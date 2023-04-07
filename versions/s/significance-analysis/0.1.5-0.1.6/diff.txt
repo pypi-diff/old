@@ -1,0 +1,92 @@
+--- tmp/significance_analysis-0.1.5.tar.gz
++++ tmp/significance_analysis-0.1.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "significance_analysis-0.1.5.tar", max compression
+│ +gzip compressed data, was "significance_analysis-0.1.6.tar", max compression
+│   --- significance_analysis-0.1.5.tar
+├── +++ significance_analysis-0.1.6.tar
+│ ├── file list
+│ │ @@ -1,6 +1,6 @@
+│ │ --rw-r--r--   0        0        0     1098 2023-03-14 12:16:41.279913 significance_analysis-0.1.5/LICENSE
+│ │ --rw-r--r--   0        0        0     6449 2023-03-27 13:23:40.086389 significance_analysis-0.1.5/pyproject.toml
+│ │ --rw-r--r--   0        0        0     3159 2023-03-27 13:16:04.259571 significance_analysis-0.1.5/README.md
+│ │ --rw-r--r--   0        0        0       83 2023-03-27 11:46:33.759635 significance_analysis-0.1.5/src/significance_analysis/__init__.py
+│ │ --rw-r--r--   0        0        0    14185 2023-03-27 12:38:50.360483 significance_analysis-0.1.5/src/significance_analysis/significance_analysis_function.py
+│ │ --rw-r--r--   0        0        0     4205 1970-01-01 00:00:00.000000 significance_analysis-0.1.5/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1098 2023-03-14 12:16:41.279913 significance_analysis-0.1.6/LICENSE
+│ │ +-rw-r--r--   0        0        0     6449 2023-04-07 14:30:12.390291 significance_analysis-0.1.6/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     3159 2023-03-27 13:16:04.259571 significance_analysis-0.1.6/README.md
+│ │ +-rw-r--r--   0        0        0       83 2023-03-27 11:46:33.759635 significance_analysis-0.1.6/src/significance_analysis/__init__.py
+│ │ +-rw-r--r--   0        0        0    18100 2023-04-07 14:29:18.992291 significance_analysis-0.1.6/src/significance_analysis/significance_analysis_function.py
+│ │ +-rw-r--r--   0        0        0     4197 1970-01-01 00:00:00.000000 significance_analysis-0.1.6/PKG-INFO
+│ │   --- significance_analysis-0.1.5/LICENSE
+│ ├── +++ significance_analysis-0.1.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- significance_analysis-0.1.5/pyproject.toml
+│ ├── +++ significance_analysis-0.1.6/pyproject.toml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "significance_analysis"
+│ │ -version = "v0.1.5"
+│ │ +version = "v0.1.6"
+│ │  description = "Significance Analysis for HPO-algorithms performing on multiple benchmarks"
+│ │  authors = ["Anton Merlin Geburek <gebureka@cs.uni-freiburg.de>",
+│ │  "Danny Stoll <stolld@cs.uni-freiburg.de>"]
+│ │  readme = "README.md"
+│ │  license = "MIT"
+│ │  keywords = ["Hyperparameter Optimization", "AutoML"]
+│ │  classifiers = [
+│ │ @@ -20,15 +20,15 @@
+│ │  packages = [
+│ │      { include = "significance_analysis", from = "src" },
+│ │  ]
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = ">=3.8,<3.11"
+│ │  pymer4 = "^0.8.0"
+│ │ -matplotlib = "^3.7.1"
+│ │ +matplotlib = "<3.7.0"
+│ │  
+│ │  [tool.poetry.group.dev.dependencies]
+│ │  pre-commit = "^2.21.0"
+│ │  mypy = "^0.930"
+│ │  
+│ │  [build-system]
+│ │  requires = ["poetry-core>=1.1.0"]
+│ │   --- significance_analysis-0.1.5/README.md
+│ ├── +++ significance_analysis-0.1.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- significance_analysis-0.1.5/PKG-INFO
+│ ├── +++ significance_analysis-0.1.6/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: significance-analysis
+│ │ -Version: 0.1.5
+│ │ +Version: 0.1.6
+│ │  Summary: Significance Analysis for HPO-algorithms performing on multiple benchmarks
+│ │  License: MIT
+│ │  Keywords: Hyperparameter Optimization,AutoML
+│ │  Author: Anton Merlin Geburek
+│ │  Author-email: gebureka@cs.uni-freiburg.de
+│ │  Requires-Python: >=3.8,<3.11
+│ │  Classifier: Intended Audience :: Science/Research
+│ │ @@ -15,15 +15,15 @@
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+│ │ -Requires-Dist: matplotlib (>=3.7.1,<4.0.0)
+│ │ +Requires-Dist: matplotlib (<3.7.0)
+│ │  Requires-Dist: pymer4 (>=0.8.0,<0.9.0)
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  # Significance Analysis
+│ │  
+│ │  [![PyPI version](https://img.shields.io/pypi/v/significance-analysis?color=informational)](https://pypi.org/project/significance-analysis/)
+│ │  [![Python versions](https://img.shields.io/pypi/pyversions/significance-analysis)](https://pypi.org/project/significance-analysis/)

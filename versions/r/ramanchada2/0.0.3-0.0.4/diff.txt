@@ -1,0 +1,865 @@
+--- tmp/ramanchada2-0.0.3.tar.gz
++++ tmp/ramanchada2-0.0.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "ramanchada2-0.0.3.tar", last modified: Wed Mar 15 16:57:23 2023, max compression
+│ +gzip compressed data, was "ramanchada2-0.0.4.tar", last modified: Fri Apr  7 14:37:31 2023, max compression
+│   --- ramanchada2-0.0.3.tar
+├── +++ ramanchada2-0.0.4.tar
+│ ├── file list
+│ │ @@ -1,147 +1,242 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.661594 ramanchada2-0.0.3/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1127 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       20 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1533 2023-03-15 16:57:23.661594 ramanchada2-0.0.3/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2168 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      526 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/README.pypi
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-15 16:57:23.661594 ramanchada2-0.0.3/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2597 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.629594 ramanchada2-0.0.3/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.637594 ramanchada2-0.0.3/src/ramanchada2/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5835 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       23 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/__main__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.641594 ramanchada2-0.0.3/src/ramanchada2/auxiliary/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/auxiliary/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.641594 ramanchada2-0.0.3/src/ramanchada2/auxiliary/spectra/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/auxiliary/spectra/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.641594 ramanchada2-0.0.3/src/ramanchada2/auxiliary/spectra/datasets2/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    14692 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/auxiliary/spectra/datasets2/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.641594 ramanchada2-0.0.3/src/ramanchada2/io/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2399 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/HSDS.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       23 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.641594 ramanchada2-0.0.3/src/ramanchada2/io/experimental/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       86 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/experimental/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      742 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/experimental/bw_format.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.645594 ramanchada2-0.0.3/src/ramanchada2/io/experimental/rc1_parser/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       22 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/experimental/rc1_parser/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6044 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/experimental/rc1_parser/binary_readers.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1946 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/experimental/rc1_parser/io.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1080 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/experimental/rc1_parser/third_party_readers.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6650 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/experimental/rc1_parser/txt_format_readers.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      535 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/experimental/read_csv.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      873 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/experimental/read_txt.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      487 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/experimental/two_column_spe.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.645594 ramanchada2-0.0.3/src/ramanchada2/io/output/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       23 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/output/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      140 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/output/write_csv.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.645594 ramanchada2-0.0.3/src/ramanchada2/io/simulated/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       79 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/simulated/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.645594 ramanchada2-0.0.3/src/ramanchada2/io/simulated/crystal/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       23 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/simulated/crystal/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      562 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/simulated/crystal/discrete_lines_dat.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2332 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/simulated/crystal/discrete_lines_out.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      377 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/simulated/lines_from_raw_dat.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2335 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/simulated/read_simulated_lines.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.645594 ramanchada2-0.0.3/src/ramanchada2/io/simulated/vasp/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       23 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/simulated/vasp/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1009 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/io/simulated/vasp/vasp_simulation_dat.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.649594 ramanchada2-0.0.3/src/ramanchada2/misc/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       23 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      711 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/base_class.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    23672 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/constants.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      193 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/exceptions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      403 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/plottable.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.649594 ramanchada2-0.0.3/src/ramanchada2/misc/spectrum_deco/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      300 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/spectrum_deco/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      141 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/spectrum_deco/dynamically_added.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      937 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/spectrum_deco/spectrum_constructor.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      821 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/spectrum_deco/spectrum_filter.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      408 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/spectrum_deco/spectrum_method.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.649594 ramanchada2-0.0.3/src/ramanchada2/misc/types/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      211 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/types/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3408 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/types/peak_candidates.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      221 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/types/pydantic_base_model.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.653594 ramanchada2-0.0.3/src/ramanchada2/misc/types/spectrum/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      257 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/types/spectrum/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2204 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/types/spectrum/applied_processings.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2437 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/types/spectrum/metadata.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.653594 ramanchada2-0.0.3/src/ramanchada2/misc/utils/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      644 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/utils/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2446 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/utils/argmin2d.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      782 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/utils/ramanshift_to_wavelength.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      418 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/misc/utils/svd.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.653594 ramanchada2-0.0.3/src/ramanchada2/spectral_components/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      229 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectral_components/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.657594 ramanchada2-0.0.3/src/ramanchada2/spectral_components/baseline/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectral_components/baseline/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectral_components/baseline/analytical.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      100 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectral_components/baseline/baseline_base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      247 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectral_components/baseline/numerical.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.657594 ramanchada2-0.0.3/src/ramanchada2/spectral_components/peak_profile/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       99 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectral_components/peak_profile/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      769 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectral_components/peak_profile/delta.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      898 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectral_components/peak_profile/gauss.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      167 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectral_components/peak_profile/voigt.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      385 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectral_components/spectral_component.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2150 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectral_components/spectral_component_collection.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1160 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectral_components/spectral_peak.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.657594 ramanchada2-0.0.3/src/ramanchada2/spectrum/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      953 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.657594 ramanchada2-0.0.3/src/ramanchada2/spectrum/arithmetics/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      193 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/arithmetics/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      822 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/arithmetics/add.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      822 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/arithmetics/mul.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      822 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/arithmetics/sub.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      826 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/arithmetics/truediv.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.657594 ramanchada2-0.0.3/src/ramanchada2/spectrum/baseline/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      193 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/baseline/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2170 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/baseline/add_baseline.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3073 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/baseline/baseline_rc1.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1348 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/baseline/moving_minimum.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.657594 ramanchada2-0.0.3/src/ramanchada2/spectrum/calc/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      193 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/calc/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      843 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/calc/central_moments.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.657594 ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      217 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7505 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/by_deltas.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1641 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/change_x_units.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1347 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/normalize.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1045 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/scale_xaxis.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      408 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/scale_yaxis.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      541 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/set_new_xaxis.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.661594 ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      217 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1711 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_cache_or_calc.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      463 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_chada.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1627 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_delta_lines.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2111 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_local_file.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1964 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_simulation.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      770 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_spectral_component_collection.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      957 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_theoretical_lines.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.661594 ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      217 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      927 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/add_poisson_noise.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1741 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/convolve.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2127 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/drop_spikes.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1034 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/moving_average.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      693 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/pad_zeros.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1838 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/resampling.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2332 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/sharpen_lines.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1658 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/smoothing.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      792 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/trim_axes.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.661594 ramanchada2-0.0.3/src/ramanchada2/spectrum/peaks/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      217 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/peaks/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5765 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/peaks/find_peaks.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1231 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/peaks/find_peaks_BayesianGaussianMixture.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10244 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/peaks/fit_peaks.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      967 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/peaks/get_fitted_peaks.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5815 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/spectrum/spectrum.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.661594 ramanchada2-0.0.3/src/ramanchada2/theoretical_lines/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       23 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/theoretical_lines/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2997 2023-03-15 16:57:14.000000 ramanchada2-0.0.3/src/ramanchada2/theoretical_lines/model_from_lines.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-15 16:57:23.641594 ramanchada2-0.0.3/src/ramanchada2.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1533 2023-03-15 16:57:23.000000 ramanchada2-0.0.3/src/ramanchada2.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5336 2023-03-15 16:57:23.000000 ramanchada2-0.0.3/src/ramanchada2.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-15 16:57:23.000000 ramanchada2-0.0.3/src/ramanchada2.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      136 2023-03-15 16:57:23.000000 ramanchada2-0.0.3/src/ramanchada2.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       12 2023-03-15 16:57:23.000000 ramanchada2-0.0.3/src/ramanchada2.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.155116 ramanchada2-0.0.4/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1127 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1533 2023-04-07 14:37:31.155116 ramanchada2-0.0.4/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2168 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      526 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/README.pypi
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 14:37:31.155116 ramanchada2-0.0.4/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2668 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.111115 ramanchada2-0.0.4/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.115115 ramanchada2-0.0.4/src/ramanchada2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5835 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/__main__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.115115 ramanchada2-0.0.4/src/ramanchada2/auxiliary/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.115115 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.115115 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.119115 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_BW532/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   185598 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_BW532/NeonSNQ043_iR532_Probe_100msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   184263 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_BW532/NeonSNQ043_iR532_Probe_5msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   187339 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_BW532/PST10_iR532_Probe_100_3000msx7.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   187743 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_BW532/S0B10_iR532_Probe_100_60000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   190431 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_BW532/S0N10_iR532_Probe_100_30000msx3.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   189952 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_BW532/S0P10_iR532_Probe_100_60000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   187633 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_BW532/S1N10_iR532_Probe_100_22000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   187638 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_BW532/Sil10_iR532_Probe_100_60000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   191297 2023-04-07 14:37:21.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_BW532/nCAL10_iR532_Probe_100_2500msx3.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   187259 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_BW532/sCAL10_iR532_Probe_100_3200msx4.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.127115 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16858 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/NeonSNQ043_iR785_OP01.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35649 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/NeonSNQ043_iR785_OP02.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   171476 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/NeonSNQ043_iR785_OP03.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16871 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/PST10_iR785_OP01_40000msx4.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35658 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/PST10_iR785_OP02_50000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   171859 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/PST10_iR785_OP03_8000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16863 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/S0B10_iR785_OP01_6000msx4.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35712 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/S0B10_iR785_OP02_25000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   171856 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/S0B10_iR785_OP03_8000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16841 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/S0N10_iR785_OP01_6000msx4.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35709 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/S0N10_iR785_OP02_25000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   171894 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/S0N10_iR785_OP03_8000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16872 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/S0P10_iR785_OP01_6000msx4.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35718 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/S0P10_iR785_OP02_25000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   171856 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/S0P10_iR785_OP03_8000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16867 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/S1N10_iR785_OP01_6000msx4.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35694 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/S1N10_iR785_OP02_25000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   171844 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/S1N10_iR785_OP03_8000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16876 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/Sil10_iR785_OP01_6000msx4.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35703 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/Sil10_iR785_OP02_25000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   171846 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/Sil10_iR785_OP03_8000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16869 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/nCAL10_iR785_OP01_6000msx4.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35695 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/nCAL10_iR785_OP02_20000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   171923 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/nCAL10_iR785_OP03_8000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16861 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/sCAL10_iR785_OP01_4000msx4.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35687 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/sCAL10_iR785_OP02_15000msx2.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   171889 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/FMNT-M_Ho785/sCAL10_iR785_OP03_8000msx2.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.131116 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   182699 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/Ne_532nm_x100_110ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   184528 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/Ne_532nm_x100_2000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   182774 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/Ne_532nm_x50_25ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   184434 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/Ne_532nm_x50_800ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   174788 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/PST02_iRPlus532_Z050_100_2500msx5.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   175407 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/PST02_iRPlus532_Z100_100_50000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   175468 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/S0B02_iRPlus532_Z050_100_30000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   174802 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/S0B02_iRPlus532_Z100_100_22000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   175123 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/S0N02_iRPlus532_Z050_100_40000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   174660 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/S0N02_iRPlus532_Z100_100_28000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   175356 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/S0P02_iRPlus532_Z050_100_30000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   174887 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/S0P02_iRPlus532_Z100_100_20000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   174718 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/S1N02_iRPlus532_Z050_100_12000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   173754 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/S1N02_iRPlus532_Z100_100_6500ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   176673 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/nCAL02_iRPlus532_Z050_100_9000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   177120 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/nCAL02_iRPlus532_Z100_100_30000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   174707 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/sCAL02_iRPlus532_Z050_100_20000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   175243 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW532/sCAL02_iRPlus532_Z100_100_65000ms.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.139115 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   184364 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/PST02_iRPlus785_Z020_100_1300ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   185045 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/PST02_iRPlus785_Z050_100_3200ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   185328 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/PST02_iRPlus785_Z100_100_9000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   189806 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S0B02_iRPlus785_Z020_100_12000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   201634 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S0B02_iRPlus785_Z020_100_full.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   189411 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S0B02_iRPlus785_Z050_100_5500ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   189005 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S0B02_iRPlus785_Z100_100_4700ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   187207 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S0N02_iRPlus785_Z020_100_3800ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   187573 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S0N02_iRPlus785_Z050_100_3200ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   186787 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S0N02_iRPlus785_Z100_100_3100ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   189400 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S0P02_iRPlus785_Z020_100_12000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   189244 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S0P02_iRPlus785_Z050_100_5700ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   188792 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S0P02_iRPlus785_Z100_100_4800ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   185773 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S1N02_iRPlus785_Z020_100_3800ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   185317 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S1N02_iRPlus785_Z050_100_2100ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   184476 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/S1N02_iRPlus785_Z100_100_2000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   183722 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/nCAL02_iRPlus785_Z020_100_1100ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   184176 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/nCAL02_iRPlus785_Z050_100_2100ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   184535 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/nCAL02_iRPlus785_Z100_100_6000ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   184428 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/sCAL02_iRPlus785_Z020_100_2400ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   184511 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/sCAL02_iRPlus785_Z050_100_3800ms.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   184796 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/ICV_BW785/sCAL02_iRPlus785_Z100_100_9500ms.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.139115 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/TOP_Ho633/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   101150 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/TOP_Ho633/Pol_HLR633_Z010_100_15sx5.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   101182 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/TOP_Ho633/S0B_HLR633_Z010_100_40sx5.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   101185 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/TOP_Ho633/S0N_HLR633_Z010_100_15sx5.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   101119 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/TOP_Ho633/S0P_HLR633_Z010_100_40sx5.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   101189 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/TOP_Ho633/S1N_HLR633_Z010_100_10sx5.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   101169 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/TOP_Ho633/Si_HLR633_Z010_100_40sx5.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   101184 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/TOP_Ho633/nCAL_HLR633_Z010_100_5sx5.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   101184 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/TOP_Ho633/neon_new2_Z010.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   101413 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/TOP_Ho633/sCAL_HLR633_Z010_100_15sx5.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14692 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.139115 ramanchada2-0.0.4/src/ramanchada2/io/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2399 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/HSDS.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.139115 ramanchada2-0.0.4/src/ramanchada2/io/experimental/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       86 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/experimental/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      742 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/experimental/bw_format.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.143116 ramanchada2-0.0.4/src/ramanchada2/io/experimental/rc1_parser/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/experimental/rc1_parser/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6044 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/experimental/rc1_parser/binary_readers.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1946 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/experimental/rc1_parser/io.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1080 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/experimental/rc1_parser/third_party_readers.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6650 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/experimental/rc1_parser/txt_format_readers.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      535 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/experimental/read_csv.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      873 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/experimental/read_txt.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      487 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/experimental/two_column_spe.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.143116 ramanchada2-0.0.4/src/ramanchada2/io/output/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/output/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      140 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/output/write_csv.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.143116 ramanchada2-0.0.4/src/ramanchada2/io/simulated/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       79 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/simulated/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.143116 ramanchada2-0.0.4/src/ramanchada2/io/simulated/crystal/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/simulated/crystal/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      562 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/simulated/crystal/discrete_lines_dat.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2332 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/simulated/crystal/discrete_lines_out.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      377 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/simulated/lines_from_raw_dat.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2335 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/simulated/read_simulated_lines.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.143116 ramanchada2-0.0.4/src/ramanchada2/io/simulated/vasp/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/simulated/vasp/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1009 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/io/simulated/vasp/vasp_simulation_dat.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.143116 ramanchada2-0.0.4/src/ramanchada2/misc/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      711 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/base_class.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    23672 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/constants.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      193 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/exceptions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      403 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/plottable.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.143116 ramanchada2-0.0.4/src/ramanchada2/misc/spectrum_deco/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      300 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/spectrum_deco/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      141 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/spectrum_deco/dynamically_added.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      937 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/spectrum_deco/spectrum_constructor.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      821 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/spectrum_deco/spectrum_filter.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      408 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/spectrum_deco/spectrum_method.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.143116 ramanchada2-0.0.4/src/ramanchada2/misc/types/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      231 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/types/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4978 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/types/fit_peaks_result.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3408 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/types/peak_candidates.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      764 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/types/positive_not_multiple.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      221 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/types/pydantic_base_model.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.143116 ramanchada2-0.0.4/src/ramanchada2/misc/types/spectrum/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      257 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/types/spectrum/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2204 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/types/spectrum/applied_processings.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2437 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/types/spectrum/metadata.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.147116 ramanchada2-0.0.4/src/ramanchada2/misc/utils/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      644 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/utils/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2446 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/utils/argmin2d.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      782 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/utils/ramanshift_to_wavelength.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      418 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/misc/utils/svd.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.147116 ramanchada2-0.0.4/src/ramanchada2/spectral_components/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      229 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectral_components/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.147116 ramanchada2-0.0.4/src/ramanchada2/spectral_components/baseline/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectral_components/baseline/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectral_components/baseline/analytical.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      100 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectral_components/baseline/baseline_base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      247 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectral_components/baseline/numerical.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.147116 ramanchada2-0.0.4/src/ramanchada2/spectral_components/peak_profile/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       99 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectral_components/peak_profile/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      769 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectral_components/peak_profile/delta.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      898 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectral_components/peak_profile/gauss.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      167 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectral_components/peak_profile/voigt.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      385 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectral_components/spectral_component.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2150 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectral_components/spectral_component_collection.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1160 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectral_components/spectral_peak.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.147116 ramanchada2-0.0.4/src/ramanchada2/spectrum/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1032 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.147116 ramanchada2-0.0.4/src/ramanchada2/spectrum/arithmetics/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      193 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/arithmetics/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      822 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/arithmetics/add.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      822 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/arithmetics/mul.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      822 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/arithmetics/sub.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      826 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/arithmetics/truediv.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.147116 ramanchada2-0.0.4/src/ramanchada2/spectrum/baseline/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      193 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/baseline/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2170 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/baseline/add_baseline.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2479 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/baseline/baseline_rc1.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1348 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/baseline/moving_minimum.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.147116 ramanchada2-0.0.4/src/ramanchada2/spectrum/calc/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      193 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/calc/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      843 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/calc/central_moments.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.151116 ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      217 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7505 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/by_deltas.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1641 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/change_x_units.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1347 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/normalize.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1045 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/scale_xaxis.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      408 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/scale_yaxis.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      541 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/set_new_xaxis.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.151116 ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      217 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1711 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_cache_or_calc.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      463 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_chada.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1627 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_delta_lines.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2111 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_local_file.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1964 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_simulation.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      770 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_spectral_component_collection.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      848 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_test_spe.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      957 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_theoretical_lines.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.151116 ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      217 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      923 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/add_gaussian_noise.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      927 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/add_poisson_noise.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1741 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/convolve.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2127 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/drop_spikes.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1034 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/moving_average.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      693 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/pad_zeros.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1838 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/resampling.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2332 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/sharpen_lines.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1658 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/smoothing.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      792 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/trim_axes.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.151116 ramanchada2-0.0.4/src/ramanchada2/spectrum/peaks/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      217 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/peaks/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5779 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/peaks/find_peaks.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1231 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/peaks/find_peaks_BayesianGaussianMixture.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5756 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/peaks/fit_peaks.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      967 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/peaks/get_fitted_peaks.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6742 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/spectrum/spectrum.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.155116 ramanchada2-0.0.4/src/ramanchada2/theoretical_lines/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/theoretical_lines/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2997 2023-04-07 14:37:22.000000 ramanchada2-0.0.4/src/ramanchada2/theoretical_lines/model_from_lines.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:37:31.115115 ramanchada2-0.0.4/src/ramanchada2.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1533 2023-04-07 14:37:31.000000 ramanchada2-0.0.4/src/ramanchada2.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13136 2023-04-07 14:37:31.000000 ramanchada2-0.0.4/src/ramanchada2.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 14:37:31.000000 ramanchada2-0.0.4/src/ramanchada2.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      136 2023-04-07 14:37:31.000000 ramanchada2-0.0.4/src/ramanchada2.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       12 2023-04-07 14:37:31.000000 ramanchada2-0.0.4/src/ramanchada2.egg-info/top_level.txt
+│ │   --- ramanchada2-0.0.3/LICENSE
+│ ├── +++ ramanchada2-0.0.4/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/PKG-INFO
+│ ├── +++ ramanchada2-0.0.4/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ramanchada2
+│ │ -Version: 0.0.3
+│ │ +Version: 0.0.4
+│ │  Summary: Harmonising Raman Spectroscopy
+│ │  Home-page: https://github.com/h2020charisma/ramanchada2
+│ │  Author: IDEAconsult Ltd.
+│ │  Author-email: dev-charisma@ideaconsult.net
+│ │  License: MIT
+│ │  Keywords: Raman,spectroscopy
+│ │  Classifier: Development Status :: 4 - Beta
+│ │   --- ramanchada2-0.0.3/README.md
+│ ├── +++ ramanchada2-0.0.4/README.md
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/README.pypi
+│ ├── +++ ramanchada2-0.0.4/README.pypi
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/setup.py
+│ ├── +++ ramanchada2-0.0.4/setup.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,11 @@
+│ │ +import ast
+│ │  from os import path
+│ │ +
+│ │  from setuptools import find_packages, setup
+│ │ -import ast
+│ │  
+│ │  NAME = 'ramanchada2'
+│ │  
+│ │  with open(path.join(path.dirname(__file__), 'src/ramanchada2/__init__.py')) as fd:
+│ │      VERSION = [expr.value.value
+│ │                 for expr in ast.parse(fd.read()).body
+│ │                 if (isinstance(expr, ast.Assign) and
+│ │ @@ -80,14 +81,16 @@
+│ │          install_requires=INSTALL_REQUIRES,
+│ │          keywords=KEYWORDS,
+│ │          license=LICENSE,
+│ │          long_description=LONG_DESCRIPTION,
+│ │          long_description_content_type=LONG_DESCRIPTION_CONTENT_TYPE,
+│ │          name=NAME,
+│ │          package_dir=PACKAGE_DIR,
+│ │ +        package_data=PACKAGE_DATA,
+│ │ +        include_package_data=True,
+│ │          packages=PACKAGES,
+│ │          python_requires=PYTHON_REQUIRES,
+│ │          url=URL,
+│ │          version=VERSION,
+│ │      )
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/__init__.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -90,15 +90,15 @@
+│ │  """
+│ │  
+│ │  from __future__ import annotations
+│ │  
+│ │  from . import spectrum
+│ │  from . import theoretical_lines
+│ │  __all__ = ['spectrum', 'theoretical_lines']
+│ │ -__version__ = '0.0.3'
+│ │ +__version__ = '0.0.4'
+│ │  
+│ │  
+│ │  import logging
+│ │  
+│ │  
+│ │  class CustomFormatter(logging.Formatter):
+│ │      green = "\x1b[32m"
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/auxiliary/spectra/datasets2/__init__.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/auxiliary/spectra/datasets2/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/io/HSDS.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/io/HSDS.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/io/experimental/bw_format.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/io/experimental/bw_format.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/io/experimental/rc1_parser/binary_readers.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/io/experimental/rc1_parser/binary_readers.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/io/experimental/rc1_parser/io.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/io/experimental/rc1_parser/io.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/io/experimental/rc1_parser/third_party_readers.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/io/experimental/rc1_parser/third_party_readers.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/io/experimental/rc1_parser/txt_format_readers.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/io/experimental/rc1_parser/txt_format_readers.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/io/experimental/read_csv.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/io/experimental/read_csv.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/io/experimental/read_txt.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/io/experimental/read_txt.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/io/simulated/crystal/discrete_lines_dat.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/io/simulated/crystal/discrete_lines_dat.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/io/simulated/crystal/discrete_lines_out.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/io/simulated/crystal/discrete_lines_out.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/io/simulated/read_simulated_lines.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/io/simulated/read_simulated_lines.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/io/simulated/vasp/vasp_simulation_dat.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/io/simulated/vasp/vasp_simulation_dat.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/misc/base_class.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/misc/base_class.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/misc/constants.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/misc/constants.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/misc/spectrum_deco/spectrum_constructor.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/misc/spectrum_deco/spectrum_constructor.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/misc/spectrum_deco/spectrum_filter.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/misc/spectrum_deco/spectrum_filter.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/misc/types/peak_candidates.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/misc/types/peak_candidates.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/misc/types/spectrum/applied_processings.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/misc/types/spectrum/applied_processings.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/misc/types/spectrum/metadata.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/misc/types/spectrum/metadata.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/misc/utils/__init__.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/misc/utils/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/misc/utils/argmin2d.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/misc/utils/argmin2d.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/misc/utils/ramanshift_to_wavelength.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/misc/utils/ramanshift_to_wavelength.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectral_components/peak_profile/delta.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectral_components/peak_profile/delta.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectral_components/peak_profile/gauss.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectral_components/peak_profile/gauss.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectral_components/spectral_component_collection.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectral_components/spectral_component_collection.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectral_components/spectral_peak.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectral_components/spectral_peak.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/__init__.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/__init__.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -10,17 +10,20 @@
+│ │  from .creators.from_cache_or_calc import from_cache_or_calc
+│ │  from .creators.from_chada import from_chada
+│ │  from .creators.from_local_file import from_local_file
+│ │  from .creators.from_simulation import from_simulation
+│ │  from .creators.from_theoretical_lines import from_theoretical_lines
+│ │  from .creators.from_spectral_component_collection import from_spectral_component_collection
+│ │  from .creators.from_delta_lines import from_delta_lines
+│ │ +from .creators.from_test_spe import from_test_spe
+│ │ +
+│ │  
+│ │  __all__ = ['Spectrum',
+│ │             'from_cache_or_calc',
+│ │             'from_chada',
+│ │             'from_local_file',
+│ │             'from_simulation',
+│ │ +           'from_test_spe',
+│ │             'from_theoretical_lines',
+│ │             'from_spectral_component_collection',
+│ │             'from_delta_lines',
+│ │             ]
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/arithmetics/add.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/arithmetics/add.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/arithmetics/mul.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/arithmetics/mul.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/arithmetics/sub.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/arithmetics/sub.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/arithmetics/truediv.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/arithmetics/truediv.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/baseline/add_baseline.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/baseline/add_baseline.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/baseline/baseline_rc1.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/baseline/baseline_rc1.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,47 +1,24 @@
+│ │  from typing import Literal, Union
+│ │  import numpy as np
+│ │  import pandas as pd
+│ │  from scipy.signal import wiener
+│ │  from scipy import sparse
+│ │  from scipy.sparse.linalg import spsolve
+│ │  
+│ │ -from pydantic import validate_arguments, PositiveInt, NonNegativeInt
+│ │ +from pydantic import validate_arguments, PositiveInt
+│ │ +from ramanchada2.misc.types import PositiveOddInt
+│ │  
+│ │  from ramanchada2.misc.spectrum_deco import add_spectrum_filter
+│ │  from ..spectrum import Spectrum
+│ │  
+│ │  
+│ │ -class NonNegativeOddInt(NonNegativeInt):
+│ │ -    class Config:
+│ │ -        arbitrary_types_allowed = True
+│ │ -
+│ │ -    @classmethod
+│ │ -    def __get_validators__(cls):
+│ │ -        for val in super().__get_validators__():
+│ │ -            yield val
+│ │ -        yield cls.validate_odd
+│ │ -
+│ │ -    @classmethod
+│ │ -    def validate_odd(cls, value) -> int:
+│ │ -        if value % 2 != 1:
+│ │ -            raise ValueError(f'Expected odd positive int, got {value}')
+│ │ -        return value
+│ │ -
+│ │ -    @classmethod
+│ │ -    def __modify_schema__(cls, field_schema):
+│ │ -        super().__modify_schema__(field_schema)
+│ │ -        field_schema.update({
+│ │ -            'not': {'multipleOf': 2}
+│ │ -        })
+│ │ -
+│ │ -
+│ │  @validate_arguments
+│ │  def baseline_als(y, lam: float = 1e5, p: float = 0.001, niter: PositiveInt = 100,
+│ │ -                 smooth: Union[NonNegativeOddInt, Literal[0]] = NonNegativeOddInt(7)):
+│ │ +                 smooth: Union[PositiveOddInt, Literal[0]] = PositiveOddInt(7)):
+│ │      if smooth > 0:
+│ │          y = wiener(y, smooth)
+│ │      L = len(y)
+│ │      D = sparse.csc_matrix(np.diff(np.eye(L), 2))
+│ │      w = np.ones(L)
+│ │      for i in range(niter):
+│ │          W = sparse.spdiags(w, 0, L, L)
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/baseline/moving_minimum.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/baseline/moving_minimum.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/calc/central_moments.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/calc/central_moments.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/by_deltas.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/by_deltas.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/change_x_units.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/change_x_units.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/normalize.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/normalize.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/scale_xaxis.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/scale_xaxis.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/calibration/set_new_xaxis.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/calibration/set_new_xaxis.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_cache_or_calc.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_cache_or_calc.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_delta_lines.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_delta_lines.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_local_file.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_local_file.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_simulation.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_simulation.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_spectral_component_collection.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_spectral_component_collection.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/creators/from_theoretical_lines.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/creators/from_theoretical_lines.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/add_poisson_noise.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/add_poisson_noise.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/convolve.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/convolve.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/drop_spikes.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/drop_spikes.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/moving_average.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/moving_average.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/pad_zeros.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/pad_zeros.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/resampling.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/resampling.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/sharpen_lines.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/sharpen_lines.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/smoothing.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/smoothing.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/filters/trim_axes.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/filters/trim_axes.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/peaks/find_peaks.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/peaks/find_peaks.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -43,24 +43,24 @@
+│ │  def find_peak_multipeak(
+│ │          spe: Spectrum, /,
+│ │          prominence: Union[NonNegativeFloat, None] = None,
+│ │          wlen: Union[NonNegativeInt, None] = None,
+│ │          width: Union[int, Tuple[int, int], None] = None,
+│ │          hht_chain: Union[List[PositiveInt], None] = None,
+│ │          bgm_kwargs={},
+│ │ -        sharpening: Union[Literal['hht'], None] = 'hht',
+│ │ +        sharpening: Union[Literal['hht'], None] = None,
+│ │          strategy: Literal['topo', 'bayesian_gaussian_mixture', 'bgm'] = 'topo'
+│ │          ) -> ListPeakCandidateMultiModel:
+│ │  
+│ │ -    if not prominence:
+│ │ -        prominence = spe.y_noise*15
+│ │ +    if prominence is None:
+│ │ +        prominence = spe.y_noise
+│ │      if not wlen:
+│ │ -        wlen = 50
+│ │ +        wlen = 200
+│ │      if width is None:
+│ │ -        width = 1
+│ │ +        width = 2
+│ │  
+│ │      if sharpening == 'hht':
+│ │          if hht_chain is None:
+│ │              hht_chain = [20]
+│ │          sharp_spe = spe.hht_sharpening_chain(movmin=hht_chain)  # type: ignore
+│ │      else:
+│ │          sharp_spe = spe
+│ │ @@ -121,15 +121,15 @@
+│ │              y1 = spe.y[li]
+│ │              y2 = spe.y[ri]
+│ │              slope = (y2-y1)/(x2-x1)
+│ │              intercept = -slope*x1+y1
+│ │              for peak_i, peak_pos in enumerate(peaks):
+│ │                  if li < peak_pos < ri:
+│ │                      pos_maximum = x_arr[peak_pos]
+│ │ -                    amplitude = y_arr[peak_pos]
+│ │ +                    amplitude = props['prominences'][peak_i]
+│ │                      lwhm = pos_maximum - interpolate(props['left_ips'][peak_i])
+│ │                      rwhm = interpolate(props['right_ips'][peak_i]) - pos_maximum
+│ │                      fwhm = lwhm + rwhm
+│ │                      sigma = fwhm/2.355
+│ │                      skew = (rwhm-lwhm)/(rwhm+lwhm)
+│ │                      peak_group.append(dict(position=pos_maximum,
+│ │                                             amplitude=amplitude,
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/peaks/find_peaks_BayesianGaussianMixture.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/peaks/find_peaks_BayesianGaussianMixture.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/peaks/get_fitted_peaks.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/peaks/get_fitted_peaks.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/spectrum/spectrum.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/spectrum/spectrum.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,25 +1,27 @@
+│ │  #!/usr/bin/env python3
+│ │  
+│ │  from __future__ import annotations
+│ │ -from typing import Set, Union, Dict, List, Tuple
+│ │ -from copy import deepcopy
+│ │ +
+│ │  import logging
+│ │ +from copy import deepcopy
+│ │ +from typing import Dict, List, Set, Tuple, Union
+│ │  
+│ │  import numpy as np
+│ │  import numpy.typing as npt
+│ │  import pydantic
+│ │ +from scipy.signal import convolve, savgol_coeffs, savgol_filter
+│ │  from scipy.stats import rv_histogram
+│ │  
+│ │ +from ramanchada2.io.HSDS import write_cha
+│ │ +from ramanchada2.io.output.write_csv import write_csv as io_write_csv
+│ │  from ramanchada2.misc.plottable import Plottable
+│ │ -from ramanchada2.misc.types import SpeMetadataModel
+│ │ +from ramanchada2.misc.types import PositiveOddInt, SpeMetadataModel
+│ │  from ramanchada2.misc.types.spectrum import (SpeProcessingListModel,
+│ │                                               SpeProcessingModel)
+│ │ -from ramanchada2.io.HSDS import write_cha
+│ │ -from ramanchada2.io.output.write_csv import write_csv as io_write_csv
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  class Spectrum(Plottable):
+│ │      _available_processings: Set[str] = set()
+│ │  
+│ │ @@ -135,15 +137,39 @@
+│ │      @y.setter
+│ │      def y(self, val: npt.NDArray[np.float64]):
+│ │          self._ydata = val
+│ │          self._ydata.flags.writeable = False
+│ │  
+│ │      @property
+│ │      def y_noise(self):
+│ │ -        return np.std(np.sort(np.diff(self.y))[len(self.y)//4:len(self.y)*3//4])
+│ │ +        return self.y_noise_savgol()
+│ │ +
+│ │ +    def y_noise_savgol_DL(self, order: PositiveOddInt = PositiveOddInt(1)):
+│ │ +        npts = order + 2
+│ │ +        ydata = self.y - np.min(self.y)
+│ │ +        summ = np.sum((ydata - savgol_filter(ydata, npts, order))**2)
+│ │ +        coeff = savgol_coeffs(npts, order)
+│ │ +        coeff[(len(coeff) - 1) // 2] -= 1
+│ │ +        scale = np.sqrt(np.sum(coeff**2))
+│ │ +        return np.sqrt(summ/len(ydata))/scale
+│ │ +
+│ │ +    @pydantic.validate_arguments
+│ │ +    def y_noise_savgol(self, order: PositiveOddInt = PositiveOddInt(1)):
+│ │ +        npts = order + 2
+│ │ +
+│ │ +        # subtract smoothed signal from original
+│ │ +        coeff = - savgol_coeffs(npts, order)
+│ │ +        coeff[(len(coeff)-1)//2] += 1
+│ │ +
+│ │ +        # normalize coefficients so that `sum(coeff**2) == 1`
+│ │ +        coeff /= np.sqrt(np.sum(coeff**2))
+│ │ +
+│ │ +        # remove the common floor
+│ │ +        ydata = self.y - np.min(self.y)
+│ │ +        return np.std(convolve(ydata, coeff, mode='same'))
+│ │  
+│ │      @property
+│ │      def x_err(self):
+│ │          return np.zeros_like(self._xdata)
+│ │  
+│ │      @property
+│ │      def y_err(self):
+│ │   --- ramanchada2-0.0.3/src/ramanchada2/theoretical_lines/model_from_lines.py
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2/theoretical_lines/model_from_lines.py
+│ │┄ Files identical despite different names
+│ │   --- ramanchada2-0.0.3/src/ramanchada2.egg-info/PKG-INFO
+│ ├── +++ ramanchada2-0.0.4/src/ramanchada2.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ramanchada2
+│ │ -Version: 0.0.3
+│ │ +Version: 0.0.4
+│ │  Summary: Harmonising Raman Spectroscopy
+│ │  Home-page: https://github.com/h2020charisma/ramanchada2
+│ │  Author: IDEAconsult Ltd.
+│ │  Author-email: dev-charisma@ideaconsult.net
+│ │  License: MIT
+│ │  Keywords: Raman,spectroscopy
+│ │  Classifier: Development Status :: 4 - Beta

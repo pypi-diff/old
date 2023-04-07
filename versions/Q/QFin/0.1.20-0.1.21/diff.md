@@ -1,0 +1,189 @@
+# Comparing `tmp/QFin-0.1.20.tar.gz` & `tmp/QFin-0.1.21.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist\QFin-0.1.20.tar", last modified: Fri Apr  7 14:37:23 2023, max compression
++gzip compressed data, was "dist\QFin-0.1.21.tar", last modified: Fri Apr  7 14:38:38 2023, max compression
+```
+
+## Comparing `QFin-0.1.20.tar` & `QFin-0.1.21.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,16 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 14:37:23.892355 QFin-0.1.20/
+--rw-rw-rw-   0        0        0    16126 2023-04-07 14:37:23.892355 QFin-0.1.20/PKG-INFO
+-drwxrwxrwx   0        0        0        0 2023-04-07 14:37:23.881354 QFin-0.1.20/QFin/
+--rw-rw-rw-   0        0        0      694 2023-04-07 13:28:44.000000 QFin-0.1.20/QFin/__init__.py
+--rw-rw-rw-   0        0        0     7384 2023-04-07 13:28:44.000000 QFin-0.1.20/QFin/options.py
+--rw-rw-rw-   0        0        0    20053 2023-04-07 13:28:44.000000 QFin-0.1.20/QFin/simulations.py
+--rw-rw-rw-   0        0        0     2521 2023-04-07 14:33:49.000000 QFin-0.1.20/QFin/stochastics.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 14:37:23.891355 QFin-0.1.20/QFin.egg-info/
+--rw-rw-rw-   0        0        0    16126 2023-04-07 14:37:23.000000 QFin-0.1.20/QFin.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      230 2023-04-07 14:37:23.000000 QFin-0.1.20/QFin.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 14:37:23.000000 QFin-0.1.20/QFin.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       12 2023-04-07 14:37:23.000000 QFin-0.1.20/QFin.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        5 2023-04-07 14:37:23.000000 QFin-0.1.20/QFin.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0    12786 2023-04-07 14:36:11.000000 QFin-0.1.20/README.md
+--rw-rw-rw-   0        0        0       42 2023-04-07 14:37:23.892355 QFin-0.1.20/setup.cfg
+--rw-rw-rw-   0        0        0     1082 2023-04-07 14:36:57.000000 QFin-0.1.20/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 14:38:38.276741 QFin-0.1.21/
++-rw-rw-rw-   0        0        0    16126 2023-04-07 14:38:38.276741 QFin-0.1.21/PKG-INFO
++drwxrwxrwx   0        0        0        0 2023-04-07 14:38:38.266741 QFin-0.1.21/QFin/
++-rw-rw-rw-   0        0        0      694 2023-04-07 13:28:44.000000 QFin-0.1.21/QFin/__init__.py
++-rw-rw-rw-   0        0        0     7384 2023-04-07 13:28:44.000000 QFin-0.1.21/QFin/options.py
++-rw-rw-rw-   0        0        0    20053 2023-04-07 13:28:44.000000 QFin-0.1.21/QFin/simulations.py
++-rw-rw-rw-   0        0        0     2251 2023-04-07 14:38:24.000000 QFin-0.1.21/QFin/stochastics.py
++drwxrwxrwx   0        0        0        0 2023-04-07 14:38:38.275741 QFin-0.1.21/QFin.egg-info/
++-rw-rw-rw-   0        0        0    16126 2023-04-07 14:38:38.000000 QFin-0.1.21/QFin.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      230 2023-04-07 14:38:38.000000 QFin-0.1.21/QFin.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 14:38:38.000000 QFin-0.1.21/QFin.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       12 2023-04-07 14:38:38.000000 QFin-0.1.21/QFin.egg-info/requires.txt
++-rw-rw-rw-   0        0        0        5 2023-04-07 14:38:38.000000 QFin-0.1.21/QFin.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0    12786 2023-04-07 14:36:11.000000 QFin-0.1.21/README.md
++-rw-rw-rw-   0        0        0       42 2023-04-07 14:38:38.277741 QFin-0.1.21/setup.cfg
++-rw-rw-rw-   0        0        0     1082 2023-04-07 14:38:34.000000 QFin-0.1.21/setup.py
+```
+
+### Comparing `QFin-0.1.20/PKG-INFO` & `QFin-0.1.21/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: QFin
+-Version: 0.1.20
++Version: 0.1.21
+ Summary: A Python library for mathematical finance.
+ Home-page: UNKNOWN
+ Author: Roman Paolucci
+ Author-email: <romanmichaelpaolucci@gmail.com>
+ License: MIT
+ Description: # Q-Fin
+         A Python library for mathematical finance.
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: QFin Version: 0.1.20 Summary: A Python library for
++Metadata-Version: 2.1 Name: QFin Version: 0.1.21 Summary: A Python library for
+ mathematical finance. Home-page: UNKNOWN Author: Roman Paolucci Author-email:
+ gmail.com> License: MIT Description: # Q-Fin A Python library for mathematical
+ finance. ## Installation https://pypi.org/project/QFin/ ``` pip install qfin
+ ``` # Version '0.1.20' QFin is being reconstructed to leverage more principals
+ of object-oriented programming. Several modules in this version are deprecated
+ along with the solutions to PDEs/SDEs (mainly in the options module). QFin now
+ contains a module called 'stochastics' which will be largely responsible for
+```
+
+### Comparing `QFin-0.1.20/QFin/__init__.py` & `QFin-0.1.21/QFin/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `QFin-0.1.20/QFin/options.py` & `QFin-0.1.21/QFin/options.py`
+
+ * *Files identical despite different names*
+
+### Comparing `QFin-0.1.20/QFin/simulations.py` & `QFin-0.1.21/QFin/simulations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `QFin-0.1.20/QFin/stochastics.py` & `QFin-0.1.21/QFin/stochastics.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -57,22 +57,8 @@
+         self.path_characteristics = (paths, n, dt, T)
+ 
+         # return paths and path characteristics
+         return (paths, n, dt, T)
+ 
+     # Calibration cannot be conducted due to flat volatility surface
+     def __init__(self, params) -> None:
+-        super().__init__(params)
+-
+-abm = ArithmeticBrownianMotion([.3])
+-
+-print(abm.vanilla_pricing(100, 99, 1, "CALL"))
+-
+-abm.simulate(100, 10000, 1/252, 1)
+-
+-payoffs = []
+-X = 99
+-
+-for path in abm.path_characteristics[0]:
+-    payoffs.append(max((path[-1] - X), 0))
+-
+-print(np.average(payoffs))
++        super().__init__(params)
+```
+
+### Comparing `QFin-0.1.20/QFin.egg-info/PKG-INFO` & `QFin-0.1.21/QFin.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: QFin
+-Version: 0.1.20
++Version: 0.1.21
+ Summary: A Python library for mathematical finance.
+ Home-page: UNKNOWN
+ Author: Roman Paolucci
+ Author-email: <romanmichaelpaolucci@gmail.com>
+ License: MIT
+ Description: # Q-Fin
+         A Python library for mathematical finance.
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: QFin Version: 0.1.20 Summary: A Python library for
++Metadata-Version: 2.1 Name: QFin Version: 0.1.21 Summary: A Python library for
+ mathematical finance. Home-page: UNKNOWN Author: Roman Paolucci Author-email:
+ gmail.com> License: MIT Description: # Q-Fin A Python library for mathematical
+ finance. ## Installation https://pypi.org/project/QFin/ ``` pip install qfin
+ ``` # Version '0.1.20' QFin is being reconstructed to leverage more principals
+ of object-oriented programming. Several modules in this version are deprecated
+ along with the solutions to PDEs/SDEs (mainly in the options module). QFin now
+ contains a module called 'stochastics' which will be largely responsible for
+```
+
+### Comparing `QFin-0.1.20/README.md` & `QFin-0.1.21/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `QFin-0.1.20/setup.py` & `QFin-0.1.21/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ from setuptools import setup, find_packages
+ 
+ from os import path
+ this_directory = path.abspath(path.dirname(__file__))
+ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+     long_description = f.read()
+ 
+-VERSION = '0.1.20'
++VERSION = '0.1.21'
+ DESCRIPTION = 'A Python library for mathematical finance.'
+ 
+ # Setting up
+ setup(
+     name="QFin",
+     license='MIT',
+     version=VERSION,
+```
+

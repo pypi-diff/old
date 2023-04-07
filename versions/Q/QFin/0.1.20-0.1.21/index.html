@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/QFin-0.1.20.tar.gz tmp/QFin-0.1.21.tar.gz --html versions/Q/QFin/0.1.20-0.1.21/index.html --text versions/Q/QFin/0.1.20-0.1.21/diff.txt --markdown versions/Q/QFin/0.1.20-0.1.21/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.37 KB</span></div>
+  <div><span class="source">tmp/QFin-0.1.20.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/QFin-0.1.21.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">270 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist\QFin-0.1.2<del>0</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>14:3<del>7</del>:<del>23</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist\QFin-0.1.2<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>14:3<ins>8</ins>:<ins>38</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">7.06 KB</span></div>
+    <div><span class="source">QFin-0.1.20.tar</span> vs.</div>
+    <div id="QFin--.-.--.tar"><span class="source">QFin-0.1.21.tar</span>
+      <a class="anchor" href="#QFin--.-.--.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.13 KB</span></div>
+      <div id="QFin--.-.--.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#QFin--.-.--.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<del>7</del>:<del>23</del>.<del>892355</del><span class="dp">·</span>QFin-0.1.2<del>0</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<ins>8</ins>:<ins>38</ins>.<ins>276741</ins><span class="dp">·</span>QFin-0.1.2<ins>1</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16126<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<del>7</del>:<del>23</del>.<del>892355</del><span class="dp">·</span>QFin-0.1.2<del>0</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16126<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<ins>8</ins>:<ins>38</ins>.<ins>276741</ins><span class="dp">·</span>QFin-0.1.2<ins>1</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<del>7</del>:<del>23</del>.<del>881354</del><span class="dp">·</span>QFin-0.1.2<del>0</del>/QFin/</td><td class="diffline">3 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<ins>8</ins>:<ins>38</ins>.<ins>266741</ins><span class="dp">·</span>QFin-0.1.2<ins>1</ins>/QFin/</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>694<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:28:44.000000<span class="dp">·</span>QFin-0.1.2<del>0</del>/QFin/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>694<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:28:44.000000<span class="dp">·</span>QFin-0.1.2<ins>1</ins>/QFin/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7384<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:28:44.000000<span class="dp">·</span>QFin-0.1.2<del>0</del>/QFin/options.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7384<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:28:44.000000<span class="dp">·</span>QFin-0.1.2<ins>1</ins>/QFin/options.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20053<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:28:44.000000<span class="dp">·</span>QFin-0.1.2<del>0</del>/QFin/simulations.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20053<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:28:44.000000<span class="dp">·</span>QFin-0.1.2<ins>1</ins>/QFin/simulations.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>52</del>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<del>3</del>:<del>49</del>.000000<span class="dp">·</span>QFin-0.1.2<del>0</del>/QFin/stochastics.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>25</ins>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<ins>8</ins>:<ins>24</ins>.000000<span class="dp">·</span>QFin-0.1.2<ins>1</ins>/QFin/stochastics.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<del>7</del>:<del>23</del>.<del>891355</del><span class="dp">·</span>QFin-0.1.2<del>0</del>/QFin.egg-info/</td><td class="diffline">8 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<ins>8</ins>:<ins>38</ins>.<ins>275741</ins><span class="dp">·</span>QFin-0.1.2<ins>1</ins>/QFin.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16126<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<del>7</del>:<del>23</del>.000000<span class="dp">·</span>QFin-0.1.2<del>0</del>/QFin.egg-info/PKG-INFO</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16126<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<ins>8</ins>:<ins>38</ins>.000000<span class="dp">·</span>QFin-0.1.2<ins>1</ins>/QFin.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>230<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<del>7</del>:<del>23</del>.000000<span class="dp">·</span>QFin-0.1.2<del>0</del>/QFin.egg-info/SOURCES.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>230<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<ins>8</ins>:<ins>38</ins>.000000<span class="dp">·</span>QFin-0.1.2<ins>1</ins>/QFin.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<del>7</del>:<del>23</del>.000000<span class="dp">·</span>QFin-0.1.2<del>0</del>/QFin.egg-info/dependency_links.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<ins>8</ins>:<ins>38</ins>.000000<span class="dp">·</span>QFin-0.1.2<ins>1</ins>/QFin.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<del>7</del>:<del>23</del>.000000<span class="dp">·</span>QFin-0.1.2<del>0</del>/QFin.egg-info/requires.txt</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<ins>8</ins>:<ins>38</ins>.000000<span class="dp">·</span>QFin-0.1.2<ins>1</ins>/QFin.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<del>7</del>:<del>23</del>.000000<span class="dp">·</span>QFin-0.1.2<del>0</del>/QFin.egg-info/top_level.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<ins>8</ins>:<ins>38</ins>.000000<span class="dp">·</span>QFin-0.1.2<ins>1</ins>/QFin.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12786<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:36:11.000000<span class="dp">·</span>QFin-0.1.2<del>0</del>/README.md</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12786<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:36:11.000000<span class="dp">·</span>QFin-0.1.2<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<del>7</del>:<del>23</del>.<del>892355</del><span class="dp">·</span>QFin-0.1.2<del>0</del>/setup.cfg</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<ins>8</ins>:<ins>38</ins>.<ins>277741</ins><span class="dp">·</span>QFin-0.1.2<ins>1</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1082<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<del>6</del>:<del>57</del>.000000<span class="dp">·</span>QFin-0.1.2<del>0</del>/setup.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1082<span class="dp">·</span>2023-04-07<span class="dp">·</span>14:3<ins>8</ins>:<ins>34</ins>.000000<span class="dp">·</span>QFin-0.1.2<ins>1</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.14 KB</span></div>
+      <div><span class="source">QFin-0.1.20/PKG-INFO</span> vs.</div>
+      <div id="QFin--.-.--.tar---QFin--.-.---PKG-INFO"><span class="source">QFin-0.1.21/PKG-INFO</span>
+        <a class="anchor" href="#QFin--.-.--.tar---QFin--.-.---PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>QFin<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>QFin<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.2<del>0</del><em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.2<ins>1</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical<span class="dp">·</span>finance.<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical<span class="dp">·</span>finance.<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Roman<span class="dp">·</span>Paolucci<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Roman<span class="dp">·</span>Paolucci<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>&lt;romanmichaelpaolucci@gmail.com&gt;<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>&lt;romanmichaelpaolucci@gmail.com&gt;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>#<span class="dp">·</span>Q-Fin<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>#<span class="dp">·</span>Q-Fin<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical<span class="dp">·</span>finance.<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical<span class="dp">·</span>finance.<em>\xd</em></td></tr>
+</table>      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol">⊟</div>
+        <div><span class="diffsize">755 B</span></div>
+        <div id="QFin--.-.--.tar---QFin--.-.---PKG-INFO---html-text---"><span class="source">html2text {}</span>
+          <a class="anchor" href="#QFin--.-.--.tar---QFin--.-.---PKG-INFO---html-text---">¶</a>
+        </div>
+        </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>QFin<span class="dp">·</span>Version:<span class="dp">·</span>0.1.2<del>0</del><span class="dp">·</span>Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>QFin<span class="dp">·</span>Version:<span class="dp">·</span>0.1.2<ins>1</ins><span class="dp">·</span>Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">mathematical<span class="dp">·</span>finance.<span class="dp">·</span>Home-page:<span class="dp">·</span>UNKNOWN<span class="dp">·</span>Author:<span class="dp">·</span>Roman<span class="dp">·</span>Paolucci<span class="dp">·</span>Author-email:</td><td class="diffline">2 </td><td class="diffpresent">mathematical<span class="dp">·</span>finance.<span class="dp">·</span>Home-page:<span class="dp">·</span>UNKNOWN<span class="dp">·</span>Author:<span class="dp">·</span>Roman<span class="dp">·</span>Paolucci<span class="dp">·</span>Author-email:</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">gmail.com&gt;<span class="dp">·</span>License:<span class="dp">·</span>MIT<span class="dp">·</span>Description:<span class="dp">·</span>#<span class="dp">·</span>Q-Fin<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical</td><td class="diffline">3 </td><td class="diffpresent">gmail.com&gt;<span class="dp">·</span>License:<span class="dp">·</span>MIT<span class="dp">·</span>Description:<span class="dp">·</span>#<span class="dp">·</span>Q-Fin<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">finance.<span class="dp">·</span>##<span class="dp">·</span>Installation<span class="dp">·</span>https://pypi.org/project/QFin/<span class="dp">·</span>```<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>qfin</td><td class="diffline">4 </td><td class="diffpresent">finance.<span class="dp">·</span>##<span class="dp">·</span>Installation<span class="dp">·</span>https://pypi.org/project/QFin/<span class="dp">·</span>```<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>qfin</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">```<span class="dp">·</span>#<span class="dp">·</span>Version<span class="dp">·</span>&#x27;0.1.20&#x27;<span class="dp">·</span>QFin<span class="dp">·</span>is<span class="dp">·</span>being<span class="dp">·</span>reconstructed<span class="dp">·</span>to<span class="dp">·</span>leverage<span class="dp">·</span>more<span class="dp">·</span>principals</td><td class="diffline">5 </td><td class="diffpresent">```<span class="dp">·</span>#<span class="dp">·</span>Version<span class="dp">·</span>&#x27;0.1.20&#x27;<span class="dp">·</span>QFin<span class="dp">·</span>is<span class="dp">·</span>being<span class="dp">·</span>reconstructed<span class="dp">·</span>to<span class="dp">·</span>leverage<span class="dp">·</span>more<span class="dp">·</span>principals</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">of<span class="dp">·</span>object-oriented<span class="dp">·</span>programming.<span class="dp">·</span>Several<span class="dp">·</span>modules<span class="dp">·</span>in<span class="dp">·</span>this<span class="dp">·</span>version<span class="dp">·</span>are<span class="dp">·</span>deprecated</td><td class="diffline">6 </td><td class="diffpresent">of<span class="dp">·</span>object-oriented<span class="dp">·</span>programming.<span class="dp">·</span>Several<span class="dp">·</span>modules<span class="dp">·</span>in<span class="dp">·</span>this<span class="dp">·</span>version<span class="dp">·</span>are<span class="dp">·</span>deprecated</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">along<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>solutions<span class="dp">·</span>to<span class="dp">·</span>PDEs/SDEs<span class="dp">·</span>(mainly<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>options<span class="dp">·</span>module).<span class="dp">·</span>QFin<span class="dp">·</span>now</td><td class="diffline">7 </td><td class="diffpresent">along<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>solutions<span class="dp">·</span>to<span class="dp">·</span>PDEs/SDEs<span class="dp">·</span>(mainly<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>options<span class="dp">·</span>module).<span class="dp">·</span>QFin<span class="dp">·</span>now</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">contains<span class="dp">·</span>a<span class="dp">·</span>module<span class="dp">·</span>called<span class="dp">·</span>&#x27;stochastics&#x27;<span class="dp">·</span>which<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>largely<span class="dp">·</span>responsible<span class="dp">·</span>for</td><td class="diffline">8 </td><td class="diffpresent">contains<span class="dp">·</span>a<span class="dp">·</span>module<span class="dp">·</span>called<span class="dp">·</span>&#x27;stochastics&#x27;<span class="dp">·</span>which<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>largely<span class="dp">·</span>responsible<span class="dp">·</span>for</td></tr>
+</table>      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">QFin-0.1.20/QFin/__init__.py</span> vs.</div>
+      <div id="QFin--.-.--.tar---QFin--.-.---QFin-__init__.py"><span class="source">QFin-0.1.21/QFin/__init__.py</span>
+        <a class="anchor" href="#QFin--.-.--.tar---QFin--.-.---QFin-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">QFin-0.1.20/QFin/options.py</span> vs.</div>
+      <div id="QFin--.-.--.tar---QFin--.-.---QFin-options.py"><span class="source">QFin-0.1.21/QFin/options.py</span>
+        <a class="anchor" href="#QFin--.-.--.tar---QFin--.-.---QFin-options.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">QFin-0.1.20/QFin/simulations.py</span> vs.</div>
+      <div id="QFin--.-.--.tar---QFin--.-.---QFin-simulations.py"><span class="source">QFin-0.1.21/QFin/simulations.py</span>
+        <a class="anchor" href="#QFin--.-.--.tar---QFin--.-.---QFin-simulations.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">733 B</span></div>
+      <div><span class="source">QFin-0.1.20/QFin/stochastics.py</span> vs.</div>
+      <div id="QFin--.-.--.tar---QFin--.-.---QFin-stochastics.py"><span class="source">QFin-0.1.21/QFin/stochastics.py</span>
+        <a class="anchor" href="#QFin--.-.--.tar---QFin--.-.---QFin-stochastics.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 57, 22 lines modified</td><td colspan="2">Offset 57, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.path_characteristics<span class="dp">·</span>=<span class="dp">·</span>(paths,<span class="dp">·</span>n,<span class="dp">·</span>dt,<span class="dp">·</span>T)<em>\xd</em></td><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.path_characteristics<span class="dp">·</span>=<span class="dp">·</span>(paths,<span class="dp">·</span>n,<span class="dp">·</span>dt,<span class="dp">·</span>T)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">58 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>return<span class="dp">·</span>paths<span class="dp">·</span>and<span class="dp">·</span>path<span class="dp">·</span>characteristics<em>\xd</em></td><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>return<span class="dp">·</span>paths<span class="dp">·</span>and<span class="dp">·</span>path<span class="dp">·</span>characteristics<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>(paths,<span class="dp">·</span>n,<span class="dp">·</span>dt,<span class="dp">·</span>T)<em>\xd</em></td><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>(paths,<span class="dp">·</span>n,<span class="dp">·</span>dt,<span class="dp">·</span>T)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">61 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Calibration<span class="dp">·</span>cannot<span class="dp">·</span>be<span class="dp">·</span>conducted<span class="dp">·</span>due<span class="dp">·</span>to<span class="dp">·</span>flat<span class="dp">·</span>volatility<span class="dp">·</span>surface<em>\xd</em></td><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Calibration<span class="dp">·</span>cannot<span class="dp">·</span>be<span class="dp">·</span>conducted<span class="dp">·</span>due<span class="dp">·</span>to<span class="dp">·</span>flat<span class="dp">·</span>volatility<span class="dp">·</span>surface<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(self,<span class="dp">·</span>params)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:<em>\xd</em></td><td class="diffline">63 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(self,<span class="dp">·</span>params)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">64 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>super().__init__(params)<del>.</del></td><td class="diffline">64 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>super().__init__(params)</td></tr>
+<tr class="diffdeleted"><td class="diffline">65 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">66 </td><td class="diffpresent">abm<span class="dp">·</span>=<span class="dp">·</span>ArithmeticBrownianMotion([.3])<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">67 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">68 </td><td class="diffpresent">print(abm.vanilla_pricing(100,<span class="dp">·</span>99,<span class="dp">·</span>1,<span class="dp">·</span>&quot;CALL&quot;))<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">69 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">70 </td><td class="diffpresent">abm.simulate(100,<span class="dp">·</span>10000,<span class="dp">·</span>1/252,<span class="dp">·</span>1)<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">71 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">72 </td><td class="diffpresent">payoffs<span class="dp">·</span>=<span class="dp">·</span>[]<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">73 </td><td class="diffpresent">X<span class="dp">·</span>=<span class="dp">·</span>99<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">74 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">75 </td><td class="diffpresent">for<span class="dp">·</span>path<span class="dp">·</span>in<span class="dp">·</span>abm.path_characteristics[0]:<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>payoffs.append(max((path[-1]<span class="dp">·</span>-<span class="dp">·</span>X),<span class="dp">·</span>0))<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">77 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">78 </td><td class="diffpresent">print(np.average(payoffs))</td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.17 KB</span></div>
+      <div><span class="source">QFin-0.1.20/QFin.egg-info/PKG-INFO</span> vs.</div>
+      <div id="QFin--.-.--.tar---QFin--.-.---QFin.egg-info-PKG-INFO"><span class="source">QFin-0.1.21/QFin.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#QFin--.-.--.tar---QFin--.-.---QFin.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>QFin<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>QFin<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.2<del>0</del><em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.2<ins>1</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical<span class="dp">·</span>finance.<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical<span class="dp">·</span>finance.<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Roman<span class="dp">·</span>Paolucci<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Roman<span class="dp">·</span>Paolucci<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>&lt;romanmichaelpaolucci@gmail.com&gt;<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>&lt;romanmichaelpaolucci@gmail.com&gt;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>#<span class="dp">·</span>Q-Fin<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>#<span class="dp">·</span>Q-Fin<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical<span class="dp">·</span>finance.<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical<span class="dp">·</span>finance.<em>\xd</em></td></tr>
+</table>      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol">⊟</div>
+        <div><span class="diffsize">755 B</span></div>
+        <div id="QFin--.-.--.tar---QFin--.-.---QFin.egg-info-PKG-INFO---html-text---"><span class="source">html2text {}</span>
+          <a class="anchor" href="#QFin--.-.--.tar---QFin--.-.---QFin.egg-info-PKG-INFO---html-text---">¶</a>
+        </div>
+        </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>QFin<span class="dp">·</span>Version:<span class="dp">·</span>0.1.2<del>0</del><span class="dp">·</span>Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>QFin<span class="dp">·</span>Version:<span class="dp">·</span>0.1.2<ins>1</ins><span class="dp">·</span>Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">mathematical<span class="dp">·</span>finance.<span class="dp">·</span>Home-page:<span class="dp">·</span>UNKNOWN<span class="dp">·</span>Author:<span class="dp">·</span>Roman<span class="dp">·</span>Paolucci<span class="dp">·</span>Author-email:</td><td class="diffline">2 </td><td class="diffpresent">mathematical<span class="dp">·</span>finance.<span class="dp">·</span>Home-page:<span class="dp">·</span>UNKNOWN<span class="dp">·</span>Author:<span class="dp">·</span>Roman<span class="dp">·</span>Paolucci<span class="dp">·</span>Author-email:</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">gmail.com&gt;<span class="dp">·</span>License:<span class="dp">·</span>MIT<span class="dp">·</span>Description:<span class="dp">·</span>#<span class="dp">·</span>Q-Fin<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical</td><td class="diffline">3 </td><td class="diffpresent">gmail.com&gt;<span class="dp">·</span>License:<span class="dp">·</span>MIT<span class="dp">·</span>Description:<span class="dp">·</span>#<span class="dp">·</span>Q-Fin<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">finance.<span class="dp">·</span>##<span class="dp">·</span>Installation<span class="dp">·</span>https://pypi.org/project/QFin/<span class="dp">·</span>```<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>qfin</td><td class="diffline">4 </td><td class="diffpresent">finance.<span class="dp">·</span>##<span class="dp">·</span>Installation<span class="dp">·</span>https://pypi.org/project/QFin/<span class="dp">·</span>```<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>qfin</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">```<span class="dp">·</span>#<span class="dp">·</span>Version<span class="dp">·</span>&#x27;0.1.20&#x27;<span class="dp">·</span>QFin<span class="dp">·</span>is<span class="dp">·</span>being<span class="dp">·</span>reconstructed<span class="dp">·</span>to<span class="dp">·</span>leverage<span class="dp">·</span>more<span class="dp">·</span>principals</td><td class="diffline">5 </td><td class="diffpresent">```<span class="dp">·</span>#<span class="dp">·</span>Version<span class="dp">·</span>&#x27;0.1.20&#x27;<span class="dp">·</span>QFin<span class="dp">·</span>is<span class="dp">·</span>being<span class="dp">·</span>reconstructed<span class="dp">·</span>to<span class="dp">·</span>leverage<span class="dp">·</span>more<span class="dp">·</span>principals</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">of<span class="dp">·</span>object-oriented<span class="dp">·</span>programming.<span class="dp">·</span>Several<span class="dp">·</span>modules<span class="dp">·</span>in<span class="dp">·</span>this<span class="dp">·</span>version<span class="dp">·</span>are<span class="dp">·</span>deprecated</td><td class="diffline">6 </td><td class="diffpresent">of<span class="dp">·</span>object-oriented<span class="dp">·</span>programming.<span class="dp">·</span>Several<span class="dp">·</span>modules<span class="dp">·</span>in<span class="dp">·</span>this<span class="dp">·</span>version<span class="dp">·</span>are<span class="dp">·</span>deprecated</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">along<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>solutions<span class="dp">·</span>to<span class="dp">·</span>PDEs/SDEs<span class="dp">·</span>(mainly<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>options<span class="dp">·</span>module).<span class="dp">·</span>QFin<span class="dp">·</span>now</td><td class="diffline">7 </td><td class="diffpresent">along<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>solutions<span class="dp">·</span>to<span class="dp">·</span>PDEs/SDEs<span class="dp">·</span>(mainly<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>options<span class="dp">·</span>module).<span class="dp">·</span>QFin<span class="dp">·</span>now</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">contains<span class="dp">·</span>a<span class="dp">·</span>module<span class="dp">·</span>called<span class="dp">·</span>&#x27;stochastics&#x27;<span class="dp">·</span>which<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>largely<span class="dp">·</span>responsible<span class="dp">·</span>for</td><td class="diffline">8 </td><td class="diffpresent">contains<span class="dp">·</span>a<span class="dp">·</span>module<span class="dp">·</span>called<span class="dp">·</span>&#x27;stochastics&#x27;<span class="dp">·</span>which<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>largely<span class="dp">·</span>responsible<span class="dp">·</span>for</td></tr>
+</table>      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">QFin-0.1.20/README.md</span> vs.</div>
+      <div id="QFin--.-.--.tar---QFin--.-.---README.md"><span class="source">QFin-0.1.21/README.md</span>
+        <a class="anchor" href="#QFin--.-.--.tar---QFin--.-.---README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">531 B</span></div>
+      <div><span class="source">QFin-0.1.20/setup.py</span> vs.</div>
+      <div id="QFin--.-.--.tar---QFin--.-.---setup.py"><span class="source">QFin-0.1.21/setup.py</span>
+        <a class="anchor" href="#QFin--.-.--.tar---QFin--.-.---setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>os<span class="dp">·</span>import<span class="dp">·</span>path<em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>os<span class="dp">·</span>import<span class="dp">·</span>path<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">this_directory<span class="dp">·</span>=<span class="dp">·</span>path.abspath(path.dirname(__file__))<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">this_directory<span class="dp">·</span>=<span class="dp">·</span>path.abspath(path.dirname(__file__))<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">with<span class="dp">·</span>open(path.join(this_directory,<span class="dp">·</span>&#x27;README.md&#x27;),<span class="dp">·</span>encoding=&#x27;utf-8&#x27;)<span class="dp">·</span>as<span class="dp">·</span>f:<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">with<span class="dp">·</span>open(path.join(this_directory,<span class="dp">·</span>&#x27;README.md&#x27;),<span class="dp">·</span>encoding=&#x27;utf-8&#x27;)<span class="dp">·</span>as<span class="dp">·</span>f:<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>f.read()<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>f.read()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.1.2<del>0</del>&#x27;<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.1.2<ins>1</ins>&#x27;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&#x27;A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical<span class="dp">·</span>finance.&#x27;<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&#x27;A<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>mathematical<span class="dp">·</span>finance.&#x27;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">#<span class="dp">·</span>Setting<span class="dp">·</span>up<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent">#<span class="dp">·</span>Setting<span class="dp">·</span>up<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">setup(<em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent">setup(<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;QFin&quot;,<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;QFin&quot;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;MIT&#x27;,<em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;MIT&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=VERSION,<em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=VERSION,<em>\xd</em></td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

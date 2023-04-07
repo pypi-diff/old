@@ -1,0 +1,416 @@
+# Comparing `tmp/imio.news.policy-1.1.2.tar.gz` & `tmp/imio.news.policy-1.1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/imio.news.policy-1.1.2.tar", last modified: Thu Jan 12 09:22:22 2023, max compression
++gzip compressed data, was "imio.news.policy-1.1.3.tar", last modified: Fri Apr  7 14:32:00 2023, max compression
+```
+
+## Comparing `imio.news.policy-1.1.2.tar` & `imio.news.policy-1.1.3.tar`
+
+### file list
+
+```diff
+@@ -1,78 +1,79 @@
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/docs/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     7990 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/docs/conf.py
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       79 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/docs/index.rst
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      520 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/DEVELOP.rst
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     4971 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/PKG-INFO
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       80 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/CONTRIBUTORS.rst
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     1979 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/README.rst
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      787 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/CHANGES.rst
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       61 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/MANIFEST.in
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     2598 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/setup.py
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      667 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/LICENSE.rst
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      518 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/setup.cfg
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       80 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/__init__.py
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       80 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/__init__.py
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     1640 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/testing.py
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      375 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/interfaces.py
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     1029 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/setuphandlers.py
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/tests/
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/tests/robot/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     1995 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/tests/robot/test_example.robot
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/tests/__init__.py
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     2008 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/tests/test_setup.py
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      943 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/tests/test_robot.py
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/uninstall/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      193 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/uninstall/browserlayer.xml
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/types/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      216 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/types/News_Item.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      215 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/types/Document.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      186 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/types/Plone_site.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      212 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/types/Event.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      355 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/types/Image.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      437 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/types/File.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      217 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/types/Collection.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      211 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/types/Link.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      213 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/types/Folder.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      695 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/metadata.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      167 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/viewlets.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      173 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/browserlayer.xml
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/registry/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     7954 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/registry/autopublishing.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     2823 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/registry/caching.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      314 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/registry/news.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      233 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/subscribers.zcml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      198 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/utils.py
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      260 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/permissions.zcml
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/upgrades/
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/upgrades/profiles/
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/upgrades/profiles/1001_to_1002/
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/upgrades/profiles/1001_to_1002/registry/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     7954 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/upgrades/profiles/1001_to_1002/registry/autopublishing.xml
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/upgrades/profiles/1000_to_1001/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      310 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/upgrades/profiles/1000_to_1001/browserlayer.xml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/upgrades/__init__.py
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     1543 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/upgrades/configure.zcml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       46 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/__init__.py
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/browser/
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/browser/static/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/browser/static/.gitkeep
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/browser/overrides/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/browser/overrides/.gitkeep
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/browser/__init__.py
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      578 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/browser/configure.zcml
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     1891 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio/news/policy/configure.zcml
+-drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio.news.policy.egg-info/
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        5 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio.news.policy.egg-info/top_level.txt
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     4971 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio.news.policy.egg-info/PKG-INFO
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        1 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio.news.policy.egg-info/dependency_links.txt
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      371 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio.news.policy.egg-info/requires.txt
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       15 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio.news.policy.egg-info/namespace_packages.txt
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     2248 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio.news.policy.egg-info/SOURCES.txt
+--rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        1 2023-01-12 09:22:22.000000 imio.news.policy-1.1.2/src/imio.news.policy.egg-info/not-zip-safe
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.011000 imio.news.policy-1.1.3/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      918 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/CHANGES.rst
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       80 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/CONTRIBUTORS.rst
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      520 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/DEVELOP.rst
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)    18092 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/LICENSE.GPL
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      667 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/LICENSE.rst
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       61 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/MANIFEST.in
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     3983 2023-04-07 14:32:00.011000 imio.news.policy-1.1.3/PKG-INFO
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     1979 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/README.rst
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/docs/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     7990 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/docs/conf.py
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       79 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/docs/index.rst
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      518 2023-04-07 14:32:00.011000 imio.news.policy-1.1.3/setup.cfg
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     2636 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/setup.py
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/imio/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       80 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/__init__.py
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/imio/news/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       80 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/__init__.py
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/imio/news/policy/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       46 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/__init__.py
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/imio/news/policy/browser/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/browser/__init__.py
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      578 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/browser/configure.zcml
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/imio/news/policy/browser/overrides/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/browser/overrides/.gitkeep
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/imio/news/policy/browser/static/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/browser/static/.gitkeep
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     1942 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/configure.zcml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      375 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/interfaces.py
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      260 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/permissions.zcml
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/imio/news/policy/profiles/
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      173 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/browserlayer.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      767 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/metadata.xml
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/registry/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     7954 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/registry/autopublishing.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     2823 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/registry/caching.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      314 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/registry/news.xml
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.011000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/types/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      217 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/types/Collection.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      215 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/types/Document.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      212 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/types/Event.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      437 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/types/File.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      213 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/types/Folder.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      355 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/types/Image.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      211 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/types/Link.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      216 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/types/News_Item.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      186 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/types/Plone_site.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      167 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/viewlets.xml
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.011000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/uninstall/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      193 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/profiles/uninstall/browserlayer.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     1029 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/setuphandlers.py
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      233 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/subscribers.zcml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     1639 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/testing.py
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.011000 imio.news.policy-1.1.3/src/imio/news/policy/tests/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/tests/__init__.py
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.011000 imio.news.policy-1.1.3/src/imio/news/policy/tests/robot/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     1995 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/tests/robot/test_example.robot
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      943 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/tests/test_robot.py
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     2007 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/tests/test_setup.py
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.011000 imio.news.policy-1.1.3/src/imio/news/policy/upgrades/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/upgrades/__init__.py
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     1543 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/upgrades/configure.zcml
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/imio/news/policy/upgrades/profiles/
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.011000 imio.news.policy-1.1.3/src/imio/news/policy/upgrades/profiles/1000_to_1001/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      310 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/upgrades/profiles/1000_to_1001/browserlayer.xml
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/imio/news/policy/upgrades/profiles/1001_to_1002/
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.011000 imio.news.policy-1.1.3/src/imio/news/policy/upgrades/profiles/1001_to_1002/registry/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     7954 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/upgrades/profiles/1001_to_1002/registry/autopublishing.xml
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      198 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio/news/policy/utils.py
++drwxrwxr-x   0 cboulanger  (1000) cboulanger  (1000)        0 2023-04-07 14:32:00.006999 imio.news.policy-1.1.3/src/imio.news.policy.egg-info/
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     3983 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio.news.policy.egg-info/PKG-INFO
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)     2260 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio.news.policy.egg-info/SOURCES.txt
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        1 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio.news.policy.egg-info/dependency_links.txt
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)       15 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio.news.policy.egg-info/namespace_packages.txt
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        1 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio.news.policy.egg-info/not-zip-safe
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)      398 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio.news.policy.egg-info/requires.txt
++-rw-rw-r--   0 cboulanger  (1000) cboulanger  (1000)        5 2023-04-07 14:31:59.000000 imio.news.policy-1.1.3/src/imio.news.policy.egg-info/top_level.txt
+```
+
+### filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-POSIX tar archive (GNU)
++POSIX tar archive
+```
+
+### Comparing `imio.news.policy-1.1.2/docs/conf.py` & `imio.news.policy-1.1.3/docs/conf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/DEVELOP.rst` & `imio.news.policy-1.1.3/DEVELOP.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/README.rst` & `imio.news.policy-1.1.3/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/CHANGES.rst` & `imio.news.policy-1.1.3/CHANGES.rst`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,11 +1,21 @@
+ Changelog
+ =========
+ 
+ 
++1.1.3 (2023-04-07)
++------------------
++
++- Add module : collective.messagesviewlet
++  [boulch]
++
++- Migrate to Plone 6.0.2
++  [boulch]
++
++
+ 1.1.2 (2023-01-12)
+ ------------------
+ 
+ - Install and configure autopublishing (with 15 min tick subscriber)
+   [boulch]
+ 
+ - Remove obsolete TinyMCE override
+```
+
+### Comparing `imio.news.policy-1.1.2/setup.py` & `imio.news.policy-1.1.3/setup.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -12,15 +12,15 @@
+         open("CHANGES.rst").read(),
+     ]
+ )
+ 
+ 
+ setup(
+     name="imio.news.policy",
+-    version="1.1.2",
++    version="1.1.3",
+     description="Policies to setup imio.news",
+     long_description=long_description,
+     # Get more from https://pypi.org/classifiers/
+     classifiers=[
+         "Environment :: Web Environment",
+         "Framework :: Plone",
+         "Framework :: Plone :: Addon",
+@@ -53,14 +53,15 @@
+         # -*- Extra requirements: -*-
+         "z3c.jbot",
+         "plone.api>=1.8.4",
+         "plone.restapi",
+         "plone.app.dexterity",
+         "collective.autopublishing",
+         "collective.big.bang",
++        "collective.messagesviewlet",
+         "collective.js.jqueryui",  # TODO : plone6 : remove
+         "collective.solr",
+         "collective.z3cform.select2",
+         "eea.facetednavigation",
+         "pas.plugins.imio",
+         "imio.gdpr",
+         "imio.news.core",
+```
+
+### Comparing `imio.news.policy-1.1.2/LICENSE.rst` & `imio.news.policy-1.1.3/LICENSE.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/setup.cfg` & `imio.news.policy-1.1.3/setup.cfg`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/testing.py` & `imio.news.policy-1.1.3/src/imio/news/policy/testing.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -10,15 +10,14 @@
+ from plone.testing import z2
+ from zope.globalrequest import setRequest
+ 
+ import imio.news.policy
+ 
+ 
+ class ImioNewsPolicyLayer(PloneSandboxLayer):
+-
+     defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE,)
+ 
+     def setUpZope(self, app, configurationContext):
+         # Load any other ZCML that is required for your tests.
+         # The z3c.autoinclude feature is disabled in the Plone fixture base
+         # layer.
+         import plone.restapi
+```
+
+### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/setuphandlers.py` & `imio.news.policy-1.1.3/src/imio/news/policy/setuphandlers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/tests/robot/test_example.robot` & `imio.news.policy-1.1.3/src/imio/news/policy/tests/robot/test_example.robot`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/tests/test_setup.py` & `imio.news.policy-1.1.3/src/imio/news/policy/tests/test_setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -27,15 +27,14 @@
+         from imio.news.policy.interfaces import IImioNewsPolicyLayer
+         from plone.browserlayer import utils
+ 
+         self.assertIn(IImioNewsPolicyLayer, utils.registered_layers())
+ 
+ 
+ class TestUninstall(unittest.TestCase):
+-
+     layer = IMIO_NEWS_POLICY_INTEGRATION_TESTING
+ 
+     def setUp(self):
+         self.portal = self.layer["portal"]
+         self.installer = get_installer(self.portal, self.layer["request"])
+         roles_before = api.user.get_roles(TEST_USER_ID)
+         setRoles(self.portal, TEST_USER_ID, ["Manager"])
+```
+
+### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/tests/test_robot.py` & `imio.news.policy-1.1.3/src/imio/news/policy/tests/test_robot.py`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/metadata.xml` & `imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/metadata.xml`
+
+ * *Files 10% similar despite different names*
+
+#### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/metadata.xml` & `imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/metadata.xml`
+
+```diff
+@@ -3,13 +3,14 @@
+   <version>1002</version>
+   <dependencies>
+     <dependency>profile-plone.app.contenttypes:plone-content</dependency>
+     <dependency>profile-plone.app.caching:default</dependency>
+     <dependency>profile-plone.restapi:default</dependency>
+     <dependency>profile-pas.plugins.imio:default</dependency>
+     <dependency>profile-collective.autopublishing:default</dependency>
++    <dependency>profile-collective.messagesviewlet:default</dependency>
+     <dependency>profile-collective.solr:default</dependency>
+     <dependency>profile-eea.facetednavigation:default</dependency>
+     <dependency>profile-imio.gdpr:default</dependency>
+     <dependency>profile-imio.news.core:default</dependency>
+   </dependencies>
+ </metadata>
+```
+
+### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/registry/autopublishing.xml` & `imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/registry/autopublishing.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/profiles/default/registry/caching.xml` & `imio.news.policy-1.1.3/src/imio/news/policy/profiles/default/registry/caching.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/upgrades/profiles/1001_to_1002/registry/autopublishing.xml` & `imio.news.policy-1.1.3/src/imio/news/policy/upgrades/profiles/1001_to_1002/registry/autopublishing.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/upgrades/configure.zcml` & `imio.news.policy-1.1.3/src/imio/news/policy/upgrades/configure.zcml`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/browser/configure.zcml` & `imio.news.policy-1.1.3/src/imio/news/policy/browser/configure.zcml`
+
+ * *Files identical despite different names*
+
+### Comparing `imio.news.policy-1.1.2/src/imio/news/policy/configure.zcml` & `imio.news.policy-1.1.3/src/imio/news/policy/configure.zcml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -10,14 +10,15 @@
+   <include package="imio.news.core" />
+ 
+   <include package="plone.app.caching" />
+   <include package="plone.restapi" />
+   <include package="collective.autopublishing" />
+   <include package="collective.big.bang" />
+   <include package="collective.js.jqueryui" />
++  <include package="collective.messagesviewlet" />
+   <include package="collective.solr" />
+   <include package="collective.z3cform.select2.widget" file="adapters.zcml" />
+   <include package="eea.facetednavigation" />
+   <include package="pas.plugins.imio" />
+   <include package="imio.gdpr" />
+ 
+   <include file="permissions.zcml" />
+```
+
+### Comparing `imio.news.policy-1.1.2/src/imio.news.policy.egg-info/SOURCES.txt` & `imio.news.policy-1.1.3/src/imio.news.policy.egg-info/SOURCES.txt`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,11 @@
+ CHANGES.rst
+ CONTRIBUTORS.rst
+ DEVELOP.rst
++LICENSE.GPL
+ LICENSE.rst
+ MANIFEST.in
+ README.rst
+ setup.cfg
+ setup.py
+ docs/conf.py
+ docs/index.rst
+```
+
