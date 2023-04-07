@@ -1,0 +1,207 @@
+# Comparing `tmp/pylinalg-0.3.2.tar.gz` & `tmp/pylinalg-0.3.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pylinalg-0.3.2.tar", max compression
++gzip compressed data, was "pylinalg-0.3.3.tar", max compression
+```
+
+## Comparing `pylinalg-0.3.2.tar` & `pylinalg-0.3.3.tar`
+
+### file list
+
+```diff
+@@ -1,12 +1,12 @@
+--rw-r--r--   0        0        0     1077 2023-03-21 08:38:04.213286 pylinalg-0.3.2/LICENSE
+--rw-r--r--   0        0        0      142 2023-03-21 08:38:04.213286 pylinalg-0.3.2/README.md
+--rw-r--r--   0        0        0      191 2023-03-21 08:38:04.217285 pylinalg-0.3.2/pylinalg/__init__.py
+--rw-r--r--   0        0        0      216 2023-03-21 08:38:04.217285 pylinalg-0.3.2/pylinalg/func/__init__.py
+--rw-r--r--   0        0        0    19557 2023-03-21 08:38:04.217285 pylinalg-0.3.2/pylinalg/func/matrix.py
+--rw-r--r--   0        0        0     3303 2023-03-21 08:38:04.217285 pylinalg-0.3.2/pylinalg/func/misc.py
+--rw-r--r--   0        0        0     7277 2023-03-21 08:38:04.217285 pylinalg-0.3.2/pylinalg/func/quaternion.py
+--rw-r--r--   0        0        0    14703 2023-03-21 08:38:04.217285 pylinalg-0.3.2/pylinalg/func/vector.py
+--rw-r--r--   0        0        0        0 2023-03-21 08:38:04.217285 pylinalg-0.3.2/pylinalg/obj/__init__.py
+--rw-r--r--   0        0        0      761 2023-03-21 08:38:04.217285 pylinalg-0.3.2/pyproject.toml
+--rw-r--r--   0        0        0      822 1970-01-01 00:00:00.000000 pylinalg-0.3.2/setup.py
+--rw-r--r--   0        0        0      751 1970-01-01 00:00:00.000000 pylinalg-0.3.2/PKG-INFO
++-rw-r--r--   0        0        0     1077 2023-04-07 11:06:26.891140 pylinalg-0.3.3/LICENSE
++-rw-r--r--   0        0        0      142 2023-04-07 11:06:26.891140 pylinalg-0.3.3/README.md
++-rw-r--r--   0        0        0      191 2023-04-07 11:06:26.891140 pylinalg-0.3.3/pylinalg/__init__.py
++-rw-r--r--   0        0        0      216 2023-04-07 11:06:26.891140 pylinalg-0.3.3/pylinalg/func/__init__.py
++-rw-r--r--   0        0        0    20035 2023-04-07 11:06:26.891140 pylinalg-0.3.3/pylinalg/func/matrix.py
++-rw-r--r--   0        0        0     3303 2023-04-07 11:06:26.891140 pylinalg-0.3.3/pylinalg/func/misc.py
++-rw-r--r--   0        0        0     7277 2023-04-07 11:06:26.891140 pylinalg-0.3.3/pylinalg/func/quaternion.py
++-rw-r--r--   0        0        0    15026 2023-04-07 11:06:26.891140 pylinalg-0.3.3/pylinalg/func/vector.py
++-rw-r--r--   0        0        0        0 2023-04-07 11:06:26.891140 pylinalg-0.3.3/pylinalg/obj/__init__.py
++-rw-r--r--   0        0        0      761 2023-04-07 11:06:26.891140 pylinalg-0.3.3/pyproject.toml
++-rw-r--r--   0        0        0      822 1970-01-01 00:00:00.000000 pylinalg-0.3.3/setup.py
++-rw-r--r--   0        0        0      751 1970-01-01 00:00:00.000000 pylinalg-0.3.3/PKG-INFO
+```
+
+### Comparing `pylinalg-0.3.2/LICENSE` & `pylinalg-0.3.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pylinalg-0.3.2/pylinalg/func/matrix.py` & `pylinalg-0.3.3/pylinalg/func/matrix.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -470,14 +470,24 @@
+     dtype : data-type, optional
+         Overrides the data type of the result.
+ 
+     Returns
+     -------
+     matrix : ndarray, [4, 4]
+         orthographic projection matrix
++
++    Notes
++    -----
++    The parameters to this function are given in a left-handed frame that is
++    obtained by mirroring source's Z-axis at the origin. In other words, if the
++    returned matrix represents a camera's projection matrix then this function's
++    parameters are given in a frame that is like the camera's local frame except
++    that it's Z-axis is inverted. This means that positive values for `near` and
++    `far` refer to a negative Z values in camera local.
++
+     """
+ 
+     left = np.asarray(left, dtype=float)
+     right = np.asarray(right, dtype=float)
+     top = np.asarray(top, dtype=float)
+     bottom = np.asarray(bottom, dtype=float)
+     far = np.asarray(far, dtype=float)
+```
+
+### Comparing `pylinalg-0.3.2/pylinalg/func/misc.py` & `pylinalg-0.3.3/pylinalg/func/misc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pylinalg-0.3.2/pylinalg/func/quaternion.py` & `pylinalg-0.3.3/pylinalg/func/quaternion.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pylinalg-0.3.2/pylinalg/func/vector.py` & `pylinalg-0.3.3/pylinalg/func/vector.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -135,34 +135,45 @@
+     dtype : data-type, optional
+         Overrides the data type of the result.
+ 
+     Returns
+     -------
+     projected_vector : ndarray, [3]
+         The unprojected vector in 3D space
++
++    Notes
++    -----
++    The source frame of this operation is the XY-plane of the camera's NDC frame
++    and the target frame is the camera's local frame.
+     """
+ 
+     vector = np.asarray(vector, dtype=float)
+     matrix = np.asarray(matrix, dtype=float)
+     depth = np.asarray(depth, dtype=float)
+ 
++    result_shape = np.broadcast_shapes(
++        vector.shape[:-1], matrix.shape[:-2], depth.shape
++    )
++
+     if out is None:
+-        out = np.empty((*vector.shape[:-1], 3), dtype=dtype)
++        out = np.empty((*result_shape, 3), dtype=dtype)
+ 
+     try:
+         inverse_projection = np.linalg.inv(matrix)
+     except np.linalg.LinAlgError:
+         raise ValueError("The provided matrix is not invertible.")
+ 
+-    vector_hom = np.empty((*vector.shape[:-1], 4), dtype=dtype)
+-    vector_hom[..., 0] = depth
+-    vector_hom[..., [1, 2]] = vector
+-    vector_hom[..., 3] = 0
+-
+-    out[:] = (inverse_projection @ vector_hom)[..., :-1]
++    vector_hom = np.empty((*result_shape, 4), dtype=dtype)
++    vector_hom[..., 2] = depth
++    vector_hom[..., [0, 1]] = vector
++    vector_hom[..., 3] = 1
++
++    out_hom = vector_hom @ inverse_projection.T
++    scale = out_hom[..., -1][..., None]
++    out[:] = (out_hom / scale)[..., :-1]
+ 
+     return out
+ 
+ 
+ def vector_apply_quaternion(vector, quaternion, /, *, out=None, dtype=None):
+     """Rotate a vector using a quaternion.
+```
+
+### Comparing `pylinalg-0.3.2/pyproject.toml` & `pylinalg-0.3.3/pyproject.toml`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "pylinalg"
+-version = "0.3.2"
++version = "0.3.3"
+ description = "Linear algebra utilities for Python"
+ authors = ["Korijn van Golen <korijn@gmail.com>"]
+ license = "MIT"
+ homepage = "https://github.com/pygfx/pylinalg"
+ readme = "README.md"
+ 
+ [tool.poetry.dependencies]
+```
+
+### Comparing `pylinalg-0.3.2/setup.py` & `pylinalg-0.3.3/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -8,15 +8,15 @@
+ {'': ['*']}
+ 
+ install_requires = \
+ ['numpy>=1.20.0']
+ 
+ setup_kwargs = {
+     'name': 'pylinalg',
+-    'version': '0.3.2',
++    'version': '0.3.3',
+     'description': 'Linear algebra utilities for Python',
+     'long_description': '[![PyPI version](https://badge.fury.io/py/pylinalg.svg)](https://badge.fury.io/py/pylinalg)\n\n# pylinalg\n\nLinear algebra utilities for Python.\n',
+     'author': 'Korijn van Golen',
+     'author_email': 'korijn@gmail.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'https://github.com/pygfx/pylinalg',
+```
+
+### Comparing `pylinalg-0.3.2/PKG-INFO` & `pylinalg-0.3.3/PKG-INFO`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pylinalg
+-Version: 0.3.2
++Version: 0.3.3
+ Summary: Linear algebra utilities for Python
+ Home-page: https://github.com/pygfx/pylinalg
+ License: MIT
+ Author: Korijn van Golen
+ Author-email: korijn@gmail.com
+ Requires-Python: >=3.8
+ Classifier: License :: OSI Approved :: MIT License
+```
+

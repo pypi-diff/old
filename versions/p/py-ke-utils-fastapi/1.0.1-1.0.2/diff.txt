@@ -1,0 +1,70 @@
+--- tmp/py-ke-utils-fastapi-1.0.1.tar.gz
++++ tmp/py-ke-utils-fastapi-1.0.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "py-ke-utils-fastapi-1.0.1.tar", last modified: Thu Mar 23 08:27:30 2023, max compression
+│ +gzip compressed data, was "py-ke-utils-fastapi-1.0.2.tar", last modified: Fri Apr  7 11:07:40 2023, max compression
+│   --- py-ke-utils-fastapi-1.0.1.tar
+├── +++ py-ke-utils-fastapi-1.0.2.tar
+│ ├── file list
+│ │ @@ -1,13 +1,13 @@
+│ │ -drwxr-xr-x   0 erne      (1000) erne      (1000)        0 2023-03-23 08:27:30.195169 py-ke-utils-fastapi-1.0.1/
+│ │ --rw-r--r--   0 erne      (1000) erne      (1000)      487 2023-03-23 08:27:30.195169 py-ke-utils-fastapi-1.0.1/PKG-INFO
+│ │ -drwxr-xr-x   0 erne      (1000) erne      (1000)        0 2023-03-23 08:27:30.185169 py-ke-utils-fastapi-1.0.1/py_ke_utils_fastapi.egg-info/
+│ │ --rw-r--r--   0 erne      (1000) erne      (1000)      487 2023-03-23 08:27:29.000000 py-ke-utils-fastapi-1.0.1/py_ke_utils_fastapi.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 erne      (1000) erne      (1000)      282 2023-03-23 08:27:29.000000 py-ke-utils-fastapi-1.0.1/py_ke_utils_fastapi.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 erne      (1000) erne      (1000)        1 2023-03-23 08:27:29.000000 py-ke-utils-fastapi-1.0.1/py_ke_utils_fastapi.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 erne      (1000) erne      (1000)       21 2023-03-23 08:27:29.000000 py-ke-utils-fastapi-1.0.1/py_ke_utils_fastapi.egg-info/requires.txt
+│ │ --rw-r--r--   0 erne      (1000) erne      (1000)       17 2023-03-23 08:27:29.000000 py-ke-utils-fastapi-1.0.1/py_ke_utils_fastapi.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 erne      (1000) erne      (1000)        0 2023-03-23 08:27:30.195169 py-ke-utils-fastapi-1.0.1/pykeutilsfastapi/
+│ │ --rw-r--r--   0 erne      (1000) erne      (1000)       49 2023-03-23 08:27:00.000000 py-ke-utils-fastapi-1.0.1/pykeutilsfastapi/__init__.py
+│ │ --rw-r--r--   0 erne      (1000) erne      (1000)     5567 2023-03-23 08:20:48.000000 py-ke-utils-fastapi-1.0.1/pykeutilsfastapi/_auth_deco.py
+│ │ --rw-r--r--   0 erne      (1000) erne      (1000)       38 2023-03-23 08:27:30.195169 py-ke-utils-fastapi-1.0.1/setup.cfg
+│ │ --rwxrwxrwx   0 erne      (1000) erne      (1000)      681 2023-03-23 08:27:11.000000 py-ke-utils-fastapi-1.0.1/setup.py
+│ │ +drwxr-xr-x   0 erne      (1000) erne      (1000)        0 2023-04-07 11:07:40.807410 py-ke-utils-fastapi-1.0.2/
+│ │ +-rw-r--r--   0 erne      (1000) erne      (1000)      487 2023-04-07 11:07:40.807410 py-ke-utils-fastapi-1.0.2/PKG-INFO
+│ │ +drwxr-xr-x   0 erne      (1000) erne      (1000)        0 2023-04-07 11:07:40.807410 py-ke-utils-fastapi-1.0.2/py_ke_utils_fastapi.egg-info/
+│ │ +-rw-r--r--   0 erne      (1000) erne      (1000)      487 2023-04-07 11:07:40.000000 py-ke-utils-fastapi-1.0.2/py_ke_utils_fastapi.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 erne      (1000) erne      (1000)      282 2023-04-07 11:07:40.000000 py-ke-utils-fastapi-1.0.2/py_ke_utils_fastapi.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 erne      (1000) erne      (1000)        1 2023-04-07 11:07:40.000000 py-ke-utils-fastapi-1.0.2/py_ke_utils_fastapi.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 erne      (1000) erne      (1000)       21 2023-04-07 11:07:40.000000 py-ke-utils-fastapi-1.0.2/py_ke_utils_fastapi.egg-info/requires.txt
+│ │ +-rw-r--r--   0 erne      (1000) erne      (1000)       17 2023-04-07 11:07:40.000000 py-ke-utils-fastapi-1.0.2/py_ke_utils_fastapi.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 erne      (1000) erne      (1000)        0 2023-04-07 11:07:40.807410 py-ke-utils-fastapi-1.0.2/pykeutilsfastapi/
+│ │ +-rw-r--r--   0 erne      (1000) erne      (1000)       49 2023-03-23 08:27:00.000000 py-ke-utils-fastapi-1.0.2/pykeutilsfastapi/__init__.py
+│ │ +-rw-r--r--   0 erne      (1000) erne      (1000)     5538 2023-04-07 11:07:11.000000 py-ke-utils-fastapi-1.0.2/pykeutilsfastapi/_auth_deco.py
+│ │ +-rw-r--r--   0 erne      (1000) erne      (1000)       38 2023-04-07 11:07:40.807410 py-ke-utils-fastapi-1.0.2/setup.cfg
+│ │ +-rwxrwxrwx   0 erne      (1000) erne      (1000)      681 2023-04-07 11:07:11.000000 py-ke-utils-fastapi-1.0.2/setup.py
+│ │   --- py-ke-utils-fastapi-1.0.1/pykeutilsfastapi/_auth_deco.py
+│ ├── +++ py-ke-utils-fastapi-1.0.2/pykeutilsfastapi/_auth_deco.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -110,15 +110,14 @@
+│ │              redis_client.close()
+│ │              raise HTTPException(
+│ │                  status_code=504,
+│ │                  detail="Gateway Timeout")
+│ │          redis_client.close()
+│ │      except redis.exceptions.ConnectionError:
+│ │          logging.error("Redis refused to connect.")
+│ │ -        redis_client.close()
+│ │          raise HTTPException(
+│ │              status_code=502,
+│ │              detail="Bad Gateway")
+│ │  
+│ │  
+│ │  def _transform_dict(data, new_token: str = "", new_id: str = "") -> dict:
+│ │      """
+│ │   --- py-ke-utils-fastapi-1.0.1/setup.py
+│ ├── +++ py-ke-utils-fastapi-1.0.2/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │ -VERSION = "1.0.1"
+│ │ +VERSION = "1.0.2"
+│ │  DESCRIPTION = "Utilities with FastAPI"
+│ │  
+│ │  # Setting up
+│ │  setup(
+│ │      name="py-ke-utils-fastapi",
+│ │      version=VERSION,
+│ │      author="KE",

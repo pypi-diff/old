@@ -1,0 +1,322 @@
+--- tmp/prompt-horizon-0.1.1.tar.gz
++++ tmp/prompt-horizon-0.1.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "prompt-horizon-0.1.1.tar", last modified: Thu Apr  6 21:12:40 2023, max compression
+│ +gzip compressed data, was "prompt-horizon-0.1.2.tar", last modified: Fri Apr  7 11:13:45 2023, max compression
+│   --- prompt-horizon-0.1.1.tar
+├── +++ prompt-horizon-0.1.2.tar
+│ ├── file list
+│ │ @@ -1,20 +1,20 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 21:12:40.222995 prompt-horizon-0.1.1/
+│ │ --rw-rw-rw-   0        0        0     1098 2023-04-06 09:13:09.000000 prompt-horizon-0.1.1/LICENSE
+│ │ --rw-rw-rw-   0        0        0     3916 2023-04-06 21:12:40.221996 prompt-horizon-0.1.1/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     3109 2023-04-06 21:08:54.000000 prompt-horizon-0.1.1/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 21:12:40.199994 prompt-horizon-0.1.1/prompt_horizon/
+│ │ --rw-rw-rw-   0        0        0        0 2023-04-06 09:27:11.000000 prompt-horizon-0.1.1/prompt_horizon/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1841 2023-04-06 13:26:55.000000 prompt-horizon-0.1.1/prompt_horizon/anonymizer.py
+│ │ --rw-rw-rw-   0        0        0     1549 2023-04-06 17:37:27.000000 prompt-horizon-0.1.1/prompt_horizon/de_anonymizer.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 21:12:40.209994 prompt-horizon-0.1.1/prompt_horizon.egg-info/
+│ │ --rw-rw-rw-   0        0        0     3916 2023-04-06 21:12:40.000000 prompt-horizon-0.1.1/prompt_horizon.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      370 2023-04-06 21:12:40.000000 prompt-horizon-0.1.1/prompt_horizon.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 21:12:40.000000 prompt-horizon-0.1.1/prompt_horizon.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       21 2023-04-06 21:12:40.000000 prompt-horizon-0.1.1/prompt_horizon.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-06 21:12:40.222995 prompt-horizon-0.1.1/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1200 2023-04-06 21:07:44.000000 prompt-horizon-0.1.1/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 21:12:40.219994 prompt-horizon-0.1.1/tests/
+│ │ --rw-rw-rw-   0        0        0        0 2023-04-06 09:32:02.000000 prompt-horizon-0.1.1/tests/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3369 2023-04-06 21:06:53.000000 prompt-horizon-0.1.1/tests/test_anonymizer.py
+│ │ --rw-rw-rw-   0        0        0     1349 2023-04-06 21:06:53.000000 prompt-horizon-0.1.1/tests/test_anonymizer_complex.py
+│ │ --rw-rw-rw-   0        0        0     3160 2023-04-06 21:06:53.000000 prompt-horizon-0.1.1/tests/test_de_anonymizer.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 11:13:45.470378 prompt-horizon-0.1.2/
+│ │ +-rw-rw-rw-   0        0        0     1098 2023-04-06 09:13:09.000000 prompt-horizon-0.1.2/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     3382 2023-04-07 11:13:45.470378 prompt-horizon-0.1.2/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     2575 2023-04-07 11:08:50.000000 prompt-horizon-0.1.2/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 11:13:45.444210 prompt-horizon-0.1.2/prompt_horizon/
+│ │ +-rw-rw-rw-   0        0        0       74 2023-04-07 11:09:20.000000 prompt-horizon-0.1.2/prompt_horizon/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1841 2023-04-06 13:26:55.000000 prompt-horizon-0.1.2/prompt_horizon/anonymizer.py
+│ │ +-rw-rw-rw-   0        0        0     1549 2023-04-06 17:37:27.000000 prompt-horizon-0.1.2/prompt_horizon/de_anonymizer.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 11:13:45.455392 prompt-horizon-0.1.2/prompt_horizon.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     3382 2023-04-07 11:13:45.000000 prompt-horizon-0.1.2/prompt_horizon.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      370 2023-04-07 11:13:45.000000 prompt-horizon-0.1.2/prompt_horizon.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 11:13:45.000000 prompt-horizon-0.1.2/prompt_horizon.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       21 2023-04-07 11:13:45.000000 prompt-horizon-0.1.2/prompt_horizon.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 11:13:45.471380 prompt-horizon-0.1.2/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1200 2023-04-07 11:11:21.000000 prompt-horizon-0.1.2/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 11:13:45.467379 prompt-horizon-0.1.2/tests/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-04-06 09:32:02.000000 prompt-horizon-0.1.2/tests/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3369 2023-04-06 21:06:53.000000 prompt-horizon-0.1.2/tests/test_anonymizer.py
+│ │ +-rw-rw-rw-   0        0        0     1349 2023-04-06 21:06:53.000000 prompt-horizon-0.1.2/tests/test_anonymizer_complex.py
+│ │ +-rw-rw-rw-   0        0        0     3160 2023-04-06 21:06:53.000000 prompt-horizon-0.1.2/tests/test_de_anonymizer.py
+│ │   --- prompt-horizon-0.1.1/LICENSE
+│ ├── +++ prompt-horizon-0.1.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- prompt-horizon-0.1.1/PKG-INFO
+│ ├── +++ prompt-horizon-0.1.2/PKG-INFO
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: prompt-horizon
+│ │ -Version: 0.1.1
+│ │ +Version: 0.1.2
+│ │  Summary: Library to anonymize JSON objects by creating placeholders for keys and values, while generating a reversible mapping to restore afterwards
+│ │  Home-page: https://github.com/gkanellopoulos/prompthorizon.git
+│ │  Author: George Kanellopoulos
+│ │  Author-email: george@gkanellopoulos.com
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │ @@ -74,18 +74,18 @@
+│ │  }
+│ │  ```
+│ │  <br>
+│ │  
+│ │  #### input and output file handling is supported
+│ │  
+│ │  ```python
+│ │ -from prompt_horizon import anonymize_from_file
+│ │ +from prompt_horizon import anonymize
+│ │  
+│ │  #This line will read the JSON data from "input.json", anonymize it, and save the anonymized JSON to "anonymized.json".
+│ │ -anonymized_json, map_object = anonymize_from_file("input.json", output_file_path="anonymized.json")
+│ │ +anonymized_json, map_object = anonymize("input.json", output_file_path="anonymized.json")
+│ │  ```
+│ │  
+│ │  <br>
+│ │  
+│ │  ### De-anonymize JSON
+│ │  
+│ │  <br>
+│ │ @@ -96,43 +96,24 @@
+│ │  #This line will return the de-anonymized JSON object, which should be the same as the original input JSON.
+│ │  deanonymized_json = de_anonymize(anonymized_json, map_object=map_object)
+│ │  ```
+│ │  
+│ │  #### input and output files are supported
+│ │  
+│ │  ```python
+│ │ -from prompt_horizon import de_anonymize_from_file
+│ │ +from prompt_horizon import de_anonymize
+│ │  
+│ │  #This will read the anonymized JSON data from "anonymized.json", the mapping object from "map_file.json", de-anonymize the JSON data, and save the de-anonymized JSON to "deanonymized.json".
+│ │ -deanonymized_json = de_anonymize_from_file("anonymized.json", map_file_path="map_file.json", output_file_path="deanonymized.json")
+│ │ +deanonymized_json = de_anonymize("anonymized.json", map_file_path="map_file.json", output_file_path="deanonymized.json")
+│ │  ```
+│ │  
+│ │  
+│ │  
+│ │  <br>
+│ │  
+│ │  ### Saving and loading the map
+│ │  
+│ │  <br>
+│ │  
+│ │ -You can also save the generated mapping object to a file and load it later for de-anonymization.
+│ │ -
+│ │ -```python
+│ │ -from prompt_horizon import save_map, load_map
+│ │ -
+│ │ -# Save the map object to a file
+│ │ -save_map(map_object, "map_file.json")
+│ │ -
+│ │ -# Load the map object from a file
+│ │ -loaded_map_object = load_map("map_file.json")
+│ │ -```
+│ │ -
+│ │ -Then, use the loaded map object to de-anonymize the JSON data:
+│ │ -
+│ │ -```python
+│ │ -deanonymized_json = de_anonymize(anonymized_json, map_object=loaded_map_object)
+│ │ -```
+│ │ -<br>
+│ │ -
+│ │  ## License
+│ │  
+│ │  This project is licensed under the [MIT License](LICENSE).
+│ │   --- prompt-horizon-0.1.1/README.md
+│ ├── +++ prompt-horizon-0.1.2/README.md
+│ │┄ Files 16% similar despite different names
+│ │ @@ -56,18 +56,18 @@
+│ │  }
+│ │  ```
+│ │  <br>
+│ │  
+│ │  #### input and output file handling is supported
+│ │  
+│ │  ```python
+│ │ -from prompt_horizon import anonymize_from_file
+│ │ +from prompt_horizon import anonymize
+│ │  
+│ │  #This line will read the JSON data from "input.json", anonymize it, and save the anonymized JSON to "anonymized.json".
+│ │ -anonymized_json, map_object = anonymize_from_file("input.json", output_file_path="anonymized.json")
+│ │ +anonymized_json, map_object = anonymize("input.json", output_file_path="anonymized.json")
+│ │  ```
+│ │  
+│ │  <br>
+│ │  
+│ │  ### De-anonymize JSON
+│ │  
+│ │  <br>
+│ │ @@ -78,43 +78,24 @@
+│ │  #This line will return the de-anonymized JSON object, which should be the same as the original input JSON.
+│ │  deanonymized_json = de_anonymize(anonymized_json, map_object=map_object)
+│ │  ```
+│ │  
+│ │  #### input and output files are supported
+│ │  
+│ │  ```python
+│ │ -from prompt_horizon import de_anonymize_from_file
+│ │ +from prompt_horizon import de_anonymize
+│ │  
+│ │  #This will read the anonymized JSON data from "anonymized.json", the mapping object from "map_file.json", de-anonymize the JSON data, and save the de-anonymized JSON to "deanonymized.json".
+│ │ -deanonymized_json = de_anonymize_from_file("anonymized.json", map_file_path="map_file.json", output_file_path="deanonymized.json")
+│ │ +deanonymized_json = de_anonymize("anonymized.json", map_file_path="map_file.json", output_file_path="deanonymized.json")
+│ │  ```
+│ │  
+│ │  
+│ │  
+│ │  <br>
+│ │  
+│ │  ### Saving and loading the map
+│ │  
+│ │  <br>
+│ │  
+│ │ -You can also save the generated mapping object to a file and load it later for de-anonymization.
+│ │ -
+│ │ -```python
+│ │ -from prompt_horizon import save_map, load_map
+│ │ -
+│ │ -# Save the map object to a file
+│ │ -save_map(map_object, "map_file.json")
+│ │ -
+│ │ -# Load the map object from a file
+│ │ -loaded_map_object = load_map("map_file.json")
+│ │ -```
+│ │ -
+│ │ -Then, use the loaded map object to de-anonymize the JSON data:
+│ │ -
+│ │ -```python
+│ │ -deanonymized_json = de_anonymize(anonymized_json, map_object=loaded_map_object)
+│ │ -```
+│ │ -<br>
+│ │ -
+│ │  ## License
+│ │  
+│ │  This project is licensed under the [MIT License](LICENSE).
+│ │   --- prompt-horizon-0.1.1/prompt_horizon/anonymizer.py
+│ ├── +++ prompt-horizon-0.1.2/prompt_horizon/anonymizer.py
+│ │┄ Files identical despite different names
+│ │   --- prompt-horizon-0.1.1/prompt_horizon/de_anonymizer.py
+│ ├── +++ prompt-horizon-0.1.2/prompt_horizon/de_anonymizer.py
+│ │┄ Files identical despite different names
+│ │   --- prompt-horizon-0.1.1/prompt_horizon.egg-info/PKG-INFO
+│ ├── +++ prompt-horizon-0.1.2/prompt_horizon.egg-info/PKG-INFO
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: prompt-horizon
+│ │ -Version: 0.1.1
+│ │ +Version: 0.1.2
+│ │  Summary: Library to anonymize JSON objects by creating placeholders for keys and values, while generating a reversible mapping to restore afterwards
+│ │  Home-page: https://github.com/gkanellopoulos/prompthorizon.git
+│ │  Author: George Kanellopoulos
+│ │  Author-email: george@gkanellopoulos.com
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │ @@ -74,18 +74,18 @@
+│ │  }
+│ │  ```
+│ │  <br>
+│ │  
+│ │  #### input and output file handling is supported
+│ │  
+│ │  ```python
+│ │ -from prompt_horizon import anonymize_from_file
+│ │ +from prompt_horizon import anonymize
+│ │  
+│ │  #This line will read the JSON data from "input.json", anonymize it, and save the anonymized JSON to "anonymized.json".
+│ │ -anonymized_json, map_object = anonymize_from_file("input.json", output_file_path="anonymized.json")
+│ │ +anonymized_json, map_object = anonymize("input.json", output_file_path="anonymized.json")
+│ │  ```
+│ │  
+│ │  <br>
+│ │  
+│ │  ### De-anonymize JSON
+│ │  
+│ │  <br>
+│ │ @@ -96,43 +96,24 @@
+│ │  #This line will return the de-anonymized JSON object, which should be the same as the original input JSON.
+│ │  deanonymized_json = de_anonymize(anonymized_json, map_object=map_object)
+│ │  ```
+│ │  
+│ │  #### input and output files are supported
+│ │  
+│ │  ```python
+│ │ -from prompt_horizon import de_anonymize_from_file
+│ │ +from prompt_horizon import de_anonymize
+│ │  
+│ │  #This will read the anonymized JSON data from "anonymized.json", the mapping object from "map_file.json", de-anonymize the JSON data, and save the de-anonymized JSON to "deanonymized.json".
+│ │ -deanonymized_json = de_anonymize_from_file("anonymized.json", map_file_path="map_file.json", output_file_path="deanonymized.json")
+│ │ +deanonymized_json = de_anonymize("anonymized.json", map_file_path="map_file.json", output_file_path="deanonymized.json")
+│ │  ```
+│ │  
+│ │  
+│ │  
+│ │  <br>
+│ │  
+│ │  ### Saving and loading the map
+│ │  
+│ │  <br>
+│ │  
+│ │ -You can also save the generated mapping object to a file and load it later for de-anonymization.
+│ │ -
+│ │ -```python
+│ │ -from prompt_horizon import save_map, load_map
+│ │ -
+│ │ -# Save the map object to a file
+│ │ -save_map(map_object, "map_file.json")
+│ │ -
+│ │ -# Load the map object from a file
+│ │ -loaded_map_object = load_map("map_file.json")
+│ │ -```
+│ │ -
+│ │ -Then, use the loaded map object to de-anonymize the JSON data:
+│ │ -
+│ │ -```python
+│ │ -deanonymized_json = de_anonymize(anonymized_json, map_object=loaded_map_object)
+│ │ -```
+│ │ -<br>
+│ │ -
+│ │  ## License
+│ │  
+│ │  This project is licensed under the [MIT License](LICENSE).
+│ │   --- prompt-horizon-0.1.1/setup.py
+│ ├── +++ prompt-horizon-0.1.2/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │  def read_file(filename):
+│ │      with open(os.path.join(os.path.dirname(__file__), filename), encoding='utf-8') as f:
+│ │          return f.read()
+│ │  
+│ │  
+│ │  setup(
+│ │      name='prompt-horizon',
+│ │ -    version='0.1.1',
+│ │ +    version='0.1.2',
+│ │      description='Library to anonymize JSON objects by creating placeholders for keys and values, while generating a reversible mapping to restore afterwards',
+│ │      long_description=read_file('README.md'),
+│ │      long_description_content_type='text/markdown',
+│ │      author='George Kanellopoulos',
+│ │      author_email='george@gkanellopoulos.com',
+│ │      url='https://github.com/gkanellopoulos/prompthorizon.git',
+│ │      packages=find_packages(),
+│ │   --- prompt-horizon-0.1.1/tests/test_anonymizer.py
+│ ├── +++ prompt-horizon-0.1.2/tests/test_anonymizer.py
+│ │┄ Files identical despite different names
+│ │   --- prompt-horizon-0.1.1/tests/test_anonymizer_complex.py
+│ ├── +++ prompt-horizon-0.1.2/tests/test_anonymizer_complex.py
+│ │┄ Files identical despite different names
+│ │   --- prompt-horizon-0.1.1/tests/test_de_anonymizer.py
+│ ├── +++ prompt-horizon-0.1.2/tests/test_de_anonymizer.py
+│ │┄ Files identical despite different names
