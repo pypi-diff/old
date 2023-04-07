@@ -1,0 +1,2910 @@
+# Comparing `tmp/fastkafka-0.3.1.tar.gz` & `tmp/fastkafka-0.4.0rc0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fastkafka-0.3.1.tar", last modified: Fri Mar 24 15:03:32 2023, max compression
++gzip compressed data, was "fastkafka-0.4.0rc0.tar", last modified: Fri Apr  7 12:25:08 2023, max compression
+```
+
+## Comparing `fastkafka-0.3.1.tar` & `fastkafka-0.4.0rc0.tar`
+
+### file list
+
+```diff
+@@ -1,45 +1,49 @@
+-drwxrwxr-x   0 davor     (1000) davor     (1000)        0 2023-03-24 15:03:32.565811 fastkafka-0.3.1/
+--rw-r--r--   0 davor     (1000) davor     (1000)    11357 2023-01-25 09:24:15.000000 fastkafka-0.3.1/LICENSE
+--rw-r--r--   0 davor     (1000) davor     (1000)      111 2023-01-25 09:24:15.000000 fastkafka-0.3.1/MANIFEST.in
+--rw-rw-r--   0 davor     (1000) davor     (1000)    31194 2023-03-24 15:03:32.565811 fastkafka-0.3.1/PKG-INFO
+--rw-rw-r--   0 davor     (1000) davor     (1000)    29790 2023-03-24 15:02:18.000000 fastkafka-0.3.1/README.md
+-drwxrwxr-x   0 davor     (1000) davor     (1000)        0 2023-03-24 15:03:32.561811 fastkafka-0.3.1/fastkafka/
+--rw-rw-r--   0 davor     (1000) davor     (1000)      429 2023-03-24 15:03:01.000000 fastkafka-0.3.1/fastkafka/__init__.py
+-drwxrwxr-x   0 davor     (1000) davor     (1000)        0 2023-03-24 15:03:32.565811 fastkafka-0.3.1/fastkafka/_application/
+--rw-rw-r--   0 davor     (1000) davor     (1000)        0 2023-03-24 15:03:01.000000 fastkafka-0.3.1/fastkafka/_application/__init__.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)    77027 2023-03-24 15:03:00.000000 fastkafka-0.3.1/fastkafka/_application/app.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     6945 2023-03-24 15:03:00.000000 fastkafka-0.3.1/fastkafka/_application/tester.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     1574 2023-03-24 15:03:00.000000 fastkafka-0.3.1/fastkafka/_cli.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     3879 2023-03-24 15:03:01.000000 fastkafka-0.3.1/fastkafka/_cli_docs.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)      852 2023-03-24 15:03:01.000000 fastkafka-0.3.1/fastkafka/_cli_testing.py
+-drwxrwxr-x   0 davor     (1000) davor     (1000)        0 2023-03-24 15:03:32.565811 fastkafka-0.3.1/fastkafka/_components/
+--rw-rw-r--   0 davor     (1000) davor     (1000)        0 2023-03-24 15:03:01.000000 fastkafka-0.3.1/fastkafka/_components/__init__.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     3705 2023-03-24 15:03:00.000000 fastkafka-0.3.1/fastkafka/_components/_subprocess.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     8821 2023-03-24 15:03:00.000000 fastkafka-0.3.1/fastkafka/_components/aiokafka_consumer_loop.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     2848 2023-03-24 15:03:00.000000 fastkafka-0.3.1/fastkafka/_components/aiokafka_producer_manager.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)    16362 2023-03-24 15:03:00.000000 fastkafka-0.3.1/fastkafka/_components/asyncapi.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     4687 2023-03-24 15:03:01.000000 fastkafka-0.3.1/fastkafka/_components/docs_dependencies.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     5746 2023-03-24 15:03:01.000000 fastkafka-0.3.1/fastkafka/_components/helpers.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     3952 2023-03-24 15:03:01.000000 fastkafka-0.3.1/fastkafka/_components/logger.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     3154 2023-03-24 15:03:00.000000 fastkafka-0.3.1/fastkafka/_components/producer_decorator.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     5066 2023-03-24 15:03:01.000000 fastkafka-0.3.1/fastkafka/_components/test_dependencies.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)    50617 2023-03-24 15:03:01.000000 fastkafka-0.3.1/fastkafka/_helpers.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)    48521 2023-03-24 15:03:01.000000 fastkafka-0.3.1/fastkafka/_modidx.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     6039 2023-03-24 15:03:00.000000 fastkafka-0.3.1/fastkafka/_server.py
+-drwxrwxr-x   0 davor     (1000) davor     (1000)        0 2023-03-24 15:03:32.565811 fastkafka-0.3.1/fastkafka/_testing/
+--rw-rw-r--   0 davor     (1000) davor     (1000)        0 2023-03-24 15:03:01.000000 fastkafka-0.3.1/fastkafka/_testing/__init__.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)    20264 2023-03-24 15:02:59.000000 fastkafka-0.3.1/fastkafka/_testing/local_broker.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)    12796 2023-03-24 15:03:00.000000 fastkafka-0.3.1/fastkafka/_testing/local_redpanda_broker.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)     5031 2023-03-24 15:03:00.000000 fastkafka-0.3.1/fastkafka/_testing/test_utils.py
+--rw-rw-r--   0 davor     (1000) davor     (1000)      764 2023-03-24 15:02:59.000000 fastkafka-0.3.1/fastkafka/testing.py
+-drwxrwxr-x   0 davor     (1000) davor     (1000)        0 2023-03-24 15:03:32.565811 fastkafka-0.3.1/fastkafka.egg-info/
+--rw-rw-r--   0 davor     (1000) davor     (1000)    31194 2023-03-24 15:03:32.000000 fastkafka-0.3.1/fastkafka.egg-info/PKG-INFO
+--rw-rw-r--   0 davor     (1000) davor     (1000)     1097 2023-03-24 15:03:32.000000 fastkafka-0.3.1/fastkafka.egg-info/SOURCES.txt
+--rw-rw-r--   0 davor     (1000) davor     (1000)        1 2023-03-24 15:03:32.000000 fastkafka-0.3.1/fastkafka.egg-info/dependency_links.txt
+--rw-rw-r--   0 davor     (1000) davor     (1000)      146 2023-03-24 15:03:32.000000 fastkafka-0.3.1/fastkafka.egg-info/entry_points.txt
+--rw-rw-r--   0 davor     (1000) davor     (1000)        1 2023-01-25 09:30:21.000000 fastkafka-0.3.1/fastkafka.egg-info/not-zip-safe
+--rw-rw-r--   0 davor     (1000) davor     (1000)      595 2023-03-24 15:03:32.000000 fastkafka-0.3.1/fastkafka.egg-info/requires.txt
+--rw-rw-r--   0 davor     (1000) davor     (1000)       10 2023-03-24 15:03:32.000000 fastkafka-0.3.1/fastkafka.egg-info/top_level.txt
+--rw-rw-r--   0 davor     (1000) davor     (1000)     1228 2023-03-24 15:02:51.000000 fastkafka-0.3.1/settings.ini
+--rw-rw-r--   0 davor     (1000) davor     (1000)       38 2023-03-24 15:03:32.565811 fastkafka-0.3.1/setup.cfg
+--rw-rw-r--   0 davor     (1000) davor     (1000)     3594 2023-03-24 14:43:28.000000 fastkafka-0.3.1/setup.py
++drwxrwxr-x   0 davor     (1000) davor     (1000)        0 2023-04-07 12:25:08.735709 fastkafka-0.4.0rc0/
++-rw-r--r--   0 davor     (1000) davor     (1000)    11357 2023-01-25 09:24:15.000000 fastkafka-0.4.0rc0/LICENSE
++-rw-r--r--   0 davor     (1000) davor     (1000)      111 2023-01-25 09:24:15.000000 fastkafka-0.4.0rc0/MANIFEST.in
++-rw-rw-r--   0 davor     (1000) davor     (1000)    31197 2023-04-07 12:25:08.731709 fastkafka-0.4.0rc0/PKG-INFO
++-rw-rw-r--   0 davor     (1000) davor     (1000)    29790 2023-03-27 11:07:38.000000 fastkafka-0.4.0rc0/README.md
++drwxrwxr-x   0 davor     (1000) davor     (1000)        0 2023-04-07 12:25:08.731709 fastkafka-0.4.0rc0/fastkafka/
++-rw-rw-r--   0 davor     (1000) davor     (1000)      432 2023-04-07 12:24:04.000000 fastkafka-0.4.0rc0/fastkafka/__init__.py
++drwxrwxr-x   0 davor     (1000) davor     (1000)        0 2023-04-07 12:25:08.731709 fastkafka-0.4.0rc0/fastkafka/_application/
++-rw-rw-r--   0 davor     (1000) davor     (1000)        0 2023-04-07 12:24:04.000000 fastkafka-0.4.0rc0/fastkafka/_application/__init__.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)    27864 2023-04-07 12:24:03.000000 fastkafka-0.4.0rc0/fastkafka/_application/app.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)     7407 2023-04-07 12:24:03.000000 fastkafka-0.4.0rc0/fastkafka/_application/tester.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)     1574 2023-04-07 12:24:03.000000 fastkafka-0.4.0rc0/fastkafka/_cli.py
++-rw-r--r--   0 davor     (1000) davor     (1000)     3879 2023-04-07 12:24:03.000000 fastkafka-0.4.0rc0/fastkafka/_cli_docs.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)      852 2023-04-07 12:24:03.000000 fastkafka-0.4.0rc0/fastkafka/_cli_testing.py
++drwxrwxr-x   0 davor     (1000) davor     (1000)        0 2023-04-07 12:25:08.731709 fastkafka-0.4.0rc0/fastkafka/_components/
++-rw-rw-r--   0 davor     (1000) davor     (1000)        0 2023-04-07 12:24:04.000000 fastkafka-0.4.0rc0/fastkafka/_components/__init__.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)     3705 2023-04-07 12:24:03.000000 fastkafka-0.4.0rc0/fastkafka/_components/_subprocess.py
++-rw-r--r--   0 davor     (1000) davor     (1000)     8769 2023-04-07 12:24:02.000000 fastkafka-0.4.0rc0/fastkafka/_components/aiokafka_consumer_loop.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)     2848 2023-04-07 12:24:02.000000 fastkafka-0.4.0rc0/fastkafka/_components/aiokafka_producer_manager.py
++-rw-r--r--   0 davor     (1000) davor     (1000)    16362 2023-04-07 12:24:03.000000 fastkafka-0.4.0rc0/fastkafka/_components/asyncapi.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)     2940 2023-04-07 12:24:03.000000 fastkafka-0.4.0rc0/fastkafka/_components/benchmarking.py
++-rw-r--r--   0 davor     (1000) davor     (1000)     4686 2023-04-07 12:24:04.000000 fastkafka-0.4.0rc0/fastkafka/_components/docs_dependencies.py
++-rw-r--r--   0 davor     (1000) davor     (1000)     2639 2023-04-07 12:24:04.000000 fastkafka-0.4.0rc0/fastkafka/_components/helpers.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)     3952 2023-04-07 12:24:04.000000 fastkafka-0.4.0rc0/fastkafka/_components/logger.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)    12280 2023-04-07 12:24:04.000000 fastkafka-0.4.0rc0/fastkafka/_components/meta.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)     3154 2023-04-07 12:24:02.000000 fastkafka-0.4.0rc0/fastkafka/_components/producer_decorator.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)     5066 2023-04-07 12:24:04.000000 fastkafka-0.4.0rc0/fastkafka/_components/test_dependencies.py
++-rw-r--r--   0 davor     (1000) davor     (1000)    11215 2023-04-07 12:24:03.000000 fastkafka-0.4.0rc0/fastkafka/_docusaurus_helper.py
++-rw-r--r--   0 davor     (1000) davor     (1000)    50547 2023-04-07 12:24:04.000000 fastkafka-0.4.0rc0/fastkafka/_helpers.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)    66827 2023-04-07 12:24:04.000000 fastkafka-0.4.0rc0/fastkafka/_modidx.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)     6039 2023-04-07 12:24:03.000000 fastkafka-0.4.0rc0/fastkafka/_server.py
++drwxrwxr-x   0 davor     (1000) davor     (1000)        0 2023-04-07 12:25:08.731709 fastkafka-0.4.0rc0/fastkafka/_testing/
++-rw-rw-r--   0 davor     (1000) davor     (1000)        0 2023-04-07 12:24:04.000000 fastkafka-0.4.0rc0/fastkafka/_testing/__init__.py
++-rw-r--r--   0 davor     (1000) davor     (1000)    19775 2023-04-07 12:24:02.000000 fastkafka-0.4.0rc0/fastkafka/_testing/apache_kafka_broker.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)    18396 2023-04-07 12:24:02.000000 fastkafka-0.4.0rc0/fastkafka/_testing/in_memory_broker.py
++-rw-r--r--   0 davor     (1000) davor     (1000)    12366 2023-04-07 12:24:02.000000 fastkafka-0.4.0rc0/fastkafka/_testing/local_redpanda_broker.py
++-rw-r--r--   0 davor     (1000) davor     (1000)     5031 2023-04-07 12:24:02.000000 fastkafka-0.4.0rc0/fastkafka/_testing/test_utils.py
++-rw-rw-r--   0 davor     (1000) davor     (1000)      849 2023-04-07 12:24:02.000000 fastkafka-0.4.0rc0/fastkafka/testing.py
++drwxrwxr-x   0 davor     (1000) davor     (1000)        0 2023-04-07 12:25:08.731709 fastkafka-0.4.0rc0/fastkafka.egg-info/
++-rw-rw-r--   0 davor     (1000) davor     (1000)    31197 2023-04-07 12:25:08.000000 fastkafka-0.4.0rc0/fastkafka.egg-info/PKG-INFO
++-rw-rw-r--   0 davor     (1000) davor     (1000)     1243 2023-04-07 12:25:08.000000 fastkafka-0.4.0rc0/fastkafka.egg-info/SOURCES.txt
++-rw-rw-r--   0 davor     (1000) davor     (1000)        1 2023-04-07 12:25:08.000000 fastkafka-0.4.0rc0/fastkafka.egg-info/dependency_links.txt
++-rw-rw-r--   0 davor     (1000) davor     (1000)      146 2023-04-07 12:25:08.000000 fastkafka-0.4.0rc0/fastkafka.egg-info/entry_points.txt
++-rw-rw-r--   0 davor     (1000) davor     (1000)        1 2023-01-25 09:30:21.000000 fastkafka-0.4.0rc0/fastkafka.egg-info/not-zip-safe
++-rw-rw-r--   0 davor     (1000) davor     (1000)      578 2023-04-07 12:25:08.000000 fastkafka-0.4.0rc0/fastkafka.egg-info/requires.txt
++-rw-rw-r--   0 davor     (1000) davor     (1000)       10 2023-04-07 12:25:08.000000 fastkafka-0.4.0rc0/fastkafka.egg-info/top_level.txt
++-rw-rw-r--   0 davor     (1000) davor     (1000)     1231 2023-04-07 12:22:16.000000 fastkafka-0.4.0rc0/settings.ini
++-rw-rw-r--   0 davor     (1000) davor     (1000)       38 2023-04-07 12:25:08.735709 fastkafka-0.4.0rc0/setup.cfg
++-rw-r--r--   0 davor     (1000) davor     (1000)     3570 2023-04-07 10:22:05.000000 fastkafka-0.4.0rc0/setup.py
+```
+
+### Comparing `fastkafka-0.3.1/LICENSE` & `fastkafka-0.4.0rc0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `fastkafka-0.3.1/PKG-INFO` & `fastkafka-0.4.0rc0/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fastkafka
+-Version: 0.3.1
++Version: 0.4.0rc0
+ Summary: FastKafka is a powerful and easy-to-use Python library for building asynchronous web services that interact with Kafka topics. Built on top of FastAPI, Starlette, Pydantic, AIOKafka and AsyncAPI, FastKafka simplifies the process of writing producers and consumers for Kafka topics.
+ Home-page: https://github.com/airtai/fastkafka
+ Author: airt
+ Author-email: info@airt.ai
+ License: Apache Software License 2.0
+ Project-URL: Bug Tracker, https://github.com/airtai/fastkafka/issues
+ Project-URL: CI, https://github.com/airtai/fastkafka/actions
+```
+
+### Comparing `fastkafka-0.3.1/README.md` & `fastkafka-0.4.0rc0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `fastkafka-0.3.1/fastkafka/_application/app.py` & `fastkafka-0.4.0rc0/fastkafka/_helpers.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,64 +1,50 @@
+-# AUTOGENERATED! DO NOT EDIT! File to edit: ../../nbs/015_FastKafka.ipynb.
++# AUTOGENERATED! DO NOT EDIT! File to edit: ../nbs/999_Helpers.ipynb.
+ 
+ # %% auto 0
+-__all__ = ['logger', 'FastKafka', 'AwaitedMock']
++__all__ = ['logger', 'aiokafka2confluent', 'confluent2aiokafka', 'produce_messages', 'consumes_messages',
++           'produce_and_consume_messages', 'get_collapsible_admonition', 'source2markdown', 'wait_for_get_url']
+ 
+-# %% ../../nbs/015_FastKafka.ipynb 1
++# %% ../nbs/999_Helpers.ipynb 2
+ import asyncio
+-import functools
+ import inspect
+ import json
+-import types
+-from asyncio import iscoroutinefunction  # do not use the version from inspect
+-from collections import namedtuple
++import textwrap
+ from datetime import datetime, timedelta
+-from inspect import signature
+-from pathlib import Path
+ from typing import *
+-from unittest.mock import AsyncMock, MagicMock
+ 
++import aiohttp
++import aiokafka
+ import anyio
+ from aiokafka import AIOKafkaConsumer, AIOKafkaProducer
+-from fastcore.foundation import patch
+-from fastcore.meta import delegates
+-from pydantic import BaseModel
+-
+-import fastkafka._components.logger
+-
+-fastkafka._components.logger.should_supress_timestamps = True
+-
+-import fastkafka
+-from fastkafka._components.aiokafka_consumer_loop import (
+-    aiokafka_consumer_loop,
+-    sanitize_kafka_config,
+-)
+-from .._components.aiokafka_producer_manager import AIOKafkaProducerManager
+-from fastkafka._components.asyncapi import (
+-    ConsumeCallable,
+-    ContactInfo,
+-    KafkaBroker,
+-    KafkaBrokers,
+-    KafkaServiceInfo,
+-    export_async_spec,
+-)
+-from .._components.helpers import filter_using_signature
+-from .._components.logger import get_logger
+-from .._components.producer_decorator import ProduceCallable, producer_decorator
++from aiokafka.helpers import create_ssl_context
++from aiokafka.structs import RecordMetadata
++from IPython.display import Markdown
++
++from ._components.helpers import in_notebook
++from ._components.logger import get_logger
++from ._components.meta import delegates
++
++# %% ../nbs/999_Helpers.ipynb 4
++if in_notebook():
++    from tqdm.notebook import tqdm
++else:
++    from tqdm import tqdm
+ 
+-# %% ../../nbs/015_FastKafka.ipynb 3
++# %% ../nbs/999_Helpers.ipynb 6
+ logger = get_logger(__name__)
+ 
+-# %% ../../nbs/015_FastKafka.ipynb 9
+-@delegates(AIOKafkaConsumer)  # type: ignore
+-@delegates(AIOKafkaProducer, keep=True)  # type: ignore
+-def _get_kafka_config(
+-    **kwargs,
+-) -> Dict[str, Any]:
+-    """Get kafka config
++# %% ../nbs/999_Helpers.ipynb 9
++@delegates(AIOKafkaProducer)
++def aiokafka2confluent(**kwargs: Dict[str, Any]) -> Dict[str, Any]:
++    """Converts AIOKafka styled config dictionary into Confluence styled one
++
++    Returns (Dict[str, Any]):
++        Confluence styled config dictionary
++
+     Args:
+         bootstrap_servers (str, list(str)): a ``host[:port]`` string or list of
+             ``host[:port]`` strings that the producer should contact to
+             bootstrap initial cluster metadata. This does not have to be the
+             full node list.  It just needs to have at least one broker that will
+             respond to a Metadata API Request. Default port is 9092. If no
+             servers are specified, will default to ``localhost:9092``.
+@@ -175,14 +161,241 @@
+             Default: :data:`None`
+         sasl_plain_password (str): password for SASL ``PLAIN`` authentication.
+             Default: :data:`None`
+         sasl_oauth_token_provider (: class:`~aiokafka.abc.AbstractTokenProvider`):
+             OAuthBearer token provider instance. (See
+             :mod:`kafka.oauth.abstract`).
+             Default: :data:`None`
++    """
++    confluent_config = {k.replace("_", "."): v for k, v in kwargs.items()}
++    for k1, k2 in zip(
++        ["sasl.plain.username", "sasl.plain.password"],
++        ["sasl.username", "sasl.password"],
++    ):
++        if k1 in confluent_config:
++            confluent_config[k2] = confluent_config.pop(k1)
++
++    if "ssl.context" in confluent_config:
++        confluent_config.pop("ssl.context")
++
++    return confluent_config
++
++# %% ../nbs/999_Helpers.ipynb 11
++def confluent2aiokafka(confluent_config: Dict[str, Any]) -> Dict[str, Any]:
++    """Converts AIOKafka styled config dictionary into Confluence styled one
++
++    Args:
++        confluent_config: Confluence styled config dictionary
++
++    Returns:
++        AIOKafka styled config dictionary
++    """
++
++    aiokafka_config = {k.replace(".", "_"): v for k, v in confluent_config.items()}
++    for k1, k2 in zip(
++        ["sasl_username", "sasl_password"],
++        ["sasl_plain_username", "sasl_plain_password"],
++    ):
++        if k1 in aiokafka_config:
++            aiokafka_config[k2] = aiokafka_config.pop(k1)
++
++    if "sasl_plain_username" in aiokafka_config:
++        aiokafka_config["ssl.context"] = (create_ssl_context(),)
++
++    return aiokafka_config
++
++# %% ../nbs/999_Helpers.ipynb 14
++@delegates(AIOKafkaProducer)
++async def produce_messages(  # type: ignore
++    *,
++    topic: str,
++    msgs: List[Any],
++    **kwargs: Dict[str, Any],
++) -> List[RecordMetadata]:
++    """Produces messages to Kafka topic
++
++    Args:
++        topic: Topic name
++        msgs: a list of messages to produce
++        bootstrap_servers (str, list(str)): a ``host[:port]`` string or list of
++            ``host[:port]`` strings that the producer should contact to
++            bootstrap initial cluster metadata. This does not have to be the
++            full node list.  It just needs to have at least one broker that will
++            respond to a Metadata API Request. Default port is 9092. If no
++            servers are specified, will default to ``localhost:9092``.
++        client_id (str): a name for this client. This string is passed in
++            each request to servers and can be used to identify specific
++            server-side log entries that correspond to this client.
++            Default: ``aiokafka-producer-#`` (appended with a unique number
++            per instance)
++        key_serializer (Callable): used to convert user-supplied keys to bytes
++            If not :data:`None`, called as ``f(key),`` should return
++            :class:`bytes`.
++            Default: :data:`None`.
++        value_serializer (Callable): used to convert user-supplied message
++            values to :class:`bytes`. If not :data:`None`, called as
++            ``f(value)``, should return :class:`bytes`.
++            Default: :data:`None`.
++        acks (Any): one of ``0``, ``1``, ``all``. The number of acknowledgments
++            the producer requires the leader to have received before considering a
++            request complete. This controls the durability of records that are
++            sent. The following settings are common:
++
++            * ``0``: Producer will not wait for any acknowledgment from the server
++              at all. The message will immediately be added to the socket
++              buffer and considered sent. No guarantee can be made that the
++              server has received the record in this case, and the retries
++              configuration will not take effect (as the client won't
++              generally know of any failures). The offset given back for each
++              record will always be set to -1.
++            * ``1``: The broker leader will write the record to its local log but
++              will respond without awaiting full acknowledgement from all
++              followers. In this case should the leader fail immediately
++              after acknowledging the record but before the followers have
++              replicated it then the record will be lost.
++            * ``all``: The broker leader will wait for the full set of in-sync
++              replicas to acknowledge the record. This guarantees that the
++              record will not be lost as long as at least one in-sync replica
++              remains alive. This is the strongest available guarantee.
++
++            If unset, defaults to ``acks=1``. If `enable_idempotence` is
++            :data:`True` defaults to ``acks=all``
++        compression_type (str): The compression type for all data generated by
++            the producer. Valid values are ``gzip``, ``snappy``, ``lz4``, ``zstd``
++            or :data:`None`.
++            Compression is of full batches of data, so the efficacy of batching
++            will also impact the compression ratio (more batching means better
++            compression). Default: :data:`None`.
++        max_batch_size (int): Maximum size of buffered data per partition.
++            After this amount :meth:`send` coroutine will block until batch is
++            drained.
++            Default: 16384
++        linger_ms (int): The producer groups together any records that arrive
++            in between request transmissions into a single batched request.
++            Normally this occurs only under load when records arrive faster
++            than they can be sent out. However in some circumstances the client
++            may want to reduce the number of requests even under moderate load.
++            This setting accomplishes this by adding a small amount of
++            artificial delay; that is, if first request is processed faster,
++            than `linger_ms`, producer will wait ``linger_ms - process_time``.
++            Default: 0 (i.e. no delay).
++        partitioner (Callable): Callable used to determine which partition
++            each message is assigned to. Called (after key serialization):
++            ``partitioner(key_bytes, all_partitions, available_partitions)``.
++            The default partitioner implementation hashes each non-None key
++            using the same murmur2 algorithm as the Java client so that
++            messages with the same key are assigned to the same partition.
++            When a key is :data:`None`, the message is delivered to a random partition
++            (filtered to partitions with available leaders only, if possible).
++        max_request_size (int): The maximum size of a request. This is also
++            effectively a cap on the maximum record size. Note that the server
++            has its own cap on record size which may be different from this.
++            This setting will limit the number of record batches the producer
++            will send in a single request to avoid sending huge requests.
++            Default: 1048576.
++        metadata_max_age_ms (int): The period of time in milliseconds after
++            which we force a refresh of metadata even if we haven't seen any
++            partition leadership changes to proactively discover any new
++            brokers or partitions. Default: 300000
++        request_timeout_ms (int): Produce request timeout in milliseconds.
++            As it's sent as part of
++            :class:`~kafka.protocol.produce.ProduceRequest` (it's a blocking
++            call), maximum waiting time can be up to ``2 *
++            request_timeout_ms``.
++            Default: 40000.
++        retry_backoff_ms (int): Milliseconds to backoff when retrying on
++            errors. Default: 100.
++        api_version (str): specify which kafka API version to use.
++            If set to ``auto``, will attempt to infer the broker version by
++            probing various APIs. Default: ``auto``
++        security_protocol (str): Protocol used to communicate with brokers.
++            Valid values are: ``PLAINTEXT``, ``SSL``. Default: ``PLAINTEXT``.
++            Default: ``PLAINTEXT``.
++        ssl_context (ssl.SSLContext): pre-configured :class:`~ssl.SSLContext`
++            for wrapping socket connections. Directly passed into asyncio's
++            :meth:`~asyncio.loop.create_connection`. For more
++            information see :ref:`ssl_auth`.
++            Default: :data:`None`
++        connections_max_idle_ms (int): Close idle connections after the number
++            of milliseconds specified by this config. Specifying :data:`None` will
++            disable idle checks. Default: 540000 (9 minutes).
++        enable_idempotence (bool): When set to :data:`True`, the producer will
++            ensure that exactly one copy of each message is written in the
++            stream. If :data:`False`, producer retries due to broker failures,
++            etc., may write duplicates of the retried message in the stream.
++            Note that enabling idempotence acks to set to ``all``. If it is not
++            explicitly set by the user it will be chosen. If incompatible
++            values are set, a :exc:`ValueError` will be thrown.
++            New in version 0.5.0.
++        sasl_mechanism (str): Authentication mechanism when security_protocol
++            is configured for ``SASL_PLAINTEXT`` or ``SASL_SSL``. Valid values
++            are: ``PLAIN``, ``GSSAPI``, ``SCRAM-SHA-256``, ``SCRAM-SHA-512``,
++            ``OAUTHBEARER``.
++            Default: ``PLAIN``
++        sasl_plain_username (str): username for SASL ``PLAIN`` authentication.
++            Default: :data:`None`
++        sasl_plain_password (str): password for SASL ``PLAIN`` authentication.
++            Default: :data:`None`
++        sasl_oauth_token_provider (: class:`~aiokafka.abc.AbstractTokenProvider`):
++            OAuthBearer token provider instance. (See
++            :mod:`kafka.oauth.abstract`).
++            Default: :data:`None`
++    """
++    p = AIOKafkaProducer(**kwargs)
++    await p.start()
++
++    try:
++
++        def prepare_msg(msg: Any) -> bytes:
++            if isinstance(msg, bytes):
++                return msg
++            elif isinstance(msg, str):
++                return msg.encode("utf-8")
++            elif hasattr(msg, "json"):
++                return msg.json().encode("utf-8")  # type: ignore
++            return json.dumps(msg).encode("utf-8")
++
++        fx = [
++            await p.send(topic, prepare_msg(msg))
++            for msg in tqdm(msgs, desc=f"producing to '{topic}'")
++        ]
++        delivery = [await f for f in fx]
++        return delivery
++    finally:
++        await p.stop()
++
++# %% ../nbs/999_Helpers.ipynb 17
++@delegates(AIOKafkaConsumer)
++async def consumes_messages(
++    *,
++    topic: str,
++    msgs_count: int,
++    **kwargs: Dict[str, Any],
++) -> None:
++    """Consumes messages
++    Args:
++        topic: Topic name
++        msgs_count: number of messages to consume before returning
++        *topics (list(str)): optional list of topics to subscribe to. If not set,
++            call :meth:`.subscribe` or :meth:`.assign` before consuming records.
++            Passing topics directly is same as calling :meth:`.subscribe` API.
++        bootstrap_servers (str, list(str)): a ``host[:port]`` string (or list of
++            ``host[:port]`` strings) that the consumer should contact to bootstrap
++            initial cluster metadata.
++
++            This does not have to be the full node list.
++            It just needs to have at least one broker that will respond to a
++            Metadata API Request. Default port is 9092. If no servers are
++            specified, will default to ``localhost:9092``.
++        client_id (str): a name for this client. This string is passed in
++            each request to servers and can be used to identify specific
++            server-side log entries that correspond to this client. Also
++            submitted to :class:`~.consumer.group_coordinator.GroupCoordinator`
++            for logging with respect to consumer group administration. Default:
++            ``aiokafka-{version}``
+         group_id (str or None): name of the consumer group to join for dynamic
+             partition assignment (if enabled), and to use for fetching and
+             committing offsets. If None, auto-partition assignment (via
+             group coordinator) and offset commits are disabled.
+             Default: None
+         key_deserializer (Callable): Any callable that takes a
+             raw message key and returns a deserialized key.
+@@ -210,27 +423,35 @@
+             This size must be at least as large as the maximum message size
+             the server allows or else it is possible for the producer to
+             send messages larger than the consumer can fetch. If that
+             happens, the consumer can get stuck trying to fetch a large
+             message on a certain partition. Default: 1048576.
+         max_poll_records (int): The maximum number of records returned in a
+             single call to :meth:`.getmany`. Defaults ``None``, no limit.
++        request_timeout_ms (int): Client request timeout in milliseconds.
++            Default: 40000.
++        retry_backoff_ms (int): Milliseconds to backoff when retrying on
++            errors. Default: 100.
+         auto_offset_reset (str): A policy for resetting offsets on
+             :exc:`.OffsetOutOfRangeError` errors: ``earliest`` will move to the oldest
+             available message, ``latest`` will move to the most recent, and
+             ``none`` will raise an exception so you can handle this case.
+             Default: ``latest``.
+         enable_auto_commit (bool): If true the consumer's offset will be
+             periodically committed in the background. Default: True.
+         auto_commit_interval_ms (int): milliseconds between automatic
+             offset commits, if enable_auto_commit is True. Default: 5000.
+         check_crcs (bool): Automatically check the CRC32 of the records
+             consumed. This ensures no on-the-wire or on-disk corruption to
+             the messages occurred. This check adds some overhead, so it may
+             be disabled in cases seeking extreme performance. Default: True
++        metadata_max_age_ms (int): The period of time in milliseconds after
++            which we force a refresh of metadata even if we haven't seen any
++            partition leadership changes to proactively discover any new
++            brokers or partitions. Default: 300000
+         partition_assignment_strategy (list): List of objects to use to
+             distribute partition ownership amongst consumer instances when
+             group management is used. This preference is implicit in the order
+             of the strategies in the list. When assignment strategy changes:
+             to support a change to the assignment strategy, new versions must
+             enable support both for the old assignment strategy and the new
+             one. The coordinator will choose the old assignment strategy until
+@@ -267,18 +488,31 @@
+             value must be set lower than `session_timeout_ms`, but typically
+             should be set no higher than 1/3 of that value. It can be
+             adjusted even lower to control the expected time for normal
+             rebalances. Default: 3000
+         consumer_timeout_ms (int): maximum wait timeout for background fetching
+             routine. Mostly defines how fast the system will see rebalance and
+             request new data for new partitions. Default: 200
++        api_version (str): specify which kafka API version to use.
++            :class:`AIOKafkaConsumer` supports Kafka API versions >=0.9 only.
++            If set to ``auto``, will attempt to infer the broker version by
++            probing various APIs. Default: ``auto``
++        security_protocol (str): Protocol used to communicate with brokers.
++            Valid values are: ``PLAINTEXT``, ``SSL``. Default: ``PLAINTEXT``.
++        ssl_context (ssl.SSLContext): pre-configured :class:`~ssl.SSLContext`
++            for wrapping socket connections. Directly passed into asyncio's
++            :meth:`~asyncio.loop.create_connection`. For more information see
++            :ref:`ssl_auth`. Default: None.
+         exclude_internal_topics (bool): Whether records from internal topics
+             (such as offsets) should be exposed to the consumer. If set to True
+             the only way to receive records from an internal topic is
+             subscribing to it. Requires 0.10+ Default: True
++        connections_max_idle_ms (int): Close idle connections after the number
++            of milliseconds specified by this config. Specifying `None` will
++            disable idle checks. Default: 540000 (9 minutes).
+         isolation_level (str): Controls how to read messages written
+             transactionally.
+ 
+             If set to ``read_committed``, :meth:`.getmany` will only return
+             transactional messages which have been committed.
+             If set to ``read_uncommitted`` (the default), :meth:`.getmany` will
+             return all messages, even transactional messages which have been
+@@ -293,550 +527,55 @@
+             than the offset of the first open transaction. In particular any
+             messages appearing after messages belonging to ongoing transactions
+             will be withheld until the relevant transaction has been completed.
+             As a result, `read_committed` consumers will not be able to read up
+             to the high watermark when there are in flight transactions.
+             Further, when in `read_committed` the seek_to_end method will
+             return the LSO. See method docs below. Default: ``read_uncommitted``
++        sasl_mechanism (str): Authentication mechanism when security_protocol
++            is configured for ``SASL_PLAINTEXT`` or ``SASL_SSL``. Valid values are:
++            ``PLAIN``, ``GSSAPI``, ``SCRAM-SHA-256``, ``SCRAM-SHA-512``,
++            ``OAUTHBEARER``.
++            Default: ``PLAIN``
++        sasl_plain_username (str): username for SASL ``PLAIN`` authentication.
++            Default: None
++        sasl_plain_password (str): password for SASL ``PLAIN`` authentication.
++            Default: None
+         sasl_oauth_token_provider (~aiokafka.abc.AbstractTokenProvider): OAuthBearer token provider instance. (See :mod:`kafka.oauth.abstract`).
+             Default: None
+     """
+-    allowed_keys = set(signature(_get_kafka_config).parameters.keys())
+-    if not set(kwargs.keys()) <= allowed_keys:
+-        unallowed_keys = ", ".join(
+-            sorted([f"'{x}'" for x in set(kwargs.keys()).difference(allowed_keys)])
+-        )
+-        raise ValueError(f"Unallowed key arguments passed: {unallowed_keys}")
+-    retval = kwargs.copy()
+-
+-    # todo: check this values
+-    config_defaults = {
+-        "bootstrap_servers": "localhost:9092",
+-        "auto_offset_reset": "earliest",
+-        "max_poll_records": 100,
+-        #         "max_buffer_size": 10_000,
+-    }
+-    for key, value in config_defaults.items():
+-        if key not in retval:
+-            retval[key] = value
+-
+-    return retval
+-
+-# %% ../../nbs/015_FastKafka.ipynb 14
+-def _get_kafka_brokers(kafka_brokers: Optional[Dict[str, Any]] = None) -> KafkaBrokers:
+-    """Get Kafka brokers
+-
+-    Args:
+-        kafka_brokers: Kafka brokers
+-
+-    """
+-    if kafka_brokers is None:
+-        retval: KafkaBrokers = KafkaBrokers(
+-            brokers={
+-                "localhost": KafkaBroker(
+-                    url="https://localhost",
+-                    description="Local (dev) Kafka broker",
+-                    port="9092",
+-                )
+-            }
+-        )
+-    else:
+-        retval = KafkaBrokers(
+-            brokers={
+-                k: KafkaBroker.parse_raw(
+-                    v.json() if hasattr(v, "json") else json.dumps(v)
+-                )
+-                for k, v in kafka_brokers.items()
+-            }
+-        )
+-
+-    return retval
+-
+-# %% ../../nbs/015_FastKafka.ipynb 16
+-def _get_topic_name(
+-    topic_callable: Union[ConsumeCallable, ProduceCallable], prefix: str = "on_"
+-) -> str:
+-    """Get topic name
+-    Args:
+-        topic_callable: a function
+-        prefix: prefix of the name of the function followed by the topic name
+-
+-    Returns:
+-        The name of the topic
+-    """
+-    topic = topic_callable.__name__
+-    if not topic.startswith(prefix) or len(topic) <= len(prefix):
+-        raise ValueError(f"Function name '{topic}' must start with {prefix}")
+-    topic = topic[len(prefix) :]
+-
+-    return topic
+-
+-# %% ../../nbs/015_FastKafka.ipynb 18
+-def _get_contact_info(
+-    name: str = "Author",
+-    url: str = "https://www.google.com",
+-    email: str = "noreply@gmail.com",
+-) -> ContactInfo:
+-    return ContactInfo(name=name, url=url, email=email)
+-
+-# %% ../../nbs/015_FastKafka.ipynb 20
+-class FastKafka:
+-    @delegates(_get_kafka_config)  # type: ignore
+-    def __init__(
+-        self,
+-        *,
+-        title: Optional[str] = None,
+-        description: Optional[str] = None,
+-        version: Optional[str] = None,
+-        contact: Optional[Dict[str, str]] = None,
+-        kafka_brokers: Dict[str, Any],
+-        root_path: Optional[Union[Path, str]] = None,
+-        bootstrap_servers: Optional[Union[str, List[str]]] = None,
+-        **kwargs,
+-    ):
+-        """Creates FastKafka application
+-
+-        Args:
+-            title: optional title for the documentation. If None,
+-                the title will be set to empty string
+-            description: optional description for the documentation. If
+-                None, the description will be set to empty string
+-            version: optional version for the documentation. If None,
+-                the version will be set to empty string
+-            contact: optional contact for the documentation. If None, the
+-                contact will be set to placeholder values:
+-                name='Author' url=HttpUrl('https://www.google.com', ) email='noreply@gmail.com'
+-            kafka_brokers: dictionary describing kafka brokers used for
+-                generating documentation
+-            root_path: path to where documentation will be created
+-            bootstrap_servers (str, list(str)): a ``host[:port]`` string or list of
+-                ``host[:port]`` strings that the producer should contact to
+-                bootstrap initial cluster metadata. This does not have to be the
+-                full node list.  It just needs to have at least one broker that will
+-                respond to a Metadata API Request. Default port is 9092. If no
+-                servers are specified, will default to ``localhost:9092``.
+-            client_id (str): a name for this client. This string is passed in
+-                each request to servers and can be used to identify specific
+-                server-side log entries that correspond to this client.
+-                Default: ``aiokafka-producer-#`` (appended with a unique number
+-                per instance)
+-            key_serializer (Callable): used to convert user-supplied keys to bytes
+-                If not :data:`None`, called as ``f(key),`` should return
+-                :class:`bytes`.
+-                Default: :data:`None`.
+-            value_serializer (Callable): used to convert user-supplied message
+-                values to :class:`bytes`. If not :data:`None`, called as
+-                ``f(value)``, should return :class:`bytes`.
+-                Default: :data:`None`.
+-            acks (Any): one of ``0``, ``1``, ``all``. The number of acknowledgments
+-                the producer requires the leader to have received before considering a
+-                request complete. This controls the durability of records that are
+-                sent. The following settings are common:
+-
+-                * ``0``: Producer will not wait for any acknowledgment from the server
+-                  at all. The message will immediately be added to the socket
+-                  buffer and considered sent. No guarantee can be made that the
+-                  server has received the record in this case, and the retries
+-                  configuration will not take effect (as the client won't
+-                  generally know of any failures). The offset given back for each
+-                  record will always be set to -1.
+-                * ``1``: The broker leader will write the record to its local log but
+-                  will respond without awaiting full acknowledgement from all
+-                  followers. In this case should the leader fail immediately
+-                  after acknowledging the record but before the followers have
+-                  replicated it then the record will be lost.
+-                * ``all``: The broker leader will wait for the full set of in-sync
+-                  replicas to acknowledge the record. This guarantees that the
+-                  record will not be lost as long as at least one in-sync replica
+-                  remains alive. This is the strongest available guarantee.
+-
+-                If unset, defaults to ``acks=1``. If `enable_idempotence` is
+-                :data:`True` defaults to ``acks=all``
+-            compression_type (str): The compression type for all data generated by
+-                the producer. Valid values are ``gzip``, ``snappy``, ``lz4``, ``zstd``
+-                or :data:`None`.
+-                Compression is of full batches of data, so the efficacy of batching
+-                will also impact the compression ratio (more batching means better
+-                compression). Default: :data:`None`.
+-            max_batch_size (int): Maximum size of buffered data per partition.
+-                After this amount :meth:`send` coroutine will block until batch is
+-                drained.
+-                Default: 16384
+-            linger_ms (int): The producer groups together any records that arrive
+-                in between request transmissions into a single batched request.
+-                Normally this occurs only under load when records arrive faster
+-                than they can be sent out. However in some circumstances the client
+-                may want to reduce the number of requests even under moderate load.
+-                This setting accomplishes this by adding a small amount of
+-                artificial delay; that is, if first request is processed faster,
+-                than `linger_ms`, producer will wait ``linger_ms - process_time``.
+-                Default: 0 (i.e. no delay).
+-            partitioner (Callable): Callable used to determine which partition
+-                each message is assigned to. Called (after key serialization):
+-                ``partitioner(key_bytes, all_partitions, available_partitions)``.
+-                The default partitioner implementation hashes each non-None key
+-                using the same murmur2 algorithm as the Java client so that
+-                messages with the same key are assigned to the same partition.
+-                When a key is :data:`None`, the message is delivered to a random partition
+-                (filtered to partitions with available leaders only, if possible).
+-            max_request_size (int): The maximum size of a request. This is also
+-                effectively a cap on the maximum record size. Note that the server
+-                has its own cap on record size which may be different from this.
+-                This setting will limit the number of record batches the producer
+-                will send in a single request to avoid sending huge requests.
+-                Default: 1048576.
+-            metadata_max_age_ms (int): The period of time in milliseconds after
+-                which we force a refresh of metadata even if we haven't seen any
+-                partition leadership changes to proactively discover any new
+-                brokers or partitions. Default: 300000
+-            request_timeout_ms (int): Produce request timeout in milliseconds.
+-                As it's sent as part of
+-                :class:`~kafka.protocol.produce.ProduceRequest` (it's a blocking
+-                call), maximum waiting time can be up to ``2 *
+-                request_timeout_ms``.
+-                Default: 40000.
+-            retry_backoff_ms (int): Milliseconds to backoff when retrying on
+-                errors. Default: 100.
+-            api_version (str): specify which kafka API version to use.
+-                If set to ``auto``, will attempt to infer the broker version by
+-                probing various APIs. Default: ``auto``
+-            security_protocol (str): Protocol used to communicate with brokers.
+-                Valid values are: ``PLAINTEXT``, ``SSL``. Default: ``PLAINTEXT``.
+-                Default: ``PLAINTEXT``.
+-            ssl_context (ssl.SSLContext): pre-configured :class:`~ssl.SSLContext`
+-                for wrapping socket connections. Directly passed into asyncio's
+-                :meth:`~asyncio.loop.create_connection`. For more
+-                information see :ref:`ssl_auth`.
+-                Default: :data:`None`
+-            connections_max_idle_ms (int): Close idle connections after the number
+-                of milliseconds specified by this config. Specifying :data:`None` will
+-                disable idle checks. Default: 540000 (9 minutes).
+-            enable_idempotence (bool): When set to :data:`True`, the producer will
+-                ensure that exactly one copy of each message is written in the
+-                stream. If :data:`False`, producer retries due to broker failures,
+-                etc., may write duplicates of the retried message in the stream.
+-                Note that enabling idempotence acks to set to ``all``. If it is not
+-                explicitly set by the user it will be chosen. If incompatible
+-                values are set, a :exc:`ValueError` will be thrown.
+-                New in version 0.5.0.
+-            sasl_mechanism (str): Authentication mechanism when security_protocol
+-                is configured for ``SASL_PLAINTEXT`` or ``SASL_SSL``. Valid values
+-                are: ``PLAIN``, ``GSSAPI``, ``SCRAM-SHA-256``, ``SCRAM-SHA-512``,
+-                ``OAUTHBEARER``.
+-                Default: ``PLAIN``
+-            sasl_plain_username (str): username for SASL ``PLAIN`` authentication.
+-                Default: :data:`None`
+-            sasl_plain_password (str): password for SASL ``PLAIN`` authentication.
+-                Default: :data:`None`
+-            sasl_oauth_token_provider (: class:`~aiokafka.abc.AbstractTokenProvider`):
+-                OAuthBearer token provider instance. (See
+-                :mod:`kafka.oauth.abstract`).
+-                Default: :data:`None`
+-            group_id (str or None): name of the consumer group to join for dynamic
+-                partition assignment (if enabled), and to use for fetching and
+-                committing offsets. If None, auto-partition assignment (via
+-                group coordinator) and offset commits are disabled.
+-                Default: None
+-            key_deserializer (Callable): Any callable that takes a
+-                raw message key and returns a deserialized key.
+-            value_deserializer (Callable, Optional): Any callable that takes a
+-                raw message value and returns a deserialized value.
+-            fetch_min_bytes (int): Minimum amount of data the server should
+-                return for a fetch request, otherwise wait up to
+-                `fetch_max_wait_ms` for more data to accumulate. Default: 1.
+-            fetch_max_bytes (int): The maximum amount of data the server should
+-                return for a fetch request. This is not an absolute maximum, if
+-                the first message in the first non-empty partition of the fetch
+-                is larger than this value, the message will still be returned
+-                to ensure that the consumer can make progress. NOTE: consumer
+-                performs fetches to multiple brokers in parallel so memory
+-                usage will depend on the number of brokers containing
+-                partitions for the topic.
+-                Supported Kafka version >= 0.10.1.0. Default: 52428800 (50 Mb).
+-            fetch_max_wait_ms (int): The maximum amount of time in milliseconds
+-                the server will block before answering the fetch request if
+-                there isn't sufficient data to immediately satisfy the
+-                requirement given by fetch_min_bytes. Default: 500.
+-            max_partition_fetch_bytes (int): The maximum amount of data
+-                per-partition the server will return. The maximum total memory
+-                used for a request ``= #partitions * max_partition_fetch_bytes``.
+-                This size must be at least as large as the maximum message size
+-                the server allows or else it is possible for the producer to
+-                send messages larger than the consumer can fetch. If that
+-                happens, the consumer can get stuck trying to fetch a large
+-                message on a certain partition. Default: 1048576.
+-            max_poll_records (int): The maximum number of records returned in a
+-                single call to :meth:`.getmany`. Defaults ``None``, no limit.
+-            auto_offset_reset (str): A policy for resetting offsets on
+-                :exc:`.OffsetOutOfRangeError` errors: ``earliest`` will move to the oldest
+-                available message, ``latest`` will move to the most recent, and
+-                ``none`` will raise an exception so you can handle this case.
+-                Default: ``latest``.
+-            enable_auto_commit (bool): If true the consumer's offset will be
+-                periodically committed in the background. Default: True.
+-            auto_commit_interval_ms (int): milliseconds between automatic
+-                offset commits, if enable_auto_commit is True. Default: 5000.
+-            check_crcs (bool): Automatically check the CRC32 of the records
+-                consumed. This ensures no on-the-wire or on-disk corruption to
+-                the messages occurred. This check adds some overhead, so it may
+-                be disabled in cases seeking extreme performance. Default: True
+-            partition_assignment_strategy (list): List of objects to use to
+-                distribute partition ownership amongst consumer instances when
+-                group management is used. This preference is implicit in the order
+-                of the strategies in the list. When assignment strategy changes:
+-                to support a change to the assignment strategy, new versions must
+-                enable support both for the old assignment strategy and the new
+-                one. The coordinator will choose the old assignment strategy until
+-                all members have been updated. Then it will choose the new
+-                strategy. Default: [:class:`.RoundRobinPartitionAssignor`]
+-            max_poll_interval_ms (int): Maximum allowed time between calls to
+-                consume messages (e.g., :meth:`.getmany`). If this interval
+-                is exceeded the consumer is considered failed and the group will
+-                rebalance in order to reassign the partitions to another consumer
+-                group member. If API methods block waiting for messages, that time
+-                does not count against this timeout. See `KIP-62`_ for more
+-                information. Default 300000
+-            rebalance_timeout_ms (int): The maximum time server will wait for this
+-                consumer to rejoin the group in a case of rebalance. In Java client
+-                this behaviour is bound to `max.poll.interval.ms` configuration,
+-                but as ``aiokafka`` will rejoin the group in the background, we
+-                decouple this setting to allow finer tuning by users that use
+-                :class:`.ConsumerRebalanceListener` to delay rebalacing. Defaults
+-                to ``session_timeout_ms``
+-            session_timeout_ms (int): Client group session and failure detection
+-                timeout. The consumer sends periodic heartbeats
+-                (`heartbeat.interval.ms`) to indicate its liveness to the broker.
+-                If no hearts are received by the broker for a group member within
+-                the session timeout, the broker will remove the consumer from the
+-                group and trigger a rebalance. The allowed range is configured with
+-                the **broker** configuration properties
+-                `group.min.session.timeout.ms` and `group.max.session.timeout.ms`.
+-                Default: 10000
+-            heartbeat_interval_ms (int): The expected time in milliseconds
+-                between heartbeats to the consumer coordinator when using
+-                Kafka's group management feature. Heartbeats are used to ensure
+-                that the consumer's session stays active and to facilitate
+-                rebalancing when new consumers join or leave the group. The
+-                value must be set lower than `session_timeout_ms`, but typically
+-                should be set no higher than 1/3 of that value. It can be
+-                adjusted even lower to control the expected time for normal
+-                rebalances. Default: 3000
+-            consumer_timeout_ms (int): maximum wait timeout for background fetching
+-                routine. Mostly defines how fast the system will see rebalance and
+-                request new data for new partitions. Default: 200
+-            exclude_internal_topics (bool): Whether records from internal topics
+-                (such as offsets) should be exposed to the consumer. If set to True
+-                the only way to receive records from an internal topic is
+-                subscribing to it. Requires 0.10+ Default: True
+-            isolation_level (str): Controls how to read messages written
+-                transactionally.
+-
+-                If set to ``read_committed``, :meth:`.getmany` will only return
+-                transactional messages which have been committed.
+-                If set to ``read_uncommitted`` (the default), :meth:`.getmany` will
+-                return all messages, even transactional messages which have been
+-                aborted.
+-
+-                Non-transactional messages will be returned unconditionally in
+-                either mode.
+-
+-                Messages will always be returned in offset order. Hence, in
+-                `read_committed` mode, :meth:`.getmany` will only return
+-                messages up to the last stable offset (LSO), which is the one less
+-                than the offset of the first open transaction. In particular any
+-                messages appearing after messages belonging to ongoing transactions
+-                will be withheld until the relevant transaction has been completed.
+-                As a result, `read_committed` consumers will not be able to read up
+-                to the high watermark when there are in flight transactions.
+-                Further, when in `read_committed` the seek_to_end method will
+-                return the LSO. See method docs below. Default: ``read_uncommitted``
+-            sasl_oauth_token_provider (~aiokafka.abc.AbstractTokenProvider): OAuthBearer token provider instance. (See :mod:`kafka.oauth.abstract`).
+-                Default: None
+-        """
+-
+-        # this is needed for documentation generation
+-        self._title = title if title is not None else ""
+-        self._description = description if description is not None else ""
+-        self._version = version if version is not None else ""
+-        if contact is not None:
+-            self._contact_info = _get_contact_info(**contact)
+-        else:
+-            self._contact_info = _get_contact_info()
+-
+-        self._kafka_service_info = KafkaServiceInfo(
+-            title=self._title,
+-            version=self._version,
+-            description=self._description,
+-            contact=self._contact_info,
+-        )
+-        self._kafka_brokers = _get_kafka_brokers(kafka_brokers)
+-
+-        self._root_path = Path(".") if root_path is None else Path(root_path)
+-
+-        self._asyncapi_path = self._root_path / "asyncapi"
+-        (self._asyncapi_path / "docs").mkdir(exist_ok=True, parents=True)
+-        (self._asyncapi_path / "spec").mkdir(exist_ok=True, parents=True)
+-
+-        if bootstrap_servers is not None:
+-            raise ValueError(
+-                f"'bootstrap_servers' parameter is not supported, please use 'kafka_brokers' to set kafka server configuration"
+-            )
+-
+-        # this is used as default parameters for creating AIOProducer and AIOConsumer objects
+-        self._kafka_config = _get_kafka_config(**kwargs)
+-
+-        #
+-        self._consumers_store: Dict[str, Tuple[ConsumeCallable, Dict[str, Any]]] = {}
+-
+-        self._producers_store: Dict[  # type: ignore
+-            str, Tuple[ProduceCallable, AIOKafkaProducer, Dict[str, Any]]
+-        ] = {}
+-
+-        self._producers_list: List[  # type: ignore
+-            Union[AIOKafkaProducer, AIOKafkaProducerManager]
+-        ] = []
+-
+-        # background tasks
+-        self._scheduled_bg_tasks: List[Callable[..., Coroutine[Any, Any, Any]]] = []
+-        self._bg_task_group_generator: Optional[anyio.abc.TaskGroup] = None
+-        self._bg_tasks_group: Optional[anyio.abc.TaskGroup] = None
+-
+-        # todo: use this for errrors
+-        self._on_error_topic: Optional[str] = None
+-
+-        self._is_started: bool = False
+-        self._is_shutting_down: bool = False
+-        self._kafka_consumer_tasks: List[asyncio.Task[Any]] = []
+-        self._kafka_producer_tasks: List[asyncio.Task[Any]] = []
+-        self._running_bg_tasks: List[asyncio.Task[Any]] = []
+-        self.run = False
+-
+-        # testing functions
+-        self.AppMocks = None
+-        self.mocks = None
+-        self.awaited_mocks = None
+-
+-    @property
+-    def is_started(self) -> bool:
+-        return self._is_started
+-
+-    def _set_bootstrap_servers(self, bootstrap_servers: str) -> None:
+-        self._kafka_config["bootstrap_servers"] = bootstrap_servers
+-
+-    def set_kafka_broker(self, kafka_broker_name: str) -> None:
+-        if kafka_broker_name not in self._kafka_brokers.brokers:
+-            raise ValueError(
+-                f"Given kafka_broker_name '{kafka_broker_name}' is not found in kafka_brokers, available options are {self._kafka_brokers.brokers.keys()}"
+-            )
+-
+-        broker_to_use = self._kafka_brokers.brokers[kafka_broker_name]
+-        bootstrap_servers = f"{broker_to_use.url}:{broker_to_use.port}"
+-        logger.info(
+-            f"set_kafka_broker() : Setting bootstrap_servers value to '{bootstrap_servers}'"
+-        )
+-        self._set_bootstrap_servers(bootstrap_servers=bootstrap_servers)
+-
+-    async def __aenter__(self) -> "FastKafka":
+-        await self.startup()
+-        return self
+-
+-    async def __aexit__(
+-        self,
+-        exc_type: Optional[Type[BaseException]],
+-        exc: Optional[BaseException],
+-        tb: Optional[types.TracebackType],
+-    ) -> None:
+-        await self.shutdown()
+-
+-    async def startup(self) -> None:
+-        raise NotImplementedError
+-
+-    async def shutdown(self) -> None:
+-        raise NotImplementedError
+-
+-    def consumes(
+-        self,
+-        topic: Optional[str] = None,
+-        *,
+-        prefix: str = "on_",
+-        **kwargs: Dict[str, Any],
+-    ) -> ConsumeCallable:
+-        raise NotImplementedError
+-
+-    def produces(  # type: ignore
+-        self,
+-        topic: Optional[str] = None,
+-        *,
+-        prefix: str = "to_",
+-        producer: Optional[AIOKafkaProducer] = None,
+-        **kwargs: Dict[str, Any],
+-    ) -> ProduceCallable:
+-        raise NotImplementedError
+-
+-    def run_in_background(
+-        self,
+-    ) -> Callable[[], Any]:
+-        raise NotImplementedError
+-
+-    def _populate_consumers(
+-        self,
+-        is_shutting_down_f: Callable[[], bool],
+-    ) -> None:
+-        raise NotImplementedError
+-
+-    def get_topics(self) -> Iterable[str]:
+-        raise NotImplementedError
+-
+-    async def _populate_producers(self) -> None:
+-        raise NotImplementedError
+-
+-    async def _populate_bg_tasks(self) -> None:
+-        raise NotImplementedError
+-
+-    def create_docs(self) -> None:
+-        raise NotImplementedError
+-
+-    def create_mocks(self) -> None:
+-        raise NotImplementedError
+-
+-    async def _shutdown_consumers(self) -> None:
+-        raise NotImplementedError
+-
+-    async def _shutdown_producers(self) -> None:
+-        raise NotImplementedError
+-
+-    async def _shutdown_bg_tasks(self) -> None:
+-        raise NotImplementedError
+-
+-# %% ../../nbs/015_FastKafka.ipynb 21
+-FastKafka.__module__ = "fastkafka"
+-
+-# %% ../../nbs/015_FastKafka.ipynb 26
+-@patch  # type: ignore
+-@delegates(AIOKafkaConsumer)  # type: ignore
+-def consumes(
+-    self: FastKafka,
+-    topic: Optional[str] = None,
++    consumer = AIOKafkaConsumer(topic, **kwargs)
++    await consumer.start()
++    try:
++        with tqdm(total=msgs_count, desc=f"consuming from '{topic}'") as pbar:
++            async for msg in consumer:
++                pbar.update(1)
++                if pbar.n >= pbar.total:
++                    break
++    finally:
++        await consumer.stop()
++
++# %% ../nbs/999_Helpers.ipynb 20
++@delegates(AIOKafkaConsumer)
++@delegates(AIOKafkaProducer, keep=True)
++async def produce_and_consume_messages(
+     *,
+-    prefix: str = "on_",
++    produce_topic: str,
++    consume_topic: str,
++    msgs: List[Any],
++    msgs_count: int,
+     **kwargs: Dict[str, Any],
+-) -> Callable[[ConsumeCallable], ConsumeCallable]:
+-    """Decorator registering the callback called when a message is received in a topic.
+-
+-    This function decorator is also responsible for registering topics for AsyncAPI specificiation and documentation.
++) -> None:
++    """produce_and_consume_messages
+ 
+     Args:
+-        topic: Kafka topic that the consumer will subscribe to and execute the
+-            decorated function when it receives a message from the topic,
+-            default: None. If the topic is not specified, topic name will be
+-            inferred from the decorated function name by stripping the defined prefix
+-        prefix: Prefix stripped from the decorated function to define a topic name
+-            if the topic argument is not passed, default: "on_". If the decorated
+-            function name is not prefixed with the defined prefix and topic argument
+-            is not passed, then this method will throw ValueError
++        produce_topic: Topic name for producing messages
++        consume_topic: Topic name for consuming messages
++        msgs: a list of messages to produce
++        msgs_count: number of messages to consume before returning
+         bootstrap_servers (str, list(str)): a ``host[:port]`` string (or list of
+             ``host[:port]`` strings) that the consumer should contact to bootstrap
+             initial cluster metadata.
+ 
+             This does not have to be the full node list.
+             It just needs to have at least one broker that will respond to a
+             Metadata API Request. Default port is 9092. If no servers are
+@@ -993,75 +732,14 @@
+             Default: ``PLAIN``
+         sasl_plain_username (str): username for SASL ``PLAIN`` authentication.
+             Default: None
+         sasl_plain_password (str): password for SASL ``PLAIN`` authentication.
+             Default: None
+         sasl_oauth_token_provider (~aiokafka.abc.AbstractTokenProvider): OAuthBearer token provider instance. (See :mod:`kafka.oauth.abstract`).
+             Default: None
+-
+-    Returns:
+-        A function returning the same function
+-
+-    Throws:
+-        ValueError
+-
+-    """
+-
+-    def _decorator(
+-        on_topic: ConsumeCallable,
+-        topic: Optional[str] = topic,
+-        kwargs: Dict[str, Any] = kwargs,
+-    ) -> ConsumeCallable:
+-        topic_resolved: str = (
+-            _get_topic_name(topic_callable=on_topic, prefix=prefix)
+-            if topic is None
+-            else topic
+-        )
+-
+-        self._consumers_store[topic_resolved] = (on_topic, kwargs)
+-
+-        return on_topic
+-
+-    return _decorator
+-
+-# %% ../../nbs/015_FastKafka.ipynb 30
+-@patch  # type: ignore
+-@delegates(AIOKafkaProducer)  # type: ignore
+-def produces(
+-    self: FastKafka,
+-    topic: Optional[str] = None,
+-    *,
+-    prefix: str = "to_",
+-    **kwargs: Dict[str, Any],
+-) -> Callable[[ProduceCallable], ProduceCallable]:
+-    """Decorator registering the callback called when delivery report for a produced message is received
+-
+-    This function decorator is also responsible for registering topics for AsyncAPI specificiation and documentation.
+-
+-    Args:
+-        topic: Kafka topic that the producer will send returned values from
+-            the decorated function to, default: None- If the topic is not
+-            specified, topic name will be inferred from the decorated function
+-            name by stripping the defined prefix.
+-        prefix: Prefix stripped from the decorated function to define a topic
+-            name if the topic argument is not passed, default: "to_". If the
+-            decorated function name is not prefixed with the defined prefix
+-            and topic argument is not passed, then this method will throw ValueError
+-        producer: optional AIOKafkaProducer object used to produce messages
+-        bootstrap_servers (str, list(str)): a ``host[:port]`` string or list of
+-            ``host[:port]`` strings that the producer should contact to
+-            bootstrap initial cluster metadata. This does not have to be the
+-            full node list.  It just needs to have at least one broker that will
+-            respond to a Metadata API Request. Default port is 9092. If no
+-            servers are specified, will default to ``localhost:9092``.
+-        client_id (str): a name for this client. This string is passed in
+-            each request to servers and can be used to identify specific
+-            server-side log entries that correspond to this client.
+-            Default: ``aiokafka-producer-#`` (appended with a unique number
+-            per instance)
+         key_serializer (Callable): used to convert user-supplied keys to bytes
+             If not :data:`None`, called as ``f(key),`` should return
+             :class:`bytes`.
+             Default: :data:`None`.
+         value_serializer (Callable): used to convert user-supplied message
+             values to :class:`bytes`. If not :data:`None`, called as
+             ``f(value)``, should return :class:`bytes`.
+@@ -1119,425 +797,94 @@
+             (filtered to partitions with available leaders only, if possible).
+         max_request_size (int): The maximum size of a request. This is also
+             effectively a cap on the maximum record size. Note that the server
+             has its own cap on record size which may be different from this.
+             This setting will limit the number of record batches the producer
+             will send in a single request to avoid sending huge requests.
+             Default: 1048576.
+-        metadata_max_age_ms (int): The period of time in milliseconds after
+-            which we force a refresh of metadata even if we haven't seen any
+-            partition leadership changes to proactively discover any new
+-            brokers or partitions. Default: 300000
+-        request_timeout_ms (int): Produce request timeout in milliseconds.
+-            As it's sent as part of
+-            :class:`~kafka.protocol.produce.ProduceRequest` (it's a blocking
+-            call), maximum waiting time can be up to ``2 *
+-            request_timeout_ms``.
+-            Default: 40000.
+-        retry_backoff_ms (int): Milliseconds to backoff when retrying on
+-            errors. Default: 100.
+-        api_version (str): specify which kafka API version to use.
+-            If set to ``auto``, will attempt to infer the broker version by
+-            probing various APIs. Default: ``auto``
+-        security_protocol (str): Protocol used to communicate with brokers.
+-            Valid values are: ``PLAINTEXT``, ``SSL``. Default: ``PLAINTEXT``.
+-            Default: ``PLAINTEXT``.
+-        ssl_context (ssl.SSLContext): pre-configured :class:`~ssl.SSLContext`
+-            for wrapping socket connections. Directly passed into asyncio's
+-            :meth:`~asyncio.loop.create_connection`. For more
+-            information see :ref:`ssl_auth`.
+-            Default: :data:`None`
+-        connections_max_idle_ms (int): Close idle connections after the number
+-            of milliseconds specified by this config. Specifying :data:`None` will
+-            disable idle checks. Default: 540000 (9 minutes).
+         enable_idempotence (bool): When set to :data:`True`, the producer will
+             ensure that exactly one copy of each message is written in the
+             stream. If :data:`False`, producer retries due to broker failures,
+             etc., may write duplicates of the retried message in the stream.
+             Note that enabling idempotence acks to set to ``all``. If it is not
+             explicitly set by the user it will be chosen. If incompatible
+             values are set, a :exc:`ValueError` will be thrown.
+             New in version 0.5.0.
+-        sasl_mechanism (str): Authentication mechanism when security_protocol
+-            is configured for ``SASL_PLAINTEXT`` or ``SASL_SSL``. Valid values
+-            are: ``PLAIN``, ``GSSAPI``, ``SCRAM-SHA-256``, ``SCRAM-SHA-512``,
+-            ``OAUTHBEARER``.
+-            Default: ``PLAIN``
+-        sasl_plain_username (str): username for SASL ``PLAIN`` authentication.
+-            Default: :data:`None`
+-        sasl_plain_password (str): password for SASL ``PLAIN`` authentication.
+-            Default: :data:`None`
+         sasl_oauth_token_provider (: class:`~aiokafka.abc.AbstractTokenProvider`):
+             OAuthBearer token provider instance. (See
+             :mod:`kafka.oauth.abstract`).
+             Default: :data:`None`
+-
+-    Returns:
+-        A function returning the same function
+-
+-    Raises:
+-        ValueError: when needed
+-    """
+-
+-    def _decorator(
+-        on_topic: ProduceCallable,
+-        topic: Optional[str] = topic,
+-        kwargs: Dict[str, Any] = kwargs,
+-    ) -> ProduceCallable:
+-        topic_resolved: str = (
+-            _get_topic_name(topic_callable=on_topic, prefix=prefix)
+-            if topic is None
+-            else topic
+-        )
+-
+-        self._producers_store[topic_resolved] = (on_topic, None, kwargs)
+-        return producer_decorator(self._producers_store, on_topic, topic_resolved)
+-
+-    return _decorator
+-
+-# %% ../../nbs/015_FastKafka.ipynb 34
+-@patch  # type: ignore
+-def get_topics(self: FastKafka) -> Iterable[str]:
+-    produce_topics = set(self._producers_store.keys())
+-    consume_topics = set(self._consumers_store.keys())
+-    return consume_topics.union(produce_topics)
+-
+-# %% ../../nbs/015_FastKafka.ipynb 36
+-@patch  # type: ignore
+-def run_in_background(
+-    self: FastKafka,
+-) -> Callable[
+-    [Callable[..., Coroutine[Any, Any, Any]]], Callable[..., Coroutine[Any, Any, Any]]
+-]:
+-    """
+-    Decorator to schedule a task to be run in the background.
+-
+-    This decorator is used to schedule a task to be run in the background when the app's `_on_startup` event is triggered.
+-
+-    Returns:
+-        Callable[None, None]: A decorator function that takes a background task as an input and stores it to be run in the backround.
+-    """
+-
+-    def _decorator(
+-        bg_task: Callable[..., Coroutine[Any, Any, Any]]
+-    ) -> Callable[..., Coroutine[Any, Any, Any]]:
+-        """
+-        Store the background task.
+-
+-        Args:
+-            bg_task (Callable[[], None]): The background task to be run asynchronously.
+-
+-        Returns:
+-            Callable[[], None]: Original background task.
+-        """
+-        logger.info(
+-            f"run_in_background() : Adding function '{bg_task.__name__}' as background task"
+-        )
+-        self._scheduled_bg_tasks.append(bg_task)
+-
+-        return bg_task
+-
+-    return _decorator
+-
+-# %% ../../nbs/015_FastKafka.ipynb 40
+-@patch  # type: ignore
+-def _populate_consumers(
+-    self: FastKafka,
+-    is_shutting_down_f: Callable[[], bool],
+-) -> None:
+-    default_config: Dict[str, Any] = filter_using_signature(
+-        AIOKafkaConsumer, **self._kafka_config
+-    )
+-    self._kafka_consumer_tasks = [
+-        asyncio.create_task(
+-            aiokafka_consumer_loop(
+-                topic=topic,
+-                callback=consumer,
+-                msg_type=signature(consumer).parameters["msg"].annotation,
+-                is_shutting_down_f=is_shutting_down_f,
+-                **{**default_config, **override_config},
+-            )
+-        )
+-        for topic, (consumer, override_config) in self._consumers_store.items()
+-    ]
+-
+-
+-@patch  # type: ignore
+-async def _shutdown_consumers(
+-    self: FastKafka,
+-) -> None:
+-    if self._kafka_consumer_tasks:
+-        await asyncio.wait(self._kafka_consumer_tasks)
+-
+-# %% ../../nbs/015_FastKafka.ipynb 42
+-# TODO: Add passing of vars
+-async def _create_producer(  # type: ignore
+-    *,
+-    callback: ProduceCallable,
+-    default_config: Dict[str, Any],
+-    override_config: Dict[str, Any],
+-    producers_list: List[Union[AIOKafkaProducer, AIOKafkaProducerManager]],
+-) -> Union[AIOKafkaProducer, AIOKafkaProducerManager]:
+-    """Creates a producer
+-
+-    Args:
+-        callback: A callback function that is called when the producer is ready.
+-        producer: An existing producer to use.
+-        default_config: A dictionary of default configuration values.
+-        override_config: A dictionary of configuration values to override.
+-        producers_list: A list of producers to add the new producer to.
+-
+-    Returns:
+-        A producer.
++        *topics (list(str)): optional list of topics to subscribe to. If not set,
++            call :meth:`.subscribe` or :meth:`.assign` before consuming records.
++            Passing topics directly is same as calling :meth:`.subscribe` API.
+     """
+-
+-    config = {
+-        **filter_using_signature(AIOKafkaProducer, **default_config),
+-        **override_config,
+-    }
+-    producer = AIOKafkaProducer(**config)
+-    logger.info(
+-        f"_create_producer() : created producer using the config: '{sanitize_kafka_config(**config)}'"
++    async with anyio.create_task_group() as tg:
++        tg.start_soon(
++            lambda d: produce_messages(**d),
++            dict(msgs=msgs, topic=produce_topic, **kwargs),
++        )
++        tg.start_soon(
++            lambda d: consumes_messages(**d),
++            dict(
++                msgs_count=msgs_count,
++                topic=consume_topic,
++                **kwargs,
++            ),
++        )
++
++# %% ../nbs/999_Helpers.ipynb 23
++def get_collapsible_admonition(
++    code_block: str, *, name: Optional[str] = None
++) -> Markdown:
++    alt_name = "" if name is None else name
++    intro = f'This example contains the content of the file "{alt_name}":'
++    return Markdown(
++        f"??? Example \n\n    {intro}\n\n"
++        + textwrap.indent(f"```python\n{code_block}\n```", prefix="    ")
+     )
+ 
+-    if not iscoroutinefunction(callback):
+-        producer = AIOKafkaProducerManager(producer)
+-
+-    await producer.start()
+-
+-    producers_list.append(producer)
+-
+-    return producer
+-
+-
+-@patch  # type: ignore
+-async def _populate_producers(self: FastKafka) -> None:
+-    """Populates the producers for the FastKafka instance.
++# %% ../nbs/999_Helpers.ipynb 25
++def source2markdown(o: Union[str, Callable[..., Any]]) -> Markdown:
++    """Converts source code into Markdown for displaying it with Jupyter notebook
+ 
+     Args:
+-        self: The FastKafka instance.
+-
+-    Returns:
+-        None.
+-
+-    Raises:
+-        None.
++        o: source code
+     """
+-    default_config: Dict[str, Any] = self._kafka_config
+-    self._producers_list = []
+-    self._producers_store.update(
+-        {
+-            topic: (
+-                callback,
+-                await _create_producer(
+-                    callback=callback,
+-                    default_config=default_config,
+-                    override_config=override_config,
+-                    producers_list=self._producers_list,
+-                ),
+-                override_config,
+-            )
+-            for topic, (
+-                callback,
+-                _,
+-                override_config,
+-            ) in self._producers_store.items()
+-        }
++    s = inspect.getsource(o) if callable(o) else o
++    return Markdown(
++        f"""
++```python
++{s}
++```
++"""
+     )
+ 
+-
+-@patch  # type: ignore
+-async def _shutdown_producers(self: FastKafka) -> None:
+-    [await producer.stop() for producer in self._producers_list[::-1]]
+-    # Remove references to stale producers
+-    self._producers_list = []
+-    self._producers_store.update(
+-        {
+-            topic: (
+-                callback,
+-                None,
+-                override_config,
+-            )
+-            for topic, (
+-                callback,
+-                _,
+-                override_config,
+-            ) in self._producers_store.items()
+-        }
+-    )
+-
+-# %% ../../nbs/015_FastKafka.ipynb 44
+-@patch  # type: ignore
+-async def _populate_bg_tasks(
+-    self: FastKafka,
+-) -> None:
+-    def _start_bg_task(task: Callable[..., Coroutine[Any, Any, Any]]) -> asyncio.Task:
+-        logger.info(
+-            f"_populate_bg_tasks() : Starting background task '{task.__name__}'"
+-        )
+-        return asyncio.create_task(task(), name=task.__name__)
+-
+-    self._running_bg_tasks = [_start_bg_task(task) for task in self._scheduled_bg_tasks]
+-
+-
+-@patch  # type: ignore
+-async def _shutdown_bg_tasks(
+-    self: FastKafka,
+-) -> None:
+-    for task in self._running_bg_tasks:
+-        logger.info(
+-            f"_shutdown_bg_tasks() : Cancelling background task '{task.get_name()}'"
+-        )
+-        task.cancel()
+-
+-    for task in self._running_bg_tasks:
+-        logger.info(
+-            f"_shutdown_bg_tasks() : Waiting for background task '{task.get_name()}' to finish"
+-        )
+-        try:
+-            await task
+-        except asyncio.CancelledError:
+-            pass
+-        logger.info(
+-            f"_shutdown_bg_tasks() : Execution finished for background task '{task.get_name()}'"
+-        )
+-
+-# %% ../../nbs/015_FastKafka.ipynb 46
+-@patch  # type: ignore
+-async def startup(self: FastKafka) -> None:
+-    def is_shutting_down_f(self: FastKafka = self) -> bool:
+-        return self._is_shutting_down
+-
+-    #     self.create_docs()
+-    await self._populate_producers()
+-    self._populate_consumers(is_shutting_down_f)
+-    await self._populate_bg_tasks()
+-
+-    self._is_started = True
+-
+-
+-@patch  # type: ignore
+-async def shutdown(self: FastKafka) -> None:
+-    self._is_shutting_down = True
+-
+-    await self._shutdown_bg_tasks()
+-    await self._shutdown_consumers()
+-    await self._shutdown_producers()
+-
+-    self._is_shutting_down = False
+-    self._is_started = False
+-
+-# %% ../../nbs/015_FastKafka.ipynb 51
+-@patch  # type: ignore
+-def create_docs(self: FastKafka) -> None:
+-    export_async_spec(
+-        consumers={
+-            topic: callback for topic, (callback, _) in self._consumers_store.items()
+-        },
+-        producers={
+-            topic: callback for topic, (callback, _, _) in self._producers_store.items()
+-        },
+-        kafka_brokers=self._kafka_brokers,
+-        kafka_service_info=self._kafka_service_info,
+-        asyncapi_path=self._asyncapi_path,
+-    )
+-
+-# %% ../../nbs/015_FastKafka.ipynb 55
+-class AwaitedMock:
+-    @staticmethod
+-    def _await_for(f: Callable[..., Any]) -> Callable[..., Any]:
+-        @delegates(f)  # type: ignore
+-        async def inner(*args, f=f, timeout: int = 60, **kwargs) -> Any:
+-            if inspect.iscoroutinefunction(f):
+-                return await asyncio.wait_for(f(*args, **kwargs), timeout=timeout)
+-            else:
+-                t0 = datetime.now()
+-                e: Optional[Exception] = None
+-                while True:
+-                    try:
+-                        return f(*args, **kwargs)
+-                    except Exception as _e:
+-                        await asyncio.sleep(1)
+-                        e = _e
+-
+-                    if datetime.now() - t0 > timedelta(seconds=timeout):
+-                        break
+-
+-                raise e
+-
+-        return inner  # type: ignore
+-
+-    def __init__(self, o: Any):
+-        self._o = o
+-
+-        for name in o.__dir__():
+-            if not name.startswith("_"):
+-                f = getattr(o, name)
+-                if inspect.ismethod(f):
+-                    setattr(self, name, self._await_for(f))
+-
+-# %% ../../nbs/015_FastKafka.ipynb 56
+-@patch  # type: ignore
+-def create_mocks(self: FastKafka) -> None:
+-    """Creates self.mocks as a named tuple mapping a new function obtained by calling the original functions and a mock"""
+-    app_methods = [f for f, _ in self._consumers_store.values()] + [
+-        f for f, _, _ in self._producers_store.values()
+-    ]
+-    self.AppMocks = namedtuple(  # type: ignore
+-        f"{self.__class__.__name__}Mocks", [f.__name__ for f in app_methods]
+-    )
+-
+-    self.mocks = self.AppMocks(  # type: ignore
+-        **{
+-            f.__name__: AsyncMock() if inspect.iscoroutinefunction(f) else MagicMock()
+-            for f in app_methods
+-        }
+-    )
+-
+-    self.awaited_mocks = self.AppMocks(  # type: ignore
+-        **{name: AwaitedMock(mock) for name, mock in self.mocks._asdict().items()}
+-    )
+-
+-    def add_mock(
+-        f: Callable[..., Any], mock: Union[AsyncMock, MagicMock]
+-    ) -> Callable[..., Any]:
+-        """Add call to mock when calling function f"""
+-
+-        @functools.wraps(f)
+-        async def async_inner(
+-            *args: Any, f: Callable[..., Any] = f, mock: AsyncMock = mock, **kwargs: Any
+-        ) -> Any:
+-            await mock(*args, **kwargs)
+-            return await f(*args, **kwargs)
+-
+-        @functools.wraps(f)
+-        def sync_inner(
+-            *args: Any, f: Callable[..., Any] = f, mock: MagicMock = mock, **kwargs: Any
+-        ) -> Any:
+-            mock(*args, **kwargs)
+-            return f(*args, **kwargs)
+-
+-        if inspect.iscoroutinefunction(f):
+-            return async_inner
+-        else:
+-            return sync_inner
+-
+-    self._consumers_store.update(
+-        {
+-            name: (
+-                add_mock(f, getattr(self.mocks, f.__name__)),
+-                kwargs,
+-            )
+-            for name, (f, kwargs) in self._consumers_store.items()
+-        }
+-    )
+-
+-    self._producers_store.update(
+-        {
+-            name: (
+-                add_mock(f, getattr(self.mocks, f.__name__)),
+-                producer,
+-                kwargs,
+-            )
+-            for name, (f, producer, kwargs) in self._producers_store.items()
+-        }
+-    )
++# %% ../nbs/999_Helpers.ipynb 27
++async def wait_for_get_url(
++    url: str, timeout: Optional[int] = None, **kwargs: Dict[str, Any]
++) -> aiohttp.ClientResponse:
++    t0 = datetime.now()
++    if timeout is not None:
++        pbar = tqdm(total=timeout, **kwargs)
++    try:
++        async with aiohttp.ClientSession() as session:
++            while True:
++                try:
++                    async with session.get(url) as response:
++                        if timeout is not None:
++                            pbar.update(pbar.total - pbar.n)
++                        return response
++                except aiohttp.ClientConnectorError as e:
++                    if timeout is not None:
++                        if pbar.total - pbar.n > 1:
++                            pbar.update(1)
++                    await asyncio.sleep(1)
++
++                if timeout is not None and datetime.now() - t0 >= timedelta(
++                    seconds=timeout
++                ):
++                    raise TimeoutError(
++                        f"Could not fetch url '{url}' for more than {timeout} seconds"
++                    )
++    finally:
++        if timeout is not None:
++            pbar.close()
+```
+
+### Comparing `fastkafka-0.3.1/fastkafka/_application/tester.py` & `fastkafka-0.4.0rc0/fastkafka/_application/tester.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -5,45 +5,46 @@
+ 
+ # %% ../../nbs/016_Tester.ipynb 1
+ import asyncio
+ import inspect
+ from contextlib import asynccontextmanager
+ from typing import *
+ 
+-from fastcore.basics import patch
+-from fastcore.meta import delegates
+ from pydantic import BaseModel
+ 
+ from .app import FastKafka
+-from .._testing.local_broker import LocalKafkaBroker
++from .._components.meta import delegates, patch
++from .._testing.apache_kafka_broker import ApacheKafkaBroker
++from .._testing.in_memory_broker import InMemoryBroker
+ from .._testing.local_redpanda_broker import LocalRedpandaBroker
+ 
+ # %% ../../nbs/016_Tester.ipynb 6
+ class Tester(FastKafka):
+-    __test__ = False
+-
++    @delegates(ApacheKafkaBroker.__init__)
+     def __init__(
+         self,
+         app: Union[FastKafka, List[FastKafka]],
+         *,
+-        broker: Optional[Union[LocalKafkaBroker, LocalRedpandaBroker]] = None,
++        broker: Optional[
++            Union[ApacheKafkaBroker, LocalRedpandaBroker, InMemoryBroker]
++        ] = None,
+     ):
+         """Mirror-like object for testing a FastFafka application
+ 
+         Can be used as context manager
+ 
+         """
+         self.apps = app if isinstance(app, list) else [app]
+         host, port = self.apps[0]._kafka_config["bootstrap_servers"].split(":")
+         super().__init__(kafka_brokers={"localhost": {"url": host, "port": port}})
+         self.create_mirrors()
+ 
+         self.broker = broker
+ 
+-    @delegates(LocalRedpandaBroker.__init__)  # type: ignore
++    @delegates(LocalRedpandaBroker.__init__)
+     def using_local_redpanda(self, **kwargs: Any) -> "Tester":
+         """Starts local Redpanda broker used by the Tester instance
+ 
+         Args:
+             listener_port: Port on which the clients (producers and consumers) can connect
+             tag: Tag of Redpanda image to use to start container
+             seastar_core: Core(s) to use byt Seastar (the framework Redpanda uses under the hood)
+@@ -62,15 +63,15 @@
+         kwargs["topics"] = (
+             topics.union(kwargs["topics"]) if "topics" in kwargs else topics
+         )
+         self.broker = LocalRedpandaBroker(**kwargs)
+ 
+         return self
+ 
+-    @delegates(LocalKafkaBroker.__init__)  # type: ignore
++    @delegates(ApacheKafkaBroker.__init__)
+     def using_local_kafka(self, **kwargs: Any) -> "Tester":
+         """Starts local Kafka broker used by the Tester instance
+ 
+         Args:
+             data_dir: Path to the directory where the zookeepeer instance will save data
+             zookeeper_port: Port for clients (Kafka brokes) to connect
+             listener_port: Port on which the clients (producers and consumers) can connect
+@@ -82,66 +83,71 @@
+         Returns:
+             An instance of tester with Kafka as broker
+         """
+         topics = set().union(*(app.get_topics() for app in self.apps))
+         kwargs["topics"] = (
+             topics.union(kwargs["topics"]) if "topics" in kwargs else topics
+         )
+-        self.broker = LocalKafkaBroker(**kwargs)
++        self.broker = ApacheKafkaBroker(**kwargs)
+ 
+         return self
+ 
+-    async def startup(self) -> None:
++    async def _start_tester(self) -> None:
+         """Starts the Tester"""
+         for app in self.apps:
+             app.create_mocks()
+-            await app.startup()
++            await app.__aenter__()
+         self.create_mocks()
+-        await super().startup()
++        await super().__aenter__()
+         await asyncio.sleep(3)
+ 
+-    async def shutdown(self) -> None:
++    async def _stop_tester(self) -> None:
+         """Shuts down the Tester"""
+-        await super().shutdown()
++        await super().__aexit__(None, None, None)
+         for app in self.apps[::-1]:
+-            await app.shutdown()
++            await app.__aexit__(None, None, None)
+ 
+     def create_mirrors(self) -> None:
+         pass
+ 
+     @asynccontextmanager
+     async def _create_ctx(self) -> AsyncGenerator["Tester", None]:
+         if self.broker is None:
+             topics = set().union(*(app.get_topics() for app in self.apps))
+-            self.broker = LocalKafkaBroker(topics=topics)
++            self.broker = InMemoryBroker()
+ 
+         bootstrap_server = await self.broker._start()
++        old_bootstrap_servers: List[str] = list()
+         try:
+-            self._set_bootstrap_servers(bootstrap_servers=bootstrap_server)
+-            for app in self.apps:
+-                app._set_bootstrap_servers(bootstrap_server)
+-            await self.startup()
++            if isinstance(self.broker, (ApacheKafkaBroker, LocalRedpandaBroker)):
++                self._set_bootstrap_servers(bootstrap_servers=bootstrap_server)
++                for app in self.apps:
++                    old_bootstrap_servers.append(app._kafka_config["bootstrap_servers"])
++                    app._set_bootstrap_servers(bootstrap_server)
++            await self._start_tester()
+             try:
+                 yield self
+             finally:
+-                await self.shutdown()
++                await self._stop_tester()
+         finally:
+             await self.broker._stop()
++            for app, server in zip(self.apps, old_bootstrap_servers):
++                app._set_bootstrap_servers(server)
+ 
+     async def __aenter__(self) -> "Tester":
+         self._ctx = self._create_ctx()
+         return await self._ctx.__aenter__()
+ 
+     async def __aexit__(self, *args: Any) -> None:
+         await self._ctx.__aexit__(*args)
+ 
+ 
+ Tester.__module__ = "fastkafka.testing"
+ 
+-# %% ../../nbs/016_Tester.ipynb 10
++# %% ../../nbs/016_Tester.ipynb 11
+ def mirror_producer(topic: str, producer_f: Callable[..., Any]) -> Callable[..., Any]:
+     msg_type = inspect.signature(producer_f).return_annotation
+ 
+     async def skeleton_func(msg: BaseModel) -> None:
+         pass
+ 
+     mirror_func = skeleton_func
+@@ -161,15 +167,15 @@
+         ]
+     )
+ 
+     mirror_func.__signature__ = sig  # type: ignore
+ 
+     return mirror_func
+ 
+-# %% ../../nbs/016_Tester.ipynb 12
++# %% ../../nbs/016_Tester.ipynb 13
+ def mirror_consumer(topic: str, consumer_f: Callable[..., Any]) -> Callable[..., Any]:
+     msg_type = inspect.signature(consumer_f).parameters["msg"]
+ 
+     async def skeleton_func(msg: BaseModel) -> BaseModel:
+         return msg
+ 
+     mirror_func = skeleton_func
+@@ -180,17 +186,17 @@
+ 
+     # adjust arg and return val
+     sig = sig.replace(parameters=[msg_type], return_annotation=msg_type.annotation)
+ 
+     mirror_func.__signature__ = sig  # type: ignore
+     return mirror_func
+ 
+-# %% ../../nbs/016_Tester.ipynb 14
+-@patch  # type: ignore
+-def create_mirrors(self: Tester):
++# %% ../../nbs/016_Tester.ipynb 15
++@patch
++def create_mirrors(self: Tester) -> None:
+     for app in self.apps:
+         for topic, (consumer_f, _) in app._consumers_store.items():
+             mirror_f = mirror_consumer(topic, consumer_f)
+             mirror_f = self.produces()(mirror_f)  # type: ignore
+             setattr(self, mirror_f.__name__, mirror_f)
+         for topic, (producer_f, _, _) in app._producers_store.items():
+             mirror_f = mirror_producer(topic, producer_f)
+```
+
+### Comparing `fastkafka-0.3.1/fastkafka/_cli.py` & `fastkafka-0.4.0rc0/fastkafka/_cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastkafka-0.3.1/fastkafka/_cli_docs.py` & `fastkafka-0.4.0rc0/fastkafka/_cli_docs.py`
+
+ * *Ordering differences only*
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,25 +1,25 @@
+ # AUTOGENERATED! DO NOT EDIT! File to edit: ../nbs/024_CLI_Docs.ipynb.
+ 
+ # %% auto 0
+ __all__ = ['logger', 'docs_install_deps', 'generate_docs', 'serve_docs']
+ 
+ # %% ../nbs/024_CLI_Docs.ipynb 1
++import asyncio
+ import signal
+ import socketserver
+ from http.server import SimpleHTTPRequestHandler
+ from types import FrameType
+ from typing import *
+-import asyncio
+ 
+ import typer
+ 
+ from fastkafka._components.docs_dependencies import (
+-    _install_docs_npm_deps,
+     _check_npm_with_local,
++    _install_docs_npm_deps,
+     _install_node,
+ )
+ from ._components.helpers import _import_from_string, change_dir
+ from ._components.logger import get_logger
+ 
+ # %% ../nbs/024_CLI_Docs.ipynb 5
+ logger = get_logger(__name__)
+```
+
+### Comparing `fastkafka-0.3.1/fastkafka/_cli_testing.py` & `fastkafka-0.4.0rc0/fastkafka/_cli_testing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastkafka-0.3.1/fastkafka/_components/_subprocess.py` & `fastkafka-0.4.0rc0/fastkafka/_components/_subprocess.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastkafka-0.3.1/fastkafka/_components/aiokafka_consumer_loop.py` & `fastkafka-0.4.0rc0/fastkafka/_components/aiokafka_consumer_loop.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -8,18 +8,18 @@
+ from typing import *
+ 
+ import anyio
+ import asyncer
+ from aiokafka import AIOKafkaConsumer
+ from aiokafka.structs import ConsumerRecord, TopicPartition
+ from anyio.streams.memory import MemoryObjectReceiveStream
+-from fastcore.meta import delegates
+ from pydantic import BaseModel
+ 
+ from .logger import get_logger
++from .meta import delegates
+ 
+ # %% ../../nbs/011_ConsumerLoop.ipynb 5
+ logger = get_logger(__name__)
+ 
+ # %% ../../nbs/011_ConsumerLoop.ipynb 9
+ def _create_safe_callback(
+     callback: Callable[[BaseModel], Awaitable[None]]
+@@ -101,24 +101,24 @@
+ ) -> AsyncGenerator[Any, Any]:
+     async for records_per_topic in receive_stream:
+         for records in records_per_topic:
+             for record in records:
+                 yield record
+ 
+ 
+-@delegates(AIOKafkaConsumer.getmany)  # type: ignore
+-async def _aiokafka_consumer_loop(
++@delegates(AIOKafkaConsumer.getmany)
++async def _aiokafka_consumer_loop(  # type: ignore
+     consumer: AIOKafkaConsumer,
+     *,
+     topic: str,
+     callback: Callable[[BaseModel], Union[None, Awaitable[None]]],
+     max_buffer_size: int = 100_000,
+     msg_type: Type[BaseModel],
+     is_shutting_down_f: Callable[[], bool],
+-    **kwargs,
++    **kwargs: Any,
+ ) -> None:
+     """
+     Consumer loop for infinite pooling of the AIOKafka consumer for new messages. Calls consumer.getmany()
+     and after the consumer return messages or times out, messages are decoded and streamed to defined callback.
+ 
+     Params:
+         callbacks: Dict of callbacks mapped to their respective topics
+@@ -170,25 +170,25 @@
+ 
+ # %% ../../nbs/011_ConsumerLoop.ipynb 24
+ def sanitize_kafka_config(**kwargs: Any) -> Dict[str, Any]:
+     """Sanitize Kafka config"""
+     return {k: "*" * len(v) if "pass" in k.lower() else v for k, v in kwargs.items()}
+ 
+ # %% ../../nbs/011_ConsumerLoop.ipynb 26
+-@delegates(AIOKafkaConsumer)  # type: ignore
+-@delegates(_aiokafka_consumer_loop, keep=True)  # type: ignore
++@delegates(AIOKafkaConsumer)
++@delegates(_aiokafka_consumer_loop, keep=True)
+ async def aiokafka_consumer_loop(
+     topic: str,
+     *,
+     timeout_ms: int = 100,
+     max_buffer_size: int = 100_000,
+-    callback: Dict[str, Callable[[BaseModel], Union[None, Awaitable[None]]]],
+-    msg_type: Dict[str, Type[BaseModel]],
++    callback: Callable[[BaseModel], Union[None, Awaitable[None]]],
++    msg_type: Type[BaseModel],
+     is_shutting_down_f: Callable[[], bool],
+-    **kwargs,
++    **kwargs: Any,
+ ) -> None:
+     """Consumer loop for infinite pooling of the AIOKafka consumer for new messages. Creates and starts AIOKafkaConsumer
+     and runs _aio_kafka_consumer loop fo infinite poling of the consumer for new messages.
+ 
+     Args:
+         topic: name of the topic to subscribe to
+         callback: callback function to be called after decoding and parsing a consumed message
+```
+
+### Comparing `fastkafka-0.3.1/fastkafka/_components/aiokafka_producer_manager.py` & `fastkafka-0.4.0rc0/fastkafka/_components/aiokafka_producer_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastkafka-0.3.1/fastkafka/_components/asyncapi.py` & `fastkafka-0.4.0rc0/fastkafka/_components/asyncapi.py`
+
+ * *Ordering differences only*
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -20,17 +20,17 @@
+ from pydantic.json import timedelta_isoformat
+ from pydantic.schema import schema
+ 
+ import fastkafka._components.logger
+ 
+ fastkafka._components.logger.should_supress_timestamps = True
+ 
++from .docs_dependencies import _check_npm_with_local
+ from .logger import get_logger
+ from .producer_decorator import KafkaEvent, ProduceCallable
+-from .docs_dependencies import _check_npm_with_local
+ 
+ # %% ../../nbs/014_AsyncAPI.ipynb 3
+ logger = get_logger(__name__)
+ 
+ # %% ../../nbs/014_AsyncAPI.ipynb 5
+ ConsumeCallable = Callable[[BaseModel], Union[Awaitable[None], None]]
+```
+
+### Comparing `fastkafka-0.3.1/fastkafka/_components/docs_dependencies.py` & `fastkafka-0.4.0rc0/fastkafka/_components/docs_dependencies.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -2,25 +2,24 @@
+ 
+ # %% auto 0
+ __all__ = ['logger', 'npm_required_major_version', 'node_version', 'node_fname', 'node_url', 'local_path', 'tgz_path',
+            'node_path']
+ 
+ # %% ../../nbs/097_Docs_Dependencies.ipynb 2
+ import asyncio
+-from tempfile import TemporaryDirectory
+-import shutil
+-import sys
+-from pathlib import Path
+ import os
++import shutil
+ import subprocess  # nosec Issue: [B404:blacklist]
+-
++import sys
+ import tarfile
++from pathlib import Path
++from tempfile import TemporaryDirectory
+ 
+-from .logger import get_logger
+ from .helpers import in_notebook
++from .logger import get_logger
+ 
+ if in_notebook():
+     from tqdm.notebook import tqdm
+ else:
+     from tqdm import tqdm
+ 
+ # %% ../../nbs/097_Docs_Dependencies.ipynb 4
+```
+
+### Comparing `fastkafka-0.3.1/fastkafka/_components/logger.py` & `fastkafka-0.4.0rc0/fastkafka/_components/logger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastkafka-0.3.1/fastkafka/_components/producer_decorator.py` & `fastkafka-0.4.0rc0/fastkafka/_components/producer_decorator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastkafka-0.3.1/fastkafka/_components/test_dependencies.py` & `fastkafka-0.4.0rc0/fastkafka/_components/test_dependencies.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastkafka-0.3.1/fastkafka/_server.py` & `fastkafka-0.4.0rc0/fastkafka/_server.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastkafka-0.3.1/fastkafka/_testing/local_broker.py` & `fastkafka-0.4.0rc0/fastkafka/_testing/apache_kafka_broker.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,42 +1,41 @@
+-# AUTOGENERATED! DO NOT EDIT! File to edit: ../../nbs/001_LocalKafkaBroker.ipynb.
++# AUTOGENERATED! DO NOT EDIT! File to edit: ../../nbs/002_ApacheKafkaBroker.ipynb.
+ 
+ # %% auto 0
+-__all__ = ['logger', 'get_zookeeper_config_string', 'get_kafka_config_string', 'LocalKafkaBroker', 'run_and_match',
++__all__ = ['logger', 'get_zookeeper_config_string', 'get_kafka_config_string', 'ApacheKafkaBroker', 'run_and_match',
+            'get_free_port', 'write_config_and_run']
+ 
+-# %% ../../nbs/001_LocalKafkaBroker.ipynb 1
++# %% ../../nbs/002_ApacheKafkaBroker.ipynb 1
+ import asyncio
+ import re
+ import socket
+ from datetime import datetime, timedelta
+ from pathlib import Path
+ from tempfile import TemporaryDirectory
+ from typing import *
+ 
+ import asyncer
+ import nest_asyncio
+-from fastcore.basics import patch
+-from fastcore.meta import delegates
+ 
+ from .._components._subprocess import terminate_asyncio_process
+-from .._components.helpers import filter_using_signature, in_notebook
++from .._components.helpers import in_notebook
+ from .._components.logger import get_logger
++from .._components.meta import delegates, filter_using_signature, patch
+ from .._components.test_dependencies import check_java, check_kafka
+ 
+-# %% ../../nbs/001_LocalKafkaBroker.ipynb 3
++# %% ../../nbs/002_ApacheKafkaBroker.ipynb 3
+ if in_notebook():
+     from tqdm.notebook import tqdm
+ else:
+     from tqdm import tqdm
+ 
+-# %% ../../nbs/001_LocalKafkaBroker.ipynb 4
++# %% ../../nbs/002_ApacheKafkaBroker.ipynb 4
+ logger = get_logger(__name__)
+ 
+-# %% ../../nbs/001_LocalKafkaBroker.ipynb 8
++# %% ../../nbs/002_ApacheKafkaBroker.ipynb 8
+ def get_zookeeper_config_string(
+     data_dir: Union[str, Path],  # the directory where the snapshot is stored.
+     zookeeper_port: int = 2181,  # the port at which the clients will connect
+ ) -> str:
+     """Generates a zookeeeper configuration string that can be exported to file
+     and used to start a zookeeper instance.
+ 
+@@ -52,15 +51,15 @@
+ clientPort={zookeeper_port}
+ maxClientCnxns=0
+ admin.enableServer=false
+ """
+ 
+     return zookeeper_config
+ 
+-# %% ../../nbs/001_LocalKafkaBroker.ipynb 10
++# %% ../../nbs/002_ApacheKafkaBroker.ipynb 10
+ def get_kafka_config_string(
+     data_dir: Union[str, Path], zookeeper_port: int = 2181, listener_port: int = 9092
+ ) -> str:
+     """Generates a kafka broker configuration string that can be exported to file
+     and used to start a kafka broker instance.
+ 
+     Args:
+@@ -152,29 +151,29 @@
+ 
+ # The following configuration specifies the time, in milliseconds, that the GroupCoordinator will delay the initial consumer rebalance.
+ group.initial.rebalance.delay.ms=0
+ """
+ 
+     return kafka_config
+ 
+-# %% ../../nbs/001_LocalKafkaBroker.ipynb 12
+-class LocalKafkaBroker:
+-    """LocalKafkaBroker class, used for running unique kafka brokers in tests to prevent topic clashing."""
++# %% ../../nbs/002_ApacheKafkaBroker.ipynb 12
++class ApacheKafkaBroker:
++    """ApacheKafkaBroker class, used for running unique kafka brokers in tests to prevent topic clashing."""
+ 
+-    @delegates(get_kafka_config_string)  # type: ignore
+-    @delegates(get_zookeeper_config_string, keep=True)  # type: ignore
++    @delegates(get_kafka_config_string)
++    @delegates(get_zookeeper_config_string, keep=True)
+     def __init__(
+         self,
+         topics: Iterable[str] = [],
+         *,
+         retries: int = 3,
+         apply_nest_asyncio: bool = False,
+         **kwargs: Dict[str, Any],
+     ):
+-        """Initialises the LocalKafkaBroker object
++        """Initialises the ApacheKafkaBroker object
+ 
+         Args:
+             data_dir: Path to the directory where the zookeepeer instance will save data
+             zookeeper_port: Port for clients (Kafka brokes) to connect
+             listener_port: Port on which the clients (producers and consumers) can connect
+             topics: List of topics to create after sucessfull Kafka broker startup
+             retries: Number of retries to create kafka and zookeeper services using random
+@@ -275,43 +274,43 @@
+         """Create missing topics in local Kafka broker
+         Returns:
+            None
+         """
+         raise NotImplementedError
+ 
+     def __enter__(self) -> str:
+-        #         LocalKafkaBroker._check_deps()
++        #         ApacheKafkaBroker._check_deps()
+         return self.start()
+ 
+     def __exit__(self, *args: Any, **kwargs: Any) -> None:
+         self.stop()
+ 
+     async def __aenter__(self) -> str:
+-        #         LocalKafkaBroker._check_deps()
++        #         ApacheKafkaBroker._check_deps()
+         return await self._start()
+ 
+     async def __aexit__(self, *args: Any, **kwargs: Any) -> None:
+         await self._stop()
+ 
+ 
+-LocalKafkaBroker.__module__ = "fastkafka.testing"
++ApacheKafkaBroker.__module__ = "fastkafka.testing"
+ 
+-# %% ../../nbs/001_LocalKafkaBroker.ipynb 14
++# %% ../../nbs/002_ApacheKafkaBroker.ipynb 14
+ @patch(cls_method=True)  # type: ignore
+-def _check_deps(cls: LocalKafkaBroker) -> None:
++def _check_deps(cls: ApacheKafkaBroker) -> None:
+     if not check_java():
+         raise RuntimeError(
+             "JDK installation not found! Please install JDK manually or run 'fastkafka testing install_deps'."
+         )
+     if not check_kafka():
+         raise RuntimeError(
+             "Kafka installation not found! Please install Kafka tools manually or run 'fastkafka testing install_deps'."
+         )
+ 
+-# %% ../../nbs/001_LocalKafkaBroker.ipynb 16
++# %% ../../nbs/002_ApacheKafkaBroker.ipynb 16
+ async def run_and_match(
+     *args: str, capture: str = "stdout", timeout: int = 5, pattern: str
+ ) -> asyncio.subprocess.Process:
+     # Create the subprocess; redirect the standard output
+     # into a pipe.
+ 
+     proc = await asyncio.create_subprocess_exec(
+@@ -348,15 +347,15 @@
+                 f"stdout={dstdout}, stderr={dstderr}, returncode={proc.returncode}"
+             )
+ 
+     await terminate_asyncio_process(proc)
+ 
+     raise TimeoutError()
+ 
+-# %% ../../nbs/001_LocalKafkaBroker.ipynb 18
++# %% ../../nbs/002_ApacheKafkaBroker.ipynb 18
+ def get_free_port() -> str:
+     s = socket.socket()
+     s.bind(("127.0.0.1", 0))
+     port = str(s.getsockname()[1])
+     s.close()
+     return port
+ 
+@@ -371,32 +370,32 @@
+         run_cmd,
+         config_path,
+         stdout=asyncio.subprocess.PIPE,
+         stdin=asyncio.subprocess.PIPE,
+     )
+ 
+ 
+-@patch  # type: ignore
++@patch
+ def get_service_config_string(
+-    self: LocalKafkaBroker, service: str, *, data_dir: Path
++    self: ApacheKafkaBroker, service: str, *, data_dir: Path
+ ) -> str:
+     service_kwargs = getattr(self, f"{service}_kwargs")
+     if service == "kafka":
+         return get_kafka_config_string(data_dir=data_dir, **service_kwargs)
+     else:
+         return get_zookeeper_config_string(data_dir=data_dir, **service_kwargs)
+ 
+ 
+-@patch  # type: ignore
+-async def _start_service(self: LocalKafkaBroker, service: str = "kafka") -> None:
++@patch
++async def _start_service(self: ApacheKafkaBroker, service: str = "kafka") -> None:
+     logger.info(f"Starting {service}...")
+ 
+     if self.temporary_directory_path is None:
+         raise ValueError(
+-            "LocalKafkaBroker._start_service(): self.temporary_directory_path is None, did you initialise it?"
++            "ApacheKafkaBroker._start_service(): self.temporary_directory_path is None, did you initialise it?"
+         )
+ 
+     configs_tried: List[Dict[str, Any]] = []
+ 
+     for i in range(self.retries + 1):
+         configs_tried = configs_tried + [getattr(self, f"{service}_kwargs").copy()]
+ 
+@@ -434,26 +433,26 @@
+         else:
+             setattr(self, f"{service}_task", service_task)
+             return
+ 
+     raise ValueError(f"Could not start {service} with params: {configs_tried}")
+ 
+ 
+-@patch  # type: ignore
+-async def _start_kafka(self: LocalKafkaBroker) -> None:
++@patch
++async def _start_kafka(self: ApacheKafkaBroker) -> None:
+     return await self._start_service("kafka")
+ 
+ 
+-@patch  # type: ignore
+-async def _start_zookeeper(self: LocalKafkaBroker) -> None:
++@patch
++async def _start_zookeeper(self: ApacheKafkaBroker) -> None:
+     return await self._start_service("zookeeper")
+ 
+ 
+-@patch  # type: ignore
+-async def _create_topics(self: LocalKafkaBroker) -> None:
++@patch
++async def _create_topics(self: ApacheKafkaBroker) -> None:
+     listener_port = self.kafka_kwargs.get("listener_port", 9092)
+     bootstrap_server = f"127.0.0.1:{listener_port}"
+ 
+     async with asyncer.create_task_group() as tg:
+         processes = [
+             tg.soonify(asyncio.create_subprocess_exec)(
+                 "kafka-topics.sh",
+@@ -472,16 +471,16 @@
+         ]
+         if any(return_value != 0 for return_value in return_values):
+             raise ValueError("Could not create missing topics!")
+     except asyncio.TimeoutError as _:
+         raise ValueError("Timed out while creating missing topics!")
+ 
+ 
+-@patch  # type: ignore
+-async def _start(self: LocalKafkaBroker) -> str:
++@patch
++async def _start(self: ApacheKafkaBroker) -> str:
+     self._check_deps()
+ 
+     self.temporary_directory = TemporaryDirectory()
+     self.temporary_directory_path = Path(self.temporary_directory.__enter__())
+ 
+     await self._start_zookeeper()
+     await self._start_kafka()
+@@ -493,24 +492,24 @@
+     await self._create_topics()
+ 
+     self._is_started = True
+ 
+     return bootstrap_server
+ 
+ 
+-@patch  # type: ignore
+-async def _stop(self: LocalKafkaBroker) -> None:
++@patch
++async def _stop(self: ApacheKafkaBroker) -> None:
+     await terminate_asyncio_process(self.kafka_task)  # type: ignore
+     await terminate_asyncio_process(self.zookeeper_task)  # type: ignore
+     self.temporary_directory.__exit__(None, None, None)  # type: ignore
+     self._is_started = False
+ 
+-# %% ../../nbs/001_LocalKafkaBroker.ipynb 21
+-@patch  # type: ignore
+-def start(self: LocalKafkaBroker) -> str:
++# %% ../../nbs/002_ApacheKafkaBroker.ipynb 21
++@patch
++def start(self: ApacheKafkaBroker) -> str:
+     """Starts a local kafka broker and zookeeper instance synchronously
+     Returns:
+        Kafka broker bootstrap server address in string format: add:port
+     """
+     logger.info(f"{self.__class__.__name__}.start(): entering...")
+     try:
+         # get or create loop
+@@ -533,43 +532,35 @@
+                     f"{self.__class__.__name__}.start(): ({loop}) is already running!"
+                 )
+                 logger.warning(
+                     f"{self.__class__.__name__}.start(): calling nest_asyncio.apply()"
+                 )
+                 nest_asyncio.apply(loop)
+             else:
+-                msg = f"{self.__class__.__name__}.start(): ({loop}) is already running! Use 'apply_nest_asyncio=True' when creating 'LocalKafkaBroker' to prevent this."
++                msg = f"{self.__class__.__name__}.start(): ({loop}) is already running! Use 'apply_nest_asyncio=True' when creating 'ApacheKafkaBroker' to prevent this."
+                 logger.error(msg)
+                 raise RuntimeError(msg)
+ 
+-        try:
+-            retval = loop.run_until_complete(self._start())
+-            logger.info(f"{self.__class__}.start(): returning {retval}")
+-            return retval
+-        except RuntimeError as e:
+-            logger.warning(
+-                f"{self.__class__.__name__}.start(): RuntimeError raised for loop ({loop}): {e}"
+-            )
+-            logger.warning(
+-                f"{self.__class__.__name__}.start(): calling nest_asyncio.apply()"
+-            )
++        retval = loop.run_until_complete(self._start())
++        logger.info(f"{self.__class__}.start(): returning {retval}")
++        return retval
+     finally:
+         logger.info(f"{self.__class__.__name__}.start(): exited.")
+ 
+ 
+-@patch  # type: ignore
+-def stop(self: LocalKafkaBroker) -> None:
++@patch
++def stop(self: ApacheKafkaBroker) -> None:
+     """Stops a local kafka broker and zookeeper instance synchronously
+     Returns:
+        None
+     """
+     logger.info(f"{self.__class__.__name__}.stop(): entering...")
+     try:
+         if not self._is_started:
+             raise RuntimeError(
+-                "LocalKafkaBroker not started yet, please call LocalKafkaBroker.start() before!"
++                "ApacheKafkaBroker not started yet, please call ApacheKafkaBroker.start() before!"
+             )
+ 
+         loop = asyncio.get_event_loop()
+         loop.run_until_complete(self._stop())
+     finally:
+         logger.info(f"{self.__class__.__name__}.stop(): exited.")
+```
+
+### Comparing `fastkafka-0.3.1/fastkafka/_testing/local_redpanda_broker.py` & `fastkafka-0.4.0rc0/fastkafka/_testing/local_redpanda_broker.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,38 +1,37 @@
+-# AUTOGENERATED! DO NOT EDIT! File to edit: ../../nbs/017_LocalRedpandaBroker.ipynb.
++# AUTOGENERATED! DO NOT EDIT! File to edit: ../../nbs/003_LocalRedpandaBroker.ipynb.
+ 
+ # %% auto 0
+ __all__ = ['logger', 'get_redpanda_docker_cmd', 'LocalRedpandaBroker', 'check_docker']
+ 
+-# %% ../../nbs/017_LocalRedpandaBroker.ipynb 1
++# %% ../../nbs/003_LocalRedpandaBroker.ipynb 1
+ import asyncio
+ from pathlib import Path
+ from tempfile import TemporaryDirectory
+ from typing import *
+ 
+ import asyncer
+ import nest_asyncio
+-from fastcore.basics import patch
+-from fastcore.meta import delegates
+ 
+ from .._components._subprocess import terminate_asyncio_process
+ from .._components.helpers import in_notebook
+-from .._components.logger import get_logger
+-from .local_broker import get_free_port, run_and_match
++from .._components.logger import get_logger, supress_timestamps
++from .._components.meta import delegates, patch
++from .apache_kafka_broker import get_free_port, run_and_match
+ 
+-# %% ../../nbs/017_LocalRedpandaBroker.ipynb 3
++# %% ../../nbs/003_LocalRedpandaBroker.ipynb 3
+ if in_notebook():
+     from tqdm.notebook import tqdm
+ else:
+     from tqdm import tqdm
+ 
+-# %% ../../nbs/017_LocalRedpandaBroker.ipynb 4
++# %% ../../nbs/003_LocalRedpandaBroker.ipynb 4
+ logger = get_logger(__name__)
+ 
+-# %% ../../nbs/017_LocalRedpandaBroker.ipynb 6
++# %% ../../nbs/003_LocalRedpandaBroker.ipynb 6
+ def get_redpanda_docker_cmd(
+     listener_port: int = 9092,
+     tag: str = "v23.1.2",
+     seastar_core: int = 1,
+     memory: str = "1G",
+     mode: str = "dev-container",
+     default_log_level: str = "debug",
+@@ -70,19 +69,19 @@
+         "--mode",
+         mode,
+         "--default-log-level",
+         default_log_level,
+     ]
+     return redpanda_docker_cmd
+ 
+-# %% ../../nbs/017_LocalRedpandaBroker.ipynb 8
++# %% ../../nbs/003_LocalRedpandaBroker.ipynb 8
+ class LocalRedpandaBroker:
+     """LocalRedpandaBroker class, used for running unique redpanda brokers in tests to prevent topic clashing."""
+ 
+-    @delegates(get_redpanda_docker_cmd, keep=True)  # type: ignore
++    @delegates(get_redpanda_docker_cmd, keep=True)
+     def __init__(
+         self,
+         topics: Iterable[str] = [],
+         *,
+         retries: int = 3,
+         apply_nest_asyncio: bool = False,
+         **kwargs: Dict[str, Any],
+@@ -187,33 +186,33 @@
+ 
+     async def __aexit__(self, *args: Any, **kwargs: Any) -> None:
+         await self._stop()
+ 
+ 
+ LocalRedpandaBroker.__module__ = "fastkafka.testing"
+ 
+-# %% ../../nbs/017_LocalRedpandaBroker.ipynb 10
++# %% ../../nbs/003_LocalRedpandaBroker.ipynb 10
+ async def check_docker() -> bool:
+     try:
+         docker_task = await run_and_match("docker", "-v", pattern="Docker version")
+         return True
+     except Exception as e:
+         logger.debug(f"Error in check_docker() : {e}")
+         return False
+ 
+-# %% ../../nbs/017_LocalRedpandaBroker.ipynb 12
++# %% ../../nbs/003_LocalRedpandaBroker.ipynb 12
+ @patch(cls_method=True)  # type: ignore
+ async def _check_deps(cls: LocalRedpandaBroker) -> None:
+     if not await check_docker():
+         raise RuntimeError(
+             "Docker installation not found! Please install docker manually and retry."
+         )
+ 
+-# %% ../../nbs/017_LocalRedpandaBroker.ipynb 15
+-@patch  # type: ignore
++# %% ../../nbs/003_LocalRedpandaBroker.ipynb 15
++@patch
+ async def _start_redpanda(self: LocalRedpandaBroker, service: str = "redpanda") -> None:
+     logger.info(f"Starting {service}...")
+ 
+     if self.temporary_directory_path is None:
+         raise ValueError(
+             "LocalRedpandaBroker._start_redpanda(): self.temporary_directory_path is None, did you initialise it?"
+         )
+@@ -243,15 +242,15 @@
+         else:
+             setattr(self, f"{service}_task", service_task)
+             return
+ 
+     raise ValueError(f"Could not start {service} with params: {configs_tried}")
+ 
+ 
+-@patch  # type: ignore
++@patch
+ async def _create_topics(self: LocalRedpandaBroker) -> None:
+     listener_port = self.redpanda_kwargs.get("listener_port", 9092)
+ 
+     async with asyncer.create_task_group() as tg:
+         processes = [
+             tg.soonify(run_and_match)(
+                 "docker",
+@@ -273,15 +272,15 @@
+         ]
+         if any(return_value != 0 for return_value in return_values):
+             raise ValueError("Could not create missing topics!")
+     except asyncio.TimeoutError as _:
+         raise ValueError("Timed out while creating missing topics!")
+ 
+ 
+-@patch  # type: ignore
++@patch
+ async def _start(self: LocalRedpandaBroker) -> str:
+     await self._check_deps()
+ 
+     self.temporary_directory = TemporaryDirectory()
+     self.temporary_directory_path = Path(self.temporary_directory.__enter__())
+ 
+     await self._start_redpanda()
+@@ -293,24 +292,24 @@
+     await self._create_topics()
+ 
+     self._is_started = True
+ 
+     return bootstrap_server
+ 
+ 
+-@patch  # type: ignore
++@patch
+ async def _stop(self: LocalRedpandaBroker) -> None:
+     logger.info(f"Stopping redpanda...")
+     await terminate_asyncio_process(self.redpanda_task)  # type: ignore
+     logger.info(f"Redpanda stopped.")
+     self.temporary_directory.__exit__(None, None, None)  # type: ignore
+     self._is_started = False
+ 
+-# %% ../../nbs/017_LocalRedpandaBroker.ipynb 17
+-@patch  # type: ignore
++# %% ../../nbs/003_LocalRedpandaBroker.ipynb 17
++@patch
+ def start(self: LocalRedpandaBroker) -> str:
+     """Starts a local redpanda broker instance synchronously
+     Returns:
+        Redpanda broker bootstrap server address in string format: add:port
+     """
+     logger.info(f"{self.__class__.__name__}.start(): entering...")
+     try:
+@@ -338,30 +337,22 @@
+                 )
+                 nest_asyncio.apply(loop)
+             else:
+                 msg = f"{self.__class__.__name__}.start(): ({loop}) is already running! Use 'apply_nest_asyncio=True' when creating 'LocalRedpandaBroker' to prevent this."
+                 logger.error(msg)
+                 raise RuntimeError(msg)
+ 
+-        try:
+-            retval = loop.run_until_complete(self._start())
+-            logger.info(f"{self.__class__}.start(): returning {retval}")
+-            return retval
+-        except RuntimeError as e:
+-            logger.warning(
+-                f"{self.__class__.__name__}.start(): RuntimeError raised for loop ({loop}): {e}"
+-            )
+-            logger.warning(
+-                f"{self.__class__.__name__}.start(): calling nest_asyncio.apply()"
+-            )
++        retval = loop.run_until_complete(self._start())
++        logger.info(f"{self.__class__}.start(): returning {retval}")
++        return retval
+     finally:
+         logger.info(f"{self.__class__.__name__}.start(): exited.")
+ 
+ 
+-@patch  # type: ignore
++@patch
+ def stop(self: LocalRedpandaBroker) -> None:
+     """Stops a local redpanda broker instance synchronously
+     Returns:
+        None
+     """
+     logger.info(f"{self.__class__.__name__}.stop(): entering...")
+     try:
+```
+
+### Comparing `fastkafka-0.3.1/fastkafka/_testing/test_utils.py` & `fastkafka-0.4.0rc0/fastkafka/_testing/test_utils.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+-# AUTOGENERATED! DO NOT EDIT! File to edit: ../../nbs/002_Test_Utils.ipynb.
++# AUTOGENERATED! DO NOT EDIT! File to edit: ../../nbs/004_Test_Utils.ipynb.
+ 
+ # %% auto 0
+ __all__ = ['logger', 'nb_safe_seed', 'true_after', 'mock_AIOKafkaProducer_send', 'run_script_and_cancel', 'display_docs']
+ 
+-# %% ../../nbs/002_Test_Utils.ipynb 1
++# %% ../../nbs/004_Test_Utils.ipynb 1
+ import asyncio
+ import hashlib
+ import shlex
+ import subprocess  # nosec
+ import unittest
+ import unittest.mock
+ from contextlib import contextmanager
+@@ -21,18 +21,18 @@
+ from IPython.display import IFrame
+ 
+ from .._application.app import FastKafka
+ from .._components._subprocess import terminate_asyncio_process
+ from .._components.helpers import _import_from_string, change_dir
+ from .._components.logger import get_logger
+ 
+-# %% ../../nbs/002_Test_Utils.ipynb 4
++# %% ../../nbs/004_Test_Utils.ipynb 4
+ logger = get_logger(__name__)
+ 
+-# %% ../../nbs/002_Test_Utils.ipynb 6
++# %% ../../nbs/004_Test_Utils.ipynb 6
+ def nb_safe_seed(s: str) -> Callable[[int], int]:
+     """Gets a unique seed function for a notebook
+ 
+     Params:
+         s: name of the notebook used to initialize the seed function
+ 
+     Returns:
+@@ -41,38 +41,38 @@
+     init_seed = int(hashlib.sha256(s.encode("utf-8")).hexdigest(), 16) % (10**8)
+ 
+     def _get_seed(x: int = 0, *, init_seed: int = init_seed) -> int:
+         return init_seed + x
+ 
+     return _get_seed
+ 
+-# %% ../../nbs/002_Test_Utils.ipynb 8
++# %% ../../nbs/004_Test_Utils.ipynb 8
+ def true_after(seconds: float) -> Callable[[], bool]:
+     """Function returning True after a given number of seconds"""
+     t = datetime.now()
+ 
+     def _true_after(seconds: float = seconds, t: datetime = t) -> bool:
+         return (datetime.now() - t) > timedelta(seconds=seconds)
+ 
+     return _true_after
+ 
+-# %% ../../nbs/002_Test_Utils.ipynb 10
++# %% ../../nbs/004_Test_Utils.ipynb 10
+ @contextmanager
+ def mock_AIOKafkaProducer_send() -> Generator[unittest.mock.Mock, None, None]:
+     """Mocks **send** method of **AIOKafkaProducer**"""
+     with unittest.mock.patch("__main__.AIOKafkaProducer.send") as mock:
+ 
+         async def _f() -> None:
+             pass
+ 
+         mock.return_value = asyncio.create_task(_f())
+ 
+         yield mock
+ 
+-# %% ../../nbs/002_Test_Utils.ipynb 11
++# %% ../../nbs/004_Test_Utils.ipynb 11
+ async def run_script_and_cancel(
+     script: str,
+     *,
+     script_file: Optional[str] = None,
+     cmd: Optional[str] = None,
+     cancel_after: int = 10,
+     app_name: str = "app",
+@@ -121,15 +121,15 @@
+         )
+         await asyncio.sleep(cancel_after)
+         proc.terminate()
+         output, _ = proc.communicate()
+ 
+         return (proc.returncode, output)
+ 
+-# %% ../../nbs/002_Test_Utils.ipynb 16
++# %% ../../nbs/004_Test_Utils.ipynb 16
+ async def display_docs(docs_path: str, port: int = 4000) -> None:
+     with change_dir(docs_path):
+         process = await asyncio.create_subprocess_exec(
+             "python3",
+             "-m",
+             "http.server",
+             f"{port}",
+```
+
+### Comparing `fastkafka-0.3.1/fastkafka/testing.py` & `fastkafka-0.4.0rc0/fastkafka/testing.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,26 +1,28 @@
+ # AUTOGENERATED! DO NOT EDIT! File to edit: ../nbs/000_Testing_export.ipynb.
+ 
+ # %% auto 0
+ __all__ = ['dummy']
+ 
+ # %% ../nbs/000_Testing_export.ipynb 1
+ from ._application.tester import Tester
+-from ._testing.local_broker import LocalKafkaBroker
++from ._testing.apache_kafka_broker import ApacheKafkaBroker
++from ._testing.in_memory_broker import InMemoryBroker
+ from ._testing.local_redpanda_broker import LocalRedpandaBroker
+ from fastkafka._testing.test_utils import (
+     display_docs,
+     mock_AIOKafkaProducer_send,
+     nb_safe_seed,
+     run_script_and_cancel,
+     true_after,
+ )
+ 
+ __all__ = [
+-    "LocalKafkaBroker",
++    "InMemoryBroker",
++    "ApacheKafkaBroker",
+     "LocalRedpandaBroker",
+     "Tester",
+     "nb_safe_seed",
+     "true_after",
+     "mock_AIOKafkaProducer_send",
+     "run_script_and_cancel",
+     "display_docs",
+```
+
+### Comparing `fastkafka-0.3.1/fastkafka.egg-info/PKG-INFO` & `fastkafka-0.4.0rc0/fastkafka.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fastkafka
+-Version: 0.3.1
++Version: 0.4.0rc0
+ Summary: FastKafka is a powerful and easy-to-use Python library for building asynchronous web services that interact with Kafka topics. Built on top of FastAPI, Starlette, Pydantic, AIOKafka and AsyncAPI, FastKafka simplifies the process of writing producers and consumers for Kafka topics.
+ Home-page: https://github.com/airtai/fastkafka
+ Author: airt
+ Author-email: info@airt.ai
+ License: Apache Software License 2.0
+ Project-URL: Bug Tracker, https://github.com/airtai/fastkafka/issues
+ Project-URL: CI, https://github.com/airtai/fastkafka/actions
+```
+
+### Comparing `fastkafka-0.3.1/settings.ini` & `fastkafka-0.4.0rc0/settings.ini`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ [DEFAULT]
+ # All sections below are required unless otherwise specified.
+ # See https://github.com/fastai/nbdev/blob/master/settings.ini for examples.
+ 
+ ### Python library ###
+ repo = fastkafka
+ lib_name = %(repo)s
+-version = 0.3.1
++version = 0.4.0rc0
+ min_python = 3.8
+ license = apache2
+ 
+ 
+ ### nbdev ###
+ doc_path = _docs
+ lib_path = fastkafka
+```
+
+### Comparing `fastkafka-0.3.1/setup.py` & `fastkafka-0.4.0rc0/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -24,15 +24,14 @@
+     '4 - Beta', '5 - Production/Stable', '6 - Mature', '7 - Inactive' ]
+ py_versions = '3.6 3.7 3.8 3.9 3.10 3.11'.split()
+ 
+ requirements = [
+     "pydantic>=1.9",
+     "anyio>=3.0",
+     "aiokafka>=0.8.0",
+-    "fastcore>=1.5.27",
+     "asyncer>=0.0.2",
+     "tqdm>=4.62",
+     "docstring-parser>=0.15",
+     "typer>=0.7.0",
+ ]
+ test_requirements = [
+     "install-jdk==0.3.0",
+@@ -47,15 +46,15 @@
+ 
+ min_python = cfg['min_python']
+ lic = licenses.get(cfg['license'].lower(), (cfg['license'], None))
+ 
+ dev_requirements = [
+     "nbconvert>=7.2.9",
+     "nbformat>=5.7.3",
+-    "nbdev-mkdocs==0.2.2",
++    "nbdev-mkdocs==0.3.0",
+     "mypy==1.0.1",
+     "pre-commit==3.0.4",
+     "nbqa==1.6.3",
+     "black==23.1.0",
+     "isort==5.12.0",
+     "bandit==1.7.4",
+     "semgrep==1.14.0",
+```
+

@@ -1,0 +1,2658 @@
+--- tmp/ory-hydra-client-2.0.2.tar.gz
++++ tmp/ory-hydra-client-2.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/ory-hydra-client-2.0.2.tar", last modified: Thu Nov 10 17:19:59 2022, max compression
+│ +gzip compressed data, was "dist/ory-hydra-client-2.1.0.tar", last modified: Fri Apr  7 12:21:17 2023, max compression
+│   --- ory-hydra-client-2.0.2.tar
+├── +++ ory-hydra-client-2.1.0.tar
+│ ├── file list
+│ │ @@ -1,124 +1,124 @@
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/
+│ │ --rw-r--r--   0 root         (0) root         (0)    11357 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/LICENSE
+│ │ --rw-r--r--   0 root         (0) root         (0)      368 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)    13625 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/README.md
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/ory_hydra_client/
+│ │ --rw-r--r--   0 root         (0) root         (0)      750 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/__init__.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/ory_hydra_client/api/
+│ │ --rw-r--r--   0 root         (0) root         (0)      216 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/api/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    40315 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/api/jwk_api.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    15923 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/api/metadata_api.py
+│ │ --rw-r--r--   0 root         (0) root         (0)   160586 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/api/o_auth2_api.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    39735 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/api/oidc_api.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     5812 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/api/wellknown_api.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    39105 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/api_client.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/ory_hydra_client/apis/
+│ │ --rw-r--r--   0 root         (0) root         (0)      692 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/apis/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    17353 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/configuration.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     5065 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/exceptions.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/
+│ │ --rw-r--r--   0 root         (0) root         (0)      350 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    13862 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/accept_o_auth2_consent_request.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    13280 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/accept_o_auth2_consent_request_session.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    17074 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/accept_o_auth2_login_request.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    12717 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/create_json_web_key_set.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    12578 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/error_o_auth2.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    13854 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/generic_error.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    11491 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/get_version200_response.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    11595 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/health_not_ready_status.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    11469 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/health_status.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    17903 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/introspected_o_auth2_token.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    11455 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/is_ready200_response.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    11589 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/is_ready503_response.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    13268 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/json_patch.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    11973 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/json_patch_document.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    17879 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/json_web_key.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    12231 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/json_web_key_set.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    11777 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/null_duration.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    37263 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_client.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    15319 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_client_token_lifespans.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    18380 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_consent_request.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    18408 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_consent_request_open_id_connect_context.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    14822 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_consent_session.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    12423 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_consent_session_expires_at.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    12114 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_consent_sessions.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    17251 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_login_request.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    13458 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_logout_request.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    11760 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_redirect_to.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    13444 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_token_exchange.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    32243 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/oidc_configuration.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    24504 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/oidc_user_info.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    12744 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/pagination.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    12101 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/pagination_headers.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    13152 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/reject_o_auth2_request.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    11698 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/string_slice_json_format.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    12759 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/token_pagination.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    12116 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/token_pagination_headers.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    12809 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/token_pagination_request_parameters.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    13024 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/token_pagination_response_headers.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    13797 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/trust_o_auth2_jwt_grant_issuer.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    14371 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/trusted_o_auth2_jwt_grant_issuer.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    12284 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/trusted_o_auth2_jwt_grant_issuers.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    11968 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/trusted_o_auth2_jwt_grant_json_web_key.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    11465 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/ory_hydra_client/model/version.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    82577 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/model_utils.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/ory_hydra_client/models/
+│ │ --rw-r--r--   0 root         (0) root         (0)     3793 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/models/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    14271 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/ory_hydra_client/rest.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/ory_hydra_client.egg-info/
+│ │ --rw-r--r--   0 root         (0) root         (0)      368 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/ory_hydra_client.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)     4561 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/ory_hydra_client.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        1 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/ory_hydra_client.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       32 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/ory_hydra_client.egg-info/requires.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       17 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/ory_hydra_client.egg-info/top_level.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       69 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/setup.cfg
+│ │ --rw-r--r--   0 root         (0) root         (0)     1043 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/setup.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-11-10 17:19:59.000000 ory-hydra-client-2.0.2/test/
+│ │ --rw-r--r--   0 root         (0) root         (0)     1170 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_accept_o_auth2_consent_request.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      888 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_accept_o_auth2_consent_request_session.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      965 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_accept_o_auth2_login_request.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      789 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_create_json_web_key_set.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      731 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_error_o_auth2.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      737 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_generic_error.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      801 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_get_version200_response.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      795 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_health_not_ready_status.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      737 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_health_status.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      816 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_introspected_o_auth2_token.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      780 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_is_ready200_response.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      780 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_is_ready503_response.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      716 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_json_patch.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      864 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_json_patch_document.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      724 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_json_web_key.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      842 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_json_web_key_set.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     1636 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/test/test_jwk_api.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     1001 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/test/test_metadata_api.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      737 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_null_duration.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     5720 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/test/test_o_auth2_api.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      982 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_o_auth2_client.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      941 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_o_auth2_client_token_lifespans.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     1261 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_o_auth2_consent_request.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      939 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_o_auth2_consent_request_open_id_connect_context.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     1439 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_o_auth2_consent_session.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      860 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_o_auth2_consent_session_expires_at.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      939 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_o_auth2_consent_sessions.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     1247 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_o_auth2_login_request.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      892 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_o_auth2_logout_request.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      767 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_o_auth2_redirect_to.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      788 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_o_auth2_token_exchange.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     1913 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/test/test_oidc_api.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      772 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_oidc_configuration.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      738 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_oidc_user_info.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      722 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_pagination.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      772 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_pagination_headers.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      788 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_reject_o_auth2_request.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      802 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_string_slice_json_format.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      758 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_token_pagination.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      808 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_token_pagination_headers.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      879 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_token_pagination_request_parameters.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      865 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_token_pagination_response_headers.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      928 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_trust_o_auth2_jwt_grant_issuer.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     1031 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_trusted_o_auth2_jwt_grant_issuer.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     1020 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_trusted_o_auth2_jwt_grant_issuers.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      876 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_trusted_o_auth2_jwt_grant_json_web_key.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      701 2022-11-10 17:15:39.000000 ory-hydra-client-2.0.2/test/test_version.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      742 2022-11-10 17:15:40.000000 ory-hydra-client-2.0.2/test/test_wellknown_api.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 12:21:17.000000 ory-hydra-client-2.1.0/
+│ │ +-rw-r--r--   0 root         (0) root         (0)    11357 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/LICENSE
+│ │ +-rw-r--r--   0 root         (0) root         (0)      368 2023-04-07 12:21:17.000000 ory-hydra-client-2.1.0/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)    13643 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/README.md
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 12:21:17.000000 ory-hydra-client-2.1.0/ory_hydra_client/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      750 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/__init__.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 12:21:17.000000 ory-hydra-client-2.1.0/ory_hydra_client/api/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      216 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/api/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    40315 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/api/jwk_api.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    15923 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/api/metadata_api.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)   161855 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/api/o_auth2_api.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    39735 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/api/oidc_api.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     5812 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/api/wellknown_api.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    39105 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/api_client.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 12:21:17.000000 ory-hydra-client-2.1.0/ory_hydra_client/apis/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      692 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/apis/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17353 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/configuration.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     5065 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/exceptions.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 12:21:17.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      350 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    13862 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/accept_o_auth2_consent_request.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    13280 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/accept_o_auth2_consent_request_session.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    18024 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/accept_o_auth2_login_request.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    12717 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/create_json_web_key_set.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    12578 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/error_o_auth2.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    13854 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/generic_error.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    11491 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/get_version200_response.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    11595 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/health_not_ready_status.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    11469 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/health_status.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17903 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/introspected_o_auth2_token.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    11455 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/is_ready200_response.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    11589 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/is_ready503_response.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    13268 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/json_patch.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    11973 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/json_patch_document.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17879 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/json_web_key.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    12231 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/json_web_key_set.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    11777 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/null_duration.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    38709 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_client.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    15319 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_client_token_lifespans.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    18380 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_consent_request.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    18408 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_consent_request_open_id_connect_context.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    14822 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_consent_session.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    12423 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_consent_session_expires_at.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    12114 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_consent_sessions.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17251 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_login_request.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    13458 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_logout_request.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    11760 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_redirect_to.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    13444 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_token_exchange.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    32243 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/oidc_configuration.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    24504 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/oidc_user_info.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    12744 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/pagination.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    12101 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/pagination_headers.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    13152 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/reject_o_auth2_request.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    11698 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/string_slice_json_format.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    12759 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/token_pagination.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    12116 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/token_pagination_headers.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    12809 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/token_pagination_request_parameters.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    13024 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/token_pagination_response_headers.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    13797 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/trust_o_auth2_jwt_grant_issuer.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    14371 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/trusted_o_auth2_jwt_grant_issuer.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    12284 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/trusted_o_auth2_jwt_grant_issuers.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    11968 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/trusted_o_auth2_jwt_grant_json_web_key.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    11465 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model/version.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    82577 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/model_utils.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 12:21:17.000000 ory-hydra-client-2.1.0/ory_hydra_client/models/
+│ │ +-rw-r--r--   0 root         (0) root         (0)     3793 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/models/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    14271 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/ory_hydra_client/rest.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 12:21:17.000000 ory-hydra-client-2.1.0/ory_hydra_client.egg-info/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      368 2023-04-07 12:21:16.000000 ory-hydra-client-2.1.0/ory_hydra_client.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)     4561 2023-04-07 12:21:17.000000 ory-hydra-client-2.1.0/ory_hydra_client.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 12:21:16.000000 ory-hydra-client-2.1.0/ory_hydra_client.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       32 2023-04-07 12:21:16.000000 ory-hydra-client-2.1.0/ory_hydra_client.egg-info/requires.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       17 2023-04-07 12:21:17.000000 ory-hydra-client-2.1.0/ory_hydra_client.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       69 2023-04-07 12:21:17.000000 ory-hydra-client-2.1.0/setup.cfg
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1043 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/setup.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 12:21:17.000000 ory-hydra-client-2.1.0/test/
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1170 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_accept_o_auth2_consent_request.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      888 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_accept_o_auth2_consent_request_session.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      965 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_accept_o_auth2_login_request.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      789 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_create_json_web_key_set.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      731 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_error_o_auth2.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      737 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_generic_error.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      801 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_get_version200_response.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      795 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_health_not_ready_status.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      737 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_health_status.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      816 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_introspected_o_auth2_token.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      780 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_is_ready200_response.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      780 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_is_ready503_response.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      716 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_json_patch.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      864 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_json_patch_document.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      724 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_json_web_key.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      842 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_json_web_key_set.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1636 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_jwk_api.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1001 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_metadata_api.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      737 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_null_duration.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     5738 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_o_auth2_api.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      982 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_o_auth2_client.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      941 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_o_auth2_client_token_lifespans.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1261 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_o_auth2_consent_request.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      939 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_o_auth2_consent_request_open_id_connect_context.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1439 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_o_auth2_consent_session.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      860 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_o_auth2_consent_session_expires_at.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      939 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_o_auth2_consent_sessions.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1247 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_o_auth2_login_request.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      892 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_o_auth2_logout_request.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      767 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_o_auth2_redirect_to.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      788 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_o_auth2_token_exchange.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1913 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_oidc_api.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      772 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_oidc_configuration.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      738 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_oidc_user_info.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      722 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_pagination.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      772 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_pagination_headers.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      788 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_reject_o_auth2_request.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      802 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_string_slice_json_format.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      758 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_token_pagination.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      808 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_token_pagination_headers.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      879 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_token_pagination_request_parameters.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      865 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_token_pagination_response_headers.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      928 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_trust_o_auth2_jwt_grant_issuer.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1031 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_trusted_o_auth2_jwt_grant_issuer.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1020 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_trusted_o_auth2_jwt_grant_issuers.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      876 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_trusted_o_auth2_jwt_grant_json_web_key.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      701 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_version.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      742 2023-04-07 12:17:19.000000 ory-hydra-client-2.1.0/test/test_wellknown_api.py
+│ │   --- ory-hydra-client-2.0.2/LICENSE
+│ ├── +++ ory-hydra-client-2.1.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- ory-hydra-client-2.0.2/README.md
+│ ├── +++ ory-hydra-client-2.1.0/README.md
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  # ory-hydra-client
+│ │  Documentation for all of Ory Hydra's APIs.
+│ │  
+│ │  
+│ │  This Python package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
+│ │  
+│ │ -- API version: v2.0.2
+│ │ -- Package version: v2.0.2
+│ │ +- API version: v2.1.0
+│ │ +- Package version: v2.1.0
+│ │  - Build package: org.openapitools.codegen.languages.PythonClientCodegen
+│ │  
+│ │  ## Requirements.
+│ │  
+│ │  Python >=3.6
+│ │  
+│ │  ## Installation & Usage
+│ │ @@ -117,15 +117,15 @@
+│ │  *OAuth2Api* | [**o_auth2_authorize**](docs/OAuth2Api.md#o_auth2_authorize) | **GET** /oauth2/auth | OAuth 2.0 Authorize Endpoint
+│ │  *OAuth2Api* | [**oauth2_token_exchange**](docs/OAuth2Api.md#oauth2_token_exchange) | **POST** /oauth2/token | The OAuth 2.0 Token Endpoint
+│ │  *OAuth2Api* | [**patch_o_auth2_client**](docs/OAuth2Api.md#patch_o_auth2_client) | **PATCH** /admin/clients/{id} | Patch OAuth 2.0 Client
+│ │  *OAuth2Api* | [**reject_o_auth2_consent_request**](docs/OAuth2Api.md#reject_o_auth2_consent_request) | **PUT** /admin/oauth2/auth/requests/consent/reject | Reject OAuth 2.0 Consent Request
+│ │  *OAuth2Api* | [**reject_o_auth2_login_request**](docs/OAuth2Api.md#reject_o_auth2_login_request) | **PUT** /admin/oauth2/auth/requests/login/reject | Reject OAuth 2.0 Login Request
+│ │  *OAuth2Api* | [**reject_o_auth2_logout_request**](docs/OAuth2Api.md#reject_o_auth2_logout_request) | **PUT** /admin/oauth2/auth/requests/logout/reject | Reject OAuth 2.0 Session Logout Request
+│ │  *OAuth2Api* | [**revoke_o_auth2_consent_sessions**](docs/OAuth2Api.md#revoke_o_auth2_consent_sessions) | **DELETE** /admin/oauth2/auth/sessions/consent | Revoke OAuth 2.0 Consent Sessions of a Subject
+│ │ -*OAuth2Api* | [**revoke_o_auth2_login_sessions**](docs/OAuth2Api.md#revoke_o_auth2_login_sessions) | **DELETE** /admin/oauth2/auth/sessions/login | Revokes All OAuth 2.0 Login Sessions of a Subject
+│ │ +*OAuth2Api* | [**revoke_o_auth2_login_sessions**](docs/OAuth2Api.md#revoke_o_auth2_login_sessions) | **DELETE** /admin/oauth2/auth/sessions/login | Revokes OAuth 2.0 Login Sessions by either a Subject or a SessionID
+│ │  *OAuth2Api* | [**revoke_o_auth2_token**](docs/OAuth2Api.md#revoke_o_auth2_token) | **POST** /oauth2/revoke | Revoke OAuth 2.0 Access or Refresh Token
+│ │  *OAuth2Api* | [**set_o_auth2_client**](docs/OAuth2Api.md#set_o_auth2_client) | **PUT** /admin/clients/{id} | Set OAuth 2.0 Client
+│ │  *OAuth2Api* | [**set_o_auth2_client_lifespans**](docs/OAuth2Api.md#set_o_auth2_client_lifespans) | **PUT** /admin/clients/{id}/lifespans | Set OAuth2 Client Token Lifespans
+│ │  *OAuth2Api* | [**trust_o_auth2_jwt_grant_issuer**](docs/OAuth2Api.md#trust_o_auth2_jwt_grant_issuer) | **POST** /admin/trust/grants/jwt-bearer/issuers | Trust OAuth2 JWT Bearer Grant Type Issuer
+│ │  *OidcApi* | [**create_oidc_dynamic_client**](docs/OidcApi.md#create_oidc_dynamic_client) | **POST** /oauth2/register | Register OAuth2 Client using OpenID Dynamic Client Registration
+│ │  *OidcApi* | [**delete_oidc_dynamic_client**](docs/OidcApi.md#delete_oidc_dynamic_client) | **DELETE** /oauth2/register/{id} | Delete OAuth 2.0 Client using the OpenID Dynamic Client Registration Management Protocol
+│ │  *OidcApi* | [**discover_oidc_configuration**](docs/OidcApi.md#discover_oidc_configuration) | **GET** /.well-known/openid-configuration | OpenID Connect Discovery
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/__init__.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/__init__.py
+│ │┄ Files 27% similar despite different names
+│ │ @@ -1,21 +1,21 @@
+│ │  # flake8: noqa
+│ │  
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │ -__version__ = "v2.0.2"
+│ │ +__version__ = "v2.1.0"
+│ │  
+│ │  # import ApiClient
+│ │  from ory_hydra_client.api_client import ApiClient
+│ │  
+│ │  # import Configuration
+│ │  from ory_hydra_client.configuration import Configuration
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/api/jwk_api.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/api/jwk_api.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/api/metadata_api.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/api/metadata_api.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/api/o_auth2_api.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/api/o_auth2_api.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │ @@ -792,14 +792,15 @@
+│ │                  'servers': None,
+│ │              },
+│ │              params_map={
+│ │                  'all': [
+│ │                      'subject',
+│ │                      'page_size',
+│ │                      'page_token',
+│ │ +                    'login_session_id',
+│ │                  ],
+│ │                  'required': [
+│ │                      'subject',
+│ │                  ],
+│ │                  'nullable': [
+│ │                  ],
+│ │                  'enum': [
+│ │ @@ -825,24 +826,28 @@
+│ │                  'openapi_types': {
+│ │                      'subject':
+│ │                          (str,),
+│ │                      'page_size':
+│ │                          (int,),
+│ │                      'page_token':
+│ │                          (str,),
+│ │ +                    'login_session_id':
+│ │ +                        (str,),
+│ │                  },
+│ │                  'attribute_map': {
+│ │                      'subject': 'subject',
+│ │                      'page_size': 'page_size',
+│ │                      'page_token': 'page_token',
+│ │ +                    'login_session_id': 'login_session_id',
+│ │                  },
+│ │                  'location_map': {
+│ │                      'subject': 'query',
+│ │                      'page_size': 'query',
+│ │                      'page_token': 'query',
+│ │ +                    'login_session_id': 'query',
+│ │                  },
+│ │                  'collection_format_map': {
+│ │                  }
+│ │              },
+│ │              headers_map={
+│ │                  'accept': [
+│ │                      'application/json'
+│ │ @@ -1306,18 +1311,17 @@
+│ │                  'operation_id': 'revoke_o_auth2_login_sessions',
+│ │                  'http_method': 'DELETE',
+│ │                  'servers': None,
+│ │              },
+│ │              params_map={
+│ │                  'all': [
+│ │                      'subject',
+│ │ +                    'sid',
+│ │                  ],
+│ │ -                'required': [
+│ │ -                    'subject',
+│ │ -                ],
+│ │ +                'required': [],
+│ │                  'nullable': [
+│ │                  ],
+│ │                  'enum': [
+│ │                  ],
+│ │                  'validation': [
+│ │                  ]
+│ │              },
+│ │ @@ -1325,20 +1329,24 @@
+│ │                  'validations': {
+│ │                  },
+│ │                  'allowed_values': {
+│ │                  },
+│ │                  'openapi_types': {
+│ │                      'subject':
+│ │                          (str,),
+│ │ +                    'sid':
+│ │ +                        (str,),
+│ │                  },
+│ │                  'attribute_map': {
+│ │                      'subject': 'subject',
+│ │ +                    'sid': 'sid',
+│ │                  },
+│ │                  'location_map': {
+│ │                      'subject': 'query',
+│ │ +                    'sid': 'query',
+│ │                  },
+│ │                  'collection_format_map': {
+│ │                  }
+│ │              },
+│ │              headers_map={
+│ │                  'accept': [
+│ │                      'application/json'
+│ │ @@ -1358,14 +1366,16 @@
+│ │                  'operation_id': 'revoke_o_auth2_token',
+│ │                  'http_method': 'POST',
+│ │                  'servers': None,
+│ │              },
+│ │              params_map={
+│ │                  'all': [
+│ │                      'token',
+│ │ +                    'client_id',
+│ │ +                    'client_secret',
+│ │                  ],
+│ │                  'required': [
+│ │                      'token',
+│ │                  ],
+│ │                  'nullable': [
+│ │                  ],
+│ │                  'enum': [
+│ │ @@ -1377,20 +1387,28 @@
+│ │                  'validations': {
+│ │                  },
+│ │                  'allowed_values': {
+│ │                  },
+│ │                  'openapi_types': {
+│ │                      'token':
+│ │                          (str,),
+│ │ +                    'client_id':
+│ │ +                        (str,),
+│ │ +                    'client_secret':
+│ │ +                        (str,),
+│ │                  },
+│ │                  'attribute_map': {
+│ │                      'token': 'token',
+│ │ +                    'client_id': 'client_id',
+│ │ +                    'client_secret': 'client_secret',
+│ │                  },
+│ │                  'location_map': {
+│ │                      'token': 'form',
+│ │ +                    'client_id': 'form',
+│ │ +                    'client_secret': 'form',
+│ │                  },
+│ │                  'collection_format_map': {
+│ │                  }
+│ │              },
+│ │              headers_map={
+│ │                  'accept': [
+│ │                      'application/json'
+│ │ @@ -2741,14 +2759,15 @@
+│ │  
+│ │          Args:
+│ │              subject (str): The subject to list the consent sessions for.
+│ │  
+│ │          Keyword Args:
+│ │              page_size (int): Items per Page  This is the number of items per page to return. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination).. [optional] if omitted the server will use the default value of 250
+│ │              page_token (str): Next Page Token  The next page token. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination).. [optional] if omitted the server will use the default value of "1"
+│ │ +            login_session_id (str): The login session id to list the consent sessions for.. [optional]
+│ │              _return_http_data_only (bool): response data without head status
+│ │                  code and headers. Default is True.
+│ │              _preload_content (bool): if False, the urllib3.HTTPResponse object
+│ │                  will be returned without reading/decoding response data.
+│ │                  Default is True.
+│ │              _request_timeout (int/float/tuple): timeout setting for this request. If
+│ │                  one number provided, it will be total request timeout. It can also
+│ │ @@ -3477,30 +3496,29 @@
+│ │          kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+│ │          kwargs['subject'] = \
+│ │              subject
+│ │          return self.revoke_o_auth2_consent_sessions_endpoint.call_with_http_info(**kwargs)
+│ │  
+│ │      def revoke_o_auth2_login_sessions(
+│ │          self,
+│ │ -        subject,
+│ │          **kwargs
+│ │      ):
+│ │ -        """Revokes All OAuth 2.0 Login Sessions of a Subject  # noqa: E501
+│ │ +        """Revokes OAuth 2.0 Login Sessions by either a Subject or a SessionID  # noqa: E501
+│ │  
+│ │ -        This endpoint invalidates a subject's authentication session. After revoking the authentication session, the subject has to re-authenticate at the Ory OAuth2 Provider. This endpoint does not invalidate any tokens and does not work with OpenID Connect Front- or Back-channel logout.  # noqa: E501
+│ │ +        This endpoint invalidates authentication sessions. After revoking the authentication session(s), the subject has to re-authenticate at the Ory OAuth2 Provider. This endpoint does not invalidate any tokens.  If you send the subject in a query param, all authentication sessions that belong to that subject are revoked. No OpennID Connect Front- or Back-channel logout is performed in this case.  Alternatively, you can send a SessionID via `sid` query param, in which case, only the session that is connected to that SessionID is revoked. OpenID Connect Back-channel logout is performed in this case.  # noqa: E501
+│ │          This method makes a synchronous HTTP request by default. To make an
+│ │          asynchronous HTTP request, please pass async_req=True
+│ │  
+│ │ -        >>> thread = api.revoke_o_auth2_login_sessions(subject, async_req=True)
+│ │ +        >>> thread = api.revoke_o_auth2_login_sessions(async_req=True)
+│ │          >>> result = thread.get()
+│ │  
+│ │ -        Args:
+│ │ -            subject (str): OAuth 2.0 Subject  The subject to revoke authentication sessions for.
+│ │  
+│ │          Keyword Args:
+│ │ +            subject (str): OAuth 2.0 Subject  The subject to revoke authentication sessions for.. [optional]
+│ │ +            sid (str): OAuth 2.0 Subject  The subject to revoke authentication sessions for.. [optional]
+│ │              _return_http_data_only (bool): response data without head status
+│ │                  code and headers. Default is True.
+│ │              _preload_content (bool): if False, the urllib3.HTTPResponse object
+│ │                  will be returned without reading/decoding response data.
+│ │                  Default is True.
+│ │              _request_timeout (int/float/tuple): timeout setting for this request. If
+│ │                  one number provided, it will be total request timeout. It can also
+│ │ @@ -3554,16 +3572,14 @@
+│ │          kwargs['_spec_property_naming'] = kwargs.get(
+│ │              '_spec_property_naming', False
+│ │          )
+│ │          kwargs['_content_type'] = kwargs.get(
+│ │              '_content_type')
+│ │          kwargs['_host_index'] = kwargs.get('_host_index')
+│ │          kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+│ │ -        kwargs['subject'] = \
+│ │ -            subject
+│ │          return self.revoke_o_auth2_login_sessions_endpoint.call_with_http_info(**kwargs)
+│ │  
+│ │      def revoke_o_auth2_token(
+│ │          self,
+│ │          token,
+│ │          **kwargs
+│ │      ):
+│ │ @@ -3576,14 +3592,16 @@
+│ │          >>> thread = api.revoke_o_auth2_token(token, async_req=True)
+│ │          >>> result = thread.get()
+│ │  
+│ │          Args:
+│ │              token (str):
+│ │  
+│ │          Keyword Args:
+│ │ +            client_id (str): [optional]
+│ │ +            client_secret (str): [optional]
+│ │              _return_http_data_only (bool): response data without head status
+│ │                  code and headers. Default is True.
+│ │              _preload_content (bool): if False, the urllib3.HTTPResponse object
+│ │                  will be returned without reading/decoding response data.
+│ │                  Default is True.
+│ │              _request_timeout (int/float/tuple): timeout setting for this request. If
+│ │                  one number provided, it will be total request timeout. It can also
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/api/oidc_api.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/api/oidc_api.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/api/wellknown_api.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/api/wellknown_api.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/api_client.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/api_client.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import json
+│ │  import atexit
+│ │ @@ -73,15 +73,15 @@
+│ │  
+│ │          self.rest_client = rest.RESTClientObject(configuration)
+│ │          self.default_headers = {}
+│ │          if header_name is not None:
+│ │              self.default_headers[header_name] = header_value
+│ │          self.cookie = cookie
+│ │          # Set default User-Agent.
+│ │ -        self.user_agent = 'OpenAPI-Generator/v2.0.2/python'
+│ │ +        self.user_agent = 'OpenAPI-Generator/v2.1.0/python'
+│ │  
+│ │      def __enter__(self):
+│ │          return self
+│ │  
+│ │      def __exit__(self, exc_type, exc_value, traceback):
+│ │          self.close()
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/apis/__init__.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/apis/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/configuration.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/configuration.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import copy
+│ │  import logging
+│ │ @@ -414,16 +414,16 @@
+│ │          """Gets the essential information for debugging.
+│ │  
+│ │          :return: The report for debugging.
+│ │          """
+│ │          return "Python SDK Debug Report:\n"\
+│ │                 "OS: {env}\n"\
+│ │                 "Python Version: {pyversion}\n"\
+│ │ -               "Version of the API: v2.0.2\n"\
+│ │ -               "SDK Package Version: v2.0.2".\
+│ │ +               "Version of the API: v2.1.0\n"\
+│ │ +               "SDK Package Version: v2.1.0".\
+│ │                 format(env=sys.platform, pyversion=sys.version)
+│ │  
+│ │      def get_host_settings(self):
+│ │          """Gets an array of host settings
+│ │  
+│ │          :return: An array of host settings
+│ │          """
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/exceptions.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/exceptions.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  class OpenApiException(Exception):
+│ │      """The base exception class for all OpenAPIExceptions"""
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/accept_o_auth2_consent_request.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/accept_o_auth2_consent_request.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/accept_o_auth2_consent_request_session.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/accept_o_auth2_consent_request_session.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/accept_o_auth2_login_request.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/accept_o_auth2_login_request.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │ @@ -88,14 +88,15 @@
+│ │          """
+│ │          lazy_import()
+│ │          return {
+│ │              'subject': (str,),  # noqa: E501
+│ │              'acr': (str,),  # noqa: E501
+│ │              'amr': (StringSliceJSONFormat,),  # noqa: E501
+│ │              'context': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+│ │ +            'extend_session_lifespan': (bool,),  # noqa: E501
+│ │              'force_subject_identifier': (str,),  # noqa: E501
+│ │              'remember': (bool,),  # noqa: E501
+│ │              'remember_for': (int,),  # noqa: E501
+│ │          }
+│ │  
+│ │      @cached_property
+│ │      def discriminator():
+│ │ @@ -103,14 +104,15 @@
+│ │  
+│ │  
+│ │      attribute_map = {
+│ │          'subject': 'subject',  # noqa: E501
+│ │          'acr': 'acr',  # noqa: E501
+│ │          'amr': 'amr',  # noqa: E501
+│ │          'context': 'context',  # noqa: E501
+│ │ +        'extend_session_lifespan': 'extend_session_lifespan',  # noqa: E501
+│ │          'force_subject_identifier': 'force_subject_identifier',  # noqa: E501
+│ │          'remember': 'remember',  # noqa: E501
+│ │          'remember_for': 'remember_for',  # noqa: E501
+│ │      }
+│ │  
+│ │      read_only_vars = {
+│ │      }
+│ │ @@ -155,14 +157,15 @@
+│ │                                  Then in Dog, we will make an instance of the
+│ │                                  Animal class but this time we won't travel
+│ │                                  through its discriminator because we passed in
+│ │                                  _visited_composed_classes = (Animal,)
+│ │              acr (str): ACR sets the Authentication AuthorizationContext Class Reference value for this authentication session. You can use it to express that, for example, a user authenticated using two factor authentication.. [optional]  # noqa: E501
+│ │              amr (StringSliceJSONFormat): [optional]  # noqa: E501
+│ │              context (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+│ │ +            extend_session_lifespan (bool): Extend OAuth2 authentication session lifespan  If set to `true`, the OAuth2 authentication cookie lifespan is extended. This is for example useful if you want the user to be able to use `prompt=none` continuously.  This value can only be set to `true` if the user has an authentication, which is the case if the `skip` value is `true`.. [optional]  # noqa: E501
+│ │              force_subject_identifier (str): ForceSubjectIdentifier forces the \"pairwise\" user ID of the end-user that authenticated. The \"pairwise\" user ID refers to the (Pairwise Identifier Algorithm)[http://openid.net/specs/openid-connect-core-1_0.html#PairwiseAlg] of the OpenID Connect specification. It allows you to set an obfuscated subject (\"user\") identifier that is unique to the client.  Please note that this changes the user ID on endpoint /userinfo and sub claim of the ID Token. It does not change the sub claim in the OAuth 2.0 Introspection.  Per default, ORY Hydra handles this value with its own algorithm. In case you want to set this yourself you can use this field. Please note that setting this field has no effect if `pairwise` is not configured in ORY Hydra or the OAuth 2.0 Client does not expect a pairwise identifier (set via `subject_type` key in the client's configuration).  Please also be aware that ORY Hydra is unable to properly compute this value during authentication. This implies that you have to compute this value on every authentication process (probably depending on the client ID or some other unique value).  If you fail to compute the proper value, then authentication processes which have id_token_hint set might fail.. [optional]  # noqa: E501
+│ │              remember (bool): Remember, if set to true, tells ORY Hydra to remember this user by telling the user agent (browser) to store a cookie with authentication data. If the same user performs another OAuth 2.0 Authorization Request, he/she will not be asked to log in again.. [optional]  # noqa: E501
+│ │              remember_for (int): RememberFor sets how long the authentication should be remembered for in seconds. If set to `0`, the authorization will be remembered for the duration of the browser session (using a session cookie).. [optional]  # noqa: E501
+│ │          """
+│ │  
+│ │          _check_type = kwargs.pop('_check_type', True)
+│ │          _spec_property_naming = kwargs.pop('_spec_property_naming', True)
+│ │ @@ -250,14 +253,15 @@
+│ │                                  Then in Dog, we will make an instance of the
+│ │                                  Animal class but this time we won't travel
+│ │                                  through its discriminator because we passed in
+│ │                                  _visited_composed_classes = (Animal,)
+│ │              acr (str): ACR sets the Authentication AuthorizationContext Class Reference value for this authentication session. You can use it to express that, for example, a user authenticated using two factor authentication.. [optional]  # noqa: E501
+│ │              amr (StringSliceJSONFormat): [optional]  # noqa: E501
+│ │              context (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+│ │ +            extend_session_lifespan (bool): Extend OAuth2 authentication session lifespan  If set to `true`, the OAuth2 authentication cookie lifespan is extended. This is for example useful if you want the user to be able to use `prompt=none` continuously.  This value can only be set to `true` if the user has an authentication, which is the case if the `skip` value is `true`.. [optional]  # noqa: E501
+│ │              force_subject_identifier (str): ForceSubjectIdentifier forces the \"pairwise\" user ID of the end-user that authenticated. The \"pairwise\" user ID refers to the (Pairwise Identifier Algorithm)[http://openid.net/specs/openid-connect-core-1_0.html#PairwiseAlg] of the OpenID Connect specification. It allows you to set an obfuscated subject (\"user\") identifier that is unique to the client.  Please note that this changes the user ID on endpoint /userinfo and sub claim of the ID Token. It does not change the sub claim in the OAuth 2.0 Introspection.  Per default, ORY Hydra handles this value with its own algorithm. In case you want to set this yourself you can use this field. Please note that setting this field has no effect if `pairwise` is not configured in ORY Hydra or the OAuth 2.0 Client does not expect a pairwise identifier (set via `subject_type` key in the client's configuration).  Please also be aware that ORY Hydra is unable to properly compute this value during authentication. This implies that you have to compute this value on every authentication process (probably depending on the client ID or some other unique value).  If you fail to compute the proper value, then authentication processes which have id_token_hint set might fail.. [optional]  # noqa: E501
+│ │              remember (bool): Remember, if set to true, tells ORY Hydra to remember this user by telling the user agent (browser) to store a cookie with authentication data. If the same user performs another OAuth 2.0 Authorization Request, he/she will not be asked to log in again.. [optional]  # noqa: E501
+│ │              remember_for (int): RememberFor sets how long the authentication should be remembered for in seconds. If set to `0`, the authorization will be remembered for the duration of the browser session (using a session cookie).. [optional]  # noqa: E501
+│ │          """
+│ │  
+│ │          _check_type = kwargs.pop('_check_type', True)
+│ │          _spec_property_naming = kwargs.pop('_spec_property_naming', False)
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/create_json_web_key_set.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/create_json_web_key_set.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/error_o_auth2.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/error_o_auth2.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/generic_error.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/generic_error.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/get_version200_response.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/get_version200_response.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/health_not_ready_status.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/health_not_ready_status.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/health_status.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/health_status.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/introspected_o_auth2_token.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/introspected_o_auth2_token.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/is_ready200_response.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/is_ready200_response.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/is_ready503_response.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/is_ready503_response.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/json_patch.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/json_patch.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/json_patch_document.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/json_patch_document.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/json_web_key.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/json_web_key.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/json_web_key_set.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/json_web_key_set.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/null_duration.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/null_duration.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_client.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_client.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │ @@ -86,14 +86,15 @@
+│ │  
+│ │          Returns
+│ │              openapi_types (dict): The key is attribute name
+│ │                  and the value is attribute type.
+│ │          """
+│ │          lazy_import()
+│ │          return {
+│ │ +            'access_token_strategy': (str,),  # noqa: E501
+│ │              'allowed_cors_origins': (StringSliceJSONFormat,),  # noqa: E501
+│ │              'audience': (StringSliceJSONFormat,),  # noqa: E501
+│ │              'authorization_code_grant_access_token_lifespan': (NullDuration,),  # noqa: E501
+│ │              'authorization_code_grant_id_token_lifespan': (NullDuration,),  # noqa: E501
+│ │              'authorization_code_grant_refresh_token_lifespan': (NullDuration,),  # noqa: E501
+│ │              'backchannel_logout_session_required': (bool,),  # noqa: E501
+│ │              'backchannel_logout_uri': (str,),  # noqa: E501
+│ │ @@ -125,28 +126,30 @@
+│ │              'registration_access_token': (str,),  # noqa: E501
+│ │              'registration_client_uri': (str,),  # noqa: E501
+│ │              'request_object_signing_alg': (str,),  # noqa: E501
+│ │              'request_uris': (StringSliceJSONFormat,),  # noqa: E501
+│ │              'response_types': (StringSliceJSONFormat,),  # noqa: E501
+│ │              'scope': (str,),  # noqa: E501
+│ │              'sector_identifier_uri': (str,),  # noqa: E501
+│ │ +            'skip_consent': (bool,),  # noqa: E501
+│ │              'subject_type': (str,),  # noqa: E501
+│ │              'token_endpoint_auth_method': (str,),  # noqa: E501
+│ │              'token_endpoint_auth_signing_alg': (str,),  # noqa: E501
+│ │              'tos_uri': (str,),  # noqa: E501
+│ │              'updated_at': (datetime,),  # noqa: E501
+│ │              'userinfo_signed_response_alg': (str,),  # noqa: E501
+│ │          }
+│ │  
+│ │      @cached_property
+│ │      def discriminator():
+│ │          return None
+│ │  
+│ │  
+│ │      attribute_map = {
+│ │ +        'access_token_strategy': 'access_token_strategy',  # noqa: E501
+│ │          'allowed_cors_origins': 'allowed_cors_origins',  # noqa: E501
+│ │          'audience': 'audience',  # noqa: E501
+│ │          'authorization_code_grant_access_token_lifespan': 'authorization_code_grant_access_token_lifespan',  # noqa: E501
+│ │          'authorization_code_grant_id_token_lifespan': 'authorization_code_grant_id_token_lifespan',  # noqa: E501
+│ │          'authorization_code_grant_refresh_token_lifespan': 'authorization_code_grant_refresh_token_lifespan',  # noqa: E501
+│ │          'backchannel_logout_session_required': 'backchannel_logout_session_required',  # noqa: E501
+│ │          'backchannel_logout_uri': 'backchannel_logout_uri',  # noqa: E501
+│ │ @@ -178,14 +181,15 @@
+│ │          'registration_access_token': 'registration_access_token',  # noqa: E501
+│ │          'registration_client_uri': 'registration_client_uri',  # noqa: E501
+│ │          'request_object_signing_alg': 'request_object_signing_alg',  # noqa: E501
+│ │          'request_uris': 'request_uris',  # noqa: E501
+│ │          'response_types': 'response_types',  # noqa: E501
+│ │          'scope': 'scope',  # noqa: E501
+│ │          'sector_identifier_uri': 'sector_identifier_uri',  # noqa: E501
+│ │ +        'skip_consent': 'skip_consent',  # noqa: E501
+│ │          'subject_type': 'subject_type',  # noqa: E501
+│ │          'token_endpoint_auth_method': 'token_endpoint_auth_method',  # noqa: E501
+│ │          'token_endpoint_auth_signing_alg': 'token_endpoint_auth_signing_alg',  # noqa: E501
+│ │          'tos_uri': 'tos_uri',  # noqa: E501
+│ │          'updated_at': 'updated_at',  # noqa: E501
+│ │          'userinfo_signed_response_alg': 'userinfo_signed_response_alg',  # noqa: E501
+│ │      }
+│ │ @@ -227,14 +231,15 @@
+│ │                                  petType and we pass in "Dog", and the class Dog
+│ │                                  allOf includes Animal, we move through Animal
+│ │                                  once using the discriminator, and pick Dog.
+│ │                                  Then in Dog, we will make an instance of the
+│ │                                  Animal class but this time we won't travel
+│ │                                  through its discriminator because we passed in
+│ │                                  _visited_composed_classes = (Animal,)
+│ │ +            access_token_strategy (str): OAuth 2.0 Access Token Strategy  AccessTokenStrategy is the strategy used to generate access tokens. Valid options are `jwt` and `opaque`. `jwt` is a bad idea, see https://www.ory.sh/docs/hydra/advanced#json-web-tokens Setting the stragegy here overrides the global setting in `strategies.access_token`.. [optional]  # noqa: E501
+│ │              allowed_cors_origins (StringSliceJSONFormat): [optional]  # noqa: E501
+│ │              audience (StringSliceJSONFormat): [optional]  # noqa: E501
+│ │              authorization_code_grant_access_token_lifespan (NullDuration): [optional]  # noqa: E501
+│ │              authorization_code_grant_id_token_lifespan (NullDuration): [optional]  # noqa: E501
+│ │              authorization_code_grant_refresh_token_lifespan (NullDuration): [optional]  # noqa: E501
+│ │              backchannel_logout_session_required (bool): OpenID Connect Back-Channel Logout Session Required  Boolean value specifying whether the RP requires that a sid (session ID) Claim be included in the Logout Token to identify the RP session with the OP when the backchannel_logout_uri is used. If omitted, the default value is false.. [optional]  # noqa: E501
+│ │              backchannel_logout_uri (str): OpenID Connect Back-Channel Logout URI  RP URL that will cause the RP to log itself out when sent a Logout Token by the OP.. [optional]  # noqa: E501
+│ │ @@ -266,16 +271,17 @@
+│ │              registration_access_token (str): OpenID Connect Dynamic Client Registration Access Token  RegistrationAccessToken can be used to update, get, or delete the OAuth2 Client. It is sent when creating a client using Dynamic Client Registration.. [optional]  # noqa: E501
+│ │              registration_client_uri (str): OpenID Connect Dynamic Client Registration URL  RegistrationClientURI is the URL used to update, get, or delete the OAuth2 Client.. [optional]  # noqa: E501
+│ │              request_object_signing_alg (str): OpenID Connect Request Object Signing Algorithm  JWS [JWS] alg algorithm [JWA] that MUST be used for signing Request Objects sent to the OP. All Request Objects from this Client MUST be rejected, if not signed with this algorithm.. [optional]  # noqa: E501
+│ │              request_uris (StringSliceJSONFormat): [optional]  # noqa: E501
+│ │              response_types (StringSliceJSONFormat): [optional]  # noqa: E501
+│ │              scope (str): OAuth 2.0 Client Scope  Scope is a string containing a space-separated list of scope values (as described in Section 3.3 of OAuth 2.0 [RFC6749]) that the client can use when requesting access tokens.. [optional]  # noqa: E501
+│ │              sector_identifier_uri (str): OpenID Connect Sector Identifier URI  URL using the https scheme to be used in calculating Pseudonymous Identifiers by the OP. The URL references a file with a single JSON array of redirect_uri values.. [optional]  # noqa: E501
+│ │ +            skip_consent (bool): SkipConsent skips the consent screen for this client. This field can only be set from the admin API.. [optional]  # noqa: E501
+│ │              subject_type (str): OpenID Connect Subject Type  The `subject_types_supported` Discovery parameter contains a list of the supported subject_type values for this server. Valid types include `pairwise` and `public`.. [optional]  # noqa: E501
+│ │ -            token_endpoint_auth_method (str): OAuth 2.0 Token Endpoint Authentication Method  Requested Client Authentication method for the Token Endpoint. The options are:  `client_secret_post`: (default) Send `client_id` and `client_secret` as `application/x-www-form-urlencoded` in the HTTP body. `client_secret_basic`: Send `client_id` and `client_secret` as `application/x-www-form-urlencoded` encoded in the HTTP Authorization header. `private_key_jwt`: Use JSON Web Tokens to authenticate the client. `none`: Used for public clients (native apps, mobile apps) which can not have secrets.. [optional]  # noqa: E501
+│ │ +            token_endpoint_auth_method (str): OAuth 2.0 Token Endpoint Authentication Method  Requested Client Authentication method for the Token Endpoint. The options are:  `client_secret_basic`: (default) Send `client_id` and `client_secret` as `application/x-www-form-urlencoded` encoded in the HTTP Authorization header. `client_secret_post`: Send `client_id` and `client_secret` as `application/x-www-form-urlencoded` in the HTTP body. `private_key_jwt`: Use JSON Web Tokens to authenticate the client. `none`: Used for public clients (native apps, mobile apps) which can not have secrets.. [optional] if omitted the server will use the default value of "client_secret_basic"  # noqa: E501
+│ │              token_endpoint_auth_signing_alg (str): OAuth 2.0 Token Endpoint Signing Algorithm  Requested Client Authentication signing algorithm for the Token Endpoint.. [optional]  # noqa: E501
+│ │              tos_uri (str): OAuth 2.0 Client Terms of Service URI  A URL string pointing to a human-readable terms of service document for the client that describes a contractual relationship between the end-user and the client that the end-user accepts when authorizing the client.. [optional]  # noqa: E501
+│ │              updated_at (datetime): OAuth 2.0 Client Last Update Date  UpdatedAt returns the timestamp of the last update.. [optional]  # noqa: E501
+│ │              userinfo_signed_response_alg (str): OpenID Connect Request Userinfo Signed Response Algorithm  JWS alg algorithm [JWA] REQUIRED for signing UserInfo Responses. If this is specified, the response will be JWT [JWT] serialized, and signed using JWS. The default, if omitted, is for the UserInfo Response to return the Claims as a UTF-8 encoded JSON object using the application/json content-type.. [optional]  # noqa: E501
+│ │          """
+│ │  
+│ │          _check_type = kwargs.pop('_check_type', True)
+│ │ @@ -357,14 +363,15 @@
+│ │                                  petType and we pass in "Dog", and the class Dog
+│ │                                  allOf includes Animal, we move through Animal
+│ │                                  once using the discriminator, and pick Dog.
+│ │                                  Then in Dog, we will make an instance of the
+│ │                                  Animal class but this time we won't travel
+│ │                                  through its discriminator because we passed in
+│ │                                  _visited_composed_classes = (Animal,)
+│ │ +            access_token_strategy (str): OAuth 2.0 Access Token Strategy  AccessTokenStrategy is the strategy used to generate access tokens. Valid options are `jwt` and `opaque`. `jwt` is a bad idea, see https://www.ory.sh/docs/hydra/advanced#json-web-tokens Setting the stragegy here overrides the global setting in `strategies.access_token`.. [optional]  # noqa: E501
+│ │              allowed_cors_origins (StringSliceJSONFormat): [optional]  # noqa: E501
+│ │              audience (StringSliceJSONFormat): [optional]  # noqa: E501
+│ │              authorization_code_grant_access_token_lifespan (NullDuration): [optional]  # noqa: E501
+│ │              authorization_code_grant_id_token_lifespan (NullDuration): [optional]  # noqa: E501
+│ │              authorization_code_grant_refresh_token_lifespan (NullDuration): [optional]  # noqa: E501
+│ │              backchannel_logout_session_required (bool): OpenID Connect Back-Channel Logout Session Required  Boolean value specifying whether the RP requires that a sid (session ID) Claim be included in the Logout Token to identify the RP session with the OP when the backchannel_logout_uri is used. If omitted, the default value is false.. [optional]  # noqa: E501
+│ │              backchannel_logout_uri (str): OpenID Connect Back-Channel Logout URI  RP URL that will cause the RP to log itself out when sent a Logout Token by the OP.. [optional]  # noqa: E501
+│ │ @@ -396,16 +403,17 @@
+│ │              registration_access_token (str): OpenID Connect Dynamic Client Registration Access Token  RegistrationAccessToken can be used to update, get, or delete the OAuth2 Client. It is sent when creating a client using Dynamic Client Registration.. [optional]  # noqa: E501
+│ │              registration_client_uri (str): OpenID Connect Dynamic Client Registration URL  RegistrationClientURI is the URL used to update, get, or delete the OAuth2 Client.. [optional]  # noqa: E501
+│ │              request_object_signing_alg (str): OpenID Connect Request Object Signing Algorithm  JWS [JWS] alg algorithm [JWA] that MUST be used for signing Request Objects sent to the OP. All Request Objects from this Client MUST be rejected, if not signed with this algorithm.. [optional]  # noqa: E501
+│ │              request_uris (StringSliceJSONFormat): [optional]  # noqa: E501
+│ │              response_types (StringSliceJSONFormat): [optional]  # noqa: E501
+│ │              scope (str): OAuth 2.0 Client Scope  Scope is a string containing a space-separated list of scope values (as described in Section 3.3 of OAuth 2.0 [RFC6749]) that the client can use when requesting access tokens.. [optional]  # noqa: E501
+│ │              sector_identifier_uri (str): OpenID Connect Sector Identifier URI  URL using the https scheme to be used in calculating Pseudonymous Identifiers by the OP. The URL references a file with a single JSON array of redirect_uri values.. [optional]  # noqa: E501
+│ │ +            skip_consent (bool): SkipConsent skips the consent screen for this client. This field can only be set from the admin API.. [optional]  # noqa: E501
+│ │              subject_type (str): OpenID Connect Subject Type  The `subject_types_supported` Discovery parameter contains a list of the supported subject_type values for this server. Valid types include `pairwise` and `public`.. [optional]  # noqa: E501
+│ │ -            token_endpoint_auth_method (str): OAuth 2.0 Token Endpoint Authentication Method  Requested Client Authentication method for the Token Endpoint. The options are:  `client_secret_post`: (default) Send `client_id` and `client_secret` as `application/x-www-form-urlencoded` in the HTTP body. `client_secret_basic`: Send `client_id` and `client_secret` as `application/x-www-form-urlencoded` encoded in the HTTP Authorization header. `private_key_jwt`: Use JSON Web Tokens to authenticate the client. `none`: Used for public clients (native apps, mobile apps) which can not have secrets.. [optional]  # noqa: E501
+│ │ +            token_endpoint_auth_method (str): OAuth 2.0 Token Endpoint Authentication Method  Requested Client Authentication method for the Token Endpoint. The options are:  `client_secret_basic`: (default) Send `client_id` and `client_secret` as `application/x-www-form-urlencoded` encoded in the HTTP Authorization header. `client_secret_post`: Send `client_id` and `client_secret` as `application/x-www-form-urlencoded` in the HTTP body. `private_key_jwt`: Use JSON Web Tokens to authenticate the client. `none`: Used for public clients (native apps, mobile apps) which can not have secrets.. [optional] if omitted the server will use the default value of "client_secret_basic"  # noqa: E501
+│ │              token_endpoint_auth_signing_alg (str): OAuth 2.0 Token Endpoint Signing Algorithm  Requested Client Authentication signing algorithm for the Token Endpoint.. [optional]  # noqa: E501
+│ │              tos_uri (str): OAuth 2.0 Client Terms of Service URI  A URL string pointing to a human-readable terms of service document for the client that describes a contractual relationship between the end-user and the client that the end-user accepts when authorizing the client.. [optional]  # noqa: E501
+│ │              updated_at (datetime): OAuth 2.0 Client Last Update Date  UpdatedAt returns the timestamp of the last update.. [optional]  # noqa: E501
+│ │              userinfo_signed_response_alg (str): OpenID Connect Request Userinfo Signed Response Algorithm  JWS alg algorithm [JWA] REQUIRED for signing UserInfo Responses. If this is specified, the response will be JWT [JWT] serialized, and signed using JWS. The default, if omitted, is for the UserInfo Response to return the Claims as a UTF-8 encoded JSON object using the application/json content-type.. [optional]  # noqa: E501
+│ │          """
+│ │  
+│ │          _check_type = kwargs.pop('_check_type', True)
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_client_token_lifespans.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_client_token_lifespans.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_consent_request.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_consent_request.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_consent_request_open_id_connect_context.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_consent_request_open_id_connect_context.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_consent_session.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_consent_session.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_consent_session_expires_at.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_consent_session_expires_at.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_consent_sessions.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_consent_sessions.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_login_request.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_login_request.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_logout_request.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_logout_request.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_redirect_to.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_redirect_to.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/o_auth2_token_exchange.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/o_auth2_token_exchange.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/oidc_configuration.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/oidc_configuration.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/oidc_user_info.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/oidc_user_info.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/pagination.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/pagination.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/pagination_headers.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/pagination_headers.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/reject_o_auth2_request.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/reject_o_auth2_request.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/string_slice_json_format.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/string_slice_json_format.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/token_pagination.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/token_pagination.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/token_pagination_headers.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/token_pagination_headers.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/token_pagination_request_parameters.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/token_pagination_request_parameters.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/token_pagination_response_headers.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/token_pagination_response_headers.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/trust_o_auth2_jwt_grant_issuer.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/trust_o_auth2_jwt_grant_issuer.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/trusted_o_auth2_jwt_grant_issuer.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/trusted_o_auth2_jwt_grant_issuer.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/trusted_o_auth2_jwt_grant_issuers.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/trusted_o_auth2_jwt_grant_issuers.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/trusted_o_auth2_jwt_grant_json_web_key.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/trusted_o_auth2_jwt_grant_json_web_key.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model/version.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model/version.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import re  # noqa: F401
+│ │  import sys  # noqa: F401
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/model_utils.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/model_utils.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  from datetime import date, datetime  # noqa: F401
+│ │  from copy import deepcopy
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/models/__init__.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/models/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client/rest.py
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client/rest.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import io
+│ │  import json
+│ │   --- ory-hydra-client-2.0.2/ory_hydra_client.egg-info/SOURCES.txt
+│ ├── +++ ory-hydra-client-2.1.0/ory_hydra_client.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- ory-hydra-client-2.0.2/setup.py
+│ ├── +++ ory-hydra-client-2.1.0/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,22 +1,22 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  from setuptools import setup, find_packages  # noqa: H301
+│ │  
+│ │  NAME = "ory-hydra-client"
+│ │ -VERSION = "v2.0.2"
+│ │ +VERSION = "v2.1.0"
+│ │  # To install the library, run the following
+│ │  #
+│ │  # python setup.py install
+│ │  #
+│ │  # prerequisite: setuptools
+│ │  # http://pypi.python.org/pypi/setuptools
+│ │   --- ory-hydra-client-2.0.2/test/test_accept_o_auth2_consent_request.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_accept_o_auth2_consent_request.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_accept_o_auth2_consent_request_session.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_accept_o_auth2_consent_request_session.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_accept_o_auth2_login_request.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_accept_o_auth2_login_request.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_create_json_web_key_set.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_create_json_web_key_set.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_error_o_auth2.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_error_o_auth2.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_generic_error.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_generic_error.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_get_version200_response.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_get_version200_response.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_health_not_ready_status.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_health_not_ready_status.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_health_status.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_health_status.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_introspected_o_auth2_token.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_introspected_o_auth2_token.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_is_ready200_response.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_is_ready200_response.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_is_ready503_response.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_is_ready503_response.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_json_patch.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_json_patch.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_json_patch_document.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_json_patch_document.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_json_web_key.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_json_web_key.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_json_web_key_set.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_json_web_key_set.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_jwk_api.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_jwk_api.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_metadata_api.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_metadata_api.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_null_duration.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_null_duration.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_o_auth2_api.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_o_auth2_api.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import unittest
+│ │  
+│ │ @@ -184,15 +184,15 @@
+│ │          Revoke OAuth 2.0 Consent Sessions of a Subject  # noqa: E501
+│ │          """
+│ │          pass
+│ │  
+│ │      def test_revoke_o_auth2_login_sessions(self):
+│ │          """Test case for revoke_o_auth2_login_sessions
+│ │  
+│ │ -        Revokes All OAuth 2.0 Login Sessions of a Subject  # noqa: E501
+│ │ +        Revokes OAuth 2.0 Login Sessions by either a Subject or a SessionID  # noqa: E501
+│ │          """
+│ │          pass
+│ │  
+│ │      def test_revoke_o_auth2_token(self):
+│ │          """Test case for revoke_o_auth2_token
+│ │  
+│ │          Revoke OAuth 2.0 Access or Refresh Token  # noqa: E501
+│ │   --- ory-hydra-client-2.0.2/test/test_o_auth2_client.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_o_auth2_client.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_o_auth2_client_token_lifespans.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_o_auth2_client_token_lifespans.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_o_auth2_consent_request.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_o_auth2_consent_request.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_o_auth2_consent_request_open_id_connect_context.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_o_auth2_consent_request_open_id_connect_context.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_o_auth2_consent_session.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_o_auth2_consent_session.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_o_auth2_consent_session_expires_at.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_o_auth2_consent_session_expires_at.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_o_auth2_consent_sessions.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_o_auth2_consent_sessions.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_o_auth2_login_request.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_o_auth2_login_request.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_o_auth2_logout_request.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_o_auth2_logout_request.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_o_auth2_redirect_to.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_o_auth2_redirect_to.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_o_auth2_token_exchange.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_o_auth2_token_exchange.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_oidc_api.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_oidc_api.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_oidc_configuration.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_oidc_configuration.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_oidc_user_info.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_oidc_user_info.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_pagination.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_pagination.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_pagination_headers.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_token_pagination_headers.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,36 +1,36 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │  
+│ │  import ory_hydra_client
+│ │ -from ory_hydra_client.model.pagination_headers import PaginationHeaders
+│ │ +from ory_hydra_client.model.token_pagination_headers import TokenPaginationHeaders
+│ │  
+│ │  
+│ │ -class TestPaginationHeaders(unittest.TestCase):
+│ │ -    """PaginationHeaders unit test stubs"""
+│ │ +class TestTokenPaginationHeaders(unittest.TestCase):
+│ │ +    """TokenPaginationHeaders unit test stubs"""
+│ │  
+│ │      def setUp(self):
+│ │          pass
+│ │  
+│ │      def tearDown(self):
+│ │          pass
+│ │  
+│ │ -    def testPaginationHeaders(self):
+│ │ -        """Test PaginationHeaders"""
+│ │ +    def testTokenPaginationHeaders(self):
+│ │ +        """Test TokenPaginationHeaders"""
+│ │          # FIXME: construct object with mandatory attributes with example values
+│ │ -        # model = PaginationHeaders()  # noqa: E501
+│ │ +        # model = TokenPaginationHeaders()  # noqa: E501
+│ │          pass
+│ │  
+│ │  
+│ │  if __name__ == '__main__':
+│ │      unittest.main()
+│ │   --- ory-hydra-client-2.0.2/test/test_reject_o_auth2_request.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_reject_o_auth2_request.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_string_slice_json_format.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_string_slice_json_format.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_token_pagination.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_token_pagination.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_token_pagination_request_parameters.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_token_pagination_request_parameters.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_token_pagination_response_headers.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_token_pagination_response_headers.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_trust_o_auth2_jwt_grant_issuer.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_trust_o_auth2_jwt_grant_issuer.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_trusted_o_auth2_jwt_grant_issuer.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_trusted_o_auth2_jwt_grant_issuer.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_trusted_o_auth2_jwt_grant_issuers.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_trusted_o_auth2_jwt_grant_issuers.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_trusted_o_auth2_jwt_grant_json_web_key.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_trusted_o_auth2_jwt_grant_json_web_key.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_version.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_version.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import sys
+│ │  import unittest
+│ │   --- ory-hydra-client-2.0.2/test/test_wellknown_api.py
+│ ├── +++ ory-hydra-client-2.1.0/test/test_wellknown_api.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """
+│ │      Ory Hydra API
+│ │  
+│ │      Documentation for all of Ory Hydra's APIs.   # noqa: E501
+│ │  
+│ │ -    The version of the OpenAPI document: v2.0.2
+│ │ +    The version of the OpenAPI document: v2.1.0
+│ │      Contact: hi@ory.sh
+│ │      Generated by: https://openapi-generator.tech
+│ │  """
+│ │  
+│ │  
+│ │  import unittest

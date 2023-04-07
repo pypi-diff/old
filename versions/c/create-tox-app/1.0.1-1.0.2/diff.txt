@@ -1,0 +1,116 @@
+--- tmp/create-tox-app-1.0.1.tar.gz
++++ tmp/create-tox-app-1.0.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "create-tox-app-1.0.1.tar", last modified: Fri Apr  7 12:01:08 2023, max compression
+│ +gzip compressed data, was "create-tox-app-1.0.2.tar", last modified: Fri Apr  7 12:18:54 2023, max compression
+│   --- create-tox-app-1.0.1.tar
+├── +++ create-tox-app-1.0.2.tar
+│ ├── file list
+│ │ @@ -1,20 +1,20 @@
+│ │ -drwxr-xr-x   0 bwozniak   (501) staff       (20)        0 2023-04-07 12:01:08.485140 create-tox-app-1.0.1/
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)     1073 2023-04-07 11:34:54.000000 create-tox-app-1.0.1/LICENSE
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)      967 2023-04-07 12:01:08.485024 create-tox-app-1.0.1/PKG-INFO
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)      678 2023-04-07 11:55:46.000000 create-tox-app-1.0.1/README.rst
+│ │ -drwxr-xr-x   0 bwozniak   (501) staff       (20)        0 2023-04-07 12:01:08.484134 create-tox-app-1.0.1/create_tox_app/
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)        0 2023-04-07 11:34:54.000000 create-tox-app-1.0.1/create_tox_app/__init__.py
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)     1034 2023-04-07 11:57:49.000000 create-tox-app-1.0.1/create_tox_app/__main__.py
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)       21 2023-04-07 11:34:54.000000 create-tox-app-1.0.1/create_tox_app/exit_codes.py
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)     2600 2023-04-07 12:00:41.000000 create-tox-app-1.0.1/create_tox_app/generator.py
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)     1826 2023-04-07 11:34:54.000000 create-tox-app-1.0.1/create_tox_app/templates.py
+│ │ -drwxr-xr-x   0 bwozniak   (501) staff       (20)        0 2023-04-07 12:01:08.484697 create-tox-app-1.0.1/create_tox_app.egg-info/
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)      967 2023-04-07 12:01:08.000000 create-tox-app-1.0.1/create_tox_app.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)      377 2023-04-07 12:01:08.000000 create-tox-app-1.0.1/create_tox_app.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)        1 2023-04-07 12:01:08.000000 create-tox-app-1.0.1/create_tox_app.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)       64 2023-04-07 12:01:08.000000 create-tox-app-1.0.1/create_tox_app.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)       15 2023-04-07 12:01:08.000000 create-tox-app-1.0.1/create_tox_app.egg-info/top_level.txt
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)       38 2023-04-07 12:01:08.485176 create-tox-app-1.0.1/setup.cfg
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)      605 2023-04-07 11:59:41.000000 create-tox-app-1.0.1/setup.py
+│ │ -drwxr-xr-x   0 bwozniak   (501) staff       (20)        0 2023-04-07 12:01:08.484819 create-tox-app-1.0.1/tests/
+│ │ --rw-r--r--   0 bwozniak   (501) staff       (20)     1194 2023-04-07 11:57:49.000000 create-tox-app-1.0.1/tests/test_app.py
+│ │ +drwxr-xr-x   0 bwozniak   (501) staff       (20)        0 2023-04-07 12:18:54.638869 create-tox-app-1.0.2/
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)     1073 2023-04-07 11:34:54.000000 create-tox-app-1.0.2/LICENSE
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)     1192 2023-04-07 12:18:54.638716 create-tox-app-1.0.2/PKG-INFO
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)      678 2023-04-07 11:55:46.000000 create-tox-app-1.0.2/README.rst
+│ │ +drwxr-xr-x   0 bwozniak   (501) staff       (20)        0 2023-04-07 12:18:54.637740 create-tox-app-1.0.2/create_tox_app/
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)        0 2023-04-07 11:34:54.000000 create-tox-app-1.0.2/create_tox_app/__init__.py
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)     1034 2023-04-07 11:57:49.000000 create-tox-app-1.0.2/create_tox_app/__main__.py
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)       21 2023-04-07 11:34:54.000000 create-tox-app-1.0.2/create_tox_app/exit_codes.py
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)     2600 2023-04-07 12:00:41.000000 create-tox-app-1.0.2/create_tox_app/generator.py
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)     1826 2023-04-07 11:34:54.000000 create-tox-app-1.0.2/create_tox_app/templates.py
+│ │ +drwxr-xr-x   0 bwozniak   (501) staff       (20)        0 2023-04-07 12:18:54.638385 create-tox-app-1.0.2/create_tox_app.egg-info/
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)     1192 2023-04-07 12:18:54.000000 create-tox-app-1.0.2/create_tox_app.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)      377 2023-04-07 12:18:54.000000 create-tox-app-1.0.2/create_tox_app.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)        1 2023-04-07 12:18:54.000000 create-tox-app-1.0.2/create_tox_app.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)       64 2023-04-07 12:18:54.000000 create-tox-app-1.0.2/create_tox_app.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)       15 2023-04-07 12:18:54.000000 create-tox-app-1.0.2/create_tox_app.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)       38 2023-04-07 12:18:54.638912 create-tox-app-1.0.2/setup.cfg
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)      850 2023-04-07 12:18:47.000000 create-tox-app-1.0.2/setup.py
+│ │ +drwxr-xr-x   0 bwozniak   (501) staff       (20)        0 2023-04-07 12:18:54.638519 create-tox-app-1.0.2/tests/
+│ │ +-rw-r--r--   0 bwozniak   (501) staff       (20)     1194 2023-04-07 11:57:49.000000 create-tox-app-1.0.2/tests/test_app.py
+│ │   --- create-tox-app-1.0.1/LICENSE
+│ ├── +++ create-tox-app-1.0.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- create-tox-app-1.0.1/PKG-INFO
+│ ├── +++ create-tox-app-1.0.2/PKG-INFO
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,14 +1,19 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: create-tox-app
+│ │ -Version: 1.0.1
+│ │ +Version: 1.0.2
+│ │  Summary: A wrapper that creates a tox env with the minimal setup for a Python app.
+│ │  Home-page: https://github.com/wozniakpl/create-tox-app.git
+│ │  Author: Bartosz Woźniak
+│ │  Author-email: bwozniakdev@protonmail.com
+│ │ +Classifier: Intended Audience :: Developers
+│ │ +Classifier: License :: OSI Approved :: MIT License
+│ │ +Classifier: Operating System :: OS Independent
+│ │ +Classifier: Natural Language :: English
+│ │ +Classifier: Programming Language :: Python
+│ │  License-File: LICENSE
+│ │  
+│ │  create-tox-app
+│ │  ==============
+│ │  
+│ │  A small script to set up a tox environment with ``setup.py``,
+│ │  formatting, linting and tests.
+│ │   --- create-tox-app-1.0.1/README.rst
+│ ├── +++ create-tox-app-1.0.2/README.rst
+│ │┄ Files identical despite different names
+│ │   --- create-tox-app-1.0.1/create_tox_app/__main__.py
+│ ├── +++ create-tox-app-1.0.2/create_tox_app/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- create-tox-app-1.0.1/create_tox_app/generator.py
+│ ├── +++ create-tox-app-1.0.2/create_tox_app/generator.py
+│ │┄ Files identical despite different names
+│ │   --- create-tox-app-1.0.1/create_tox_app/templates.py
+│ ├── +++ create-tox-app-1.0.2/create_tox_app/templates.py
+│ │┄ Files identical despite different names
+│ │   --- create-tox-app-1.0.1/create_tox_app.egg-info/PKG-INFO
+│ ├── +++ create-tox-app-1.0.2/create_tox_app.egg-info/PKG-INFO
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,14 +1,19 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: create-tox-app
+│ │ -Version: 1.0.1
+│ │ +Version: 1.0.2
+│ │  Summary: A wrapper that creates a tox env with the minimal setup for a Python app.
+│ │  Home-page: https://github.com/wozniakpl/create-tox-app.git
+│ │  Author: Bartosz Woźniak
+│ │  Author-email: bwozniakdev@protonmail.com
+│ │ +Classifier: Intended Audience :: Developers
+│ │ +Classifier: License :: OSI Approved :: MIT License
+│ │ +Classifier: Operating System :: OS Independent
+│ │ +Classifier: Natural Language :: English
+│ │ +Classifier: Programming Language :: Python
+│ │  License-File: LICENSE
+│ │  
+│ │  create-tox-app
+│ │  ==============
+│ │  
+│ │  A small script to set up a tox environment with ``setup.py``,
+│ │  formatting, linting and tests.
+│ │   --- create-tox-app-1.0.1/tests/test_app.py
+│ ├── +++ create-tox-app-1.0.2/tests/test_app.py
+│ │┄ Files identical despite different names

@@ -1,0 +1,70 @@
+--- tmp/to-pip-1.2.tar.gz
++++ tmp/to-pip-1.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "to-pip-1.2.tar", last modified: Fri Apr  7 12:23:12 2023, max compression
+│ +gzip compressed data, was "to-pip-1.3.tar", last modified: Fri Apr  7 12:24:41 2023, max compression
+│   --- to-pip-1.2.tar
+├── +++ to-pip-1.3.tar
+│ ├── file list
+│ │ @@ -1,12 +1,12 @@
+│ │ -drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 12:23:12.097418 to-pip-1.2/
+│ │ --rw-r--r--   0 chiubowen   (501) staff       (20)     2102 2023-04-07 12:23:12.097313 to-pip-1.2/PKG-INFO
+│ │ --rw-r--r--   0 chiubowen   (501) staff       (20)     1940 2023-04-07 12:23:11.000000 to-pip-1.2/README.md
+│ │ --rw-r--r--   0 chiubowen   (501) staff       (20)       38 2023-04-07 12:23:12.097461 to-pip-1.2/setup.cfg
+│ │ --rw-r--r--   0 chiubowen   (501) staff       (20)      510 2023-04-07 12:23:11.000000 to-pip-1.2/setup.py
+│ │ -drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 12:23:12.097176 to-pip-1.2/to_pip.egg-info/
+│ │ --rw-r--r--   0 chiubowen   (501) staff       (20)     2102 2023-04-07 12:23:12.000000 to-pip-1.2/to_pip.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 chiubowen   (501) staff       (20)      181 2023-04-07 12:23:12.000000 to-pip-1.2/to_pip.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 chiubowen   (501) staff       (20)        1 2023-04-07 12:23:12.000000 to-pip-1.2/to_pip.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 chiubowen   (501) staff       (20)       40 2023-04-07 12:23:12.000000 to-pip-1.2/to_pip.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 chiubowen   (501) staff       (20)        7 2023-04-07 12:23:12.000000 to-pip-1.2/to_pip.egg-info/top_level.txt
+│ │ --rwxr-xr-x   0 chiubowen   (501) staff       (20)     2988 2023-04-07 12:23:11.000000 to-pip-1.2/to_pip.py
+│ │ +drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 12:24:41.383052 to-pip-1.3/
+│ │ +-rw-r--r--   0 chiubowen   (501) staff       (20)     2102 2023-04-07 12:24:41.382951 to-pip-1.3/PKG-INFO
+│ │ +-rw-r--r--   0 chiubowen   (501) staff       (20)     1940 2023-04-07 12:24:41.000000 to-pip-1.3/README.md
+│ │ +-rw-r--r--   0 chiubowen   (501) staff       (20)       38 2023-04-07 12:24:41.383088 to-pip-1.3/setup.cfg
+│ │ +-rw-r--r--   0 chiubowen   (501) staff       (20)      486 2023-04-07 12:24:41.000000 to-pip-1.3/setup.py
+│ │ +drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 12:24:41.382824 to-pip-1.3/to_pip.egg-info/
+│ │ +-rw-r--r--   0 chiubowen   (501) staff       (20)     2102 2023-04-07 12:24:41.000000 to-pip-1.3/to_pip.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 chiubowen   (501) staff       (20)      181 2023-04-07 12:24:41.000000 to-pip-1.3/to_pip.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 chiubowen   (501) staff       (20)        1 2023-04-07 12:24:41.000000 to-pip-1.3/to_pip.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 chiubowen   (501) staff       (20)       40 2023-04-07 12:24:41.000000 to-pip-1.3/to_pip.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 chiubowen   (501) staff       (20)        7 2023-04-07 12:24:41.000000 to-pip-1.3/to_pip.egg-info/top_level.txt
+│ │ +-rwxr-xr-x   0 chiubowen   (501) staff       (20)     2988 2023-04-07 12:24:41.000000 to-pip-1.3/to_pip.py
+│ │   --- to-pip-1.2/PKG-INFO
+│ ├── +++ to-pip-1.3/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: to-pip
+│ │ -Version: 1.2
+│ │ +Version: 1.3
+│ │  Summary: UNKNOWN
+│ │  Home-page: UNKNOWN
+│ │  License: UNKNOWN
+│ │  Platform: UNKNOWN
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  ## 簡介
+│ │   --- to-pip-1.2/README.md
+│ ├── +++ to-pip-1.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- to-pip-1.2/to_pip.egg-info/PKG-INFO
+│ ├── +++ to-pip-1.3/to_pip.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: to-pip
+│ │ -Version: 1.2
+│ │ +Version: 1.3
+│ │  Summary: UNKNOWN
+│ │  Home-page: UNKNOWN
+│ │  License: UNKNOWN
+│ │  Platform: UNKNOWN
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  ## 簡介
+│ │   --- to-pip-1.2/to_pip.py
+│ ├── +++ to-pip-1.3/to_pip.py
+│ │┄ Files identical despite different names

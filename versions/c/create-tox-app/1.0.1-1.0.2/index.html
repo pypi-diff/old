@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/create-tox-app-1.0.1.tar.gz tmp/create-tox-app-1.0.2.tar.gz --html versions/c/create-tox-app/1.0.1-1.0.2/index.html --text versions/c/create-tox-app/1.0.1-1.0.2/diff.txt --markdown versions/c/create-tox-app/1.0.1-1.0.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.75 KB</span></div>
+  <div><span class="source">tmp/create-tox-app-1.0.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/create-tox-app-1.0.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">278 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;create-tox-app-1.0.<del>1</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>12:<del>01</del>:<del>08</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;create-tox-app-1.0.<ins>2</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>12:<ins>18</ins>:<ins>54</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">7.42 KB</span></div>
+    <div><span class="source">create-tox-app-1.0.1.tar</span> vs.</div>
+    <div id="create-tox-app--.-.-.tar"><span class="source">create-tox-app-1.0.2.tar</span>
+      <a class="anchor" href="#create-tox-app--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.09 KB</span></div>
+      <div id="create-tox-app--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#create-tox-app--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 20 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<del>01</del>:<del>08</del>.<del>485140</del><span class="dp">·</span>create-tox-app-1.0.<del>1</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<ins>18</ins>:<ins>54</ins>.<ins>638869</ins><span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1073<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:34:54.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1073<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:34:54.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>967</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<del>01</del>:<del>08</del>.<del>485024</del><span class="dp">·</span>create-tox-app-1.0.<del>1</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1192</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<ins>18</ins>:<ins>54</ins>.<ins>638716</ins><span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>678<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:55:46.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/README.rst</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>678<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:55:46.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<del>01</del>:<del>08</del>.<del>484134</del><span class="dp">·</span>create-tox-app-1.0.<del>1</del>/create_tox_app/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<ins>18</ins>:<ins>54</ins>.<ins>637740</ins><span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/create_tox_app/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:34:54.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/create_tox_app/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:34:54.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/create_tox_app/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1034<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:57:49.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/create_tox_app/__main__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1034<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:57:49.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/create_tox_app/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:34:54.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/create_tox_app/exit_codes.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:34:54.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/create_tox_app/exit_codes.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2600<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:00:41.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/create_tox_app/generator.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2600<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:00:41.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/create_tox_app/generator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1826<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:34:54.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/create_tox_app/templates.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1826<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:34:54.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/create_tox_app/templates.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<del>01</del>:<del>08</del>.<del>484697</del><span class="dp">·</span>create-tox-app-1.0.<del>1</del>/create_tox_app.egg-info/</td><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<ins>18</ins>:<ins>54</ins>.<ins>638385</ins><span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/create_tox_app.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>967</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<del>01</del>:<del>08</del>.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/create_tox_app.egg-info/PKG-INFO</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1192</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<ins>18</ins>:<ins>54</ins>.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/create_tox_app.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>377<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<del>01</del>:<del>08</del>.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/create_tox_app.egg-info/SOURCES.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>377<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<ins>18</ins>:<ins>54</ins>.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/create_tox_app.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<del>01</del>:<del>08</del>.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/create_tox_app.egg-info/dependency_links.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<ins>18</ins>:<ins>54</ins>.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/create_tox_app.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>64<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<del>01</del>:<del>08</del>.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/create_tox_app.egg-info/entry_points.txt</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>64<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<ins>18</ins>:<ins>54</ins>.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/create_tox_app.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<del>01</del>:<del>08</del>.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/create_tox_app.egg-info/top_level.txt</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<ins>18</ins>:<ins>54</ins>.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/create_tox_app.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<del>01</del>:<del>08</del>.<del>4</del>8<del>5</del>1<del>7</del><del>6</del><span class="dp">·</span>create-tox-app-1.0.<del>1</del>/setup.cfg</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<ins>18</ins>:<ins>54</ins>.<ins>6</ins><ins>3</ins>8<ins>9</ins>1<ins>2</ins><span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>605</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>1</del>:<del>59</del>:4<del>1</del>.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/setup.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>850</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>18</ins>:4<ins>7</ins>.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<del>01</del>:<del>08</del>.<del>4848</del>19<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/tests/</td><td class="diffline">19 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:<ins>18</ins>:<ins>54</ins>.<ins>6385</ins>19<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1194<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:57:49.000000<span class="dp">·</span>create-tox-app-1.0.<del>1</del>/tests/test_app.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>bwozniak<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1194<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:57:49.000000<span class="dp">·</span>create-tox-app-1.0.<ins>2</ins>/tests/test_app.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">create-tox-app-1.0.1/LICENSE</span> vs.</div>
+      <div id="create-tox-app--.-.-.tar---create-tox-app--.-.--LICENSE"><span class="source">create-tox-app-1.0.2/LICENSE</span>
+        <a class="anchor" href="#create-tox-app--.-.-.tar---create-tox-app--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">789 B</span></div>
+      <div><span class="source">create-tox-app-1.0.1/PKG-INFO</span> vs.</div>
+      <div id="create-tox-app--.-.-.tar---create-tox-app--.-.--PKG-INFO"><span class="source">create-tox-app-1.0.2/PKG-INFO</span>
+        <a class="anchor" href="#create-tox-app--.-.-.tar---create-tox-app--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 15% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 19 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>create-tox-app</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>create-tox-app</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>wrapper<span class="dp">·</span>that<span class="dp">·</span>creates<span class="dp">·</span>a<span class="dp">·</span>tox<span class="dp">·</span>env<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>minimal<span class="dp">·</span>setup<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>app.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>wrapper<span class="dp">·</span>that<span class="dp">·</span>creates<span class="dp">·</span>a<span class="dp">·</span>tox<span class="dp">·</span>env<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>minimal<span class="dp">·</span>setup<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>app.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/wozniakpl/create-tox-app.git</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/wozniakpl/create-tox-app.git</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Bartosz<span class="dp">·</span>Woźniak</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Bartosz<span class="dp">·</span>Woźniak</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>bwozniakdev@protonmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>bwozniakdev@protonmail.com</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Natural<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>English</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">13 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">create-tox-app</td><td class="diffline">14 </td><td class="diffpresent">create-tox-app</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">==============</td><td class="diffline">15 </td><td class="diffpresent">==============</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">A<span class="dp">·</span>small<span class="dp">·</span>script<span class="dp">·</span>to<span class="dp">·</span>set<span class="dp">·</span>up<span class="dp">·</span>a<span class="dp">·</span>tox<span class="dp">·</span>environment<span class="dp">·</span>with<span class="dp">·</span>``setup.py``,</td><td class="diffline">16 </td><td class="diffpresent">A<span class="dp">·</span>small<span class="dp">·</span>script<span class="dp">·</span>to<span class="dp">·</span>set<span class="dp">·</span>up<span class="dp">·</span>a<span class="dp">·</span>tox<span class="dp">·</span>environment<span class="dp">·</span>with<span class="dp">·</span>``setup.py``,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">formatting,<span class="dp">·</span>linting<span class="dp">·</span>and<span class="dp">·</span>tests.</td><td class="diffline">17 </td><td class="diffpresent">formatting,<span class="dp">·</span>linting<span class="dp">·</span>and<span class="dp">·</span>tests.</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">create-tox-app-1.0.1/README.rst</span> vs.</div>
+      <div id="create-tox-app--.-.-.tar---create-tox-app--.-.--README.rst"><span class="source">create-tox-app-1.0.2/README.rst</span>
+        <a class="anchor" href="#create-tox-app--.-.-.tar---create-tox-app--.-.--README.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">create-tox-app-1.0.1/create_tox_app/__main__.py</span> vs.</div>
+      <div id="create-tox-app--.-.-.tar---create-tox-app--.-.--create_tox_app-__main__.py"><span class="source">create-tox-app-1.0.2/create_tox_app/__main__.py</span>
+        <a class="anchor" href="#create-tox-app--.-.-.tar---create-tox-app--.-.--create_tox_app-__main__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">create-tox-app-1.0.1/create_tox_app/generator.py</span> vs.</div>
+      <div id="create-tox-app--.-.-.tar---create-tox-app--.-.--create_tox_app-generator.py"><span class="source">create-tox-app-1.0.2/create_tox_app/generator.py</span>
+        <a class="anchor" href="#create-tox-app--.-.-.tar---create-tox-app--.-.--create_tox_app-generator.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">create-tox-app-1.0.1/create_tox_app/templates.py</span> vs.</div>
+      <div id="create-tox-app--.-.-.tar---create-tox-app--.-.--create_tox_app-templates.py"><span class="source">create-tox-app-1.0.2/create_tox_app/templates.py</span>
+        <a class="anchor" href="#create-tox-app--.-.-.tar---create-tox-app--.-.--create_tox_app-templates.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">837 B</span></div>
+      <div><span class="source">create-tox-app-1.0.1/create_tox_app.egg-info/PKG-INFO</span> vs.</div>
+      <div id="create-tox-app--.-.-.tar---create-tox-app--.-.--create_tox_app.egg-info-PKG-INFO"><span class="source">create-tox-app-1.0.2/create_tox_app.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#create-tox-app--.-.-.tar---create-tox-app--.-.--create_tox_app.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 15% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 19 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>create-tox-app</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>create-tox-app</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>wrapper<span class="dp">·</span>that<span class="dp">·</span>creates<span class="dp">·</span>a<span class="dp">·</span>tox<span class="dp">·</span>env<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>minimal<span class="dp">·</span>setup<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>app.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>wrapper<span class="dp">·</span>that<span class="dp">·</span>creates<span class="dp">·</span>a<span class="dp">·</span>tox<span class="dp">·</span>env<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>minimal<span class="dp">·</span>setup<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>app.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/wozniakpl/create-tox-app.git</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/wozniakpl/create-tox-app.git</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Bartosz<span class="dp">·</span>Woźniak</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Bartosz<span class="dp">·</span>Woźniak</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>bwozniakdev@protonmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>bwozniakdev@protonmail.com</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Natural<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>English</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">13 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">create-tox-app</td><td class="diffline">14 </td><td class="diffpresent">create-tox-app</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">==============</td><td class="diffline">15 </td><td class="diffpresent">==============</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">A<span class="dp">·</span>small<span class="dp">·</span>script<span class="dp">·</span>to<span class="dp">·</span>set<span class="dp">·</span>up<span class="dp">·</span>a<span class="dp">·</span>tox<span class="dp">·</span>environment<span class="dp">·</span>with<span class="dp">·</span>``setup.py``,</td><td class="diffline">16 </td><td class="diffpresent">A<span class="dp">·</span>small<span class="dp">·</span>script<span class="dp">·</span>to<span class="dp">·</span>set<span class="dp">·</span>up<span class="dp">·</span>a<span class="dp">·</span>tox<span class="dp">·</span>environment<span class="dp">·</span>with<span class="dp">·</span>``setup.py``,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">formatting,<span class="dp">·</span>linting<span class="dp">·</span>and<span class="dp">·</span>tests.</td><td class="diffline">17 </td><td class="diffpresent">formatting,<span class="dp">·</span>linting<span class="dp">·</span>and<span class="dp">·</span>tests.</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">create-tox-app-1.0.1/tests/test_app.py</span> vs.</div>
+      <div id="create-tox-app--.-.-.tar---create-tox-app--.-.--tests-test_app.py"><span class="source">create-tox-app-1.0.2/tests/test_app.py</span>
+        <a class="anchor" href="#create-tox-app--.-.-.tar---create-tox-app--.-.--tests-test_app.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

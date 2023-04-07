@@ -1,0 +1,386 @@
+# Comparing `tmp/phonemeRecognizerWrapper-0.1.2.tar.gz` & `tmp/phonemeRecognizerWrapper-0.1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "phonemeRecognizerWrapper-0.1.2.tar", last modified: Thu Sep  8 14:14:59 2022, max compression
++gzip compressed data, was "phonemeRecognizerWrapper-0.1.3.tar", last modified: Fri Apr  7 12:21:31 2023, max compression
+```
+
+## Comparing `phonemeRecognizerWrapper-0.1.2.tar` & `phonemeRecognizerWrapper-0.1.3.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,16 @@
+-drwxrwxrwx   0        0        0        0 2022-09-08 14:14:59.774939 phonemeRecognizerWrapper-0.1.2/
+--rw-rw-rw-   0        0        0     1088 2022-09-08 13:30:25.000000 phonemeRecognizerWrapper-0.1.2/LICENSE.txt
+--rw-rw-rw-   0        0        0        0 2022-09-08 13:30:25.000000 phonemeRecognizerWrapper-0.1.2/MANIFEST.in
+--rw-rw-rw-   0        0        0     2932 2022-09-08 14:14:59.774443 phonemeRecognizerWrapper-0.1.2/PKG-INFO
+--rw-rw-rw-   0        0        0     2460 2022-09-08 14:03:55.000000 phonemeRecognizerWrapper-0.1.2/README.md
+-drwxrwxrwx   0        0        0        0 2022-09-08 14:14:59.759068 phonemeRecognizerWrapper-0.1.2/phonemeRecognizerWrapper/
+--rw-rw-rw-   0        0        0        0 2022-09-08 13:30:25.000000 phonemeRecognizerWrapper-0.1.2/phonemeRecognizerWrapper/__init__.py
+--rw-rw-rw-   0        0        0     7658 2022-09-08 14:04:06.000000 phonemeRecognizerWrapper-0.1.2/phonemeRecognizerWrapper/recognize.py
+-drwxrwxrwx   0        0        0        0 2022-09-08 14:14:59.772955 phonemeRecognizerWrapper-0.1.2/phonemeRecognizerWrapper.egg-info/
+--rw-rw-rw-   0        0        0     2932 2022-09-08 14:14:59.000000 phonemeRecognizerWrapper-0.1.2/phonemeRecognizerWrapper.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      356 2022-09-08 14:14:59.000000 phonemeRecognizerWrapper-0.1.2/phonemeRecognizerWrapper.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2022-09-08 14:14:59.000000 phonemeRecognizerWrapper-0.1.2/phonemeRecognizerWrapper.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       28 2022-09-08 14:14:59.000000 phonemeRecognizerWrapper-0.1.2/phonemeRecognizerWrapper.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       25 2022-09-08 14:14:59.000000 phonemeRecognizerWrapper-0.1.2/phonemeRecognizerWrapper.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2022-09-08 14:14:59.774939 phonemeRecognizerWrapper-0.1.2/setup.cfg
+--rw-rw-rw-   0        0        0      984 2022-09-08 14:14:26.000000 phonemeRecognizerWrapper-0.1.2/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:21:31.702145 phonemeRecognizerWrapper-0.1.3/
++-rw-rw-rw-   0        0        0     1088 2022-09-08 13:30:25.000000 phonemeRecognizerWrapper-0.1.3/LICENSE.txt
++-rw-rw-rw-   0        0        0        0 2022-09-08 13:30:25.000000 phonemeRecognizerWrapper-0.1.3/MANIFEST.in
++-rw-rw-rw-   0        0        0     3701 2023-04-07 12:21:31.701650 phonemeRecognizerWrapper-0.1.3/PKG-INFO
++-rw-rw-rw-   0        0        0     3229 2023-04-07 12:13:00.000000 phonemeRecognizerWrapper-0.1.3/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 12:21:31.675391 phonemeRecognizerWrapper-0.1.3/phonemeRecognizerWrapper/
++-rw-rw-rw-   0        0        0        0 2022-09-08 13:30:25.000000 phonemeRecognizerWrapper-0.1.3/phonemeRecognizerWrapper/__init__.py
++-rw-rw-rw-   0        0        0     8429 2023-04-07 12:14:15.000000 phonemeRecognizerWrapper-0.1.3/phonemeRecognizerWrapper/recognize.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:21:31.699170 phonemeRecognizerWrapper-0.1.3/phonemeRecognizerWrapper.egg-info/
++-rw-rw-rw-   0        0        0     3701 2023-04-07 12:21:31.000000 phonemeRecognizerWrapper-0.1.3/phonemeRecognizerWrapper.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      356 2023-04-07 12:21:31.000000 phonemeRecognizerWrapper-0.1.3/phonemeRecognizerWrapper.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 12:21:31.000000 phonemeRecognizerWrapper-0.1.3/phonemeRecognizerWrapper.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       28 2023-04-07 12:21:31.000000 phonemeRecognizerWrapper-0.1.3/phonemeRecognizerWrapper.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       25 2023-04-07 12:21:31.000000 phonemeRecognizerWrapper-0.1.3/phonemeRecognizerWrapper.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 12:21:31.702145 phonemeRecognizerWrapper-0.1.3/setup.cfg
++-rw-rw-rw-   0        0        0      984 2023-04-07 12:13:12.000000 phonemeRecognizerWrapper-0.1.3/setup.py
+```
+
+### Comparing `phonemeRecognizerWrapper-0.1.2/LICENSE.txt` & `phonemeRecognizerWrapper-0.1.3/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `phonemeRecognizerWrapper-0.1.2/PKG-INFO` & `phonemeRecognizerWrapper-0.1.3/README.md`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,22 +1,20 @@
+-Metadata-Version: 2.1
+-Name: phonemeRecognizerWrapper
+-Version: 0.1.2
+-Summary: Package containing one wrapper script over the Allosaurus phoneme recognition library, designed for passing the Allosaurus output data to MATLAB scripts for further analysis.
+-Home-page: https://github.com/PetrKryze/phonemeRecognizerWrapper
+-Author: Petr Krýže
+-Author-email: petr.kryze@gmail.com
+-License: LICENSE.txt
+-Description-Content-Type: text/markdown
+-License-File: LICENSE.txt
+-
+ # phonemeRecognizerWrapper
+ Package containing one wrapper script over the Allosaurus phoneme recognition library, designed for passing the Allosaurus output data to MATLAB scripts for further analysis.
+ 
+-## Usage: phonemeRecognizer.py
++## Installation
++1. [Install Python 3](https://www.python.org/downloads/)
++   - To see if Python is installed, use `py --version` in command line
++   - `pip` is automatically included in the Python installation, but to check or update the pip version use: `py -m ensurepip --upgrade`
++2. [Install this package](https://pypi.org/project/phonemeRecognizerWrapper)
++   - From command line (assuming user has already installed python and pip):  
++     `pip install phonemeRecognizerWrapper`
++     - This should also automatically install all dependent packages. 
++
++## Usage
+ This script uses the [Allosaurus](https://github.com/xinjli/allosaurus) phoneme recognition package to extract phonemic content from audio files of human speech. This script acts as a wrapper over the allosaurus package for improved formatting and piping of data to MATLAB scripts for analysis (e.g. vowel formant extraction).
+ 
+ ### Command structure
+ `py -m phonemeRecognizerWrapper.recognize LANGUAGE_CODE FILES EMIT_PROB`
+ 
+ ### Required Arguments:
+ 1. `LANGUAGE_CODE`
+@@ -28,23 +26,28 @@
+    - **Example options:**
+      - `"ipa"` - uses the whole available phonetic inventory for recognition (less accurate)
+      - `"deu"` - german
+      - `"gsw"` - swiss german
+      - `"fra"` - french
+      - `"eng"` - english
+ 2. `FILES`
+-   - Semicolon delimited text string containing absolute paths to all files meant for recognition. Surround the string with apostrophes ("") if any of the paths contains spaces.
+-   - Example:  
++   - Absolute path to a temp .txt file containing semicolon delimited text string of absolute paths to all files meant for recognition. Surround the string with apostrophes ("") if any of the paths contains spaces.
++   - Temp file contents example:  
+      `"C:\sounds\sound1.wav;C:\sounds\sound2.wav"`
+ 
+ ### Optional Arguments:
+ 3. `EMIT_PROB`
+    - Allosaurus setting that determines the phoneme emission rate of the underlying model. Higher number tells the model to produce more phonemes, smaller number vice versa.  
+    Center is at `1.0`, and optimal range that produces comprehensive outputs is `0.8 - 1.5`. **If omitted, default value of 1.5 is used.**
+ 
+ ### Examples
+ - Example usage from command line:
+   `py -m phonemeRecognizerWrapper.recognize eng "C:\sounds\sound.wav;C:\sounds\sound2.wav" 1.0`
+ 
+ - Example usage from MATLAB via the `[status, result] = system(command)` function:  
+   `command = 'py -m phonemeRecognizerWrapper.recognize eng "C:\sounds\sound.wav;C:\sounds\sound2.wav" 1.0';`
+   - It is also recommended to use `set PYTHONIOENCODING=utf8` before the python command to ensure proper text formantting via the standard output pipe.
++
++## Contacts
++> For any questions, please email: *petr.kryze@gmail.com*  
++> Authors: Petr Krýže @PetrKryze based on code from Vojtěch Illner  
++> CTU Prague, FEE 2023
+```
+
+### Comparing `phonemeRecognizerWrapper-0.1.2/README.md` & `phonemeRecognizerWrapper-0.1.3/PKG-INFO`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,11 +1,31 @@
++Metadata-Version: 2.1
++Name: phonemeRecognizerWrapper
++Version: 0.1.3
++Summary: Package containing one wrapper script over the Allosaurus phoneme recognition library, designed for passing the Allosaurus output data to MATLAB scripts for further analysis.
++Home-page: https://github.com/PetrKryze/phonemeRecognizerWrapper
++Author: Petr Krýže
++Author-email: petr.kryze@gmail.com
++License: LICENSE.txt
++Description-Content-Type: text/markdown
++License-File: LICENSE.txt
++
+ # phonemeRecognizerWrapper
+ Package containing one wrapper script over the Allosaurus phoneme recognition library, designed for passing the Allosaurus output data to MATLAB scripts for further analysis.
+ 
+-## Usage: phonemeRecognizer.py
++## Installation
++1. [Install Python 3](https://www.python.org/downloads/)
++   - To see if Python is installed, use `py --version` in command line
++   - `pip` is automatically included in the Python installation, but to check or update the pip version use: `py -m ensurepip --upgrade`
++2. [Install this package](https://pypi.org/project/phonemeRecognizerWrapper)
++   - From command line (assuming user has already installed python and pip):  
++     `pip install phonemeRecognizerWrapper`
++     - This should also automatically install all dependent packages. 
++
++## Usage
+ This script uses the [Allosaurus](https://github.com/xinjli/allosaurus) phoneme recognition package to extract phonemic content from audio files of human speech. This script acts as a wrapper over the allosaurus package for improved formatting and piping of data to MATLAB scripts for analysis (e.g. vowel formant extraction).
+ 
+ ### Command structure
+ `py -m phonemeRecognizerWrapper.recognize LANGUAGE_CODE FILES EMIT_PROB`
+ 
+ ### Required Arguments:
+ 1. `LANGUAGE_CODE`
+@@ -17,23 +37,28 @@
+    - **Example options:**
+      - `"ipa"` - uses the whole available phonetic inventory for recognition (less accurate)
+      - `"deu"` - german
+      - `"gsw"` - swiss german
+      - `"fra"` - french
+      - `"eng"` - english
+ 2. `FILES`
+-   - Semicolon delimited text string containing absolute paths to all files meant for recognition. Surround the string with apostrophes ("") if any of the paths contains spaces.
+-   - Example:  
++   - Absolute path to a temp .txt file containing semicolon delimited text string of absolute paths to all files meant for recognition. Surround the string with apostrophes ("") if any of the paths contains spaces.
++   - Temp file contents example:  
+      `"C:\sounds\sound1.wav;C:\sounds\sound2.wav"`
+ 
+ ### Optional Arguments:
+ 3. `EMIT_PROB`
+    - Allosaurus setting that determines the phoneme emission rate of the underlying model. Higher number tells the model to produce more phonemes, smaller number vice versa.  
+    Center is at `1.0`, and optimal range that produces comprehensive outputs is `0.8 - 1.5`. **If omitted, default value of 1.5 is used.**
+ 
+ ### Examples
+ - Example usage from command line:
+   `py -m phonemeRecognizerWrapper.recognize eng "C:\sounds\sound.wav;C:\sounds\sound2.wav" 1.0`
+ 
+ - Example usage from MATLAB via the `[status, result] = system(command)` function:  
+   `command = 'py -m phonemeRecognizerWrapper.recognize eng "C:\sounds\sound.wav;C:\sounds\sound2.wav" 1.0';`
+   - It is also recommended to use `set PYTHONIOENCODING=utf8` before the python command to ensure proper text formantting via the standard output pipe.
++
++## Contacts
++> For any questions, please email: *petr.kryze@gmail.com*  
++> Authors: Petr Krýže @PetrKryze based on code from Vojtěch Illner  
++> CTU Prague, FEE 2023
+```
+
+#### encoding
+
+```diff
+@@ -1 +1 @@
+-us-ascii
++utf-8
+```
+
+### Comparing `phonemeRecognizerWrapper-0.1.2/phonemeRecognizerWrapper/recognize.py` & `phonemeRecognizerWrapper-0.1.3/phonemeRecognizerWrapper/recognize.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -14,17 +14,17 @@
+ #                   See https://github.com/xinjli/allosaurus for more info.
+ #                   * Example options:
+ #                   "ipa" - uses the whole available phonetic inventory for recognition (less accurate)
+ #                   "deu" - german
+ #                   "gsw" - swiss german
+ #                   "fra" - french
+ #                   "eng" - english
+-# 2) FILES: Semicolon delimited text string containing absolute paths to all files meant for recognition. Surround the
+-#           string with apostrophes ("") if any of the paths contains spaces.
+-#           * Example:
++# 2) FILES: Absolute path to a temp .txt file containing a semicolon delimited string of absolute paths to all files
++#           meant for recognition. Surround the string with apostrophes ("") if any of the paths contains spaces.
++#           * Temp file contents example:
+ #           "C:\sounds\sound1.wav;C:\sounds\sound2.wav"
+ 
+ # Optional Arguments:
+ # 3) EMIT_PROB: Allosaurus setting that determines the phoneme emission rate of the underlying model. Higher number
+ #               tells the model to produce more phonemes, smaller number vice versa. Center is at 1.0, and optimal range
+ #               that produces comprehensive outputs is 0.8 - 1.5. If omitted, default value of 1.5 is used.
+ # ----------------------------------------------------------------------------------------------------------------------
+@@ -89,40 +89,55 @@
+ 
+ # Run the script.
+ if __name__ == '__main__':
+     # Retrieve input arguments
+     try:
+         # Required arguments
+         input_lang = sys.argv[1]
+-        input_files = sys.argv[2]
++        input_files_file_path = sys.argv[2]
+         # Optional argument
+         if len(sys.argv) <= 3:
+             input_emit = DEFAULT_EMIT_PROBABILITY  # Get default emit probability
+         else:
+             input_emit = float(sys.argv[3])
+     except IndexError:
+         print('Invalid input arguments\n' +
+               '1 - language code\n' +
+-              '2 - string with semicolon delimited input sound files for analysis\n' +
++              '2 - path to a temp text file containing a string with semicolon delimited input sound files for '
++              'analysis\n' +
+               '3 - float number indicating probability of emitting phonemes\n')
+         sys.exit(-1)
+ 
++    # Input files' paths are stored in a temp text file on the provided path (input_files_file_path), we need to
++    # retrieve that file and get its content (just one long line)
++    temp_file_path = Path(input_files_file_path)
++    if not Path.is_file(temp_file_path):  # Check for file existence
++        sys.stderr.write("Temp input file %s does not exist or is not a file!" % temp_file_path)
++        sys.exit(-1)
++
++    ext = temp_file_path.suffix.lower()
++    if ext != ".txt":
++        sys.stderr.write("Temp input file %s is not a TXT text file!" % temp_file_path)
++        sys.exit(-1)
++
++    input_files = Path.read_text(temp_file_path)
++
+     # Input conditioning - parse input and check file existence
+     processed_files = []
+     if len(str(input_files)) > 0:
+         input_files = (str(input_files)).split(";")
+         for f in input_files:
+             filepath = Path(f)
+             if not Path.is_file(filepath):  # Check if the file exists
+                 sys.stderr.write("File %s does not exist or is not a file!" % f)
+                 sys.exit(-1)
+ 
+             ext = filepath.suffix.lower()
+             if ext != ".wav":  # Check if the file is a WAV
+-                sys.stderr.write("File %s is not a WAV audio file." % f)
++                sys.stderr.write("File %s is not a WAV audio file!" % f)
+                 sys.exit(-1)
+ 
+             fol_path = filepath.parent  # Folder where the file is located
+             temppath = fol_path.joinpath("temp")
+             if not temppath.exists():  # Create the temp folder if it doesn't exist
+                 temppath.mkdir()
+```
+
+### Comparing `phonemeRecognizerWrapper-0.1.2/phonemeRecognizerWrapper.egg-info/PKG-INFO` & `phonemeRecognizerWrapper-0.1.3/phonemeRecognizerWrapper.egg-info/PKG-INFO`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,22 +1,31 @@
+ Metadata-Version: 2.1
+ Name: phonemeRecognizerWrapper
+-Version: 0.1.2
++Version: 0.1.3
+ Summary: Package containing one wrapper script over the Allosaurus phoneme recognition library, designed for passing the Allosaurus output data to MATLAB scripts for further analysis.
+ Home-page: https://github.com/PetrKryze/phonemeRecognizerWrapper
+ Author: Petr Krýže
+ Author-email: petr.kryze@gmail.com
+ License: LICENSE.txt
+ Description-Content-Type: text/markdown
+ License-File: LICENSE.txt
+ 
+ # phonemeRecognizerWrapper
+ Package containing one wrapper script over the Allosaurus phoneme recognition library, designed for passing the Allosaurus output data to MATLAB scripts for further analysis.
+ 
+-## Usage: phonemeRecognizer.py
++## Installation
++1. [Install Python 3](https://www.python.org/downloads/)
++   - To see if Python is installed, use `py --version` in command line
++   - `pip` is automatically included in the Python installation, but to check or update the pip version use: `py -m ensurepip --upgrade`
++2. [Install this package](https://pypi.org/project/phonemeRecognizerWrapper)
++   - From command line (assuming user has already installed python and pip):  
++     `pip install phonemeRecognizerWrapper`
++     - This should also automatically install all dependent packages. 
++
++## Usage
+ This script uses the [Allosaurus](https://github.com/xinjli/allosaurus) phoneme recognition package to extract phonemic content from audio files of human speech. This script acts as a wrapper over the allosaurus package for improved formatting and piping of data to MATLAB scripts for analysis (e.g. vowel formant extraction).
+ 
+ ### Command structure
+ `py -m phonemeRecognizerWrapper.recognize LANGUAGE_CODE FILES EMIT_PROB`
+ 
+ ### Required Arguments:
+ 1. `LANGUAGE_CODE`
+@@ -28,23 +37,28 @@
+    - **Example options:**
+      - `"ipa"` - uses the whole available phonetic inventory for recognition (less accurate)
+      - `"deu"` - german
+      - `"gsw"` - swiss german
+      - `"fra"` - french
+      - `"eng"` - english
+ 2. `FILES`
+-   - Semicolon delimited text string containing absolute paths to all files meant for recognition. Surround the string with apostrophes ("") if any of the paths contains spaces.
+-   - Example:  
++   - Absolute path to a temp .txt file containing semicolon delimited text string of absolute paths to all files meant for recognition. Surround the string with apostrophes ("") if any of the paths contains spaces.
++   - Temp file contents example:  
+      `"C:\sounds\sound1.wav;C:\sounds\sound2.wav"`
+ 
+ ### Optional Arguments:
+ 3. `EMIT_PROB`
+    - Allosaurus setting that determines the phoneme emission rate of the underlying model. Higher number tells the model to produce more phonemes, smaller number vice versa.  
+    Center is at `1.0`, and optimal range that produces comprehensive outputs is `0.8 - 1.5`. **If omitted, default value of 1.5 is used.**
+ 
+ ### Examples
+ - Example usage from command line:
+   `py -m phonemeRecognizerWrapper.recognize eng "C:\sounds\sound.wav;C:\sounds\sound2.wav" 1.0`
+ 
+ - Example usage from MATLAB via the `[status, result] = system(command)` function:  
+   `command = 'py -m phonemeRecognizerWrapper.recognize eng "C:\sounds\sound.wav;C:\sounds\sound2.wav" 1.0';`
+   - It is also recommended to use `set PYTHONIOENCODING=utf8` before the python command to ensure proper text formantting via the standard output pipe.
++
++## Contacts
++> For any questions, please email: *petr.kryze@gmail.com*  
++> Authors: Petr Krýže @PetrKryze based on code from Vojtěch Illner  
++> CTU Prague, FEE 2023
+```
+
+### Comparing `phonemeRecognizerWrapper-0.1.2/setup.py` & `phonemeRecognizerWrapper-0.1.3/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ from setuptools import setup
+ 
+ setup(
+     # Application name:
+     name='phonemeRecognizerWrapper',
+ 
+     # Version number (initial):
+-    version='0.1.2',
++    version='0.1.3',
+ 
+     # Application author details:
+     author='Petr Krýže',
+     author_email='petr.kryze@gmail.com',
+ 
+     # Packages
+     packages=['phonemeRecognizerWrapper'],
+```
+

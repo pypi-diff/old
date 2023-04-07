@@ -1,0 +1,1274 @@
+--- tmp/deep_training-0.1.0rc0-py3-none-any.whl.zip
++++ tmp/deep_training-0.1.1-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,135 +1,138 @@
+│ -Zip file size: 220217 bytes, number of entries: 133
+│ --rw-rw-rw-  2.0 fat       47 b- defN 23-Mar-25 01:07 deep_training/__init__.py
+│ --rw-rw-rw-  2.0 fat      877 b- defN 23-Apr-02 07:47 deep_training/setup.py
+│ --rw-rw-rw-  2.0 fat       55 b- defN 22-Dec-09 10:30 deep_training/cv/__init__.py
+│ --rw-rw-rw-  2.0 fat      195 b- defN 23-Jan-27 09:29 deep_training/data_helper/__init__.py
+│ --rw-rw-rw-  2.0 fat    29088 b- defN 23-Apr-01 16:32 deep_training/data_helper/data_helper.py
+│ --rw-rw-rw-  2.0 fat     4926 b- defN 23-Feb-16 11:14 deep_training/data_helper/data_module.py
+│ --rw-rw-rw-  2.0 fat     1383 b- defN 23-Jan-27 09:29 deep_training/data_helper/data_writer.py
+│ --rw-rw-rw-  2.0 fat    12513 b- defN 23-Mar-25 01:07 deep_training/data_helper/training_args.py
+│ --rw-rw-rw-  2.0 fat       70 b- defN 22-Dec-13 10:57 deep_training/nlp/__init__.py
+│ --rw-rw-rw-  2.0 fat       56 b- defN 22-Dec-09 10:30 deep_training/nlp/layers/__init__.py
+│ --rw-rw-rw-  2.0 fat      241 b- defN 23-Mar-13 10:58 deep_training/nlp/layers/activate.py
+│ --rw-rw-rw-  2.0 fat    13271 b- defN 22-Dec-09 10:30 deep_training/nlp/layers/crf.py
+│ --rw-rw-rw-  2.0 fat     4653 b- defN 22-Dec-10 10:46 deep_training/nlp/layers/handshakingkernel.py
+│ --rw-rw-rw-  2.0 fat      435 b- defN 22-Dec-09 10:30 deep_training/nlp/layers/mask.py
+│ --rw-rw-rw-  2.0 fat     1319 b- defN 22-Dec-11 10:47 deep_training/nlp/layers/mhslayer.py
+│ --rw-rw-rw-  2.0 fat     5911 b- defN 22-Dec-09 10:30 deep_training/nlp/layers/norm.py
+│ --rw-rw-rw-  2.0 fat     1220 b- defN 22-Dec-09 10:30 deep_training/nlp/layers/prefix_encoder.py
+│ --rw-rw-rw-  2.0 fat     7259 b- defN 22-Dec-14 10:41 deep_training/nlp/layers/seq_pointer.py
+│ --rw-rw-rw-  2.0 fat     3550 b- defN 22-Dec-14 11:17 deep_training/nlp/layers/w2ner.py
+│ --rw-rw-rw-  2.0 fat       72 b- defN 23-Mar-02 15:05 deep_training/nlp/layers/lora/__init__.py
+│ --rw-rw-rw-  2.0 fat    15095 b- defN 23-Mar-02 13:58 deep_training/nlp/layers/lora/layers.py
+│ --rw-rw-rw-  2.0 fat     1819 b- defN 23-Mar-02 13:58 deep_training/nlp/layers/lora/utils.py
+│ --rw-rw-rw-  2.0 fat     3662 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/BatchAllTripletLoss.py
+│ --rw-rw-rw-  2.0 fat     3880 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/BatchHardSoftMarginTripletLoss.py
+│ --rw-rw-rw-  2.0 fat     8358 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/BatchHardTripletLoss.py
+│ --rw-rw-rw-  2.0 fat     4552 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/BatchSemiHardTripletLoss.py
+│ --rw-rw-rw-  2.0 fat     2255 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/ContrastiveLoss.py
+│ --rw-rw-rw-  2.0 fat     4573 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/ContrastiveTensionLoss.py
+│ --rw-rw-rw-  2.0 fat     1359 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/CosineSimilarityLoss.py
+│ --rw-rw-rw-  2.0 fat      742 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/MSELoss.py
+│ --rw-rw-rw-  2.0 fat     1315 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/MarginMSELoss.py
+│ --rw-rw-rw-  2.0 fat     5302 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/MegaBatchMarginLoss.py
+│ --rw-rw-rw-  2.0 fat     2420 b- defN 23-Jan-18 10:41 deep_training/nlp/losses/MultipleNegativesRankingLoss.py
+│ --rw-rw-rw-  2.0 fat     2905 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/MultipleNegativesSymmetricRankingLoss.py
+│ --rw-rw-rw-  2.0 fat     1863 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/OnlineContrastiveLoss.py
+│ --rw-rw-rw-  2.0 fat     2880 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/SoftmaxLoss.py
+│ --rw-rw-rw-  2.0 fat     2306 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/TripletLoss.py
+│ --rw-rw-rw-  2.0 fat      599 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/__init__.py
+│ --rw-rw-rw-  2.0 fat      661 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/bce_loss.py
+│ --rw-rw-rw-  2.0 fat     1397 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/center_loss.py
+│ --rw-rw-rw-  2.0 fat     1772 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/circle_loss.py
+│ --rw-rw-rw-  2.0 fat     1056 b- defN 23-Jan-13 10:46 deep_training/nlp/losses/contrast.py
+│ --rw-rw-rw-  2.0 fat      619 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/dice_loss.py
+│ --rw-rw-rw-  2.0 fat      710 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/focal_loss.py
+│ --rw-rw-rw-  2.0 fat      882 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/label_smoothing.py
+│ --rw-rw-rw-  2.0 fat      547 b- defN 23-Jan-27 09:29 deep_training/nlp/losses/lm_loss.py
+│ --rw-rw-rw-  2.0 fat     2149 b- defN 22-Dec-30 15:52 deep_training/nlp/losses/loss_arcface.py
+│ --rw-rw-rw-  2.0 fat      962 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/loss_casrel.py
+│ --rw-rw-rw-  2.0 fat     1496 b- defN 22-Dec-19 15:04 deep_training/nlp/losses/loss_cosent.py
+│ --rw-rw-rw-  2.0 fat     1912 b- defN 22-Dec-30 15:52 deep_training/nlp/losses/loss_cosface.py
+│ --rw-rw-rw-  2.0 fat     2223 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/loss_globalpointer.py
+│ --rw-rw-rw-  2.0 fat     6020 b- defN 23-Jan-06 15:08 deep_training/nlp/losses/loss_infonce.py
+│ --rw-rw-rw-  2.0 fat      884 b- defN 22-Dec-22 13:22 deep_training/nlp/losses/loss_kl.py
+│ --rw-rw-rw-  2.0 fat     1270 b- defN 23-Mar-14 11:02 deep_training/nlp/losses/loss_mhslinker.py
+│ --rw-rw-rw-  2.0 fat      617 b- defN 22-Dec-14 10:41 deep_training/nlp/losses/loss_r-drop.py
+│ --rw-rw-rw-  2.0 fat     2656 b- defN 22-Dec-30 15:52 deep_training/nlp/losses/loss_sphereface.py
+│ --rw-rw-rw-  2.0 fat      562 b- defN 22-Dec-09 10:30 deep_training/nlp/losses/loss_splinker.py
+│ --rw-rw-rw-  2.0 fat    10822 b- defN 23-Jan-09 10:43 deep_training/nlp/losses/loss_spn4re.py
+│ --rw-rw-rw-  2.0 fat     5644 b- defN 22-Dec-11 03:40 deep_training/nlp/losses/loss_tplinker.py
+│ --rw-rw-rw-  2.0 fat     2466 b- defN 23-Jan-18 10:41 deep_training/nlp/losses/utils.py
+│ --rw-rw-rw-  2.0 fat       71 b- defN 22-Dec-13 10:57 deep_training/nlp/metrics/__init__.py
+│ --rw-rw-rw-  2.0 fat      655 b- defN 22-Dec-09 10:30 deep_training/nlp/metrics/pointer.py
+│ --rw-rw-rw-  2.0 fat       58 b- defN 22-Dec-09 10:30 deep_training/nlp/models/__init__.py
+│ --rw-rw-rw-  2.0 fat     6811 b- defN 22-Dec-22 11:49 deep_training/nlp/models/casrel.py
+│ --rw-rw-rw-  2.0 fat     5078 b- defN 22-Dec-22 10:47 deep_training/nlp/models/crf_cascad.py
+│ --rw-rw-rw-  2.0 fat     1573 b- defN 22-Dec-22 10:47 deep_training/nlp/models/crf_model.py
+│ --rw-rw-rw-  2.0 fat    12970 b- defN 23-Jan-18 10:41 deep_training/nlp/models/diffcse.py
+│ --rw-rw-rw-  2.0 fat     5388 b- defN 23-Apr-01 02:08 deep_training/nlp/models/esimcse.py
+│ --rw-rw-rw-  2.0 fat     4194 b- defN 23-Mar-09 11:11 deep_training/nlp/models/gec_model.py
+│ --rw-rw-rw-  2.0 fat    10824 b- defN 22-Dec-26 10:42 deep_training/nlp/models/gplinker.py
+│ --rw-rw-rw-  2.0 fat     3799 b- defN 23-Jan-17 10:36 deep_training/nlp/models/infonce.py
+│ --rw-rw-rw-  2.0 fat     2444 b- defN 22-Dec-22 10:47 deep_training/nlp/models/mhs_ner.py
+│ --rw-rw-rw-  2.0 fat     5976 b- defN 22-Dec-22 10:47 deep_training/nlp/models/mhslinker.py
+│ --rw-rw-rw-  2.0 fat     4646 b- defN 23-Jan-18 10:41 deep_training/nlp/models/onerel_model.py
+│ --rw-rw-rw-  2.0 fat     2735 b- defN 23-Apr-01 16:44 deep_training/nlp/models/pointer.py
+│ --rw-rw-rw-  2.0 fat    13317 b- defN 23-Apr-01 16:44 deep_training/nlp/models/prefixtuning.py
+│ --rw-rw-rw-  2.0 fat    15900 b- defN 23-Jan-18 10:41 deep_training/nlp/models/prgc_model.py
+│ --rw-rw-rw-  2.0 fat    16100 b- defN 23-Jan-18 18:07 deep_training/nlp/models/promptbert_cse.py
+│ --rw-rw-rw-  2.0 fat     5134 b- defN 23-Jan-18 10:41 deep_training/nlp/models/pure_model.py
+│ --rw-rw-rw-  2.0 fat     3934 b- defN 23-Jan-16 10:37 deep_training/nlp/models/simcse.py
+│ --rw-rw-rw-  2.0 fat     6007 b- defN 23-Apr-01 16:44 deep_training/nlp/models/span_ner.py
+│ --rw-rw-rw-  2.0 fat    14439 b- defN 23-Jan-18 10:41 deep_training/nlp/models/spn4re.py
+│ --rw-rw-rw-  2.0 fat    11368 b- defN 22-Dec-22 10:47 deep_training/nlp/models/tplinker.py
+│ --rw-rw-rw-  2.0 fat     8142 b- defN 22-Dec-22 10:47 deep_training/nlp/models/tplinkerplus.py
+│ --rw-rw-rw-  2.0 fat    31499 b- defN 23-Apr-01 17:10 deep_training/nlp/models/transformer.py
+│ --rw-rw-rw-  2.0 fat     7953 b- defN 23-Jan-15 13:51 deep_training/nlp/models/tsdae_model.py
+│ --rw-rw-rw-  2.0 fat     9025 b- defN 23-Apr-01 16:44 deep_training/nlp/models/w2ner.py
+│ --rw-rw-rw-  2.0 fat    16500 b- defN 23-Mar-25 04:49 deep_training/nlp/models/LLaMA/__init__.py
+│ --rw-rw-rw-  2.0 fat     5087 b- defN 23-Mar-10 13:49 deep_training/nlp/models/LLaMA/configuration.py
+│ --rw-rw-rw-  2.0 fat    19183 b- defN 23-Mar-25 04:49 deep_training/nlp/models/LLaMA_parallel/__init__.py
+│ --rw-rw-rw-  2.0 fat     5087 b- defN 23-Mar-09 11:19 deep_training/nlp/models/LLaMA_parallel/configuration.py
+│ --rw-rw-rw-  2.0 fat    31627 b- defN 23-Mar-25 04:49 deep_training/nlp/models/PaLM/__init__.py
+│ --rw-rw-rw-  2.0 fat     5890 b- defN 23-Mar-13 10:58 deep_training/nlp/models/PaLM/configuration.py
+│ --rw-rw-rw-  2.0 fat    59991 b- defN 23-Apr-02 07:19 deep_training/nlp/models/chatglm/__init__.py
+│ --rw-rw-rw-  2.0 fat     4418 b- defN 23-Apr-01 14:31 deep_training/nlp/models/chatglm/configuration.py
+│ --rw-rw-rw-  2.0 fat    15150 b- defN 23-Apr-02 03:59 deep_training/nlp/models/chatglm/quantization.py
+│ --rw-rw-rw-  2.0 fat    17854 b- defN 23-Apr-02 03:33 deep_training/nlp/models/chatglm/tokenization.py
+│ --rw-rw-rw-  2.0 fat    34123 b- defN 23-Mar-25 04:47 deep_training/nlp/models/laMDA/__init__.py
+│ --rw-rw-rw-  2.0 fat     5981 b- defN 23-Mar-13 10:58 deep_training/nlp/models/laMDA/configuration.py
+│ --rw-rw-rw-  2.0 fat    13316 b- defN 23-Mar-25 01:49 deep_training/nlp/models/lora/__init__.py
+│ --rw-rw-rw-  2.0 fat     7058 b- defN 23-Mar-18 13:30 deep_training/nlp/models/lora/configuration.py
+│ --rw-rw-rw-  2.0 fat      102 b- defN 22-Dec-09 10:30 deep_training/nlp/models/splinker/__init__.py
+│ --rw-rw-rw-  2.0 fat     2851 b- defN 22-Dec-22 10:47 deep_training/nlp/models/splinker/splinker.py
+│ --rw-rw-rw-  2.0 fat    14478 b- defN 23-Feb-11 10:38 deep_training/nlp/models/t5decoder/__init__.py
+│ --rw-rw-rw-  2.0 fat     6646 b- defN 23-Feb-08 15:33 deep_training/nlp/models/t5encoder/__init__.py
+│ --rw-rw-rw-  2.0 fat       56 b- defN 22-Dec-14 10:41 deep_training/nlp/optimizer/__init__.py
+│ --rw-rw-rw-  2.0 fat     5225 b- defN 23-Mar-07 15:42 deep_training/nlp/optimizer/lamb.py
+│ --rw-rw-rw-  2.0 fat       99 b- defN 23-Mar-01 14:42 deep_training/nlp/optimizer/lion/__init__.py
+│ --rw-rw-rw-  2.0 fat     2295 b- defN 23-Mar-01 14:42 deep_training/nlp/optimizer/lion/lion.py
+│ --rw-rw-rw-  2.0 fat     2198 b- defN 23-Mar-01 14:42 deep_training/nlp/optimizer/lion/triton.py
+│ --rw-rw-rw-  2.0 fat     2868 b- defN 22-Dec-14 10:41 deep_training/nlp/scheduler/__init__.py
+│ --rw-rw-rw-  2.0 fat     6982 b- defN 23-Apr-01 07:30 deep_training/nlp/utils/__init__.py
+│ --rw-rw-rw-  2.0 fat     6323 b- defN 23-Jan-22 05:27 deep_training/nlp/utils/adversarial.py
+│ --rw-rw-rw-  2.0 fat    15256 b- defN 23-Jan-03 10:40 deep_training/nlp/utils/nlputils.py
+│ --rw-rw-rw-  2.0 fat      795 b- defN 23-Jan-11 10:36 deep_training/nlp/utils/spearman.py
+│ --rw-rw-rw-  2.0 fat       80 b- defN 23-Apr-01 07:32 deep_training/pl_adapter/__init__.py
+│ --rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-07 11:53 deep_training/tfnlp/__init__.py
+│ --rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-07 11:53 deep_training/tfnlp/layers/__init__.py
+│ --rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-07 11:53 deep_training/tfnlp/losses/__init__.py
+│ --rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-07 11:53 deep_training/tfnlp/metrics/__init__.py
+│ --rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-07 11:53 deep_training/tfnlp/models/__init__.py
+│ --rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-07 11:53 deep_training/tfnlp/optimizer/__init__.py
+│ --rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-07 11:53 deep_training/tfnlp/scheduler/__init__.py
+│ --rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-07 11:53 deep_training/tfnlp/utils/__init__.py
+│ --rw-rw-rw-  2.0 fat       55 b- defN 23-Mar-07 11:53 deep_training/utils/__init__.py
+│ --rw-rw-rw-  2.0 fat     1941 b- defN 23-Mar-07 11:53 deep_training/utils/distributed.py
+│ --rw-rw-rw-  2.0 fat     1724 b- defN 23-Mar-07 11:53 deep_training/utils/func.py
+│ --rw-rw-rw-  2.0 fat     5117 b- defN 23-Feb-21 10:54 deep_training/utils/maskedlm.py
+│ --rw-rw-rw-  2.0 fat     7469 b- defN 23-Mar-19 01:08 deep_training/utils/trainer.py
+│ --rw-rw-rw-  2.0 fat      650 b- defN 23-Apr-02 07:47 deep_training-0.1.0rc0.dist-info/METADATA
+│ --rw-rw-rw-  2.0 fat       92 b- defN 23-Apr-02 07:47 deep_training-0.1.0rc0.dist-info/WHEEL
+│ --rw-rw-rw-  2.0 fat       14 b- defN 23-Apr-02 07:47 deep_training-0.1.0rc0.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 fat    12745 b- defN 23-Apr-02 07:47 deep_training-0.1.0rc0.dist-info/RECORD
+│ -133 files, 748143 bytes uncompressed, 199575 bytes compressed:  73.3%
+│ +Zip file size: 223846 bytes, number of entries: 136
+│ +-rw-rw-rw-  2.0 fat       47 b- defN 23-Mar-22 10:40 deep_training/__init__.py
+│ +-rw-rw-rw-  2.0 fat      874 b- defN 23-Apr-07 11:24 deep_training/setup.py
+│ +-rw-rw-rw-  2.0 fat       55 b- defN 23-Mar-19 08:44 deep_training/cv/__init__.py
+│ +-rw-rw-rw-  2.0 fat      195 b- defN 23-Mar-19 08:44 deep_training/data_helper/__init__.py
+│ +-rw-rw-rw-  2.0 fat    29088 b- defN 23-Apr-02 08:38 deep_training/data_helper/data_helper.py
+│ +-rw-rw-rw-  2.0 fat     4926 b- defN 23-Mar-19 08:44 deep_training/data_helper/data_module.py
+│ +-rw-rw-rw-  2.0 fat     1383 b- defN 23-Mar-19 08:44 deep_training/data_helper/data_writer.py
+│ +-rw-rw-rw-  2.0 fat    12513 b- defN 23-Mar-24 16:06 deep_training/data_helper/training_args.py
+│ +-rw-rw-rw-  2.0 fat       70 b- defN 23-Mar-19 08:44 deep_training/nlp/__init__.py
+│ +-rw-rw-rw-  2.0 fat       56 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/__init__.py
+│ +-rw-rw-rw-  2.0 fat      241 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/activate.py
+│ +-rw-rw-rw-  2.0 fat    13271 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/crf.py
+│ +-rw-rw-rw-  2.0 fat     4653 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/handshakingkernel.py
+│ +-rw-rw-rw-  2.0 fat      435 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/mask.py
+│ +-rw-rw-rw-  2.0 fat     1319 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/mhslayer.py
+│ +-rw-rw-rw-  2.0 fat     5911 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/norm.py
+│ +-rw-rw-rw-  2.0 fat     1220 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/prefix_encoder.py
+│ +-rw-rw-rw-  2.0 fat     7259 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/seq_pointer.py
+│ +-rw-rw-rw-  2.0 fat     3550 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/w2ner.py
+│ +-rw-rw-rw-  2.0 fat       54 b- defN 23-Apr-07 10:47 deep_training/nlp/layers/adalora/__init__.py
+│ +-rw-rw-rw-  2.0 fat    15143 b- defN 23-Apr-07 10:47 deep_training/nlp/layers/adalora/layers.py
+│ +-rw-rw-rw-  2.0 fat       72 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/lora/__init__.py
+│ +-rw-rw-rw-  2.0 fat    15095 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/lora/layers.py
+│ +-rw-rw-rw-  2.0 fat     1819 b- defN 23-Mar-19 08:44 deep_training/nlp/layers/lora/utils.py
+│ +-rw-rw-rw-  2.0 fat     3662 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/BatchAllTripletLoss.py
+│ +-rw-rw-rw-  2.0 fat     3880 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/BatchHardSoftMarginTripletLoss.py
+│ +-rw-rw-rw-  2.0 fat     8358 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/BatchHardTripletLoss.py
+│ +-rw-rw-rw-  2.0 fat     4552 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/BatchSemiHardTripletLoss.py
+│ +-rw-rw-rw-  2.0 fat     2255 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/ContrastiveLoss.py
+│ +-rw-rw-rw-  2.0 fat     4573 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/ContrastiveTensionLoss.py
+│ +-rw-rw-rw-  2.0 fat     1359 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/CosineSimilarityLoss.py
+│ +-rw-rw-rw-  2.0 fat      742 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/MSELoss.py
+│ +-rw-rw-rw-  2.0 fat     1315 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/MarginMSELoss.py
+│ +-rw-rw-rw-  2.0 fat     5302 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/MegaBatchMarginLoss.py
+│ +-rw-rw-rw-  2.0 fat     2420 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/MultipleNegativesRankingLoss.py
+│ +-rw-rw-rw-  2.0 fat     2905 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/MultipleNegativesSymmetricRankingLoss.py
+│ +-rw-rw-rw-  2.0 fat     1863 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/OnlineContrastiveLoss.py
+│ +-rw-rw-rw-  2.0 fat     2880 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/SoftmaxLoss.py
+│ +-rw-rw-rw-  2.0 fat     2306 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/TripletLoss.py
+│ +-rw-rw-rw-  2.0 fat      599 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/__init__.py
+│ +-rw-rw-rw-  2.0 fat      661 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/bce_loss.py
+│ +-rw-rw-rw-  2.0 fat     1397 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/center_loss.py
+│ +-rw-rw-rw-  2.0 fat     1772 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/circle_loss.py
+│ +-rw-rw-rw-  2.0 fat     1056 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/contrast.py
+│ +-rw-rw-rw-  2.0 fat      619 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/dice_loss.py
+│ +-rw-rw-rw-  2.0 fat      710 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/focal_loss.py
+│ +-rw-rw-rw-  2.0 fat      882 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/label_smoothing.py
+│ +-rw-rw-rw-  2.0 fat      547 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/lm_loss.py
+│ +-rw-rw-rw-  2.0 fat     2149 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_arcface.py
+│ +-rw-rw-rw-  2.0 fat      962 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_casrel.py
+│ +-rw-rw-rw-  2.0 fat     1496 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_cosent.py
+│ +-rw-rw-rw-  2.0 fat     1912 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_cosface.py
+│ +-rw-rw-rw-  2.0 fat     2223 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_globalpointer.py
+│ +-rw-rw-rw-  2.0 fat     6020 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_infonce.py
+│ +-rw-rw-rw-  2.0 fat      884 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_kl.py
+│ +-rw-rw-rw-  2.0 fat     1270 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_mhslinker.py
+│ +-rw-rw-rw-  2.0 fat      617 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_r-drop.py
+│ +-rw-rw-rw-  2.0 fat     2656 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_sphereface.py
+│ +-rw-rw-rw-  2.0 fat      562 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_splinker.py
+│ +-rw-rw-rw-  2.0 fat    10822 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_spn4re.py
+│ +-rw-rw-rw-  2.0 fat     5644 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/loss_tplinker.py
+│ +-rw-rw-rw-  2.0 fat     2466 b- defN 23-Mar-19 08:44 deep_training/nlp/losses/utils.py
+│ +-rw-rw-rw-  2.0 fat       71 b- defN 23-Mar-19 08:44 deep_training/nlp/metrics/__init__.py
+│ +-rw-rw-rw-  2.0 fat      655 b- defN 23-Mar-19 08:44 deep_training/nlp/metrics/pointer.py
+│ +-rw-rw-rw-  2.0 fat       58 b- defN 23-Mar-19 08:44 deep_training/nlp/models/__init__.py
+│ +-rw-rw-rw-  2.0 fat     6811 b- defN 23-Mar-19 08:44 deep_training/nlp/models/casrel.py
+│ +-rw-rw-rw-  2.0 fat     5078 b- defN 23-Mar-19 08:44 deep_training/nlp/models/crf_cascad.py
+│ +-rw-rw-rw-  2.0 fat     1573 b- defN 23-Mar-19 08:44 deep_training/nlp/models/crf_model.py
+│ +-rw-rw-rw-  2.0 fat    12970 b- defN 23-Mar-19 08:44 deep_training/nlp/models/diffcse.py
+│ +-rw-rw-rw-  2.0 fat     5388 b- defN 23-Mar-29 16:13 deep_training/nlp/models/esimcse.py
+│ +-rw-rw-rw-  2.0 fat     4194 b- defN 23-Mar-19 08:44 deep_training/nlp/models/gec_model.py
+│ +-rw-rw-rw-  2.0 fat    10824 b- defN 23-Mar-19 08:44 deep_training/nlp/models/gplinker.py
+│ +-rw-rw-rw-  2.0 fat     3799 b- defN 23-Mar-19 08:44 deep_training/nlp/models/infonce.py
+│ +-rw-rw-rw-  2.0 fat     2444 b- defN 23-Mar-19 08:44 deep_training/nlp/models/mhs_ner.py
+│ +-rw-rw-rw-  2.0 fat     5976 b- defN 23-Mar-19 08:44 deep_training/nlp/models/mhslinker.py
+│ +-rw-rw-rw-  2.0 fat     4646 b- defN 23-Mar-19 08:44 deep_training/nlp/models/onerel_model.py
+│ +-rw-rw-rw-  2.0 fat     2735 b- defN 23-Apr-02 08:38 deep_training/nlp/models/pointer.py
+│ +-rw-rw-rw-  2.0 fat    13317 b- defN 23-Apr-02 08:38 deep_training/nlp/models/prefixtuning.py
+│ +-rw-rw-rw-  2.0 fat    15900 b- defN 23-Mar-19 08:44 deep_training/nlp/models/prgc_model.py
+│ +-rw-rw-rw-  2.0 fat    16100 b- defN 23-Mar-19 08:44 deep_training/nlp/models/promptbert_cse.py
+│ +-rw-rw-rw-  2.0 fat     5134 b- defN 23-Mar-19 08:44 deep_training/nlp/models/pure_model.py
+│ +-rw-rw-rw-  2.0 fat     3934 b- defN 23-Mar-19 08:44 deep_training/nlp/models/simcse.py
+│ +-rw-rw-rw-  2.0 fat     6007 b- defN 23-Apr-02 08:38 deep_training/nlp/models/span_ner.py
+│ +-rw-rw-rw-  2.0 fat    14439 b- defN 23-Mar-19 08:44 deep_training/nlp/models/spn4re.py
+│ +-rw-rw-rw-  2.0 fat    11368 b- defN 23-Mar-19 08:44 deep_training/nlp/models/tplinker.py
+│ +-rw-rw-rw-  2.0 fat     8142 b- defN 23-Mar-19 08:44 deep_training/nlp/models/tplinkerplus.py
+│ +-rw-rw-rw-  2.0 fat    31760 b- defN 23-Apr-03 13:31 deep_training/nlp/models/transformer.py
+│ +-rw-rw-rw-  2.0 fat     7953 b- defN 23-Mar-19 08:44 deep_training/nlp/models/tsdae_model.py
+│ +-rw-rw-rw-  2.0 fat     9025 b- defN 23-Apr-02 08:38 deep_training/nlp/models/w2ner.py
+│ +-rw-rw-rw-  2.0 fat    16500 b- defN 23-Mar-25 05:27 deep_training/nlp/models/LLaMA/__init__.py
+│ +-rw-rw-rw-  2.0 fat     5087 b- defN 23-Mar-19 08:44 deep_training/nlp/models/LLaMA/configuration.py
+│ +-rw-rw-rw-  2.0 fat    19183 b- defN 23-Mar-25 05:27 deep_training/nlp/models/LLaMA_parallel/__init__.py
+│ +-rw-rw-rw-  2.0 fat     5087 b- defN 23-Mar-19 08:44 deep_training/nlp/models/LLaMA_parallel/configuration.py
+│ +-rw-rw-rw-  2.0 fat    31627 b- defN 23-Mar-25 05:27 deep_training/nlp/models/PaLM/__init__.py
+│ +-rw-rw-rw-  2.0 fat     5890 b- defN 23-Mar-19 08:44 deep_training/nlp/models/PaLM/configuration.py
+│ +-rw-rw-rw-  2.0 fat       54 b- defN 23-Apr-07 10:47 deep_training/nlp/models/adalora/__init__.py
+│ +-rw-rw-rw-  2.0 fat       54 b- defN 23-Apr-07 10:47 deep_training/nlp/models/adalora/configuration.py
+│ +-rw-rw-rw-  2.0 fat    60192 b- defN 23-Apr-07 11:39 deep_training/nlp/models/chatglm/__init__.py
+│ +-rw-rw-rw-  2.0 fat     4575 b- defN 23-Apr-07 11:22 deep_training/nlp/models/chatglm/configuration.py
+│ +-rw-rw-rw-  2.0 fat    15150 b- defN 23-Apr-02 08:38 deep_training/nlp/models/chatglm/quantization.py
+│ +-rw-rw-rw-  2.0 fat    16460 b- defN 23-Apr-07 11:22 deep_training/nlp/models/chatglm/tokenization.py
+│ +-rw-rw-rw-  2.0 fat    34123 b- defN 23-Mar-25 05:27 deep_training/nlp/models/laMDA/__init__.py
+│ +-rw-rw-rw-  2.0 fat     5981 b- defN 23-Mar-19 08:44 deep_training/nlp/models/laMDA/configuration.py
+│ +-rw-rw-rw-  2.0 fat    13316 b- defN 23-Mar-25 05:27 deep_training/nlp/models/lora/__init__.py
+│ +-rw-rw-rw-  2.0 fat     7058 b- defN 23-Mar-19 08:44 deep_training/nlp/models/lora/configuration.py
+│ +-rw-rw-rw-  2.0 fat      102 b- defN 23-Mar-19 08:44 deep_training/nlp/models/splinker/__init__.py
+│ +-rw-rw-rw-  2.0 fat     2851 b- defN 23-Mar-19 08:44 deep_training/nlp/models/splinker/splinker.py
+│ +-rw-rw-rw-  2.0 fat    14478 b- defN 23-Mar-19 08:44 deep_training/nlp/models/t5decoder/__init__.py
+│ +-rw-rw-rw-  2.0 fat     6646 b- defN 23-Mar-19 08:44 deep_training/nlp/models/t5encoder/__init__.py
+│ +-rw-rw-rw-  2.0 fat       56 b- defN 23-Mar-19 08:44 deep_training/nlp/optimizer/__init__.py
+│ +-rw-rw-rw-  2.0 fat     5225 b- defN 23-Mar-19 08:44 deep_training/nlp/optimizer/lamb.py
+│ +-rw-rw-rw-  2.0 fat       99 b- defN 23-Mar-19 08:44 deep_training/nlp/optimizer/lion/__init__.py
+│ +-rw-rw-rw-  2.0 fat     2295 b- defN 23-Mar-19 08:44 deep_training/nlp/optimizer/lion/lion.py
+│ +-rw-rw-rw-  2.0 fat     2198 b- defN 23-Mar-19 08:44 deep_training/nlp/optimizer/lion/triton.py
+│ +-rw-rw-rw-  2.0 fat     2868 b- defN 23-Mar-19 08:44 deep_training/nlp/scheduler/__init__.py
+│ +-rw-rw-rw-  2.0 fat     6982 b- defN 23-Apr-02 08:38 deep_training/nlp/utils/__init__.py
+│ +-rw-rw-rw-  2.0 fat     6323 b- defN 23-Mar-19 08:44 deep_training/nlp/utils/adversarial.py
+│ +-rw-rw-rw-  2.0 fat    15256 b- defN 23-Mar-19 08:44 deep_training/nlp/utils/nlputils.py
+│ +-rw-rw-rw-  2.0 fat      795 b- defN 23-Mar-19 08:44 deep_training/nlp/utils/spearman.py
+│ +-rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-19 08:44 deep_training/tfnlp/__init__.py
+│ +-rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-19 08:44 deep_training/tfnlp/layers/__init__.py
+│ +-rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-19 08:44 deep_training/tfnlp/losses/__init__.py
+│ +-rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-19 08:44 deep_training/tfnlp/metrics/__init__.py
+│ +-rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-19 08:44 deep_training/tfnlp/models/__init__.py
+│ +-rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-19 08:44 deep_training/tfnlp/optimizer/__init__.py
+│ +-rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-19 08:44 deep_training/tfnlp/scheduler/__init__.py
+│ +-rw-rw-rw-  2.0 fat       53 b- defN 23-Mar-19 08:44 deep_training/tfnlp/utils/__init__.py
+│ +-rw-rw-rw-  2.0 fat       55 b- defN 23-Mar-19 08:44 deep_training/utils/__init__.py
+│ +-rw-rw-rw-  2.0 fat     1941 b- defN 23-Mar-19 08:44 deep_training/utils/distributed.py
+│ +-rw-rw-rw-  2.0 fat     1724 b- defN 23-Mar-19 08:44 deep_training/utils/func.py
+│ +-rw-rw-rw-  2.0 fat     5117 b- defN 23-Mar-19 08:44 deep_training/utils/maskedlm.py
+│ +-rw-rw-rw-  2.0 fat     7469 b- defN 23-Mar-19 08:44 deep_training/utils/trainer.py
+│ +-rw-rw-rw-  2.0 fat      603 b- defN 23-Apr-07 12:25 deep_training-0.1.1.dist-info/METADATA
+│ +-rw-rw-rw-  2.0 fat       92 b- defN 23-Apr-07 12:25 deep_training-0.1.1.dist-info/WHEEL
+│ +-rw-rw-rw-  2.0 fat       14 b- defN 23-Apr-07 12:25 deep_training-0.1.1.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 fat    13044 b- defN 23-Apr-07 12:25 deep_training-0.1.1.dist-info/RECORD
+│ +136 files, 762842 bytes uncompressed, 202714 bytes compressed:  73.4%
+├── zipnote {}
+│ @@ -51,14 +51,20 @@
+│  
+│  Filename: deep_training/nlp/layers/seq_pointer.py
+│  Comment: 
+│  
+│  Filename: deep_training/nlp/layers/w2ner.py
+│  Comment: 
+│  
+│ +Filename: deep_training/nlp/layers/adalora/__init__.py
+│ +Comment: 
+│ +
+│ +Filename: deep_training/nlp/layers/adalora/layers.py
+│ +Comment: 
+│ +
+│  Filename: deep_training/nlp/layers/lora/__init__.py
+│  Comment: 
+│  
+│  Filename: deep_training/nlp/layers/lora/layers.py
+│  Comment: 
+│  
+│  Filename: deep_training/nlp/layers/lora/utils.py
+│ @@ -273,14 +279,20 @@
+│  
+│  Filename: deep_training/nlp/models/PaLM/__init__.py
+│  Comment: 
+│  
+│  Filename: deep_training/nlp/models/PaLM/configuration.py
+│  Comment: 
+│  
+│ +Filename: deep_training/nlp/models/adalora/__init__.py
+│ +Comment: 
+│ +
+│ +Filename: deep_training/nlp/models/adalora/configuration.py
+│ +Comment: 
+│ +
+│  Filename: deep_training/nlp/models/chatglm/__init__.py
+│  Comment: 
+│  
+│  Filename: deep_training/nlp/models/chatglm/configuration.py
+│  Comment: 
+│  
+│  Filename: deep_training/nlp/models/chatglm/quantization.py
+│ @@ -339,17 +351,14 @@
+│  
+│  Filename: deep_training/nlp/utils/nlputils.py
+│  Comment: 
+│  
+│  Filename: deep_training/nlp/utils/spearman.py
+│  Comment: 
+│  
+│ -Filename: deep_training/pl_adapter/__init__.py
+│ -Comment: 
+│ -
+│  Filename: deep_training/tfnlp/__init__.py
+│  Comment: 
+│  
+│  Filename: deep_training/tfnlp/layers/__init__.py
+│  Comment: 
+│  
+│  Filename: deep_training/tfnlp/losses/__init__.py
+│ @@ -381,20 +390,20 @@
+│  
+│  Filename: deep_training/utils/maskedlm.py
+│  Comment: 
+│  
+│  Filename: deep_training/utils/trainer.py
+│  Comment: 
+│  
+│ -Filename: deep_training-0.1.0rc0.dist-info/METADATA
+│ +Filename: deep_training-0.1.1.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: deep_training-0.1.0rc0.dist-info/WHEEL
+│ +Filename: deep_training-0.1.1.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: deep_training-0.1.0rc0.dist-info/top_level.txt
+│ +Filename: deep_training-0.1.1.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: deep_training-0.1.0rc0.dist-info/RECORD
+│ +Filename: deep_training-0.1.1.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── deep_training/setup.py
+│ @@ -1,15 +1,15 @@
+│  #! -*- coding: utf-8 -*-
+│  
+│  from setuptools import setup, find_packages
+│  
+│  ignore = ['test','tests']
+│  setup(
+│      name='deep_training',
+│ -    version='0.1.0rc0',
+│ +    version='0.1.1',
+│      description='an easy training architecture',
+│      long_description='torch_training: https://github.com/ssbuild/deep_training.git',
+│      license='Apache License 2.0',
+│      url='https://github.com/ssbuild/deep_training',
+│      author='ssbuild',
+│      author_email='9727464@qq.com',
+│      install_requires=['pytorch-lightning>=2',
+├── deep_training/nlp/models/transformer.py
+│ @@ -113,20 +113,25 @@
+│              base_new = (TransformerLightningModule,) + tuple(b for b in base_new if not issubclass(b, TransformerBase))
+│          cls_ = super(TransformerFakeMeta, cls).__new__(cls, name, base_new, attr)
+│          if backbone_class is not None:
+│              cls_.__BACKBONE_CLASS__ = backbone_class
+│          return cls_
+│  
+│  
+│ +
+│ +class PreTrainedModel_Data:
+│ +    base_model_prefix = None
+│ +    config_class = None
+│ +
+│  class TransformerBase(MyLightningModule,metaclass=TransformerFakeMeta):
+│      def __init__(self,*args,**kwargs):
+│          config = get_value_from_args('config',PretrainedConfig,*args,**kwargs)
+│          super(TransformerBase, self).__init__()
+│          self.config = config
+│ -        self.base_model_prefix = None
+│ +        self._premodel_data = PreTrainedModel_Data()
+│          self._trainer:  typing.Optional["pl.Trainer"]  = None
+│  
+│      def forward(self, *args, **batch):
+│          return self.model(*args,**batch)
+│  
+│      def compute_loss(self, *args,**batch) -> tuple:
+│          return self.model(*args,**batch)
+│ @@ -212,36 +217,38 @@
+│          else:
+│              cls_ = CLS(config)
+│              cls_.post_init()
+│          return cls_
+│  
+│      @property
+│      def model(self):
+│ -        if not self.base_model_prefix:
+│ +        if not self._premodel_data.base_model_prefix:
+│              return None
+│ -        return getattr(self, self.base_model_prefix,None)
+│ +        return getattr(self, self._premodel_data.base_model_prefix,None)
+│  
+│      @model.setter
+│      def model(self, model):
+│          self.set_model(model)
+│  
+│      def set_model(self, model , copy_attr=True):
+│          if copy_attr:
+│              keep_keys = ['config_class','base_model_prefix']
+│              for k in keep_keys:
+│                  o = getattr(model,k,None)
+│                  if o is None:
+│                      continue
+│ -                setattr(self,k,o)
+│ +                if o == 'model':
+│ +                    o = 'model_'
+│ +                setattr(self._premodel_data,k,o)
+│  
+│ -        assert self.base_model_prefix is not None, ValueError('base_model_prefix is not allow empty')
+│ -        setattr(self, self.base_model_prefix, model)
+│ +        assert self._premodel_data.base_model_prefix is not None, ValueError('base_model_prefix is not allow empty')
+│ +        setattr(self, self._premodel_data.base_model_prefix, model)
+│  
+│      def get_model_lr(self):
+│ -        return [(self.model if self.base_model_prefix is not None else self , self.config.task_specific_params['learning_rate']), ]
+│ +        return [(self.model if self._premodel_data.base_model_prefix is not None else self , self.config.task_specific_params['learning_rate']), ]
+│  
+│  
+│  
+│  class TransformerLightningModule(MyLightningModule):
+│      def __init__(self, *args,**kwargs):
+│          config = get_value_from_args('config',PretrainedConfig,*args,**kwargs)
+│          model_args = get_value_from_args('model_args', ModelArguments, *args, **kwargs)
+├── deep_training/nlp/models/chatglm/__init__.py
+│ @@ -49,28 +49,17 @@
+│      def __call__(self, input_ids: torch.LongTensor, scores: torch.FloatTensor) -> torch.FloatTensor:
+│          if torch.isnan(scores).any() or torch.isinf(scores).any():
+│              scores.zero_()
+│              scores[..., 20005] = 5e4
+│          return scores
+│  
+│  
+│ -class SPTokens:...
+│  
+│ -SPTokens.MASK = 150000
+│ -SPTokens.gMASK = 150001
+│ -SPTokens.BOS_ID = 150004
+│ -SPTokens.EOS_ID = 150005
+│  
+│  
+│ -def setup_model_ids(mask_token_id,gmask_token_id,bos_token_id,eos_token_id):
+│ -    SPTokens.MASK = mask_token_id
+│ -    SPTokens.gMASK = gmask_token_id
+│ -    SPTokens.BOS_ID = bos_token_id
+│ -    SPTokens.EOS_ID = eos_token_id
+│ -
+│  
+│  def setup_model_profile():
+│      # flags required to enable jit fusion kernels
+│      torch._C._jit_set_profiling_mode(False)
+│      torch._C._jit_set_profiling_executor(False)
+│      torch._C._jit_override_can_fuse_on_cpu(True)
+│      torch._C._jit_override_can_fuse_on_gpu(True)
+│ @@ -665,15 +654,15 @@
+│  
+│  class ChatGLMPreTrainedModel(PreTrainedModel):
+│      """
+│      An abstract class to handle weights initialization and
+│      a simple interface for downloading and loading pretrained models.
+│      """
+│  
+│ -    is_parallelizable = True
+│ +    is_parallelizable = False
+│      supports_gradient_checkpointing = True
+│      config_class = ChatGLMConfig
+│      base_model_prefix = "transformer"
+│      _no_split_modules = ["GLMBlock"]
+│  
+│      def __init__(self, *inputs, **kwargs):
+│          super().__init__(*inputs, **kwargs)
+│ @@ -711,25 +700,25 @@
+│  
+│          return attention_mask
+│  
+│      def get_position_ids(self, input_ids, mask_positions, device, gmask=False):
+│          batch_size, seq_length = input_ids.shape
+│          context_lengths = [seq.tolist().index(self.config.bos_token_id) for seq in input_ids]
+│          if self.position_encoding_2d:
+│ -            position_ids = torch.arange(seq_length, dtype=torch.long, device=device).expand(batch_size, seq_length)
+│ +            position_ids = torch.arange(seq_length, dtype=torch.long, device=device).unsqueeze(0).repeat(batch_size, 1)
+│              for i, context_length in enumerate(context_lengths):
+│                  position_ids[i, context_length:] = mask_positions[i]
+│              block_position_ids = [torch.cat((
+│                  torch.zeros(context_length, dtype=torch.long, device=device),
+│                  torch.arange(seq_length - context_length, dtype=torch.long, device=device) + 1
+│              )) for context_length in context_lengths]
+│              block_position_ids = torch.stack(block_position_ids, dim=0)
+│              position_ids = torch.stack((position_ids, block_position_ids), dim=1)
+│          else:
+│ -            position_ids = torch.arange(seq_length, dtype=torch.long, device=device).expand(batch_size, seq_length)
+│ +            position_ids = torch.arange(seq_length, dtype=torch.long, device=device).unsqueeze(0).repeat(batch_size, 1)
+│              if not gmask:
+│                  for i, context_length in enumerate(context_lengths):
+│                      position_ids[context_length:] = mask_positions[i]
+│  
+│          return position_ids
+│  
+│  CHATGLM_6B_START_DOCSTRING = r"""
+│ @@ -873,15 +862,15 @@
+│                  param.requires_grad = False
+│              self.prefix_tokens = torch.arange(self.pre_seq_len).long()
+│              self.prefix_encoder = PrefixEncoder(config)
+│              self.dropout = torch.nn.Dropout(0.1)
+│  
+│              total_params = sum(p.numel() for p in self.parameters())
+│              trainable_params = sum(p.numel() for p in self.parameters() if p.requires_grad)
+│ -            print("Using p-tuning v2: # trainable_params = {} / {}".format(trainable_params, total_params))
+│ +            print("Using p-tuning v2: # trainable_params = {} / {} , || trainable %: {}".format(trainable_params, total_params , 100 * trainable_params / total_params))
+│      def get_input_embeddings(self):
+│          return self.word_embeddings
+│  
+│      def set_input_embeddings(self, new_embeddings: torch.Tensor):
+│          self.word_embeddings = new_embeddings
+│  
+│  
+│ @@ -926,15 +915,15 @@
+│              output_hidden_states if output_hidden_states is not None else self.config.output_hidden_states
+│          )
+│          use_cache = use_cache if use_cache is not None else self.config.use_cache
+│          return_dict = return_dict if return_dict is not None else self.config.use_return_dict
+│  
+│          if self.gradient_checkpointing and self.training:
+│              if use_cache:
+│ -                logger.warning_once(
+│ +                logger.warning(
+│                      "`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`..."
+│                  )
+│                  use_cache = False
+│          if input_ids is not None and inputs_embeds is not None:
+│              raise ValueError("You cannot specify both input_ids and inputs_embeds at the same time")
+│          elif input_ids is not None:
+│              batch_size, seq_length = input_ids.shape[:2]
+│ @@ -960,17 +949,17 @@
+│                  attention_mask = self.get_masks(
+│                      input_ids,
+│                      device=input_ids.device
+│                  )
+│  
+│              
+│              if position_ids is None:
+│ -                MASK, gMASK = SPTokens.MASK, SPTokens.gMASK
+│ -                mask_token = MASK if MASK in input_ids else gMASK
+│ -                use_gmask = False if MASK in input_ids else gMASK
+│ +                MASK, gMASK = self.config.mask_token_id, self.config.gmask_token_id
+│ +                mask_token = gMASK if gMASK in input_ids else MASK
+│ +                use_gmask = True if gMASK in input_ids else False
+│  
+│                  mask_positions = [seq.tolist().index(mask_token) for seq in input_ids]
+│                  position_ids = self.get_position_ids(
+│                      input_ids,
+│                      mask_positions=mask_positions,
+│                      device=input_ids.device,
+│                      gmask=use_gmask
+│ @@ -1076,36 +1065,36 @@
+│      def get_output_embeddings(self):
+│          return self.lm_head
+│  
+│      def set_output_embeddings(self, new_embeddings):
+│          self.lm_head = new_embeddings
+│  
+│      def _update_model_kwargs_for_generation(
+│ -            self,
+│ -            outputs: ModelOutput,
+│ -            model_kwargs: Dict[str, Any],
+│ -            is_encoder_decoder: bool = False,
+│ -            standardize_cache_format: bool = False,
+│ +        self,
+│ +        outputs: ModelOutput,
+│ +        model_kwargs: Dict[str, Any],
+│ +        is_encoder_decoder: bool = False,
+│ +        standardize_cache_format: bool = False,
+│      ) -> Dict[str, Any]:
+│          # update past_key_values
+│          model_kwargs["past_key_values"] = self._extract_past_from_model_output(
+│              outputs, standardize_cache_format=standardize_cache_format
+│          )
+│  
+│          # update attention mask
+│          if "attention_mask" in model_kwargs:
+│              attention_mask = model_kwargs["attention_mask"]
+│ -
+│ -            attention_mask = torch.cat(
+│ -                [attention_mask, attention_mask.new_ones((*attention_mask.shape[:3], 1))], dim=3)
+│ -            new_attention_mask = attention_mask[:, :, -1:].clone()
+│ -            new_attention_mask[..., -1] = False
+│ -            model_kwargs["attention_mask"] = torch.cat(
+│ -                [attention_mask, new_attention_mask], dim=2
+│ -            )
+│ +            if attention_mask is not None and attention_mask.dtype == torch.bool:
+│ +                attention_mask = torch.cat(
+│ +                    [attention_mask, attention_mask.new_ones((*attention_mask.shape[:3], 1))], dim=3)
+│ +                new_attention_mask = attention_mask[:, :, -1:].clone()
+│ +                new_attention_mask[..., -1] = False
+│ +                model_kwargs["attention_mask"] = torch.cat(
+│ +                    [attention_mask, new_attention_mask], dim=2
+│ +                )
+│  
+│          # update position ids
+│          if "position_ids" in model_kwargs:
+│              position_ids = model_kwargs["position_ids"]
+│              new_position_id = position_ids[..., -1:].clone()
+│              new_position_id[:, 1, :] += 1
+│              model_kwargs["position_ids"] = torch.cat(
+│ @@ -1121,26 +1110,28 @@
+│              past_key_values: Optional[torch.Tensor] = None,
+│              attention_mask: Optional[torch.Tensor] = None,
+│              position_ids: Optional[torch.Tensor] = None,
+│              **kwargs
+│      ) -> dict:
+│  
+│          batch_size, seq_length = input_ids.shape
+│ -        MASK, gMASK = 150000, 150001
+│ -        mask_token = MASK if MASK in input_ids else gMASK
+│ -        use_gmask = False if MASK in input_ids else gMASK
+│ +        MASK, gMASK = self.config.mask_token_id, self.config.gmask_token_id
+│ +        mask_token = gMASK if gMASK in input_ids else MASK
+│ +        use_gmask = True if gMASK in input_ids else False
+│          seqs = input_ids.tolist()
+│          mask_positions = [seq.index(mask_token) for seq in seqs]
+│  
+│          # only last token for input_ids if past is not None
+│          if past is not None or past_key_values is not None:
+│  
+│              last_token = input_ids[:, -1].unsqueeze(-1)
+│ -            if attention_mask is not None:
+│ +            if attention_mask is not None and attention_mask.dtype == torch.bool:
+│                  attention_mask = attention_mask[:, :, -1:]
+│ +            else:
+│ +                attention_mask = None
+│              if position_ids is not None:
+│                  position_ids = position_ids[..., -1:]
+│              else:
+│                  context_lengths = [seq.index(self.config.bos_token_id) for seq in seqs]
+│                  if self.position_encoding_2d:
+│                      position_ids = torch.tensor(
+│                          [[mask_position, seq_length - context_length] for mask_position, context_length in
+│ @@ -1154,14 +1145,17 @@
+│              return {
+│                  "input_ids": last_token,
+│                  "past_key_values": past,
+│                  "position_ids": position_ids,
+│                  "attention_mask": attention_mask
+│              }
+│          else:
+│ +            if attention_mask is not None and attention_mask.dtype != torch.bool:
+│ +                # logger.warning_once(f"The dtype of attention mask ({attention_mask.dtype}) is not bool")
+│ +                attention_mask = None
+│              if attention_mask is None:
+│                  attention_mask = self.get_masks(
+│                      input_ids,
+│                      device=input_ids.device
+│                  )
+│              if position_ids is None:
+│                  position_ids = self.get_position_ids(
+├── deep_training/nlp/models/chatglm/configuration.py
+│ @@ -1,27 +1,24 @@
+│  """ ChatGLM model configuration """
+│ -import torch
+│ +
+│  from transformers.configuration_utils import PretrainedConfig
+│  from transformers.utils import logging
+│  
+│  logger = logging.get_logger(__name__)
+│  
+│  
+│  class ChatGLMConfig(PretrainedConfig):
+│      r"""
+│      This is the configuration class to store the configuration of a [`~ChatGLMModel`].
+│      It is used to instantiate an ChatGLM model according to the specified arguments, defining the model
+│      architecture. Instantiating a configuration with the defaults will yield a similar configuration to that of
+│      the ChatGLM-6B [THUDM/ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) architecture.
+│ -
+│      Configuration objects inherit from  [`PretrainedConfig`] and can be used
+│      to control the model outputs. Read the documentation from  [`PretrainedConfig`]
+│      for more information.
+│ -
+│ -
+│      Args:
+│          vocab_size (`int`, *optional*, defaults to 150528):
+│              Vocabulary size of the ChatGLM-6B model. Defines the number of different tokens that can be represented by the
+│              `inputs_ids` passed when calling [`~ChatGLMModel`] or
+│              [`~TFChatGLMModel`].
+│          hidden_size (`int`, *optional*, defaults to 4096):
+│              Dimension of the encoder layers and the pooler layer.
+│ @@ -35,70 +32,72 @@
+│              The maximum sequence length that this model might ever be used with.
+│              Typically set this to something large just in case (e.g., 512 or 1024 or 2048).
+│          layernorm_epsilon (`float`, *optional*, defaults to 1e-5):
+│              The epsilon used by the layer normalization layers.
+│          use_cache (`bool`, *optional*, defaults to `True`):
+│              Whether the model should return the last key/values attentions (not used by all models).
+│          Example:
+│ -
+│      ```python
+│ -    # >>> from configuration_chatglm import ChatGLMConfig
+│ -    # >>> from modeling_chatglm import ChatGLMModel
+│ -    #
+│ -    # >>> # Initializing a ChatGLM-6B THUDM/ChatGLM-6B style configuration
+│ -    # >>> configuration = ChatGLMConfig()
+│ -    #
+│ -    # >>> # Initializing a model from the THUDM/ChatGLM-6B style configuration
+│ -    # >>> model = ChatGLMModel(configuration)
+│ -    #
+│ -    # >>> # Accessing the model configuration
+│ -    # >>> configuration = model.config
+│ +    >>> from configuration_chatglm import ChatGLMConfig
+│ +    >>> from modeling_chatglm import ChatGLMModel
+│ +    >>> # Initializing a ChatGLM-6B THUDM/ChatGLM-6B style configuration
+│ +    >>> configuration = ChatGLMConfig()
+│ +    >>> # Initializing a model from the THUDM/ChatGLM-6B style configuration
+│ +    >>> model = ChatGLMModel(configuration)
+│ +    >>> # Accessing the model configuration
+│ +    >>> configuration = model.config
+│      ```
+│  """
+│      model_type = "chatglm"
+│  
+│      def __init__(
+│              self,
+│              vocab_size=150528,
+│              hidden_size=4096,
+│              num_layers=28,
+│              num_attention_heads=32,
+│              layernorm_epsilon=1e-5,
+│              use_cache=False,
+│              bos_token_id=150004,
+│              eos_token_id=150005,
+│ +            mask_token_id=150000,
+│ +            gmask_token_id=150001,
+│              pad_token_id=0,
+│              max_sequence_length=2048,
+│              inner_hidden_size=16384,
+│              position_encoding_2d=True,
+│ -            initializer_range=0.02,
+│ -            initializer_weight=False,
+│              quantization_bit=0,
+│              pre_seq_len=None,
+│              prefix_projection=False,
+│ +            initializer_range=0.02,
+│ +            initializer_weight=False,
+│              #precision=16, # 16,32,64 or torch.half,torch.float,torch.float32
+│              **kwargs
+│      ):
+│          self.num_layers = num_layers
+│          self.vocab_size = vocab_size
+│          self.hidden_size = hidden_size
+│          self.num_attention_heads = num_attention_heads
+│          self.max_sequence_length = max_sequence_length
+│          self.layernorm_epsilon = layernorm_epsilon
+│          self.inner_hidden_size = inner_hidden_size
+│          self.use_cache = use_cache
+│          self.bos_token_id = bos_token_id
+│          self.eos_token_id = eos_token_id
+│          self.pad_token_id = pad_token_id
+│ +        self.mask_token_id = mask_token_id
+│ +        self.gmask_token_id = gmask_token_id
+│          self.position_encoding_2d = position_encoding_2d
+│ -        self.initializer_range = initializer_range
+│ -        self.initializer_weight = initializer_weight
+│          self.quantization_bit = quantization_bit
+│          self.pre_seq_len = pre_seq_len
+│          self.prefix_projection = prefix_projection
+│ +        self.initializer_range = initializer_range
+│ +        self.initializer_weight = initializer_weight
+│ +        self.quantization_bit = quantization_bit
+│ +
+│  
+│          super().__init__(
+│              pad_token_id=pad_token_id,
+│              bos_token_id=bos_token_id,
+│              eos_token_id=eos_token_id,
+│              **kwargs
+│          )
+├── deep_training/nlp/models/chatglm/tokenization.py
+│ @@ -1,96 +1,82 @@
+│  """Tokenization classes for ChatGLM."""
+│  from typing import List, Optional, Union
+│  import os
+│  
+│  from transformers.tokenization_utils import PreTrainedTokenizer
+│ -from icetk.text_tokenizer import TextTokenizer
+│ -import icetk.sentencepiece_model_pb2 as sp_model
+│  from transformers.utils import logging, PaddingStrategy
+│  from transformers.tokenization_utils_base import EncodedInput, BatchEncoding
+│  from typing import Dict
+│ +import sentencepiece as spm
+│  import numpy as np
+│  
+│  logger = logging.get_logger(__name__)
+│  
+│  PRETRAINED_POSITIONAL_EMBEDDINGS_SIZES = {
+│      "THUDM/chatglm-6b": 2048,
+│  }
+│  
+│  
+│ +class TextTokenizer:
+│ +    def __init__(self, model_path):
+│ +        self.sp = spm.SentencePieceProcessor()
+│ +        self.sp.Load(model_path)
+│ +        self.num_tokens = self.sp.vocab_size()
+│ +
+│ +    def encode(self, text):
+│ +        return self.sp.EncodeAsIds(text)
+│ +
+│ +    def decode(self, ids: List[int]):
+│ +        return self.sp.DecodeIds(ids)
+│ +
+│ +    def tokenize(self, text):
+│ +        return self.sp.EncodeAsPieces(text)
+│ +
+│ +    def convert_tokens_to_ids(self, tokens):
+│ +        return [self.sp.PieceToId(token) for token in tokens]
+│ +
+│ +    def convert_token_to_id(self, token):
+│ +        return self.sp.PieceToId(token)
+│ +
+│ +    def convert_id_to_token(self, idx):
+│ +        return self.sp.IdToPiece(idx)
+│ +
+│ +    def __len__(self):
+│ +        return self.num_tokens
+│ +
+│ +
+│  class SPTokenizer:
+│      def __init__(
+│ -        self,
+│ -        vocab_file,
+│ -        max_blank_length=80,
+│ -        byte_fallback=True,
+│ +            self,
+│ +            vocab_file,
+│ +            num_image_tokens=20000,
+│ +            max_blank_length=80,
+│ +            byte_fallback=True,
+│      ):
+│          assert vocab_file is not None
+│          self.vocab_file = vocab_file
+│ +        self.num_image_tokens = num_image_tokens
+│          self.special_tokens = ["[MASK]", "[gMASK]", "[sMASK]", "<unused_0>", "<sop>", "<eop>", "<ENC>", "<dBLOCK>"]
+│          self.max_blank_length = max_blank_length
+│          self.byte_fallback = byte_fallback
+│ -        self.text_tokenizer = self._build_text_tokenizer(encode_special_tokens=False)
+│ -        self.special_text_tokenizer = self._build_text_tokenizer(encode_special_tokens=True)
+│ -
+│ -    @staticmethod
+│ -    def _configure_tokenizer(
+│ -        text_tokenizer: TextTokenizer,
+│ -        special_tokens: List[str],
+│ -        max_blank_length: int,
+│ -        byte_fallback: bool,
+│ -        encode_special_tokens=False,
+│ -    ):
+│ -        # special token
+│ -        special_token_type = 4 if encode_special_tokens else 3  # 3 - CONTROL, 4 - USER_DEFINE
+│ -        for token in special_tokens:
+│ -            text_tokenizer.proto.pieces.append(
+│ -                sp_model.ModelProto.SentencePiece(piece=token, score=0.0, type=special_token_type)
+│ -            )
+│ -        # whitespaces
+│ -        for token in [SPTokenizer.get_tab_token()] + [
+│ -            SPTokenizer.get_blank_token(i) for i in range(2, max_blank_length + 1)
+│ -        ]:
+│ -            text_tokenizer.proto.pieces.append(sp_model.ModelProto.SentencePiece(piece=token, score=0.0, type=4))
+│ -        # byte fallback
+│ -        if byte_fallback:
+│ -            text_tokenizer.proto.trainer_spec.byte_fallback = True
+│ -            for i in range(256):
+│ -                text_tokenizer.proto.pieces.append(
+│ -                    sp_model.ModelProto.SentencePiece(piece="<0x{:02X}>".format(i), score=0.0, type=6)
+│ -                )
+│ -        text_tokenizer.refresh()
+│ -
+│ -    def _build_text_tokenizer(self, encode_special_tokens=False):
+│ -        tokenizer = TextTokenizer(self.vocab_file)
+│ -        self._configure_tokenizer(
+│ -            tokenizer, self.special_tokens, self.max_blank_length, self.byte_fallback, encode_special_tokens
+│ -        )
+│ -        return tokenizer
+│ +        self.text_tokenizer = TextTokenizer(vocab_file)
+│  
+│ -    def _get_text_tokenizer(self, encode_special_tokens=False):
+│ -        if encode_special_tokens:
+│ -            return self.special_text_tokenizer
+│ -        else:
+│ -            return self.text_tokenizer
+│ +    def _get_text_tokenizer(self):
+│ +        return self.text_tokenizer
+│  
+│      @staticmethod
+│      def get_blank_token(length: int):
+│          assert length >= 2
+│          return f"<|blank_{length}|>"
+│  
+│      @staticmethod
+│      def get_tab_token():
+│          return f"<|tab|>"
+│  
+│      @property
+│ -    def num_image_tokens(self):
+│ -        return 20000
+│ -
+│ -    @property
+│      def num_text_tokens(self):
+│          return self.text_tokenizer.num_tokens
+│  
+│      @property
+│      def num_tokens(self):
+│          return self.num_image_tokens + self.num_text_tokens
+│  
+│ @@ -105,54 +91,54 @@
+│          if linebreak:
+│              text = text.replace("\n", "<n>")
+│          if whitespaces:
+│              text = self._encode_whitespaces(text, max_len=self.max_blank_length)
+│          return text
+│  
+│      def encode(
+│ -        self, text: str, linebreak=True, whitespaces=True, special_tokens=False, add_dummy_prefix=True
+│ +            self, text: str, linebreak=True, whitespaces=True, add_dummy_prefix=True
+│      ) -> List[int]:
+│          """
+│          @param text: Text to encode.
+│          @param linebreak: Whether to encode newline (\n) in text.
+│          @param whitespaces: Whether to encode multiple whitespaces or tab in text, useful for source code encoding.
+│          @param special_tokens: Whether to encode special token ([MASK], [gMASK], etc.) in text.
+│          @param add_dummy_prefix: Whether to add dummy blank space in the beginning.
+│          """
+│          text = self._preprocess(text, linebreak, whitespaces)
+│          if not add_dummy_prefix:
+│              text = "<n>" + text
+│ -        tmp = self._get_text_tokenizer(encode_special_tokens=special_tokens).encode(text)
+│ +        tmp = self._get_text_tokenizer().encode(text)
+│          tokens = [x + self.num_image_tokens for x in tmp]
+│          return tokens if add_dummy_prefix else tokens[2:]
+│  
+│ -    def decode(self, text_ids: List[int], special_tokens=False) -> str:
+│ +    def decode(self, text_ids: List[int]) -> str:
+│          ids = [int(_id) - self.num_image_tokens for _id in text_ids]
+│          ids = [_id for _id in ids if _id >= 0]
+│ -        text = self._get_text_tokenizer(encode_special_tokens=special_tokens).decode(ids)
+│ +        text = self._get_text_tokenizer().decode(ids)
+│          text = text.replace("<n>", "\n")
+│          text = text.replace(SPTokenizer.get_tab_token(), "\t")
+│          for i in range(2, self.max_blank_length + 1):
+│              text = text.replace(self.get_blank_token(i), " " * i)
+│          return text
+│  
+│      def tokenize(
+│ -        self, text: str, linebreak=True, whitespaces=True, special_tokens=False, add_dummy_prefix=True
+│ +            self, text: str, linebreak=True, whitespaces=True, add_dummy_prefix=True
+│      ) -> List[str]:
+│          """
+│          @param text: Text to encode.
+│          @param linebreak: Whether to encode newline (\n) in text.
+│          @param whitespaces: Whether to encode multiple whitespaces or tab in text, useful for source code encoding.
+│          @param special_tokens: Whether to encode special token ([MASK], [gMASK], etc.) in text.
+│          @param add_dummy_prefix: Whether to add dummy blank space in the beginning.
+│          """
+│          text = self._preprocess(text, linebreak, whitespaces)
+│          if not add_dummy_prefix:
+│              text = "<n>" + text
+│ -        tokens = self._get_text_tokenizer(encode_special_tokens=special_tokens).tokenize(text)
+│ +        tokens = self._get_text_tokenizer().tokenize(text)
+│          return tokens if add_dummy_prefix else tokens[2:]
+│  
+│      def __getitem__(self, x: Union[int, str]):
+│          if isinstance(x, int):
+│              if x < self.num_image_tokens:
+│                  return "<image_{}>".format(x)
+│              else:
+│ @@ -185,14 +171,15 @@
+│              remove_space=False,
+│              bos_token='sop',
+│              eos_token='eos',
+│              eop_token='eop',
+│              mask_token='[MASK]',
+│              gmask_token='[gMASK]',
+│              padding_side="left",
+│ +            num_image_tokens=20000,
+│              **kwargs
+│      ) -> None:
+│          super().__init__(
+│              do_lower_case=do_lower_case,
+│              remove_space=remove_space,
+│              padding_side=padding_side,
+│              **kwargs
+│ @@ -204,19 +191,25 @@
+│  
+│          self.bos_token = bos_token
+│          self.eos_token = eos_token
+│          self.eop_token = eop_token
+│          self.mask_token = mask_token
+│          self.gmask_token = gmask_token
+│  
+│ -        self.sp_tokenizer = SPTokenizer(vocab_file)
+│ +        self.sp_tokenizer = SPTokenizer(vocab_file, num_image_tokens=num_image_tokens)
+│  
+│          """ Initialisation """
+│  
+│      @property
+│ +    def gmask_token_id(self) -> Optional[int]:
+│ +        if self.gmask_token is None:
+│ +            return None
+│ +        return self.convert_tokens_to_ids(self.gmask_token)
+│ +
+│ +    @property
+│      def eop_token_id(self) -> Optional[int]:
+│          """
+│          `Optional[int]`: Id of the end of sentence token in the vocabulary. Returns `None` if the token has not been
+│          set.
+│          """
+│          if self.eop_token is None:
+│              return None
+│ @@ -248,33 +241,28 @@
+│          """ Returns a tokenized string. """
+│          text = self.preprocess_text(text)
+│  
+│          seq = self.sp_tokenizer.tokenize(text)
+│  
+│          return seq
+│  
+│ -    def decode(
+│ +    def _decode(
+│              self,
+│ -            token_ids: Union[List[int], List[List[int]]],
+│ +            token_ids: Union[int, List[int]],
+│              skip_special_tokens: bool = False,
+│              clean_up_tokenization_spaces: bool = True,
+│ -            spaces_between_special_tokens: bool = True,
+│              **kwargs
+│      ) -> str:
+│ -        if isinstance(token_ids[0], list):
+│ -            tokens = []
+│ -            for single_token_ids in token_ids:
+│ -                if self.pad_token_id in single_token_ids:  # remove pad
+│ -                    single_token_ids = list(filter((self.pad_token_id).__ne__, single_token_ids))
+│ -                tokens.append(self.sp_tokenizer.decode(single_token_ids))
+│ -            return (tokens)
+│ -        else:
+│ -            if self.pad_token_id in token_ids:  # remove pad
+│ -                token_ids = list(filter((self.pad_token_id).__ne__, token_ids))
+│ -            return self.sp_tokenizer.decode(token_ids)
+│ +        if isinstance(token_ids, int):
+│ +            token_ids = [token_ids]
+│ +        if len(token_ids) == 0:
+│ +            return ""
+│ +        if self.pad_token_id in token_ids:  # remove pad
+│ +            token_ids = list(filter((self.pad_token_id).__ne__, token_ids))
+│ +        return self.sp_tokenizer.decode(token_ids)
+│  
+│      def _convert_token_to_id(self, token):
+│          """ Converts a token (str) in an id using the vocab. """
+│          return self.sp_tokenizer[token]
+│  
+│      def _convert_id_to_token(self, index):
+│          """Converts an index (integer) in a token (str) using the vocab."""
+│ @@ -337,20 +325,20 @@
+│              if not token_ids_1 or token_ids_1[-1] != eop_id:
+│                  token_ids_1 += [eop_id]
+│              token_ids_0 += token_ids_1
+│  
+│          return token_ids_0
+│  
+│      def _pad(
+│ -        self,
+│ -        encoded_inputs: Union[Dict[str, EncodedInput], BatchEncoding],
+│ -        max_length: Optional[int] = None,
+│ -        padding_strategy: PaddingStrategy = PaddingStrategy.DO_NOT_PAD,
+│ -        pad_to_multiple_of: Optional[int] = None,
+│ -        return_attention_mask: Optional[bool] = None,
+│ +            self,
+│ +            encoded_inputs: Union[Dict[str, EncodedInput], BatchEncoding],
+│ +            max_length: Optional[int] = None,
+│ +            padding_strategy: PaddingStrategy = PaddingStrategy.DO_NOT_PAD,
+│ +            pad_to_multiple_of: Optional[int] = None,
+│ +            return_attention_mask: Optional[bool] = None,
+│      ) -> dict:
+│          """
+│          Pad encoded inputs (on left/right and up to predefined length or max length in the batch)
+│          Args:
+│              encoded_inputs:
+│                  Dictionary of tokenized inputs (`List[int]`) or batch of tokenized inputs (`List[List[int]]`).
+│              max_length: maximum length of the returned list and optionally padding length (see below).
+│ @@ -369,16 +357,14 @@
+│                  (optional) Set to False to avoid returning attention mask (default: set to model specifics)
+│          """
+│          # Load from model defaults
+│          bos_token_id = self.sp_tokenizer[self.bos_token]
+│          mask_token_id = self.sp_tokenizer[self.mask_token]
+│          gmask_token_id = self.sp_tokenizer[self.gmask_token]
+│          assert self.padding_side == "left"
+│ -        if return_attention_mask is None:
+│ -            return_attention_mask = "attention_mask" in self.model_input_names
+│  
+│          required_input = encoded_inputs[self.model_input_names[0]]
+│          seq_length = len(required_input)
+│  
+│          if padding_strategy == PaddingStrategy.LONGEST:
+│              max_length = len(required_input)
+│   --- deep_training-0.1.0rc0.dist-info/METADATA
+├── +++ deep_training-0.1.1.dist-info/METADATA
+│┄ Files 20% similar despite different names
+│ @@ -1,24 +1,21 @@
+│ -Metadata-Version: 2.1
+│ -Name: deep-training
+│ -Version: 0.1.0rc0
+│ -Summary: an easy training architecture
+│ -Home-page: https://github.com/ssbuild/deep_training
+│ -Author: ssbuild
+│ -Author-email: 9727464@qq.com
+│ -License: Apache License 2.0
+│ -Platform: UNKNOWN
+│ -Requires-Dist: pytorch-lightning (>=2)
+│ -Requires-Dist: fastdatasets (<=1,>=0.9.6)
+│ -Requires-Dist: tfrecords (<=1,>=0.2.4)
+│ -Requires-Dist: sentencepiece
+│ -Requires-Dist: numpy
+│ -Requires-Dist: transformers (>=4.22)
+│ -Requires-Dist: seqmetric
+│ -Requires-Dist: scipy
+│ -Requires-Dist: scikit-learn
+│ -Requires-Dist: tqdm
+│ -Requires-Dist: six
+│ -
+│ -torch_training: https://github.com/ssbuild/deep_training.git
+│ -
+│ -
+│ +Metadata-Version: 2.1
+│ +Name: deep-training
+│ +Version: 0.1.1
+│ +Summary: an easy training architecture
+│ +Home-page: https://github.com/ssbuild/deep_training
+│ +Author: ssbuild
+│ +Author-email: 9727464@qq.com
+│ +License: Apache License 2.0
+│ +Requires-Dist: pytorch-lightning (>=2)
+│ +Requires-Dist: fastdatasets (<=1,>=0.9.6)
+│ +Requires-Dist: tfrecords (<=1,>=0.2.4)
+│ +Requires-Dist: sentencepiece
+│ +Requires-Dist: numpy
+│ +Requires-Dist: transformers (>=4.22)
+│ +Requires-Dist: seqmetric
+│ +Requires-Dist: scipy
+│ +Requires-Dist: scikit-learn
+│ +Requires-Dist: tqdm
+│ +Requires-Dist: six
+│ +
+│ +torch_training: https://github.com/ssbuild/deep_training.git
+│   --- deep_training-0.1.0rc0.dist-info/RECORD
+├── +++ deep_training-0.1.1.dist-info/RECORD
+│┄ Files 2% similar despite different names
+│ @@ -1,9 +1,9 @@
+│  deep_training/__init__.py,sha256=bhATnUT4VEzwvA8_8IwxspnDRKf32ZgEeHYCN2E5Dd4,47
+│ -deep_training/setup.py,sha256=FLEWGveEUzAHOhbBLIf3ZWAQGYoW6vqqzyQdCvaFuvk,877
+│ +deep_training/setup.py,sha256=LxwOOAHGxZMcejSZ_B_yO6-qv3HI5R9n3SYDJTI9W_U,874
+│  deep_training/cv/__init__.py,sha256=J-zlKxMsAfAgoO0vSAzgYJXSuMSJcJ7NKAPKeaeC3TM,55
+│  deep_training/data_helper/__init__.py,sha256=P8rAMalR6xNepAf-9ldGoOSsEiUtur8Px6gUpTXQhd8,195
+│  deep_training/data_helper/data_helper.py,sha256=wamHVXHpCIcG-COkVLRmwIjmcQ0MQy99xjago0ulkkY,29088
+│  deep_training/data_helper/data_module.py,sha256=cRqwzcKMpFaE2HhdbAEwrIC9KxOE0rLkeQ25VCJh2W8,4926
+│  deep_training/data_helper/data_writer.py,sha256=BnxUmMuR60Wawd1SH9TTEBsQuDLozxWJdmLozuO-Wv4,1383
+│  deep_training/data_helper/training_args.py,sha256=VOHdJafXr8DIGOF50xuD62Nv2ZeLvdZQR9jE6qfhpb8,12513
+│  deep_training/nlp/__init__.py,sha256=L4_ltrwpG8mrgN1hZRKimefLHgjhRYyXVtLMFzr1grw,70
+│ @@ -13,14 +13,16 @@
+│  deep_training/nlp/layers/handshakingkernel.py,sha256=BRJZbEjKM347q8zEMEtJXxXjmqhegmQgqebhqMy4UkI,4653
+│  deep_training/nlp/layers/mask.py,sha256=8SB_Hl9X48-yuJMCPjLDabDXvgWvH4VPqUOSVDmePFs,435
+│  deep_training/nlp/layers/mhslayer.py,sha256=Ky6xW3hNe0x4WWPPoWa8pZkCp_-MR5VE0yKHYPzzpd0,1319
+│  deep_training/nlp/layers/norm.py,sha256=r_yHSnDAv8RY1nb1VS1lMWttbJVyCO376OIuu0So8c8,5911
+│  deep_training/nlp/layers/prefix_encoder.py,sha256=y_Y4wWLnEyZJf33pQJFjWfl-AX1VS8Aejj3JXOdiRXQ,1220
+│  deep_training/nlp/layers/seq_pointer.py,sha256=KmwZclK9gqdluy2o-h7nd3zL3EZjjjw1L6dz0isCFI8,7259
+│  deep_training/nlp/layers/w2ner.py,sha256=fP7hlMHp1NTH6elNMJA-wBOER76VTouSSsKCinLsCyM,3550
+│ +deep_training/nlp/layers/adalora/__init__.py,sha256=yP4EglT9AdymCxkWQbmKi7OZQE7r-qIFJEl9T18S6qI,54
+│ +deep_training/nlp/layers/adalora/layers.py,sha256=0ahzA0e5kQIRhdQ_GwTSigcE1InxOtFRRbrLc39A4Zg,15143
+│  deep_training/nlp/layers/lora/__init__.py,sha256=An6uqZgoF7mefWEWijb3eHeZnrsqjpNA_c1KoshjjI8,72
+│  deep_training/nlp/layers/lora/layers.py,sha256=JWz9RtqA-hLsTxyhZPBlz82aN_VaPjNoDYRhssKV1H0,15095
+│  deep_training/nlp/layers/lora/utils.py,sha256=1ouFUmTF9IXzum97eIlrTeT6J4OAnEwIaWkZdgXMjSc,1819
+│  deep_training/nlp/losses/BatchAllTripletLoss.py,sha256=_2Og7Hf3Bjd1GT55UFmbZq5QLxdcKUyv4T00loPrKUo,3662
+│  deep_training/nlp/losses/BatchHardSoftMarginTripletLoss.py,sha256=Caif480bvgTWAQueadlAGSODpdaxVyRaik5-3j84wwg,3880
+│  deep_training/nlp/losses/BatchHardTripletLoss.py,sha256=xDdaQkcr6KCehSWlasABBkjPS9D6u_H5EngmppBkpXc,8358
+│  deep_training/nlp/losses/BatchSemiHardTripletLoss.py,sha256=xcfR8X3zyEs7YFoAT0q78iuZ2CJPtsrRUkp1Q8v5-QA,4552
+│ @@ -78,27 +80,29 @@
+│  deep_training/nlp/models/promptbert_cse.py,sha256=ZuG-BYq_pDPL1J2WdadUFtpieTTfCWWt9jEUEQ51HvM,16100
+│  deep_training/nlp/models/pure_model.py,sha256=J_rrgtl3CAg47301I1ntoI_kEwcXYgUioBa1pyczgR8,5134
+│  deep_training/nlp/models/simcse.py,sha256=_rOgAaunki07rsf6sH3jDQ41O9kXW8yF1ZuVqL7IbDo,3934
+│  deep_training/nlp/models/span_ner.py,sha256=UeLTYDCjjkcmIoEtNp60xqoHc02eXEhNLwf3EqeQznk,6007
+│  deep_training/nlp/models/spn4re.py,sha256=pSITHdWKnBzJ8KiQzScczfyxHl96NxRaUGE8B34FTrc,14439
+│  deep_training/nlp/models/tplinker.py,sha256=H2xNhLUnJs5FOoNZOylKGkHbhufcOXPr9xZG0BfDoJQ,11368
+│  deep_training/nlp/models/tplinkerplus.py,sha256=ywaqBqgDsmU1v__3VUaxDzNw8LaKVAL6Lnx49obvDUY,8142
+│ -deep_training/nlp/models/transformer.py,sha256=4vO-e6EnCl9bPuYSXErYt8ZgvVzR58w_A_UvEa0u4zs,31499
+│ +deep_training/nlp/models/transformer.py,sha256=GfxKT43K9Hoexfhf7Ri6Pwp3KWXkDBtoNMEqt_kP3UA,31760
+│  deep_training/nlp/models/tsdae_model.py,sha256=ArjLqYu8XL_WkAqwiHYJXFIdro-HJHIxwBXirxBETVU,7953
+│  deep_training/nlp/models/w2ner.py,sha256=-KtfdpYY68s142CMcWHJbfiEHFW-qbSEENqtRgxHjBw,9025
+│  deep_training/nlp/models/LLaMA/__init__.py,sha256=n_M2atEv-G2i3oy_YkLCVu5QiLLyfxEj2xr91h1dWEw,16500
+│  deep_training/nlp/models/LLaMA/configuration.py,sha256=HNzzhIIdR9HBN9Y4Oavv6cGgIf0ExcphwsbVkltJ2ZM,5087
+│  deep_training/nlp/models/LLaMA_parallel/__init__.py,sha256=5lsrh09pBTzRRKwc1bJtJs37Qn5qKqif_5S0pOoD1zc,19183
+│  deep_training/nlp/models/LLaMA_parallel/configuration.py,sha256=HNzzhIIdR9HBN9Y4Oavv6cGgIf0ExcphwsbVkltJ2ZM,5087
+│  deep_training/nlp/models/PaLM/__init__.py,sha256=P1qwWPUycRmZ6I48tov6janJUNpp4L-iMoVN54ykcQw,31627
+│  deep_training/nlp/models/PaLM/configuration.py,sha256=kIb3nj-2pQB2wyNrYHSZqr_ta1F0Cg-VbGEbnM5icPc,5890
+│ -deep_training/nlp/models/chatglm/__init__.py,sha256=jXWgt07k1sLg2lRHVCyNomojMlLQSxAsDJdj6RrHXmU,59991
+│ -deep_training/nlp/models/chatglm/configuration.py,sha256=mDT68aHU-DF6SNLXZf8ZqFHmc8bO_VN3d3zMft7LeAY,4418
+│ +deep_training/nlp/models/adalora/__init__.py,sha256=FNEb8Y0iSkO_KxDqAEShH0QAI2yEO-qA-0XT-nBOMTM,54
+│ +deep_training/nlp/models/adalora/configuration.py,sha256=9mZ5ok08nN2-bcjblntmL4Sal3Vx9OmlpB0HaKWxVBA,54
+│ +deep_training/nlp/models/chatglm/__init__.py,sha256=VNPZK8ySnwazfuLgcODS6vvw6coNJH9h4CuDrFeNvZg,60192
+│ +deep_training/nlp/models/chatglm/configuration.py,sha256=4w-Kbp_FJ2crIQVyu6kie9lbMSuE3U4nnjwjVPos2E8,4575
+│  deep_training/nlp/models/chatglm/quantization.py,sha256=sqX_poTcYNLJLDPbCwfRllDCF0enhshjX_dw7yZa604,15150
+│ -deep_training/nlp/models/chatglm/tokenization.py,sha256=hVU_ZQ_DR5-8DtnrdeNixK_u8Rpl0Zikv7Y-3GZFzfA,17854
+│ +deep_training/nlp/models/chatglm/tokenization.py,sha256=8K8W7b2ciL8rAYlq-XEYM9p0H2NtyLn9oIUYO8zHlQo,16460
+│  deep_training/nlp/models/laMDA/__init__.py,sha256=fvxTQQ8jfU-msPRdC8KsGlCwzM6u8-WBmayu6gE-s0E,34123
+│  deep_training/nlp/models/laMDA/configuration.py,sha256=8ZvPEl1C1KUGYWw7a8XcgIgl3gWH9WXa_-ZNDqz34PE,5981
+│  deep_training/nlp/models/lora/__init__.py,sha256=TLkGh0MPw_-SGNP18YSnbj6SBTywqsUoiJKKt3vZb30,13316
+│  deep_training/nlp/models/lora/configuration.py,sha256=2CR4U2P-feBh0mwsccpLDGENSyeA0c9emu4KyAn7bqs,7058
+│  deep_training/nlp/models/splinker/__init__.py,sha256=QtgnpJa78vAq9bzfjN67NmHU3dXU6WH84jeyZoD1sBs,102
+│  deep_training/nlp/models/splinker/splinker.py,sha256=cAXQoPucM3ULYUhBw9z-OxPK_b9hHKEZPgMb4vFfQwc,2851
+│  deep_training/nlp/models/t5decoder/__init__.py,sha256=R9Op4Ysli9isootQQ2FcjhpbG13fNESlmUROu6cfGH0,14478
+│ @@ -109,25 +113,24 @@
+│  deep_training/nlp/optimizer/lion/lion.py,sha256=kDN4_dz1N6G0q8PhQBpdQRNhtm5MXNSx-kde2JP2FlU,2295
+│  deep_training/nlp/optimizer/lion/triton.py,sha256=QLdWMW7cgqQU6Zb8uqmESONr7S7Nf1Tk4TR7OwACDQo,2198
+│  deep_training/nlp/scheduler/__init__.py,sha256=-zaiinwJzOBWypkNodSZO12kqbswVsPy5JCsYpvLbbY,2868
+│  deep_training/nlp/utils/__init__.py,sha256=RjmFkASRpijHVp-0w7PAXB_M21zs15I1g02YnJ5NihM,6982
+│  deep_training/nlp/utils/adversarial.py,sha256=FNZlg8mV23YXRu7aDcu1JZBUGBV01hi_bwRzfFyzEzM,6323
+│  deep_training/nlp/utils/nlputils.py,sha256=KEmFliU1IqJHy3INNDvOriEMlBkP8GNwe8Y8_c_imZQ,15256
+│  deep_training/nlp/utils/spearman.py,sha256=tOpaah5bt_65ferL_uI6FMfKvNexi7CQztSYLj-k3yo,795
+│ -deep_training/pl_adapter/__init__.py,sha256=hz-mjdGxFJBf68lQmIheXVHebnqJX7Dt9c2o8_htJAc,80
+│  deep_training/tfnlp/__init__.py,sha256=TRm9uMMO340jiD1ZGdDhtoxQ5BxI-au-RnOwAV13mbM,53
+│  deep_training/tfnlp/layers/__init__.py,sha256=TRm9uMMO340jiD1ZGdDhtoxQ5BxI-au-RnOwAV13mbM,53
+│  deep_training/tfnlp/losses/__init__.py,sha256=TRm9uMMO340jiD1ZGdDhtoxQ5BxI-au-RnOwAV13mbM,53
+│  deep_training/tfnlp/metrics/__init__.py,sha256=69flKnae4cQQyWUDwuYE0w0iaPonvH0P_WjBd_t-IqU,53
+│  deep_training/tfnlp/models/__init__.py,sha256=69flKnae4cQQyWUDwuYE0w0iaPonvH0P_WjBd_t-IqU,53
+│  deep_training/tfnlp/optimizer/__init__.py,sha256=69flKnae4cQQyWUDwuYE0w0iaPonvH0P_WjBd_t-IqU,53
+│  deep_training/tfnlp/scheduler/__init__.py,sha256=69flKnae4cQQyWUDwuYE0w0iaPonvH0P_WjBd_t-IqU,53
+│  deep_training/tfnlp/utils/__init__.py,sha256=kAmlOWNSpQCHbtT-mAsKGQzQFoWKp2jQf3neCJ0cCRY,53
+│  deep_training/utils/__init__.py,sha256=JFm7m_LPsS9Oavyxn9rbWqllCmV_zBho19rISlHNX4c,55
+│  deep_training/utils/distributed.py,sha256=-dhvJ6YHpRxvtZ1_on50IE33fUFW3zKXBKqqK-L1HGM,1941
+│  deep_training/utils/func.py,sha256=1p8hiQDCyk_gQGKrF7y6Dt66k3jLXSAt2IQeJuHQEl8,1724
+│  deep_training/utils/maskedlm.py,sha256=o8EB2BbDdh7wdgqz9Oi6SsVr1uBWxV15qfTk2VPjWsU,5117
+│  deep_training/utils/trainer.py,sha256=Rit5xEC2r9MvQdDR4A5A6E4_gzNCVNmW9m55kC83O50,7469
+│ -deep_training-0.1.0rc0.dist-info/METADATA,sha256=pFYqVEs0scTGv1FlteTOCA2YBedlMu8U0guABaPs-JI,650
+│ -deep_training-0.1.0rc0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+│ -deep_training-0.1.0rc0.dist-info/top_level.txt,sha256=P4qengiW56PZRm1VvlGcseSUCmAaBCsalCviUABZtO0,14
+│ -deep_training-0.1.0rc0.dist-info/RECORD,,
+│ +deep_training-0.1.1.dist-info/METADATA,sha256=TvHlY35shbp2hzAbzR6y3Qzsl0a1A-pAZ3mMvaH8fq4,603
+│ +deep_training-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+│ +deep_training-0.1.1.dist-info/top_level.txt,sha256=P4qengiW56PZRm1VvlGcseSUCmAaBCsalCviUABZtO0,14
+│ +deep_training-0.1.1.dist-info/RECORD,,
