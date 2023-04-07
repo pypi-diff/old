@@ -1,0 +1,182 @@
+# Comparing `tmp/tencentcloud-sdk-python-dc-3.0.867.tar.gz` & `tmp/tencentcloud-sdk-python-dc-3.0.868.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/tencentcloud-sdk-python-dc-3.0.867.tar", last modified: Wed Apr  5 16:27:44 2023, max compression
++gzip compressed data, was "dist/tencentcloud-sdk-python-dc-3.0.868.tar", last modified: Fri Apr  7 00:26:50 2023, max compression
+```
+
+## Comparing `tencentcloud-sdk-python-dc-3.0.867.tar` & `tencentcloud-sdk-python-dc-3.0.868.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,19 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/
+--rw-r--r--   0 root         (0) root         (0)     1004 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/setup.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud_sdk_python_dc.egg-info/
+--rw-r--r--   0 root         (0) root         (0)        1 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud_sdk_python_dc.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)      435 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud_sdk_python_dc.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)     1654 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud_sdk_python_dc.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)       13 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud_sdk_python_dc.egg-info/top_level.txt
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud/
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud/dc/
+--rw-r--r--   0 root         (0) root         (0)        0 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud/dc/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud/dc/v20180410/
+--rw-r--r--   0 root         (0) root         (0)        0 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud/dc/v20180410/__init__.py
+--rw-r--r--   0 root         (0) root         (0)     2973 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud/dc/v20180410/errorcodes.py
+--rw-r--r--   0 root         (0) root         (0)    90044 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud/dc/v20180410/models.py
+--rw-r--r--   0 root         (0) root         (0)    20922 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud/dc/v20180410/dc_client.py
+--rw-r--r--   0 root         (0) root         (0)      630 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/tencentcloud/__init__.py
+--rw-r--r--   0 root         (0) root         (0)       88 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/setup.cfg
+--rw-r--r--   0 root         (0) root         (0)     1654 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)      734 2023-04-05 16:27:44.000000 tencentcloud-sdk-python-dc-3.0.867/README.rst
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 00:26:50.000000 tencentcloud-sdk-python-dc-3.0.868/
++-rw-r--r--   0 root         (0) root         (0)     1654 2023-04-07 00:26:50.000000 tencentcloud-sdk-python-dc-3.0.868/PKG-INFO
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 00:26:50.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud/
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 00:26:50.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud/dc/
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 00:26:50.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud/dc/v20180410/
++-rw-r--r--   0 root         (0) root         (0)    90037 2023-04-07 00:26:49.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud/dc/v20180410/models.py
++-rw-r--r--   0 root         (0) root         (0)    20922 2023-04-07 00:26:49.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud/dc/v20180410/dc_client.py
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-07 00:26:49.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud/dc/v20180410/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     2973 2023-04-07 00:26:49.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud/dc/v20180410/errorcodes.py
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-07 00:26:49.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud/dc/__init__.py
++-rw-r--r--   0 root         (0) root         (0)      630 2023-04-07 00:26:49.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud/__init__.py
++-rw-r--r--   0 root         (0) root         (0)      734 2023-04-07 00:26:49.000000 tencentcloud-sdk-python-dc-3.0.868/README.rst
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 00:26:50.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud_sdk_python_dc.egg-info/
++-rw-r--r--   0 root         (0) root         (0)     1654 2023-04-07 00:26:49.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud_sdk_python_dc.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 00:26:49.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud_sdk_python_dc.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)       13 2023-04-07 00:26:49.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud_sdk_python_dc.egg-info/top_level.txt
++-rw-r--r--   0 root         (0) root         (0)      435 2023-04-07 00:26:49.000000 tencentcloud-sdk-python-dc-3.0.868/tencentcloud_sdk_python_dc.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)     1004 2023-04-07 00:26:49.000000 tencentcloud-sdk-python-dc-3.0.868/setup.py
++-rw-r--r--   0 root         (0) root         (0)       88 2023-04-07 00:26:50.000000 tencentcloud-sdk-python-dc-3.0.868/setup.cfg
+```
+
+### Comparing `tencentcloud-sdk-python-dc-3.0.867/setup.py` & `tencentcloud-sdk-python-dc-3.0.868/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `tencentcloud-sdk-python-dc-3.0.867/tencentcloud_sdk_python_dc.egg-info/PKG-INFO` & `tencentcloud-sdk-python-dc-3.0.868/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.1
+ Name: tencentcloud-sdk-python-dc
+-Version: 3.0.867
++Version: 3.0.868
+ Summary: Tencent Cloud Dc SDK for Python
+ Home-page: https://github.com/TencentCloud/tencentcloud-sdk-python
+ Author: Tencent Cloud
+ Author-email: tencentcloudapi@tencent.com
+ License: Apache License 2.0
+ Description: ============================
+         Tencent Cloud SDK for Python
+```
+
+### Comparing `tencentcloud-sdk-python-dc-3.0.867/tencentcloud/dc/v20180410/errorcodes.py` & `tencentcloud-sdk-python-dc-3.0.868/tencentcloud/dc/v20180410/errorcodes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `tencentcloud-sdk-python-dc-3.0.867/tencentcloud/dc/v20180410/models.py` & `tencentcloud-sdk-python-dc-3.0.868/tencentcloud/dc/v20180410/models.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -308,17 +308,28 @@
+     def __init__(self):
+         r"""
+         :param DirectConnectName: 物理专线的名称。
+         :type DirectConnectName: str
+         :param AccessPointId: 物理专线所在的接入点。
+ 您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
+         :type AccessPointId: str
+-        :param LineOperator: 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
++        :param LineOperator: 提供接入物理专线的运营商。
++ChinaTelecom：中国电信； 
++ChinaMobile：中国移动；
++ChinaUnicom：中国联通；
++ In-houseWiring：楼内线；
++ChinaOther：中国其他；
++ InternationalOperator：境外其他。
+         :type LineOperator: str
+-        :param PortType: 物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）。
++        :param PortType: 物理专线接入端口类型，取值：
++100Base-T：百兆电口；
++1000Base-T（默认值）：千兆电口；
++1000Base-LX：千兆单模光口（10千米）；
++10GBase-T：万兆电口；
++10GBase-LR（默认值）：万兆单模光口（10千米）。
+         :type PortType: str
+         :param CircuitCode: 运营商或者服务商为物理专线提供的电路编码。
+         :type CircuitCode: str
+         :param Location: 本地数据中心的地理位置。
+         :type Location: str
+         :param Bandwidth: 物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
+         :type Bandwidth: int
+@@ -336,15 +347,15 @@
+         :type CustomerContactMail: str
+         :param CustomerContactNumber: 物理专线申请者联系号码。默认从账户体系获取。
+         :type CustomerContactNumber: str
+         :param FaultReportContactPerson: 报障联系人。
+         :type FaultReportContactPerson: str
+         :param FaultReportContactNumber: 报障联系电话。
+         :type FaultReportContactNumber: str
+-        :param SignLaw: 物理专线申请者是否签署了用户使用协议。默认已签署
++        :param SignLaw: 物理专线申请者是否签署了用户使用协议。默认已签署。
+         :type SignLaw: bool
+         """
+         self.DirectConnectName = None
+         self.AccessPointId = None
+         self.LineOperator = None
+         self.PortType = None
+         self.CircuitCode = None
+```
+
+### Comparing `tencentcloud-sdk-python-dc-3.0.867/tencentcloud/dc/v20180410/dc_client.py` & `tencentcloud-sdk-python-dc-3.0.868/tencentcloud/dc/v20180410/dc_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `tencentcloud-sdk-python-dc-3.0.867/tencentcloud/__init__.py` & `tencentcloud-sdk-python-dc-3.0.868/tencentcloud/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -10,8 +10,8 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
+-__version__ = '3.0.867'
++__version__ = '3.0.868'
+```
+
+### Comparing `tencentcloud-sdk-python-dc-3.0.867/PKG-INFO` & `tencentcloud-sdk-python-dc-3.0.868/tencentcloud_sdk_python_dc.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.1
+ Name: tencentcloud-sdk-python-dc
+-Version: 3.0.867
++Version: 3.0.868
+ Summary: Tencent Cloud Dc SDK for Python
+ Home-page: https://github.com/TencentCloud/tencentcloud-sdk-python
+ Author: Tencent Cloud
+ Author-email: tencentcloudapi@tencent.com
+ License: Apache License 2.0
+ Description: ============================
+         Tencent Cloud SDK for Python
+```
+
+### Comparing `tencentcloud-sdk-python-dc-3.0.867/README.rst` & `tencentcloud-sdk-python-dc-3.0.868/README.rst`
+
+ * *Files identical despite different names*
+

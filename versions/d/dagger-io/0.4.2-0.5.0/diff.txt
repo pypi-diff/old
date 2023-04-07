@@ -1,0 +1,589 @@
+--- tmp/dagger_io-0.4.2.tar.gz
++++ tmp/dagger_io-0.5.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dagger_io-0.4.2.tar", max compression
+│ +gzip compressed data, was "dagger_io-0.5.0.tar", max compression
+│   --- dagger_io-0.4.2.tar
+├── +++ dagger_io-0.5.0.tar
+│ ├── file list
+│ │ @@ -1,32 +1,32 @@
+│ │ --rw-r--r--   0        0        0    10758 2023-03-23 05:23:13.938681 dagger_io-0.4.2/LICENSE
+│ │ --rw-r--r--   0        0        0     4727 2023-03-23 05:23:13.938681 dagger_io-0.4.2/README.md
+│ │ --rw-r--r--   0        0        0     6344 2023-03-23 05:26:59.696544 dagger_io-0.4.2/pyproject.toml
+│ │ --rw-r--r--   0        0        0      313 2023-03-23 05:23:13.938681 dagger_io-0.4.2/src/dagger/__init__.py
+│ │ --rw-r--r--   0        0        0       49 2023-03-23 05:23:13.938681 dagger_io-0.4.2/src/dagger/__main__.py
+│ │ --rw-r--r--   0        0        0       69 2023-03-23 05:23:13.938681 dagger_io-0.4.2/src/dagger/api/.gitattributes
+│ │ --rw-r--r--   0        0        0        0 2023-03-23 05:23:13.938681 dagger_io-0.4.2/src/dagger/api/__init__.py
+│ │ --rw-r--r--   0        0        0     9905 2023-03-23 05:23:13.938681 dagger_io-0.4.2/src/dagger/api/base.py
+│ │ --rw-r--r--   0        0        0    78379 2023-03-23 05:23:13.938681 dagger_io-0.4.2/src/dagger/api/gen.py
+│ │ --rw-r--r--   0        0        0    78071 2023-03-23 05:23:13.938681 dagger_io-0.4.2/src/dagger/api/gen_sync.py
+│ │ --rw-r--r--   0        0        0     1650 2023-03-23 05:23:13.938681 dagger_io-0.4.2/src/dagger/cli.py
+│ │ --rw-r--r--   0        0        0    18459 2023-03-23 05:23:13.938681 dagger_io-0.4.2/src/dagger/codegen.py
+│ │ --rw-r--r--   0        0        0     1291 2023-03-23 05:23:13.938681 dagger_io-0.4.2/src/dagger/config.py
+│ │ --rw-r--r--   0        0        0     1585 2023-03-23 05:23:13.938681 dagger_io-0.4.2/src/dagger/connection.py
+│ │ --rw-r--r--   0        0        0      964 2023-03-23 05:23:13.938681 dagger_io-0.4.2/src/dagger/context.py
+│ │ --rw-r--r--   0        0        0       37 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/engine/.gitattributes
+│ │ --rw-r--r--   0        0        0       35 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/engine/__init__.py
+│ │ --rw-r--r--   0        0        0       64 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/engine/_version.py
+│ │ --rw-r--r--   0        0        0     3675 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/engine/cli.py
+│ │ --rw-r--r--   0        0        0     1838 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/engine/conn.py
+│ │ --rw-r--r--   0        0        0     8163 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/engine/download.py
+│ │ --rw-r--r--   0        0        0     3042 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/exceptions.py
+│ │ --rw-r--r--   0        0        0      677 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/log.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/py.typed
+│ │ --rw-r--r--   0        0        0     2320 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/server/__init__.py
+│ │ --rw-r--r--   0        0        0      849 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/server/cli.py
+│ │ --rw-r--r--   0        0        0      865 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/server/converter.py
+│ │ --rw-r--r--   0        0        0     3892 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/session.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/transport/__init__.py
+│ │ --rw-r--r--   0        0        0     5820 2023-03-23 05:23:13.942680 dagger_io-0.4.2/src/dagger/transport/httpx.py
+│ │ --rw-r--r--   0        0        0     5922 1970-01-01 00:00:00.000000 dagger_io-0.4.2/setup.py
+│ │ --rw-r--r--   0        0        0     6481 1970-01-01 00:00:00.000000 dagger_io-0.4.2/PKG-INFO
+│ │ +-rw-r--r--   0        0        0    10758 2023-04-07 00:21:18.228624 dagger_io-0.5.0/LICENSE
+│ │ +-rw-r--r--   0        0        0     4727 2023-04-07 00:21:18.228624 dagger_io-0.5.0/README.md
+│ │ +-rw-r--r--   0        0        0     6344 2023-04-07 00:25:48.633385 dagger_io-0.5.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      313 2023-04-07 00:21:18.228624 dagger_io-0.5.0/src/dagger/__init__.py
+│ │ +-rw-r--r--   0        0        0       49 2023-04-07 00:21:18.228624 dagger_io-0.5.0/src/dagger/__main__.py
+│ │ +-rw-r--r--   0        0        0       69 2023-04-07 00:21:18.228624 dagger_io-0.5.0/src/dagger/api/.gitattributes
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 00:21:18.228624 dagger_io-0.5.0/src/dagger/api/__init__.py
+│ │ +-rw-r--r--   0        0        0    10234 2023-04-07 00:21:18.228624 dagger_io-0.5.0/src/dagger/api/base.py
+│ │ +-rw-r--r--   0        0        0    79297 2023-04-07 00:21:18.228624 dagger_io-0.5.0/src/dagger/api/gen.py
+│ │ +-rw-r--r--   0        0        0    78989 2023-04-07 00:21:18.228624 dagger_io-0.5.0/src/dagger/api/gen_sync.py
+│ │ +-rw-r--r--   0        0        0     1650 2023-04-07 00:21:18.228624 dagger_io-0.5.0/src/dagger/cli.py
+│ │ +-rw-r--r--   0        0        0    18459 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/codegen.py
+│ │ +-rw-r--r--   0        0        0     1291 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/config.py
+│ │ +-rw-r--r--   0        0        0     1585 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/connection.py
+│ │ +-rw-r--r--   0        0        0      964 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/context.py
+│ │ +-rw-r--r--   0        0        0       37 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/engine/.gitattributes
+│ │ +-rw-r--r--   0        0        0       35 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/engine/__init__.py
+│ │ +-rw-r--r--   0        0        0       64 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/engine/_version.py
+│ │ +-rw-r--r--   0        0        0     4188 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/engine/cli.py
+│ │ +-rw-r--r--   0        0        0     2005 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/engine/conn.py
+│ │ +-rw-r--r--   0        0        0     8163 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/engine/download.py
+│ │ +-rw-r--r--   0        0        0     3042 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/exceptions.py
+│ │ +-rw-r--r--   0        0        0      677 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/log.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/py.typed
+│ │ +-rw-r--r--   0        0        0     2320 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/server/__init__.py
+│ │ +-rw-r--r--   0        0        0      849 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/server/cli.py
+│ │ +-rw-r--r--   0        0        0      865 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/server/converter.py
+│ │ +-rw-r--r--   0        0        0     3892 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/session.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/transport/__init__.py
+│ │ +-rw-r--r--   0        0        0     5820 2023-04-07 00:21:18.232625 dagger_io-0.5.0/src/dagger/transport/httpx.py
+│ │ +-rw-r--r--   0        0        0     5922 1970-01-01 00:00:00.000000 dagger_io-0.5.0/setup.py
+│ │ +-rw-r--r--   0        0        0     6481 1970-01-01 00:00:00.000000 dagger_io-0.5.0/PKG-INFO
+│ │   --- dagger_io-0.4.2/LICENSE
+│ ├── +++ dagger_io-0.5.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/README.md
+│ ├── +++ dagger_io-0.5.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/pyproject.toml
+│ ├── +++ dagger_io-0.5.0/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["poetry-core"]
+│ │  build-backend = "poetry.core.masonry.api"
+│ │  
+│ │  [tool.poetry]
+│ │  name = "dagger-io"
+│ │ -version = "0.4.2"
+│ │ +version = "0.5.0"
+│ │  description = "A client package for running Dagger pipelines in Python."
+│ │  license = "Apache-2.0"
+│ │  authors = ["Dagger <hello@dagger.io>"]
+│ │  readme = "README.md"
+│ │  homepage = "https://dagger.io"
+│ │  documentation = "https://docs.dagger.io/sdk/python"
+│ │  repository = "https://github.com/dagger/dagger/tree/main/sdk/python"
+│ │   --- dagger_io-0.4.2/src/dagger/api/base.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/api/base.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,24 +1,25 @@
+│ │  import contextlib
+│ │  import enum
+│ │  import functools
+│ │  import logging
+│ │  import typing
+│ │  from collections import deque
+│ │  from collections.abc import Callable, Sequence
+│ │ -from typing import Any, ParamSpec, TypeVar
+│ │ +from typing import Annotated, Any, ParamSpec, TypeGuard, TypeVar
+│ │  
+│ │  import anyio
+│ │  import attrs
+│ │  import cattrs
+│ │  import graphql
+│ │  import httpx
+│ │  from beartype import beartype
+│ │  from beartype.door import TypeHint
+│ │  from beartype.roar import BeartypeCallHintViolation
+│ │ +from beartype.vale import IsInstance
+│ │  from cattrs.preconf.json import make_converter
+│ │  from gql.client import AsyncClientSession, SyncClientSession
+│ │  from gql.dsl import DSLField, DSLQuery, DSLSchema, DSLSelectable, DSLType, dsl_gql
+│ │  from gql.transport.exceptions import (
+│ │      TransportClosed,
+│ │      TransportProtocolError,
+│ │      TransportQueryError,
+│ │ @@ -46,20 +47,14 @@
+│ │  
+│ │      def to_dsl(self, schema: DSLSchema) -> DSLField:
+│ │          type_: DSLType = getattr(schema, self.type_name)
+│ │          field: DSLField = getattr(type_, self.name)(**self.args)
+│ │          return field
+│ │  
+│ │  
+│ │ -@typing.runtime_checkable
+│ │ -class IDType(typing.Protocol):
+│ │ -    def id(self) -> str:  # noqa: A003
+│ │ -        ...
+│ │ -
+│ │ -
+│ │  @attrs.define
+│ │  class Context:
+│ │      session: AsyncClientSession | SyncClientSession
+│ │      schema: DSLSchema
+│ │      selections: deque[Field] = attrs.field(factory=deque)
+│ │      converter: cattrs.Converter = attrs.field(
+│ │          factory=functools.partial(make_converter, detailed_validation=False)
+│ │ @@ -124,35 +119,35 @@
+│ │              sel.args[k][idx] = await v.id()
+│ │  
+│ │          # resolve all ids concurrently
+│ │          async with anyio.create_task_group() as tg:
+│ │              for i, sel in enumerate(self.selections):
+│ │                  for k, v in sel.args.items():
+│ │                      # check if it's a sequence of Type objects
+│ │ -                    if TypeSequence.is_bearable(v):
+│ │ +                    if is_id_type_sequence(v):
+│ │                          # make sure it's a list, to mutate by index
+│ │                          sel.args[k] = list(v)
+│ │                          for seq_i, seq_v in enumerate(sel.args[k]):
+│ │ -                            if isinstance(seq_v, IDType):
+│ │ +                            if is_id_type(seq_v):
+│ │                                  tg.start_soon(_resolve_seq_id, i, seq_i, k, seq_v)
+│ │ -                    elif isinstance(v, Type | IDType):
+│ │ +                    elif is_id_type(v):
+│ │                          tg.start_soon(_resolve_id, i, k, v)
+│ │  
+│ │      def resolve_ids_sync(self) -> None:
+│ │          """Replace Type object instances with their ID implicitly."""
+│ │          for sel in self.selections:
+│ │              for k, v in sel.args.items():
+│ │                  # check if it's a sequence of Type objects
+│ │ -                if TypeSequence.is_bearable(v):
+│ │ +                if is_id_type_sequence(v):
+│ │                      # make sure it's a list, to mutate by index
+│ │                      sel.args[k] = list(v)
+│ │                      for seq_i, seq_v in enumerate(sel.args[k]):
+│ │ -                        if isinstance(seq_v, IDType):
+│ │ +                        if is_id_type(seq_v):
+│ │                              sel.args[k][seq_i] = seq_v.id()
+│ │ -                elif isinstance(v, Type | IDType):
+│ │ +                elif is_id_type(v):
+│ │                      sel.args[k] = v.id()
+│ │  
+│ │      @contextlib.contextmanager
+│ │      def _handle_execute(self, query: graphql.DocumentNode):
+│ │          # Reduces duplication when handling errors, between sync and async.
+│ │          try:
+│ │              yield
+│ │ @@ -255,15 +250,33 @@
+│ │          return cls(ctx)
+│ │  
+│ │      @property
+│ │      def graphql_name(self) -> str:
+│ │          return "Query"
+│ │  
+│ │  
+│ │ -TypeSequence = TypeHint(Sequence[Type])
+│ │ +@typing.runtime_checkable
+│ │ +class HasID(typing.Protocol):
+│ │ +    async def id(self) -> Scalar:  # noqa: A003
+│ │ +        ...
+│ │ +
+│ │ +
+│ │ +IDType = Annotated[HasID, IsInstance[Type]]
+│ │ +IDTypeSeq = Annotated[Sequence[IDType], ~IsInstance[str]]
+│ │ +
+│ │ +IDTypeHint = TypeHint(IDType)
+│ │ +IDTypeSeqHint = TypeHint(IDTypeSeq)
+│ │ +
+│ │ +
+│ │ +def is_id_type(v: object) -> TypeGuard[IDType]:
+│ │ +    return IDTypeHint.is_bearable(v)
+│ │ +
+│ │ +
+│ │ +def is_id_type_sequence(v: object) -> TypeGuard[IDTypeSeq]:
+│ │ +    return IDTypeSeqHint.is_bearable(v)
+│ │  
+│ │  
+│ │  def typecheck(func: Callable[P, T]) -> Callable[P, T]:
+│ │      """
+│ │      Runtime type checking.
+│ │  
+│ │      Allows fast failure, before sending requests to the API,
+│ │   --- dagger_io-0.4.2/src/dagger/api/gen.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/api/gen.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -524,14 +524,43 @@
+│ │              If the API returns an error.
+│ │          """
+│ │          _args: list[Arg] = []
+│ │          _ctx = self._select("imageRef", _args)
+│ │          return await _ctx.execute(Optional[str])
+│ │  
+│ │      @typecheck
+│ │ +    def import_(
+│ │ +        self,
+│ │ +        source: "File",
+│ │ +        tag: Optional[str] = None,
+│ │ +    ) -> "Container":
+│ │ +        """Reads the container from an OCI tarball.
+│ │ +
+│ │ +        NOTE: this involves unpacking the tarball to an OCI store on the host
+│ │ +        at
+│ │ +        $XDG_CACHE_DIR/dagger/oci. This directory can be removed whenever you
+│ │ +        like.
+│ │ +
+│ │ +        Parameters
+│ │ +        ----------
+│ │ +        source:
+│ │ +            File to read the container from.
+│ │ +        tag:
+│ │ +            Identifies the tag to import from the archive, if the archive
+│ │ +            bundles
+│ │ +            multiple tags.
+│ │ +        """
+│ │ +        _args = [
+│ │ +            Arg("source", source),
+│ │ +            Arg("tag", tag, None),
+│ │ +        ]
+│ │ +        _ctx = self._select("import", _args)
+│ │ +        return Container(_ctx)
+│ │ +
+│ │ +    @typecheck
+│ │      async def label(self, name: str) -> Optional[str]:
+│ │          """Retrieves the value of the specified label.
+│ │  
+│ │          Returns
+│ │          -------
+│ │          Optional[str]
+│ │              The `String` scalar type represents textual data, represented as
+│ │ @@ -1846,15 +1875,16 @@
+│ │          return await _ctx.execute(FileID)
+│ │  
+│ │      @typecheck
+│ │      def secret(self) -> "Secret":
+│ │          """Retrieves a secret referencing the contents of this file.
+│ │  
+│ │          .. deprecated::
+│ │ -            insecure, leaves secret in cache
+│ │ +            insecure, leaves secret in cache. Superseded by
+│ │ +            :py:meth:`set_secret`
+│ │          """
+│ │          _args: list[Arg] = []
+│ │          _ctx = self._select("secret", _args)
+│ │          return Secret(_ctx)
+│ │  
+│ │      @typecheck
+│ │      async def size(self) -> int:
+│ │ @@ -2120,15 +2150,19 @@
+│ │  
+│ │  
+│ │  class HostVariable(Type):
+│ │      """An environment variable on the host environment."""
+│ │  
+│ │      @typecheck
+│ │      def secret(self) -> "Secret":
+│ │ -        """A secret referencing the value of this variable."""
+│ │ +        """A secret referencing the value of this variable.
+│ │ +
+│ │ +        .. deprecated::
+│ │ +            been superseded by :py:meth:`set_secret`
+│ │ +        """
+│ │          _args: list[Arg] = []
+│ │          _ctx = self._select("secret", _args)
+│ │          return Secret(_ctx)
+│ │  
+│ │      @typecheck
+│ │      async def value(self) -> str:
+│ │          """The value of this variable.
+│ │   --- dagger_io-0.4.2/src/dagger/api/gen_sync.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/api/gen_sync.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -524,14 +524,43 @@
+│ │              If the API returns an error.
+│ │          """
+│ │          _args: list[Arg] = []
+│ │          _ctx = self._select("imageRef", _args)
+│ │          return _ctx.execute_sync(Optional[str])
+│ │  
+│ │      @typecheck
+│ │ +    def import_(
+│ │ +        self,
+│ │ +        source: "File",
+│ │ +        tag: Optional[str] = None,
+│ │ +    ) -> "Container":
+│ │ +        """Reads the container from an OCI tarball.
+│ │ +
+│ │ +        NOTE: this involves unpacking the tarball to an OCI store on the host
+│ │ +        at
+│ │ +        $XDG_CACHE_DIR/dagger/oci. This directory can be removed whenever you
+│ │ +        like.
+│ │ +
+│ │ +        Parameters
+│ │ +        ----------
+│ │ +        source:
+│ │ +            File to read the container from.
+│ │ +        tag:
+│ │ +            Identifies the tag to import from the archive, if the archive
+│ │ +            bundles
+│ │ +            multiple tags.
+│ │ +        """
+│ │ +        _args = [
+│ │ +            Arg("source", source),
+│ │ +            Arg("tag", tag, None),
+│ │ +        ]
+│ │ +        _ctx = self._select("import", _args)
+│ │ +        return Container(_ctx)
+│ │ +
+│ │ +    @typecheck
+│ │      def label(self, name: str) -> Optional[str]:
+│ │          """Retrieves the value of the specified label.
+│ │  
+│ │          Returns
+│ │          -------
+│ │          Optional[str]
+│ │              The `String` scalar type represents textual data, represented as
+│ │ @@ -1846,15 +1875,16 @@
+│ │          return _ctx.execute_sync(FileID)
+│ │  
+│ │      @typecheck
+│ │      def secret(self) -> "Secret":
+│ │          """Retrieves a secret referencing the contents of this file.
+│ │  
+│ │          .. deprecated::
+│ │ -            insecure, leaves secret in cache
+│ │ +            insecure, leaves secret in cache. Superseded by
+│ │ +            :py:meth:`set_secret`
+│ │          """
+│ │          _args: list[Arg] = []
+│ │          _ctx = self._select("secret", _args)
+│ │          return Secret(_ctx)
+│ │  
+│ │      @typecheck
+│ │      def size(self) -> int:
+│ │ @@ -2120,15 +2150,19 @@
+│ │  
+│ │  
+│ │  class HostVariable(Type):
+│ │      """An environment variable on the host environment."""
+│ │  
+│ │      @typecheck
+│ │      def secret(self) -> "Secret":
+│ │ -        """A secret referencing the value of this variable."""
+│ │ +        """A secret referencing the value of this variable.
+│ │ +
+│ │ +        .. deprecated::
+│ │ +            been superseded by :py:meth:`set_secret`
+│ │ +        """
+│ │          _args: list[Arg] = []
+│ │          _ctx = self._select("secret", _args)
+│ │          return Secret(_ctx)
+│ │  
+│ │      @typecheck
+│ │      def value(self) -> str:
+│ │          """The value of this variable.
+│ │   --- dagger_io-0.4.2/src/dagger/cli.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/cli.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/src/dagger/codegen.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/codegen.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/src/dagger/config.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/config.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/src/dagger/connection.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/connection.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/src/dagger/context.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/context.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/src/dagger/engine/cli.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/engine/cli.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,10 +1,11 @@
+│ │  import logging
+│ │  import subprocess
+│ │  import time
+│ │ +from importlib import metadata
+│ │  from json.decoder import JSONDecodeError
+│ │  from pathlib import Path
+│ │  
+│ │  import cattrs
+│ │  from cattrs.preconf.json import JsonConverter
+│ │  
+│ │  import dagger
+│ │ @@ -14,35 +15,53 @@
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  OS_ETXTBSY = 26
+│ │  
+│ │  
+│ │ +def get_sdk_version():
+│ │ +    try:
+│ │ +        return metadata.version("dagger-io")
+│ │ +    except metadata.PackageNotFoundError:
+│ │ +        return "n/a"
+│ │ +
+│ │ +
+│ │  class CLISession(SyncResourceManager):
+│ │      """Start an engine session with a provided CLI path."""
+│ │  
+│ │      def __init__(self, cfg: dagger.Config, path: str) -> None:
+│ │          super().__init__()
+│ │          self.cfg = cfg
+│ │          self.path = path
+│ │          self.converter = JsonConverter()
+│ │ +        # no constructor param intentional
+│ │ +        self.is_async = True
+│ │  
+│ │      def __enter__(self) -> ConnectParams:
+│ │          with self.get_sync_stack() as stack:
+│ │              try:
+│ │                  proc = self._start()
+│ │              except (OSError, ValueError, TypeError) as e:
+│ │                  raise SessionError(e) from e
+│ │              stack.push(proc)
+│ │              conn = self._get_conn(proc)
+│ │          return conn
+│ │  
+│ │      def _start(self) -> subprocess.Popen:
+│ │ -        args = [self.path, "session"]
+│ │ +        args = [
+│ │ +            self.path,
+│ │ +            "session",
+│ │ +            "--label",
+│ │ +            "dagger.io/sdk.name:python",
+│ │ +            "--label",
+│ │ +            f"dagger.io/sdk.version:{get_sdk_version()}",
+│ │ +            "--label",
+│ │ +            f"dagger.io/sdk.async:{str(self.is_async).lower()}",
+│ │ +        ]
+│ │          if self.cfg.workdir:
+│ │              args.extend(["--workdir", str(Path(self.cfg.workdir).absolute())])
+│ │          if self.cfg.config_path:
+│ │              args.extend(["--project", str(Path(self.cfg.config_path).absolute())])
+│ │  
+│ │          # Retry starting if "text file busy" error is hit. That error can happen
+│ │          # due to a flaw in how Linux works: if any fork of this process happens
+│ │   --- dagger_io-0.4.2/src/dagger/engine/conn.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/engine/conn.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -15,14 +15,15 @@
+│ │  
+│ │  class Engine(SyncResourceManager):
+│ │      """Start engine, provisioning if needed."""
+│ │  
+│ │      def __init__(self, cfg: Config) -> None:
+│ │          super().__init__()
+│ │          self.cfg = cfg
+│ │ +        self.is_async = True
+│ │  
+│ │      def from_env(self) -> ConnectParams | None:
+│ │          if not (port := os.environ.get("DAGGER_SESSION_PORT")):
+│ │              return None
+│ │          if not (token := os.environ.get("DAGGER_SESSION_TOKEN")):
+│ │              msg = "DAGGER_SESSION_TOKEN must be set when using DAGGER_SESSION_PORT"
+│ │              raise ProvisionError(msg)
+│ │ @@ -33,21 +34,25 @@
+│ │              msg = f"Invalid DAGGER_SESSION_PORT: {port}"
+│ │              raise ProvisionError(msg) from e
+│ │  
+│ │      def from_cli(self) -> ConnectParams:
+│ │          cli_bin = os.environ.get("_EXPERIMENTAL_DAGGER_CLI_BIN")
+│ │          if not cli_bin:
+│ │              cli_bin = Downloader().get()
+│ │ +        cli_session = CLISession(self.cfg, cli_bin)
+│ │ +        cli_session.is_async = self.is_async
+│ │          with self.get_sync_stack() as stack:
+│ │ -            return stack.enter_context(CLISession(self.cfg, cli_bin))
+│ │ +            return stack.enter_context(cli_session)
+│ │  
+│ │      def __enter__(self) -> ConnectParams:
+│ │ +        self.is_async = False
+│ │          return self.from_env() or self.from_cli()
+│ │  
+│ │      async def __aenter__(self) -> ConnectParams:
+│ │ +        self.is_async = True
+│ │          # FIXME: Create proper async provisioning later.
+│ │          # This is just to support sync faster.
+│ │          return await anyio.to_thread.run_sync(self.__enter__)
+│ │  
+│ │      async def __aexit__(self, *exc_details) -> None:
+│ │          # FIXME: Create proper async provisioning later.
+│ │          # This is just to support sync faster.
+│ │   --- dagger_io-0.4.2/src/dagger/engine/download.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/engine/download.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/src/dagger/exceptions.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/src/dagger/log.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/log.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/src/dagger/server/__init__.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/server/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/src/dagger/server/cli.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/server/cli.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/src/dagger/server/converter.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/server/converter.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/src/dagger/session.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/session.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/src/dagger/transport/httpx.py
+│ ├── +++ dagger_io-0.5.0/src/dagger/transport/httpx.py
+│ │┄ Files identical despite different names
+│ │   --- dagger_io-0.4.2/setup.py
+│ ├── +++ dagger_io-0.5.0/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -23,15 +23,15 @@
+│ │   'typer[all]>=0.6.1']
+│ │  
+│ │  extras_require = \
+│ │  {'server': ['strawberry-graphql>=0.133.5']}
+│ │  
+│ │  setup_kwargs = {
+│ │      'name': 'dagger-io',
+│ │ -    'version': '0.4.2',
+│ │ +    'version': '0.5.0',
+│ │      'description': 'A client package for running Dagger pipelines in Python.',
+│ │      'long_description': '# Dagger Python SDK\n\n[![PyPI Version](https://img.shields.io/pypi/v/dagger-io)](https://pypi.org/project/dagger-io/) \n[![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagger-io.svg)](https://anaconda.org/conda-forge/dagger-io)\n[![Supported Python Versions](https://img.shields.io/pypi/pyversions/dagger-io.svg)](https://pypi.org/project/dagger-io/)\n[![License](https://img.shields.io/pypi/l/dagger-io.svg)](https://pypi.python.org/pypi/dagger-io)\n[![Code style](https://img.shields.io/badge/code%20style-black-black.svg)](https://github.com/psf/black)\n[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v1.json)](https://github.com/charliermarsh/ruff)\n\nA client package for running [Dagger](https://dagger.io/) pipelines.\n\n## What is the Dagger Python SDK?\n\nThe Dagger Python SDK contains everything you need to develop CI/CD pipelines in Python, and run them on any OCI-compatible container runtime.\n\n## Requirements\n\n- Python 3.10 or later\n- [Docker](https://docs.docker.com/engine/install/), or another OCI-compatible container runtime\n\nA compatible version of the  [Dagger CLI](https://docs.dagger.io/cli) is automatically downloaded and run by the SDK for you, although it’s possible to manage it manually.\n\n## Installation\n\nFrom [PyPI](https://pypi.org/project/dagger-io/), using `pip`:\n\n```shell\npip install dagger-io\n```\n\nYou can also install via [Conda](https://anaconda.org/conda-forge/dagger-io), from the [conda-forge](https://conda-forge.org/docs/user/introduction.html#how-can-i-install-packages-from-conda-forge) channel:\n\n```shell\nconda install dagger-io\n```\n\n## Example\n\nCreate a `main.py` file:\n\n```python\nimport sys\n\nimport anyio\nimport dagger\n\n\nasync def main(args: list[str]):\n    async with dagger.Connection() as client:\n        # build container with cowsay entrypoint\n        ctr = (\n            client.container()\n            .from_("python:alpine")\n            .with_exec(["pip", "install", "cowsay"])\n            .with_entrypoint(["cowsay"])\n        )\n\n        # run cowsay with requested message\n        result = await ctr.with_exec(args).stdout()\n\n    print(result)\n\n\nanyio.run(main, sys.argv[1:])\n```\n\nRun with:\n\n```console\n$ python main.py "Simple is better than complex"\n  _____________________________\n| Simple is better than complex |\n  =============================\n                             \\\n                              \\\n                                ^__^\n                                (oo)\\_______\n                                (__)\\       )\\/\\\n                                    ||----w |\n                                    ||     ||\n```\n\n> **Note**\n> It may take a while for it to finish, especially on first run with cold cache.\n\nIf you need to debug, you can stream the logs from the engine with the `log_output`  config:\n\n```python\nconfig = dagger.Config(log_output=sys.stderr)\nasync with dagger.Connection(config) as client:\n    ...\n```\n\n## Learn more\n\n- [Documentation](https://docs.dagger.io/sdk/python)\n- [API Reference](https://dagger-io.readthedocs.org)\n- [Source code](https://github.com/dagger/dagger/tree/main/sdk/python)\n\n## Development\n\nThis library is maintained with [Poetry](https://python-poetry.org/docs/).\n\nIf you already have a [Python 3.10 or later](https://docs.python.org/3/using/index.html) interpreter in your `$PATH`, you can let [Poetry manage](https://python-poetry.org/docs/basic-usage/#using-your-virtual-environment) the [virtual environment](https://packaging.python.org/en/latest/tutorials/installing-packages/#creating-virtual-environments) automatically. Otherwise you need to activate it first, before installing dependencies:\n\n```shell\npoetry install\n```\n\nThe following commands are available:\n- `poe test`: Run tests.\n- `poe fmt`: Re-format code following common styling conventions.\n- `poe lint`: Check for linting violations.\n- `poe generate`: Regenerate API client after changes to the codegen.\n- `poe docs`: Build reference docs locally.\n\n### Engine changes\n\nTesting and regenerating the client may fail if there’s changes in the engine code that haven’t been released yet. \n\nThe simplest way to run those commands locally with the most updated engine version is to build it using [Dagger’s CI pipelines](https://github.com/dagger/dagger/blob/main/internal/mage/sdk/python.go) :\n\n```shell\n../../hack/make sdk:python:test\n../../hack/make sdk:python:generate\n```\n\nYou can also build the CLI and use it directly within the Python SDK:\n\n```shell\n../../hack/dev poe test\n```\n\nOr build it separately and tell the SDK to use it directly (or any other CLI binary):\n\n```shell\n../../hack/make\n_EXPERIMENTAL_DAGGER_CLI_BIN=../../bin/dagger poe test\n```\n\n',
+│ │      'author': 'Dagger',
+│ │      'author_email': 'hello@dagger.io',
+│ │      'maintainer': 'None',
+│ │      'maintainer_email': 'None',
+│ │      'url': 'https://dagger.io',
+│ │   --- dagger_io-0.4.2/PKG-INFO
+│ ├── +++ dagger_io-0.5.0/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dagger-io
+│ │ -Version: 0.4.2
+│ │ +Version: 0.5.0
+│ │  Summary: A client package for running Dagger pipelines in Python.
+│ │  Home-page: https://dagger.io
+│ │  License: Apache-2.0
+│ │  Author: Dagger
+│ │  Author-email: hello@dagger.io
+│ │  Requires-Python: >=3.10,<4.0
+│ │  Classifier: Development Status :: 3 - Alpha

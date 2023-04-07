@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/github_rest_api-0.8.0.tar.gz tmp/github_rest_api-0.9.0.tar.gz --html versions/g/github-rest-api/0.8.0-0.9.0/index.html --text versions/g/github-rest-api/0.8.0-0.9.0/diff.txt --markdown versions/g/github-rest-api/0.8.0-0.9.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">5.47 KB</span></div>
+  <div><span class="source">tmp/github_rest_api-0.8.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/github_rest_api-0.9.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">198 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;github_rest_api-0.<del>8</del>.0.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;github_rest_api-0.<ins>9</ins>.0.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">5.21 KB</span></div>
+    <div><span class="source">github_rest_api-0.8.0.tar</span> vs.</div>
+    <div id="github_rest_api--.-.-.tar"><span class="source">github_rest_api-0.9.0.tar</span>
+      <a class="anchor" href="#github_rest_api--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">1.84 KB</span></div>
+      <div id="github_rest_api--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#github_rest_api--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>173<span class="dp">·</span>2023-04-0<del>3</del><span class="dp">·</span><del>22</del>:4<del>4</del>:<del>33</del>.<del>688</del>7<del>84</del><span class="dp">·</span>github_rest_api-0.<del>8</del>.0/README.md</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>173<span class="dp">·</span>2023-04-0<ins>4</ins><span class="dp">·</span><ins>01</ins>:4<ins>9</ins>:<ins>50</ins>.<ins>464</ins>7<ins>45</ins><span class="dp">·</span>github_rest_api-0.<ins>9</ins>.0/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>70<span class="dp">·</span>2023-04-0<del>3</del><span class="dp">·</span><del>22</del>:4<del>4</del>:<del>33</del>.<del>688</del>7<del>84</del><span class="dp">·</span>github_rest_api-0.<del>8</del>.0/github_rest_api/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>70<span class="dp">·</span>2023-04-0<ins>4</ins><span class="dp">·</span><ins>01</ins>:4<ins>9</ins>:<ins>50</ins>.<ins>464</ins>7<ins>45</ins><span class="dp">·</span>github_rest_api-0.<ins>9</ins>.0/github_rest_api/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>2023-04-0<del>3</del><span class="dp">·</span><del>22</del>:4<del>4</del>:<del>33</del>.<del>688</del>7<del>84</del><span class="dp">·</span>github_rest_api-0.<del>8</del>.0/github_rest_api/actions/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>2023-04-0<ins>4</ins><span class="dp">·</span><ins>01</ins>:4<ins>9</ins>:<ins>50</ins>.<ins>464</ins>7<ins>45</ins><span class="dp">·</span>github_rest_api-0.<ins>9</ins>.0/github_rest_api/actions/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<del>852</del><span class="dp">·</span>2023-04-0<del>3</del><span class="dp">·</span><del>22</del>:4<del>4</del>:<del>33</del>.<del>688</del>7<del>84</del><span class="dp">·</span>github_rest_api-0.<del>8</del>.0/github_rest_api/actions/cargo.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<ins>903</ins><span class="dp">·</span>2023-04-0<ins>4</ins><span class="dp">·</span><ins>01</ins>:4<ins>9</ins>:<ins>50</ins>.<ins>464</ins>7<ins>45</ins><span class="dp">·</span>github_rest_api-0.<ins>9</ins>.0/github_rest_api/actions/cargo.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>9</del>8<del>8</del><span class="dp">·</span>2023-04-0<del>3</del><span class="dp">·</span><del>22</del>:4<del>4</del>:<del>33</del>.<del>688</del>7<del>84</del><span class="dp">·</span>github_rest_api-0.<del>8</del>.0/github_rest_api/actions/utils.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>11</ins>8<ins>4</ins><span class="dp">·</span>2023-04-0<ins>4</ins><span class="dp">·</span><ins>01</ins>:4<ins>9</ins>:<ins>50</ins>.<ins>464</ins>7<ins>45</ins><span class="dp">·</span>github_rest_api-0.<ins>9</ins>.0/github_rest_api/actions/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3532<span class="dp">·</span>2023-04-0<del>3</del><span class="dp">·</span><del>22</del>:4<del>4</del>:<del>33</del>.<del>688</del>7<del>84</del><span class="dp">·</span>github_rest_api-0.<del>8</del>.0/github_rest_api/github.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3532<span class="dp">·</span>2023-04-0<ins>4</ins><span class="dp">·</span><ins>01</ins>:4<ins>9</ins>:<ins>50</ins>.<ins>464</ins>7<ins>45</ins><span class="dp">·</span>github_rest_api-0.<ins>9</ins>.0/github_rest_api/github.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>782<span class="dp">·</span>2023-04-0<del>3</del><span class="dp">·</span><del>22</del>:4<del>4</del>:<del>33</del>.<del>688</del>7<del>84</del><span class="dp">·</span>github_rest_api-0.<del>8</del>.0/pyproject.toml</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>782<span class="dp">·</span>2023-04-0<ins>4</ins><span class="dp">·</span><ins>01</ins>:4<ins>9</ins>:<ins>50</ins>.<ins>464</ins>7<ins>45</ins><span class="dp">·</span>github_rest_api-0.<ins>9</ins>.0/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>579<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>github_rest_api-0.<del>8</del>.0/PKG-INFO</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>579<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>github_rest_api-0.<ins>9</ins>.0/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.46 KB</span></div>
+      <div><span class="source">github_rest_api-0.8.0/github_rest_api/actions/cargo.py</span> vs.</div>
+      <div id="github_rest_api--.-.-.tar---github_rest_api--.-.--github_rest_api-actions-cargo.py"><span class="source">github_rest_api-0.9.0/github_rest_api/actions/cargo.py</span>
+        <a class="anchor" href="#github_rest_api--.-.-.tar---github_rest_api--.-.--github_rest_api-actions-cargo.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 11, 21 lines modified</td><td colspan="2">Offset 11, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>nums<span class="dp">·</span>=<span class="dp">·</span>random.sample(range(10),<span class="dp">·</span>10)</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>nums<span class="dp">·</span>=<span class="dp">·</span>random.sample(range(10),<span class="dp">·</span>10)</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>&quot;_branch_&quot;<span class="dp">·</span>+<span class="dp">·</span>&quot;&quot;.join(str(num)<span class="dp">·</span>for<span class="dp">·</span>num<span class="dp">·</span>in<span class="dp">·</span>nums)</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>&quot;_branch_&quot;<span class="dp">·</span>+<span class="dp">·</span>&quot;&quot;.join(str(num)<span class="dp">·</span>for<span class="dp">·</span>num<span class="dp">·</span>in<span class="dp">·</span>nums)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">def<span class="dp">·</span>_copy_last_dev_bench()<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">13 </td><td class="diffpresent">def<span class="dp">·</span>_copy_last_dev_bench()<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>branch<span class="dp">·</span>=<span class="dp">·</span>_gen_temp_branch()</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>branch<span class="dp">·</span>=<span class="dp">·</span>_gen_temp_branch()</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>create_branch(branch)</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>create_branch(branch)</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>switch_branch(&quot;gh-pages&quot;)</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>switch_branch(<ins>branch=</ins>&quot;gh-pages&quot;<ins>,<span class="dp">·</span>fetch=True</ins>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>src<span class="dp">·</span>=<span class="dp">·</span>Path(&quot;dev/criterion&quot;)</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>src<span class="dp">·</span>=<span class="dp">·</span>Path(&quot;dev/criterion&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>src.is_dir():</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>src.is_dir():</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>target<span class="dp">·</span>=<span class="dp">·</span>Path(&quot;target/criterion&quot;)</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>target<span class="dp">·</span>=<span class="dp">·</span>Path(&quot;target/criterion&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>target.mkdir(parents=True,<span class="dp">·</span>exist_ok=True)</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>target.mkdir(parents=True,<span class="dp">·</span>exist_ok=True)</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>shutil.copytree(src,<span class="dp">·</span>target,<span class="dp">·</span>dirs_exist_ok=True)</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>shutil.copytree(src,<span class="dp">·</span>target,<span class="dp">·</span>dirs_exist_ok=True)</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>switch_branch(branch)</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>switch_branch(branch<ins>=branch,<span class="dp">·</span>fetch=False</ins>)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">def<span class="dp">·</span>_cargo_criterion()<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">23 </td><td class="diffpresent">def<span class="dp">·</span>_cargo_criterion()<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Run<span class="dp">·</span>`cargo<span class="dp">·</span>criterion`<span class="dp">·</span>to<span class="dp">·</span>benchmark<span class="dp">·</span>the<span class="dp">·</span>specified<span class="dp">·</span>branch.</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Run<span class="dp">·</span>`cargo<span class="dp">·</span>criterion`<span class="dp">·</span>to<span class="dp">·</span>benchmark<span class="dp">·</span>the<span class="dp">·</span>specified<span class="dp">·</span>branch.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>branch:<span class="dp">·</span>The<span class="dp">·</span>branch<span class="dp">·</span>to<span class="dp">·</span>benchmark.</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>branch:<span class="dp">·</span>The<span class="dp">·</span>branch<span class="dp">·</span>to<span class="dp">·</span>benchmark.</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 36, 15 lines modified</td><td colspan="2">Offset 36, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">def<span class="dp">·</span>_copy_bench_results(bench_dir:<span class="dp">·</span>Path,<span class="dp">·</span>storage:<span class="dp">·</span>str)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">36 </td><td class="diffpresent">def<span class="dp">·</span>_copy_bench_results(bench_dir:<span class="dp">·</span>Path,<span class="dp">·</span>storage:<span class="dp">·</span>str)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Copy<span class="dp">·</span>benchmark<span class="dp">·</span>results<span class="dp">·</span>into<span class="dp">·</span>the<span class="dp">·</span>right<span class="dp">·</span>directory.</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Copy<span class="dp">·</span>benchmark<span class="dp">·</span>results<span class="dp">·</span>into<span class="dp">·</span>the<span class="dp">·</span>right<span class="dp">·</span>directory.</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>bench_dir:<span class="dp">·</span>The<span class="dp">·</span>root<span class="dp">·</span>benchmark<span class="dp">·</span>directory</td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>bench_dir:<span class="dp">·</span>The<span class="dp">·</span>root<span class="dp">·</span>benchmark<span class="dp">·</span>directory</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(under<span class="dp">·</span>the<span class="dp">·</span>gh-pages<span class="dp">·</span>branch).</td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(under<span class="dp">·</span>the<span class="dp">·</span>gh-pages<span class="dp">·</span>branch).</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>pr_merge_name:<span class="dp">·</span>The<span class="dp">·</span>corresponding<span class="dp">·</span>PR<span class="dp">·</span>merge<span class="dp">·</span>name.</td><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>pr_merge_name:<span class="dp">·</span>The<span class="dp">·</span>corresponding<span class="dp">·</span>PR<span class="dp">·</span>merge<span class="dp">·</span>name.</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>switch_branch(&quot;gh-pages&quot;)</td><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>switch_branch(&quot;gh-pages&quot;<ins>,<span class="dp">·</span>fetch=True</ins>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>src<span class="dp">·</span>=<span class="dp">·</span>Path(&quot;target/criterion&quot;)</td><td class="diffline">43 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>src<span class="dp">·</span>=<span class="dp">·</span>Path(&quot;target/criterion&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>dst<span class="dp">·</span>=<span class="dp">·</span>bench_dir<span class="dp">·</span>/<span class="dp">·</span>storage<span class="dp">·</span>/<span class="dp">·</span>&quot;criterion&quot;</td><td class="diffline">44 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>dst<span class="dp">·</span>=<span class="dp">·</span>bench_dir<span class="dp">·</span>/<span class="dp">·</span>storage<span class="dp">·</span>/<span class="dp">·</span>&quot;criterion&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>dst.mkdir(parents=True,<span class="dp">·</span>exist_ok=True)</td><td class="diffline">45 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>dst.mkdir(parents=True,<span class="dp">·</span>exist_ok=True)</td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>shutil.copytree(src,<span class="dp">·</span>dst,<span class="dp">·</span>dirs_exist_ok=True)</td><td class="diffline">46 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>shutil.copytree(src,<span class="dp">·</span>dst,<span class="dp">·</span>dirs_exist_ok=True)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">def<span class="dp">·</span>_git_push_gh_pages(bench_dir:<span class="dp">·</span>Path)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">47 </td><td class="diffpresent">def<span class="dp">·</span>_git_push_gh_pages(bench_dir:<span class="dp">·</span>Path)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">878 B</span></div>
+      <div><span class="source">github_rest_api-0.8.0/github_rest_api/actions/utils.py</span> vs.</div>
+      <div id="github_rest_api--.-.-.tar---github_rest_api--.-.--github_rest_api-actions-utils.py"><span class="source">github_rest_api-0.9.0/github_rest_api/actions/utils.py</span>
+        <a class="anchor" href="#github_rest_api--.-.-.tar---github_rest_api--.-.--github_rest_api-actions-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 22% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 20, 11 lines modified</td><td colspan="2">Offset 20, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Create<span class="dp">·</span>a<span class="dp">·</span>new<span class="dp">·</span>local<span class="dp">·</span>branch.</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Create<span class="dp">·</span>a<span class="dp">·</span>new<span class="dp">·</span>local<span class="dp">·</span>branch.</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>branch:<span class="dp">·</span>The<span class="dp">·</span>new<span class="dp">·</span>local<span class="dp">·</span>branch<span class="dp">·</span>to<span class="dp">·</span>create.</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>branch:<span class="dp">·</span>The<span class="dp">·</span>new<span class="dp">·</span>local<span class="dp">·</span>branch<span class="dp">·</span>to<span class="dp">·</span>create.</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cmd<span class="dp">·</span>=<span class="dp">·</span>f&quot;git<span class="dp">·</span>checkout<span class="dp">·</span>-b<span class="dp">·</span>{branch}&quot;</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cmd<span class="dp">·</span>=<span class="dp">·</span>f&quot;git<span class="dp">·</span>checkout<span class="dp">·</span>-b<span class="dp">·</span>{branch}&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sp.run(cmd,<span class="dp">·</span>shell=True,<span class="dp">·</span>check=True)</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sp.run(cmd,<span class="dp">·</span>shell=True,<span class="dp">·</span>check=True)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">def<span class="dp">·</span>switch_branch(branch:<span class="dp">·</span>str)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">25 </td><td class="diffpresent">def<span class="dp">·</span>switch_branch(branch:<span class="dp">·</span>str<ins>,<span class="dp">·</span>fetch:<span class="dp">·</span>bool</ins>)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Switch<span class="dp">·</span>to<span class="dp">·</span>another<span class="dp">·</span>branch.<del>&quot;&quot;&quot;</del></td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Switch<span class="dp">·</span>to<span class="dp">·</span>another<span class="dp">·</span>branch.</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>cmd<span class="dp">·</span></del><del>=<span class="dp">·</span>f&quot;git<span class="dp">·</span>fet</del>ch<del><span class="dp">·</span>o</del><del>rigin</del><span class="dp">·</span><del>{</del>branch<del>}<span class="dp">·</span>&amp;&amp;</del><span class="dp">·</span><del>g</del><del>it</del><span class="dp">·</span>checkout<del><span class="dp">·</span>{branch}</del><del>&quot;</del></td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>:param<span class="dp">·</span>bran</ins>ch<ins>:<span class="dp">·</span>The</ins><span class="dp">·</span>branch<span class="dp">·</span><ins>to</ins><span class="dp">·</span>checkout<ins>.</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:param<span class="dp">·</span>fetch:<span class="dp">·</span>If<span class="dp">·</span>true,<span class="dp">·</span>fetch<span class="dp">·</span>the<span class="dp">·</span>branch<span class="dp">·</span>from<span class="dp">·</span>remote<span class="dp">·</span>first.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>fetch:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cmd<span class="dp">·</span>=<span class="dp">·</span>f&quot;git<span class="dp">·</span>fetch<span class="dp">·</span>origin<span class="dp">·</span>{branch}&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sp.run(cmd,<span class="dp">·</span>shell=True,<span class="dp">·</span>check=True)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cmd<span class="dp">·</span>=<span class="dp">·</span>f&quot;git<span class="dp">·</span>checkout<span class="dp">·</span>{branch}&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sp.run(cmd,<span class="dp">·</span>shell=True,<span class="dp">·</span>check=True)</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sp.run(cmd,<span class="dp">·</span>shell=True,<span class="dp">·</span>check=True)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">github_rest_api-0.8.0/github_rest_api/github.py</span> vs.</div>
+      <div id="github_rest_api--.-.-.tar---github_rest_api--.-.--github_rest_api-github.py"><span class="source">github_rest_api-0.9.0/github_rest_api/github.py</span>
+        <a class="anchor" href="#github_rest_api--.-.-.tar---github_rest_api--.-.--github_rest_api-github.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">424 B</span></div>
+      <div><span class="source">github_rest_api-0.8.0/pyproject.toml</span> vs.</div>
+      <div id="github_rest_api--.-.-.tar---github_rest_api--.-.--pyproject.toml"><span class="source">github_rest_api-0.9.0/pyproject.toml</span>
+        <a class="anchor" href="#github_rest_api--.-.-.tar---github_rest_api--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 18% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;github_rest_api&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;github_rest_api&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.<del>8</del>.0&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.<ins>9</ins>.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Simple<span class="dp">·</span>wrapper<span class="dp">·</span>of<span class="dp">·</span>GitHub<span class="dp">·</span>REST<span class="dp">·</span>APIs.&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Simple<span class="dp">·</span>wrapper<span class="dp">·</span>of<span class="dp">·</span>GitHub<span class="dp">·</span>REST<span class="dp">·</span>APIs.&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Ben<span class="dp">·</span>Du<span class="dp">·</span>&lt;longendu@yahoo.com&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Ben<span class="dp">·</span>Du<span class="dp">·</span>&lt;longendu@yahoo.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[{include<span class="dp">·</span>=<span class="dp">·</span>&quot;github_rest_api&quot;}]</td><td class="diffline">7 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[{include<span class="dp">·</span>=<span class="dp">·</span>&quot;github_rest_api&quot;}]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">8 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.10,&lt;4&quot;</td><td class="diffline">9 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.10,&lt;4&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">473 B</span></div>
+      <div><span class="source">github_rest_api-0.8.0/PKG-INFO</span> vs.</div>
+      <div id="github_rest_api--.-.-.tar---github_rest_api--.-.--PKG-INFO"><span class="source">github_rest_api-0.9.0/PKG-INFO</span>
+        <a class="anchor" href="#github_rest_api--.-.-.tar---github_rest_api--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>github-rest-api</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>github-rest-api</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>8</del>.0</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>9</ins>.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Simple<span class="dp">·</span>wrapper<span class="dp">·</span>of<span class="dp">·</span>GitHub<span class="dp">·</span>REST<span class="dp">·</span>APIs.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Simple<span class="dp">·</span>wrapper<span class="dp">·</span>of<span class="dp">·</span>GitHub<span class="dp">·</span>REST<span class="dp">·</span>APIs.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>Ben<span class="dp">·</span>Du</td><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>Ben<span class="dp">·</span>Du</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>longendu@yahoo.com</td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>longendu@yahoo.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.10,&lt;4</td><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.10,&lt;4</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

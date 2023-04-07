@@ -1,0 +1,172 @@
+--- tmp/seittik-2023.3.5.tar.gz
++++ tmp/seittik-2023.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "seittik-2023.3.5.tar", max compression
+│ +gzip compressed data, was "seittik-2023.4.tar", max compression
+│   --- seittik-2023.3.5.tar
+├── +++ seittik-2023.4.tar
+│ ├── file list
+│ │ @@ -1,22 +1,22 @@
+│ │ --rw-r--r--   0        0        0     1048 2023-03-18 20:45:01.489589 seittik-2023.3.5/LICENSE
+│ │ --rw-r--r--   0        0        0     2386 2023-03-18 19:58:35.109074 seittik-2023.3.5/README.md
+│ │ --rw-r--r--   0        0        0     4418 2023-03-31 01:51:56.215561 seittik-2023.3.5/pyproject.toml
+│ │ --rw-r--r--   0        0        0      345 2023-03-31 01:51:56.215561 seittik-2023.3.5/src/seittik/__init__.py
+│ │ --rw-r--r--   0        0        0    87479 2023-03-30 21:01:51.036144 seittik-2023.3.5/src/seittik/pipes.py
+│ │ --rw-r--r--   0        0        0    16261 2023-03-31 00:41:05.527693 seittik-2023.3.5/src/seittik/shears.py
+│ │ --rw-r--r--   0        0        0       13 2023-03-17 22:52:45.510409 seittik-2023.3.5/src/seittik/utils/__init__.py
+│ │ --rw-r--r--   0        0        0      352 2023-03-17 22:52:45.537076 seittik-2023.3.5/src/seittik/utils/abc.py
+│ │ --rw-r--r--   0        0        0     5262 2023-03-22 21:38:35.935103 seittik-2023.3.5/src/seittik/utils/argutils.py
+│ │ --rw-r--r--   0        0        0     3691 2023-03-30 11:08:27.075762 seittik-2023.3.5/src/seittik/utils/classutils.py
+│ │ --rw-r--r--   0        0        0     1660 2023-03-17 22:52:45.537076 seittik-2023.3.5/src/seittik/utils/collections.py
+│ │ --rw-r--r--   0        0        0      480 2023-03-28 11:13:39.533371 seittik-2023.3.5/src/seittik/utils/compareutils.py
+│ │ --rw-r--r--   0        0        0     1831 2023-03-22 19:16:47.803511 seittik-2023.3.5/src/seittik/utils/diceutils.py
+│ │ --rw-r--r--   0        0        0      666 2023-03-17 22:52:45.537076 seittik-2023.3.5/src/seittik/utils/flatten.py
+│ │ --rw-r--r--   0        0        0      278 2023-03-17 22:52:45.537076 seittik-2023.3.5/src/seittik/utils/funcutils.py
+│ │ --rw-r--r--   0        0        0     5253 2023-03-28 11:13:39.533371 seittik-2023.3.5/src/seittik/utils/merge.py
+│ │ --rw-r--r--   0        0        0     1411 2023-03-22 19:16:47.803511 seittik-2023.3.5/src/seittik/utils/randutils.py
+│ │ --rw-r--r--   0        0        0      392 2023-03-28 23:59:55.101394 seittik-2023.3.5/src/seittik/utils/sentinels.py
+│ │ --rw-r--r--   0        0        0     2820 2023-03-30 11:08:27.075762 seittik-2023.3.5/src/seittik/utils/stringutils.py
+│ │ --rw-r--r--   0        0        0      223 2023-03-17 22:52:45.517075 seittik-2023.3.5/src/seittik/utils/structutils.py
+│ │ --rw-r--r--   0        0        0     4785 2023-03-17 22:52:45.543743 seittik-2023.3.5/src/seittik/utils/walk.py
+│ │ --rw-r--r--   0        0        0     3877 1970-01-01 00:00:00.000000 seittik-2023.3.5/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1048 2023-03-18 20:45:01.489589 seittik-2023.4/LICENSE
+│ │ +-rw-r--r--   0        0        0     2386 2023-03-18 19:58:35.109074 seittik-2023.4/README.md
+│ │ +-rw-r--r--   0        0        0     4422 2023-04-07 00:22:05.192808 seittik-2023.4/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      343 2023-04-07 00:22:05.192808 seittik-2023.4/src/seittik/__init__.py
+│ │ +-rw-r--r--   0        0        0   120671 2023-04-05 23:58:59.019144 seittik-2023.4/src/seittik/pipes.py
+│ │ +-rw-r--r--   0        0        0    16261 2023-04-05 22:15:54.822636 seittik-2023.4/src/seittik/shears.py
+│ │ +-rw-r--r--   0        0        0       13 2023-03-17 22:52:45.510409 seittik-2023.4/src/seittik/utils/__init__.py
+│ │ +-rw-r--r--   0        0        0      352 2023-03-17 22:52:45.537076 seittik-2023.4/src/seittik/utils/abc.py
+│ │ +-rw-r--r--   0        0        0     5262 2023-03-22 21:38:35.935103 seittik-2023.4/src/seittik/utils/argutils.py
+│ │ +-rw-r--r--   0        0        0     3691 2023-04-05 22:15:54.822636 seittik-2023.4/src/seittik/utils/classutils.py
+│ │ +-rw-r--r--   0        0        0     1660 2023-03-17 22:52:45.537076 seittik-2023.4/src/seittik/utils/collections.py
+│ │ +-rw-r--r--   0        0        0      480 2023-03-28 11:13:39.533371 seittik-2023.4/src/seittik/utils/compareutils.py
+│ │ +-rw-r--r--   0        0        0     1831 2023-03-22 19:16:47.803511 seittik-2023.4/src/seittik/utils/diceutils.py
+│ │ +-rw-r--r--   0        0        0      666 2023-03-17 22:52:45.537076 seittik-2023.4/src/seittik/utils/flatten.py
+│ │ +-rw-r--r--   0        0        0     1901 2023-04-05 22:15:54.822636 seittik-2023.4/src/seittik/utils/funcutils.py
+│ │ +-rw-r--r--   0        0        0     5253 2023-04-05 22:15:54.822636 seittik-2023.4/src/seittik/utils/merge.py
+│ │ +-rw-r--r--   0        0        0     1411 2023-03-22 19:16:47.803511 seittik-2023.4/src/seittik/utils/randutils.py
+│ │ +-rw-r--r--   0        0        0      419 2023-04-05 22:15:54.822636 seittik-2023.4/src/seittik/utils/sentinels.py
+│ │ +-rw-r--r--   0        0        0     2820 2023-04-05 22:15:54.825970 seittik-2023.4/src/seittik/utils/stringutils.py
+│ │ +-rw-r--r--   0        0        0      223 2023-03-17 22:52:45.517075 seittik-2023.4/src/seittik/utils/structutils.py
+│ │ +-rw-r--r--   0        0        0     4785 2023-03-17 22:52:45.543743 seittik-2023.4/src/seittik/utils/walk.py
+│ │ +-rw-r--r--   0        0        0     3875 1970-01-01 00:00:00.000000 seittik-2023.4/PKG-INFO
+│ │   --- seittik-2023.3.5/LICENSE
+│ ├── +++ seittik-2023.4/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- seittik-2023.3.5/README.md
+│ ├── +++ seittik-2023.4/README.md
+│ │┄ Files identical despite different names
+│ │   --- seittik-2023.3.5/pyproject.toml
+│ ├── +++ seittik-2023.4/pyproject.toml
+│ │┄ Files 4% similar despite different names
+│ │ @@ -24,25 +24,25 @@
+│ │  
+│ │  [tool.poe.tasks]
+│ │  # sphinx-build / sphinx-autobuild:
+│ │  # -a : Write all files
+│ │  # -b : Set builder
+│ │  # -d : Doctree cache dir
+│ │  # -E : Don't cache, always read
+│ │ -doc.cmd = './python_packages/bin/sphinx-build -a -E -d doc/.doctrees -b html doc doc/_build/html'
+│ │ +doc.cmd = './python_packages/bin/sphinx-build -a -E -d doc/.doctrees -b dirhtml doc doc/_build/html'
+│ │  doc.help = "Build documentation"
+│ │ -doclive.cmd = './python_packages/bin/sphinx-autobuild -a -d doc/.doctrees -E -b html --watch src/seittik --watch CHANGELOG.md --watch LICENSE.md doc doc/_build/html'
+│ │ +doclive.cmd = './python_packages/bin/sphinx-autobuild -a -d doc/.doctrees -E -b dirhtml --watch src/seittik --watch CHANGELOG.md --watch LICENSE.md doc doc/_build/html'
+│ │  doclive.help = "Build documentation with live autoreload"
+│ │  # nox:
+│ │  nox.cmd = './python_packages/bin/nox'
+│ │  nox.help = "Run nox"
+│ │  
+│ │  [tool.poetry]
+│ │  name = 'seittik'
+│ │ -version = '2023.03.5'
+│ │ +version = '2023.04'
+│ │  description = "A functional programming library that aims to supplant Python's existing functional interfaces, offering a more comprehensive and expressive alternative."
+│ │  license = 'MIT'
+│ │  authors = ['Tom Tobin <opensource@alchemicalhydra.com>']
+│ │  readme = 'README.md'
+│ │  keywords = [
+│ │    'functional',
+│ │    'functools',
+│ │ @@ -80,29 +80,29 @@
+│ │  'Issue Tracker' = 'https://github.com/alchemicalhydra/seittik/issues'
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = "^3.10"
+│ │  
+│ │  [tool.poetry.group.dev.dependencies]
+│ │  # General
+│ │ -ipython = ">=8.11.0"
+│ │ +ipython = ">=8.12.0"
+│ │  # Tasks
+│ │  poethepoet = ">=0.19.0"
+│ │  # Tests
+│ │ -coverage = ">=7.2.2"
+│ │ -hypothesis = ">=6.70.0"
+│ │ +coverage = ">=7.2.3"
+│ │ +hypothesis = ">=6.70.2"
+│ │  nox = ">=2022.11.21"
+│ │ -pyfakefs = ">=5.1.0"
+│ │ +pyfakefs = ">=5.2.0"
+│ │  pytest = ">=7.2.2"
+│ │  pytest-cov = ">=4.0.0"
+│ │  pytest-isort = ">=3.1.0"
+│ │  pytest-xdist = ">=3.2.1"
+│ │  # Docs
+│ │  myst-parser = ">=1.0.0"
+│ │ -pydata-sphinx-theme = ">=0.13.1"
+│ │ +pydata-sphinx-theme = ">=0.13.3"
+│ │  sphinx = ">=6.1.3"
+│ │  sphinx-autobuild = ">=2021.3.14"
+│ │  sphinx-autodoc2 = ">=0.4.2"
+│ │  sphinxcontrib-dooble = ">=1.0.1"
+│ │  sphinxcontrib-mermaid = ">=0.8.1"
+│ │  # Necessary to avoid `sphinx-autobuild` needlessly chewing up CPU; its
+│ │  # dependency `livereload` has this as a silent optional dependency of its own.
+│ │   --- seittik-2023.3.5/src/seittik/shears.py
+│ ├── +++ seittik-2023.4/src/seittik/shears.py
+│ │┄ Files identical despite different names
+│ │   --- seittik-2023.3.5/src/seittik/utils/argutils.py
+│ ├── +++ seittik-2023.4/src/seittik/utils/argutils.py
+│ │┄ Files identical despite different names
+│ │   --- seittik-2023.3.5/src/seittik/utils/classutils.py
+│ ├── +++ seittik-2023.4/src/seittik/utils/classutils.py
+│ │┄ Files identical despite different names
+│ │   --- seittik-2023.3.5/src/seittik/utils/collections.py
+│ ├── +++ seittik-2023.4/src/seittik/utils/collections.py
+│ │┄ Files identical despite different names
+│ │   --- seittik-2023.3.5/src/seittik/utils/diceutils.py
+│ ├── +++ seittik-2023.4/src/seittik/utils/diceutils.py
+│ │┄ Files identical despite different names
+│ │   --- seittik-2023.3.5/src/seittik/utils/flatten.py
+│ ├── +++ seittik-2023.4/src/seittik/utils/flatten.py
+│ │┄ Files identical despite different names
+│ │   --- seittik-2023.3.5/src/seittik/utils/merge.py
+│ ├── +++ seittik-2023.4/src/seittik/utils/merge.py
+│ │┄ Files identical despite different names
+│ │   --- seittik-2023.3.5/src/seittik/utils/randutils.py
+│ ├── +++ seittik-2023.4/src/seittik/utils/randutils.py
+│ │┄ Files identical despite different names
+│ │   --- seittik-2023.3.5/src/seittik/utils/stringutils.py
+│ ├── +++ seittik-2023.4/src/seittik/utils/stringutils.py
+│ │┄ Files identical despite different names
+│ │   --- seittik-2023.3.5/src/seittik/utils/walk.py
+│ ├── +++ seittik-2023.4/src/seittik/utils/walk.py
+│ │┄ Files identical despite different names
+│ │   --- seittik-2023.3.5/PKG-INFO
+│ ├── +++ seittik-2023.4/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: seittik
+│ │ -Version: 2023.3.5
+│ │ +Version: 2023.4
+│ │  Summary: A functional programming library that aims to supplant Python's existing functional interfaces, offering a more comprehensive and expressive alternative.
+│ │  License: MIT
+│ │  Keywords: functional,functools,iterable,iteration,iterator,itertools,lambda,pipe,shear
+│ │  Author: Tom Tobin
+│ │  Author-email: opensource@alchemicalhydra.com
+│ │  Requires-Python: >=3.10,<4.0
+│ │  Classifier: Development Status :: 3 - Alpha

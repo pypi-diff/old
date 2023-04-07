@@ -1,0 +1,429 @@
+# Comparing `tmp/PyTimbre-0.6.4a0.tar.gz` & `tmp/PyTimbre-0.6.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "PyTimbre-0.6.4a0.tar", last modified: Sat Apr  1 14:37:30 2023, max compression
++gzip compressed data, was "PyTimbre-0.6.5.tar", last modified: Fri Apr  7 00:32:40 2023, max compression
+```
+
+## Comparing `PyTimbre-0.6.4a0.tar` & `PyTimbre-0.6.5.tar`
+
+### file list
+
+```diff
+@@ -1,28 +1,30 @@
+-drwxrwxrwx   0        0        0        0 2023-04-01 14:37:30.813481 PyTimbre-0.6.4a0/
+--rw-rw-rw-   0        0        0     1106 2023-02-28 16:15:07.000000 PyTimbre-0.6.4a0/LICENSE.txt
+--rw-rw-rw-   0        0        0    12170 2023-04-01 14:37:30.813481 PyTimbre-0.6.4a0/PKG-INFO
+-drwxrwxrwx   0        0        0        0 2023-04-01 14:37:30.805087 PyTimbre-0.6.4a0/PyTimbre.egg-info/
+--rw-rw-rw-   0        0        0    12170 2023-04-01 14:37:30.000000 PyTimbre-0.6.4a0/PyTimbre.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      627 2023-04-01 14:37:30.000000 PyTimbre-0.6.4a0/PyTimbre.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-01 14:37:30.000000 PyTimbre-0.6.4a0/PyTimbre.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       71 2023-04-01 14:37:30.000000 PyTimbre-0.6.4a0/PyTimbre.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        9 2023-04-01 14:37:30.000000 PyTimbre-0.6.4a0/PyTimbre.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0     4342 2023-04-01 12:53:27.000000 PyTimbre-0.6.4a0/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-01 14:37:30.806087 PyTimbre-0.6.4a0/pytimbre/
+--rw-rw-rw-   0        0        0       75 2023-03-03 22:01:28.000000 PyTimbre-0.6.4a0/pytimbre/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-01 14:37:30.809086 PyTimbre-0.6.4a0/pytimbre/audio_files/
+--rw-rw-rw-   0        0        0      108 2023-03-31 16:13:47.000000 PyTimbre-0.6.4a0/pytimbre/audio_files/__init__.py
+--rw-rw-rw-   0        0        0    15305 2023-03-31 16:13:47.000000 PyTimbre-0.6.4a0/pytimbre/audio_files/acoustic_field_recorder.py
+--rw-rw-rw-   0        0        0    23192 2023-03-31 16:13:47.000000 PyTimbre-0.6.4a0/pytimbre/audio_files/ansi_standard_formatted_files.py
+--rw-rw-rw-   0        0        0    70669 2023-03-31 16:13:47.000000 PyTimbre-0.6.4a0/pytimbre/audio_files/wavefile.py
+-drwxrwxrwx   0        0        0        0 2023-04-01 14:37:30.812479 PyTimbre-0.6.4a0/pytimbre/spectral/
+--rw-rw-rw-   0        0        0      150 2023-03-03 22:01:28.000000 PyTimbre-0.6.4a0/pytimbre/spectral/__init__.py
+--rw-rw-rw-   0        0        0    16085 2023-03-31 16:13:47.000000 PyTimbre-0.6.4a0/pytimbre/spectral/acoustic_weights.py
+--rw-rw-rw-   0        0        0    15571 2023-03-03 22:01:28.000000 PyTimbre-0.6.4a0/pytimbre/spectral/fractional_octave_band.py
+--rw-rw-rw-   0        0        0    38821 2023-03-31 16:13:47.000000 PyTimbre-0.6.4a0/pytimbre/spectral/spectra.py
+--rw-rw-rw-   0        0        0     6647 2023-03-31 16:13:47.000000 PyTimbre-0.6.4a0/pytimbre/spectral/spectrogram.py
+--rw-rw-rw-   0        0        0    30872 2023-03-31 16:13:47.000000 PyTimbre-0.6.4a0/pytimbre/spectral/time_histories.py
+--rw-rw-rw-   0        0        0    10808 2023-04-01 14:37:07.000000 PyTimbre-0.6.4a0/pytimbre/swipe.py
+--rw-rw-rw-   0        0        0    82753 2023-04-01 13:09:56.000000 PyTimbre-0.6.4a0/pytimbre/waveform.py
+--rw-rw-rw-   0        0        0       42 2023-04-01 14:37:30.813481 PyTimbre-0.6.4a0/setup.cfg
+--rw-rw-rw-   0        0        0     1096 2023-04-01 13:14:56.000000 PyTimbre-0.6.4a0/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:32:40.103105 PyTimbre-0.6.5/
++-rw-rw-rw-   0        0        0     1106 2023-02-28 16:15:07.000000 PyTimbre-0.6.5/LICENSE.txt
++-rw-rw-rw-   0        0        0    12168 2023-04-07 00:32:40.101792 PyTimbre-0.6.5/PKG-INFO
++-rw-rw-rw-   0        0        0     4342 2023-04-01 12:53:27.000000 PyTimbre-0.6.5/README.md
++-rw-rw-rw-   0        0        0       42 2023-04-07 00:32:40.103105 PyTimbre-0.6.5/setup.cfg
++-rw-rw-rw-   0        0        0     1102 2023-04-07 00:31:55.000000 PyTimbre-0.6.5/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:32:40.073022 PyTimbre-0.6.5/src/
++drwxrwxrwx   0        0        0        0 2023-04-07 00:32:40.092256 PyTimbre-0.6.5/src/PyTimbre.egg-info/
++-rw-rw-rw-   0        0        0    12168 2023-04-07 00:32:39.000000 PyTimbre-0.6.5/src/PyTimbre.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      719 2023-04-07 00:32:40.000000 PyTimbre-0.6.5/src/PyTimbre.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 00:32:39.000000 PyTimbre-0.6.5/src/PyTimbre.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0      115 2023-04-07 00:32:39.000000 PyTimbre-0.6.5/src/PyTimbre.egg-info/requires.txt
++-rw-rw-rw-   0        0        0        9 2023-04-07 00:32:39.000000 PyTimbre-0.6.5/src/PyTimbre.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-07 00:32:40.095438 PyTimbre-0.6.5/src/pytimbre/
++-rw-rw-rw-   0        0        0       96 2023-04-06 23:54:05.000000 PyTimbre-0.6.5/src/pytimbre/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:32:40.096620 PyTimbre-0.6.5/src/pytimbre/audio_files/
++-rw-rw-rw-   0        0        0      108 2023-04-04 13:59:30.000000 PyTimbre-0.6.5/src/pytimbre/audio_files/__init__.py
++-rw-rw-rw-   0        0        0    23192 2023-03-31 16:13:47.000000 PyTimbre-0.6.5/src/pytimbre/audio_files/ansi_standard_formatted_files.py
++-rw-rw-rw-   0        0        0    15323 2023-04-04 13:59:30.000000 PyTimbre-0.6.5/src/pytimbre/audio_files/calibrated_binary_files.py
++-rw-rw-rw-   0        0        0    70669 2023-03-31 16:13:47.000000 PyTimbre-0.6.5/src/pytimbre/audio_files/wavefile.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:32:40.101792 PyTimbre-0.6.5/src/pytimbre/spectral/
++-rw-rw-rw-   0        0        0      150 2023-03-03 22:01:28.000000 PyTimbre-0.6.5/src/pytimbre/spectral/__init__.py
++-rw-rw-rw-   0        0        0    16085 2023-03-31 16:13:47.000000 PyTimbre-0.6.5/src/pytimbre/spectral/acoustic_weights.py
++-rw-rw-rw-   0        0        0    15571 2023-03-03 22:01:28.000000 PyTimbre-0.6.5/src/pytimbre/spectral/fractional_octave_band.py
++-rw-rw-rw-   0        0        0    38821 2023-03-31 16:13:47.000000 PyTimbre-0.6.5/src/pytimbre/spectral/spectra.py
++-rw-rw-rw-   0        0        0     6647 2023-03-31 16:13:47.000000 PyTimbre-0.6.5/src/pytimbre/spectral/spectrogram.py
++-rw-rw-rw-   0        0        0    30872 2023-03-31 16:13:47.000000 PyTimbre-0.6.5/src/pytimbre/spectral/time_histories.py
++-rw-rw-rw-   0        0        0    10655 2023-04-07 00:06:51.000000 PyTimbre-0.6.5/src/pytimbre/swipe.py
++-rw-rw-rw-   0        0        0    83139 2023-04-07 00:24:11.000000 PyTimbre-0.6.5/src/pytimbre/waveform.py
++-rw-rw-rw-   0        0        0     7680 2023-04-07 00:21:00.000000 PyTimbre-0.6.5/src/pytimbre/yin.py
+```
+
+### Comparing `PyTimbre-0.6.4a0/LICENSE.txt` & `PyTimbre-0.6.5/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `PyTimbre-0.6.4a0/PKG-INFO` & `PyTimbre-0.6.5/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: PyTimbre
+-Version: 0.6.4a0
++Version: 0.6.5
+ Summary: Python conversion of Timbre Toolbox
+ Home-page: https://gitlab.com/python-audio-feature-extraction/pytimbre
+ Download-URL: 
+ Author: Dr. Frank Mobley
+ Author-email: frank.mobley.1@afrl.af.mil
+ License: MIT
+ Keywords: machine learning,feature extraction,MATLAB,audio
+```
+
+### Comparing `PyTimbre-0.6.4a0/PyTimbre.egg-info/PKG-INFO` & `PyTimbre-0.6.5/src/PyTimbre.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: PyTimbre
+-Version: 0.6.4a0
++Version: 0.6.5
+ Summary: Python conversion of Timbre Toolbox
+ Home-page: https://gitlab.com/python-audio-feature-extraction/pytimbre
+ Download-URL: 
+ Author: Dr. Frank Mobley
+ Author-email: frank.mobley.1@afrl.af.mil
+ License: MIT
+ Keywords: machine learning,feature extraction,MATLAB,audio
+```
+
+### Comparing `PyTimbre-0.6.4a0/README.md` & `PyTimbre-0.6.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `PyTimbre-0.6.4a0/pytimbre/audio_files/acoustic_field_recorder.py` & `PyTimbre-0.6.5/src/pytimbre/audio_files/calibrated_binary_files.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -215,15 +215,15 @@
+     def stop_time(self):
+         return self.start_time + timedelta(seconds=self.record_duration)
+ 
+ 
+ class CalibratedBinaryFile(Waveform):
+     def __init__(self, log, path, run_id=None, ch_id=None, s0=None, s1=None, sync='log_start_time'):
+         """
+-        This function loads the waveform from the AFR measurement and adjusts for the DC offset
++        This function loads the waveform from the legacy measurement and adjusts for the DC offset
+         :param path: string
+             The path to the binary audio file
+         :param log: log_file
+             the object that represents the collection of audio files
+         :param run_id: string or integer
+             the run number represented as either the full ID component or the integer
+         :param ch_id: string or integer
+@@ -237,16 +237,16 @@
+             irig_start_time defines the waveform start time via an IRIG-B signal, and requires that log.irig_ch be populated with the appropriate IRIG channel number on the recorder.
+         """
+ 
+         if not isinstance(log, MeasurementLogFile):
+             raise Exception("Arugment invalid")
+ 
+         if run_id is not None and ch_id is not None:
+-            run_str = CalibratedBinaryFile.set_record_id_to_AFR_format(run_id)
+-            ch_str = CalibratedBinaryFile.set_channel_to_AFR_format(ch_id)
++            run_str = CalibratedBinaryFile.set_record_id_to_legacy_format(run_id)
++            ch_str = CalibratedBinaryFile.set_channel_to_legacy_format(ch_id)
+             data_path = "{}/{}_{}.bin".format(path, run_str, ch_str)
+         else:
+             data_path = path
+ 
+         y = CalibratedBinaryFile.read_bin_file(data_path, s0, s1)
+ 
+         if sync == 'log_start_time':
+@@ -273,26 +273,26 @@
+         return 20 * np.log10(self.peak_pressure / 20e-6)
+ 
+     @property
+     def peak_time(self):
+         return self.times[np.argmax(self.samples)]
+ 
+     @staticmethod
+-    def set_channel_to_AFR_format(ch_id):
++    def set_channel_to_legacy_format(ch_id):
+         if isinstance(ch_id, str):
+             if "CH" in ch_id.upper():
+                 ch_str = ch_id[2:]
+             else:
+                 ch_str = ch_id
+         else:
+             ch_str = "{:03.0f}".format(ch_id)
+         return ch_str
+ 
+     @staticmethod
+-    def set_record_id_to_AFR_format(run_id):
++    def set_record_id_to_legacy_format(run_id):
+         if isinstance(run_id, int):
+             run_str = "ID{:03.0f}".format(run_id)
+         else:
+             run_str = run_id
+         return run_str
+ 
+     @staticmethod
+@@ -330,12 +330,12 @@
+ 
+         f.close()
+ 
+         return y
+ 
+     @staticmethod
+     def sync_to_irig(log, path):
+-        ch_str = CalibratedBinaryFile.set_channel_to_AFR_format(log.irig_ch)
++        ch_str = CalibratedBinaryFile.set_channel_to_legacy_format(log.irig_ch)
+         data_path = "{}{}.bin".format(path[0:-7], ch_str)
+         y = CalibratedBinaryFile.read_bin_file(data_path, s0=0, s1=int(log.sample_rate * 3))
+         tpm, julian_date = Waveform.irig_converter(np.array(y))
+         return tpm
+```
+
+### Comparing `PyTimbre-0.6.4a0/pytimbre/audio_files/ansi_standard_formatted_files.py` & `PyTimbre-0.6.5/src/pytimbre/audio_files/ansi_standard_formatted_files.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PyTimbre-0.6.4a0/pytimbre/audio_files/wavefile.py` & `PyTimbre-0.6.5/src/pytimbre/audio_files/wavefile.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PyTimbre-0.6.4a0/pytimbre/spectral/acoustic_weights.py` & `PyTimbre-0.6.5/src/pytimbre/spectral/acoustic_weights.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PyTimbre-0.6.4a0/pytimbre/spectral/fractional_octave_band.py` & `PyTimbre-0.6.5/src/pytimbre/spectral/fractional_octave_band.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PyTimbre-0.6.4a0/pytimbre/spectral/spectra.py` & `PyTimbre-0.6.5/src/pytimbre/spectral/spectra.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PyTimbre-0.6.4a0/pytimbre/spectral/spectrogram.py` & `PyTimbre-0.6.5/src/pytimbre/spectral/spectrogram.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PyTimbre-0.6.4a0/pytimbre/spectral/time_histories.py` & `PyTimbre-0.6.5/src/pytimbre/spectral/time_histories.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PyTimbre-0.6.4a0/pytimbre/swipe.py` & `PyTimbre-0.6.5/src/pytimbre/swipe.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,23 +1,26 @@
+ from scipy import interpolate
+ import numpy as np
+-import librosa
++# import librosa
++import scipy.signal
+ 
+ """
+ | Description: libf0 SWIPE implementation
+ | Contributors: Sebastian Rosenzweig, Vojtěch Pešek, Simon Schwär, Meinard Müller
+ | License: The MIT license, https://opensource.org/licenses/MIT
+ | This file is part of libf0.
+ """
+ """
+ This file was downloaded on 1 April 2023, from https://github.com/groupmm/libf0. This swipe.py file was integrated into
+ the structure of the PyTimbre module to facilitate the calculation of the fundamental frequency. However, there are a
+ number of dependencies that were not required by PyTimbre. 
+ 
+ 2023_04_01 - FSM - Function arguments were normalized to the standard Python rules.
++2023-04-06 - FSM - Updated the swipe function to use the SciPy.Signal.STFT function rather than librosa
++2023-04-06 - FSM - Removed all functions that rely on librosa
+ """
+ 
+ 
+ def swipe(samples, sample_rate: float = 22050, hop_size: float = 256, minimum_frequency: float = 55.0,
+           maximum_frequency: float = 1760.0, pitch_resolution: float = 1 / 96, erb_resolution: float = 0.1,
+           strength_threshold: float = 0):
+     """
+@@ -84,18 +87,21 @@
+ 
+     for i in range(0, len(ws)):
+         N = ws[i]
+         hop_size = int(N / 2)
+ 
+         x_zero_padded = np.concatenate([samples, np.zeros(N)])
+ 
+-        # x, f, ti = stft_with_f_t(x_zero_padded, N, hop_size, sample_rate)
+-        x = librosa.stft(x_zero_padded, n_fft=N, hop_length=hop_size, pad_mode='constant', center=True)
+-        ti = librosa.frames_to_time(np.arange(0, x.shape[1]), sr=sample_rate, hop_length=hop_size, n_fft=N)
+-        f = librosa.fft_frequencies(sr=sample_rate, n_fft=N)
++        f, ti, x = scipy.signal.stft(x_zero_padded,
++                                     fs=sample_rate,
++                                     nperseg=hop_size,
++                                     nfft=N,
++                                     scaling='psd',
++                                     boundary='zeros',
++                                     padded=True)
+ 
+         ti = np.insert(ti, 0, 0)
+         ti = np.delete(ti, -1)
+ 
+         spectrum = np.abs(x)
+         magnitude = resample_ferbs(spectrum, f, f_erbs)
+         loudness = np.sqrt(magnitude)
+@@ -147,23 +153,14 @@
+ 
+ 
+ def time_values(m, hop_size, sample_rate):
+     """Physical time of STFT coefficients"""
+     return m * hop_size / sample_rate
+ 
+ 
+-def stft_with_f_t(y, fft_size, hop_size, sample_rate):
+-    """STFT wrapper"""
+-    x = librosa.stft(y, n_fft=int(fft_size), hop_length=int(hop_size), pad_mode='constant', center=True)
+-    f = frequency_coefficients(np.arange(0, x.shape[0]), fft_size, sample_rate)
+-    t = time_values(np.arange(0, x.shape[1]), hop_size, sample_rate)
+-
+-    return x, f, t
+-
+-
+ def hz2erbs(hz):
+     """Convert Hz to ERB scale"""
+     return 21.4 * np.log10(1 + hz / 229)
+ 
+ 
+ def erbs2hz(erbs):
+     """Convert ERB to Hz"""
+```
+
+### Comparing `PyTimbre-0.6.4a0/pytimbre/waveform.py` & `PyTimbre-0.6.5/src/pytimbre/waveform.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -4,14 +4,15 @@
+ from enum import Enum
+ from scipy.signal.windows import hamming, tukey
+ import scipy.signal
+ import statsmodels.api as sm
+ import colorednoise as cn
+ import warnings
+ from .swipe import swipe
++from .yin import yin
+ 
+ 
+ class WindowingMethods(Enum):
+     """
+     The available windowing methods for the waveform
+     """
+ 
+@@ -440,15 +441,25 @@
+ 
+         clipped_sections, total_clipped_samples = detect_clipping(self.samples)
+ 
+         return not ((total_clipped_samples / len(self.samples)) < 0.01)
+ 
+     @property
+     def fundamental_frequency(self):
+-        return swipe(self.samples, self.sample_rate, minimum_frequency=10, maximum_frequency=10000)[0]
++        # return np.median(swipe(self.samples, self.sample_rate, minimum_frequency=10, maximum_frequency=10000,
++        #                        strength_threshold=0.25, hop_size=0.25 * self.sample_rate)[0])
++
++        return np.median(yin(
++            self.samples,
++            self.sample_rate,
++            F_max=10000,
++            F_min=10,
++            N=int(np.floor(self.sample_rate/10)),
++            H=int(np.floor(self.sample_rate/10/4))
++        )[0])
+ 
+     # ------------------ Static functions for the calculation of filter shapes and timbre features ---------------------
+ 
+     @staticmethod
+     def AC_Filter_Design(fs):
+         """
+         AC_Filter_Design.py
+```
+
+### Comparing `PyTimbre-0.6.4a0/setup.py` & `PyTimbre-0.6.5/setup.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -5,35 +5,31 @@
+ 
+     with open('HISTORY.md') as history_file:
+         HISTORY = history_file.read()
+ 
+         with open('LICENSE.txt') as license_file:
+             LICENSE = license_file.read()
+ 
+-setup_args = dict(
++setup(
+     name='PyTimbre',
+-    version='0.6.4a0',
++    version='0.6.5',
+     description='Python conversion of Timbre Toolbox',
+     long_description_content_type="text/markdown",
+-    long_description=README+'\n\n' + HISTORY+'\n\n' + LICENSE,
++    long_description=README + '\n\n' + HISTORY + '\n\n' + LICENSE,
+     license='MIT',
+-    packages=find_packages(),
++    packages=find_packages('src'),
+     author='Dr. Frank Mobley',
+     author_email='frank.mobley.1@afrl.af.mil',
+     keywords=['machine learning', 'feature extraction', 'MATLAB', 'audio'],
+     url='https://gitlab.com/python-audio-feature-extraction/pytimbre',
+-    download_url=''
++    download_url='',
++    install_requires=[
++        'numpy==1.23.5',
++        'pandas==1.5.3',
++        'scipy==1.10.1',
++        'statsmodels==0.13.2',
++        'mosqito==1.0.8',
++        'colorednoise==2.1.0',
++        'clipdetect==0.1.1'
++    ],
++    package_dir={'': 'src'}
+ )
+-
+-install_requires = [
+-    'numpy',
+-    'pandas',
+-    'scipy',
+-    'statsmodels',
+-    'mosqito',
+-    'colorednoise',
+-    'clipdetect',
+-    'librosa'
+-]
+-
+-if __name__ == '__main__':
+-    setup(**setup_args, install_requires=install_requires)
+```
+
