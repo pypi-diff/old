@@ -1,0 +1,25 @@
+--- tmp/nullable-0.1.1.tar.gz
++++ tmp/nullable-0.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "nullable-0.1.1.tar", max compression
+│ +gzip compressed data, was "nullable-0.2.0.tar", max compression
+│   --- nullable-0.1.1.tar
+├── +++ nullable-0.2.0.tar
+│ ├── file list
+│ │ @@ -1,6 +1,6 @@
+│ │ --rw-r--r--   0        0        0     1069 2023-04-03 00:27:02.936222 nullable-0.1.1/LICENSE
+│ │ --rw-r--r--   0        0        0       31 2023-04-03 00:27:02.936222 nullable-0.1.1/README.md
+│ │ --rw-r--r--   0        0        0      253 2023-04-03 00:27:02.936222 nullable-0.1.1/nullable/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2023-04-03 00:27:02.936222 nullable-0.1.1/nullable/py.typed
+│ │ --rw-r--r--   0        0        0      457 2023-04-03 00:27:16.828232 nullable-0.1.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0      554 1970-01-01 00:00:00.000000 nullable-0.1.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1069 2023-04-07 03:26:32.434820 nullable-0.2.0/LICENSE
+│ │ +-rw-r--r--   0        0        0      674 2023-04-07 03:26:32.434820 nullable-0.2.0/README.md
+│ │ +-rw-r--r--   0        0        0      261 2023-04-07 03:26:32.434820 nullable-0.2.0/nullable/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 03:26:32.434820 nullable-0.2.0/nullable/py.typed
+│ │ +-rw-r--r--   0        0        0      457 2023-04-07 03:26:43.299116 nullable-0.2.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     1197 1970-01-01 00:00:00.000000 nullable-0.2.0/PKG-INFO
+│ │   --- nullable-0.1.1/LICENSE
+│ ├── +++ nullable-0.2.0/LICENSE
+│ │┄ Files identical despite different names

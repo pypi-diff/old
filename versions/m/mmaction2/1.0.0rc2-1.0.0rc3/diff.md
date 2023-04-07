@@ -1,0 +1,6590 @@
+# Comparing `tmp/mmaction2-1.0.0rc2.tar.gz` & `tmp/mmaction2-1.0.0rc3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/mmaction2-1.0.0rc2.tar", last modified: Tue Jan 10 14:08:29 2023, max compression
++gzip compressed data, was "dist/mmaction2-1.0.0rc3.tar", last modified: Fri Feb 10 14:19:16 2023, max compression
+```
+
+## Comparing `mmaction2-1.0.0rc2.tar` & `mmaction2-1.0.0rc3.tar`
+
+### file list
+
+```diff
+@@ -1,635 +1,672 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/
+--rw-r--r--   0 runner    (1001) docker     (123)      137 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)    22769 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    19535 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/
+--rw-r--r--   0 runner    (1001) docker     (123)      813 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/default_runtime.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/
+--rw-r--r--   0 runner    (1001) docker     (123)      378 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/audioonly_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)      275 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/bmn_400x100.py
+--rw-r--r--   0 runner    (1001) docker     (123)      334 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/bsn_pem.py
+--rw-r--r--   0 runner    (1001) docker     (123)      168 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/bsn_tem.py
+--rw-r--r--   0 runner    (1001) docker     (123)      580 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/c2d_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)      819 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/c3d_sports1m_pretrained.py
+--rw-r--r--   0 runner    (1001) docker     (123)      972 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/i3d_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)      772 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/ircsn_r152.py
+--rw-r--r--   0 runner    (1001) docker     (123)      435 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/mvit_small.py
+--rw-r--r--   0 runner    (1001) docker     (123)      915 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/r2plus1d_r34.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1225 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/slowfast_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)      707 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/slowonly_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)      751 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/swin_tiny.py
+--rw-r--r--   0 runner    (1001) docker     (123)      636 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tanet_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)      754 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tin_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1491 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tpn_slowonly_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1325 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tpn_tsm_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)      677 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/trn_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)      768 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tsm_mobilenet_v2.py
+--rw-r--r--   0 runner    (1001) docker     (123)      678 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tsm_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)      314 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tsn_r18_audio.py
+--rw-r--r--   0 runner    (1001) docker     (123)      673 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tsn_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)      581 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/x3d.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/
+--rw-r--r--   0 runner    (1001) docker     (123)      506 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/adam_20e.py
+--rw-r--r--   0 runner    (1001) docker     (123)      470 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/sgd_100e.py
+--rw-r--r--   0 runner    (1001) docker     (123)      548 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/sgd_150e_warmup.py
+--rw-r--r--   0 runner    (1001) docker     (123)      468 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/sgd_50e.py
+--rw-r--r--   0 runner    (1001) docker     (123)      553 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/sgd_tsm_100e.py
+--rw-r--r--   0 runner    (1001) docker     (123)      551 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/sgd_tsm_50e.py
+--rw-r--r--   0 runner    (1001) docker     (123)      554 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/sgd_tsm_mobilenet_v2_100e.py
+--rw-r--r--   0 runner    (1001) docker     (123)      552 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/sgd_tsm_mobilenet_v2_50e.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/_base_/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/_base_/models/
+--rw-r--r--   0 runner    (1001) docker     (123)     1743 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/_base_/models/slowonly_r50.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1623 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/_base_/models/slowonly_r50_nl.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/acrn/
+--rw-r--r--   0 runner    (1001) docker     (123)     2222 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/acrn/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     4317 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/acrn/slowfast-acrn_kinetics400-pretrained-r50_8xb8-8x8x1-cosine-10e_ava21-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2446 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/acrn/slowfast-acrn_kinetics400-pretrained-r50_8xb8-8x8x1-cosine-10e_ava22-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/
+--rw-r--r--   0 runner    (1001) docker     (123)    11140 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)      207 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50-context_8xb16-4x16x1-20e_ava21-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      170 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50-temporal-max_8xb6-8x8x1-cosine-10e_ava22-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3378 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50_8xb16-4x16x1-20e_ava21-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3273 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50_8xb6-8x8x1-cosine-10e_ava22-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1764 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50_8xb8-8x8x1-20e_ava21-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      242 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowfast_r50-k400-pre-temporal-max-focal-alpha3-gamma1_8xb6-8x8x1-cosine-10e_ava22-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2503 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r101_8xb16-8x8x1-20e_ava21-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      719 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r50-nl_8xb16-4x16x1-20e_ava21-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2576 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r50-nl_8xb16-8x8x1-20e_ava21-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2974 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r50_8xb16-4x16x1-20e_ava21-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      433 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowonly_kinetics700-pretrained-r50_8xb16-4x16x1-20e_ava21-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/
+--rw-r--r--   0 runner    (1001) docker     (123)     3678 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k400-pre-r50_8xb8-4x16x1-10e_ava-kinetics-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4006 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k400-pre-r50_8xb8-8x8x1-10e_ava-kinetics-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      239 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50-context-temporal-max-nl-head_8xb8-8x8x1-10e_ava-kinetics-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      256 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50-context-temporal-max-nl-head_8xb8-8x8x1-focal-10e_ava-kinetics-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      224 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50-context-temporal-max_8xb8-8x8x1-10e_ava-kinetics-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      198 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50-context_8xb8-8x8x1-10e_ava-kinetics-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4195 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50_8xb8-16x4x1-10e-tricks_ava-kinetics-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      412 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50_8xb8-4x16x1-10e_ava-kinetics-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      411 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50_8xb8-8x8x1-10e_ava-kinetics-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/lfb/
+--rw-r--r--   0 runner    (1001) docker     (123)     2188 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/lfb/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)      221 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/lfb/slowonly-lfb-max_kinetics400-pretrained-r50_8xb12-4x16x1-20e_ava21-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4228 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/lfb/slowonly-lfb-nl_kinetics400-pretrained-r50_8xb12-4x16x1-20e_ava21-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1990 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/lfb/slowonly-lfb_ava-pretrained-r50_infer-4x16x1_ava21-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bmn/
+--rw-r--r--   0 runner    (1001) docker     (123)     2981 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bmn/bmn_2xb8-400x100-9e_activitynet-feature.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1035 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bmn/metafile.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bsn/
+--rw-r--r--   0 runner    (1001) docker     (123)     2563 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bsn/bsn_pem_1xb16-400x100-20e_activitynet-feature.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1096 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bsn/bsn_pgm_400x100_activitynet-feature.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2703 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bsn/bsn_tem_1xb16-400x100-20e_activitynet-feature.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1509 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bsn/metafile.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c2d/
+--rw-r--r--   0 runner    (1001) docker     (123)      233 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c2d/c2d_r101-in1k-pre-nopool_8xb32-8x8x1-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3149 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c2d/c2d_r50-in1k-pre-nopool_8xb32-8x8x1-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3155 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c2d/c2d_r50-in1k-pre_8xb32-16x4x1-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3152 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c2d/c2d_r50-in1k-pre_8xb32-8x8x1-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4129 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c2d/metafile.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c3d/
+--rw-r--r--   0 runner    (1001) docker     (123)     3516 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c3d/c3d_sports1m-pretrained_8xb30-16x1x1-45e_ucf101-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1170 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c3d/metafile.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/
+--rw-r--r--   0 runner    (1001) docker     (123)      394 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/ipcsn_ig65m-pretrained-r152-bnfrozen_32x2x1-58e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      371 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/ipcsn_r152_32x2x1-180e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      586 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/ipcsn_sports1m-pretrained-r152-bnfrozen_32x2x1-58e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4020 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/ircsn_ig65m-pretrained-r152-bnfrozen_8xb12-32x2x1-58e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      268 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/ircsn_ig65m-pretrained-r152_8xb12-32x2x1-58e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      350 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/ircsn_ig65m-pretrained-r50-bnfrozen_8xb12-32x2x1-58e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      371 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/ircsn_r152_32x2x1-180e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      586 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/ircsn_sports1m-pretrained-r152-bnfrozen_32x2x1-58e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7995 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/metafile.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/i3d/
+--rw-r--r--   0 runner    (1001) docker     (123)      238 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50-heavy_8xb8-32x2x1-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3512 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50-nl-dot-product_8xb8-32x2x1-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      344 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50-nl-embedded-gaussian_8xb8-32x2x1-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      335 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50-nl-gaussian_8xb8-32x2x1-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3206 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50_8xb8-32x2x1-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2790 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50_8xb8-dense-32x2x1-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6752 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/i3d/metafile.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/
+--rw-r--r--   0 runner    (1001) docker     (123)     4480 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     4457 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/mvit-base-p244_32x3x1_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4252 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/mvit-base-p244_u32_sthv2-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4559 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/mvit-large-p244_40x3x1_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4337 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/mvit-large-p244_u40_sthv2-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4388 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/mvit-small-p244_16x4x1_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3795 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/mvit-small-p244_u16_sthv2-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/omnisource/
+--rw-r--r--   0 runner    (1001) docker     (123)     4873 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/omnisource/slowonly_r50_16xb16-8x8x1-256e_imagenet-kinetics400-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/r2plus1d/
+--rw-r--r--   0 runner    (1001) docker     (123)     2128 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/r2plus1d/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     2649 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/r2plus1d/r2plus1d_r34_8xb8-32x2x1-180e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3480 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/r2plus1d/r2plus1d_r34_8xb8-8x8x1-180e_kinetics400-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowfast/
+--rw-r--r--   0 runner    (1001) docker     (123)     5065 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowfast/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)      171 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowfast/slowfast_r101-r50_32xb8-4x16x1-256e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      155 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowfast/slowfast_r101_8xb8-8x8x1-256e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3447 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowfast/slowfast_r50_8xb8-4x16x1-256e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      242 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowfast/slowfast_r50_8xb8-8x8x1-256e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      454 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowfast/slowfast_r50_8xb8-8x8x1-steplr-256e_kinetics400-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/
+--rw-r--r--   0 runner    (1001) docker     (123)    10117 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     3557 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_16xb16-4x16x1-steplr-150e_kinetics700-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2630 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_16xb16-8x8x1-steplr-150e_kinetics700-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      745 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_8xb16-4x16x1-steplr-150e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      744 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_8xb16-8x8x1-steplr-150e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      490 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_r101_8xb16-8x8x1-196e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      797 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_r50-in1k-pre-nl-embedded-gaussian_8xb16-4x16x1-steplr-150e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      796 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_r50-in1k-pre-nl-embedded-gaussian_8xb16-8x8x1-steplr-150e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3641 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_r50_8xb16-4x16x1-256e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2586 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_r50_8xb16-8x8x1-256e_kinetics400-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/
+--rw-r--r--   0 runner    (1001) docker     (123)     5495 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     4230 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/swin-base-p244-w877_in1k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2992 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/swin-large-p244-w877_in22k-pre_16xb8-amp-32x2x1-30e_kinetics700-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4236 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/swin-large-p244-w877_in22k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4195 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/swin-small-p244-w877_in1k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4144 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/swin-tiny-p244-w877_in1k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tanet/
+--rw-r--r--   0 runner    (1001) docker     (123)     3426 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tanet/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     3751 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tanet/tanet_imagenet-pretrained-r50_8xb6-1x1x16-50e_sthv1-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3651 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tanet/tanet_imagenet-pretrained-r50_8xb8-1x1x8-50e_sthv1-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3485 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tanet/tanet_imagenet-pretrained-r50_8xb8-dense-1x1x8-100e_kinetics400-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/timesformer/
+--rw-r--r--   0 runner    (1001) docker     (123)     3247 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/timesformer/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)      134 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/timesformer/timesformer_divST_8xb8-8x32x1-15e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      132 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/timesformer/timesformer_jointST_8xb8-8x32x1-15e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4478 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/timesformer/timesformer_spaceOnly_8xb8-8x32x1-15e_kinetics400-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tin/
+--rw-r--r--   0 runner    (1001) docker     (123)     3037 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tin/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     3577 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tin/tin_imagenet-pretrained-r50_8xb6-1x1x8-40e_sthv1-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3473 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tin/tin_imagenet-pretrained-r50_8xb6-1x1x8-40e_sthv2-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3181 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tin/tin_kinetics400-pretrained-tsm-r50_1x1x8-50e_kinetics400-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tpn/
+--rw-r--r--   0 runner    (1001) docker     (123)     3117 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tpn/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     3201 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tpn/tpn-slowonly_imagenet-pretrained-r50_8xb8-8x8x1-150e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      156 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tpn/tpn-slowonly_r50_8xb8-8x8x1-150e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3105 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tpn/tpn-tsm_imagenet-pretrained-r50_8xb8-1x1x8-150e_sthv1-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/trn/
+--rw-r--r--   0 runner    (1001) docker     (123)     2299 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/trn/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     2976 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/trn/trn_imagenet-pretrained-r50_8xb16-1x1x8-50e_sthv1-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3669 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/trn/trn_imagenet-pretrained-r50_8xb16-1x1x8-50e_sthv2-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/
+--rw-r--r--   0 runner    (1001) docker     (123)    10690 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)      235 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r101_8xb16-1x1x8-50e_sthv2-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      389 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50-nl-dot-product_8xb16-1x1x8-50e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      395 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50-nl-embedded-gaussian_8xb16-1x1x8-50e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      386 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50-nl-gaussian_8xb16-1x1x8-50e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2859 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x16-50e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1801 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x16-50e_sthv2-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      643 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x8-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3755 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x8-50e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3774 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x8-50e_sthv2-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3770 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-dense-1x1x8-50e_kinetics400-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/custom_backbones/
+--rw-r--r--   0 runner    (1001) docker     (123)     1110 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-dense161_8xb32-1x1x3-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      552 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-rn101-32x4d_8xb32-1x1x3-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)      250 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-swin-transformer_8xb32-1x1x3-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10706 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)      237 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r101_8xb32-1x1x8-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1710 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x16-50e_sthv2-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3148 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x3-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1989 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x5-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1989 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3234 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-50e_sthv2-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2941 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-dense-1x1x5-100e_kinetics400-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/videomae/
+--rw-r--r--   0 runner    (1001) docker     (123)     1683 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/videomae/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     1632 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/videomae/vit-base-p16_videomae-k400-pre_16x4x1_kinetics-400.py
+--rw-r--r--   0 runner    (1001) docker     (123)      192 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/videomae/vit-large-p16_videomae-k400-pre_16x4x1_kinetics-400.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/x3d/
+--rw-r--r--   0 runner    (1001) docker     (123)     2068 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/x3d/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     1047 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/x3d/x3d_m_16x5x1_facebook-kinetics400-rgb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1047 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/x3d/x3d_s_13x6x1_facebook-kinetics400-rgb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition_audio/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition_audio/audioonly/
+--rw-r--r--   0 runner    (1001) docker     (123)     2962 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition_audio/audioonly/audioonly_r50_8xb160-64x1x1-100e_kinetics400-audio-feature.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition_audio/resnet/
+--rw-r--r--   0 runner    (1001) docker     (123)     1140 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition_audio/resnet/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     2964 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition_audio/resnet/tsn_r18_8xb320-64x1x1-100e_kinetics400-audio-feature.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3048 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition_audio/resnet/tsn_r18_8xb320-64x1x1-100e_kinetics400-audio.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/
+--rw-r--r--   0 runner    (1001) docker     (123)     2012 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2024 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2009 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2021 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2012 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2024 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3087 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3103 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7480 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/metafile.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/
+--rw-r--r--   0 runner    (1001) docker     (123)     5659 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     4220 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/slowonly_kinetics400-pretrained-r50_8xb16-u48-120e_hmdb51-split1-keypoint.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4221 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/slowonly_kinetics400-pretrained-r50_8xb16-u48-120e_ucf101-split1-keypoint.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4009 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_gym-keypoint.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4284 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_gym-limb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4010 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_ntu60-xsub-keypoint.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4285 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_ntu60-xsub-limb.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/
+--rw-r--r--   0 runner    (1001) docker     (123)    14524 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     2012 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu120-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2024 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu120-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2010 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2009 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu120-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2021 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu120-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2007 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2019 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2012 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu120-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2024 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu120-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2010 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3030 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu120-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3046 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu120-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3028 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3044 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-3d.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/
+--rw-r--r--   0 runner    (1001) docker     (123)     7518 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/metafile.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     2012 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2024 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2009 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-u100-80e_ntu60-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2021 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-u100-80e_ntu60-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2012 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2024 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3112 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3128 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-u100-80e_ntu60-xsub-keypoint-3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)      891 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/model-index.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/
+--rw-r--r--   0 runner    (1001) docker     (123)     5790 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/analyze_logs.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1956 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/bench_processing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2756 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/benchmark.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5424 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/check_videos.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1494 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/eval_metric.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2774 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/get_flops.py
+--rw-r--r--   0 runner    (1001) docker     (123)      643 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/print_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1892 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/report_accuracy.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2472 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/report_map.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/convert/
+--rw-r--r--   0 runner    (1001) docker     (123)     7790 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/convert/convert_recognizer.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/
+--rw-r--r--   0 runner    (1001) docker     (123)     3261 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/activitynet_feature_postprocessing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6164 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/convert_proposal_format.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4949 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/download.py
+--rw-r--r--   0 runner    (1001) docker     (123)      264 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/download_annotations.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      284 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/download_bsn_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      528 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/download_feature_annotations.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      637 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/download_features.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      278 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/download_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      259 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/extract_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)     3511 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/generate_rawframes_filelist.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1704 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/process_annotations.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5256 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/tsn_feature_extraction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2888 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/anno_txt2json.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/
+--rw-r--r--   0 runner    (1001) docker     (123)     1168 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/cut_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      339 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/download_annotations.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      506 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/download_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      570 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/download_videos_gnu_parallel.sh
+--rw-r--r--   0 runner    (1001) docker     (123)     2166 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/download_videos_parallel.py
+--rw-r--r--   0 runner    (1001) docker     (123)      410 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/download_videos_parallel.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      211 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/extract_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      189 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/extract_rgb_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)     1309 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/extract_rgb_frames_ffmpeg.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      425 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/fetch_ava_proposals.sh
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/
+--rw-r--r--   0 runner    (1001) docker     (123)     5146 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/X-101-64x4d-FPN.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6718 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/cut_kinetics.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1398 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/extract_rgb_frames.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4415 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/fetch_proposal.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1446 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/merge_annotations.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2809 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/prepare_annotation.py
+--rw-r--r--   0 runner    (1001) docker     (123)      693 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/softlink_ava.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10580 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/build_audio_features.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10445 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/build_file_list.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10163 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/build_rawframes.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4152 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/build_videos.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2580 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/denormalize_proposal_file.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/diving48/
+--rw-r--r--   0 runner    (1001) docker     (123)      404 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/diving48/download_annotations.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      325 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/diving48/download_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      211 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/diving48/extract_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      189 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/diving48/extract_rgb_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      201 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/diving48/extract_rgb_frames_opencv.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      402 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/diving48/generate_rawframes_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      387 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/diving48/generate_videos_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)     1998 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/extract_audio.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/
+--rw-r--r--   0 runner    (1001) docker     (123)     3464 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/download.py
+--rw-r--r--   0 runner    (1001) docker     (123)      531 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/download_annotations.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      334 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/download_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      232 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/extract_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)     1883 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/generate_file_list.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1713 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/trim_event.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1629 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/trim_subaction.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hmdb51/
+--rw-r--r--   0 runner    (1001) docker     (123)      471 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hmdb51/download_annotations.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      521 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hmdb51/download_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      202 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hmdb51/extract_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      191 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hmdb51/extract_rgb_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      203 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hmdb51/extract_rgb_frames_opencv.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      218 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hmdb51/generate_rawframes_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      209 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hmdb51/generate_videos_filelist.sh
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/
+--rw-r--r--   0 runner    (1001) docker     (123)     7014 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/download.py
+--rw-r--r--   0 runner    (1001) docker     (123)      540 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/download_annotations.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      404 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/download_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      454 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/extract_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)     4884 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/generate_file_list.py
+--rw-r--r--   0 runner    (1001) docker     (123)      410 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/generate_rawframes_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)     1229 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/generate_sub_file_list.py
+--rw-r--r--   0 runner    (1001) docker     (123)      417 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/generate_videos_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      428 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/parse_tag_list.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/jester/
+--rw-r--r--   0 runner    (1001) docker     (123)      195 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/jester/encode_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      207 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/jester/extract_flow.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      426 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/jester/generate_rawframes_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      377 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/jester/generate_videos_filelist.sh
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/
+--rw-r--r--   0 runner    (1001) docker     (123)     8191 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/download.py
+--rw-r--r--   0 runner    (1001) docker     (123)      794 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/download_annotations.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      876 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/download_backup_annotations.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      687 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/download_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      750 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/extract_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      705 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/extract_rgb_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      729 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/extract_rgb_frames_opencv.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      734 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/generate_rawframes_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      712 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/generate_videos_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      764 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/rename_classnames.sh
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mit/
+--rw-r--r--   0 runner    (1001) docker     (123)      438 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mit/extract_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      392 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mit/extract_rgb_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      418 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mit/extract_rgb_frames_opencv.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      448 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mit/generate_rawframes_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      430 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mit/generate_videos_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      519 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mit/preprocess_data.sh
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mmit/
+--rw-r--r--   0 runner    (1001) docker     (123)      209 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mmit/extract_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      185 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mmit/extract_rgb_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      198 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mmit/extract_rgb_frames_opencv.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      433 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mmit/generate_rawframes_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      415 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mmit/generate_videos_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      392 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mmit/preprocess_data.sh
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/omnisource/
+--rw-r--r--   0 runner    (1001) docker     (123)     1194 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/omnisource/trim_raw_video.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18235 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/parse_file_list.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4209 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/resize_videos.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/skeleton/
+--rw-r--r--   0 runner    (1001) docker     (123)      770 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/skeleton/babel2mma2.py
+--rw-r--r--   0 runner    (1001) docker     (123)      545 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/skeleton/download_annotations.sh
+--rw-r--r--   0 runner    (1001) docker     (123)     7465 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/skeleton/gen_ntu_rgbd_raw.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11600 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/skeleton/ntu_pose_extraction.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/sthv1/
+--rw-r--r--   0 runner    (1001) docker     (123)      192 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/sthv1/encode_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      204 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/sthv1/extract_flow.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      421 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/sthv1/generate_rawframes_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      372 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/sthv1/generate_videos_filelist.sh
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/sthv2/
+--rw-r--r--   0 runner    (1001) docker     (123)      211 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/sthv2/extract_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      189 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/sthv2/extract_rgb_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      201 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/sthv2/extract_rgb_frames_opencv.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      387 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/sthv2/generate_rawframes_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      372 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/sthv2/generate_videos_filelist.sh
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/thumos14/
+--rw-r--r--   0 runner    (1001) docker     (123)      561 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/thumos14/denormalize_proposal_file.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      781 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/thumos14/download_annotations.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      612 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/thumos14/download_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      442 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/thumos14/extract_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      396 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/thumos14/extract_rgb_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      422 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/thumos14/extract_rgb_frames_opencv.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      421 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/thumos14/fetch_tag_proposals.sh
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ucf101/
+--rw-r--r--   0 runner    (1001) docker     (123)      409 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ucf101/download_annotations.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      344 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ucf101/download_videos.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      202 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ucf101/extract_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      191 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ucf101/extract_rgb_frames.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      203 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ucf101/extract_rgb_frames_opencv.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      218 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ucf101/generate_rawframes_filelist.sh
+--rw-r--r--   0 runner    (1001) docker     (123)      209 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ucf101/generate_videos_filelist.sh
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/deployment/
+--rw-r--r--   0 runner    (1001) docker     (123)     5762 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/deployment/export_onnx_stdet.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3942 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/deployment/mmaction2torchserve.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2727 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/deployment/mmaction_handler.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1801 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/deployment/publish_model.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)      496 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/dist_test.sh
+--rwxr-xr-x   0 runner    (1001) docker     (123)      466 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/dist_train.sh
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/misc/
+--rw-r--r--   0 runner    (1001) docker     (123)     6716 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/misc/bsn_proposal_generation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7589 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/misc/clip_feature_extraction.py
+--rw-r--r--   0 runner    (1001) docker     (123)      363 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/misc/dist_clip_feature_extraction.sh
+--rw-r--r--   0 runner    (1001) docker     (123)     6107 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/misc/flow_extraction.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)      620 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/slurm_test.sh
+--rwxr-xr-x   0 runner    (1001) docker     (123)      644 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/slurm_train.sh
+--rw-r--r--   0 runner    (1001) docker     (123)     4458 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/test.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4731 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/train.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/visualizations/
+--rw-r--r--   0 runner    (1001) docker     (123)     8522 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/visualizations/browse_dataset.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7182 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/visualizations/vis_cam.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8936 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/.mim/tools/visualizations/vis_scheduler.py
+--rw-r--r--   0 runner    (1001) docker     (123)      957 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/apis/
+--rw-r--r--   0 runner    (1001) docker     (123)      278 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/apis/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7552 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/apis/inference.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/datasets/
+--rw-r--r--   0 runner    (1001) docker     (123)      690 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3409 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/activitynet_dataset.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3748 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/audio_dataset.py
+--rw-r--r--   0 runner    (1001) docker     (123)    26133 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/ava_dataset.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2538 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2196 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/pose_dataset.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5656 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/rawframe_dataset.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5211 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/repeat_aug_dataset.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/datasets/transforms/
+--rw-r--r--   0 runner    (1001) docker     (123)     2605 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/transforms/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13071 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/transforms/formatting.py
+--rw-r--r--   0 runner    (1001) docker     (123)    68140 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/transforms/loading.py
+--rw-r--r--   0 runner    (1001) docker     (123)    45975 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/transforms/pose_transforms.py
+--rw-r--r--   0 runner    (1001) docker     (123)    60552 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/transforms/processing.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14219 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/transforms/wrappers.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3533 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/datasets/video_dataset.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/engine/
+--rw-r--r--   0 runner    (1001) docker     (123)      218 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/engine/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/engine/hooks/
+--rw-r--r--   0 runner    (1001) docker     (123)      176 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/engine/hooks/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2088 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/engine/hooks/output.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5327 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/engine/hooks/visualization_hook.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/engine/model/
+--rw-r--r--   0 runner    (1001) docker     (123)      118 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/engine/model/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1491 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/engine/model/weight_init.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/engine/optimizers/
+--rw-r--r--   0 runner    (1001) docker     (123)      263 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/engine/optimizers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2651 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/engine/optimizers/swin_optim_wrapper_constructor.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4276 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/engine/optimizers/tsm_optim_wrapper_constructor.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/engine/runner/
+--rw-r--r--   0 runner    (1001) docker     (123)      149 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/engine/runner/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2964 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/engine/runner/multi_loop.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/evaluation/
+--rw-r--r--   0 runner    (1001) docker     (123)      135 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/
+--rw-r--r--   0 runner    (1001) docker     (123)      979 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    22373 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/accuracy.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/
+--rw-r--r--   0 runner    (1001) docker     (123)       48 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5689 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/metrics.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4923 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/np_box_list.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3462 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/np_box_ops.py
+--rw-r--r--   0 runner    (1001) docker     (123)    24758 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/object_detection_evaluation.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16949 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/per_image_evaluation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5313 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/standard_fields.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8544 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9404 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/functional/eval_detection.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/evaluation/metrics/
+--rw-r--r--   0 runner    (1001) docker     (123)      204 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/metrics/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5306 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/metrics/acc_metric.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6679 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/metrics/anet_metric.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3200 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/evaluation/metrics/ava_metric.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/
+--rw-r--r--   0 runner    (1001) docker     (123)      529 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/
+--rw-r--r--   0 runner    (1001) docker     (123)     1140 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8838 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/aagcn.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3040 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/c2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5072 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/c3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11894 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/mobilenet_v2.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1466 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/mobilenet_v2_tsm.py
+--rw-r--r--   0 runner    (1001) docker     (123)    33652 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/mvit.py
+--rw-r--r--   0 runner    (1001) docker     (123)    23533 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/resnet.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1532 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/resnet2plus1d.py
+--rw-r--r--   0 runner    (1001) docker     (123)    42862 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/resnet3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6582 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/resnet3d_csn.py
+--rw-r--r--   0 runner    (1001) docker     (123)    22125 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/resnet3d_slowfast.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1826 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/resnet3d_slowonly.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14308 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/resnet_audio.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8488 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/resnet_omni.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12899 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/resnet_tin.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11039 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/resnet_tsm.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8906 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/stgcn.py
+--rw-r--r--   0 runner    (1001) docker     (123)    40458 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/swin.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3998 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/tanet.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12239 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/timesformer.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13903 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/vit_mae.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19483 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/backbones/x3d.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/common/
+--rw-r--r--   0 runner    (1001) docker     (123)      481 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/common/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4020 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/common/conv2plus1d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3721 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/common/conv_audio.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3021 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/common/sub_batchnorm3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4767 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/common/tam.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9052 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/common/transformer.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/data_preprocessors/
+--rw-r--r--   0 runner    (1001) docker     (123)      140 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/data_preprocessors/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5890 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/data_preprocessors/data_preprocessor.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/heads/
+--rw-r--r--   0 runner    (1001) docker     (123)      666 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9018 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2279 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/gcn_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2662 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/i3d_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2717 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/mvit_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4968 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/omni_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2756 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/slowfast_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1721 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/timesformer_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2778 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/tpn_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8171 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/trn_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4442 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/tsm_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2591 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/tsn_audio_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3546 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/tsn_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3098 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/heads/x3d_head.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/localizers/
+--rw-r--r--   0 runner    (1001) docker     (123)      128 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/localizers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19876 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/localizers/bmn.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20591 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/localizers/bsn.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/localizers/utils/
+--rw-r--r--   0 runner    (1001) docker     (123)      376 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/localizers/utils/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11543 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/localizers/utils/bsn_utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5256 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/localizers/utils/proposal_utils.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/losses/
+--rw-r--r--   0 runner    (1001) docker     (123)      631 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/losses/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1261 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/losses/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2117 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/losses/binary_logistic_regression_loss.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7229 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/losses/bmn_loss.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7442 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/losses/cross_entropy_loss.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6732 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/losses/hvu_loss.py
+--rw-r--r--   0 runner    (1001) docker     (123)      744 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/losses/nll_loss.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2666 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/losses/ohem_hinge_loss.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7336 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/losses/ssn_loss.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/necks/
+--rw-r--r--   0 runner    (1001) docker     (123)       88 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/necks/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18247 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/necks/tpn.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/recognizers/
+--rw-r--r--   0 runner    (1001) docker     (123)      417 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/recognizers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9313 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/recognizers/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4644 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/recognizers/recognizer2d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4495 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/recognizers/recognizer3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1278 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/recognizers/recognizer_audio.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1425 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/recognizers/recognizer_gcn.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6959 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/recognizers/recognizer_omni.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/
+--rw-r--r--   0 runner    (1001) docker     (123)      338 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/bbox_heads/
+--rw-r--r--   0 runner    (1001) docker     (123)      110 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/bbox_heads/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16716 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/bbox_heads/bbox_head.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/roi_extractors/
+--rw-r--r--   0 runner    (1001) docker     (123)      136 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/roi_extractors/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5238 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/roi_extractors/single_straight3d.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9632 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/roi_head.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/shared_heads/
+--rw-r--r--   0 runner    (1001) docker     (123)      202 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/shared_heads/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4302 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/shared_heads/acrn_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14724 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/shared_heads/fbo_head.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7780 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/shared_heads/lfb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5715 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/roi_heads/shared_heads/lfb_infer_head.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/task_modules/
+--rw-r--r--   0 runner    (1001) docker     (123)      122 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/task_modules/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/task_modules/assigners/
+--rw-r--r--   0 runner    (1001) docker     (123)      133 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/task_modules/assigners/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6217 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/task_modules/assigners/max_iou_assigner_ava.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/models/utils/
+--rw-r--r--   0 runner    (1001) docker     (123)      362 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/utils/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9012 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/utils/blending_utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8484 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/utils/embed.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16041 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/utils/gcn_utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7077 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/models/utils/graph.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3966 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/registry.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/structures/
+--rw-r--r--   0 runner    (1001) docker     (123)      217 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/structures/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2694 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/structures/action_data_sample.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/structures/bbox/
+--rw-r--r--   0 runner    (1001) docker     (123)      163 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/structures/bbox/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1608 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/structures/bbox/bbox_target.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2160 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/structures/bbox/transforms.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/testing/
+--rw-r--r--   0 runner    (1001) docker     (123)      655 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/testing/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4182 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/testing/_utils.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/utils/
+--rw-r--r--   0 runner    (1001) docker     (123)      426 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/utils/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      509 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/utils/collect_env.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9663 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/utils/gradcam_utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1820 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/utils/misc.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1936 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/utils/setup_env.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1024 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/utils/typing.py
+--rw-r--r--   0 runner    (1001) docker     (123)      777 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/version.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction/visualization/
+--rw-r--r--   0 runner    (1001) docker     (123)      314 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/visualization/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12152 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/visualization/action_visualizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5711 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/mmaction/visualization/video_backend.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction2.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)    22769 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction2.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    33117 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction2.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction2.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction2.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (123)      649 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction2.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        9 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/mmaction2.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      626 2023-01-10 14:08:29.000000 mmaction2-1.0.0rc2/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     7243 2023-01-10 14:08:27.000000 mmaction2-1.0.0rc2/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/
++-rw-r--r--   0 runner    (1001) docker     (123)      137 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)    22922 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    19720 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/
++-rw-r--r--   0 runner    (1001) docker     (123)      813 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/default_runtime.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/
++-rw-r--r--   0 runner    (1001) docker     (123)      378 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/audioonly_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)      275 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/bmn_400x100.py
++-rw-r--r--   0 runner    (1001) docker     (123)      334 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/bsn_pem.py
++-rw-r--r--   0 runner    (1001) docker     (123)      168 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/bsn_tem.py
++-rw-r--r--   0 runner    (1001) docker     (123)      580 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/c2d_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)      819 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/c3d_sports1m_pretrained.py
++-rw-r--r--   0 runner    (1001) docker     (123)      972 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/i3d_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)      772 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/ircsn_r152.py
++-rw-r--r--   0 runner    (1001) docker     (123)      435 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/mvit_small.py
++-rw-r--r--   0 runner    (1001) docker     (123)      915 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/r2plus1d_r34.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1225 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/slowfast_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)      707 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/slowonly_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)      751 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/swin_tiny.py
++-rw-r--r--   0 runner    (1001) docker     (123)      636 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tanet_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)      754 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tin_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1491 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tpn_slowonly_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1325 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tpn_tsm_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)      677 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/trn_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)      768 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tsm_mobilenet_v2.py
++-rw-r--r--   0 runner    (1001) docker     (123)      678 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tsm_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)      314 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tsn_r18_audio.py
++-rw-r--r--   0 runner    (1001) docker     (123)      673 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tsn_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)      581 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/x3d.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/
++-rw-r--r--   0 runner    (1001) docker     (123)      506 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/adam_20e.py
++-rw-r--r--   0 runner    (1001) docker     (123)      470 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/sgd_100e.py
++-rw-r--r--   0 runner    (1001) docker     (123)      548 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/sgd_150e_warmup.py
++-rw-r--r--   0 runner    (1001) docker     (123)      468 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/sgd_50e.py
++-rw-r--r--   0 runner    (1001) docker     (123)      553 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/sgd_tsm_100e.py
++-rw-r--r--   0 runner    (1001) docker     (123)      551 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/sgd_tsm_50e.py
++-rw-r--r--   0 runner    (1001) docker     (123)      554 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/sgd_tsm_mobilenet_v2_100e.py
++-rw-r--r--   0 runner    (1001) docker     (123)      552 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/sgd_tsm_mobilenet_v2_50e.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/_base_/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/_base_/models/
++-rw-r--r--   0 runner    (1001) docker     (123)     1743 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/_base_/models/slowonly_r50.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1623 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/_base_/models/slowonly_r50_nl.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/acrn/
++-rw-r--r--   0 runner    (1001) docker     (123)     2222 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/acrn/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     4317 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/acrn/slowfast-acrn_kinetics400-pretrained-r50_8xb8-8x8x1-cosine-10e_ava21-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2446 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/acrn/slowfast-acrn_kinetics400-pretrained-r50_8xb8-8x8x1-cosine-10e_ava22-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/
++-rw-r--r--   0 runner    (1001) docker     (123)    11140 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      207 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50-context_8xb16-4x16x1-20e_ava21-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      170 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50-temporal-max_8xb6-8x8x1-cosine-10e_ava22-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3378 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50_8xb16-4x16x1-20e_ava21-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3273 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50_8xb6-8x8x1-cosine-10e_ava22-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1764 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50_8xb8-8x8x1-20e_ava21-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      242 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowfast_r50-k400-pre-temporal-max-focal-alpha3-gamma1_8xb6-8x8x1-cosine-10e_ava22-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2503 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r101_8xb16-8x8x1-20e_ava21-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      719 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r50-nl_8xb16-4x16x1-20e_ava21-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2576 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r50-nl_8xb16-8x8x1-20e_ava21-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2974 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r50_8xb16-4x16x1-20e_ava21-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      433 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowonly_kinetics700-pretrained-r50_8xb16-4x16x1-20e_ava21-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/
++-rw-r--r--   0 runner    (1001) docker     (123)     3678 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k400-pre-r50_8xb8-4x16x1-10e_ava-kinetics-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4006 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k400-pre-r50_8xb8-8x8x1-10e_ava-kinetics-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      239 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50-context-temporal-max-nl-head_8xb8-8x8x1-10e_ava-kinetics-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      256 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50-context-temporal-max-nl-head_8xb8-8x8x1-focal-10e_ava-kinetics-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      224 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50-context-temporal-max_8xb8-8x8x1-10e_ava-kinetics-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      198 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50-context_8xb8-8x8x1-10e_ava-kinetics-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4195 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50_8xb8-16x4x1-10e-tricks_ava-kinetics-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      412 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50_8xb8-4x16x1-10e_ava-kinetics-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      411 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50_8xb8-8x8x1-10e_ava-kinetics-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/lfb/
++-rw-r--r--   0 runner    (1001) docker     (123)     2188 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/lfb/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      221 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/lfb/slowonly-lfb-max_kinetics400-pretrained-r50_8xb12-4x16x1-20e_ava21-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4228 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/lfb/slowonly-lfb-nl_kinetics400-pretrained-r50_8xb12-4x16x1-20e_ava21-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1990 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/lfb/slowonly-lfb_ava-pretrained-r50_infer-4x16x1_ava21-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bmn/
++-rw-r--r--   0 runner    (1001) docker     (123)     2981 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bmn/bmn_2xb8-400x100-9e_activitynet-feature.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1035 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bmn/metafile.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bsn/
++-rw-r--r--   0 runner    (1001) docker     (123)     2563 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bsn/bsn_pem_1xb16-400x100-20e_activitynet-feature.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1096 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bsn/bsn_pgm_400x100_activitynet-feature.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2703 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bsn/bsn_tem_1xb16-400x100-20e_activitynet-feature.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1509 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bsn/metafile.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c2d/
++-rw-r--r--   0 runner    (1001) docker     (123)      233 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c2d/c2d_r101-in1k-pre-nopool_8xb32-8x8x1-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3149 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c2d/c2d_r50-in1k-pre-nopool_8xb32-8x8x1-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3155 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c2d/c2d_r50-in1k-pre_8xb32-16x4x1-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3152 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c2d/c2d_r50-in1k-pre_8xb32-8x8x1-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4129 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c2d/metafile.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c3d/
++-rw-r--r--   0 runner    (1001) docker     (123)     3516 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c3d/c3d_sports1m-pretrained_8xb30-16x1x1-45e_ucf101-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1170 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c3d/metafile.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/
++-rw-r--r--   0 runner    (1001) docker     (123)      394 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/ipcsn_ig65m-pretrained-r152-bnfrozen_32x2x1-58e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      371 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/ipcsn_r152_32x2x1-180e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      586 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/ipcsn_sports1m-pretrained-r152-bnfrozen_32x2x1-58e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4020 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/ircsn_ig65m-pretrained-r152-bnfrozen_8xb12-32x2x1-58e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      268 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/ircsn_ig65m-pretrained-r152_8xb12-32x2x1-58e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      350 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/ircsn_ig65m-pretrained-r50-bnfrozen_8xb12-32x2x1-58e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      371 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/ircsn_r152_32x2x1-180e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      586 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/ircsn_sports1m-pretrained-r152-bnfrozen_32x2x1-58e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7995 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/metafile.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/i3d/
++-rw-r--r--   0 runner    (1001) docker     (123)      238 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50-heavy_8xb8-32x2x1-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3512 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50-nl-dot-product_8xb8-32x2x1-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      344 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50-nl-embedded-gaussian_8xb8-32x2x1-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      335 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50-nl-gaussian_8xb8-32x2x1-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3206 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50_8xb8-32x2x1-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2790 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50_8xb8-dense-32x2x1-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6775 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/i3d/metafile.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/
++-rw-r--r--   0 runner    (1001) docker     (123)     7548 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     4727 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/mvit-base-p244_32x3x1_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4224 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/mvit-base-p244_u32_sthv2-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4415 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/mvit-large-p244_40x3x1_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4309 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/mvit-large-p244_u40_sthv2-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4626 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/mvit-small-p244_32xb16-16x4x1-200e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5088 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/mvit-small-p244_k400-maskfeat-pre_8xb32-16x4x1-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4079 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/mvit-small-p244_k400-pre_16xb16-u16-100e_sthv2-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/omnisource/
++-rw-r--r--   0 runner    (1001) docker     (123)     1019 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/omnisource/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     4872 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/omnisource/slowonly_r50_8xb16-8x8x1-256e_imagenet-kinetics400-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/r2plus1d/
++-rw-r--r--   0 runner    (1001) docker     (123)     2128 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/r2plus1d/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     2649 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/r2plus1d/r2plus1d_r34_8xb8-32x2x1-180e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3480 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/r2plus1d/r2plus1d_r34_8xb8-8x8x1-180e_kinetics400-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowfast/
++-rw-r--r--   0 runner    (1001) docker     (123)     5093 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowfast/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      171 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowfast/slowfast_r101-r50_32xb8-4x16x1-256e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      155 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowfast/slowfast_r101_8xb8-8x8x1-256e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3447 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowfast/slowfast_r50_8xb8-4x16x1-256e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      242 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowfast/slowfast_r50_8xb8-8x8x1-256e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      454 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowfast/slowfast_r50_8xb8-8x8x1-steplr-256e_kinetics400-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/
++-rw-r--r--   0 runner    (1001) docker     (123)    10117 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     3557 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_16xb16-4x16x1-steplr-150e_kinetics700-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2630 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_16xb16-8x8x1-steplr-150e_kinetics700-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      745 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_8xb16-4x16x1-steplr-150e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      744 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_8xb16-8x8x1-steplr-150e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      490 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_r101_8xb16-8x8x1-196e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      797 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_r50-in1k-pre-nl-embedded-gaussian_8xb16-4x16x1-steplr-150e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      796 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_r50-in1k-pre-nl-embedded-gaussian_8xb16-8x8x1-steplr-150e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3641 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_r50_8xb16-4x16x1-256e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2586 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_r50_8xb16-8x8x1-256e_kinetics400-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/
++-rw-r--r--   0 runner    (1001) docker     (123)     5495 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     4230 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/swin-base-p244-w877_in1k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2992 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/swin-large-p244-w877_in22k-pre_16xb8-amp-32x2x1-30e_kinetics700-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4236 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/swin-large-p244-w877_in22k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4195 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/swin-small-p244-w877_in1k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4144 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/swin-tiny-p244-w877_in1k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tanet/
++-rw-r--r--   0 runner    (1001) docker     (123)     3426 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tanet/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     3751 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tanet/tanet_imagenet-pretrained-r50_8xb6-1x1x16-50e_sthv1-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3651 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tanet/tanet_imagenet-pretrained-r50_8xb8-1x1x8-50e_sthv1-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3485 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tanet/tanet_imagenet-pretrained-r50_8xb8-dense-1x1x8-100e_kinetics400-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/timesformer/
++-rw-r--r--   0 runner    (1001) docker     (123)     3247 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/timesformer/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      134 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/timesformer/timesformer_divST_8xb8-8x32x1-15e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      132 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/timesformer/timesformer_jointST_8xb8-8x32x1-15e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4478 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/timesformer/timesformer_spaceOnly_8xb8-8x32x1-15e_kinetics400-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tin/
++-rw-r--r--   0 runner    (1001) docker     (123)     3037 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tin/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     3577 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tin/tin_imagenet-pretrained-r50_8xb6-1x1x8-40e_sthv1-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3473 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tin/tin_imagenet-pretrained-r50_8xb6-1x1x8-40e_sthv2-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3181 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tin/tin_kinetics400-pretrained-tsm-r50_1x1x8-50e_kinetics400-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tpn/
++-rw-r--r--   0 runner    (1001) docker     (123)     3117 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tpn/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     3201 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tpn/tpn-slowonly_imagenet-pretrained-r50_8xb8-8x8x1-150e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      156 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tpn/tpn-slowonly_r50_8xb8-8x8x1-150e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3105 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tpn/tpn-tsm_imagenet-pretrained-r50_8xb8-1x1x8-150e_sthv1-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/trn/
++-rw-r--r--   0 runner    (1001) docker     (123)     2299 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/trn/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     2976 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/trn/trn_imagenet-pretrained-r50_8xb16-1x1x8-50e_sthv1-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3669 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/trn/trn_imagenet-pretrained-r50_8xb16-1x1x8-50e_sthv2-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/
++-rw-r--r--   0 runner    (1001) docker     (123)    10690 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      235 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r101_8xb16-1x1x8-50e_sthv2-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      389 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50-nl-dot-product_8xb16-1x1x8-50e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      395 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50-nl-embedded-gaussian_8xb16-1x1x8-50e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      386 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50-nl-gaussian_8xb16-1x1x8-50e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2859 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x16-50e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1801 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x16-50e_sthv2-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      643 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x8-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3755 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x8-50e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3774 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x8-50e_sthv2-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3770 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-dense-1x1x8-50e_kinetics400-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/custom_backbones/
++-rw-r--r--   0 runner    (1001) docker     (123)     1110 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-dense161_8xb32-1x1x3-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      552 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-rn101-32x4d_8xb32-1x1x3-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      250 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-swin-transformer_8xb32-1x1x3-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10729 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      237 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r101_8xb32-1x1x8-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1710 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x16-50e_sthv2-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3148 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x3-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1989 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x5-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1989 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3234 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-50e_sthv2-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2941 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-dense-1x1x5-100e_kinetics400-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformer/
++-rw-r--r--   0 runner    (1001) docker     (123)     2796 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformer/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     1515 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformer/uniformer-base_imagenet1k-pre_16x4x1_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1515 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformer/uniformer-base_imagenet1k-pre_32x4x1_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1514 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformer/uniformer-small_imagenet1k-pre_16x4x1_kinetics400-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/
++-rw-r--r--   0 runner    (1001) docker     (123)    17947 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     1863 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-base-p16-res224_clip-kinetics710-kinetics-k400-pre_u8_mitv1-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1859 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-base-p16-res224_clip-kinetics710-pre_u8_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1859 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-base-p16-res224_clip-kinetics710-pre_u8_kinetics600-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1859 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-base-p16-res224_clip-kinetics710-pre_u8_kinetics700-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      968 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-base-p16-res224_clip-pre_u8_kinetics710-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1865 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u16_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1865 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u16_kinetics600-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1865 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u16_kinetics700-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1865 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u32_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1865 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u32_kinetics600-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1865 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u32_kinetics700-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1864 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u8_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1864 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u8_kinetics600-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1864 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u8_kinetics700-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      973 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-pre_u8_kinetics710-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1864 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res336_clip-kinetics710-pre_u32_kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1864 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res336_clip-kinetics710-pre_u32_kinetics600-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1864 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res336_clip-kinetics710-pre_u32_kinetics700-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)      974 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res336_clip-pre_u8_kinetics710-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1868 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p16-res224_clip-kinetics710-kinetics-k400-pre_u8_mitv1-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1875 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p16-res336_clip-kinetics710-kinetics-k400-pre_u8_mitv1-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/videomae/
++-rw-r--r--   0 runner    (1001) docker     (123)     1683 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/videomae/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     1632 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/videomae/vit-base-p16_videomae-k400-pre_16x4x1_kinetics-400.py
++-rw-r--r--   0 runner    (1001) docker     (123)      192 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/videomae/vit-large-p16_videomae-k400-pre_16x4x1_kinetics-400.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/x3d/
++-rw-r--r--   0 runner    (1001) docker     (123)     2068 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/x3d/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     1047 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/x3d/x3d_m_16x5x1_facebook-kinetics400-rgb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1047 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/x3d/x3d_s_13x6x1_facebook-kinetics400-rgb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition_audio/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition_audio/audioonly/
++-rw-r--r--   0 runner    (1001) docker     (123)     2962 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition_audio/audioonly/audioonly_r50_8xb160-64x1x1-100e_kinetics400-audio-feature.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition_audio/resnet/
++-rw-r--r--   0 runner    (1001) docker     (123)     1140 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition_audio/resnet/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     2964 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition_audio/resnet/tsn_r18_8xb320-64x1x1-100e_kinetics400-audio-feature.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3048 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition_audio/resnet/tsn_r18_8xb320-64x1x1-100e_kinetics400-audio.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/
++-rw-r--r--   0 runner    (1001) docker     (123)     2012 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2024 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2009 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2021 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2012 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2024 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3087 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3103 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7480 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/metafile.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/
++-rw-r--r--   0 runner    (1001) docker     (123)     5659 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     4220 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/slowonly_kinetics400-pretrained-r50_8xb16-u48-120e_hmdb51-split1-keypoint.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4221 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/slowonly_kinetics400-pretrained-r50_8xb16-u48-120e_ucf101-split1-keypoint.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4009 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_gym-keypoint.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4284 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_gym-limb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4010 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_ntu60-xsub-keypoint.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4285 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_ntu60-xsub-limb.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/
++-rw-r--r--   0 runner    (1001) docker     (123)    14524 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     2012 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu120-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2024 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu120-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2010 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2009 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu120-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2021 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu120-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2007 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2019 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2012 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu120-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2024 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu120-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2010 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3030 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu120-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3046 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu120-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3028 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3044 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-3d.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/
++-rw-r--r--   0 runner    (1001) docker     (123)     7518 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/metafile.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     2012 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2024 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2009 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-u100-80e_ntu60-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2021 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-u100-80e_ntu60-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2012 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2024 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3112 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3128 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-u100-80e_ntu60-xsub-keypoint-3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)      891 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction/.mim/model-index.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/
++-rw-r--r--   0 runner    (1001) docker     (123)     5790 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/analyze_logs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1956 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/bench_processing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2756 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/benchmark.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5462 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/check_videos.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1527 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/eval_metric.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2809 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/get_flops.py
++-rw-r--r--   0 runner    (1001) docker     (123)      643 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/print_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1892 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/report_accuracy.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2472 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/report_map.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/convert/
++-rw-r--r--   0 runner    (1001) docker     (123)     7790 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/convert/convert_recognizer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/
++-rw-r--r--   0 runner    (1001) docker     (123)     3261 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/activitynet_feature_postprocessing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6164 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/convert_proposal_format.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4949 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/download.py
++-rw-r--r--   0 runner    (1001) docker     (123)      264 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/download_annotations.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      284 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/download_bsn_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      528 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/download_feature_annotations.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      637 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/download_features.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      278 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/download_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      259 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/extract_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)     3511 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/generate_rawframes_filelist.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1704 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/process_annotations.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5256 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/tsn_feature_extraction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2888 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/anno_txt2json.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/
++-rw-r--r--   0 runner    (1001) docker     (123)     1168 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/cut_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      339 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/download_annotations.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      506 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/download_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      570 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/download_videos_gnu_parallel.sh
++-rw-r--r--   0 runner    (1001) docker     (123)     2166 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/download_videos_parallel.py
++-rw-r--r--   0 runner    (1001) docker     (123)      410 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/download_videos_parallel.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      211 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/extract_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      189 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/extract_rgb_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)     1309 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/extract_rgb_frames_ffmpeg.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      425 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/fetch_ava_proposals.sh
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/
++-rw-r--r--   0 runner    (1001) docker     (123)     5146 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/X-101-64x4d-FPN.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6718 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/cut_kinetics.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1398 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/extract_rgb_frames.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4415 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/fetch_proposal.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1446 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/merge_annotations.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2809 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/prepare_annotation.py
++-rw-r--r--   0 runner    (1001) docker     (123)      693 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/softlink_ava.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10580 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/build_audio_features.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10445 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/build_file_list.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10163 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/build_rawframes.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4152 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/build_videos.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2580 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/denormalize_proposal_file.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/diving48/
++-rw-r--r--   0 runner    (1001) docker     (123)      404 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/diving48/download_annotations.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      325 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/diving48/download_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      211 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/diving48/extract_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      189 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/diving48/extract_rgb_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      201 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/diving48/extract_rgb_frames_opencv.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      402 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/diving48/generate_rawframes_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      387 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/diving48/generate_videos_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)     1998 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/extract_audio.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/
++-rw-r--r--   0 runner    (1001) docker     (123)     3464 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/download.py
++-rw-r--r--   0 runner    (1001) docker     (123)      531 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/download_annotations.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      334 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/download_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      232 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/extract_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)     1883 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/generate_file_list.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1713 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/trim_event.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1629 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/trim_subaction.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hmdb51/
++-rw-r--r--   0 runner    (1001) docker     (123)      471 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hmdb51/download_annotations.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      521 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hmdb51/download_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      202 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hmdb51/extract_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      191 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hmdb51/extract_rgb_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      203 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hmdb51/extract_rgb_frames_opencv.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      218 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hmdb51/generate_rawframes_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      209 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hmdb51/generate_videos_filelist.sh
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/
++-rw-r--r--   0 runner    (1001) docker     (123)     7014 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/download.py
++-rw-r--r--   0 runner    (1001) docker     (123)      540 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/download_annotations.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      404 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/download_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      454 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/extract_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)     4884 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/generate_file_list.py
++-rw-r--r--   0 runner    (1001) docker     (123)      410 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/generate_rawframes_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)     1229 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/generate_sub_file_list.py
++-rw-r--r--   0 runner    (1001) docker     (123)      417 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/generate_videos_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      428 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/parse_tag_list.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/jester/
++-rw-r--r--   0 runner    (1001) docker     (123)      195 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/jester/encode_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      207 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/jester/extract_flow.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      426 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/jester/generate_rawframes_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      377 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/jester/generate_videos_filelist.sh
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/
++-rw-r--r--   0 runner    (1001) docker     (123)     8191 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/download.py
++-rw-r--r--   0 runner    (1001) docker     (123)      794 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/download_annotations.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      876 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/download_backup_annotations.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      687 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/download_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      750 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/extract_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      705 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/extract_rgb_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      729 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/extract_rgb_frames_opencv.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      734 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/generate_rawframes_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      712 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/generate_videos_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      764 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/rename_classnames.sh
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mit/
++-rw-r--r--   0 runner    (1001) docker     (123)      438 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mit/extract_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      392 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mit/extract_rgb_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      418 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mit/extract_rgb_frames_opencv.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      448 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mit/generate_rawframes_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      430 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mit/generate_videos_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      519 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mit/preprocess_data.sh
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mmit/
++-rw-r--r--   0 runner    (1001) docker     (123)      209 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mmit/extract_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      185 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mmit/extract_rgb_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      198 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mmit/extract_rgb_frames_opencv.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      433 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mmit/generate_rawframes_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      415 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mmit/generate_videos_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      392 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mmit/preprocess_data.sh
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/omnisource/
++-rw-r--r--   0 runner    (1001) docker     (123)     1194 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/omnisource/trim_raw_video.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18235 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/parse_file_list.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4209 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/resize_videos.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/skeleton/
++-rw-r--r--   0 runner    (1001) docker     (123)      770 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/skeleton/babel2mma2.py
++-rw-r--r--   0 runner    (1001) docker     (123)      545 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/skeleton/download_annotations.sh
++-rw-r--r--   0 runner    (1001) docker     (123)     7465 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/skeleton/gen_ntu_rgbd_raw.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11600 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/skeleton/ntu_pose_extraction.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/sthv1/
++-rw-r--r--   0 runner    (1001) docker     (123)      192 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/sthv1/encode_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      204 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/sthv1/extract_flow.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      421 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/sthv1/generate_rawframes_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      372 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/sthv1/generate_videos_filelist.sh
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/sthv2/
++-rw-r--r--   0 runner    (1001) docker     (123)      211 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/sthv2/extract_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      189 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/sthv2/extract_rgb_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      201 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/sthv2/extract_rgb_frames_opencv.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      387 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/sthv2/generate_rawframes_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      372 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/sthv2/generate_videos_filelist.sh
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/thumos14/
++-rw-r--r--   0 runner    (1001) docker     (123)      561 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/thumos14/denormalize_proposal_file.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      781 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/thumos14/download_annotations.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      612 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/thumos14/download_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      442 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/thumos14/extract_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      396 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/thumos14/extract_rgb_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      422 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/thumos14/extract_rgb_frames_opencv.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      421 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/thumos14/fetch_tag_proposals.sh
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ucf101/
++-rw-r--r--   0 runner    (1001) docker     (123)      409 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ucf101/download_annotations.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      344 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ucf101/download_videos.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      202 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ucf101/extract_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      191 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ucf101/extract_rgb_frames.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      203 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ucf101/extract_rgb_frames_opencv.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      218 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ucf101/generate_rawframes_filelist.sh
++-rw-r--r--   0 runner    (1001) docker     (123)      209 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ucf101/generate_videos_filelist.sh
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/deployment/
++-rw-r--r--   0 runner    (1001) docker     (123)     5800 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/deployment/export_onnx_stdet.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3942 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/deployment/mmaction2torchserve.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2727 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/deployment/mmaction_handler.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1801 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/deployment/publish_model.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)      496 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/dist_test.sh
++-rwxr-xr-x   0 runner    (1001) docker     (123)      466 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/dist_train.sh
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/misc/
++-rw-r--r--   0 runner    (1001) docker     (123)     6716 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/misc/bsn_proposal_generation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7589 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/misc/clip_feature_extraction.py
++-rw-r--r--   0 runner    (1001) docker     (123)      363 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/misc/dist_clip_feature_extraction.sh
++-rw-r--r--   0 runner    (1001) docker     (123)     6107 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/misc/flow_extraction.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)      620 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/slurm_test.sh
++-rwxr-xr-x   0 runner    (1001) docker     (123)      644 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/slurm_train.sh
++-rw-r--r--   0 runner    (1001) docker     (123)     4218 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/test.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4491 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/train.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/visualizations/
++-rw-r--r--   0 runner    (1001) docker     (123)     8469 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/visualizations/browse_dataset.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7072 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/visualizations/vis_cam.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8914 2023-02-10 14:19:11.000000 mmaction2-1.0.0rc3/mmaction/.mim/tools/visualizations/vis_scheduler.py
++-rw-r--r--   0 runner    (1001) docker     (123)      957 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/apis/
++-rw-r--r--   0 runner    (1001) docker     (123)      313 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/apis/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7724 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/apis/inference.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/apis/inferencers/
++-rw-r--r--   0 runner    (1001) docker     (123)      220 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/apis/inferencers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15087 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/apis/inferencers/actionrecog_inferencer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9215 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/apis/inferencers/mmaction2_inferencer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/datasets/
++-rw-r--r--   0 runner    (1001) docker     (123)      690 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3390 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/activitynet_dataset.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3748 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/audio_dataset.py
++-rw-r--r--   0 runner    (1001) docker     (123)    25913 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/ava_dataset.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2538 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2150 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/pose_dataset.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5535 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/rawframe_dataset.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6041 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/repeat_aug_dataset.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/datasets/transforms/
++-rw-r--r--   0 runner    (1001) docker     (123)     2605 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/transforms/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13071 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/transforms/formatting.py
++-rw-r--r--   0 runner    (1001) docker     (123)    70437 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/transforms/loading.py
++-rw-r--r--   0 runner    (1001) docker     (123)    45975 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/transforms/pose_transforms.py
++-rw-r--r--   0 runner    (1001) docker     (123)    60552 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/transforms/processing.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14219 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/transforms/wrappers.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3680 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/datasets/video_dataset.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/engine/
++-rw-r--r--   0 runner    (1001) docker     (123)      218 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/engine/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/engine/hooks/
++-rw-r--r--   0 runner    (1001) docker     (123)      176 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/engine/hooks/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2088 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/engine/hooks/output.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5325 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/engine/hooks/visualization_hook.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/engine/model/
++-rw-r--r--   0 runner    (1001) docker     (123)      118 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/engine/model/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1491 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/engine/model/weight_init.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/engine/optimizers/
++-rw-r--r--   0 runner    (1001) docker     (123)      409 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/engine/optimizers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4830 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/engine/optimizers/layer_decay_optim_wrapper_constructor.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2651 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/engine/optimizers/swin_optim_wrapper_constructor.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4276 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/engine/optimizers/tsm_optim_wrapper_constructor.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/engine/runner/
++-rw-r--r--   0 runner    (1001) docker     (123)      149 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/engine/runner/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2964 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/engine/runner/multi_loop.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/evaluation/
++-rw-r--r--   0 runner    (1001) docker     (123)      135 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/
++-rw-r--r--   0 runner    (1001) docker     (123)      979 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    22373 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/accuracy.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/
++-rw-r--r--   0 runner    (1001) docker     (123)       48 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5689 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/metrics.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4923 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/np_box_list.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3462 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/np_box_ops.py
++-rw-r--r--   0 runner    (1001) docker     (123)    24758 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/object_detection_evaluation.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16949 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/per_image_evaluation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5313 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/standard_fields.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8544 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9404 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/functional/eval_detection.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/evaluation/metrics/
++-rw-r--r--   0 runner    (1001) docker     (123)      204 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/metrics/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5306 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/metrics/acc_metric.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6679 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/metrics/anet_metric.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3200 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/evaluation/metrics/ava_metric.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/
++-rw-r--r--   0 runner    (1001) docker     (123)      529 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/
++-rw-r--r--   0 runner    (1001) docker     (123)     1238 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8838 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/aagcn.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3040 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/c2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5072 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/c3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11894 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/mobilenet_v2.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1466 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/mobilenet_v2_tsm.py
++-rw-r--r--   0 runner    (1001) docker     (123)    36005 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/mvit.py
++-rw-r--r--   0 runner    (1001) docker     (123)    23533 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/resnet.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1532 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/resnet2plus1d.py
++-rw-r--r--   0 runner    (1001) docker     (123)    42862 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/resnet3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6582 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/resnet3d_csn.py
++-rw-r--r--   0 runner    (1001) docker     (123)    22125 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/resnet3d_slowfast.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1826 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/resnet3d_slowonly.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14308 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/resnet_audio.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8488 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/resnet_omni.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12899 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/resnet_tin.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11039 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/resnet_tsm.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8906 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/stgcn.py
++-rw-r--r--   0 runner    (1001) docker     (123)    40458 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/swin.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3998 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/tanet.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12239 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/timesformer.py
++-rw-r--r--   0 runner    (1001) docker     (123)    22430 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/uniformer.py
++-rw-r--r--   0 runner    (1001) docker     (123)    22583 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/uniformerv2.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13903 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/vit_mae.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19483 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/backbones/x3d.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/common/
++-rw-r--r--   0 runner    (1001) docker     (123)      481 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/common/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4020 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/common/conv2plus1d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3721 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/common/conv_audio.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3021 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/common/sub_batchnorm3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4767 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/common/tam.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9052 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/common/transformer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/data_preprocessors/
++-rw-r--r--   0 runner    (1001) docker     (123)      140 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/data_preprocessors/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5890 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/data_preprocessors/data_preprocessor.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/heads/
++-rw-r--r--   0 runner    (1001) docker     (123)      666 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9018 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2279 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/gcn_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2662 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/i3d_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2982 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/mvit_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4968 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/omni_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2756 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/slowfast_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2140 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/timesformer_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2778 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/tpn_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8171 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/trn_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4442 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/tsm_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2591 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/tsn_audio_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3546 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/tsn_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3098 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/heads/x3d_head.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/localizers/
++-rw-r--r--   0 runner    (1001) docker     (123)      128 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/localizers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19876 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/localizers/bmn.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20591 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/localizers/bsn.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/localizers/utils/
++-rw-r--r--   0 runner    (1001) docker     (123)      376 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/localizers/utils/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11543 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/localizers/utils/bsn_utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5256 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/localizers/utils/proposal_utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/losses/
++-rw-r--r--   0 runner    (1001) docker     (123)      631 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/losses/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1261 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/losses/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2117 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/losses/binary_logistic_regression_loss.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7229 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/losses/bmn_loss.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7442 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/losses/cross_entropy_loss.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6732 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/losses/hvu_loss.py
++-rw-r--r--   0 runner    (1001) docker     (123)      744 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/losses/nll_loss.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2666 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/losses/ohem_hinge_loss.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7336 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/losses/ssn_loss.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/necks/
++-rw-r--r--   0 runner    (1001) docker     (123)       88 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/necks/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18247 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/necks/tpn.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/recognizers/
++-rw-r--r--   0 runner    (1001) docker     (123)      417 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/recognizers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9313 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/recognizers/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4644 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/recognizers/recognizer2d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4495 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/recognizers/recognizer3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1278 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/recognizers/recognizer_audio.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1425 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/recognizers/recognizer_gcn.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6959 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/recognizers/recognizer_omni.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/
++-rw-r--r--   0 runner    (1001) docker     (123)      338 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/bbox_heads/
++-rw-r--r--   0 runner    (1001) docker     (123)      110 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/bbox_heads/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16716 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/bbox_heads/bbox_head.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/roi_extractors/
++-rw-r--r--   0 runner    (1001) docker     (123)      136 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/roi_extractors/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5238 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/roi_extractors/single_straight3d.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9632 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/roi_head.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/shared_heads/
++-rw-r--r--   0 runner    (1001) docker     (123)      202 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/shared_heads/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4302 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/shared_heads/acrn_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14724 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/shared_heads/fbo_head.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7780 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/shared_heads/lfb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5715 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/roi_heads/shared_heads/lfb_infer_head.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/task_modules/
++-rw-r--r--   0 runner    (1001) docker     (123)      122 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/task_modules/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/task_modules/assigners/
++-rw-r--r--   0 runner    (1001) docker     (123)      133 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/task_modules/assigners/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6217 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/task_modules/assigners/max_iou_assigner_ava.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/models/utils/
++-rw-r--r--   0 runner    (1001) docker     (123)      362 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/utils/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9012 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/utils/blending_utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8484 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/utils/embed.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16041 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/utils/gcn_utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7077 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/models/utils/graph.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5062 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/registry.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/structures/
++-rw-r--r--   0 runner    (1001) docker     (123)      217 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/structures/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2694 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/structures/action_data_sample.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/structures/bbox/
++-rw-r--r--   0 runner    (1001) docker     (123)      163 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/structures/bbox/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1608 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/structures/bbox/bbox_target.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2160 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/structures/bbox/transforms.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/testing/
++-rw-r--r--   0 runner    (1001) docker     (123)      655 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/testing/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4182 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/testing/_utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/utils/
++-rw-r--r--   0 runner    (1001) docker     (123)      426 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/utils/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      509 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/utils/collect_env.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9663 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/utils/gradcam_utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1820 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/utils/misc.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1936 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/utils/setup_env.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1024 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/utils/typing.py
++-rw-r--r--   0 runner    (1001) docker     (123)      777 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/version.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction/visualization/
++-rw-r--r--   0 runner    (1001) docker     (123)      314 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/visualization/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13253 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/visualization/action_visualizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4911 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/mmaction/visualization/video_backend.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/mmaction2.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)    22922 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction2.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    36492 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction2.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction2.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction2.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)      656 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction2.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        9 2023-02-10 14:19:15.000000 mmaction2-1.0.0rc3/mmaction2.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      626 2023-02-10 14:19:16.000000 mmaction2-1.0.0rc3/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     7243 2023-02-10 14:19:10.000000 mmaction2-1.0.0rc3/setup.py
+```
+
+### Comparing `mmaction2-1.0.0rc2/PKG-INFO` & `mmaction2-1.0.0rc3/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mmaction2
+-Version: 1.0.0rc2
++Version: 1.0.0rc3
+ Summary: OpenMMLab Video Understanding Toolbox and Benchmark
+ Home-page: https://github.com/open-mmlab/mmaction2
+ Author: MMAction2 Contributors
+ Author-email: openmmlab@gmail.com
+ Maintainer: MMAction2 Contributors
+ Maintainer-email: openmmlab@gmail.com
+ License: Apache License 2.0
+@@ -76,23 +76,19 @@
+         
+         - **Support four major video understanding tasks**: MMAction2 implements various algorithms for multiple video understanding tasks, including action recognition, action localization, spatio-temporal action detection, and skeleton-based action detection.
+         
+         - **Well tested and documented**: We provide detailed documentation and API reference, as well as unit tests.
+         
+         ## What's New
+         
+-        **Release**: v1.0.0rc2 with the following new features:
++        **Release (2022.02.10)**: v1.0.0rc3 with the following new features:
+         
+-        - We Support Omni-Sourece training on ImageNet and Kinetics datasets.
+-        - We support exporting spatial-temporal detection models to ONNX.
+-        - We support **STGCN++** on NTU-RGB+D.
+-        - We support **MViT V2** on Kinetics 400 and something-V2.
+-        - We refine our skeleton-based pipelines and support the joint training of multi-stream skeleton information, including **joint, bone, joint-motion, and bone-motion**.
+-        - We support **VideoMAE** on Kinetics400.
+-        - We support **C2D** on Kinetics400, achieve 73.57% Top-1 accuracy (higher than 71.8% in the [paper](https://arxiv.org/abs/1711.07971)).
++        - Support Action Recognition model UniFormer V1(ICLR'2022), UniFormer V2(Arxiv'2022).
++        - Support training MViT V2(CVPR'2022), and MaskFeat(CVPR'2022) fine-tuning.
++        - Add a new handy interface for inference MMAction2 models ([demo](https://github.com/open-mmlab/mmaction2/blob/dev-1.x/demo/README.md#inferencer))
+         
+         ## Installation
+         
+         Please refer to [install.md](https://mmaction2.readthedocs.io/en/1.x/get_started.html) for more detailed instructions.
+         
+         ## Supported Methods
+         
+@@ -125,17 +121,17 @@
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition_audio/resnet/README.md">MultiModality: Audio</a> (ArXiv'2020)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/tanet/README.md">TANet</a> (ArXiv'2020)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/timesformer/README.md">TimeSformer</a> (ICML'2021)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/swin/README.md">VideoSwin</a> (CVPR'2022)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/videomae/README.md">VideoMAE</a> (NeurIPS'2022)</td>
+           </tr>
+           <tr>
+-            <td><a href="https://github.com/open-mmlab/mmaction2/blob/dev-1.x/configs/recognition/mvit/README.md">MViT V2</a> (CVPR'2022)</td>
+-            <td></td>
+-            <td></td>
++            <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/mvit/README.md">MViT V2</a> (CVPR'2022)</td>
++            <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/uniformer/README.md">UniFormer V1</a> (ICLR'2022)</td>
++            <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/uniformerv2/README.md">UniFormer V2</a> (Arxiv'2022)</td>
+             <td></td>
+             <td></td>
+           </tr>
+           <tr>
+             <td colspan="5" style="font-weight:bold;">Action Localization</td>
+           </tr>
+           <tr>
+@@ -215,15 +211,15 @@
+           <tr>
+             <td colspan="4" style="font-weight:bold;">Spatio-Temporal Action Detection</td>
+           </tr>
+           <tr>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/ucf101_24/README.md">UCF101-24*</a> (<a href="http://www.thumos.info/download.html">Homepage</a>) (CRCV-IR-12-01)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/jhmdb/README.md">JHMDB*</a> (<a href="http://jhmdb.is.tue.mpg.de/">Homepage</a>) (ICCV'2015)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/ava/README.md">AVA</a> (<a href="https://research.google.com/ava/index.html">Homepage</a>) (CVPR'2018)</td>
+-            <td></td>
++            <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/ava_kinetics/README.md">AVA-Kinetics</a> (<a href="https://research.google.com/ava/index.html">Homepage</a>) (Arxiv'2020)</td>
+           </tr>
+           <tr>
+             <td colspan="4" style="font-weight:bold;">Skeleton-based Action Recognition</td>
+           </tr>
+           <tr>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/skeleton/README.md">PoseC3D-FineGYM</a> (<a href="https://kennymckormick.github.io/posec3d/">Homepage</a>) (ArXiv'2021)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/skeleton/README.md">PoseC3D-NTURGB+D</a> (<a href="https://kennymckormick.github.io/posec3d/">Homepage</a>) (ArXiv'2021)</td>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: mmaction2 Version: 1.0.0rc2 Summary: OpenMMLab
++Metadata-Version: 2.1 Name: mmaction2 Version: 1.0.0rc3 Summary: OpenMMLab
+ Video Understanding Toolbox and Benchmark Home-page: https://github.com/open-
+ mmlab/mmaction2 Author: MMAction2 Contributors Author-email:
+ openmmlab@gmail.com Maintainer: MMAction2 Contributors Maintainer-email:
+ openmmlab@gmail.com License: Apache License 2.0 Description:
+ [https://github.com/open-mmlab/mmaction2/raw/1.x/resources/mmaction2_logo.png]
+                                         
+            OpenMMLab website HOT      OpenMMLab platform TRY_IT_OUT
+@@ -44,37 +44,34 @@
+ ## Major Features - **Modular design**: We decompose a video understanding
+ framework into different components. One can easily construct a customized
+ video understanding framework by combining different modules. - **Support four
+ major video understanding tasks**: MMAction2 implements various algorithms for
+ multiple video understanding tasks, including action recognition, action
+ localization, spatio-temporal action detection, and skeleton-based action
+ detection. - **Well tested and documented**: We provide detailed documentation
+-and API reference, as well as unit tests. ## What's New **Release**: v1.0.0rc2
+-with the following new features: - We Support Omni-Sourece training on ImageNet
+-and Kinetics datasets. - We support exporting spatial-temporal detection models
+-to ONNX. - We support **STGCN++** on NTU-RGB+D. - We support **MViT V2** on
+-Kinetics 400 and something-V2. - We refine our skeleton-based pipelines and
+-support the joint training of multi-stream skeleton information, including
+-**joint, bone, joint-motion, and bone-motion**. - We support **VideoMAE** on
+-Kinetics400. - We support **C2D** on Kinetics400, achieve 73.57% Top-1 accuracy
+-(higher than 71.8% in the [paper](https://arxiv.org/abs/1711.07971)). ##
+-Installation Please refer to [install.md](https://mmaction2.readthedocs.io/en/
+-1.x/get_started.html) for more detailed instructions. ## Supported Methods
++and API reference, as well as unit tests. ## What's New **Release
++(2022.02.10)**: v1.0.0rc3 with the following new features: - Support Action
++Recognition model UniFormer V1(ICLR'2022), UniFormer V2(Arxiv'2022). - Support
++training MViT V2(CVPR'2022), and MaskFeat(CVPR'2022) fine-tuning. - Add a new
++handy interface for inference MMAction2 models ([demo](https://github.com/open-
++mmlab/mmaction2/blob/dev-1.x/demo/README.md#inferencer)) ## Installation Please
++refer to [install.md](https://mmaction2.readthedocs.io/en/1.x/get_started.html)
++for more detailed instructions. ## Supported Methods
+ Action Recognition
+ C3D (CVPR'2014) TSN (ECCV'2016) I3D (CVPR'2017) C2D (CVPR'2018) I3D_Non-Local
+                                                                 (CVPR'2018)
+ R(2+1)D         TRN (ECCV'2018) TSM (ICCV'2019) TSM_Non-Local   SlowOnly
+ (CVPR'2018)                                     (ICCV'2019)     (ICCV'2019)
+ SlowFast        CSN (ICCV'2019) TIN (AAAI'2020) TPN (CVPR'2020) X3D (CVPR'2020)
+ (ICCV'2019)
+ MultiModality:  TANet           TimeSformer     VideoSwin       VideoMAE
+ Audio           (ArXiv'2020)    (ICML'2021)     (CVPR'2022)     (NeurIPS'2022)
+ (ArXiv'2020)
+-MViT_V2
+-(CVPR'2022)
++MViT_V2         UniFormer_V1    UniFormer_V2
++(CVPR'2022)     (ICLR'2022)     (Arxiv'2022)
+ Action Localization
+ SSN (ICCV'2017) BSN (ECCV'2018) BMN (ICCV'2019)
+ Spatio-Temporal Action Detection
+ ACRN            SlowOnly+Fast   SlowFast+Fast
+ (ECCV'2018)     R-CNN           R-CNN           LFB (CVPR'2019)
+                 (ICCV'2019)     (ICCV'2019)
+ Skeleton-based Action Recognition
+@@ -99,17 +96,17 @@
+ FineGYM (Homepage)
+ (CVPR'2020)
+ Action Localization
+ THUMOS14 (Homepage)  ActivityNet
+ (THUMOS Challenge    (Homepage)
+ 2014)                (CVPR'2015)
+ Spatio-Temporal Action Detection
+-UCF101-24*           JHMDB* (Homepage)  AVA (Homepage)
+-(Homepage) (CRCV-IR- (ICCV'2015)        (CVPR'2018)
+-12-01)
++UCF101-24*           JHMDB* (Homepage)  AVA (Homepage)       AVA-Kinetics
++(Homepage) (CRCV-IR- (ICCV'2015)        (CVPR'2018)          (Homepage)
++12-01)                                                       (Arxiv'2020)
+ Skeleton-based Action Recognition
+ PoseC3D-FineGYM      PoseC3D-NTURGB+D   PoseC3D-UCF101       PoseC3D-HMDB51
+ (Homepage)           (Homepage)         (Homepage)           (Homepage)
+ (ArXiv'2021)         (ArXiv'2021)       (ArXiv'2021)         (ArXiv'2021)
+ Datasets marked with * are not fully supported yet, but related dataset
+ preparation steps are provided. A summary can be found on the [**Supported
+ Datasets**](https://mmaction2.readthedocs.io/en/latest/supported_datasets.html)
+```
+
+### Comparing `mmaction2-1.0.0rc2/README.md` & `mmaction2-1.0.0rc3/README.md`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -66,23 +66,19 @@
+ 
+ - **Support four major video understanding tasks**: MMAction2 implements various algorithms for multiple video understanding tasks, including action recognition, action localization, spatio-temporal action detection, and skeleton-based action detection.
+ 
+ - **Well tested and documented**: We provide detailed documentation and API reference, as well as unit tests.
+ 
+ ## What's New
+ 
+-**Release**: v1.0.0rc2 with the following new features:
++**Release (2022.02.10)**: v1.0.0rc3 with the following new features:
+ 
+-- We Support Omni-Sourece training on ImageNet and Kinetics datasets.
+-- We support exporting spatial-temporal detection models to ONNX.
+-- We support **STGCN++** on NTU-RGB+D.
+-- We support **MViT V2** on Kinetics 400 and something-V2.
+-- We refine our skeleton-based pipelines and support the joint training of multi-stream skeleton information, including **joint, bone, joint-motion, and bone-motion**.
+-- We support **VideoMAE** on Kinetics400.
+-- We support **C2D** on Kinetics400, achieve 73.57% Top-1 accuracy (higher than 71.8% in the [paper](https://arxiv.org/abs/1711.07971)).
++- Support Action Recognition model UniFormer V1(ICLR'2022), UniFormer V2(Arxiv'2022).
++- Support training MViT V2(CVPR'2022), and MaskFeat(CVPR'2022) fine-tuning.
++- Add a new handy interface for inference MMAction2 models ([demo](https://github.com/open-mmlab/mmaction2/blob/dev-1.x/demo/README.md#inferencer))
+ 
+ ## Installation
+ 
+ Please refer to [install.md](https://mmaction2.readthedocs.io/en/1.x/get_started.html) for more detailed instructions.
+ 
+ ## Supported Methods
+ 
+@@ -115,17 +111,17 @@
+     <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition_audio/resnet/README.md">MultiModality: Audio</a> (ArXiv'2020)</td>
+     <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/tanet/README.md">TANet</a> (ArXiv'2020)</td>
+     <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/timesformer/README.md">TimeSformer</a> (ICML'2021)</td>
+     <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/swin/README.md">VideoSwin</a> (CVPR'2022)</td>
+     <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/videomae/README.md">VideoMAE</a> (NeurIPS'2022)</td>
+   </tr>
+   <tr>
+-    <td><a href="https://github.com/open-mmlab/mmaction2/blob/dev-1.x/configs/recognition/mvit/README.md">MViT V2</a> (CVPR'2022)</td>
+-    <td></td>
+-    <td></td>
++    <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/mvit/README.md">MViT V2</a> (CVPR'2022)</td>
++    <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/uniformer/README.md">UniFormer V1</a> (ICLR'2022)</td>
++    <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/uniformerv2/README.md">UniFormer V2</a> (Arxiv'2022)</td>
+     <td></td>
+     <td></td>
+   </tr>
+   <tr>
+     <td colspan="5" style="font-weight:bold;">Action Localization</td>
+   </tr>
+   <tr>
+@@ -205,15 +201,15 @@
+   <tr>
+     <td colspan="4" style="font-weight:bold;">Spatio-Temporal Action Detection</td>
+   </tr>
+   <tr>
+     <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/ucf101_24/README.md">UCF101-24*</a> (<a href="http://www.thumos.info/download.html">Homepage</a>) (CRCV-IR-12-01)</td>
+     <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/jhmdb/README.md">JHMDB*</a> (<a href="http://jhmdb.is.tue.mpg.de/">Homepage</a>) (ICCV'2015)</td>
+     <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/ava/README.md">AVA</a> (<a href="https://research.google.com/ava/index.html">Homepage</a>) (CVPR'2018)</td>
+-    <td></td>
++    <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/ava_kinetics/README.md">AVA-Kinetics</a> (<a href="https://research.google.com/ava/index.html">Homepage</a>) (Arxiv'2020)</td>
+   </tr>
+   <tr>
+     <td colspan="4" style="font-weight:bold;">Skeleton-based Action Recognition</td>
+   </tr>
+   <tr>
+     <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/skeleton/README.md">PoseC3D-FineGYM</a> (<a href="https://kennymckormick.github.io/posec3d/">Homepage</a>) (ArXiv'2021)</td>
+     <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/skeleton/README.md">PoseC3D-NTURGB+D</a> (<a href="https://kennymckormick.github.io/posec3d/">Homepage</a>) (ArXiv'2021)</td>
+```
+
+#### html2text {}
+
+```diff
+@@ -39,37 +39,34 @@
+ ## Major Features - **Modular design**: We decompose a video understanding
+ framework into different components. One can easily construct a customized
+ video understanding framework by combining different modules. - **Support four
+ major video understanding tasks**: MMAction2 implements various algorithms for
+ multiple video understanding tasks, including action recognition, action
+ localization, spatio-temporal action detection, and skeleton-based action
+ detection. - **Well tested and documented**: We provide detailed documentation
+-and API reference, as well as unit tests. ## What's New **Release**: v1.0.0rc2
+-with the following new features: - We Support Omni-Sourece training on ImageNet
+-and Kinetics datasets. - We support exporting spatial-temporal detection models
+-to ONNX. - We support **STGCN++** on NTU-RGB+D. - We support **MViT V2** on
+-Kinetics 400 and something-V2. - We refine our skeleton-based pipelines and
+-support the joint training of multi-stream skeleton information, including
+-**joint, bone, joint-motion, and bone-motion**. - We support **VideoMAE** on
+-Kinetics400. - We support **C2D** on Kinetics400, achieve 73.57% Top-1 accuracy
+-(higher than 71.8% in the [paper](https://arxiv.org/abs/1711.07971)). ##
+-Installation Please refer to [install.md](https://mmaction2.readthedocs.io/en/
+-1.x/get_started.html) for more detailed instructions. ## Supported Methods
++and API reference, as well as unit tests. ## What's New **Release
++(2022.02.10)**: v1.0.0rc3 with the following new features: - Support Action
++Recognition model UniFormer V1(ICLR'2022), UniFormer V2(Arxiv'2022). - Support
++training MViT V2(CVPR'2022), and MaskFeat(CVPR'2022) fine-tuning. - Add a new
++handy interface for inference MMAction2 models ([demo](https://github.com/open-
++mmlab/mmaction2/blob/dev-1.x/demo/README.md#inferencer)) ## Installation Please
++refer to [install.md](https://mmaction2.readthedocs.io/en/1.x/get_started.html)
++for more detailed instructions. ## Supported Methods
+ Action Recognition
+ C3D (CVPR'2014) TSN (ECCV'2016) I3D (CVPR'2017) C2D (CVPR'2018) I3D_Non-Local
+                                                                 (CVPR'2018)
+ R(2+1)D         TRN (ECCV'2018) TSM (ICCV'2019) TSM_Non-Local   SlowOnly
+ (CVPR'2018)                                     (ICCV'2019)     (ICCV'2019)
+ SlowFast        CSN (ICCV'2019) TIN (AAAI'2020) TPN (CVPR'2020) X3D (CVPR'2020)
+ (ICCV'2019)
+ MultiModality:  TANet           TimeSformer     VideoSwin       VideoMAE
+ Audio           (ArXiv'2020)    (ICML'2021)     (CVPR'2022)     (NeurIPS'2022)
+ (ArXiv'2020)
+-MViT_V2
+-(CVPR'2022)
++MViT_V2         UniFormer_V1    UniFormer_V2
++(CVPR'2022)     (ICLR'2022)     (Arxiv'2022)
+ Action Localization
+ SSN (ICCV'2017) BSN (ECCV'2018) BMN (ICCV'2019)
+ Spatio-Temporal Action Detection
+ ACRN            SlowOnly+Fast   SlowFast+Fast
+ (ECCV'2018)     R-CNN           R-CNN           LFB (CVPR'2019)
+                 (ICCV'2019)     (ICCV'2019)
+ Skeleton-based Action Recognition
+@@ -94,17 +91,17 @@
+ FineGYM (Homepage)
+ (CVPR'2020)
+ Action Localization
+ THUMOS14 (Homepage)  ActivityNet
+ (THUMOS Challenge    (Homepage)
+ 2014)                (CVPR'2015)
+ Spatio-Temporal Action Detection
+-UCF101-24*           JHMDB* (Homepage)  AVA (Homepage)
+-(Homepage) (CRCV-IR- (ICCV'2015)        (CVPR'2018)
+-12-01)
++UCF101-24*           JHMDB* (Homepage)  AVA (Homepage)       AVA-Kinetics
++(Homepage) (CRCV-IR- (ICCV'2015)        (CVPR'2018)          (Homepage)
++12-01)                                                       (Arxiv'2020)
+ Skeleton-based Action Recognition
+ PoseC3D-FineGYM      PoseC3D-NTURGB+D   PoseC3D-UCF101       PoseC3D-HMDB51
+ (Homepage)           (Homepage)         (Homepage)           (Homepage)
+ (ArXiv'2021)         (ArXiv'2021)       (ArXiv'2021)         (ArXiv'2021)
+ Datasets marked with * are not fully supported yet, but related dataset
+ preparation steps are provided. A summary can be found on the [**Supported
+ Datasets**](https://mmaction2.readthedocs.io/en/latest/supported_datasets.html)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/default_runtime.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/default_runtime.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/c2d_r50.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/c2d_r50.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/c3d_sports1m_pretrained.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/c3d_sports1m_pretrained.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/i3d_r50.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/i3d_r50.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/ircsn_r152.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/ircsn_r152.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/r2plus1d_r34.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/r2plus1d_r34.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/slowfast_r50.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/slowfast_r50.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/slowonly_r50.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/slowonly_r50.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/swin_tiny.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/swin_tiny.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tanet_r50.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tanet_r50.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tin_r50.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tin_r50.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tpn_slowonly_r50.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tpn_slowonly_r50.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tpn_tsm_r50.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tpn_tsm_r50.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/trn_r50.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/trn_r50.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tsm_mobilenet_v2.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tsm_mobilenet_v2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tsm_r50.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tsm_r50.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/tsn_r50.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/tsn_r50.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/models/x3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/models/x3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/sgd_150e_warmup.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/sgd_150e_warmup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/sgd_tsm_100e.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/sgd_tsm_100e.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/sgd_tsm_50e.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/sgd_tsm_50e.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/sgd_tsm_mobilenet_v2_100e.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/sgd_tsm_mobilenet_v2_100e.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/_base_/schedules/sgd_tsm_mobilenet_v2_50e.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/_base_/schedules/sgd_tsm_mobilenet_v2_50e.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/_base_/models/slowonly_r50.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/_base_/models/slowonly_r50.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/_base_/models/slowonly_r50_nl.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/_base_/models/slowonly_r50_nl.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/acrn/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/acrn/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/acrn/slowfast-acrn_kinetics400-pretrained-r50_8xb8-8x8x1-cosine-10e_ava21-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/acrn/slowfast-acrn_kinetics400-pretrained-r50_8xb8-8x8x1-cosine-10e_ava21-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/acrn/slowfast-acrn_kinetics400-pretrained-r50_8xb8-8x8x1-cosine-10e_ava22-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/acrn/slowfast-acrn_kinetics400-pretrained-r50_8xb8-8x8x1-cosine-10e_ava22-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50_8xb16-4x16x1-20e_ava21-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50_8xb16-4x16x1-20e_ava21-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50_8xb6-8x8x1-cosine-10e_ava22-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50_8xb6-8x8x1-cosine-10e_ava22-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50_8xb8-8x8x1-20e_ava21-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowfast_kinetics400-pretrained-r50_8xb8-8x8x1-20e_ava21-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r101_8xb16-8x8x1-20e_ava21-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r101_8xb16-8x8x1-20e_ava21-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r50-nl_8xb16-4x16x1-20e_ava21-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r50-nl_8xb16-4x16x1-20e_ava21-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r50-nl_8xb16-8x8x1-20e_ava21-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r50-nl_8xb16-8x8x1-20e_ava21-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r50_8xb16-4x16x1-20e_ava21-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava/slowonly_kinetics400-pretrained-r50_8xb16-4x16x1-20e_ava21-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k400-pre-r50_8xb8-4x16x1-10e_ava-kinetics-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k400-pre-r50_8xb8-4x16x1-10e_ava-kinetics-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k400-pre-r50_8xb8-8x8x1-10e_ava-kinetics-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k400-pre-r50_8xb8-8x8x1-10e_ava-kinetics-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50_8xb8-16x4x1-10e-tricks_ava-kinetics-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/ava_kinetics/slowonly_k700-pre-r50_8xb8-16x4x1-10e-tricks_ava-kinetics-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/lfb/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/lfb/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/lfb/slowonly-lfb-nl_kinetics400-pretrained-r50_8xb12-4x16x1-20e_ava21-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/lfb/slowonly-lfb-nl_kinetics400-pretrained-r50_8xb12-4x16x1-20e_ava21-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/detection/lfb/slowonly-lfb_ava-pretrained-r50_infer-4x16x1_ava21-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/detection/lfb/slowonly-lfb_ava-pretrained-r50_infer-4x16x1_ava21-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bmn/bmn_2xb8-400x100-9e_activitynet-feature.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bmn/bmn_2xb8-400x100-9e_activitynet-feature.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bmn/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bmn/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bsn/bsn_pem_1xb16-400x100-20e_activitynet-feature.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bsn/bsn_pem_1xb16-400x100-20e_activitynet-feature.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bsn/bsn_pgm_400x100_activitynet-feature.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bsn/bsn_pgm_400x100_activitynet-feature.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bsn/bsn_tem_1xb16-400x100-20e_activitynet-feature.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bsn/bsn_tem_1xb16-400x100-20e_activitynet-feature.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/localization/bsn/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/localization/bsn/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c2d/c2d_r50-in1k-pre-nopool_8xb32-8x8x1-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c2d/c2d_r50-in1k-pre-nopool_8xb32-8x8x1-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c2d/c2d_r50-in1k-pre_8xb32-16x4x1-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c2d/c2d_r50-in1k-pre_8xb32-16x4x1-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c2d/c2d_r50-in1k-pre_8xb32-8x8x1-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c2d/c2d_r50-in1k-pre_8xb32-8x8x1-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c2d/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c2d/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c3d/c3d_sports1m-pretrained_8xb30-16x1x1-45e_ucf101-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c3d/c3d_sports1m-pretrained_8xb30-16x1x1-45e_ucf101-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/c3d/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/c3d/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/ipcsn_sports1m-pretrained-r152-bnfrozen_32x2x1-58e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/ipcsn_sports1m-pretrained-r152-bnfrozen_32x2x1-58e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/ircsn_ig65m-pretrained-r152-bnfrozen_8xb12-32x2x1-58e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/ircsn_ig65m-pretrained-r152-bnfrozen_8xb12-32x2x1-58e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/ircsn_sports1m-pretrained-r152-bnfrozen_32x2x1-58e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/ircsn_sports1m-pretrained-r152-bnfrozen_32x2x1-58e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/csn/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/csn/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50-nl-dot-product_8xb8-32x2x1-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50-nl-dot-product_8xb8-32x2x1-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50_8xb8-32x2x1-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50_8xb8-32x2x1-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50_8xb8-dense-32x2x1-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50_8xb8-dense-32x2x1-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/i3d/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/i3d/metafile.yml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -3,14 +3,16 @@
+     README: configs/recognition/i3d/README.md
+     Paper:
+       URL: https://arxiv.org/abs/1705.07750
+       Title: 'Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset'
+ 
+ Models:
+   - Name: i3d_imagenet-pretrained-r50-nl-dot-product_8xb8-32x2x1-100e_kinetics400-rgb
++    Alias:
++      - i3d
+     Config: configs/recognition/i3d/i3d_imagenet-pretrained-r50-nl-dot-product_8xb8-32x2x1-100e_kinetics400-rgb.py
+     In Collection: I3D
+     Metadata:
+       Architecture: ResNet50
+       Batch Size: 8
+       Epochs: 100
+       FLOPs: 59.3G
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/mvit-base-p244_32x3x1_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/mvit-base-p244_u32_sthv2-rgb.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -11,71 +11,60 @@
+     data_preprocessor=dict(
+         type='ActionDataPreprocessor',
+         mean=[114.75, 114.75, 114.75],
+         std=[57.375, 57.375, 57.375],
+         blending=dict(
+             type='RandomBatchAugment',
+             augments=[
+-                dict(type='MixupBlending', alpha=0.8, num_classes=400),
+-                dict(type='CutmixBlending', alpha=1, num_classes=400)
++                dict(type='MixupBlending', alpha=0.8, num_classes=174),
++                dict(type='CutmixBlending', alpha=1, num_classes=174)
+             ]),
+         format_shape='NCTHW'),
+-)
++    cls_head=dict(num_classes=174))
+ 
+ # dataset settings
+ dataset_type = 'VideoDataset'
+-data_root = 'data/kinetics400/videos_train'
+-data_root_val = 'data/kinetics400/videos_val'
+-ann_file_train = 'data/kinetics400/kinetics400_train_list_videos.txt'
+-ann_file_val = 'data/kinetics400/kinetics400_val_list_videos.txt'
+-ann_file_test = 'data/kinetics400/kinetics400_val_list_videos.txt'
++data_root = 'data/sthv2/videos'
++data_root_val = 'data/sthv2/videos'
++ann_file_train = 'data/sthv2/sthv2_train_list_videos.txt'
++ann_file_val = 'data/sthv2/sthv2_val_list_videos.txt'
++ann_file_test = 'data/sthv2/sthv2_val_list_videos.txt'
+ 
+ file_client_args = dict(io_backend='disk')
+ train_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(type='SampleFrames', clip_len=32, frame_interval=3, num_clips=1),
++    dict(type='UniformSample', clip_len=32),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 256)),
++    dict(type='RandomResizedCrop'),
++    dict(type='Resize', scale=(224, 224), keep_ratio=False),
+     dict(
+         type='PytorchVideoWrapper',
+         op='RandAugment',
+         magnitude=7,
+         num_layers=4),
+-    dict(type='RandomResizedCrop'),
+-    dict(type='Resize', scale=(224, 224), keep_ratio=False),
+-    dict(type='Flip', flip_ratio=0.5),
+     dict(type='RandomErasing', erase_prob=0.25, mode='rand'),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ val_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(
+-        type='SampleFrames',
+-        clip_len=32,
+-        frame_interval=3,
+-        num_clips=1,
+-        test_mode=True),
++    dict(type='UniformSample', clip_len=32, test_mode=True),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 256)),
+     dict(type='CenterCrop', crop_size=224),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ test_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(
+-        type='SampleFrames',
+-        clip_len=32,
+-        frame_interval=3,
+-        num_clips=5,
+-        test_mode=True),
++    dict(type='UniformSample', clip_len=32, test_mode=True),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 224)),
+-    dict(type='CenterCrop', crop_size=224),
++    dict(type='ThreeCrop', crop_size=224),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ 
+ train_dataloader = dict(
+     batch_size=8,
+     num_workers=8,
+@@ -109,38 +98,38 @@
+         pipeline=test_pipeline,
+         test_mode=True))
+ 
+ val_evaluator = dict(type='AccMetric')
+ test_evaluator = val_evaluator
+ 
+ train_cfg = dict(
+-    type='EpochBasedTrainLoop', max_epochs=30, val_begin=1, val_interval=3)
++    type='EpochBasedTrainLoop', max_epochs=100, val_begin=1, val_interval=3)
+ val_cfg = dict(type='ValLoop')
+ test_cfg = dict(type='TestLoop')
+ 
++base_lr = 1.6e-3
+ optim_wrapper = dict(
+-    type='AmpOptimWrapper',
+     optimizer=dict(
+-        type='AdamW', lr=1.6e-3, betas=(0.9, 0.999), weight_decay=0.05))
++        type='AdamW', lr=base_lr, betas=(0.9, 0.999), weight_decay=0.05))
+ 
+ param_scheduler = [
+     dict(
+         type='LinearLR',
+         start_factor=0.1,
+         by_epoch=True,
+         begin=0,
+         end=30,
+         convert_to_iter_based=True),
+     dict(
+         type='CosineAnnealingLR',
+-        T_max=200,
+-        eta_min=0,
++        T_max=70,
++        eta_min=base_lr / 100,
+         by_epoch=True,
+-        begin=0,
+-        end=200,
++        begin=30,
++        end=100,
+         convert_to_iter_based=True)
+ ]
+ 
+ default_hooks = dict(
+     checkpoint=dict(interval=3, max_keep_ckpts=5), logger=dict(interval=100))
+ 
+ # Default setting for scaling LR automatically
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/mvit-base-p244_u32_sthv2-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/mvit-large-p244_u40_sthv2-rgb.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,42 +1,44 @@
+ _base_ = [
+     '../../_base_/models/mvit_small.py', '../../_base_/default_runtime.py'
+ ]
+ 
+ model = dict(
+     backbone=dict(
+-        arch='base',
+-        temporal_size=32,
+-        drop_path_rate=0.3,
++        arch='large',
++        temporal_size=40,
++        spatial_size=312,
++        drop_path_rate=0.75,
+     ),
+     data_preprocessor=dict(
+         type='ActionDataPreprocessor',
+         mean=[114.75, 114.75, 114.75],
+         std=[57.375, 57.375, 57.375],
+         blending=dict(
+             type='RandomBatchAugment',
+             augments=[
+-                dict(type='MixupBlending', alpha=0.8, num_classes=174),
+-                dict(type='CutmixBlending', alpha=1, num_classes=174)
++                dict(type='MixupBlending', alpha=0.8, num_classes=400),
++                dict(type='CutmixBlending', alpha=1, num_classes=400)
+             ]),
+         format_shape='NCTHW'),
+-    cls_head=dict(num_classes=174))
++    cls_head=dict(in_channels=1152, num_classes=174),
++    test_cfg=dict(max_testing_views=5))
+ 
+ # dataset settings
+ dataset_type = 'VideoDataset'
+ data_root = 'data/sthv2/videos'
+ data_root_val = 'data/sthv2/videos'
+ ann_file_train = 'data/sthv2/sthv2_train_list_videos.txt'
+ ann_file_val = 'data/sthv2/sthv2_val_list_videos.txt'
+ ann_file_test = 'data/sthv2/sthv2_val_list_videos.txt'
+ 
+ file_client_args = dict(io_backend='disk')
+ train_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(type='UniformSample', clip_len=32),
++    dict(type='UniformSample', clip_len=40),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 256)),
+     dict(type='RandomResizedCrop'),
+     dict(type='Resize', scale=(224, 224), keep_ratio=False),
+     dict(
+         type='PytorchVideoWrapper',
+         op='RandAugment',
+@@ -44,24 +46,24 @@
+         num_layers=4),
+     dict(type='RandomErasing', erase_prob=0.25, mode='rand'),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ val_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(type='UniformSample', clip_len=32, test_mode=True),
++    dict(type='UniformSample', clip_len=40, test_mode=True),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 256)),
+     dict(type='CenterCrop', crop_size=224),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ test_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(type='UniformSample', clip_len=32, test_mode=True),
++    dict(type='UniformSample', clip_len=40, test_mode=True),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 224)),
+     dict(type='ThreeCrop', crop_size=224),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ 
+@@ -104,15 +106,14 @@
+ train_cfg = dict(
+     type='EpochBasedTrainLoop', max_epochs=100, val_begin=1, val_interval=3)
+ val_cfg = dict(type='ValLoop')
+ test_cfg = dict(type='TestLoop')
+ 
+ base_lr = 1.6e-3
+ optim_wrapper = dict(
+-    type='AmpOptimWrapper',
+     optimizer=dict(
+         type='AdamW', lr=base_lr, betas=(0.9, 0.999), weight_decay=0.05))
+ 
+ param_scheduler = [
+     dict(
+         type='LinearLR',
+         start_factor=0.1,
+@@ -127,14 +128,14 @@
+         by_epoch=True,
+         begin=30,
+         end=100,
+         convert_to_iter_based=True)
+ ]
+ 
+ default_hooks = dict(
+-    checkpoint=dict(interval=3, max_keep_ckpts=5), logger=dict(interval=100))
++    checkpoint=dict(interval=3, max_keep_ckpts=5), logger=dict(interval=10))
+ 
+ # Default setting for scaling LR automatically
+ #   - `enable` means enable scaling LR automatically
+ #       or not by default.
+ #   - `base_batch_size` = (8 GPUs) x (8 samples per GPU).
+ auto_scale_lr = dict(enable=False, base_batch_size=64)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/mvit-large-p244_40x3x1_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/mvit-base-p244_32x3x1_kinetics400-rgb.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,94 +1,96 @@
+ _base_ = [
+     '../../_base_/models/mvit_small.py', '../../_base_/default_runtime.py'
+ ]
+ 
+ model = dict(
+     backbone=dict(
+-        arch='large',
+-        temporal_size=40,
+-        spatial_size=312,
+-        drop_path_rate=0.75,
++        arch='base',
++        temporal_size=32,
++        drop_path_rate=0.3,
+     ),
+     data_preprocessor=dict(
+         type='ActionDataPreprocessor',
+         mean=[114.75, 114.75, 114.75],
+         std=[57.375, 57.375, 57.375],
+         blending=dict(
+             type='RandomBatchAugment',
+             augments=[
+                 dict(type='MixupBlending', alpha=0.8, num_classes=400),
+                 dict(type='CutmixBlending', alpha=1, num_classes=400)
+             ]),
+         format_shape='NCTHW'),
+-    cls_head=dict(in_channels=1152),
+-    test_cfg=dict(max_testing_views=5))
++)
+ 
+ # dataset settings
+ dataset_type = 'VideoDataset'
+ data_root = 'data/kinetics400/videos_train'
+ data_root_val = 'data/kinetics400/videos_val'
+ ann_file_train = 'data/kinetics400/kinetics400_train_list_videos.txt'
+ ann_file_val = 'data/kinetics400/kinetics400_val_list_videos.txt'
+ ann_file_test = 'data/kinetics400/kinetics400_val_list_videos.txt'
+ 
+ file_client_args = dict(io_backend='disk')
+ train_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(type='SampleFrames', clip_len=40, frame_interval=3, num_clips=1),
++    dict(type='SampleFrames', clip_len=32, frame_interval=3, num_clips=1),
+     dict(type='DecordDecode'),
+-    dict(type='Resize', scale=(-1, 356)),
++    dict(type='Resize', scale=(-1, 256)),
+     dict(
+         type='PytorchVideoWrapper',
+         op='RandAugment',
+         magnitude=7,
+         num_layers=4),
+     dict(type='RandomResizedCrop'),
+-    dict(type='Resize', scale=(312, 312), keep_ratio=False),
++    dict(type='Resize', scale=(224, 224), keep_ratio=False),
+     dict(type='Flip', flip_ratio=0.5),
+     dict(type='RandomErasing', erase_prob=0.25, mode='rand'),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ val_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+     dict(
+         type='SampleFrames',
+-        clip_len=40,
++        clip_len=32,
+         frame_interval=3,
+         num_clips=1,
+         test_mode=True),
+     dict(type='DecordDecode'),
+-    dict(type='Resize', scale=(-1, 356)),
+-    dict(type='CenterCrop', crop_size=312),
++    dict(type='Resize', scale=(-1, 256)),
++    dict(type='CenterCrop', crop_size=224),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ test_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+     dict(
+         type='SampleFrames',
+-        clip_len=40,
++        clip_len=32,
+         frame_interval=3,
+         num_clips=5,
+         test_mode=True),
+     dict(type='DecordDecode'),
+-    dict(type='Resize', scale=(-1, 312)),
+-    dict(type='ThreeCrop', crop_size=312),
++    dict(type='Resize', scale=(-1, 224)),
++    dict(type='CenterCrop', crop_size=224),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ 
++repeat_sample = 2
+ train_dataloader = dict(
+     batch_size=8,
+     num_workers=8,
+     persistent_workers=True,
+     sampler=dict(type='DefaultSampler', shuffle=True),
++    collate_fn=dict(type='repeat_pseudo_collate'),
+     dataset=dict(
+-        type=dataset_type,
++        type='RepeatAugDataset',
++        num_repeats=repeat_sample,
++        sample_once=True,
+         ann_file=ann_file_train,
+         data_prefix=dict(video=data_root),
+         pipeline=train_pipeline))
+ val_dataloader = dict(
+     batch_size=8,
+     num_workers=8,
+     persistent_workers=True,
+@@ -111,42 +113,44 @@
+         pipeline=test_pipeline,
+         test_mode=True))
+ 
+ val_evaluator = dict(type='AccMetric')
+ test_evaluator = val_evaluator
+ 
+ train_cfg = dict(
+-    type='EpochBasedTrainLoop', max_epochs=30, val_begin=1, val_interval=3)
++    type='EpochBasedTrainLoop', max_epochs=200, val_begin=1, val_interval=1)
+ val_cfg = dict(type='ValLoop')
+ test_cfg = dict(type='TestLoop')
+ 
++base_lr = 1.6e-3
+ optim_wrapper = dict(
+-    type='AmpOptimWrapper',
+     optimizer=dict(
+-        type='AdamW', lr=1.6e-3, betas=(0.9, 0.999), weight_decay=0.05))
++        type='AdamW', lr=base_lr, betas=(0.9, 0.999), weight_decay=0.05),
++    paramwise_cfg=dict(norm_decay_mult=0.0, bias_decay_mult=0.0),
++    clip_grad=dict(max_norm=1, norm_type=2))
+ 
+ param_scheduler = [
+     dict(
+         type='LinearLR',
+-        start_factor=0.1,
++        start_factor=0.01,
+         by_epoch=True,
+         begin=0,
+         end=30,
+         convert_to_iter_based=True),
+     dict(
+         type='CosineAnnealingLR',
+         T_max=200,
+-        eta_min=0,
++        eta_min=base_lr / 100,
+         by_epoch=True,
+-        begin=0,
++        begin=30,
+         end=200,
+         convert_to_iter_based=True)
+ ]
+ 
+ default_hooks = dict(
+     checkpoint=dict(interval=3, max_keep_ckpts=5), logger=dict(interval=100))
+ 
+ # Default setting for scaling LR automatically
+ #   - `enable` means enable scaling LR automatically
+ #       or not by default.
+ #   - `base_batch_size` = (8 GPUs) x (8 samples per GPU).
+-auto_scale_lr = dict(enable=True, base_batch_size=512)
++auto_scale_lr = dict(enable=False, base_batch_size=512 // repeat_sample)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/mvit-large-p244_u40_sthv2-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/mvit-small-p244_32xb16-16x4x1-200e_kinetics400-rgb.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,83 +1,91 @@
+ _base_ = [
+     '../../_base_/models/mvit_small.py', '../../_base_/default_runtime.py'
+ ]
+ 
+ model = dict(
+-    backbone=dict(
+-        arch='large',
+-        temporal_size=40,
+-        spatial_size=312,
+-        drop_path_rate=0.75,
+-    ),
+     data_preprocessor=dict(
+         type='ActionDataPreprocessor',
+         mean=[114.75, 114.75, 114.75],
+         std=[57.375, 57.375, 57.375],
+         blending=dict(
+             type='RandomBatchAugment',
+             augments=[
+                 dict(type='MixupBlending', alpha=0.8, num_classes=400),
+                 dict(type='CutmixBlending', alpha=1, num_classes=400)
+             ]),
+-        format_shape='NCTHW'),
+-    cls_head=dict(in_channels=1152, num_classes=174),
+-    test_cfg=dict(max_testing_views=5))
++        format_shape='NCTHW'), )
+ 
+ # dataset settings
+ dataset_type = 'VideoDataset'
+-data_root = 'data/sthv2/videos'
+-data_root_val = 'data/sthv2/videos'
+-ann_file_train = 'data/sthv2/sthv2_train_list_videos.txt'
+-ann_file_val = 'data/sthv2/sthv2_val_list_videos.txt'
+-ann_file_test = 'data/sthv2/sthv2_val_list_videos.txt'
++data_root = 'data/kinetics400/videos_train'
++data_root_val = 'data/kinetics400/videos_val'
++ann_file_train = 'data/kinetics400/kinetics400_train_list_videos.txt'
++ann_file_val = 'data/kinetics400/kinetics400_val_list_videos.txt'
++ann_file_test = 'data/kinetics400/kinetics400_val_list_videos.txt'
+ 
+ file_client_args = dict(io_backend='disk')
++
+ train_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(type='UniformSample', clip_len=40),
++    dict(type='SampleFrames', clip_len=16, frame_interval=4, num_clips=1),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 256)),
+-    dict(type='RandomResizedCrop'),
+-    dict(type='Resize', scale=(224, 224), keep_ratio=False),
+     dict(
+         type='PytorchVideoWrapper',
+         op='RandAugment',
+         magnitude=7,
+         num_layers=4),
++    dict(type='RandomResizedCrop'),
++    dict(type='Resize', scale=(224, 224), keep_ratio=False),
++    dict(type='Flip', flip_ratio=0.5),
+     dict(type='RandomErasing', erase_prob=0.25, mode='rand'),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ val_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(type='UniformSample', clip_len=40, test_mode=True),
++    dict(
++        type='SampleFrames',
++        clip_len=16,
++        frame_interval=4,
++        num_clips=1,
++        test_mode=True),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 256)),
+     dict(type='CenterCrop', crop_size=224),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ test_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(type='UniformSample', clip_len=40, test_mode=True),
++    dict(
++        type='SampleFrames',
++        clip_len=16,
++        frame_interval=4,
++        num_clips=5,
++        test_mode=True),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 224)),
+-    dict(type='ThreeCrop', crop_size=224),
++    dict(type='CenterCrop', crop_size=224),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ 
++repeat_sample = 2
+ train_dataloader = dict(
+     batch_size=8,
+     num_workers=8,
+     persistent_workers=True,
+     sampler=dict(type='DefaultSampler', shuffle=True),
++    collate_fn=dict(type='repeat_pseudo_collate'),
+     dataset=dict(
+-        type=dataset_type,
++        type='RepeatAugDataset',
++        num_repeats=repeat_sample,
++        sample_once=True,
+         ann_file=ann_file_train,
+         data_prefix=dict(video=data_root),
+         pipeline=train_pipeline))
+ val_dataloader = dict(
+     batch_size=8,
+     num_workers=8,
+     persistent_workers=True,
+@@ -100,43 +108,44 @@
+         pipeline=test_pipeline,
+         test_mode=True))
+ 
+ val_evaluator = dict(type='AccMetric')
+ test_evaluator = val_evaluator
+ 
+ train_cfg = dict(
+-    type='EpochBasedTrainLoop', max_epochs=100, val_begin=1, val_interval=3)
++    type='EpochBasedTrainLoop', max_epochs=200, val_begin=1, val_interval=1)
+ val_cfg = dict(type='ValLoop')
+ test_cfg = dict(type='TestLoop')
+ 
+ base_lr = 1.6e-3
+ optim_wrapper = dict(
+-    type='AmpOptimWrapper',
+     optimizer=dict(
+-        type='AdamW', lr=base_lr, betas=(0.9, 0.999), weight_decay=0.05))
++        type='AdamW', lr=base_lr, betas=(0.9, 0.999), weight_decay=0.05),
++    paramwise_cfg=dict(norm_decay_mult=0.0, bias_decay_mult=0.0),
++    clip_grad=dict(max_norm=1, norm_type=2))
+ 
+ param_scheduler = [
+     dict(
+         type='LinearLR',
+-        start_factor=0.1,
++        start_factor=0.01,
+         by_epoch=True,
+         begin=0,
+         end=30,
+         convert_to_iter_based=True),
+     dict(
+         type='CosineAnnealingLR',
+-        T_max=70,
++        T_max=200,
+         eta_min=base_lr / 100,
+         by_epoch=True,
+         begin=30,
+-        end=100,
++        end=200,
+         convert_to_iter_based=True)
+ ]
+ 
+ default_hooks = dict(
+-    checkpoint=dict(interval=3, max_keep_ckpts=5), logger=dict(interval=10))
++    checkpoint=dict(interval=3, max_keep_ckpts=5), logger=dict(interval=100))
+ 
+ # Default setting for scaling LR automatically
+ #   - `enable` means enable scaling LR automatically
+ #       or not by default.
+ #   - `base_batch_size` = (8 GPUs) x (8 samples per GPU).
+-auto_scale_lr = dict(enable=False, base_batch_size=64)
++auto_scale_lr = dict(enable=True, base_batch_size=512 // repeat_sample)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/mvit-small-p244_16x4x1_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/mvit/mvit-small-p244_k400-pre_16xb16-u16-100e_sthv2-rgb.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,75 +1,60 @@
+ _base_ = [
+     '../../_base_/models/mvit_small.py', '../../_base_/default_runtime.py'
+ ]
+ 
+ model = dict(
+-    data_preprocessor=dict(
+-        type='ActionDataPreprocessor',
+-        mean=[114.75, 114.75, 114.75],
+-        std=[57.375, 57.375, 57.375],
+-        blending=dict(
+-            type='RandomBatchAugment',
+-            augments=[
+-                dict(type='MixupBlending', alpha=0.8, num_classes=400),
+-                dict(type='CutmixBlending', alpha=1, num_classes=400)
+-            ]),
+-        format_shape='NCTHW'), )
++    backbone=dict(
++        init_cfg=dict(
++            type='Pretrained',
++            checkpoint=  # noqa: E251
++            'https://download.openmmlab.com/mmaction/v1.0/recognition/mvit/converted/mvit-small-p244_16x4x1_kinetics400-rgb_20221021-9ebaaeed.pth',  # noqa: E501
++            prefix='backbone.')),
++    cls_head=dict(num_classes=174))
+ 
+ # dataset settings
+ dataset_type = 'VideoDataset'
+-data_root = 'data/kinetics400/videos_train'
+-data_root_val = 'data/kinetics400/videos_val'
+-ann_file_train = 'data/kinetics400/kinetics400_train_list_videos.txt'
+-ann_file_val = 'data/kinetics400/kinetics400_val_list_videos.txt'
+-ann_file_test = 'data/kinetics400/kinetics400_val_list_videos.txt'
++data_root = 'data/sthv2/videos'
++data_root_val = 'data/sthv2/videos'
++ann_file_train = 'data/sthv2/sthv2_train_list_videos.txt'
++ann_file_val = 'data/sthv2/sthv2_val_list_videos.txt'
++ann_file_test = 'data/sthv2/sthv2_val_list_videos.txt'
+ 
+ file_client_args = dict(io_backend='disk')
+ train_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(type='SampleFrames', clip_len=16, frame_interval=4, num_clips=1),
++    dict(type='UniformSample', clip_len=16),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 256)),
++    dict(type='RandomResizedCrop'),
++    dict(type='Resize', scale=(224, 224), keep_ratio=False),
+     dict(
+         type='PytorchVideoWrapper',
+         op='RandAugment',
+         magnitude=7,
+         num_layers=4),
+-    dict(type='RandomResizedCrop'),
+-    dict(type='Resize', scale=(224, 224), keep_ratio=False),
+-    dict(type='Flip', flip_ratio=0.5),
+     dict(type='RandomErasing', erase_prob=0.25, mode='rand'),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ val_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(
+-        type='SampleFrames',
+-        clip_len=16,
+-        frame_interval=4,
+-        num_clips=1,
+-        test_mode=True),
++    dict(type='UniformSample', clip_len=16, test_mode=True),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 256)),
+     dict(type='CenterCrop', crop_size=224),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ test_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(
+-        type='SampleFrames',
+-        clip_len=16,
+-        frame_interval=4,
+-        num_clips=5,
+-        test_mode=True),
++    dict(type='UniformSample', clip_len=16, test_mode=True),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 224)),
+-    dict(type='CenterCrop', crop_size=224),
++    dict(type='ThreeCrop', crop_size=224),
+     dict(type='FormatShape', input_format='NCTHW'),
+     dict(type='PackActionInputs')
+ ]
+ 
+ train_dataloader = dict(
+     batch_size=8,
+     num_workers=8,
+@@ -103,43 +88,43 @@
+         pipeline=test_pipeline,
+         test_mode=True))
+ 
+ val_evaluator = dict(type='AccMetric')
+ test_evaluator = val_evaluator
+ 
+ train_cfg = dict(
+-    type='EpochBasedTrainLoop', max_epochs=200, val_begin=1, val_interval=3)
++    type='EpochBasedTrainLoop', max_epochs=100, val_begin=1, val_interval=3)
+ val_cfg = dict(type='ValLoop')
+ test_cfg = dict(type='TestLoop')
+ 
+ base_lr = 1.6e-3
+ optim_wrapper = dict(
+-    type='AmpOptimWrapper',
+     optimizer=dict(
+-        type='AdamW', lr=base_lr, betas=(0.9, 0.999), weight_decay=0.05))
++        type='AdamW', lr=base_lr, betas=(0.9, 0.999), weight_decay=0.05),
++    paramwise_cfg=dict(norm_decay_mult=0.0, bias_decay_mult=0.0))
+ 
+ param_scheduler = [
+     dict(
+         type='LinearLR',
+         start_factor=0.1,
+         by_epoch=True,
+         begin=0,
+         end=30,
+         convert_to_iter_based=True),
+     dict(
+         type='CosineAnnealingLR',
+-        T_max=200,
++        T_max=100,
+         eta_min=base_lr / 100,
+         by_epoch=True,
+         begin=30,
+-        end=200,
++        end=100,
+         convert_to_iter_based=True)
+ ]
+ 
+ default_hooks = dict(
+     checkpoint=dict(interval=3, max_keep_ckpts=5), logger=dict(interval=100))
+ 
+ # Default setting for scaling LR automatically
+ #   - `enable` means enable scaling LR automatically
+ #       or not by default.
+ #   - `base_batch_size` = (8 GPUs) x (8 samples per GPU).
+-auto_scale_lr = dict(enable=True, base_batch_size=512)
++auto_scale_lr = dict(enable=False, base_batch_size=64)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/mvit/mvit-small-p244_u16_sthv2-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x8-50e_sthv2-rgb.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,124 +1,125 @@
+-_base_ = [
+-    '../../_base_/models/mvit_small.py', '../../_base_/default_runtime.py'
+-]
++_base_ = ['../../_base_/models/tsm_r50.py', '../../_base_/default_runtime.py']
+ 
+-model = dict(cls_head=dict(num_classes=174))
++# model settings
++model = dict(cls_head=dict(num_classes=174, dropout_ratio=0.5))
+ 
+ # dataset settings
+ dataset_type = 'VideoDataset'
+ data_root = 'data/sthv2/videos'
+-data_root_val = 'data/sthv2/videos'
+ ann_file_train = 'data/sthv2/sthv2_train_list_videos.txt'
+ ann_file_val = 'data/sthv2/sthv2_val_list_videos.txt'
+-ann_file_test = 'data/sthv2/sthv2_val_list_videos.txt'
+ 
+ file_client_args = dict(io_backend='disk')
++
+ train_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(type='UniformSample', clip_len=16),
++    dict(type='SampleFrames', clip_len=1, frame_interval=1, num_clips=8),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 256)),
+-    dict(type='RandomResizedCrop'),
+-    dict(type='Resize', scale=(224, 224), keep_ratio=False),
+     dict(
+-        type='PytorchVideoWrapper',
+-        op='RandAugment',
+-        magnitude=7,
+-        num_layers=4),
+-    dict(type='RandomErasing', erase_prob=0.25, mode='rand'),
+-    dict(type='FormatShape', input_format='NCTHW'),
++        type='MultiScaleCrop',
++        input_size=224,
++        scales=(1, 0.875, 0.75, 0.66),
++        random_crop=False,
++        max_wh_scale_gap=1,
++        num_fixed_crops=13),
++    dict(type='Resize', scale=(224, 224), keep_ratio=False),
++    dict(type='Flip', flip_ratio=0.5),
++    dict(type='FormatShape', input_format='NCHW'),
+     dict(type='PackActionInputs')
+ ]
+ val_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(type='UniformSample', clip_len=16, test_mode=True),
++    dict(
++        type='SampleFrames',
++        clip_len=1,
++        frame_interval=1,
++        num_clips=8,
++        test_mode=True),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 256)),
+     dict(type='CenterCrop', crop_size=224),
+-    dict(type='FormatShape', input_format='NCTHW'),
++    dict(type='FormatShape', input_format='NCHW'),
+     dict(type='PackActionInputs')
+ ]
+ test_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+-    dict(type='UniformSample', clip_len=16, test_mode=True),
++    dict(
++        type='SampleFrames',
++        clip_len=1,
++        frame_interval=1,
++        num_clips=8,
++        test_mode=True,
++        twice_sample=True),
+     dict(type='DecordDecode'),
+-    dict(type='Resize', scale=(-1, 224)),
+-    dict(type='ThreeCrop', crop_size=224),
+-    dict(type='FormatShape', input_format='NCTHW'),
++    dict(type='Resize', scale=(-1, 256)),
++    dict(type='TenCrop', crop_size=224),
++    dict(type='FormatShape', input_format='NCHW'),
+     dict(type='PackActionInputs')
+ ]
+ 
+ train_dataloader = dict(
+-    batch_size=8,
++    batch_size=16,
+     num_workers=8,
+     persistent_workers=True,
+     sampler=dict(type='DefaultSampler', shuffle=True),
+     dataset=dict(
+         type=dataset_type,
+         ann_file=ann_file_train,
+         data_prefix=dict(video=data_root),
+         pipeline=train_pipeline))
+ val_dataloader = dict(
+-    batch_size=8,
++    batch_size=16,
+     num_workers=8,
+     persistent_workers=True,
+     sampler=dict(type='DefaultSampler', shuffle=False),
+     dataset=dict(
+         type=dataset_type,
+         ann_file=ann_file_val,
+-        data_prefix=dict(video=data_root_val),
++        data_prefix=dict(video=data_root),
+         pipeline=val_pipeline,
+         test_mode=True))
+ test_dataloader = dict(
+     batch_size=1,
+     num_workers=8,
+     persistent_workers=True,
+     sampler=dict(type='DefaultSampler', shuffle=False),
+     dataset=dict(
+         type=dataset_type,
+-        ann_file=ann_file_test,
+-        data_prefix=dict(video=data_root_val),
++        ann_file=ann_file_val,
++        data_prefix=dict(video=data_root),
+         pipeline=test_pipeline,
+         test_mode=True))
+ 
+ val_evaluator = dict(type='AccMetric')
+ test_evaluator = val_evaluator
+ 
++default_hooks = dict(checkpoint=dict(interval=3, max_keep_ckpts=3))
++
+ train_cfg = dict(
+-    type='EpochBasedTrainLoop', max_epochs=100, val_begin=1, val_interval=3)
++    type='EpochBasedTrainLoop', max_epochs=50, val_begin=1, val_interval=1)
+ val_cfg = dict(type='ValLoop')
+ test_cfg = dict(type='TestLoop')
+ 
+-base_lr = 1.6e-3
+-optim_wrapper = dict(
+-    type='AmpOptimWrapper',
+-    optimizer=dict(
+-        type='AdamW', lr=base_lr, betas=(0.9, 0.999), weight_decay=0.05),
+-    paramwise_cfg=dict(norm_decay_mult=0.0, bias_decay_mult=0.0))
+-
+ param_scheduler = [
++    dict(type='LinearLR', start_factor=0.1, by_epoch=True, begin=0, end=5),
+     dict(
+-        type='LinearLR',
+-        start_factor=0.1,
+-        by_epoch=True,
++        type='MultiStepLR',
+         begin=0,
+-        end=30,
+-        convert_to_iter_based=True),
+-    dict(
+-        type='CosineAnnealingLR',
+-        T_max=100,
+-        eta_min=base_lr / 100,
++        end=50,
+         by_epoch=True,
+-        begin=30,
+-        end=100,
+-        convert_to_iter_based=True)
++        milestones=[25, 45],
++        gamma=0.1)
+ ]
+ 
+-default_hooks = dict(
+-    checkpoint=dict(interval=3, max_keep_ckpts=5), logger=dict(interval=100))
++optim_wrapper = dict(
++    constructor='TSMOptimWrapperConstructor',
++    paramwise_cfg=dict(fc_lr5=True),
++    optimizer=dict(type='SGD', lr=0.02, momentum=0.9, weight_decay=0.0005),
++    clip_grad=dict(max_norm=20, norm_type=2))
+ 
+ # Default setting for scaling LR automatically
+ #   - `enable` means enable scaling LR automatically
+ #       or not by default.
+-#   - `base_batch_size` = (8 GPUs) x (8 samples per GPU).
+-auto_scale_lr = dict(enable=False, base_batch_size=64)
++#   - `base_batch_size` = (8 GPUs) x (16 samples per GPU).
++auto_scale_lr = dict(enable=False, base_batch_size=128)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/omnisource/slowonly_r50_16xb16-8x8x1-256e_imagenet-kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/omnisource/slowonly_r50_8xb16-8x8x1-256e_imagenet-kinetics400-rgb.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -155,15 +155,15 @@
+         eta_min=0,
+         by_epoch=True,
+         begin=34,
+         end=256,
+         convert_to_iter_based=True)
+ ]
+ """
+-The learning rate is for total_batch_size = 16 x 16 (num_gpus x batch_size)
++The learning rate is for total_batch_size = 8 x 16 (num_gpus x batch_size)
+ If you want to use other batch size or number of GPU settings, please update
+ the learning rate with the linear scaling rule.
+ """
+ optim_wrapper = dict(
+     optimizer=dict(type='SGD', lr=0.1, momentum=0.9, weight_decay=0.0001),
+     clip_grad=dict(max_norm=40, norm_type=2))
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/r2plus1d/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/r2plus1d/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/r2plus1d/r2plus1d_r34_8xb8-32x2x1-180e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/r2plus1d/r2plus1d_r34_8xb8-32x2x1-180e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/r2plus1d/r2plus1d_r34_8xb8-8x8x1-180e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/r2plus1d/r2plus1d_r34_8xb8-8x8x1-180e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowfast/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowfast/metafile.yml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -26,14 +26,16 @@
+         Metrics:
+           Top 1 Accuracy: 75.55
+           Top 5 Accuracy: 92.35
+     Training Log: https://download.openmmlab.com/mmaction/v1.0/recognition/slowfast/slowfast_r50_8xb8-4x16x1-256e_kinetics400-rgb/slowfast_r50_8xb8-4x16x1-256e_kinetics400-rgb.log
+     Weights: https://download.openmmlab.com/mmaction/v1.0/recognition/slowfast/slowfast_r50_8xb8-4x16x1-256e_kinetics400-rgb/slowfast_r50_8xb8-4x16x1-256e_kinetics400-rgb_20220901-701b0f6f.pth
+ 
+   - Name: slowfast_r50_8xb8-8x8x1-256e_kinetics400-rgb
++    Alias:
++      - slowfast
+     Config: configs/recognition/slowfast/slowfast_r50_8xb8-8x8x1-256e_kinetics400-rgb.py
+     In Collection: SlowFast
+     Metadata:
+       Architecture: ResNet50
+       Batch Size: 8
+       Epochs: 256
+       FLOPs: 66.1G
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowfast/slowfast_r50_8xb8-4x16x1-256e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowfast/slowfast_r50_8xb8-4x16x1-256e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_16xb16-4x16x1-steplr-150e_kinetics700-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_16xb16-4x16x1-steplr-150e_kinetics700-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_16xb16-8x8x1-steplr-150e_kinetics700-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_16xb16-8x8x1-steplr-150e_kinetics700-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_8xb16-4x16x1-steplr-150e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_8xb16-4x16x1-steplr-150e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_8xb16-8x8x1-steplr-150e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_imagenet-pretrained-r50_8xb16-8x8x1-steplr-150e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_r50-in1k-pre-nl-embedded-gaussian_8xb16-4x16x1-steplr-150e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_r50-in1k-pre-nl-embedded-gaussian_8xb16-4x16x1-steplr-150e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_r50-in1k-pre-nl-embedded-gaussian_8xb16-8x8x1-steplr-150e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_r50-in1k-pre-nl-embedded-gaussian_8xb16-8x8x1-steplr-150e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_r50_8xb16-4x16x1-256e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_r50_8xb16-4x16x1-256e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/slowonly/slowonly_r50_8xb16-8x8x1-256e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/slowonly/slowonly_r50_8xb16-8x8x1-256e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/swin-base-p244-w877_in1k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/swin-base-p244-w877_in1k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/swin-large-p244-w877_in22k-pre_16xb8-amp-32x2x1-30e_kinetics700-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/swin-large-p244-w877_in22k-pre_16xb8-amp-32x2x1-30e_kinetics700-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/swin-large-p244-w877_in22k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/swin-large-p244-w877_in22k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/swin-small-p244-w877_in1k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/swin-small-p244-w877_in1k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/swin/swin-tiny-p244-w877_in1k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/swin/swin-tiny-p244-w877_in1k-pre_8xb8-amp-32x2x1-30e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tanet/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tanet/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tanet/tanet_imagenet-pretrained-r50_8xb6-1x1x16-50e_sthv1-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tanet/tanet_imagenet-pretrained-r50_8xb6-1x1x16-50e_sthv1-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tanet/tanet_imagenet-pretrained-r50_8xb8-1x1x8-50e_sthv1-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tanet/tanet_imagenet-pretrained-r50_8xb8-1x1x8-50e_sthv1-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tanet/tanet_imagenet-pretrained-r50_8xb8-dense-1x1x8-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tanet/tanet_imagenet-pretrained-r50_8xb8-dense-1x1x8-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/timesformer/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/timesformer/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/timesformer/timesformer_spaceOnly_8xb8-8x32x1-15e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/timesformer/timesformer_spaceOnly_8xb8-8x32x1-15e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tin/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tin/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tin/tin_imagenet-pretrained-r50_8xb6-1x1x8-40e_sthv1-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tin/tin_imagenet-pretrained-r50_8xb6-1x1x8-40e_sthv1-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tin/tin_imagenet-pretrained-r50_8xb6-1x1x8-40e_sthv2-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tin/tin_imagenet-pretrained-r50_8xb6-1x1x8-40e_sthv2-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tin/tin_kinetics400-pretrained-tsm-r50_1x1x8-50e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tin/tin_kinetics400-pretrained-tsm-r50_1x1x8-50e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tpn/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tpn/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tpn/tpn-slowonly_imagenet-pretrained-r50_8xb8-8x8x1-150e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tpn/tpn-slowonly_imagenet-pretrained-r50_8xb8-8x8x1-150e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tpn/tpn-tsm_imagenet-pretrained-r50_8xb8-1x1x8-150e_sthv1-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tpn/tpn-tsm_imagenet-pretrained-r50_8xb8-1x1x8-150e_sthv1-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/trn/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/trn/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/trn/trn_imagenet-pretrained-r50_8xb16-1x1x8-50e_sthv1-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/trn/trn_imagenet-pretrained-r50_8xb16-1x1x8-50e_sthv1-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/trn/trn_imagenet-pretrained-r50_8xb16-1x1x8-50e_sthv2-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/trn/trn_imagenet-pretrained-r50_8xb16-1x1x8-50e_sthv2-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x16-50e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x16-50e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x16-50e_sthv2-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x16-50e_sthv2-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x8-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x8-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x8-50e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x8-50e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-1x1x8-50e_sthv2-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-50e_sthv2-rgb.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,8 +1,11 @@
+-_base_ = ['../../_base_/models/tsm_r50.py', '../../_base_/default_runtime.py']
++_base_ = [
++    '../../_base_/models/tsn_r50.py', '../../_base_/schedules/sgd_50e.py',
++    '../../_base_/default_runtime.py'
++]
+ 
+ # model settings
+ model = dict(cls_head=dict(num_classes=174, dropout_ratio=0.5))
+ 
+ # dataset settings
+ dataset_type = 'VideoDataset'
+ data_root = 'data/sthv2/videos'
+@@ -17,16 +20,15 @@
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 256)),
+     dict(
+         type='MultiScaleCrop',
+         input_size=224,
+         scales=(1, 0.875, 0.75, 0.66),
+         random_crop=False,
+-        max_wh_scale_gap=1,
+-        num_fixed_crops=13),
++        max_wh_scale_gap=1),
+     dict(type='Resize', scale=(224, 224), keep_ratio=False),
+     dict(type='Flip', flip_ratio=0.5),
+     dict(type='FormatShape', input_format='NCHW'),
+     dict(type='PackActionInputs')
+ ]
+ val_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+@@ -44,36 +46,35 @@
+ ]
+ test_pipeline = [
+     dict(type='DecordInit', **file_client_args),
+     dict(
+         type='SampleFrames',
+         clip_len=1,
+         frame_interval=1,
+-        num_clips=8,
+-        test_mode=True,
+-        twice_sample=True),
++        num_clips=25,
++        test_mode=True),
+     dict(type='DecordDecode'),
+     dict(type='Resize', scale=(-1, 256)),
+     dict(type='TenCrop', crop_size=224),
+     dict(type='FormatShape', input_format='NCHW'),
+     dict(type='PackActionInputs')
+ ]
+ 
+ train_dataloader = dict(
+-    batch_size=16,
++    batch_size=32,
+     num_workers=8,
+     persistent_workers=True,
+     sampler=dict(type='DefaultSampler', shuffle=True),
+     dataset=dict(
+         type=dataset_type,
+         ann_file=ann_file_train,
+         data_prefix=dict(video=data_root),
+         pipeline=train_pipeline))
+ val_dataloader = dict(
+-    batch_size=16,
++    batch_size=32,
+     num_workers=8,
+     persistent_workers=True,
+     sampler=dict(type='DefaultSampler', shuffle=False),
+     dataset=dict(
+         type=dataset_type,
+         ann_file=ann_file_val,
+         data_prefix=dict(video=data_root),
+@@ -93,33 +94,14 @@
+ 
+ val_evaluator = dict(type='AccMetric')
+ test_evaluator = val_evaluator
+ 
+ default_hooks = dict(checkpoint=dict(interval=3, max_keep_ckpts=3))
+ 
+ train_cfg = dict(
+-    type='EpochBasedTrainLoop', max_epochs=50, val_begin=1, val_interval=1)
+-val_cfg = dict(type='ValLoop')
+-test_cfg = dict(type='TestLoop')
+-
+-param_scheduler = [
+-    dict(type='LinearLR', start_factor=0.1, by_epoch=True, begin=0, end=5),
+-    dict(
+-        type='MultiStepLR',
+-        begin=0,
+-        end=50,
+-        by_epoch=True,
+-        milestones=[25, 45],
+-        gamma=0.1)
+-]
+-
+-optim_wrapper = dict(
+-    constructor='TSMOptimWrapperConstructor',
+-    paramwise_cfg=dict(fc_lr5=True),
+-    optimizer=dict(type='SGD', lr=0.02, momentum=0.9, weight_decay=0.0005),
+-    clip_grad=dict(max_norm=20, norm_type=2))
++    type='EpochBasedTrainLoop', max_epochs=50, val_begin=1, val_interval=5)
+ 
+ # Default setting for scaling LR automatically
+ #   - `enable` means enable scaling LR automatically
+ #       or not by default.
+-#   - `base_batch_size` = (8 GPUs) x (16 samples per GPU).
+-auto_scale_lr = dict(enable=False, base_batch_size=128)
++#   - `base_batch_size` = (8 GPUs) x (32 samples per GPU).
++auto_scale_lr = dict(enable=False, base_batch_size=256)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-dense-1x1x8-50e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsm/tsm_imagenet-pretrained-r50_8xb16-dense-1x1x8-50e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-dense161_8xb32-1x1x3-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-dense161_8xb32-1x1x3-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-rn101-32x4d_8xb32-1x1x3-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-rn101-32x4d_8xb32-1x1x3-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/metafile.yml`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -49,14 +49,16 @@
+       Metrics:
+         Top 1 Accuracy: 73.80
+         Top 5 Accuracy: 91.21
+     Training Log: https://download.openmmlab.com/mmaction/v1.0/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x5-100e_kinetics400-rgb/tsn_imagenet-pretrained-r50_8xb32-1x1x5-100e_kinetics400-rgb.log
+     Weights: https://download.openmmlab.com/mmaction/v1.0/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x5-100e_kinetics400-rgb/tsn_imagenet-pretrained-r50_8xb32-1x1x5-100e_kinetics400-rgb_20220906-65d68713.pth
+ 
+   - Name: tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb
++    Alias:
++      - TSN
+     Config: configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb.py
+     In Collection: TSN
+     Metadata:
+       Architecture: ResNet50
+       Batch Size: 32
+       Epochs: 100
+       FLOPs: 102.7G
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x16-50e_sthv2-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x16-50e_sthv2-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x3-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x3-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x5-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x5-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-50e_sthv2-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-u100-80e_ntu60-xsub-keypoint-3d.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,107 +1,106 @@
+-_base_ = [
+-    '../../_base_/models/tsn_r50.py', '../../_base_/schedules/sgd_50e.py',
+-    '../../_base_/default_runtime.py'
+-]
+-
+-# model settings
+-model = dict(cls_head=dict(num_classes=174, dropout_ratio=0.5))
+-
+-# dataset settings
+-dataset_type = 'VideoDataset'
+-data_root = 'data/sthv2/videos'
+-ann_file_train = 'data/sthv2/sthv2_train_list_videos.txt'
+-ann_file_val = 'data/sthv2/sthv2_val_list_videos.txt'
++_base_ = '../../_base_/default_runtime.py'
+ 
+-file_client_args = dict(io_backend='disk')
++model = dict(
++    type='RecognizerGCN',
++    backbone=dict(
++        type='STGCN',
++        gcn_adaptive='init',
++        gcn_with_res=True,
++        tcn_type='mstcn',
++        graph_cfg=dict(layout='nturgb+d', mode='spatial')),
++    cls_head=dict(type='GCNHead', num_classes=60, in_channels=256))
+ 
++dataset_type = 'PoseDataset'
++ann_file = 'data/skeleton/ntu60_3d.pkl'
+ train_pipeline = [
+-    dict(type='DecordInit', **file_client_args),
+-    dict(type='SampleFrames', clip_len=1, frame_interval=1, num_clips=8),
+-    dict(type='DecordDecode'),
+-    dict(type='Resize', scale=(-1, 256)),
+-    dict(
+-        type='MultiScaleCrop',
+-        input_size=224,
+-        scales=(1, 0.875, 0.75, 0.66),
+-        random_crop=False,
+-        max_wh_scale_gap=1),
+-    dict(type='Resize', scale=(224, 224), keep_ratio=False),
+-    dict(type='Flip', flip_ratio=0.5),
+-    dict(type='FormatShape', input_format='NCHW'),
++    dict(type='PreNormalize3D'),
++    dict(type='GenSkeFeat', dataset='nturgb+d', feats=['j']),
++    dict(type='UniformSampleFrames', clip_len=100),
++    dict(type='PoseDecode'),
++    dict(type='FormatGCNInput', num_person=2),
+     dict(type='PackActionInputs')
+ ]
+ val_pipeline = [
+-    dict(type='DecordInit', **file_client_args),
++    dict(type='PreNormalize3D'),
++    dict(type='GenSkeFeat', dataset='nturgb+d', feats=['j']),
+     dict(
+-        type='SampleFrames',
+-        clip_len=1,
+-        frame_interval=1,
+-        num_clips=8,
+-        test_mode=True),
+-    dict(type='DecordDecode'),
+-    dict(type='Resize', scale=(-1, 256)),
+-    dict(type='CenterCrop', crop_size=224),
+-    dict(type='FormatShape', input_format='NCHW'),
++        type='UniformSampleFrames', clip_len=100, num_clips=1, test_mode=True),
++    dict(type='PoseDecode'),
++    dict(type='FormatGCNInput', num_person=2),
+     dict(type='PackActionInputs')
+ ]
+ test_pipeline = [
+-    dict(type='DecordInit', **file_client_args),
++    dict(type='PreNormalize3D'),
++    dict(type='GenSkeFeat', dataset='nturgb+d', feats=['j']),
+     dict(
+-        type='SampleFrames',
+-        clip_len=1,
+-        frame_interval=1,
+-        num_clips=25,
++        type='UniformSampleFrames', clip_len=100, num_clips=10,
+         test_mode=True),
+-    dict(type='DecordDecode'),
+-    dict(type='Resize', scale=(-1, 256)),
+-    dict(type='TenCrop', crop_size=224),
+-    dict(type='FormatShape', input_format='NCHW'),
++    dict(type='PoseDecode'),
++    dict(type='FormatGCNInput', num_person=2),
+     dict(type='PackActionInputs')
+ ]
+ 
+ train_dataloader = dict(
+-    batch_size=32,
+-    num_workers=8,
++    batch_size=16,
++    num_workers=2,
+     persistent_workers=True,
+     sampler=dict(type='DefaultSampler', shuffle=True),
+     dataset=dict(
+-        type=dataset_type,
+-        ann_file=ann_file_train,
+-        data_prefix=dict(video=data_root),
+-        pipeline=train_pipeline))
++        type='RepeatDataset',
++        times=5,
++        dataset=dict(
++            type=dataset_type,
++            ann_file=ann_file,
++            pipeline=train_pipeline,
++            split='xsub_train')))
+ val_dataloader = dict(
+-    batch_size=32,
+-    num_workers=8,
++    batch_size=16,
++    num_workers=2,
+     persistent_workers=True,
+     sampler=dict(type='DefaultSampler', shuffle=False),
+     dataset=dict(
+         type=dataset_type,
+-        ann_file=ann_file_val,
+-        data_prefix=dict(video=data_root),
++        ann_file=ann_file,
+         pipeline=val_pipeline,
++        split='xsub_val',
+         test_mode=True))
+ test_dataloader = dict(
+     batch_size=1,
+-    num_workers=8,
++    num_workers=2,
+     persistent_workers=True,
+     sampler=dict(type='DefaultSampler', shuffle=False),
+     dataset=dict(
+         type=dataset_type,
+-        ann_file=ann_file_val,
+-        data_prefix=dict(video=data_root),
++        ann_file=ann_file,
+         pipeline=test_pipeline,
++        split='xsub_val',
+         test_mode=True))
+ 
+-val_evaluator = dict(type='AccMetric')
++val_evaluator = [dict(type='AccMetric')]
+ test_evaluator = val_evaluator
+ 
+-default_hooks = dict(checkpoint=dict(interval=3, max_keep_ckpts=3))
+-
+ train_cfg = dict(
+-    type='EpochBasedTrainLoop', max_epochs=50, val_begin=1, val_interval=5)
++    type='EpochBasedTrainLoop', max_epochs=16, val_begin=1, val_interval=1)
++val_cfg = dict(type='ValLoop')
++test_cfg = dict(type='TestLoop')
++
++param_scheduler = [
++    dict(
++        type='CosineAnnealingLR',
++        eta_min=0,
++        T_max=16,
++        by_epoch=True,
++        convert_to_iter_based=True)
++]
++
++optim_wrapper = dict(
++    optimizer=dict(
++        type='SGD', lr=0.1, momentum=0.9, weight_decay=0.0005, nesterov=True))
++
++default_hooks = dict(checkpoint=dict(interval=1), logger=dict(interval=100))
+ 
+ # Default setting for scaling LR automatically
+ #   - `enable` means enable scaling LR automatically
+ #       or not by default.
+-#   - `base_batch_size` = (8 GPUs) x (32 samples per GPU).
+-auto_scale_lr = dict(enable=False, base_batch_size=256)
++#   - `base_batch_size` = (8 GPUs) x (16 samples per GPU).
++auto_scale_lr = dict(enable=False, base_batch_size=128)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-dense-1x1x5-100e_kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-dense-1x1x5-100e_kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/videomae/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/videomae/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/videomae/vit-base-p16_videomae-k400-pre_16x4x1_kinetics-400.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/videomae/vit-base-p16_videomae-k400-pre_16x4x1_kinetics-400.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/x3d/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/x3d/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/x3d/x3d_m_16x5x1_facebook-kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/x3d/x3d_m_16x5x1_facebook-kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition/x3d/x3d_s_13x6x1_facebook-kinetics400-rgb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition/x3d/x3d_s_13x6x1_facebook-kinetics400-rgb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition_audio/audioonly/audioonly_r50_8xb160-64x1x1-100e_kinetics400-audio-feature.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition_audio/audioonly/audioonly_r50_8xb160-64x1x1-100e_kinetics400-audio-feature.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition_audio/resnet/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition_audio/resnet/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition_audio/resnet/tsn_r18_8xb320-64x1x1-100e_kinetics400-audio-feature.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition_audio/resnet/tsn_r18_8xb320-64x1x1-100e_kinetics400-audio-feature.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/recognition_audio/resnet/tsn_r18_8xb320-64x1x1-100e_kinetics400-audio.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/recognition_audio/resnet/tsn_r18_8xb320-64x1x1-100e_kinetics400-audio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/2s-agcn/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/2s-agcn/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/slowonly_kinetics400-pretrained-r50_8xb16-u48-120e_hmdb51-split1-keypoint.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/slowonly_kinetics400-pretrained-r50_8xb16-u48-120e_hmdb51-split1-keypoint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/slowonly_kinetics400-pretrained-r50_8xb16-u48-120e_ucf101-split1-keypoint.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/slowonly_kinetics400-pretrained-r50_8xb16-u48-120e_ucf101-split1-keypoint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_gym-keypoint.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_gym-keypoint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_gym-limb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_gym-limb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_ntu60-xsub-keypoint.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_ntu60-xsub-keypoint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_ntu60-xsub-limb.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/posec3d/slowonly_r50_8xb16-u48-240e_ntu60-xsub-limb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu120-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu120-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu120-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu120-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu120-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu120-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu120-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu120-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-bone-u100-80e_ntu60-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu120-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu120-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu120-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu120-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu120-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu120-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu120-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu120-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcn/stgcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/metafile.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/metafile.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-motion-u100-80e_ntu60-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-u100-80e_ntu60-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-u100-80e_ntu60-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-u100-80e_ntu60-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-bone-u100-80e_ntu60-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-3d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-motion-u100-80e_ntu60-xsub-keypoint-3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py` & `mmaction2-1.0.0rc3/mmaction/.mim/configs/skeleton/stgcnpp/stgcnpp_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/model-index.yml` & `mmaction2-1.0.0rc3/mmaction/.mim/model-index.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/analyze_logs.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/analyze_logs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/bench_processing.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/bench_processing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/benchmark.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/benchmark.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/check_videos.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/check_videos.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -3,19 +3,17 @@
+ import os
+ import warnings
+ from functools import partial
+ from multiprocessing import Manager, cpu_count
+ 
+ import numpy as np
+ from mmengine import Config, DictAction, track_parallel_progress
++from mmengine.registry import init_default_scope
+ 
+ from mmaction.registry import DATASETS, TRANSFORMS
+-from mmaction.utils import register_all_modules
+-
+-register_all_modules()
+ 
+ 
+ def parse_args():
+     parser = argparse.ArgumentParser(description='MMAction2 check datasets')
+     parser.add_argument('config', help='test config file path')
+     parser.add_argument(
+         '--options',
+@@ -111,14 +109,15 @@
+ 
+     decoder_to_pipeline_prefix = dict(
+         decord='Decord', opencv='OpenCV', pyav='PyAV')
+ 
+     # read config file
+     cfg = Config.fromfile(args.config)
+     cfg.merge_from_dict(args.cfg_options)
++    init_default_scope(cfg.get('default_scope', 'mmaction'))
+ 
+     # build dataset
+     dataset_cfg = cfg.get(f'{args.split}_dataloader').dataset
+     dataset_type = dataset_cfg.type
+     assert dataset_type == 'VideoDataset'
+     dataset_cfg.pipeline = [
+         dict(type=decoder_to_pipeline_prefix[args.decoder] + 'Init'),
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/eval_metric.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/eval_metric.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,15 +1,14 @@
+ # Copyright (c) OpenMMLab. All rights reserved.
+ import argparse
+ 
+ import mmengine
+ from mmengine import Config, DictAction
+ from mmengine.evaluator import Evaluator
+-
+-from mmaction.utils import register_all_modules
++from mmengine.registry import init_default_scope
+ 
+ 
+ def parse_args():
+     parser = argparse.ArgumentParser(description='Evaluate metric of the '
+                                      'results saved in pkl format')
+     parser.add_argument('config', help='Config of the model')
+     parser.add_argument('pkl_results', help='Results in pickle format')
+@@ -26,20 +25,19 @@
+     args = parser.parse_args()
+     return args
+ 
+ 
+ def main():
+     args = parse_args()
+ 
+-    register_all_modules()
+-
+     # load config
+     cfg = Config.fromfile(args.config)
+     if args.cfg_options is not None:
+         cfg.merge_from_dict(args.cfg_options)
++    init_default_scope(cfg.get('default_scope', 'mmaction'))
+ 
+     data_samples = mmengine.load(args.pkl_results)
+ 
+     evaluator = Evaluator(cfg.test_evaluator)
+     eval_results = evaluator.offline_evaluate(data_samples)
+     print(eval_results)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/get_flops.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/get_flops.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -8,17 +8,17 @@
+                            flop_count_str, flop_count_table, parameter_count)
+ except ImportError:
+     print('You may need to install fvcore for flops computation, '
+           'and you can use `pip install -r requirements/optional.txt` '
+           'to set up the environment')
+ from fvcore.nn.print_model_statistics import _format_size
+ from mmengine import Config
++from mmengine.registry import init_default_scope
+ 
+ from mmaction.registry import MODELS
+-from mmaction.utils import register_all_modules
+ 
+ 
+ def parse_args():
+     parser = argparse.ArgumentParser(description='Get model flops and params')
+     parser.add_argument('config', help='config file path')
+     parser.add_argument(
+         '--shape',
+@@ -44,16 +44,16 @@
+     elif len(args.shape) == 5:
+         # n, c, t, h, w = args.shape
+         input_shape = tuple(args.shape)
+     else:
+         raise ValueError('invalid input shape')
+ 
+     cfg = Config.fromfile(args.config)
++    init_default_scope(cfg.get('default_scope', 'mmaction'))
+ 
+-    register_all_modules()
+     model = MODELS.build(cfg.model)
+     model.eval()
+ 
+     if hasattr(model, 'extract_feat'):
+         model.forward = model.extract_feat
+     else:
+         raise NotImplementedError(
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/print_config.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/print_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/report_accuracy.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/report_accuracy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/analysis_tools/report_map.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/analysis_tools/report_map.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/convert/convert_recognizer.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/convert/convert_recognizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/activitynet_feature_postprocessing.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/activitynet_feature_postprocessing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/convert_proposal_format.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/convert_proposal_format.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/download.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/download.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/download_feature_annotations.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/download_feature_annotations.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/download_features.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/download_features.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/generate_rawframes_filelist.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/generate_rawframes_filelist.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/process_annotations.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/process_annotations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/activitynet/tsn_feature_extraction.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/activitynet/tsn_feature_extraction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/anno_txt2json.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/anno_txt2json.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/cut_videos.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/cut_videos.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/download_videos_gnu_parallel.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/download_videos_gnu_parallel.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/download_videos_parallel.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/download_videos_parallel.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava/extract_rgb_frames_ffmpeg.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava/extract_rgb_frames_ffmpeg.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/X-101-64x4d-FPN.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/X-101-64x4d-FPN.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/cut_kinetics.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/cut_kinetics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/extract_rgb_frames.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/extract_rgb_frames.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/fetch_proposal.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/fetch_proposal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/merge_annotations.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/merge_annotations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/prepare_annotation.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/prepare_annotation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/ava_kinetics/softlink_ava.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/ava_kinetics/softlink_ava.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/build_audio_features.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/build_audio_features.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/build_file_list.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/build_file_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/build_rawframes.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/build_rawframes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/build_videos.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/build_videos.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/denormalize_proposal_file.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/denormalize_proposal_file.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/extract_audio.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/extract_audio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/download.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/download.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/download_annotations.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/download_annotations.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/generate_file_list.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/generate_file_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/trim_event.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/trim_event.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/gym/trim_subaction.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/gym/trim_subaction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hmdb51/download_videos.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hmdb51/download_videos.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/download.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/download.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/download_annotations.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/download_annotations.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/generate_file_list.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/generate_file_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/hvu/generate_sub_file_list.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/hvu/generate_sub_file_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/download.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/download.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/download_annotations.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/download_annotations.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/download_backup_annotations.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/download_backup_annotations.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/download_videos.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/download_videos.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/extract_frames.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/extract_frames.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/extract_rgb_frames.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/extract_rgb_frames.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/extract_rgb_frames_opencv.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/extract_rgb_frames_opencv.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/generate_rawframes_filelist.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/generate_rawframes_filelist.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/generate_videos_filelist.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/generate_videos_filelist.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/kinetics/rename_classnames.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/kinetics/rename_classnames.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/mit/preprocess_data.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/mit/preprocess_data.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/omnisource/trim_raw_video.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/omnisource/trim_raw_video.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/parse_file_list.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/parse_file_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/resize_videos.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/resize_videos.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/skeleton/babel2mma2.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/skeleton/babel2mma2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/skeleton/download_annotations.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/skeleton/download_annotations.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/skeleton/gen_ntu_rgbd_raw.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/skeleton/gen_ntu_rgbd_raw.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/skeleton/ntu_pose_extraction.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/skeleton/ntu_pose_extraction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/thumos14/denormalize_proposal_file.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/thumos14/denormalize_proposal_file.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/thumos14/download_annotations.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/thumos14/download_annotations.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/data/thumos14/download_videos.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/data/thumos14/download_videos.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/deployment/export_onnx_stdet.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/deployment/export_onnx_stdet.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -2,18 +2,18 @@
+ import argparse
+ 
+ import onnxruntime
+ import torch
+ import torch.nn as nn
+ from mmdet.structures.bbox import bbox2roi
+ from mmengine import Config
++from mmengine.registry import init_default_scope
+ from mmengine.runner import load_checkpoint
+ 
+ from mmaction.registry import MODELS
+-from mmaction.utils import register_all_modules
+ 
+ 
+ def parse_args():
+     parser = argparse.ArgumentParser(description='Get model flops and params')
+     parser.add_argument('config', help='config file path')
+     parser.add_argument('checkpoint', help='checkpoint file')
+     parser.add_argument(
+@@ -120,16 +120,16 @@
+         bbox_feats, _ = self.bbox_roi_extractor(feat, rois)
+         cls_score = self.bbox_head(bbox_feats)
+         return cls_score
+ 
+ 
+ def main():
+     args = parse_args()
+-    register_all_modules()
+     config = Config.fromfile(args.config)
++    init_default_scope(config.get('default_scope', 'mmaction'))
+ 
+     base_model = MODELS.build(config.model)
+     load_checkpoint(base_model, args.checkpoint, map_location='cpu')
+     base_model.to(args.device)
+ 
+     if len(args.shape) == 1:
+         input_shape = (args.shape[0], args.shape[0])
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/deployment/mmaction2torchserve.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/deployment/mmaction2torchserve.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/deployment/mmaction_handler.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/deployment/mmaction_handler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/deployment/publish_model.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/deployment/publish_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/misc/bsn_proposal_generation.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/misc/bsn_proposal_generation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/misc/clip_feature_extraction.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/misc/clip_feature_extraction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/misc/flow_extraction.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/misc/flow_extraction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/slurm_test.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/slurm_test.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/slurm_train.sh` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/slurm_train.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/test.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/test.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -2,16 +2,14 @@
+ import argparse
+ import os
+ import os.path as osp
+ 
+ from mmengine.config import Config, DictAction
+ from mmengine.runner import Runner
+ 
+-from mmaction.utils import register_all_modules
+-
+ 
+ def parse_args():
+     parser = argparse.ArgumentParser(
+         description='MMAction2 test (and eval) a model')
+     parser.add_argument('config', help='test config file path')
+     parser.add_argument('checkpoint', help='checkpoint file')
+     parser.add_argument(
+@@ -87,18 +85,14 @@
+ 
+     return cfg
+ 
+ 
+ def main():
+     args = parse_args()
+ 
+-    # register all modules in mmaction2 into the registries
+-    # do not init the default scope here because it will be init in the runner
+-    register_all_modules(init_default_scope=False)
+-
+     # load config
+     cfg = Config.fromfile(args.config)
+     cfg = merge_args(cfg, args)
+     cfg.launcher = args.launcher
+     if args.cfg_options is not None:
+         cfg.merge_from_dict(args.cfg_options)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/train.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/train.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -2,16 +2,14 @@
+ import argparse
+ import os
+ import os.path as osp
+ 
+ from mmengine.config import Config, DictAction
+ from mmengine.runner import Runner
+ 
+-from mmaction.utils import register_all_modules
+-
+ 
+ def parse_args():
+     parser = argparse.ArgumentParser(description='Train a action recognizer')
+     parser.add_argument('config', help='train config file path')
+     parser.add_argument('--work-dir', help='the dir to save logs and models')
+     parser.add_argument(
+         '--resume',
+@@ -117,18 +115,14 @@
+ 
+     return cfg
+ 
+ 
+ def main():
+     args = parse_args()
+ 
+-    # register all modules in mmaction2 into the registries
+-    # do not init the default scope here because it will be init in the runner
+-    register_all_modules(init_default_scope=False)
+-
+     cfg = Config.fromfile(args.config)
+ 
+     # merge cli arguments to config
+     cfg = merge_args(cfg, args)
+ 
+     # build the runner from config
+     runner = Runner.from_cfg(cfg)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/visualizations/browse_dataset.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/visualizations/browse_dataset.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -5,19 +5,19 @@
+ from copy import deepcopy
+ 
+ import cv2
+ import mmcv
+ import numpy as np
+ from mmengine.config import Config, DictAction
+ from mmengine.dataset import Compose
++from mmengine.registry import init_default_scope
+ from mmengine.utils import ProgressBar
+ from mmengine.visualization import Visualizer
+ 
+ from mmaction.registry import DATASETS
+-from mmaction.utils import register_all_modules
+ from mmaction.visualization import ActionVisualizer
+ from mmaction.visualization.action_visualizer import _get_adaptive_scale
+ 
+ 
+ def parse_args():
+     parser = argparse.ArgumentParser(description='Browse a dataset')
+     parser.add_argument('config', help='train config file path')
+@@ -174,33 +174,28 @@
+ 
+ 
+ def main():
+     args = parse_args()
+     cfg = Config.fromfile(args.config)
+     if args.cfg_options is not None:
+         cfg.merge_from_dict(args.cfg_options)
+-
+-    # register all modules in mmaction2 into the registries
+-    register_all_modules()
++    init_default_scope(cfg.get('default_scope', 'mmaction'))
+ 
+     dataset_cfg = cfg.get(args.phase + '_dataloader').get('dataset')
+     dataset = DATASETS.build(dataset_cfg)
+ 
+     intermediate_imgs = []
+     dataset.pipeline = InspectCompose(dataset.pipeline.transforms,
+                                       intermediate_imgs)
+ 
+     # init visualizer
+-    vis_backends = [
+-        dict(
+-            type='LocalVisBackend',
+-            out_type='video',
+-            save_dir=args.output_dir,
+-            fps=args.fps)
+-    ]
++    vis_backends = [dict(
++        type='LocalVisBackend',
++        save_dir=args.output_dir,
++    )]
+     visualizer = ActionVisualizer(
+         vis_backends=vis_backends, save_dir='place_holder')
+ 
+     if args.label:
+         labels = open(args.label).readlines()
+         labels = [x.strip() for x in labels]
+         visualizer.dataset_meta = dict(classes=labels)
+@@ -229,13 +224,14 @@
+ 
+         intermediate_imgs.clear()
+ 
+         data_sample = item['data_samples'].numpy()
+ 
+         file_id = f'video_{i}'
+         video = [x[..., ::-1] for x in video]
+-        visualizer.add_datasample(file_id, video, data_sample)
++        visualizer.add_datasample(
++            file_id, video, data_sample, fps=args.fps, out_type='video')
+         progress_bar.update()
+ 
+ 
+ if __name__ == '__main__':
+     main()
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/visualizations/vis_cam.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/visualizations/vis_cam.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -7,15 +7,15 @@
+ import mmcv
+ import numpy as np
+ import torch.nn as nn
+ from mmengine import Config, DictAction
+ from mmengine.dataset import Compose, pseudo_collate
+ 
+ from mmaction.apis import init_recognizer
+-from mmaction.utils import GradCAM, register_all_modules
++from mmaction.utils import GradCAM
+ 
+ 
+ def parse_args():
+     parser = argparse.ArgumentParser(
+         description='MMAction2 GradCAM Visualization')
+     parser.add_argument('config', help='test config file path')
+     parser.add_argument('checkpoint', help='checkpoint file/url')
+@@ -163,17 +163,14 @@
+ 
+     return frame_list
+ 
+ 
+ def main():
+     args = parse_args()
+ 
+-    # Register all modules in mmaction2 into the registries
+-    register_all_modules()
+-
+     cfg = Config.fromfile(args.config)
+     cfg.merge_from_dict(args.cfg_options)
+ 
+     # Build the recognizer from a config file and checkpoint file/url
+     model = init_recognizer(cfg, args.checkpoint, device=args.device)
+ 
+     inputs = build_inputs(model, args.video, use_frames=args.use_frames)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/.mim/tools/visualizations/vis_scheduler.py` & `mmaction2-1.0.0rc3/mmaction/.mim/tools/visualizations/vis_scheduler.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -8,20 +8,19 @@
+ 
+ import matplotlib.pyplot as plt
+ import rich
+ import torch.nn as nn
+ from mmengine.config import Config, DictAction
+ from mmengine.hooks import Hook
+ from mmengine.model import BaseModel
++from mmengine.registry import init_default_scope
+ from mmengine.runner import Runner
+ from mmengine.visualization import Visualizer
+ from rich.progress import BarColumn, MofNCompleteColumn, Progress, TextColumn
+ 
+-from mmaction.utils import register_all_modules
+-
+ 
+ class SimpleModel(BaseModel):
+     """simple model that do nothing in train_step."""
+ 
+     def __init__(self):
+         super(SimpleModel, self).__init__()
+         self.data_preprocessor = nn.Identity()
+@@ -202,16 +201,15 @@
+         cfg.merge_from_dict(args.cfg_options)
+     if cfg.get('work_dir', None) is None:
+         # use config filename as default work_dir if cfg.work_dir is None
+         cfg.work_dir = osp.join('./work_dirs',
+                                 osp.splitext(osp.basename(args.config))[0])
+ 
+     cfg.log_level = args.log_level
+-    # register all modules in mmcls into the registries
+-    register_all_modules()
++    init_default_scope(cfg.get('default_scope', 'mmaction'))
+ 
+     # make sure save_root exists
+     if args.save_path and not args.save_path.parent.exists():
+         raise FileNotFoundError(
+             f'The save path is {args.save_path}, and directory '
+             f"'{args.save_path.parent}' do not exist.")
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/__init__.py` & `mmaction2-1.0.0rc3/mmaction/__init__.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -5,15 +5,15 @@
+ 
+ from .version import __version__
+ 
+ mmcv_minimum_version = '2.0.0rc0'
+ mmcv_maximum_version = '2.1.0'
+ mmcv_version = digit_version(mmcv.__version__)
+ 
+-mmengine_minimum_version = '0.3.0'
++mmengine_minimum_version = '0.5.0'
+ mmengine_maximum_version = '1.0.0'
+ mmengine_version = digit_version(mmengine.__version__)
+ 
+ assert (digit_version(mmcv_minimum_version) <= mmcv_version
+         < digit_version(mmcv_maximum_version)), \
+     f'MMCV=={mmcv.__version__} is used but incompatible. ' \
+     f'Please install mmcv>={mmcv_minimum_version}, <{mmcv_maximum_version}.'
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/apis/inference.py` & `mmaction2-1.0.0rc3/mmaction/apis/inference.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,14 +3,15 @@
+ from typing import List, Optional, Union
+ 
+ import mmengine
+ import numpy as np
+ import torch
+ import torch.nn as nn
+ from mmengine.dataset import Compose, pseudo_collate
++from mmengine.registry import init_default_scope
+ from mmengine.runner import load_checkpoint
+ from mmengine.utils import track_iter_progress
+ 
+ from mmaction.registry import MODELS
+ from mmaction.structures import ActionDataSample
+ 
+ 
+@@ -32,15 +33,18 @@
+     """
+     if isinstance(config, (str, Path)):
+         config = mmengine.Config.fromfile(config)
+     elif not isinstance(config, mmengine.Config):
+         raise TypeError('config must be a filename or Config object, '
+                         f'but got {type(config)}')
+ 
+-    config.model.backbone.pretrained = None
++    init_default_scope(config.get('default_scope', 'mmaction'))
++
++    if config.model.backbone.get('pretrained', None):
++        config.model.backbone.pretrained = None
+     model = MODELS.build(config.model)
+ 
+     if checkpoint is not None:
+         load_checkpoint(model, checkpoint, map_location='cpu')
+     model.cfg = config
+     model.to(device)
+     model.eval()
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/__init__.py` & `mmaction2-1.0.0rc3/mmaction/datasets/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/activitynet_dataset.py` & `mmaction2-1.0.0rc3/mmaction/datasets/activitynet_dataset.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ # Copyright (c) OpenMMLab. All rights reserved.
+ from typing import Callable, List, Optional, Union
+ 
+ import mmengine
+-from mmengine.utils import check_file_exist
++from mmengine.fileio import exists
+ 
+ from mmaction.registry import DATASETS
+ from mmaction.utils import ConfigType
+ from .base import BaseActionDataset
+ 
+ 
+ @DATASETS.register_module()
+@@ -76,15 +76,15 @@
+             pipeline=pipeline,
+             data_prefix=data_prefix,
+             test_mode=test_mode,
+             **kwargs)
+ 
+     def load_data_list(self) -> List[dict]:
+         """Load annotation file to get video information."""
+-        check_file_exist(self.ann_file)
++        exists(self.ann_file)
+         data_list = []
+         anno_database = mmengine.load(self.ann_file)
+         for video_name in anno_database:
+             video_info = anno_database[video_name]
+             feature_path = video_name + '.csv'
+             feature_path = '%s/%s' % (self.data_prefix['video'], feature_path)
+             video_info['feature_path'] = feature_path
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/audio_dataset.py` & `mmaction2-1.0.0rc3/mmaction/datasets/audio_dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/ava_dataset.py` & `mmaction2-1.0.0rc3/mmaction/datasets/ava_dataset.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,16 +1,15 @@
+ # Copyright (c) OpenMMLab. All rights reserved.
+ import os.path as osp
+ from collections import defaultdict
+ from typing import Callable, List, Optional, Union
+ 
+ import numpy as np
+-from mmengine.fileio import load
++from mmengine.fileio import exists, list_from_file, load
+ from mmengine.logging import MMLogger
+-from mmengine.utils import check_file_exist
+ 
+ from mmaction.evaluation import read_labelmap
+ from mmaction.registry import DATASETS
+ from mmaction.utils import ConfigType
+ from .base import BaseActionDataset
+ 
+ 
+@@ -195,44 +194,44 @@
+         bboxes = np.stack(bboxes)
+         labels = np.stack(labels)
+         entity_ids = np.stack(entity_ids)
+         return bboxes, labels, entity_ids
+ 
+     def load_data_list(self) -> List[dict]:
+         """Load AVA annotations."""
+-        check_file_exist(self.ann_file)
++        exists(self.ann_file)
+         data_list = []
+         records_dict_by_img = defaultdict(list)
+-        with open(self.ann_file, 'r') as fin:
+-            for line in fin:
+-                line_split = line.strip().split(',')
+-
+-                label = int(line_split[6])
+-                if self.custom_classes is not None:
+-                    if label not in self.custom_classes:
+-                        continue
+-                    label = self.custom_classes.index(label)
+-
+-                video_id = line_split[0]
+-                timestamp = int(line_split[1])
+-                img_key = f'{video_id},{timestamp:04d}'
+-
+-                entity_box = np.array(list(map(float, line_split[2:6])))
+-                entity_id = int(line_split[7])
+-                shot_info = (0, (self.timestamp_end - self.timestamp_start) *
+-                             self._FPS)
+-
+-                video_info = dict(
+-                    video_id=video_id,
+-                    timestamp=timestamp,
+-                    entity_box=entity_box,
+-                    label=label,
+-                    entity_id=entity_id,
+-                    shot_info=shot_info)
+-                records_dict_by_img[img_key].append(video_info)
++        fin = list_from_file(self.ann_file)
++        for line in fin:
++            line_split = line.strip().split(',')
++
++            label = int(line_split[6])
++            if self.custom_classes is not None:
++                if label not in self.custom_classes:
++                    continue
++                label = self.custom_classes.index(label)
++
++            video_id = line_split[0]
++            timestamp = int(line_split[1])
++            img_key = f'{video_id},{timestamp:04d}'
++
++            entity_box = np.array(list(map(float, line_split[2:6])))
++            entity_id = int(line_split[7])
++            shot_info = (0, (self.timestamp_end - self.timestamp_start) *
++                         self._FPS)
++
++            video_info = dict(
++                video_id=video_id,
++                timestamp=timestamp,
++                entity_box=entity_box,
++                label=label,
++                entity_id=entity_id,
++                shot_info=shot_info)
++            records_dict_by_img[img_key].append(video_info)
+ 
+         for img_key in records_dict_by_img:
+             video_id, timestamp = img_key.split(',')
+             bboxes, labels, entity_ids = self.parse_img_record(
+                 records_dict_by_img[img_key])
+             ann = dict(
+                 gt_bboxes=bboxes, gt_labels=labels, entity_ids=entity_ids)
+@@ -526,44 +525,44 @@
+             end = int(video_id[-1])
+             video_id = '_'.join(video_id[:-2])
+             return start, end
+         return self.timestamp_start, self.timestamp_end
+ 
+     def load_data_list(self) -> List[dict]:
+         """Load AVA annotations."""
+-        check_file_exist(self.ann_file)
++        exists(self.ann_file)
+         data_list = []
+         records_dict_by_img = defaultdict(list)
+-        with open(self.ann_file, 'r') as fin:
+-            for line in fin:
+-                line_split = line.strip().split(',')
+-
+-                label = int(line_split[6])
+-                if self.custom_classes is not None:
+-                    if label not in self.custom_classes:
+-                        continue
+-                    label = self.custom_classes.index(label)
+-
+-                video_id = line_split[0]
+-                timestamp = int(line_split[1])
+-                img_key = f'{video_id},{timestamp:04d}'
+-
+-                entity_box = np.array(list(map(float, line_split[2:6])))
+-                entity_id = int(line_split[7])
+-                start, end = self.get_timestamp(video_id)
+-                shot_info = (1, (end - start) * self._FPS + 1)
+-
+-                video_info = dict(
+-                    video_id=video_id,
+-                    timestamp=timestamp,
+-                    entity_box=entity_box,
+-                    label=label,
+-                    entity_id=entity_id,
+-                    shot_info=shot_info)
+-                records_dict_by_img[img_key].append(video_info)
++        fin = list_from_file(self.ann_file)
++        for line in fin:
++            line_split = line.strip().split(',')
++
++            label = int(line_split[6])
++            if self.custom_classes is not None:
++                if label not in self.custom_classes:
++                    continue
++                label = self.custom_classes.index(label)
++
++            video_id = line_split[0]
++            timestamp = int(line_split[1])
++            img_key = f'{video_id},{timestamp:04d}'
++
++            entity_box = np.array(list(map(float, line_split[2:6])))
++            entity_id = int(line_split[7])
++            start, end = self.get_timestamp(video_id)
++            shot_info = (1, (end - start) * self._FPS + 1)
++
++            video_info = dict(
++                video_id=video_id,
++                timestamp=timestamp,
++                entity_box=entity_box,
++                label=label,
++                entity_id=entity_id,
++                shot_info=shot_info)
++            records_dict_by_img[img_key].append(video_info)
+ 
+         for img_key in records_dict_by_img:
+             video_id, timestamp = img_key.split(',')
+             start, end = self.get_timestamp(video_id)
+             bboxes, labels, entity_ids = self.parse_img_record(
+                 records_dict_by_img[img_key])
+             ann = dict(
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/base.py` & `mmaction2-1.0.0rc3/mmaction/datasets/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/pose_dataset.py` & `mmaction2-1.0.0rc3/mmaction/datasets/pose_dataset.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,12 +1,11 @@
+ # Copyright (c) OpenMMLab. All rights reserved.
+ from typing import Callable, List, Optional, Union
+ 
+-from mmengine.fileio import load
+-from mmengine.utils import check_file_exist
++from mmengine.fileio import exists, load
+ 
+ from mmaction.registry import DATASETS
+ from mmaction.utils import ConfigType
+ from .base import BaseActionDataset
+ 
+ 
+ @DATASETS.register_module()
+@@ -44,15 +43,15 @@
+             start_index=start_index,
+             modality='Pose',
+             **kwargs)
+ 
+     def load_data_list(self) -> List[dict]:
+         """Load annotation file to get skeleton information."""
+         assert self.ann_file.endswith('.pkl')
+-        check_file_exist(self.ann_file)
++        exists(self.ann_file)
+         data_list = load(self.ann_file)
+ 
+         if self.split is not None:
+             split, data = data_list['split'], data_list['annotations']
+             identifier = 'filename' if 'filename' in data[0] else 'frame_dir'
+             data_list = [x for x in data if x[identifier] in split[self.split]]
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/rawframe_dataset.py` & `mmaction2-1.0.0rc3/mmaction/datasets/rawframe_dataset.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ # Copyright (c) OpenMMLab. All rights reserved.
+ import os.path as osp
+ from typing import Callable, List, Optional, Union
+ 
+-from mmengine.utils import check_file_exist
++from mmengine.fileio import exists, list_from_file
+ 
+ from mmaction.registry import DATASETS
+ from mmaction.utils import ConfigType
+ from .base import BaseActionDataset
+ 
+ 
+ @DATASETS.register_module()
+@@ -105,46 +105,46 @@
+             num_classes=num_classes,
+             start_index=start_index,
+             modality=modality,
+             **kwargs)
+ 
+     def load_data_list(self) -> List[dict]:
+         """Load annotation file to get video information."""
+-        check_file_exist(self.ann_file)
++        exists(self.ann_file)
+         data_list = []
+-        with open(self.ann_file, 'r') as fin:
+-            for line in fin:
+-                line_split = line.strip().split()
+-                video_info = {}
+-                idx = 0
+-                # idx for frame_dir
+-                frame_dir = line_split[idx]
+-                if self.data_prefix['img'] is not None:
+-                    frame_dir = osp.join(self.data_prefix['img'], frame_dir)
+-                video_info['frame_dir'] = frame_dir
++        fin = list_from_file(self.ann_file)
++        for line in fin:
++            line_split = line.strip().split()
++            video_info = {}
++            idx = 0
++            # idx for frame_dir
++            frame_dir = line_split[idx]
++            if self.data_prefix['img'] is not None:
++                frame_dir = osp.join(self.data_prefix['img'], frame_dir)
++            video_info['frame_dir'] = frame_dir
++            idx += 1
++            if self.with_offset:
++                # idx for offset and total_frames
++                video_info['offset'] = int(line_split[idx])
++                video_info['total_frames'] = int(line_split[idx + 1])
++                idx += 2
++            else:
++                # idx for total_frames
++                video_info['total_frames'] = int(line_split[idx])
+                 idx += 1
+-                if self.with_offset:
+-                    # idx for offset and total_frames
+-                    video_info['offset'] = int(line_split[idx])
+-                    video_info['total_frames'] = int(line_split[idx + 1])
+-                    idx += 2
+-                else:
+-                    # idx for total_frames
+-                    video_info['total_frames'] = int(line_split[idx])
+-                    idx += 1
+-                # idx for label[s]
+-                label = [int(x) for x in line_split[idx:]]
+-                assert label, f'missing label in line: {line}'
+-                if self.multi_class:
+-                    assert self.num_classes is not None
+-                    video_info['label'] = label
+-                else:
+-                    assert len(label) == 1
+-                    video_info['label'] = label[0]
+-                data_list.append(video_info)
++            # idx for label[s]
++            label = [int(x) for x in line_split[idx:]]
++            assert label, f'missing label in line: {line}'
++            if self.multi_class:
++                assert self.num_classes is not None
++                video_info['label'] = label
++            else:
++                assert len(label) == 1
++                video_info['label'] = label[0]
++            data_list.append(video_info)
+ 
+         return data_list
+ 
+     def get_data_info(self, idx: int) -> dict:
+         """Get annotation by index."""
+         data_info = super().get_data_info(idx)
+         data_info['filename_tmpl'] = self.filename_tmpl
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/repeat_aug_dataset.py` & `mmaction2-1.0.0rc3/mmaction/datasets/repeat_aug_dataset.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -18,15 +18,16 @@
+         return transform.__repr__().split('(')[0]
+     else:
+         raise TypeError
+ 
+ 
+ @DATASETS.register_module()
+ class RepeatAugDataset(VideoDataset):
+-    """Video dataset for action recognition.
++    """Video dataset for action recognition use repeat augment.
++    https://arxiv.org/pdf/1901.09335.pdf.
+ 
+     The dataset loads raw videos and apply specified transforms to return a
+     dict containing the frame tensors and other information.
+ 
+     The ann_file is a text file with multiple lines, and each line indicates
+     a sample video with the filepath and label, which are split with a
+     whitespace. Example of a annotation file:
+@@ -43,14 +44,18 @@
+ 
+     Args:
+         ann_file (str): Path to the annotation file.
+         pipeline (List[Union[dict, ConfigDict, Callable]]): A sequence of
+             data transforms.
+         data_prefix (dict or ConfigDict): Path to a directory where videos
+             are held. Defaults to ``dict(video='')``.
++        num_repeats (int): Number of repeat time of one video in a batch.
++            Defaults to 4.
++        sample_once (bool): Determines whether use same frame index for
++            repeat samples. Defaults to False.
+         multi_class (bool): Determines whether the dataset is a multi-class
+             dataset. Defaults to False.
+         num_classes (int, optional): Number of classes of the dataset, used in
+             multi-class datasets. Defaults to None.
+         start_index (int): Specify a start index for frames in consideration of
+             different filename format. However, when taking videos as input,
+             it should be set to 0, since frames loaded from videos count
+@@ -62,14 +67,15 @@
+     """
+ 
+     def __init__(self,
+                  ann_file: str,
+                  pipeline: List[Union[dict, Callable]],
+                  data_prefix: ConfigType = dict(video=''),
+                  num_repeats: int = 4,
++                 sample_once: bool = False,
+                  multi_class: bool = False,
+                  num_classes: Optional[int] = None,
+                  start_index: int = 0,
+                  modality: str = 'RGB',
+                  **kwargs) -> None:
+ 
+         use_decord = get_type(pipeline[0]) == 'DecordInit' and \
+@@ -87,14 +93,15 @@
+             multi_class=multi_class,
+             num_classes=num_classes,
+             start_index=start_index,
+             modality=modality,
+             test_mode=False,
+             **kwargs)
+         self.num_repeats = num_repeats
++        self.sample_once = sample_once
+ 
+     def prepare_data(self, idx) -> List[dict]:
+         """Get data processed by ``self.pipeline``.
+ 
+         Reduce the video loading and decompressing.
+         Args:
+             idx (int): The index of ``data_info``.
+@@ -108,19 +115,28 @@
+ 
+         frame_inds_list, frame_inds_length = [], [0]
+ 
+         fake_data_info = dict(
+             total_frames=data_info['total_frames'],
+             start_index=data_info['start_index'])
+ 
+-        for repeat in range(self.num_repeats):
++        if not self.sample_once:
++            for repeat in range(self.num_repeats):
++                data_info_ = transforms[1](fake_data_info)  # SampleFrames
++                frame_inds = data_info_['frame_inds']
++                frame_inds_list.append(frame_inds.reshape(-1))
++                frame_inds_length.append(frame_inds.size +
++                                         frame_inds_length[-1])
++        else:
+             data_info_ = transforms[1](fake_data_info)  # SampleFrames
+             frame_inds = data_info_['frame_inds']
+-            frame_inds_list.append(frame_inds.reshape(-1))
+-            frame_inds_length.append(frame_inds.size + frame_inds_length[-1])
++            for repeat in range(self.num_repeats):
++                frame_inds_list.append(frame_inds.reshape(-1))
++                frame_inds_length.append(frame_inds.size +
++                                         frame_inds_length[-1])
+ 
+         for key in data_info_:
+             data_info[key] = data_info_[key]
+ 
+         data_info['frame_inds'] = np.concatenate(frame_inds_list)
+ 
+         data_info = transforms[2](data_info)  # DecordDecode
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/transforms/__init__.py` & `mmaction2-1.0.0rc3/mmaction/datasets/transforms/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/transforms/formatting.py` & `mmaction2-1.0.0rc3/mmaction/datasets/transforms/formatting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/transforms/loading.py` & `mmaction2-1.0.0rc3/mmaction/datasets/transforms/loading.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ # Copyright (c) OpenMMLab. All rights reserved.
+ import copy as cp
+ import io
+ import os
+ import os.path as osp
+ import shutil
+-from typing import Optional
++from typing import Optional, Union
+ 
+ import mmcv
+ import numpy as np
+ import torch
+ from mmcv.transforms import BaseTransform
+ from mmengine.fileio import FileClient
+ 
+@@ -456,24 +456,28 @@
+         clip.
+ 
+         Args:
+             num_frames (int): Total number of frame in the video.
+         Returns:
+             seq (list): the indexes of frames of sampled from the video.
+         """
+-        assert self.num_clips == 1
+         seg_size = float(num_frames - 1) / self.clip_len
+         inds = []
+-        for i in range(self.clip_len):
+-            start = int(np.round(seg_size * i))
+-            end = int(np.round(seg_size * (i + 1)))
+-            if not self.test_mode:
++        if not self.test_mode:
++            for i in range(self.clip_len):
++                start = int(np.round(seg_size * i))
++                end = int(np.round(seg_size * (i + 1)))
+                 inds.append(np.random.randint(start, end + 1))
+-            else:
+-                inds.append((start + end) // 2)
++        else:
++            duration = seg_size / (self.num_clips + 1)
++            for k in range(self.num_clips):
++                for i in range(self.clip_len):
++                    start = int(np.round(seg_size * i))
++                    frame_index = start + int(duration * (k + 1))
++                    inds.append(frame_index)
+ 
+         return np.array(inds)
+ 
+     def transform(self, results: dict):
+         num_frames = results['total_frames']
+ 
+         inds = self._get_sample_clips(num_frames)
+@@ -1395,14 +1399,69 @@
+         repr_str = (f'{self.__class__.__name__}('
+                     f'io_backend={self.io_backend}, '
+                     f'decoding_backend={self.decoding_backend})')
+         return repr_str
+ 
+ 
+ @TRANSFORMS.register_module()
++class InferencerPackInput(BaseTransform):
++
++    def __init__(self,
++                 input_format='video',
++                 filename_tmpl='img_{:05}.jpg',
++                 modality='RGB',
++                 start_index=1) -> None:
++        self.input_format = input_format
++        self.filename_tmpl = filename_tmpl
++        self.modality = modality
++        self.start_index = start_index
++
++    def transform(self, video: Union[str, np.ndarray, dict]) -> dict:
++        if self.input_format == 'dict':
++            results = video
++        elif self.input_format == 'video':
++            results = dict(
++                filename=video, label=-1, start_index=0, modality='RGB')
++        elif self.input_format == 'rawframes':
++            import re
++
++            # count the number of frames that match the format of
++            # `filename_tmpl`
++            # RGB pattern example: img_{:05}.jpg -> ^img_\d+.jpg$
++            # Flow patteren example: {}_{:05d}.jpg -> ^x_\d+.jpg$
++            pattern = f'^{self.filename_tmpl}$'
++            if self.modality == 'Flow':
++                pattern = pattern.replace('{}', 'x')
++            pattern = pattern.replace(
++                pattern[pattern.find('{'):pattern.find('}') + 1], '\\d+')
++            total_frames = len(
++                list(
++                    filter(lambda x: re.match(pattern, x) is not None,
++                           os.listdir(video))))
++            results = dict(
++                frame_dir=video,
++                total_frames=total_frames,
++                label=-1,
++                start_index=self.start_index,
++                filename_tmpl=self.filename_tmpl,
++                modality=self.modality)
++        elif self.input_format == 'array':
++            modality_map = {2: 'Flow', 3: 'RGB'}
++            modality = modality_map.get(video.shape[-1])
++            results = dict(
++                total_frames=video.shape[0],
++                label=-1,
++                start_index=0,
++                array=video,
++                modality=modality)
++
++        return results
++
++
++@TRANSFORMS.register_module()
+ class ArrayDecode(BaseTransform):
+     """Load and decode frames with given indices from a 4D array.
+ 
+     Required keys are "array and "frame_inds", added or modified keys are
+     "imgs", "img_shape" and "original_shape".
+     """
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/transforms/pose_transforms.py` & `mmaction2-1.0.0rc3/mmaction/datasets/transforms/pose_transforms.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/transforms/processing.py` & `mmaction2-1.0.0rc3/mmaction/datasets/transforms/processing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/transforms/wrappers.py` & `mmaction2-1.0.0rc3/mmaction/datasets/transforms/wrappers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/datasets/video_dataset.py` & `mmaction2-1.0.0rc3/mmaction/datasets/video_dataset.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ # Copyright (c) OpenMMLab. All rights reserved.
+ import os.path as osp
+ from typing import Callable, List, Optional, Union
+ 
+-from mmengine.utils import check_file_exist
++from mmengine.fileio import exists, list_from_file
+ 
+ from mmaction.registry import DATASETS
+ from mmaction.utils import ConfigType
+ from .base import BaseActionDataset
+ 
+ 
+ @DATASETS.register_module()
+@@ -40,52 +40,56 @@
+             dataset. Defaults to False.
+         num_classes (int, optional): Number of classes of the dataset, used in
+             multi-class datasets. Defaults to None.
+         start_index (int): Specify a start index for frames in consideration of
+             different filename format. However, when taking videos as input,
+             it should be set to 0, since frames loaded from videos count
+             from 0. Defaults to 0.
+-        modality (str): Modality of data. Support ``RGB``, ``Flow``.
+-            Defaults to ``RGB``.
++        modality (str): Modality of data. Support ``'RGB'``, ``'Flow'``.
++            Defaults to ``'RGB'``.
+         test_mode (bool): Store True when building test or validation dataset.
+             Defaults to False.
++        delimiter (str): Delimiter for the annotation file.
++            Defaults to ``' '`` (whitespace).
+     """
+ 
+     def __init__(self,
+                  ann_file: str,
+                  pipeline: List[Union[dict, Callable]],
+                  data_prefix: ConfigType = dict(video=''),
+                  multi_class: bool = False,
+                  num_classes: Optional[int] = None,
+                  start_index: int = 0,
+                  modality: str = 'RGB',
+                  test_mode: bool = False,
++                 delimiter: str = ' ',
+                  **kwargs) -> None:
++        self.delimiter = delimiter
+         super().__init__(
+             ann_file,
+             pipeline=pipeline,
+             data_prefix=data_prefix,
+             multi_class=multi_class,
+             num_classes=num_classes,
+             start_index=start_index,
+             modality=modality,
+             test_mode=test_mode,
+             **kwargs)
+ 
+     def load_data_list(self) -> List[dict]:
+         """Load annotation file to get video information."""
+-        check_file_exist(self.ann_file)
++        exists(self.ann_file)
+         data_list = []
+-        with open(self.ann_file, 'r') as fin:
+-            for line in fin:
+-                line_split = line.strip().split()
+-                if self.multi_class:
+-                    assert self.num_classes is not None
+-                    filename, label = line_split[0], line_split[1:]
+-                    label = list(map(int, label))
+-                else:
+-                    filename, label = line_split
+-                    label = int(label)
+-                if self.data_prefix['video'] is not None:
+-                    filename = osp.join(self.data_prefix['video'], filename)
+-                data_list.append(dict(filename=filename, label=label))
++        fin = list_from_file(self.ann_file)
++        for line in fin:
++            line_split = line.strip().split(self.delimiter)
++            if self.multi_class:
++                assert self.num_classes is not None
++                filename, label = line_split[0], line_split[1:]
++                label = list(map(int, label))
++            else:
++                filename, label = line_split
++                label = int(label)
++            if self.data_prefix['video'] is not None:
++                filename = osp.join(self.data_prefix['video'], filename)
++            data_list.append(dict(filename=filename, label=label))
+         return data_list
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/engine/hooks/output.py` & `mmaction2-1.0.0rc3/mmaction/engine/hooks/output.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/engine/hooks/visualization_hook.py` & `mmaction2-1.0.0rc3/mmaction/engine/hooks/visualization_hook.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -87,15 +87,15 @@
+             elif 'frame_dir' in data_sample:
+                 sample_name = osp.basename(data_sample.get('frame_dir'))
+             else:
+                 sample_name = str(sample_id)
+ 
+             draw_args = self.draw_args
+             if self.out_dir is not None:
+-                draw_args['out_folder'] = self.file_client.join_path(
++                draw_args['out_path'] = self.file_client.join_path(
+                     self.out_dir, f'{sample_name}_{step}')
+ 
+             self._visualizer.add_datasample(
+                 sample_name,
+                 video=video,
+                 data_sample=data_sample,
+                 step=step,
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/engine/model/weight_init.py` & `mmaction2-1.0.0rc3/mmaction/engine/model/weight_init.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/engine/optimizers/swin_optim_wrapper_constructor.py` & `mmaction2-1.0.0rc3/mmaction/engine/optimizers/swin_optim_wrapper_constructor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/engine/optimizers/tsm_optim_wrapper_constructor.py` & `mmaction2-1.0.0rc3/mmaction/engine/optimizers/tsm_optim_wrapper_constructor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/engine/runner/multi_loop.py` & `mmaction2-1.0.0rc3/mmaction/engine/runner/multi_loop.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/functional/__init__.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/functional/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/functional/accuracy.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/functional/accuracy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/metrics.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/metrics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/np_box_list.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/np_box_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/np_box_ops.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/np_box_ops.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/object_detection_evaluation.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/object_detection_evaluation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/per_image_evaluation.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/per_image_evaluation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_evaluation/standard_fields.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_evaluation/standard_fields.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/functional/ava_utils.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/functional/ava_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/functional/eval_detection.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/functional/eval_detection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/metrics/acc_metric.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/metrics/acc_metric.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/metrics/anet_metric.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/metrics/anet_metric.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/evaluation/metrics/ava_metric.py` & `mmaction2-1.0.0rc3/mmaction/evaluation/metrics/ava_metric.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/__init__.py` & `mmaction2-1.0.0rc3/mmaction/models/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/__init__.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/__init__.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -15,17 +15,19 @@
+ from .resnet_omni import OmniResNet
+ from .resnet_tin import ResNetTIN
+ from .resnet_tsm import ResNetTSM
+ from .stgcn import STGCN
+ from .swin import SwinTransformer3D
+ from .tanet import TANet
+ from .timesformer import TimeSformer
++from .uniformer import UniFormer
++from .uniformerv2 import UniFormerV2
+ from .vit_mae import VisionTransformer
+ from .x3d import X3D
+ 
+ __all__ = [
+     'AAGCN', 'C2D', 'C3D', 'MViT', 'MobileNetV2', 'MobileNetV2TSM',
+     'OmniResNet', 'ResNet', 'ResNet2Plus1d', 'ResNet3d', 'ResNet3dCSN',
+     'ResNet3dLayer', 'ResNet3dSlowFast', 'ResNet3dSlowOnly', 'ResNetAudio',
+     'ResNetTIN', 'ResNetTSM', 'STGCN', 'SwinTransformer3D', 'TANet',
+-    'TimeSformer', 'VisionTransformer', 'X3D'
++    'TimeSformer', 'UniFormer', 'UniFormerV2', 'VisionTransformer', 'X3D'
+ ]
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/aagcn.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/aagcn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/c2d.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/c2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/c3d.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/c3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/mobilenet_v2.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/mobilenet_v2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/mobilenet_v2_tsm.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/mobilenet_v2_tsm.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/mvit.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/mvit.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -3,16 +3,18 @@
+ 
+ import numpy as np
+ import torch
+ import torch.nn as nn
+ import torch.nn.functional as F
+ from mmcv.cnn import build_activation_layer, build_norm_layer
+ from mmcv.cnn.bricks import DropPath
++from mmengine.logging import MMLogger
+ from mmengine.model import BaseModule, ModuleList
+ from mmengine.model.weight_init import trunc_normal_
++from mmengine.runner.checkpoint import _load_checkpoint_with_prefix
+ from mmengine.utils import to_3tuple
+ 
+ from mmaction.registry import MODELS
+ from ..utils.embed import PatchEmbed3D
+ 
+ 
+ def resize_pos_embed(pos_embed: torch.Tensor,
+@@ -553,14 +555,19 @@
+ 
+             Defaults to 'base'.
+         spatial_size (int): The expected input spatial_size shape.
+             Defaults to 224.
+         temporal_size (int): The expected input temporal_size shape.
+             Defaults to 224.
+         in_channels (int): The num of input channels. Defaults to 3.
++        pretrained (str, optional): Name of pretrained model.
++            Defaults to None.
++        pretrained_type (str, optional): Type of pretrained model. choose from
++            'imagenet', 'maskfeat', None. Defaults to None, which means load
++            from same architecture.
+         out_scales (int | Sequence[int]): The output scale indices.
+             They should not exceed the length of ``downscale_indices``.
+             Defaults to -1, which means the last scale.
+         drop_path_rate (float): Stochastic depth rate. Defaults to 0.1.
+         use_abs_pos_embed (bool): If True, add absolute position embedding to
+             the patch embedding. Defaults to False.
+         interpolate_mode (str): Select the interpolate mode for absolute
+@@ -652,14 +659,15 @@
+     def __init__(
+         self,
+         arch: str = 'base',
+         spatial_size: int = 224,
+         temporal_size: int = 16,
+         in_channels: int = 3,
+         pretrained: Optional[str] = None,
++        pretrained_type: Optional[str] = None,
+         out_scales: Union[int, Sequence[int]] = -1,
+         drop_path_rate: float = 0.,
+         use_abs_pos_embed: bool = False,
+         interpolate_mode: str = 'trilinear',
+         pool_kernel: tuple = (3, 3, 3),
+         dim_mul: int = 2,
+         head_mul: int = 2,
+@@ -673,21 +681,22 @@
+         mlp_ratio: float = 4.,
+         qkv_bias: bool = True,
+         norm_cfg: Dict = dict(type='LN', eps=1e-6),
+         patch_cfg: Dict = dict(
+             kernel_size=(3, 7, 7), stride=(2, 4, 4), padding=(1, 3, 3)),
+         init_cfg: Optional[Union[Dict, List[Dict]]] = [
+             dict(type='TruncNormal', layer=['Conv2d', 'Conv3d'], std=0.02),
+-            dict(type='TruncNormal', layer='Linear', std=0.02, bias=0.),
++            dict(type='TruncNormal', layer='Linear', std=0.02, bias=0.02),
+             dict(type='Constant', layer='LayerNorm', val=1., bias=0.02),
+         ]
+     ) -> None:
+         if pretrained:
+-            self.init_cfg = dict(type='Pretrained', checkpoint=pretrained)
+-        super().__init__(init_cfg=init_cfg)
++            init_cfg = dict(type='Pretrained', checkpoint=pretrained)
++        super().__init__(init_cfg=init_cfg.copy())
++        self.pretrained_type = pretrained_type
+ 
+         if isinstance(arch, str):
+             arch = arch.lower()
+             assert arch in set(self.arch_zoo), \
+                 f'Arch {arch} is not in default archs {set(self.arch_zoo)}'
+             self.arch_settings = self.arch_zoo[arch]
+         else:
+@@ -698,14 +707,17 @@
+                 f'Custom arch needs a dict with keys {essential_keys}'
+             self.arch_settings = arch
+ 
+         self.embed_dims = self.arch_settings['embed_dims']
+         self.num_layers = self.arch_settings['num_layers']
+         self.num_heads = self.arch_settings['num_heads']
+         self.downscale_indices = self.arch_settings['downscale_indices']
++        # Defaults take downscale_indices as downscale_indices
++        self.dim_mul_indices = self.arch_settings.get(
++            'dim_mul_indices', self.downscale_indices.copy())
+         self.num_scales = len(self.downscale_indices) + 1
+         self.stage_indices = {
+             index - 1: i
+             for i, index in enumerate(self.downscale_indices)
+         }
+         self.stage_indices[self.num_layers - 1] = self.num_scales - 1
+         self.use_abs_pos_embed = use_abs_pos_embed
+@@ -754,27 +766,29 @@
+ 
+         self.blocks = ModuleList()
+         out_dims_list = [self.embed_dims]
+         num_heads = self.num_heads
+         stride_kv = adaptive_kv_stride
+         input_size = self.patch_resolution
+         for i in range(self.num_layers):
+-            if i in self.downscale_indices:
++            if i in self.downscale_indices or i in self.dim_mul_indices:
+                 num_heads *= head_mul
++
++            if i in self.downscale_indices:
+                 stride_q = [1, 2, 2]
+                 stride_kv = [max(s // 2, 1) for s in stride_kv]
+             else:
+                 stride_q = [1, 1, 1]
+ 
+             # Set output embed_dims
+-            if dim_mul_in_attention and i in self.downscale_indices:
+-                # multiply embed_dims in downscale layers.
++            if dim_mul_in_attention and i in self.dim_mul_indices:
++                # multiply embed_dims in dim_mul_indices layers.
+                 out_dims = out_dims_list[-1] * dim_mul
+-            elif not dim_mul_in_attention and i + 1 in self.downscale_indices:
+-                # multiply embed_dims before downscale layers.
++            elif not dim_mul_in_attention and i + 1 in self.dim_mul_indices:
++                # multiply embed_dims before dim_mul_indices layers.
+                 out_dims = out_dims_list[-1] * dim_mul
+             else:
+                 out_dims = out_dims_list[-1]
+ 
+             attention_block = MultiScaleBlock(
+                 in_dims=out_dims_list[-1],
+                 out_dims=out_dims,
+@@ -799,20 +813,52 @@
+             if i in self.stage_indices:
+                 stage_index = self.stage_indices[i]
+                 if stage_index in self.out_scales:
+                     norm_layer = build_norm_layer(norm_cfg, out_dims)[1]
+                     self.add_module(f'norm{stage_index}', norm_layer)
+ 
+     def init_weights(self, pretrained: Optional[str] = None) -> None:
+-        super().init_weights()
+-
+-        if (isinstance(self.init_cfg, dict)
+-                and self.init_cfg['type'] == 'Pretrained'):
+-            # Suppress default init if use pretrained model.
+-            return
++        # interpolate maskfeat relative position embedding
++        if self.pretrained_type == 'maskfeat':
++            logger = MMLogger.get_current_instance()
++            pretrained = self.init_cfg['checkpoint']
++            logger.info(f'load pretrained model from {pretrained}')
++            state_dict = _load_checkpoint_with_prefix(
++                'backbone.', pretrained, map_location='cpu')
++            attn_rel_pos_keys = [
++                k for k in state_dict.keys() if 'attn.rel_pos' in k
++            ]
++            for k in attn_rel_pos_keys:
++                attn_rel_pos_pretrained = state_dict[k]
++                attn_rel_pos_current = self.state_dict()[k]
++                L1, dim1 = attn_rel_pos_pretrained.size()
++                L2, dim2 = attn_rel_pos_current.size()
++                if dim1 != dim2:
++                    logger.warning(f'Dim mismatch in loading {k}, passing')
++                else:
++                    if L1 != L2:
++                        interp_param = torch.nn.functional.interpolate(
++                            attn_rel_pos_pretrained.t().unsqueeze(0),
++                            size=L2,
++                            mode='linear')
++                        interp_param = \
++                            interp_param.view(dim2, L2).permute(1, 0)
++                        state_dict[k] = interp_param
++                        logger.info(
++                            f'{k} reshaped from {(L1, dim1)} to {L2, dim2}')
++            msg = self.load_state_dict(state_dict, strict=False)
++            logger.info(msg)
++
++        elif self.pretrained_type is None:
++            super().init_weights()
++
++            if (isinstance(self.init_cfg, dict)
++                    and self.init_cfg['type'] == 'Pretrained'):
++                # Suppress default init if use pretrained model.
++                return
+ 
+         if self.use_abs_pos_embed:
+             trunc_normal_(self.pos_embed, std=0.02)
+ 
+     def forward(self, x: torch.Tensor) ->\
+             Tuple[Union[torch.Tensor, List[torch.Tensor]]]:
+         """Forward the MViT."""
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/resnet.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/resnet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/resnet2plus1d.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/resnet2plus1d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/resnet3d.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/resnet3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/resnet3d_csn.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/resnet3d_csn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/resnet3d_slowfast.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/resnet3d_slowfast.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/resnet3d_slowonly.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/resnet3d_slowonly.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/resnet_audio.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/resnet_audio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/resnet_omni.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/resnet_omni.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/resnet_tin.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/resnet_tin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/resnet_tsm.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/resnet_tsm.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/stgcn.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/stgcn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/swin.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/swin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/tanet.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/tanet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/timesformer.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/timesformer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/vit_mae.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/vit_mae.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/backbones/x3d.py` & `mmaction2-1.0.0rc3/mmaction/models/backbones/x3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/common/conv2plus1d.py` & `mmaction2-1.0.0rc3/mmaction/models/common/conv2plus1d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/common/conv_audio.py` & `mmaction2-1.0.0rc3/mmaction/models/common/conv_audio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/common/sub_batchnorm3d.py` & `mmaction2-1.0.0rc3/mmaction/models/common/sub_batchnorm3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/common/tam.py` & `mmaction2-1.0.0rc3/mmaction/models/common/tam.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/common/transformer.py` & `mmaction2-1.0.0rc3/mmaction/models/common/transformer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/data_preprocessors/data_preprocessor.py` & `mmaction2-1.0.0rc3/mmaction/models/data_preprocessors/data_preprocessor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/__init__.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/base.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/gcn_head.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/gcn_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/i3d_head.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/i3d_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/mvit_head.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/mvit_head.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -19,38 +19,43 @@
+     Args:
+         num_classes (int): Number of classes to be classified.
+         in_channels (int): Number of channels in input feature.
+         loss_cls (dict or ConfigDict): Config for building loss.
+             Defaults to `dict(type='CrossEntropyLoss')`.
+         dropout_ratio (float): Probability of dropout layer. Default: 0.5.
+         init_std (float): Std value for Initiation. Defaults to 0.02.
++        init_scale (float): Scale factor for Initiation parameters. Default: 1.
+         kwargs (dict, optional): Any keyword argument to be used to initialize
+             the head.
+     """
+ 
+     def __init__(self,
+                  num_classes: int,
+                  in_channels: int,
+                  loss_cls: ConfigType = dict(type='CrossEntropyLoss'),
+                  dropout_ratio: float = 0.5,
+                  init_std: float = 0.02,
++                 init_scale: float = 1.0,
+                  **kwargs) -> None:
+         super().__init__(num_classes, in_channels, loss_cls, **kwargs)
+         self.init_std = init_std
++        self.init_scale = init_scale
+         self.dropout_ratio = dropout_ratio
+         if self.dropout_ratio != 0:
+             self.dropout = nn.Dropout(p=self.dropout_ratio)
+         else:
+             self.dropout = None
+         self.fc_cls = nn.Linear(self.in_channels, self.num_classes)
+ 
+     def init_weights(self) -> None:
+         """Initiate the parameters from scratch."""
+         trunc_normal_init(self.fc_cls.weight, std=self.init_std)
+         constant_init(self.fc_cls.bias, 0.02)
++        self.fc_cls.weight.data.mul_(self.init_scale)
++        self.fc_cls.bias.data.mul_(self.init_scale)
+ 
+     def pre_logits(self, feats: Tuple[List[Tensor]]) -> Tensor:
+         """The process before the final classification head.
+ 
+         The input ``feats`` is a tuple of list of tensor, and each tensor is
+         the feature of a backbone stage.
+         """
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/omni_head.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/omni_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/slowfast_head.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/slowfast_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/timesformer_head.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/timesformer_head.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -13,26 +13,35 @@
+ 
+     Args:
+         num_classes (int): Number of classes to be classified.
+         in_channels (int): Number of channels in input feature.
+         loss_cls (dict or ConfigDict): Config for building loss.
+             Defaults to `dict(type='CrossEntropyLoss')`.
+         init_std (float): Std value for Initiation. Defaults to 0.02.
++        dropout_ratio (float): Probability of dropout layer.
++            Defaults to : 0.0.
+         kwargs (dict, optional): Any keyword argument to be used to initialize
+             the head.
+     """
+ 
+     def __init__(self,
+                  num_classes: int,
+                  in_channels: int,
+                  loss_cls: ConfigType = dict(type='CrossEntropyLoss'),
+                  init_std: float = 0.02,
++                 dropout_ratio: float = 0.0,
+                  **kwargs) -> None:
+         super().__init__(num_classes, in_channels, loss_cls, **kwargs)
+         self.init_std = init_std
++        self.dropout_ratio = dropout_ratio
++
++        if self.dropout_ratio != 0:
++            self.dropout = nn.Dropout(p=self.dropout_ratio)
++        else:
++            self.dropout = None
+         self.fc_cls = nn.Linear(self.in_channels, self.num_classes)
+ 
+     def init_weights(self) -> None:
+         """Initiate the parameters from scratch."""
+         trunc_normal_init(self.fc_cls, std=self.init_std)
+ 
+     def forward(self, x: Tensor, **kwargs) -> Tensor:
+@@ -41,10 +50,13 @@
+         Args:
+             x (Tensor): The input data.
+ 
+         Returns:
+             Tensor: The classification scores for input samples.
+         """
+         # [N, in_channels]
++        if self.dropout is not None:
++            x = self.dropout(x)
++        # [N, in_channels]
+         cls_score = self.fc_cls(x)
+         # [N, num_classes]
+         return cls_score
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/tpn_head.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/tpn_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/trn_head.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/trn_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/tsm_head.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/tsm_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/tsn_audio_head.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/tsn_audio_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/tsn_head.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/tsn_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/heads/x3d_head.py` & `mmaction2-1.0.0rc3/mmaction/models/heads/x3d_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/localizers/bmn.py` & `mmaction2-1.0.0rc3/mmaction/models/localizers/bmn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/localizers/bsn.py` & `mmaction2-1.0.0rc3/mmaction/models/localizers/bsn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/localizers/utils/bsn_utils.py` & `mmaction2-1.0.0rc3/mmaction/models/localizers/utils/bsn_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/localizers/utils/proposal_utils.py` & `mmaction2-1.0.0rc3/mmaction/models/localizers/utils/proposal_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/losses/__init__.py` & `mmaction2-1.0.0rc3/mmaction/models/losses/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/losses/base.py` & `mmaction2-1.0.0rc3/mmaction/models/losses/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/losses/binary_logistic_regression_loss.py` & `mmaction2-1.0.0rc3/mmaction/models/losses/binary_logistic_regression_loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/losses/bmn_loss.py` & `mmaction2-1.0.0rc3/mmaction/models/losses/bmn_loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/losses/cross_entropy_loss.py` & `mmaction2-1.0.0rc3/mmaction/models/losses/cross_entropy_loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/losses/hvu_loss.py` & `mmaction2-1.0.0rc3/mmaction/models/losses/hvu_loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/losses/nll_loss.py` & `mmaction2-1.0.0rc3/mmaction/models/losses/nll_loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/losses/ohem_hinge_loss.py` & `mmaction2-1.0.0rc3/mmaction/models/losses/ohem_hinge_loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/losses/ssn_loss.py` & `mmaction2-1.0.0rc3/mmaction/models/losses/ssn_loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/necks/tpn.py` & `mmaction2-1.0.0rc3/mmaction/models/necks/tpn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/recognizers/base.py` & `mmaction2-1.0.0rc3/mmaction/models/recognizers/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/recognizers/recognizer2d.py` & `mmaction2-1.0.0rc3/mmaction/models/recognizers/recognizer2d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/recognizers/recognizer3d.py` & `mmaction2-1.0.0rc3/mmaction/models/recognizers/recognizer3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/recognizers/recognizer_audio.py` & `mmaction2-1.0.0rc3/mmaction/models/recognizers/recognizer_audio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/recognizers/recognizer_gcn.py` & `mmaction2-1.0.0rc3/mmaction/models/recognizers/recognizer_gcn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/recognizers/recognizer_omni.py` & `mmaction2-1.0.0rc3/mmaction/models/recognizers/recognizer_omni.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/roi_heads/bbox_heads/bbox_head.py` & `mmaction2-1.0.0rc3/mmaction/models/roi_heads/bbox_heads/bbox_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/roi_heads/roi_extractors/single_straight3d.py` & `mmaction2-1.0.0rc3/mmaction/models/roi_heads/roi_extractors/single_straight3d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/roi_heads/roi_head.py` & `mmaction2-1.0.0rc3/mmaction/models/roi_heads/roi_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/roi_heads/shared_heads/acrn_head.py` & `mmaction2-1.0.0rc3/mmaction/models/roi_heads/shared_heads/acrn_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/roi_heads/shared_heads/fbo_head.py` & `mmaction2-1.0.0rc3/mmaction/models/roi_heads/shared_heads/fbo_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/roi_heads/shared_heads/lfb.py` & `mmaction2-1.0.0rc3/mmaction/models/roi_heads/shared_heads/lfb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/roi_heads/shared_heads/lfb_infer_head.py` & `mmaction2-1.0.0rc3/mmaction/models/roi_heads/shared_heads/lfb_infer_head.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/task_modules/assigners/max_iou_assigner_ava.py` & `mmaction2-1.0.0rc3/mmaction/models/task_modules/assigners/max_iou_assigner_ava.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/utils/blending_utils.py` & `mmaction2-1.0.0rc3/mmaction/models/utils/blending_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/utils/embed.py` & `mmaction2-1.0.0rc3/mmaction/models/utils/embed.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/utils/gcn_utils.py` & `mmaction2-1.0.0rc3/mmaction/models/utils/gcn_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/models/utils/graph.py` & `mmaction2-1.0.0rc3/mmaction/models/utils/graph.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/structures/action_data_sample.py` & `mmaction2-1.0.0rc3/mmaction/structures/action_data_sample.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/structures/bbox/bbox_target.py` & `mmaction2-1.0.0rc3/mmaction/structures/bbox/bbox_target.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/structures/bbox/transforms.py` & `mmaction2-1.0.0rc3/mmaction/structures/bbox/transforms.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/testing/__init__.py` & `mmaction2-1.0.0rc3/mmaction/testing/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/testing/_utils.py` & `mmaction2-1.0.0rc3/mmaction/testing/_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/utils/gradcam_utils.py` & `mmaction2-1.0.0rc3/mmaction/utils/gradcam_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/utils/misc.py` & `mmaction2-1.0.0rc3/mmaction/utils/misc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/utils/setup_env.py` & `mmaction2-1.0.0rc3/mmaction/utils/setup_env.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/utils/typing.py` & `mmaction2-1.0.0rc3/mmaction/utils/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/version.py` & `mmaction2-1.0.0rc3/mmaction/version.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ # Copyright (c) Open-MMLab. All rights reserved.
+ 
+-__version__ = '1.0.0rc2'
++__version__ = '1.0.0rc3'
+ 
+ 
+ def parse_version_info(version_str: str):
+     """Parse a version string into a tuple.
+ 
+     Args:
+         version_str (str): The version string.
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/visualization/action_visualizer.py` & `mmaction2-1.0.0rc3/mmaction/visualization/action_visualizer.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,17 +1,15 @@
+ # Copyright (c) OpenMMLab. All rights reserved.
+-import os
+ import os.path as osp
+-import warnings
+ from typing import Dict, List, Optional, Sequence, Tuple, Union
+ 
+-import matplotlib.pyplot as plt
+ import mmcv
+ import numpy as np
+ from mmengine.dist import master_only
++from mmengine.fileio.io import isdir, isfile, join_path, list_dir_or_file
+ from mmengine.visualization import Visualizer
+ 
+ from mmaction.registry import VISBACKENDS, VISUALIZERS
+ from mmaction.structures import ActionDataSample
+ 
+ 
+ def _get_adaptive_scale(img_shape: Tuple[int, int],
+@@ -41,19 +39,14 @@
+ 
+ @VISUALIZERS.register_module()
+ class ActionVisualizer(Visualizer):
+     """Universal Visualizer for classification task.
+ 
+     Args:
+         name (str): Name of the instance. Defaults to 'visualizer'.
+-        video (Union[np.ndarray, Sequence[np.ndarray]]):
+-            the origin video to draw. The format should be RGB.
+-            For np.ndarray input, the video shape should be (N, H, W, C).
+-            For Sequence[np.ndarray] input, the shape of each frame in
+-             the sequence should be (H, W, C).
+         vis_backends (list, optional): Visual backend config list.
+             Defaults to None.
+         save_dir (str, optional): Save file dir for all storage backends.
+             If it is None, the backend storage will not save any data.
+         fig_save_cfg (dict): Keyword parameters of figure for saving.
+             Defaults to empty dict.
+         fig_show_cfg (dict): Keyword parameters of figure for showing.
+@@ -85,93 +78,97 @@
+         >>> vis.add_datasample('demo', video, step=1)
+         >>> assert Path('outputs/vis_data/demo/frames_1/2.png').exists()
+     """
+ 
+     def __init__(
+         self,
+         name='visualizer',
+-        video: Optional[np.ndarray] = None,
+         vis_backends: Optional[List[Dict]] = None,
+         save_dir: Optional[str] = None,
+         fig_save_cfg=dict(frameon=False),
+-        fig_show_cfg=dict(frameon=False, num='show')
++        fig_show_cfg=dict(frameon=False)
+     ) -> None:
+-        self._dataset_meta = None
+-        self._vis_backends = dict()
++        super().__init__(
++            name=name,
++            image=None,
++            vis_backends=vis_backends,
++            save_dir=save_dir,
++            fig_save_cfg=fig_save_cfg,
++            fig_show_cfg=fig_show_cfg)
++
++    def _load_video(self,
++                    video: Union[np.ndarray, Sequence[np.ndarray], str],
++                    target_resolution: Optional[Tuple[int]] = None):
++        """Load video from multiple source and convert to target resolution.
+ 
+-        if save_dir is None:
+-            warnings.warn('`Visualizer` backend is not initialized '
+-                          'because save_dir is None.')
+-        elif vis_backends is not None:
+-            assert len(vis_backends) > 0, 'empty list'
+-            names = [
+-                vis_backend.get('name', None) for vis_backend in vis_backends
+-            ]
+-            if None in names:
+-                if len(set(names)) > 1:
+-                    raise RuntimeError(
+-                        'If one of them has a name attribute, '
+-                        'all backends must use the name attribute')
+-                else:
+-                    type_names = [
+-                        vis_backend['type'] for vis_backend in vis_backends
+-                    ]
+-                    if len(set(type_names)) != len(type_names):
+-                        raise RuntimeError(
+-                            'The same vis backend cannot exist in '
+-                            '`vis_backend` config. '
+-                            'Please specify the name field.')
+-
+-            if None not in names and len(set(names)) != len(names):
+-                raise RuntimeError('The name fields cannot be the same')
+-
+-            save_dir = osp.join(save_dir, 'vis_data')
+-
+-            for vis_backend in vis_backends:
+-                name = vis_backend.pop('name', vis_backend['type'])
+-                vis_backend.setdefault('save_dir', save_dir)
+-                self._vis_backends[name] = VISBACKENDS.build(vis_backend)
+-
+-        self.is_inline = 'inline' in plt.get_backend()
+-
+-        self.fig_save = None
+-        self.fig_show = None
+-        self.fig_save_num = fig_save_cfg.get('num', None)
+-        self.fig_show_num = fig_show_cfg.get('num', None)
+-        self.fig_save_cfg = fig_save_cfg
+-        self.fig_show_cfg = fig_show_cfg
+-
+-        (self.fig_save_canvas, self.fig_save,
+-         self.ax_save) = self._initialize_fig(fig_save_cfg)
+-        self.dpi = self.fig_save.get_dpi()
++        Args:
++            video (np.ndarray, str): The video to draw.
++            target_resolution (Tuple[int], optional): Set to
++                (desired_width desired_height) to have resized frames. If
++                either dimension is None, the frames are resized by keeping
++                the existing aspect ratio. Defaults to None.
++        """
++        if isinstance(video, np.ndarray) or isinstance(video, list):
++            frames = video
++        elif isinstance(video, str):
++            # video file path
++            if isfile(video):
++                try:
++                    import decord
++                except ImportError:
++                    raise ImportError(
++                        'Please install decord to load video file.')
++                video = decord.VideoReader(video)
++                frames = [x.asnumpy()[..., ::-1] for x in video]
++            # rawframes folder path
++            elif isdir(video):
++                frame_list = sorted(list_dir_or_file(video, list_dir=False))
++                frames = [mmcv.imread(join_path(video, x)) for x in frame_list]
++        else:
++            raise TypeError(f'type of video {type(video)} not supported')
++
++        if target_resolution is not None:
++            w, h = target_resolution
++            frame_h, frame_w, _ = frames[0].shape
++            if w == -1:
++                w = int(h / frame_h * frame_w)
++            if h == -1:
++                h = int(w / frame_w * frame_h)
++            frames = [mmcv.imresize(f, (w, h)) for f in frames]
++
++        return frames
+ 
+     @master_only
+     def add_datasample(self,
+                        name: str,
+-                       video: Union[np.ndarray, Sequence[np.ndarray]],
++                       video: Union[np.ndarray, Sequence[np.ndarray], str],
+                        data_sample: Optional[ActionDataSample] = None,
+                        draw_gt: bool = True,
+                        draw_pred: bool = True,
+                        draw_score: bool = True,
+                        rescale_factor: Optional[float] = None,
+                        show_frames: bool = False,
+                        text_cfg: dict = dict(),
+                        wait_time: float = 0.1,
+-                       out_folder: Optional[str] = None,
+-                       step: int = 0) -> None:
++                       out_path: Optional[str] = None,
++                       out_type: str = 'img',
++                       target_resolution: Optional[Tuple[int]] = None,
++                       step: int = 0,
++                       fps: int = 4) -> None:
+         """Draw datasample and save to all backends.
+ 
+-        - If ``out_folder`` is specified, all storage backends are ignored
+-          and save the videos to the ``out_folder``.
++        - If ``out_path`` is specified, all storage backends are ignored
++          and save the videos to the ``out_path``.
+         - If ``show_frames`` is True, plot the frames in a window sequentially,
+           please confirm you are able to access the graphical interface.
+ 
+         Args:
+             name (str): The frame identifier.
+-            video (np.ndarray): The video to draw.
++            video (np.ndarray, str): The video to draw. supports decoded
++                np.ndarray, video file path, rawframes folder path.
+             data_sample (:obj:`ActionDataSample`, optional): The annotation of
+                 the frame. Defaults to None.
+             draw_gt (bool): Whether to draw ground truth labels.
+                 Defaults to True.
+             draw_pred (bool): Whether to draw prediction labels.
+                 Defaults to True.
+             draw_score (bool): Whether to draw the prediction scores
+@@ -181,22 +178,29 @@
+             show_frames (bool): Whether to display the frames of the video.
+                 Defaults to False.
+             text_cfg (dict): Extra text setting, which accepts
+                 arguments of :attr:`mmengine.Visualizer.draw_texts`.
+                 Defaults to an empty dict.
+             wait_time (float): Delay in seconds. 0 is the special
+                 value that means "forever". Defaults to 0.1.
+-            out_folder (str, optional): Extra folder to save the visualization
++            out_path (str, optional): Extra folder to save the visualization
+                 result. If specified, the visualizer will only save the result
+-                frame to the out_folder and ignore its storage backends.
++                frame to the out_path and ignore its storage backends.
+                 Defaults to None.
++            out_type (str): Output format type, choose from 'img', 'gif',
++                'video'. Defaults to ``'img'``.
++            target_resolution (Tuple[int], optional): Set to
++                (desired_width desired_height) to have resized frames. If
++                either dimension is None, the frames are resized by keeping
++                the existing aspect ratio. Defaults to None.
+             step (int): Global step value to record. Defaults to 0.
++            fps (int): Frames per second for saving video. Defaults to 4.
+         """
+         classes = None
+-        wait_time_in_milliseconds = wait_time * 10**6
++        video = self._load_video(video, target_resolution)
+         tol_video = len(video)
+ 
+         if self.dataset_meta is not None:
+             classes = self.dataset_meta.get('classes', None)
+ 
+         if data_sample is None:
+             data_sample = ActionDataSample()
+@@ -252,35 +256,57 @@
+                 'bboxes': dict(facecolor='black', alpha=0.5, boxstyle='Round'),
+             }
+             _text_cfg.update(text_cfg)
+             self.draw_texts('\n'.join(texts), **_text_cfg)
+             drawn_img = self.get_image()
+             resulted_video.append(drawn_img)
+ 
+-            if show_frames:
+-                self.show(
+-                    drawn_img,
+-                    win_name=frame_name,
+-                    wait_time=wait_time_in_milliseconds)
++        if show_frames:
++            frame_wait_time = 1. / fps
++            for frame_idx, drawn_img in enumerate(resulted_video):
++                frame_name = 'frame %d of %s' % (frame_idx + 1, name)
++                if frame_idx < len(resulted_video) - 1:
++                    wait_time = frame_wait_time
++                else:
++                    wait_time = wait_time
++                self.show(drawn_img, win_name=frame_name, wait_time=wait_time)
+ 
+         resulted_video = np.array(resulted_video)
+-        if out_folder is not None:
+-            resulted_video = resulted_video[..., ::-1]
+-            os.makedirs(out_folder, exist_ok=True)
+-            # save the frame to the target file instead of vis_backends
+-            for frame_idx, frame in enumerate(resulted_video):
+-                mmcv.imwrite(frame, out_folder + '/%d.png' % frame_idx)
++        if out_path is not None:
++            save_dir, save_name = osp.split(out_path)
++            vis_backend_cfg = dict(type='LocalVisBackend', save_dir=save_dir)
++            tmp_local_vis_backend = VISBACKENDS.build(vis_backend_cfg)
++            tmp_local_vis_backend.add_video(
++                save_name,
++                resulted_video,
++                step=step,
++                fps=fps,
++                out_type=out_type)
+         else:
+-            self.add_video(name, resulted_video, step=step)
++            self.add_video(
++                name, resulted_video, step=step, fps=fps, out_type=out_type)
++        return resulted_video
+ 
+     @master_only
+-    def add_video(self, name: str, image: np.ndarray, step: int = 0) -> None:
++    def add_video(
++        self,
++        name: str,
++        image: np.ndarray,
++        step: int = 0,
++        fps: int = 4,
++        out_type: str = 'img',
++    ) -> None:
+         """Record the image.
+ 
+         Args:
+             name (str): The image identifier.
+             image (np.ndarray, optional): The image to be saved. The format
+                 should be RGB. Default to None.
+             step (int): Global step value to record. Default to 0.
++            fps (int): Frames per second for saving video. Defaults to 4.
++            out_type (str): Output format type, choose from 'img', 'gif',
++                'video'. Defaults to ``'img'``.
+         """
+         for vis_backend in self._vis_backends.values():
+-            vis_backend.add_video(name, image, step)  # type: ignore
++            vis_backend.add_video(
++                name, image, step=step, fps=fps,
++                out_type=out_type)  # type: ignore
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction/visualization/video_backend.py` & `mmaction2-1.0.0rc3/mmaction/visualization/video_backend.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,10 +1,11 @@
+ # Copyright (c) OpenMMLab. All rights reserved.
+ import os
+ import os.path as osp
++from typing import Optional
+ 
+ import cv2
+ import numpy as np
+ from mmengine.visualization import (LocalVisBackend, TensorboardVisBackend,
+                                     WandbVisBackend)
+ from mmengine.visualization.vis_backend import force_init_env
+ 
+@@ -17,81 +18,58 @@
+ 
+ 
+ @VISBACKENDS.register_module()
+ class LocalVisBackend(LocalVisBackend):
+     """Local visualization backend class with video support.
+ 
+     See mmengine.visualization.LocalVisBackend for more details.
+-
+-    Args:
+-        save_dir (str, optional): The root directory to save the files
+-            produced by the visualizer. If it is none, it means no data
+-            is stored.
+-        img_save_dir (str): The directory to save images.
+-            Defaults to ``'vis_image'``.
+-        config_save_file (str): The file name to save config.
+-            Defaults to ``'config.py'``.
+-        scalar_save_file (str):  The file name to save scalar values.
+-            Defaults to ``'scalars.json'``.
+-        out_type (str): Output format type, choose from 'img', 'gif',
+-            'video'. Defaults to ``'img'``.
+-        fps (int): Frames per second for saving video. Defaults to 5.
+     """
+ 
+-    def __init__(
+-        self,
+-        save_dir: str,
+-        img_save_dir: str = 'vis_image',
+-        config_save_file: str = 'config.py',
+-        scalar_save_file: str = 'scalars.json',
+-        out_type: str = 'img',
+-        fps: int = 5,
+-    ):
+-        super().__init__(save_dir, img_save_dir, config_save_file,
+-                         scalar_save_file)
+-        self.out_type = out_type
+-        self.fps = fps
+-
+     @force_init_env
+     def add_video(self,
+                   name: str,
+                   frames: np.ndarray,
+                   step: int = 0,
++                  fps: Optional[int] = 4,
++                  out_type: Optional[int] = 'img',
+                   **kwargs) -> None:
+         """Record the frames of a video to disk.
+ 
+         Args:
+             name (str): The video identifier (frame folder).
+             frames (np.ndarray): The frames to be saved. The format
+                 should be RGB. The shape should be (T, H, W, C).
+             step (int): Global step value to record. Defaults to 0.
++            out_type (str): Output format type, choose from 'img', 'gif',
++            'video'. Defaults to ``'img'``.
++            fps (int): Frames per second for saving video. Defaults to 4.
+         """
+         assert frames.dtype == np.uint8
+ 
+-        if self.out_type == 'img':
++        if out_type == 'img':
+             frames_dir = osp.join(self._save_dir, name, f'frames_{step}')
+             os.makedirs(frames_dir, exist_ok=True)
+             for idx, frame in enumerate(frames):
+                 drawn_image = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+                 save_file_name = f'{idx}.png'
+                 cv2.imwrite(osp.join(frames_dir, save_file_name), drawn_image)
+         else:
+             try:
+                 from moviepy.editor import ImageSequenceClip
+             except ImportError:
+                 raise ImportError('Please install moviepy to enable '
+                                   'output file.')
+ 
+             frames = [x[..., ::-1] for x in frames]
+-            video_clips = ImageSequenceClip(frames, fps=self.fps)
++            video_clips = ImageSequenceClip(frames, fps=fps)
+             name = osp.splitext(name)[0]
+-            if self.out_type == 'gif':
++            if out_type == 'gif':
+                 out_path = osp.join(self._save_dir, name + '.gif')
+                 video_clips.write_gif(out_path, logger=None)
+-            elif self.out_type == 'video':
++            elif out_type == 'video':
+                 out_path = osp.join(self._save_dir, name + '.mp4')
+                 video_clips.write_videofile(
+                     out_path, remove_temp=True, logger=None)
+ 
+ 
+ @VISBACKENDS.register_module()
+ class WandbVisBackend(WandbVisBackend):
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction2.egg-info/PKG-INFO` & `mmaction2-1.0.0rc3/mmaction2.egg-info/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mmaction2
+-Version: 1.0.0rc2
++Version: 1.0.0rc3
+ Summary: OpenMMLab Video Understanding Toolbox and Benchmark
+ Home-page: https://github.com/open-mmlab/mmaction2
+ Author: MMAction2 Contributors
+ Author-email: openmmlab@gmail.com
+ Maintainer: MMAction2 Contributors
+ Maintainer-email: openmmlab@gmail.com
+ License: Apache License 2.0
+@@ -76,23 +76,19 @@
+         
+         - **Support four major video understanding tasks**: MMAction2 implements various algorithms for multiple video understanding tasks, including action recognition, action localization, spatio-temporal action detection, and skeleton-based action detection.
+         
+         - **Well tested and documented**: We provide detailed documentation and API reference, as well as unit tests.
+         
+         ## What's New
+         
+-        **Release**: v1.0.0rc2 with the following new features:
++        **Release (2022.02.10)**: v1.0.0rc3 with the following new features:
+         
+-        - We Support Omni-Sourece training on ImageNet and Kinetics datasets.
+-        - We support exporting spatial-temporal detection models to ONNX.
+-        - We support **STGCN++** on NTU-RGB+D.
+-        - We support **MViT V2** on Kinetics 400 and something-V2.
+-        - We refine our skeleton-based pipelines and support the joint training of multi-stream skeleton information, including **joint, bone, joint-motion, and bone-motion**.
+-        - We support **VideoMAE** on Kinetics400.
+-        - We support **C2D** on Kinetics400, achieve 73.57% Top-1 accuracy (higher than 71.8% in the [paper](https://arxiv.org/abs/1711.07971)).
++        - Support Action Recognition model UniFormer V1(ICLR'2022), UniFormer V2(Arxiv'2022).
++        - Support training MViT V2(CVPR'2022), and MaskFeat(CVPR'2022) fine-tuning.
++        - Add a new handy interface for inference MMAction2 models ([demo](https://github.com/open-mmlab/mmaction2/blob/dev-1.x/demo/README.md#inferencer))
+         
+         ## Installation
+         
+         Please refer to [install.md](https://mmaction2.readthedocs.io/en/1.x/get_started.html) for more detailed instructions.
+         
+         ## Supported Methods
+         
+@@ -125,17 +121,17 @@
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition_audio/resnet/README.md">MultiModality: Audio</a> (ArXiv'2020)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/tanet/README.md">TANet</a> (ArXiv'2020)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/timesformer/README.md">TimeSformer</a> (ICML'2021)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/swin/README.md">VideoSwin</a> (CVPR'2022)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/videomae/README.md">VideoMAE</a> (NeurIPS'2022)</td>
+           </tr>
+           <tr>
+-            <td><a href="https://github.com/open-mmlab/mmaction2/blob/dev-1.x/configs/recognition/mvit/README.md">MViT V2</a> (CVPR'2022)</td>
+-            <td></td>
+-            <td></td>
++            <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/mvit/README.md">MViT V2</a> (CVPR'2022)</td>
++            <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/uniformer/README.md">UniFormer V1</a> (ICLR'2022)</td>
++            <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/configs/recognition/uniformerv2/README.md">UniFormer V2</a> (Arxiv'2022)</td>
+             <td></td>
+             <td></td>
+           </tr>
+           <tr>
+             <td colspan="5" style="font-weight:bold;">Action Localization</td>
+           </tr>
+           <tr>
+@@ -215,15 +211,15 @@
+           <tr>
+             <td colspan="4" style="font-weight:bold;">Spatio-Temporal Action Detection</td>
+           </tr>
+           <tr>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/ucf101_24/README.md">UCF101-24*</a> (<a href="http://www.thumos.info/download.html">Homepage</a>) (CRCV-IR-12-01)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/jhmdb/README.md">JHMDB*</a> (<a href="http://jhmdb.is.tue.mpg.de/">Homepage</a>) (ICCV'2015)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/ava/README.md">AVA</a> (<a href="https://research.google.com/ava/index.html">Homepage</a>) (CVPR'2018)</td>
+-            <td></td>
++            <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/ava_kinetics/README.md">AVA-Kinetics</a> (<a href="https://research.google.com/ava/index.html">Homepage</a>) (Arxiv'2020)</td>
+           </tr>
+           <tr>
+             <td colspan="4" style="font-weight:bold;">Skeleton-based Action Recognition</td>
+           </tr>
+           <tr>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/skeleton/README.md">PoseC3D-FineGYM</a> (<a href="https://kennymckormick.github.io/posec3d/">Homepage</a>) (ArXiv'2021)</td>
+             <td><a href="https://github.com/open-mmlab/mmaction2/blob/1.x/tools/data/skeleton/README.md">PoseC3D-NTURGB+D</a> (<a href="https://kennymckormick.github.io/posec3d/">Homepage</a>) (ArXiv'2021)</td>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: mmaction2 Version: 1.0.0rc2 Summary: OpenMMLab
++Metadata-Version: 2.1 Name: mmaction2 Version: 1.0.0rc3 Summary: OpenMMLab
+ Video Understanding Toolbox and Benchmark Home-page: https://github.com/open-
+ mmlab/mmaction2 Author: MMAction2 Contributors Author-email:
+ openmmlab@gmail.com Maintainer: MMAction2 Contributors Maintainer-email:
+ openmmlab@gmail.com License: Apache License 2.0 Description:
+ [https://github.com/open-mmlab/mmaction2/raw/1.x/resources/mmaction2_logo.png]
+                                         
+            OpenMMLab website HOT      OpenMMLab platform TRY_IT_OUT
+@@ -44,37 +44,34 @@
+ ## Major Features - **Modular design**: We decompose a video understanding
+ framework into different components. One can easily construct a customized
+ video understanding framework by combining different modules. - **Support four
+ major video understanding tasks**: MMAction2 implements various algorithms for
+ multiple video understanding tasks, including action recognition, action
+ localization, spatio-temporal action detection, and skeleton-based action
+ detection. - **Well tested and documented**: We provide detailed documentation
+-and API reference, as well as unit tests. ## What's New **Release**: v1.0.0rc2
+-with the following new features: - We Support Omni-Sourece training on ImageNet
+-and Kinetics datasets. - We support exporting spatial-temporal detection models
+-to ONNX. - We support **STGCN++** on NTU-RGB+D. - We support **MViT V2** on
+-Kinetics 400 and something-V2. - We refine our skeleton-based pipelines and
+-support the joint training of multi-stream skeleton information, including
+-**joint, bone, joint-motion, and bone-motion**. - We support **VideoMAE** on
+-Kinetics400. - We support **C2D** on Kinetics400, achieve 73.57% Top-1 accuracy
+-(higher than 71.8% in the [paper](https://arxiv.org/abs/1711.07971)). ##
+-Installation Please refer to [install.md](https://mmaction2.readthedocs.io/en/
+-1.x/get_started.html) for more detailed instructions. ## Supported Methods
++and API reference, as well as unit tests. ## What's New **Release
++(2022.02.10)**: v1.0.0rc3 with the following new features: - Support Action
++Recognition model UniFormer V1(ICLR'2022), UniFormer V2(Arxiv'2022). - Support
++training MViT V2(CVPR'2022), and MaskFeat(CVPR'2022) fine-tuning. - Add a new
++handy interface for inference MMAction2 models ([demo](https://github.com/open-
++mmlab/mmaction2/blob/dev-1.x/demo/README.md#inferencer)) ## Installation Please
++refer to [install.md](https://mmaction2.readthedocs.io/en/1.x/get_started.html)
++for more detailed instructions. ## Supported Methods
+ Action Recognition
+ C3D (CVPR'2014) TSN (ECCV'2016) I3D (CVPR'2017) C2D (CVPR'2018) I3D_Non-Local
+                                                                 (CVPR'2018)
+ R(2+1)D         TRN (ECCV'2018) TSM (ICCV'2019) TSM_Non-Local   SlowOnly
+ (CVPR'2018)                                     (ICCV'2019)     (ICCV'2019)
+ SlowFast        CSN (ICCV'2019) TIN (AAAI'2020) TPN (CVPR'2020) X3D (CVPR'2020)
+ (ICCV'2019)
+ MultiModality:  TANet           TimeSformer     VideoSwin       VideoMAE
+ Audio           (ArXiv'2020)    (ICML'2021)     (CVPR'2022)     (NeurIPS'2022)
+ (ArXiv'2020)
+-MViT_V2
+-(CVPR'2022)
++MViT_V2         UniFormer_V1    UniFormer_V2
++(CVPR'2022)     (ICLR'2022)     (Arxiv'2022)
+ Action Localization
+ SSN (ICCV'2017) BSN (ECCV'2018) BMN (ICCV'2019)
+ Spatio-Temporal Action Detection
+ ACRN            SlowOnly+Fast   SlowFast+Fast
+ (ECCV'2018)     R-CNN           R-CNN           LFB (CVPR'2019)
+                 (ICCV'2019)     (ICCV'2019)
+ Skeleton-based Action Recognition
+@@ -99,17 +96,17 @@
+ FineGYM (Homepage)
+ (CVPR'2020)
+ Action Localization
+ THUMOS14 (Homepage)  ActivityNet
+ (THUMOS Challenge    (Homepage)
+ 2014)                (CVPR'2015)
+ Spatio-Temporal Action Detection
+-UCF101-24*           JHMDB* (Homepage)  AVA (Homepage)
+-(Homepage) (CRCV-IR- (ICCV'2015)        (CVPR'2018)
+-12-01)
++UCF101-24*           JHMDB* (Homepage)  AVA (Homepage)       AVA-Kinetics
++(Homepage) (CRCV-IR- (ICCV'2015)        (CVPR'2018)          (Homepage)
++12-01)                                                       (Arxiv'2020)
+ Skeleton-based Action Recognition
+ PoseC3D-FineGYM      PoseC3D-NTURGB+D   PoseC3D-UCF101       PoseC3D-HMDB51
+ (Homepage)           (Homepage)         (Homepage)           (Homepage)
+ (ArXiv'2021)         (ArXiv'2021)       (ArXiv'2021)         (ArXiv'2021)
+ Datasets marked with * are not fully supported yet, but related dataset
+ preparation steps are provided. A summary can be found on the [**Supported
+ Datasets**](https://mmaction2.readthedocs.io/en/latest/supported_datasets.html)
+```
+
+### Comparing `mmaction2-1.0.0rc2/mmaction2.egg-info/SOURCES.txt` & `mmaction2-1.0.0rc3/mmaction2.egg-info/SOURCES.txt`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -98,17 +98,19 @@
+ mmaction/.mim/configs/recognition/i3d/i3d_imagenet-pretrained-r50_8xb8-dense-32x2x1-100e_kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/i3d/metafile.yml
+ mmaction/.mim/configs/recognition/mvit/metafile.yml
+ mmaction/.mim/configs/recognition/mvit/mvit-base-p244_32x3x1_kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/mvit/mvit-base-p244_u32_sthv2-rgb.py
+ mmaction/.mim/configs/recognition/mvit/mvit-large-p244_40x3x1_kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/mvit/mvit-large-p244_u40_sthv2-rgb.py
+-mmaction/.mim/configs/recognition/mvit/mvit-small-p244_16x4x1_kinetics400-rgb.py
+-mmaction/.mim/configs/recognition/mvit/mvit-small-p244_u16_sthv2-rgb.py
+-mmaction/.mim/configs/recognition/omnisource/slowonly_r50_16xb16-8x8x1-256e_imagenet-kinetics400-rgb.py
++mmaction/.mim/configs/recognition/mvit/mvit-small-p244_32xb16-16x4x1-200e_kinetics400-rgb.py
++mmaction/.mim/configs/recognition/mvit/mvit-small-p244_k400-maskfeat-pre_8xb32-16x4x1-100e_kinetics400-rgb.py
++mmaction/.mim/configs/recognition/mvit/mvit-small-p244_k400-pre_16xb16-u16-100e_sthv2-rgb.py
++mmaction/.mim/configs/recognition/omnisource/metafile.yml
++mmaction/.mim/configs/recognition/omnisource/slowonly_r50_8xb16-8x8x1-256e_imagenet-kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/r2plus1d/metafile.yml
+ mmaction/.mim/configs/recognition/r2plus1d/r2plus1d_r34_8xb8-32x2x1-180e_kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/r2plus1d/r2plus1d_r34_8xb8-8x8x1-180e_kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/slowfast/metafile.yml
+ mmaction/.mim/configs/recognition/slowfast/slowfast_r101-r50_32xb8-4x16x1-256e_kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/slowfast/slowfast_r101_8xb8-8x8x1-256e_kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/slowfast/slowfast_r50_8xb8-4x16x1-256e_kinetics400-rgb.py
+@@ -167,14 +169,40 @@
+ mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x5-100e_kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-100e_kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x8-50e_sthv2-rgb.py
+ mmaction/.mim/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-dense-1x1x5-100e_kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-dense161_8xb32-1x1x3-100e_kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-rn101-32x4d_8xb32-1x1x3-100e_kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/tsn/custom_backbones/tsn_imagenet-pretrained-swin-transformer_8xb32-1x1x3-100e_kinetics400-rgb.py
++mmaction/.mim/configs/recognition/uniformer/metafile.yml
++mmaction/.mim/configs/recognition/uniformer/uniformer-base_imagenet1k-pre_16x4x1_kinetics400-rgb.py
++mmaction/.mim/configs/recognition/uniformer/uniformer-base_imagenet1k-pre_32x4x1_kinetics400-rgb.py
++mmaction/.mim/configs/recognition/uniformer/uniformer-small_imagenet1k-pre_16x4x1_kinetics400-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/metafile.yml
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-base-p16-res224_clip-kinetics710-kinetics-k400-pre_u8_mitv1-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-base-p16-res224_clip-kinetics710-pre_u8_kinetics400-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-base-p16-res224_clip-kinetics710-pre_u8_kinetics600-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-base-p16-res224_clip-kinetics710-pre_u8_kinetics700-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-base-p16-res224_clip-pre_u8_kinetics710-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u16_kinetics400-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u16_kinetics600-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u16_kinetics700-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u32_kinetics400-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u32_kinetics600-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u32_kinetics700-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u8_kinetics400-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u8_kinetics600-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-kinetics710-pre_u8_kinetics700-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res224_clip-pre_u8_kinetics710-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res336_clip-kinetics710-pre_u32_kinetics400-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res336_clip-kinetics710-pre_u32_kinetics600-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res336_clip-kinetics710-pre_u32_kinetics700-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p14-res336_clip-pre_u8_kinetics710-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p16-res224_clip-kinetics710-kinetics-k400-pre_u8_mitv1-rgb.py
++mmaction/.mim/configs/recognition/uniformerv2/uniformerv2-large-p16-res336_clip-kinetics710-kinetics-k400-pre_u8_mitv1-rgb.py
+ mmaction/.mim/configs/recognition/videomae/metafile.yml
+ mmaction/.mim/configs/recognition/videomae/vit-base-p16_videomae-k400-pre_16x4x1_kinetics-400.py
+ mmaction/.mim/configs/recognition/videomae/vit-large-p16_videomae-k400-pre_16x4x1_kinetics-400.py
+ mmaction/.mim/configs/recognition/x3d/metafile.yml
+ mmaction/.mim/configs/recognition/x3d/x3d_m_16x5x1_facebook-kinetics400-rgb.py
+ mmaction/.mim/configs/recognition/x3d/x3d_s_13x6x1_facebook-kinetics400-rgb.py
+ mmaction/.mim/configs/recognition_audio/audioonly/audioonly_r50_8xb160-64x1x1-100e_kinetics400-audio-feature.py
+@@ -370,14 +398,17 @@
+ mmaction/.mim/tools/misc/dist_clip_feature_extraction.sh
+ mmaction/.mim/tools/misc/flow_extraction.py
+ mmaction/.mim/tools/visualizations/browse_dataset.py
+ mmaction/.mim/tools/visualizations/vis_cam.py
+ mmaction/.mim/tools/visualizations/vis_scheduler.py
+ mmaction/apis/__init__.py
+ mmaction/apis/inference.py
++mmaction/apis/inferencers/__init__.py
++mmaction/apis/inferencers/actionrecog_inferencer.py
++mmaction/apis/inferencers/mmaction2_inferencer.py
+ mmaction/datasets/__init__.py
+ mmaction/datasets/activitynet_dataset.py
+ mmaction/datasets/audio_dataset.py
+ mmaction/datasets/ava_dataset.py
+ mmaction/datasets/base.py
+ mmaction/datasets/pose_dataset.py
+ mmaction/datasets/rawframe_dataset.py
+@@ -392,14 +423,15 @@
+ mmaction/engine/__init__.py
+ mmaction/engine/hooks/__init__.py
+ mmaction/engine/hooks/output.py
+ mmaction/engine/hooks/visualization_hook.py
+ mmaction/engine/model/__init__.py
+ mmaction/engine/model/weight_init.py
+ mmaction/engine/optimizers/__init__.py
++mmaction/engine/optimizers/layer_decay_optim_wrapper_constructor.py
+ mmaction/engine/optimizers/swin_optim_wrapper_constructor.py
+ mmaction/engine/optimizers/tsm_optim_wrapper_constructor.py
+ mmaction/engine/runner/__init__.py
+ mmaction/engine/runner/multi_loop.py
+ mmaction/evaluation/__init__.py
+ mmaction/evaluation/functional/__init__.py
+ mmaction/evaluation/functional/accuracy.py
+@@ -434,14 +466,16 @@
+ mmaction/models/backbones/resnet_omni.py
+ mmaction/models/backbones/resnet_tin.py
+ mmaction/models/backbones/resnet_tsm.py
+ mmaction/models/backbones/stgcn.py
+ mmaction/models/backbones/swin.py
+ mmaction/models/backbones/tanet.py
+ mmaction/models/backbones/timesformer.py
++mmaction/models/backbones/uniformer.py
++mmaction/models/backbones/uniformerv2.py
+ mmaction/models/backbones/vit_mae.py
+ mmaction/models/backbones/x3d.py
+ mmaction/models/common/__init__.py
+ mmaction/models/common/conv2plus1d.py
+ mmaction/models/common/conv_audio.py
+ mmaction/models/common/sub_batchnorm3d.py
+ mmaction/models/common/tam.py
+```
+
+### Comparing `mmaction2-1.0.0rc2/setup.cfg` & `mmaction2-1.0.0rc3/setup.cfg`
+
+ * *Files identical despite different names*
+
+### Comparing `mmaction2-1.0.0rc2/setup.py` & `mmaction2-1.0.0rc3/setup.py`
+
+ * *Files identical despite different names*
+

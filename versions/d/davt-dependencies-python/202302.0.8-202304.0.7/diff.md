@@ -1,0 +1,71 @@
+# Comparing `tmp/davt_dependencies_python-202302.0.8.tar.gz` & `tmp/davt_dependencies_python-202304.0.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "davt_dependencies_python-202302.0.8.tar", max compression
++gzip compressed data, was "davt_dependencies_python-202304.0.7.tar", max compression
+```
+
+## Comparing `davt_dependencies_python-202302.0.8.tar` & `davt_dependencies_python-202304.0.7.tar`
+
+### file list
+
+```diff
+@@ -1,6 +1,5 @@
+--rw-r--r--   0        0        0      332 2023-02-09 09:12:09.803102 davt_dependencies_python-202302.0.8/README.md
+--rw-r--r--   0        0        0      839 2023-02-09 09:12:09.803102 davt_dependencies_python-202302.0.8/davt_dependencies_python/__init__.py
+--rw-r--r--   0        0        0     2527 2023-02-09 09:18:04.295575 davt_dependencies_python-202302.0.8/pyproject.toml
+--rw-r--r--   0        0        0      170 2023-02-09 09:12:09.803102 davt_dependencies_python-202302.0.8/setup.cfg
+--rw-r--r--   0        0        0     2271 1970-01-01 00:00:00.000000 davt_dependencies_python-202302.0.8/setup.py
+--rw-r--r--   0        0        0     3028 1970-01-01 00:00:00.000000 davt_dependencies_python-202302.0.8/PKG-INFO
++-rw-r--r--   0        0        0      332 2023-04-07 03:25:46.017541 davt_dependencies_python-202304.0.7/README.md
++-rw-r--r--   0        0        0      839 2023-04-07 03:25:46.017541 davt_dependencies_python-202304.0.7/davt_dependencies_python/__init__.py
++-rw-r--r--   0        0        0     2527 2023-04-07 03:29:03.512986 davt_dependencies_python-202304.0.7/pyproject.toml
++-rw-r--r--   0        0        0      170 2023-04-07 03:25:46.017541 davt_dependencies_python-202304.0.7/setup.cfg
++-rw-r--r--   0        0        0     3028 1970-01-01 00:00:00.000000 davt_dependencies_python-202304.0.7/PKG-INFO
+```
+
+### Comparing `davt_dependencies_python-202302.0.8/davt_dependencies_python/__init__.py` & `davt_dependencies_python-202304.0.7/davt_dependencies_python/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `davt_dependencies_python-202302.0.8/pyproject.toml` & `davt_dependencies_python-202304.0.7/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name="davt_dependencies_python"
+-version="202302.0.8"
++version="202304.0.7"
+ description="Data, Analytics and Visualization Templates (DAVT) - Python Dependencies"
+ authors=["John Bowyer <zfi4@cdc.gov>"]
+ readme = "README.md"
+ license="Apache"
+ homepage="https://github.com/cdcent/davt"
+ repository="https://github.com/cdcent/davt"
+ classifiers=[
+```
+
+### Comparing `davt_dependencies_python-202302.0.8/PKG-INFO` & `davt_dependencies_python-202304.0.7/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: davt-dependencies-python
+-Version: 202302.0.8
++Version: 202304.0.7
+ Summary: Data, Analytics and Visualization Templates (DAVT) - Python Dependencies
+ Home-page: https://github.com/cdcent/davt
+ License: Apache
+ Author: John Bowyer
+ Author-email: zfi4@cdc.gov
+ Requires-Python: >=3.9,<4.0
+ Classifier: Development Status :: 4 - Beta
+```
+

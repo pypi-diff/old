@@ -1,0 +1,127 @@
+--- tmp/pywnp-1.0.7.tar.gz
++++ tmp/pywnp-1.0.8.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pywnp-1.0.7.tar", last modified: Thu Apr  6 01:42:12 2023, max compression
+│ +gzip compressed data, was "pywnp-1.0.8.tar", last modified: Fri Apr  7 03:30:37 2023, max compression
+│   --- pywnp-1.0.7.tar
+├── +++ pywnp-1.0.8.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 01:42:12.977958 pywnp-1.0.7/
+│ │ --rw-rw-rw-   0        0        0     1060 2023-03-20 18:31:19.000000 pywnp-1.0.7/LICENSE
+│ │ --rw-rw-rw-   0        0        0     5353 2023-04-06 01:42:12.976955 pywnp-1.0.7/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     3627 2023-03-30 12:26:36.000000 pywnp-1.0.7/README.md
+│ │ --rw-rw-rw-   0        0        0      669 2023-04-06 01:41:30.000000 pywnp-1.0.7/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-06 01:42:12.977958 pywnp-1.0.7/setup.cfg
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 01:42:12.954785 pywnp-1.0.7/src/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 01:42:12.961729 pywnp-1.0.7/src/pywnp/
+│ │ --rw-rw-rw-   0        0        0       27 2023-03-20 19:19:07.000000 pywnp-1.0.7/src/pywnp/__init__.py
+│ │ --rw-rw-rw-   0        0        0    10527 2023-04-06 01:40:35.000000 pywnp-1.0.7/src/pywnp/pywnp.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 01:42:12.975956 pywnp-1.0.7/src/pywnp.egg-info/
+│ │ --rw-rw-rw-   0        0        0     5353 2023-04-06 01:42:12.000000 pywnp-1.0.7/src/pywnp.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      237 2023-04-06 01:42:12.000000 pywnp-1.0.7/src/pywnp.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 01:42:12.000000 pywnp-1.0.7/src/pywnp.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       11 2023-04-06 01:42:12.000000 pywnp-1.0.7/src/pywnp.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        6 2023-04-06 01:42:12.000000 pywnp-1.0.7/src/pywnp.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 03:30:37.424034 pywnp-1.0.8/
+│ │ +-rw-rw-rw-   0        0        0     1060 2023-03-20 18:31:19.000000 pywnp-1.0.8/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     5353 2023-04-07 03:30:37.423032 pywnp-1.0.8/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     3627 2023-03-30 12:26:36.000000 pywnp-1.0.8/README.md
+│ │ +-rw-rw-rw-   0        0        0      669 2023-04-07 03:30:16.000000 pywnp-1.0.8/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 03:30:37.424034 pywnp-1.0.8/setup.cfg
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 03:30:37.398734 pywnp-1.0.8/src/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 03:30:37.407809 pywnp-1.0.8/src/pywnp/
+│ │ +-rw-rw-rw-   0        0        0       27 2023-03-20 19:19:07.000000 pywnp-1.0.8/src/pywnp/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    10730 2023-04-07 03:30:00.000000 pywnp-1.0.8/src/pywnp/pywnp.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 03:30:37.422032 pywnp-1.0.8/src/pywnp.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     5353 2023-04-07 03:30:37.000000 pywnp-1.0.8/src/pywnp.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      237 2023-04-07 03:30:37.000000 pywnp-1.0.8/src/pywnp.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 03:30:37.000000 pywnp-1.0.8/src/pywnp.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       11 2023-04-07 03:30:37.000000 pywnp-1.0.8/src/pywnp.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        6 2023-04-07 03:30:37.000000 pywnp-1.0.8/src/pywnp.egg-info/top_level.txt
+│ │   --- pywnp-1.0.7/LICENSE
+│ ├── +++ pywnp-1.0.8/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- pywnp-1.0.7/PKG-INFO
+│ ├── +++ pywnp-1.0.8/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pywnp
+│ │ -Version: 1.0.7
+│ │ +Version: 1.0.8
+│ │  Summary: A python library to communicate with the WebNowPlaying-Redux browser extension
+│ │  Author-email: keifufu <keifufu@noonly.net>
+│ │  License: Copyright 2023 keifufu
+│ │          
+│ │          Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+│ │          
+│ │          The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+│ │   --- pywnp-1.0.7/README.md
+│ ├── +++ pywnp-1.0.8/README.md
+│ │┄ Files identical despite different names
+│ │   --- pywnp-1.0.7/pyproject.toml
+│ ├── +++ pywnp-1.0.8/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [project]
+│ │  name = "pywnp"
+│ │ -version = "1.0.7"
+│ │ +version = "1.0.8"
+│ │  description = "A python library to communicate with the WebNowPlaying-Redux browser extension"
+│ │  authors = [ { name="keifufu", email="keifufu@noonly.net" } ]
+│ │  readme = "README.md"
+│ │  license = { file = "LICENSE" }
+│ │  keywords = [ "webnowplaying", "wnp", "youtube", "spotify", "media", "music" ]
+│ │  requires-python = ">=3.7"
+│ │  classifiers = [
+│ │   --- pywnp-1.0.7/src/pywnp/pywnp.py
+│ ├── +++ pywnp-1.0.8/src/pywnp/pywnp.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -166,21 +166,26 @@
+│ │      WNPRedux._logger(type, message)
+│ │  
+│ │    def Close():
+│ │      if not WNPRedux.isInitialized: return
+│ │      try:
+│ │        WNPRedux.isInitialized = False
+│ │        for client in WNPRedux._clients:
+│ │ -        asyncio.run(client.close())
+│ │ +        try: asyncio.run(client.close())
+│ │ +        except: pass
+│ │ +      WNPRedux.mediaInfo = MediaInfo()
+│ │ +      WNPRedux._mediaInfoDictionary = list()
+│ │ +      WNPRedux._recipients = set()
+│ │ +      WNPRedux._clients = set()
+│ │ +      WNPRedux.clients = 0
+│ │        WNPRedux._server.ws_server.close()
+│ │ -      WNPRedux._future.set_result(None)
+│ │        WNPRedux._server = None
+│ │ +      WNPRedux._future.set_result(None)
+│ │        WNPRedux._future = None
+│ │ -    except:
+│ │ -      pass
+│ │ +    except: pass
+│ │  
+│ │    async def _onConnect(websocket):
+│ │      WNPRedux._clients.add(websocket)
+│ │      WNPRedux.clients = len(WNPRedux._clients)
+│ │      websocket.id = str(datetime.now())
+│ │      await websocket.send(f'ADAPTER_VERSION {WNPRedux._version};WNPRLIB_REVISION 1')
+│ │      try:
+│ │   --- pywnp-1.0.7/src/pywnp.egg-info/PKG-INFO
+│ ├── +++ pywnp-1.0.8/src/pywnp.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pywnp
+│ │ -Version: 1.0.7
+│ │ +Version: 1.0.8
+│ │  Summary: A python library to communicate with the WebNowPlaying-Redux browser extension
+│ │  Author-email: keifufu <keifufu@noonly.net>
+│ │  License: Copyright 2023 keifufu
+│ │          
+│ │          Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+│ │          
+│ │          The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
