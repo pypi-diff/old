@@ -1,0 +1,2761 @@
+--- tmp/konductor-0.0.1.tar.gz
++++ tmp/konductor-0.0.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "konductor-0.0.1.tar", last modified: Thu Mar  2 12:15:31 2023, max compression
+│ +gzip compressed data, was "konductor-0.0.2.tar", last modified: Fri Apr  7 02:16:34 2023, max compression
+│   --- konductor-0.0.1.tar
+├── +++ konductor-0.0.2.tar
+│ ├── file list
+│ │ @@ -1,77 +1,128 @@
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)    11344 2023-03-02 11:34:00.000000 konductor-0.0.1/LICENSE
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)    13490 2023-03-02 12:15:31.636050 konductor-0.0.1/PKG-INFO
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     1874 2023-03-02 12:13:53.000000 konductor-0.0.1/README.rst
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      632 2023-03-02 11:37:26.000000 konductor-0.0.1/pyproject.toml
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      153 2023-03-02 12:15:31.636050 konductor-0.0.1/setup.cfg
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)       93 2023-02-19 03:40:03.000000 konductor-0.0.1/setup.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.626050 konductor-0.0.1/src/
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)        0 2023-02-19 03:40:03.000000 konductor-0.0.1/src/konductor/__init__.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/metadata/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      729 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/metadata/__init__.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/metadata/checkpointer/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      597 2023-02-23 11:20:43.000000 konductor-0.0.1/src/konductor/metadata/checkpointer/__init__.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     3830 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/metadata/checkpointer/_pytorch.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      489 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/metadata/checkpointer/_tensorflow.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     2497 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/metadata/manager.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/metadata/remotesync/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      946 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/metadata/remotesync/__init__.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     3834 2023-02-19 03:40:03.000000 konductor-0.0.1/src/konductor/metadata/remotesync/_base.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     5700 2023-03-02 06:02:44.000000 konductor-0.0.1/src/konductor/metadata/remotesync/minio.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     7934 2023-02-19 03:40:03.000000 konductor-0.0.1/src/konductor/metadata/remotesync/ssh.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/metadata/statistics/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      107 2023-02-19 03:40:03.000000 konductor-0.0.1/src/konductor/metadata/statistics/__init__.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     6901 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/metadata/statistics/perflogger.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     1190 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/metadata/statistics/scalar_dict.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     7743 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/metadata/statistics/statistic.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/modules/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      516 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/modules/__init__.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/modules/data/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     4230 2023-03-02 00:38:06.000000 konductor-0.0.1/src/konductor/modules/data/__init__.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/modules/data/_pytorch/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)       44 2023-02-23 11:20:43.000000 konductor-0.0.1/src/konductor/modules/data/_pytorch/__init__.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      841 2023-03-02 04:54:20.000000 konductor-0.0.1/src/konductor/modules/data/_pytorch/cityscapes.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     2446 2023-03-02 05:37:57.000000 konductor-0.0.1/src/konductor/modules/data/_pytorch/dataloader.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      412 2023-02-23 11:20:43.000000 konductor-0.0.1/src/konductor/modules/data/_pytorch/mnist.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/modules/data/_tensorflow/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)       25 2023-02-23 11:20:43.000000 konductor-0.0.1/src/konductor/modules/data/_tensorflow/__init__.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)        0 2023-02-23 11:20:43.000000 konductor-0.0.1/src/konductor/modules/data/_tensorflow/dataloader.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      864 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/modules/data/dali.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     2890 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/modules/init.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/modules/losses/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     1441 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/modules/losses/__init__.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/modules/models/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     1926 2023-03-02 03:11:25.000000 konductor-0.0.1/src/konductor/modules/models/__init__.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/modules/models/_pytorch/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     1689 2023-03-02 03:14:48.000000 konductor-0.0.1/src/konductor/modules/models/_pytorch/__init__.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     1803 2023-03-02 03:10:01.000000 konductor-0.0.1/src/konductor/modules/models/_pytorch/encdec.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      743 2023-03-02 04:49:03.000000 konductor-0.0.1/src/konductor/modules/models/_pytorch/torchvision.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/modules/models/_tensorflow/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      217 2023-03-02 03:08:06.000000 konductor-0.0.1/src/konductor/modules/models/_tensorflow/__init__.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/modules/optimizers/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     1244 2023-03-02 03:22:56.000000 konductor-0.0.1/src/konductor/modules/optimizers/__init__.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/modules/optimizers/_pytorch/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)       30 2023-03-02 03:33:48.000000 konductor-0.0.1/src/konductor/modules/optimizers/_pytorch/__init__.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     2900 2023-03-02 04:00:12.000000 konductor-0.0.1/src/konductor/modules/optimizers/_pytorch/base.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      693 2023-03-02 00:54:00.000000 konductor-0.0.1/src/konductor/modules/optimizers/_pytorch/common.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     5756 2023-03-02 03:05:47.000000 konductor-0.0.1/src/konductor/modules/optimizers/_pytorch/lamb.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     3003 2023-03-02 03:30:11.000000 konductor-0.0.1/src/konductor/modules/registry.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/modules/scheduler/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     2383 2023-03-02 03:09:31.000000 konductor-0.0.1/src/konductor/modules/scheduler/__init__.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     2404 2023-03-02 03:19:51.000000 konductor-0.0.1/src/konductor/modules/scheduler/_pytorch.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/trainer/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      161 2023-02-19 03:40:03.000000 konductor-0.0.1/src/konductor/trainer/__init__.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     7418 2023-03-02 00:13:42.000000 konductor-0.0.1/src/konductor/trainer/initialisation.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     3912 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/trainer/pbar.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     1162 2023-02-19 03:40:03.000000 konductor-0.0.1/src/konductor/trainer/profiler.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     7418 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/trainer/pytorch.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     2961 2023-03-01 11:09:37.000000 konductor-0.0.1/src/konductor/trainer/trainer.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor/webserver/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)        0 2023-02-19 03:40:03.000000 konductor-0.0.1/src/konductor/webserver/__init__.py
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)      917 2023-02-19 03:40:03.000000 konductor-0.0.1/src/konductor/webserver/app.py
+│ │ -drwxr-xr-x   0 bpfer     (1000) bpfer     (1000)        0 2023-03-02 12:15:31.636050 konductor-0.0.1/src/konductor.egg-info/
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)    13490 2023-03-02 12:15:31.000000 konductor-0.0.1/src/konductor.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)     2170 2023-03-02 12:15:31.000000 konductor-0.0.1/src/konductor.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)        1 2023-03-02 12:15:31.000000 konductor-0.0.1/src/konductor.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 bpfer     (1000) bpfer     (1000)       10 2023-03-02 12:15:31.000000 konductor-0.0.1/src/konductor.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.360264 konductor-0.0.2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2115 2023-04-07 02:16:24.000000 konductor-0.0.2/.dockerignore
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.344263 konductor-0.0.2/.github/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.348264 konductor-0.0.2/.github/workflows/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1162 2023-04-07 02:16:24.000000 konductor-0.0.2/.github/workflows/publish-to-pypi.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2098 2023-04-07 02:16:24.000000 konductor-0.0.2/.gitignore
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      364 2023-04-07 02:16:24.000000 konductor-0.0.2/Dockerfile
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      889 2023-04-07 02:16:24.000000 konductor-0.0.2/Dockerfile.pytorch
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11344 2023-04-07 02:16:24.000000 konductor-0.0.2/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15612 2023-04-07 02:16:34.360264 konductor-0.0.2/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1893 2023-04-07 02:16:24.000000 konductor-0.0.2/README.rst
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.352264 konductor-0.0.2/docs/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:24.000000 konductor-0.0.2/docs/statistics.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:24.000000 konductor-0.0.2/docs/trainer.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:24.000000 konductor-0.0.2/docs/visualisation.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.352264 konductor-0.0.2/examples/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      694 2023-04-07 02:16:24.000000 konductor-0.0.2/examples/kube-launch.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1432 2023-04-07 02:16:24.000000 konductor-0.0.2/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 02:16:34.360264 konductor-0.0.2/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       93 2023-04-07 02:16:24.000000 konductor-0.0.2/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.348264 konductor-0.0.2/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.352264 konductor-0.0.2/src/konductor/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.352264 konductor-0.0.2/src/konductor/metadata/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      647 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.352264 konductor-0.0.2/src/konductor/metadata/checkpointer/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      597 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/checkpointer/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3981 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/checkpointer/_pytorch.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      505 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/checkpointer/_tensorflow.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3617 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/manager.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.352264 konductor-0.0.2/src/konductor/metadata/remotesync/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1181 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/remotesync/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4124 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/remotesync/_base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5550 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/remotesync/minio.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10675 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/remotesync/ssh.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.352264 konductor-0.0.2/src/konductor/metadata/statistics/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      107 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/statistics/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6447 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/statistics/perflogger.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1618 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/statistics/scalar_dict.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8378 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/metadata/statistics/statistic.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.352264 konductor-0.0.2/src/konductor/modules/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      516 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.352264 konductor-0.0.2/src/konductor/modules/data/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4324 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/data/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.352264 konductor-0.0.2/src/konductor/modules/data/_pytorch/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       44 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/data/_pytorch/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      841 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/data/_pytorch/cityscapes.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2899 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/data/_pytorch/dataloader.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      491 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/data/_pytorch/mnist.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.352264 konductor-0.0.2/src/konductor/modules/data/_tensorflow/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       25 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/data/_tensorflow/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/data/_tensorflow/dataloader.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      918 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/data/dali.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2890 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/init.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.356263 konductor-0.0.2/src/konductor/modules/losses/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1527 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/losses/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.356263 konductor-0.0.2/src/konductor/modules/losses/_pytorch/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       19 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/losses/_pytorch/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1789 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/losses/_pytorch/base.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.356263 konductor-0.0.2/src/konductor/modules/models/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1993 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/models/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.356263 konductor-0.0.2/src/konductor/modules/models/_pytorch/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2415 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/models/_pytorch/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1803 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/models/_pytorch/encdec.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      743 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/models/_pytorch/torchvision.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.356263 konductor-0.0.2/src/konductor/modules/models/_tensorflow/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      217 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/models/_tensorflow/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.356263 konductor-0.0.2/src/konductor/modules/optimizers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1330 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/optimizers/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.356263 konductor-0.0.2/src/konductor/modules/optimizers/_pytorch/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       30 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/optimizers/_pytorch/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2900 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/optimizers/_pytorch/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      693 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/optimizers/_pytorch/common.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5756 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/optimizers/_pytorch/lamb.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3233 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/registry.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.356263 konductor-0.0.2/src/konductor/modules/scheduler/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2383 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/scheduler/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2404 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/modules/scheduler/_pytorch.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.356263 konductor-0.0.2/src/konductor/trainer/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      160 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/trainer/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7935 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/trainer/init.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4575 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/trainer/pbar.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1162 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/trainer/profiler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9459 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/trainer/pytorch.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3806 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/trainer/trainer.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.356263 konductor-0.0.2/src/konductor/utilities/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.356263 konductor-0.0.2/src/konductor/utilities/comm/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      733 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/utilities/comm/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8008 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/utilities/comm/_pytorch.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3311 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/utilities/comm/_tensorflow.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4229 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/utilities/metadata.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1238 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/utilities/onnx_export.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.356263 konductor-0.0.2/src/konductor/webserver/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/webserver/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3825 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/webserver/app.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3825 2023-04-07 02:16:24.000000 konductor-0.0.2/src/konductor/webserver/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.352264 konductor-0.0.2/src/konductor.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15612 2023-04-07 02:16:34.000000 konductor-0.0.2/src/konductor.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3260 2023-04-07 02:16:34.000000 konductor-0.0.2/src/konductor.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 02:16:34.000000 konductor-0.0.2/src/konductor.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       70 2023-04-07 02:16:34.000000 konductor-0.0.2/src/konductor.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      138 2023-04-07 02:16:34.000000 konductor-0.0.2/src/konductor.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-07 02:16:34.000000 konductor-0.0.2/src/konductor.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.360264 konductor-0.0.2/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      374 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/base.yml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.360264 konductor-0.0.2/tests/config_init/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/config_init/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1143 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/config_init/test_pytorch.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      390 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/init_config.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.360264 konductor-0.0.2/tests/remote/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/remote/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       84 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/remote/ssh_config
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1341 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/remote/test_remote.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.360264 konductor-0.0.2/tests/statistics/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/statistics/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3462 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/statistics/test_checkpointer.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1840 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/statistics/test_metamanager.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1958 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/statistics/test_perflogger.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2325 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/statistics/test_statistic.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      463 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/statistics/test_utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1723 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/test_registry.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.360264 konductor-0.0.2/tests/trainer/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/trainer/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1139 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/trainer/test_pytorch.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:34.360264 konductor-0.0.2/tests/webui/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/webui/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      859 2023-04-07 02:16:24.000000 konductor-0.0.2/tests/webui/test_tree.py
+│ │   --- konductor-0.0.1/LICENSE
+│ ├── +++ konductor-0.0.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/PKG-INFO
+│ ├── +++ konductor-0.0.2/PKG-INFO
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: konductor
+│ │ -Version: 0.0.1
+│ │ +Version: 0.0.2
+│ │  Summary: Framework for training generic ml models
+│ │  Author-email: Bryce Ferenczi <frenzi@hotmail.com.au>
+│ │  License:                                  Apache License
+│ │                                     Version 2.0, January 2004
+│ │                                  http://www.apache.org/licenses/
+│ │          
+│ │             TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+│ │ @@ -203,13 +203,56 @@
+│ │             distributed under the License is distributed on an "AS IS" BASIS,
+│ │             WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │             See the License for the specific language governing permissions and
+│ │             limitations under the License.
+│ │          
+│ │  Project-URL: Homepage, https://github.com/5had3z/konductor
+│ │  Project-URL: Bug Tracker, https://github.com/5had3z/konductor/issues
+│ │ -Classifier: Programming Language :: Python :: 3
+│ │ +Classifier: Development Status :: 2 - Pre-Alpha
+│ │ +Classifier: Intended Audience :: Developers
+│ │ +Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: Programming Language :: Python :: 3.11
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Operating System :: OS Independent
+│ │ +Classifier: Natural Language :: English
+│ │  Requires-Python: >=3.10
+│ │ -Description-Content-Type: text/markdown
+│ │ +Description-Content-Type: text/x-rst
+│ │ +Provides-Extra: REMOTE
+│ │ +Provides-Extra: WEBUI
+│ │  License-File: LICENSE
+│ │ +
+│ │ +This is SUPER in development and SUBJECT TO CHANGE
+│ │ +--------------------------------------------------
+│ │ +
+│ │ +Yes, there is no documentation at the moment, its not really intended as useable to the outside world atm, I personally need a convenient pip install.
+│ │ +
+│ │ +=========
+│ │ +Konductor
+│ │ +=========
+│ │ +
+│ │ +.. class:: center
+│ │ +
+│ │ +|version| |python| |license| |ci| |coverage| |codestyle|
+│ │ +
+│ │ +.. |version| image:: https://img.shields.io/pypi/v/konductor
+│ │ +    :target: https://pypi.org/project/konductor/
+│ │ +    :alt: PyPI - Package Version
+│ │ +.. |python| image:: https://img.shields.io/pypi/pyversions/konductor
+│ │ +    :target: https://pypi.org/project/konductor/
+│ │ +    :alt: PyPI - Python Version
+│ │ +.. |license| image:: https://img.shields.io/pypi/l/konductor
+│ │ +    :target: https://github.com/konductor/konductor/blob/main/LICENSE
+│ │ +    :alt: PyPI - License
+│ │ +.. |ci| image:: https://img.shields.io/circleci/build/github/konductor/konductor/main
+│ │ +    :target: https://app.circleci.com/pipelines/github/konductor/konductor
+│ │ +    :alt: CircleCI
+│ │ +.. |coverage| image:: https://img.shields.io/codecov/c/gh/konductor/konductor
+│ │ +    :target: https://app.codecov.io/gh/konductor/konductor
+│ │ +    :alt: Codecov
+│ │ +.. |codestyle| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+│ │ +    :target: https://github.com/psf/black
+│ │ +
+│ │ +Model training framework bundled with performance evaluation and comparison tools for rapid prototyping. Go deep into setting up automatic configuration for ablations or quickly throw in a dataloader, model and loss function and run distributed training in seconds.
+│ │ +
+│ │ +The aims of this project are
+│ │ + - Empower you to only need to touch a few parts of the framework to get some wacky non-standard training loop done.
+│ │ + - Easily roll in existing code bases into this framework so you can git clone yolo-69, register it to konductor, throw in your data and start training instead of whatever random framework of their codebase.
+│ │   --- konductor-0.0.1/README.rst
+│ ├── +++ konductor-0.0.2/README.rst
+│ │┄ Files 6% similar despite different names
+│ │ @@ -3,14 +3,16 @@
+│ │  
+│ │  Yes, there is no documentation at the moment, its not really intended as useable to the outside world atm, I personally need a convenient pip install.
+│ │  
+│ │  =========
+│ │  Konductor
+│ │  =========
+│ │  
+│ │ +.. class:: center
+│ │ +
+│ │  |version| |python| |license| |ci| |coverage| |codestyle|
+│ │  
+│ │  .. |version| image:: https://img.shields.io/pypi/v/konductor
+│ │      :target: https://pypi.org/project/konductor/
+│ │      :alt: PyPI - Package Version
+│ │  .. |python| image:: https://img.shields.io/pypi/pyversions/konductor
+│ │      :target: https://pypi.org/project/konductor/
+│ │   --- konductor-0.0.1/src/konductor/metadata/__init__.py
+│ ├── +++ konductor-0.0.2/src/konductor/metadata/__init__.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,17 +1,14 @@
+│ │  from .manager import MetadataManager
+│ │  from .checkpointer import Checkpointer
+│ │  from .statistics import PerfLogger, PerfLoggerConfig, Statistic
+│ │  from .remotesync import get_remote_config, _RemoteSyncrhoniser
+│ │  
+│ │ -from ..modules import ExperimentInitConfig
+│ │ -
+│ │  
+│ │  def get_metadata_manager(
+│ │ -    exp_config: ExperimentInitConfig,
+│ │      log_config: PerfLoggerConfig,
+│ │      remote_sync: _RemoteSyncrhoniser | None = None,
+│ │      **checkpointables,
+│ │  ) -> MetadataManager:
+│ │      """Checkpointables should at least include the model as the first in the list"""
+│ │      perflogger = PerfLogger(log_config)
+│ │      checkpointer = Checkpointer(**checkpointables, rootdir=log_config.write_path)
+│ │   --- konductor-0.0.1/src/konductor/metadata/checkpointer/__init__.py
+│ ├── +++ konductor-0.0.2/src/konductor/metadata/checkpointer/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/src/konductor/metadata/checkpointer/_pytorch.py
+│ ├── +++ konductor-0.0.2/src/konductor/metadata/checkpointer/_pytorch.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -8,26 +8,32 @@
+│ │  from torch.nn.parallel import DistributedDataParallel, DataParallel
+│ │  
+│ │  
+│ │  class Checkpointer:
+│ │      """
+│ │      Checkpointer that saves/loads model and checkpointables
+│ │      Inspired from fvcore and diverged from there.
+│ │ -    Use "latest.pth" as your checkpoint filename to prevent accumulations.
+│ │ -    Otherwise, use any filename and a "latest.pth" will link to it.
+│ │ +    Use "latest.pt" as your checkpoint filename to prevent accumulations.
+│ │ +    Otherwise, use any filename and a "latest.pt" will link to it.
+│ │      """
+│ │  
+│ │      def __init__(self, rootdir: Path = Path.cwd(), **extras) -> None:
+│ │          """
+│ │          Args:
+│ │          """
+│ │          self.logger = logging.getLogger(type(self).__name__)
+│ │ -
+│ │ +        self.rootdir = rootdir
+│ │          self._ckpts: Dict[str, nn.Module] = {}
+│ │  
+│ │ +        if not rootdir.exists():
+│ │ +            self.logger.info(f"Creating checkpoint folder: {rootdir}")
+│ │ +            rootdir.mkdir(parents=True)
+│ │ +        else:
+│ │ +            self.logger.info(f"Using checkpoint folder: {rootdir}")
+│ │ +
+│ │          # Unpack any lists of modules
+│ │          for k in list(extras.keys()):
+│ │              if isinstance(extras[k], list):
+│ │                  if len(extras[k]) > 1:
+│ │                      # unpack list into dictionary
+│ │                      self.logger.info(f"Unpacking {k} into checkpointable list")
+│ │                      extras.update(
+│ │ @@ -37,21 +43,14 @@
+│ │                  else:
+│ │                      # remove list dimension
+│ │                      extras[k] = extras[k][0]
+│ │  
+│ │          for k, v in extras.items():
+│ │              self.add_checkpointable(k, v)
+│ │  
+│ │ -        if not rootdir.exists():
+│ │ -            self.logger.info(f"Creating checkpoint folder: {rootdir}")
+│ │ -            rootdir.mkdir(parents=True)
+│ │ -
+│ │ -        self.rootdir = rootdir
+│ │ -        self.logger.info(f"Saving checkpoint data at {rootdir}")
+│ │ -
+│ │      def add_checkpointable(self, key: str, checkpointable: Any) -> None:
+│ │          """
+│ │          Add checkpointable for logging, requres state_dict method.
+│ │          """
+│ │          assert (
+│ │              key not in self._ckpts
+│ │          ), f"{key} already in dict of checkpointables, can't add another"
+│ │ @@ -62,49 +61,53 @@
+│ │  
+│ │          # Unwrap data parallel
+│ │          if isinstance(checkpointable, (DistributedDataParallel, DataParallel)):
+│ │              checkpointable = checkpointable.module
+│ │  
+│ │          self._ckpts[key] = checkpointable
+│ │  
+│ │ -    def save(self, filename: str = "latest.pth", **extras) -> None:
+│ │ +    def save(self, filename: str, **extras) -> None:
+│ │          """
+│ │          Saves checkpointables with extra scalar data kwargs
+│ │ -        Use latest.pth if you don't want to accumulate checkponts.
+│ │ -        Otherwise the new file will be saved and latest.pth will link to it.
+│ │ +        Use latest.pt if you don't want to accumulate checkponts.
+│ │ +        Otherwise the new file will be saved and latest.pt will link to it.
+│ │          """
+│ │ -        if not filename.endswith(".pth"):
+│ │ -            filename += ".pth"
+│ │ +        assert (
+│ │ +            isinstance(filename, str) and len(filename) > 0
+│ │ +        ), f"Filename should be a string of len > 0, got {filename}"
+│ │ +
+│ │ +        if not filename.endswith(".pt"):
+│ │ +            filename += ".pt"
+│ │          _path = self.rootdir / filename
+│ │  
+│ │          data = {k: v.state_dict() for k, v in self._ckpts.items()}
+│ │          data.update(extras)
+│ │  
+│ │          torch.save(data, _path)
+│ │  
+│ │ -        # If the path name is not 'latest.pth' create a symlink to it
+│ │ -        # using 'latest.pth' prevents the accumulation of checkpoints.
+│ │ -        if _path.name != "latest.pth":
+│ │ +        # If the path name is not 'latest.pt' create a symlink to it
+│ │ +        # using 'latest.pt' prevents the accumulation of checkpoints.
+│ │ +        if _path.name != "latest.pt":
+│ │              try:
+│ │ -                (self.rootdir / "latest.pth").symlink_to(_path)
+│ │ +                (self.rootdir / "latest.pt").symlink_to(_path)
+│ │              except OSError:
+│ │                  # make copy if symlink is unsupported
+│ │ -                shutil.copy(_path, self.rootdir / "latest.pth")
+│ │ +                shutil.copy(_path, self.rootdir / "latest.pt")
+│ │  
+│ │      def load(self, filename: str) -> Dict[str, Any]:
+│ │          """Load checkpoint and return any previously saved scalar kwargs"""
+│ │ -        if not filename.endswith(".pth"):
+│ │ -            filename += ".pth"
+│ │ +        if not filename.endswith(".pt"):
+│ │ +            filename += ".pt"
+│ │          _path = self.rootdir / filename
+│ │ -        checkpoint = torch.load(_path)
+│ │ +        checkpoint = torch.load(_path, map_location="cpu")
+│ │  
+│ │          for key in self._ckpts:
+│ │              self._ckpts[key].load_state_dict(checkpoint.pop(key))
+│ │  
+│ │          # Return any extra data
+│ │          return checkpoint
+│ │  
+│ │      def resume(self) -> Dict[str, Any] | None:
+│ │ -        """Resumes from checkpoint linked with latest.pth"""
+│ │ -        if (self.rootdir / "latest.pth").exists():
+│ │ -            return self.load("latest.pth")
+│ │ +        """Resumes from checkpoint linked with latest.pt"""
+│ │ +        if (self.rootdir / "latest.pt").exists():
+│ │ +            return self.load("latest.pt")
+│ │          return None
+│ │   --- konductor-0.0.1/src/konductor/metadata/remotesync/_base.py
+│ ├── +++ konductor-0.0.2/src/konductor/metadata/remotesync/_base.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,66 +1,70 @@
+│ │ -"""
+│ │ -Abstract Base remote syncrhonisation that defines
+│ │ +"""Abstract Base remote syncrhonisation that defines
+│ │  interfaces required for remote synchronisation.
+│ │  """
+│ │  from abc import ABCMeta, abstractmethod
+│ │  from logging import getLogger
+│ │  from pathlib import Path
+│ │  import re
+│ │  from typing import List, Set
+│ │  
+│ │  
+│ │  class _RemoteSyncrhoniser(metaclass=ABCMeta):
+│ │ -    """
+│ │ -    Synchronises set of files(objects) between host and remote
+│ │ +    """Synchronises set of files(objects) between host and remote
+│ │      data source.
+│ │      """
+│ │  
+│ │      def __init__(self, host_path: Path, file_list: Set[str] | None = None) -> None:
+│ │          self.logger = getLogger("remote_sync")
+│ │          self.file_list: Set[str] = set() if file_list is None else file_list
+│ │          assert host_path.exists(), f"Host path does not exist: {host_path}"
+│ │          self._host_path = host_path
+│ │  
+│ │      @abstractmethod
+│ │ -    def push(self, filename: str) -> None:
+│ │ -        """Copies file from the host to the remote"""
+│ │ +    def push(self, filename: str, force: bool = False) -> None:
+│ │ +        """Copies file from the host to the remote
+│ │ +        Will not copy if the remote last motified is newer unless force=True"""
+│ │  
+│ │ -    @abstractmethod
+│ │ -    def push_select(self, regex_: List[str]) -> None:
+│ │ +    def push_select(self, regex_: List[str], force: bool = False) -> None:
+│ │          """Copies files that match list of regex to remote"""
+│ │ +        self._generate_file_list_from_host()
+│ │ +        for filename in self.file_list:
+│ │ +            if any(re.match(exp_, filename) for exp_ in regex_):
+│ │ +                self.logger.info("Pushing matched object %s", filename)
+│ │ +                self.push(filename, force)
+│ │  
+│ │      @abstractmethod
+│ │      def push_all(self, force: bool = False) -> None:
+│ │ -        """
+│ │ -        Copies files from the host to the remote.
+│ │ +        """Copies files from the host to the remote.
+│ │          Force pushes files even if last modified time is older.
+│ │ +        Call super().push_all() to generate file list
+│ │          """
+│ │          self._generate_file_list_from_host()
+│ │          if len(self.file_list) == 0:  # warn if still empty
+│ │              self.logger.warning("No files to push to remote")
+│ │  
+│ │      @abstractmethod
+│ │ -    def pull(self, filename: str) -> None:
+│ │ -        """Copies file from the remote to the host"""
+│ │ +    def pull(self, filename: str, force: bool = False) -> None:
+│ │ +        """Copies file from the remote to the host.
+│ │ +        Will not copy if the host last motified is newer unless force=True"""
+│ │  
+│ │ -    def pull_select(self, regex_: List[str]) -> None:
+│ │ +    def pull_select(self, regex_: List[str], force: bool = False) -> None:
+│ │          """Copies files that match list of regex from remote"""
+│ │          self._generate_file_list_from_remote()
+│ │          self.logger.info("Pulling objects that match %s", regex_)
+│ │          for filename in self.file_list:
+│ │              if any(re.match(exp_, filename) for exp_ in regex_):
+│ │                  self.logger.info("Pulling matched object %s", filename)
+│ │ -                self.pull(filename)
+│ │ +                self.pull(filename, force)
+│ │  
+│ │      @abstractmethod
+│ │      def pull_all(self, force: bool = False) -> None:
+│ │ -        """
+│ │ -        Copies files from the remote to the host
+│ │ +        """Copies files from the remote to the host
+│ │          Force pulls files even if last modified time is older.
+│ │ +        Call super().pull_all() to generate file list
+│ │          """
+│ │          self._generate_file_list_from_remote()
+│ │          if len(self.file_list) == 0:  # warn if still empty
+│ │              self.logger.warning("No files to pull from remote")
+│ │              return
+│ │  
+│ │          if self.host_existance() and force:
+│ │ @@ -74,31 +78,20 @@
+│ │          return any((self._host_path / file).exists() for file in self.file_list)
+│ │  
+│ │      @abstractmethod
+│ │      def remote_existance(self) -> bool:
+│ │          """Check if some previous experiment data is on the remote"""
+│ │  
+│ │      @abstractmethod
+│ │ -    def get_file(self, remote_src: str, host_dest: str) -> None:
+│ │ +    def get_file(self, remote_src: str, host_dest: str | None = None) -> None:
+│ │          """Get a file from the remote"""
+│ │ -        raise NotImplementedError()
+│ │  
+│ │      def _generate_file_list_from_host(self) -> None:
+│ │ -        """
+│ │ -        Generates the file list to be published to remote dependent on
+│ │ -        what files are contained within the host directory and where
+│ │ -        it should be publishing to the remote.
+│ │ -        """
+│ │ -        self.file_list = set()
+│ │ -        for filename in self._host_path.iterdir():
+│ │ -            self.file_list.add(filename.name)
+│ │ +        """Generates the file list to be syncrhonised based on files in the host directory."""
+│ │ +        self.file_list = set(f.name for f in self._host_path.iterdir() if f.is_file())
+│ │  
+│ │          assert len(self.file_list) > 0, "No files to synchronise from host"
+│ │          self.logger.info("%d files found on host to synchronise", len(self.file_list))
+│ │  
+│ │      @abstractmethod
+│ │      def _generate_file_list_from_remote(self) -> None:
+│ │ -        """
+│ │ -        Generates the file list to be pulled from the remote dependent
+│ │ -        on what wiles are contained within the remote directory.
+│ │ -        """
+│ │ -        self.file_list = set()
+│ │ +        """Generates the file list to be syncrhonised based on files on the remote."""
+│ │   --- konductor-0.0.1/src/konductor/metadata/remotesync/minio.py
+│ ├── +++ konductor-0.0.2/src/konductor/metadata/remotesync/minio.py
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,13 +1,14 @@
+│ │  """
+│ │  Synchronise workspace with minio s3 bucket
+│ │  """
+│ │  import os
+│ │  from dataclasses import dataclass
+│ │ -from typing import Any, Dict, List
+│ │ +from typing import Any, Dict
+│ │ +from pathlib import Path
+│ │  
+│ │  from minio import Minio, S3Error
+│ │  
+│ │  from . import REGISTRY, RemoteConfig, ExperimentInitConfig
+│ │  from ._base import _RemoteSyncrhoniser
+│ │  from ...utilities.comm import is_main_process
+│ │  
+│ │ @@ -66,91 +67,88 @@
+│ │                  "endpoint": os.environ["MINIO_SERVICE_HOST"],
+│ │                  "access_key": os.environ.get("MINIO_ACCESS_KEY", None),
+│ │                  "secret_key": os.environ.get("MINIO_SECRET_KEY", None),
+│ │                  "secure": False,
+│ │              }
+│ │  
+│ │          self.client = Minio(**minio_access)
+│ │ -        self.bucket_name = (
+│ │ -            bucket_name if bucket_name is not None else self._host_path.name
+│ │ -        )
+│ │ +        self.bucket_name = self._host_path.name if bucket_name is None else bucket_name
+│ │  
+│ │          self.logger.info("Checking bucket existance %s", self.bucket_name)
+│ │ -        if not self.client.bucket_exists(self.bucket_name) and is_main_process():
+│ │ +        if is_main_process() and not self.client.bucket_exists(self.bucket_name):
+│ │              self.logger.info("Creating bucket %s", self.bucket_name)
+│ │              self.client.make_bucket(self.bucket_name)
+│ │  
+│ │ -    def pull(self, filename: str) -> None:
+│ │ -        self.client.fget_object(
+│ │ -            self.bucket_name, filename, str(self._host_path / filename)
+│ │ -        )
+│ │ +    def _local_is_newer(self, filename: str) -> bool:
+│ │ +        """Whether the file on the host was the last modified file (is newer).
+│ │ +        Return false if the file doesn't exist on the host
+│ │ +        Return true if the file doesn't exist on the remote"""
+│ │ +        local = self._host_path / filename
+│ │ +        if not local.exists():  # Not found on host
+│ │ +            return False
+│ │ +        try:
+│ │ +            remote_modified = self.client.stat_object(
+│ │ +                self.bucket_name, filename
+│ │ +            ).last_modified.timestamp()
+│ │ +        except S3Error:  # Not found on remote
+│ │ +            return True
+│ │ +        local_modified = local.stat().st_mtime
+│ │ +        return local_modified > remote_modified
+│ │ +
+│ │ +    def pull(self, filename: str, force: bool = False) -> None:
+│ │ +        if self._local_is_newer(filename) and not force:
+│ │ +            self.logger.info("Skipping file pull from remote: %s", filename)
+│ │ +            return
+│ │ +
+│ │ +        local = self._host_path / filename
+│ │ +        if local.exists():
+│ │ +            self.logger.info("Pulling file from remote and overwriting: %s", filename)
+│ │ +        else:
+│ │ +            self.logger.info("Pulling new file from remote: %s", filename)
+│ │ +
+│ │ +        self.client.fget_object(self.bucket_name, filename, str(local))
+│ │  
+│ │          # Change local time to remote last modified
+│ │          remote_modified = self.client.stat_object(
+│ │              self.bucket_name, filename
+│ │          ).last_modified.timestamp()
+│ │ -        os.utime(str(self._host_path / filename), (remote_modified, remote_modified))
+│ │ +        os.utime(str(local), (remote_modified, remote_modified))
+│ │  
+│ │      def pull_all(self, force: bool = False) -> None:
+│ │          super().pull_all(force)
+│ │          for filename in self.file_list:
+│ │ -            local_path = self._host_path / filename
+│ │ -            if local_path.exists():
+│ │ -                local_modified = local_path.stat().st_mtime
+│ │ -                remote_modified = self.client.stat_object(
+│ │ -                    self.bucket_name, filename
+│ │ -                ).last_modified.timestamp()
+│ │ -
+│ │ -                if remote_modified < local_modified and not force:
+│ │ -                    self.logger.info("Skipping object pull: %s", filename)
+│ │ -                    continue
+│ │ -                else:
+│ │ -                    self.logger.info("Pulling and overwriting: %s", filename)
+│ │ -            else:
+│ │ -                self.logger.info("Pulling new object: %s", filename)
+│ │ +            self.pull(filename, force)
+│ │  
+│ │ -            self.pull(filename)
+│ │ +    def push(self, filename: str, force: bool = False) -> None:
+│ │ +        if not self._local_is_newer(filename) and not force:
+│ │ +            self.logger.info("Skipping file push to remote: %s", filename)
+│ │ +            return
+│ │  
+│ │ -    def push(self, filename: str) -> None:
+│ │ +        self.logger.info("Pushing file to remote: %s", filename)
+│ │          self.client.fput_object(
+│ │              self.bucket_name, filename, str(self._host_path / filename)
+│ │          )
+│ │  
+│ │          # Doesn't seem like I can change last modified on object?
+│ │          # local_modified = (self._host_path / filename).stat().st_mtime
+│ │  
+│ │ -    def push_select(self, regex_: List[str]) -> None:
+│ │ -        raise NotImplementedError()
+│ │ -
+│ │      def push_all(self, force: bool = False) -> None:
+│ │          super().push_all(force)
+│ │          for filename in self.file_list:
+│ │ -            try:
+│ │ -                remote_modified = self.client.stat_object(
+│ │ -                    self.bucket_name, filename
+│ │ -                ).last_modified
+│ │ -                local_modified = (self._host_path / filename).stat().st_mtime
+│ │ -
+│ │ -                # Remote mod will be greater than since its "modify" time will
+│ │ -                # be the last push which is after the actual modify on a worker
+│ │ -                if remote_modified.timestamp() > local_modified and not force:
+│ │ -                    self.logger.info("Skipping object push: %s", filename)
+│ │ -                    continue
+│ │ -            # does not exist on remote so should push new file
+│ │ -            except S3Error:
+│ │ -                self.logger.info("Pushing new object: %s", filename)
+│ │ -            else:
+│ │ -                self.logger.info("Pushing object update: %s", filename)
+│ │ -            finally:
+│ │ -                self.push(filename)
+│ │ +            self.push(filename, force)
+│ │  
+│ │      def remote_existance(self) -> bool:
+│ │          return self.client.bucket_exists(self.bucket_name)
+│ │  
+│ │ -    def get_file(self, remote_src: str, host_dest: str) -> None:
+│ │ +    def get_file(self, remote_src: str, host_dest: Path | None = None) -> None:
+│ │ +        if host_dest is None:
+│ │ +            host_dest = self._host_path / remote_src
+│ │ +            self.logger.info(
+│ │ +                "get_file destination unspecified, writing to %s", str(host_dest)
+│ │ +            )
+│ │ +
+│ │          self.client.fget_object(self.bucket_name, remote_src, host_dest)
+│ │  
+│ │      def _generate_file_list_from_remote(self) -> None:
+│ │ -        super()._generate_file_list_from_remote()
+│ │ -        minio_obj = self.client.list_objects(self.bucket_name)
+│ │ -        for obj in minio_obj:
+│ │ -            self.file_list.add(obj.object_name)
+│ │ +        self.file_list = set(
+│ │ +            o.object_name for o in self.client.list_objects(self.bucket_name)
+│ │ +        )
+│ │   --- konductor-0.0.1/src/konductor/metadata/remotesync/ssh.py
+│ ├── +++ konductor-0.0.2/src/konductor/metadata/remotesync/ssh.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,16 +1,18 @@
+│ │  """
+│ │  Synchonise workspace with folder of remote machine
+│ │  """
+│ │  
+│ │  from dataclasses import dataclass
+│ │ -import os
+│ │ -from pathlib import Path
+│ │ -from typing import Any, List
+│ │ +from functools import wraps
+│ │  from getpass import getpass
+│ │ +from pathlib import Path
+│ │ +from typing import Any
+│ │ +import subprocess
+│ │ +import os
+│ │  
+│ │  import paramiko
+│ │  
+│ │  from . import REGISTRY, RemoteConfig, ExperimentInitConfig
+│ │  from ._base import _RemoteSyncrhoniser
+│ │  from ...utilities.comm import is_main_process
+│ │  
+│ │ @@ -28,23 +30,43 @@
+│ │      }
+│ │  
+│ │      config = paramiko.SSHConfig()
+│ │      with open(filepath, "r", encoding="utf-8") as ssh_cfg:
+│ │          config.parse(ssh_cfg)
+│ │      parsed_cfg = config.lookup(hostname)
+│ │  
+│ │ +    if not all(k in parsed_cfg for k in ["hostname", "user", "identityfile"]):
+│ │ +        raise LookupError(f"{hostname} not found in {filepath}")
+│ │ +
+│ │      parsed_keys = set(parsed_cfg.keys())
+│ │      for key in parsed_keys:
+│ │          data = parsed_cfg.pop(key)
+│ │          if key in cfg_map:
+│ │              parsed_cfg[cfg_map[key]] = data
+│ │  
+│ │      return parsed_cfg
+│ │  
+│ │  
+│ │ +def retry_connection(method):
+│ │ +    """Wrap SSH interaction with this to retry to
+│ │ +    establish connection if it fails once"""
+│ │ +
+│ │ +    @wraps(method)
+│ │ +    def _impl(self: "SshSync", *args, **kwargs):
+│ │ +        try:
+│ │ +            out = method(self, *args, **kwargs)
+│ │ +        except paramiko.SSHException:
+│ │ +            self.logger.warning("Reestablishing Connection...")
+│ │ +            self._session.connect(**self._pk_cfg)
+│ │ +            out = method(self, *args, **kwargs)
+│ │ +        return out
+│ │ +
+│ │ +    return _impl
+│ │ +
+│ │ +
+│ │  @dataclass
+│ │  @REGISTRY.register_module("ssh")
+│ │  class SSHRemote(RemoteConfig):
+│ │      remote_path: Path
+│ │      pk_cfg: paramiko.SSHConfigDict
+│ │  
+│ │      @classmethod
+│ │ @@ -55,16 +77,21 @@
+│ │          if all(k in args for k in ["filepath", "hostname"]):
+│ │              pk_cfg = _parse_ssh_config(args["filepath"], args["hostname"])
+│ │          elif "pk_cfg" in args:
+│ │              pk_cfg = args["pk_cfg"]
+│ │          else:
+│ │              raise KeyError(f"Missing Remote configuration {args}")
+│ │  
+│ │ +        if not isinstance(args["remote_path"], Path):
+│ │ +            args["remote_path"] = Path(args["remote_path"])
+│ │ +
+│ │          return cls(
+│ │ -            host_path=config.work_dir, pk_cfg=pk_cfg, remote_path=args["remote_path"]
+│ │ +            host_path=config.work_dir,
+│ │ +            pk_cfg=pk_cfg,
+│ │ +            remote_path=args["remote_path"] / config.work_dir.name,
+│ │          )
+│ │  
+│ │      def get_instance(self):
+│ │          return SshSync(
+│ │              remote_path=self.remote_path,
+│ │              pk_cfg=self.pk_cfg,
+│ │              host_path=self.host_path,
+│ │ @@ -89,137 +116,194 @@
+│ │  
+│ │          :param remote_path: path on remote to syncrhonise to
+│ │          :param ssh_cfg: path and hostname for ssh config file, defaults to None
+│ │          :param pk_cfg: configuration for paramiko client, defaults to None
+│ │          """
+│ │          super().__init__(**kwargs)
+│ │  
+│ │ +        # If identity file is used, use that
+│ │ +        # otherwise request password to begin session
+│ │ +        if not "key_filename" in pk_cfg:
+│ │ +            pk_cfg["password"] = getpass()
+│ │ +        self._pk_cfg = pk_cfg
+│ │ +
+│ │          self._session = paramiko.SSHClient()
+│ │          self._session.load_system_host_keys()
+│ │          self._session.set_missing_host_key_policy(paramiko.AutoAddPolicy)
+│ │ -
+│ │ -        # If identity file is used, use that
+│ │ -        # otherwise request password to begin session
+│ │ -        if "key_filename" in pk_cfg:
+│ │ -            self._session.connect(**pk_cfg)
+│ │ -        else:
+│ │ -            self._session.connect(**pk_cfg, password=getpass())
+│ │ +        self._session.connect(**pk_cfg)
+│ │  
+│ │          self._remote_path = remote_path
+│ │ +        self.has_recursed = False
+│ │  
+│ │          if not self.remote_existance() and is_main_process():
+│ │              self.logger.info("Creating directory on remote %s", remote_path)
+│ │              _, _, stderr = self._session.exec_command(f"mkdir -p {remote_path}")
+│ │              for line in stderr:
+│ │                  self.logger.error(line.strip("\n"))
+│ │  
+│ │ -    def push(self, filename: str) -> None:
+│ │ -        local_path = str(self._host_path / filename)
+│ │ -        remote_path = str(self._remote_path / filename)
+│ │ +    @staticmethod
+│ │ +    def _local_is_newer(local: Path, remote: Path, sftp: paramiko.SFTPClient) -> bool:
+│ │ +        """Whether the file on the host was the last modified file (is newer).
+│ │ +        Return false if the file doesn't exist on the host
+│ │ +        Return true if the file doesn't exist on the remote"""
+│ │ +        if not local.exists():  # Not found on host
+│ │ +            return False
+│ │ +        try:
+│ │ +            remote_modified = sftp.stat(str(remote)).st_mtime
+│ │ +            assert remote_modified is not None
+│ │ +        except FileNotFoundError:  # Not found on remote
+│ │ +            return True
+│ │ +        local_modified = local.stat().st_mtime
+│ │ +        return local_modified > remote_modified
+│ │ +
+│ │ +    def _get_local_remote(self, filename: str):
+│ │ +        """Return local and remote path pair"""
+│ │ +        return self._host_path / filename, self._remote_path / filename
+│ │ +
+│ │ +    def _match_checksum(self, host: Path, remote: Path) -> bool:
+│ │ +        """md5 checksum of host and remote files match"""
+│ │ +        _, stdout, _ = self._session.exec_command(f"md5sum {str(remote)}")
+│ │ +        remote_check = stdout.readline().strip("\n").split(" ")[0]
+│ │  
+│ │ -        # Copy local to the remote
+│ │ -        stfp_session = self._session.open_sftp()
+│ │ -        stfp_session.put(local_path, remote_path)
+│ │ +        ret = subprocess.run(["md5sum", str(host)], capture_output=True)
+│ │ +        host_check = ret.stdout.decode().split(" ")[0]
+│ │ +
+│ │ +        return remote_check == host_check
+│ │ +
+│ │ +    @retry_connection
+│ │ +    def push(
+│ │ +        self,
+│ │ +        filename: str,
+│ │ +        force: bool = False,
+│ │ +        sftp: paramiko.SFTPClient | None = None,
+│ │ +    ) -> None:
+│ │ +        local, remote = self._get_local_remote(filename)
+│ │ +        sftp_ = self._session.open_sftp() if sftp is None else sftp
+│ │  
+│ │ -        # Change remote time to local last modified
+│ │ -        local_modified = Path(local_path).stat().st_mtime
+│ │ -        stfp_session.utime(remote_path, (local_modified, local_modified))
+│ │ +        if not self._local_is_newer(local, remote, sftp_) and not force:
+│ │ +            self.logger.info("Skipping file push to remote: %s", filename)
+│ │ +            return
+│ │ +
+│ │ +        # Copy local to the remote
+│ │ +        self.logger.info("Pushing file to remote: %s", filename)
+│ │ +        tmp_remote = remote.with_suffix(".tmp")
+│ │ +        sftp_.put(str(local), str(tmp_remote))
+│ │ +
+│ │ +        if not self._match_checksum(local, tmp_remote):
+│ │ +            if not self.has_recursed:
+│ │ +                self.logger.warning("Retrying Push with Checksum error %s", filename)
+│ │ +                self.has_recursed = True
+│ │ +                self.push(filename, force, sftp_)
+│ │ +                self.has_recursed = False
+│ │ +            else:
+│ │ +                raise OSError("Failed retry of pushing %s", filename)
+│ │ +        else:
+│ │ +            # If successfully pushed, rename to main target
+│ │ +            sftp_.posix_rename(str(tmp_remote), str(remote))
+│ │  
+│ │ -        stfp_session.close()
+│ │ +            # Change remote time to local last modified
+│ │ +            local_modified = local.stat().st_mtime
+│ │ +            sftp_.utime(str(remote), (local_modified, local_modified))
+│ │  
+│ │ -    def push_select(self, regex_: List[str]) -> None:
+│ │ -        raise NotImplementedError()
+│ │ +        if sftp is None:  # clean up if locally created
+│ │ +            sftp_.close()
+│ │  
+│ │ +    @retry_connection
+│ │      def push_all(self, force: bool = False) -> None:
+│ │          super().push_all(force)
+│ │ -        stfp_session = self._session.open_sftp()
+│ │ +        sftp = self._session.open_sftp()
+│ │          for filename in self.file_list:
+│ │ -            local_path = self._host_path / filename
+│ │ -            remote_path = self._remote_path / filename
+│ │ -            try:
+│ │ -                remote_modified = stfp_session.stat(str(remote_path)).st_mtime
+│ │ -                local_modified = local_path.stat().st_mtime
+│ │ -
+│ │ -                assert remote_modified is not None
+│ │ -                # Remote mod will be greater than since its "modify" time will
+│ │ -                # be the last push which is after the actual modify on a worker
+│ │ -                if remote_modified > local_modified and not force:
+│ │ -                    continue
+│ │ -            # does not exist on remote so should push new file
+│ │ -            except FileNotFoundError:
+│ │ -                self.logger.info("Pushing new file: %s", filename)
+│ │ -            else:
+│ │ -                self.logger.info("Pushing file update: %s", filename)
+│ │ -            finally:
+│ │ -                stfp_session.put(str(local_path), str(remote_path))
+│ │ -
+│ │ -        stfp_session.close()
+│ │ -
+│ │ -    def pull(self, filename: str) -> None:
+│ │ -        local_path = str(self._host_path / filename)
+│ │ -        remote_path = str(self._remote_path / filename)
+│ │ +            self.push(filename, force, sftp)
+│ │ +        sftp.close()
+│ │ +
+│ │ +    @retry_connection
+│ │ +    def pull(
+│ │ +        self,
+│ │ +        filename: str,
+│ │ +        force: bool = False,
+│ │ +        sftp: paramiko.SFTPClient | None = None,
+│ │ +    ) -> None:
+│ │ +        local, remote = self._get_local_remote(filename)
+│ │ +        sftp_ = self._session.open_sftp() if sftp is None else sftp
+│ │ +
+│ │ +        if self._local_is_newer(local, remote, sftp_) and not force:
+│ │ +            self.logger.info("Skipping file pull from remote: %s", filename)
+│ │ +            return
+│ │ +
+│ │ +        self.logger.info(
+│ │ +            "Pulling file from remote and overwriting existing: %s"
+│ │ +            if local.exists()
+│ │ +            else "Pulling new file from remote: %s",
+│ │ +            filename,
+│ │ +        )
+│ │  
+│ │          # Copy remote to local
+│ │ -        stfp_session = self._session.open_sftp()
+│ │ -        stfp_session.get(remote_path, local_path)
+│ │ +        tmp_local = local.with_suffix(".tmp")
+│ │ +        sftp_.get(str(remote), str(tmp_local))
+│ │ +
+│ │ +        if not self._match_checksum(tmp_local, remote):
+│ │ +            if not self.has_recursed:
+│ │ +                self.logger.warning("Retrying Pull with Checksum error %s", filename)
+│ │ +                self.has_recursed = True
+│ │ +                self.pull(filename, force, sftp_)
+│ │ +                self.has_recursed = False
+│ │ +            else:
+│ │ +                raise OSError("Failed retry of pulling %s", filename)
+│ │ +        else:
+│ │ +            # If successfully pushed, rename to main target
+│ │ +            tmp_local.rename(local)
+│ │ +
+│ │ +            # Change local time to remote last modified
+│ │ +            remote_modified = sftp_.stat(str(remote)).st_mtime
+│ │ +            assert remote_modified is not None
+│ │ +            os.utime(local, (remote_modified, remote_modified))
+│ │  
+│ │ -        # Change local time to remote last modified
+│ │ -        remote_modified = stfp_session.stat(remote_path).st_mtime
+│ │ -        stfp_session.close()
+│ │ -        assert remote_modified is not None
+│ │ -        os.utime(local_path, (remote_modified, remote_modified))
+│ │ +        if sftp is None:  # clean up if locally created
+│ │ +            sftp_.close()
+│ │  
+│ │ +    @retry_connection
+│ │      def pull_all(self, force: bool = False) -> None:
+│ │          super().pull_all(force)
+│ │ -        stfp_session = self._session.open_sftp()
+│ │ +        sftp = self._session.open_sftp()
+│ │          for filename in self.file_list:
+│ │ -            local_path = self._host_path / filename
+│ │ -            remote_path = self._remote_path / filename
+│ │ -            if local_path.exists():
+│ │ -                local_modified = local_path.stat().st_mtime
+│ │ -                remote_modified = stfp_session.stat(str(remote_path)).st_mtime
+│ │ -
+│ │ -                assert remote_modified is not None
+│ │ -                if remote_modified < local_modified and not force:
+│ │ -                    self.logger.info("Skipping file pull: %s", filename)
+│ │ -                    continue
+│ │ -                else:
+│ │ -                    self.logger.info("Pulling and overwriting: %s", filename)
+│ │ -            else:
+│ │ -                self.logger.info("Pulling new file: %s", filename)
+│ │ -
+│ │ -            stfp_session.get(str(remote_path), str(local_path))
+│ │ -
+│ │ -        stfp_session.close()
+│ │ +            self.pull(filename, force, sftp)
+│ │ +        sftp.close()
+│ │  
+│ │ +    @retry_connection
+│ │      def _generate_file_list_from_remote(self) -> None:
+│ │ -        super()._generate_file_list_from_remote()
+│ │          remote_path = str(self._remote_path)
+│ │  
+│ │          # List files on remote
+│ │          _, stdout, stderr = self._session.exec_command(f"ls {remote_path}")
+│ │ -        for line in stdout:
+│ │ -            self.file_list.add(line.strip("\n"))
+│ │  
+│ │          for line in stderr:
+│ │              self.logger.error(line.strip("\n"))
+│ │  
+│ │ +        self.file_list = set(line.strip("\n") for line in stdout)
+│ │ +
+│ │          # Create directory on remote of err out (resultant
+│ │          # from folder/path) not existing on remote.
+│ │          if len(self.file_list) > 0:
+│ │              self.logger.info("Files found: %s", self.file_list)
+│ │ -            return
+│ │  
+│ │ +    @retry_connection
+│ │      def remote_existance(self) -> bool:
+│ │          _, _, stderr = self._session.exec_command(f"ls {self._remote_path}")
+│ │          for _ in stderr:  # Not empty if an error occured i.e folder doesn't exist
+│ │              return False
+│ │          return True
+│ │  
+│ │ -    def get_file(self, remote_src: str, host_dest: str) -> None:
+│ │ +    @retry_connection
+│ │ +    def get_file(self, remote_src: str, host_dest: Path | None = None) -> None:
+│ │          """
+│ │          Gets an individual remote file and copies to host.\n
+│ │          Needs to be full path including filename for both remote and host.
+│ │          """
+│ │ -        stfp_session = self._session.open_sftp()
+│ │ -        stfp_session.get(remote_src, host_dest)
+│ │ -        stfp_session.close()
+│ │ +        if host_dest is None:
+│ │ +            host_dest = self._host_path / Path(remote_src).name
+│ │ +            self.logger.info(
+│ │ +                "get_file host destination unspecified, writing to %s", str(host_dest)
+│ │ +            )
+│ │ +
+│ │ +        sftp = self._session.open_sftp()
+│ │ +        sftp.get(remote_src, str(host_dest))
+│ │ +        sftp.close()
+│ │   --- konductor-0.0.1/src/konductor/metadata/statistics/perflogger.py
+│ ├── +++ konductor-0.0.2/src/konductor/metadata/statistics/perflogger.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,34 +1,29 @@
+│ │  from dataclasses import dataclass, field
+│ │  from pathlib import Path
+│ │ -from typing import Any, Callable, Dict, List, Type, Set
+│ │ +from typing import Any, Dict, List, Type, Set
+│ │  from logging import getLogger
+│ │ +import re
+│ │  
+│ │  import numpy as np
+│ │ -from pandas import DataFrame as df
+│ │  from tensorboard.summary import Writer
+│ │  
+│ │  from .statistic import Statistic, STATISTICS_REGISTRY
+│ │ +from ...utilities import comm
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class PerfLoggerConfig:
+│ │      """
+│ │      Contains collection of useful attributes required
+│ │      for many performance evaluation methods.
+│ │      """
+│ │  
+│ │      write_path: Path
+│ │  
+│ │ -    # training buffer length
+│ │ -    train_buffer_length: int
+│ │ -
+│ │ -    # validation buffer length
+│ │ -    validation_buffer_length: int
+│ │ -
+│ │      # List of named statistics to track
+│ │      statistics: Dict[str, Type[Statistic]]
+│ │  
+│ │      # Interval to log training statistics
+│ │      interval: int = 1
+│ │  
+│ │      # attributes from dataset which statistics may need
+│ │ @@ -43,14 +38,19 @@
+│ │      # List of statistics to also write to a tensorboard
+│ │      write_tboard: Set[str] = field(default_factory=set)
+│ │  
+│ │      def __post_init__(self):
+│ │          if isinstance(self.write_tboard, list):
+│ │              self.write_tboard = set(self.write_tboard)
+│ │  
+│ │ +        for stat in self.statistics:
+│ │ +            assert re.match(
+│ │ +                r"\A[a-zA-Z0-9-]+\Z", stat
+│ │ +            ), f"Invalid character in name {stat}"
+│ │ +
+│ │  
+│ │  class PerfLogger:
+│ │      """
+│ │      When logging, while in training mode save the performance of each iteration
+│ │      as the network is learning, it should improve with each iteration. While in validation
+│ │      record performance, however summarise this as a single scalar at the end of the
+│ │      epoch. This is because we want to see the average performance across the entire
+│ │ @@ -81,74 +81,54 @@
+│ │  
+│ │      def set_iteration(self, it: int) -> None:
+│ │          self._iteration = it
+│ │  
+│ │      def train(self) -> None:
+│ │          """Set logger in training mode"""
+│ │          self.is_training = True
+│ │ -        buffer_sz = min(self.config.train_buffer_length // self.log_interval, 1000)
+│ │ -        pathname_fn = lambda k: self.config.write_path / f"train_{k}.parquet"
+│ │ -        self._reset_statistics(buffer_sz, pathname_fn)
+│ │ +        self._reset_statistics()
+│ │  
+│ │      def eval(self) -> None:
+│ │          """Set logger in validation mode"""
+│ │          self.is_training = False
+│ │ -        buffer_sz = min(self.config.validation_buffer_length, 1000)
+│ │ -        pathname_fn = lambda k: self.config.write_path / f"val_{k}.parquet"
+│ │ -        self._reset_statistics(buffer_sz, pathname_fn)
+│ │ -
+│ │ -    def _reset_statistics(
+│ │ -        self, buffer_sz: int, pathname_fn: Callable[[str], Path]
+│ │ -    ) -> None:
+│ │ -        """
+│ │ -        Pathname function should genereally be callablee that inserts the
+│ │ -        statistic name to create: folder/{split}_{stat}.pq
+│ │ -        """
+│ │ +        self._reset_statistics()
+│ │ +
+│ │ +    def _reset_statistics(self) -> None:
+│ │ +        """Flush buffers and reset to new file"""
+│ │ +
+│ │ +        def pathname_fn(name: str):
+│ │ +            """Create logging file with naming convention
+│ │ +            {split}_{stat}_{rank}_{start_iter}"""
+│ │ +            split = "train" if self.is_training else "val"
+│ │ +            filename = f"{split}_{name}_{comm.get_rank()}_{self._iteration}.parquet"
+│ │ +            return self.config.write_path / filename
+│ │ +
+│ │          self.flush()
+│ │          self._statistics = {
+│ │ -            k: v.from_config(
+│ │ -                buffer_sz, pathname_fn(k), **self.config.dataset_properties
+│ │ -            )
+│ │ +            k: v.from_config(1000, pathname_fn(k), **self.config.dataset_properties)
+│ │              for k, v in self.config.statistics.items()
+│ │          }
+│ │  
+│ │      @property
+│ │ -    def logger_keys(self) -> List[str]:
+│ │ +    def keys(self) -> List[str]:
+│ │ +        """Names of the statistics being logged"""
+│ │          assert self._statistics is not None, self._not_init_msg
+│ │          return list(self._statistics.keys())
+│ │  
+│ │ -    @property
+│ │ -    def statistics_keys(self) -> List[str]:
+│ │ -        keys: List[str] = []
+│ │ -        assert self._statistics is not None, self._not_init_msg
+│ │ -        for name, statistic in self._statistics.items():
+│ │ -            keys.extend([f"{name}/{k}" for k in statistic.keys])
+│ │ -        return keys
+│ │ -
+│ │ -    @property
+│ │ -    def statistics_data(self) -> df:
+│ │ -        data: Dict[str, np.ndarray] = {}
+│ │ -        assert self._statistics is not None, self._not_init_msg
+│ │ -        for name, statistic in self._statistics.items():
+│ │ -            data.update({f"{name}/{k}": v for k, v in statistic.data.items()})
+│ │ -        return df(data)
+│ │ -
+│ │      def flush(self) -> None:
+│ │          """flush all statistics to ensure written to disk"""
+│ │          if self._statistics is None:
+│ │              return  # no data to flush
+│ │  
+│ │          for stat in self._statistics.values():
+│ │              stat.flush()  # write any valid data
+│ │  
+│ │      def log(self, name: str, *args, **kwargs) -> None:
+│ │          assert self._statistics is not None, self._not_init_msg
+│ │ -        assert (
+│ │ -            self._iteration >= 0
+│ │ -        ), "Perflogger.set_iteration never called, this is required for logging properly"
+│ │ +        assert self._iteration >= 0, "Iteration for perflogger not set"
+│ │  
+│ │          # Log if testing or at training log interval
+│ │          if not self.is_training or self._iteration % self.log_interval == 0:
+│ │              self._statistics[name](self._iteration, *args, **kwargs)
+│ │  
+│ │              # Write to tensorbard at each iteration when training
+│ │              if (
+│ │ @@ -179,13 +159,24 @@
+│ │          return mean_loss
+│ │  
+│ │      def epoch_losses(self) -> Dict[str, float]:
+│ │          """Get mean validation for each loss of last iteration"""
+│ │          assert self._statistics is not None, self._not_init_msg
+│ │          self.flush()  # Ensure flushed so data is on disk to read
+│ │  
+│ │ -        _filename = self.config.write_path / "val_loss.parquet"
+│ │ -        if not _filename.exists():
+│ │ -            raise RuntimeError("Loss not tracked in validation")
+│ │ +        # Get last iteration of val loss
+│ │ +        try:
+│ │ +            _filename = max(
+│ │ +                [
+│ │ +                    f
+│ │ +                    for f in self.config.write_path.iterdir()
+│ │ +                    if f"val_loss_{comm.get_rank()}_" in f.stem
+│ │ +                ],
+│ │ +                key=lambda x: int(x.stem.split("_")[-1]),
+│ │ +            )
+│ │ +        except ValueError:  # If max gets empty sequence
+│ │ +            raise RuntimeError(
+│ │ +                f"No validation loss log found in directory {self.config.write_path}"
+│ │ +            )
+│ │  
+│ │          _val_loss = self.config.statistics["loss"](0, _filename)
+│ │          return _val_loss.iteration_mean(self._iteration)
+│ │   --- konductor-0.0.1/src/konductor/metadata/statistics/statistic.py
+│ ├── +++ konductor-0.0.2/src/konductor/metadata/statistics/statistic.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -49,15 +49,15 @@
+│ │          self._logger = logging.getLogger(
+│ │              logger_name if logger_name is not None else type(self).__name__
+│ │          )
+│ │  
+│ │          if self.writepath.exists():
+│ │              schema = pq.read_schema(self.writepath)
+│ │              self._statistics = {
+│ │ -                n: np.empty(0)
+│ │ +                n: np.empty(self._buffer_length)
+│ │                  for n in schema.names
+│ │                  if n not in {"iteration", "timestamp"}
+│ │              }
+│ │          else:
+│ │              self._statistics: Dict[str, np.ndarray] = {}
+│ │  
+│ │          self._current_it = 0
+│ │ @@ -99,41 +99,50 @@
+│ │          """True if any statistic buffer is full"""
+│ │          return self.size == self.capacity
+│ │  
+│ │      @property
+│ │      def empty(self) -> bool:
+│ │          return self._end_idx == -1
+│ │  
+│ │ -    @property
+│ │ -    def data(self) -> Dict[str, np.ndarray]:
+│ │ -        """Return a dictonary of statistic key and vector pairs of currently valid data"""
+│ │ -        if comm.in_distributed_mode():
+│ │ +    def data(self, all_gather: bool = False) -> Dict[str, np.ndarray]:
+│ │ +        """Get valid in-memory data, gather from other ranks if necessary
+│ │ +
+│ │ +        :param all_gather: Gather data from all ranks if in distributed
+│ │ +            mode, defaults to False
+│ │ +        :return: Dict[str, np.ndarray] key value pairs of statistic and valid data
+│ │ +        """
+│ │ +        if comm.in_distributed_mode() and all_gather:
+│ │              data_ = {}
+│ │              for s in self._statistics:
+│ │                  gath_data = comm.all_gather(self._statistics[s][: self.size])
+│ │                  if self.reduce_batch:
+│ │                      data_[s] = np.nanmean(np.stack(gath_data, axis=0), axis=0)
+│ │                  else:
+│ │                      data_[s] = np.concatenate(gath_data, axis=0)
+│ │          else:
+│ │              data_ = {k: v[: self.size] for k, v in self._statistics.items()}
+│ │  
+│ │ -        if not self.reduce_batch and comm.in_distributed_mode():
+│ │ +        if not self.reduce_batch and comm.in_distributed_mode() and all_gather:
+│ │              data_["iteration"] = np.concatenate(
+│ │                  comm.all_gather(self._iteration_key[: self.size]), axis=0
+│ │              )
+│ │              data_["timestamp"] = np.concatenate(
+│ │                  comm.all_gather(self._timestamp_key[: self.size]), axis=0
+│ │              )
+│ │          else:
+│ │              data_["iteration"] = self._iteration_key[: self.size]
+│ │              data_["timestamp"] = self._timestamp_key[: self.size]
+│ │  
+│ │          return data_
+│ │  
+│ │ +    def as_df(self, all_gather: bool = False) -> df:
+│ │ +        """Get valid data as pandas dataframe, option to gather
+│ │ +        from all ranks if in distributed mode"""
+│ │ +        return df(self.data(all_gather))
+│ │ +
+│ │      @property
+│ │      def last(self) -> Dict[str, float]:
+│ │          """
+│ │          Return the last logged statistics, don't return iteration or timestamp data
+│ │          """
+│ │          if comm.in_distributed_mode() and self.reduce_batch:
+│ │              data_ = {}
+│ │ @@ -143,51 +152,56 @@
+│ │                  data_[s] = np.nanmean(data_[s], axis=0)
+│ │          else:
+│ │              data_ = {k: v[self._end_idx] for k, v in self._statistics.items()}
+│ │          return data_
+│ │  
+│ │      def iteration_mean(self, it: int) -> Dict[str, float]:
+│ │          """Returns the average of each statistic in the current state"""
+│ │ -        self.flush()  # flush all held data
+│ │ +        self.flush()  # flush all currently held data
+│ │  
+│ │          data = pq.read_table(
+│ │              self.writepath,
+│ │              pre_buffer=False,
+│ │              memory_map=True,
+│ │              use_threads=True,
+│ │              filters=[("iteration", "=", it)],
+│ │          )
+│ │  
+│ │ -        return {k: np.nanmean(data[k]) for k in self.keys}
+│ │ +        # Reduce per worker first so you don't have to send as much data
+│ │ +        data = {k: np.nanmean(data[k]) for k in self.keys}
+│ │ +
+│ │ +        if comm.in_distributed_mode():  # reduce over workers
+│ │ +            data = {
+│ │ +                k: np.concatenate(comm.all_gather(v)).mean() for k, v in data.items()
+│ │ +            }
+│ │ +
+│ │ +        return data
+│ │  
+│ │      def flush(self) -> None:
+│ │          """Writes valid data from memory to parquet file"""
+│ │          if self.empty:
+│ │              return
+│ │  
+│ │          data = pa.Table.from_pandas(self.as_df())
+│ │  
+│ │ -        if self.writepath.exists():
+│ │ -            original_data = pq.read_table(
+│ │ +        original_data = (
+│ │ +            pq.read_table(
+│ │                  self.writepath, pre_buffer=False, memory_map=True, use_threads=True
+│ │              )
+│ │ -        else:
+│ │ -            original_data = None
+│ │ +            if self.writepath.exists()
+│ │ +            else None
+│ │ +        )
+│ │  
+│ │          with pq.ParquetWriter(self.writepath, data.schema) as writer:
+│ │              if original_data is not None:
+│ │                  writer.write_table(original_data)
+│ │              writer.write_table(data)
+│ │  
+│ │          self.reset()
+│ │  
+│ │ -    def as_df(self) -> df:
+│ │ -        """Get valid data as pandas dataframe"""
+│ │ -        return df(self.data)
+│ │ -
+│ │      def reset(self) -> None:
+│ │          """Empty the currently held data"""
+│ │          self._end_idx = -1
+│ │          for s in self._statistics:
+│ │              self._statistics[s] = np.full(self._buffer_length, np.nan)
+│ │  
+│ │      def _append_sample(self, name: str, value: float | np.ndarray) -> None:
+│ │   --- konductor-0.0.1/src/konductor/modules/__init__.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/src/konductor/modules/data/__init__.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/data/__init__.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  import abc
+│ │  import enum
+│ │ -from dataclasses import dataclass
+│ │ +from dataclasses import dataclass, field
+│ │  import os
+│ │  from pathlib import Path
+│ │  from typing import Any, Dict, Sequence
+│ │  
+│ │  from ..registry import Registry, BaseConfig
+│ │  from ..init import ModuleInitConfig, DatasetInitConfig, ExperimentInitConfig
+│ │  
+│ │ @@ -25,17 +25,19 @@
+│ │      experiment, this configuration is given as a list and an argument of which dataset
+│ │      to configure is the second argument.
+│ │  
+│ │          :raises NotImplementedError: This is a base class that you should inherit from
+│ │          :return: Creates a new dataset configuration to instanciate a dataset
+│ │      """
+│ │  
+│ │ -    train_loader: ModuleInitConfig
+│ │ -    val_loader: ModuleInitConfig
+│ │ -    basepath: Path = Path(os.environ.get("DATAPATH", "/data"))
+│ │ +    train_loader: ModuleInitConfig = field(kw_only=True)
+│ │ +    val_loader: ModuleInitConfig = field(kw_only=True)
+│ │ +    basepath: Path = field(
+│ │ +        default=Path(os.environ.get("DATAPATH", "/data")), kw_only=True
+│ │ +    )
+│ │  
+│ │      @classmethod
+│ │      def from_config(cls, config: ExperimentInitConfig, idx: int = 0):
+│ │          """Create a dataset configuration from the global experiment initialisation configuration
+│ │  
+│ │          :param config: Experiment Configuration that configures the dataset to be loaded.
+│ │          :param idx: Index of the dataset to be configured, defaults to 0
+│ │   --- konductor-0.0.1/src/konductor/modules/data/_pytorch/cityscapes.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/data/_pytorch/cityscapes.py
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/src/konductor/modules/data/_pytorch/dataloader.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/data/_pytorch/dataloader.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,61 +1,78 @@
+│ │ -from typing import Any, Callable, Dict, List, Type
+│ │ +from typing import Any, Callable, List, Type
+│ │  from warnings import warn
+│ │ +from dataclasses import dataclass
+│ │  
+│ │  from ....utilities.comm import get_world_size, in_distributed_mode
+│ │  from .. import DataloaderConfig, DATALOADER_REGISTRY
+│ │  
+│ │  from torch.utils.data import (
+│ │      DataLoader,
+│ │      DistributedSampler,
+│ │      SequentialSampler,
+│ │      RandomSampler,
+│ │      Sampler,
+│ │ +    BatchSampler,
+│ │  )
+│ │  
+│ │  try:
+│ │      from torchdata.datapipes.iter import IterableWrapper
+│ │      from torchdata.dataloader2 import DataLoader2
+│ │      from torchdata.dataloader2.reading_service import (
+│ │          MultiProcessingReadingService,
+│ │          DistributedReadingService,
+│ │      )
+│ │  except ImportError:
+│ │      print("torchdata unavailable")
+│ │  
+│ │  
+│ │ +@dataclass
+│ │  @DATALOADER_REGISTRY.register_module("PYTORCH_V1")
+│ │  class DataloaderV1Config(DataloaderConfig):
+│ │      pin_memory: bool = True
+│ │ -    custom_sampler: Type[Sampler] | None = None
+│ │ -    collate_fn: Callable[[List[Dict[str, Any]]], Dict[str, Any]] | None = None
+│ │ +    sampler: Type[Sampler] | None = None
+│ │ +    batch_sampler: Type[BatchSampler] | None = None
+│ │ +    collate_fn: Callable[[List[Any]], Any] | None = None
+│ │  
+│ │      def get_instance(self, *args):
+│ │          dataset: Any = self.dataset.get_instance(self.mode)
+│ │ -        if self.custom_sampler is not None:
+│ │ -            sampler = self.custom_sampler(dataset)
+│ │ +
+│ │ +        if self.sampler is not None:
+│ │ +            sampler = self.sampler(dataset)
+│ │          elif in_distributed_mode():
+│ │              sampler = DistributedSampler(dataset, shuffle=self.shuffle)
+│ │              self.batch_size //= get_world_size()
+│ │          elif self.shuffle:
+│ │              sampler = RandomSampler(dataset)
+│ │          else:
+│ │              sampler = SequentialSampler(dataset)
+│ │  
+│ │ +        if self.batch_sampler is not None:
+│ │ +            batch_sampler = self.batch_sampler(sampler, self.batch_size, self.drop_last)
+│ │ +            batch_size = 1
+│ │ +            drop_last = False
+│ │ +            sampler = None
+│ │ +        else:
+│ │ +            batch_sampler = None
+│ │ +            batch_size = self.batch_size
+│ │ +            drop_last = self.drop_last
+│ │ +
+│ │          return DataLoader(
+│ │              dataset,
+│ │              sampler=sampler,
+│ │ -            drop_last=self.drop_last,
+│ │ -            batch_size=self.batch_size,
+│ │ +            batch_sampler=batch_sampler,
+│ │ +            drop_last=drop_last,
+│ │ +            batch_size=batch_size,
+│ │              num_workers=self.workers,
+│ │              pin_memory=self.pin_memory,
+│ │              collate_fn=self.collate_fn,
+│ │          )
+│ │  
+│ │  
+│ │ +@dataclass
+│ │  @DATALOADER_REGISTRY.register_module("PYTORCH_V2")
+│ │  class DataloaderV2Config(DataloaderConfig):
+│ │      """Uses DataPipe API
+│ │  
+│ │      :param DataloaderConfig: _description_
+│ │      """
+│ │   --- konductor-0.0.1/src/konductor/modules/data/dali.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/data/dali.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,21 +1,24 @@
+│ │ +from dataclasses import dataclass
+│ │ +
+│ │  import torch
+│ │  from nvidia.dali.plugin.pytorch import DALIGenericIterator
+│ │  
+│ │  from . import DataloaderConfig, DATALOADER_REGISTRY, Mode
+│ │  from ...utilities.comm import get_rank, get_world_size
+│ │  
+│ │  
+│ │ +@dataclass
+│ │  @DATALOADER_REGISTRY.register_module("DALI")
+│ │  class DaliLoaderConfig(DataloaderConfig):
+│ │      def get_instance(self, *args):
+│ │          pipe_kwargs = {
+│ │              "shard_id": get_rank(),
+│ │              "num_shards": get_world_size(),
+│ │ -            "num_threads": self.workers,
+│ │ +            "num_threads": max(self.workers, 1),
+│ │              "device_id": torch.cuda.current_device(),
+│ │              "batch_size": self.batch_size // get_world_size(),
+│ │          }
+│ │  
+│ │          dali_pipe, out_map, reader_name = self.dataset.get_instance(
+│ │              mode=self.mode, random_shuffle=self.mode == Mode.train, **pipe_kwargs
+│ │          )
+│ │   --- konductor-0.0.1/src/konductor/modules/init.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/init.py
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/src/konductor/modules/losses/__init__.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/losses/__init__.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -28,14 +28,22 @@
+│ │          assert len(self.names) == len(set(self.names)), f"Duplicate names {self.names}"
+│ │  
+│ │      @classmethod
+│ │      def from_config(cls, config: ExperimentInitConfig, idx: int, **kwargs):
+│ │          return cls(**config.criterion[idx].args, **kwargs)
+│ │  
+│ │  
+│ │ +try:
+│ │ +    import torch
+│ │ +except ImportError:
+│ │ +    pass
+│ │ +else:
+│ │ +    from . import _pytorch
+│ │ +
+│ │ +
+│ │  def get_criterion_config(config: ExperimentInitConfig) -> List[LossConfig]:
+│ │      """Get list of loss configs from experiment configuration"""
+│ │      return [
+│ │          REGISTRY[loss_fn.type].from_config(config, idx)
+│ │          for idx, loss_fn in enumerate(config.criterion)
+│ │      ]
+│ │   --- konductor-0.0.1/src/konductor/modules/models/__init__.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/models/__init__.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -39,15 +39,16 @@
+│ │  
+│ │  
+│ │  def get_model_config(config: ExperimentInitConfig, idx: int = 0) -> ModelConfig:
+│ │      return MODEL_REGISTRY[config.model[idx].type].from_config(config, idx)
+│ │  
+│ │  
+│ │  def get_model(config: ExperimentInitConfig, idx: int = 0) -> Any:
+│ │ -    """Returns standalone model"""
+│ │ +    """Returns standalone model, use get_training_model
+│ │ +    to also get optimizer and lr scheduler"""
+│ │      return get_model_config(config, idx).get_instance()
+│ │  
+│ │  
+│ │  def get_training_model(config: ExperimentInitConfig, idx: int = 0) -> Any:
+│ │      """Returns model with optimizer and lr scheduler"""
+│ │      return get_model_config(config, idx).get_training_modules()
+│ │   --- konductor-0.0.1/src/konductor/modules/models/_pytorch/__init__.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/models/_pytorch/__init__.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,23 +1,44 @@
+│ │  from dataclasses import dataclass
+│ │  from pathlib import Path
+│ │  from logging import getLogger
+│ │  import os
+│ │  
+│ │ +import torch
+│ │  from torch import nn, load
+│ │  
+│ │ +from konductor.utilities import comm
+│ │ +
+│ │  from ...models import ModelConfig
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class TorchModelConfig(ModelConfig):
+│ │      """
+│ │      Pytorch Model configuration that also includes helper for batchnorm and pretrained management.
+│ │      """
+│ │  
+│ │ +    def get_training_modules(self):
+│ │ +        model: nn.Module = self.get_instance()
+│ │ +
+│ │ +        if torch.cuda.is_available():
+│ │ +            model = model.cuda()
+│ │ +
+│ │ +        if comm.in_distributed_mode():
+│ │ +            model = nn.parallel.DistributedDataParallel(
+│ │ +                nn.SyncBatchNorm.convert_sync_batchnorm(model),
+│ │ +                device_ids=[torch.cuda.current_device()],
+│ │ +                output_device=torch.cuda.current_device(),
+│ │ +                find_unused_parameters=os.getenv("DDP_FIND_UNUSED", "False") == "True",
+│ │ +            )
+│ │ +
+│ │ +        optim = self.optimizer.get_instance(model)
+│ │ +        sched = self.optimizer.get_scheduler(optim)
+│ │ +        return model, optim, sched
+│ │ +
+│ │      def _apply_extra(self, model: nn.Module) -> nn.Module:
+│ │          if self.bn_momentum != 0.1:
+│ │              for module in model.modules():
+│ │                  if isinstance(module, nn.BatchNorm2d):
+│ │                      module.momentum = self.bn_momentum
+│ │  
+│ │          if self.bn_freeze:
+│ │   --- konductor-0.0.1/src/konductor/modules/models/_pytorch/encdec.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/models/_pytorch/encdec.py
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/src/konductor/modules/models/_pytorch/torchvision.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/models/_pytorch/torchvision.py
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/src/konductor/modules/optimizers/__init__.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/optimizers/__init__.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -35,7 +35,15 @@
+│ │      )
+│ │      return optimizer_conf
+│ │  
+│ │  
+│ │  def get_optimizer(cfg: OptimizerInitConfig, model: Any) -> Any:
+│ │      """Return an initialised optimizer according to the configmap"""
+│ │      return get_optimizer_config(cfg).get_instance(model)
+│ │ +
+│ │ +
+│ │ +try:
+│ │ +    import torch
+│ │ +except ImportError:
+│ │ +    pass
+│ │ +else:
+│ │ +    from . import _pytorch
+│ │   --- konductor-0.0.1/src/konductor/modules/optimizers/_pytorch/base.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/optimizers/_pytorch/base.py
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/src/konductor/modules/optimizers/_pytorch/common.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/optimizers/_pytorch/common.py
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/src/konductor/modules/optimizers/_pytorch/lamb.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/optimizers/_pytorch/lamb.py
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/src/konductor/modules/registry.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/registry.py
+│ │┄ Files 25% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  """
+│ │  The design rationale for a configuration registry which returns models
+│ │  is that we can partially initialise and gather the relevant variables
+│ │  throughout the initialisation phase of the program. This allows for 
+│ │  circular dependices between classes such as the numebr of classes defined
+│ │ -by a dataset can be used to configure the model, and 
+│ │ -
+│ │ +by a dataset can be used to configure the model 
+│ │  """
+│ │ +
+│ │  import abc
+│ │  from dataclasses import dataclass
+│ │  import inspect
+│ │  from logging import getLogger
+│ │  from typing import Any, Dict, Type
+│ │  
+│ │  from .init import ExperimentInitConfig
+│ │ @@ -30,66 +30,72 @@
+│ │  
+│ │      @abc.abstractmethod
+│ │      def get_instance(self, *args, **kwargs) -> Any:
+│ │          """Get initialised module from configuration"""
+│ │  
+│ │  
+│ │  class Registry:
+│ │ +    """
+│ │ +    Registry for modules to re-access by a given name.
+│ │ +    Names are case insensitive (all cast to lower).
+│ │ +    """
+│ │ +
+│ │      def __init__(self, name: str):
+│ │ -        self._name = name
+│ │ +        self._name = name.lower()
+│ │          self._module_dict: Dict[str, Type[BaseConfig]] = {}
+│ │ -        self._logger = getLogger(name=name)
+│ │ +        self._logger = getLogger(name=f"{name}_registry")
+│ │  
+│ │      def __len__(self):
+│ │          return len(self._module_dict)
+│ │  
+│ │      def __repr__(self) -> str:
+│ │          return (
+│ │              f"{self.__class__.__name__} (name={self._name}, items={self._module_dict})"
+│ │          )
+│ │  
+│ │      def __getitem__(self, name: str) -> Type[BaseConfig]:
+│ │ -        return self._module_dict[name]
+│ │ +        return self._module_dict[name.lower()]
+│ │  
+│ │      @property
+│ │      def name(self):
+│ │          return self._name
+│ │  
+│ │      @property
+│ │      def module_dict(self):
+│ │          return self._module_dict
+│ │  
+│ │      def __contains__(self, name: str) -> bool:
+│ │ -        return name in self._module_dict
+│ │ +        return name.lower() in self._module_dict
+│ │  
+│ │      def _register_module(
+│ │          self, module: Any, name: str | None = None, force_override: bool = False
+│ │      ):
+│ │          if not any([inspect.isclass(module), inspect.isfunction(module)]):
+│ │              raise TypeError(f"module must be a class or a function, got {type(module)}")
+│ │  
+│ │          name = module.__name__ if name is None else name
+│ │ +        name = name.lower()  # enforce lowercase
+│ │  
+│ │          if name in self._module_dict:
+│ │              if force_override:
+│ │ -                self._logger.warn(f"Overriding {name} in registry")
+│ │ +                self._logger.warning(f"Overriding {name}")
+│ │              else:
+│ │ -                raise KeyError(f"{name} is already registered in {self.name}")
+│ │ +                raise KeyError(f"{name} is already registered")
+│ │          else:
+│ │ -            self._logger.info(f"Registering new module {name}")
+│ │ +            self._logger.info(f"adding new module {name}")
+│ │  
+│ │          self._module_dict[name] = module
+│ │  
+│ │      def register_module(
+│ │          self,
+│ │          name: str | None = None,
+│ │ -        module: Type[BaseConfig] | None = None,
+│ │ +        module: Any | None = None,
+│ │          force_override: bool = False,
+│ │      ):
+│ │ -        """"""
+│ │ +        """Add new module to registry, name is case insensitive (force lower)"""
+│ │          if module is not None:
+│ │              self._register_module(
+│ │                  module=module, name=name, force_override=force_override
+│ │              )
+│ │              return module
+│ │  
+│ │          def _register(module):
+│ │   --- konductor-0.0.1/src/konductor/modules/scheduler/__init__.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/scheduler/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/src/konductor/modules/scheduler/_pytorch.py
+│ ├── +++ konductor-0.0.2/src/konductor/modules/scheduler/_pytorch.py
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/src/konductor/trainer/initialisation.py
+│ ├── +++ konductor-0.0.2/src/konductor/trainer/init.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -3,33 +3,36 @@
+│ │  """
+│ │  import argparse
+│ │  from typing import Dict, Type
+│ │  from pathlib import Path
+│ │  import yaml
+│ │  import hashlib
+│ │  
+│ │ -from .trainer import BaseTrainer, TrainingMangerConfig, TrainingModules
+│ │ +from .trainer import TrainerConfig, TrainerModules, TrainerT
+│ │  from ..modules import (
+│ │ +    get_model,
+│ │      get_training_model,
+│ │      get_criterion,
+│ │      get_optimizer,
+│ │      get_lr_scheduler,
+│ │      get_dataset_properties,
+│ │      get_dataloader,
+│ │      get_dataset_config,
+│ │      ExperimentInitConfig,
+│ │ +    ModuleInitConfig,
+│ │  )
+│ │  from ..metadata import (
+│ │      get_metadata_manager,
+│ │      get_remote_config,
+│ │      PerfLoggerConfig,
+│ │      MetadataManager,
+│ │      Statistic,
+│ │  )
+│ │  from ..metadata.statistics.scalar_dict import ScalarStatistic
+│ │ +from ..utilities import comm
+│ │  
+│ │  
+│ │  def parser_add_common_args(parser: argparse.ArgumentParser) -> None:
+│ │      """Parse common training and evaluation command line arguments"""
+│ │  
+│ │      # Training config file or string
+│ │      parser.add_argument(
+│ │ @@ -78,14 +81,17 @@
+│ │      parser.add_argument(
+│ │          "-w",
+│ │          "--workers",
+│ │          type=int,
+│ │          default=0,
+│ │          help="Number of dataloader workers",
+│ │      )
+│ │ +    parser.add_argument(
+│ │ +        "-e", "--epochs", type=int, default=1, help="Max epoch to train to"
+│ │ +    )
+│ │  
+│ │      # Configruation for torch.distributed training
+│ │      parser.add_argument("-g", "--gpu", type=int, required=False, default=0)
+│ │      parser.add_argument("-b", "--backend", type=str, required=False, default="nccl")
+│ │      parser.add_argument(
+│ │          "-d",
+│ │          "--dist_method",
+│ │ @@ -131,37 +137,38 @@
+│ │  
+│ │          train_hash = hashlib.md5(str(exp_cfg).encode("utf-8")).hexdigest()
+│ │          exp_path: Path = workspace / train_hash
+│ │  
+│ │          if not exp_path.exists():
+│ │              print(f"Creating experiment directory {exp_path}")
+│ │              exp_path.mkdir(parents=True)
+│ │ +        else:
+│ │ +            print(f"Using experiment directory {exp_path}")
+│ │  
+│ │          # Ensure the experiment configuration exists in the target directory
+│ │          if not (exp_path / "train_config.yml").exists():
+│ │              with open(exp_path / "train_config.yml", "w", encoding="utf-8") as f:
+│ │                  yaml.safe_dump(exp_cfg, f)
+│ │  
+│ │      else:
+│ │          raise RuntimeError("Either --train_hash or --train_config are required")
+│ │  
+│ │      exp_cfg["work_dir"] = exp_path
+│ │  
+│ │      return ExperimentInitConfig.from_yaml(exp_cfg)
+│ │  
+│ │  
+│ │ -def initialise_training_modules(
+│ │ +def init_training_modules(
+│ │      exp_config: ExperimentInitConfig,
+│ │ -    train_module_cls: Type[TrainingModules] = TrainingModules,
+│ │ -) -> TrainingModules:
+│ │ +    train_module_cls: Type[TrainerModules] = TrainerModules,
+│ │ +) -> TrainerModules:
+│ │      """
+│ │      Initialise training modules from experiment init config
+│ │      optional custom init modules available.
+│ │      """
+│ │ -
+│ │      dataset_cfgs = [
+│ │          get_dataset_config(exp_config, idx) for idx in range(len(exp_config.data))
+│ │      ]
+│ │      train_loaders = [get_dataloader(cfg, "train") for cfg in dataset_cfgs]
+│ │      val_loaders = [get_dataloader(cfg, "val") for cfg in dataset_cfgs]
+│ │  
+│ │      modules = [
+│ │ @@ -174,72 +181,84 @@
+│ │      criterion = get_criterion(exp_config)
+│ │  
+│ │      return train_module_cls(
+│ │          models, criterion, optims, scheds, train_loaders, val_loaders
+│ │      )
+│ │  
+│ │  
+│ │ -def initialise_data_manager(
+│ │ +def init_data_manager(
+│ │      exp_config: ExperimentInitConfig,
+│ │ -    train_modules: TrainingModules,
+│ │ +    train_modules: TrainerModules,
+│ │      statistics: Dict[str, Type[Statistic]],
+│ │      perf_log_cfg_cls: Type[PerfLoggerConfig] = PerfLoggerConfig,
+│ │  ) -> MetadataManager:
+│ │      """
+│ │      Initialise the data manager that handles statistics and checkpoints
+│ │      """
+│ │      # Add tracker for losses
+│ │      statistics["loss"] = ScalarStatistic
+│ │  
+│ │      # Initialise metadata management engine
+│ │      log_config = perf_log_cfg_cls(
+│ │          exp_config.work_dir,
+│ │ -        len(train_modules.trainloader),
+│ │ -        len(train_modules.valloader),
+│ │          statistics,
+│ │          dataset_properties=get_dataset_properties(exp_config),
+│ │          **exp_config.logger_kwargs,
+│ │      )
+│ │  
+│ │      remote_sync = (
+│ │          None
+│ │          if exp_config.remote_sync is None
+│ │          else get_remote_config(exp_config).get_instance()
+│ │      )
+│ │  
+│ │      return get_metadata_manager(
+│ │ -        exp_config,
+│ │          log_config,
+│ │          remote_sync=remote_sync,
+│ │          model=train_modules.model,
+│ │          optim=train_modules.optimizer,
+│ │          scheduler=train_modules.scheduler,
+│ │      )
+│ │  
+│ │  
+│ │ -def initialise_training(
+│ │ -    cli_args: argparse.Namespace,
+│ │ -    trainer_cls: Type[BaseTrainer],
+│ │ -    trainer_config: TrainingMangerConfig,
+│ │ -    statistics: Dict[str, type[Statistic]],
+│ │ -    train_module_cls: Type[TrainingModules] = TrainingModules,
+│ │ -    perf_log_cfg_cls: Type[PerfLoggerConfig] = PerfLoggerConfig,
+│ │ -) -> BaseTrainer:
+│ │ -    """Initialize training manager class"""
+│ │ +def cli_init_config(cli_args: argparse.Namespace):
+│ │ +    """
+│ │ +    Parse cli args to generate the experiment configuration
+│ │ +    """
+│ │      exp_config = get_experiment_cfg(
+│ │          cli_args.workspace, cli_args.config_file, cli_args.run_hash
+│ │      )
+│ │  
+│ │ -    for data in exp_config.data:  # Divide workers evenly among datasets
+│ │ -        data.val_loader.args["workers"] = cli_args.workers // len(exp_config.data)
+│ │ -        data.train_loader.args["workers"] = cli_args.workers // len(exp_config.data)
+│ │ +    if cli_args.remote:
+│ │ +        with open(cli_args.remote, "r", encoding="utf-8") as f:
+│ │ +            cfg = yaml.safe_load(f)
+│ │ +        exp_config.remote_sync = ModuleInitConfig(**cfg)
+│ │ +
+│ │ +    if hasattr(cli_args, "workers"):
+│ │ +        for data in exp_config.data:  # Divide workers evenly among datasets
+│ │ +            data.val_loader.args["workers"] = cli_args.workers // len(exp_config.data)
+│ │ +            data.train_loader.args["workers"] = cli_args.workers // len(exp_config.data)
+│ │ +
+│ │ +    return exp_config
+│ │ +
+│ │ +
+│ │ +def init_training(
+│ │ +    exp_config: ExperimentInitConfig,
+│ │ +    trainer_cls: Type[TrainerT],
+│ │ +    trainer_config: TrainerConfig,
+│ │ +    statistics: Dict[str, type[Statistic]],
+│ │ +    train_module_cls: Type[TrainerModules] = TrainerModules,
+│ │ +    perf_log_cfg_cls: Type[PerfLoggerConfig] = PerfLoggerConfig,
+│ │ +) -> TrainerT:
+│ │ +    """Initialize training manager class + distributed setup"""
+│ │ +    comm.initialize()
+│ │  
+│ │      trainer_config.optimizer_interval = exp_config.model[0].optimizer.args.pop(
+│ │          "step_interval", 1
+│ │      )
+│ │  
+│ │ -    train_modules = initialise_training_modules(exp_config, train_module_cls)
+│ │ -    data_manager = initialise_data_manager(
+│ │ +    train_modules = init_training_modules(exp_config, train_module_cls)
+│ │ +    data_manager = init_data_manager(
+│ │          exp_config, train_modules, statistics, perf_log_cfg_cls
+│ │      )
+│ │  
+│ │      return trainer_cls(trainer_config, train_modules, data_manager)
+│ │   --- konductor-0.0.1/src/konductor/trainer/pbar.py
+│ ├── +++ konductor-0.0.2/src/konductor/trainer/pbar.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  import time
+│ │  import os
+│ │  import itertools
+│ │ -from threading import Thread, Event
+│ │ +from threading import Thread, Event, Lock
+│ │  from datetime import timedelta
+│ │  from typing import Any, List
+│ │  import enum
+│ │  
+│ │  from tqdm.auto import tqdm
+│ │  from colorama import Fore
+│ │  
+│ │ @@ -33,28 +33,40 @@
+│ │      Threadded progress bar so you get smooth animation while iterating.
+│ │      Use context manager if possible to ensure that thread is cleaned up
+│ │      even if the total is not reached.
+│ │      """
+│ │  
+│ │      pbar_style = [["\\", "|", "/", "-"], ["▖", "▘", "▝", "▗"]]
+│ │  
+│ │ +    # The amount of the terminal string that's just formatting
+│ │ +    # This increases the "string length" but not its display length
+│ │ +    # So it has to be compensated for
+│ │ +    _fmt_len = len(
+│ │ +        f"{Fore.GREEN}{Fore.YELLOW}{Fore.RED}{Fore.RESET}"
+│ │ +        f"{Fore.YELLOW}{Fore.RESET}{Fore.YELLOW}{Fore.RESET}"
+│ │ +        f"{Fore.GREEN}{Fore.YELLOW}{Fore.RED}{Fore.RESET}"
+│ │ +    )
+│ │ +
+│ │      def __init__(
+│ │          self,
+│ │          total: int,
+│ │ +        desc: str = "",
+│ │          ncols: int | None = None,
+│ │          frequency: float = 10,
+│ │          progress_style: List[str] | int | None = None,
+│ │      ) -> None:
+│ │          super().__init__()
+│ │          self.total = total
+│ │          self.ncols = ncols
+│ │ -        self.iter = 0
+│ │ +        self._desc = desc
+│ │ +        self.n = 0
+│ │          self.frequency = frequency
+│ │          self.s_time = time.time()
+│ │          self.stop = Event()
+│ │ +        self.lk = Lock()
+│ │  
+│ │          if progress_style is None:
+│ │              self.style = self.pbar_style[0]
+│ │          elif isinstance(progress_style, int):
+│ │              self.style = self.pbar_style[progress_style]
+│ │          else:
+│ │              self.style = progress_style
+│ │ @@ -73,61 +85,70 @@
+│ │  
+│ │      def elapsed_str(self) -> str:
+│ │          """Elapsed time string with microseconds removed"""
+│ │          return str(self.elapsed()).split(".")[0]
+│ │  
+│ │      def estimated(self) -> timedelta:
+│ │          """Estimated completion time"""
+│ │ -        if self.iter == 0:
+│ │ +        if self.n == 0:
+│ │              return timedelta(hours=999)
+│ │ -        time_per_iter = self.elapsed() / self.iter
+│ │ -        return time_per_iter * (self.total - self.iter)
+│ │ +        time_per_iter = self.elapsed() / self.n
+│ │ +        return time_per_iter * (self.total - self.n)
+│ │  
+│ │      def estimated_str(self) -> str:
+│ │          """Estimated completion time string with microseconds removed"""
+│ │          return str(self.estimated()).split(".")[0]
+│ │  
+│ │      def run(self) -> None:
+│ │          n_digits = len(str(self.total))
+│ │  
+│ │          for i in itertools.cycle(self.style):
+│ │ -            start_str = f"\r{Fore.GREEN}{self.iter:0{n_digits}}{Fore.YELLOW}/{Fore.RED}{self.total}{Fore.RESET}"
+│ │ +            with self.lk:
+│ │ +                start_str = f"{Fore.BLUE}{self._desc}: {Fore.GREEN}{self.n:0{n_digits}}{Fore.YELLOW}/{Fore.RED}{self.total}{Fore.RESET}"
+│ │              end_str = (
+│ │                  f"Elapsed: {Fore.YELLOW}{self.elapsed_str()}{Fore.RESET} "
+│ │                  f"Est: {Fore.YELLOW}{self.estimated_str()}{Fore.RESET}"
+│ │              )
+│ │  
+│ │              ncols = os.get_terminal_size().columns if self.ncols is None else self.ncols
+│ │ -            # not sure why doesn't fill full console
+│ │ -            ncols -= len(start_str) + len(end_str) + 1
+│ │ -            done_bars = ncols * self.iter / self.total
+│ │ +            print(" " * (ncols - 2), end="\r")  # Clear the terminal
+│ │ +            ncols -= len(start_str) + len(end_str) - self._fmt_len // 2
+│ │ +            done_bars = ncols * self.n // self.total
+│ │  
+│ │ -            bar_str = f"{Fore.GREEN}{'█'*int(done_bars)}{Fore.YELLOW}{i}{Fore.RED}{'-'*int(ncols - done_bars)}{Fore.RESET}"
+│ │ +            bar_str = f"{Fore.GREEN}{'█'*done_bars}{Fore.YELLOW}{i}{Fore.RED}{'-'*(ncols - done_bars)}{Fore.RESET}"
+│ │  
+│ │ -            print(start_str, bar_str, end_str, end="")
+│ │ +            print(start_str, bar_str, end_str, end="\r")
+│ │  
+│ │ -            if self.iter >= self.total or self.stop.is_set():
+│ │ +            if self.n >= self.total or self.stop.is_set():
+│ │                  print()
+│ │                  break
+│ │  
+│ │              time.sleep(1 / self.frequency)
+│ │  
+│ │ +    def set_description(self, desc: str):
+│ │ +        with self.lk:
+│ │ +            self._desc = desc
+│ │ +
+│ │      def update(self, update):
+│ │ -        self.iter += update
+│ │ +        self.n += update
+│ │  
+│ │  
+│ │  def training_function(data: Any, pbar) -> None:
+│ │      for _ in data:
+│ │          pbar.update(1)
+│ │          time.sleep(0.01)
+│ │  
+│ │  
+│ │  def test_progress_bar() -> None:
+│ │      data = range(100)
+│ │ -    fn = pbar_wrapper(training_function, pbar_type=PbarType.TQDM, total=len(data))
+│ │ +    fn = pbar_wrapper(
+│ │ +        training_function, pbar_type=PbarType.TQDM, total=len(data), desc="test"
+│ │ +    )
+│ │      fn(data)
+│ │ -    fn = pbar_wrapper(training_function, pbar_type=PbarType.INBUILT, total=len(data))
+│ │ +    fn = pbar_wrapper(
+│ │ +        training_function, pbar_type=PbarType.INBUILT, total=len(data), desc="test"
+│ │ +    )
+│ │      fn(data)
+│ │  
+│ │  
+│ │  if __name__ == "__main__":
+│ │      test_progress_bar()
+│ │   --- konductor-0.0.1/src/konductor/trainer/profiler.py
+│ ├── +++ konductor-0.0.2/src/konductor/trainer/profiler.py
+│ │┄ Files identical despite different names
+│ │   --- konductor-0.0.1/src/konductor/trainer/pytorch.py
+│ ├── +++ konductor-0.0.2/src/konductor/trainer/pytorch.py
+│ │┄ Files 27% similar despite different names
+│ │ @@ -1,208 +1,273 @@
+│ │  from dataclasses import dataclass
+│ │ -import os
+│ │  from typing import Any, Dict, List, Tuple
+│ │ +from threading import Thread, Event, Lock
+│ │  
+│ │  import torch
+│ │ +from torch import backends as tb
+│ │  from torch import optim, Tensor, nn
+│ │  from torch.autograd.grad_mode import no_grad
+│ │  from torch.amp.autocast_mode import autocast
+│ │  from torch.cuda.amp.grad_scaler import GradScaler
+│ │  from torch.optim.lr_scheduler import ReduceLROnPlateau
+│ │ -from torch.profiler import record_function
+│ │ -from torch.nn.parallel import DistributedDataParallel
+│ │ +from torch.profiler import record_function, profile, ProfilerAction
+│ │  
+│ │  
+│ │ -from ..utilities import comm
+│ │ -from ..metadata.statistics import PerfLogger
+│ │ -from .trainer import BaseTrainer, TrainingModules, TrainingMangerConfig, MetadataManager
+│ │ +from .trainer import (
+│ │ +    BaseTrainer,
+│ │ +    TrainerModules,
+│ │ +    TrainerConfig,
+│ │ +    MetadataManager,
+│ │ +    TrainingError,
+│ │ +)
+│ │  
+│ │  
+│ │  @dataclass
+│ │ -class PytorchTrainingModules(TrainingModules):
+│ │ +class PyTorchTrainerModules(TrainerModules):
+│ │      model: nn.Module
+│ │      criterion: List[nn.Module]
+│ │      optimizer: optim.Optimizer
+│ │      grad_scaler: GradScaler | None = None
+│ │  
+│ │  
+│ │ +@dataclass
+│ │ +class PyTorchTrainerConfig(TrainerConfig):
+│ │ +    # Nvidia AMP Usage and Configuration
+│ │ +    amp: bool = False
+│ │ +    amp_kwargs: Dict[str, Any] | None = None
+│ │ +
+│ │ +
+│ │  def _amp_wrapper(func, amp_kwargs: Dict[str, Any] | None = None):
+│ │      if amp_kwargs is None:
+│ │          amp_kwargs = {"device_type": "cuda"}
+│ │          print("Assuming cuda amp")
+│ │  
+│ │      def with_amp(*args, **kwargs):
+│ │          with autocast(**amp_kwargs):
+│ │              func(*args, **kwargs)
+│ │  
+│ │      return with_amp
+│ │  
+│ │  
+│ │ +class AsyncFiniteMonitor(Thread):
+│ │ +    """tensor.item() is a blocking call, this screws up our pipeline
+│ │ +    therefore, we should do this async"""
+│ │ +
+│ │ +    def __init__(self) -> None:
+│ │ +        super().__init__()
+│ │ +        self.stop_token = Event()
+│ │ +        self.is_ready = Event()
+│ │ +        self.lk = Lock()
+│ │ +        self.data: Dict[str, Tensor] = {}
+│ │ +        self.err = None
+│ │ +
+│ │ +    def run(self) -> None:
+│ │ +        try:
+│ │ +            while not self.stop_token.is_set():
+│ │ +                self.is_ready.wait()
+│ │ +                with self.lk:
+│ │ +                    for key, data in self.data.items():
+│ │ +                        assert torch.isfinite(data), f"Invalid loss found in {key}"
+│ │ +                    self.is_ready.clear()
+│ │ +        except AssertionError as err:
+│ │ +            self.err = TrainingError(err)
+│ │ +
+│ │ +    def __call__(self, data: Dict[str, Tensor]) -> Any:
+│ │ +        """Added items to validate finiteness"""
+│ │ +        # Propagate error that has come from the thread
+│ │ +        if self.err is not None:
+│ │ +            raise self.err
+│ │ +
+│ │ +        # Start async monitor if it hasn't been already
+│ │ +        # This will raise if it has been started previously
+│ │ +        # and then stopped for whatever reason.
+│ │ +        if not self.is_alive():
+│ │ +            self.start()
+│ │ +
+│ │ +        with self.lk:
+│ │ +            self.data = data
+│ │ +            self.is_ready.set()
+│ │ +
+│ │ +    def stop(self):
+│ │ +        self.stop_token.set()
+│ │ +        # Give dummy data to awake thread
+│ │ +        with self.lk:
+│ │ +            self.data = {}
+│ │ +            self.is_ready.set()
+│ │ +        self.join()
+│ │ +        if self.err is not None:
+│ │ +            raise self.err
+│ │ +
+│ │ +
+│ │  class PyTorchTrainer(BaseTrainer):
+│ │      """Training manager for pytorch based models"""
+│ │  
+│ │ -    modules: PytorchTrainingModules
+│ │ +    modules: PyTorchTrainerModules
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │ -        config: TrainingMangerConfig,
+│ │ -        train_modules: TrainingModules,
+│ │ +        config: PyTorchTrainerConfig,
+│ │ +        modules: PyTorchTrainerModules,
+│ │          data_manager: MetadataManager,
+│ │      ):
+│ │          # If AMP is enabled, wrap train and eval loops and add grad_scaler
+│ │          if config.amp:
+│ │ -            self.modules.grad_scaler = GradScaler()
+│ │ -            self.data_manager.checkpointer.add_checkpointable(
+│ │ +            modules.grad_scaler = GradScaler()
+│ │ +            data_manager.checkpointer.add_checkpointable(
+│ │                  "grad_scaler", self.modules.grad_scaler
+│ │              )
+│ │              self._train = _amp_wrapper(self._train, config.amp_kwargs)
+│ │              self._validate = _amp_wrapper(self._validate, config.amp_kwargs)
+│ │  
+│ │ -        super().__init__(config, train_modules, data_manager)
+│ │ +        super().__init__(config, modules, data_manager)
+│ │  
+│ │ -        if torch.cuda.is_available():
+│ │ -            self._to_cuda()
+│ │ +        self.loss_monitor = config.loss_monitor
+│ │  
+│ │          if isinstance(self.modules.scheduler, ReduceLROnPlateau):
+│ │ -            self._logger.warn(
+│ │ +            self._logger.warning(
+│ │                  "Using ReduceLROnPlateau scheduler, ensure you calculate loss during validation"
+│ │              )
+│ │  
+│ │ -    def _to_cuda(self) -> None:
+│ │ -        self.modules.model = self.modules.model.cuda()
+│ │ -        for idx, crit in enumerate(self.modules.criterion):
+│ │ -            self.modules.criterion[idx] = crit.cuda()
+│ │ -
+│ │ -        if comm.in_distributed_mode():
+│ │ -            self.modules.model = DistributedDataParallel(
+│ │ -                nn.SyncBatchNorm.convert_sync_batchnorm(self.modules.model),
+│ │ -                device_ids=[torch.cuda.current_device()],
+│ │ -                output_device=torch.cuda.current_device(),
+│ │ -                find_unused_parameters=os.getenv("DDP_FIND_UNUSED", "False") == "True",
+│ │ -            )
+│ │ +        # Warn user if they're on ampere or above and do not have tensor cores enabled
+│ │ +        if (
+│ │ +            not (tb.cuda.matmul.allow_tf32 and tb.cudnn.allow_tf32)
+│ │ +            and torch.cuda.get_device_properties(torch.cuda.current_device()).major >= 8
+│ │ +        ):
+│ │ +            self._logger.warning("Tensor Cores not Enabled")
+│ │  
+│ │      def _accumulate_losses(self, losses: Dict[str, Tensor]) -> None:
+│ │          """Accumulate and backprop losses with optional grad scaler if enabled"""
+│ │ -        loss = torch.zeros(1).cuda()
+│ │ -        for loss_ in losses:
+│ │ -            if not torch.isfinite(losses[loss_]):
+│ │ -                raise RuntimeError(f"Not finite loss detected for {loss_}")
+│ │ -            if self.modules.grad_scaler is not None:
+│ │ -                loss += self.modules.grad_scaler.scale(losses[loss_])
+│ │ -            else:
+│ │ -                loss += losses[loss_]
+│ │ -
+│ │ -        loss /= self._config.optimizer_interval
+│ │ -        loss.backward()
+│ │ +        with record_function("backward"):
+│ │ +            self.loss_monitor(losses)
+│ │ +            all_loss = [
+│ │ +                l
+│ │ +                if self.modules.grad_scaler is None
+│ │ +                else self.modules.grad_scaler.scale(l)
+│ │ +                for l in losses.values()
+│ │ +            ]
+│ │ +            all_loss = torch.stack(all_loss).sum() / self._config.optimizer_interval
+│ │ +            all_loss.backward()
+│ │  
+│ │      def _maybe_step_optimiser(self, iter_: int) -> None:
+│ │ -        """"""
+│ │ -        if iter_ % self._config.optimizer_interval == 0:
+│ │ -            if self.modules.grad_scaler is not None:
+│ │ -                self.modules.grad_scaler.step(self.modules.optimizer)
+│ │ -                self.modules.grad_scaler.update()
+│ │ -            else:
+│ │ -                self.modules.optimizer.step()
+│ │ -            self.data_manager.iter_step()
+│ │ -            self.modules.optimizer.zero_grad()
+│ │ +        """Step optimizer if modulo the interval"""
+│ │ +        with record_function("optimizer"):
+│ │ +            if iter_ % self._config.optimizer_interval == 0:
+│ │ +                if self.modules.grad_scaler is not None:
+│ │ +                    self.modules.grad_scaler.step(self.modules.optimizer)
+│ │ +                    self.modules.grad_scaler.update()
+│ │ +                else:
+│ │ +                    self.modules.optimizer.step()
+│ │ +                self.data_manager.iter_step()
+│ │ +                self.modules.optimizer.zero_grad()
+│ │ +
+│ │ +    @no_grad()
+│ │ +    def log_step(
+│ │ +        self,
+│ │ +        data: Dict[str, Tensor],
+│ │ +        preds: Dict[str, Tensor] | None,
+│ │ +        losses: Dict[str, Tensor] | None,
+│ │ +    ) -> None:
+│ │ +        """
+│ │ +        Logging things, statistics should have "losses" tracker, all losses are forwarded
+│ │ +        to that. If losses are missing logging of them will be skipped (if you don't want
+│ │ +        to log loss during eval). If predictions are missing then accuracy logging will
+│ │ +        be skipped (if you don't want to log acc during training)
+│ │ +        """
+│ │ +        with record_function("statistics"):
+│ │ +            if losses is not None:
+│ │ +                self.data_manager.perflog.log("loss", losses)
+│ │ +
+│ │ +            if preds is None:
+│ │ +                return
+│ │ +
+│ │ +            for statistic in self.data_manager.perflog.keys:
+│ │ +                if statistic == "loss":
+│ │ +                    continue
+│ │ +                self.data_manager.perflog.log(statistic, preds, data)
+│ │  
+│ │ -    def _train(self, pbar=None) -> None:
+│ │ +    def _train(self, pbar=None, profiler: profile | None = None) -> None:
+│ │          """Train for one epoch over the dataset"""
+│ │          self.modules.model.train()
+│ │          self.data_manager.perflog.train()
+│ │  
+│ │ -        for idx, data in enumerate(self.modules.trainloader):
+│ │ -            losses, preds = self.train_step(
+│ │ -                data, self.modules.model, self.modules.criterion
+│ │ -            )
+│ │ -            self.log_step(self.data_manager.perflog, data, preds, losses)
+│ │ -            self._accumulate_losses(losses)
+│ │ -            self._maybe_step_optimiser(idx)
+│ │ +        gidx = len(self.modules.trainloader) * self.data_manager.epoch
+│ │ +        for data in self.modules.trainloader:
+│ │ +            try:
+│ │ +                data = self.data_transform(data)
+│ │ +                losses, preds = self.train_step(data)
+│ │ +                self.log_step(data, preds, losses)
+│ │ +                self._accumulate_losses(losses)
+│ │ +                self._maybe_step_optimiser(gidx)
+│ │ +            except TrainingError as err:
+│ │ +                self.training_exception(err, data)
+│ │  
+│ │ +            gidx += 1
+│ │              if pbar is not None:
+│ │                  pbar.update(1)
+│ │ +            if profiler is not None:
+│ │ +                profiler.step()
+│ │ +                if (
+│ │ +                    profiler.schedule(profiler.step_num)
+│ │ +                    == ProfilerAction.RECORD_AND_SAVE
+│ │ +                ):
+│ │ +                    break
+│ │  
+│ │ -    @staticmethod
+│ │ -    def train_step(
+│ │ -        batch_data, model, criterion
+│ │ -    ) -> Tuple[Dict[str, Tensor], Dict[str, Tensor] | None]:
+│ │ +    def train_step(self, data) -> Tuple[Dict[str, Tensor], Dict[str, Tensor] | None]:
+│ │          """
+│ │          Standard training step, if you don't want to calculate
+│ │          performance during training, return None for predictions.
+│ │          return
+│ │              Losses: description of losses for logging purposes
+│ │              Predictions: predictions in dict
+│ │          """
+│ │ -        [data, label] = [x.cuda() for x in batch_data]
+│ │ -
+│ │          with record_function("train_inference"):
+│ │ -            pred = model(data)
+│ │ +            pred = self.modules.model(data)
+│ │  
+│ │          with record_function("criterion"):
+│ │              losses = {}
+│ │ -            for criterion in criterion:
+│ │ -                losses.update(criterion(pred, label))
+│ │ +            for criterion in self.modules.criterion:
+│ │ +                losses.update(criterion(pred, data))
+│ │  
+│ │          return losses, pred
+│ │  
+│ │      @no_grad()
+│ │ -    def _validate(self, pbar=None) -> None:
+│ │ +    def _validate(self, pbar=None, profiler: profile | None = None) -> None:
+│ │          self.modules.model.eval()
+│ │          self.data_manager.perflog.eval()
+│ │  
+│ │          for data in self.modules.valloader:
+│ │ -            losses, preds = self.val_step(
+│ │ -                data, self.modules.model, self.modules.criterion
+│ │ -            )
+│ │ -            self.log_step(self.data_manager.perflog, preds, data, losses)
+│ │ +            data = self.data_transform(data)
+│ │ +            losses, preds = self.val_step(data)
+│ │ +            self.log_step(data, preds, losses)
+│ │              if pbar is not None:
+│ │                  pbar.update(1)
+│ │ +            if profiler is not None:
+│ │ +                profiler.step()
+│ │ +                if (
+│ │ +                    profiler.schedule(profiler.step_num)
+│ │ +                    == ProfilerAction.RECORD_AND_SAVE
+│ │ +                ):
+│ │ +                    break
+│ │  
+│ │          if isinstance(self.modules.scheduler, ReduceLROnPlateau):
+│ │              self.modules.scheduler.step(self.data_manager.perflog.epoch_loss())
+│ │          else:
+│ │              self.modules.scheduler.step()
+│ │  
+│ │ -    @staticmethod
+│ │ -    def val_step(
+│ │ -        batch_data, model, criterion
+│ │ -    ) -> Tuple[Dict[str, Tensor] | None, Dict[str, Tensor]]:
+│ │ +    def val_step(self, data) -> Tuple[Dict[str, Tensor] | None, Dict[str, Tensor]]:
+│ │          """
+│ │          Standard evaluation step, if you don't want to evaluate/track loss
+│ │          during evaluation, do not perform the calculation and return None
+│ │          in the loss part of the tuple.
+│ │          return:
+│ │              Losses: description of losses for logging purposes
+│ │              Predictions: predictions dict
+│ │          """
+│ │ -        [data, label] = [x.cuda() for x in batch_data]
+│ │ -
+│ │          with record_function("eval_inference"):
+│ │ -            pred = model(data)
+│ │ +            pred = self.modules.model(data)
+│ │  
+│ │          with record_function("criterion"):
+│ │              losses = {}
+│ │ -            for criterion in criterion:
+│ │ -                losses.update(criterion(pred, label))
+│ │ +            for criterion in self.modules.criterion:
+│ │ +                losses.update(criterion(pred, data))
+│ │  
+│ │          return losses, pred
+│ │ -
+│ │ -    @staticmethod
+│ │ -    @no_grad()
+│ │ -    @record_function("statistics")
+│ │ -    def log_step(
+│ │ -        logger: PerfLogger,
+│ │ -        data: Dict[str, Tensor],
+│ │ -        preds: Dict[str, Tensor] | None,
+│ │ -        losses: Dict[str, Tensor] | None,
+│ │ -    ) -> None:
+│ │ -        """
+│ │ -        Logging things, statistics should have "losses" tracker, all losses are forwarded
+│ │ -        to that. If losses are missing logging of them will be skipped (if you don't want
+│ │ -        to log loss during eval). If predictions are missing then accuracy logging will
+│ │ -        be skipped (if you don't want to log acc during training)
+│ │ -        """
+│ │ -        for statistic in logger.logger_keys:
+│ │ -            if statistic == "loss" and losses is not None:
+│ │ -                logger.log(statistic, {k: v.item() for k, v in losses.items()})
+│ │ -            elif preds is not None:
+│ │ -                logger.log(statistic, preds, data)
+│ │   --- konductor-0.0.1/src/konductor/trainer/trainer.py
+│ ├── +++ konductor-0.0.2/src/konductor/trainer/trainer.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,17 +1,17 @@
+│ │  from abc import ABC, abstractmethod
+│ │  from dataclasses import dataclass
+│ │  from logging import getLogger
+│ │ -from typing import Any, Callable, Dict, List, Sequence
+│ │ +from typing import Any, Callable, Dict, List, Sequence, TypeVar
+│ │  
+│ │  from konductor.metadata import MetadataManager
+│ │  
+│ │  
+│ │  @dataclass
+│ │ -class TrainingModules:
+│ │ +class TrainerModules:
+│ │      """Holds all common training Modules"""
+│ │  
+│ │      model: Any  # Model to train
+│ │      criterion: List[Any]  # List of loss functions
+│ │      optimizer: Any  # Optimizer
+│ │      scheduler: Any  # Learning rate scheduler
+│ │      trainloader: Sequence
+│ │ @@ -24,37 +24,42 @@
+│ │                  continue  # don't unwrap criterion
+│ │              obj = getattr(self, field)
+│ │              if isinstance(obj, list) and len(obj) == 1:
+│ │                  setattr(self, field, obj[0])
+│ │  
+│ │  
+│ │  @dataclass
+│ │ -class TrainingMangerConfig:
+│ │ -    amp: bool = False  # Enable Nvidia AMP
+│ │ -    amp_kwargs: Dict[str, Any] | None = None  # Additional AMP Args
+│ │ -    profile: Callable | None = None  # Enable Profiling
+│ │ +class TrainerConfig:
+│ │ +    # Function to run for monitoring issues with the value
+│ │ +    # of the loss, does absolutely nothing by default
+│ │ +    loss_monitor: Callable[[Dict[str, Any]], None] = lambda x: None
+│ │ +
+│ │      pbar: Callable | None = None  # Enable Console Progress
+│ │      optimizer_interval: int = 1  # interval to call optimizer.step()
+│ │  
+│ │  
+│ │ +class TrainingError(RuntimeError):
+│ │ +    """Exception raised by user in their training loop"""
+│ │ +
+│ │ +
+│ │  class BaseTrainer(ABC):
+│ │      """
+│ │      Base class that various trainer types inherit from that
+│ │      contains basic train loops which they can implement
+│ │      """
+│ │  
+│ │ -    modules = TrainingModules
+│ │ +    modules = TrainerModules
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │ -        config: TrainingMangerConfig,
+│ │ -        train_modules: TrainingModules,
+│ │ +        config: TrainerConfig,
+│ │ +        modules: TrainerModules,
+│ │          data_manager: MetadataManager,
+│ │      ):
+│ │ -        self.modules = train_modules
+│ │ +        self.modules = modules
+│ │          self.data_manager = data_manager
+│ │          self._logger = getLogger(type(self).__name__)
+│ │          self._config = config
+│ │  
+│ │          extra = self.data_manager.resume()
+│ │          if extra is not None and "epoch" in extra:
+│ │              self._logger.info(f"Resuming from epoch {extra['epoch']}")
+│ │ @@ -65,18 +70,32 @@
+│ │              self._train = config.pbar(self._train, total=len(self.modules.trainloader))
+│ │              self._validate = config.pbar(
+│ │                  self._validate, total=len(self.modules.valloader)
+│ │              )
+│ │  
+│ │      def run_epoch(self) -> None:
+│ │          """Complete one epoch with training and validation epoch"""
+│ │ +        self._logger.info(f"Training epoch {self.data_manager.epoch}")
+│ │          self._train()
+│ │ +        self._logger.info(f"Validating epoch {self.data_manager.epoch}")
+│ │          self._validate()
+│ │ +        self._logger.info(f"Epoch {self.data_manager.epoch} complete")
+│ │          self.data_manager.epoch_step()
+│ │  
+│ │ +    def data_transform(self, data: Any) -> Any:
+│ │ +        """Apply any post motifications to data after loading
+│ │ +        before being passed to [train|val]_step, no-op by default"""
+│ │ +        return data
+│ │ +
+│ │ +    def training_exception(self, err: Exception, data: Any) -> None:
+│ │ +        """This function is run when an runtime exception is thrown
+│ │ +        during training iteration, useful for logging the state of the
+│ │ +        model and the data used in the training iteration"""
+│ │ +        raise err
+│ │ +
+│ │      @abstractmethod
+│ │      def _accumulate_losses(self, losses: Dict[str, Any]) -> Any:
+│ │          """Accumulate losses into single number hook, good idea to put a
+│ │          grad scaler here if using amp"""
+│ │  
+│ │      @abstractmethod
+│ │      def _maybe_step_optimiser(self, iter_: int) -> None:
+│ │ @@ -85,7 +104,10 @@
+│ │      @abstractmethod
+│ │      def _train(self) -> None:
+│ │          """Train for one epoch over the dataset"""
+│ │  
+│ │      @abstractmethod
+│ │      def _validate(self) -> None:
+│ │          """Validate one epoch over the dataset"""
+│ │ +
+│ │ +
+│ │ +TrainerT = TypeVar("TrainerT", bound=BaseTrainer)
+│ │   --- konductor-0.0.1/src/konductor.egg-info/PKG-INFO
+│ ├── +++ konductor-0.0.2/src/konductor.egg-info/PKG-INFO
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: konductor
+│ │ -Version: 0.0.1
+│ │ +Version: 0.0.2
+│ │  Summary: Framework for training generic ml models
+│ │  Author-email: Bryce Ferenczi <frenzi@hotmail.com.au>
+│ │  License:                                  Apache License
+│ │                                     Version 2.0, January 2004
+│ │                                  http://www.apache.org/licenses/
+│ │          
+│ │             TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+│ │ @@ -203,13 +203,56 @@
+│ │             distributed under the License is distributed on an "AS IS" BASIS,
+│ │             WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │             See the License for the specific language governing permissions and
+│ │             limitations under the License.
+│ │          
+│ │  Project-URL: Homepage, https://github.com/5had3z/konductor
+│ │  Project-URL: Bug Tracker, https://github.com/5had3z/konductor/issues
+│ │ -Classifier: Programming Language :: Python :: 3
+│ │ +Classifier: Development Status :: 2 - Pre-Alpha
+│ │ +Classifier: Intended Audience :: Developers
+│ │ +Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: Programming Language :: Python :: 3.11
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Operating System :: OS Independent
+│ │ +Classifier: Natural Language :: English
+│ │  Requires-Python: >=3.10
+│ │ -Description-Content-Type: text/markdown
+│ │ +Description-Content-Type: text/x-rst
+│ │ +Provides-Extra: REMOTE
+│ │ +Provides-Extra: WEBUI
+│ │  License-File: LICENSE
+│ │ +
+│ │ +This is SUPER in development and SUBJECT TO CHANGE
+│ │ +--------------------------------------------------
+│ │ +
+│ │ +Yes, there is no documentation at the moment, its not really intended as useable to the outside world atm, I personally need a convenient pip install.
+│ │ +
+│ │ +=========
+│ │ +Konductor
+│ │ +=========
+│ │ +
+│ │ +.. class:: center
+│ │ +
+│ │ +|version| |python| |license| |ci| |coverage| |codestyle|
+│ │ +
+│ │ +.. |version| image:: https://img.shields.io/pypi/v/konductor
+│ │ +    :target: https://pypi.org/project/konductor/
+│ │ +    :alt: PyPI - Package Version
+│ │ +.. |python| image:: https://img.shields.io/pypi/pyversions/konductor
+│ │ +    :target: https://pypi.org/project/konductor/
+│ │ +    :alt: PyPI - Python Version
+│ │ +.. |license| image:: https://img.shields.io/pypi/l/konductor
+│ │ +    :target: https://github.com/konductor/konductor/blob/main/LICENSE
+│ │ +    :alt: PyPI - License
+│ │ +.. |ci| image:: https://img.shields.io/circleci/build/github/konductor/konductor/main
+│ │ +    :target: https://app.circleci.com/pipelines/github/konductor/konductor
+│ │ +    :alt: CircleCI
+│ │ +.. |coverage| image:: https://img.shields.io/codecov/c/gh/konductor/konductor
+│ │ +    :target: https://app.codecov.io/gh/konductor/konductor
+│ │ +    :alt: Codecov
+│ │ +.. |codestyle| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+│ │ +    :target: https://github.com/psf/black
+│ │ +
+│ │ +Model training framework bundled with performance evaluation and comparison tools for rapid prototyping. Go deep into setting up automatic configuration for ablations or quickly throw in a dataloader, model and loss function and run distributed training in seconds.
+│ │ +
+│ │ +The aims of this project are
+│ │ + - Empower you to only need to touch a few parts of the framework to get some wacky non-standard training loop done.
+│ │ + - Easily roll in existing code bases into this framework so you can git clone yolo-69, register it to konductor, throw in your data and start training instead of whatever random framework of their codebase.

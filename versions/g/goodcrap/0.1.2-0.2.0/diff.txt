@@ -1,0 +1,822 @@
+--- tmp/goodcrap-0.1.2.tar.gz
++++ tmp/goodcrap-0.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "goodcrap-0.1.2.tar", last modified: Wed Apr  5 02:32:49 2023, max compression
+│ +gzip compressed data, was "goodcrap-0.2.0.tar", last modified: Fri Apr  7 02:12:01 2023, max compression
+│   --- goodcrap-0.1.2.tar
+├── +++ goodcrap-0.2.0.tar
+│ ├── file list
+│ │ @@ -1,45 +1,66 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 02:32:49.253672 goodcrap-0.1.2/
+│ │ --rw-rw-rw-   0        0        0       66 2023-03-29 13:09:13.000000 goodcrap-0.1.2/.gitattributes
+│ │ --rw-rw-rw-   0        0        0      116 2023-04-05 02:25:55.000000 goodcrap-0.1.2/CHANGELOG.md
+│ │ --rw-rw-rw-   0        0        0     1574 2023-04-05 01:05:21.000000 goodcrap-0.1.2/CONTRIBUTING.rst
+│ │ --rw-rw-rw-   0        0        0    35802 2023-03-29 13:09:13.000000 goodcrap-0.1.2/LICENSE
+│ │ --rw-rw-rw-   0        0        0      124 2023-04-04 03:52:56.000000 goodcrap-0.1.2/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0     8725 2023-04-05 02:32:49.253672 goodcrap-0.1.2/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     8157 2023-04-05 02:02:59.000000 goodcrap-0.1.2/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 02:32:49.236383 goodcrap-0.1.2/goodcrap/
+│ │ --rw-rw-rw-   0        0        0       87 2023-04-05 01:53:33.000000 goodcrap-0.1.2/goodcrap/__init__.py
+│ │ --rw-rw-rw-   0        0        0       72 2023-04-04 00:49:25.000000 goodcrap-0.1.2/goodcrap/__main__.py
+│ │ --rw-rw-rw-   0        0        0     4642 2023-04-03 04:06:23.000000 goodcrap-0.1.2/goodcrap/cli.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 02:32:49.253672 goodcrap-0.1.2/goodcrap/crappers/
+│ │ --rw-rw-rw-   0        0        0     1388 2023-04-04 15:33:28.000000 goodcrap-0.1.2/goodcrap/crappers/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 02:32:49.253672 goodcrap-0.1.2/goodcrap/databases/
+│ │ --rw-rw-rw-   0        0        0        0 2023-04-04 01:02:02.000000 goodcrap-0.1.2/goodcrap/databases/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3110 2023-04-05 00:18:50.000000 goodcrap-0.1.2/goodcrap/databases/database.py
+│ │ --rw-rw-rw-   0        0        0      450 2023-04-05 01:10:52.000000 goodcrap-0.1.2/goodcrap/databases/mysql.py
+│ │ --rw-rw-rw-   0        0        0      422 2023-04-05 01:11:01.000000 goodcrap-0.1.2/goodcrap/databases/sqlite.py
+│ │ --rw-rw-rw-   0        0        0     5942 2023-04-05 02:25:55.000000 goodcrap-0.1.2/goodcrap/goodcrap.py
+│ │ --rw-rw-rw-   0        0        0     2532 2023-04-05 00:16:45.000000 goodcrap-0.1.2/goodcrap/random_mapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 02:32:49.253672 goodcrap-0.1.2/goodcrap/templates/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-31 13:15:48.000000 goodcrap-0.1.2/goodcrap/templates/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 02:32:49.253672 goodcrap-0.1.2/goodcrap/templates/__pycache__/
+│ │ --rw-rw-rw-   0        0        0      143 2023-03-31 13:16:56.000000 goodcrap-0.1.2/goodcrap/templates/__pycache__/__init__.cpython-310.pyc
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 02:32:49.220375 goodcrap-0.1.2/goodcrap/templates/databases/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 02:32:49.253672 goodcrap-0.1.2/goodcrap/templates/databases/customers_orders/
+│ │ --rw-rw-rw-   0        0        0      751 2023-04-04 05:53:19.000000 goodcrap-0.1.2/goodcrap/templates/databases/customers_orders/customers_orders.crap_labels.json
+│ │ --rw-rw-rw-   0        0        0     1148 2023-04-03 03:07:46.000000 goodcrap-0.1.2/goodcrap/templates/databases/customers_orders/customers_orders.sql
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 02:32:49.220375 goodcrap-0.1.2/goodcrap/templates/tables/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 02:32:49.253672 goodcrap-0.1.2/goodcrap/templates/tables/customers/
+│ │ --rw-rw-rw-   0        0        0      562 2023-04-04 23:45:49.000000 goodcrap-0.1.2/goodcrap/templates/tables/customers/customers.crap_labels.json
+│ │ --rw-rw-rw-   0        0        0      547 2023-04-02 16:03:37.000000 goodcrap-0.1.2/goodcrap/templates/tables/customers/customers.sql
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 02:32:49.253672 goodcrap-0.1.2/goodcrap/templates/tables/orders/
+│ │ --rw-rw-rw-   0        0        0      244 2023-04-04 04:00:46.000000 goodcrap-0.1.2/goodcrap/templates/tables/orders/orders.crap_labels.json
+│ │ --rw-rw-rw-   0        0        0      599 2023-04-04 03:59:42.000000 goodcrap-0.1.2/goodcrap/templates/tables/orders/orders.sql
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 02:32:49.253672 goodcrap-0.1.2/goodcrap.egg-info/
+│ │ --rw-rw-rw-   0        0        0     8725 2023-04-05 02:32:49.000000 goodcrap-0.1.2/goodcrap.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      989 2023-04-05 02:32:49.000000 goodcrap-0.1.2/goodcrap.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-05 02:32:49.000000 goodcrap-0.1.2/goodcrap.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       54 2023-04-05 02:32:49.000000 goodcrap-0.1.2/goodcrap.egg-info/entry_points.txt
+│ │ --rw-rw-rw-   0        0        0       30 2023-04-05 02:32:49.000000 goodcrap-0.1.2/goodcrap.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        9 2023-04-05 02:32:49.000000 goodcrap-0.1.2/goodcrap.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0      215 2023-04-05 02:32:49.270886 goodcrap-0.1.2/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      907 2023-04-05 02:32:33.000000 goodcrap-0.1.2/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.778699 goodcrap-0.2.0/
+│ │ +-rw-rw-rw-   0        0        0       66 2023-03-29 13:09:13.000000 goodcrap-0.2.0/.gitattributes
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.686940 goodcrap-0.2.0/.github/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.716943 goodcrap-0.2.0/.github/workflows/
+│ │ +-rw-rw-rw-   0        0        0      576 2023-04-05 03:09:29.000000 goodcrap-0.2.0/.github/workflows/pylint.yml
+│ │ +-rw-rw-rw-   0        0        0       48 2023-04-05 01:29:51.000000 goodcrap-0.2.0/.gitignore
+│ │ +-rw-rw-rw-   0        0        0      332 2023-04-07 02:10:51.000000 goodcrap-0.2.0/CHANGELOG.md
+│ │ +-rw-rw-rw-   0        0        0     1574 2023-04-05 01:05:21.000000 goodcrap-0.2.0/CONTRIBUTING.rst
+│ │ +-rw-rw-rw-   0        0        0    35802 2023-03-29 13:09:13.000000 goodcrap-0.2.0/LICENSE
+│ │ +-rw-rw-rw-   0        0        0      193 2023-04-07 02:11:43.000000 goodcrap-0.2.0/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0    10765 2023-04-07 02:12:01.780197 goodcrap-0.2.0/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0    10131 2023-04-07 02:02:32.000000 goodcrap-0.2.0/README.md
+│ │ +-rw-rw-rw-   0        0        0        5 2023-04-07 02:10:55.000000 goodcrap-0.2.0/VERSION
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.720120 goodcrap-0.2.0/examples/
+│ │ +-rw-rw-rw-   0        0        0      139 2023-04-04 14:07:32.000000 goodcrap-0.2.0/examples/mysql_config.json
+│ │ +-rw-rw-rw-   0        0        0       59 2023-04-05 01:09:16.000000 goodcrap-0.2.0/examples/sqlite_config.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.726120 goodcrap-0.2.0/goodcrap/
+│ │ +-rw-rw-rw-   0        0        0       87 2023-04-07 02:06:54.000000 goodcrap-0.2.0/goodcrap/__init__.py
+│ │ +-rw-rw-rw-   0        0        0       72 2023-04-04 00:49:25.000000 goodcrap-0.2.0/goodcrap/__main__.py
+│ │ +-rw-rw-rw-   0        0        0     5212 2023-04-06 16:34:32.000000 goodcrap-0.2.0/goodcrap/cli.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.752675 goodcrap-0.2.0/goodcrap/crappers/
+│ │ +-rw-rw-rw-   0        0        0     1021 2023-04-06 04:35:52.000000 goodcrap-0.2.0/goodcrap/crappers/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.754674 goodcrap-0.2.0/goodcrap/data_warehouses/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-04-05 14:10:31.000000 goodcrap-0.2.0/goodcrap/data_warehouses/__init__.py
+│ │ +-rw-rw-rw-   0        0        0       32 2023-04-05 23:18:00.000000 goodcrap-0.2.0/goodcrap/data_warehouses/dimension_fillers.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.758982 goodcrap-0.2.0/goodcrap/databases/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-04-04 01:02:02.000000 goodcrap-0.2.0/goodcrap/databases/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2904 2023-04-06 16:06:51.000000 goodcrap-0.2.0/goodcrap/databases/database.py
+│ │ +-rw-rw-rw-   0        0        0      450 2023-04-05 01:10:52.000000 goodcrap-0.2.0/goodcrap/databases/mysql.py
+│ │ +-rw-rw-rw-   0        0        0      422 2023-04-05 01:11:01.000000 goodcrap-0.2.0/goodcrap/databases/sqlite.py
+│ │ +-rw-rw-rw-   0        0        0    12341 2023-04-07 02:00:54.000000 goodcrap-0.2.0/goodcrap/goodcrap.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.760988 goodcrap-0.2.0/goodcrap/pipelines/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-04-05 15:01:30.000000 goodcrap-0.2.0/goodcrap/pipelines/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3566 2023-04-06 15:52:52.000000 goodcrap-0.2.0/goodcrap/pipelines/mage.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.767016 goodcrap-0.2.0/goodcrap/pipelines/templates/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-04-05 15:01:30.000000 goodcrap-0.2.0/goodcrap/pipelines/templates/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1126 2023-04-06 13:40:38.000000 goodcrap-0.2.0/goodcrap/pipelines/templates/data_exporter_mysql.py
+│ │ +-rw-rw-rw-   0        0        0      683 2023-04-06 15:53:25.000000 goodcrap-0.2.0/goodcrap/pipelines/templates/data_loader.py
+│ │ +-rw-rw-rw-   0        0        0      832 2023-04-06 06:10:32.000000 goodcrap-0.2.0/goodcrap/pipelines/templates/metadata.yaml
+│ │ +-rw-rw-rw-   0        0        0     2519 2023-04-07 01:50:31.000000 goodcrap-0.2.0/goodcrap/random_mapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.768132 goodcrap-0.2.0/goodcrap/templates/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-31 13:15:48.000000 goodcrap-0.2.0/goodcrap/templates/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.769272 goodcrap-0.2.0/goodcrap/templates/__pycache__/
+│ │ +-rw-rw-rw-   0        0        0      143 2023-03-31 13:16:56.000000 goodcrap-0.2.0/goodcrap/templates/__pycache__/__init__.cpython-310.pyc
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.771278 goodcrap-0.2.0/goodcrap/templates/data_warehouses/
+│ │ +-rw-rw-rw-   0        0        0     7250 2023-04-05 14:08:49.000000 goodcrap-0.2.0/goodcrap/templates/data_warehouses/sales.sql
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.694937 goodcrap-0.2.0/goodcrap/templates/databases/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.773437 goodcrap-0.2.0/goodcrap/templates/databases/customers_orders/
+│ │ +-rw-rw-rw-   0        0        0      751 2023-04-04 05:53:19.000000 goodcrap-0.2.0/goodcrap/templates/databases/customers_orders/customers_orders.crap_labels.json
+│ │ +-rw-rw-rw-   0        0        0     1148 2023-04-06 15:06:31.000000 goodcrap-0.2.0/goodcrap/templates/databases/customers_orders/customers_orders.sql
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.696937 goodcrap-0.2.0/goodcrap/templates/tables/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.776309 goodcrap-0.2.0/goodcrap/templates/tables/customers/
+│ │ +-rw-rw-rw-   0        0        0      562 2023-04-04 23:45:49.000000 goodcrap-0.2.0/goodcrap/templates/tables/customers/customers.crap_labels.json
+│ │ +-rw-rw-rw-   0        0        0      547 2023-04-02 16:03:37.000000 goodcrap-0.2.0/goodcrap/templates/tables/customers/customers.sql
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.778699 goodcrap-0.2.0/goodcrap/templates/tables/orders/
+│ │ +-rw-rw-rw-   0        0        0      244 2023-04-04 04:00:46.000000 goodcrap-0.2.0/goodcrap/templates/tables/orders/orders.crap_labels.json
+│ │ +-rw-rw-rw-   0        0        0      599 2023-04-04 03:59:42.000000 goodcrap-0.2.0/goodcrap/templates/tables/orders/orders.sql
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:12:01.750400 goodcrap-0.2.0/goodcrap.egg-info/
+│ │ +-rw-rw-rw-   0        0        0    10765 2023-04-07 02:12:01.000000 goodcrap-0.2.0/goodcrap.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     1458 2023-04-07 02:12:01.000000 goodcrap-0.2.0/goodcrap.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 02:12:01.000000 goodcrap-0.2.0/goodcrap.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       54 2023-04-07 02:12:01.000000 goodcrap-0.2.0/goodcrap.egg-info/entry_points.txt
+│ │ +-rw-rw-rw-   0        0        0       37 2023-04-07 02:12:01.000000 goodcrap-0.2.0/goodcrap.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        9 2023-04-07 02:12:01.000000 goodcrap-0.2.0/goodcrap.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0      215 2023-04-07 02:12:01.782203 goodcrap-0.2.0/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1023 2023-04-06 16:31:50.000000 goodcrap-0.2.0/setup.py
+│ │   --- goodcrap-0.1.2/CONTRIBUTING.rst
+│ ├── +++ goodcrap-0.2.0/CONTRIBUTING.rst
+│ │┄ Files identical despite different names
+│ │   --- goodcrap-0.1.2/LICENSE
+│ ├── +++ goodcrap-0.2.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- goodcrap-0.1.2/PKG-INFO
+│ ├── +++ goodcrap-0.2.0/PKG-INFO
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,22 +1,22 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: goodcrap
+│ │ -Version: 0.1.2
+│ │ -Summary: goodcrap generates controlled random data.
+│ │ +Version: 0.2.0
+│ │ +Summary: goodcrap creates tables, databases and csv files and fill them with random data
+│ │  Home-page: https://github.com/goodcrap/goodcrap
+│ │  Author: Sherif Abdulkader Tawfik Abbas
+│ │  Author-email: sherif.tawfic@gmail.com
+│ │  License: gpl-3.0
+│ │  Keywords: ai,data engineering,fake data,data science
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # `goodcrap`
+│ │  
+│ │ -`goodcrap` is a python package that generates tables, databases or `csv` files and fill them with random, or fake, data.
+│ │ +`goodcrap` is a python package that generates data structures (tables, databases and `csv` files) and fill them with random data, or generates [`Mage`](https://github.com/mage-ai/mage-ai) pipelines that the user can use to orchestrate filling the data structures.
+│ │  
+│ │  ## Motivation
+│ │  
+│ │  This software enables data engineers to replicate the database schemas at their organisations, and then generate fake data that resemble a random sample of the actual data in their organisation.
+│ │  
+│ │  While public datasets, such as those hosted at Google or Kaggle, is a common starting point for people interested in learning data analytics and machine learning, many of these datasets require extensive data cleaning so that they can be usable in analytics pipelines. This makes the use of these datasets difficult for AI learners and practitioners.
+│ │  
+│ │ @@ -90,15 +90,23 @@
+│ │  ## Python library
+│ │  
+│ │  The class `GoodCrap` is your `goodcrap` interface. You instantiate it with the key settings, and then generate the data by using the member functions `write_csv()`, `get_dataframe()` or `run()`.
+│ │  - `write_csv()`: writes a `csv` file
+│ │  - `get_dataframe()`: returns a `pandas` `DataFrame` object populated with the random data
+│ │  - `run()`: that's the more generic function that can generate tables and databases and populate them
+│ │  
+│ │ -And example usage for the `goodcrap` library is as follows:
+│ │ +And example usage for the `goodcrap` library is as follows. Here we are generating a `pandas` `DataFrame` for one of the template tables, `customers`:
+│ │ +
+│ │ +```python
+│ │ +from goodcrap import GoodCrap
+│ │ +a = GoodCrap(seed=3,size=1000,template_table='customers')
+│ │ +df=a.get_dataframe()
+│ │ +```
+│ │ +
+│ │ +The following example generates the data frame for some table, given its `crap_label` configuration object:
+│ │  
+│ │  ```python
+│ │  
+│ │  gc = GoodCrap(size=10000,seed=123)
+│ │  craplabels = {
+│ │      "customer_number": "ssn",
+│ │      "first_name": "first_name",
+│ │ @@ -122,22 +130,30 @@
+│ │          "max": 10000,
+│ │          "multiplier": 10
+│ │      }
+│ │  }
+│ │  df = gc.get_dataframe('customers',craplabels)
+│ │  ```
+│ │  
+│ │ -## How data for a foreign key is generated
+│ │ +## How data for a foreign key column is generated
+│ │  
+│ │  `goodcrap` will detect whether a column in a table is related to another table, and will fill that column with random selections of the related column. To demonstrate, run this command:
+│ │  
+│ │  `goodcrap --size 1000 --seed 3 --database_config examples\mysql_config --template_database customers_orders`
+│ │  
+│ │  This command will use the database settings in `examples\mysql_config.json` to generate the template database `customers_orders` and fill the tables with 1000 rows each. There are two tables here: `customers` and `orders`, and they are related: `orders` has a column `customer_number` that is tied to `customers` via the foreign key `customers.customer_number`. Therefore, that column is filled with random selections from `customers.customer_number`.
+│ │  
+│ │ +For a quick demo of generating the `orders` table: assuming you have setup up the `customers_orders` database and filled it with some data, the following code will generate an `orders` `DataFrame` using columns values from the `customers` table:
+│ │ +
+│ │ +```python
+│ │ +from goodcrap import GoodCrap
+│ │ +a = GoodCrap(seed=3,size=1000,template_table='orders',database_config="../examples/mysql_config")
+│ │ +df=a.get_dataframe()
+│ │ +```
+│ │ +
+│ │  ## `goodcrap` with `Mage`
+│ │  
+│ │  `goodcrap` can be used in `Mage` as a `Data Loader`. You can generate as much data as you want from multiple random `goodcrap` Data Loaders into your pipelines for testing, such as for testing the convergence of data into a data warehouse. You can also schedule the generation of data from `goodcrap` sources to simulate time series data traffic. A typical test-case scenario here is to run an SQL query at the data destination while data is being continuously loaded.
+│ │  
+│ │  Here is an example `goodcrap` source in `Mage`:
+│ │  
+│ │  ```python
+│ │ @@ -183,24 +199,37 @@
+│ │  def test_output(output, *args) -> None:
+│ │      """
+│ │      Template code for testing the output of the block.
+│ │      """
+│ │      assert output is not None, 'The output is undefined'
+│ │  
+│ │  ```
+│ │ +*Note:* If you are planning to run a `Mage` pipeline multiple times, then make sure that it does not have columns that are generated using the faker.unique function. The columns should be universally unique.
+│ │ +
+│ │ +## `goodcrap` generates `Mage` pipelines
+│ │ +
+│ │ +`Mage` python files are generated using `Jinja` templates. Here is an example command to generate pipelines for each of the tables in the template database `customers_orders`:
+│ │ +
+│ │ +`goodcrap --size 1000 --seed 3 --database_config examples\mysql_config --template_database customers_orders --mage_pipeline`
+│ │ +
+│ │ +Note that `goodcrap` currently will only generate `Mage` projects if the database configurations are defined.
+│ │ +
+│ │ +## Data warehouses
+│ │ +
+│ │ +Some dimensions in data warehouses will required to be filled as part of the testing exercise, but should not be filled with random data. These are the *conformed* dimensions with rigid data, such as the Date, Countries, and Cities dimensions. `goodcrap` will be able to fill these dimensions using the `DimensionFiller` class. Filling these tables will be performed before any other table is populated.
+│ │  
+│ │  ## Guessing the `crap_labels.json` settings
+│ │  
+│ │  *in progress*
+│ │  
+│ │  ## Learning the values from a data sample
+│ │  
+│ │  *in progress*
+│ │  
+│ │ -## Contrinuting to `goodcrap`
+│ │ +## Contributing to `goodcrap`
+│ │  
+│ │  That would be much appreciated. Check [here](CONTRIBUTING.rst).
+│ │  
+│ │  ## License
+│ │  
+│ │  `goodcrap` is licensed under the [GPL3](LICENSE) license.
+│ │   --- goodcrap-0.1.2/README.md
+│ ├── +++ goodcrap-0.2.0/README.md
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  # `goodcrap`
+│ │  
+│ │ -`goodcrap` is a python package that generates tables, databases or `csv` files and fill them with random, or fake, data.
+│ │ +`goodcrap` is a python package that generates data structures (tables, databases and `csv` files) and fill them with random data, or generates [`Mage`](https://github.com/mage-ai/mage-ai) pipelines that the user can use to orchestrate filling the data structures.
+│ │  
+│ │  ## Motivation
+│ │  
+│ │  This software enables data engineers to replicate the database schemas at their organisations, and then generate fake data that resemble a random sample of the actual data in their organisation.
+│ │  
+│ │  While public datasets, such as those hosted at Google or Kaggle, is a common starting point for people interested in learning data analytics and machine learning, many of these datasets require extensive data cleaning so that they can be usable in analytics pipelines. This makes the use of these datasets difficult for AI learners and practitioners.
+│ │  
+│ │ @@ -78,15 +78,23 @@
+│ │  ## Python library
+│ │  
+│ │  The class `GoodCrap` is your `goodcrap` interface. You instantiate it with the key settings, and then generate the data by using the member functions `write_csv()`, `get_dataframe()` or `run()`.
+│ │  - `write_csv()`: writes a `csv` file
+│ │  - `get_dataframe()`: returns a `pandas` `DataFrame` object populated with the random data
+│ │  - `run()`: that's the more generic function that can generate tables and databases and populate them
+│ │  
+│ │ -And example usage for the `goodcrap` library is as follows:
+│ │ +And example usage for the `goodcrap` library is as follows. Here we are generating a `pandas` `DataFrame` for one of the template tables, `customers`:
+│ │ +
+│ │ +```python
+│ │ +from goodcrap import GoodCrap
+│ │ +a = GoodCrap(seed=3,size=1000,template_table='customers')
+│ │ +df=a.get_dataframe()
+│ │ +```
+│ │ +
+│ │ +The following example generates the data frame for some table, given its `crap_label` configuration object:
+│ │  
+│ │  ```python
+│ │  
+│ │  gc = GoodCrap(size=10000,seed=123)
+│ │  craplabels = {
+│ │      "customer_number": "ssn",
+│ │      "first_name": "first_name",
+│ │ @@ -110,22 +118,30 @@
+│ │          "max": 10000,
+│ │          "multiplier": 10
+│ │      }
+│ │  }
+│ │  df = gc.get_dataframe('customers',craplabels)
+│ │  ```
+│ │  
+│ │ -## How data for a foreign key is generated
+│ │ +## How data for a foreign key column is generated
+│ │  
+│ │  `goodcrap` will detect whether a column in a table is related to another table, and will fill that column with random selections of the related column. To demonstrate, run this command:
+│ │  
+│ │  `goodcrap --size 1000 --seed 3 --database_config examples\mysql_config --template_database customers_orders`
+│ │  
+│ │  This command will use the database settings in `examples\mysql_config.json` to generate the template database `customers_orders` and fill the tables with 1000 rows each. There are two tables here: `customers` and `orders`, and they are related: `orders` has a column `customer_number` that is tied to `customers` via the foreign key `customers.customer_number`. Therefore, that column is filled with random selections from `customers.customer_number`.
+│ │  
+│ │ +For a quick demo of generating the `orders` table: assuming you have setup up the `customers_orders` database and filled it with some data, the following code will generate an `orders` `DataFrame` using columns values from the `customers` table:
+│ │ +
+│ │ +```python
+│ │ +from goodcrap import GoodCrap
+│ │ +a = GoodCrap(seed=3,size=1000,template_table='orders',database_config="../examples/mysql_config")
+│ │ +df=a.get_dataframe()
+│ │ +```
+│ │ +
+│ │  ## `goodcrap` with `Mage`
+│ │  
+│ │  `goodcrap` can be used in `Mage` as a `Data Loader`. You can generate as much data as you want from multiple random `goodcrap` Data Loaders into your pipelines for testing, such as for testing the convergence of data into a data warehouse. You can also schedule the generation of data from `goodcrap` sources to simulate time series data traffic. A typical test-case scenario here is to run an SQL query at the data destination while data is being continuously loaded.
+│ │  
+│ │  Here is an example `goodcrap` source in `Mage`:
+│ │  
+│ │  ```python
+│ │ @@ -171,24 +187,37 @@
+│ │  def test_output(output, *args) -> None:
+│ │      """
+│ │      Template code for testing the output of the block.
+│ │      """
+│ │      assert output is not None, 'The output is undefined'
+│ │  
+│ │  ```
+│ │ +*Note:* If you are planning to run a `Mage` pipeline multiple times, then make sure that it does not have columns that are generated using the faker.unique function. The columns should be universally unique.
+│ │ +
+│ │ +## `goodcrap` generates `Mage` pipelines
+│ │ +
+│ │ +`Mage` python files are generated using `Jinja` templates. Here is an example command to generate pipelines for each of the tables in the template database `customers_orders`:
+│ │ +
+│ │ +`goodcrap --size 1000 --seed 3 --database_config examples\mysql_config --template_database customers_orders --mage_pipeline`
+│ │ +
+│ │ +Note that `goodcrap` currently will only generate `Mage` projects if the database configurations are defined.
+│ │ +
+│ │ +## Data warehouses
+│ │ +
+│ │ +Some dimensions in data warehouses will required to be filled as part of the testing exercise, but should not be filled with random data. These are the *conformed* dimensions with rigid data, such as the Date, Countries, and Cities dimensions. `goodcrap` will be able to fill these dimensions using the `DimensionFiller` class. Filling these tables will be performed before any other table is populated.
+│ │  
+│ │  ## Guessing the `crap_labels.json` settings
+│ │  
+│ │  *in progress*
+│ │  
+│ │  ## Learning the values from a data sample
+│ │  
+│ │  *in progress*
+│ │  
+│ │ -## Contrinuting to `goodcrap`
+│ │ +## Contributing to `goodcrap`
+│ │  
+│ │  That would be much appreciated. Check [here](CONTRIBUTING.rst).
+│ │  
+│ │  ## License
+│ │  
+│ │  `goodcrap` is licensed under the [GPL3](LICENSE) license.
+│ │   --- goodcrap-0.1.2/goodcrap/cli.py
+│ ├── +++ goodcrap-0.2.0/goodcrap/cli.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -3,23 +3,23 @@
+│ │  import logging
+│ │  import os
+│ │  import random
+│ │  import sys
+│ │  import textwrap
+│ │  from pathlib import Path
+│ │  from typing import Dict, List, Optional, TextIO, TypeVar, Union
+│ │ -
+│ │ +from . import VERSION
+│ │  
+│ │  class CLI:
+│ │      def __init__(self, argv: Optional[str] = None) -> None:
+│ │          self.argv = argv or sys.argv[:]
+│ │          self.prog_name = Path(self.argv[0]).name
+│ │          self.formatter_class = argparse.RawDescriptionHelpFormatter
+│ │          self.epilog = 'Epilogue'
+│ │ -        self.version = '0.1.0'
+│ │ +        self.version = VERSION
+│ │  
+│ │          default_locale = os.environ.get("LANG", "en_US").split(".")[0]
+│ │          # if default_locale not in AVAILABLE_LOCALES:
+│ │          #     default_locale = DEFAULT_LOCALE
+│ │  
+│ │          parser = argparse.ArgumentParser(
+│ │              prog=self.prog_name,
+│ │ @@ -88,67 +88,84 @@
+│ │              "--database_config",
+│ │              "-j",
+│ │              type=str,
+│ │              help="name of json file that includes the database configuration",
+│ │          )
+│ │  
+│ │          parser.add_argument(
+│ │ -            "--table_sql",
+│ │              "-q",
+│ │ +            "--table_sql",
+│ │              type=str,
+│ │              help="name of sql file that includes the table data definition statements",
+│ │          )
+│ │  
+│ │          parser.add_argument(
+│ │ -            "--table_crap_labels",
+│ │              "-l",
+│ │ +            "--table_crap_labels",
+│ │              type=str,
+│ │              help="name of json file that includes the configuration of the table to be filled",
+│ │          )
+│ │  
+│ │          parser.add_argument(
+│ │ -            "--database_sql",
+│ │              "-Q",
+│ │ +            "--database_sql",
+│ │              type=str,
+│ │              help="name of sql file that includes the data definition statements of the table in the database",
+│ │          )
+│ │  
+│ │          parser.add_argument(
+│ │ -            "--database_crap_labels",
+│ │              "-L",
+│ │ +            "--database_crap_labels",
+│ │              type=str,
+│ │              help="name of json file that includes the configuration of the table to be filled",
+│ │          )
+│ │  
+│ │          parser.add_argument(
+│ │ -            "--guess_crap_labels",
+│ │              "-g",
+│ │ +            "--guess_crap_labels",
+│ │              type=str,
+│ │              help="infer the crap labels from the data in the provided csv file",
+│ │          )
+│ │  
+│ │ +        parser.add_argument(
+│ │ +            "-M",
+│ │ +            "--mage_project",
+│ │ +            type=str,
+│ │ +            help="generate a new mage project",
+│ │ +        )
+│ │ +
+│ │ +        parser.add_argument(
+│ │ +            "-P",
+│ │ +            "--mage_pipeline",
+│ │ +            action="store_const",
+│ │ +            const='mage_pipeline',
+│ │ +            help="generate a new mage pipeline in the current mage project",
+│ │ +        )
+│ │ +
+│ │          arguments = parser.parse_args(self.argv[1:])
+│ │          random.seed(arguments.seed)
+│ │  
+│ │          from .goodcrap import GoodCrap
+│ │          good_crap = GoodCrap(size=arguments.size,
+│ │                               seed=arguments.seed,
+│ │                               to_csv=arguments.to_csv,
+│ │                               to_json=arguments.to_json,
+│ │                               template_database=arguments.template_database,
+│ │                               template_table=arguments.template_table,
+│ │                               database_config=arguments.database_config,
+│ │                               table_sql=arguments.table_sql,
+│ │                               table_crap_labels=arguments.table_crap_labels,
+│ │                               database_sql=arguments.database_sql,
+│ │ -                             database_crap_labels=arguments.database_crap_labels
+│ │ +                             database_crap_labels=arguments.database_crap_labels,
+│ │ +                             mage_project_name=arguments.mage_project,
+│ │ +                             mage_pipeline=arguments.mage_pipeline
+│ │                               )
+│ │  
+│ │          good_crap.run()
+│ │  
+│ │  
+│ │ -
+│ │  def execute_cli(argv: Optional[str] = None) -> None:
+│ │      cli = CLI()
+│ │  
+│ │ +
+│ │  if __name__ == "__main__":
+│ │      execute_cli()
+│ │   --- goodcrap-0.1.2/goodcrap/databases/database.py
+│ ├── +++ goodcrap-0.2.0/goodcrap/databases/database.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -24,56 +24,53 @@
+│ │  
+│ │      def run(self, table_sql=None, table_crap_labels=None, database_sql=None, database_crap_labels=None):
+│ │          if table_sql is not None and table_crap_labels is not None:
+│ │              table_name = os.path.basename(table_sql).split('.')[0]
+│ │              with open(table_sql, 'r') as f:
+│ │                  self.table_sql = f.read()
+│ │                  f.close()
+│ │ -            with open(table_crap_labels, 'r') as f:
+│ │ -                self.table_crap_labels = json.load(f)
+│ │ -                f.close()
+│ │              self.connection.execute(self.table_sql)
+│ │              metadata = MetaData(bind=self.engine)
+│ │  
+│ │              table = Table(table_name, metadata, autoload=True)
+│ │  
+│ │              fm = RandomMapper(self.seed, self.table_crap_labels,
+│ │ -                             table, engine=self.engine)
+│ │ +                              table, engine=self.engine)
+│ │  
+│ │              data_csv = []
+│ │              for i in range(self.size):
+│ │                  row = fm.get_crap()
+│ │                  ins = table.insert().values(row)
+│ │                  self.engine.execute(ins)
+│ │                  if self.database_config['to_csv']:
+│ │                      data_csv += [row]
+│ │              if self.database_config['to_csv']:
+│ │                  df = pd.DataFrame(data_csv, columns=table.columns)
+│ │                  df.to_csv(table_name+'.csv')
+│ │  
+│ │ -        if database_sql is not None and database_crap_labels is not None:
+│ │ +        elif database_sql is not None and database_crap_labels is not None:
+│ │              with open(database_sql, 'r') as f:
+│ │                  self.database_sql = f.read()
+│ │                  f.close()
+│ │ -            with open(database_crap_labels, 'r') as f:
+│ │ -                self.database_crap_labels = json.load(f)
+│ │ -                f.close()
+│ │              self.connection.execute(self.database_sql)
+│ │              metadata = MetaData(bind=self.engine)
+│ │              rounds = 10
+│ │              for i in range(rounds):
+│ │                  for table_name in self.engine.table_names():
+│ │                      table = Table(table_name, metadata, autoload=True)
+│ │  
+│ │                      fm = RandomMapper(
+│ │ -                        self.seed, self.database_crap_labels[table_name], table, self.engine)
+│ │ +                        self.seed, database_crap_labels[table_name], table, self.engine)
+│ │  
+│ │                      data_csv = []
+│ │                      for i in range(int(self.size/rounds)):
+│ │                          row = fm.get_crap()
+│ │                          ins = table.insert().values(row)
+│ │                          self.engine.execute(ins)
+│ │                          if self.database_config['to_csv']:
+│ │                              data_csv += [row]
+│ │                      if self.database_config['to_csv']:
+│ │                          df = pd.DataFrame(data_csv, columns=table.columns)
+│ │                          df.to_csv(table_name+'.csv')
+│ │ +
+│ │ +    def execute(self, sql):
+│ │ +        return self.engine.execute(sql)
+│ │   --- goodcrap-0.1.2/goodcrap/random_mapper.py
+│ ├── +++ goodcrap-0.2.0/goodcrap/random_mapper.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,29 +1,27 @@
+│ │  from sqlalchemy import MetaData, Table, Column, Integer, String, select
+│ │  import faker
+│ │  from .crappers import crapper, crapper_unique
+│ │  
+│ │  fake = faker.Faker('en-US')
+│ │  
+│ │ -
+│ │  class RandomMapper:
+│ │      """
+│ │      Maps a table column to a Faker
+│ │      """
+│ │  
+│ │      def __init__(self, seed, crap_labels: dict, table: Table = None, engine=None) -> None:
+│ │          self.seed = seed
+│ │          self.engine = engine
+│ │          faker.Faker.seed(self.seed)
+│ │          self.faker_generator = []
+│ │          table_columns = []
+│ │          primary_keys = []
+│ │          fks = {}
+│ │          if engine is not None and table is not None:
+│ │ -            
+│ │              for f in table.foreign_keys:
+│ │                  print('Table has foreign key to', f.column.table)
+│ │                  metadata = MetaData(bind=self.engine)
+│ │                  rel_table = Table(f.column.table, metadata, autoload=True)
+│ │                  results = self.engine.connect().execute(
+│ │                      select(rel_table.c[f.column.name])).fetchall()
+│ │                  results = [x[0] for x in results]
+│ │ @@ -40,15 +38,15 @@
+│ │          for column_name in table_columns:
+│ │              cl = crap_labels[column_name]
+│ │              if type(cl) is str:
+│ │                  if column_name in fks.keys():
+│ │                      import random
+│ │                      # Get a random key from the related table
+│ │                      self.faker_generator += [
+│ │ -                        lambda: random.sample(fks[column_name], 1)]
+│ │ +                        lambda: random.sample(fks[column_name], 1)[0]]
+│ │                  elif not cl.startswith('goodcrap_'):
+│ │                      if column_name in primary_keys:
+│ │                          self.faker_generator += [getattr(fake.unique,
+│ │                                                           cl)]
+│ │                      else:
+│ │                          self.faker_generator += [getattr(fake,
+│ │                                                           cl)]
+│ │   --- goodcrap-0.1.2/goodcrap/templates/databases/customers_orders/customers_orders.crap_labels.json
+│ ├── +++ goodcrap-0.2.0/goodcrap/templates/databases/customers_orders/customers_orders.crap_labels.json
+│ │┄ Files identical despite different names
+│ │   --- goodcrap-0.1.2/goodcrap/templates/databases/customers_orders/customers_orders.sql
+│ ├── +++ goodcrap-0.2.0/goodcrap/templates/databases/customers_orders/customers_orders.sql
+│ │┄ Files identical despite different names
+│ │   --- goodcrap-0.1.2/goodcrap/templates/tables/customers/customers.crap_labels.json
+│ ├── +++ goodcrap-0.2.0/goodcrap/templates/tables/customers/customers.crap_labels.json
+│ │┄ Files identical despite different names
+│ │   --- goodcrap-0.1.2/goodcrap/templates/tables/customers/customers.sql
+│ ├── +++ goodcrap-0.2.0/goodcrap/templates/tables/customers/customers.sql
+│ │┄ Files identical despite different names
+│ │   --- goodcrap-0.1.2/goodcrap/templates/tables/orders/orders.sql
+│ ├── +++ goodcrap-0.2.0/goodcrap/templates/tables/orders/orders.sql
+│ │┄ Files identical despite different names
+│ │   --- goodcrap-0.1.2/goodcrap.egg-info/PKG-INFO
+│ ├── +++ goodcrap-0.2.0/goodcrap.egg-info/PKG-INFO
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,22 +1,22 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: goodcrap
+│ │ -Version: 0.1.2
+│ │ -Summary: goodcrap generates controlled random data.
+│ │ +Version: 0.2.0
+│ │ +Summary: goodcrap creates tables, databases and csv files and fill them with random data
+│ │  Home-page: https://github.com/goodcrap/goodcrap
+│ │  Author: Sherif Abdulkader Tawfik Abbas
+│ │  Author-email: sherif.tawfic@gmail.com
+│ │  License: gpl-3.0
+│ │  Keywords: ai,data engineering,fake data,data science
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # `goodcrap`
+│ │  
+│ │ -`goodcrap` is a python package that generates tables, databases or `csv` files and fill them with random, or fake, data.
+│ │ +`goodcrap` is a python package that generates data structures (tables, databases and `csv` files) and fill them with random data, or generates [`Mage`](https://github.com/mage-ai/mage-ai) pipelines that the user can use to orchestrate filling the data structures.
+│ │  
+│ │  ## Motivation
+│ │  
+│ │  This software enables data engineers to replicate the database schemas at their organisations, and then generate fake data that resemble a random sample of the actual data in their organisation.
+│ │  
+│ │  While public datasets, such as those hosted at Google or Kaggle, is a common starting point for people interested in learning data analytics and machine learning, many of these datasets require extensive data cleaning so that they can be usable in analytics pipelines. This makes the use of these datasets difficult for AI learners and practitioners.
+│ │  
+│ │ @@ -90,15 +90,23 @@
+│ │  ## Python library
+│ │  
+│ │  The class `GoodCrap` is your `goodcrap` interface. You instantiate it with the key settings, and then generate the data by using the member functions `write_csv()`, `get_dataframe()` or `run()`.
+│ │  - `write_csv()`: writes a `csv` file
+│ │  - `get_dataframe()`: returns a `pandas` `DataFrame` object populated with the random data
+│ │  - `run()`: that's the more generic function that can generate tables and databases and populate them
+│ │  
+│ │ -And example usage for the `goodcrap` library is as follows:
+│ │ +And example usage for the `goodcrap` library is as follows. Here we are generating a `pandas` `DataFrame` for one of the template tables, `customers`:
+│ │ +
+│ │ +```python
+│ │ +from goodcrap import GoodCrap
+│ │ +a = GoodCrap(seed=3,size=1000,template_table='customers')
+│ │ +df=a.get_dataframe()
+│ │ +```
+│ │ +
+│ │ +The following example generates the data frame for some table, given its `crap_label` configuration object:
+│ │  
+│ │  ```python
+│ │  
+│ │  gc = GoodCrap(size=10000,seed=123)
+│ │  craplabels = {
+│ │      "customer_number": "ssn",
+│ │      "first_name": "first_name",
+│ │ @@ -122,22 +130,30 @@
+│ │          "max": 10000,
+│ │          "multiplier": 10
+│ │      }
+│ │  }
+│ │  df = gc.get_dataframe('customers',craplabels)
+│ │  ```
+│ │  
+│ │ -## How data for a foreign key is generated
+│ │ +## How data for a foreign key column is generated
+│ │  
+│ │  `goodcrap` will detect whether a column in a table is related to another table, and will fill that column with random selections of the related column. To demonstrate, run this command:
+│ │  
+│ │  `goodcrap --size 1000 --seed 3 --database_config examples\mysql_config --template_database customers_orders`
+│ │  
+│ │  This command will use the database settings in `examples\mysql_config.json` to generate the template database `customers_orders` and fill the tables with 1000 rows each. There are two tables here: `customers` and `orders`, and they are related: `orders` has a column `customer_number` that is tied to `customers` via the foreign key `customers.customer_number`. Therefore, that column is filled with random selections from `customers.customer_number`.
+│ │  
+│ │ +For a quick demo of generating the `orders` table: assuming you have setup up the `customers_orders` database and filled it with some data, the following code will generate an `orders` `DataFrame` using columns values from the `customers` table:
+│ │ +
+│ │ +```python
+│ │ +from goodcrap import GoodCrap
+│ │ +a = GoodCrap(seed=3,size=1000,template_table='orders',database_config="../examples/mysql_config")
+│ │ +df=a.get_dataframe()
+│ │ +```
+│ │ +
+│ │  ## `goodcrap` with `Mage`
+│ │  
+│ │  `goodcrap` can be used in `Mage` as a `Data Loader`. You can generate as much data as you want from multiple random `goodcrap` Data Loaders into your pipelines for testing, such as for testing the convergence of data into a data warehouse. You can also schedule the generation of data from `goodcrap` sources to simulate time series data traffic. A typical test-case scenario here is to run an SQL query at the data destination while data is being continuously loaded.
+│ │  
+│ │  Here is an example `goodcrap` source in `Mage`:
+│ │  
+│ │  ```python
+│ │ @@ -183,24 +199,37 @@
+│ │  def test_output(output, *args) -> None:
+│ │      """
+│ │      Template code for testing the output of the block.
+│ │      """
+│ │      assert output is not None, 'The output is undefined'
+│ │  
+│ │  ```
+│ │ +*Note:* If you are planning to run a `Mage` pipeline multiple times, then make sure that it does not have columns that are generated using the faker.unique function. The columns should be universally unique.
+│ │ +
+│ │ +## `goodcrap` generates `Mage` pipelines
+│ │ +
+│ │ +`Mage` python files are generated using `Jinja` templates. Here is an example command to generate pipelines for each of the tables in the template database `customers_orders`:
+│ │ +
+│ │ +`goodcrap --size 1000 --seed 3 --database_config examples\mysql_config --template_database customers_orders --mage_pipeline`
+│ │ +
+│ │ +Note that `goodcrap` currently will only generate `Mage` projects if the database configurations are defined.
+│ │ +
+│ │ +## Data warehouses
+│ │ +
+│ │ +Some dimensions in data warehouses will required to be filled as part of the testing exercise, but should not be filled with random data. These are the *conformed* dimensions with rigid data, such as the Date, Countries, and Cities dimensions. `goodcrap` will be able to fill these dimensions using the `DimensionFiller` class. Filling these tables will be performed before any other table is populated.
+│ │  
+│ │  ## Guessing the `crap_labels.json` settings
+│ │  
+│ │  *in progress*
+│ │  
+│ │  ## Learning the values from a data sample
+│ │  
+│ │  *in progress*
+│ │  
+│ │ -## Contrinuting to `goodcrap`
+│ │ +## Contributing to `goodcrap`
+│ │  
+│ │  That would be much appreciated. Check [here](CONTRIBUTING.rst).
+│ │  
+│ │  ## License
+│ │  
+│ │  `goodcrap` is licensed under the [GPL3](LICENSE) license.
+│ │   --- goodcrap-0.1.2/goodcrap.egg-info/SOURCES.txt
+│ ├── +++ goodcrap-0.2.0/goodcrap.egg-info/SOURCES.txt
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,32 +1,46 @@
+│ │  .gitattributes
+│ │ +.gitignore
+│ │  CHANGELOG.md
+│ │  CONTRIBUTING.rst
+│ │  LICENSE
+│ │  MANIFEST.in
+│ │  README.md
+│ │ +VERSION
+│ │  setup.cfg
+│ │  setup.py
+│ │ +.github/workflows/pylint.yml
+│ │ +examples/mysql_config.json
+│ │ +examples/sqlite_config.json
+│ │  goodcrap/__init__.py
+│ │  goodcrap/__main__.py
+│ │  goodcrap/cli.py
+│ │  goodcrap/goodcrap.py
+│ │  goodcrap/random_mapper.py
+│ │  goodcrap.egg-info/PKG-INFO
+│ │  goodcrap.egg-info/SOURCES.txt
+│ │  goodcrap.egg-info/dependency_links.txt
+│ │  goodcrap.egg-info/entry_points.txt
+│ │  goodcrap.egg-info/requires.txt
+│ │  goodcrap.egg-info/top_level.txt
+│ │  goodcrap/crappers/__init__.py
+│ │ +goodcrap/data_warehouses/__init__.py
+│ │ +goodcrap/data_warehouses/dimension_fillers.py
+│ │  goodcrap/databases/__init__.py
+│ │  goodcrap/databases/database.py
+│ │  goodcrap/databases/mysql.py
+│ │  goodcrap/databases/sqlite.py
+│ │ +goodcrap/pipelines/__init__.py
+│ │ +goodcrap/pipelines/mage.py
+│ │ +goodcrap/pipelines/templates/__init__.py
+│ │ +goodcrap/pipelines/templates/data_exporter_mysql.py
+│ │ +goodcrap/pipelines/templates/data_loader.py
+│ │ +goodcrap/pipelines/templates/metadata.yaml
+│ │  goodcrap/templates/__init__.py
+│ │  goodcrap/templates/__pycache__/__init__.cpython-310.pyc
+│ │ +goodcrap/templates/data_warehouses/sales.sql
+│ │  goodcrap/templates/databases/customers_orders/customers_orders.crap_labels.json
+│ │  goodcrap/templates/databases/customers_orders/customers_orders.sql
+│ │  goodcrap/templates/tables/customers/customers.crap_labels.json
+│ │  goodcrap/templates/tables/customers/customers.sql
+│ │  goodcrap/templates/tables/orders/orders.crap_labels.json
+│ │  goodcrap/templates/tables/orders/orders.sql
+│ │   --- goodcrap-0.1.2/setup.py
+│ ├── +++ goodcrap-0.2.0/setup.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,27 +1,28 @@
+│ │  from setuptools import setup, find_packages
+│ │  from pathlib import Path
+│ │  
+│ │  here = Path(__file__).resolve().parent
+│ │  README = (here / "README.md").read_text(encoding="utf-8")
+│ │ +VERSION = (here / "VERSION").read_text(encoding="utf-8").strip()
+│ │  
+│ │  setup(
+│ │      name='goodcrap',
+│ │      packages=['goodcrap',
+│ │                ] + find_packages(exclude=['tests', 'tests.*']),
+│ │      include_package_data=True,
+│ │      entry_points={
+│ │          "console_scripts": ["goodcrap=goodcrap.cli:execute_cli"],
+│ │      },
+│ │ -    version='0.1.2',
+│ │ +    version=VERSION,
+│ │      license='gpl-3.0',
+│ │ -    description='goodcrap generates controlled random data.',
+│ │ +    description='goodcrap creates tables, databases and csv files and fill them with random data',
+│ │      long_description=README,
+│ │      long_description_content_type='text/markdown',
+│ │      author='Sherif Abdulkader Tawfik Abbas',
+│ │      author_email='sherif.tawfic@gmail.com',
+│ │      url='https://github.com/goodcrap/goodcrap',
+│ │      keywords=['ai', 'data engineering', 'fake data',
+│ │                'data science'],
+│ │ -    install_requires=['sqlalchemy','faker','pandas','numpy'],
+│ │ +    install_requires=['sqlalchemy', 'faker', 'pandas', 'numpy', 'jinja2'],
+│ │  
+│ │  )

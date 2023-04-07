@@ -1,0 +1,721 @@
+# Comparing `tmp/drf-pydantic-0.3.0.tar.gz` & `tmp/drf_pydantic-0.4.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "drf-pydantic-0.3.0.tar", max compression
++gzip compressed data, was "drf_pydantic-0.4.0.tar", max compression
+```
+
+## Comparing `drf-pydantic-0.3.0.tar` & `drf_pydantic-0.4.0.tar`
+
+### file list
+
+```diff
+@@ -1,8 +1,7 @@
+--rw-r--r--   0        0        0     1072 2022-09-03 05:24:18.159170 drf-pydantic-0.3.0/LICENSE
+--rw-r--r--   0        0        0     3475 2022-09-03 05:24:18.159170 drf-pydantic-0.3.0/README.md
+--rw-r--r--   0        0        0     2148 2022-09-03 05:24:18.159170 drf-pydantic-0.3.0/pyproject.toml
+--rw-r--r--   0        0        0       66 2022-09-03 05:24:18.159170 drf-pydantic-0.3.0/src/drf_pydantic/__init__.py
+--rw-r--r--   0        0        0      626 2022-09-03 05:24:18.159170 drf-pydantic-0.3.0/src/drf_pydantic/base_model.py
+--rw-r--r--   0        0        0     4638 2022-09-03 05:24:18.159170 drf-pydantic-0.3.0/src/drf_pydantic/parse.py
+--rw-r--r--   0        0        0     4407 1970-01-01 00:00:00.000000 drf-pydantic-0.3.0/setup.py
+--rw-r--r--   0        0        0     4689 1970-01-01 00:00:00.000000 drf-pydantic-0.3.0/PKG-INFO
++-rw-r--r--   0        0        0     1072 2023-04-07 02:15:45.269589 drf_pydantic-0.4.0/LICENSE
++-rw-r--r--   0        0        0     3475 2023-04-07 02:15:45.269589 drf_pydantic-0.4.0/README.md
++-rw-r--r--   0        0        0     2148 2023-04-07 02:15:45.273589 drf_pydantic-0.4.0/pyproject.toml
++-rw-r--r--   0        0        0       66 2023-04-07 02:15:45.273589 drf_pydantic-0.4.0/src/drf_pydantic/__init__.py
++-rw-r--r--   0        0        0      626 2023-04-07 02:15:45.273589 drf_pydantic-0.4.0/src/drf_pydantic/base_model.py
++-rw-r--r--   0        0        0     5637 2023-04-07 02:15:45.273589 drf_pydantic-0.4.0/src/drf_pydantic/parse.py
++-rw-r--r--   0        0        0     4740 1970-01-01 00:00:00.000000 drf_pydantic-0.4.0/PKG-INFO
+```
+
+### Comparing `drf-pydantic-0.3.0/LICENSE` & `drf_pydantic-0.4.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `drf-pydantic-0.3.0/README.md` & `drf_pydantic-0.4.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `drf-pydantic-0.3.0/pyproject.toml` & `drf_pydantic-0.4.0/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "drf-pydantic"
+-version = "0.3.0"
++version = "0.4.0"
+ description = "Use pydantic with the Django REST framework"
+ license = "MIT"
+ authors = ["George Bocharov <bocharovgeorgii@gmail.com>"]
+ readme = "README.md"
+ homepage = "https://github.com/georgebv/drf-pydantic"
+ repository = "https://github.com/georgebv/drf-pydantic"
+ keywords = ["django", "drf", "pydantic", "typing", "rest", "api"]
+```
+
+### Comparing `drf-pydantic-0.3.0/src/drf_pydantic/base_model.py` & `drf_pydantic-0.4.0/src/drf_pydantic/base_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `drf-pydantic-0.3.0/src/drf_pydantic/parse.py` & `drf_pydantic-0.4.0/src/drf_pydantic/parse.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -30,14 +30,17 @@
+     float: serializers.FloatField,
+     decimal.Decimal: serializers.DecimalField,
+     # Date and time fields
+     datetime.date: serializers.DateField,
+     datetime.time: serializers.TimeField,
+     datetime.datetime: serializers.DateTimeField,
+     datetime.timedelta: serializers.DurationField,
++    # Constraint fields
++    pydantic.ConstrainedStr: serializers.CharField,
++    pydantic.ConstrainedInt: serializers.IntegerField,
+ }
+ 
+ 
+ def create_serializer_from_model(
+     model_class: type[pydantic.BaseModel],
+ ) -> type[serializers.Serializer]:
+     """
+@@ -87,15 +90,31 @@
+     else:
+         extra_kwargs["required"] = field.required
+     if field.default is not None:
+         extra_kwargs["default"] = field.default
+     if field.allow_none:
+         extra_kwargs["allow_null"] = True
+         extra_kwargs["default"] = None
+-
++    
++    #check if field._type is a subclass of ConstrainedNumberMeta
++    if issubclass(field.type_.__class__, pydantic.types.ConstrainedNumberMeta):
++        if field.type_.gt is not None:
++            extra_kwargs["min_value"] = field.type_.gt + 1
++        elif field.type_.ge is not None:
++            extra_kwargs["min_value"] = field.type_.ge
++        if field.type_.lt is not None:
++            extra_kwargs["max_value"] = field.type_.lt - 1
++        elif field.type_.le is not None:
++            extra_kwargs["max_value"] = field.type_.le
++    
++    #check if field._type is a subclass of ConstrainedStr
++    if inspect.isclass(field.type_) and issubclass(field.type_, pydantic.types.ConstrainedStr):
++        extra_kwargs["min_length"] = field.type_.min_length
++        extra_kwargs["max_length"] = field.type_.max_length
++    
+     # Scalar field
+     if field.outer_type_ is field.type_:
+         # Normal class
+         if inspect.isclass(field.type_):
+             return _convert_type(field.type_)(**extra_kwargs)
+ 
+         # Alias
+@@ -136,11 +155,13 @@
+     # Nested model
+     if issubclass(type_, pydantic.BaseModel):
+         try:
+             return getattr(type_, "drf_serializer")
+         except AttributeError:
+             return create_serializer_from_model(type_)
+ 
+-    try:
+-        return FIELD_MAP[type_]
+-    except KeyError as error:
+-        raise NotImplementedError(f"{type_.__name__} is not yet supported") from error
++    for key in [type_, type_.__base__]:
++        try:
++            return FIELD_MAP[key]
++        except KeyError:
++            continue
++    raise NotImplementedError(f"{type_.__name__} is not yet supported")
+```
+
+### Comparing `drf-pydantic-0.3.0/setup.py` & `drf_pydantic-0.4.0/PKG-INFO`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,276 +1,297 @@
+-00000000: 2320 2d2a 2d20 636f 6469 6e67 3a20 7574  # -*- coding: ut
+-00000010: 662d 3820 2d2a 2d0a 6672 6f6d 2073 6574  f-8 -*-.from set
+-00000020: 7570 746f 6f6c 7320 696d 706f 7274 2073  uptools import s
+-00000030: 6574 7570 0a0a 7061 636b 6167 655f 6469  etup..package_di
+-00000040: 7220 3d20 5c0a 7b27 273a 2027 7372 6327  r = \.{'': 'src'
+-00000050: 7d0a 0a70 6163 6b61 6765 7320 3d20 5c0a  }..packages = \.
+-00000060: 5b27 6472 665f 7079 6461 6e74 6963 275d  ['drf_pydantic']
+-00000070: 0a0a 7061 636b 6167 655f 6461 7461 203d  ..package_data =
+-00000080: 205c 0a7b 2727 3a20 5b27 2a27 5d7d 0a0a   \.{'': ['*']}..
+-00000090: 696e 7374 616c 6c5f 7265 7175 6972 6573  install_requires
+-000000a0: 203d 205c 0a5b 2764 6a61 6e67 6f72 6573   = \.['djangores
+-000000b0: 7466 7261 6d65 776f 726b 3e3d 332e 3133  tframework>=3.13
+-000000c0: 2e30 2c3c 342e 302e 3027 2c20 2770 7964  .0,<4.0.0', 'pyd
+-000000d0: 616e 7469 635b 656d 6169 6c5d 3e3d 312e  antic[email]>=1.
+-000000e0: 392e 302c 3c32 2e30 2e30 275d 0a0a 7365  9.0,<2.0.0']..se
+-000000f0: 7475 705f 6b77 6172 6773 203d 207b 0a20  tup_kwargs = {. 
+-00000100: 2020 2027 6e61 6d65 273a 2027 6472 662d     'name': 'drf-
+-00000110: 7079 6461 6e74 6963 272c 0a20 2020 2027  pydantic',.    '
+-00000120: 7665 7273 696f 6e27 3a20 2730 2e33 2e30  version': '0.3.0
+-00000130: 272c 0a20 2020 2027 6465 7363 7269 7074  ',.    'descript
+-00000140: 696f 6e27 3a20 2755 7365 2070 7964 616e  ion': 'Use pydan
+-00000150: 7469 6320 7769 7468 2074 6865 2044 6a61  tic with the Dja
+-00000160: 6e67 6f20 5245 5354 2066 7261 6d65 776f  ngo REST framewo
+-00000170: 726b 272c 0a20 2020 2027 6c6f 6e67 5f64  rk',.    'long_d
+-00000180: 6573 6372 6970 7469 6f6e 273a 2027 3c70  escription': '<p
+-00000190: 2061 6c69 676e 3d22 6365 6e74 6572 223e   align="center">
+-000001a0: 5c6e 2020 3c61 2068 7265 663d 2268 7474  \n  <a href="htt
+-000001b0: 7073 3a2f 2f67 6974 6875 622e 636f 6d2f  ps://github.com/
+-000001c0: 6765 6f72 6765 6276 2f64 7266 2d70 7964  georgebv/drf-pyd
+-000001d0: 616e 7469 632f 6163 7469 6f6e 732f 776f  antic/actions/wo
+-000001e0: 726b 666c 6f77 732f 6369 6364 2e79 6d6c  rkflows/cicd.yml
+-000001f0: 2220 7461 7267 6574 3d22 5f62 6c61 6e6b  " target="_blank
+-00000200: 223e 5c6e 2020 2020 3c69 6d67 2073 7263  ">\n    <img src
+-00000210: 3d22 6874 7470 733a 2f2f 6769 7468 7562  ="https://github
+-00000220: 2e63 6f6d 2f67 656f 7267 6562 762f 6472  .com/georgebv/dr
+-00000230: 662d 7079 6461 6e74 6963 2f61 6374 696f  f-pydantic/actio
+-00000240: 6e73 2f77 6f72 6b66 6c6f 7773 2f63 6963  ns/workflows/cic
+-00000250: 642e 796d 6c2f 6261 6467 652e 7376 673f  d.yml/badge.svg?
+-00000260: 6272 616e 6368 3d6d 6169 6e22 2061 6c74  branch=main" alt
+-00000270: 3d22 4349 2f43 4420 5374 6174 7573 223e  ="CI/CD Status">
+-00000280: 5c6e 2020 3c2f 613e 5c6e 2020 3c61 2068  \n  </a>\n  <a h
+-00000290: 7265 663d 2268 7474 7073 3a2f 2f63 6f64  ref="https://cod
+-000002a0: 6563 6f76 2e69 6f2f 6768 2f67 656f 7267  ecov.io/gh/georg
+-000002b0: 6562 762f 6472 662d 7079 6461 6e74 6963  ebv/drf-pydantic
+-000002c0: 2220 7461 7267 6574 3d22 5f62 6c61 6e6b  " target="_blank
+-000002d0: 223e 5c6e 2020 2020 3c69 6d67 2073 7263  ">\n    <img src
+-000002e0: 3d22 6874 7470 733a 2f2f 636f 6465 636f  ="https://codeco
+-000002f0: 762e 696f 2f67 682f 6765 6f72 6765 6276  v.io/gh/georgebv
+-00000300: 2f64 7266 2d70 7964 616e 7469 632f 6272  /drf-pydantic/br
+-00000310: 616e 6368 2f6d 6169 6e2f 6772 6170 682f  anch/main/graph/
+-00000320: 6261 6467 652e 7376 673f 746f 6b65 6e3d  badge.svg?token=
+-00000330: 474e 3972 787a 4946 4d63 2220 616c 743d  GN9rxzIFMc" alt=
+-00000340: 2254 6573 7420 436f 7665 7261 6765 222f  "Test Coverage"/
+-00000350: 3e5c 6e20 203c 2f61 3e5c 6e20 203c 6120  >\n  </a>\n  <a 
+-00000360: 6872 6566 3d22 6874 7470 733a 2f2f 6261  href="https://ba
+-00000370: 6467 652e 6675 7279 2e69 6f2f 7079 2f64  dge.fury.io/py/d
+-00000380: 7266 2d70 7964 616e 7469 6322 2074 6172  rf-pydantic" tar
+-00000390: 6765 743d 225f 626c 616e 6b22 3e5c 6e20  get="_blank">\n 
+-000003a0: 2020 203c 696d 6720 7372 633d 2268 7474     <img src="htt
+-000003b0: 7073 3a2f 2f62 6164 6765 2e66 7572 792e  ps://badge.fury.
+-000003c0: 696f 2f70 792f 6472 662d 7079 6461 6e74  io/py/drf-pydant
+-000003d0: 6963 2e73 7667 2220 616c 743d 2250 7950  ic.svg" alt="PyP
+-000003e0: 4920 7665 7273 696f 6e22 2068 6569 6768  I version" heigh
+-000003f0: 743d 2232 3022 3e5c 6e20 203c 2f61 3e5c  t="20">\n  </a>\
+-00000400: 6e3c 2f70 3e5c 6e5c 6e3c 7020 616c 6967  n</p>\n\n<p alig
+-00000410: 6e3d 2263 656e 7465 7222 3e5c 6e20 203c  n="center">\n  <
+-00000420: 693e 5c6e 2020 2020 5573 6520 7079 6461  i>\n    Use pyda
+-00000430: 6e74 6963 2077 6974 6820 446a 616e 676f  ntic with Django
+-00000440: 2052 4553 5420 6672 616d 6577 6f72 6b5c   REST framework\
+-00000450: 6e20 203c 2f69 3e5c 6e3c 2f70 3e5c 6e5c  n  </i>\n</p>\n\
+-00000460: 6e2d 205b 496e 7472 6f64 7563 7469 6f6e  n- [Introduction
+-00000470: 5d28 2369 6e74 726f 6475 6374 696f 6e29  ](#introduction)
+-00000480: 5c6e 2d20 5b49 6e73 7461 6c6c 6174 696f  \n- [Installatio
+-00000490: 6e5d 2823 696e 7374 616c 6c61 7469 6f6e  n](#installation
+-000004a0: 295c 6e2d 205b 5573 6167 655d 2823 7573  )\n- [Usage](#us
+-000004b0: 6167 6529 5c6e 2020 2d20 5b47 656e 6572  age)\n  - [Gener
+-000004c0: 616c 5d28 2367 656e 6572 616c 295c 6e20  al](#general)\n 
+-000004d0: 202d 205b 4578 6973 7469 6e67 204d 6f64   - [Existing Mod
+-000004e0: 656c 735d 2823 6578 6973 7469 6e67 2d6d  els](#existing-m
+-000004f0: 6f64 656c 7329 5c6e 2020 2d20 5b4e 6573  odels)\n  - [Nes
+-00000500: 7465 6420 4d6f 6465 6c73 5d28 236e 6573  ted Models](#nes
+-00000510: 7465 642d 6d6f 6465 6c73 295c 6e2d 205b  ted-models)\n- [
+-00000520: 526f 6164 6d61 705d 2823 726f 6164 6d61  Roadmap](#roadma
+-00000530: 7029 5c6e 5c6e 2320 496e 7472 6f64 7563  p)\n\n# Introduc
+-00000540: 7469 6f6e 5c6e 5c6e 5b50 7964 616e 7469  tion\n\n[Pydanti
+-00000550: 635d 2868 7474 7073 3a2f 2f70 7964 616e  c](https://pydan
+-00000560: 7469 632d 646f 6373 2e68 656c 706d 616e  tic-docs.helpman
+-00000570: 7561 6c2e 696f 2920 6973 2061 2050 7974  ual.io) is a Pyt
+-00000580: 686f 6e20 6c69 6272 6172 7920 7573 6564  hon library used
+-00000590: 2074 6f20 7065 7266 6f72 6d5c 6e64 6174   to perform\ndat
+-000005a0: 6120 7365 7269 616c 697a 6174 696f 6e20  a serialization 
+-000005b0: 616e 6420 7661 6c69 6461 7469 6f6e 2e5c  and validation.\
+-000005c0: 6e5c 6e5b 446a 616e 676f 2052 4553 5420  n\n[Django REST 
+-000005d0: 6672 616d 6577 6f72 6b5d 2868 7474 7073  framework](https
+-000005e0: 3a2f 2f77 7777 2e64 6a61 6e67 6f2d 7265  ://www.django-re
+-000005f0: 7374 2d66 7261 6d65 776f 726b 2e6f 7267  st-framework.org
+-00000600: 2920 6973 2061 2066 7261 6d65 776f 726b  ) is a framework
+-00000610: 2062 7569 6c74 5c6e 6f6e 2074 6f70 206f   built\non top o
+-00000620: 6620 5b44 6a61 6e67 6f5d 2868 7474 7073  f [Django](https
+-00000630: 3a2f 2f77 7777 2e64 6a61 6e67 6f70 726f  ://www.djangopro
+-00000640: 6a65 6374 2e63 6f6d 2f29 2077 6869 6368  ject.com/) which
+-00000650: 2061 6c6c 6f77 7320 7772 6974 696e 6720   allows writing 
+-00000660: 5245 5354 2041 5049 732e 5c6e 5c6e 4966  REST APIs.\n\nIf
+-00000670: 206c 696b 6520 6d65 2079 6f75 2064 6576   like me you dev
+-00000680: 656c 6f70 2044 5246 2041 5049 7320 616e  elop DRF APIs an
+-00000690: 6420 796f 7520 6c69 6b65 2070 7964 616e  d you like pydan
+-000006a0: 7469 6320 2c20 6064 7266 2d70 7964 616e  tic , `drf-pydan
+-000006b0: 7469 6360 2069 7320 666f 7220 796f 7520  tic` is for you 
+-000006c0: f09f 988d 2e5c 6e5c 6e23 2049 6e73 7461  .....\n\n# Insta
+-000006d0: 6c6c 6174 696f 6e5c 6e5c 6e60 6060 7368  llation\n\n```sh
+-000006e0: 656c 6c5c 6e70 6970 2069 6e73 7461 6c6c  ell\npip install
+-000006f0: 2064 7266 2d70 7964 616e 7469 635c 6e60   drf-pydantic\n`
+-00000700: 6060 5c6e 5c6e 2320 5573 6167 655c 6e5c  ``\n\n# Usage\n\
+-00000710: 6e23 2320 4765 6e65 7261 6c5c 6e5c 6e55  n## General\n\nU
+-00000720: 7365 2060 6472 665f 7079 6461 6e74 6963  se `drf_pydantic
+-00000730: 2e42 6173 654d 6f64 656c 6020 696e 7374  .BaseModel` inst
+-00000740: 6561 6420 6f66 2060 7079 6461 6e74 6963  ead of `pydantic
+-00000750: 2e42 6173 654d 6f64 656c 6020 7768 656e  .BaseModel` when
+-00000760: 2063 7265 6174 696e 6720 796f 7572 5c6e   creating your\n
+-00000770: 6d6f 6465 6c73 3a5c 6e5c 6e60 6060 7079  models:\n\n```py
+-00000780: 7468 6f6e 5c6e 6672 6f6d 2064 7266 5f70  thon\nfrom drf_p
+-00000790: 7964 616e 7469 6320 696d 706f 7274 2042  ydantic import B
+-000007a0: 6173 654d 6f64 656c 5c6e 5c6e 636c 6173  aseModel\n\nclas
+-000007b0: 7320 4d79 4d6f 6465 6c28 4261 7365 4d6f  s MyModel(BaseMo
+-000007c0: 6465 6c29 3a5c 6e20 206e 616d 653a 2073  del):\n  name: s
+-000007d0: 7472 5c6e 2020 6164 6472 6573 7365 733a  tr\n  addresses:
+-000007e0: 206c 6973 745b 7374 725d 5c6e 6060 605c   list[str]\n```\
+-000007f0: 6e5c 6e57 6865 6e65 7665 7220 796f 7520  n\nWhenever you 
+-00000800: 6e65 6564 2061 2044 5246 2073 6572 6961  need a DRF seria
+-00000810: 6c69 7a65 7220 796f 7520 6361 6e20 6765  lizer you can ge
+-00000820: 7420 6974 2066 726f 6d20 7468 6520 6d6f  t it from the mo
+-00000830: 6465 6c20 6c69 6b65 2074 6869 733a 5c6e  del like this:\n
+-00000840: 5c6e 6060 6070 7974 686f 6e5c 6e4d 794d  \n```python\nMyM
+-00000850: 6f64 656c 2e64 7266 5f73 6572 6961 6c69  odel.drf_seriali
+-00000860: 7a65 725c 6e60 6060 5c6e 5c6e 3e20 e284  zer\n```\n\n> ..
+-00000870: b9ef b88f 202a 2a49 4e46 4f2a 2a3c 6272  .... **INFO**<br
+-00000880: 3e5c 6e3e 204d 6f64 656c 7320 6372 6561  >\n> Models crea
+-00000890: 7465 6420 7573 696e 6720 6064 7266 5f70  ted using `drf_p
+-000008a0: 7964 616e 7469 6360 2061 7265 2066 756c  ydantic` are ful
+-000008b0: 6c79 2069 6465 6e64 6974 6361 6c20 746f  ly idenditcal to
+-000008c0: 2074 686f 7365 2063 7265 6174 6564 2062   those created b
+-000008d0: 795c 6e3e 2060 7079 6461 6e74 6963 602e  y\n> `pydantic`.
+-000008e0: 2054 6865 206f 6e6c 7920 6368 616e 6765   The only change
+-000008f0: 2069 7320 7468 6520 6164 6469 7469 6f6e   is the addition
+-00000900: 206f 6620 7468 6520 6064 7266 5f73 6572   of the `drf_ser
+-00000910: 6961 6c69 7a65 7260 2061 7474 7269 6275  ializer` attribu
+-00000920: 7465 5c6e 3e20 6475 7269 6e67 2063 6c61  te\n> during cla
+-00000930: 7373 2063 7265 6174 696f 6e20 286e 6f74  ss creation (not
+-00000940: 2069 6e73 7461 6e63 6529 2e5c 6e5c 6e23   instance).\n\n#
+-00000950: 2320 4578 6973 7469 6e67 204d 6f64 656c  # Existing Model
+-00000960: 735c 6e5c 6e49 6620 796f 7520 6861 7665  s\n\nIf you have
+-00000970: 2061 6e20 6578 6973 7469 6e67 2063 6f64   an existing cod
+-00000980: 6520 6261 7365 2061 6e64 2079 6f75 2077  e base and you w
+-00000990: 6f75 6c64 206c 696b 6520 746f 2075 7365  ould like to use
+-000009a0: 2074 6865 2060 6472 665f 7365 7269 616c   the `drf_serial
+-000009b0: 697a 6572 605c 6e61 7474 7269 6275 7465  izer`\nattribute
+-000009c0: 2074 6f20 6f6e 6c79 2073 7065 6369 6669   to only specifi
+-000009d0: 6320 6d6f 6465 6c73 2c20 7468 656e 2067  c models, then g
+-000009e0: 7265 6174 206e 6577 7320 f09f a5b3 202d  reat news .... -
+-000009f0: 2079 6f75 2063 616e 2065 6173 696c 7920   you can easily 
+-00000a00: 6578 7465 6e64 5c6e 796f 7572 2065 7869  extend\nyour exi
+-00000a10: 7374 6967 6e20 6070 7964 616e 7469 6360  stign `pydantic`
+-00000a20: 206d 6f64 656c 7320 6279 2061 6464 696e   models by addin
+-00000a30: 6720 6064 7266 5f70 7964 616e 7469 632e  g `drf_pydantic.
+-00000a40: 4261 7365 4d6f 6465 6c60 2074 6f20 7468  BaseModel` to th
+-00000a50: 6520 6c69 7374 5c6e 6f66 2070 6172 656e  e list\nof paren
+-00000a60: 7420 636c 6173 7365 732e 5c6e 5c6e 596f  t classes.\n\nYo
+-00000a70: 7572 2065 7869 7374 696e 6720 7079 6461  ur existing pyda
+-00000a80: 6e74 6963 206d 6f64 656c 733a 5c6e 5c6e  ntic models:\n\n
+-00000a90: 6060 6070 7974 686f 6e5c 6e66 726f 6d20  ```python\nfrom 
+-00000aa0: 7079 6461 6e74 6963 2069 6d70 6f72 7420  pydantic import 
+-00000ab0: 4261 7365 4d6f 6465 6c5c 6e5c 6e63 6c61  BaseModel\n\ncla
+-00000ac0: 7373 2050 6574 2842 6173 654d 6f64 656c  ss Pet(BaseModel
+-00000ad0: 293a 5c6e 2020 6e61 6d65 3a20 7374 725c  ):\n  name: str\
+-00000ae0: 6e5c 6e63 6c61 7373 2044 6f67 2850 6574  n\nclass Dog(Pet
+-00000af0: 293a 5c6e 2020 6272 6565 643a 2073 7472  ):\n  breed: str
+-00000b00: 5c6e 6060 605c 6e5c 6e55 7064 6174 6520  \n```\n\nUpdate 
+-00000b10: 796f 7572 2060 446f 6760 206d 6f64 656c  your `Dog` model
+-00000b20: 2061 6e64 2067 6574 2073 6572 6961 6c69   and get seriali
+-00000b30: 7a65 7220 7669 6120 7468 6520 6064 7266  zer via the `drf
+-00000b40: 5f73 6572 6961 6c69 7a65 7260 3a5c 6e5c  _serializer`:\n\
+-00000b50: 6e60 6060 7079 7468 6f6e 5c6e 6672 6f6d  n```python\nfrom
+-00000b60: 2064 7266 5f70 7964 616e 7469 6320 696d   drf_pydantic im
+-00000b70: 706f 7274 2042 6173 654d 6f64 656c 2061  port BaseModel a
+-00000b80: 7320 4452 4642 6173 654d 6f64 656c 5c6e  s DRFBaseModel\n
+-00000b90: 6672 6f6d 2070 7964 616e 7469 6320 696d  from pydantic im
+-00000ba0: 706f 7274 2042 6173 654d 6f64 656c 5c6e  port BaseModel\n
+-00000bb0: 5c6e 636c 6173 7320 5065 7428 4261 7365  \nclass Pet(Base
+-00000bc0: 4d6f 6465 6c29 3a5c 6e20 206e 616d 653a  Model):\n  name:
+-00000bd0: 2073 7472 5c6e 5c6e 636c 6173 7320 446f   str\n\nclass Do
+-00000be0: 6728 4452 4642 6173 654d 6f64 656c 2c20  g(DRFBaseModel, 
+-00000bf0: 5065 7429 3a5c 6e20 2062 7265 6564 3a20  Pet):\n  breed: 
+-00000c00: 7374 725c 6e5c 6e44 6f67 2e64 7266 5f73  str\n\nDog.drf_s
+-00000c10: 6572 6961 6c69 7a65 725c 6e60 6060 5c6e  erializer\n```\n
+-00000c20: 5c6e 3e20 e29a a0ef b88f 202a 2a41 5454  \n> ...... **ATT
+-00000c30: 454e 5449 4f4e 2a2a 3c62 723e 5c6e 3e20  ENTION**<br>\n> 
+-00000c40: 496e 6865 7269 7461 6e63 6520 6f72 6465  Inheritance orde
+-00000c50: 7220 6973 2069 6d70 6f72 7461 6e74 3a20  r is important: 
+-00000c60: 6064 7266 5f70 7964 616e 7469 632e 4261  `drf_pydantic.Ba
+-00000c70: 7365 4d6f 6465 6c60 206d 7573 7420 616c  seModel` must al
+-00000c80: 7761 7973 2067 6f20 6265 666f 7265 5c6e  ways go before\n
+-00000c90: 3e20 7468 6520 6070 7964 616e 7469 632e  > the `pydantic.
+-00000ca0: 4261 7365 4d6f 6465 6c60 2063 6c61 7373  BaseModel` class
+-00000cb0: 2e5c 6e5c 6e23 2320 4e65 7374 6564 204d  .\n\n## Nested M
+-00000cc0: 6f64 656c 735c 6e5c 6e49 6620 796f 7520  odels\n\nIf you 
+-00000cd0: 6861 7665 206e 6573 7465 6420 6d6f 6465  have nested mode
+-00000ce0: 6c73 2061 6e64 2079 6f75 2077 616e 7420  ls and you want 
+-00000cf0: 746f 2067 656e 6572 6174 6520 7365 7269  to generate seri
+-00000d00: 616c 697a 6572 206f 6e6c 7920 6672 6f6d  alizer only from
+-00000d10: 206f 6e65 206f 6620 7468 656d 2c5c 6e79   one of them,\ny
+-00000d20: 6f75 2064 6f6e 5c27 7420 6861 7665 2074  ou don\'t have t
+-00000d30: 6f20 7570 6461 7465 2061 6c6c 206d 6f64  o update all mod
+-00000d40: 656c 7320 2d20 6f6e 6c79 2075 7064 6174  els - only updat
+-00000d50: 6520 7468 6520 6d6f 6465 6c20 796f 7520  e the model you 
+-00000d60: 6e65 6564 2c20 6064 7266 5f70 7964 616e  need, `drf_pydan
+-00000d70: 7469 6360 5c6e 7769 6c6c 2067 656e 6572  tic`\nwill gener
+-00000d80: 6174 6520 7365 7269 616c 697a 6572 7320  ate serializers 
+-00000d90: 666f 7220 616c 6c20 6e6f 726d 616c 206e  for all normal n
+-00000da0: 6573 7465 6420 6070 7964 616e 7469 6360  ested `pydantic`
+-00000db0: 206d 6f64 656c 7320 666f 7220 6672 6565   models for free
+-00000dc0: 20f0 9f90 b15c 7532 3030 64f0 9f91 a42e   ....\u200d.....
+-00000dd0: 5c6e 5c6e 6060 6070 7974 686f 6e5c 6e66  \n\n```python\nf
+-00000de0: 726f 6d20 6472 665f 7079 6461 6e74 6963  rom drf_pydantic
+-00000df0: 2069 6d70 6f72 7420 4261 7365 4d6f 6465   import BaseMode
+-00000e00: 6c20 6173 2044 5246 4261 7365 4d6f 6465  l as DRFBaseMode
+-00000e10: 6c5c 6e66 726f 6d20 7079 6461 6e74 6963  l\nfrom pydantic
+-00000e20: 2069 6d70 6f72 7420 4261 7365 4d6f 6465   import BaseMode
+-00000e30: 6c5c 6e5c 6e63 6c61 7373 2041 7061 7274  l\n\nclass Apart
+-00000e40: 6d65 6e74 2842 6173 654d 6f64 656c 293a  ment(BaseModel):
+-00000e50: 5c6e 2020 666c 6f6f 723a 2069 6e74 5c6e  \n  floor: int\n
+-00000e60: 2020 7465 6e61 6e74 3a20 7374 725c 6e5c    tenant: str\n\
+-00000e70: 6e63 6c61 7373 2042 7569 6c64 696e 6728  nclass Building(
+-00000e80: 4261 7365 4d6f 6465 6c29 3a5c 6e20 2061  BaseModel):\n  a
+-00000e90: 6464 7265 7373 3a20 7374 725c 6e20 2061  ddress: str\n  a
+-00000ea0: 7061 726d 656e 7473 3a20 6c69 7374 5b41  parments: list[A
+-00000eb0: 7061 7274 6d65 6e74 5d5c 6e5c 6e63 6c61  partment]\n\ncla
+-00000ec0: 7373 2042 6c6f 636b 2844 5246 4261 7365  ss Block(DRFBase
+-00000ed0: 4d6f 6465 6c29 3a5c 6e20 2062 7569 6c64  Model):\n  build
+-00000ee0: 696e 6773 3a20 6c69 7374 5b42 7569 6c64  ings: list[Build
+-00000ef0: 696e 645d 5c6e 5c6e 426c 6f63 6b2e 6472  ind]\n\nBlock.dr
+-00000f00: 665f 7365 7269 616c 697a 6572 5c6e 6060  f_serializer\n``
+-00000f10: 605c 6e5c 6e23 2052 6f61 646d 6170 5c6e  `\n\n# Roadmap\n
+-00000f20: 5c6e 2d20 4164 6420 6045 4e55 4d60 2073  \n- Add `ENUM` s
+-00000f30: 7570 706f 7274 5c6e 2d20 4164 6420 6f70  upport\n- Add op
+-00000f40: 7469 6f6e 2074 6f20 6372 6561 7465 2063  tion to create c
+-00000f50: 7573 746f 6d20 7365 7269 616c 697a 6572  ustom serializer
+-00000f60: 2066 6f72 2063 6f6d 706c 6578 206d 6f64   for complex mod
+-00000f70: 656c 735c 6e2d 2041 6464 2073 7570 706f  els\n- Add suppo
+-00000f80: 7274 2066 6f72 2063 6f6e 7374 7261 696e  rt for constrain
+-00000f90: 7473 2028 6d61 782c 206d 696e 2c20 7265  ts (max, min, re
+-00000fa0: 6765 782c 2065 7463 2e29 5c6e 272c 0a20  gex, etc.)\n',. 
+-00000fb0: 2020 2027 6175 7468 6f72 273a 2027 4765     'author': 'Ge
+-00000fc0: 6f72 6765 2042 6f63 6861 726f 7627 2c0a  orge Bocharov',.
+-00000fd0: 2020 2020 2761 7574 686f 725f 656d 6169      'author_emai
+-00000fe0: 6c27 3a20 2762 6f63 6861 726f 7667 656f  l': 'bocharovgeo
+-00000ff0: 7267 6969 4067 6d61 696c 2e63 6f6d 272c  rgii@gmail.com',
+-00001000: 0a20 2020 2027 6d61 696e 7461 696e 6572  .    'maintainer
+-00001010: 273a 2027 4e6f 6e65 272c 0a20 2020 2027  ': 'None',.    '
+-00001020: 6d61 696e 7461 696e 6572 5f65 6d61 696c  maintainer_email
+-00001030: 273a 2027 4e6f 6e65 272c 0a20 2020 2027  ': 'None',.    '
+-00001040: 7572 6c27 3a20 2768 7474 7073 3a2f 2f67  url': 'https://g
+-00001050: 6974 6875 622e 636f 6d2f 6765 6f72 6765  ithub.com/george
+-00001060: 6276 2f64 7266 2d70 7964 616e 7469 6327  bv/drf-pydantic'
+-00001070: 2c0a 2020 2020 2770 6163 6b61 6765 5f64  ,.    'package_d
+-00001080: 6972 273a 2070 6163 6b61 6765 5f64 6972  ir': package_dir
+-00001090: 2c0a 2020 2020 2770 6163 6b61 6765 7327  ,.    'packages'
+-000010a0: 3a20 7061 636b 6167 6573 2c0a 2020 2020  : packages,.    
+-000010b0: 2770 6163 6b61 6765 5f64 6174 6127 3a20  'package_data': 
+-000010c0: 7061 636b 6167 655f 6461 7461 2c0a 2020  package_data,.  
+-000010d0: 2020 2769 6e73 7461 6c6c 5f72 6571 7569    'install_requi
+-000010e0: 7265 7327 3a20 696e 7374 616c 6c5f 7265  res': install_re
+-000010f0: 7175 6972 6573 2c0a 2020 2020 2770 7974  quires,.    'pyt
+-00001100: 686f 6e5f 7265 7175 6972 6573 273a 2027  hon_requires': '
+-00001110: 3e3d 332e 392c 3c34 2e30 272c 0a7d 0a0a  >=3.9,<4.0',.}..
+-00001120: 0a73 6574 7570 282a 2a73 6574 7570 5f6b  .setup(**setup_k
+-00001130: 7761 7267 7329 0a                        wargs).
++00000000: 4d65 7461 6461 7461 2d56 6572 7369 6f6e  Metadata-Version
++00000010: 3a20 322e 310a 4e61 6d65 3a20 6472 662d  : 2.1.Name: drf-
++00000020: 7079 6461 6e74 6963 0a56 6572 7369 6f6e  pydantic.Version
++00000030: 3a20 302e 342e 300a 5375 6d6d 6172 793a  : 0.4.0.Summary:
++00000040: 2055 7365 2070 7964 616e 7469 6320 7769   Use pydantic wi
++00000050: 7468 2074 6865 2044 6a61 6e67 6f20 5245  th the Django RE
++00000060: 5354 2066 7261 6d65 776f 726b 0a48 6f6d  ST framework.Hom
++00000070: 652d 7061 6765 3a20 6874 7470 733a 2f2f  e-page: https://
++00000080: 6769 7468 7562 2e63 6f6d 2f67 656f 7267  github.com/georg
++00000090: 6562 762f 6472 662d 7079 6461 6e74 6963  ebv/drf-pydantic
++000000a0: 0a4c 6963 656e 7365 3a20 4d49 540a 4b65  .License: MIT.Ke
++000000b0: 7977 6f72 6473 3a20 646a 616e 676f 2c64  ywords: django,d
++000000c0: 7266 2c70 7964 616e 7469 632c 7479 7069  rf,pydantic,typi
++000000d0: 6e67 2c72 6573 742c 6170 690a 4175 7468  ng,rest,api.Auth
++000000e0: 6f72 3a20 4765 6f72 6765 2042 6f63 6861  or: George Bocha
++000000f0: 726f 760a 4175 7468 6f72 2d65 6d61 696c  rov.Author-email
++00000100: 3a20 626f 6368 6172 6f76 6765 6f72 6769  : bocharovgeorgi
++00000110: 6940 676d 6169 6c2e 636f 6d0a 5265 7175  i@gmail.com.Requ
++00000120: 6972 6573 2d50 7974 686f 6e3a 203e 3d33  ires-Python: >=3
++00000130: 2e39 2c3c 342e 300a 436c 6173 7369 6669  .9,<4.0.Classifi
++00000140: 6572 3a20 4465 7665 6c6f 706d 656e 7420  er: Development 
++00000150: 5374 6174 7573 203a 3a20 3420 2d20 4265  Status :: 4 - Be
++00000160: 7461 0a43 6c61 7373 6966 6965 723a 2049  ta.Classifier: I
++00000170: 6e74 656e 6465 6420 4175 6469 656e 6365  ntended Audience
++00000180: 203a 3a20 4465 7665 6c6f 7065 7273 0a43   :: Developers.C
++00000190: 6c61 7373 6966 6965 723a 2049 6e74 656e  lassifier: Inten
++000001a0: 6465 6420 4175 6469 656e 6365 203a 3a20  ded Audience :: 
++000001b0: 496e 666f 726d 6174 696f 6e20 5465 6368  Information Tech
++000001c0: 6e6f 6c6f 6779 0a43 6c61 7373 6966 6965  nology.Classifie
++000001d0: 723a 2049 6e74 656e 6465 6420 4175 6469  r: Intended Audi
++000001e0: 656e 6365 203a 3a20 5379 7374 656d 2041  ence :: System A
++000001f0: 646d 696e 6973 7472 6174 6f72 730a 436c  dministrators.Cl
++00000200: 6173 7369 6669 6572 3a20 4c69 6365 6e73  assifier: Licens
++00000210: 6520 3a3a 204f 5349 2041 7070 726f 7665  e :: OSI Approve
++00000220: 6420 3a3a 204d 4954 204c 6963 656e 7365  d :: MIT License
++00000230: 0a43 6c61 7373 6966 6965 723a 204f 7065  .Classifier: Ope
++00000240: 7261 7469 6e67 2053 7973 7465 6d20 3a3a  rating System ::
++00000250: 204f 5320 496e 6465 7065 6e64 656e 740a   OS Independent.
++00000260: 436c 6173 7369 6669 6572 3a20 5072 6f67  Classifier: Prog
++00000270: 7261 6d6d 696e 6720 4c61 6e67 7561 6765  ramming Language
++00000280: 203a 3a20 5079 7468 6f6e 0a43 6c61 7373   :: Python.Class
++00000290: 6966 6965 723a 2050 726f 6772 616d 6d69  ifier: Programmi
++000002a0: 6e67 204c 616e 6775 6167 6520 3a3a 2050  ng Language :: P
++000002b0: 7974 686f 6e20 3a3a 2033 0a43 6c61 7373  ython :: 3.Class
++000002c0: 6966 6965 723a 2050 726f 6772 616d 6d69  ifier: Programmi
++000002d0: 6e67 204c 616e 6775 6167 6520 3a3a 2050  ng Language :: P
++000002e0: 7974 686f 6e20 3a3a 2033 2e39 0a43 6c61  ython :: 3.9.Cla
++000002f0: 7373 6966 6965 723a 2050 726f 6772 616d  ssifier: Program
++00000300: 6d69 6e67 204c 616e 6775 6167 6520 3a3a  ming Language ::
++00000310: 2050 7974 686f 6e20 3a3a 2033 2e31 300a   Python :: 3.10.
++00000320: 436c 6173 7369 6669 6572 3a20 5072 6f67  Classifier: Prog
++00000330: 7261 6d6d 696e 6720 4c61 6e67 7561 6765  ramming Language
++00000340: 203a 3a20 5079 7468 6f6e 203a 3a20 332e   :: Python :: 3.
++00000350: 3131 0a43 6c61 7373 6966 6965 723a 2050  11.Classifier: P
++00000360: 726f 6772 616d 6d69 6e67 204c 616e 6775  rogramming Langu
++00000370: 6167 6520 3a3a 2050 7974 686f 6e20 3a3a  age :: Python ::
++00000380: 2033 0a43 6c61 7373 6966 6965 723a 2050   3.Classifier: P
++00000390: 726f 6772 616d 6d69 6e67 204c 616e 6775  rogramming Langu
++000003a0: 6167 6520 3a3a 2050 7974 686f 6e20 3a3a  age :: Python ::
++000003b0: 2033 203a 3a20 4f6e 6c79 0a43 6c61 7373   3 :: Only.Class
++000003c0: 6966 6965 723a 2054 6f70 6963 203a 3a20  ifier: Topic :: 
++000003d0: 536f 6674 7761 7265 2044 6576 656c 6f70  Software Develop
++000003e0: 6d65 6e74 203a 3a20 4c69 6272 6172 6965  ment :: Librarie
++000003f0: 7320 3a3a 2050 7974 686f 6e20 4d6f 6475  s :: Python Modu
++00000400: 6c65 730a 436c 6173 7369 6669 6572 3a20  les.Classifier: 
++00000410: 5479 7069 6e67 203a 3a20 5479 7065 640a  Typing :: Typed.
++00000420: 5265 7175 6972 6573 2d44 6973 743a 2064  Requires-Dist: d
++00000430: 6a61 6e67 6f72 6573 7466 7261 6d65 776f  jangorestframewo
++00000440: 726b 2028 3e3d 332e 3133 2e30 2c3c 342e  rk (>=3.13.0,<4.
++00000450: 302e 3029 0a52 6571 7569 7265 732d 4469  0.0).Requires-Di
++00000460: 7374 3a20 7079 6461 6e74 6963 5b65 6d61  st: pydantic[ema
++00000470: 696c 5d20 283e 3d31 2e39 2e30 2c3c 322e  il] (>=1.9.0,<2.
++00000480: 302e 3029 0a50 726f 6a65 6374 2d55 524c  0.0).Project-URL
++00000490: 3a20 5265 706f 7369 746f 7279 2c20 6874  : Repository, ht
++000004a0: 7470 733a 2f2f 6769 7468 7562 2e63 6f6d  tps://github.com
++000004b0: 2f67 656f 7267 6562 762f 6472 662d 7079  /georgebv/drf-py
++000004c0: 6461 6e74 6963 0a44 6573 6372 6970 7469  dantic.Descripti
++000004d0: 6f6e 2d43 6f6e 7465 6e74 2d54 7970 653a  on-Content-Type:
++000004e0: 2074 6578 742f 6d61 726b 646f 776e 0a0a   text/markdown..
++000004f0: 3c70 2061 6c69 676e 3d22 6365 6e74 6572  <p align="center
++00000500: 223e 0a20 203c 6120 6872 6566 3d22 6874  ">.  <a href="ht
++00000510: 7470 733a 2f2f 6769 7468 7562 2e63 6f6d  tps://github.com
++00000520: 2f67 656f 7267 6562 762f 6472 662d 7079  /georgebv/drf-py
++00000530: 6461 6e74 6963 2f61 6374 696f 6e73 2f77  dantic/actions/w
++00000540: 6f72 6b66 6c6f 7773 2f63 6963 642e 796d  orkflows/cicd.ym
++00000550: 6c22 2074 6172 6765 743d 225f 626c 616e  l" target="_blan
++00000560: 6b22 3e0a 2020 2020 3c69 6d67 2073 7263  k">.    <img src
++00000570: 3d22 6874 7470 733a 2f2f 6769 7468 7562  ="https://github
++00000580: 2e63 6f6d 2f67 656f 7267 6562 762f 6472  .com/georgebv/dr
++00000590: 662d 7079 6461 6e74 6963 2f61 6374 696f  f-pydantic/actio
++000005a0: 6e73 2f77 6f72 6b66 6c6f 7773 2f63 6963  ns/workflows/cic
++000005b0: 642e 796d 6c2f 6261 6467 652e 7376 673f  d.yml/badge.svg?
++000005c0: 6272 616e 6368 3d6d 6169 6e22 2061 6c74  branch=main" alt
++000005d0: 3d22 4349 2f43 4420 5374 6174 7573 223e  ="CI/CD Status">
++000005e0: 0a20 203c 2f61 3e0a 2020 3c61 2068 7265  .  </a>.  <a hre
++000005f0: 663d 2268 7474 7073 3a2f 2f63 6f64 6563  f="https://codec
++00000600: 6f76 2e69 6f2f 6768 2f67 656f 7267 6562  ov.io/gh/georgeb
++00000610: 762f 6472 662d 7079 6461 6e74 6963 2220  v/drf-pydantic" 
++00000620: 7461 7267 6574 3d22 5f62 6c61 6e6b 223e  target="_blank">
++00000630: 0a20 2020 203c 696d 6720 7372 633d 2268  .    <img src="h
++00000640: 7474 7073 3a2f 2f63 6f64 6563 6f76 2e69  ttps://codecov.i
++00000650: 6f2f 6768 2f67 656f 7267 6562 762f 6472  o/gh/georgebv/dr
++00000660: 662d 7079 6461 6e74 6963 2f62 7261 6e63  f-pydantic/branc
++00000670: 682f 6d61 696e 2f67 7261 7068 2f62 6164  h/main/graph/bad
++00000680: 6765 2e73 7667 3f74 6f6b 656e 3d47 4e39  ge.svg?token=GN9
++00000690: 7278 7a49 464d 6322 2061 6c74 3d22 5465  rxzIFMc" alt="Te
++000006a0: 7374 2043 6f76 6572 6167 6522 2f3e 0a20  st Coverage"/>. 
++000006b0: 203c 2f61 3e0a 2020 3c61 2068 7265 663d   </a>.  <a href=
++000006c0: 2268 7474 7073 3a2f 2f62 6164 6765 2e66  "https://badge.f
++000006d0: 7572 792e 696f 2f70 792f 6472 662d 7079  ury.io/py/drf-py
++000006e0: 6461 6e74 6963 2220 7461 7267 6574 3d22  dantic" target="
++000006f0: 5f62 6c61 6e6b 223e 0a20 2020 203c 696d  _blank">.    <im
++00000700: 6720 7372 633d 2268 7474 7073 3a2f 2f62  g src="https://b
++00000710: 6164 6765 2e66 7572 792e 696f 2f70 792f  adge.fury.io/py/
++00000720: 6472 662d 7079 6461 6e74 6963 2e73 7667  drf-pydantic.svg
++00000730: 2220 616c 743d 2250 7950 4920 7665 7273  " alt="PyPI vers
++00000740: 696f 6e22 2068 6569 6768 743d 2232 3022  ion" height="20"
++00000750: 3e0a 2020 3c2f 613e 0a3c 2f70 3e0a 0a3c  >.  </a>.</p>..<
++00000760: 7020 616c 6967 6e3d 2263 656e 7465 7222  p align="center"
++00000770: 3e0a 2020 3c69 3e0a 2020 2020 5573 6520  >.  <i>.    Use 
++00000780: 7079 6461 6e74 6963 2077 6974 6820 446a  pydantic with Dj
++00000790: 616e 676f 2052 4553 5420 6672 616d 6577  ango REST framew
++000007a0: 6f72 6b0a 2020 3c2f 693e 0a3c 2f70 3e0a  ork.  </i>.</p>.
++000007b0: 0a2d 205b 496e 7472 6f64 7563 7469 6f6e  .- [Introduction
++000007c0: 5d28 2369 6e74 726f 6475 6374 696f 6e29  ](#introduction)
++000007d0: 0a2d 205b 496e 7374 616c 6c61 7469 6f6e  .- [Installation
++000007e0: 5d28 2369 6e73 7461 6c6c 6174 696f 6e29  ](#installation)
++000007f0: 0a2d 205b 5573 6167 655d 2823 7573 6167  .- [Usage](#usag
++00000800: 6529 0a20 202d 205b 4765 6e65 7261 6c5d  e).  - [General]
++00000810: 2823 6765 6e65 7261 6c29 0a20 202d 205b  (#general).  - [
++00000820: 4578 6973 7469 6e67 204d 6f64 656c 735d  Existing Models]
++00000830: 2823 6578 6973 7469 6e67 2d6d 6f64 656c  (#existing-model
++00000840: 7329 0a20 202d 205b 4e65 7374 6564 204d  s).  - [Nested M
++00000850: 6f64 656c 735d 2823 6e65 7374 6564 2d6d  odels](#nested-m
++00000860: 6f64 656c 7329 0a2d 205b 526f 6164 6d61  odels).- [Roadma
++00000870: 705d 2823 726f 6164 6d61 7029 0a0a 2320  p](#roadmap)..# 
++00000880: 496e 7472 6f64 7563 7469 6f6e 0a0a 5b50  Introduction..[P
++00000890: 7964 616e 7469 635d 2868 7474 7073 3a2f  ydantic](https:/
++000008a0: 2f70 7964 616e 7469 632d 646f 6373 2e68  /pydantic-docs.h
++000008b0: 656c 706d 616e 7561 6c2e 696f 2920 6973  elpmanual.io) is
++000008c0: 2061 2050 7974 686f 6e20 6c69 6272 6172   a Python librar
++000008d0: 7920 7573 6564 2074 6f20 7065 7266 6f72  y used to perfor
++000008e0: 6d0a 6461 7461 2073 6572 6961 6c69 7a61  m.data serializa
++000008f0: 7469 6f6e 2061 6e64 2076 616c 6964 6174  tion and validat
++00000900: 696f 6e2e 0a0a 5b44 6a61 6e67 6f20 5245  ion...[Django RE
++00000910: 5354 2066 7261 6d65 776f 726b 5d28 6874  ST framework](ht
++00000920: 7470 733a 2f2f 7777 772e 646a 616e 676f  tps://www.django
++00000930: 2d72 6573 742d 6672 616d 6577 6f72 6b2e  -rest-framework.
++00000940: 6f72 6729 2069 7320 6120 6672 616d 6577  org) is a framew
++00000950: 6f72 6b20 6275 696c 740a 6f6e 2074 6f70  ork built.on top
++00000960: 206f 6620 5b44 6a61 6e67 6f5d 2868 7474   of [Django](htt
++00000970: 7073 3a2f 2f77 7777 2e64 6a61 6e67 6f70  ps://www.djangop
++00000980: 726f 6a65 6374 2e63 6f6d 2f29 2077 6869  roject.com/) whi
++00000990: 6368 2061 6c6c 6f77 7320 7772 6974 696e  ch allows writin
++000009a0: 6720 5245 5354 2041 5049 732e 0a0a 4966  g REST APIs...If
++000009b0: 206c 696b 6520 6d65 2079 6f75 2064 6576   like me you dev
++000009c0: 656c 6f70 2044 5246 2041 5049 7320 616e  elop DRF APIs an
++000009d0: 6420 796f 7520 6c69 6b65 2070 7964 616e  d you like pydan
++000009e0: 7469 6320 2c20 6064 7266 2d70 7964 616e  tic , `drf-pydan
++000009f0: 7469 6360 2069 7320 666f 7220 796f 7520  tic` is for you 
++00000a00: f09f 988d 2e0a 0a23 2049 6e73 7461 6c6c  .......# Install
++00000a10: 6174 696f 6e0a 0a60 6060 7368 656c 6c0a  ation..```shell.
++00000a20: 7069 7020 696e 7374 616c 6c20 6472 662d  pip install drf-
++00000a30: 7079 6461 6e74 6963 0a60 6060 0a0a 2320  pydantic.```..# 
++00000a40: 5573 6167 650a 0a23 2320 4765 6e65 7261  Usage..## Genera
++00000a50: 6c0a 0a55 7365 2060 6472 665f 7079 6461  l..Use `drf_pyda
++00000a60: 6e74 6963 2e42 6173 654d 6f64 656c 6020  ntic.BaseModel` 
++00000a70: 696e 7374 6561 6420 6f66 2060 7079 6461  instead of `pyda
++00000a80: 6e74 6963 2e42 6173 654d 6f64 656c 6020  ntic.BaseModel` 
++00000a90: 7768 656e 2063 7265 6174 696e 6720 796f  when creating yo
++00000aa0: 7572 0a6d 6f64 656c 733a 0a0a 6060 6070  ur.models:..```p
++00000ab0: 7974 686f 6e0a 6672 6f6d 2064 7266 5f70  ython.from drf_p
++00000ac0: 7964 616e 7469 6320 696d 706f 7274 2042  ydantic import B
++00000ad0: 6173 654d 6f64 656c 0a0a 636c 6173 7320  aseModel..class 
++00000ae0: 4d79 4d6f 6465 6c28 4261 7365 4d6f 6465  MyModel(BaseMode
++00000af0: 6c29 3a0a 2020 6e61 6d65 3a20 7374 720a  l):.  name: str.
++00000b00: 2020 6164 6472 6573 7365 733a 206c 6973    addresses: lis
++00000b10: 745b 7374 725d 0a60 6060 0a0a 5768 656e  t[str].```..When
++00000b20: 6576 6572 2079 6f75 206e 6565 6420 6120  ever you need a 
++00000b30: 4452 4620 7365 7269 616c 697a 6572 2079  DRF serializer y
++00000b40: 6f75 2063 616e 2067 6574 2069 7420 6672  ou can get it fr
++00000b50: 6f6d 2074 6865 206d 6f64 656c 206c 696b  om the model lik
++00000b60: 6520 7468 6973 3a0a 0a60 6060 7079 7468  e this:..```pyth
++00000b70: 6f6e 0a4d 794d 6f64 656c 2e64 7266 5f73  on.MyModel.drf_s
++00000b80: 6572 6961 6c69 7a65 720a 6060 600a 0a3e  erializer.```..>
++00000b90: 20e2 84b9 efb8 8f20 2a2a 494e 464f 2a2a   ...... **INFO**
++00000ba0: 3c62 723e 0a3e 204d 6f64 656c 7320 6372  <br>.> Models cr
++00000bb0: 6561 7465 6420 7573 696e 6720 6064 7266  eated using `drf
++00000bc0: 5f70 7964 616e 7469 6360 2061 7265 2066  _pydantic` are f
++00000bd0: 756c 6c79 2069 6465 6e64 6974 6361 6c20  ully idenditcal 
++00000be0: 746f 2074 686f 7365 2063 7265 6174 6564  to those created
++00000bf0: 2062 790a 3e20 6070 7964 616e 7469 6360   by.> `pydantic`
++00000c00: 2e20 5468 6520 6f6e 6c79 2063 6861 6e67  . The only chang
++00000c10: 6520 6973 2074 6865 2061 6464 6974 696f  e is the additio
++00000c20: 6e20 6f66 2074 6865 2060 6472 665f 7365  n of the `drf_se
++00000c30: 7269 616c 697a 6572 6020 6174 7472 6962  rializer` attrib
++00000c40: 7574 650a 3e20 6475 7269 6e67 2063 6c61  ute.> during cla
++00000c50: 7373 2063 7265 6174 696f 6e20 286e 6f74  ss creation (not
++00000c60: 2069 6e73 7461 6e63 6529 2e0a 0a23 2320   instance)...## 
++00000c70: 4578 6973 7469 6e67 204d 6f64 656c 730a  Existing Models.
++00000c80: 0a49 6620 796f 7520 6861 7665 2061 6e20  .If you have an 
++00000c90: 6578 6973 7469 6e67 2063 6f64 6520 6261  existing code ba
++00000ca0: 7365 2061 6e64 2079 6f75 2077 6f75 6c64  se and you would
++00000cb0: 206c 696b 6520 746f 2075 7365 2074 6865   like to use the
++00000cc0: 2060 6472 665f 7365 7269 616c 697a 6572   `drf_serializer
++00000cd0: 600a 6174 7472 6962 7574 6520 746f 206f  `.attribute to o
++00000ce0: 6e6c 7920 7370 6563 6966 6963 206d 6f64  nly specific mod
++00000cf0: 656c 732c 2074 6865 6e20 6772 6561 7420  els, then great 
++00000d00: 6e65 7773 20f0 9fa5 b320 2d20 796f 7520  news .... - you 
++00000d10: 6361 6e20 6561 7369 6c79 2065 7874 656e  can easily exten
++00000d20: 640a 796f 7572 2065 7869 7374 6967 6e20  d.your existign 
++00000d30: 6070 7964 616e 7469 6360 206d 6f64 656c  `pydantic` model
++00000d40: 7320 6279 2061 6464 696e 6720 6064 7266  s by adding `drf
++00000d50: 5f70 7964 616e 7469 632e 4261 7365 4d6f  _pydantic.BaseMo
++00000d60: 6465 6c60 2074 6f20 7468 6520 6c69 7374  del` to the list
++00000d70: 0a6f 6620 7061 7265 6e74 2063 6c61 7373  .of parent class
++00000d80: 6573 2e0a 0a59 6f75 7220 6578 6973 7469  es...Your existi
++00000d90: 6e67 2070 7964 616e 7469 6320 6d6f 6465  ng pydantic mode
++00000da0: 6c73 3a0a 0a60 6060 7079 7468 6f6e 0a66  ls:..```python.f
++00000db0: 726f 6d20 7079 6461 6e74 6963 2069 6d70  rom pydantic imp
++00000dc0: 6f72 7420 4261 7365 4d6f 6465 6c0a 0a63  ort BaseModel..c
++00000dd0: 6c61 7373 2050 6574 2842 6173 654d 6f64  lass Pet(BaseMod
++00000de0: 656c 293a 0a20 206e 616d 653a 2073 7472  el):.  name: str
++00000df0: 0a0a 636c 6173 7320 446f 6728 5065 7429  ..class Dog(Pet)
++00000e00: 3a0a 2020 6272 6565 643a 2073 7472 0a60  :.  breed: str.`
++00000e10: 6060 0a0a 5570 6461 7465 2079 6f75 7220  ``..Update your 
++00000e20: 6044 6f67 6020 6d6f 6465 6c20 616e 6420  `Dog` model and 
++00000e30: 6765 7420 7365 7269 616c 697a 6572 2076  get serializer v
++00000e40: 6961 2074 6865 2060 6472 665f 7365 7269  ia the `drf_seri
++00000e50: 616c 697a 6572 603a 0a0a 6060 6070 7974  alizer`:..```pyt
++00000e60: 686f 6e0a 6672 6f6d 2064 7266 5f70 7964  hon.from drf_pyd
++00000e70: 616e 7469 6320 696d 706f 7274 2042 6173  antic import Bas
++00000e80: 654d 6f64 656c 2061 7320 4452 4642 6173  eModel as DRFBas
++00000e90: 654d 6f64 656c 0a66 726f 6d20 7079 6461  eModel.from pyda
++00000ea0: 6e74 6963 2069 6d70 6f72 7420 4261 7365  ntic import Base
++00000eb0: 4d6f 6465 6c0a 0a63 6c61 7373 2050 6574  Model..class Pet
++00000ec0: 2842 6173 654d 6f64 656c 293a 0a20 206e  (BaseModel):.  n
++00000ed0: 616d 653a 2073 7472 0a0a 636c 6173 7320  ame: str..class 
++00000ee0: 446f 6728 4452 4642 6173 654d 6f64 656c  Dog(DRFBaseModel
++00000ef0: 2c20 5065 7429 3a0a 2020 6272 6565 643a  , Pet):.  breed:
++00000f00: 2073 7472 0a0a 446f 672e 6472 665f 7365   str..Dog.drf_se
++00000f10: 7269 616c 697a 6572 0a60 6060 0a0a 3e20  rializer.```..> 
++00000f20: e29a a0ef b88f 202a 2a41 5454 454e 5449  ...... **ATTENTI
++00000f30: 4f4e 2a2a 3c62 723e 0a3e 2049 6e68 6572  ON**<br>.> Inher
++00000f40: 6974 616e 6365 206f 7264 6572 2069 7320  itance order is 
++00000f50: 696d 706f 7274 616e 743a 2060 6472 665f  important: `drf_
++00000f60: 7079 6461 6e74 6963 2e42 6173 654d 6f64  pydantic.BaseMod
++00000f70: 656c 6020 6d75 7374 2061 6c77 6179 7320  el` must always 
++00000f80: 676f 2062 6566 6f72 650a 3e20 7468 6520  go before.> the 
++00000f90: 6070 7964 616e 7469 632e 4261 7365 4d6f  `pydantic.BaseMo
++00000fa0: 6465 6c60 2063 6c61 7373 2e0a 0a23 2320  del` class...## 
++00000fb0: 4e65 7374 6564 204d 6f64 656c 730a 0a49  Nested Models..I
++00000fc0: 6620 796f 7520 6861 7665 206e 6573 7465  f you have neste
++00000fd0: 6420 6d6f 6465 6c73 2061 6e64 2079 6f75  d models and you
++00000fe0: 2077 616e 7420 746f 2067 656e 6572 6174   want to generat
++00000ff0: 6520 7365 7269 616c 697a 6572 206f 6e6c  e serializer onl
++00001000: 7920 6672 6f6d 206f 6e65 206f 6620 7468  y from one of th
++00001010: 656d 2c0a 796f 7520 646f 6e27 7420 6861  em,.you don't ha
++00001020: 7665 2074 6f20 7570 6461 7465 2061 6c6c  ve to update all
++00001030: 206d 6f64 656c 7320 2d20 6f6e 6c79 2075   models - only u
++00001040: 7064 6174 6520 7468 6520 6d6f 6465 6c20  pdate the model 
++00001050: 796f 7520 6e65 6564 2c20 6064 7266 5f70  you need, `drf_p
++00001060: 7964 616e 7469 6360 0a77 696c 6c20 6765  ydantic`.will ge
++00001070: 6e65 7261 7465 2073 6572 6961 6c69 7a65  nerate serialize
++00001080: 7273 2066 6f72 2061 6c6c 206e 6f72 6d61  rs for all norma
++00001090: 6c20 6e65 7374 6564 2060 7079 6461 6e74  l nested `pydant
++000010a0: 6963 6020 6d6f 6465 6c73 2066 6f72 2066  ic` models for f
++000010b0: 7265 6520 f09f 90b1 e280 8df0 9f91 a42e  ree ............
++000010c0: 0a0a 6060 6070 7974 686f 6e0a 6672 6f6d  ..```python.from
++000010d0: 2064 7266 5f70 7964 616e 7469 6320 696d   drf_pydantic im
++000010e0: 706f 7274 2042 6173 654d 6f64 656c 2061  port BaseModel a
++000010f0: 7320 4452 4642 6173 654d 6f64 656c 0a66  s DRFBaseModel.f
++00001100: 726f 6d20 7079 6461 6e74 6963 2069 6d70  rom pydantic imp
++00001110: 6f72 7420 4261 7365 4d6f 6465 6c0a 0a63  ort BaseModel..c
++00001120: 6c61 7373 2041 7061 7274 6d65 6e74 2842  lass Apartment(B
++00001130: 6173 654d 6f64 656c 293a 0a20 2066 6c6f  aseModel):.  flo
++00001140: 6f72 3a20 696e 740a 2020 7465 6e61 6e74  or: int.  tenant
++00001150: 3a20 7374 720a 0a63 6c61 7373 2042 7569  : str..class Bui
++00001160: 6c64 696e 6728 4261 7365 4d6f 6465 6c29  lding(BaseModel)
++00001170: 3a0a 2020 6164 6472 6573 733a 2073 7472  :.  address: str
++00001180: 0a20 2061 7061 726d 656e 7473 3a20 6c69  .  aparments: li
++00001190: 7374 5b41 7061 7274 6d65 6e74 5d0a 0a63  st[Apartment]..c
++000011a0: 6c61 7373 2042 6c6f 636b 2844 5246 4261  lass Block(DRFBa
++000011b0: 7365 4d6f 6465 6c29 3a0a 2020 6275 696c  seModel):.  buil
++000011c0: 6469 6e67 733a 206c 6973 745b 4275 696c  dings: list[Buil
++000011d0: 6469 6e64 5d0a 0a42 6c6f 636b 2e64 7266  dind]..Block.drf
++000011e0: 5f73 6572 6961 6c69 7a65 720a 6060 600a  _serializer.```.
++000011f0: 0a23 2052 6f61 646d 6170 0a0a 2d20 4164  .# Roadmap..- Ad
++00001200: 6420 6045 4e55 4d60 2073 7570 706f 7274  d `ENUM` support
++00001210: 0a2d 2041 6464 206f 7074 696f 6e20 746f  .- Add option to
++00001220: 2063 7265 6174 6520 6375 7374 6f6d 2073   create custom s
++00001230: 6572 6961 6c69 7a65 7220 666f 7220 636f  erializer for co
++00001240: 6d70 6c65 7820 6d6f 6465 6c73 0a2d 2041  mplex models.- A
++00001250: 6464 2073 7570 706f 7274 2066 6f72 2063  dd support for c
++00001260: 6f6e 7374 7261 696e 7473 2028 6d61 782c  onstraints (max,
++00001270: 206d 696e 2c20 7265 6765 782c 2065 7463   min, regex, etc
++00001280: 2e29 0a0a                                .)..
+```
+

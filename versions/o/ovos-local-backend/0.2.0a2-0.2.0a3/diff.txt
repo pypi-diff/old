@@ -1,0 +1,640 @@
+--- tmp/ovos_local_backend-0.2.0a2-py3-none-any.whl.zip
++++ tmp/ovos_local_backend-0.2.0a3-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,26 +1,26 @@
+│ -Zip file size: 33674 bytes, number of entries: 24
+│ --rw-r--r--  2.0 unx       53 b- defN 23-Apr-07 01:04 ovos_local_backend/__init__.py
+│ --rw-r--r--  2.0 unx      555 b- defN 23-Apr-07 01:04 ovos_local_backend/__main__.py
+│ --rw-r--r--  2.0 unx     9116 b- defN 23-Apr-07 01:04 ovos_local_backend/configuration.py
+│ --rw-r--r--  2.0 unx    33972 b- defN 23-Apr-07 01:04 ovos_local_backend/database.py
+│ --rw-r--r--  2.0 unx      103 b- defN 23-Apr-07 01:04 ovos_local_backend/session.py
+│ --rw-r--r--  2.0 unx      177 b- defN 23-Apr-07 01:04 ovos_local_backend/version.py
+│ --rw-r--r--  2.0 unx     2102 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/__init__.py
+│ --rw-r--r--  2.0 unx     2220 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/admin.py
+│ --rw-r--r--  2.0 unx     4453 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/auth.py
+│ --rw-r--r--  2.0 unx    13647 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/crud.py
+│ --rw-r--r--  2.0 unx     3388 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/decorators.py
+│ --rw-r--r--  2.0 unx     7943 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/device.py
+│ --rw-r--r--  2.0 unx     4663 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/external_apis.py
+│ --rw-r--r--  2.0 unx     2253 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/precise.py
+│ --rw-r--r--  2.0 unx     2107 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/stt.py
+│ --rw-r--r--  2.0 unx     9836 b- defN 23-Apr-07 01:04 ovos_local_backend/utils/__init__.py
+│ --rw-r--r--  2.0 unx     6203 b- defN 23-Apr-07 01:04 ovos_local_backend/utils/geolocate.py
+│ --rw-r--r--  2.0 unx     1020 b- defN 23-Apr-07 01:04 ovos_local_backend/utils/mail.py
+│ --rw-r--r--  2.0 unx    11349 b- defN 23-Apr-07 01:05 ovos_local_backend-0.2.0a2.dist-info/LICENSE
+│ --rw-r--r--  2.0 unx      689 b- defN 23-Apr-07 01:05 ovos_local_backend-0.2.0a2.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 01:05 ovos_local_backend-0.2.0a2.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx       73 b- defN 23-Apr-07 01:05 ovos_local_backend-0.2.0a2.dist-info/entry_points.txt
+│ --rw-r--r--  2.0 unx       19 b- defN 23-Apr-07 01:05 ovos_local_backend-0.2.0a2.dist-info/top_level.txt
+│ --rw-rw-r--  2.0 unx     2200 b- defN 23-Apr-07 01:05 ovos_local_backend-0.2.0a2.dist-info/RECORD
+│ -24 files, 118233 bytes uncompressed, 30038 bytes compressed:  74.6%
+│ +Zip file size: 33739 bytes, number of entries: 24
+│ +-rw-r--r--  2.0 unx       53 b- defN 23-Apr-07 02:08 ovos_local_backend/__init__.py
+│ +-rw-r--r--  2.0 unx      555 b- defN 23-Apr-07 02:08 ovos_local_backend/__main__.py
+│ +-rw-r--r--  2.0 unx     9116 b- defN 23-Apr-07 02:08 ovos_local_backend/configuration.py
+│ +-rw-r--r--  2.0 unx    33972 b- defN 23-Apr-07 02:08 ovos_local_backend/database.py
+│ +-rw-r--r--  2.0 unx      103 b- defN 23-Apr-07 02:08 ovos_local_backend/session.py
+│ +-rw-r--r--  2.0 unx      177 b- defN 23-Apr-07 02:08 ovos_local_backend/version.py
+│ +-rw-r--r--  2.0 unx     2102 b- defN 23-Apr-07 02:08 ovos_local_backend/backend/__init__.py
+│ +-rw-r--r--  2.0 unx     2220 b- defN 23-Apr-07 02:08 ovos_local_backend/backend/admin.py
+│ +-rw-r--r--  2.0 unx     4453 b- defN 23-Apr-07 02:08 ovos_local_backend/backend/auth.py
+│ +-rw-r--r--  2.0 unx    13762 b- defN 23-Apr-07 02:08 ovos_local_backend/backend/crud.py
+│ +-rw-r--r--  2.0 unx     3388 b- defN 23-Apr-07 02:08 ovos_local_backend/backend/decorators.py
+│ +-rw-r--r--  2.0 unx     8043 b- defN 23-Apr-07 02:08 ovos_local_backend/backend/device.py
+│ +-rw-r--r--  2.0 unx     4663 b- defN 23-Apr-07 02:08 ovos_local_backend/backend/external_apis.py
+│ +-rw-r--r--  2.0 unx     2276 b- defN 23-Apr-07 02:08 ovos_local_backend/backend/precise.py
+│ +-rw-r--r--  2.0 unx     2107 b- defN 23-Apr-07 02:08 ovos_local_backend/backend/stt.py
+│ +-rw-r--r--  2.0 unx     9836 b- defN 23-Apr-07 02:08 ovos_local_backend/utils/__init__.py
+│ +-rw-r--r--  2.0 unx     6203 b- defN 23-Apr-07 02:08 ovos_local_backend/utils/geolocate.py
+│ +-rw-r--r--  2.0 unx     1020 b- defN 23-Apr-07 02:08 ovos_local_backend/utils/mail.py
+│ +-rw-r--r--  2.0 unx    11349 b- defN 23-Apr-07 02:08 ovos_local_backend-0.2.0a3.dist-info/LICENSE
+│ +-rw-r--r--  2.0 unx      689 b- defN 23-Apr-07 02:08 ovos_local_backend-0.2.0a3.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 02:08 ovos_local_backend-0.2.0a3.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx       73 b- defN 23-Apr-07 02:08 ovos_local_backend-0.2.0a3.dist-info/entry_points.txt
+│ +-rw-r--r--  2.0 unx       19 b- defN 23-Apr-07 02:08 ovos_local_backend-0.2.0a3.dist-info/top_level.txt
+│ +-rw-rw-r--  2.0 unx     2200 b- defN 23-Apr-07 02:08 ovos_local_backend-0.2.0a3.dist-info/RECORD
+│ +24 files, 118471 bytes uncompressed, 30103 bytes compressed:  74.6%
+├── zipnote {}
+│ @@ -48,26 +48,26 @@
+│  
+│  Filename: ovos_local_backend/utils/geolocate.py
+│  Comment: 
+│  
+│  Filename: ovos_local_backend/utils/mail.py
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend-0.2.0a2.dist-info/LICENSE
+│ +Filename: ovos_local_backend-0.2.0a3.dist-info/LICENSE
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend-0.2.0a2.dist-info/METADATA
+│ +Filename: ovos_local_backend-0.2.0a3.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend-0.2.0a2.dist-info/WHEEL
+│ +Filename: ovos_local_backend-0.2.0a3.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend-0.2.0a2.dist-info/entry_points.txt
+│ +Filename: ovos_local_backend-0.2.0a3.dist-info/entry_points.txt
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend-0.2.0a2.dist-info/top_level.txt
+│ +Filename: ovos_local_backend-0.2.0a3.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend-0.2.0a2.dist-info/RECORD
+│ +Filename: ovos_local_backend-0.2.0a3.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── ovos_local_backend/version.py
+│ @@ -1,7 +1,7 @@
+│  # The following lines are replaced during the release process.
+│  # START_VERSION_BLOCK
+│  VERSION_MAJOR = 0
+│  VERSION_MINOR = 2
+│  VERSION_BUILD = 0
+│ -VERSION_ALPHA = 2
+│ +VERSION_ALPHA = 3
+│  # END_VERSION_BLOCK
+├── ovos_local_backend/backend/crud.py
+│ @@ -9,28 +9,30 @@
+│  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│  # See the License for the specific language governing permissions and
+│  # limitations under the License.
+│  #
+│  
+│  import base64
+│  
+│ +import flask
+│ +
+│  import ovos_local_backend.database as db
+│ -from flask import request
+│  from ovos_local_backend.backend import API_VERSION
+│  from ovos_local_backend.backend.decorators import noindex, requires_admin
+│  
+│  
+│  def get_database_crud(app):
+│ +
+│      # DATABASE - (backend manager uses these)
+│      @app.route("/" + API_VERSION + "/admin/<uuid>/skill_settings",
+│                 methods=['POST'])
+│      @requires_admin
+│      @noindex
+│      def create_skill_settings(uuid):
+│ -        data = request.json
+│ +        data = flask.request.json
+│          skill_id = data.pop("skill_id")
+│          device = db.get_device(uuid)
+│          if not device:
+│              return {"error": f"unknown uuid: {uuid}"}
+│          if device.isolated_skills:
+│              remote_id = f"@{uuid}|{skill_id}"
+│          else:
+│ @@ -60,27 +62,27 @@
+│              remote_id = f"@{uuid}|{skill_id}"
+│          else:
+│              remote_id = skill_id
+│          if flask.request.method == 'DELETE':
+│              success = db.delete_skill_settings(remote_id)
+│              return {"success": success}
+│          elif flask.request.method == 'PUT':
+│ -            entry = db.update_skill_settings(remote_id, **request.json)
+│ +            entry = db.update_skill_settings(remote_id, **flask.request.json)
+│          else:  # GET
+│              entry = db.get_skill_settings(remote_id)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/skill_settings",
+│                 methods=['POST'])
+│      @requires_admin
+│      @noindex
+│      def create_shared_skill_settings():
+│ -        data = request.json
+│ +        data = flask.request.json
+│          skill_id = data.pop("skill_id")
+│          entry = db.add_skill_settings(skill_id, **data)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/skill_settings/list",
+│ @@ -96,27 +98,27 @@
+│      @requires_admin
+│      @noindex
+│      def get_shared_skill_settings(skill_id):
+│          if flask.request.method == 'DELETE':
+│              success = db.delete_skill_settings(skill_id)
+│              return {"success": success}
+│          elif flask.request.method == 'PUT':
+│ -            entry = db.update_skill_settings(skill_id, **request.json)
+│ +            entry = db.update_skill_settings(skill_id, **flask.request.json)
+│          else:  # GET
+│              entry = db.get_skill_settings(skill_id)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/oauth_apps",
+│                 methods=['POST'])
+│      @requires_admin
+│      @noindex
+│      def create_oauth_app():
+│ -        entry = db.add_oauth_application(**request.json)
+│ +        entry = db.add_oauth_application(**flask.request.json)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/oauth_apps/list",
+│                 methods=['GET'])
+│      @requires_admin
+│ @@ -130,27 +132,27 @@
+│      @requires_admin
+│      @noindex
+│      def get_oauth_apps(token_id):
+│          if flask.request.method == 'DELETE':
+│              success = db.delete_oauth_application(token_id)
+│              return {"success": success}
+│          elif flask.request.method == 'PUT':
+│ -            entry = db.update_oauth_application(token_id, **request.json)
+│ +            entry = db.update_oauth_application(token_id, **flask.request.json)
+│          else:  # GET
+│              entry = db.get_oauth_application(token_id)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/oauth_toks",
+│                 methods=['POST'])
+│      @requires_admin
+│      @noindex
+│      def create_oauth_toks():
+│ -        entry = db.add_oauth_token(**request.json)
+│ +        entry = db.add_oauth_token(**flask.request.json)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/oauth_toks/list",
+│                 methods=['GET'])
+│      @requires_admin
+│ @@ -164,28 +166,28 @@
+│      @requires_admin
+│      @noindex
+│      def get_oauth_toks(token_id):
+│          if flask.request.method == 'DELETE':
+│              success = db.delete_oauth_token(token_id)
+│              return {"success": success}
+│          elif flask.request.method == 'PUT':
+│ -            entry = db.update_oauth_token(token_id, **request.json)
+│ +            entry = db.update_oauth_token(token_id, **flask.request.json)
+│          else:  # GET
+│              entry = db.get_oauth_token(token_id)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/voice_recs",
+│                 methods=['POST'])
+│      @requires_admin
+│      @noindex
+│      def create_voice_rec():
+│          # b64 decode bytes before saving
+│ -        data = request.json
+│ +        data = flask.flask.request.json
+│          audio_b64 = data.pop("audio_b64")
+│          data["byte_data"] = base64.decodestring(audio_b64)
+│          entry = db.add_stt_recording(**data)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│ @@ -203,28 +205,28 @@
+│      @noindex
+│      def get_voice_rec(recording_id):
+│          # rec_id = f"@{uuid}|{transcription}|{count}"
+│          if flask.request.method == 'DELETE':
+│              success = db.delete_stt_recording(recording_id)
+│              return {"success": success}
+│          elif flask.request.method == 'PUT':
+│ -            entry = db.update_stt_recording(recording_id, **request.json)
+│ +            entry = db.update_stt_recording(recording_id, **flask.request.json)
+│          else:  # GET
+│              entry = db.get_stt_recording(recording_id)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/ww_recs",
+│                 methods=['POST'])
+│      @requires_admin
+│      @noindex
+│      def create_ww_rec():
+│          # b64 decode bytes before saving
+│ -        data = request.json
+│ +        data = flask.request.json
+│          audio_b64 = data.pop("audio_b64")
+│          data["byte_data"] = base64.decodestring(audio_b64)
+│          entry = db.add_ww_recording(**data)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│ @@ -242,27 +244,27 @@
+│      @noindex
+│      def get_ww_rec(recording_id):
+│          #  rec_id = f"@{uuid}|{transcription}|{count}"
+│          if flask.request.method == 'DELETE':
+│              success = db.delete_ww_recording(recording_id)
+│              return {"success": success}
+│          elif flask.request.method == 'PUT':
+│ -            entry = db.update_ww_recording(recording_id, **request.json)
+│ +            entry = db.update_ww_recording(recording_id, **flask.request.json)
+│          else:  # GET
+│              entry = db.get_ww_recording(recording_id)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/metrics",
+│                 methods=['POST'])
+│      @requires_admin
+│      @noindex
+│      def create_metric():
+│ -        entry = db.add_metric(**request.json)
+│ +        entry = db.add_metric(**flask.request.json)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/metrics/list",
+│                 methods=['GET'])
+│      @requires_admin
+│ @@ -277,27 +279,27 @@
+│      @noindex
+│      def get_metric(metric_id):
+│          # metric_id = f"@{uuid}|{name}|{count}"
+│          if flask.request.method == 'DELETE':
+│              success = db.delete_metric(metric_id)
+│              return {"success": success}
+│          elif flask.request.method == 'PUT':
+│ -            entry = db.update_metric(metric_id, request.json)
+│ +            entry = db.update_metric(metric_id, flask.request.json)
+│          else:  # GET
+│              entry = db.get_metric(metric_id)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/devices",
+│                 methods=['POST'])
+│      @requires_admin
+│      @noindex
+│      def create_device():
+│ -        entry = db.add_device(**request.json)
+│ +        entry = db.add_device(**flask.request.json)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/devices/list",
+│                 methods=['GET'])
+│      @requires_admin
+│ @@ -311,27 +313,27 @@
+│      @requires_admin
+│      @noindex
+│      def get_device(uuid):
+│          if flask.request.method == 'DELETE':
+│              success = db.delete_device(uuid)
+│              return {"success": success}
+│          elif flask.request.method == 'PUT':
+│ -            entry = db.update_device(uuid, **request.json)
+│ +            entry = db.update_device(uuid, **flask.request.json)
+│          else:  # GET
+│              entry = db.get_device()
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/voice_defs",
+│                 methods=['POST'])
+│      @requires_admin
+│      @noindex
+│      def create_voice_defs():
+│ -        entry = db.add_voice_definition(**request.json)
+│ +        entry = db.add_voice_definition(**flask.request.json)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/voice_defs/list",
+│                 methods=['GET'])
+│      @requires_admin
+│ @@ -345,27 +347,27 @@
+│      @requires_admin
+│      @noindex
+│      def get_voice_def(voice_id):
+│          if flask.request.method == 'DELETE':
+│              success = db.delete_voice_definition(voice_id)
+│              return {"success": success}
+│          elif flask.request.method == 'PUT':
+│ -            entry = db.update_voice_definition(voice_id, **request.json)
+│ +            entry = db.update_voice_definition(voice_id, **flask.request.json)
+│          else:  # GET
+│              entry = db.get_voice_definition(voice_id)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/ww_defs",
+│                 methods=['POST'])
+│      @requires_admin
+│      @noindex
+│      def create_ww_def():
+│ -        entry = db.add_wakeword_definition(**request.json)
+│ +        entry = db.add_wakeword_definition(**flask.request.json)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      @app.route("/" + API_VERSION + "/admin/ww_defs/list",
+│                 methods=['GET'])
+│      @requires_admin
+│ @@ -379,15 +381,15 @@
+│      @requires_admin
+│      @noindex
+│      def get_ww_def(ww_id):
+│          if flask.request.method == 'DELETE':
+│              success = db.delete_wakeword_definition(ww_id)
+│              return {"success": success}
+│          elif flask.request.method == 'PUT':
+│ -            entry = db.update_wakeword_definition(ww_id, **request.json)
+│ +            entry = db.update_wakeword_definition(ww_id, **flask.request.json)
+│          else:  # GET
+│              entry = db.get_wakeword_definition(ww_id)
+│          if not entry:
+│              return {"error": "entry not found"}
+│          return entry.serialize()
+│  
+│      return app
+├── ovos_local_backend/backend/device.py
+│ @@ -11,69 +11,71 @@
+│  # limitations under the License.
+│  #
+│  import time
+│  
+│  from flask import request
+│  
+│  from ovos_local_backend.backend import API_VERSION
+│ -from ovos_local_backend.backend.decorators import noindex, requires_auth, requires_opt_in
+│ +from ovos_local_backend.backend.decorators import noindex, requires_auth
+│  from ovos_local_backend.configuration import CONFIGURATION
+│  from ovos_local_backend.utils import generate_code, nice_json
+│  from ovos_local_backend.utils.geolocate import get_request_location
+│  from ovos_local_backend.utils.mail import send_email
+│  from ovos_local_backend.database import (
+│ -    add_metric,
+│ +    save_metric,
+│      get_device,
+│      add_device,
+│ -    SkillSettings,
+│ -    update_skill_settings,
+│ -    get_skill_settings_for_device
+│ +    SkillSettings
+│  )
+│  
+│  
+│ -
+│ -@requires_opt_in
+│ -def save_metric(uuid, name, data):
+│ -    add_metric(uuid, name, data)
+│ -
+│ -
+│ -
+│  def get_device_routes(app):
+│      @app.route(f"/{API_VERSION}/device/<uuid>/settingsMeta", methods=['PUT'])
+│      @requires_auth
+│      def settingsmeta(uuid):
+│          """ new style skill settings meta (upload only) """
+│          s = SkillSettings.deserialize(request.json)
+│ -        # ignore s.settings on purpose
+│ -        update_skill_settings(s.remote_id, 
+│ -                              metadata_json=s.meta, 
+│ -                              display_name=s.display_name)
+│ +
+│ +        # TODO - sql db
+│ +        # save new settings meta to db
+│ +        with SettingsDatabase() as db:
+│ +            # keep old settings, update meta only
+│ +            old_s = db.get_setting(s.skill_id, uuid)
+│ +            if old_s:
+│ +                s.settings = old_s.settings
+│ +            db.add_setting(uuid, s.skill_id, s.settings, s.meta,
+│ +                           s.display_name, s.remote_id)
+│ +        # end TODO
+│ +
+│          return nice_json({"success": True, "uuid": uuid})
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>/skill/settings", methods=['GET'])
+│      @requires_auth
+│      def skill_settings_v2(uuid):
+│          """ new style skill settings (download only)"""
+│ -        return {s.skill_id: s.settings for s in get_skill_settings_for_device(uuid)}
+│ +        # TODO
+│ +        db = SettingsDatabase()
+│ +        return {s.skill_id: s.settings for s in db.get_device_settings(uuid)}
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>/skill", methods=['GET', 'PUT'])
+│      @requires_auth
+│      def skill_settings(uuid):
+│          """ old style skill settings/settingsmeta - supports 2 way sync
+│           PUT - json for 1 skill
+│           GET - list of all skills """
+│ +        # TODO
+│          if request.method == 'PUT':
+│ -            s = SkillSettings.deserialize(request.json)
+│ -            update_skill_settings(s.remote_id,
+│ -                                  settings_json=s.settings,
+│ -                                  metadata_json=s.meta,
+│ -                                  display_name=s.display_name)
+│ +            # update local db
+│ +            with SettingsDatabase() as db:
+│ +                s = SkillSettings.deserialize(request.json)
+│ +                db.add_setting(uuid, s.skill_id, s.settings, s.meta,
+│ +                               s.display_name, s.remote_id)
+│              return nice_json({"success": True, "uuid": uuid})
+│          else:
+│ -            return nice_json([s.serialize() for s in get_skill_settings_for_device(uuid)])
+│ +            return nice_json([s.serialize() for s in SettingsDatabase().get_device_settings(uuid)])
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>/skillJson", methods=['PUT'])
+│      @requires_auth
+│      def skill_json(uuid):
+│          """ device is communicating to the backend what skills are installed
+│          drop the info and don't track it! maybe if we add a UI and it becomes useful..."""
+│          # everything works in skill settings without using this
+│ @@ -91,15 +93,15 @@
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>/location", methods=['GET'])
+│      @requires_auth
+│      @noindex
+│      def location(uuid):
+│          device = get_device(uuid)
+│          if device:
+│ -            return device.location
+│ +            return device.location_json
+│          return get_request_location()
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>/setting", methods=['GET'])
+│      @requires_auth
+│      @noindex
+│      def setting(uuid=""):
+│          device = get_device(uuid)
+├── ovos_local_backend/backend/precise.py
+│ @@ -1,8 +1,9 @@
+│ -from flask import request
+│ +import flask
+│ +import json
+│  
+│  from ovos_local_backend.backend import API_VERSION
+│  from ovos_local_backend.backend.decorators import noindex, requires_auth, requires_opt_in
+│  from ovos_local_backend.configuration import CONFIGURATION
+│  from ovos_local_backend.database import add_ww_recording
+│  
+│  
+│ @@ -39,31 +40,31 @@
+│  def get_precise_routes(app):
+│      @app.route('/precise/upload', methods=['POST'])
+│      @noindex
+│      @requires_auth
+│      def precise_upload():
+│          success = False
+│          if CONFIGURATION["record_wakewords"]:
+│ -            auth = request.headers.get('Authorization', '').replace("Bearer ", "")
+│ +            auth = flask.request.headers.get('Authorization', '').replace("Bearer ", "")
+│              uuid = auth.split(":")[-1]  # this split is only valid here, not selene
+│ -            success = save_ww_recording(uuid, request.files)
+│ +            success = save_ww_recording(uuid, flask.request.files)
+│  
+│          return {"success": success,
+│                  "sent_to_mycroft": False,
+│                  "saved": CONFIGURATION["record_wakewords"]}
+│  
+│      @app.route(f'/{API_VERSION}/device/<uuid>/wake-word-file', methods=['POST'])
+│      @noindex
+│      @requires_auth
+│      def precise_upload_v2(uuid):
+│          success = False
+│ -        if 'audio' not in request.files:
+│ +        if 'audio' not in flask.request.files:
+│              return "No Audio to upload", 400
+│  
+│          if CONFIGURATION["record_wakewords"]:
+│ -            success = save_ww_recording(uuid, request.files)
+│ +            success = save_ww_recording(uuid, flask.request.files)
+│  
+│          return {"success": success,
+│                  "sent_to_mycroft": False,
+│                  "saved": CONFIGURATION["record_wakewords"]}
+│  
+│      return app
+│   --- ovos_local_backend-0.2.0a2.dist-info/LICENSE
+├── +++ ovos_local_backend-0.2.0a3.dist-info/LICENSE
+│┄ Files identical despite different names
+│   --- ovos_local_backend-0.2.0a2.dist-info/METADATA
+├── +++ ovos_local_backend-0.2.0a3.dist-info/METADATA
+│┄ Files 1% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: ovos-local-backend
+│ -Version: 0.2.0a2
+│ +Version: 0.2.0a3
+│  Summary: mock mycroft backend
+│  Home-page: https://github.com/OpenVoiceOS/OVOS-local-backend
+│  Author: jarbasAI
+│  Author-email: jarbasai@mailfence.com
+│  License: Apache-2.0
+│  Platform: UNKNOWN
+│  Requires-Dist: Flask (>=0.12)
+│   --- ovos_local_backend-0.2.0a2.dist-info/RECORD
+├── +++ ovos_local_backend-0.2.0a3.dist-info/RECORD
+│┄ Files 5% similar despite different names
+│ @@ -1,24 +1,24 @@
+│  ovos_local_backend/__init__.py,sha256=YMbBqDky5TUJdq4mx2Phaq6Vzx2Hd-bIf1YTTFSPxOA,53
+│  ovos_local_backend/__main__.py,sha256=FaCVoPxLlHy_IAfpIqpe8MVpu3HbyP5Xk0hA5-r-Wxo,555
+│  ovos_local_backend/configuration.py,sha256=oYkIwhO1lySY1OOcHieA5QBzKyRuxSYOTgH0lr9RHWA,9116
+│  ovos_local_backend/database.py,sha256=XPZJVzLP0RvxhQKx4pKm4B5KNupa2GIjkQF2a39s-ok,33972
+│  ovos_local_backend/session.py,sha256=5--wfP8Vu0njYU90S_hJoyr4SnnRrG_w-bmpOO9_1hw,103
+│ -ovos_local_backend/version.py,sha256=VQMNdeYRkfF7zChGp-GQpnzaLk-m2ZfMR2zUOZLZaWs,177
+│ +ovos_local_backend/version.py,sha256=E148oAbISg5DoiySSKtv3yswsAGNPMR6i2_MEnrVakE,177
+│  ovos_local_backend/backend/__init__.py,sha256=ZN4jJ4El_w--VNqRbEAT6l2EteDP3aT60tKdpUdF5GM,2102
+│  ovos_local_backend/backend/admin.py,sha256=koalkJOiUf00Gq--yB6Ig56dTHtpOmgn1yseLt50B78,2220
+│  ovos_local_backend/backend/auth.py,sha256=Aur9qrHKkA6M5GdISKGaI5io1K71XOb0WkbwF1bPtF0,4453
+│ -ovos_local_backend/backend/crud.py,sha256=NjjD7kkGkyimzAjPJm9e1B0-tybpjY7lPImqpxkeP2A,13647
+│ +ovos_local_backend/backend/crud.py,sha256=K2bdzrDLe6Dl3NEDbxnuiHJSeUpAF6oL-llGeYmA6x4,13762
+│  ovos_local_backend/backend/decorators.py,sha256=Yfitr0bFHKWw8kLxuj4nx6kb75ulvL62KIBGNjIfsm8,3388
+│ -ovos_local_backend/backend/device.py,sha256=rfdkSferWQcekUKGzqterwE4XpKZk80_zrdyr1F9SLs,7943
+│ +ovos_local_backend/backend/device.py,sha256=2pBTlpK33T7Vl52U6Shxusjj7gFOqagjdZOjXtS8Ykk,8043
+│  ovos_local_backend/backend/external_apis.py,sha256=4DDJHQKbW27U2r43gTY4nFfFYgwru7xEmK8VzMJL2_M,4663
+│ -ovos_local_backend/backend/precise.py,sha256=n0V0qpakf6htLpm-o17XqvAu9-eVCp3RCT_fIZUAfqE,2253
+│ +ovos_local_backend/backend/precise.py,sha256=TdZo9ZYgZJJX_xqYuE5h83sT0iM3Mo9bwfAEGvOuMnE,2276
+│  ovos_local_backend/backend/stt.py,sha256=W08Clr4PCY8Pkmw7bAyLNgomsMGD8hs7oavyDk8svkk,2107
+│  ovos_local_backend/utils/__init__.py,sha256=TpuV-D9-t3Jj9PETINAjH45Buy3U1cKrgZ9BiywPKkY,9836
+│  ovos_local_backend/utils/geolocate.py,sha256=uMjb_FYmn81t38FDDH7vVO8Zq8x5XjVTSgkXYx9XVHE,6203
+│  ovos_local_backend/utils/mail.py,sha256=OXc3cvKRmQ3t0COmSdtkZYGQydnrzxvwngahfqrNg7s,1020
+│ -ovos_local_backend-0.2.0a2.dist-info/LICENSE,sha256=fYHkowW9JcaEcqCPTXYBayNJ9J1lGdYVb7Mf9oy6oEY,11349
+│ -ovos_local_backend-0.2.0a2.dist-info/METADATA,sha256=fiKfAtaAEKC2SJjuSIQczXr5XEONgwSaKWR-uBiXigI,689
+│ -ovos_local_backend-0.2.0a2.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ -ovos_local_backend-0.2.0a2.dist-info/entry_points.txt,sha256=0EEK_6ggH1Jn8ShRNLQSNGS8ZnLz9j3uyc2Z0ezJF0c,73
+│ -ovos_local_backend-0.2.0a2.dist-info/top_level.txt,sha256=wzhQzBnq6wL0_UNQ2JBeakplDf_Mv-e7qBaZ7TR2Rlk,19
+│ -ovos_local_backend-0.2.0a2.dist-info/RECORD,,
+│ +ovos_local_backend-0.2.0a3.dist-info/LICENSE,sha256=fYHkowW9JcaEcqCPTXYBayNJ9J1lGdYVb7Mf9oy6oEY,11349
+│ +ovos_local_backend-0.2.0a3.dist-info/METADATA,sha256=_dh0sRVAhNRrtvG22k-ssmLblzP6fB5sOjTUpDej_fE,689
+│ +ovos_local_backend-0.2.0a3.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ +ovos_local_backend-0.2.0a3.dist-info/entry_points.txt,sha256=0EEK_6ggH1Jn8ShRNLQSNGS8ZnLz9j3uyc2Z0ezJF0c,73
+│ +ovos_local_backend-0.2.0a3.dist-info/top_level.txt,sha256=wzhQzBnq6wL0_UNQ2JBeakplDf_Mv-e7qBaZ7TR2Rlk,19
+│ +ovos_local_backend-0.2.0a3.dist-info/RECORD,,

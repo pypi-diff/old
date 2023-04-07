@@ -1,0 +1,250 @@
+# Comparing `tmp/rapidoml-0.1.2.tar.gz` & `tmp/rapidoml-0.1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "rapidoml-0.1.2.tar", last modified: Thu Apr  6 21:21:37 2023, max compression
++gzip compressed data, was "rapidoml-0.1.3.tar", last modified: Fri Apr  7 02:13:35 2023, max compression
+```
+
+## Comparing `rapidoml-0.1.2.tar` & `rapidoml-0.1.3.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,18 @@
+-drwxr-xr-x   0 fcarva844   (501) staff       (20)        0 2023-04-06 21:21:37.336117 rapidoml-0.1.2/
+--rw-r--r--   0 fcarva844   (501) staff       (20)    11357 2023-04-06 19:03:37.000000 rapidoml-0.1.2/LICENSE
+--rw-r--r--   0 fcarva844   (501) staff       (20)    17286 2023-04-06 21:21:37.335526 rapidoml-0.1.2/PKG-INFO
+--rw-r--r--   0 fcarva844   (501) staff       (20)     3436 2023-04-06 19:36:05.000000 rapidoml-0.1.2/README.md
+--rw-r--r--   0 fcarva844   (501) staff       (20)      890 2023-04-06 21:20:20.000000 rapidoml-0.1.2/pyproject.toml
+-drwxr-xr-x   0 fcarva844   (501) staff       (20)        0 2023-04-06 21:21:37.329882 rapidoml-0.1.2/rapidoml.egg-info/
+--rw-r--r--   0 fcarva844   (501) staff       (20)    17286 2023-04-06 21:21:37.000000 rapidoml-0.1.2/rapidoml.egg-info/PKG-INFO
+--rw-r--r--   0 fcarva844   (501) staff       (20)      292 2023-04-06 21:21:37.000000 rapidoml-0.1.2/rapidoml.egg-info/SOURCES.txt
+--rw-r--r--   0 fcarva844   (501) staff       (20)        1 2023-04-06 21:21:37.000000 rapidoml-0.1.2/rapidoml.egg-info/dependency_links.txt
+--rw-r--r--   0 fcarva844   (501) staff       (20)       62 2023-04-06 21:21:37.000000 rapidoml-0.1.2/rapidoml.egg-info/requires.txt
+--rw-r--r--   0 fcarva844   (501) staff       (20)        6 2023-04-06 21:21:37.000000 rapidoml-0.1.2/rapidoml.egg-info/top_level.txt
+--rw-r--r--   0 fcarva844   (501) staff       (20)       38 2023-04-06 21:21:37.336270 rapidoml-0.1.2/setup.cfg
+--rw-r--r--   0 fcarva844   (501) staff       (20)     1024 2023-04-06 21:20:17.000000 rapidoml-0.1.2/setup.py
+-drwxr-xr-x   0 fcarva844   (501) staff       (20)        0 2023-04-06 21:21:37.334595 rapidoml-0.1.2/tests/
+--rw-r--r--   0 fcarva844   (501) staff       (20)        0 2023-04-06 19:22:30.000000 rapidoml-0.1.2/tests/__init__.py
+--rw-r--r--   0 fcarva844   (501) staff       (20)     1144 2023-04-06 20:40:23.000000 rapidoml-0.1.2/tests/test_datasets.py
+--rw-r--r--   0 fcarva844   (501) staff       (20)     1007 2023-04-06 20:10:55.000000 rapidoml-0.1.2/tests/test_preprocessing.py
+--rw-r--r--   0 fcarva844   (501) staff       (20)      960 2023-04-06 20:48:41.000000 rapidoml-0.1.2/tests/test_rapidoml.py
++drwxr-xr-x   0 fcarva844   (501) staff       (20)        0 2023-04-07 02:13:35.846674 rapidoml-0.1.3/
++-rw-r--r--   0 fcarva844   (501) staff       (20)    11357 2023-04-06 19:03:37.000000 rapidoml-0.1.3/LICENSE
++-rw-r--r--   0 fcarva844   (501) staff       (20)    17286 2023-04-07 02:13:35.846276 rapidoml-0.1.3/PKG-INFO
++-rw-r--r--   0 fcarva844   (501) staff       (20)     3436 2023-04-06 19:36:05.000000 rapidoml-0.1.3/README.md
++-rw-r--r--   0 fcarva844   (501) staff       (20)     1048 2023-04-07 02:09:31.000000 rapidoml-0.1.3/pyproject.toml
++drwxr-xr-x   0 fcarva844   (501) staff       (20)        0 2023-04-07 02:13:35.842900 rapidoml-0.1.3/rapidoml.egg-info/
++-rw-r--r--   0 fcarva844   (501) staff       (20)    17286 2023-04-07 02:13:35.000000 rapidoml-0.1.3/rapidoml.egg-info/PKG-INFO
++-rw-r--r--   0 fcarva844   (501) staff       (20)      292 2023-04-07 02:13:35.000000 rapidoml-0.1.3/rapidoml.egg-info/SOURCES.txt
++-rw-r--r--   0 fcarva844   (501) staff       (20)        1 2023-04-07 02:13:35.000000 rapidoml-0.1.3/rapidoml.egg-info/dependency_links.txt
++-rw-r--r--   0 fcarva844   (501) staff       (20)       62 2023-04-07 02:13:35.000000 rapidoml-0.1.3/rapidoml.egg-info/requires.txt
++-rw-r--r--   0 fcarva844   (501) staff       (20)        6 2023-04-07 02:13:35.000000 rapidoml-0.1.3/rapidoml.egg-info/top_level.txt
++-rw-r--r--   0 fcarva844   (501) staff       (20)       38 2023-04-07 02:13:35.846782 rapidoml-0.1.3/setup.cfg
++-rw-r--r--   0 fcarva844   (501) staff       (20)     1024 2023-04-07 02:09:37.000000 rapidoml-0.1.3/setup.py
++drwxr-xr-x   0 fcarva844   (501) staff       (20)        0 2023-04-07 02:13:35.845403 rapidoml-0.1.3/tests/
++-rw-r--r--   0 fcarva844   (501) staff       (20)      106 2023-04-07 01:41:51.000000 rapidoml-0.1.3/tests/__init__.py
++-rw-r--r--   0 fcarva844   (501) staff       (20)     1395 2023-04-07 02:10:59.000000 rapidoml-0.1.3/tests/test_datasets.py
++-rw-r--r--   0 fcarva844   (501) staff       (20)     1014 2023-04-07 02:11:27.000000 rapidoml-0.1.3/tests/test_preprocessing.py
++-rw-r--r--   0 fcarva844   (501) staff       (20)      799 2023-04-07 02:10:16.000000 rapidoml-0.1.3/tests/test_rapidoml.py
+```
+
+### Comparing `rapidoml-0.1.2/LICENSE` & `rapidoml-0.1.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `rapidoml-0.1.2/PKG-INFO` & `rapidoml-0.1.3/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: rapidoml
+-Version: 0.1.2
++Version: 0.1.3
+ Summary: RapidoML is a simple Automated Machine Learning (AutoML) library
+ Home-page: https://github.com/hipnologo/rapidoml
+ Author: Fabio Carvalho
+ Author-email: Fabio Carvalho <hipnologo@gmail.com>
+ License:                                  Apache License
+                                    Version 2.0, January 2004
+                                 http://www.apache.org/licenses/
+```
+
+### Comparing `rapidoml-0.1.2/README.md` & `rapidoml-0.1.3/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `rapidoml-0.1.2/pyproject.toml` & `rapidoml-0.1.3/pyproject.toml`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ requires = ["setuptools", "wheel"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "rapidoml"
+-version = "0.1.2"
++version = "0.1.3"
+ description = "RapidoML is a simple Automated Machine Learning (AutoML) library"
+ authors = [
+   { name="Fabio Carvalho", email="hipnologo@gmail.com" },
+ ]
+ readme = "README.md"
+ keywords = ["documentation", "python"]
+ classifiers = [
+@@ -17,12 +17,22 @@
+     "License :: OSI Approved :: Apache Software License",
+     "Programming Language :: Python :: 3",
+     "Programming Language :: Python :: 3.6",
+     "Programming Language :: Python :: 3.7",
+     "Programming Language :: Python :: 3.8",
+     "Programming Language :: Python :: 3.9",
+ ]
++dependencies = [
++        "numpy",
++        "scikit-learn",
++        "tensorflow",
++        "keras",
++        "xgboost",
++        "lightgbm",
++        "catboost"
++]
++
+ license = { file = "LICENSE" }
+ 
+ [project.urls]
+ "Homepage" = "https://github.com/hipnologo/rapidoml"
+ "Bug Tracker" = "https://github.com/hipnologo/rapidoml/issues"
+```
+
+### Comparing `rapidoml-0.1.2/rapidoml.egg-info/PKG-INFO` & `rapidoml-0.1.3/rapidoml.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: rapidoml
+-Version: 0.1.2
++Version: 0.1.3
+ Summary: RapidoML is a simple Automated Machine Learning (AutoML) library
+ Home-page: https://github.com/hipnologo/rapidoml
+ Author: Fabio Carvalho
+ Author-email: Fabio Carvalho <hipnologo@gmail.com>
+ License:                                  Apache License
+                                    Version 2.0, January 2004
+                                 http://www.apache.org/licenses/
+```
+
+### Comparing `rapidoml-0.1.2/setup.py` & `rapidoml-0.1.3/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ from setuptools import setup, find_packages
+ 
+ with open("README.md", "r") as fh:
+     long_description = fh.read()
+ 
+ setup(
+     name="rapidoml",
+-    version="0.1.2",
++    version="0.1.3",
+     packages=find_packages(),
+     install_requires=[
+         "numpy",
+         "scikit-learn",
+         "tensorflow",
+         "keras",
+         "xgboost",
+```
+
+### Comparing `rapidoml-0.1.2/tests/test_datasets.py` & `rapidoml-0.1.3/tests/test_datasets.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,30 +1,32 @@
+ import unittest
+ import pandas as pd
+ from rapidoml.datasets import sample_datasets
+ from rapidoml.preprocessing import preprocess_data
+-
++from sklearn.datasets import load_iris, load_digits
+ 
+ class TestSampleDatasets(unittest.TestCase):
+     def test_iris_dataset(self):
+         X_train, X_test, y_train, y_test = sample_datasets('iris')
++        iris = load_iris()
+         df_train = pd.DataFrame(X_train, columns=iris.feature_names)
+         df_test = pd.DataFrame(X_test, columns=iris.feature_names)
+-        df_train['target'] = y_train
+-        df_test['target'] = y_test
++        df_train['species'] = y_train
++        df_test['species'] = y_test
+ 
+         df_processed = preprocess_data(df_train, categorical_columns=['species'], numerical_columns=iris.feature_names)
+         self.assertEqual(df_processed['species'].nunique(), 3)
+ 
+     def test_digits_dataset(self):
+         X_train, X_test, y_train, y_test = sample_datasets('digits')
+-        df_train = pd.DataFrame(X_train)
+-        df_test = pd.DataFrame(X_test)
++        digits = load_digits()
++        df_train = pd.DataFrame(X_train, columns=[f"pixel_{i}" for i in range(X_train.shape[1])])
++        df_test = pd.DataFrame(X_test, columns=[f"pixel_{i}" for i in range(X_train.shape[1])])
+         df_train['target'] = y_train
+         df_test['target'] = y_test
+ 
+-        df_processed = preprocess_data(df_train, numerical_columns=df_train.columns[:-1])
++        df_processed = preprocess_data(df_train, numerical_columns=[f"pixel_{i}" for i in range(X_train.shape[1])])
+         self.assertAlmostEqual(df_processed.mean().sum(), 0.0, delta=1e-6)
+ 
+ 
+ if __name__ == '__main__':
+     unittest.main()
+```
+
+### Comparing `rapidoml-0.1.2/tests/test_preprocessing.py` & `rapidoml-0.1.3/tests/test_preprocessing.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,13 +1,12 @@
+ import unittest
+ import pandas as pd
+ import numpy as np
+ from rapidoml.preprocessing import preprocess_data
+ 
+-
+ class TestPreprocessing(unittest.TestCase):
+     def test_preprocess_data_categorical(self):
+         data = {'category': ['A', 'B', 'A', 'C']}
+         df = pd.DataFrame(data)
+         df_processed = preprocess_data(df, categorical_columns=['category'])
+         self.assertEqual(df_processed['category'].nunique(), 3)
+ 
+@@ -17,11 +16,11 @@
+         df_processed = preprocess_data(df, numerical_columns=['value'])
+         self.assertAlmostEqual(np.mean(df_processed['value']), 0.0, delta=1e-6)
+ 
+     def test_preprocess_data_invalid_scaling_method(self):
+         data = {'value': [1, 2, 3, 4, 5, 6]}
+         df = pd.DataFrame(data)
+         with self.assertRaises(ValueError):
+-            preprocess_data(df, numerical_columns=['value'], scaler='unknown')
++            preprocess_data(df, numerical_columns=['value'], scaling_method='unknown')
+ 
+ if __name__ == '__main__':
+     unittest.main()
+```
+
