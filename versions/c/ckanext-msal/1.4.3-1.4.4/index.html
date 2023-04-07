@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/ckanext-msal-1.4.3.tar.gz tmp/ckanext-msal-1.4.4.tar.gz --html versions/c/ckanext-msal/1.4.3-1.4.4/index.html --text versions/c/ckanext-msal/1.4.3-1.4.4/diff.txt --markdown versions/c/ckanext-msal/1.4.3-1.4.4/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">12.2 KB</span></div>
+  <div><span class="source">tmp/ckanext-msal-1.4.3.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/ckanext-msal-1.4.4.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">274 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;ckanext-msal-1.4.<del>3</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Thu</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;ckanext-msal-1.4.<ins>4</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Fri</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">11.9 KB</span></div>
+    <div><span class="source">ckanext-msal-1.4.3.tar</span> vs.</div>
+    <div id="ckanext-msal--.-.-.tar"><span class="source">ckanext-msal-1.4.4.tar</span>
+      <a class="anchor" href="#ckanext-msal--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">8.03 KB</span></div>
+      <div id="ckanext-msal--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 32 lines modified</td><td colspan="2">Offset 1, 32 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.<del>945140</del><span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.<ins>504333</ins><span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>34500<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>34500<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>193<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/MANIFEST.in</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>193<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3861<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.<del>945140</del><span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3861<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.<ins>504333</ins><span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3308<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/README.md</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3308<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.<del>941140</del><span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/</td><td class="diffline">6 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.<ins>504333</ins><span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>219<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>219<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.<del>945140</del><span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/</td><td class="diffline">8 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.<ins>504333</ins><span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.<del>945140</del><span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/assets/</td><td class="diffline">10 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.<ins>504333</ins><span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/assets/</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>271<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/assets/webassets.yml</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>271<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/assets/webassets.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>865<span class="dp">·</span>2022-05-16<span class="dp">·</span>12:30:13.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/config.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>865<span class="dp">·</span>2022-05-16<span class="dp">·</span>12:30:13.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>12</del>98<span class="dp">·</span>202<del>2</del>-04-0<del>1</del><span class="dp">·</span><del>10</del>:3<del>7</del>:5<del>3</del>.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/middleware.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span>9</ins>98<span class="dp">·</span>202<ins>3</ins>-04-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:3<ins>9</ins>:5<ins>5</ins>.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/middleware.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<del>13</del><span class="dp">·</span>202<del>2</del>-04-0<del>5</del><span class="dp">·</span><del>13</del>:3<del>8</del>:<del>24</del>.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/plugin.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<ins>52</ins><span class="dp">·</span>202<ins>3</ins>-04-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:3<ins>9</ins>:<ins>55</ins>.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/plugin.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.<del>945140</del><span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/tests/</td><td class="diffline">15 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.<ins>504333</ins><span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/tests/__init__.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/tests/fixtures.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/tests/fixtures.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3854<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/tests/test_user.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3854<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/tests/test_user.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1276<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/tests/test_utils.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1276<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/tests/test_utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8711<span class="dp">·</span>2022-05-17<span class="dp">·</span>09:24:10.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/user.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8711<span class="dp">·</span>2022-05-17<span class="dp">·</span>09:24:10.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/user.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4132<span class="dp">·</span>2022-04-01<span class="dp">·</span>11:40:30.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/utils.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4132<span class="dp">·</span>2022-04-01<span class="dp">·</span>11:40:30.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2299<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext/msal/views.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2299<span class="dp">·</span>2022-04-01<span class="dp">·</span>10:37:53.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext/msal/views.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.<del>945140</del><span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext_msal.egg-info/</td><td class="diffline">23 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.<ins>504333</ins><span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext_msal.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3861<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext_msal.egg-info/PKG-INFO</td><td class="diffline">24 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3861<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext_msal.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>637<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext_msal.egg-info/SOURCES.txt</td><td class="diffline">25 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>637<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext_msal.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext_msal.egg-info/dependency_links.txt</td><td class="diffline">26 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext_msal.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext_msal.egg-info/entry_points.txt</td><td class="diffline">27 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext_msal.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext_msal.egg-info/namespace_packages.txt</td><td class="diffline">28 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext_msal.egg-info/namespace_packages.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/ckanext_msal.egg-info/top_level.txt</td><td class="diffline">29 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/ckanext_msal.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>65<span class="dp">·</span>2022-11-08<span class="dp">·</span>12:53:47.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/requirements.txt</td><td class="diffline">30 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>65<span class="dp">·</span>2022-11-08<span class="dp">·</span>12:53:47.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/requirements.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>517<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>44</del>.<del>945140</del><span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/setup.cfg</td><td class="diffline">31 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>517<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>41</ins>:<ins>15</ins>.<ins>504333</ins><span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3754<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>6</del>:<del>24</del>:<del>01</del>.000000<span class="dp">·</span>ckanext-msal-1.4.<del>3</del>/setup.py</td><td class="diffline">32 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>cherry<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3754<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>7</ins>:<ins>40</ins>:<ins>33</ins>.000000<span class="dp">·</span>ckanext-msal-1.4.<ins>4</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/LICENSE</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--LICENSE"><span class="source">ckanext-msal-1.4.4/LICENSE</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">485 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/PKG-INFO</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--PKG-INFO"><span class="source">ckanext-msal-1.4.4/PKG-INFO</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>ckanext-msal</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>ckanext-msal</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.4.<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.4.<ins>4</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Login<span class="dp">·</span>to<span class="dp">·</span>CKAN<span class="dp">·</span>using<span class="dp">·</span>The<span class="dp">·</span>Microsoft<span class="dp">·</span>Authentication<span class="dp">·</span>Library<span class="dp">·</span>(MSAL)</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Login<span class="dp">·</span>to<span class="dp">·</span>CKAN<span class="dp">·</span>using<span class="dp">·</span>The<span class="dp">·</span>Microsoft<span class="dp">·</span>Authentication<span class="dp">·</span>Library<span class="dp">·</span>(MSAL)</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mutantsan/ckanext-msal</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mutantsan/ckanext-msal</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Alexandr<span class="dp">·</span>Cherniavskyi</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Alexandr<span class="dp">·</span>Cherniavskyi</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mutantsan@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mutantsan@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>AGPL</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>AGPL</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>CKAN<span class="dp">·</span>SSO,CKAN,Microsoft,SAML,MSAL</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>CKAN<span class="dp">·</span>SSO,CKAN,Microsoft,SAML,MSAL</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/README.md</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--README.md"><span class="source">ckanext-msal-1.4.4/README.md</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/ckanext/msal/config.py</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-config.py"><span class="source">ckanext-msal-1.4.4/ckanext/msal/config.py</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.01 KB</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/ckanext/msal/plugin.py</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-plugin.py"><span class="source">ckanext-msal-1.4.4/ckanext/msal/plugin.py</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-plugin.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 4% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>ckan.plugins<span class="dp">·</span>as<span class="dp">·</span>p</td><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>ckan.plugins<span class="dp">·</span>as<span class="dp">·</span>p</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>ckan.plugins.toolkit<span class="dp">·</span>as<span class="dp">·</span>tk</td><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>ckan.plugins.toolkit<span class="dp">·</span>as<span class="dp">·</span>tk</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>ckan.model<span class="dp">·</span>as<span class="dp">·</span>model</td><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>ckan.model<span class="dp">·</span>as<span class="dp">·</span>model</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>ckan.common<span class="dp">·</span>import<span class="dp">·</span>session</td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>ckan.common<span class="dp">·</span>import<span class="dp">·</span>session</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>ckanext.msal.middleware<span class="dp">·</span>import<span class="dp">·</span><del>Ses</del><del>s</del>i<del>onI</del>nvalidato<del>r</del></td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>ckanext.msal.middleware<span class="dp">·</span>import<span class="dp">·</span><ins>_</ins>invalidat<ins>e_user_sessi</ins>o<ins>n</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>ckanext.msal.views<span class="dp">·</span>import<span class="dp">·</span>get_blueprints</td><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>ckanext.msal.views<span class="dp">·</span>import<span class="dp">·</span>get_blueprints</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">import<span class="dp">·</span>ckanext.msal.user<span class="dp">·</span>as<span class="dp">·</span>user_funcs</td><td class="diffline">7 </td><td class="diffpresent">import<span class="dp">·</span>ckanext.msal.user<span class="dp">·</span>as<span class="dp">·</span>user_funcs</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">import<span class="dp">·</span>ckanext.msal.utils<span class="dp">·</span>as<span class="dp">·</span>msal_utils</td><td class="diffline">8 </td><td class="diffpresent">import<span class="dp">·</span>ckanext.msal.utils<span class="dp">·</span>as<span class="dp">·</span>msal_utils</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">class<span class="dp">·</span>MsalPlugin(p.SingletonPlugin):</td><td class="diffline">9 </td><td class="diffpresent">class<span class="dp">·</span>MsalPlugin(p.SingletonPlugin):</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>p.implements(p.IConfigurer)</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>p.implements(p.IConfigurer)</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 18, 15 lines modified</td><td colspan="2">Offset 18, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>IConfigurer</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>IConfigurer</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>update_config(self,<span class="dp">·</span>config_):</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>update_config(self,<span class="dp">·</span>config_):</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tk.add_template_directory(config_,<span class="dp">·</span>&quot;templates&quot;)</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tk.add_template_directory(config_,<span class="dp">·</span>&quot;templates&quot;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>IMiddleware</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>IMiddleware</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>make_middleware(self,<span class="dp">·</span>app,<span class="dp">·</span>config):</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>make_middleware(self,<span class="dp">·</span>app,<span class="dp">·</span>config):</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>r</del>e<del>tu</del>r<del>n<span class="dp">·</span>S</del>e<del>s</del>s<del>ionI</del>nvalidat<del>o</del>r<del>(app</del>)</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>app.</ins><ins>b</ins>e<ins>fo</ins>r<ins>e_r</ins>e<ins>qu</ins><ins>e</ins>s<ins>t(_i</ins>nvalidat<ins>e_us</ins><ins>e</ins>r<ins>_ses</ins><ins>sion</ins>)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>app</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>IBlueprint</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>IBlueprint</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>get_blueprint(self):</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>get_blueprint(self):</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>get_blueprints()</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>get_blueprints()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>IAuthenticator</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>IAuthenticator</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>identify(self):</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>identify(self):</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/ckanext/msal/tests/test_user.py</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-tests-test_user.py"><span class="source">ckanext-msal-1.4.4/ckanext/msal/tests/test_user.py</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-tests-test_user.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/ckanext/msal/tests/test_utils.py</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-tests-test_utils.py"><span class="source">ckanext-msal-1.4.4/ckanext/msal/tests/test_utils.py</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-tests-test_utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/ckanext/msal/user.py</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-user.py"><span class="source">ckanext-msal-1.4.4/ckanext/msal/user.py</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-user.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/ckanext/msal/utils.py</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-utils.py"><span class="source">ckanext-msal-1.4.4/ckanext/msal/utils.py</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/ckanext/msal/views.py</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-views.py"><span class="source">ckanext-msal-1.4.4/ckanext/msal/views.py</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext-msal-views.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">529 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/ckanext_msal.egg-info/PKG-INFO</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext_msal.egg-info-PKG-INFO"><span class="source">ckanext-msal-1.4.4/ckanext_msal.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext_msal.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>ckanext-msal</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>ckanext-msal</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.4.<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.4.<ins>4</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Login<span class="dp">·</span>to<span class="dp">·</span>CKAN<span class="dp">·</span>using<span class="dp">·</span>The<span class="dp">·</span>Microsoft<span class="dp">·</span>Authentication<span class="dp">·</span>Library<span class="dp">·</span>(MSAL)</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Login<span class="dp">·</span>to<span class="dp">·</span>CKAN<span class="dp">·</span>using<span class="dp">·</span>The<span class="dp">·</span>Microsoft<span class="dp">·</span>Authentication<span class="dp">·</span>Library<span class="dp">·</span>(MSAL)</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mutantsan/ckanext-msal</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mutantsan/ckanext-msal</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Alexandr<span class="dp">·</span>Cherniavskyi</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Alexandr<span class="dp">·</span>Cherniavskyi</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mutantsan@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mutantsan@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>AGPL</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>AGPL</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>CKAN<span class="dp">·</span>SSO,CKAN,Microsoft,SAML,MSAL</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>CKAN<span class="dp">·</span>SSO,CKAN,Microsoft,SAML,MSAL</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/ckanext_msal.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext_msal.egg-info-SOURCES.txt"><span class="source">ckanext-msal-1.4.4/ckanext_msal.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--ckanext_msal.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/setup.cfg</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--setup.cfg"><span class="source">ckanext-msal-1.4.4/setup.cfg</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">682 B</span></div>
+      <div><span class="source">ckanext-msal-1.4.3/setup.py</span> vs.</div>
+      <div id="ckanext-msal--.-.-.tar---ckanext-msal--.-.--setup.py"><span class="source">ckanext-msal-1.4.4/setup.py</span>
+        <a class="anchor" href="#ckanext-msal--.-.-.tar---ckanext-msal--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 12, 15 lines modified</td><td colspan="2">Offset 12, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">setup(</td><td class="diffline">12 </td><td class="diffpresent">setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;&#x27;&#x27;ckanext-msal&#x27;&#x27;&#x27;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;&#x27;&#x27;ckanext-msal&#x27;&#x27;&#x27;,</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Versions<span class="dp">·</span>should<span class="dp">·</span>comply<span class="dp">·</span>with<span class="dp">·</span>PEP440.<span class="dp">·</span><span class="dp">·</span>For<span class="dp">·</span>a<span class="dp">·</span>discussion<span class="dp">·</span>on<span class="dp">·</span>single-sourcing</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Versions<span class="dp">·</span>should<span class="dp">·</span>comply<span class="dp">·</span>with<span class="dp">·</span>PEP440.<span class="dp">·</span><span class="dp">·</span>For<span class="dp">·</span>a<span class="dp">·</span>discussion<span class="dp">·</span>on<span class="dp">·</span>single-sourcing</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>the<span class="dp">·</span>version<span class="dp">·</span>across<span class="dp">·</span>setup.py<span class="dp">·</span>and<span class="dp">·</span>the<span class="dp">·</span>project<span class="dp">·</span>code,<span class="dp">·</span>see</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>the<span class="dp">·</span>version<span class="dp">·</span>across<span class="dp">·</span>setup.py<span class="dp">·</span>and<span class="dp">·</span>the<span class="dp">·</span>project<span class="dp">·</span>code,<span class="dp">·</span>see</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>http://packaging.python.org/en/latest/tutorial.html#version</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>http://packaging.python.org/en/latest/tutorial.html#version</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;1.4.<del>3</del>&#x27;,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;1.4.<ins>4</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;&#x27;&#x27;Login<span class="dp">·</span>to<span class="dp">·</span>CKAN<span class="dp">·</span>using<span class="dp">·</span>The<span class="dp">·</span>Microsoft<span class="dp">·</span>Authentication<span class="dp">·</span>Library<span class="dp">·</span>(MSAL)&#x27;&#x27;&#x27;,</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;&#x27;&#x27;Login<span class="dp">·</span>to<span class="dp">·</span>CKAN<span class="dp">·</span>using<span class="dp">·</span>The<span class="dp">·</span>Microsoft<span class="dp">·</span>Authentication<span class="dp">·</span>Library<span class="dp">·</span>(MSAL)&#x27;&#x27;&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&quot;text/markdown&quot;,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&quot;text/markdown&quot;,</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>The<span class="dp">·</span>project&#x27;s<span class="dp">·</span>main<span class="dp">·</span>homepage.</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>The<span class="dp">·</span>project&#x27;s<span class="dp">·</span>main<span class="dp">·</span>homepage.</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/mutantsan/ckanext-msal&#x27;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/mutantsan/ckanext-msal&#x27;,</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

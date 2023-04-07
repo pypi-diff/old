@@ -1,0 +1,155 @@
+# Comparing `tmp/htmlextradata-0.1.2.tar.gz` & `tmp/htmlextradata-0.1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "htmlextradata-0.1.2.tar", max compression
++gzip compressed data, was "htmlextradata-0.1.3.tar", max compression
+```
+
+## Comparing `htmlextradata-0.1.2.tar` & `htmlextradata-0.1.3.tar`
+
+### file list
+
+```diff
+@@ -1,5 +1,5 @@
+--rw-r--r--   0        0        0     1054 2023-04-06 08:40:10.886907 htmlextradata-0.1.2/README.md
+--rw-r--r--   0        0        0       75 2023-04-06 07:47:38.730745 htmlextradata-0.1.2/htmlextradata/__init__.py
+--rw-r--r--   0        0        0     2949 2023-04-06 07:47:17.155339 htmlextradata-0.1.2/htmlextradata/plugin.py
+--rw-r--r--   0        0        0     1257 2023-04-06 08:59:03.134945 htmlextradata-0.1.2/pyproject.toml
+--rw-r--r--   0        0        0     1836 1970-01-01 00:00:00.000000 htmlextradata-0.1.2/PKG-INFO
++-rw-r--r--   0        0        0     1054 2023-04-06 08:40:10.886907 htmlextradata-0.1.3/README.md
++-rw-r--r--   0        0        0       75 2023-04-06 07:47:38.730745 htmlextradata-0.1.3/htmlextradata/__init__.py
++-rw-r--r--   0        0        0     2774 2023-04-07 07:20:49.974074 htmlextradata-0.1.3/htmlextradata/plugin.py
++-rw-r--r--   0        0        0     1257 2023-04-07 07:47:32.722946 htmlextradata-0.1.3/pyproject.toml
++-rw-r--r--   0        0        0     1836 1970-01-01 00:00:00.000000 htmlextradata-0.1.3/PKG-INFO
+```
+
+### Comparing `htmlextradata-0.1.2/README.md` & `htmlextradata-0.1.3/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `htmlextradata-0.1.2/htmlextradata/plugin.py` & `htmlextradata-0.1.3/htmlextradata/plugin.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -9,16 +9,14 @@
+ from mkdocs.config import config_options as co
+ from mkdocs.plugins import BasePlugin
+ from mkdocs.utils import warning_filter
+ 
+ log = logging.getLogger(__name__)
+ log.addFilter(warning_filter)
+ 
+-_SKIP_NAMESPACE = ("errors",)  # todo вынести в настройки
+-
+ 
+ class HtmlExtraDataPlugin(BasePlugin):
+     """Данный плагин парсит данные в папке и добавляет в контекст приложения,
+     чтобы потом можно было обработать в шаболоне."""
+ 
+     config_scheme = (("data", co.Type(str, default="_extradata")),)
+ 
+@@ -26,35 +24,35 @@
+         """Добавим данные в контекст"""
+ 
+         config[namespace] = data
+ 
+     def on_pre_build(self, config):
+         """Обработка данных и заполняем конфиг"""
+ 
+-        data_source_folders = self.config.data.get("data", [])
++        source_folders = self.config.data.get("data", [])
+         base_path = os.path.dirname(self.config.config_file_path)
+-        if isinstance(data_source_folders, str):
+-            data_source_folders = [
+-                f"{base_path}/{dir_}" for dir_ in data_source_folders.split(",")
++        if isinstance(source_folders, str):
++            source_folders = [
++                f"{base_path}/{dir_}" for dir_ in source_folders.split(",")
+             ]
+ 
+-        if not data_source_folders:
+-            data_source_folders = []
++        if not source_folders:
++            source_folders = []
+             for datadir in [
+                 os.path.dirname(self.config.config_file_path),
+                 self.config.docs_dir,
+             ]:
+                 ds_folder = os.path.join(datadir, "_extradata")
+                 if os.path.exists(ds_folder):
+-                    data_source_folders.append(ds_folder)
++                    source_folders.append(ds_folder)
+ 
+-        if not data_source_folders:
++        if not source_folders:
+             return
+ 
+-        for ds_folder in data_source_folders:
++        for ds_folder in source_folders:
+             if os.path.exists(ds_folder):
+                 path = Path(ds_folder)
+                 for filename in chain(
+                     path.glob("**/*.yaml"),
+                     path.glob("**/*.yml"),
+                     path.glob("**/*.json"),
+                 ):
+@@ -71,13 +69,11 @@
+                         ),
+                     )
+ 
+     def on_page_context(self, context, *, page, config, nav):
+         """Контекст для страницы"""
+ 
+         namespace = page.url.rstrip("/").split("/").pop()
+-
+-        if namespace not in _SKIP_NAMESPACE:
+-            if namespace in config:
+-                context["extradata"] = config[namespace]
++        if namespace in config:
++            context["extradata"] = config[namespace]
+ 
+         return context
+```
+
+### Comparing `htmlextradata-0.1.2/pyproject.toml` & `htmlextradata-0.1.3/pyproject.toml`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "htmlextradata"
+-version = "0.1.2"
++version = "0.1.3"
+ description = "MkDocs Plugin"
+ authors = ["Alexandr Starovoytov <stalex.info@yandex.ru>"]
+ repository = "https://github.com/stalexsm/mkdocs-htmlextradata-plugin"
+ readme = "README.md"
+ license = "MIT"
+ keywords = [
+     "mkdocs", "mkdocs-plugin",
+```
+
+### Comparing `htmlextradata-0.1.2/PKG-INFO` & `htmlextradata-0.1.3/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: htmlextradata
+-Version: 0.1.2
++Version: 0.1.3
+ Summary: MkDocs Plugin
+ Home-page: https://github.com/stalexsm/mkdocs-htmlextradata-plugin
+ License: MIT
+ Keywords: mkdocs,mkdocs-plugin
+ Author: Alexandr Starovoytov
+ Author-email: stalex.info@yandex.ru
+ Requires-Python: >=3.10,<4.0
+```
+

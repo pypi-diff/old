@@ -1,0 +1,27 @@
+# Comparing `tmp/3d-0.1.0.tar.gz` & `tmp/3d-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "3d-0.1.0.tar", max compression
++gzip compressed data, was "3d-0.1.1.tar", max compression
+```
+
+## Comparing `3d-0.1.0.tar` & `3d-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,4 +1,5 @@
+--rw-r--r--   0        0        0        0 2023-04-06 20:35:32.386668 3d-0.1.0/3d/__init__.py
+--rw-r--r--   0        0        0        0 2023-04-06 20:35:32.386668 3d-0.1.0/README.md
+--rw-r--r--   0        0        0      259 2023-04-06 20:35:32.393335 3d-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0      329 1970-01-01 00:00:00.000000 3d-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0      292 2023-04-06 20:54:56.209282 3d-0.1.1/README.md
++-rw-r--r--   0        0        0       27 2023-04-06 20:55:56.908337 3d-0.1.1/g/__init__.py
++-rw-r--r--   0        0        0       21 2023-04-06 20:58:42.715428 3d-0.1.1/g/window.py
++-rw-r--r--   0        0        0      323 2023-04-06 20:55:34.060416 3d-0.1.1/pyproject.toml
++-rw-r--r--   0        0        0      649 1970-01-01 00:00:00.000000 3d-0.1.1/PKG-INFO
+```
+

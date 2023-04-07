@@ -1,0 +1,1331 @@
+# Comparing `tmp/webspot-0.1.3.tar.gz` & `tmp/webspot-0.1.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "webspot-0.1.3.tar", last modified: Sat Mar 25 11:49:57 2023, max compression
++gzip compressed data, was "webspot-0.1.4.tar", last modified: Fri Apr  7 07:38:59 2023, max compression
+```
+
+## Comparing `webspot-0.1.3.tar` & `webspot-0.1.4.tar`
+
+### file list
+
+```diff
+@@ -1,125 +1,130 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.849246 webspot-0.1.3/
+--rw-r--r--   0 runner    (1001) docker     (123)     1499 2023-03-25 11:49:20.000000 webspot-0.1.3/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     3492 2023-03-25 11:49:57.845246 webspot-0.1.3/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     3013 2023-03-25 11:49:20.000000 webspot-0.1.3/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-25 11:49:57.849246 webspot-0.1.3/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)      953 2023-03-25 11:49:21.000000 webspot-0.1.3/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.837246 webspot-0.1.3/webspot/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.841246 webspot-0.1.3/webspot/cmd/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/cmd/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      238 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/cmd/crawl.py
+--rw-r--r--   0 runner    (1001) docker     (123)      215 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/cmd/request.py
+--rw-r--r--   0 runner    (1001) docker     (123)      146 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/cmd/web.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.841246 webspot-0.1.3/webspot/constants/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/constants/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      141 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/constants/detector.py
+--rw-r--r--   0 runner    (1001) docker     (123)      132 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/constants/field_extract_rule_type.py
+--rw-r--r--   0 runner    (1001) docker     (123)       72 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/constants/html_request_method.py
+--rw-r--r--   0 runner    (1001) docker     (123)      101 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/constants/request_status.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.841246 webspot-0.1.3/webspot/crawler/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/crawler/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.841246 webspot-0.1.3/webspot/crawler/actions/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/crawler/actions/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      553 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/crawler/actions/run_crawler.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.841246 webspot-0.1.3/webspot/crawler/crawler/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/crawler/crawler/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      263 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/crawler/crawler/items.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3650 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/crawler/crawler/middlewares.py
+--rw-r--r--   0 runner    (1001) docker     (123)      361 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/crawler/crawler/pipelines.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3364 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/crawler/crawler/settings.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.841246 webspot-0.1.3/webspot/crawler/crawler/spiders/
+--rw-r--r--   0 runner    (1001) docker     (123)      161 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/crawler/crawler/spiders/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2910 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/crawler/crawler/spiders/web_spider.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.841246 webspot-0.1.3/webspot/db/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/db/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      470 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/db/connect.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.841246 webspot-0.1.3/webspot/detect/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.841246 webspot-0.1.3/webspot/detect/detectors/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/detectors/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1297 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/detectors/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9004 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/detectors/pagination.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18495 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/detectors/plain_list.py
+--rw-r--r--   0 runner    (1001) docker     (123)      657 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/detectors/plain_table.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.841246 webspot-0.1.3/webspot/detect/models/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/models/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      201 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/models/list_result.py
+--rw-r--r--   0 runner    (1001) docker     (123)      324 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/models/result.py
+--rw-r--r--   0 runner    (1001) docker     (123)      174 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/models/selector.py
+--rw-r--r--   0 runner    (1001) docker     (123)      178 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/models/stats.py
+--rw-r--r--   0 runner    (1001) docker     (123)      176 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/models/table_result.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.841246 webspot-0.1.3/webspot/detect/utils/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/utils/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1377 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/utils/highlight_html.py
+--rw-r--r--   0 runner    (1001) docker     (123)      133 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/utils/math.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1472 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/utils/transform_html_links.py
+--rw-r--r--   0 runner    (1001) docker     (123)      244 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/detect/utils/url.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/graph/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/graph/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16017 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/graph/graph_loader.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/graph/models/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/graph/models/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1603 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/graph/models/node.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/logging/
+--rw-r--r--   0 runner    (1001) docker     (123)      686 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/logging/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/models/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/models/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1120 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/models/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2077 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/models/request.py
+--rw-r--r--   0 runner    (1001) docker     (123)      235 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/models/user.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/request/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/request/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5088 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/request/html_requester.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/test/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/test/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/test/crawler/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/test/crawler/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      932 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/test/crawler/test_crawler.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/test/detect/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/test/detect/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2990 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/test/detect/test_plain_list.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/test/logging/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/test/logging/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      676 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/test/logging/test_get_logger.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/test/web/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/test/web/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/test/web/routes/
+--rw-r--r--   0 runner    (1001) docker     (123)      101 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/test/web/routes/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/test/web/routes/api/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/test/web/routes/api/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1223 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/test/web/routes/api/test_request.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/utils/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/utils/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      530 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/utils/mongo.py
+--rw-r--r--   0 runner    (1001) docker     (123)      199 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/utils/selector.py
+--rw-r--r--   0 runner    (1001) docker     (123)      106 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/utils/test.py
+--rw-r--r--   0 runner    (1001) docker     (123)      678 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/utils/time.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/web/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      722 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/app.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/web/logging/
+--rw-r--r--   0 runner    (1001) docker     (123)       75 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/logging/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/web/middlewares/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/middlewares/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      367 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/middlewares/no_cache.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/web/models/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/models/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/web/models/payload/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/models/payload/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1038 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/models/payload/request.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/web/routes/
+--rw-r--r--   0 runner    (1001) docker     (123)      157 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/routes/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/web/routes/api/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/routes/api/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4680 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/routes/api/request.py
+--rw-r--r--   0 runner    (1001) docker     (123)      284 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/routes/index.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.845246 webspot-0.1.3/webspot/web/utils/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:21.000000 webspot-0.1.3/webspot/web/utils/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-25 11:49:57.837246 webspot-0.1.3/webspot.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     3492 2023-03-25 11:49:57.000000 webspot-0.1.3/webspot.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     2744 2023-03-25 11:49:57.000000 webspot-0.1.3/webspot.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-25 11:49:57.000000 webspot-0.1.3/webspot.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       54 2023-03-25 11:49:57.000000 webspot-0.1.3/webspot.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      293 2023-03-25 11:49:57.000000 webspot-0.1.3/webspot.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        8 2023-03-25 11:49:57.000000 webspot-0.1.3/webspot.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.136529 webspot-0.1.4/
++-rw-r--r--   0 runner    (1001) docker     (123)     1499 2023-04-07 07:38:22.000000 webspot-0.1.4/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     3492 2023-04-07 07:38:59.136529 webspot-0.1.4/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     3013 2023-04-07 07:38:22.000000 webspot-0.1.4/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 07:38:59.136529 webspot-0.1.4/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)      953 2023-04-07 07:38:22.000000 webspot-0.1.4/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.124529 webspot-0.1.4/webspot/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.128529 webspot-0.1.4/webspot/cmd/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/cmd/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      238 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/cmd/crawl.py
++-rw-r--r--   0 runner    (1001) docker     (123)      215 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/cmd/request.py
++-rw-r--r--   0 runner    (1001) docker     (123)      146 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/cmd/web.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.128529 webspot-0.1.4/webspot/constants/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/constants/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      141 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/constants/detector.py
++-rw-r--r--   0 runner    (1001) docker     (123)      132 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/constants/field_extract_rule_type.py
++-rw-r--r--   0 runner    (1001) docker     (123)       72 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/constants/html_request_method.py
++-rw-r--r--   0 runner    (1001) docker     (123)      101 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/constants/request_status.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.128529 webspot-0.1.4/webspot/crawler/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/crawler/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.128529 webspot-0.1.4/webspot/crawler/actions/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/crawler/actions/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      553 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/crawler/actions/run_crawler.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.128529 webspot-0.1.4/webspot/crawler/crawler/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/crawler/crawler/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      263 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/crawler/crawler/items.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3650 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/crawler/crawler/middlewares.py
++-rw-r--r--   0 runner    (1001) docker     (123)      361 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/crawler/crawler/pipelines.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3364 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/crawler/crawler/settings.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.128529 webspot-0.1.4/webspot/crawler/crawler/spiders/
++-rw-r--r--   0 runner    (1001) docker     (123)      161 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/crawler/crawler/spiders/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2910 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/crawler/crawler/spiders/web_spider.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.128529 webspot-0.1.4/webspot/db/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/db/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      470 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/db/connect.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.128529 webspot-0.1.4/webspot/detect/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.128529 webspot-0.1.4/webspot/detect/detectors/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/detectors/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1297 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/detectors/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3509 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/detectors/pagination.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19641 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/detectors/plain_list.py
++-rw-r--r--   0 runner    (1001) docker     (123)      657 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/detectors/plain_table.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/detect/models/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/models/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      201 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/models/list_result.py
++-rw-r--r--   0 runner    (1001) docker     (123)      324 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/models/result.py
++-rw-r--r--   0 runner    (1001) docker     (123)      201 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/models/selector.py
++-rw-r--r--   0 runner    (1001) docker     (123)      178 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/models/stats.py
++-rw-r--r--   0 runner    (1001) docker     (123)      176 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/models/table_result.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/detect/utils/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/utils/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2324 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/utils/highlight_html.py
++-rw-r--r--   0 runner    (1001) docker     (123)      133 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/utils/math.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1530 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/utils/transform_html_links.py
++-rw-r--r--   0 runner    (1001) docker     (123)      244 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/detect/utils/url.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/extract/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/extract/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2568 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/extract/extract_results.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/graph/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/graph/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16017 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/graph/graph_loader.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/graph/models/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/graph/models/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1603 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/graph/models/node.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/logging/
++-rw-r--r--   0 runner    (1001) docker     (123)      686 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/logging/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/models/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/models/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1140 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/models/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)      706 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/models/node.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2090 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/models/request.py
++-rw-r--r--   0 runner    (1001) docker     (123)      235 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/models/user.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/request/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/request/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5500 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/request/html_requester.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/test/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/test/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/test/crawler/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/test/crawler/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      932 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/test/crawler/test_crawler.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/test/detect/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/test/detect/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3008 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/test/detect/test_plain_list.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/test/logging/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/test/logging/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      676 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/test/logging/test_get_logger.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/test/web/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/test/web/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.132529 webspot-0.1.4/webspot/test/web/routes/
++-rw-r--r--   0 runner    (1001) docker     (123)      101 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/test/web/routes/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.136529 webspot-0.1.4/webspot/test/web/routes/api/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/test/web/routes/api/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12101 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/test/web/routes/api/test_request.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.136529 webspot-0.1.4/webspot/utils/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/utils/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      530 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/utils/mongo.py
++-rw-r--r--   0 runner    (1001) docker     (123)      199 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/utils/selector.py
++-rw-r--r--   0 runner    (1001) docker     (123)      106 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/utils/test.py
++-rw-r--r--   0 runner    (1001) docker     (123)      678 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/utils/time.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.136529 webspot-0.1.4/webspot/web/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      722 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/app.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.136529 webspot-0.1.4/webspot/web/logging/
++-rw-r--r--   0 runner    (1001) docker     (123)       75 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/logging/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.136529 webspot-0.1.4/webspot/web/middlewares/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/middlewares/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      367 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/middlewares/no_cache.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.136529 webspot-0.1.4/webspot/web/models/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/models/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.136529 webspot-0.1.4/webspot/web/models/payload/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/models/payload/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      441 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/models/payload/node.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1298 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/models/payload/request.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.136529 webspot-0.1.4/webspot/web/routes/
++-rw-r--r--   0 runner    (1001) docker     (123)      157 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/routes/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.136529 webspot-0.1.4/webspot/web/routes/api/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/routes/api/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5231 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/routes/api/request.py
++-rw-r--r--   0 runner    (1001) docker     (123)      284 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/routes/index.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.136529 webspot-0.1.4/webspot/web/utils/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:22.000000 webspot-0.1.4/webspot/web/utils/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:38:59.124529 webspot-0.1.4/webspot.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     3492 2023-04-07 07:38:59.000000 webspot-0.1.4/webspot.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2865 2023-04-07 07:38:59.000000 webspot-0.1.4/webspot.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 07:38:59.000000 webspot-0.1.4/webspot.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       54 2023-04-07 07:38:59.000000 webspot-0.1.4/webspot.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      310 2023-04-07 07:38:59.000000 webspot-0.1.4/webspot.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-07 07:38:59.000000 webspot-0.1.4/webspot.egg-info/top_level.txt
+```
+
+### Comparing `webspot-0.1.3/LICENSE` & `webspot-0.1.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/PKG-INFO` & `webspot-0.1.4/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: webspot
+-Version: 0.1.3
++Version: 0.1.4
+ Summary: An intelligent web service to automatically detect web content and extract information from it.
+ Home-page: https://github.com/tikazyq/webspot
+ Author: tikazyq
+ Author-email: tikazyq@163.com
+ License: BSD-3-Clause
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: BSD License
+```
+
+### Comparing `webspot-0.1.3/README.md` & `webspot-0.1.4/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/setup.py` & `webspot-0.1.4/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+     long_description = f.read()
+ 
+ with open('requirements.txt', 'r') as f:
+     install_requires = f.read().split('\n')
+ 
+ setup(
+     name='webspot',
+-    version='0.1.3',
++    version='0.1.4',
+     packages=find_packages('.'),
+     url='https://github.com/tikazyq/webspot',
+     license='BSD-3-Clause',
+     author='tikazyq',
+     author_email='tikazyq@163.com',
+     description='An intelligent web service to automatically detect web content and extract information from it.',
+     long_description=long_description,
+```
+
+### Comparing `webspot-0.1.3/webspot/crawler/actions/run_crawler.py` & `webspot-0.1.4/webspot/crawler/actions/run_crawler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/crawler/crawler/middlewares.py` & `webspot-0.1.4/webspot/crawler/crawler/middlewares.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/crawler/crawler/settings.py` & `webspot-0.1.4/webspot/crawler/crawler/settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/crawler/crawler/spiders/web_spider.py` & `webspot-0.1.4/webspot/crawler/crawler/spiders/web_spider.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/detect/detectors/base.py` & `webspot-0.1.4/webspot/detect/detectors/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/detect/detectors/plain_list.py` & `webspot-0.1.4/webspot/detect/detectors/plain_list.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,10 +1,11 @@
+ import base64
+ import json
+ import time
++from collections import defaultdict
+ from typing import List, Set, Dict
+ from urllib.parse import urljoin
+ 
+ import numpy as np
+ import pandas as pd
+ from bs4 import BeautifulSoup
+ from scipy.sparse import csr_matrix
+@@ -33,36 +34,42 @@
+         self,
+         dbscan_eps: float = 0.5,
+         dbscan_min_samples: int = 3,
+         dbscan_metric: str = 'euclidean',
+         dbscan_n_jobs: int = -1,
+         entropy_threshold: float = 1e-3,
+         score_threshold: float = 1.,
++        sample_item_nodes: int = 10,
+         min_item_nodes: int = 5,
+         node2vec_ratio: float = 1.,
+         result_name_prefix: str = 'List',
+         text_length_discount: float = 0.01,
+         max_text_length: float = 1024,
+         max_item_count: int = 10,
++        min_item_nodes_ratio: float = 0.5,
+         max_feature_count: int = 10,
++        max_result_count: int = 10,
+         *args,
+         **kwargs,
+     ):
+         super().__init__(*args, **kwargs)
+ 
+         # settings
+         self.entropy_threshold = entropy_threshold
+         self.score_threshold = score_threshold
++        self.sample_item_nodes = sample_item_nodes
+         self.min_item_nodes = min_item_nodes
+         self.node2vec_ratio = node2vec_ratio
+         self.result_name_prefix = result_name_prefix
+         self.text_length_discount = text_length_discount
+         self.max_text_length = max_text_length
+         self.max_item_count = max_item_count
++        self.min_item_nodes_ratio = min_item_nodes_ratio
+         self.max_feature_count = max_feature_count
++        self.max_result_count = max_result_count
+ 
+         # dbscan model
+         self.dbscan = DBSCAN(
+             metric=dbscan_metric,
+             eps=dbscan_eps,
+             min_samples=dbscan_min_samples,
+             n_jobs=dbscan_n_jobs,
+@@ -175,56 +182,58 @@
+         else:
+             return x
+ 
+     def _extract_fields_by_id(self, list_id: int, item_nodes: List[Node]) -> List[Selector]:
+         # fields
+         fields: List[Selector] = []
+ 
+-        # extract rules set (css selector path, type, attribute)
+-        fields_extract_rules_set: Set[(str, str)] = set()
++        # extract rules dict (css selector path, type, attribute)
++        fields_extract_rules_dict: Dict[(str, str), int] = defaultdict(int)
+ 
+         # list child nodes
+         list_child_nodes = self.graph_loader.get_node_children_by_id(list_id)
+ 
+         # iterate list child nodes
+         i = 0
+-        for c in list_child_nodes:
++        for c in np.random.choice(list_child_nodes, self.sample_item_nodes):
+             if c.tag != item_nodes[0].tag:
+                 continue
+ 
+             # stop if item nodes samples reached
+             if i == self.min_item_nodes:
+                 break
+ 
+             # item child nodes
+             item_child_nodes = self.graph_loader.get_node_children_recursive_by_id(c.id)
+ 
+             # iterate item child nodes
+             for n in item_child_nodes:
+                 # extract text
+-                if n.text is not None and n.text.strip() != '':
++                if n.text is not None and len(n.text.strip()) > 0:
+                     extract_rule_css = self.graph_loader.get_node_css_selector_path(node=n, root_id=list_id,
+                                                                                     numbered=False, no_id=True)
+-                    fields_extract_rules_set.add((extract_rule_css, FIELD_EXTRACT_RULE_TYPE_TEXT, ''))
++                    fields_extract_rules_dict[(extract_rule_css, FIELD_EXTRACT_RULE_TYPE_TEXT, '')] += 1
+ 
+                 # extract link
+-                if n.tag == 'a' and n.attrs.get('href') is not None:
++                if n.tag == 'a' and n.attrs.get('href') is not None and len(n.attrs.get('href').strip()) > 0:
+                     extract_rule_css = self.graph_loader.get_node_css_selector_path(node=n, root_id=list_id,
+                                                                                     numbered=False, no_id=True)
+-                    fields_extract_rules_set.add((extract_rule_css, FIELD_EXTRACT_RULE_TYPE_LINK_URL, 'href'))
++                    fields_extract_rules_dict[(extract_rule_css, FIELD_EXTRACT_RULE_TYPE_LINK_URL, 'href')] += 1
+ 
+                 # extract image url
+-                if n.tag == 'img' and n.attrs.get('src') is not None:
++                if n.tag == 'img' and n.attrs.get('src') is not None and len(n.attrs.get('src').strip()) > 0:
+                     extract_rule_css = self.graph_loader.get_node_css_selector_path(node=n, root_id=list_id,
+                                                                                     numbered=False, no_id=True)
+-                    fields_extract_rules_set.add((extract_rule_css, FIELD_EXTRACT_RULE_TYPE_IMAGE_URL, 'src'))
++                    fields_extract_rules_dict[(extract_rule_css, FIELD_EXTRACT_RULE_TYPE_IMAGE_URL, 'src')] += 1
+ 
+             i += 1
+ 
+-        for i, item in enumerate(fields_extract_rules_set):
++        for i, (item, count) in enumerate(fields_extract_rules_dict.items()):
++            if float(count) / self.min_item_nodes < self.min_item_nodes_ratio:
++                continue
+             extract_rule_css, type_, attribute = item
+             name = f'Field_{type_}_{i + 1}'
+             fields.append(Selector(
+                 name=name,
+                 selector=extract_rule_css,
+                 type=type_,
+                 attribute=attribute,
+@@ -384,25 +393,30 @@
+ 
+         # iterate inputs
+         for i, list_node, item_nodes, score, scores in zip(range(len(list_node_list)),
+                                                            list_node_list,
+                                                            item_nodes_list,
+                                                            score_list,
+                                                            scores_list):
++            # break if max result count reached
++            if i == self.max_result_count:
++                break
++
+             # list node
+             list_node = list_node
+ 
+             # item nodes
+             item_nodes = item_nodes
+ 
+             # list selector
+             list_selector = Selector(
+                 name='list',
+                 selector=self.graph_loader.get_node_css_selector_path(list_node),
+                 type='css',
++                node_id=list_node.id,
+             )
+ 
+             # items node extract rule (css)
+             items_selector = Selector(
+                 name='items',
+                 selector=self.graph_loader.get_node_css_selector_repr(item_nodes[0], False, True),
+                 type='css',
+@@ -434,14 +448,23 @@
+                 data=data,
+                 detector=DETECTOR_PLAIN_LIST,
+             )
+             results.append(result)
+ 
+         return results
+ 
++    def _post_extract_filter(self, results: List[ListResult]) -> List[ListResult]:
++        for i, result in enumerate(results):
++            # prune if item nodes is fewer than threshold
++            if len(result.data) < self.min_item_nodes:
++                del results[i]
++                i -= 1
++
++        return results
++
+     def _sort(self, results: List[ListResult]) -> List[ListResult]:
+         results = sorted(results, key=lambda x: x.score, reverse=True)
+ 
+         # assign name
+         for i, result in enumerate(results):
+             results[i].name = f'{self.result_name_prefix} {i + 1}'
+ 
+@@ -458,14 +481,17 @@
+ 
+         # filter nodes
+         res = self._filter(*res)
+ 
+         # extract fields into results
+         results = self._extract(*res)
+ 
++        # extract fields into results
++        results = self._post_extract_filter(results)
++
+         # sort results
+         self.results = self._sort(results)
+ 
+         toc = time.time()
+         logger.debug(f'PlainListExtractor: {toc - tic:.2f}s')
+ 
+         return self.results
+```
+
+### Comparing `webspot-0.1.3/webspot/detect/detectors/plain_table.py` & `webspot-0.1.4/webspot/detect/detectors/plain_table.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/detect/utils/highlight_html.py` & `webspot-0.1.4/webspot/detect/utils/highlight_html.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,27 +1,65 @@
+ import logging
+ import os.path
+ from typing import List
+ 
+ from bs4 import BeautifulSoup, Tag
+ 
+-from webspot.detect.models.list_result import ListResult
++
++def get_embed_highlight_css() -> str:
++    file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../web/static/css/embed/highlight.css'))
++    with open(file_path, 'r') as f:
++        return f.read()
+ 
+ 
+-def get_embed_css() -> str:
+-    file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../web/static/css/highlight.css'))
++def get_embed_annotate_css() -> str:
++    file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../web/static/css/embed/annotate.css'))
+     with open(file_path, 'r') as f:
+         return f.read()
+ 
+ 
+-def embed_highlight_css(html: str) -> str:
++def get_embed_annotate_js() -> str:
++    file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../web/static/js/embed/annotate.js'))
++    with open(file_path, 'r') as f:
++        return f.read()
++
++
++def embed_highlight(html: str) -> str:
++    # soup
++    soup = BeautifulSoup(html, 'html.parser')
++
++    # css
++    style_el = soup.new_tag('style')
++    style_el.append(get_embed_highlight_css())
++    soup.select_one('head').append(style_el)
++
++    # html
++    return str(soup)
++
++
++def embed_annotate(html: str) -> str:
++    # soup
+     soup = BeautifulSoup(html, 'html.parser')
++
++    # css
+     style_el = soup.new_tag('style')
+-    style_el.append(get_embed_css())
++    style_el.append(get_embed_annotate_css())
+     soup.select_one('head').append(style_el)
++
++    # js
++    script_el = soup.new_tag('script')
++    script_el.append(get_embed_annotate_js())
++    body_el = soup.select_one('body')
++    body_el.append(script_el)
++
++    # links
++    for a_el in soup.select('a'):
++        a_el.attrs['href'] = 'javascript:'
++
++    # html
+     return str(soup)
+ 
+ 
+ def _add_class(el: Tag, classes: List[str]):
+     if not el:
+         return
+     el_class = el.get('class') or ''
+```
+
+### Comparing `webspot-0.1.3/webspot/detect/utils/transform_html_links.py` & `webspot-0.1.4/webspot/detect/utils/transform_html_links.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -48,11 +48,13 @@
+     return False
+ 
+ 
+ def _is_relative_url_path(url: str) -> bool:
+     return not re.search(re.escape(url), r'^(https?:)?//')
+ 
+ 
+-def transform_url(root_url: str, url: str) -> str:
++def transform_url(root_url: str = None, url: str = None) -> str:
++    if root_url is None:
++        return url
+     if not _is_relative_url_path(url):
+         return url
+     return urljoin(root_url, url)
+```
+
+### Comparing `webspot-0.1.3/webspot/graph/graph_loader.py` & `webspot-0.1.4/webspot/graph/graph_loader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/graph/models/node.py` & `webspot-0.1.4/webspot/graph/models/node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/logging/__init__.py` & `webspot-0.1.4/webspot/logging/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/models/base.py` & `webspot-0.1.4/webspot/models/base.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -6,16 +6,16 @@
+ from mongoengine import Document, StringField, DateTimeField, pre_save
+ from pydantic import BaseModel, Field
+ 
+ from webspot.utils.mongo import encode_mongo_document
+ 
+ 
+ class BaseOut(BaseModel):
+-    id: str
+-    created_at: datetime
++    id: Optional[str]
++    created_at: Optional[datetime]
+     created_by: Optional[str]
+     updated_at: Optional[datetime]
+     updated_by: Optional[str]
+ 
+ 
+ class Base(Document):
+     created_at = DateTimeField(default=datetime.utcnow)
+```
+
+### Comparing `webspot-0.1.3/webspot/models/request.py` & `webspot-0.1.4/webspot/models/request.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -7,15 +7,15 @@
+ from webspot.constants.request_status import REQUEST_STATUS_PENDING
+ from webspot.detect.models.list_result import ListResult
+ from webspot.detect.models.result import Result
+ from webspot.models.base import Base, BaseOut
+ 
+ 
+ class RequestOut(BaseOut):
+-    url: str
++    url: Optional[str]
+     method: Optional[str]
+     duration: Optional[int]
+     status: Optional[str]
+     results: Optional[Dict[str, List[Union[ListResult, Result]]]]
+     valid: Optional[bool]
+     error: Optional[str]
+     no_async: Optional[bool]
+@@ -35,15 +35,15 @@
+     results = DictField(default={})
+     valid = BooleanField(default=True)
+     error = StringField()
+     no_async = BooleanField(default=False)
+     detectors = ListField(default=[DETECTOR_PLAIN_LIST, DETECTOR_PAGINATION])
+     execution_time = DictField(default={})
+ 
+-    def to_out(self) -> BaseOut:
++    def to_out(self) -> RequestOut:
+         return RequestOut(
+             id=str(self.id),
+             created_at=self.created_at,
+             created_by=self.created_by,
+             updated_at=self.updated_at,
+             updated_by=self.updated_by,
+             url=self.url,
+```
+
+### Comparing `webspot-0.1.3/webspot/request/html_requester.py` & `webspot-0.1.4/webspot/request/html_requester.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -2,30 +2,32 @@
+ import logging
+ import os
+ from typing import Optional
+ from urllib.parse import urlparse
+ 
+ import html_to_json_enhanced
+ import httpx
++from html_to_json_enhanced.convert_html import HtmlConverter
+ from httpx import Timeout
+ from requests import Response
+ from retrying import retry
+ 
+ from webspot.constants.html_request_method import HTML_REQUEST_METHOD_REQUEST, HTML_REQUEST_METHOD_ROD
+ from webspot.detect.utils.transform_html_links import transform_html_links
+ 
+ DEFAULT_REQUEST_ROD_URL = 'http://localhost:7777/request'
+-DEFAULT_REQUEST_ROD_DURATION = 10
++DEFAULT_REQUEST_ROD_DURATION = 5
+ DEFAULT_DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'data'))
+ 
+ 
+ class HtmlRequester(object):
+     def __init__(
+         self,
+         url: str = None,
++        html: str = None,
+         html_path: str = None,
+         request_method: str = HTML_REQUEST_METHOD_REQUEST,
+         request_rod_url: str = DEFAULT_REQUEST_ROD_URL,
+         request_rod_duration: int = DEFAULT_REQUEST_ROD_DURATION,
+         save: bool = False,
+     ):
+         # settings
+@@ -34,21 +36,24 @@
+         self.request_method = request_method
+         self.request_rod_url = request_rod_url
+         self.request_rod_duration = request_rod_duration
+         self.save = save
+         self.encodings = ['utf-8', 'gbk', 'iso-8859-1', 'cp1252']
+ 
+         # data
+-        self.html_: Optional[str] = None
++        self.html_: Optional[str] = html
+         self.html_response: Optional[Response] = None
+         self.json_data: Optional[dict] = None
+ 
+         # logger
+         self.logger = logging.getLogger('webspot.request.html_requester')
+ 
++        # html converter
++        self.html_converter: Optional[HtmlConverter] = None
++
+     def _decode_response_content(self, res: Response) -> str:
+         content = ''
+         for encoding in self.encodings:
+             try:
+                 content = res.content.decode(encoding)
+                 break
+             except UnicodeDecodeError:
+@@ -67,14 +72,15 @@
+ 
+         if request_method == HTML_REQUEST_METHOD_ROD:
+             # request rod (headless browser)
+             res = httpx.post(
+                 request_rod_url,
+                 json={'url': url, 'duration': request_rod_duration},
+                 headers={'Content-Type': 'application/json'},
++                timeout=60,
+             )
+             if res.status_code != 200:
+                 raise Exception(f'Invalid response from request rod: {res.status_code}')
+             self.html_response = res
+             self.html_ = json.loads(self._decode_response_content(res)).get('html')
+         elif request_method == HTML_REQUEST_METHOD_REQUEST:
+             # plain request
+@@ -82,59 +88,71 @@
+             if res.status_code != 200:
+                 raise Exception(f'Invalid response from request: {res.status_code}')
+             self.html_response = res
+             self.html_ = self._decode_response_content(res)
+         else:
+             raise Exception(f'Invalid request method: {request_method}')
+ 
++    def _convert_to_json(self):
+         # convert html to json data
+-        self.json_data = html_to_json_enhanced.convert(self.html_, with_id=True)
+-
+-        if self.save:
+-            # domain
+-            domain = urlparse(url).netloc
+-
+-            # create data html directory if not exists
+-            data_html_dir = os.path.join(DEFAULT_DATA_DIR, domain, 'html')
+-            if not os.path.exists(data_html_dir):
+-                os.makedirs(data_html_dir)
+-
+-            # create data json directory if not exists
+-            data_json_dir = os.path.join(DEFAULT_DATA_DIR, domain, 'json')
+-            if not os.path.exists(data_json_dir):
+-                os.makedirs(data_json_dir)
+-
+-            # file name prefix
+-            filename_prefix = url.replace('/', '_').replace(':', '_').replace('.', '_')
+-
+-            # save response html
+-            data_html_dir = os.path.join(DEFAULT_DATA_DIR, domain, 'html')
+-            filename = os.path.join(data_html_dir, f'{filename_prefix}.html')
+-            with open(filename, 'w') as f:
+-                f.write(self.html_)
+-
+-            # save response json
+-            filename = os.path.join(data_json_dir, f'{filename_prefix}.json')
+-            with open(filename, 'w') as f:
+-                f.write(json.dumps(self.json_data))
++        self.html_converter = HtmlConverter(self.html_)
++        self.json_data = self.html_converter.convert()
++        self.html_ = str(self.html_converter.soup)
++
++    def _save(self):
++        # domain
++        domain = urlparse(self.url).netloc
++
++        # create data html directory if not exists
++        data_html_dir = os.path.join(DEFAULT_DATA_DIR, domain, 'html')
++        if not os.path.exists(data_html_dir):
++            os.makedirs(data_html_dir)
++
++        # create data json directory if not exists
++        data_json_dir = os.path.join(DEFAULT_DATA_DIR, domain, 'json')
++        if not os.path.exists(data_json_dir):
++            os.makedirs(data_json_dir)
++
++        # file name prefix
++        filename_prefix = self.url.replace('/', '_').replace(':', '_').replace('.', '_')
++
++        # save response html
++        data_html_dir = os.path.join(DEFAULT_DATA_DIR, domain, 'html')
++        filename = os.path.join(data_html_dir, f'{filename_prefix}.html')
++        with open(filename, 'w') as f:
++            f.write(self.html_)
++
++        # save response json
++        filename = os.path.join(data_json_dir, f'{filename_prefix}.json')
++        with open(filename, 'w') as f:
++            f.write(json.dumps(self.json_data))
+ 
+     def _load_html(self):
+         # print info
+         self.logger.info(f'Loading html from {self.html_path}...')
+ 
+         with open(self.html_path, 'r') as f:
+             self.html_ = f.read()
+ 
+     def run(self):
+         # request html page if url exists
+-        if self.url:
+-            self._request_html()
++        if self.html_:
++            pass
+         elif self.html_path:
+             self._load_html()
++        elif self.url:
++            self._request_html()
+         else:
+             raise Exception('No url or html path provided')
+ 
+         assert self.html_ is not None, 'No html obtained!'
+ 
++        # convert html to json data
++        self._convert_to_json()
++
++        # save
++        if self.save:
++            self._save()
++
+     @property
+     def html(self):
+         return transform_html_links(self.html_, self.url)
+```
+
+### Comparing `webspot-0.1.3/webspot/test/crawler/test_crawler.py` & `webspot-0.1.4/webspot/test/crawler/test_crawler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/test/detect/test_plain_list.py` & `webspot-0.1.4/webspot/test/detect/test_plain_list.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -35,31 +35,32 @@
+             }
+         },
+     },
+     {
+         'url': 'https://github.com/search?q=spider',
+         'result': {
+             'selectors': {
+-                'list': '.pt-md-0 > div.px-2 > ul.repo-list'
++                'list': 'div.px-2 > ul.repo-list'
+             }
+-        }
++        },
++        'index': 1,
+     },
+     {
+         'url': 'http://bang.dangdang.com/books/newhotsales',
+         'result': {
+             'selectors': {
+-                'list': '.bang_list_box > ul.bang_list.clearfix.bang_list_mode'
++                'list': 'div.bang_list_box > ul.bang_list.clearfix.bang_list_mode'
+             }
+         }
+     },
+     {
+         'url': 'https://cuiqingcai.com/archives/',
+         'result': {
+             'selectors': {
+-                'list': '.post-block > div.posts-collapse'
++                'list': 'div.post-block > div.posts-collapse'
+             }
+         }
+     },
+     # {
+     #     'url': 'https://github.com/crawlab-team/crawlab/actions',
+     #     'result': {
+     #         'selectors': {
+@@ -94,10 +95,10 @@
+ 
+     results = plain_list_detector.results
+     assert len(results) > 0, 'results should be more than 0'
+ 
+     test_case_result = test_case.get('result')
+     test_case_list_selector = test_case_result.get('selectors').get('list')
+     target_result = results[target_index]
+-    assert target_result.selectors.get('list').selector == test_case_list_selector, 'selectors should be equal'
++    assert test_case_list_selector in target_result.selectors.get('list').selector, 'selectors should be matched'
+     assert len(target_result.fields) > 0, 'target fields should be more than 0'
+     assert len(target_result.data) > 0, 'target data should be more than 0'
+```
+
+### Comparing `webspot-0.1.3/webspot/test/logging/test_get_logger.py` & `webspot-0.1.4/webspot/test/logging/test_get_logger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/utils/mongo.py` & `webspot-0.1.4/webspot/utils/mongo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/utils/time.py` & `webspot-0.1.4/webspot/utils/time.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/web/app.py` & `webspot-0.1.4/webspot/web/app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `webspot-0.1.3/webspot/web/models/payload/request.py` & `webspot-0.1.4/webspot/web/models/payload/request.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -2,32 +2,36 @@
+ 
+ from pydantic import BaseModel, Field
+ 
+ from webspot.constants.detector import DETECTOR_PLAIN_LIST, DETECTOR_PAGINATION
+ 
+ 
+ class RequestPayload(BaseModel):
+-    url: str = Field(
+-        ...,
++    url: Optional[str] = Field(
+         title='URL',
+-        description='The URL to request.',
++        description='The URL to request. If not provided, the HTML must be provided.',
++    )
++    html: Optional[str] = Field(
++        title='HTML',
++        description='The HTML to parse. If not provided, the URL must be provided.',
+     )
+     method: Optional[str] = Field(
+         default='request',
+         title='Request Method',
+         description='The method to use to request the page. (request, rod)',
+     )
+     no_async: Optional[bool] = Field(
+-        default=False,
++        default=True,
+         title='No Async',
+-        description='If true, the request will be run synchronously, and return the result immediately.',
++        description='If true, the request will be run synchronously, and return the result immediately; otherwise, '
++                    'the request will be run asynchronously.',
+     )
+     detectors: Optional[List[str]] = Field(
+         default=[DETECTOR_PLAIN_LIST, DETECTOR_PAGINATION],
+         title='Detectors',
+         description='The detectors to run on the page.',
+     )
+     duration: Optional[int] = Field(
+-        default=3,
++        default=5,
+         title='Duration (seconds)',
+         description='The duration to request the page (method "rod" only)',
+     )
+```
+
+### Comparing `webspot-0.1.3/webspot/web/routes/api/request.py` & `webspot-0.1.4/webspot/web/routes/api/request.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,25 +1,31 @@
+ import threading
+ import traceback
+ from datetime import datetime
+ from typing import List
+ 
++from bs4 import BeautifulSoup
+ from fastapi import Body
++from html_to_json_enhanced import convert
+ from starlette.responses import HTMLResponse
+ 
+ from webspot.constants.detector import DETECTOR_PLAIN_LIST, DETECTOR_PAGINATION
+ from webspot.constants.request_status import REQUEST_STATUS_SUCCESS, REQUEST_STATUS_ERROR
+ from webspot.detect.detectors.pagination import PaginationDetector
+ from webspot.detect.detectors.plain_list import PlainListDetector
+-from webspot.detect.utils.highlight_html import embed_highlight_css
++from webspot.detect.utils.highlight_html import embed_highlight, embed_annotate
++from webspot.detect.utils.transform_html_links import transform_html_links
++from webspot.extract.extract_results import extract_rules
+ from webspot.graph.graph_loader import GraphLoader
++from webspot.models.node import NodeOut, Node
+ from webspot.models.request import Request, RequestOut
+ from webspot.request.html_requester import HtmlRequester
+ from webspot.web.app import app
+ from webspot.web.logging import logger
++from webspot.web.models.payload.node import NodePayload
+ from webspot.web.models.payload.request import RequestPayload
+ 
+ 
+ @app.get('/api/requests')
+ async def requests(skip: int = 0, limit: int = 20) -> List[RequestOut]:
+     """Get all requests."""
+     docs = Request.objects[skip:(skip + limit)].order_by('-_id')
+@@ -30,18 +36,63 @@
+ async def request(id: str) -> RequestOut:
+     """Get a request."""
+     d = Request.objects(pk=id).first()
+     return d.to_out()
+ 
+ 
+ @app.get('/api/requests/{id}/html')
+-async def request_html(id: str) -> HTMLResponse:
++async def request_html(id: str, mode: str = 'highlight') -> HTMLResponse:
+     """Get a request."""
+     d = Request.objects(pk=id).first()
+-    return HTMLResponse(content=embed_highlight_css(d.html_highlighted))
++    if mode == 'annotate':
++        return HTMLResponse(content=embed_annotate(transform_html_links(d.html_highlighted, d.url)))
++    else:
++        return HTMLResponse(content=embed_highlight(d.html_highlighted))
++
++
++@app.get('/api/requests/{id}/nodes/{node_id}')
++async def request_node(id: str, node_id: int) -> dict:
++    """Get a request."""
++    d = Request.objects(pk=id).first()
++    json_data = convert(d.html)
++    graph_loader = GraphLoader(d.html, json_data)
++    graph_loader.run()
++    n = graph_loader.get_node_by_id(node_id)
++    return n
++
++
++@app.post('/api/requests/{id}/nodes')
++async def request_node(id: str, payload: NodePayload) -> NodeOut:
++    """Get a request."""
++    d = Request.objects(pk=id).first()
++    assert d is not None, f'Request not found for id: {id}'
++    soup = BeautifulSoup(d.html, 'html.parser')
++    node = soup.select_one(payload.css_selector)
++    assert node is not None, f'Node not found for selector: {payload.css_selector}'
++    n = Node(
++        request_id=id,
++        node_id=int(node.attrs['node-id']),
++        tag=payload.tag,
++    )
++    n.save()
++    return n.to_out()
++
++
++@app.post('/api/requests/{id}/nodes/{node_id}')
++async def request_node(id: str, node_id: int, payload: NodePayload) -> NodeOut:
++    """Get a request."""
++    d = Request.objects(pk=id).first()
++    assert d is not None, f'Request not found for id: {id}'
++    n = Node(
++        request_id=id,
++        node_id=node_id,
++        tag=payload.tag,
++    )
++    n.save()
++    return n.to_out()
+ 
+ 
+ @app.put('/api/requests/{id}')
+ async def request(id: str) -> RequestOut:
+     """Update a request."""
+     d = Request.objects(pk=id).first()
+     _d = await request.json()
+@@ -49,100 +100,65 @@
+     return d.to_out()
+ 
+ 
+ @app.post('/api/requests')
+ async def request(payload: RequestPayload = Body(
+     example={
+         'url': 'https://quotes.toscrape.com',
++        'html': '<html>...</html>',
+         'method': 'request',
+         'no_async': False,
+         'detectors': ['plain_list', 'pagination'],
++        'duration': 5,
+     }
+ )) -> RequestOut:
+     """Create a request. This is used to generate a new request to detect a web page."""
+     d = Request(
+         url=payload.url,
++        html=payload.html,
+         method=payload.method,
+         no_async=payload.no_async,
+         detectors=payload.detectors,
++        duration=payload.duration,
+     )
+     d.save()
+ 
++    if payload.html:
++        d.no_async = True
++
+     if d.no_async:
+         # run request (sync)
+         d = _run_request(d)
+     else:
+         # run request (async)
+         t = threading.Thread(target=_run_request, args=[d])
+         t.start()
+ 
+     return d.to_out()
+ 
+ 
+ def _run_request(d: Request):
+-    execution_time = {
+-        'html_requester': None,
+-        'graph_loader': None,
+-        'detectors': {},
+-    }
+     try:
+-        # html requester
+-        tic = datetime.now()
+-        html_requester = HtmlRequester(
++        results, execution_time, html_requester, graph_loader, detectors = extract_rules(
+             url=d.url,
+-            request_method=d.method,
+-            request_rod_duration=d.duration,
++            method=d.method,
++            duration=d.duration,
++            html=d.html,
++            detectors=d.detectors,
+         )
+-        html_requester.run()
+-        execution_time['html_requester'] = round((datetime.now() - tic).total_seconds() * 1000)
+-
+-        # graph loader
+-        tic = datetime.now()
+-        graph_loader = GraphLoader(
+-            html=html_requester.html_,
+-            json_data=html_requester.json_data,
+-        )
+-        graph_loader.run()
+-        execution_time['graph_loader'] = round((datetime.now() - tic).total_seconds() * 1000)
+-
+-        # run detectors
+-        html = html_requester.html
+-        for detector_name in d.detectors:
+-            # start time
+-            tic = datetime.now()
+-
+-            # detector class
+-            if detector_name == DETECTOR_PLAIN_LIST:
+-                detector_cls = PlainListDetector
+-            elif detector_name == DETECTOR_PAGINATION:
+-                detector_cls = PaginationDetector
+-            else:
+-                raise Exception(f'Invalid detector: {detector_name}')
+-
+-            # run detector
+-            detector = detector_cls(
+-                graph_loader=graph_loader,
+-                html_requester=html_requester,
+-            )
+-            detector.run()
+-
+-            # highlight html
+-            html = detector.highlight_html(html)
+-
+-            # add to results
+-            d.results[detector_name] = [r.dict() for r in detector.results]
+-
+-            # execution time
+-            execution_time['detectors'][detector_name] = round((datetime.now() - tic).total_seconds() * 1000)
+ 
+         # update request
+         d.status = REQUEST_STATUS_SUCCESS
+         d.html = html_requester.html_
++        html = html_requester.html
++        for detector in detectors:
++            html = detector.highlight_html(html)
+         d.html_highlighted = html
+         d.execution_time = execution_time
++        d.results = results
+         d.save()
+ 
+     except Exception as e:
+         err_lines = traceback.format_exception(type(e), e, e.__traceback__)
+         err = ''.join(err_lines)
+         logger.error(err)
+```
+
+### Comparing `webspot-0.1.3/webspot.egg-info/PKG-INFO` & `webspot-0.1.4/webspot.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: webspot
+-Version: 0.1.3
++Version: 0.1.4
+ Summary: An intelligent web service to automatically detect web content and extract information from it.
+ Home-page: https://github.com/tikazyq/webspot
+ Author: tikazyq
+ Author-email: tikazyq@163.com
+ License: BSD-3-Clause
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: BSD License
+```
+
+### Comparing `webspot-0.1.3/webspot.egg-info/SOURCES.txt` & `webspot-0.1.4/webspot.egg-info/SOURCES.txt`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -42,21 +42,24 @@
+ webspot/detect/models/stats.py
+ webspot/detect/models/table_result.py
+ webspot/detect/utils/__init__.py
+ webspot/detect/utils/highlight_html.py
+ webspot/detect/utils/math.py
+ webspot/detect/utils/transform_html_links.py
+ webspot/detect/utils/url.py
++webspot/extract/__init__.py
++webspot/extract/extract_results.py
+ webspot/graph/__init__.py
+ webspot/graph/graph_loader.py
+ webspot/graph/models/__init__.py
+ webspot/graph/models/node.py
+ webspot/logging/__init__.py
+ webspot/models/__init__.py
+ webspot/models/base.py
++webspot/models/node.py
+ webspot/models/request.py
+ webspot/models/user.py
+ webspot/request/__init__.py
+ webspot/request/html_requester.py
+ webspot/test/__init__.py
+ webspot/test/crawler/__init__.py
+ webspot/test/crawler/test_crawler.py
+@@ -76,13 +79,14 @@
+ webspot/web/__init__.py
+ webspot/web/app.py
+ webspot/web/logging/__init__.py
+ webspot/web/middlewares/__init__.py
+ webspot/web/middlewares/no_cache.py
+ webspot/web/models/__init__.py
+ webspot/web/models/payload/__init__.py
++webspot/web/models/payload/node.py
+ webspot/web/models/payload/request.py
+ webspot/web/routes/__init__.py
+ webspot/web/routes/index.py
+ webspot/web/routes/api/__init__.py
+ webspot/web/routes/api/request.py
+ webspot/web/utils/__init__.py
+```
+
