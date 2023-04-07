@@ -1,0 +1,68 @@
+# Comparing `tmp/aifactory-1.6.6.tar.gz` & `tmp/aifactory-1.6.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "aifactory-1.6.6.tar", last modified: Fri Apr  7 06:19:18 2023, max compression
++gzip compressed data, was "aifactory-1.6.7.tar", last modified: Fri Apr  7 06:30:10 2023, max compression
+```
+
+## Comparing `aifactory-1.6.6.tar` & `aifactory-1.6.7.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,17 @@
+-drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 06:19:18.509944 aifactory-1.6.6/
+--rw-r--r--   0 kyj        (501) staff       (20)      228 2023-04-07 06:19:18.509764 aifactory-1.6.6/PKG-INFO
+-drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 06:19:18.508545 aifactory-1.6.6/aifactory/
+--rw-r--r--   0 kyj        (501) staff       (20)        0 2022-08-02 00:40:18.000000 aifactory-1.6.6/aifactory/__init__.py
+--rw-r--r--   0 kyj        (501) staff       (20)     3743 2022-11-14 05:11:27.000000 aifactory-1.6.6/aifactory/api.py
+--rw-r--r--   0 kyj        (501) staff       (20)     3710 2022-11-14 05:11:05.000000 aifactory-1.6.6/aifactory/demo.py
+--rw-r--r--   0 kyj        (501) staff       (20)    14314 2023-03-30 07:01:37.000000 aifactory-1.6.6/aifactory/grade.py
+--rw-r--r--   0 kyj        (501) staff       (20)     5966 2022-11-05 14:24:05.000000 aifactory-1.6.6/aifactory/make_zip.py
+--rw-r--r--   0 kyj        (501) staff       (20)     3600 2023-04-07 06:19:06.000000 aifactory-1.6.6/aifactory/score.py
+-drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 06:19:18.509535 aifactory-1.6.6/aifactory.egg-info/
+--rw-r--r--   0 kyj        (501) staff       (20)      228 2023-04-07 06:19:18.000000 aifactory-1.6.6/aifactory.egg-info/PKG-INFO
+--rw-r--r--   0 kyj        (501) staff       (20)      289 2023-04-07 06:19:18.000000 aifactory-1.6.6/aifactory.egg-info/SOURCES.txt
+--rw-r--r--   0 kyj        (501) staff       (20)        1 2023-04-07 06:19:18.000000 aifactory-1.6.6/aifactory.egg-info/dependency_links.txt
+--rw-r--r--   0 kyj        (501) staff       (20)       41 2023-04-07 06:19:18.000000 aifactory-1.6.6/aifactory.egg-info/requires.txt
+--rw-r--r--   0 kyj        (501) staff       (20)       17 2023-04-07 06:19:18.000000 aifactory-1.6.6/aifactory.egg-info/top_level.txt
+--rw-r--r--   0 kyj        (501) staff       (20)       38 2023-04-07 06:19:18.509992 aifactory-1.6.6/setup.cfg
+--rw-r--r--   0 kyj        (501) staff       (20)      430 2023-04-07 06:19:12.000000 aifactory-1.6.6/setup.py
++drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 06:30:10.771371 aifactory-1.6.7/
++-rw-r--r--   0 kyj        (501) staff       (20)      228 2023-04-07 06:30:10.771091 aifactory-1.6.7/PKG-INFO
++drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 06:30:10.769898 aifactory-1.6.7/aifactory/
++-rw-r--r--   0 kyj        (501) staff       (20)        0 2022-08-02 00:40:18.000000 aifactory-1.6.7/aifactory/__init__.py
++-rw-r--r--   0 kyj        (501) staff       (20)     3743 2022-11-14 05:11:27.000000 aifactory-1.6.7/aifactory/api.py
++-rw-r--r--   0 kyj        (501) staff       (20)     3710 2022-11-14 05:11:05.000000 aifactory-1.6.7/aifactory/demo.py
++-rw-r--r--   0 kyj        (501) staff       (20)    14314 2023-03-30 07:01:37.000000 aifactory-1.6.7/aifactory/grade.py
++-rw-r--r--   0 kyj        (501) staff       (20)     5966 2022-11-05 14:24:05.000000 aifactory-1.6.7/aifactory/make_zip.py
++-rw-r--r--   0 kyj        (501) staff       (20)     3274 2023-04-07 06:29:52.000000 aifactory-1.6.7/aifactory/score.py
++drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 06:30:10.770848 aifactory-1.6.7/aifactory.egg-info/
++-rw-r--r--   0 kyj        (501) staff       (20)      228 2023-04-07 06:30:10.000000 aifactory-1.6.7/aifactory.egg-info/PKG-INFO
++-rw-r--r--   0 kyj        (501) staff       (20)      289 2023-04-07 06:30:10.000000 aifactory-1.6.7/aifactory.egg-info/SOURCES.txt
++-rw-r--r--   0 kyj        (501) staff       (20)        1 2023-04-07 06:30:10.000000 aifactory-1.6.7/aifactory.egg-info/dependency_links.txt
++-rw-r--r--   0 kyj        (501) staff       (20)       41 2023-04-07 06:30:10.000000 aifactory-1.6.7/aifactory.egg-info/requires.txt
++-rw-r--r--   0 kyj        (501) staff       (20)       17 2023-04-07 06:30:10.000000 aifactory-1.6.7/aifactory.egg-info/top_level.txt
++-rw-r--r--   0 kyj        (501) staff       (20)       38 2023-04-07 06:30:10.771458 aifactory-1.6.7/setup.cfg
++-rw-r--r--   0 kyj        (501) staff       (20)      430 2023-04-07 06:30:03.000000 aifactory-1.6.7/setup.py
+```
+
+### Comparing `aifactory-1.6.6/aifactory/api.py` & `aifactory-1.6.7/aifactory/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aifactory-1.6.6/aifactory/demo.py` & `aifactory-1.6.7/aifactory/demo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aifactory-1.6.6/aifactory/grade.py` & `aifactory-1.6.7/aifactory/grade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aifactory-1.6.6/aifactory/make_zip.py` & `aifactory-1.6.7/aifactory/make_zip.py`
+
+ * *Files identical despite different names*
+

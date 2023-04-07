@@ -1,0 +1,197 @@
+# Comparing `tmp/fastq-2.0.1.tar.gz` & `tmp/fastq-2.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fastq-2.0.1.tar", last modified: Tue Nov  8 10:00:11 2022, max compression
++gzip compressed data, was "fastq-2.0.2.tar", last modified: Fri Apr  7 06:30:23 2023, max compression
+```
+
+## Comparing `fastq-2.0.1.tar` & `fastq-2.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,20 +1,24 @@
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-08 10:00:11.563362 fastq-2.0.1/
+--rwxr-xr-x   0 runner    (1001) docker     (121)    35149 2022-11-08 09:59:58.000000 fastq-2.0.1/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (121)     5542 2022-11-08 10:00:11.563362 fastq-2.0.1/PKG-INFO
+--rwxr-xr-x   0 runner    (1001) docker     (121)     4756 2022-11-08 09:59:58.000000 fastq-2.0.1/README.md
+--rwxr-xr-x   0 runner    (1001) docker     (121)      497 2022-11-08 09:59:58.000000 fastq-2.0.1/pyproject.toml
+--rwxr-xr-x   0 runner    (1001) docker     (121)      959 2022-11-08 10:00:11.563362 fastq-2.0.1/setup.cfg
+--rwxr-xr-x   0 runner    (1001) docker     (121)       69 2022-11-08 09:59:58.000000 fastq-2.0.1/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-08 10:00:11.559362 fastq-2.0.1/src/
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-08 10:00:11.563362 fastq-2.0.1/src/fastq/
+--rwxr-xr-x   0 runner    (1001) docker     (121)      178 2022-11-08 09:59:58.000000 fastq-2.0.1/src/fastq/__init__.py
+--rwxr-xr-x   0 runner    (1001) docker     (121)     5209 2022-11-08 09:59:58.000000 fastq-2.0.1/src/fastq/_fastq.py
+--rwxr-xr-x   0 runner    (1001) docker     (121)     2976 2022-11-08 09:59:58.000000 fastq-2.0.1/src/fastq/_reader.py
+--rwxr-xr-x   0 runner    (1001) docker     (121)      726 2022-11-08 09:59:58.000000 fastq-2.0.1/src/fastq/_writer.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-08 10:00:11.563362 fastq-2.0.1/src/fastq.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (121)     5542 2022-11-08 10:00:11.000000 fastq-2.0.1/src/fastq.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)      331 2022-11-08 10:00:11.000000 fastq-2.0.1/src/fastq.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        1 2022-11-08 10:00:11.000000 fastq-2.0.1/src/fastq.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        1 2022-11-08 10:00:11.000000 fastq-2.0.1/src/fastq.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (121)       61 2022-11-08 10:00:11.000000 fastq-2.0.1/src/fastq.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        6 2022-11-08 10:00:11.000000 fastq-2.0.1/src/fastq.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:30:23.705347 fastq-2.0.2/
++-rwxr-xr-x   0 runner    (1001) docker     (123)    35149 2023-04-07 06:30:10.000000 fastq-2.0.2/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     5543 2023-04-07 06:30:23.705347 fastq-2.0.2/PKG-INFO
++-rwxr-xr-x   0 runner    (1001) docker     (123)     4757 2023-04-07 06:30:10.000000 fastq-2.0.2/README.md
++-rwxr-xr-x   0 runner    (1001) docker     (123)      497 2023-04-07 06:30:10.000000 fastq-2.0.2/pyproject.toml
++-rwxr-xr-x   0 runner    (1001) docker     (123)      996 2023-04-07 06:30:23.705347 fastq-2.0.2/setup.cfg
++-rwxr-xr-x   0 runner    (1001) docker     (123)       69 2023-04-07 06:30:10.000000 fastq-2.0.2/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:30:23.701347 fastq-2.0.2/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:30:23.705347 fastq-2.0.2/src/fastq/
++-rwxr-xr-x   0 runner    (1001) docker     (123)      178 2023-04-07 06:30:10.000000 fastq-2.0.2/src/fastq/__init__.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     5209 2023-04-07 06:30:10.000000 fastq-2.0.2/src/fastq/_fastq.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     2976 2023-04-07 06:30:10.000000 fastq-2.0.2/src/fastq/_reader.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)      726 2023-04-07 06:30:10.000000 fastq-2.0.2/src/fastq/_writer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:30:23.705347 fastq-2.0.2/src/fastq.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     5543 2023-04-07 06:30:23.000000 fastq-2.0.2/src/fastq.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      401 2023-04-07 06:30:23.000000 fastq-2.0.2/src/fastq.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 06:30:23.000000 fastq-2.0.2/src/fastq.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 06:30:23.000000 fastq-2.0.2/src/fastq.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)       61 2023-04-07 06:30:23.000000 fastq-2.0.2/src/fastq.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        6 2023-04-07 06:30:23.000000 fastq-2.0.2/src/fastq.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:30:23.705347 fastq-2.0.2/tests/
++-rwxr-xr-x   0 runner    (1001) docker     (123)     2680 2023-04-07 06:30:10.000000 fastq-2.0.2/tests/test_fastq.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)      533 2023-04-07 06:30:10.000000 fastq-2.0.2/tests/test_fastq_info.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     1934 2023-04-07 06:30:10.000000 fastq-2.0.2/tests/test_fastq_read.py
+```
+
+### Comparing `fastq-2.0.1/LICENSE` & `fastq-2.0.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `fastq-2.0.1/PKG-INFO` & `fastq-2.0.2/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fastq
+-Version: 2.0.1
++Version: 2.0.2
+ Summary: A simple FASTQ toolbox for small to medium size projects without dependencies.
+ Home-page: https://github.com/not-a-feature/fastq
+ Author: Jules Kreuer / not_a_feature
+ License: gpl-3.0
+ Keywords: FASTQ,fastq,reader,toolbox,bio,bioinformatics
+ Platform: unix
+ Platform: linux
+@@ -21,14 +21,15 @@
+ Description-Content-Type: text/markdown
+ Provides-Extra: testing
+ License-File: LICENSE
+ 
+ ![fastq](https://github.com/not-a-feature/fastq/raw/main/fastq.png)
+ 
+ A simple FASTQ toolbox for small to medium size projects without dependencies.
++
+ [![DOI](https://zenodo.org/badge/450063403.svg)](https://zenodo.org/badge/latestdoi/450063403)
+ ![Test Badge](https://github.com/not-a-feature/fastq/actions/workflows/tests.yml/badge.svg)
+ [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+ ![Download Badge](https://img.shields.io/pypi/dm/fastq.svg)
+ ![Python Version Badge](https://img.shields.io/pypi/pyversions/fastq)
+```
+
+### Comparing `fastq-2.0.1/README.md` & `fastq-2.0.2/README.md`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,11 @@
+ ![fastq](https://github.com/not-a-feature/fastq/raw/main/fastq.png)
+ 
+ A simple FASTQ toolbox for small to medium size projects without dependencies.
++
+ [![DOI](https://zenodo.org/badge/450063403.svg)](https://zenodo.org/badge/latestdoi/450063403)
+ ![Test Badge](https://github.com/not-a-feature/fastq/actions/workflows/tests.yml/badge.svg)
+ [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+ ![Download Badge](https://img.shields.io/pypi/dm/fastq.svg)
+ ![Python Version Badge](https://img.shields.io/pypi/pyversions/fastq)
+```
+
+### Comparing `fastq-2.0.1/setup.cfg` & `fastq-2.0.2/setup.cfg`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [metadata]
+ name = fastq
+-version = 2.0.1
++version = 2.0.2
+ description = A simple FASTQ toolbox for small to medium size projects without dependencies.
+ long_description = file: README.md
+ long_description_content_type = text/markdown
+ keywords = FASTQ, fastq, reader, toolbox, bio, bioinformatics
+ home-page = https://github.com/not-a-feature/fastq
+ author = Jules Kreuer / not_a_feature
+ license = gpl-3.0
+@@ -18,14 +18,16 @@
+ 	Programming Language :: Python :: 3.10
+ 	Programming Language :: Python :: 3.11
+ 
+ [options]
+ packages = 
+ 	fastq
+ python_requires = >=3.7
++setup_requires = 
++	miniFasta >=3.0.1
+ package_dir = 
+ 	=src
+ zip_safe = no
+ 
+ [options.extras_require]
+ testing = 
+ 	pytest>=7.1
+```
+
+### Comparing `fastq-2.0.1/src/fastq/_fastq.py` & `fastq-2.0.2/src/fastq/_fastq.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastq-2.0.1/src/fastq/_reader.py` & `fastq-2.0.2/src/fastq/_reader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastq-2.0.1/src/fastq/_writer.py` & `fastq-2.0.2/src/fastq/_writer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastq-2.0.1/src/fastq.egg-info/PKG-INFO` & `fastq-2.0.2/src/fastq.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fastq
+-Version: 2.0.1
++Version: 2.0.2
+ Summary: A simple FASTQ toolbox for small to medium size projects without dependencies.
+ Home-page: https://github.com/not-a-feature/fastq
+ Author: Jules Kreuer / not_a_feature
+ License: gpl-3.0
+ Keywords: FASTQ,fastq,reader,toolbox,bio,bioinformatics
+ Platform: unix
+ Platform: linux
+@@ -21,14 +21,15 @@
+ Description-Content-Type: text/markdown
+ Provides-Extra: testing
+ License-File: LICENSE
+ 
+ ![fastq](https://github.com/not-a-feature/fastq/raw/main/fastq.png)
+ 
+ A simple FASTQ toolbox for small to medium size projects without dependencies.
++
+ [![DOI](https://zenodo.org/badge/450063403.svg)](https://zenodo.org/badge/latestdoi/450063403)
+ ![Test Badge](https://github.com/not-a-feature/fastq/actions/workflows/tests.yml/badge.svg)
+ [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+ ![Download Badge](https://img.shields.io/pypi/dm/fastq.svg)
+ ![Python Version Badge](https://img.shields.io/pypi/pyversions/fastq)
+```
+

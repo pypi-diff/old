@@ -1,0 +1,213 @@
+# Comparing `tmp/snapper-ont-0.4.3.tar.gz` & `tmp/snapper-ont-0.4.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/snapper-ont-0.4.3.tar", last modified: Tue Apr  4 08:20:07 2023, max compression
++gzip compressed data, was "dist/snapper-ont-0.4.4.tar", last modified: Fri Apr  7 06:34:08 2023, max compression
+```
+
+## Comparing `snapper-ont-0.4.3.tar` & `snapper-ont-0.4.4.tar`
+
+### file list
+
+```diff
+@@ -1,23 +1,23 @@
+-drwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)        0 2023-04-04 08:20:07.000000 snapper-ont-0.4.3/
+--rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)     1074 2023-02-27 11:26:28.000000 snapper-ont-0.4.3/LICENSE
+--rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)      475 2023-04-04 08:20:07.000000 snapper-ont-0.4.3/PKG-INFO
+--rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)     2922 2023-02-27 11:28:05.000000 snapper-ont-0.4.3/README.md
+--rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)       38 2023-04-04 08:20:07.000000 snapper-ont-0.4.3/setup.cfg
+--rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)     1064 2023-04-04 08:20:05.000000 snapper-ont-0.4.3/setup.py
+-drwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)        0 2023-04-04 08:20:07.000000 snapper-ont-0.4.3/snapper/
+--rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)     7813 2023-04-03 14:46:52.000000 snapper-ont-0.4.3/snapper/snapper.py
+-drwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)        0 2023-04-04 08:20:07.000000 snapper-ont-0.4.3/snapper/src/
+--rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)     6983 2023-03-30 14:19:03.000000 snapper-ont-0.4.3/snapper/src/data_processing.py
+--rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)    15983 2023-03-30 14:18:56.000000 snapper-ont-0.4.3/snapper/src/methods.py
+--rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)     5804 2023-04-03 14:56:18.000000 snapper-ont-0.4.3/snapper/src/motif_extraction.py
+--rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)     5438 2023-04-04 08:17:18.000000 snapper-ont-0.4.3/snapper/src/plotting.py
+--rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)     1465 2023-02-27 11:26:28.000000 snapper-ont-0.4.3/snapper/src/seq_processing.py
+--rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)     3120 2023-03-30 14:17:30.000000 snapper-ont-0.4.3/snapper/src/statistics_methods.py
+--rwx------   0 konanov_dn  (1002) konanov_dn  (1002)     8829 2023-03-30 11:35:53.000000 snapper-ont-0.4.3/snapper/src/type_I_RM_system.py
+-drwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)        0 2023-04-04 08:20:07.000000 snapper-ont-0.4.3/snapper_ont.egg-info/
+--rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)      475 2023-04-04 08:20:07.000000 snapper-ont-0.4.3/snapper_ont.egg-info/PKG-INFO
+--rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)      463 2023-04-04 08:20:07.000000 snapper-ont-0.4.3/snapper_ont.egg-info/SOURCES.txt
+--rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)        1 2023-04-04 08:20:07.000000 snapper-ont-0.4.3/snapper_ont.egg-info/dependency_links.txt
+--rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)       49 2023-04-04 08:20:07.000000 snapper-ont-0.4.3/snapper_ont.egg-info/entry_points.txt
+--rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)       45 2023-04-04 08:20:07.000000 snapper-ont-0.4.3/snapper_ont.egg-info/requires.txt
+--rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)        8 2023-04-04 08:20:07.000000 snapper-ont-0.4.3/snapper_ont.egg-info/top_level.txt
++drwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)        0 2023-04-07 06:34:08.000000 snapper-ont-0.4.4/
++-rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)     1074 2023-02-27 11:26:28.000000 snapper-ont-0.4.4/LICENSE
++-rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)      475 2023-04-07 06:34:08.000000 snapper-ont-0.4.4/PKG-INFO
++-rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)     2922 2023-02-27 11:28:05.000000 snapper-ont-0.4.4/README.md
++-rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)       38 2023-04-07 06:34:08.000000 snapper-ont-0.4.4/setup.cfg
++-rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)     1064 2023-04-07 06:33:31.000000 snapper-ont-0.4.4/setup.py
++drwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)        0 2023-04-07 06:34:08.000000 snapper-ont-0.4.4/snapper/
++-rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)     7813 2023-04-03 14:46:52.000000 snapper-ont-0.4.4/snapper/snapper.py
++drwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)        0 2023-04-07 06:34:08.000000 snapper-ont-0.4.4/snapper/src/
++-rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)     6983 2023-03-30 14:19:03.000000 snapper-ont-0.4.4/snapper/src/data_processing.py
++-rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)    15983 2023-03-30 14:18:56.000000 snapper-ont-0.4.4/snapper/src/methods.py
++-rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)     5804 2023-04-03 14:56:18.000000 snapper-ont-0.4.4/snapper/src/motif_extraction.py
++-rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)     5460 2023-04-07 06:33:13.000000 snapper-ont-0.4.4/snapper/src/plotting.py
++-rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)     1465 2023-02-27 11:26:28.000000 snapper-ont-0.4.4/snapper/src/seq_processing.py
++-rwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)     3120 2023-03-30 14:17:30.000000 snapper-ont-0.4.4/snapper/src/statistics_methods.py
++-rwx------   0 konanov_dn  (1002) konanov_dn  (1002)     8829 2023-03-30 11:35:53.000000 snapper-ont-0.4.4/snapper/src/type_I_RM_system.py
++drwxrwxr-x   0 konanov_dn  (1002) konanov_dn  (1002)        0 2023-04-07 06:34:08.000000 snapper-ont-0.4.4/snapper_ont.egg-info/
++-rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)      475 2023-04-07 06:34:08.000000 snapper-ont-0.4.4/snapper_ont.egg-info/PKG-INFO
++-rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)      463 2023-04-07 06:34:08.000000 snapper-ont-0.4.4/snapper_ont.egg-info/SOURCES.txt
++-rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)        1 2023-04-07 06:34:08.000000 snapper-ont-0.4.4/snapper_ont.egg-info/dependency_links.txt
++-rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)       49 2023-04-07 06:34:08.000000 snapper-ont-0.4.4/snapper_ont.egg-info/entry_points.txt
++-rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)       45 2023-04-07 06:34:08.000000 snapper-ont-0.4.4/snapper_ont.egg-info/requires.txt
++-rw-rw-r--   0 konanov_dn  (1002) konanov_dn  (1002)        8 2023-04-07 06:34:08.000000 snapper-ont-0.4.4/snapper_ont.egg-info/top_level.txt
+```
+
+### Comparing `snapper-ont-0.4.3/LICENSE` & `snapper-ont-0.4.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `snapper-ont-0.4.3/README.md` & `snapper-ont-0.4.4/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `snapper-ont-0.4.3/setup.py` & `snapper-ont-0.4.4/setup.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import setuptools
+ 
+ with open("README.md", "r", encoding="utf-8") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name="snapper-ont",
+-    version="0.4.3",
++    version="0.4.4",
+     author="D.N. Konanov",
+     author_email="konanovdmitriy@gmail.com",
+     description="Nanopore-based methylation sites caller",
+     long_description="snapper",
+     long_description_content_type="",
+     url="https://github.com/DNKonanov/Snapper",
+     project_urls={
+```
+
+### Comparing `snapper-ont-0.4.3/snapper/snapper.py` & `snapper-ont-0.4.4/snapper/snapper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snapper-ont-0.4.3/snapper/src/data_processing.py` & `snapper-ont-0.4.4/snapper/src/data_processing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snapper-ont-0.4.3/snapper/src/methods.py` & `snapper-ont-0.4.4/snapper/src/methods.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snapper-ont-0.4.3/snapper/src/motif_extraction.py` & `snapper-ont-0.4.4/snapper/src/motif_extraction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snapper-ont-0.4.3/snapper/src/plotting.py` & `snapper-ont-0.4.4/snapper/src/plotting.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -46,62 +46,60 @@
+     for i in range(ext_length + 1):
+         anc_variants.append('N'*i + ancMOTIF_c + 'N'*(ext_length - i))
+         
+     return anc_variants
+ 
+ def plot_dist(motif, native_motifs, wga_motifs, savepath, lenmotif=15, MAXSAMPLESIZE = 2000):
+     
+-
++    print(f'Rendering {"".join(motif[1])}...')
+     
+     ancMOTIF_init = gen_template(motif[1], motif[2], lenmotif)
+ 
+     anc_variants = get_anc_variants(ancMOTIF_init, lenmotif=lenmotif)
+     
+     N = len(anc_variants)
+     fig, axs = plt.subplots(N, 2, figsize=(14, 4*N))
+     
+     motif_cnt = 0
+     for ancMOTIF in anc_variants:
+-        print(ancMOTIF)
+-        
+         
+         _wga = []
+         _native = []
+         
+         lens = []
+         effect_size_dist = []
+ 
+         cnt = 0
+         for MOTIF in gen_variants(ancMOTIF):
+ 
+ 
+-            if MOTIF not in wga_motifs:
++            if MOTIF not in wga_motifs or MOTIF not in native_motifs:
+                 continue
+ 
+             _wga += wga_motifs[MOTIF]
+             _native += native_motifs[MOTIF]
+ 
+             effect_size_dist.append(np.abs(cohend(native_motifs[MOTIF], wga_motifs[MOTIF])))
+ 
+             #print(len(_wga), len(_native))
+         
+-        print(len(effect_size_dist))
+         if len(effect_size_dist) == 0:
+             continue
+         if len(_native) > MAXSAMPLESIZE:
+             _native = sample(_native, MAXSAMPLESIZE)
+ 
+         if len(_wga) > MAXSAMPLESIZE:
+             _wga = sample(_wga, MAXSAMPLESIZE)
+         
+         
+         sns.distplot(x = _wga, hist = False, label='WGA', color='red', ax=axs[motif_cnt][0])
+         sns.distplot(x = _native, hist = False, label='native', color='green', ax=axs[motif_cnt][0])
+         axs[motif_cnt][0].grid()
+ 
++        
+         axs[motif_cnt][0].set_title('{}, confidence = {}\nmed effsize = {}'.format(ancMOTIF, motif[0], np.median(effect_size_dist)))
+         axs[motif_cnt][0].set_xlabel('Normalized signal')
+ 
+         axs[motif_cnt][1].hist(effect_size_dist, bins=50, density=True, rwidth=0.8, color='black')
+         axs[motif_cnt][1].set_xlabel('eff size')
+         
+         title = np.round([
+@@ -119,15 +117,15 @@
+ 
+         axs[motif_cnt][0].legend()
+         
+         motif_cnt += 1
+ 
+     plt.tight_layout()
+ 
+-    plt.savefig(savepath + '/{}.png'.format(ancMOTIF), format='png', dpi=400)
++    plt.savefig(savepath + '/{}.png'.format("".join(motif[1])), format='png', dpi=400)
+     plt.show()
+ 
+ 
+ 
+ 
+ def plot_motif(motif, sample_motifs, control_motifs, savepath, lenmotif=11):
+```
+
+### Comparing `snapper-ont-0.4.3/snapper/src/seq_processing.py` & `snapper-ont-0.4.4/snapper/src/seq_processing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snapper-ont-0.4.3/snapper/src/statistics_methods.py` & `snapper-ont-0.4.4/snapper/src/statistics_methods.py`
+
+ * *Files identical despite different names*
+
+### Comparing `snapper-ont-0.4.3/snapper/src/type_I_RM_system.py` & `snapper-ont-0.4.4/snapper/src/type_I_RM_system.py`
+
+ * *Files identical despite different names*
+

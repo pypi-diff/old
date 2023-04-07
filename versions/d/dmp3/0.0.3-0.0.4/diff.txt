@@ -1,0 +1,416 @@
+--- tmp/dmp3-0.0.3.tar.gz
++++ tmp/dmp3-0.0.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dmp3-0.0.3.tar", last modified: Thu Apr  6 08:35:56 2023, max compression
+│ +gzip compressed data, was "dmp3-0.0.4.tar", last modified: Fri Apr  7 06:25:28 2023, max compression
+│   --- dmp3-0.0.3.tar
+├── +++ dmp3-0.0.4.tar
+│ ├── file list
+│ │ @@ -1,23 +1,23 @@
+│ │ -drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-06 08:35:56.109752 dmp3-0.0.3/
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     3077 2023-04-05 09:44:04.000000 dmp3-0.0.3/.gitignore
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     1064 2023-04-05 05:41:07.000000 dmp3-0.0.3/LICENSE
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     5216 2023-04-06 08:35:56.109752 dmp3-0.0.3/PKG-INFO
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     4381 2023-04-06 08:33:25.000000 dmp3-0.0.3/README.rst
+│ │ --rw-r--r--   0 user      (1000) user      (1000)      969 2023-04-06 08:28:30.000000 dmp3-0.0.3/pyproject.toml
+│ │ --rw-r--r--   0 user      (1000) user      (1000)       38 2023-04-06 08:35:56.109752 dmp3-0.0.3/setup.cfg
+│ │ -drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-06 08:35:56.099752 dmp3-0.0.3/src/
+│ │ -drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-06 08:35:56.099752 dmp3-0.0.3/src/dmp3/
+│ │ --rw-r--r--   0 user      (1000) user      (1000)        0 2023-04-06 08:28:30.000000 dmp3-0.0.3/src/dmp3/__init__.py
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     2376 2023-04-06 08:28:30.000000 dmp3-0.0.3/src/dmp3/_internal.py
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     4451 2023-04-06 08:28:30.000000 dmp3-0.0.3/src/dmp3/dmp3.py
+│ │ -drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-06 08:35:56.109752 dmp3-0.0.3/src/dmp3.egg-info/
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     5216 2023-04-06 08:35:56.000000 dmp3-0.0.3/src/dmp3.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 user      (1000) user      (1000)      352 2023-04-06 08:35:56.000000 dmp3-0.0.3/src/dmp3.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 user      (1000) user      (1000)        1 2023-04-06 08:35:56.000000 dmp3-0.0.3/src/dmp3.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 user      (1000) user      (1000)       39 2023-04-06 08:35:56.000000 dmp3-0.0.3/src/dmp3.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 user      (1000) user      (1000)       14 2023-04-06 08:35:56.000000 dmp3-0.0.3/src/dmp3.egg-info/requires.txt
+│ │ --rw-r--r--   0 user      (1000) user      (1000)        5 2023-04-06 08:35:56.000000 dmp3-0.0.3/src/dmp3.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-06 08:35:56.109752 dmp3-0.0.3/tests/
+│ │ --rw-r--r--   0 user      (1000) user      (1000)      290 2023-04-06 04:40:16.000000 dmp3-0.0.3/tests/conftest.py
+│ │ --rw-r--r--   0 user      (1000) user      (1000)      682 2023-04-06 04:40:16.000000 dmp3-0.0.3/tests/terminal.py
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     1846 2023-04-06 08:28:30.000000 dmp3-0.0.3/tests/test_wsl.py
+│ │ +drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:25:28.156743 dmp3-0.0.4/
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     3109 2023-04-07 04:09:35.000000 dmp3-0.0.4/.gitignore
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     1064 2023-04-05 05:41:07.000000 dmp3-0.0.4/LICENSE
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     6098 2023-04-07 06:25:28.156743 dmp3-0.0.4/PKG-INFO
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     5264 2023-04-07 05:54:32.000000 dmp3-0.0.4/README.rst
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)      969 2023-04-07 06:23:16.000000 dmp3-0.0.4/pyproject.toml
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)       38 2023-04-07 06:25:28.156743 dmp3-0.0.4/setup.cfg
+│ │ +drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:25:28.146743 dmp3-0.0.4/src/
+│ │ +drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:25:28.156743 dmp3-0.0.4/src/dmp3/
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)        0 2023-04-06 08:28:30.000000 dmp3-0.0.4/src/dmp3/__init__.py
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     2924 2023-04-07 03:16:39.000000 dmp3-0.0.4/src/dmp3/_internal.py
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     4305 2023-04-07 04:25:05.000000 dmp3-0.0.4/src/dmp3/dmp3.py
+│ │ +drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:25:28.156743 dmp3-0.0.4/src/dmp3.egg-info/
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     6098 2023-04-07 06:25:28.000000 dmp3-0.0.4/src/dmp3.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)      352 2023-04-07 06:25:28.000000 dmp3-0.0.4/src/dmp3.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)        1 2023-04-07 06:25:28.000000 dmp3-0.0.4/src/dmp3.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)       39 2023-04-07 06:25:28.000000 dmp3-0.0.4/src/dmp3.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)       14 2023-04-07 06:25:28.000000 dmp3-0.0.4/src/dmp3.egg-info/requires.txt
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)        5 2023-04-07 06:25:28.000000 dmp3-0.0.4/src/dmp3.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:25:28.156743 dmp3-0.0.4/tests/
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)      290 2023-04-06 04:40:16.000000 dmp3-0.0.4/tests/conftest.py
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)      682 2023-04-06 04:40:16.000000 dmp3-0.0.4/tests/terminal.py
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     2417 2023-04-07 06:12:19.000000 dmp3-0.0.4/tests/test_wsl.py
+│ │   --- dmp3-0.0.3/.gitignore
+│ ├── +++ dmp3-0.0.4/.gitignore
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,7 +1,10 @@
+│ │ +# testing dirs
+│ │ +tests/mp3_dir/*
+│ │ +
+│ │  # Byte-compiled / optimized / DLL files
+│ │  __pycache__/
+│ │  *.py[cod]
+│ │  *$py.class
+│ │  
+│ │  # C extensions
+│ │  *.so
+│ │   --- dmp3-0.0.3/LICENSE
+│ ├── +++ dmp3-0.0.4/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- dmp3-0.0.3/README.rst
+│ ├── +++ dmp3-0.0.4/README.rst
+│ │┄ Files 23% similar despite different names
+│ │ @@ -18,61 +18,89 @@
+│ │  
+│ │  #. Install dmp3 package from pypi
+│ │  
+│ │      .. code-block:: console
+│ │  
+│ │          pip install dmp3
+│ │  
+│ │ -#. Install `FFMPEG <https://ffmpeg.org/>`_, it converts medio formats. 
+│ │ +#. Install `FFMPEG <https://ffmpeg.org/>`_, it converts media formats. 
+│ │  
+│ │ -    - Linux
+│ │ +    Linux
+│ │  
+│ │ -        .. code-block:: console
+│ │ +    .. code-block:: console
+│ │  
+│ │ -            sudo apt install ffmpeg
+│ │ +        sudo apt install ffmpeg
+│ │  
+│ │ -    - Windows
+│ │ +    Windows
+│ │      
+│ │ -        #. Install from `ffmpeg download page <https://ffmpeg.org/download.html>`_, or `windows installer <https://www.gyan.dev/ffmpeg/builds/>`_.
+│ │ -        #. Add the bin folder that contains ``ffmpeg.exe`` to system path, so that it is available on command line.
+│ │ +    #. Install from `ffmpeg download page <https://ffmpeg.org/download.html>`_,
+│ │ +       most likely use `windows installer <https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip>`_.
+│ │ +    #. Add the bin folder that contains ``ffmpeg.exe`` to system path,
+│ │ +       so that it is available on command line.
+│ │  
+│ │  Simple Usage
+│ │  --------------
+│ │  
+│ │  Linux:
+│ │  
+│ │  .. code-block:: console
+│ │  
+│ │ -    dmp3 /mnt/d/media/music/game_theme/starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy
+│ │ +    cd /home/user/Projects/utube_playlist_mp3_downloader/tests/mp3_dir
+│ │ +    dmp3 starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy
+│ │  
+│ │  Windows:
+│ │  
+│ │  .. code-block:: console
+│ │  
+│ │      dmp3 "D:\media\music\game_theme\starcraft_terran" -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy
+│ │  
+│ │ -Effect in target location:
+│ │ +Example results:
+│ │  
+│ │  .. code-block:: text
+│ │  
+│ │ -    game_theme
+│ │ -    ├── starcraft_terran
+│ │ -    │   ├── StarCraft - Terran Theme 1-mD4GbGmvNRc.mp3
+│ │ -    │   ├── Starcraft 2 Soundtrack - Terran 01-zAS8KivZX5s.mp3
+│ │ -    │   ├── Starcraft 2 Soundtrack - Terran 02-sNbTg0Li36k.mp3
+│ │ -    │   ├── Starcraft 2 Soundtrack - Terran 03-dssNa11htIM.mp3
+│ │ -    │   ├── Starcraft 2 Soundtrack - Terran 04-4YfQjho2IOk.mp3
+│ │ -    │   ├── Starcraft 2 Soundtrack - Terran 05-fQluJBSXM5I.mp3
+│ │ -    │   ├── Terran Theme 2 - Starcraft Soundtrack-_R1QLIo16DY.mp3
+│ │ -    │   ├── Terran Theme 3 - Starcraft Soundtrack-xcEHDqji74A.mp3
+│ │ -    │   └── Terran Theme 4 (Brood War) - Starcraft Soundtrack-l9XSZw67QpY.mp3
+│ │ -    ├── diablo
+│ │ -    │   ├── Diablo - Ending-4XDfoh2BQlU.mp3
+│ │ -    │   ├── Diablo - Intro-oFds4KWQ3kM.mp3
+│ │ -    ...
+│ │ +    mp3_dir/
+│ │ +    ├── diablo1
+│ │ +    │   ├── .dmp3
+│ │ +    │   ├── Diablo 1 [OST] - 01 - Intro-Y7P7vrvEQYc.mp3
+│ │ +    │   ├── Diablo 1 [OST] - 02 - Town-SEpydfXj87M.mp3
+│ │ +    │   ├── Diablo 1 [OST] - 03 - Dungeon-yQCg-uHOrZk.mp3
+│ │ +    │   ├── Diablo 1 [OST] - 04 - Catacombs-FPQPJwVX-60.mp3
+│ │ +    │   ├── Diablo 1 [OST] - 05 - Caves-J9OIyH21ZKo.mp3
+│ │ +    │   └── Diablo 1 [OST] - 06 - Hell-5PBG92gkL7I.mp3
+│ │ +    └── starcraft_terran
+│ │ +        ├── .dmp3
+│ │ +        ├── StarCraft - Terran Theme 1-mD4GbGmvNRc.mp3
+│ │ +        ├── Starcraft 2 Soundtrack - Terran 01-zAS8KivZX5s.mp3
+│ │ +        ├── Starcraft 2 Soundtrack - Terran 02-sNbTg0Li36k.mp3
+│ │ +        ├── Starcraft 2 Soundtrack - Terran 03-dssNa11htIM.mp3
+│ │ +        ├── Starcraft 2 Soundtrack - Terran 04-4YfQjho2IOk.mp3
+│ │ +        ├── Starcraft 2 Soundtrack - Terran 05-fQluJBSXM5I.mp3
+│ │ +        ├── Terran Theme 2 - Starcraft Soundtrack-_R1QLIo16DY.mp3
+│ │ +        ├── Terran Theme 3 - Starcraft Soundtrack-xcEHDqji74A.mp3
+│ │ +        └── Terran Theme 4 (Brood War) - Starcraft Soundtrack-l9XSZw67QpY.mp3
+│ │ +
+│ │ +Refresh multiple local storage folders, each tracking a playlist:
+│ │ +
+│ │ +.. code-block:: console
+│ │ +
+│ │ +    cd /home/user/Projects/utube_playlist_mp3_downloader/tests/mp3_dir
+│ │ +    dmp3 . -r
+│ │ +
+│ │ +Usage in python script:
+│ │ +
+│ │ +.. code-block:: Python
+│ │ +
+│ │ +        from dmp3.dmp3 import dmp3
+│ │ +        from pathlib import Path
+│ │ +
+│ │ +        folder = Path("/home/user/Projects/utube_playlist_mp3_downloader/tests/mp3_dir/starcraft_terran")
+│ │ +        webpath = "https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy"
+│ │ +
+│ │ +        dmp3(folder=folder)
+│ │ +        dmp3(folder=folder, webpath=webpath, start=1, end=3, refresh_folder_mode=False, mp3=True)
+│ │  
+│ │  API
+│ │  -------
+│ │  
+│ │     .. code-block:: console
+│ │     
+│ │          usage: dmp3 [-h] [-w WEBPATH] [-s START] [-e END] [-r] [-m MP3] folder
+│ │ @@ -97,24 +125,27 @@
+│ │          -w WEBPATH, --webpath WEBPATH
+│ │                                  Webpath to download from, creates a .dmp3 file insdie folder to store webpath
+│ │          -s START, --start START
+│ │                                  Start index of the playlist
+│ │          -e END, --end END     End index of the playlist
+│ │          -r, --refresh_folder_mode
+│ │                                  Refresh all mp3 folders in the folder, default is False.
+│ │ -                                In this mode, work through all sub folders with .mp3 inside, and download all new videos
+│ │          -m MP3, --mp3 MP3     Convert mp4 files to mp3 files in the folder (WIP)
+│ │  
+│ │ -        Example:
+│ │ +        Examples:
+│ │  
+│ │          Entire playlist:
+│ │ -        dmp3 /mnt/d/media/music/game_theme/starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy
+│ │ +        cd /home/user/Projects/utube_playlist_mp3_downloader/tests/mp3_dir
+│ │ +        dmp3 starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy
+│ │ +
+│ │          Part of playlist:
+│ │ -        dmp3 /mnt/d/media/music/game_theme/starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy -s 1 -e 2
+│ │ +        dmp3 starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy -s 1 -e 2
+│ │  
+│ │          Refresh entire playlist:
+│ │ -        dmp3 /mnt/d/media/music/game_theme/starcraft_terran
+│ │ +        dmp3 starcraft_terran
+│ │ +
+│ │          Refresh part of playlist:
+│ │ -        dmp3 /mnt/d/media/music/game_theme/starcraft_terran -e 3
+│ │ +        dmp3 starcraft_terran -e 2
+│ │  
+│ │          Refresh all folders:
+│ │ -        dmp3 /mnt/d/media/music/game_theme -r
+│ │ +        cd /home/user/Projects/utube_playlist_mp3_downloader/tests/mp3_dir
+│ │ +        dmp3 . -r
+│ │   --- dmp3-0.0.3/pyproject.toml
+│ ├── +++ dmp3-0.0.4/pyproject.toml
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["setuptools>=61.0"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "dmp3"
+│ │ -version = "0.0.3"
+│ │ +version = "0.0.4"
+│ │  authors = [
+│ │    { name="0xdomyz", email="septemberwhyms@gmail.com" },
+│ │  ]
+│ │  description = "Download youtube video or playlist, convert to mp3, store into a folder."
+│ │  readme = "README.rst"
+│ │  requires-python = ">=3.9"
+│ │  classifiers = [
+│ │   --- dmp3-0.0.3/src/dmp3/_internal.py
+│ ├── +++ dmp3-0.0.4/src/dmp3/_internal.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -11,14 +11,15 @@
+│ │          {
+│ │              "key": "FFmpegExtractAudio",
+│ │              "preferredcodec": "mp3",
+│ │              "preferredquality": "192",
+│ │          }
+│ │      ],
+│ │      "age_limit": 18,
+│ │ +    "ignoreerrors": True,
+│ │  }
+│ │  
+│ │  
+│ │  # def fetch_items_from_list(
+│ │  #     webpath: str, start: int = None, end: int = None
+│ │  # ) -> List[str]:
+│ │  #     headers = {
+│ │ @@ -35,50 +36,76 @@
+│ │  
+│ │  
+│ │  def fetch_items_from_list(
+│ │      playlist_url: str, start: int = None, end: int = None
+│ │  ) -> List[str]:
+│ │      playlist = pytube.Playlist(playlist_url)
+│ │      res = playlist.video_urls
+│ │ +    res_len = len(res)
+│ │ +
+│ │ +    # bound start
+│ │ +    if start is not None:
+│ │ +        if start > res_len:
+│ │ +            return []
+│ │ +        elif start < 1:
+│ │ +            start = 0
+│ │ +    # bound end
+│ │ +    if end is not None:
+│ │ +        if end > res_len:
+│ │ +            end = res_len
+│ │ +        elif end < 1:
+│ │ +            return []
+│ │ +
+│ │ +    # slice, index start from 1
+│ │      if start is not None and end is not None:
+│ │ -        res = res[start:end]
+│ │ +        res = res[start - 1 : end]
+│ │      elif start is not None:
+│ │ -        res = res[start:]
+│ │ +        res = res[start - 1 :]
+│ │      elif end is not None:
+│ │          res = res[:end]
+│ │ +
+│ │      return res
+│ │  
+│ │  
+│ │  def already_downloaded_ids(folder: Path) -> List[str]:
+│ │      # already downloaded files
+│ │      files = [i.stem for i in folder.iterdir() if i.suffix == ".mp3"]
+│ │ -    existing_ids = [re.findall(r"-([^-]*)$", file)[0] for file in files]
+│ │ +    # the final 11 chars are the id
+│ │ +    existing_ids = [file[-11:] for file in files]
+│ │      return existing_ids
+│ │  
+│ │  
+│ │  def ids_from_list(target_urls: List[str]) -> List[str]:
+│ │      # fetch chars after ?v=, and up to end of string
+│ │      target_ids = [re.findall(r"\?v=([^=]*)$", url)[0] for url in target_urls]
+│ │      return target_ids
+│ │  
+│ │  
+│ │  SAVE_FILE_FORMAT = "%(title)s-%(id)s.%(ext)s"
+│ │  
+│ │  
+│ │ +def yt_dlp_download(webpath: str, headers: dict):
+│ │ +    try:
+│ │ +        with yt_dlp.YoutubeDL(headers) as ydl:
+│ │ +            ydl.download([webpath])
+│ │ +    except Exception as e:
+│ │ +        print(e)
+│ │ +
+│ │ +
+│ │  def download_ids_and_convert_to_mp3(ids: List[str], folder: Path):
+│ │      headers = dict(HEADERS, outtmpl=f"{folder}/{SAVE_FILE_FORMAT}")
+│ │ -    with yt_dlp.YoutubeDL(headers) as ydl:
+│ │ -        for id in ids:
+│ │ -            ydl.download([f"https://www.youtube.com/watch?v={id}"])
+│ │ +    for id in ids:
+│ │ +        yt_dlp_download(
+│ │ +            webpath=f"https://www.youtube.com/watch?v={id}", headers=headers
+│ │ +        )
+│ │  
+│ │  
+│ │  def download_list_subset_and_convert_to_mp3(
+│ │      webpath: str, folder: Path, start: int = None, end: int = None
+│ │  ):
+│ │      headers = dict(HEADERS, outtmpl=f"{folder}/{SAVE_FILE_FORMAT}")
+│ │      if start is not None:
+│ │          headers["playliststart"] = start
+│ │      if end is not None:
+│ │          headers["playlistend"] = end
+│ │  
+│ │ -    with yt_dlp.YoutubeDL(headers) as ydl:
+│ │ -        ydl.download([webpath])
+│ │ +    yt_dlp_download(webpath=webpath, headers=headers)
+│ │   --- dmp3-0.0.3/src/dmp3/dmp3.py
+│ ├── +++ dmp3-0.0.4/src/dmp3/dmp3.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -23,18 +23,15 @@
+│ │  argparser.add_argument(
+│ │      "-e", "--end", type=int, help="End index of the playlist", default=None
+│ │  )
+│ │  argparser.add_argument(
+│ │      "-r",
+│ │      "--refresh_folder_mode",
+│ │      action="store_true",
+│ │ -    help=(
+│ │ -        "Refresh all mp3 folders in the folder, default is False.\n"
+│ │ -        "In this mode, work through all sub folders with .mp3 inside, and download all new videos"
+│ │ -    ),
+│ │ +    help=("Refresh all mp3 folders in the folder, default is False."),
+│ │  )
+│ │  argparser.add_argument(
+│ │      "-m",
+│ │      "--mp3",
+│ │      type=bool,
+│ │      help="Convert mp4 files to mp3 files in the folder (WIP)",
+│ │      default=True,
+│ │ @@ -51,30 +48,34 @@
+│ │  If not provided and no .dmp3 file is found in the folder, exits.
+│ │  
+│ │  If start and/or end are provided, download only the subset of the playlist.
+│ │  But will not download the videos that are already downloaded.
+│ │  """
+│ │  
+│ │  epilog = """
+│ │ -Example:
+│ │ +Examples:
+│ │  
+│ │  Entire playlist:
+│ │ -dmp3 /mnt/d/media/music/game_theme/starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy
+│ │ +cd /home/user/Projects/utube_playlist_mp3_downloader/tests/mp3_dir
+│ │ +dmp3 starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy
+│ │ +
+│ │  Part of playlist:
+│ │ -dmp3 /mnt/d/media/music/game_theme/starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy -s 1 -e 2
+│ │ +dmp3 starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy -s 1 -e 2
+│ │  
+│ │  Refresh entire playlist:
+│ │ -dmp3 /mnt/d/media/music/game_theme/starcraft_terran
+│ │ +dmp3 starcraft_terran
+│ │ +
+│ │  Refresh part of playlist:
+│ │ -dmp3 /mnt/d/media/music/game_theme/starcraft_terran -e 3
+│ │ +dmp3 starcraft_terran -e 2
+│ │  
+│ │  Refresh all folders:
+│ │ -dmp3 /mnt/d/media/music/game_theme -r
+│ │ +cd /home/user/Projects/utube_playlist_mp3_downloader/tests/mp3_dir
+│ │ +dmp3 . -r
+│ │ +
+│ │  """
+│ │ -epilog2 = """asdf"""
+│ │  
+│ │  argparser.description = description
+│ │  argparser.epilog = epilog
+│ │  
+│ │  
+│ │  # main process
+│ │  def process_folder_and_webpath(
+│ │   --- dmp3-0.0.3/tests/terminal.py
+│ ├── +++ dmp3-0.0.4/tests/terminal.py
+│ │┄ Files identical despite different names

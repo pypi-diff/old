@@ -1,0 +1,104 @@
+# Comparing `tmp/typed-graphql-0.8.0.tar.gz` & `tmp/typed-graphql-0.9.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "typed-graphql-0.8.0.tar", last modified: Mon Mar 15 22:36:54 2021, max compression
++gzip compressed data, was "typed-graphql-0.9.0.tar", last modified: Mon Mar 15 22:39:41 2021, max compression
+```
+
+## Comparing `typed-graphql-0.8.0.tar` & `typed-graphql-0.9.0.tar`
+
+### file list
+
+```diff
+@@ -1,7 +1,7 @@
+--rw-r--r--   0        0        0     1466 2020-10-25 01:19:35.496165 typed-graphql-0.8.0/LICENSE
+--rw-r--r--   0        0        0      455 2021-03-15 22:36:23.631811 typed-graphql-0.8.0/pyproject.toml
+--rw-r--r--   0        0        0       78 2021-03-09 23:05:27.772948 typed-graphql-0.8.0/typed_graphql/__init__.py
+--rw-r--r--   0        0        0     6972 2021-03-15 07:07:53.613844 typed-graphql-0.8.0/typed_graphql/core.py
+--rw-r--r--   0        0        0        0 2020-10-21 23:02:54.906029 typed-graphql-0.8.0/typed_graphql/py.typed
+--rw-r--r--   0        0        0      657 2021-03-15 22:36:54.576722 typed-graphql-0.8.0/setup.py
+--rw-r--r--   0        0        0      522 2021-03-15 22:36:54.577030 typed-graphql-0.8.0/PKG-INFO
++-rw-r--r--   0        0        0     1466 2020-10-25 01:19:35.496165 typed-graphql-0.9.0/LICENSE
++-rw-r--r--   0        0        0      455 2021-03-15 22:39:22.668610 typed-graphql-0.9.0/pyproject.toml
++-rw-r--r--   0        0        0       78 2021-03-09 23:05:27.772948 typed-graphql-0.9.0/typed_graphql/__init__.py
++-rw-r--r--   0        0        0     7137 2021-03-15 22:38:13.082338 typed-graphql-0.9.0/typed_graphql/core.py
++-rw-r--r--   0        0        0        0 2020-10-21 23:02:54.906029 typed-graphql-0.9.0/typed_graphql/py.typed
++-rw-r--r--   0        0        0      657 2021-03-15 22:39:41.545891 typed-graphql-0.9.0/setup.py
++-rw-r--r--   0        0        0      522 2021-03-15 22:39:41.546224 typed-graphql-0.9.0/PKG-INFO
+```
+
+### Comparing `typed-graphql-0.8.0/LICENSE` & `typed-graphql-0.9.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `typed-graphql-0.8.0/typed_graphql/core.py` & `typed-graphql-0.9.0/typed_graphql/core.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -167,14 +167,17 @@
+         return GraphQLList(python_type_to_graphql_type(t.__args__[0], nonnull=True))
+     if str(t).startswith("typing.Iterable"):
+         assert len(t.__args__) == 1
+         return GraphQLList(python_type_to_graphql_type(t.__args__[0], nonnull=True))
+     elif str(t).startswith("typing.List"):
+         assert len(t.__args__) == 1
+         return GraphQLList(python_type_to_graphql_type(t.__args__[0], nonnull=True))
++    elif str(t).startswith("typing.Tuple"):
++        assert len(t.__args__) == 1
++        return GraphQLList(python_type_to_graphql_type(t.__args__[0], nonnull=True))
+     if str(t).startswith("graphql.type.definition.GraphQLList"):
+         assert len(t.__args__) == 1
+         return GraphQLList(python_type_to_graphql_type(t.__args__[0], nonnull=True))
+     elif str(t).startswith("typing.Union"):
+         if len(t.__args__) == 2:
+             if issubclass(t.__args__[1], type(None)):
+                 return python_type_to_graphql_type(t.__args__[0], nonnull=False)
+```
+
+### Comparing `typed-graphql-0.8.0/setup.py` & `typed-graphql-0.9.0/setup.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -8,15 +8,15 @@
+ {'': ['*']}
+ 
+ install_requires = \
+ ['graphql-core>=3.1.2,<4.0.0']
+ 
+ setup_kwargs = {
+     'name': 'typed-graphql',
+-    'version': '0.8.0',
++    'version': '0.9.0',
+     'description': 'Use types to have a simpler graphql implementation',
+     'long_description': None,
+     'author': 'Willem Thiart',
+     'author_email': 'himself@willemthiart.com',
+     'maintainer': None,
+     'maintainer_email': None,
+     'url': None,
+```
+
+### Comparing `typed-graphql-0.8.0/PKG-INFO` & `typed-graphql-0.9.0/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: typed-graphql
+-Version: 0.8.0
++Version: 0.9.0
+ Summary: Use types to have a simpler graphql implementation
+ License: BSD-3-Clause
+ Author: Willem Thiart
+ Author-email: himself@willemthiart.com
+ Requires-Python: >=3.7,<4.0
+ Classifier: License :: OSI Approved :: BSD License
+ Classifier: Programming Language :: Python :: 3
+```
+
