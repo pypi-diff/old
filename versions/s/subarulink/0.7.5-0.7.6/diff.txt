@@ -1,0 +1,178 @@
+--- tmp/subarulink-0.7.5.tar.gz
++++ tmp/subarulink-0.7.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "subarulink-0.7.5.tar", last modified: Sat Feb 18 01:37:27 2023, max compression
+│ +gzip compressed data, was "subarulink-0.7.6.tar", last modified: Fri Apr  7 05:06:35 2023, max compression
+│   --- subarulink-0.7.5.tar
+├── +++ subarulink-0.7.6.tar
+│ ├── file list
+│ │ @@ -1,35 +1,35 @@
+│ │ -drwxr-xr-x   0 gg         (501) wheel        (0)        0 2023-02-18 01:37:27.266662 subarulink-0.7.5/
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)      195 2022-02-12 17:50:33.000000 subarulink-0.7.5/AUTHORS.md
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)     6362 2022-03-30 01:34:05.000000 subarulink-0.7.5/DEVELOPERS.md
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)    11358 2020-10-11 22:38:54.000000 subarulink-0.7.5/LICENSE
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)       30 2022-02-12 17:49:18.000000 subarulink-0.7.5/MANIFEST.in
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)     8286 2023-02-18 01:37:27.266751 subarulink-0.7.5/PKG-INFO
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)     7680 2022-12-08 02:51:09.000000 subarulink-0.7.5/README.md
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)     2479 2022-12-18 23:12:31.000000 subarulink-0.7.5/pyproject.toml
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)      631 2023-02-18 01:37:27.267112 subarulink-0.7.5/setup.cfg
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)     3971 2022-12-08 02:51:09.000000 subarulink-0.7.5/setup.py
+│ │ -drwxr-xr-x   0 gg         (501) wheel        (0)        0 2023-02-18 01:37:27.263284 subarulink-0.7.5/subarulink/
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)      808 2022-12-03 21:57:17.000000 subarulink-0.7.5/subarulink/__init__.py
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)      264 2023-02-18 01:13:37.000000 subarulink-0.7.5/subarulink/__version__.py
+│ │ -drwxr-xr-x   0 gg         (501) wheel        (0)        0 2023-02-18 01:37:27.264715 subarulink-0.7.5/subarulink/_subaru_api/
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)      204 2022-12-08 02:51:09.000000 subarulink-0.7.5/subarulink/_subaru_api/__init__.py
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)     7266 2023-02-18 01:13:37.000000 subarulink-0.7.5/subarulink/_subaru_api/const.py
+│ │ -drwxr-xr-x   0 gg         (501) wheel        (0)        0 2023-02-18 01:37:27.265318 subarulink-0.7.5/subarulink/app/
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)      219 2022-02-12 17:50:33.000000 subarulink-0.7.5/subarulink/app/__init__.py
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)    29784 2023-02-18 01:13:37.000000 subarulink-0.7.5/subarulink/app/cli.py
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)    13768 2023-01-21 17:52:41.000000 subarulink-0.7.5/subarulink/connection.py
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)     7433 2023-01-21 17:52:41.000000 subarulink-0.7.5/subarulink/const.py
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)    56482 2023-01-21 17:55:31.000000 subarulink-0.7.5/subarulink/controller.py
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)     1187 2020-12-24 00:13:12.000000 subarulink-0.7.5/subarulink/exceptions.py
+│ │ -drwxr-xr-x   0 gg         (501) wheel        (0)        0 2023-02-18 01:37:27.264254 subarulink-0.7.5/subarulink.egg-info/
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)     8286 2023-02-18 01:37:27.000000 subarulink-0.7.5/subarulink.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)      656 2023-02-18 01:37:27.000000 subarulink-0.7.5/subarulink.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)        1 2023-02-18 01:37:27.000000 subarulink-0.7.5/subarulink.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)       55 2023-02-18 01:37:27.000000 subarulink-0.7.5/subarulink.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)       18 2023-02-18 01:37:27.000000 subarulink-0.7.5/subarulink.egg-info/requires.txt
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)       11 2023-02-18 01:37:27.000000 subarulink-0.7.5/subarulink.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 gg         (501) wheel        (0)        0 2023-02-18 01:37:27.266500 subarulink-0.7.5/tests/
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)     4575 2023-01-21 17:52:41.000000 subarulink-0.7.5/tests/test_cli.py
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)    15062 2023-01-21 17:52:41.000000 subarulink-0.7.5/tests/test_connection.py
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)    15911 2022-12-18 20:24:35.000000 subarulink-0.7.5/tests/test_remote_commands.py
+│ │ --rw-r--r--   0 gg         (501) wheel        (0)     9684 2023-01-21 17:52:41.000000 subarulink-0.7.5/tests/test_vehicle_status.py
+│ │ +drwxr-xr-x   0 gg         (501) wheel        (0)        0 2023-04-07 05:06:35.117887 subarulink-0.7.6/
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)      195 2022-02-12 17:50:33.000000 subarulink-0.7.6/AUTHORS.md
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)     6362 2022-03-30 01:34:05.000000 subarulink-0.7.6/DEVELOPERS.md
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)    11358 2020-10-11 22:38:54.000000 subarulink-0.7.6/LICENSE
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)       30 2022-02-12 17:49:18.000000 subarulink-0.7.6/MANIFEST.in
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)     8286 2023-04-07 05:06:35.117973 subarulink-0.7.6/PKG-INFO
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)     7680 2022-12-08 02:51:09.000000 subarulink-0.7.6/README.md
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)     2479 2022-12-18 23:12:31.000000 subarulink-0.7.6/pyproject.toml
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)      509 2023-04-07 05:06:35.118271 subarulink-0.7.6/setup.cfg
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)     3971 2022-12-08 02:51:09.000000 subarulink-0.7.6/setup.py
+│ │ +drwxr-xr-x   0 gg         (501) wheel        (0)        0 2023-04-07 05:06:35.114945 subarulink-0.7.6/subarulink/
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)      808 2022-12-03 21:57:17.000000 subarulink-0.7.6/subarulink/__init__.py
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)      264 2023-04-07 04:54:03.000000 subarulink-0.7.6/subarulink/__version__.py
+│ │ +drwxr-xr-x   0 gg         (501) wheel        (0)        0 2023-04-07 05:06:35.116036 subarulink-0.7.6/subarulink/_subaru_api/
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)      204 2022-12-08 02:51:09.000000 subarulink-0.7.6/subarulink/_subaru_api/__init__.py
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)     7266 2023-04-07 04:49:31.000000 subarulink-0.7.6/subarulink/_subaru_api/const.py
+│ │ +drwxr-xr-x   0 gg         (501) wheel        (0)        0 2023-04-07 05:06:35.116476 subarulink-0.7.6/subarulink/app/
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)      219 2022-02-12 17:50:33.000000 subarulink-0.7.6/subarulink/app/__init__.py
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)    29784 2023-02-18 01:13:37.000000 subarulink-0.7.6/subarulink/app/cli.py
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)    13768 2023-01-21 17:52:41.000000 subarulink-0.7.6/subarulink/connection.py
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)     7433 2023-01-21 17:52:41.000000 subarulink-0.7.6/subarulink/const.py
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)    56482 2023-01-21 17:55:31.000000 subarulink-0.7.6/subarulink/controller.py
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)     1187 2020-12-24 00:13:12.000000 subarulink-0.7.6/subarulink/exceptions.py
+│ │ +drwxr-xr-x   0 gg         (501) wheel        (0)        0 2023-04-07 05:06:35.115706 subarulink-0.7.6/subarulink.egg-info/
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)     8286 2023-04-07 05:06:35.000000 subarulink-0.7.6/subarulink.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)      656 2023-04-07 05:06:35.000000 subarulink-0.7.6/subarulink.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)        1 2023-04-07 05:06:35.000000 subarulink-0.7.6/subarulink.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)       55 2023-04-07 05:06:35.000000 subarulink-0.7.6/subarulink.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)       18 2023-04-07 05:06:35.000000 subarulink-0.7.6/subarulink.egg-info/requires.txt
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)       11 2023-04-07 05:06:35.000000 subarulink-0.7.6/subarulink.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 gg         (501) wheel        (0)        0 2023-04-07 05:06:35.117750 subarulink-0.7.6/tests/
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)     4575 2023-01-21 17:52:41.000000 subarulink-0.7.6/tests/test_cli.py
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)    15062 2023-01-21 17:52:41.000000 subarulink-0.7.6/tests/test_connection.py
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)    15911 2022-12-18 20:24:35.000000 subarulink-0.7.6/tests/test_remote_commands.py
+│ │ +-rw-r--r--   0 gg         (501) wheel        (0)     9684 2023-01-21 17:52:41.000000 subarulink-0.7.6/tests/test_vehicle_status.py
+│ │   --- subarulink-0.7.5/DEVELOPERS.md
+│ ├── +++ subarulink-0.7.6/DEVELOPERS.md
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/LICENSE
+│ ├── +++ subarulink-0.7.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/PKG-INFO
+│ ├── +++ subarulink-0.7.6/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: subarulink
+│ │ -Version: 0.7.5
+│ │ +Version: 0.7.6
+│ │  Summary: A package for interacting with Subaru Starlink Remote Services API.
+│ │  Home-page: https://github.com/G-Two/subarulink
+│ │  Author: G-Two
+│ │  Author-email: 
+│ │  License: Apache-2.0
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │   --- subarulink-0.7.5/README.md
+│ ├── +++ subarulink-0.7.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/pyproject.toml
+│ ├── +++ subarulink-0.7.6/pyproject.toml
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/setup.py
+│ ├── +++ subarulink-0.7.6/setup.py
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/subarulink/__init__.py
+│ ├── +++ subarulink-0.7.6/subarulink/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/subarulink/_subaru_api/const.py
+│ ├── +++ subarulink-0.7.6/subarulink/_subaru_api/const.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  #  SPDX-License-Identifier: Apache-2.0
+│ │  """
+│ │  Constants used by subarulink to interact with the STARLINK HTTP API.
+│ │  
+│ │  This is an undocumented API derived from analysis of the MySubaru Android app v2.7.39.
+│ │  """
+│ │  
+│ │ -API_VERSION = "/g2v25"
+│ │ +API_VERSION = "/g2v27"
+│ │  
+│ │  API_SERVER = {
+│ │      "USA": "mobileapi.prod.subarucs.com",
+│ │      "CAN": "mobileapi.ca.prod.subarucs.com",
+│ │  }
+│ │  
+│ │  API_MOBILE_APP = {
+│ │   --- subarulink-0.7.5/subarulink/app/cli.py
+│ ├── +++ subarulink-0.7.6/subarulink/app/cli.py
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/subarulink/connection.py
+│ ├── +++ subarulink-0.7.6/subarulink/connection.py
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/subarulink/const.py
+│ ├── +++ subarulink-0.7.6/subarulink/const.py
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/subarulink/controller.py
+│ ├── +++ subarulink-0.7.6/subarulink/controller.py
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/subarulink/exceptions.py
+│ ├── +++ subarulink-0.7.6/subarulink/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/subarulink.egg-info/PKG-INFO
+│ ├── +++ subarulink-0.7.6/subarulink.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: subarulink
+│ │ -Version: 0.7.5
+│ │ +Version: 0.7.6
+│ │  Summary: A package for interacting with Subaru Starlink Remote Services API.
+│ │  Home-page: https://github.com/G-Two/subarulink
+│ │  Author: G-Two
+│ │  Author-email: 
+│ │  License: Apache-2.0
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │   --- subarulink-0.7.5/subarulink.egg-info/SOURCES.txt
+│ ├── +++ subarulink-0.7.6/subarulink.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/tests/test_cli.py
+│ ├── +++ subarulink-0.7.6/tests/test_cli.py
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/tests/test_connection.py
+│ ├── +++ subarulink-0.7.6/tests/test_connection.py
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/tests/test_remote_commands.py
+│ ├── +++ subarulink-0.7.6/tests/test_remote_commands.py
+│ │┄ Files identical despite different names
+│ │   --- subarulink-0.7.5/tests/test_vehicle_status.py
+│ ├── +++ subarulink-0.7.6/tests/test_vehicle_status.py
+│ │┄ Files identical despite different names
