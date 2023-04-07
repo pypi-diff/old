@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/StackingNonlinearTransformations-0.0.3-py3.8.egg tmp/StackingNonlinearTransformations-0.0.4-py3.8.egg --html versions/S/StackingNonlinearTransformations/0.0.3-0.0.4/index.html --text versions/S/StackingNonlinearTransformations/0.0.3-0.0.4/diff.txt --markdown versions/S/StackingNonlinearTransformations/0.0.3-0.0.4/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">3.68 KB</span></div>
+  <div><span class="source">tmp/StackingNonlinearTransformations-0.0.3-py3.8.egg</span> vs.</div>
+  <div id="top"><span class="source">tmp/StackingNonlinearTransformations-0.0.4-py3.8.egg</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.3 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 9 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>1<del>1279</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span><del>6</del></td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>1<ins>4106</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span><ins>7</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>56<del>67</del>2<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>1<del>2</del>:<del>54</del><span class="dp">·</span>EGG-INFO/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>56<ins>76</ins>2<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>1<ins>4</ins>:<ins>20</ins><span class="dp">·</span>EGG-INFO/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>8</del>7<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>1<del>2</del>:<del>54</del><span class="dp">·</span>EGG-INFO/SOURCES.txt</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>7</ins>7<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>1<ins>4</ins>:<ins>20</ins><span class="dp">·</span>EGG-INFO/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>1<del>2</del>:<del>54</del><span class="dp">·</span>EGG-INFO/dependency_links.txt</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>1<ins>4</ins>:<ins>20</ins><span class="dp">·</span>EGG-INFO/dependency_links.txt</td></tr>
+<tr class="diffdeleted"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>12:54<span class="dp">·</span>EGG-INFO/requires.txt</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>1</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>1<del>2</del>:<del>54</del><span class="dp">·</span>EGG-INFO/top_level.txt</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>33</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>1<ins>4</ins>:<ins>20</ins><span class="dp">·</span>EGG-INFO/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>1<del>2</del>:<del>54</del><span class="dp">·</span>EGG-INFO/zip-safe</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>1<ins>4</ins>:<ins>20</ins><span class="dp">·</span>EGG-INFO/zip-safe</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3463<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>14:10<span class="dp">·</span>stackingnonlineartransformations/__init__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2784<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>14:20<span class="dp">·</span>stackingnonlineartransformations/__pycache__/__init__.cpython-38.pyc</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent"><del>6</del><span class="dp">·</span>files,<span class="dp">·</span><del>5700</del>2<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>1<del>0549</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span><del>81</del>.<del>5</del>%</td><td class="diffline">9 </td><td class="diffpresent"><ins>7</ins><span class="dp">·</span>files,<span class="dp">·</span><ins>6332</ins>2<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>1<ins>3118</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span><ins>79</ins>.<ins>3</ins>%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">552 B</span></div>
+    <div id="zipnote--TEMP--diffoscope_szqwok_i_-------tmp-llzltf__.zip"><span class="source">zipnote «TEMP»/diffoscope_szqwok_i_003004/tmp2llzltf__.zip</span>
+      <a class="anchor" href="#zipnote--TEMP--diffoscope_szqwok_i_-------tmp-llzltf__.zip">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 3, 17 lines modified</td><td colspan="2">Offset 3, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">Filename:<span class="dp">·</span>EGG-INFO/SOURCES.txt</td><td class="diffline">3 </td><td class="diffpresent">Filename:<span class="dp">·</span>EGG-INFO/SOURCES.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">4 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Filename:<span class="dp">·</span>EGG-INFO/dependency_links.txt</td><td class="diffline">5 </td><td class="diffpresent">Filename:<span class="dp">·</span>EGG-INFO/dependency_links.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">6 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent">Filename:<span class="dp">·</span>EGG-INFO/requires.txt</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Filename:<span class="dp">·</span>EGG-INFO/top_level.txt</td><td class="diffline">7 </td><td class="diffpresent">Filename:<span class="dp">·</span>EGG-INFO/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">8 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Filename:<span class="dp">·</span>EGG-INFO/zip-safe</td><td class="diffline">9 </td><td class="diffpresent">Filename:<span class="dp">·</span>EGG-INFO/zip-safe</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">10 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">Filename:<span class="dp">·</span>stackingnonlineartransformations/__init__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">13 </td><td class="diffpresent">Filename:<span class="dp">·</span>stackingnonlineartransformations/__pycache__/__init__.cpython-38.pyc</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">14 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">15 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1020 B</span></div>
+    <div id="EGG-INFO-PKG-INFO"><span class="source">EGG-INFO/PKG-INFO</span>
+      <a class="anchor" href="#EGG-INFO-PKG-INFO">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>StackingNonlinearTransformations<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>StackingNonlinearTransformations<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<del>3</del><em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<ins>4</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Stacking<span class="dp">·</span>algorithm<span class="dp">·</span>optimization<span class="dp">·</span><em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Stacking<span class="dp">·</span>algorithm<span class="dp">·</span>optimization<span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitee.com/caoxinyu123/prostate_cancer_related_research/blob/STN/StackingNonlinearTransformations.py<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitee.com/caoxinyu123/prostate_cancer_related_research/blob/STN/StackingNonlinearTransformations.py<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>caoxinyu<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>caoxinyu<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>398424191@qqc.om<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>398424191@qqc.om<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>python,windows,mac,linux<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License<em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.6<em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.6<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown<em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">16 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 959, 9 lines modified</td><td colspan="2">Offset 960, 11 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">959 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[2.41687444e-01<span class="dp">·</span>4.72064771e-01<span class="dp">·</span>2.86247785e-01]<em>\xd</em></td><td class="diffline">960 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[2.41687444e-01<span class="dp">·</span>4.72064771e-01<span class="dp">·</span>2.86247785e-01]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">960 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[8.28419375e-02<span class="dp">·</span>4.11308528e-01<span class="dp">·</span>5.05849534e-01]<em>\xd</em></td><td class="diffline">961 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[8.28419375e-02<span class="dp">·</span>4.11308528e-01<span class="dp">·</span>5.05849534e-01]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">961 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[4.40553422e-05<span class="dp">·</span>2.35332311e-05<span class="dp">·</span>9.99932411e-01]<em>\xd</em></td><td class="diffline">962 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[4.40553422e-05<span class="dp">·</span>2.35332311e-05<span class="dp">·</span>9.99932411e-01]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">962 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[2.78964612e-01<span class="dp">·</span>4.59652130e-01<span class="dp">·</span>2.61383258e-01]<em>\xd</em></td><td class="diffline">963 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[2.78964612e-01<span class="dp">·</span>4.59652130e-01<span class="dp">·</span>2.61383258e-01]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">963 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[2.97970311e-02<span class="dp">·</span>2.75009795e-02<span class="dp">·</span>9.42701989e-01]]<em>\xd</em></td><td class="diffline">964 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[2.97970311e-02<span class="dp">·</span>2.75009795e-02<span class="dp">·</span>9.42701989e-01]]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">964 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0.85625<em>\xd</em></td><td class="diffline">965 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0.85625<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">965 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><em>\xd</em></td><td class="diffline">966 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">967 </td><td class="diffpresent">#<span class="dp">·</span>upload<span class="dp">·</span>log<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">966 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">968 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">969 </td><td class="diffpresent">0.0.4<span class="dp">·</span>更新正确的Class调用方法<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">967 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">970 </td><td class="diffpresent"><em>\xd</em></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">453 B</span></div>
+    <div id="EGG-INFO-SOURCES.txt"><span class="source">EGG-INFO/SOURCES.txt</span>
+      <a class="anchor" href="#EGG-INFO-SOURCES.txt">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 6 lines modified</td><td colspan="2">Offset 1, 6 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">setup.py</td><td class="diffline">1 </td><td class="diffpresent">setup.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">StackingNonlinearTransformations.egg-info/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">StackingNonlinearTransformations.egg-info/PKG-INFO</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">StackingNonlinearTransformations.egg-info/SOURCES.txt</td><td class="diffline">3 </td><td class="diffpresent">StackingNonlinearTransformations.egg-info/SOURCES.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">StackingNonlinearTransformations.egg-info/dependency_links.txt</td><td class="diffline">4 </td><td class="diffpresent">StackingNonlinearTransformations.egg-info/dependency_links.txt</td></tr>
+<tr class="diffdeleted"><td class="diffline">5 </td><td class="diffpresent">StackingNonlinearTransformations.egg-info/requires.txt</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">StackingNonlinearTransformations.egg-info/top_level.txt</td><td class="diffline">5 </td><td class="diffpresent">StackingNonlinearTransformations.egg-info/top_level.txt</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">stackingnonlineartransformations/__init__.py</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">304 B</span></div>
+    <div id="EGG-INFO-top_level.txt"><span class="source">EGG-INFO/top_level.txt</span>
+      <a class="anchor" href="#EGG-INFO-top_level.txt">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 3 lines modified</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2" class="diffpresent">00000000:<span class="dp">·</span>7374<span class="dp">·</span>6163<span class="dp">·</span>6b69<span class="dp">·</span>6e67<span class="dp">·</span>6e6f<span class="dp">·</span>6e6c<span class="dp">·</span>696e<span class="dp">·</span>6561<span class="dp">·</span><span class="dp">·</span>stackingnonlinea</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2" class="diffpresent">00000010:<span class="dp">·</span>7274<span class="dp">·</span>7261<span class="dp">·</span>6e73<span class="dp">·</span>666f<span class="dp">·</span>726d<span class="dp">·</span>6174<span class="dp">·</span>696f<span class="dp">·</span>6e73<span class="dp">·</span><span class="dp">·</span>rtransformations</td></tr>
+<tr class="diffchanged"><td colspan="2" class="diffpresent">000000<del>0</del>0:<span class="dp">·</span>0a<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>.</td><td colspan="2" class="diffpresent">000000<ins>2</ins>0:<span class="dp">·</span>0a<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>.</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

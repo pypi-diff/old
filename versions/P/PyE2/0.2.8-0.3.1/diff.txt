@@ -1,0 +1,830 @@
+--- tmp/pye2-0.2.8.tar.gz
++++ tmp/pye2-0.3.1.tar.gz
+│   --- pye2-0.2.8.tar
+├── +++ pye2-0.3.1.tar
+│ ├── file list
+│ │ @@ -1,43 +1,47 @@
+│ │ --rw-r--r--   0        0        0       75 2020-02-02 00:00:00.000000 pye2-0.2.8/__init__.py
+│ │ --rw-r--r--   0        0        0       14 2020-02-02 00:00:00.000000 pye2-0.2.8/requirements.txt
+│ │ --rw-r--r--   0        0        0     1343 2020-02-02 00:00:00.000000 pye2-0.2.8/.github/workflows/python-publish.yml
+│ │ --rw-r--r--   0        0        0      115 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/__init__.py
+│ │ --rw-r--r--   0        0        0      339 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/version.py
+│ │ --rw-r--r--   0        0        0      818 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/base/__init__.py
+│ │ --rw-r--r--   0        0        0    12686 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/base/generic_session.py
+│ │ --rw-r--r--   0        0        0    10270 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/base/pipeline.py
+│ │ --rw-r--r--   0        0        0       29 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/base/payload/__init__.py
+│ │ --rw-r--r--   0        0        0      824 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/base/payload/payload.py
+│ │ --rw-r--r--   0        0        0      790 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/comm/__init__.py
+│ │ --rw-r--r--   0        0        0     9139 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/comm/amqp_wrapper.py
+│ │ --rw-r--r--   0        0        0    10508 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/comm/mqtt_wrapper.py
+│ │ --rw-r--r--   0        0        0      177 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/const/README.md
+│ │ --rw-r--r--   0        0        0     1032 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/const/__init__.py
+│ │ --rw-r--r--   0        0        0     2598 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/const/base.py
+│ │ --rw-r--r--   0        0        0     1873 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/const/comms.py
+│ │ --rw-r--r--   0        0        0     1734 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/const/heartbeat.py
+│ │ --rw-r--r--   0        0        0      890 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/const/misc.py
+│ │ --rw-r--r--   0        0        0     2564 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/const/payload.py
+│ │ --rw-r--r--   0        0        0       49 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/default/__init__.py
+│ │ --rw-r--r--   0        0        0     5383 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/default/mqtt_session.py
+│ │ --rw-r--r--   0        0        0      761 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/io_formatter/__init__.py
+│ │ --rw-r--r--   0        0        0     1334 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/io_formatter/consts.py
+│ │ --rw-r--r--   0        0        0     3619 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/io_formatter/io_formatter_manager.py
+│ │ --rw-r--r--   0        0        0      750 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/io_formatter/base/__init__.py
+│ │ --rw-r--r--   0        0        0     3423 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/io_formatter/base/base_formatter.py
+│ │ --rw-r--r--   0        0        0      696 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/io_formatter/default/__init__.py
+│ │ --rw-r--r--   0        0        0     1148 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/io_formatter/default/a_dummy.py
+│ │ --rw-r--r--   0        0        0    11753 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/io_formatter/default/cavi2.py
+│ │ --rw-r--r--   0        0        0       56 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/io_formatter/mixins/__init__.py
+│ │ --rw-r--r--   0        0        0     4810 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/io_formatter/mixins/plugins_manager_mixin.py
+│ │ --rw-r--r--   0        0        0       38 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/utils/__init__.py
+│ │ --rw-r--r--   0        0        0     1759 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/utils/code.py
+│ │ --rw-r--r--   0        0        0     1625 2020-02-02 00:00:00.000000 pye2-0.2.8/PyE2/utils/code_exec.py
+│ │ --rw-r--r--   0        0        0     4182 2020-02-02 00:00:00.000000 pye2-0.2.8/xperimental/custom_exec_tutorial.py
+│ │ --rw-r--r--   0        0        0     4436 2020-02-02 00:00:00.000000 pye2-0.2.8/xperimental/distributed_prime_number_search.py
+│ │ --rw-r--r--   0        0        0     3350 2020-02-02 00:00:00.000000 pye2-0.2.8/xperimental/ex1.py
+│ │ --rw-r--r--   0        0        0     2457 2020-02-02 00:00:00.000000 pye2-0.2.8/.gitignore
+│ │ --rw-r--r--   0        0        0    11357 2020-02-02 00:00:00.000000 pye2-0.2.8/LICENSE
+│ │ --rw-r--r--   0        0        0      298 2020-02-02 00:00:00.000000 pye2-0.2.8/README.md
+│ │ --rw-r--r--   0        0        0      760 2020-02-02 00:00:00.000000 pye2-0.2.8/pyproject.toml
+│ │ --rw-r--r--   0        0        0      937 2020-02-02 00:00:00.000000 pye2-0.2.8/PKG-INFO
+│ │ +-rw-r--r--   0        0        0      261 2020-02-02 00:00:00.000000 pye2-0.3.1/TODOs.md
+│ │ +-rw-r--r--   0        0        0       75 2020-02-02 00:00:00.000000 pye2-0.3.1/__init__.py
+│ │ +-rw-r--r--   0        0        0       14 2020-02-02 00:00:00.000000 pye2-0.3.1/requirements.txt
+│ │ +-rw-r--r--   0        0        0     1291 2020-02-02 00:00:00.000000 pye2-0.3.1/.github/workflows/python-publish.yml
+│ │ +-rw-r--r--   0        0        0      115 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/__init__.py
+│ │ +-rw-r--r--   0        0        0      339 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/version.py
+│ │ +-rw-r--r--   0        0        0      818 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/base/__init__.py
+│ │ +-rw-r--r--   0        0        0    18533 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/base/generic_session.py
+│ │ +-rw-r--r--   0        0        0    16351 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/base/pipeline.py
+│ │ +-rw-r--r--   0        0        0    18533 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/base/tmpeb3hj3eh
+│ │ +-rw-r--r--   0        0        0       29 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/base/payload/__init__.py
+│ │ +-rw-r--r--   0        0        0      824 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/base/payload/payload.py
+│ │ +-rw-r--r--   0        0        0      790 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/comm/__init__.py
+│ │ +-rw-r--r--   0        0        0     9139 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/comm/amqp_wrapper.py
+│ │ +-rw-r--r--   0        0        0    10508 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/comm/mqtt_wrapper.py
+│ │ +-rw-r--r--   0        0        0      177 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/const/README.md
+│ │ +-rw-r--r--   0        0        0     1032 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/const/__init__.py
+│ │ +-rw-r--r--   0        0        0     2598 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/const/base.py
+│ │ +-rw-r--r--   0        0        0     1873 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/const/comms.py
+│ │ +-rw-r--r--   0        0        0     1734 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/const/heartbeat.py
+│ │ +-rw-r--r--   0        0        0      890 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/const/misc.py
+│ │ +-rw-r--r--   0        0        0     2564 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/const/payload.py
+│ │ +-rw-r--r--   0        0        0       49 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/default/__init__.py
+│ │ +-rw-r--r--   0        0        0     5753 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/default/mqtt_session.py
+│ │ +-rw-r--r--   0        0        0      761 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/io_formatter/__init__.py
+│ │ +-rw-r--r--   0        0        0     1334 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/io_formatter/consts.py
+│ │ +-rw-r--r--   0        0        0     3619 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/io_formatter/io_formatter_manager.py
+│ │ +-rw-r--r--   0        0        0      750 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/io_formatter/base/__init__.py
+│ │ +-rw-r--r--   0        0        0     3423 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/io_formatter/base/base_formatter.py
+│ │ +-rw-r--r--   0        0        0      696 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/io_formatter/default/__init__.py
+│ │ +-rw-r--r--   0        0        0     1148 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/io_formatter/default/a_dummy.py
+│ │ +-rw-r--r--   0        0        0    11753 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/io_formatter/default/cavi2.py
+│ │ +-rw-r--r--   0        0        0       56 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/io_formatter/mixins/__init__.py
+│ │ +-rw-r--r--   0        0        0     4810 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/io_formatter/mixins/plugins_manager_mixin.py
+│ │ +-rw-r--r--   0        0        0       38 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/utils/__init__.py
+│ │ +-rw-r--r--   0        0        0     1759 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/utils/code.py
+│ │ +-rw-r--r--   0        0        0     1625 2020-02-02 00:00:00.000000 pye2-0.3.1/PyE2/utils/code_exec.py
+│ │ +-rw-r--r--   0        0        0     4182 2020-02-02 00:00:00.000000 pye2-0.3.1/xperimental/custom_exec_tutorial.py
+│ │ +-rw-r--r--   0        0        0     1881 2020-02-02 00:00:00.000000 pye2-0.3.1/xperimental/dedist_example.py
+│ │ +-rw-r--r--   0        0        0     2300 2020-02-02 00:00:00.000000 pye2-0.3.1/xperimental/dedist_example_initiator.py
+│ │ +-rw-r--r--   0        0        0      276 2020-02-02 00:00:00.000000 pye2-0.3.1/xperimental/dedist_example_worker.py
+│ │ +-rw-r--r--   0        0        0     3350 2020-02-02 00:00:00.000000 pye2-0.3.1/xperimental/ex1.py
+│ │ +-rw-r--r--   0        0        0     2457 2020-02-02 00:00:00.000000 pye2-0.3.1/.gitignore
+│ │ +-rw-r--r--   0        0        0    11357 2020-02-02 00:00:00.000000 pye2-0.3.1/LICENSE
+│ │ +-rw-r--r--   0        0        0     5791 2020-02-02 00:00:00.000000 pye2-0.3.1/README.md
+│ │ +-rw-r--r--   0        0        0      760 2020-02-02 00:00:00.000000 pye2-0.3.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     6430 2020-02-02 00:00:00.000000 pye2-0.3.1/PKG-INFO
+│ │   --- pye2-0.2.8/.github/workflows/python-publish.yml
+│ ├── +++ pye2-0.3.1/.github/workflows/python-publish.yml
+│ │┄ Files 4% similar despite different names
+│ │ @@ -20,15 +20,14 @@
+│ │        - name: Set up Python
+│ │          uses: actions/setup-python@v4
+│ │          with:
+│ │            python-version: "3.x"
+│ │        - name: Install dependencies
+│ │          run: |
+│ │            python -m pip install --upgrade pip
+│ │ -          python -m pip install -r requirements.txt
+│ │            python -m pip install --upgrade build twine
+│ │        - name: Bump version
+│ │          run: python PyE2/version.py
+│ │        - name: Build package
+│ │          run: >-
+│ │            python -m
+│ │            build
+│ │   --- pye2-0.2.8/PyE2/base/__init__.py
+│ ├── +++ pye2-0.3.1/PyE2/base/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/base/generic_session.py
+│ ├── +++ pye2-0.3.1/PyE2/base/generic_session.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -18,15 +18,15 @@
+│ │  @project: 
+│ │  @description:
+│ │  """
+│ │  
+│ │  import os
+│ │  import sys
+│ │  import traceback
+│ │ -from time import localtime, mktime, strftime, strptime
+│ │ +from time import localtime, mktime, strftime, strptime, sleep
+│ │  from time import time as tm
+│ │  
+│ │  from ..const import comms as comm_ct
+│ │  from .pipeline import Pipeline
+│ │  from .payload import Payload
+│ │  from ..io_formatter import IOFormatterManager
+│ │  
+│ │ @@ -175,23 +175,30 @@
+│ │        "PAYLOADS_CHANNEL": {
+│ │            "TOPIC": "lummetry/payloads"
+│ │        },
+│ │        "QOS": 0
+│ │    }
+│ │  
+│ │    def __init__(self, *, host, port, user, pwd, name='pySDK', config={}, log=None, on_notification=None, on_heartbeat=None, silent=False, **kwargs) -> None:
+│ │ +    """Create a session object that allows to connect to a communication server and to interact with nodes from the AiXp network.
+│ │ +
+│ │ +    Args:
+│ │ +        host (str): Hostname of the server
+│ │ +        port (int): port
+│ │ +        user (str): username
+│ │ +        pwd (str): password
+│ │ +        name (str, optional): Will be used as `SESSION_ID` when communicating with AiXp nodes. Defaults to 'pySDK'.
+│ │ +        config (dict, optional): Configures the names of the channels this session will connect to. Defaults to {}.
+│ │ +        log (Logger, optional): instance of a Logger class that provides utility functions and prettier logs. Useful for Hyperfy devs. Defaults to None.
+│ │ +        on_notification (Callable[[Session, dict], None], optional): Callback that handles the notification received by this session. Defaults to None.
+│ │ +        on_heartbeat (Callable[[Session, dict], None], optional): Callback that handles the heartbeat received by this session. Defaults to None.
+│ │ +        silent (bool, optional): This flag controlls if the `.P` method dumps text to the stdout. Defaults to False.
+│ │ +    """
+│ │      if log is None:
+│ │ -      log = Logger(
+│ │ -          lib_name='EE',
+│ │ -          base_folder='.',
+│ │ -          app_folder='_local_cache',
+│ │ -          config_file='config_startup.txt',
+│ │ -          max_lines=3000,
+│ │ -          TF_KERAS=False
+│ │ -      )
+│ │ +      log = Logger()
+│ │  
+│ │      super(GenericSession, self).__init__()
+│ │  
+│ │      self.silent = silent
+│ │  
+│ │      # maybe read config from file?
+│ │      self._config = {**self.default_config, **config}
+│ │ @@ -211,27 +218,24 @@
+│ │  
+│ │      self.payload_instance_callbacks = []
+│ │      self.notification_instance_callbacks = []
+│ │  
+│ │      self.payload_pipeline_callbacks = []
+│ │      self.notification_pipeline_callbacks = []
+│ │      self.heartbeat_pipeline_callbacks = []
+│ │ +    self.own_pipelines = []
+│ │  
+│ │      self.formatter_wrapper = IOFormatterManager(log)
+│ │  
+│ │      return
+│ │  
+│ │    @property
+│ │    def server(self):
+│ │      return self._config[comm_ct.HOST]
+│ │  
+│ │ -  def P(self, *args, **kwargs):
+│ │ -    if not self.silent:
+│ │ -      self.log.P(*args, **kwargs)
+│ │ -
+│ │    def _fill_config(self, host, port, user, pwd, name):
+│ │      if self._config.get(comm_ct.SB_ID, None) is None:
+│ │        self._config[comm_ct.SB_ID] = name
+│ │  
+│ │      if self._config.get(comm_ct.USER, None) is None:
+│ │        self._config[comm_ct.USER] = user
+│ │  
+│ │ @@ -241,17 +245,14 @@
+│ │      if self._config.get(comm_ct.HOST, None) is None:
+│ │        self._config[comm_ct.HOST] = host
+│ │  
+│ │      if self._config.get(comm_ct.PORT, None) is None:
+│ │        self._config[comm_ct.PORT] = port
+│ │      return
+│ │  
+│ │ -  def connect(self) -> None:
+│ │ -    raise NotImplementedError
+│ │ -
+│ │    def _parse_message(self, dict_msg: dict):
+│ │      formatter = self.formatter_wrapper \
+│ │          .get_required_formatter_from_payload(dict_msg)
+│ │      if formatter is not None:
+│ │        dict_msg = formatter.decode_output(dict_msg)
+│ │      return dict_msg
+│ │  
+│ │ @@ -316,18 +317,14 @@
+│ │          callback(pipeline, msg_signature, msg_instance, msg_data)
+│ │  
+│ │      for pipeline, signature, instance, callback in self.payload_instance_callbacks:
+│ │        if msg_eeid == pipeline.e2id and msg_stream == pipeline.name and msg_signature == signature and msg_instance == instance:
+│ │          callback(pipeline, msg_data)
+│ │      return
+│ │  
+│ │ -  # TODO: add arguments after they are finally set in Pipeline
+│ │ -  def create_pipeline(self, *args, **kwargs) -> Pipeline:
+│ │ -    return Pipeline(self, self.log, *args, silent=self.silent, **kwargs)
+│ │ -
+│ │    def _send_command_to_box(self, command, worker, payload):
+│ │      msg_to_send = {
+│ │          'EE_ID': worker,
+│ │          'SB_ID': worker,
+│ │          'ACTION': command,
+│ │          'PAYLOAD': payload,
+│ │          'INITIATOR_ID': self.name
+│ │ @@ -359,30 +356,143 @@
+│ │  
+│ │    def send_command_update_pipeline(self, worker, stream_config):
+│ │      self._send_command_to_box('UPDATE_CONFIG', worker, stream_config)
+│ │  
+│ │    def send_command_delete_pipeline(self, worker, stream_name):
+│ │      self._send_command_to_box('ARCHIVE_CONFIG', worker, stream_name)
+│ │  
+│ │ -  def close(self):
+│ │ +  def _send_payload(self, to, payload):
+│ │      raise NotImplementedError
+│ │  
+│ │ -  def _send_payload(self, to, payload):
+│ │ +  def P(self, *args, **kwargs):
+│ │ +    """Print info to stdout if the session was created with the silent argument set to `False`
+│ │ +    """
+│ │ +    if not self.silent:
+│ │ +      self.log.P(*args, **kwargs)
+│ │ +
+│ │ +  def connect(self) -> None:
+│ │ +    """Connect to the communication server using the credentials provided when creating this instance
+│ │ +    """
+│ │      raise NotImplementedError
+│ │  
+│ │ +  def create_pipeline(self, *, e2id, name, data_source, config={}, plugins=[], on_data, on_notification=None, **kwargs) -> Pipeline:
+│ │ +    """Create a new pipeline on a box. A pipeline is the equivalent of the "config file" used by the Hyperfy dev team internaly.
+│ │ +    A pipeline allows one to define what is the data acquisition type and source, and what plugins will run on that data.
+│ │ +
+│ │ +    Args:
+│ │ +        e2id (str): Name of the AiXp node.
+│ │ +        name (str): Name of the pipeline. This is good to be kept unique, as it allows multiple parties to overwrite each others configurations.
+│ │ +        data_source (str): Name of the DataCaptureThread plugin to be used for acquisition.
+│ │ +        on_data (Callable[[Pipeline, str, str, dict], None]): Callback that handles messages received from this pipeline. As arguments, it has a reference to this Pipeline object, the name of the Signature and the name of the Instance that sent the message, along with the payload itself.
+│ │ +        plugins (list): List of dictionaries which contain the configurations of each plugin instance that is desired to run on the box. Defaults to []. Should be left [], and instances should be created with the api.
+│ │ +        config (dict, optional): Data acquisition specific parameters. Defaults to {}.
+│ │ +        on_notification (Callable[[Pipeline, dict], None], optional): Callback that handles notifications received from this pipeline. As arguments, it has a reference to this Pipeline object, along with the payload itself. Defaults to None.
+│ │ +
+│ │ +    Returns:
+│ │ +        Pipeline: a Pipeline object which can be used to control plugin instances.
+│ │ +    """
+│ │ +    pipeline = Pipeline(
+│ │ +      self,
+│ │ +      self.log,
+│ │ +      e2id=e2id,
+│ │ +      name=name,
+│ │ +      data_source=data_source,
+│ │ +      config=config,
+│ │ +      plugins=plugins,
+│ │ +      on_data=on_data,
+│ │ +      on_notification=on_notification,
+│ │ +      silent=self.silent,
+│ │ +      **kwargs
+│ │ +     )
+│ │ +    self.own_pipelines.append(pipeline)
+│ │ +    return pipeline
+│ │ +  
+│ │ +  
+│ │ +  def close_own_pipelines(self):
+│ │ +    # iterate through all CREATED pipelines from this session and close them
+│ │ +    for pipeline in self.own_pipelines:
+│ │ +      pipeline.close()    
+│ │ +    return
+│ │ +
+│ │ +  def close(self, close_pipelines=False, **kwargs):
+│ │ +    """Close the session, releasing all resources and closing all threads
+│ │ +    """
+│ │ +    # TODO: Stefan: here we need to change from abstract to concrete - all pipelines MUST
+│ │ +    #       be deallocated. The child re-implementations must call self().__close__ beforehand
+│ │ +    if close_pipelines:
+│ │ +      self.close_own_pipelines()
+│ │ +    return
+│ │ +  
+│ │    def get_active_nodes(self):
+│ │ +    """Get the list of all AiXp nodes that sent a message since this session was created, and that are considered online
+│ │ +
+│ │ +    Returns:
+│ │ +        list: List of names of all the AiXp nodes that are considered online
+│ │ +    """
+│ │      return list(self._online_boxes.keys())
+│ │  
+│ │    def get_active_pipelines(self, e2id):
+│ │ +    """Get a dictionary with all the pipelines that are active on this AiXp node
+│ │ +
+│ │ +    Args:
+│ │ +        e2id (str): name of the AiXp node
+│ │ +
+│ │ +    Returns:
+│ │ +        dict: The key is the name of the pipeline, and the value is the entire config dictionary of that pipeline.
+│ │ +    """
+│ │      return self._online_boxes.get(e2id, None)
+│ │  
+│ │ -  def attach_to_pipeline(self, e2id, pipeline_name, **kwargs) -> Pipeline:
+│ │ +  def attach_to_pipeline(self, e2id, pipeline_name, on_data, on_notification=None, **kwargs) -> Pipeline:
+│ │ +    """Create a Pipeline object and attach to an existing pipeline on a box.
+│ │ +    Useful when one wants to treat an existing pipeline as one of his own, 
+│ │ +    or when one wants to attach callbacks to various events (on_data, on_notification). 
+│ │ +
+│ │ +    Args:
+│ │ +        e2id (str): Name of the AiXp node.
+│ │ +        pipeline_name (str): Name of the pipeline
+│ │ +        on_data (Callable[[Pipeline, str, str, dict], None]): Callback that handles messages received from this pipeline. As arguments, it has a reference to this Pipeline object, the name of the Signature and the name of the Instance that sent the message, along with the payload itself.
+│ │ +        on_notification (Callable[[Pipeline, dict], None], optional): Callback that handles notifications received from this pipeline. As arguments, it has a reference to this Pipeline object, along with the payload itself. Defaults to None.
+│ │ +
+│ │ +    Raises:
+│ │ +        Exception: The session does not consider the node online or the pipeline does not exist on that box.
+│ │ +
+│ │ +    Returns:
+│ │ +        Pipeline: a Pipeline object which can be used to control plugin instances.
+│ │ +    """
+│ │      if e2id not in self._online_boxes:
+│ │        raise Exception("Unable to attach to pipeline. Node does not exist")
+│ │  
+│ │      if pipeline_name not in self._online_boxes[e2id]:
+│ │        raise Exception("Unable to attach to pipeline. Pipeline does not exist")
+│ │  
+│ │      pipeline_config = {
+│ │          k.lower(): v for k, v in self._online_boxes[e2id][pipeline_name].items()}
+│ │      data_source = pipeline_config['type']
+│ │ -    return Pipeline(self, self.log, e2id=e2id, config={}, data_source=data_source, create_pipeline=False, silent=self.silent, **pipeline_config, **kwargs)
+│ │ +    return Pipeline(self, self.log, e2id=e2id, config={}, data_source=data_source, create_pipeline=False, silent=self.silent, on_data=on_data, on_notification=on_notification, **pipeline_config, **kwargs)
+│ │ +  
+│ │ +  
+│ │ +  def wait_until_sigint(self, close_session=True, close_pipelines=False):
+│ │ +    """
+│ │ +    This simple method will lock the main thread in a loop until a SIGINT signal is received
+│ │ +
+│ │ +    Parameters
+│ │ +    ----------
+│ │ +    close_session : bool, optional
+│ │ +      If `True` will close the session when the loop is exited. The default is True.
+│ │ +
+│ │ +    close_pipelines : bool, optional
+│ │ +      If `True` will close all pipelines initiated by this session when the loop is exited. The default is True.
+│ │ +
+│ │ +    Returns
+│ │ +    -------
+│ │ +    None.
+│ │ +
+│ │ +    """
+│ │ +    try:
+│ │ +      while True:
+│ │ +        sleep(0.1)
+│ │ +    except KeyboardInterrupt:
+│ │ +      self.P("CTRL+C detected. Stopping loop.", color='r')
+│ │ +      
+│ │ +    if close_session:
+│ │ +      self.close(close_pipelines=close_pipelines)
+│ │ +    return
+│ │   --- pye2-0.2.8/PyE2/base/payload/payload.py
+│ ├── +++ pye2-0.3.1/PyE2/base/payload/payload.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/comm/__init__.py
+│ ├── +++ pye2-0.3.1/PyE2/comm/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/comm/amqp_wrapper.py
+│ ├── +++ pye2-0.3.1/PyE2/comm/amqp_wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/comm/mqtt_wrapper.py
+│ ├── +++ pye2-0.3.1/PyE2/comm/mqtt_wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/const/__init__.py
+│ ├── +++ pye2-0.3.1/PyE2/const/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/const/base.py
+│ ├── +++ pye2-0.3.1/PyE2/const/base.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/const/comms.py
+│ ├── +++ pye2-0.3.1/PyE2/const/comms.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/const/heartbeat.py
+│ ├── +++ pye2-0.3.1/PyE2/const/heartbeat.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/const/misc.py
+│ ├── +++ pye2-0.3.1/PyE2/const/misc.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/const/payload.py
+│ ├── +++ pye2-0.3.1/PyE2/const/payload.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/default/mqtt_session.py
+│ ├── +++ pye2-0.3.1/PyE2/default/mqtt_session.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -28,16 +28,16 @@
+│ │  from ..comm import MQTTWrapper
+│ │  from ..base import GenericSession
+│ │  
+│ │  
+│ │  # TODO: implement send_command, send_payload,
+│ │  #       to be used by the Pipeline class
+│ │  class MqttSession(GenericSession):
+│ │ -  def __init__(self, *args, **kwargs) -> None:
+│ │ -    super(MqttSession, self).__init__(*args, **kwargs)
+│ │ +  def __init__(self, *, host, port, user, pwd, name='pySDK', config={}, log=None, on_notification=None, on_heartbeat=None, silent=False, **kwargs) -> None:
+│ │ +    super(MqttSession, self).__init__(host=host, port=port, user=user, pwd=pwd, name=name, config=config, log=log, on_notification=on_notification, on_heartbeat=on_heartbeat, silent=silent, **kwargs)
+│ │  
+│ │      self._payload_messages = deque()
+│ │      self._default_communicator = MQTTWrapper(
+│ │          log=self.log,
+│ │          config=self._config,
+│ │          send_channel_name=comm_ct.COMMUNICATION_CONFIG_CHANNEL,
+│ │          recv_channel_name=comm_ct.COMMUNICATION_PAYLOADS_CHANNEL,
+│ │ @@ -147,15 +147,17 @@
+│ │      self.running = True
+│ │      self._payload_thread.start()
+│ │      self._notif_thread.start()
+│ │      self._hb_thread.start()
+│ │  
+│ │      return
+│ │  
+│ │ -  def close(self):
+│ │ +  def close(self, close_pipelines=False, **kwargs):
+│ │ +    super(MqttSession, self).close(close_pipelines=close_pipelines, **kwargs)
+│ │ +    
+│ │      self._default_communicator.release()
+│ │      self._heartbeats_communicator.release()
+│ │      self._notifications_communicator.release()
+│ │      self.running = False
+│ │      self._payload_thread.join()
+│ │      self._notif_thread.join()
+│ │      self._hb_thread.join()
+│ │   --- pye2-0.2.8/PyE2/io_formatter/__init__.py
+│ ├── +++ pye2-0.3.1/PyE2/io_formatter/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/io_formatter/consts.py
+│ ├── +++ pye2-0.3.1/PyE2/io_formatter/consts.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/io_formatter/io_formatter_manager.py
+│ ├── +++ pye2-0.3.1/PyE2/io_formatter/io_formatter_manager.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/io_formatter/base/__init__.py
+│ ├── +++ pye2-0.3.1/PyE2/io_formatter/base/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/io_formatter/base/base_formatter.py
+│ ├── +++ pye2-0.3.1/PyE2/io_formatter/base/base_formatter.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/io_formatter/default/__init__.py
+│ ├── +++ pye2-0.3.1/PyE2/io_formatter/default/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/io_formatter/default/a_dummy.py
+│ ├── +++ pye2-0.3.1/PyE2/io_formatter/default/a_dummy.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/io_formatter/default/cavi2.py
+│ ├── +++ pye2-0.3.1/PyE2/io_formatter/default/cavi2.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/io_formatter/mixins/plugins_manager_mixin.py
+│ ├── +++ pye2-0.3.1/PyE2/io_formatter/mixins/plugins_manager_mixin.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/utils/code.py
+│ ├── +++ pye2-0.3.1/PyE2/utils/code.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/PyE2/utils/code_exec.py
+│ ├── +++ pye2-0.3.1/PyE2/utils/code_exec.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/xperimental/custom_exec_tutorial.py
+│ ├── +++ pye2-0.3.1/xperimental/custom_exec_tutorial.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/xperimental/distributed_prime_number_search.py
+│ ├── +++ pye2-0.3.1/README.md
+│ │┄ Files 26% similar despite different names
+│ │ @@ -1,36 +1,43 @@
+│ │ -# -*- coding: utf-8 -*-
+│ │ -"""
+│ │ -Copyright 2019-2022 Lummetry.AI (Knowledge Investment Group SRL). All Rights Reserved.
+│ │ -
+│ │ -
+│ │ -* NOTICE:  All information contained herein is, and remains
+│ │ -* the property of Knowledge Investment Group SRL.  
+│ │ -* The intellectual and technical concepts contained
+│ │ -* herein are proprietary to Knowledge Investment Group SRL
+│ │ -* and may be covered by Romanian and Foreign Patents,
+│ │ -* patents in process, and are protected by trade secret or copyright law.
+│ │ -* Dissemination of this information or reproduction of this material
+│ │ -* is strictly forbidden unless prior written permission is obtained
+│ │ -* from Knowledge Investment Group SRL.
+│ │ -
+│ │ -
+│ │ -@copyright: Lummetry.AI
+│ │ -@author: Lummetry.AI - AID
+│ │ -@project: 
+│ │ -@description:
+│ │ -Created on Thu Jan 26 14:57:44 2023
+│ │ -"""
+│ │ +# PyE2 SDK
+│ │  
+│ │ -import os
+│ │ -from time import sleep, time
+│ │ +This Python package enables low-code development and deployment of end-to-end AI cooperative application pipelines within the AiXpand Execution Engine processing nodes ecosystem. For further information please see "AiXpand - Decentralized ubiquitous computing MLOps execution engine".
+│ │  
+│ │ -from PyE2 import Payload, Pipeline, Session, code_to_base64
+│ │  
+│ │ -worker_code = """
+│ │ +## Installation
+│ │ +
+│ │ +
+│ │ +
+│ │ +## Quick start "Hello world!"
+│ │ +
+│ │ +Below is a simple "Hello world!" style application that creates a session by connecting to a known communication broker, listens for processing nodes heartbeats and displays the basic compute capabilities of the discovered nodes such as CPU & RAM.
+│ │ +
+│ │ +### Importing and configuration
+│ │ +
+│ │ +```
+│ │ +```
+│ │ +
+│ │ +### Preparing callbacks
+│ │ +
+│ │ +```
+│ │ +```
+│ │ +
+│ │ +### Running a simple main loop
+│ │ +
+│ │ +```
+│ │ +```
+│ │ +
+│ │ +## Advanced quick-start with decentralized distributed jobs
+│ │ +
+│ │ +For a more advanced quick-start we are going to create a execution pipeline on a target processing node that will request a specific number of workers in the network (including itself) to run a brute prime number search job.
+│ │ +The initiator job itself will create the request for the required number of discovered worker peers then will listen for results. Finally after a given configurable amount of time will close its own execution pipeline as well as each worker pipeline.
+│ │ +
+│ │ +### Worker code
+│ │ +
+│ │ +```
+│ │  _result=None
+│ │  skip = False
+│ │  for _ in range(plugin.cfg_max_tries):
+│ │    num = plugin.np.random.randint(1, 10_000)
+│ │    for n in range(2,int(num**0.5)+1):
+│ │      if num % n == 0:
+│ │        skip=True
+│ │ @@ -38,138 +45,146 @@
+│ │      # endif
+│ │    # endfor
+│ │    if not skip:
+│ │      _result=num
+│ │      break
+│ │    # endif
+│ │  # endfor
+│ │ -"""
+│ │ +```
+│ │  
+│ │ -master_code = """
+│ │ -_result=None
+│ │ +### Initiator node code
+│ │ +
+│ │ +```
+│ │ +result=None
+│ │  if plugin.int_cache['run_first_time'] == 0:
+│ │    # this is the first run, consider this the setup
+│ │    
+│ │    plugin.int_cache['run_first_time'] = 1
+│ │  
+│ │    worker_code = plugin.cfg_worker_code
+│ │    n_workers = plugin.cfg_n_workers
+│ │ -  
+│ │ +  # we use DeAPI `plugin.deapi_get_wokers` call to get the needed workers
+│ │    plugin.obj_cache['lst_workers'] = plugin.deapi_get_wokers(n_workers)
+│ │    plugin.obj_cache['dct_workers'] = {}
+│ │    plugin.obj_cache['dct_worker_progress'] = {}
+│ │    plugin.P(plugin.obj_cache['lst_workers'])
+│ │    
+│ │ -  
+│ │ +  # for each worker we symetrically launch the same job
+│ │    for worker in plugin.obj_cache['lst_workers']:
+│ │      plugin.obj_cache['dct_worker_progress'][worker] = []
+│ │ -    stream_name = plugin.cmdapi_start_simple_custom_pipeline(
+│ │ +    pipeline_name = plugin.cmdapi_start_simple_custom_pipeline(
+│ │        base64code=worker_code, 
+│ │        dest=worker,
+│ │        instance_config={
+│ │          'MAX_TRIES': plugin.cfg_max_tries, 
+│ │        }
+│ │      )
+│ │ -    plugin.obj_cache['dct_workers'][worker] = stream_name 
+│ │ +    plugin.obj_cache['dct_workers'][worker] = pipeline_name 
+│ │    # endfor
+│ │    
+│ │    plugin.obj_cache["start_time"] = plugin.datetime.now()
+│ │    # endfor
+│ │ -# endif
+│ │  elif (plugin.datetime.now() - plugin.obj_cache["start_time"]).seconds > plugin.cfg_max_run_time:
+│ │ -  # stop the workers and stop this instance
+│ │ +  # if the configured time has elapsed we stop all the worker pipelines 
+│ │ +  # as well as stop this pipeline itself
+│ │    
+│ │ -  for box_id, stream_name in plugin.obj_cache['dct_workers'].items():
+│ │ -    plugin.cmdapi_archive_stream_on_other_box(box_id=box_id, stream_name=stream_name)
+│ │ -  plugin.cmdapi_archive_current_stream()
+│ │ -  _result = plugin.obj_cache['dct_worker_progress']
+│ │ +  for ee_id, pipeline_name in plugin.obj_cache['dct_workers'].items():
+│ │ +    plugin.cmdapi_archive_pipeline(dest=ee_id, name=pipeline_name)
+│ │ +  # now archive own pipeline
+│ │ +  plugin.cmdapi_archive_pipeline()
+│ │ +  result = {
+│ │ +    'STATUS'  : 'DONE',
+│ │ +    'RESULTS' : plugin.obj_cache['dct_worker_progress']
+│ │ +  }
+│ │  else:
+│ │    # here are the operations we are running periodically
+│ │ -
+│ │ -  payload = plugin.dataapi_struct_data()
+│ │ +  payload = plugin.dataapi_struct_data() # we use the DataAPI to get upstream data
+│ │    if payload is not None:
+│ │      
+│ │ -    box = payload.get('EE_ID', payload.get('SB_ID'))
+│ │ -    stream = payload.get('STREAM_NAME')
+│ │ +    ee_id = payload.get('EE_ID', payload.get('SB_ID'))
+│ │ +    pipeline_name = payload.get('STREAM_NAME')
+│ │      
+│ │ -    if (box, stream) in plugin.obj_cache['dct_workers'].items():
+│ │ +    if (ee_id, pipeline_name) in plugin.obj_cache['dct_workers'].items():
+│ │ +      # now we extract result from the result key of the payload JSON
+│ │ +      # this also can be configured to another name
+│ │        num = payload.get('EXEC_RESULT', payload.get('EXEC_INFO'))
+│ │        if num is not None:
+│ │ -        plugin.obj_cache['dct_worker_progress'][box].append(num)
+│ │ +        plugin.obj_cache['dct_worker_progress'][ee_id].append(num)
+│ │ +        result = {
+│ │ +          'STATUS'  : 'IN_PROGRESS',
+│ │ +          'RESULTS' : plugin.obj_cache['dct_worker_progress']
+│ │ +        }
+│ │    # endif
+│ │  # endif
+│ │ -"""
+│ │ +```
+│ │  
+│ │ +### The local code
+│ │  
+│ │ -def instance_on_data(pipeline, data: Payload):
+│ │ -  print(data)
+│ │ -  return
+│ │ +```
+│ │  
+│ │ +from PyE2 import Session, code_to_base64
+│ │  
+│ │ -def pipeline_on_data(pipeline, signature, instance, data: Payload):
+│ │ -  pass
+│ │ -
+│ │ -
+│ │ -dct_server = {
+│ │ -    'host': "jenkinsx.globalintelligence.ro",
+│ │ +SERVER_CONFIG = {
+│ │ +    'host': "****************",
+│ │      'port': 31083,
+│ │ -    'user': "coreaixp",
+│ │ -    'pwd': "s3cret-passw0rd"
+│ │ +    'user': "****************",
+│ │ +    'pwd': "****************"
+│ │  }
+│ │  
+│ │ -e2id = 'stefan-box'
+│ │ -sess = Session(**dct_server, silent=True)
+│ │ -sess.connect()
+│ │ -
+│ │ -listener_params = {k.upper(): v for k, v in dct_server.items()}
+│ │ -listener_params["PASS"] = listener_params["PWD"]
+│ │ -listener_params["TOPIC"] = "lummetry/payloads"
+│ │ -
+│ │ -pipeline = sess.create_pipeline(
+│ │ -    e2id=e2id,
+│ │ -    name='test_dist_jobs',
+│ │ -    # data_source='Void',
+│ │ -    # config={},
+│ │ -    data_source='IotQueueListener',
+│ │ -    config={
+│ │ -        'STREAM_CONFIG_METADATA': listener_params,
+│ │ -        "RECONNECTABLE": True,
+│ │ -    },
+│ │ -    plugins=None,
+│ │ -    on_data=pipeline_on_data,
+│ │ -)
+│ │ -
+│ │ -# now start a ciclic process
+│ │ -# pipeline.start_custom_plugin(
+│ │ -#     instance_id='inst01',
+│ │ -#     plain_code=worker_code,
+│ │ -#     params={
+│ │ -#       'MAX_TRIES': 10,
+│ │ -#       },
+│ │ -#     on_data=instance_on_data,
+│ │ -#     process_delay=1
+│ │ -# )
+│ │ -
+│ │ -pipeline.start_custom_plugin(
+│ │ -    instance_id='inst02',
+│ │ -    plain_code=master_code,
+│ │ -    params={
+│ │ -      'MAX_TRIES': 10,
+│ │ -      'MAX_RUN_TIME': 60,
+│ │ -      'N_WORKERS': 2,
+│ │ -      'WORKER_CODE': code_to_base64(worker_code)
+│ │ -      },
+│ │ -    on_data=instance_on_data,
+│ │ -    process_delay=0.2
+│ │ -)
+│ │ -
+│ │  
+│ │ +def instance_on_data(pipeline, data):
+│ │ +  print(data)
+│ │ +  return
+│ │  
+│ │ -try:
+│ │ -  while True:
+│ │ -    sleep(0.1)
+│ │ -except KeyboardInterrupt:
+│ │ -  pipeline.P("CTRL+C detected. Closing example..", color='r')
+│ │  
+│ │ +def pipeline_on_data(pipeline, signature, instance, data):
+│ │ +  pass
+│ │  
+│ │ -pipeline.close()
+│ │ -sess.close()
+│ │ +if __name__ == '__main__':
+│ │ +  
+│ │ +  WORKER_CODE_PATH = 'xperimental/dedist_example_worker.py'
+│ │ +  INITIATOR_CODE_PATH = 'xperimental/dedist_example_initiator.py'
+│ │ +  
+│ │ +  with open(WORKER_CODE_PATH, 'rt') as fh:
+│ │ +    worker_code = fh.read()
+│ │ +    
+│ │ +  e2id = 'stefan-box' # provide a known EE id
+│ │ +  sess = Session(**SERVER_CONFIG, silent=True)
+│ │ +  sess.connect()
+│ │ +  
+│ │ +  listener_params = {k.upper(): v for k, v in SERVER_CONFIG.items()}
+│ │ +  listener_params["PASS"] = listener_params["PWD"]
+│ │ +  listener_params["TOPIC"] = "lummetry/payloads"
+│ │ +  
+│ │ +  pipeline = sess.create_pipeline(
+│ │ +      e2id=e2id,
+│ │ +      name='test_dist_jobs',
+│ │ +      # data_source='Void',
+│ │ +      # config={},
+│ │ +      data_source='IotQueueListener', # this DCT allows data acquisition from MQTT brokers
+│ │ +      config={
+│ │ +          'STREAM_CONFIG_METADATA': listener_params,
+│ │ +          "RECONNECTABLE": True,
+│ │ +      },
+│ │ +      plugins=None,
+│ │ +      on_data=pipeline_on_data,
+│ │ +  )
+│ │ +  
+│ │ +  
+│ │ +  pipeline.start_custom_plugin(
+│ │ +      instance_id='inst02',
+│ │ +      plain_code_path=INITIATOR_CODE_PATH,
+│ │ +      params={
+│ │ +        'MAX_TRIES': 10, # this will be used within plugin as `plugin.cfg_max_tries`
+│ │ +        'MAX_RUN_TIME': 60, # this will be used within plugin as `plugin.cfg_max_run_time`
+│ │ +        'N_WORKERS': 2, # this will be used within plugin as `plugin.cfg_n_workers`
+│ │ +        
+│ │ +        # this will be used within plugin as `plugin.cfg_worker_code`
+│ │ +        'WORKER_CODE': code_to_base64(worker_code) 
+│ │ +        },
+│ │ +      on_data=instance_on_data,
+│ │ +      process_delay=0.2
+│ │ +  )
+│ │ +  
+│ │ +  sess.wait_until_sigint(close_session=True, close_pipelines=True)
+│ │ +  
+│ │ +```
+│ │   --- pye2-0.2.8/xperimental/ex1.py
+│ ├── +++ pye2-0.3.1/xperimental/ex1.py
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/.gitignore
+│ ├── +++ pye2-0.3.1/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/LICENSE
+│ ├── +++ pye2-0.3.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- pye2-0.2.8/pyproject.toml
+│ ├── +++ pye2-0.3.1/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["hatchling", "pika", "paho-mqtt"]
+│ │  build-backend = "hatchling.build"
+│ │  
+│ │  [project]
+│ │  name = "PyE2"
+│ │ -version = "0.2.8"
+│ │ +version = "0.3.1"
+│ │  authors = [
+│ │    { name="Stefan Saraev", email="stefan.saraev@global-technical.com" },
+│ │    { name="Cristan Bleotiu", email="cristan.bleotiu@global-technical.com" },
+│ │    { name="Andrei Ionut Damian", email="andrei.damian@lummetry.ai" },
+│ │  ]
+│ │  description = "PyE2 is an SDK used to communicate with the AiXpand network"
+│ │  readme = "README.md"

@@ -1,0 +1,233 @@
+# Comparing `tmp/langchain-serve-0.0.2.dev38.tar.gz` & `tmp/langchain-serve-0.0.3.dev3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "langchain-serve-0.0.2.dev38.tar", last modified: Wed Apr  5 09:09:28 2023, max compression
++gzip compressed data, was "langchain-serve-0.0.3.dev3.tar", last modified: Fri Apr  7 06:22:00 2023, max compression
+```
+
+## Comparing `langchain-serve-0.0.2.dev38.tar` & `langchain-serve-0.0.3.dev3.tar`
+
+### file list
+
+```diff
+@@ -1,46 +1,46 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 09:09:28.132020 langchain-serve-0.0.2.dev38/
+--rw-r--r--   0 runner    (1001) docker     (123)    11357 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      166 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)    26708 2023-04-05 09:09:28.132020 langchain-serve-0.0.2.dev38/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    25458 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 09:09:28.128020 langchain-serve-0.0.2.dev38/langchain_serve.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)    26708 2023-04-05 09:09:28.000000 langchain-serve-0.0.2.dev38/langchain_serve.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1148 2023-04-05 09:09:28.000000 langchain-serve-0.0.2.dev38/langchain_serve.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-05 09:09:28.000000 langchain-serve-0.0.2.dev38/langchain_serve.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      127 2023-04-05 09:09:28.000000 langchain-serve-0.0.2.dev38/langchain_serve.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-05 09:09:28.000000 langchain-serve-0.0.2.dev38/langchain_serve.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (123)       81 2023-04-05 09:09:28.000000 langchain-serve-0.0.2.dev38/langchain_serve.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-05 09:09:28.000000 langchain-serve-0.0.2.dev38/langchain_serve.egg-info/top_level.txt
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 09:09:28.128020 langchain-serve-0.0.2.dev38/lcserve/
+--rw-r--r--   0 runner    (1001) docker     (123)      458 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/Dockerfile
+--rw-r--r--   0 runner    (1001) docker     (123)      351 2023-04-05 09:09:27.000000 langchain-serve-0.0.2.dev38/lcserve/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3415 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/__main__.py
+--rw-r--r--   0 runner    (1001) docker     (123)       76 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/agent-requirements.txt
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 09:09:28.128020 langchain-serve-0.0.2.dev38/lcserve/backend/
+--rw-r--r--   0 runner    (1001) docker     (123)      177 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8786 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/agentexecutor.py
+--rw-r--r--   0 runner    (1001) docker     (123)      715 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/decorators.py
+--rw-r--r--   0 runner    (1001) docker     (123)    21951 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/gateway.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2393 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/nginx.conf
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 09:09:28.132020 langchain-serve-0.0.2.dev38/lcserve/backend/playground/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/playground/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2713 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/playground/app.py
+--rw-r--r--   0 runner    (1001) docker     (123)       80 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/playground/config.toml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 09:09:28.132020 langchain-serve-0.0.2.dev38/lcserve/backend/playground/utils/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/playground/utils/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4213 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/playground/utils/helper.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1635 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/playground/utils/langchain_helper.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1365 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/playground/utils/talk.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2524 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/backend/playground/utils/tools.py
+--rw-r--r--   0 runner    (1001) docker     (123)      107 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/config.yml
+--rw-r--r--   0 runner    (1001) docker     (123)      545 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/customgateway.Dockerfile
+--rw-r--r--   0 runner    (1001) docker     (123)      101 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/customgateway_config.yml
+--rw-r--r--   0 runner    (1001) docker     (123)    15376 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/flow.py
+--rw-r--r--   0 runner    (1001) docker     (123)      775 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/flow.yml
+--rw-r--r--   0 runner    (1001) docker     (123)       84 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/playgroundgateway_config.yml
+--rw-r--r--   0 runner    (1001) docker     (123)       45 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/requirements.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      501 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/servinggateway.Dockerfile
+--rw-r--r--   0 runner    (1001) docker     (123)       87 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/lcserve/servinggateway_config.yml
+--rw-r--r--   0 runner    (1001) docker     (123)       81 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/requirements.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-05 09:09:28.132020 langchain-serve-0.0.2.dev38/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     2904 2023-04-05 09:09:20.000000 langchain-serve-0.0.2.dev38/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:22:00.763548 langchain-serve-0.0.3.dev3/
++-rw-r--r--   0 runner    (1001) docker     (123)    11357 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      166 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)    26707 2023-04-07 06:22:00.763548 langchain-serve-0.0.3.dev3/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    25458 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:22:00.763548 langchain-serve-0.0.3.dev3/langchain_serve.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)    26707 2023-04-07 06:22:00.000000 langchain-serve-0.0.3.dev3/langchain_serve.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1148 2023-04-07 06:22:00.000000 langchain-serve-0.0.3.dev3/langchain_serve.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 06:22:00.000000 langchain-serve-0.0.3.dev3/langchain_serve.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      127 2023-04-07 06:22:00.000000 langchain-serve-0.0.3.dev3/langchain_serve.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 06:22:00.000000 langchain-serve-0.0.3.dev3/langchain_serve.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)       81 2023-04-07 06:22:00.000000 langchain-serve-0.0.3.dev3/langchain_serve.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-07 06:22:00.000000 langchain-serve-0.0.3.dev3/langchain_serve.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:22:00.763548 langchain-serve-0.0.3.dev3/lcserve/
++-rw-r--r--   0 runner    (1001) docker     (123)      458 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/Dockerfile
++-rw-r--r--   0 runner    (1001) docker     (123)      350 2023-04-07 06:22:00.000000 langchain-serve-0.0.3.dev3/lcserve/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3415 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/__main__.py
++-rw-r--r--   0 runner    (1001) docker     (123)       76 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/agent-requirements.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:22:00.763548 langchain-serve-0.0.3.dev3/lcserve/backend/
++-rw-r--r--   0 runner    (1001) docker     (123)      177 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8786 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/agentexecutor.py
++-rw-r--r--   0 runner    (1001) docker     (123)      715 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/decorators.py
++-rw-r--r--   0 runner    (1001) docker     (123)    21956 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/gateway.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2393 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/nginx.conf
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:22:00.763548 langchain-serve-0.0.3.dev3/lcserve/backend/playground/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/playground/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2713 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/playground/app.py
++-rw-r--r--   0 runner    (1001) docker     (123)       80 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/playground/config.toml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:22:00.763548 langchain-serve-0.0.3.dev3/lcserve/backend/playground/utils/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/playground/utils/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4213 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/playground/utils/helper.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1635 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/playground/utils/langchain_helper.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1365 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/playground/utils/talk.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2524 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/backend/playground/utils/tools.py
++-rw-r--r--   0 runner    (1001) docker     (123)      107 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/config.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      545 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/customgateway.Dockerfile
++-rw-r--r--   0 runner    (1001) docker     (123)      101 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/customgateway_config.yml
++-rw-r--r--   0 runner    (1001) docker     (123)    15376 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/flow.py
++-rw-r--r--   0 runner    (1001) docker     (123)      775 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/flow.yml
++-rw-r--r--   0 runner    (1001) docker     (123)       84 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/playgroundgateway_config.yml
++-rw-r--r--   0 runner    (1001) docker     (123)       45 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/requirements.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      501 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/servinggateway.Dockerfile
++-rw-r--r--   0 runner    (1001) docker     (123)       87 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/lcserve/servinggateway_config.yml
++-rw-r--r--   0 runner    (1001) docker     (123)       81 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/requirements.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 06:22:00.763548 langchain-serve-0.0.3.dev3/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     2904 2023-04-07 06:21:57.000000 langchain-serve-0.0.3.dev3/setup.py
+```
+
+### Comparing `langchain-serve-0.0.2.dev38/LICENSE` & `langchain-serve-0.0.3.dev3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/PKG-INFO` & `langchain-serve-0.0.3.dev3/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: langchain-serve
+-Version: 0.0.2.dev38
++Version: 0.0.3.dev3
+ Summary: Langchain Serve - serve your langchain apps on Jina AI Cloud.
+ Home-page: https://github.com/jina-ai/langchain-serve/
+ Author: Jina AI
+ Author-email: hello@jina.ai
+ License: Apache 2.0
+ Download-URL: https://github.com/jina-ai/langchain-serve/tags
+ Project-URL: Documentation, https://docs.jina.ai
+```
+
+### Comparing `langchain-serve-0.0.2.dev38/README.md` & `langchain-serve-0.0.3.dev3/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/langchain_serve.egg-info/PKG-INFO` & `langchain-serve-0.0.3.dev3/langchain_serve.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: langchain-serve
+-Version: 0.0.2.dev38
++Version: 0.0.3.dev3
+ Summary: Langchain Serve - serve your langchain apps on Jina AI Cloud.
+ Home-page: https://github.com/jina-ai/langchain-serve/
+ Author: Jina AI
+ Author-email: hello@jina.ai
+ License: Apache 2.0
+ Download-URL: https://github.com/jina-ai/langchain-serve/tags
+ Project-URL: Documentation, https://docs.jina.ai
+```
+
+### Comparing `langchain-serve-0.0.2.dev38/langchain_serve.egg-info/SOURCES.txt` & `langchain-serve-0.0.3.dev3/langchain_serve.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/__main__.py` & `langchain-serve-0.0.3.dev3/lcserve/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/backend/agentexecutor.py` & `langchain-serve-0.0.3.dev3/lcserve/backend/agentexecutor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/backend/decorators.py` & `langchain-serve-0.0.3.dev3/lcserve/backend/decorators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/backend/gateway.py` & `langchain-serve-0.0.3.dev3/lcserve/backend/gateway.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -556,12 +556,12 @@
+                                     error=_ws_serving_error,
+                                 )
+                                 await websocket.send_text(_data.json())
+ 
+                             if _ws_serving_error != '':
+                                 print(f'Error: {_ws_serving_error}')
+ 
+-                except WebSocketDisconnect:
++                except WebSocketDisconnect as e:
+                     self.logger.info(
+                         f'Client {websocket.client} disconnected from `{func.__name__}` with code {e.code} and reason {e.reason}'
+                     )
+                     return
+```
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/backend/nginx.conf` & `langchain-serve-0.0.3.dev3/lcserve/backend/nginx.conf`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/backend/playground/app.py` & `langchain-serve-0.0.3.dev3/lcserve/backend/playground/app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/backend/playground/utils/helper.py` & `langchain-serve-0.0.3.dev3/lcserve/backend/playground/utils/helper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/backend/playground/utils/langchain_helper.py` & `langchain-serve-0.0.3.dev3/lcserve/backend/playground/utils/langchain_helper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/backend/playground/utils/talk.py` & `langchain-serve-0.0.3.dev3/lcserve/backend/playground/utils/talk.py`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/backend/playground/utils/tools.py` & `langchain-serve-0.0.3.dev3/lcserve/backend/playground/utils/tools.py`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/customgateway.Dockerfile` & `langchain-serve-0.0.3.dev3/lcserve/customgateway.Dockerfile`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/flow.py` & `langchain-serve-0.0.3.dev3/lcserve/flow.py`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/lcserve/flow.yml` & `langchain-serve-0.0.3.dev3/lcserve/flow.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `langchain-serve-0.0.2.dev38/setup.py` & `langchain-serve-0.0.3.dev3/setup.py`
+
+ * *Files identical despite different names*
+

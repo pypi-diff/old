@@ -1,0 +1,245 @@
+# Comparing `tmp/ddd-struct-0.2.1.tar.gz` & `tmp/ddd-struct-0.2.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "ddd-struct-0.2.1.tar", last modified: Mon Apr  3 06:40:47 2023, max compression
++gzip compressed data, was "ddd-struct-0.2.2.tar", last modified: Fri Apr  7 06:19:56 2023, max compression
+```
+
+## Comparing `ddd-struct-0.2.1.tar` & `ddd-struct-0.2.2.tar`
+
+### file list
+
+```diff
+@@ -1,30 +1,30 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 06:40:47.594413 ddd-struct-0.2.1/
+--rw-rw-rw-   0 root         (0) root         (0)     1091 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/LICENSE
+--rw-r--r--   0 root         (0) root         (0)      258 2023-04-03 06:40:47.594413 ddd-struct-0.2.1/PKG-INFO
+--rw-rw-rw-   0 root         (0) root         (0)      299 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/README.md
+--rw-r--r--   0 root         (0) root         (0)       38 2023-04-03 06:40:47.594413 ddd-struct-0.2.1/setup.cfg
+--rw-rw-rw-   0 root         (0) root         (0)      636 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/setup.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 06:40:47.586413 ddd-struct-0.2.1/src/
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 06:40:47.590413 ddd-struct-0.2.1/src/ddd_struct/
+--rw-rw-rw-   0 root         (0) root         (0)      183 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/src/ddd_struct/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 06:40:47.590413 ddd-struct-0.2.1/src/ddd_struct/application/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/src/ddd_struct/application/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     8716 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/src/ddd_struct/application/action.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 06:40:47.590413 ddd-struct-0.2.1/src/ddd_struct/domain/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/src/ddd_struct/domain/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)      924 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/src/ddd_struct/domain/repository.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 06:40:47.590413 ddd-struct-0.2.1/src/ddd_struct/infrastructure/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/src/ddd_struct/infrastructure/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     3870 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/src/ddd_struct/infrastructure/repository_impl.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 06:40:47.594413 ddd-struct-0.2.1/src/ddd_struct/lib/
+--rw-rw-rw-   0 root         (0) root         (0)       80 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/src/ddd_struct/lib/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)      332 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/src/ddd_struct/lib/common.py
+--rw-rw-rw-   0 root         (0) root         (0)     2763 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/src/ddd_struct/lib/thread.py
+--rw-rw-rw-   0 root         (0) root         (0)      799 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/src/ddd_struct/lib/warning.py
+--rw-rw-rw-   0 root         (0) root         (0)       21 2023-04-03 06:40:38.000000 ddd-struct-0.2.1/src/ddd_struct/version.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 06:40:47.590413 ddd-struct-0.2.1/src/ddd_struct.egg-info/
+--rw-r--r--   0 root         (0) root         (0)      258 2023-04-03 06:40:47.000000 ddd-struct-0.2.1/src/ddd_struct.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)      624 2023-04-03 06:40:47.000000 ddd-struct-0.2.1/src/ddd_struct.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-04-03 06:40:47.000000 ddd-struct-0.2.1/src/ddd_struct.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)       21 2023-04-03 06:40:47.000000 ddd-struct-0.2.1/src/ddd_struct.egg-info/requires.txt
+--rw-r--r--   0 root         (0) root         (0)       11 2023-04-03 06:40:47.000000 ddd-struct-0.2.1/src/ddd_struct.egg-info/top_level.txt
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:19:56.928193 ddd-struct-0.2.2/
++-rw-rw-rw-   0 root         (0) root         (0)     1091 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/LICENSE
++-rw-r--r--   0 root         (0) root         (0)      258 2023-04-07 06:19:56.928193 ddd-struct-0.2.2/PKG-INFO
++-rw-rw-rw-   0 root         (0) root         (0)      299 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/README.md
++-rw-r--r--   0 root         (0) root         (0)       38 2023-04-07 06:19:56.928193 ddd-struct-0.2.2/setup.cfg
++-rw-rw-rw-   0 root         (0) root         (0)      636 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/setup.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:19:56.924193 ddd-struct-0.2.2/src/
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:19:56.924193 ddd-struct-0.2.2/src/ddd_struct/
++-rw-rw-rw-   0 root         (0) root         (0)      183 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/src/ddd_struct/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:19:56.928193 ddd-struct-0.2.2/src/ddd_struct/application/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/src/ddd_struct/application/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     8716 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/src/ddd_struct/application/action.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:19:56.928193 ddd-struct-0.2.2/src/ddd_struct/domain/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/src/ddd_struct/domain/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)      924 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/src/ddd_struct/domain/repository.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:19:56.928193 ddd-struct-0.2.2/src/ddd_struct/infrastructure/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/src/ddd_struct/infrastructure/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     3870 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/src/ddd_struct/infrastructure/repository_impl.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:19:56.928193 ddd-struct-0.2.2/src/ddd_struct/lib/
++-rw-rw-rw-   0 root         (0) root         (0)       80 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/src/ddd_struct/lib/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)      332 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/src/ddd_struct/lib/common.py
++-rw-rw-rw-   0 root         (0) root         (0)     4542 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/src/ddd_struct/lib/thread.py
++-rw-rw-rw-   0 root         (0) root         (0)      799 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/src/ddd_struct/lib/warning.py
++-rw-rw-rw-   0 root         (0) root         (0)       21 2023-04-07 06:19:47.000000 ddd-struct-0.2.2/src/ddd_struct/version.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:19:56.924193 ddd-struct-0.2.2/src/ddd_struct.egg-info/
++-rw-r--r--   0 root         (0) root         (0)      258 2023-04-07 06:19:56.000000 ddd-struct-0.2.2/src/ddd_struct.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)      624 2023-04-07 06:19:56.000000 ddd-struct-0.2.2/src/ddd_struct.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 06:19:56.000000 ddd-struct-0.2.2/src/ddd_struct.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)       21 2023-04-07 06:19:56.000000 ddd-struct-0.2.2/src/ddd_struct.egg-info/requires.txt
++-rw-r--r--   0 root         (0) root         (0)       11 2023-04-07 06:19:56.000000 ddd-struct-0.2.2/src/ddd_struct.egg-info/top_level.txt
+```
+
+### Comparing `ddd-struct-0.2.1/LICENSE` & `ddd-struct-0.2.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `ddd-struct-0.2.1/setup.py` & `ddd-struct-0.2.2/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ddd-struct-0.2.1/src/ddd_struct/application/action.py` & `ddd-struct-0.2.2/src/ddd_struct/application/action.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ddd-struct-0.2.1/src/ddd_struct/domain/repository.py` & `ddd-struct-0.2.2/src/ddd_struct/domain/repository.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ddd-struct-0.2.1/src/ddd_struct/infrastructure/repository_impl.py` & `ddd-struct-0.2.2/src/ddd_struct/infrastructure/repository_impl.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ddd-struct-0.2.1/src/ddd_struct/lib/thread.py` & `ddd-struct-0.2.2/src/ddd_struct/lib/thread.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,48 +1,74 @@
+ import asyncio, traceback, time
++from typing import Tuple
+ from functools import wraps, partial
+ from copy import copy
++from .warning import deprecated
+ 
+ 
++class TaskItem:
++    def __init__(self, index, func, args, kwargs, retry=None) -> None:
++        self.index = index
++        self.func = func
++        self.args = args
++        self.kwargs = kwargs
++        self.retry = retry
++
+ 
+ def async_wrap(func):
+     if asyncio.iscoroutinefunction(func):
+         return func
+     @wraps(func)
+     async def run(*args, loop=None, executor=None, **kwargs):
+         if loop is None:
+             loop = asyncio.get_event_loop()
+         pfunc = partial(func, *args, **kwargs)
+         return await loop.run_in_executor(executor, pfunc)
+     return run 
+ 
+ 
+ class CoroutinePool:
+-    def __init__(self, n_workers=10) -> None:
++    def __init__(self, n_workers=10, retry=0) -> None:
+         self.n_workers = n_workers
+         self.wait_list = []
+         self.ret_list_when_timeout = None
++        self.retry = retry
++        self.failed = {}
+ 
+ 
+-    def _get_task_result(self, task):
++    def _get_task_result(self, task)->Tuple[bool, str]:
+         try:
+-            return task.result()
++            return True, task.result()
+         except asyncio.CancelledError:
+-            return traceback.format_exc()
++            return False, traceback.format_exc()
+         except:
+             pass
+         try:
+-            return task.exception()
++            return False, task.exception()
+         except:
+-            return traceback.format_exc()
++            return False, traceback.format_exc()
+ 
+ 
++    @deprecated()
+     def add_task(self, func, *args, **kwargs):
+-        self.wait_list.append((len(self.wait_list), func, args, kwargs))
+-   
++        task_item = TaskItem(len(self.wait_list), func, args, kwargs)
++        self.wait_list.append(task_item)
++
++
++    def add_task2(self, func, retry=0, *args, **kwargs):
++        task_item = TaskItem(len(self.wait_list), func, args, kwargs, retry)
++        self.wait_list.append(task_item)
++
++
++    def create_task(self, task_item:TaskItem):
++        func, args, kwargs = task_item.func, task_item.args, task_item.kwargs
++        func = async_wrap(func)
++        task = asyncio.create_task(func(*args, **kwargs))
++        return task
++
+ 
+     def execute(self, delay=0, timeout=100, n_workers=None):
+         if n_workers is not None:
+             self.n_workers = n_workers
+         wait_list = copy(self.wait_list)
+ 
+         async def run():
+@@ -53,26 +79,41 @@
+             for _ in range(1000000000):
+                 if (time.time()-start_time)>timeout:
+                     self.ret_list_when_timeout = ret_list
+                     raise ValueError(f'Fail to finish task in {timeout}s')
+ 
+                 # create task
+                 if len(runner)<self.n_workers and wait_list:
+-                    idx, func, args, kwargs = wait_list.pop()
+-                    func = async_wrap(func)
+-                    task = asyncio.create_task(func(*args, **kwargs))
+-                    runner.append((idx, task))
++                    task_item:TaskItem = wait_list.pop()
++                    task = self.create_task(task_item)
++                    runner.append((task_item.index, task, task_item))
+                 else:
+                     # check tasks
+-                    for i, (idx, task) in enumerate(runner):
++                    for i, (idx, task, item) in enumerate(runner):
+                         if not task.done():
+                             continue
+-                        ret_list[idx] = self._get_task_result(task)
+-                        runner[i] = None
+-                    runner = [r for r in runner if r]
++                        succeed, result = self._get_task_result(task)
++                        if succeed:
++                            ret_list[idx] = result
++                            runner[i] = None
++                            if idx in self.failed: del self.failed[idx]
++                        elif idx not in self.failed and item.retry>0:
++                            assert idx==item.index
++                            self.failed[idx] = 1
++                            task = self.create_task(item)
++                            runner[i] = (item.index, task, item)
++                        elif idx in self.failed and self.failed[idx]<item.retry:
++                            self.failed[idx] += 1
++                            task = self.create_task(item)
++                            runner[i] = (item.index, task, item)
++                        else:
++                            ret_list[idx] = result
++                            runner[i] = None
++                            if idx in self.failed: del self.failed[idx]
++                    runner = [r for r in runner if r is not None]
+ 
+                     #exit
+                     if not runner and not wait_list:
+                         break
+                     await asyncio.sleep(delay)
+             return ret_list
+```
+
+### Comparing `ddd-struct-0.2.1/src/ddd_struct/lib/warning.py` & `ddd-struct-0.2.2/src/ddd_struct/lib/warning.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ddd-struct-0.2.1/src/ddd_struct.egg-info/SOURCES.txt` & `ddd-struct-0.2.2/src/ddd_struct.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+

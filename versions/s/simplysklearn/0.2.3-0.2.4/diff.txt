@@ -1,0 +1,202 @@
+--- tmp/simplysklearn-0.2.3.tar.gz
++++ tmp/simplysklearn-0.2.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "simplysklearn-0.2.3.tar", last modified: Tue Apr  4 04:07:40 2023, max compression
+│ +gzip compressed data, was "simplysklearn-0.2.4.tar", last modified: Fri Apr  7 06:15:54 2023, max compression
+│   --- simplysklearn-0.2.3.tar
+├── +++ simplysklearn-0.2.4.tar
+│ ├── file list
+│ │ @@ -1,22 +1,22 @@
+│ │ -drwxr-xr-x   0 kimhyunbin   (501) staff       (20)        0 2023-04-04 04:07:40.666778 simplysklearn-0.2.3/
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)     1068 2023-01-28 09:52:32.000000 simplysklearn-0.2.3/LICENSE
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)     4076 2023-04-04 04:07:40.666604 simplysklearn-0.2.3/PKG-INFO
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)     3672 2023-04-04 03:51:02.000000 simplysklearn-0.2.3/README.md
+│ │ -drwxr-xr-x   0 kimhyunbin   (501) staff       (20)        0 2023-04-04 04:07:40.665181 simplysklearn-0.2.3/classification/
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)        0 2023-04-03 05:20:29.000000 simplysklearn-0.2.3/classification/__init__.py
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)     6907 2023-04-04 03:58:23.000000 simplysklearn-0.2.3/classification/classification.py
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)     3267 2023-04-04 03:32:06.000000 simplysklearn-0.2.3/classification/classification_metrics.py
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)     2135 2023-04-04 03:38:15.000000 simplysklearn-0.2.3/classification/plot.py
+│ │ -drwxr-xr-x   0 kimhyunbin   (501) staff       (20)        0 2023-04-04 04:07:40.665676 simplysklearn-0.2.3/regression/
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)        0 2023-02-04 03:57:42.000000 simplysklearn-0.2.3/regression/__init__.py
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)     2136 2023-04-04 03:38:27.000000 simplysklearn-0.2.3/regression/plot.py
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)     6232 2023-04-04 03:58:59.000000 simplysklearn-0.2.3/regression/regression.py
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)     1935 2023-04-04 03:25:47.000000 simplysklearn-0.2.3/regression/regression_metrics.py
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)       38 2023-04-04 04:07:40.666829 simplysklearn-0.2.3/setup.cfg
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)     1006 2023-04-04 04:07:27.000000 simplysklearn-0.2.3/setup.py
+│ │ -drwxr-xr-x   0 kimhyunbin   (501) staff       (20)        0 2023-04-04 04:07:40.666307 simplysklearn-0.2.3/simplysklearn.egg-info/
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)     4076 2023-04-04 04:07:40.000000 simplysklearn-0.2.3/simplysklearn.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)      434 2023-04-04 04:07:40.000000 simplysklearn-0.2.3/simplysklearn.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)        1 2023-04-04 04:07:40.000000 simplysklearn-0.2.3/simplysklearn.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)       58 2023-04-04 04:07:40.000000 simplysklearn-0.2.3/simplysklearn.egg-info/requires.txt
+│ │ --rw-r--r--   0 kimhyunbin   (501) staff       (20)       26 2023-04-04 04:07:40.000000 simplysklearn-0.2.3/simplysklearn.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 kimhyunbin   (501) staff       (20)        0 2023-04-07 06:15:54.804021 simplysklearn-0.2.4/
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)     1068 2023-01-28 09:52:32.000000 simplysklearn-0.2.4/LICENSE
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)     4180 2023-04-07 06:15:54.803901 simplysklearn-0.2.4/PKG-INFO
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)     3778 2023-04-06 06:48:32.000000 simplysklearn-0.2.4/README.md
+│ │ +drwxr-xr-x   0 kimhyunbin   (501) staff       (20)        0 2023-04-07 06:15:54.801728 simplysklearn-0.2.4/classification/
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)        0 2023-04-03 05:20:29.000000 simplysklearn-0.2.4/classification/__init__.py
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)     6496 2023-04-07 06:12:34.000000 simplysklearn-0.2.4/classification/classification.py
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)     3267 2023-04-04 03:32:06.000000 simplysklearn-0.2.4/classification/classification_metrics.py
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)     2135 2023-04-04 03:38:15.000000 simplysklearn-0.2.4/classification/plot.py
+│ │ +drwxr-xr-x   0 kimhyunbin   (501) staff       (20)        0 2023-04-07 06:15:54.802874 simplysklearn-0.2.4/regression/
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)        0 2023-02-04 03:57:42.000000 simplysklearn-0.2.4/regression/__init__.py
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)     2136 2023-04-04 03:38:27.000000 simplysklearn-0.2.4/regression/plot.py
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)     6232 2023-04-04 03:58:59.000000 simplysklearn-0.2.4/regression/regression.py
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)     1935 2023-04-04 03:25:47.000000 simplysklearn-0.2.4/regression/regression_metrics.py
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)       38 2023-04-07 06:15:54.804065 simplysklearn-0.2.4/setup.cfg
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)     1006 2023-04-07 06:15:48.000000 simplysklearn-0.2.4/setup.py
+│ │ +drwxr-xr-x   0 kimhyunbin   (501) staff       (20)        0 2023-04-07 06:15:54.803717 simplysklearn-0.2.4/simplysklearn.egg-info/
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)     4180 2023-04-07 06:15:54.000000 simplysklearn-0.2.4/simplysklearn.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)      434 2023-04-07 06:15:54.000000 simplysklearn-0.2.4/simplysklearn.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)        1 2023-04-07 06:15:54.000000 simplysklearn-0.2.4/simplysklearn.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)       58 2023-04-07 06:15:54.000000 simplysklearn-0.2.4/simplysklearn.egg-info/requires.txt
+│ │ +-rw-r--r--   0 kimhyunbin   (501) staff       (20)       26 2023-04-07 06:15:54.000000 simplysklearn-0.2.4/simplysklearn.egg-info/top_level.txt
+│ │   --- simplysklearn-0.2.3/LICENSE
+│ ├── +++ simplysklearn-0.2.4/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- simplysklearn-0.2.3/PKG-INFO
+│ ├── +++ simplysklearn-0.2.4/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: simplysklearn
+│ │ -Version: 0.2.3
+│ │ +Version: 0.2.4
+│ │  Summary: Python package to automate machine learning process to showcase metric values for nearly all Scikit-Learn's models.
+│ │  Home-page: https://github.com/vanilladucky/simplysklearn
+│ │  Author: Kim Hyun Bin
+│ │  Author-email: KIMH0004@e.ntu.edu.sg
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -38,16 +38,18 @@
+│ │  This package would mainly be beneficial to those recently starting out in the field of machine learning or intermediate users. 
+│ │  It is probably unsuitable for highly complex models or datasets. 
+│ │  
+│ │  The main usage should be to assist the user by assessing the performances of myriad of models.
+│ │  
+│ │  ## What it provides
+│ │  
+│ │ -* Prepares datatset by takeing care of categorical feature by one-hot-encoding and numerical feature by scaling.
+│ │ -* Fits the engineered dataset on myriad of Scikit-Learn models. 
+│ │ +![image](https://github.com/vanilladucky/ModelExploration/blob/main/images/modelflow.png)
+│ │ +
+│ │ +* Prepares datatset by taking care of categorical feature by one-hot-encoding and numerical feature by scaling.
+│ │ +* Automatically fits the engineered dataset on myriad of Scikit-Learn models. 
+│ │  * Depending on what metric you want to observe, will plot you a colorful comparison of metrics of different models. 
+│ │  
+│ │  ## Future Improvements 
+│ │  
+│ │  * Automated hyperparameter tuning process
+│ │  * Option to display feature importances
+│ │   --- simplysklearn-0.2.3/README.md
+│ ├── +++ simplysklearn-0.2.4/README.md
+│ │┄ Files 3% similar despite different names
+│ │ @@ -24,16 +24,18 @@
+│ │  This package would mainly be beneficial to those recently starting out in the field of machine learning or intermediate users. 
+│ │  It is probably unsuitable for highly complex models or datasets. 
+│ │  
+│ │  The main usage should be to assist the user by assessing the performances of myriad of models.
+│ │  
+│ │  ## What it provides
+│ │  
+│ │ -* Prepares datatset by takeing care of categorical feature by one-hot-encoding and numerical feature by scaling.
+│ │ -* Fits the engineered dataset on myriad of Scikit-Learn models. 
+│ │ +![image](https://github.com/vanilladucky/ModelExploration/blob/main/images/modelflow.png)
+│ │ +
+│ │ +* Prepares datatset by taking care of categorical feature by one-hot-encoding and numerical feature by scaling.
+│ │ +* Automatically fits the engineered dataset on myriad of Scikit-Learn models. 
+│ │  * Depending on what metric you want to observe, will plot you a colorful comparison of metrics of different models. 
+│ │  
+│ │  ## Future Improvements 
+│ │  
+│ │  * Automated hyperparameter tuning process
+│ │  * Option to display feature importances
+│ │   --- simplysklearn-0.2.3/classification/classification.py
+│ ├── +++ simplysklearn-0.2.4/classification/classification.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -150,14 +150,7 @@
+│ │          plot = Plot(self.Scores, metric)
+│ │          plot.calculate()
+│ │          self.outlier_values = plot.display()
+│ │  
+│ │          return  
+│ │  
+│ │  
+│ │ -#------------------Testing Code-----------------------#
+│ │ -import pandas as pd
+│ │ -df = pd.read_csv('/Users/kimhyunbin/Documents/Python/My own project (Python)/simplysklearn/testing_datasets/classification_2.csv')
+│ │ -model = Classification(df, df.columns.tolist()[1:-1], 'Class', PredictProba = True, EnsembleBoolean=True, NeuralBoolean=True, SplitRatio=0.3)
+│ │ -model.fit()
+│ │ -model.plot('log_loss')
+│ │ -print(model.outlier_values)
+│ │   --- simplysklearn-0.2.3/classification/classification_metrics.py
+│ ├── +++ simplysklearn-0.2.4/classification/classification_metrics.py
+│ │┄ Files identical despite different names
+│ │   --- simplysklearn-0.2.3/classification/plot.py
+│ ├── +++ simplysklearn-0.2.4/classification/plot.py
+│ │┄ Files identical despite different names
+│ │   --- simplysklearn-0.2.3/regression/plot.py
+│ ├── +++ simplysklearn-0.2.4/regression/plot.py
+│ │┄ Files identical despite different names
+│ │   --- simplysklearn-0.2.3/regression/regression.py
+│ ├── +++ simplysklearn-0.2.4/regression/regression.py
+│ │┄ Files identical despite different names
+│ │   --- simplysklearn-0.2.3/regression/regression_metrics.py
+│ ├── +++ simplysklearn-0.2.4/regression/regression_metrics.py
+│ │┄ Files identical despite different names
+│ │   --- simplysklearn-0.2.3/setup.py
+│ ├── +++ simplysklearn-0.2.4/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  import setuptools
+│ │  with open("README.md", "r") as fh:
+│ │      long_description = fh.read()
+│ │      
+│ │  setuptools.setup(
+│ │      name="simplysklearn", 
+│ │ -    version="0.2.3",
+│ │ +    version="0.2.4",
+│ │      author="Kim Hyun Bin",
+│ │      author_email="KIMH0004@e.ntu.edu.sg",
+│ │      description="Python package to automate machine learning process to showcase metric values for nearly all Scikit-Learn's models.",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/vanilladucky/simplysklearn",
+│ │      packages=setuptools.find_packages(),
+│ │   --- simplysklearn-0.2.3/simplysklearn.egg-info/PKG-INFO
+│ ├── +++ simplysklearn-0.2.4/simplysklearn.egg-info/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: simplysklearn
+│ │ -Version: 0.2.3
+│ │ +Version: 0.2.4
+│ │  Summary: Python package to automate machine learning process to showcase metric values for nearly all Scikit-Learn's models.
+│ │  Home-page: https://github.com/vanilladucky/simplysklearn
+│ │  Author: Kim Hyun Bin
+│ │  Author-email: KIMH0004@e.ntu.edu.sg
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -38,16 +38,18 @@
+│ │  This package would mainly be beneficial to those recently starting out in the field of machine learning or intermediate users. 
+│ │  It is probably unsuitable for highly complex models or datasets. 
+│ │  
+│ │  The main usage should be to assist the user by assessing the performances of myriad of models.
+│ │  
+│ │  ## What it provides
+│ │  
+│ │ -* Prepares datatset by takeing care of categorical feature by one-hot-encoding and numerical feature by scaling.
+│ │ -* Fits the engineered dataset on myriad of Scikit-Learn models. 
+│ │ +![image](https://github.com/vanilladucky/ModelExploration/blob/main/images/modelflow.png)
+│ │ +
+│ │ +* Prepares datatset by taking care of categorical feature by one-hot-encoding and numerical feature by scaling.
+│ │ +* Automatically fits the engineered dataset on myriad of Scikit-Learn models. 
+│ │  * Depending on what metric you want to observe, will plot you a colorful comparison of metrics of different models. 
+│ │  
+│ │  ## Future Improvements 
+│ │  
+│ │  * Automated hyperparameter tuning process
+│ │  * Option to display feature importances
