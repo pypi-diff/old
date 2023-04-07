@@ -1,0 +1,1024 @@
+# Comparing `tmp/hftbacktest-1.4.1.tar.gz` & `tmp/hftbacktest-1.5.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/hftbacktest-1.4.1.tar", last modified: Wed Apr  5 14:33:19 2023, max compression
++gzip compressed data, was "dist/hftbacktest-1.5.0.tar", last modified: Fri Apr  7 13:49:50 2023, max compression
+```
+
+## Comparing `hftbacktest-1.4.1.tar` & `hftbacktest-1.5.0.tar`
+
+### file list
+
+```diff
+@@ -1,41 +1,40 @@
+-drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-05 14:33:19.442557 hftbacktest-1.4.1/
+--rw-r--r--   0 kaz       (1000) kaz       (1000)     1079 2022-11-14 13:24:06.000000 hftbacktest-1.4.1/LICENSE
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     8324 2023-04-05 14:33:19.442557 hftbacktest-1.4.1/PKG-INFO
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     5968 2023-03-16 12:21:31.000000 hftbacktest-1.4.1/README.rst
+-drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-05 14:33:19.438557 hftbacktest-1.4.1/hftbacktest/
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     5857 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/__init__.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)      830 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/assettype.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     6817 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/backtest.py
+-drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-05 14:33:19.438557 hftbacktest-1.4.1/hftbacktest/data/
+--rw-r--r--   0 kaz       (1000) kaz       (1000)     1118 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/data/__init__.py
+-drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-05 14:33:19.438557 hftbacktest-1.4.1/hftbacktest/data/utils/
+--rw-r--r--   0 kaz       (1000) kaz       (1000)       44 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/data/utils/__init__.py
+--rw-r--r--   0 kaz       (1000) kaz       (1000)    10186 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/data/utils/binancefutures.py
+--rw-r--r--   0 kaz       (1000) kaz       (1000)     1275 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/data/utils/snapshot.py
+--rw-r--r--   0 kaz       (1000) kaz       (1000)     5943 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/data/utils/tardis.py
+--rw-r--r--   0 kaz       (1000) kaz       (1000)     7534 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/data/validation.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     8469 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/data.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     6194 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/marketdepth.py
+-drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-05 14:33:19.438557 hftbacktest-1.4.1/hftbacktest/models/
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)        0 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/models/__init__.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     7162 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/models/latencies.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     2446 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/models/queue.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     4024 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/order.py
+-drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-05 14:33:19.442557 hftbacktest-1.4.1/hftbacktest/proc/
+--rw-r--r--   0 kaz       (1000) kaz       (1000)        0 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/proc/__init__.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     4965 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/proc/local.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)    13781 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/proc/nopartialfillexchange.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)    21123 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/proc/partialfillexchange.py
+--rw-r--r--   0 kaz       (1000) kaz       (1000)     4990 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/proc/proc.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     3252 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/reader.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     8902 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/stat.py
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     1728 2023-04-05 14:24:27.000000 hftbacktest-1.4.1/hftbacktest/state.py
+-drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-05 14:33:19.438557 hftbacktest-1.4.1/hftbacktest.egg-info/
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)     8324 2023-04-05 14:33:19.000000 hftbacktest-1.4.1/hftbacktest.egg-info/PKG-INFO
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)      906 2023-04-05 14:33:19.000000 hftbacktest-1.4.1/hftbacktest.egg-info/SOURCES.txt
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)        1 2023-04-05 14:33:19.000000 hftbacktest-1.4.1/hftbacktest.egg-info/dependency_links.txt
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)        1 2023-02-22 13:33:16.000000 hftbacktest-1.4.1/hftbacktest.egg-info/not-zip-safe
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)       48 2023-04-05 14:33:19.000000 hftbacktest-1.4.1/hftbacktest.egg-info/requires.txt
+--rw-rw-r--   0 kaz       (1000) kaz       (1000)       12 2023-04-05 14:33:19.000000 hftbacktest-1.4.1/hftbacktest.egg-info/top_level.txt
+--rw-r--r--   0 kaz       (1000) kaz       (1000)     1247 2023-04-05 14:33:19.442557 hftbacktest-1.4.1/setup.cfg
+--rw-r--r--   0 kaz       (1000) kaz       (1000)       61 2023-02-22 13:27:55.000000 hftbacktest-1.4.1/setup.py
++drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-07 13:49:50.597083 hftbacktest-1.5.0/
++-rw-r--r--   0 kaz       (1000) kaz       (1000)     1079 2022-11-14 13:24:06.000000 hftbacktest-1.5.0/LICENSE
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     8304 2023-04-07 13:49:50.597083 hftbacktest-1.5.0/PKG-INFO
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     5948 2023-04-05 15:42:48.000000 hftbacktest-1.5.0/README.rst
++drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-07 13:49:50.593083 hftbacktest-1.5.0/hftbacktest/
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     7007 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/__init__.py
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)      830 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/assettype.py
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     7792 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/backtest.py
++drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-07 13:49:50.597083 hftbacktest-1.5.0/hftbacktest/data/
++-rw-r--r--   0 kaz       (1000) kaz       (1000)     1118 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/data/__init__.py
++drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-07 13:49:50.597083 hftbacktest-1.5.0/hftbacktest/data/utils/
++-rw-r--r--   0 kaz       (1000) kaz       (1000)       44 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/data/utils/__init__.py
++-rw-r--r--   0 kaz       (1000) kaz       (1000)    10186 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/data/utils/binancefutures.py
++-rw-r--r--   0 kaz       (1000) kaz       (1000)     1275 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/data/utils/snapshot.py
++-rw-r--r--   0 kaz       (1000) kaz       (1000)     5943 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/data/utils/tardis.py
++-rw-r--r--   0 kaz       (1000) kaz       (1000)     7534 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/data/validation.py
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     6194 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/marketdepth.py
++drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-07 13:49:50.597083 hftbacktest-1.5.0/hftbacktest/models/
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)        0 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/models/__init__.py
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     7375 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/models/latencies.py
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     2516 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/models/queue.py
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     4143 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/order.py
++drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-07 13:49:50.597083 hftbacktest-1.5.0/hftbacktest/proc/
++-rw-r--r--   0 kaz       (1000) kaz       (1000)        0 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/proc/__init__.py
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     5831 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/proc/local.py
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)    14751 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/proc/nopartialfillexchange.py
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)    22059 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/proc/partialfillexchange.py
++-rw-r--r--   0 kaz       (1000) kaz       (1000)     5903 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/proc/proc.py
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     3252 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/reader.py
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     8902 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/stat.py
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     2149 2023-04-07 10:42:05.000000 hftbacktest-1.5.0/hftbacktest/state.py
++drwxrwxr-x   0 kaz       (1000) kaz       (1000)        0 2023-04-07 13:49:50.597083 hftbacktest-1.5.0/hftbacktest.egg-info/
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)     8304 2023-04-07 13:49:50.000000 hftbacktest-1.5.0/hftbacktest.egg-info/PKG-INFO
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)      886 2023-04-07 13:49:50.000000 hftbacktest-1.5.0/hftbacktest.egg-info/SOURCES.txt
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)        1 2023-04-07 13:49:50.000000 hftbacktest-1.5.0/hftbacktest.egg-info/dependency_links.txt
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)        1 2023-02-22 13:33:16.000000 hftbacktest-1.5.0/hftbacktest.egg-info/not-zip-safe
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)       48 2023-04-07 13:49:50.000000 hftbacktest-1.5.0/hftbacktest.egg-info/requires.txt
++-rw-rw-r--   0 kaz       (1000) kaz       (1000)       12 2023-04-07 13:49:50.000000 hftbacktest-1.5.0/hftbacktest.egg-info/top_level.txt
++-rw-r--r--   0 kaz       (1000) kaz       (1000)     1247 2023-04-07 13:49:50.601082 hftbacktest-1.5.0/setup.cfg
++-rw-r--r--   0 kaz       (1000) kaz       (1000)       61 2023-02-22 13:27:55.000000 hftbacktest-1.5.0/setup.py
+```
+
+### Comparing `hftbacktest-1.4.1/LICENSE` & `hftbacktest-1.5.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `hftbacktest-1.4.1/PKG-INFO` & `hftbacktest-1.5.0/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.2
+ Name: hftbacktest
+-Version: 1.4.1
++Version: 1.5.0
+ Summary: High-frequency trading and market making backtesting tool
+ Home-page: https://github.com/nkaz001/hftbacktest
+ Author: nkaz001
+ Author-email: nkaz001@protonmail.com
+ License: MIT
+ Project-URL: Docs, https://github.com/nkaz001/hftbacktest/wiki
+ Project-URL: GitHub: issues, https://github.com/nkaz001/hftbacktest/issues
+@@ -47,15 +47,15 @@
+         .. code-block:: console
+         
+          git clone https://github.com/nkaz001/hftbacktest
+         
+         Data Source & Format
+         --------------------
+         
+-        Please see https://github.com/nkaz001/collect-binancefutures regarding collecting and converting the feed data or `datautils <https://github.com/nkaz001/hftbacktest/tree/master/datautils>`_ directory.
++        Please see `Data <https://github.com/nkaz001/hftbacktest/wiki/Data>`_ or `Data Preparation <https://github.com/nkaz001/hftbacktest/blob/master/examples/Data%20Preparation.ipynb>`_.
+         
+         A Quick Example
+         ---------------
+         
+         Get a glimpse of what backtesting with hftbacktest looks like with these code snippets:
+         
+         .. code-block:: python
+```
+
+### Comparing `hftbacktest-1.4.1/README.rst` & `hftbacktest-1.5.0/README.rst`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -36,15 +36,15 @@
+ .. code-block:: console
+ 
+  git clone https://github.com/nkaz001/hftbacktest
+ 
+ Data Source & Format
+ --------------------
+ 
+-Please see https://github.com/nkaz001/collect-binancefutures regarding collecting and converting the feed data or `datautils <https://github.com/nkaz001/hftbacktest/tree/master/datautils>`_ directory.
++Please see `Data <https://github.com/nkaz001/hftbacktest/wiki/Data>`_ or `Data Preparation <https://github.com/nkaz001/hftbacktest/blob/master/examples/Data%20Preparation.ipynb>`_.
+ 
+ A Quick Example
+ ---------------
+ 
+ Get a glimpse of what backtesting with hftbacktest looks like with these code snippets:
+ 
+ .. code-block:: python
+```
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/__init__.py` & `hftbacktest-1.5.0/hftbacktest/__init__.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -25,15 +25,15 @@
+            'NoPartialFillExchange', 'PartialFillExchange',
+            'ConstantLatency', 'FeedLatency', 'ForwardFeedLatency', 'BackwardFeedLatency', 'IntpOrderLatency',
+            'Linear', 'Inverse',
+            'RiskAverseQueueModel', 'LogProbQueueModel', 'IdentityProbQueueModel', 'SquareProbQueueModel',
+            'Stat',
+            'validate_data', 'correct_local_timestamp', 'correct_exch_timestamp', 'correct',)
+ 
+-__version__ = '1.4.1'
++__version__ = '1.5.0'
+ 
+ 
+ def HftBacktest(
+         data,
+         tick_size,
+         lot_size,
+         maker_fee,
+@@ -46,95 +46,48 @@
+         start_balance=0,
+         start_fee=0,
+         trade_list_size=0,
+         exchange_model=None
+ ):
+     cache = Cache()
+ 
+-    if isinstance(data, pd.DataFrame):
++    if isinstance(data, list):
+         local_reader = DataReader(cache)
+-        local_reader.add_data(data.to_numpy())
+-
+-        exch_reader = DataReader(cache)
+-        exch_reader.add_data(data.to_numpy())
+-    elif isinstance(data, np.ndarray):
+-        local_reader = DataReader(cache)
+-        local_reader.add_data(data)
+-
+         exch_reader = DataReader(cache)
+-        exch_reader.add_data(data)
++        for item in data:
++            if isinstance(item, str):
++                local_reader.add_file(item)
++                exch_reader.add_file(item)
++            elif isinstance(item, pd.DataFrame) or isinstance(item, np.ndarray):
++                local_reader.add_data(item)
++                exch_reader.add_data(item)
++            else:
++                raise ValueError('Unsupported data type')
+     elif isinstance(data, str):
+         local_reader = DataReader(cache)
+         local_reader.add_file(data)
+ 
+         exch_reader = DataReader(cache)
+         exch_reader.add_file(data)
+-    elif isinstance(data, list):
+-        local_reader = DataReader(cache)
+-        exch_reader = DataReader(cache)
+-        for filepath in data:
+-            if isinstance(filepath, str):
+-                local_reader.add_file(filepath)
+-                exch_reader.add_file(filepath)
+-            elif isinstance(filepath, pd.DataFrame) or isinstance(filepath, np.ndarray):
+-                local_reader.add_data(filepath)
+-                exch_reader.add_data(filepath)
+-            else:
+-                raise ValueError('Unsupported data type')
+     else:
+-        raise ValueError('Unsupported data type')
++        data = __load_data(data)
++        local_reader = DataReader(cache)
++        local_reader.add_data(data)
+ 
+-    if isinstance(snapshot, pd.DataFrame):
+-        assert (snapshot.columns[:6] == [
+-            'event',
+-            'exch_timestamp',
+-            'local_timestamp',
+-            'side',
+-            'price',
+-            'qty'
+-        ]).all()
+-        snapshot = snapshot.to_numpy()
+-    elif isinstance(snapshot, np.ndarray):
+-        assert snapshot.shape[1] >= 6
+-    elif isinstance(snapshot, str):
+-        if snapshot.endswith('.npy'):
+-            snapshot = np.load(snapshot)
+-        elif snapshot.endswith('.npz'):
+-            tmp = np.load(snapshot)
+-            if 'data' in tmp:
+-                snapshot = tmp['data']
+-                assert snapshot.shape[1] >= 6
+-            else:
+-                k = list(tmp.keys())[0]
+-                print("Snapshot is loaded from %s instead of 'data'" % k)
+-                snapshot = tmp[k]
+-                assert snapshot.shape[1] >= 6
+-        else:
+-            df = pd.read_pickle(snapshot, compression='gzip')
+-            assert (df.columns[:6] == [
+-                'event',
+-                'exch_timestamp',
+-                'local_timestamp',
+-                'side',
+-                'price',
+-                'qty'
+-            ]).all()
+-            snapshot = df.to_numpy()
+-    elif snapshot is None:
+-        pass
+-    else:
+-        raise ValueError('Unsupported snapshot type')
++        exch_reader = DataReader(cache)
++        exch_reader.add_data(data)
+ 
+     if queue_model is None:
+         queue_model = RiskAverseQueueModel()
+ 
+     local_market_depth = MarketDepth(tick_size, lot_size)
+     exch_market_depth = MarketDepth(tick_size, lot_size)
+ 
+     if snapshot is not None:
++        snapshot = __load_data(snapshot)
+         local_market_depth.apply_snapshot(snapshot)
+         exch_market_depth.apply_snapshot(snapshot)
+ 
+     local_state = State(
+         start_position,
+         start_balance,
+         start_fee,
+@@ -174,7 +127,107 @@
+         exch_market_depth,
+         exch_state,
+         order_latency,
+         queue_model
+     )
+ 
+     return SingleAssetHftBacktest(local, exch)
++
++
++def reset(
++        hbt,
++        data,
++        tick_size=None,
++        lot_size=None,
++        maker_fee=None,
++        taker_fee=None,
++        snapshot=None,
++        start_position=0,
++        start_balance=0,
++        start_fee=0,
++        trade_list_size=None,
++):
++    cache = Cache()
++
++    if isinstance(data, list):
++        local_reader = DataReader(cache)
++        exch_reader = DataReader(cache)
++        for item in data:
++            if isinstance(item, str):
++                local_reader.add_file(item)
++                exch_reader.add_file(item)
++            elif isinstance(item, pd.DataFrame) or isinstance(item, np.ndarray):
++                local_reader.add_data(item)
++                exch_reader.add_data(item)
++            else:
++                raise ValueError('Unsupported data type')
++    elif isinstance(data, str):
++        local_reader = DataReader(cache)
++        local_reader.add_file(data)
++
++        exch_reader = DataReader(cache)
++        exch_reader.add_file(data)
++    else:
++        data = __load_data(data)
++        local_reader = DataReader(cache)
++        local_reader.add_data(data)
++
++        exch_reader = DataReader(cache)
++        exch_reader.add_data(data)
++
++    snapshot = __load_data(snapshot) if snapshot is not None else None
++
++    hbt.reset(
++        local_reader,
++        exch_reader,
++        start_position,
++        start_balance,
++        start_fee,
++        maker_fee,
++        taker_fee,
++        tick_size,
++        lot_size,
++        snapshot,
++        trade_list_size,
++    )
++
++
++def __load_data(data):
++    if isinstance(data, pd.DataFrame):
++        assert (data.columns[:6] == [
++            'event',
++            'exch_timestamp',
++            'local_timestamp',
++            'side',
++            'price',
++            'qty'
++        ]).all()
++        data = data.to_numpy()
++    elif isinstance(data, np.ndarray):
++        assert data.shape[1] >= 6
++    elif isinstance(data, str):
++        if data.endswith('.npy'):
++            data = np.load(data)
++        elif data.endswith('.npz'):
++            tmp = np.load(data)
++            if 'data' in tmp:
++                data = tmp['data']
++                assert data.shape[1] >= 6
++            else:
++                k = list(tmp.keys())[0]
++                print("Data is loaded from %s instead of 'data'" % k)
++                data = tmp[k]
++                assert data.shape[1] >= 6
++        else:
++            df = pd.read_pickle(data, compression='gzip')
++            assert (df.columns[:6] == [
++                'event',
++                'exch_timestamp',
++                'local_timestamp',
++                'side',
++                'price',
++                'qty'
++            ]).all()
++            data = df.to_numpy()
++    else:
++        raise ValueError('Unsupported data type')
++    return data
+```
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/assettype.py` & `hftbacktest-1.5.0/hftbacktest/assettype.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/backtest.py` & `hftbacktest-1.5.0/hftbacktest/backtest.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -213,14 +213,54 @@
+ 
+         self.current_timestamp = timestamp
+ 
+         if not self.run:
+             return False
+         return True
+ 
++    def reset(
++            self,
++            local_reader,
++            exch_reader,
++            start_position,
++            start_balance,
++            start_fee,
++            maker_fee,
++            taker_fee,
++            tick_size,
++            lot_size,
++            snapshot,
++            trade_list_size,
++    ):
++        self.local.reader = local_reader
++        self.exch.reader = exch_reader
++
++        self.local.reset(
++            start_position,
++            start_balance,
++            start_fee,
++            maker_fee,
++            taker_fee,
++            tick_size,
++            lot_size,
++            snapshot,
++            trade_list_size,
++        )
++        self.exch.reset(
++            start_position,
++            start_balance,
++            start_fee,
++            maker_fee,
++            taker_fee,
++            tick_size,
++            lot_size,
++            snapshot
++        )
++        self.current_timestamp = self.local.next_data[0, COL_LOCAL_TIMESTAMP]
++        self.run = True
+ 
+ def SingleAssetHftBacktest(local, exch):
+     jitted = jitclass(spec=[
+         ('run', boolean),
+         ('current_timestamp', int64),
+         ('local', typeof(local)),
+         ('exch', typeof(exch)),
+```
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/data/__init__.py` & `hftbacktest-1.5.0/hftbacktest/data/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/data/utils/binancefutures.py` & `hftbacktest-1.5.0/hftbacktest/data/utils/binancefutures.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/data/utils/snapshot.py` & `hftbacktest-1.5.0/hftbacktest/data/utils/snapshot.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/data/utils/tardis.py` & `hftbacktest-1.5.0/hftbacktest/data/utils/tardis.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/data/validation.py` & `hftbacktest-1.5.0/hftbacktest/data/validation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/marketdepth.py` & `hftbacktest-1.5.0/hftbacktest/marketdepth.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/models/latencies.py` & `hftbacktest-1.5.0/hftbacktest/models/latencies.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -15,14 +15,17 @@
+ 
+     def entry(self, timestamp, order, proc):
+         return self.entry_latency
+ 
+     def response(self, timestamp, order, proc):
+         return self.response_latency
+ 
++    def reset(self):
++        pass
++
+ 
+ @jitclass
+ class FeedLatency:
+     entry_latency_mul: float64
+     resp_latency_mul: float64
+     entry_latency: float64
+     response_latency: float64
+@@ -67,14 +70,17 @@
+ 
+     def entry(self, timestamp, order, proc):
+         return self.entry_latency + self.entry_latency_mul * self.__latency(proc)
+ 
+     def response(self, timestamp, order, proc):
+         return self.response_latency + self.resp_latency_mul * self.__latency(proc)
+ 
++    def reset(self):
++        pass
++
+ 
+ @jitclass
+ class ForwardFeedLatency:
+     entry_latency_mul: float64
+     resp_latency_mul: float64
+     entry_latency: float64
+     response_latency: float64
+@@ -101,14 +107,17 @@
+ 
+     def entry(self, timestamp, order, proc):
+         return self.entry_latency + self.entry_latency_mul * self.__latency(proc)
+ 
+     def response(self, timestamp, order, proc):
+         return self.response_latency + self.resp_latency_mul * self.__latency(proc)
+ 
++    def reset(self):
++        pass
++
+ 
+ @jitclass
+ class BackwardFeedLatency:
+     entry_latency_mul: float64
+     resp_latency_mul: float64
+     entry_latency: float64
+     response_latency: float64
+@@ -135,14 +144,17 @@
+ 
+     def entry(self, timestamp, order, proc):
+         return self.entry_latency + self.entry_latency_mul * self.__latency(proc)
+ 
+     def response(self, timestamp, order, proc):
+         return self.response_latency + self.resp_latency_mul * self.__latency(proc)
+ 
++    def reset(self):
++        pass
++
+ 
+ @jitclass
+ class IntpOrderLatency:
+     entry_rn: int64
+     resp_rn: int64
+     data: float64[:]
+     
+@@ -195,7 +207,11 @@
+                 resp_local_timestamp = self.data[row_num, 2]
+                 next_resp_local_timestamp = self.data[row_num + 1, 2]
+ 
+                 lat1 = resp_local_timestamp - exch_timestamp
+                 lat2 = next_resp_local_timestamp - next_exch_timestamp
+                 return self.__intp(timestamp, exch_timestamp, lat1, next_exch_timestamp, lat2)
+         raise ValueError
++
++    def reset(self):
++        self.entry_rn = 0
++        self.resp_rn = 0
+```
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/models/queue.py` & `hftbacktest-1.5.0/hftbacktest/models/queue.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -23,14 +23,17 @@
+ 
+     def depth(self, order, prev_qty, new_qty, proc):
+         order.q[0] = min(order.q[0], new_qty)
+ 
+     def is_filled(self, order, proc):
+         return round(order.q[0] / proc.lot_size) < 0
+ 
++    def reset(self):
++        pass
++
+ 
+ class ProbQueueModel:
+     def __init__(self):
+         pass
+ 
+     def new(self, order, proc):
+         if order.side == 1:
+@@ -65,14 +68,17 @@
+ 
+     def is_filled(self, order, proc):
+         return round(order.q[0] / proc.lot_size) < 0
+ 
+     def prob(self, front, back):
+         return np.divide(self.f(back), self.f(back) + self.f(front))
+ 
++    def reset(self):
++        pass
++
+ 
+ @jitclass
+ class LogProbQueueModel(ProbQueueModel):
+     def f(self, x):
+         return np.log(1 + x)
+```
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/order.py` & `hftbacktest-1.5.0/hftbacktest/order.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -143,14 +143,19 @@
+ 
+     def get(self, order_id):
+         for order, recv_timestamp in self.order_list:
+             if order.order_id == order_id:
+                 return recv_timestamp
+         raise KeyError
+ 
++    def reset(self):
++        self.order_list.clear()
++        self.orders.clear()
++        self.frontmost_timestamp = 0
++
+     def __getitem__(self, key):
+         return self.order_list[key]
+ 
+     def __len__(self):
+         return len(self.order_list)
+ 
+     def __delitem__(self, key):
+```
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/proc/nopartialfillexchange.py` & `hftbacktest-1.5.0/hftbacktest/proc/nopartialfillexchange.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -29,14 +29,39 @@
+             state,
+             order_latency
+         )
+         self.sell_orders = Dict.empty(int64, order_ladder_ty)
+         self.buy_orders = Dict.empty(int64, order_ladder_ty)
+         self.queue_model = queue_model
+ 
++    def reset(
++            self,
++            start_position,
++            start_balance,
++            start_fee,
++            maker_fee,
++            taker_fee,
++            tick_size,
++            lot_size,
++            snapshot
++    ):
++        self._proc_reset(
++            start_position,
++            start_balance,
++            start_fee,
++            maker_fee,
++            taker_fee,
++            tick_size,
++            lot_size,
++            snapshot
++        )
++        self.sell_orders.clear()
++        self.buy_orders.clear()
++        self.queue_model.reset()
++
+     def _next_data_timestamp(self):
+         return self._next_data_timestamp_column(COL_EXCH_TIMESTAMP)
+ 
+     def _process_recv_order(self, order, recv_timestamp, wait_resp, next_timestamp):
+         # Process a new order.
+         if order.req == NEW:
+             order.req = NONE
+@@ -201,14 +226,17 @@
+         else:
+             for t in range(new_best, prev_best):
+                 if t in self.buy_orders:
+                     for order in list(self.buy_orders[t].values()):
+                         self.__fill(order, timestamp, True)
+ 
+     def __ack_new(self, order, timestamp):
++        if order.order_id in self.orders:
++            raise KeyError('order_id already exists')
++
+         if order.side == BUY:
+             # Check if the buy order price is greater than or equal to the current best ask.
+             if order.price_tick >= self.depth.best_ask_tick:
+                 if order.time_in_force == GTX:
+                     order.status = EXPIRED
+                 else:
+                     # Take the market.
+@@ -264,15 +292,16 @@
+         exch_order = self.orders.get(order.order_id)
+ 
+         # The order can be already deleted due to fill or expiration.
+         if exch_order is None:
+             order.status = EXPIRED
+             order.exch_timestamp = timestamp
+             local_recv_timestamp = timestamp + self.order_latency.response(timestamp, order, self)
+-            self.orders_to.append(order.copy(), local_recv_timestamp)
++            # It can overwrite another existing order on the local side if order_id is the same. So, commented out.
++            # self.orders_to.append(order.copy(), local_recv_timestamp)
+             return local_recv_timestamp
+ 
+         # Delete the order.
+         del self.orders[exch_order.order_id]
+         if exch_order.side == BUY:
+             del self.buy_orders[exch_order.price_tick][exch_order.order_id]
+         else:
+@@ -289,14 +318,19 @@
+             self,
+             order,
+             timestamp,
+             maker,
+             exec_price_tick=0,
+             delete_order=True
+     ):
++        if order.status == EXPIRED \
++                or order.status == CANCELED \
++                or order.status == FILLED:
++            raise ValueError('status')
++
+         order.maker = maker
+         order.exec_price_tick = order.price_tick if maker else exec_price_tick
+         order.exec_qty = order.leaves_qty
+         order.leaves_qty = 0
+         order.status = FILLED
+         order.exch_timestamp = timestamp
+         local_recv_timestamp = order.exch_timestamp + self.order_latency.response(timestamp, order, self)
+```
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/proc/partialfillexchange.py` & `hftbacktest-1.5.0/hftbacktest/proc/partialfillexchange.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -31,14 +31,39 @@
+             state,
+             order_latency
+         )
+         self.sell_orders = Dict.empty(int64, order_ladder_ty)
+         self.buy_orders = Dict.empty(int64, order_ladder_ty)
+         self.queue_model = queue_model
+ 
++    def reset(
++            self,
++            start_position,
++            start_balance,
++            start_fee,
++            maker_fee,
++            taker_fee,
++            tick_size,
++            lot_size,
++            snapshot
++    ):
++        self._proc_reset(
++            start_position,
++            start_balance,
++            start_fee,
++            maker_fee,
++            taker_fee,
++            tick_size,
++            lot_size,
++            snapshot
++        )
++        self.sell_orders.clear()
++        self.buy_orders.clear()
++        self.queue_model.reset()
++
+     def _next_data_timestamp(self):
+         return self._next_data_timestamp_column(COL_EXCH_TIMESTAMP)
+ 
+     def _process_recv_order(self, order, recv_timestamp, wait_resp, next_timestamp):
+         # Process a new order.
+         if order.req == NEW:
+             order.req = NONE
+@@ -249,14 +274,17 @@
+                             order,
+                             order.leaves_qty,
+                             timestamp,
+                             True
+                         )
+ 
+     def __ack_new(self, order, timestamp):
++        if order.order_id in self.orders:
++            raise KeyError('order_id already exists')
++
+         if order.side == BUY:
+             # Check if the buy order price is greater than or equal to the current best ask.
+             if order.price_tick >= self.depth.best_ask_tick:
+                 if order.time_in_force == GTX:
+                     order.status = EXPIRED
+                 elif order.time_in_force == FOK:
+                     # The order must be executed immediately in its entirety; otherwise, the entire order will be
+@@ -426,15 +454,16 @@
+         exch_order = self.orders.get(order.order_id)
+ 
+         # The order can be already deleted due to fill or expiration.
+         if exch_order is None:
+             order.status = EXPIRED
+             order.exch_timestamp = timestamp
+             local_recv_timestamp = timestamp + self.order_latency.response(timestamp, order, self)
+-            self.orders_to.append(order.copy(), local_recv_timestamp)
++            # It can overwrite another existing order on the local side if order_id is the same. So, commented out.
++            # self.orders_to.append(order.copy(), local_recv_timestamp)
+             return local_recv_timestamp
+ 
+         # Delete the order.
+         del self.orders[exch_order.order_id]
+         if exch_order.side == BUY:
+             del self.buy_orders[exch_order.price_tick][exch_order.order_id]
+         else:
+@@ -452,14 +481,19 @@
+             order,
+             exec_qty,
+             timestamp,
+             maker,
+             exec_price_tick=0,
+             delete_order=True
+     ):
++        if order.status == EXPIRED \
++                or order.status == CANCELED \
++                or order.status == FILLED:
++            raise ValueError('status')
++
+         order.maker = maker
+         order.exec_price_tick = order.price_tick if maker else exec_price_tick
+         order.exec_qty = exec_qty
+         order.leaves_qty -= exec_qty
+         order.status = PARTIALLY_FILLED if round(order.leaves_qty / self.depth.lot_size) > 0 else FILLED
+         order.exch_timestamp = timestamp
+         local_recv_timestamp = order.exch_timestamp + self.order_latency.response(timestamp, order, self)
+```
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/proc/proc.py` & `hftbacktest-1.5.0/hftbacktest/proc/proc.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -22,14 +22,49 @@
+         self.orders_to = orders_to
+         self.orders_from = orders_from
+ 
+         self.depth = depth
+         self.state = state
+         self.order_latency = order_latency
+ 
++    def _proc_reset(
++            self,
++            start_position,
++            start_balance,
++            start_fee,
++            maker_fee,
++            taker_fee,
++            tick_size,
++            lot_size,
++            snapshot
++    ):
++        self.next_data = self.reader.next()
++        self.data = np.empty((0, self.next_data.shape[1]), self.next_data.dtype)
++        self.row_num = 0
++        self.next_row_num = 0
++
++        self.orders.clear()
++
++        self.orders_to.reset()
++        self.orders_from.reset()
++
++        self.depth.clear_depth(0, 0)
++
++        if tick_size is not None:
++            self.depth.tick_size = tick_size
++
++        if lot_size is not None:
++            self.depth.lot_size = lot_size
++
++        if snapshot is not None:
++            self.depth.apply_snapshot(snapshot)
++
++        self.state.reset(start_position, start_balance, start_fee, maker_fee, taker_fee)
++        self.order_latency.reset()
++
+     def next_timestamp(self):
+         next_data_timestamp = self._next_data_timestamp()
+         next_recv_order_timestamp = self.orders_from.frontmost_timestamp
+ 
+         # zero and negative timestamp are invalid timestamp.
+         # if two timestamps are valid, choose the earlier one.
+         # otherwise, choose the valid one.
+```
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/reader.py` & `hftbacktest-1.5.0/hftbacktest/reader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/stat.py` & `hftbacktest-1.5.0/hftbacktest/stat.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hftbacktest-1.4.1/hftbacktest/state.py` & `hftbacktest-1.5.0/hftbacktest/state.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -31,14 +31,26 @@
+         self.trade_num += 1
+         self.trade_qty += order.exec_qty
+         self.trade_amount += amount
+ 
+     def equity(self, mid):
+         return self.asset_type.equity(mid, self.balance, self.position, self.fee)
+ 
++    def reset(self, start_position, start_balance, start_fee, maker_fee, taker_fee):
++        self.position = start_position
++        self.balance = start_balance
++        self.fee = start_fee
++        self.trade_num = 0
++        self.trade_qty = 0
++        self.trade_amount = 0
++        if maker_fee is not None:
++            self.maker_fee = maker_fee
++        if taker_fee is not None:
++            self.taker_fee = taker_fee
++
+ 
+ def State(
+         start_position,
+         start_balance,
+         start_fee,
+         maker_fee,
+         taker_fee,
+```
+
+### Comparing `hftbacktest-1.4.1/hftbacktest.egg-info/PKG-INFO` & `hftbacktest-1.5.0/hftbacktest.egg-info/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.2
+ Name: hftbacktest
+-Version: 1.4.1
++Version: 1.5.0
+ Summary: High-frequency trading and market making backtesting tool
+ Home-page: https://github.com/nkaz001/hftbacktest
+ Author: nkaz001
+ Author-email: nkaz001@protonmail.com
+ License: MIT
+ Project-URL: Docs, https://github.com/nkaz001/hftbacktest/wiki
+ Project-URL: GitHub: issues, https://github.com/nkaz001/hftbacktest/issues
+@@ -47,15 +47,15 @@
+         .. code-block:: console
+         
+          git clone https://github.com/nkaz001/hftbacktest
+         
+         Data Source & Format
+         --------------------
+         
+-        Please see https://github.com/nkaz001/collect-binancefutures regarding collecting and converting the feed data or `datautils <https://github.com/nkaz001/hftbacktest/tree/master/datautils>`_ directory.
++        Please see `Data <https://github.com/nkaz001/hftbacktest/wiki/Data>`_ or `Data Preparation <https://github.com/nkaz001/hftbacktest/blob/master/examples/Data%20Preparation.ipynb>`_.
+         
+         A Quick Example
+         ---------------
+         
+         Get a glimpse of what backtesting with hftbacktest looks like with these code snippets:
+         
+         .. code-block:: python
+```
+
+### Comparing `hftbacktest-1.4.1/hftbacktest.egg-info/SOURCES.txt` & `hftbacktest-1.5.0/hftbacktest.egg-info/SOURCES.txt`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,15 +1,14 @@
+ LICENSE
+ README.rst
+ setup.cfg
+ setup.py
+ hftbacktest/__init__.py
+ hftbacktest/assettype.py
+ hftbacktest/backtest.py
+-hftbacktest/data.py
+ hftbacktest/marketdepth.py
+ hftbacktest/order.py
+ hftbacktest/reader.py
+ hftbacktest/stat.py
+ hftbacktest/state.py
+ hftbacktest.egg-info/PKG-INFO
+ hftbacktest.egg-info/SOURCES.txt
+```
+
+### Comparing `hftbacktest-1.4.1/setup.cfg` & `hftbacktest-1.5.0/setup.cfg`
+
+ * *Files identical despite different names*
+

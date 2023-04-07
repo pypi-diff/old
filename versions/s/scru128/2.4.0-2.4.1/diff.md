@@ -1,0 +1,149 @@
+# Comparing `tmp/scru128-2.4.0.tar.gz` & `tmp/scru128-2.4.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "scru128-2.4.0.tar", max compression
++gzip compressed data, was "scru128-2.4.1.tar", max compression
+```
+
+## Comparing `scru128-2.4.0.tar` & `scru128-2.4.1.tar`
+
+### file list
+
+```diff
+@@ -1,6 +1,6 @@
+--rw-r--r--   0        0        0    11357 2021-09-26 06:39:06.272667 scru128-2.4.0/LICENSE
+--rw-r--r--   0        0        0     2491 2022-10-30 06:25:18.335985 scru128-2.4.0/README.md
+--rw-r--r--   0        0        0      678 2023-03-22 22:42:55.073532 scru128-2.4.0/pyproject.toml
+--rw-r--r--   0        0        0    14816 2023-03-22 22:42:55.073908 scru128-2.4.0/scru128/__init__.py
+--rw-r--r--   0        0        0     2134 2022-10-30 06:25:18.337374 scru128-2.4.0/scru128/cli/__init__.py
+--rw-r--r--   0        0        0     3256 1970-01-01 00:00:00.000000 scru128-2.4.0/PKG-INFO
++-rw-r--r--   0        0        0    11357 2021-09-26 06:39:06.272667 scru128-2.4.1/LICENSE
++-rw-r--r--   0        0        0     2491 2023-04-07 13:48:09.594211 scru128-2.4.1/README.md
++-rw-r--r--   0        0        0      678 2023-04-07 13:48:09.594923 scru128-2.4.1/pyproject.toml
++-rw-r--r--   0        0        0    14816 2023-03-22 22:42:55.073908 scru128-2.4.1/scru128/__init__.py
++-rw-r--r--   0        0        0     2134 2022-10-30 06:25:18.337374 scru128-2.4.1/scru128/cli/__init__.py
++-rw-r--r--   0        0        0     3256 1970-01-01 00:00:00.000000 scru128-2.4.1/PKG-INFO
+```
+
+### Comparing `scru128-2.4.0/LICENSE` & `scru128-2.4.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `scru128-2.4.0/README.md` & `scru128-2.4.1/README.md`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -24,18 +24,18 @@
+ 
+ # generate a textual representation directly
+ print(scru128.new_string())  # e.g. "036Z951MHZX67T63MQ9XE6Q0J"
+ ```
+ 
+ See [SCRU128 Specification] for details.
+ 
+-[uuid]: https://en.wikipedia.org/wiki/Universally_unique_identifier
+-[ulid]: https://github.com/ulid/spec
+-[ksuid]: https://github.com/segmentio/ksuid
+-[scru128 specification]: https://github.com/scru128/spec
++[UUID]: https://en.wikipedia.org/wiki/Universally_unique_identifier
++[ULID]: https://github.com/ulid/spec
++[KSUID]: https://github.com/segmentio/ksuid
++[SCRU128 Specification]: https://github.com/scru128/spec
+ 
+ ## Command-line interface
+ 
+ `scru128` generates SCRU128 IDs.
+ 
+ ```bash
+ $ scru128
+```
+
+### Comparing `scru128-2.4.0/pyproject.toml` & `scru128-2.4.1/pyproject.toml`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "scru128"
+-version = "2.4.0"
++version = "2.4.1"
+ description = "SCRU128: Sortable, Clock and Random number-based Unique identifier"
+ license = "Apache-2.0"
+ authors = ["LiosK <contact@mail.liosk.net>"]
+ readme = "README.md"
+ homepage = "https://github.com/scru128/python"
+ keywords = ["identifier", "uuid", "guid", "ulid", "ksuid"]
+ classifiers = ["Operating System :: OS Independent"]
+@@ -13,13 +13,13 @@
+ scru128 = "scru128.cli:generate"
+ scru128-inspect = "scru128.cli:inspect"
+ 
+ [tool.poetry.dependencies]
+ python = "^3.7"
+ 
+ [tool.poetry.dev-dependencies]
+-black = "^23.1.0"
+-mypy = "^1.1.1"
++black = "^23.3.0"
++mypy = "^1.2.0"
+ 
+ [build-system]
+ requires = ["poetry-core>=1.0.0"]
+ build-backend = "poetry.core.masonry.api"
+```
+
+### Comparing `scru128-2.4.0/scru128/__init__.py` & `scru128-2.4.1/scru128/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `scru128-2.4.0/scru128/cli/__init__.py` & `scru128-2.4.1/scru128/cli/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `scru128-2.4.0/PKG-INFO` & `scru128-2.4.1/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: scru128
+-Version: 2.4.0
++Version: 2.4.1
+ Summary: SCRU128: Sortable, Clock and Random number-based Unique identifier
+ Home-page: https://github.com/scru128/python
+ License: Apache-2.0
+ Keywords: identifier,uuid,guid,ulid,ksuid
+ Author: LiosK
+ Author-email: contact@mail.liosk.net
+ Requires-Python: >=3.7,<4.0
+@@ -44,18 +44,18 @@
+ 
+ # generate a textual representation directly
+ print(scru128.new_string())  # e.g. "036Z951MHZX67T63MQ9XE6Q0J"
+ ```
+ 
+ See [SCRU128 Specification] for details.
+ 
+-[uuid]: https://en.wikipedia.org/wiki/Universally_unique_identifier
+-[ulid]: https://github.com/ulid/spec
+-[ksuid]: https://github.com/segmentio/ksuid
+-[scru128 specification]: https://github.com/scru128/spec
++[UUID]: https://en.wikipedia.org/wiki/Universally_unique_identifier
++[ULID]: https://github.com/ulid/spec
++[KSUID]: https://github.com/segmentio/ksuid
++[SCRU128 Specification]: https://github.com/scru128/spec
+ 
+ ## Command-line interface
+ 
+ `scru128` generates SCRU128 IDs.
+ 
+ ```bash
+ $ scru128
+```
+

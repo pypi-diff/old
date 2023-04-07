@@ -1,0 +1,165 @@
+--- tmp/hitchrunpy-0.8.0.tar.gz
++++ tmp/hitchrunpy-0.9.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/hitchrunpy-0.8.0.tar", last modified: Sun Dec  2 23:01:10 2018, max compression
+│ +gzip compressed data, was "dist/hitchrunpy-0.9.0.tar", last modified: Thu Jun 20 09:20:20 2019, max compression
+│   --- hitchrunpy-0.8.0.tar
+├── +++ hitchrunpy-0.9.0.tar
+│ ├── file list
+│ │ @@ -1,20 +1,20 @@
+│ │ -drwxrwxr-x   0 colm      (1000) colm      (1000)        0 2018-12-02 23:01:10.000000 hitchrunpy-0.8.0/
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)     1775 2018-10-11 19:17:31.000000 hitchrunpy-0.8.0/README.md
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)     1743 2018-11-26 20:12:41.000000 hitchrunpy-0.8.0/setup.py
+│ │ -drwxrwxr-x   0 colm      (1000) colm      (1000)        0 2018-12-02 23:01:10.000000 hitchrunpy-0.8.0/hitchrunpy.egg-info/
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)        1 2018-12-02 23:01:08.000000 hitchrunpy-0.8.0/hitchrunpy.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)       53 2018-12-02 23:01:08.000000 hitchrunpy-0.8.0/hitchrunpy.egg-info/requires.txt
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)        1 2017-08-21 16:08:28.000000 hitchrunpy-0.8.0/hitchrunpy.egg-info/not-zip-safe
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)     3125 2018-12-02 23:01:08.000000 hitchrunpy-0.8.0/hitchrunpy.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)       11 2018-12-02 23:01:08.000000 hitchrunpy-0.8.0/hitchrunpy.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)      355 2018-12-02 23:01:09.000000 hitchrunpy-0.8.0/hitchrunpy.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)     3125 2018-12-02 23:01:10.000000 hitchrunpy-0.8.0/PKG-INFO
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)        5 2018-12-02 23:00:51.000000 hitchrunpy-0.8.0/VERSION
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)       59 2017-08-19 15:27:41.000000 hitchrunpy-0.8.0/MANIFEST.in
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)       38 2018-12-02 23:01:10.000000 hitchrunpy-0.8.0/setup.cfg
+│ │ -drwxrwxr-x   0 colm      (1000) colm      (1000)        0 2018-12-02 23:01:10.000000 hitchrunpy-0.8.0/hitchrunpy/
+│ │ -drwxrwxr-x   0 colm      (1000) colm      (1000)        0 2018-12-02 23:01:10.000000 hitchrunpy-0.8.0/hitchrunpy/templates/
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)     1900 2017-10-27 09:07:18.000000 hitchrunpy-0.8.0/hitchrunpy/templates/base.jinja2
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)     2980 2018-10-07 23:06:25.000000 hitchrunpy-0.8.0/hitchrunpy/exceptions.py
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)     8497 2018-12-02 18:43:34.000000 hitchrunpy-0.8.0/hitchrunpy/example_python_code.py
+│ │ --rw-rw-r--   0 colm      (1000) colm      (1000)      510 2018-12-02 23:01:07.000000 hitchrunpy-0.8.0/hitchrunpy/__init__.py
+│ │ +drwxrwxr-x   0 colm      (1000) colm      (1000)        0 2019-06-20 09:20:20.000000 hitchrunpy-0.9.0/
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)     1775 2018-10-11 19:17:31.000000 hitchrunpy-0.9.0/README.md
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)     1743 2019-06-20 09:16:51.000000 hitchrunpy-0.9.0/setup.py
+│ │ +drwxrwxr-x   0 colm      (1000) colm      (1000)        0 2019-06-20 09:20:20.000000 hitchrunpy-0.9.0/hitchrunpy.egg-info/
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)        1 2019-06-20 09:20:19.000000 hitchrunpy-0.9.0/hitchrunpy.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)       53 2019-06-20 09:20:19.000000 hitchrunpy-0.9.0/hitchrunpy.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)        1 2017-08-21 16:08:28.000000 hitchrunpy-0.9.0/hitchrunpy.egg-info/not-zip-safe
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)     3125 2019-06-20 09:20:19.000000 hitchrunpy-0.9.0/hitchrunpy.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)       11 2019-06-20 09:20:19.000000 hitchrunpy-0.9.0/hitchrunpy.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)      355 2019-06-20 09:20:19.000000 hitchrunpy-0.9.0/hitchrunpy.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)     3125 2019-06-20 09:20:20.000000 hitchrunpy-0.9.0/PKG-INFO
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)        5 2019-06-20 09:19:37.000000 hitchrunpy-0.9.0/VERSION
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)       59 2017-08-19 15:27:41.000000 hitchrunpy-0.9.0/MANIFEST.in
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)       38 2019-06-20 09:20:20.000000 hitchrunpy-0.9.0/setup.cfg
+│ │ +drwxrwxr-x   0 colm      (1000) colm      (1000)        0 2019-06-20 09:20:20.000000 hitchrunpy-0.9.0/hitchrunpy/
+│ │ +drwxrwxr-x   0 colm      (1000) colm      (1000)        0 2019-06-20 09:20:20.000000 hitchrunpy-0.9.0/hitchrunpy/templates/
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)     1900 2017-10-27 09:07:18.000000 hitchrunpy-0.9.0/hitchrunpy/templates/base.jinja2
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)     2980 2018-10-07 23:06:25.000000 hitchrunpy-0.9.0/hitchrunpy/exceptions.py
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)     9213 2019-06-20 09:01:09.000000 hitchrunpy-0.9.0/hitchrunpy/example_python_code.py
+│ │ +-rw-rw-r--   0 colm      (1000) colm      (1000)      510 2019-06-20 09:20:19.000000 hitchrunpy-0.9.0/hitchrunpy/__init__.py
+│ │   --- hitchrunpy-0.8.0/README.md
+│ ├── +++ hitchrunpy-0.9.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- hitchrunpy-0.8.0/setup.py
+│ ├── +++ hitchrunpy-0.9.0/setup.py
+│ │┄ Files identical despite different names
+│ │   --- hitchrunpy-0.8.0/hitchrunpy.egg-info/PKG-INFO
+│ ├── +++ hitchrunpy-0.9.0/hitchrunpy.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: hitchrunpy
+│ │ -Version: 0.8.0
+│ │ +Version: 0.9.0
+│ │  Summary: Tools to run and interact with python code.
+│ │  Home-page: https://github.com/hitchtest/hitchrunpy
+│ │  Author: Colm O'Connor
+│ │  Author-email: colm.oconnor.github@gmail.com
+│ │  License: MIT
+│ │  Description: # HitchRunPy
+│ │   --- hitchrunpy-0.8.0/PKG-INFO
+│ ├── +++ hitchrunpy-0.9.0/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: hitchrunpy
+│ │ -Version: 0.8.0
+│ │ +Version: 0.9.0
+│ │  Summary: Tools to run and interact with python code.
+│ │  Home-page: https://github.com/hitchtest/hitchrunpy
+│ │  Author: Colm O'Connor
+│ │  Author-email: colm.oconnor.github@gmail.com
+│ │  License: MIT
+│ │  Description: # HitchRunPy
+│ │   --- hitchrunpy-0.8.0/hitchrunpy/templates/base.jinja2
+│ ├── +++ hitchrunpy-0.9.0/hitchrunpy/templates/base.jinja2
+│ │┄ Files identical despite different names
+│ │   --- hitchrunpy-0.8.0/hitchrunpy/exceptions.py
+│ ├── +++ hitchrunpy-0.9.0/hitchrunpy/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- hitchrunpy-0.8.0/hitchrunpy/example_python_code.py
+│ ├── +++ hitchrunpy-0.9.0/hitchrunpy/example_python_code.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -93,21 +93,31 @@
+│ │          self._setup_code = u""
+│ │          self._code = u""
+│ │          self._expect_exceptions = False
+│ │          self._long_strings = None
+│ │          self._cprofile_data = None
+│ │          self._timeout = None
+│ │          self._environment_variables = {}
+│ │ +        self._files = {}
+│ │          self._modules = None
+│ │  
+│ │      def with_code(self, code):
+│ │          new_expyc = copy(self)
+│ │          new_expyc._code = code
+│ │          return new_expyc
+│ │  
+│ │ +    def with_files(self, files):
+│ │ +        assert isinstance(files, dict), "files must be dict of filenames and contents"
+│ │ +        for filename, content in files.items():
+│ │ +            assert isinstance(filename, str), "filenames must be strings"
+│ │ +            assert isinstance(content, str), "file contents must be strings"
+│ │ +        new_expyc = copy(self)
+│ │ +        new_expyc._files = files
+│ │ +        return new_expyc
+│ │ +
+│ │      def with_env(self, **environment_vars):
+│ │          new_expyc = copy(self)
+│ │          new_expyc._environment_variables = environment_vars
+│ │          return new_expyc
+│ │  
+│ │      def with_terminal_size(self, width, height):
+│ │          new_expyc = copy(self)
+│ │ @@ -155,14 +165,17 @@
+│ │          """
+│ │          working_dir = self._holding_dir / "working"
+│ │  
+│ │          if working_dir.exists():
+│ │              working_dir.rmtree()
+│ │          working_dir.mkdir()
+│ │  
+│ │ +        for filename, content in self._files.items():
+│ │ +            working_dir.joinpath(filename).write_text(content)
+│ │ +
+│ │          error_path = working_dir.joinpath("error.txt")
+│ │          example_python_code = working_dir.joinpath("examplepythoncode.py")
+│ │  
+│ │          env = environment.Environment()
+│ │          env.loader = FileSystemLoader(HITCHRUNPY_TEMPLATE_DIR)
+│ │  
+│ │          example_python_code.write_text(
+│ │ @@ -196,16 +209,20 @@
+│ │          """
+│ │          working_dir = self._holding_dir / "working"
+│ │  
+│ │          if working_dir.exists():
+│ │              working_dir.rmtree()
+│ │          working_dir.mkdir()
+│ │  
+│ │ -        for module_path in self._modules:
+│ │ -            Path(module_path).copy(working_dir / module_path)
+│ │ +        if self._modules is not None:
+│ │ +            for module_path in self._modules:
+│ │ +                Path(module_path).copy(working_dir / module_path)
+│ │ +
+│ │ +        for filename, content in self._files.items():
+│ │ +            working_dir.joinpath(filename).write_text(content)
+│ │  
+│ │          error_path = working_dir.joinpath("error.txt")
+│ │          example_python_code = working_dir.joinpath("examplepythoncode.py")
+│ │  
+│ │          env = environment.Environment()
+│ │          env.loader = FileSystemLoader(HITCHRUNPY_TEMPLATE_DIR)

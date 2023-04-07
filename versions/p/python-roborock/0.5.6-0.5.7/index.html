@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/python_roborock-0.5.6.tar.gz tmp/python_roborock-0.5.7.tar.gz --html versions/p/python-roborock/0.5.6-0.5.7/index.html --text versions/p/python-roborock/0.5.6-0.5.7/diff.txt --markdown versions/p/python-roborock/0.5.6-0.5.7/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">9.21 KB</span></div>
+  <div><span class="source">tmp/python_roborock-0.5.6.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/python_roborock-0.5.7.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">198 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;python_roborock-0.5.<del>6</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;python_roborock-0.5.<ins>7</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.95 KB</span></div>
+    <div><span class="source">python_roborock-0.5.6.tar</span> vs.</div>
+    <div id="python_roborock--.-.-.tar"><span class="source">python_roborock-0.5.7.tar</span>
+      <a class="anchor" href="#python_roborock--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.74 KB</span></div>
+      <div id="python_roborock--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 17 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2221<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2221<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1175<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>7</del>.<del>451013</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/pyproject.toml</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1175<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>999358</ins><span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>300<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>300<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17099<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/api.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17099<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/api.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3957<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/cli.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3957<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8276<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/cloud_api.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8276<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/cloud_api.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3704<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/code_mappings.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3704<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/code_mappings.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>8866</del><span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/containers.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>9190</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/containers.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1022<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/exceptions.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1022<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/exceptions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7030<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/local_api.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7030<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/local_api.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1194<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/offline/offline.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1194<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/offline/offline.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6030<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/roborock_message.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6030<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/roborock_message.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>644<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/roborock_queue.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>644<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/roborock_queue.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12471<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/typing.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12471<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/typing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>809<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>21</del>:<del>27</del>:5<del>6</del>.<del>6</del>5<del>10</del>0<del>6</del><span class="dp">·</span>python_roborock-0.5.<del>6</del>/roborock/util.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>809<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>13</ins>:<ins>52</ins>:5<ins>5</ins>.<ins>2</ins><ins>7</ins>5<ins>35</ins>0<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/roborock/util.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3348<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>python_roborock-0.5.<del>6</del>/PKG-INFO</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3348<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>python_roborock-0.5.<ins>7</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/LICENSE</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--LICENSE"><span class="source">python_roborock-0.5.7/LICENSE</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/README.md</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--README.md"><span class="source">python_roborock-0.5.7/README.md</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">523 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/pyproject.toml</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--pyproject.toml"><span class="source">python_roborock-0.5.7/pyproject.toml</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;python-roborock&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;python-roborock&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.5.<del>6</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.5.<ins>7</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>control<span class="dp">·</span>Roborock<span class="dp">·</span>vacuums.&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>control<span class="dp">·</span>Roborock<span class="dp">·</span>vacuums.&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;humbertogontijo<span class="dp">·</span>&lt;humbertogontijo@users.noreply.github.com&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;humbertogontijo<span class="dp">·</span>&lt;humbertogontijo@users.noreply.github.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;GPL-3.0-only&quot;</td><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;GPL-3.0-only&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">7 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/humbertogontijo/python-roborock&quot;</td><td class="diffline">8 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/humbertogontijo/python-roborock&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">9 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>5<span class="dp">·</span>-<span class="dp">·</span>Production/Stable&quot;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>5<span class="dp">·</span>-<span class="dp">·</span>Production/Stable&quot;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/roborock/api.py</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--roborock-api.py"><span class="source">python_roborock-0.5.7/roborock/api.py</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--roborock-api.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/roborock/cli.py</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--roborock-cli.py"><span class="source">python_roborock-0.5.7/roborock/cli.py</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--roborock-cli.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/roborock/cloud_api.py</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--roborock-cloud_api.py"><span class="source">python_roborock-0.5.7/roborock/cloud_api.py</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--roborock-cloud_api.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/roborock/code_mappings.py</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--roborock-code_mappings.py"><span class="source">python_roborock-0.5.7/roborock/code_mappings.py</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--roborock-code_mappings.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.91 KB</span></div>
+      <div><span class="source">python_roborock-0.5.6/roborock/containers.py</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--roborock-containers.py"><span class="source">python_roborock-0.5.7/roborock/containers.py</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--roborock-containers.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 39 lines modified</td><td colspan="2">Offset 1, 48 lines modified</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>__future__<span class="dp">·</span>import<span class="dp">·</span>annotations</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>re</td><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>re</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>dataclasses<span class="dp">·</span>import<span class="dp">·</span>dataclass</td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>dataclasses<span class="dp">·</span>import<span class="dp">·</span>dataclass<ins>,<span class="dp">·</span>asdict</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>enum<span class="dp">·</span>import<span class="dp">·</span>Enum</td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>enum<span class="dp">·</span>import<span class="dp">·</span>Enum</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Any,<span class="dp">·</span>Optional</td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Any,<span class="dp">·</span>Optional</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>dacite<span class="dp">·</span>import<span class="dp">·</span>from_dict,<span class="dp">·</span>Config</td><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>dacite<span class="dp">·</span>import<span class="dp">·</span>from_dict,<span class="dp">·</span>Config</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>roborock.code_mappings<span class="dp">·</span>import<span class="dp">·</span>RoborockDockWashTowelModeCode,<span class="dp">·</span>RoborockDockTypeCode,<span class="dp">·</span>RoborockMopIntensityCode,<span class="dp">·</span>\</td><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>roborock.code_mappings<span class="dp">·</span>import<span class="dp">·</span>RoborockDockWashTowelModeCode,<span class="dp">·</span>RoborockDockTypeCode,<span class="dp">·</span>RoborockMopIntensityCode,<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>RoborockStateCode</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>RoborockStateCode</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>.code_mappings<span class="dp">·</span>import<span class="dp">·</span>RoborockMopModeCode,<span class="dp">·</span>RoborockDockErrorCode,<span class="dp">·</span>\</td><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>.code_mappings<span class="dp">·</span>import<span class="dp">·</span>RoborockMopModeCode,<span class="dp">·</span>RoborockDockErrorCode,<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>RoborockErrorCode,<span class="dp">·</span>RoborockDockDustCollectionModeCode,<span class="dp">·</span>RoborockFanPowerCode</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>RoborockErrorCode,<span class="dp">·</span>RoborockDockDustCollectionModeCode,<span class="dp">·</span>RoborockFanPowerCode</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">def<span class="dp">·</span><del>to_snak</del>e(s):</td><td class="diffline">11 </td><td class="diffpresent">def<span class="dp">·</span><ins>cameliz</ins>e(<ins>s:<span class="dp">·</span></ins>s<ins>tr</ins>):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>first,<span class="dp">·</span>*others<span class="dp">·</span>=<span class="dp">·</span>s.split(&#x27;_&#x27;)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>&#x27;&#x27;.join([first.lower(),<span class="dp">·</span>*map(str.title,<span class="dp">·</span>others)])</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">14 </td><td class="diffpresent">def<span class="dp">·</span>decamelize(s:<span class="dp">·</span>str):</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>re.sub(&#x27;([A-Z]+)&#x27;,<span class="dp">·</span>&#x27;_\\1&#x27;,<span class="dp">·</span>s).lower()</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>re.sub(&#x27;([A-Z]+)&#x27;,<span class="dp">·</span>&#x27;_\\1&#x27;,<span class="dp">·</span>s).lower()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">def<span class="dp">·</span>decamelize(d):</td><td class="diffline">16 </td><td class="diffpresent">def<span class="dp">·</span>decamelize<ins>_obj</ins>(<ins>d:<span class="dp">·</span></ins>d<ins>ict<span class="dp">·</span>|<span class="dp">·</span>list</ins>):</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>isinstance(d,<span class="dp">·</span>list):</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>isinstance(d,<span class="dp">·</span>list):</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>[decamelize(i)<span class="dp">·</span>if<span class="dp">·</span>isinstance(i,<span class="dp">·</span>(dict,<span class="dp">·</span>list))<span class="dp">·</span>else<span class="dp">·</span>i<span class="dp">·</span>for<span class="dp">·</span>i<span class="dp">·</span>in<span class="dp">·</span>d]</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>[decamelize<ins>_obj</ins>(i)<span class="dp">·</span>if<span class="dp">·</span>isinstance(i,<span class="dp">·</span>(dict,<span class="dp">·</span>list))<span class="dp">·</span>else<span class="dp">·</span>i<span class="dp">·</span>for<span class="dp">·</span>i<span class="dp">·</span>in<span class="dp">·</span>d]</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>{<del>to_snak</del>e(a):<span class="dp">·</span>decamelize(b)<span class="dp">·</span>if<span class="dp">·</span>isinstance(b,<span class="dp">·</span>(dict,<span class="dp">·</span>list))<span class="dp">·</span>else<span class="dp">·</span>b<span class="dp">·</span>for<span class="dp">·</span>a,<span class="dp">·</span>b<span class="dp">·</span>in<span class="dp">·</span>d.items()}</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>{<ins>de</ins><ins>cameliz</ins>e(a):<span class="dp">·</span>decamelize<ins>_obj</ins>(b)<span class="dp">·</span>if<span class="dp">·</span>isinstance(b,<span class="dp">·</span>(dict,<span class="dp">·</span>list))<span class="dp">·</span>else<span class="dp">·</span>b<span class="dp">·</span>for<span class="dp">·</span>a,<span class="dp">·</span>b<span class="dp">·</span>in<span class="dp">·</span>d.items()}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">@dataclass</td><td class="diffline">20 </td><td class="diffpresent">@dataclass</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">class<span class="dp">·</span>RoborockBase:</td><td class="diffline">21 </td><td class="diffpresent">class<span class="dp">·</span>RoborockBase:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@classmethod</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@classmethod</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>from_dict(cls,<span class="dp">·</span>data:<span class="dp">·</span>dict[str,<span class="dp">·</span>any]):</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>from_dict(cls,<span class="dp">·</span>data:<span class="dp">·</span>dict[str,<span class="dp">·</span>any]):</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>from_dict(cls,<span class="dp">·</span>decamelize(data),<span class="dp">·</span>config=Config(cast=[Enum]))</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>from_dict(cls,<span class="dp">·</span>decamelize<ins>_obj</ins>(data),<span class="dp">·</span>config=Config(cast=[Enum]))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>as_dict(self):</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>as_dict(self):</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>self<del>.</del><del>__</del>dict__</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span><ins>asdict(</ins>self<ins>,<span class="dp">·</span></ins>dict_<ins>factory=lambda<span class="dp">·</span></ins>_<ins>fields:<span class="dp">·</span>{</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>camelize(key):<span class="dp">·</span>value<span class="dp">·</span>for<span class="dp">·</span>(key,<span class="dp">·</span>value)<span class="dp">·</span>in<span class="dp">·</span>_fields<span class="dp">·</span>if<span class="dp">·</span>value<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>})</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">@dataclass</td><td class="diffline">29 </td><td class="diffpresent">@dataclass</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">class<span class="dp">·</span>Reference(RoborockBase):</td><td class="diffline">30 </td><td class="diffpresent">class<span class="dp">·</span>Reference(RoborockBase):</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>r:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>None</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>r:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>None</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>a:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>None</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>a:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>None</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>m:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>None</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>m:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>None</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/roborock/exceptions.py</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--roborock-exceptions.py"><span class="source">python_roborock-0.5.7/roborock/exceptions.py</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--roborock-exceptions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/roborock/local_api.py</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--roborock-local_api.py"><span class="source">python_roborock-0.5.7/roborock/local_api.py</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--roborock-local_api.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/roborock/offline/offline.py</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--roborock-offline-offline.py"><span class="source">python_roborock-0.5.7/roborock/offline/offline.py</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--roborock-offline-offline.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/roborock/roborock_message.py</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--roborock-roborock_message.py"><span class="source">python_roborock-0.5.7/roborock/roborock_message.py</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--roborock-roborock_message.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/roborock/roborock_queue.py</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--roborock-roborock_queue.py"><span class="source">python_roborock-0.5.7/roborock/roborock_queue.py</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--roborock-roborock_queue.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/roborock/typing.py</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--roborock-typing.py"><span class="source">python_roborock-0.5.7/roborock/typing.py</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--roborock-typing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">python_roborock-0.5.6/roborock/util.py</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--roborock-util.py"><span class="source">python_roborock-0.5.7/roborock/util.py</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--roborock-util.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.2 KB</span></div>
+      <div><span class="source">python_roborock-0.5.6/PKG-INFO</span> vs.</div>
+      <div id="python_roborock--.-.-.tar---python_roborock--.-.--PKG-INFO"><span class="source">python_roborock-0.5.7/PKG-INFO</span>
+        <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>python-roborock</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>python-roborock</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<del>6</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<ins>7</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>control<span class="dp">·</span>Roborock<span class="dp">·</span>vacuums.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>control<span class="dp">·</span>Roborock<span class="dp">·</span>vacuums.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/humbertogontijo/python-roborock</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/humbertogontijo/python-roborock</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>GPL-3.0-only</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>GPL-3.0-only</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>humbertogontijo</td><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>humbertogontijo</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>humbertogontijo@users.noreply.github.com</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>humbertogontijo@users.noreply.github.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>5<span class="dp">·</span>-<span class="dp">·</span>Production/Stable</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>5<span class="dp">·</span>-<span class="dp">·</span>Production/Stable</td></tr>
+</table>      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol">⊟</div>
+        <div><span class="diffsize">733 B</span></div>
+        <div id="python_roborock--.-.-.tar---python_roborock--.-.--PKG-INFO---html-text---"><span class="source">html2text {}</span>
+          <a class="anchor" href="#python_roborock--.-.-.tar---python_roborock--.-.--PKG-INFO---html-text---">¶</a>
+        </div>
+        </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>python-roborock<span class="dp">·</span>Version:<span class="dp">·</span>0.5.<del>6</del><span class="dp">·</span>Summary:<span class="dp">·</span>A<span class="dp">·</span>package</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>python-roborock<span class="dp">·</span>Version:<span class="dp">·</span>0.5.<ins>7</ins><span class="dp">·</span>Summary:<span class="dp">·</span>A<span class="dp">·</span>package</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">to<span class="dp">·</span>control<span class="dp">·</span>Roborock<span class="dp">·</span>vacuums.<span class="dp">·</span>Home-page:<span class="dp">·</span>https://github.com/humbertogontijo/</td><td class="diffline">2 </td><td class="diffpresent">to<span class="dp">·</span>control<span class="dp">·</span>Roborock<span class="dp">·</span>vacuums.<span class="dp">·</span>Home-page:<span class="dp">·</span>https://github.com/humbertogontijo/</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">python-roborock<span class="dp">·</span>License:<span class="dp">·</span>GPL-3.0-only<span class="dp">·</span>Author:<span class="dp">·</span>humbertogontijo<span class="dp">·</span>Author-email:</td><td class="diffline">3 </td><td class="diffpresent">python-roborock<span class="dp">·</span>License:<span class="dp">·</span>GPL-3.0-only<span class="dp">·</span>Author:<span class="dp">·</span>humbertogontijo<span class="dp">·</span>Author-email:</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">humbertogontijo@users.noreply.github.com<span class="dp">·</span>Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td><td class="diffline">4 </td><td class="diffpresent">humbertogontijo@users.noreply.github.com<span class="dp">·</span>Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>5<span class="dp">·</span>-<span class="dp">·</span>Production/Stable<span class="dp">·</span>Classifier:<span class="dp">·</span>Intended</td><td class="diffline">5 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>5<span class="dp">·</span>-<span class="dp">·</span>Production/Stable<span class="dp">·</span>Classifier:<span class="dp">·</span>Intended</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Audience<span class="dp">·</span>::<span class="dp">·</span>Developers<span class="dp">·</span>Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General</td><td class="diffline">6 </td><td class="diffpresent">Audience<span class="dp">·</span>::<span class="dp">·</span>Developers<span class="dp">·</span>Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>(GPLv3)<span class="dp">·</span>Classifier:<span class="dp">·</span>Natural<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>English<span class="dp">·</span>Classifier:</td><td class="diffline">7 </td><td class="diffpresent">Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>(GPLv3)<span class="dp">·</span>Classifier:<span class="dp">·</span>Natural<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>English<span class="dp">·</span>Classifier:</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">8 </td><td class="diffpresent">Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+</table>      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
