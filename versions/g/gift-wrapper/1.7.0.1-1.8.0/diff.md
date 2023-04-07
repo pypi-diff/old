@@ -1,0 +1,1731 @@
+# Comparing `tmp/gift-wrapper-1.7.0.1.tar.gz` & `tmp/gift-wrapper-1.8.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "gift-wrapper-1.7.0.1.tar", last modified: Tue Apr 20 09:29:45 2021, max compression
++gzip compressed data, was "gift-wrapper-1.8.0.tar", last modified: Fri Apr  7 08:16:00 2023, max compression
+```
+
+## Comparing `gift-wrapper-1.7.0.1.tar` & `gift-wrapper-1.8.0.tar`
+
+### file list
+
+```diff
+@@ -1,23 +1,24 @@
+-drwxr-xr-x   0 manu      (1000) users      (100)        0 2021-04-20 09:29:45.656679 gift-wrapper-1.7.0.1/
+--rw-r--r--   0 manu      (1000) users      (100)     9944 2021-04-20 09:29:45.656679 gift-wrapper-1.7.0.1/PKG-INFO
+--rw-r--r--   0 manu      (1000) users      (100)     8265 2020-10-31 08:36:03.000000 gift-wrapper-1.7.0.1/README.md
+-drwxr-xr-x   0 manu      (1000) users      (100)        0 2021-04-20 09:29:45.655679 gift-wrapper-1.7.0.1/gift_wrapper/
+--rw-r--r--   0 manu      (1000) users      (100)        0 2020-04-26 09:02:36.000000 gift-wrapper-1.7.0.1/gift_wrapper/__init__.py
+--rw-r--r--   0 manu      (1000) users      (100)      254 2020-04-09 09:50:24.000000 gift-wrapper-1.7.0.1/gift_wrapper/colors.py
+--rw-r--r--   0 manu      (1000) users      (100)     5718 2021-04-18 09:45:09.000000 gift-wrapper-1.7.0.1/gift_wrapper/core.py
+--rw-r--r--   0 manu      (1000) users      (100)     3871 2021-01-07 20:01:01.000000 gift-wrapper-1.7.0.1/gift_wrapper/gift.py
+--rw-r--r--   0 manu      (1000) users      (100)     2686 2020-08-22 12:32:33.000000 gift-wrapper-1.7.0.1/gift_wrapper/image.py
+--rw-r--r--   0 manu      (1000) users      (100)     2743 2021-04-18 09:39:37.000000 gift-wrapper-1.7.0.1/gift_wrapper/latex.py
+--rw-r--r--   0 manu      (1000) users      (100)      660 2020-10-31 12:13:47.000000 gift-wrapper-1.7.0.1/gift_wrapper/parsing.py
+--rw-r--r--   0 manu      (1000) users      (100)     6796 2021-01-07 20:06:49.000000 gift-wrapper-1.7.0.1/gift_wrapper/question.py
+--rw-r--r--   0 manu      (1000) users      (100)     4403 2020-08-22 12:32:33.000000 gift-wrapper-1.7.0.1/gift_wrapper/remote.py
+--rw-r--r--   0 manu      (1000) users      (100)     6186 2021-04-18 09:39:37.000000 gift-wrapper-1.7.0.1/gift_wrapper/transformer.py
+-drwxr-xr-x   0 manu      (1000) users      (100)        0 2021-04-20 09:29:45.656679 gift-wrapper-1.7.0.1/gift_wrapper.egg-info/
+--rw-r--r--   0 manu      (1000) users      (100)     9944 2021-04-20 09:29:45.000000 gift-wrapper-1.7.0.1/gift_wrapper.egg-info/PKG-INFO
+--rw-r--r--   0 manu      (1000) users      (100)      470 2021-04-20 09:29:45.000000 gift-wrapper-1.7.0.1/gift_wrapper.egg-info/SOURCES.txt
+--rw-r--r--   0 manu      (1000) users      (100)        1 2021-04-20 09:29:45.000000 gift-wrapper-1.7.0.1/gift_wrapper.egg-info/dependency_links.txt
+--rw-r--r--   0 manu      (1000) users      (100)       52 2021-04-20 09:29:45.000000 gift-wrapper-1.7.0.1/gift_wrapper.egg-info/entry_points.txt
+--rw-r--r--   0 manu      (1000) users      (100)       59 2021-04-20 09:29:45.000000 gift-wrapper-1.7.0.1/gift_wrapper.egg-info/requires.txt
+--rw-r--r--   0 manu      (1000) users      (100)       13 2021-04-20 09:29:45.000000 gift-wrapper-1.7.0.1/gift_wrapper.egg-info/top_level.txt
+--rw-r--r--   0 manu      (1000) users      (100)       38 2021-04-20 09:29:45.656679 gift-wrapper-1.7.0.1/setup.cfg
+--rw-r--r--   0 manu      (1000) users      (100)      939 2021-04-20 09:29:37.000000 gift-wrapper-1.7.0.1/setup.py
++drwxr-xr-x   0 manu      (1000) users      (100)        0 2023-04-07 08:16:00.403505 gift-wrapper-1.8.0/
++-rw-r--r--   0 manu      (1000) users      (100)    11357 2023-03-11 11:00:53.000000 gift-wrapper-1.8.0/LICENSE
++-rw-r--r--   0 manu      (1000) users      (100)     8760 2023-04-07 08:16:00.402505 gift-wrapper-1.8.0/PKG-INFO
++-rw-r--r--   0 manu      (1000) users      (100)     8252 2023-03-25 14:55:49.000000 gift-wrapper-1.8.0/README.md
++drwxr-xr-x   0 manu      (1000) users      (100)        0 2023-04-07 08:16:00.399505 gift-wrapper-1.8.0/gift_wrapper/
++-rw-r--r--   0 manu      (1000) users      (100)        0 2023-03-11 11:00:53.000000 gift-wrapper-1.8.0/gift_wrapper/__init__.py
++-rw-r--r--   0 manu      (1000) users      (100)      254 2023-03-11 11:00:53.000000 gift-wrapper-1.8.0/gift_wrapper/colors.py
++-rw-r--r--   0 manu      (1000) users      (100)     7631 2023-04-07 08:09:43.000000 gift-wrapper-1.8.0/gift_wrapper/core.py
++-rw-r--r--   0 manu      (1000) users      (100)     3825 2023-03-18 13:49:24.000000 gift-wrapper-1.8.0/gift_wrapper/gift.py
++-rw-r--r--   0 manu      (1000) users      (100)     2643 2023-03-18 13:50:18.000000 gift-wrapper-1.8.0/gift_wrapper/image.py
++-rw-r--r--   0 manu      (1000) users      (100)     2729 2023-03-18 13:51:21.000000 gift-wrapper-1.8.0/gift_wrapper/latex.py
++-rw-r--r--   0 manu      (1000) users      (100)      660 2023-03-11 11:00:53.000000 gift-wrapper-1.8.0/gift_wrapper/parsing.py
++-rw-r--r--   0 manu      (1000) users      (100)     6731 2023-03-18 13:53:09.000000 gift-wrapper-1.8.0/gift_wrapper/question.py
++-rw-r--r--   0 manu      (1000) users      (100)     5167 2023-04-01 12:31:40.000000 gift-wrapper-1.8.0/gift_wrapper/remote.py
++-rw-r--r--   0 manu      (1000) users      (100)     5787 2023-03-18 13:54:58.000000 gift-wrapper-1.8.0/gift_wrapper/transformer.py
++drwxr-xr-x   0 manu      (1000) users      (100)        0 2023-04-07 08:16:00.402505 gift-wrapper-1.8.0/gift_wrapper.egg-info/
++-rw-r--r--   0 manu      (1000) users      (100)     8760 2023-04-07 08:16:00.000000 gift-wrapper-1.8.0/gift_wrapper.egg-info/PKG-INFO
++-rw-r--r--   0 manu      (1000) users      (100)      478 2023-04-07 08:16:00.000000 gift-wrapper-1.8.0/gift_wrapper.egg-info/SOURCES.txt
++-rw-r--r--   0 manu      (1000) users      (100)        1 2023-04-07 08:16:00.000000 gift-wrapper-1.8.0/gift_wrapper.egg-info/dependency_links.txt
++-rw-r--r--   0 manu      (1000) users      (100)       51 2023-04-07 08:16:00.000000 gift-wrapper-1.8.0/gift_wrapper.egg-info/entry_points.txt
++-rw-r--r--   0 manu      (1000) users      (100)       59 2023-04-07 08:16:00.000000 gift-wrapper-1.8.0/gift_wrapper.egg-info/requires.txt
++-rw-r--r--   0 manu      (1000) users      (100)       13 2023-04-07 08:16:00.000000 gift-wrapper-1.8.0/gift_wrapper.egg-info/top_level.txt
++-rw-r--r--   0 manu      (1000) users      (100)       38 2023-04-07 08:16:00.403505 gift-wrapper-1.8.0/setup.cfg
++-rw-r--r--   0 manu      (1000) users      (100)      938 2023-03-18 14:11:48.000000 gift-wrapper-1.8.0/setup.py
+```
+
+### Comparing `gift-wrapper-1.7.0.1/PKG-INFO` & `gift-wrapper-1.8.0/README.md`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,159 +1,143 @@
+-Metadata-Version: 2.1
+-Name: gift-wrapper
+-Version: 1.7.0.1
+-Summary: Build GIFT (Moodle compatible) files easily
+-Home-page: https://github.com/manuvazquez/gift-wrapper
+-Author: Manuel A. Vázquez
+-Author-email: manuavazquez@gmail.com
+-License: UNKNOWN
+-Description: # gift-wrapper
+-        
+-        This is Python software to easily build [GIFT](https://docs.moodle.org/en/GIFT_format) -based [question banks](https://docs.moodle.org/en/Question_bank) in [Moodle](https://moodle.org/). Other similar tools are available (you can search for *Tools that create or process GIFTs* in [Moodle's GIFT page](https://docs.moodle.org/en/GIFT_format)) but none of them fitted well my workflow. What I need is (the goals of `gift-wrapper` are):
+-        
+-        * to write questions in plain text, and as many as I like in a single file
+-        * to write latex formulas directly
+-        * to easily/seamlessly include images
+-        
+-        The most interesting point is probably the last one.
+-        
+-        ## Requirements
+-        
+-        Python requirements are:
+-        
+-        - Python &#8805; 3.6
+-        - [paramiko](http://www.paramiko.org/)
+-        - [colorama](https://pypi.org/project/colorama/)
+-        - [pyyaml](https://pypi.org/project/PyYAML/)
+-        - [tqdm](https://github.com/tqdm/tqdm)
+-        
+-        Now, if you want to make the most of the software you also need:
+-        
+-        * [pdflatex](https://en.wikipedia.org/wiki/PdfTeX) (i.e. a [TeX](https://en.wikipedia.org/wiki/TeX) distribution)
+-        * [pdf2svg](https://github.com/dawbarton/pdf2svg/)
+-        * disk space in a remote server that can host your images
+-        
+-        ## Install
+-        
+-        ```
+-        pip install gift-wrapper
+-        ```
+-        
+-        should suffice.
+-        
+-        ### Manual setup
+-        
+-        If you rather clone this repository, (in order to, potentially, get the latest additions/modifications)  
+-        
+-        ```
+-        pip install pyyaml paramiko tqdm colorama
+-        ```
+-        
+-        should install all the additional requirements. If you use [Anaconda](https://anaconda.org/), the [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script `make_conda_environment.sh` will make a proper environment (named `gift`).
+-        
+-        After that, you should be able to run the program.
+-        
+-        ## Usage
+-        
+-        The main program is `wrap.py` and you can check the available command-line options with
+-        ```
+-        wrap.py -h
+-        ```
+-        or
+-        ```
+-        python wrap.py -h
+-        ```
+-        if you did a manual installation and `wrap.py` doesn't have execution permissions. 
+-        
+-        If you don't pass any argument, `parameters.yaml` and `bank.yaml` files are expected. The former is a settings file whereas the latter is the actual *input file* in which you must write the questions.
+-        
+-        The output will be a text file in GIFT format with the same name as the input one (the file with the questions) but `.gift.txt` extension (by default, `bank.gift.txt` then). It seems that *sometimes* Moodle has troubles importing (recognizing) a text file if the extension is not `.txt`. 
+-        
+-        ### Parameters
+-        
+-        `parameters.yaml` is a [YAML](https://en.wikipedia.org/wiki/YAML) file intended to hold settings that you only need to specify once. Right now, it mostly contains parameters related to `images hosting` (needed to copy your images to a remote server). All the options are either self-explanatory or explained through comments. It should be fairly easy to tweak the [included example](parameters.yaml) for your own setup.
+-        
+-        ### Questions
+-        
+-        Questions are specified through another *YAML* file. The first parameter, `pictures base directory`, refers to the base directory that will be created in the remote host for all your embedded images. It is meant to separate different question banks (so that you can have, e.g., directories `quiz 1` and `quiz 2`). The remaining of the file is a **list of categories**, and inside each one there is a **list of questions**. Hopefully, the format is clear from either the name of the settings and/or its companion comments. You are probably better off taking a look at the [provided example](bank.yaml).
+-        
+-        ### Example
+-        
+-        If you run the program inside the `gift-wrapper` directory as is, it will process the sample `bank.yaml` which includes a `.tex`, a `.svg` and some mathematical formulas, and will generate a `bank.gift.txt` file which you can import from Moodle (choosing the GIFT format when asked). If you have not adapted the settings in `images hosting`  (within `parameters.yaml`) to your needs, you will instead see an error since a remote connection could not be established. Still, you can run the program in *local* mode by passing `-l` through the command line, or try and embed every image in its corresponding question with `-e`.
+-        
+-        ## Including images
+-        
+-        `gift-wrapper` has been designed to work with [svg](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) images. Then, in order to include any image in a question, two scenarios are contemplated:
+-        
+-        * you already have an svg
+-        * you have a TeX file **that can be compiled with *pdflatex***
+-        
+-        In any case, you just need to write the path to the file inside the text of the question (whether in the `statement`, the `answer` or the `feedbak`). If in the second scenario, i.e., you are including a *TeX* file, this will be compiled into a pdf with *pdflatex*, and then converted to an svg with *pdf2svg*. Hence, a *svg* file will be, in the end, available for every image.
+-        
+-        Images (*svg*s) are either copied to a remote host (and properly linked in the output GIFT file), or directly embedded into their corresponding questions.
+-        
+-        Characters allowed in a path (to either a `.tex` or a `.svg`) are:
+-        * alphanumeric (A-Z, a-z, 0-9)
+-        * underscore, '_', and dash, '-'
+-        * '/' and '\\' (path separators).
+-        
+-        ### Browser compatibility
+-        
+-        It seems (it has been reported) not every browser properly handles svg images (maybe other types too) embedded in a question as an URL. My experience so far is both [Firefox](https://www.mozilla.org/en-US/firefox) and [Chromium](https://www.chromium.org/Home) (at the time of writing this) work just fine. 
+-        
+-        ### Do I really need pdf2svg?
+-        
+-        Only if you want automatic conversion from `.tex` (passing through `.pdf`) to `.svg`, i.e., only if you embed a `.tex` somewhere.
+-        Also, there is (probably) nothing special about *pdf2svg* and, in principle, you can use any command-line program that takes as arguments the input pdf and the output svg. However, I've only tested the program with *pdf2svg* since it's the one included in [Gentoo Linux](https://www.gentoo.org/).
+-        
+-        ## Remote access
+-        
+-        By default, images are copied into some remote host (with a publicly visible directory) so that they can be accessed by Moodle. This is done automatically for every embedded image (svg or tex). For this to work, in the `parameters.yaml` file, within `ssh` either
+-        
+-        * user and password, or
+-        * user and path to a public key file
+-        
+-        (but **not both**) should be specified.
+-        
+-        You can run the program locally, i.e., omitting the transferring of the images to a remote host by using `-l` command line argument. This is especially meaningful if you don't have any embedded image in your questions (and hence nothing needs to be copied to a remote host).
+-        
+-        ## Latex support
+-        
+-        Formulas inside `$`s are processed and, within them, these are the commands/symbols that have been tested so far
+-        
+-        - greek letters
+-        - subindexes
+-        - calligraphic symbols, i.e., prefixed by `\cal`
+-        - fractions with `\frac{}{}`
+-        - `\underline`
+-        - `\left(` and `\right)`
+-        - `\left[` and `\right]`
+-        - `\begin{bmatrix}` and `\end{bmatrix}`
+-        - symbols `\sim`, `\approx`
+-        
+-        More things are probably OK, but I have not tried them yet.
+-        
+-        Inside text, only commands `\textit` and `\textbf` are supported for the time being.
+-        
+-        ### Safety checks
+-        
+-        By default, `wrap.py` checks whether or not the formulas you wrote between `$`'s can actually be compiled. Right now this involves a call to `pdflatex` *for every formula*, meaning that it can significantly slow down the process. It can be disabled by passing ` --no-checks` (or simply `-n`). It is probably a good idea to actually check the formulas every once in a while (e.g., every time you add a new one), though, since *bad* latex formulas will be (silently) imported by Moodle anyway, and not only will they be incorrectly rendered but they may also mess up subsequent content.  
+-        
+-        ## Current limitations
+-        
+-        - only *numerical* and *multiple-choice* questions are supported (notice that the GIFT format itself doesn't support every type of question available in Moodle)
+-        
+-        - the latex support is very basic
+-        
+-        - one is in for troubles if embedding URLs pointing to `.svg` or `.tex` files since the file part will, most likely, be parsed and replaced
+-        
+-        ## See also
+-        
+-        If you are comfortable with Python and [Jupyter](https://jupyter.org/) notebooks, you might also be interested in [py2gift](https://github.com/manuvazquez/py2gift).
+-        
+-Platform: UNKNOWN
+-Classifier: Programming Language :: Python :: 3
+-Classifier: Environment :: Console
+-Classifier: License :: OSI Approved :: Apache Software License
+-Classifier: Operating System :: OS Independent
+-Requires-Python: >=3.6
+-Description-Content-Type: text/markdown
++# gift-wrapper
++
++This is Python software to easily build [GIFT](https://docs.moodle.org/en/GIFT_format) -based [question banks](https://docs.moodle.org/en/Question_bank) in [Moodle](https://moodle.org/). Other similar tools are available (you can search for *Tools that create or process GIFTs* in [Moodle's GIFT page](https://docs.moodle.org/en/GIFT_format)) but none of them fitted well my workflow. What I need is (the goals of `gift-wrapper` are):
++
++* to write questions in plain text, and as many as I like in a single file
++* to write latex formulas directly
++* to easily/seamlessly include images
++
++The most interesting point is probably the last one.
++
++## Requirements
++
++Python requirements are:
++
++- Python &#8805; 3.10
++- [paramiko](http://www.paramiko.org/)
++- [colorama](https://pypi.org/project/colorama/)
++- [pyyaml](https://pypi.org/project/PyYAML/)
++- [tqdm](https://github.com/tqdm/tqdm)
++
++Now, if you want to make the most of the software you also need:
++
++* [pdflatex](https://en.wikipedia.org/wiki/PdfTeX) (i.e. a [TeX](https://en.wikipedia.org/wiki/TeX) distribution)
++* [pdf2svg](https://github.com/dawbarton/pdf2svg/)
++* disk space in a remote server that can host your images
++
++## Install
++
++```
++pip install gift-wrapper
++```
++
++should suffice.
++
++### Manual setup
++
++If you rather clone this repository, (in order to, potentially, get the latest additions/modifications)  
++
++```
++pip install pyyaml paramiko tqdm colorama
++```
++
++should install all the additional requirements. If you use [Anaconda](https://anaconda.org/), the [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script `make_conda_environment.sh` will make a proper environment (named `gift`).
++
++After that, you should be able to run the program.
++
++## Usage
++
++The main program is `wrap.py` and you can check the available command-line options with
++```
++wrap.py -h
++```
++or
++```
++python wrap.py -h
++```
++if you did a manual installation and `wrap.py` doesn't have execution permissions. 
++
++If you don't pass any argument, `parameters.yaml` and `bank.yaml` files are expected. The former is a settings file whereas the latter is the actual *input file* in which you must write the questions.
++
++The output will be a text file in GIFT format with the same name as the input (the file with the questions) but `.gift.txt` extension (thus, `bank.gift.txt`, by default). It seems that *sometimes* Moodle has troubles importing (recognizing) a text file if the extension is not `.txt`. 
++
++### Parameters
++
++`parameters.yaml` is a [YAML](https://en.wikipedia.org/wiki/YAML) file intended to hold settings that you only need to specify once. Right now, it only contains parameters related to `images hosting` (needed to copy your images to a remote server). All the options are either self-explanatory or explained through comments. It should be fairly easy to tweak the [included example](parameters.yaml) for your own setup.
++
++### Questions
++
++Questions are specified through another *YAML* file. The first parameter, `pictures base directory`, refers to the base directory that will be created in the remote host to accommodate your images (only meaningful if images are **not** embedded in the questions, i.e., if not passing `-e`). It is meant to separate different question banks (so that you can have, e.g., directories `quiz 1` and `quiz 2`). The rest of the file is a **list of categories**, and inside each one there is a **list of questions**. Hopefully, the format is clear from either the name of the settings and/or its companion comments. You are probably better off taking a look at the [provided example](bank.yaml).
++
++### Example
++
++If you run the program inside the `gift-wrapper` directory as is, it will process the sample `bank.yaml` which includes a `.tex`, a `.svg` and some mathematical formulas, and will generate a `bank.gift.txt` file which you can import from Moodle (choosing the GIFT format when asked). If the parameters file (by default, `parameters.yaml`) is not found, images are embedded into the corresponding questions (tantamount to passing `-e`).
++
++## Including images
++
++`gift-wrapper` has been designed to work with [svg](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) images. Then, in order to include any image in a question, two scenarios are contemplated:
++
++* you already have an svg
++* you have a TeX file **that can be compiled with *pdflatex***
++
++In any case, you just need to write the path to the file inside the text of the question (whether in the `statement`, the `answer` or the `feedbak`). If in the second scenario, i.e., you are including a *TeX* file, this will be compiled into a pdf with *pdflatex*, and then converted to an svg with *pdf2svg*. Hence, a *svg* file will be, in the end, available for every image.
++
++Images (*svg*s) are either copied to a remote host (and properly linked in the output GIFT file), or directly embedded into their corresponding questions.
++
++Characters allowed in a path (to either a `.tex` or a `.svg`) are:
++* alphanumeric (A-Z, a-z, 0-9)
++* underscore, '_', and dash, '-'
++* '/' and '\\' (path separators).
++
++### Browser compatibility
++
++It seems (it has been reported) not every browser properly handles svg images (maybe other types too) embedded in a question as an URL. My experience so far is both [Firefox](https://www.mozilla.org/en-US/firefox) and [Chromium](https://www.chromium.org/Home) (at the time of writing this) work just fine. 
++
++### Do I really need pdf2svg?
++
++Only if you want automatic conversion from `.tex` (passing through `.pdf`) to `.svg`, i.e., only if you embed a `.tex` somewhere.
++Also, there is (probably) nothing special about *pdf2svg* and, in principle, you can use any command-line program that takes as arguments the input pdf and the output svg. However, I've only tested the program with *pdf2svg* since it's the one included in [Gentoo Linux](https://www.gentoo.org/).
++
++## Remote access
++
++If a parameters file (e.g., `parameters.yaml`) is found, images are by default copied to the specified remote host (within a publicly visible directory) so that they can be accessed by Moodle. This is done automatically for every embedded image (svg or tex). For this to work, in the `parameters.yaml` file, within `ssh` either
++
++* user and password, or
++* user and path to a public key file
++
++(but **not both**) should be specified.
++
++You can inhibit this behavior and run the program locally (omitting the transferring of the images to a remote host) by using `-l` command line argument. This is especially meaningful if you don't have any embedded image in your questions (and hence nothing needs to be copied to a remote host).
++
++## Latex support
++
++Formulas inside `$`s are processed and, within them, these are the commands/symbols that have been tested so far
++
++- greek letters
++- subindexes
++- calligraphic symbols, i.e., prefixed by `\cal`
++- fractions with `\frac{}{}`
++- `\underline`
++- `\left(` and `\right)`
++- `\left[` and `\right]`
++- `\begin{bmatrix}` and `\end{bmatrix}`
++- symbols `\sim`, `\approx`
++
++More things are probably OK, but I have not tested them yet.
++
++Inside text, only commands `\textit` and `\textbf` are supported for the time being.
++
++### Safety checks
++
++By default, `wrap.py` checks whether or not the formulas you wrote between `$`'s can actually be compiled. Right now this involves a call to `pdflatex` *for every formula*, meaning that it can significantly slow down the process. It can be disabled by passing ` --no-checks` (or simply `-n`). It is probably a good idea to actually check the formulas every once in a while (e.g., every time you add a new one), though, since *bad* latex formulas will be (silently) imported by Moodle anyway, and not only will they be incorrectly rendered but they may also mess up subsequent content.  
++
++## Current limitations
++
++- only *numerical* and *multiple-choice* questions are supported (notice that the GIFT format itself doesn't support every type of question available in Moodle)
++
++- the latex support is very basic
++
++- one is in for troubles if embedding remote URLs pointing to `.svg` or `.tex` files since the file part will, most likely, be parsed and replaced
++
++## See also
++
++If you are comfortable with Python and [Jupyter](https://jupyter.org/) notebooks, you might also be interested in [py2gift](https://github.com/manuvazquez/py2gift).
+```
+
+#### encoding
+
+```diff
+@@ -1 +1 @@
+-utf-8
++us-ascii
+```
+
+### Comparing `gift-wrapper-1.7.0.1/README.md` & `gift-wrapper-1.8.0/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,22 +1,37 @@
++Metadata-Version: 2.1
++Name: gift-wrapper
++Version: 1.8.0
++Summary: Build GIFT (Moodle compatible) files easily
++Home-page: https://github.com/manuvazquez/gift-wrapper
++Author: Manuel A. Vázquez
++Author-email: manuavazquez@gmail.com
++Classifier: Programming Language :: Python :: 3
++Classifier: Environment :: Console
++Classifier: License :: OSI Approved :: Apache Software License
++Classifier: Operating System :: OS Independent
++Requires-Python: >=3.10
++Description-Content-Type: text/markdown
++License-File: LICENSE
++
+ # gift-wrapper
+ 
+ This is Python software to easily build [GIFT](https://docs.moodle.org/en/GIFT_format) -based [question banks](https://docs.moodle.org/en/Question_bank) in [Moodle](https://moodle.org/). Other similar tools are available (you can search for *Tools that create or process GIFTs* in [Moodle's GIFT page](https://docs.moodle.org/en/GIFT_format)) but none of them fitted well my workflow. What I need is (the goals of `gift-wrapper` are):
+ 
+ * to write questions in plain text, and as many as I like in a single file
+ * to write latex formulas directly
+ * to easily/seamlessly include images
+ 
+ The most interesting point is probably the last one.
+ 
+ ## Requirements
+ 
+ Python requirements are:
+ 
+-- Python &#8805; 3.6
++- Python &#8805; 3.10
+ - [paramiko](http://www.paramiko.org/)
+ - [colorama](https://pypi.org/project/colorama/)
+ - [pyyaml](https://pypi.org/project/PyYAML/)
+ - [tqdm](https://github.com/tqdm/tqdm)
+ 
+ Now, if you want to make the most of the software you also need:
+ 
+@@ -54,27 +69,27 @@
+ ```
+ python wrap.py -h
+ ```
+ if you did a manual installation and `wrap.py` doesn't have execution permissions. 
+ 
+ If you don't pass any argument, `parameters.yaml` and `bank.yaml` files are expected. The former is a settings file whereas the latter is the actual *input file* in which you must write the questions.
+ 
+-The output will be a text file in GIFT format with the same name as the input one (the file with the questions) but `.gift.txt` extension (by default, `bank.gift.txt` then). It seems that *sometimes* Moodle has troubles importing (recognizing) a text file if the extension is not `.txt`. 
++The output will be a text file in GIFT format with the same name as the input (the file with the questions) but `.gift.txt` extension (thus, `bank.gift.txt`, by default). It seems that *sometimes* Moodle has troubles importing (recognizing) a text file if the extension is not `.txt`. 
+ 
+ ### Parameters
+ 
+-`parameters.yaml` is a [YAML](https://en.wikipedia.org/wiki/YAML) file intended to hold settings that you only need to specify once. Right now, it mostly contains parameters related to `images hosting` (needed to copy your images to a remote server). All the options are either self-explanatory or explained through comments. It should be fairly easy to tweak the [included example](parameters.yaml) for your own setup.
++`parameters.yaml` is a [YAML](https://en.wikipedia.org/wiki/YAML) file intended to hold settings that you only need to specify once. Right now, it only contains parameters related to `images hosting` (needed to copy your images to a remote server). All the options are either self-explanatory or explained through comments. It should be fairly easy to tweak the [included example](parameters.yaml) for your own setup.
+ 
+ ### Questions
+ 
+-Questions are specified through another *YAML* file. The first parameter, `pictures base directory`, refers to the base directory that will be created in the remote host for all your embedded images. It is meant to separate different question banks (so that you can have, e.g., directories `quiz 1` and `quiz 2`). The remaining of the file is a **list of categories**, and inside each one there is a **list of questions**. Hopefully, the format is clear from either the name of the settings and/or its companion comments. You are probably better off taking a look at the [provided example](bank.yaml).
++Questions are specified through another *YAML* file. The first parameter, `pictures base directory`, refers to the base directory that will be created in the remote host to accommodate your images (only meaningful if images are **not** embedded in the questions, i.e., if not passing `-e`). It is meant to separate different question banks (so that you can have, e.g., directories `quiz 1` and `quiz 2`). The rest of the file is a **list of categories**, and inside each one there is a **list of questions**. Hopefully, the format is clear from either the name of the settings and/or its companion comments. You are probably better off taking a look at the [provided example](bank.yaml).
+ 
+ ### Example
+ 
+-If you run the program inside the `gift-wrapper` directory as is, it will process the sample `bank.yaml` which includes a `.tex`, a `.svg` and some mathematical formulas, and will generate a `bank.gift.txt` file which you can import from Moodle (choosing the GIFT format when asked). If you have not adapted the settings in `images hosting`  (within `parameters.yaml`) to your needs, you will instead see an error since a remote connection could not be established. Still, you can run the program in *local* mode by passing `-l` through the command line, or try and embed every image in its corresponding question with `-e`.
++If you run the program inside the `gift-wrapper` directory as is, it will process the sample `bank.yaml` which includes a `.tex`, a `.svg` and some mathematical formulas, and will generate a `bank.gift.txt` file which you can import from Moodle (choosing the GIFT format when asked). If the parameters file (by default, `parameters.yaml`) is not found, images are embedded into the corresponding questions (tantamount to passing `-e`).
+ 
+ ## Including images
+ 
+ `gift-wrapper` has been designed to work with [svg](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) images. Then, in order to include any image in a question, two scenarios are contemplated:
+ 
+ * you already have an svg
+ * you have a TeX file **that can be compiled with *pdflatex***
+@@ -95,22 +110,22 @@
+ ### Do I really need pdf2svg?
+ 
+ Only if you want automatic conversion from `.tex` (passing through `.pdf`) to `.svg`, i.e., only if you embed a `.tex` somewhere.
+ Also, there is (probably) nothing special about *pdf2svg* and, in principle, you can use any command-line program that takes as arguments the input pdf and the output svg. However, I've only tested the program with *pdf2svg* since it's the one included in [Gentoo Linux](https://www.gentoo.org/).
+ 
+ ## Remote access
+ 
+-By default, images are copied into some remote host (with a publicly visible directory) so that they can be accessed by Moodle. This is done automatically for every embedded image (svg or tex). For this to work, in the `parameters.yaml` file, within `ssh` either
++If a parameters file (e.g., `parameters.yaml`) is found, images are by default copied to the specified remote host (within a publicly visible directory) so that they can be accessed by Moodle. This is done automatically for every embedded image (svg or tex). For this to work, in the `parameters.yaml` file, within `ssh` either
+ 
+ * user and password, or
+ * user and path to a public key file
+ 
+ (but **not both**) should be specified.
+ 
+-You can run the program locally, i.e., omitting the transferring of the images to a remote host by using `-l` command line argument. This is especially meaningful if you don't have any embedded image in your questions (and hence nothing needs to be copied to a remote host).
++You can inhibit this behavior and run the program locally (omitting the transferring of the images to a remote host) by using `-l` command line argument. This is especially meaningful if you don't have any embedded image in your questions (and hence nothing needs to be copied to a remote host).
+ 
+ ## Latex support
+ 
+ Formulas inside `$`s are processed and, within them, these are the commands/symbols that have been tested so far
+ 
+ - greek letters
+ - subindexes
+@@ -118,26 +133,26 @@
+ - fractions with `\frac{}{}`
+ - `\underline`
+ - `\left(` and `\right)`
+ - `\left[` and `\right]`
+ - `\begin{bmatrix}` and `\end{bmatrix}`
+ - symbols `\sim`, `\approx`
+ 
+-More things are probably OK, but I have not tried them yet.
++More things are probably OK, but I have not tested them yet.
+ 
+ Inside text, only commands `\textit` and `\textbf` are supported for the time being.
+ 
+ ### Safety checks
+ 
+ By default, `wrap.py` checks whether or not the formulas you wrote between `$`'s can actually be compiled. Right now this involves a call to `pdflatex` *for every formula*, meaning that it can significantly slow down the process. It can be disabled by passing ` --no-checks` (or simply `-n`). It is probably a good idea to actually check the formulas every once in a while (e.g., every time you add a new one), though, since *bad* latex formulas will be (silently) imported by Moodle anyway, and not only will they be incorrectly rendered but they may also mess up subsequent content.  
+ 
+ ## Current limitations
+ 
+ - only *numerical* and *multiple-choice* questions are supported (notice that the GIFT format itself doesn't support every type of question available in Moodle)
+ 
+ - the latex support is very basic
+ 
+-- one is in for troubles if embedding URLs pointing to `.svg` or `.tex` files since the file part will, most likely, be parsed and replaced
++- one is in for troubles if embedding remote URLs pointing to `.svg` or `.tex` files since the file part will, most likely, be parsed and replaced
+ 
+ ## See also
+ 
+ If you are comfortable with Python and [Jupyter](https://jupyter.org/) notebooks, you might also be interested in [py2gift](https://github.com/manuvazquez/py2gift).
+```
+
+#### encoding
+
+```diff
+@@ -1 +1 @@
+-us-ascii
++utf-8
+```
+
+### Comparing `gift-wrapper-1.7.0.1/gift_wrapper/core.py` & `gift-wrapper-1.8.0/gift_wrapper/core.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -7,88 +7,152 @@
+ 
+ from . import question
+ from . import remote
+ from . import gift
+ from . import colors
+ from . import transformer
+ 
+-
+ def main():
++	"""Processes command-line arguments and feeds them to `wrap`.
++	"""
+ 
+ 	parser = argparse.ArgumentParser(description='Build GIFT files (Moodle) from a simple specification')
+ 
+ 	parser.add_argument(
+-		'-p', '--parameters_file', type=argparse.FileType('r'), default='parameters.yaml', help='parameters file',
++		'-p', '--parameters_file', default='parameters.yaml', help='parameters file',
+ 		nargs='?')
+ 
+ 	parser.add_argument(
+-		'-i', '--input_file', type=argparse.FileType('r'), default='bank.yaml', help='questions file', nargs='?')
++		'-i', '--input_file', default='bank.yaml', help='questions file', nargs='?')
+ 
+ 	parser.add_argument(
+ 		'-l', '--local', default=False, action='store_true', help="don't try to copy the images to the server")
+ 
+ 	parser.add_argument(
+-		'-n', '--no-checks', default=False, action='store_true', help="don't check latex formulas (much faster)")
++		'-n', '--no-checks', default=False, action='store_true', help="don't check LaTeX formulas (much faster)")
+ 
+ 	parser.add_argument(
+ 		'-e', '--embed-images', default=False, action='store_true',
+ 		help='embed the images rather than link to them')
+ 
+ 	command_line_arguments = parser.parse_args()
+-
++	
+ 	wrap(
+-		parameters=command_line_arguments.parameters_file.name,
+-		questions_file=command_line_arguments.input_file.name, local_run=command_line_arguments.local,
++		parameters=command_line_arguments.parameters_file,
++		questions_file=command_line_arguments.input_file, local_run=command_line_arguments.local,
+ 		no_checks=command_line_arguments.no_checks,
+ 		embed_images=command_line_arguments.embed_images)
+ 
+ 
+ def wrap(parameters: str, questions_file: str, local_run: bool, no_checks: bool, embed_images: bool):
++	"""Builds a gift file.
++
++	Parameters
++	----------
++	parameters : str
++		Parameters
++	questions_file : str
++		Input file encompassing the questions
++	local_run : bool
++		If `True`, images are not copied over to a server
++	no_checks : bool
++		If `True`, LaTeX formulas are not checked
++	embed_images : bool
++		If `True`, images are embedded
++	"""
+ 
+ 	# ================================= parameters' reading
+ 
+ 	# if a file name was passed, either as a string or wrapped in a `Pathlib`,...
+-	if (type(parameters) == str) or (type(parameters) == pathlib.Path):
++	if isinstance(parameters, (str, pathlib.Path)):
++
++		# so that we can assume it is a `pathlib.Path`
++		parameters = pathlib.Path(parameters)
++
++		# if a parameters file is NOT present...
++		if not parameters.exists():
++			
++			# ...images are embedded
++			embed_images = True
++
++			print(
++				f'"{parameters}"{colors.info} not found: embedding the images (`-e`). If you\'d like to host your images in a remote server you can download the sample parameters file{colors.reset} '
++				r'https://raw.githubusercontent.com/manuvazquez/gift-wrapper/master/parameters.yaml'
++				' and tweak it to your needs'
++				)
++
++			# it shouldn't be used anywhere, but just in case...
++			parameters = None
++		
++		# if a parameters file IS present...
++		else:
+ 
+-		# ...it is read
+-		with open(parameters) as yaml_data:
++			# ...it is read
++			with parameters.open() as yaml_data:
+ 
+-			parameters = yaml.load(yaml_data, Loader=yaml.FullLoader)
++				parameters = yaml.load(yaml_data, Loader=yaml.FullLoader)
+ 
+ 	# if a file name was *not* passed...
+ 	else:
+ 
+ 		# ...then it should be a dictionary
+-		assert type(parameters) == dict
++		assert isinstance(parameters, dict), 'passed `parameters` is not a file nor a dictionary'
+ 
+ 	input_file = pathlib.Path(questions_file)
+ 
++	# if the questions file doesn't exist...
++	if not input_file.exists():
++
++		raise SystemExit(
++			f'"{input_file}" {colors.error}cannot be found: you can download a sample from{colors.reset} '
++			r'https://raw.githubusercontent.com/manuvazquez/gift-wrapper/master/bank.yaml'
++			)
++
+ 	# ================================= questions' reading
+ 
+ 	# the file containing the questions is read
+ 	with open(input_file) as yaml_data:
+ 
+ 		input_data = yaml.load(yaml_data, Loader=yaml.FullLoader)
+ 
+ 	categories = input_data['categories']
+ 	pictures_base_directory = input_data['pictures base directory']
+ 
+-	# ================================= behaviour
++	# ================================= behavior
+ 
+ 	# to keep track of files already compiled/transferred
+ 	history = {'already compiled': set(), 'already transferred': set()}
+ 
+ 	# lists of processing objects to be applied at the very beginning...
+ 	pre_transforms = [transformer.TexToSvg(history)]
+ 
+ 	# ...and at the end
+ 	post_transforms = [
+ 		gift.process_new_lines, transformer.LatexFormulas(not no_checks),
+ 		transformer.LatexCommandsWithinText()]
+ 
++	# if images are *not* to be embedded, and this is *not* a local run (i.e., if images are supposed to be hosted remotely)...
++	if (not embed_images) and (not local_run):
++
++		# an object to handle the connection with the requested host is instantiated
++		connection = remote.Connection(
++				parameters['images hosting']['copy']['host'], **parameters['images hosting']['ssh'])
++
++		# an attempt is made...
++		try:
++
++			# ...to connect
++			connection.connect()
++
++		except remote.CannotConnectException:
++		
++			print(f'{colors.info}cannot establish a connection: embedding the images (`-e`){colors.reset}')
++
++			embed_images = True
++
+ 	# if images embedding was requested...
+ 	if embed_images:
+ 
+ 		# ...a connection is not needed
+ 		connection = None
+ 
+ 		# an object to embed svg files in the output file is added to the list of *post* processors
+@@ -96,23 +160,23 @@
+ 
+ 	# if images are *not* to be embedded...
+ 	else:
+ 
+ 		# if "local" running was requested...
+ 		if local_run:
+ 
+-			# ...a "fake" connections is instantiated
++			# ...a "fake" connection is instantiated
+ 			connection = remote.FakeConnection(parameters['images hosting']['copy']['host'])
+ 
+-		# if *no* local running was requested...
+-		else:
++		# # if *no* local running was requested...
++		# else:
+ 
+-			# ...an actual connection with the requested host is opened
+-			connection = remote.Connection(
+-				parameters['images hosting']['copy']['host'], **parameters['images hosting']['ssh'])
++		# 	# ...an actual connection with the requested host is opened
++		# 	connection = remote.Connection(
++		# 		parameters['images hosting']['copy']['host'], **parameters['images hosting']['ssh'])
+ 
+ 		# an object to copy svg files to a remote location is added to the list of *pre* processors
+ 		pre_transforms.append(transformer.SvgToHttp(
+ 			history, connection, parameters['images hosting']['copy']['public filesystem root'],
+ 			pictures_base_directory, parameters['images hosting']['public URL']))
+ 
+ 	# output file has the same name as the input with the ".gift.txt" suffix
+@@ -125,15 +189,15 @@
+ 		# for every category...
+ 		for cat in tqdm(categories, desc='category', leave=False):
+ 
+ 			# if "something" was actually provided...
+ 			if cat['name']:
+ 
+ 				# ...if it's *not* a list...
+-				if type(cat['name']) != list:
++				if not isinstance(cat['name'], list):
+ 
+ 					# ...it is turned into one
+ 					cat['name'] = [cat['name']]
+ 
+ 				for c in cat['name']:
+ 
+ 					f.write(gift.from_category(c))
+@@ -159,23 +223,17 @@
+ 
+ 				q = question_class(**q, pre_transforms=pre_transforms, post_transforms=post_transforms)
+ 
+ 				f.write(f'{q.gift}\n\n')
+ 
+ 	print(f'{colors.info}file "{colors.reset}{output_file}{colors.info}" created')
+ 
+-	# if images are *not* to be embedded...
+-	if not embed_images:
+-
+-		# if this is a "fake" connection
+-		if type(connection) == remote.FakeConnection:
+-
+-			# if there is any file to be copied...
+-			if connection.files_to_copy:
++	# if images are *not* to be embedded, this is a "local" run (fake connection), and there are files to be copied...
++	if (not embed_images) and local_run and connection.files_to_copy:
+ 
+-				print(f'{colors.info}you *should* copy:')
++		print(f'{colors.info}you *should* copy:')
+ 
+-				for source, remote_directory in connection.files_to_copy:
++		for source, remote_directory in connection.files_to_copy:
+ 
+-					print(
+-						f'{source}{colors.info} to '
+-						f'{colors.reset}{remote_directory}{colors.info} in {colors.reset}{connection.host}')
++			print(
++				f'{source}{colors.info} to '
++				f'{colors.reset}{remote_directory}{colors.info} in {colors.reset}{connection.host}')
+```
+
+### Comparing `gift-wrapper-1.7.0.1/gift_wrapper/gift.py` & `gift-wrapper-1.8.0/gift_wrapper/gift.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,9 +1,7 @@
+-from typing import Union, Optional
+-
+ from . import latex
+ 
+ 
+ class NotCompliantLatexFormula(Exception):
+ 
+ 	def __init__(self, formula: str) -> None:
+ 
+@@ -161,15 +159,15 @@
+ 
+ 	"""
+ 
+ 	# new lines are replaced everywhere *except* inside latex formulas
+ 	return latex.replace_and_replace_only_in_formulas('\n', r'<br>', r'<br>', ' ', text)
+ 
+ 
+-def from_numerical_solution(solution: [float, int], error: Optional[Union[float, int, str]] = None) -> str:
++def from_numerical_solution(solution: [float, int], error:  float | int | str | None = None) -> str:
+ 	"""
+ 	Generates GIFT-ready text from the solution and, optionally, error of a numerical question.
+ 
+ 	Parameters
+ 	----------
+ 	solution : int or float
+ 		Value of the solution.
+@@ -184,15 +182,15 @@
+ 	"""
+ 
+ 	error = ':' + str(error) if error else ''
+ 
+ 	return f'#\t=%100%{solution}{error}#'
+ 
+ 
+-def from_wrong_answer(text: str, grade: Optional[int] = None) -> str:
++def from_wrong_answer(text: str, grade: int | None = None) -> str:
+ 	"""
+ 	Generates GIFT-ready text from a (single) wrong answer and, optionally, its grade.
+ 
+ 	Parameters
+ 	----------
+ 	text : str
+ 		The phrasing of the answer.
+```
+
+### Comparing `gift-wrapper-1.7.0.1/gift_wrapper/image.py` & `gift-wrapper-1.8.0/gift_wrapper/image.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,20 +1,19 @@
+ import sys
+ import pathlib
+ import shutil
+ import subprocess
+ import uuid
+-from typing import Union
+ 
+ from . import colors
+ from . import latex
+ from . import parsing
+ 
+ 
+-def tex_to_pdf(source_file: Union[str, pathlib.Path], timeout: int = 10) -> pathlib.Path:
++def tex_to_pdf(source_file: str | pathlib.Path, timeout: int = 10) -> pathlib.Path:
+ 	"""
+ 	Turns a TeX file into a pdf.
+ 
+ 	Parameters
+ 	----------
+ 	source_file : str or pathlib.Path
+ 		TeX file.
+@@ -56,15 +55,15 @@
+ 		print(f'\n{colors.error}errors were found while compiling {colors.reset}{source_file}')
+ 
+ 		sys.exit(1)
+ 
+ 	return source_file.with_suffix('.pdf')
+ 
+ 
+-def pdf_to_svg(input_file: Union[str, pathlib.Path]) -> pathlib.Path:
++def pdf_to_svg(input_file: str | pathlib.Path) -> pathlib.Path:
+ 	"""
+ 	Converts a pdf file into an svg.
+ 
+ 	Parameters
+ 	----------
+ 	input_file : str or pathlib.Path
+ 		pdf file.
+@@ -94,15 +93,15 @@
+ 
+ 	assert run_summary.returncode == 0,\
+ 		f"{colors.error}could not convert {colors.reset}{input_file}{colors.error} to svg"
+ 
+ 	return output_file
+ 
+ 
+-def svg_to_html(input_file: Union[str, pathlib.Path]) -> str:
++def svg_to_html(input_file: str | pathlib.Path) -> str:
+ 	"""
+ 
+ 	Parameters
+ 	----------
+ 	input_file : str or pathlib.Path
+ 		svg file.
+```
+
+### Comparing `gift-wrapper-1.7.0.1/gift_wrapper/latex.py` & `gift-wrapper-1.8.0/gift_wrapper/latex.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,21 +1,21 @@
+ import pathlib
+ import shutil
+ import subprocess
+ import string
+ import re
+ import sys
+ import tempfile
+-from typing import Union, List, Optional
+ 
+ from . import parsing
++from . import colors
+ 
+ 
+ def compile_tex(
+-		source_file: Union[str, pathlib.Path], timeout: Optional[int], options: List[str] = ['halt-on-error']) -> int:
++		source_file: str | pathlib.Path, timeout: int | None, options: list[str] = ['halt-on-error']) -> int:
+ 	"""
+ 	Compiles a TeX file.
+ 
+ 	Parameters
+ 	----------
+ 	source_file : str or pathlib.Path
+ 		TeX file.
+@@ -33,15 +33,15 @@
+ 
+ 	source_file = pathlib.Path(source_file)
+ 
+ 	path_to_compiler = shutil.which('pdflatex')
+ 
+ 	if path_to_compiler is None:
+ 
+-		print('cannot find pdflatex')
++		print(f'{colors.error}cannot find pdflatex')
+ 
+ 		sys.exit(1)
+ 
+ 	command = [path_to_compiler] + [f'-{o}' for o in options] + [source_file.name]
+ 
+ 	run_summary = subprocess.run(command, capture_output=True, cwd=source_file.parent, timeout=timeout)
+```
+
+### Comparing `gift-wrapper-1.7.0.1/gift_wrapper/parsing.py` & `gift-wrapper-1.8.0/gift_wrapper/parsing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gift-wrapper-1.7.0.1/gift_wrapper/question.py` & `gift-wrapper-1.8.0/gift_wrapper/question.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,21 +1,20 @@
+ import sys
+ import abc
+ import functools
+ import pathlib
+ import string
+-from typing import Union, Optional
+ 
+ from . import gift
+ from . import colors
+ from . import parsing
+ from . import transformer
+ 
+ 
+-def user_settings_to_class_init(settings: dict, name: Optional[str] = None) -> str:
++def user_settings_to_class_init(settings: dict, name: str | None = None) -> str:
+ 	"""
+ 	Turns a user settings dictionary into one that can be passed to a question's  `__init__`.
+ 
+ 	Parameters
+ 	----------
+ 	settings : dict
+ 		User settings.
+@@ -40,16 +39,16 @@
+ 	Abstract class implementing an html-based question.
+ 	"""
+ 
+ 	# in order to process LaTeX commands *in text* (ignoring occurrences in formulas)
+ 	latex_commands_within_text_processor = transformer.LatexCommandsWithinText()
+ 
+ 	def __init__(
+-			self, name: str, statement: str, images_settings: Optional[dict] = None, feedback: Optional[str] = None,
+-			time: Optional[int] = None, pre_transforms: list = [], post_transforms: list = []):
++			self, name: str, statement: str, images_settings: dict | None = None, feedback: str | None = None,
++			time: int | None = None, pre_transforms: list = [], post_transforms: list = []):
+ 		"""
+ 		Initializer.
+ 
+ 		Parameters
+ 		----------
+ 		name : str
+ 			Name of the question.
+@@ -160,16 +159,16 @@
+ 
+ class Numerical(HtmlQuestion):
+ 	"""
+ 	Class implementing a numerical question.
+ 	"""
+ 
+ 	def __init__(
+-			self, name: str, statement: str, solution: dict, images_settings: Optional[dict] = None,
+-			feedback: Optional[str] = None, time: Optional[int] = None, pre_transforms: list = [],
++			self, name: str, statement: str, solution: dict, images_settings: dict | None = None,
++			feedback: str | None = None, time: int | None = None, pre_transforms: list = [],
+ 			post_transforms: list = []):
+ 		"""
+ 		Initializer.
+ 
+ 		Parameters
+ 		----------
+ 		solution : dict
+@@ -217,16 +216,16 @@
+ 	"""
+ 	Class implementing a multiple-choice question.
+ 	"""
+ 
+ 	template_wrong_answers = string.Template(r"**<font color='$color'>$text</font>**")
+ 
+ 	def __init__(
+-			self, name: str, statement: str, answers: dict, images_settings: Optional[dict] = None,
+-			feedback: Optional[str] = None, time: Optional[int] = None, pre_transforms: list = [],
++			self, name: str, statement: str, answers: dict, images_settings: dict | None = None,
++			feedback: str | None = None, time: int | None = None, pre_transforms: list = [],
+ 			post_transforms: list = []):
+ 		"""
+ 		Initializer.
+ 
+ 		Parameters
+ 		----------
+ 		answers : dict
+```
+
+### Comparing `gift-wrapper-1.7.0.1/gift_wrapper/remote.py` & `gift-wrapper-1.8.0/gift_wrapper/remote.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,38 +1,43 @@
+ import sys
++import socket
+ import pathlib
+-from typing import Union
+ 
+ import paramiko
+ 
+ from . import colors
+ 
++class CannotConnectException(Exception):
++	"Raised when a connection could not be established"
+ 
+ class Connection:
+ 
+ 	connection_not_available_help = (
+ 		r'(you can try running the program in local mode, by passing "-l", or embedding the images, with "-e")')
+ 
+-	def __init__(self, host: str, user: str, password: str, public_key: Union[str, pathlib.Path]):
++	def __init__(self, host: str, user: str, password: str, public_key: str | pathlib.Path):
+ 
+ 		self.host = host
+ 		self.user = user
+ 		self.password = password
+ 		self.public_key = public_key
+ 
+ 		# to be set in `connect`
+ 		self.sftp = None
+ 
+ 		# useful in `__del__` in the case the connection never gets established
+ 		self.connection = None
+ 
+-		# self.connect()
+-
+ 	def connect(self):
+ 
++		# if the connection has already been established...
++		if self.connection is not None:
++
++			return
++
+ 		if (self.password is not None) and (self.public_key is not None):
+ 
+ 			print(f'\n{colors.error}either "password" or "public_key" must be passed, but not both')
+ 
+ 			sys.exit(1)
+ 
+ 		if self.public_key is not None:
+@@ -48,46 +53,60 @@
+ 
+ 			# below, an actual string is needed
+ 			public_key = public_key.as_posix()
+ 
+ 		else:
+ 
+ 			# local variable `public_key` (rather than attribute `self.public_key`) is used below, so it must be
+-			# initialized anyway (even though it is to `None`)
++			# initialized anyway (even if to `None`)
+ 			public_key = None
+ 
+ 		self.connection = paramiko.SSHClient()
+ 
+ 		# so that it finds the key (no known_hosts error?)
+ 		self.connection.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ 
+ 		try:
+ 
+-			# print(f'{self.user=}, {self.password=}, {self.public_key=}')
+-
+ 			# connection is established
+ 			self.connection.connect(self.host, username=self.user, password=self.password, key_filename=public_key)
+ 
+-		except paramiko.ssh_exception.AuthenticationException:
++		except paramiko.ssh_exception.AuthenticationException as authentication_exception:
+ 
+-			# first character is not visible due to tqdm
+-			print(
+-				f'\n{colors.error}provided username {colors.reset}({self.user}){colors.error}'
+-				f' and/or password are not valid {self.connection_not_available_help}')
++			# # first character is not visible due to tqdm
++			# print(
++			# 	f'\n{colors.error}provided username {colors.reset}({self.user}){colors.error}'
++			# 	f' and/or password are not valid {self.connection_not_available_help}')
+ 
+-			sys.exit(1)
++			# sys.exit(1)
+ 
+-		except paramiko.ssh_exception.SSHException:
++			raise CannotConnectException(
++				f'{colors.error}provided username {colors.reset}({self.user}){colors.error}'
++				f' and/or password are not valid {self.connection_not_available_help}'
++			) from authentication_exception
+ 
+-			# first character is not visible due to tqdm
+-			print(
++		except paramiko.ssh_exception.SSHException as ssh_exception:
++
++			# # first character is not visible due to tqdm
++			# print(
++			# 	f'\n{colors.error}the provided public key {colors.reset}({self.public_key}){colors.error}'
++			# 	f' is not valid or has not been decrypted {self.connection_not_available_help}')
++
++			# sys.exit(1)
++
++			raise CannotConnectException(
+ 				f'\n{colors.error}the provided public key {colors.reset}({self.public_key}){colors.error}'
+-				f' is not valid or has not been decrypted {self.connection_not_available_help}')
++				f' is not valid or has not been decrypted {self.connection_not_available_help}'
++			) from ssh_exception
+ 
+-			sys.exit(1)
++		except socket.gaierror as socket_exception:
++
++			raise CannotConnectException(
++				f'\n{colors.error}cannot connect to the host{colors.reset}'
++			) from socket_exception			
+ 
+ 		# FTP component of the connection
+ 		self.sftp = paramiko.SFTPClient.from_transport(self.connection.get_transport())
+ 
+ 	def __del__(self):
+ 
+ 		if self.connection is not None:
+@@ -100,15 +119,15 @@
+ 
+ 			return False
+ 
+ 		else:
+ 
+ 			return self.connection.get_transport().is_active()
+ 
+-	def copy(self, source: Union[str, pathlib.Path], remote_directory: str):
++	def copy(self, source: str | pathlib.Path, remote_directory: str):
+ 
+ 		if self.connection is None:
+ 
+ 			self.connect()
+ 
+ 		local = pathlib.Path(source)
+ 		remote_directory = pathlib.Path(remote_directory)
+@@ -122,15 +141,15 @@
+ 
+ 		self.make_directory_at(remote_directory.relative_to(remote_directory.parts[0]), remote_directory.parts[0])
+ 
+ 		remote = remote_directory / local.name
+ 
+ 		self.sftp.put(local.as_posix(), self.sftp.normalize(remote.as_posix()))
+ 
+-	def make_directory_at(self, new: Union[str, pathlib.Path], at: str):
++	def make_directory_at(self, new: str | pathlib.Path, at: str):
+ 
+ 		if self.connection is None:
+ 
+ 			self.connect()
+ 
+ 		self.sftp.chdir(at)
+ 
+@@ -162,15 +181,15 @@
+ 		self.files_to_copy = []
+ 
+ 	@staticmethod
+ 	def is_active():
+ 
+ 		return False
+ 
+-	def copy(self, source: Union[str, pathlib.Path], remote_directory: str):
++	def copy(self, source: str | pathlib.Path, remote_directory: str):
+ 
+ 		source = pathlib.Path(source)
+ 
+ 		if source.as_posix() not in self.already_copied:
+ 
+ 			self.already_copied.add(source.as_posix())
+ 			self.files_to_copy.append((source, remote_directory))
+```
+
+### Comparing `gift-wrapper-1.7.0.1/gift_wrapper/transformer.py` & `gift-wrapper-1.8.0/gift_wrapper/transformer.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,21 +1,21 @@
+ import re
+ import pathlib
+ import functools
+-from typing import Union, Callable, Optional
++from typing import Callable
+ 
+ from . import image
+ from . import parsing
+ from . import remote
+ from . import gift
+ from . import latex
+ 
+ 
+ def process_paths(
+-		text: str, pattern: str, process_match: Callable[[str], None], replacement: Union[str, Callable[..., str]]):
++		text: str, pattern: str, process_match: Callable[[str], None], replacement: str | Callable[..., str]):
+ 	"""
+ 	It searches in a text for strings corresponding to files (maybe including a path), replaces them by another
+ 	string according to some function and, additionally, processes each file according to another function.
+ 
+ 	Parameters
+ 	----------
+ 	text : str
+@@ -49,26 +49,26 @@
+ 
+ 
+ class Transformer:
+ 
+ 	def __init__(self) -> None:
+ 
+ 		# subclasses are expected to set this up
+-		self.function: Optional[Callable] = None
++		self.function: Callable | None = None
+ 
+ 	def __call__(self, text: str):
+ 
+ 		assert self.function is not None, 'method "function" was not defined'
+ 
+ 		return self.function(text)
+ 
+ 
+ class TexToSvg(Transformer):
+ 	"""
+-	Processor to convert TeX files into svg files.
++	Transformer to convert TeX files into svg files.
+ 	"""
+ 
+ 	def __init__(self, history: dict) -> None:
+ 
+ 		super().__init__()
+ 
+ 		self.history = history
+@@ -87,30 +87,29 @@
+ 		# (the "\1" in `replacement` refers to matches in `pattern`)
+ 		self.function = functools.partial(
+ 			process_paths, pattern=parsing.tex_file_name, process_match=process_match, replacement=r'\1.svg')
+ 
+ 
+ class SvgToHttp(Transformer):
+ 	"""
+-	Processor to transfer svg files to a remote location.
++	Transformer to transfer svg files to a remote location.
+ 	"""
+ 
+ 	def __init__(
+ 			self, history: dict, connection: remote.Connection, public_filesystem_root: str,
+ 			pictures_base_directory: str, public_url: str):
+ 
+ 		super().__init__()
+ 
+ 		self.history = history
+ 
+ 		# assembled remote path
+ 		remote_subdirectory = pathlib.Path(public_filesystem_root).joinpath(pictures_base_directory)
+ 
+-		# TODO: when minimum Python version is forwarded to 3.8, `re.Match` should be the type hinting for `m`
+-		def replacement_function(m) -> str:
++		def replacement_function(m: re.Match) -> str:
+ 
+ 			file = pathlib.Path(m.group(0))
+ 
+ 			return public_url + pictures_base_directory + '/' + file.as_posix()
+ 
+ 		def process_match(f):
+ 
+@@ -126,40 +125,39 @@
+ 		self.function = functools.partial(
+ 			process_paths, pattern=parsing.url_less_svg_file, process_match=process_match,
+ 			replacement=replacement_function)
+ 
+ 
+ class SvgToInline(Transformer):
+ 	"""
+-	Processor to directly include svg files into a question.
++	Transformer to directly include svg files into a question.
+ 	"""
+ 
+ 	def __init__(self):
+ 
+ 		super().__init__()
+ 
+-		# TODO: when minimum Python version is forwarded to 3.8, `re.Match` should be the type hinting for `m`
+-		def replacement_function(m) -> str:
++		def replacement_function(m: re.Match) -> str:
+ 
+ 			file = pathlib.Path(m.group(1))
+ 
+ 			return image.svg_to_html(file)
+ 
+ 		self.function = functools.partial(
+ 			process_paths, pattern=parsing.svg_file, process_match=lambda x: None, replacement=replacement_function)
+ 
+ 
+ class URLs(Transformer):
+ 	"""
+-	Processor to arrange URLs into a GIFT-appropriate format.
++	Transformer to arrange URLs into a GIFT-appropriate format.
+ 	"""
+ 
+ 	url = f'http({parsing.regex_url_valid_character}+)(?!{parsing.regex_url_valid_character})'
+ 
+-	def __init__(self, images_settings: Optional[dict] = None):
++	def __init__(self, images_settings: dict | None = None):
+ 
+ 		super().__init__()
+ 
+ 		if images_settings is None:
+ 
+ 			self.images_width, self.images_height = None, None
+ 
+@@ -168,16 +166,15 @@
+ 			assert ('width' in images_settings) and ('height' in images_settings), \
+ 				'"width" and/or "height" missing in "image_settings"'
+ 
+ 			self.images_width, self.images_height = images_settings['width'], images_settings['height']
+ 
+ 		self.function = lambda text: re.sub(self.url, self.replacement, text)
+ 
+-	# TODO: when minimum Python version is forwarded to 3.8, `re.Match` should be the type hinting for "m"
+-	def replacement(self, m) -> str:
++	def replacement(self, m: re.Match) -> str:
+ 
+ 		return '<p>' + gift.from_image_url(m.group(0), width=self.images_width, height=self.images_height) + '<br></p>'
+ 
+ 
+ class LatexCommandsWithinText(Transformer):
+ 
+ 	# in every list, the first pair of elements are the search pattern and replacement to be applied *globally* whereas
+@@ -215,16 +212,15 @@
+ 
+ 		super().__init__()
+ 
+ 		self.check_compliance = check_compliance
+ 
+ 		self.function = lambda text: re.sub(self.latex_formula, self.replacement, text)
+ 
+-	# TODO: when minimum Python version is forwarded to 3.8, `re.Match` should be the type hinting for "m"
+-	def replacement(self, m) -> str:
++	def replacement(self, m: re.Match) -> str:
+ 
+ 		latex_source = m.group(1)
+ 
+ 		if self.check_compliance:
+ 
+ 			if not latex.formula_can_be_compiled(latex_source):
+ 				raise gift.NotCompliantLatexFormula(latex_source)
+```
+
+### Comparing `gift-wrapper-1.7.0.1/gift_wrapper.egg-info/PKG-INFO` & `gift-wrapper-1.8.0/gift_wrapper.egg-info/PKG-INFO`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,159 +1,158 @@
+ Metadata-Version: 2.1
+ Name: gift-wrapper
+-Version: 1.7.0.1
++Version: 1.8.0
+ Summary: Build GIFT (Moodle compatible) files easily
+ Home-page: https://github.com/manuvazquez/gift-wrapper
+ Author: Manuel A. Vázquez
+ Author-email: manuavazquez@gmail.com
+-License: UNKNOWN
+-Description: # gift-wrapper
+-        
+-        This is Python software to easily build [GIFT](https://docs.moodle.org/en/GIFT_format) -based [question banks](https://docs.moodle.org/en/Question_bank) in [Moodle](https://moodle.org/). Other similar tools are available (you can search for *Tools that create or process GIFTs* in [Moodle's GIFT page](https://docs.moodle.org/en/GIFT_format)) but none of them fitted well my workflow. What I need is (the goals of `gift-wrapper` are):
+-        
+-        * to write questions in plain text, and as many as I like in a single file
+-        * to write latex formulas directly
+-        * to easily/seamlessly include images
+-        
+-        The most interesting point is probably the last one.
+-        
+-        ## Requirements
+-        
+-        Python requirements are:
+-        
+-        - Python &#8805; 3.6
+-        - [paramiko](http://www.paramiko.org/)
+-        - [colorama](https://pypi.org/project/colorama/)
+-        - [pyyaml](https://pypi.org/project/PyYAML/)
+-        - [tqdm](https://github.com/tqdm/tqdm)
+-        
+-        Now, if you want to make the most of the software you also need:
+-        
+-        * [pdflatex](https://en.wikipedia.org/wiki/PdfTeX) (i.e. a [TeX](https://en.wikipedia.org/wiki/TeX) distribution)
+-        * [pdf2svg](https://github.com/dawbarton/pdf2svg/)
+-        * disk space in a remote server that can host your images
+-        
+-        ## Install
+-        
+-        ```
+-        pip install gift-wrapper
+-        ```
+-        
+-        should suffice.
+-        
+-        ### Manual setup
+-        
+-        If you rather clone this repository, (in order to, potentially, get the latest additions/modifications)  
+-        
+-        ```
+-        pip install pyyaml paramiko tqdm colorama
+-        ```
+-        
+-        should install all the additional requirements. If you use [Anaconda](https://anaconda.org/), the [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script `make_conda_environment.sh` will make a proper environment (named `gift`).
+-        
+-        After that, you should be able to run the program.
+-        
+-        ## Usage
+-        
+-        The main program is `wrap.py` and you can check the available command-line options with
+-        ```
+-        wrap.py -h
+-        ```
+-        or
+-        ```
+-        python wrap.py -h
+-        ```
+-        if you did a manual installation and `wrap.py` doesn't have execution permissions. 
+-        
+-        If you don't pass any argument, `parameters.yaml` and `bank.yaml` files are expected. The former is a settings file whereas the latter is the actual *input file* in which you must write the questions.
+-        
+-        The output will be a text file in GIFT format with the same name as the input one (the file with the questions) but `.gift.txt` extension (by default, `bank.gift.txt` then). It seems that *sometimes* Moodle has troubles importing (recognizing) a text file if the extension is not `.txt`. 
+-        
+-        ### Parameters
+-        
+-        `parameters.yaml` is a [YAML](https://en.wikipedia.org/wiki/YAML) file intended to hold settings that you only need to specify once. Right now, it mostly contains parameters related to `images hosting` (needed to copy your images to a remote server). All the options are either self-explanatory or explained through comments. It should be fairly easy to tweak the [included example](parameters.yaml) for your own setup.
+-        
+-        ### Questions
+-        
+-        Questions are specified through another *YAML* file. The first parameter, `pictures base directory`, refers to the base directory that will be created in the remote host for all your embedded images. It is meant to separate different question banks (so that you can have, e.g., directories `quiz 1` and `quiz 2`). The remaining of the file is a **list of categories**, and inside each one there is a **list of questions**. Hopefully, the format is clear from either the name of the settings and/or its companion comments. You are probably better off taking a look at the [provided example](bank.yaml).
+-        
+-        ### Example
+-        
+-        If you run the program inside the `gift-wrapper` directory as is, it will process the sample `bank.yaml` which includes a `.tex`, a `.svg` and some mathematical formulas, and will generate a `bank.gift.txt` file which you can import from Moodle (choosing the GIFT format when asked). If you have not adapted the settings in `images hosting`  (within `parameters.yaml`) to your needs, you will instead see an error since a remote connection could not be established. Still, you can run the program in *local* mode by passing `-l` through the command line, or try and embed every image in its corresponding question with `-e`.
+-        
+-        ## Including images
+-        
+-        `gift-wrapper` has been designed to work with [svg](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) images. Then, in order to include any image in a question, two scenarios are contemplated:
+-        
+-        * you already have an svg
+-        * you have a TeX file **that can be compiled with *pdflatex***
+-        
+-        In any case, you just need to write the path to the file inside the text of the question (whether in the `statement`, the `answer` or the `feedbak`). If in the second scenario, i.e., you are including a *TeX* file, this will be compiled into a pdf with *pdflatex*, and then converted to an svg with *pdf2svg*. Hence, a *svg* file will be, in the end, available for every image.
+-        
+-        Images (*svg*s) are either copied to a remote host (and properly linked in the output GIFT file), or directly embedded into their corresponding questions.
+-        
+-        Characters allowed in a path (to either a `.tex` or a `.svg`) are:
+-        * alphanumeric (A-Z, a-z, 0-9)
+-        * underscore, '_', and dash, '-'
+-        * '/' and '\\' (path separators).
+-        
+-        ### Browser compatibility
+-        
+-        It seems (it has been reported) not every browser properly handles svg images (maybe other types too) embedded in a question as an URL. My experience so far is both [Firefox](https://www.mozilla.org/en-US/firefox) and [Chromium](https://www.chromium.org/Home) (at the time of writing this) work just fine. 
+-        
+-        ### Do I really need pdf2svg?
+-        
+-        Only if you want automatic conversion from `.tex` (passing through `.pdf`) to `.svg`, i.e., only if you embed a `.tex` somewhere.
+-        Also, there is (probably) nothing special about *pdf2svg* and, in principle, you can use any command-line program that takes as arguments the input pdf and the output svg. However, I've only tested the program with *pdf2svg* since it's the one included in [Gentoo Linux](https://www.gentoo.org/).
+-        
+-        ## Remote access
+-        
+-        By default, images are copied into some remote host (with a publicly visible directory) so that they can be accessed by Moodle. This is done automatically for every embedded image (svg or tex). For this to work, in the `parameters.yaml` file, within `ssh` either
+-        
+-        * user and password, or
+-        * user and path to a public key file
+-        
+-        (but **not both**) should be specified.
+-        
+-        You can run the program locally, i.e., omitting the transferring of the images to a remote host by using `-l` command line argument. This is especially meaningful if you don't have any embedded image in your questions (and hence nothing needs to be copied to a remote host).
+-        
+-        ## Latex support
+-        
+-        Formulas inside `$`s are processed and, within them, these are the commands/symbols that have been tested so far
+-        
+-        - greek letters
+-        - subindexes
+-        - calligraphic symbols, i.e., prefixed by `\cal`
+-        - fractions with `\frac{}{}`
+-        - `\underline`
+-        - `\left(` and `\right)`
+-        - `\left[` and `\right]`
+-        - `\begin{bmatrix}` and `\end{bmatrix}`
+-        - symbols `\sim`, `\approx`
+-        
+-        More things are probably OK, but I have not tried them yet.
+-        
+-        Inside text, only commands `\textit` and `\textbf` are supported for the time being.
+-        
+-        ### Safety checks
+-        
+-        By default, `wrap.py` checks whether or not the formulas you wrote between `$`'s can actually be compiled. Right now this involves a call to `pdflatex` *for every formula*, meaning that it can significantly slow down the process. It can be disabled by passing ` --no-checks` (or simply `-n`). It is probably a good idea to actually check the formulas every once in a while (e.g., every time you add a new one), though, since *bad* latex formulas will be (silently) imported by Moodle anyway, and not only will they be incorrectly rendered but they may also mess up subsequent content.  
+-        
+-        ## Current limitations
+-        
+-        - only *numerical* and *multiple-choice* questions are supported (notice that the GIFT format itself doesn't support every type of question available in Moodle)
+-        
+-        - the latex support is very basic
+-        
+-        - one is in for troubles if embedding URLs pointing to `.svg` or `.tex` files since the file part will, most likely, be parsed and replaced
+-        
+-        ## See also
+-        
+-        If you are comfortable with Python and [Jupyter](https://jupyter.org/) notebooks, you might also be interested in [py2gift](https://github.com/manuvazquez/py2gift).
+-        
+-Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Environment :: Console
+ Classifier: License :: OSI Approved :: Apache Software License
+ Classifier: Operating System :: OS Independent
+-Requires-Python: >=3.6
++Requires-Python: >=3.10
+ Description-Content-Type: text/markdown
++License-File: LICENSE
++
++# gift-wrapper
++
++This is Python software to easily build [GIFT](https://docs.moodle.org/en/GIFT_format) -based [question banks](https://docs.moodle.org/en/Question_bank) in [Moodle](https://moodle.org/). Other similar tools are available (you can search for *Tools that create or process GIFTs* in [Moodle's GIFT page](https://docs.moodle.org/en/GIFT_format)) but none of them fitted well my workflow. What I need is (the goals of `gift-wrapper` are):
++
++* to write questions in plain text, and as many as I like in a single file
++* to write latex formulas directly
++* to easily/seamlessly include images
++
++The most interesting point is probably the last one.
++
++## Requirements
++
++Python requirements are:
++
++- Python &#8805; 3.10
++- [paramiko](http://www.paramiko.org/)
++- [colorama](https://pypi.org/project/colorama/)
++- [pyyaml](https://pypi.org/project/PyYAML/)
++- [tqdm](https://github.com/tqdm/tqdm)
++
++Now, if you want to make the most of the software you also need:
++
++* [pdflatex](https://en.wikipedia.org/wiki/PdfTeX) (i.e. a [TeX](https://en.wikipedia.org/wiki/TeX) distribution)
++* [pdf2svg](https://github.com/dawbarton/pdf2svg/)
++* disk space in a remote server that can host your images
++
++## Install
++
++```
++pip install gift-wrapper
++```
++
++should suffice.
++
++### Manual setup
++
++If you rather clone this repository, (in order to, potentially, get the latest additions/modifications)  
++
++```
++pip install pyyaml paramiko tqdm colorama
++```
++
++should install all the additional requirements. If you use [Anaconda](https://anaconda.org/), the [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script `make_conda_environment.sh` will make a proper environment (named `gift`).
++
++After that, you should be able to run the program.
++
++## Usage
++
++The main program is `wrap.py` and you can check the available command-line options with
++```
++wrap.py -h
++```
++or
++```
++python wrap.py -h
++```
++if you did a manual installation and `wrap.py` doesn't have execution permissions. 
++
++If you don't pass any argument, `parameters.yaml` and `bank.yaml` files are expected. The former is a settings file whereas the latter is the actual *input file* in which you must write the questions.
++
++The output will be a text file in GIFT format with the same name as the input (the file with the questions) but `.gift.txt` extension (thus, `bank.gift.txt`, by default). It seems that *sometimes* Moodle has troubles importing (recognizing) a text file if the extension is not `.txt`. 
++
++### Parameters
++
++`parameters.yaml` is a [YAML](https://en.wikipedia.org/wiki/YAML) file intended to hold settings that you only need to specify once. Right now, it only contains parameters related to `images hosting` (needed to copy your images to a remote server). All the options are either self-explanatory or explained through comments. It should be fairly easy to tweak the [included example](parameters.yaml) for your own setup.
++
++### Questions
++
++Questions are specified through another *YAML* file. The first parameter, `pictures base directory`, refers to the base directory that will be created in the remote host to accommodate your images (only meaningful if images are **not** embedded in the questions, i.e., if not passing `-e`). It is meant to separate different question banks (so that you can have, e.g., directories `quiz 1` and `quiz 2`). The rest of the file is a **list of categories**, and inside each one there is a **list of questions**. Hopefully, the format is clear from either the name of the settings and/or its companion comments. You are probably better off taking a look at the [provided example](bank.yaml).
++
++### Example
++
++If you run the program inside the `gift-wrapper` directory as is, it will process the sample `bank.yaml` which includes a `.tex`, a `.svg` and some mathematical formulas, and will generate a `bank.gift.txt` file which you can import from Moodle (choosing the GIFT format when asked). If the parameters file (by default, `parameters.yaml`) is not found, images are embedded into the corresponding questions (tantamount to passing `-e`).
++
++## Including images
++
++`gift-wrapper` has been designed to work with [svg](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) images. Then, in order to include any image in a question, two scenarios are contemplated:
++
++* you already have an svg
++* you have a TeX file **that can be compiled with *pdflatex***
++
++In any case, you just need to write the path to the file inside the text of the question (whether in the `statement`, the `answer` or the `feedbak`). If in the second scenario, i.e., you are including a *TeX* file, this will be compiled into a pdf with *pdflatex*, and then converted to an svg with *pdf2svg*. Hence, a *svg* file will be, in the end, available for every image.
++
++Images (*svg*s) are either copied to a remote host (and properly linked in the output GIFT file), or directly embedded into their corresponding questions.
++
++Characters allowed in a path (to either a `.tex` or a `.svg`) are:
++* alphanumeric (A-Z, a-z, 0-9)
++* underscore, '_', and dash, '-'
++* '/' and '\\' (path separators).
++
++### Browser compatibility
++
++It seems (it has been reported) not every browser properly handles svg images (maybe other types too) embedded in a question as an URL. My experience so far is both [Firefox](https://www.mozilla.org/en-US/firefox) and [Chromium](https://www.chromium.org/Home) (at the time of writing this) work just fine. 
++
++### Do I really need pdf2svg?
++
++Only if you want automatic conversion from `.tex` (passing through `.pdf`) to `.svg`, i.e., only if you embed a `.tex` somewhere.
++Also, there is (probably) nothing special about *pdf2svg* and, in principle, you can use any command-line program that takes as arguments the input pdf and the output svg. However, I've only tested the program with *pdf2svg* since it's the one included in [Gentoo Linux](https://www.gentoo.org/).
++
++## Remote access
++
++If a parameters file (e.g., `parameters.yaml`) is found, images are by default copied to the specified remote host (within a publicly visible directory) so that they can be accessed by Moodle. This is done automatically for every embedded image (svg or tex). For this to work, in the `parameters.yaml` file, within `ssh` either
++
++* user and password, or
++* user and path to a public key file
++
++(but **not both**) should be specified.
++
++You can inhibit this behavior and run the program locally (omitting the transferring of the images to a remote host) by using `-l` command line argument. This is especially meaningful if you don't have any embedded image in your questions (and hence nothing needs to be copied to a remote host).
++
++## Latex support
++
++Formulas inside `$`s are processed and, within them, these are the commands/symbols that have been tested so far
++
++- greek letters
++- subindexes
++- calligraphic symbols, i.e., prefixed by `\cal`
++- fractions with `\frac{}{}`
++- `\underline`
++- `\left(` and `\right)`
++- `\left[` and `\right]`
++- `\begin{bmatrix}` and `\end{bmatrix}`
++- symbols `\sim`, `\approx`
++
++More things are probably OK, but I have not tested them yet.
++
++Inside text, only commands `\textit` and `\textbf` are supported for the time being.
++
++### Safety checks
++
++By default, `wrap.py` checks whether or not the formulas you wrote between `$`'s can actually be compiled. Right now this involves a call to `pdflatex` *for every formula*, meaning that it can significantly slow down the process. It can be disabled by passing ` --no-checks` (or simply `-n`). It is probably a good idea to actually check the formulas every once in a while (e.g., every time you add a new one), though, since *bad* latex formulas will be (silently) imported by Moodle anyway, and not only will they be incorrectly rendered but they may also mess up subsequent content.  
++
++## Current limitations
++
++- only *numerical* and *multiple-choice* questions are supported (notice that the GIFT format itself doesn't support every type of question available in Moodle)
++
++- the latex support is very basic
++
++- one is in for troubles if embedding remote URLs pointing to `.svg` or `.tex` files since the file part will, most likely, be parsed and replaced
++
++## See also
++
++If you are comfortable with Python and [Jupyter](https://jupyter.org/) notebooks, you might also be interested in [py2gift](https://github.com/manuvazquez/py2gift).
+```
+
+### Comparing `gift-wrapper-1.7.0.1/setup.py` & `gift-wrapper-1.8.0/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,27 +1,27 @@
+ import setuptools
+ 
+ with open("README.md", "r") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name="gift-wrapper", # Replace with your own username
+-    version="1.7.0.1",
++    version="1.8.0",
+     author="Manuel A. Vázquez",
+     author_email="manuavazquez@gmail.com",
+     description="Build GIFT (Moodle compatible) files easily",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/manuvazquez/gift-wrapper",
+     packages=setuptools.find_packages(),
+     install_requires=['paramiko>=2.7.1', 'colorama>=0.4.3', 'PyYAML>=5.3.1', 'tqdm>=4.44.1'],
+     classifiers=[
+         "Programming Language :: Python :: 3",
+         "Environment :: Console",
+         "License :: OSI Approved :: Apache Software License",
+         "Operating System :: OS Independent",
+     ],
+-    python_requires='>=3.6',
++    python_requires='>=3.10',
+     entry_points={
+         'console_scripts': ['wrap.py=gift_wrapper.core:main'],
+     }
+ )
+```
+

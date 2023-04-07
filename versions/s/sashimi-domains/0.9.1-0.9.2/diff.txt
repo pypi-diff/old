@@ -1,0 +1,294 @@
+--- tmp/sashimi_domains-0.9.1.tar.gz
++++ tmp/sashimi_domains-0.9.2.tar.gz
+│   --- sashimi_domains-0.9.1.tar
+├── +++ sashimi_domains-0.9.2.tar
+│ ├── file list
+│ │ @@ -1,47 +1,47 @@
+│ │ --rw-r--r--   0        0        0      356 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/TODO
+│ │ --rw-r--r--   0        0        0    26080 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/limbo/blockology.py
+│ │ --rw-r--r--   0        0        0     4308 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/limbo/corporalogy.py
+│ │ --rw-r--r--   0        0        0    15646 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/limbo/graphology.py
+│ │ --rw-r--r--   0        0        0     1058 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/__init__.py
+│ │ --rw-r--r--   0        0        0     3604 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/config.py
+│ │ --rw-r--r--   0        0        0     9608 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/ioio.py
+│ │ --rw-r--r--   0        0        0     2612 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/misc.py
+│ │ --rw-r--r--   0        0        0     2071 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/naming.py
+│ │ --rw-r--r--   0        0        0    18282 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/scorology.py
+│ │ --rw-r--r--   0        0        0     9237 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/vectorology.py
+│ │ --rw-r--r--   0        0        0     7129 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/w2v_score.py
+│ │ --rw-r--r--   0        0        0    12895 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/__init__.py
+│ │ --rw-r--r--   0        0        0    17181 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/annotations.py
+│ │ --rw-r--r--   0        0        0     8885 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/area_rank_chart.py
+│ │ --rw-r--r--   0        0        0    11261 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/block_ext_map.py
+│ │ --rw-r--r--   0        0        0    44082 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/hierarchical_block_map.py
+│ │ --rw-r--r--   0        0        0     7477 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/hierarchical_block_map_help.html
+│ │ --rw-r--r--   0        0        0     8002 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/link_maps.py
+│ │ --rw-r--r--   0        0        0    11432 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/network_map.py
+│ │ --rw-r--r--   0        0        0     3726 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/util.py
+│ │ --rw-r--r--   0        0        0     8939 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/zmethods.py
+│ │ --rw-r--r--   0        0        0     8602 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/tables/__init__.py
+│ │ --rw-r--r--   0        0        0      559 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/tables/tables.css
+│ │ --rw-r--r--   0        0        0     7743 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/tables/tables_html.py
+│ │ --rw-r--r--   0        0        0     1299 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/blocks/tables/tables_plots.py
+│ │ --rw-r--r--   0        0        0    37117 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/corpus/__init__.py
+│ │ --rw-r--r--   0        0        0     6291 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/corpus/nlp.py
+│ │ --rw-r--r--   0        0        0     8886 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/corpus/parsers.py
+│ │ --rw-r--r--   0        0        0     1729 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/corpus/wos.py
+│ │ --rw-r--r--   0        0        0    19814 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/graph_models/__init__.py
+│ │ --rw-r--r--   0        0        0     9048 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/graph_models/domain_chained_model.py
+│ │ --rw-r--r--   0        0        0     6588 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/graph_models/domain_topic_model.py
+│ │ --rw-r--r--   0        0        0     1070 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/graph_models/util.py
+│ │ --rwxr-xr-x   0        0        0     1746 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/util/asco_clean.py
+│ │ --rwxr-xr-x   0        0        0      451 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/util/pubmed_clean.py
+│ │ --rwxr-xr-x   0        0        0      612 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/util/pubmed_get.sh
+│ │ --rwxr-xr-x   0        0        0     6667 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/util/scan_bugtrap.py
+│ │ --rw-r--r--   0        0        0     4354 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/util/wos_lam/__init__.py
+│ │ --rw-r--r--   0        0        0      521 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/src/sashimi/util/wos_lam/wos_api_request.tpl
+│ │ --rw-r--r--   0        0        0     4874 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/tests/test_basic_usage.py
+│ │ --rw-r--r--   0        0        0     7140 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/tests/test_pclabel_bfield.py
+│ │ --rw-r--r--   0        0        0       40 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/.gitignore
+│ │ --rw-r--r--   0        0        0    35061 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/LICENSE
+│ │ --rw-r--r--   0        0        0     7445 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/README.md
+│ │ --rw-r--r--   0        0        0     1975 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0     8826 2020-02-02 00:00:00.000000 sashimi_domains-0.9.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0      356 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/TODO
+│ │ +-rw-r--r--   0        0        0    26080 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/limbo/blockology.py
+│ │ +-rw-r--r--   0        0        0     4308 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/limbo/corporalogy.py
+│ │ +-rw-r--r--   0        0        0    15646 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/limbo/graphology.py
+│ │ +-rw-r--r--   0        0        0     1058 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/__init__.py
+│ │ +-rw-r--r--   0        0        0     3604 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/config.py
+│ │ +-rw-r--r--   0        0        0     9608 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/ioio.py
+│ │ +-rw-r--r--   0        0        0     2612 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/misc.py
+│ │ +-rw-r--r--   0        0        0     2071 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/naming.py
+│ │ +-rw-r--r--   0        0        0    18282 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/scorology.py
+│ │ +-rw-r--r--   0        0        0     9237 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/vectorology.py
+│ │ +-rw-r--r--   0        0        0     7129 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/w2v_score.py
+│ │ +-rw-r--r--   0        0        0    12895 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/__init__.py
+│ │ +-rw-r--r--   0        0        0    17181 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/annotations.py
+│ │ +-rw-r--r--   0        0        0     8885 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/area_rank_chart.py
+│ │ +-rw-r--r--   0        0        0    11261 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/block_ext_map.py
+│ │ +-rw-r--r--   0        0        0    44082 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/hierarchical_block_map.py
+│ │ +-rw-r--r--   0        0        0     7477 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/hierarchical_block_map_help.html
+│ │ +-rw-r--r--   0        0        0     8002 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/link_maps.py
+│ │ +-rw-r--r--   0        0        0    11432 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/network_map.py
+│ │ +-rw-r--r--   0        0        0     3726 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/util.py
+│ │ +-rw-r--r--   0        0        0     8939 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/zmethods.py
+│ │ +-rw-r--r--   0        0        0     8602 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/tables/__init__.py
+│ │ +-rw-r--r--   0        0        0      559 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/tables/tables.css
+│ │ +-rw-r--r--   0        0        0     7743 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/tables/tables_html.py
+│ │ +-rw-r--r--   0        0        0     1299 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/blocks/tables/tables_plots.py
+│ │ +-rw-r--r--   0        0        0    37117 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/corpus/__init__.py
+│ │ +-rw-r--r--   0        0        0     6291 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/corpus/nlp.py
+│ │ +-rw-r--r--   0        0        0     8886 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/corpus/parsers.py
+│ │ +-rw-r--r--   0        0        0     1729 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/corpus/wos.py
+│ │ +-rw-r--r--   0        0        0    19814 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/graph_models/__init__.py
+│ │ +-rw-r--r--   0        0        0     9048 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/graph_models/domain_chained_model.py
+│ │ +-rw-r--r--   0        0        0     6588 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/graph_models/domain_topic_model.py
+│ │ +-rw-r--r--   0        0        0     1070 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/graph_models/util.py
+│ │ +-rwxr-xr-x   0        0        0     1746 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/util/asco_clean.py
+│ │ +-rwxr-xr-x   0        0        0      451 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/util/pubmed_clean.py
+│ │ +-rwxr-xr-x   0        0        0      612 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/util/pubmed_get.sh
+│ │ +-rwxr-xr-x   0        0        0     6667 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/util/scan_bugtrap.py
+│ │ +-rw-r--r--   0        0        0     4354 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/util/wos_lam/__init__.py
+│ │ +-rw-r--r--   0        0        0      521 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/src/sashimi/util/wos_lam/wos_api_request.tpl
+│ │ +-rw-r--r--   0        0        0     4874 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/tests/test_basic_usage.py
+│ │ +-rw-r--r--   0        0        0     7140 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/tests/test_pclabel_bfield.py
+│ │ +-rw-r--r--   0        0        0       40 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/.gitignore
+│ │ +-rw-r--r--   0        0        0    35061 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/LICENSE
+│ │ +-rw-r--r--   0        0        0     7445 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/README.md
+│ │ +-rw-r--r--   0        0        0     1977 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     8804 2020-02-02 00:00:00.000000 sashimi_domains-0.9.2/PKG-INFO
+│ │   --- sashimi_domains-0.9.1/src/limbo/blockology.py
+│ ├── +++ sashimi_domains-0.9.2/src/limbo/blockology.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/limbo/corporalogy.py
+│ ├── +++ sashimi_domains-0.9.2/src/limbo/corporalogy.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/limbo/graphology.py
+│ ├── +++ sashimi_domains-0.9.2/src/limbo/graphology.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/__init__.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -22,15 +22,15 @@
+│ │  """
+│ │  
+│ │  __author__ = "Alexandre Hannud Abdo <abdo@member.fsf.org>"
+│ │  __copyright__ = "Copyright 2016-2023 Alexandre Hannud Abdo"
+│ │  __license__ = "GNU GPL version 3 or above"
+│ │  __URL__ = "https://gitlab.com/solstag/sashimi/"
+│ │  
+│ │ -__version__ = "0.9.1"
+│ │ +__version__ = "0.9.2"
+│ │  
+│ │  __all__ = ["Corpus", "GraphModels", "Vectorology"]
+│ │  
+│ │  import graph_tool  # to avoid import order issues with pandas # noqa
+│ │  
+│ │  #######################
+│ │  # Expose main classes #
+│ │   --- sashimi_domains-0.9.1/src/sashimi/config.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/config.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/ioio.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/ioio.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/misc.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/misc.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/naming.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/naming.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/scorology.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/scorology.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/vectorology.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/vectorology.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/w2v_score.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/w2v_score.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/__init__.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/annotations.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/annotations.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/area_rank_chart.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/area_rank_chart.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/block_ext_map.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/block_ext_map.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/hierarchical_block_map.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/hierarchical_block_map.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/hierarchical_block_map_help.html
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/hierarchical_block_map_help.html
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/link_maps.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/link_maps.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/network_map.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/network_map.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/util.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/util.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/zmethods.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/zmethods.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/tables/__init__.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/tables/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/tables/tables.css
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/tables/tables.css
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/tables/tables_html.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/tables/tables_html.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/blocks/tables/tables_plots.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/blocks/tables/tables_plots.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/corpus/__init__.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/corpus/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/corpus/nlp.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/corpus/nlp.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/corpus/parsers.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/corpus/parsers.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/corpus/wos.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/corpus/wos.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/graph_models/__init__.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/graph_models/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/graph_models/domain_chained_model.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/graph_models/domain_chained_model.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/graph_models/domain_topic_model.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/graph_models/domain_topic_model.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/graph_models/util.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/graph_models/util.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/util/asco_clean.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/util/asco_clean.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/util/pubmed_get.sh
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/util/pubmed_get.sh
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/util/scan_bugtrap.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/util/scan_bugtrap.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/util/wos_lam/__init__.py
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/util/wos_lam/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/src/sashimi/util/wos_lam/wos_api_request.tpl
+│ ├── +++ sashimi_domains-0.9.2/src/sashimi/util/wos_lam/wos_api_request.tpl
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/tests/test_basic_usage.py
+│ ├── +++ sashimi_domains-0.9.2/tests/test_basic_usage.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/tests/test_pclabel_bfield.py
+│ ├── +++ sashimi_domains-0.9.2/tests/test_pclabel_bfield.py
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/LICENSE
+│ ├── +++ sashimi_domains-0.9.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/README.md
+│ ├── +++ sashimi_domains-0.9.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- sashimi_domains-0.9.1/pyproject.toml
+│ ├── +++ sashimi_domains-0.9.2/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -19,15 +19,15 @@
+│ │    "Topic :: Sociology",
+│ │    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+│ │    "Topic :: Scientific/Engineering :: Visualization",
+│ │  ]
+│ │  dependencies = [
+│ │    "bokeh",
+│ │    "colorcet",
+│ │ -  "gensim",
+│ │ +  # "gensim",
+│ │    "lxml",
+│ │    "matplotlib",
+│ │    "numpy",
+│ │    "pandas",
+│ │    "scipy",
+│ │    "spacy",
+│ │    "tqdm",
+│ │   --- sashimi_domains-0.9.1/PKG-INFO
+│ ├── +++ sashimi_domains-0.9.2/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: sashimi-domains
+│ │ -Version: 0.9.1
+│ │ +Version: 0.9.2
+│ │  Summary: Sashimi is a Python module that provides tailored mathematical models and corresponding interactive visualisations for exploratory and confirmatory mixed-methods analysis of large textual or token corpora. It can detect textual and metadata structures and shifts, by employing stochastic block modeling (SBM) from graph-tool or [currently deprecated] word embedding from Gensim.
+│ │  Project-URL: Documentation, https://gitlab.com/solstag/abstractology/
+│ │  Project-URL: Issues, https://gitlab.com/solstag/abstractology/-/issues
+│ │  Project-URL: Source, https://gitlab.com/solstag/abstractology/
+│ │  Author-email: Ale Abdo <abdo@member.fsf.org>
+│ │  License-Expression: GPL-3.0-or-later
+│ │  License-File: LICENSE
+│ │ @@ -13,15 +13,14 @@
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+│ │  Classifier: Topic :: Scientific/Engineering :: Visualization
+│ │  Classifier: Topic :: Sociology
+│ │  Requires-Python: >=3.8
+│ │  Requires-Dist: bokeh
+│ │  Requires-Dist: colorcet
+│ │ -Requires-Dist: gensim
+│ │  Requires-Dist: lxml
+│ │  Requires-Dist: matplotlib
+│ │  Requires-Dist: numpy
+│ │  Requires-Dist: pandas
+│ │  Requires-Dist: scipy
+│ │  Requires-Dist: spacy
+│ │  Requires-Dist: tqdm
