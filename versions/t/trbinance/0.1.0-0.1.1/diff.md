@@ -1,0 +1,305 @@
+# Comparing `tmp/trbinance-0.1.0.tar.gz` & `tmp/trbinance-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "trbinance-0.1.0.tar", last modified: Thu Apr  6 09:59:07 2023, max compression
++gzip compressed data, was "trbinance-0.1.1.tar", last modified: Fri Apr  7 12:15:22 2023, max compression
+```
+
+## Comparing `trbinance-0.1.0.tar` & `trbinance-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,15 @@
+-drwxrwxrwx   0        0        0        0 2023-04-06 09:59:07.184411 trbinance-0.1.0/
+--rw-rw-rw-   0        0        0      191 2023-04-06 09:59:07.183409 trbinance-0.1.0/PKG-INFO
+--rw-rw-rw-   0        0        0      573 2023-04-06 09:57:48.000000 trbinance-0.1.0/README.md
+--rw-rw-rw-   0        0        0       42 2023-04-06 09:59:07.184411 trbinance-0.1.0/setup.cfg
+--rw-rw-rw-   0        0        0      369 2023-04-06 09:50:06.000000 trbinance-0.1.0/setup.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 09:59:07.172473 trbinance-0.1.0/trbinance/
+--rw-rw-rw-   0        0        0       35 2023-04-06 08:57:35.000000 trbinance-0.1.0/trbinance/__init__.py
+--rw-rw-rw-   0        0        0    11192 2023-04-06 09:53:03.000000 trbinance-0.1.0/trbinance/client.py
+--rw-rw-rw-   0        0        0      761 2023-04-06 08:23:10.000000 trbinance-0.1.0/trbinance/defines.py
+--rw-rw-rw-   0        0        0     2915 2023-04-06 07:37:28.000000 trbinance-0.1.0/trbinance/helper.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 09:59:07.182413 trbinance-0.1.0/trbinance.egg-info/
+--rw-rw-rw-   0        0        0      191 2023-04-06 09:59:07.000000 trbinance-0.1.0/trbinance.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      233 2023-04-06 09:59:07.000000 trbinance-0.1.0/trbinance.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 09:59:07.000000 trbinance-0.1.0/trbinance.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       10 2023-04-06 09:59:07.000000 trbinance-0.1.0/trbinance.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-07 12:15:22.334435 trbinance-0.1.1/
++-rw-rw-rw-   0        0        0      191 2023-04-07 12:15:22.334435 trbinance-0.1.1/PKG-INFO
++-rw-rw-rw-   0        0        0      753 2023-04-06 10:03:07.000000 trbinance-0.1.1/README.md
++-rw-rw-rw-   0        0        0       42 2023-04-07 12:15:22.335434 trbinance-0.1.1/setup.cfg
++-rw-rw-rw-   0        0        0      369 2023-04-07 12:15:07.000000 trbinance-0.1.1/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:15:22.317436 trbinance-0.1.1/trbinance/
++-rw-rw-rw-   0        0        0       35 2023-04-06 08:57:35.000000 trbinance-0.1.1/trbinance/__init__.py
++-rw-rw-rw-   0        0        0    11565 2023-04-07 12:03:07.000000 trbinance-0.1.1/trbinance/client.py
++-rw-rw-rw-   0        0        0      761 2023-04-06 08:23:10.000000 trbinance-0.1.1/trbinance/defines.py
++-rw-rw-rw-   0        0        0     2915 2023-04-06 07:37:28.000000 trbinance-0.1.1/trbinance/helper.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:15:22.332435 trbinance-0.1.1/trbinance.egg-info/
++-rw-rw-rw-   0        0        0      191 2023-04-07 12:15:22.000000 trbinance-0.1.1/trbinance.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      233 2023-04-07 12:15:22.000000 trbinance-0.1.1/trbinance.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 12:15:22.000000 trbinance-0.1.1/trbinance.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       10 2023-04-07 12:15:22.000000 trbinance-0.1.1/trbinance.egg-info/top_level.txt
+```
+
+### Comparing `trbinance-0.1.0/README.md` & `trbinance-0.1.1/README.md`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,13 +1,17 @@
+ # python-trbinance
+ 
+ ## TrBinance Python API Wrapper
+ 
+ This is a simple Python API wrapper for the TrBinance cryptocurrency exchange. It allows you to interact with the TrBinance API, perform various operations like fetching account information, trading pairs, placing orders, and more. I will try to make it similar to ccxt conventions, so it should be easy to use for people who have used ccxt before.
+ 
++## Caution
++
++This is a work in progress. I am not responsible for any losses you may incur while using this library. Use at your own risk. Not all methods are tested properly!
++
+ ## Installation
+ 
+ ```bash
+ pip install trbinance
+ ```
+ 
+ [Support me by signing up with the referral link](https://www.trbinance.com/account/signup?ref=A42ISN65)
+```
+
+### Comparing `trbinance-0.1.0/trbinance/client.py` & `trbinance-0.1.1/trbinance/client.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -26,20 +26,21 @@
+ 
+     def _request(self, method, endpoint, security_type, symbol_type=0, params=None):
+         if symbol_type == 1:
+             url = self.urls["type1"] + endpoint
+         else:
+             url = self.urls["base"] + endpoint
+ 
+-        if security_type.lower() in ['private', 'signed']:
+-            params['timestamp'] = int(time.time() * 1000)
+-            signature = self._generate_signature(params)
+-            params['signature'] = signature
+-
+         with requests.Session() as session:
++            if security_type.lower() in ['private', 'signed']:
++                params['timestamp'] = int(time.time() * 1000)
++                signature = self._generate_signature(params)
++                params['signature'] = signature
++                session.headers.update({'X-MBX-APIKEY': self.api_key})
++                
+             if method == 'GET':
+                 response = session.get(url, params=params)
+             elif method == 'POST':
+                 response = session.post(url, data=params)
+             else:
+                 raise Exception('Invalid method')
+ 
+@@ -50,15 +51,18 @@
+     def _generate_signature(self, params):
+         query_string = '&'.join([f"{key}={value}" for key, value in params.items()])
+         return hmac.new(self.secret_key.encode('utf-8'), query_string.encode('utf-8'), hashlib.sha256).hexdigest()
+ 
+     def _handle_response(self, raw_response):
+         response = raw_response.json()
+         if "code" in response:
+-            if response['code'] != 0:
++            if response['code'] == 3219:
++                print("Already cancelled")
++                return {"data": []}
++            elif response['code'] != 0:
+                 raise Exception(f"Error {response['code']}: {response['msg']}")
+         return response
+ 
+     def check_server_time(self):
+         endpoint = '/common/time'
+         response = self._request('GET', endpoint, 'public')
+         data = {"timestamp": response["timestamp"]}
+@@ -170,143 +174,143 @@
+     def create_order(self, symbol, side, order_type, **kwargs):
+         origin_symbol = convert_symbol_convention_to(symbol)
+ 
+         # assert side.lower() in ['buy','sell'], "side must be either 'buy' or 'sell'"
+         # assert order_type in ['limit', 'market'], "order_type must be either 'limit' or 'market'"
+ 
+         order_type_num = OrderType[order_type.upper()].value
+-        if kwargs.get('postOnly', False):
+-            order_type_num = OrderType["LIMIT_MAKER"].value
++        
++        assert order_type_num in [1,2,4,6], "order_type must be either 'LIMIT','MARKET','STOP_LOSS_LIMIT' or 'TAKE_PROFIT_LIMIT' "
+ 
+         params = {
+             'symbol': origin_symbol,
+             'side': Side[side.upper()].value,
+             'type': order_type_num,
+             'timestamp': int(time.time() * 1000),
+             **kwargs
+         }
+         
+         endpoint = "/orders"
+         symbol_type = 0
+-        data = self._request("POST", endpoint, "private", symbol_type=symbol_type, params=params)
+-        return data
++        resp = self._request("POST", endpoint, "private", symbol_type=symbol_type, params=params)
++        return resp["data"]
+ 
+     def query_order(self, orderId, **kwargs):
+         params = {
+             'orderId': orderId,
+             'timestamp': int(time.time() * 1000),
+             **kwargs
+         }
+ 
+         endpoint = "/orders/detail"
+-        data = self._request("GET", endpoint, "private", symbol_type=0, params=params)
+-        return data
++        resp = self._request("GET", endpoint, "private", symbol_type=0, params=params)
++        return resp["data"]
+ 
+     def cancel_order(self, orderId, **kwargs):
+         params = {
+             'orderId': orderId,
+             'timestamp': int(time.time() * 1000),
+             **kwargs
+         }
+         endpoint = "/orders/cancel"
+-        data = self._request("POST", endpoint, "private", symbol_type=0, params=params)
+-        return data
++        resp = self._request("POST", endpoint, "private", symbol_type=0, params=params)
++        return resp["data"]
+ 
+     def all_orders(self, symbol=None, **kwargs):
+         params = {
+             'timestamp': int(time.time() * 1000),
+             **kwargs
+         }
+ 
+         if symbol is not None:
+             origin_symbol = convert_symbol_convention_to(symbol)
+             params['symbol'] = origin_symbol
+         endpoint = "/orders"
+-        data = self._request("GET", endpoint, "private", symbol_type=0, params=params)
+-        return data
++        resp = self._request("GET", endpoint, "private", symbol_type=0, params=params)
++        return resp["data"]["list"]
+ 
+     def new_oco(self, symbol, side, quantity, price, stopPrice, stopLimitPrice, **kwargs):
+         params = {
+             'symbol': convert_symbol_convention_to(symbol),
+             'side': Side[side.upper()].value,
+             'quantity': quantity,
+             'price': price,
+             'stopPrice': stopPrice,
+             'stopLimitPrice': stopLimitPrice,
+             'timestamp': int(time.time() * 1000),
+             **kwargs
+         }
+         endpoint = "/orders/oco"
+         symbol_type = 0
+-        data = self._request("POST", endpoint, "private", symbol_type=symbol_type, params=params)
+-        return data
++        resp = self._request("POST", endpoint, "private", symbol_type=symbol_type, params=params)
++        return resp["data"]
+ 
+     def account_information(self, **kwargs):
+         params = {
+             'timestamp': int(time.time() * 1000),
+             **kwargs
+         }
+         endpoint = "/account/spot"
+-        data = self._request("GET", endpoint, "private", symbol_type=0, params=params)
+-        return data
++        resp = self._request("GET", endpoint, "private", symbol_type=0, params=params)
++        return resp["data"]
+ 
+     def account_asset_information(self, asset, **kwargs):
+         params = {
+             'asset': asset,
+             'timestamp': int(time.time() * 1000),
+             **kwargs
+         }
+         endpoint = "/account/spot/asset"
+-        data = self._request("GET", endpoint, "private", symbol_type=0, params=params)
+-        return data
++        resp = self._request("GET", endpoint, "private", symbol_type=0, params=params)
++        return resp["data"]
+ 
+     def account_trade_list(self, symbol, **kwargs):
+         params = {
+             'symbol': convert_symbol_convention_to(symbol),
+             'timestamp': int(time.time() * 1000),
+             **kwargs
+         }
+         endpoint = "/orders/trades"
+-        data = self._request("GET", endpoint, "private", symbol_type=0, params=params)
+-        return data
++        resp = self._request("GET", endpoint, "private", symbol_type=0, params=params)
++        return resp["data"]
+ 
+     def withdraw(self, asset, address, amount, **kwargs):
+         params = {
+             'asset': asset,
+             'address': address,
+             'amount': amount,
+             'timestamp': int(time.time() * 1000),
+             **kwargs
+         }
+         endpoint = "/withdraws"
+-        data = self._request("POST", endpoint, "private", symbol_type=0, params=params)
+-        return data
++        resp = self._request("POST", endpoint, "private", symbol_type=0, params=params)
++        return resp["data"]
+ 
+     def withdraw_history(self, **kwargs):
+         params = {
+             'timestamp': int(time.time() * 1000),
+             **kwargs
+         }
+         endpoint = "/withdraws"
+-        data = self._request("GET", endpoint, "private", symbol_type=0, params=params)
+-        return data
++        resp = self._request("GET", endpoint, "private", symbol_type=0, params=params)
++        return resp["data"]
+ 
+     def deposit_history(self, **kwargs):
+         params = {
+             'timestamp': int(time.time() * 1000),
+             **kwargs
+         }
+         endpoint = "/deposits"
+-        data = self._request("GET", endpoint, "private", symbol_type=0, params=params)
+-        return data
++        resp = self._request("GET", endpoint, "private", symbol_type=0, params=params)
++        return resp["data"]
+ 
+ 
+     def deposit_address(self, asset, network, **kwargs):
+         params = {
+             'asset': asset,
+             'network': network,
+             'timestamp': int(time.time() * 1000),
+             **kwargs
+         }
+         endpoint = "/deposits/address"
+-        data = self._request("GET", endpoint, "private", symbol_type=0, params=params)
+-        return data
++        resp = self._request("GET", endpoint, "private", symbol_type=0, params=params)
++        return resp["data"]
+```
+
+### Comparing `trbinance-0.1.0/trbinance/defines.py` & `trbinance-0.1.1/trbinance/defines.py`
+
+ * *Files identical despite different names*
+
+### Comparing `trbinance-0.1.0/trbinance/helper.py` & `trbinance-0.1.1/trbinance/helper.py`
+
+ * *Files identical despite different names*
+

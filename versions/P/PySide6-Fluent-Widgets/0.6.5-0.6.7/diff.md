@@ -1,0 +1,585 @@
+# Comparing `tmp/PySide6-Fluent-Widgets-0.6.5.tar.gz` & `tmp/PySide6-Fluent-Widgets-0.6.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist\PySide6-Fluent-Widgets-0.6.5.tar", last modified: Fri Apr  7 08:31:48 2023, max compression
++gzip compressed data, was "dist\PySide6-Fluent-Widgets-0.6.7.tar", last modified: Fri Apr  7 12:10:41 2023, max compression
+```
+
+## Comparing `PySide6-Fluent-Widgets-0.6.5.tar` & `PySide6-Fluent-Widgets-0.6.7.tar`
+
+### file list
+
+```diff
+@@ -1,72 +1,72 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 08:31:48.777488 PySide6-Fluent-Widgets-0.6.5/
+--rw-rw-rw-   0        0        0     7815 2023-04-07 07:50:28.000000 PySide6-Fluent-Widgets-0.6.5/LICENSE
+--rw-rw-rw-   0        0        0     3604 2023-04-07 08:31:48.776066 PySide6-Fluent-Widgets-0.6.5/PKG-INFO
+-drwxrwxrwx   0        0        0        0 2023-04-07 08:31:48.674097 PySide6-Fluent-Widgets-0.6.5/PySide6_Fluent_Widgets.egg-info/
+--rw-rw-rw-   0        0        0     3604 2023-04-07 08:31:48.000000 PySide6-Fluent-Widgets-0.6.5/PySide6_Fluent_Widgets.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0     2663 2023-04-07 08:31:48.000000 PySide6-Fluent-Widgets-0.6.5/PySide6_Fluent_Widgets.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 08:31:48.000000 PySide6-Fluent-Widgets-0.6.5/PySide6_Fluent_Widgets.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       70 2023-04-07 08:31:48.000000 PySide6-Fluent-Widgets-0.6.5/PySide6_Fluent_Widgets.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       15 2023-04-07 08:31:48.000000 PySide6-Fluent-Widgets-0.6.5/PySide6_Fluent_Widgets.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0     2785 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-07 08:31:48.676095 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/
+--rw-rw-rw-   0        0        0      502 2023-04-07 07:55:38.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 08:31:48.679982 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/_rc/
+--rw-rw-rw-   0        0        0        0 2023-01-17 07:40:20.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/_rc/__init__.py
+--rw-rw-rw-   0        0        0  3453876 2023-04-07 07:54:25.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/_rc/resource.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 08:31:48.699768 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/
+--rw-rw-rw-   0        0        0      390 2023-04-05 13:34:28.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/__init__.py
+--rw-rw-rw-   0        0        0     3193 2023-01-27 14:07:06.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/auto_wrap.py
+--rw-rw-rw-   0        0        0    10566 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/config.py
+--rw-rw-rw-   0        0        0      675 2023-01-16 13:18:33.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/exception_handler.py
+--rw-rw-rw-   0        0        0     7223 2023-04-07 07:52:34.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/icon.py
+--rw-rw-rw-   0        0        0     4785 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/image_utils.py
+--rw-rw-rw-   0        0        0     4687 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/smooth_scroll.py
+--rw-rw-rw-   0        0        0     6970 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/style_sheet.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 08:31:48.701769 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/
+--rw-rw-rw-   0        0        0      124 2023-03-26 10:38:38.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 08:31:48.711892 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/dialog_box/
+--rw-rw-rw-   0        0        0      170 2023-03-14 08:29:15.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/dialog_box/__init__.py
+--rw-rw-rw-   0        0        0    11823 2023-04-07 07:52:34.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/dialog_box/color_dialog.py
+--rw-rw-rw-   0        0        0     5198 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/dialog_box/dialog.py
+--rw-rw-rw-   0        0        0    11326 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/dialog_box/folder_list_dialog.py
+--rw-rw-rw-   0        0        0     3244 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/dialog_box/mask_dialog_base.py
+--rw-rw-rw-   0        0        0     2425 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/dialog_box/message_dialog.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 08:31:48.719101 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/layout/
+--rw-rw-rw-   0        0        0      114 2023-01-16 13:10:58.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/layout/__init__.py
+--rw-rw-rw-   0        0        0     2658 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/layout/expand_layout.py
+--rw-rw-rw-   0        0        0     5437 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/layout/flow_layout.py
+--rw-rw-rw-   0        0        0     1305 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/layout/v_box_layout.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 08:31:48.726370 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/navigation/
+--rw-rw-rw-   0        0        0      260 2023-03-18 06:45:47.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/navigation/__init__.py
+--rw-rw-rw-   0        0        0     4303 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/navigation/navigation_interface.py
+--rw-rw-rw-   0        0        0    14447 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/navigation/navigation_panel.py
+--rw-rw-rw-   0        0        0     4873 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/navigation/navigation_widget.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 08:31:48.738944 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/
+--rw-rw-rw-   0        0        0      550 2023-03-24 06:13:50.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/__init__.py
+--rw-rw-rw-   0        0        0     5195 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/custom_color_setting_card.py
+--rw-rw-rw-   0        0        0     8036 2023-04-07 07:52:34.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/expand_setting_card.py
+--rw-rw-rw-   0        0        0     6028 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/folder_list_setting_card.py
+--rw-rw-rw-   0        0        0     2838 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/options_setting_card.py
+--rw-rw-rw-   0        0        0    12820 2023-04-07 07:52:34.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/setting_card.py
+--rw-rw-rw-   0        0        0     1516 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/setting_card_group.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 08:31:48.774067 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/
+--rw-rw-rw-   0        0        0      870 2023-04-07 07:52:34.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/__init__.py
+--rw-rw-rw-   0        0        0     4596 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/acrylic_label.py
+--rw-rw-rw-   0        0        0     4650 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/button.py
+--rw-rw-rw-   0        0        0      306 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/check_box.py
+--rw-rw-rw-   0        0        0    11268 2023-04-07 08:28:52.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/combo_box.py
+--rw-rw-rw-   0        0        0      707 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/icon_widget.py
+--rw-rw-rw-   0        0        0    18835 2023-04-07 07:52:34.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/info_bar.py
+--rw-rw-rw-   0        0        0      845 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/label.py
+--rw-rw-rw-   0        0        0     5757 2023-04-07 07:52:34.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/line_edit.py
+--rw-rw-rw-   0        0        0    23278 2023-04-07 07:55:38.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/menu.py
+--rw-rw-rw-   0        0        0     4487 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/scroll_area.py
+--rw-rw-rw-   0        0        0     5012 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/slider.py
+--rw-rw-rw-   0        0        0     4444 2023-04-07 07:51:08.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/spin_box.py
+--rw-rw-rw-   0        0        0     6314 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/stacked_widget.py
+--rw-rw-rw-   0        0        0     5854 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/state_tool_tip.py
+--rw-rw-rw-   0        0        0     6577 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/switch_button.py
+--rw-rw-rw-   0        0        0     1692 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/three_state_button.py
+--rw-rw-rw-   0        0        0     5175 2023-04-07 07:50:32.000000 PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/tool_tip.py
+--rw-rw-rw-   0        0        0       42 2023-04-07 08:31:48.777488 PySide6-Fluent-Widgets-0.6.5/setup.cfg
+--rw-rw-rw-   0        0        0     1243 2023-04-07 07:55:44.000000 PySide6-Fluent-Widgets-0.6.5/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:10:41.519964 PySide6-Fluent-Widgets-0.6.7/
++-rw-rw-rw-   0        0        0     7815 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/LICENSE
++-rw-rw-rw-   0        0        0     3604 2023-04-07 12:10:41.518961 PySide6-Fluent-Widgets-0.6.7/PKG-INFO
++drwxrwxrwx   0        0        0        0 2023-04-07 12:10:41.402854 PySide6-Fluent-Widgets-0.6.7/PySide6_Fluent_Widgets.egg-info/
++-rw-rw-rw-   0        0        0     3604 2023-04-07 12:10:41.000000 PySide6-Fluent-Widgets-0.6.7/PySide6_Fluent_Widgets.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0     2663 2023-04-07 12:10:41.000000 PySide6-Fluent-Widgets-0.6.7/PySide6_Fluent_Widgets.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 12:10:41.000000 PySide6-Fluent-Widgets-0.6.7/PySide6_Fluent_Widgets.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       70 2023-04-07 12:10:41.000000 PySide6-Fluent-Widgets-0.6.7/PySide6_Fluent_Widgets.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       15 2023-04-07 12:10:41.000000 PySide6-Fluent-Widgets-0.6.7/PySide6_Fluent_Widgets.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0     2785 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 12:10:41.403855 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/
++-rw-rw-rw-   0        0        0      502 2023-04-07 12:05:30.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:10:41.407157 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/_rc/
++-rw-rw-rw-   0        0        0        0 2023-01-17 07:40:20.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/_rc/__init__.py
++-rw-rw-rw-   0        0        0  3453876 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/_rc/resource.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:10:41.437189 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/
++-rw-rw-rw-   0        0        0      390 2023-04-05 13:34:28.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/__init__.py
++-rw-rw-rw-   0        0        0     3193 2023-01-27 14:07:06.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/auto_wrap.py
++-rw-rw-rw-   0        0        0    10566 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/config.py
++-rw-rw-rw-   0        0        0      675 2023-01-16 13:18:33.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/exception_handler.py
++-rw-rw-rw-   0        0        0     7223 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/icon.py
++-rw-rw-rw-   0        0        0     4785 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/image_utils.py
++-rw-rw-rw-   0        0        0     4687 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/smooth_scroll.py
++-rw-rw-rw-   0        0        0     6970 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/style_sheet.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:10:41.439185 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/
++-rw-rw-rw-   0        0        0      124 2023-03-26 10:38:38.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:10:41.450521 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/dialog_box/
++-rw-rw-rw-   0        0        0      170 2023-03-14 08:29:15.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/dialog_box/__init__.py
++-rw-rw-rw-   0        0        0    11823 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/dialog_box/color_dialog.py
++-rw-rw-rw-   0        0        0     5198 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/dialog_box/dialog.py
++-rw-rw-rw-   0        0        0    11326 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/dialog_box/folder_list_dialog.py
++-rw-rw-rw-   0        0        0     3244 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/dialog_box/mask_dialog_base.py
++-rw-rw-rw-   0        0        0     2425 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/dialog_box/message_dialog.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:10:41.458624 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/layout/
++-rw-rw-rw-   0        0        0      114 2023-01-16 13:10:58.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/layout/__init__.py
++-rw-rw-rw-   0        0        0     2658 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/layout/expand_layout.py
++-rw-rw-rw-   0        0        0     5437 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/layout/flow_layout.py
++-rw-rw-rw-   0        0        0     1305 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/layout/v_box_layout.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:10:41.466142 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/navigation/
++-rw-rw-rw-   0        0        0      260 2023-03-18 06:45:47.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/navigation/__init__.py
++-rw-rw-rw-   0        0        0     4303 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/navigation/navigation_interface.py
++-rw-rw-rw-   0        0        0    14447 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/navigation/navigation_panel.py
++-rw-rw-rw-   0        0        0     4873 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/navigation/navigation_widget.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:10:41.480668 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/
++-rw-rw-rw-   0        0        0      550 2023-03-24 06:13:50.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/__init__.py
++-rw-rw-rw-   0        0        0     5195 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/custom_color_setting_card.py
++-rw-rw-rw-   0        0        0     8036 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/expand_setting_card.py
++-rw-rw-rw-   0        0        0     6028 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/folder_list_setting_card.py
++-rw-rw-rw-   0        0        0     2838 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/options_setting_card.py
++-rw-rw-rw-   0        0        0    12820 2023-04-07 12:05:07.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/setting_card.py
++-rw-rw-rw-   0        0        0     1516 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/setting_card_group.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:10:41.516963 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/
++-rw-rw-rw-   0        0        0      870 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/__init__.py
++-rw-rw-rw-   0        0        0     4596 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/acrylic_label.py
++-rw-rw-rw-   0        0        0     4650 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/button.py
++-rw-rw-rw-   0        0        0      306 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/check_box.py
++-rw-rw-rw-   0        0        0    13482 2023-04-07 12:05:39.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/combo_box.py
++-rw-rw-rw-   0        0        0      707 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/icon_widget.py
++-rw-rw-rw-   0        0        0    18835 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/info_bar.py
++-rw-rw-rw-   0        0        0      845 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/label.py
++-rw-rw-rw-   0        0        0     5757 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/line_edit.py
++-rw-rw-rw-   0        0        0    23278 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/menu.py
++-rw-rw-rw-   0        0        0     4487 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/scroll_area.py
++-rw-rw-rw-   0        0        0     5012 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/slider.py
++-rw-rw-rw-   0        0        0     4444 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/spin_box.py
++-rw-rw-rw-   0        0        0     6314 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/stacked_widget.py
++-rw-rw-rw-   0        0        0     5854 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/state_tool_tip.py
++-rw-rw-rw-   0        0        0     6577 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/switch_button.py
++-rw-rw-rw-   0        0        0     1692 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/three_state_button.py
++-rw-rw-rw-   0        0        0     5175 2023-04-07 12:05:08.000000 PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/tool_tip.py
++-rw-rw-rw-   0        0        0       42 2023-04-07 12:10:41.519964 PySide6-Fluent-Widgets-0.6.7/setup.cfg
++-rw-rw-rw-   0        0        0     1243 2023-04-07 12:05:49.000000 PySide6-Fluent-Widgets-0.6.7/setup.py
+```
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/LICENSE` & `PySide6-Fluent-Widgets-0.6.7/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/PKG-INFO` & `PySide6-Fluent-Widgets-0.6.7/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: PySide6-Fluent-Widgets
+-Version: 0.6.5
++Version: 0.6.7
+ Summary: A fluent design widgets library based on PySide6
+ Home-page: https://github.com/zhiyiYo/PyQt-Fluent-Widgets/tree/PySide6
+ Author: zhiyiYo
+ Author-email: shokokawaii@outlook.com
+ License: LGPLv3
+ Project-URL: Documentation, https://pyqt-fluent-widgets.readthedocs.io/
+ Project-URL: Source Code, https://github.com/zhiyiYo/PyQt-Fluent-Widgets/tree/PySide6
+```
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/PySide6_Fluent_Widgets.egg-info/PKG-INFO` & `PySide6-Fluent-Widgets-0.6.7/PySide6_Fluent_Widgets.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: PySide6-Fluent-Widgets
+-Version: 0.6.5
++Version: 0.6.7
+ Summary: A fluent design widgets library based on PySide6
+ Home-page: https://github.com/zhiyiYo/PyQt-Fluent-Widgets/tree/PySide6
+ Author: zhiyiYo
+ Author-email: shokokawaii@outlook.com
+ License: LGPLv3
+ Project-URL: Documentation, https://pyqt-fluent-widgets.readthedocs.io/
+ Project-URL: Source Code, https://github.com/zhiyiYo/PyQt-Fluent-Widgets/tree/PySide6
+```
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/PySide6_Fluent_Widgets.egg-info/SOURCES.txt` & `PySide6-Fluent-Widgets-0.6.7/PySide6_Fluent_Widgets.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/README.md` & `PySide6-Fluent-Widgets-0.6.7/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/_rc/resource.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/_rc/resource.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/auto_wrap.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/auto_wrap.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/config.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/exception_handler.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/exception_handler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/icon.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/icon.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/image_utils.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/image_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/smooth_scroll.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/smooth_scroll.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/common/style_sheet.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/common/style_sheet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/dialog_box/color_dialog.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/dialog_box/color_dialog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/dialog_box/dialog.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/dialog_box/dialog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/dialog_box/folder_list_dialog.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/dialog_box/folder_list_dialog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/dialog_box/mask_dialog_base.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/dialog_box/mask_dialog_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/dialog_box/message_dialog.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/dialog_box/message_dialog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/layout/expand_layout.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/layout/expand_layout.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/layout/flow_layout.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/layout/flow_layout.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/layout/v_box_layout.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/layout/v_box_layout.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/navigation/navigation_interface.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/navigation/navigation_interface.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/navigation/navigation_panel.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/navigation/navigation_panel.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/navigation/navigation_widget.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/navigation/navigation_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/__init__.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/custom_color_setting_card.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/custom_color_setting_card.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/expand_setting_card.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/expand_setting_card.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/folder_list_setting_card.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/folder_list_setting_card.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/options_setting_card.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/options_setting_card.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/setting_card.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/setting_card.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/settings/setting_card_group.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/settings/setting_card_group.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/__init__.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/acrylic_label.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/acrylic_label.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/button.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/button.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/combo_box.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/combo_box.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -27,26 +27,30 @@
+             the icon of item
+ 
+         userData: Any
+             user data
+         """
+         self.text = text
+         self.userData = userData
+-        if icon:
+-            self._icon = QIcon(icon) if isinstance(icon, str) else icon
+-        else:
+-            self._icon = QIcon()
++        self.icon = icon
+ 
+     @property
+     def icon(self):
+         if isinstance(self._icon, QIcon):
+             return self._icon
+ 
+         return self._icon.icon()
+ 
++    @icon.setter
++    def icon(self, ico: Union[str, QIcon, FluentIconBase]):
++        if ico:
++            self._icon = QIcon(ico) if isinstance(ico, str) else ico
++        else:
++            self._icon = QIcon()
++
+ 
+ class ComboBoxBase:
+     """ Combo box base """
+ 
+     def __init__(self, parent=None, **kwargs):
+         pass
+ 
+@@ -109,15 +113,15 @@
+                 self.setCurrentIndex(0)
+                 self.currentTextChanged.emit(self.currentText())
+                 self.currentIndexChanged.emit(0)
+ 
+     def currentIndex(self):
+         return self._currentIndex
+ 
+-    def setCurrentIndex(self, index):
++    def setCurrentIndex(self, index: int):
+         """ set current index
+ 
+         Parameters
+         ----------
+         index: int
+             current index
+         """
+@@ -133,14 +137,20 @@
+ 
+     def currentText(self):
+         if not 0 <= self.currentIndex() < len(self.items):
+             return ''
+ 
+         return self.items[self.currentIndex()].text
+ 
++    def currentData(self):
++        if not 0 <= self.currentIndex() < len(self.items):
++            return None
++
++        return self.items[self.currentIndex()].userData
++
+     def setCurrentText(self, text):
+         """ set the current text displayed in combo box,
+         text should be in the item list
+ 
+         Parameters
+         ----------
+         text: str
+@@ -168,25 +178,44 @@
+         item = self.itemMap.pop()
+         item.text = text
+         self.itemMap[text] = item
+         if self.currentIndex() == index:
+             self.setText(text)
+ 
+     def itemData(self, index: int):
+-        """ Returns the data for the given role in the given index in the combobox """
++        """ Returns the data in the given index """
+         if not 0 <= index < len(self.items):
+             return None
+ 
+         return self.items[index].userData
+ 
++    def itemText(self, index: int):
++        """ Returns the text in the given index """
++        if not 0 <= index < len(self.items):
++            return ''
++
++        return self.items[index].text
++
++    def itemIcon(self, index: int):
++        """ Returns the icon in the given index """
++        if not 0 <= index < len(self.items):
++            return QIcon()
++
++        return self.items[index].icon
++
+     def setItemData(self, index: int, value):
+-        """ Sets the data role for the item on the given index in the combobox to the specified value """
++        """ Sets the data role for the item on the given index """
+         if 0 <= index < len(self.items):
+             self.items[index].userData = value
+ 
++    def setItemIcon(self, index: int, icon: Union[str, QIcon, FluentIconBase]):
++        """ Sets the data role for the item on the given index """
++        if 0 <= index < len(self.items):
++            self.items[index].icon = icon
++
+     def findData(self, data):
+         """ Returns the index of the item containing the given data, otherwise returns -1 """
+         for i, item in enumerate(self.items):
+             if item.userData == data:
+                 return i
+ 
+         return -1
+@@ -194,14 +223,54 @@
+     def findText(self, text: str):
+         """ Returns the index of the item containing the given text; otherwise returns -1. """
+         if text not in self.itemMap:
+             return -1
+ 
+         return self.items.index(self.itemMap[text])
+ 
++    def clear(self):
++        """ Clears the combobox, removing all items. """
++        if self.currentIndex() >= 0:
++            self.setText('')
++
++        self.items.clear()
++        self.itemMap.clear()
++        self._currentIndex = -1
++
++    def count(self):
++        """ Returns the number of items in the combobox """
++        return len(self.items)
++
++    def insertItem(self, index: int, text: str, icon: Union[str, QIcon, FluentIconBase] = None, userData=None):
++        """ Inserts item into the combobox at the given index. """
++        if not text or text in self.itemMap:
++            return
++
++        item = ComboItem(text, icon, userData)
++        self.items.insert(index, item)
++        self.itemMap[text] = item
++
++        if index <= self.currentIndex():
++            self._onItemClicked(self.currentIndex() + 1)
++
++    def insertItems(self, index: int, texts: Iterable[str]):
++        """ Inserts items into the combobox, starting at the index specified. """
++        pos = index
++        for text in texts:
++            if not text or text in self.itemMap:
++                continue
++
++            item = ComboItem(text)
++            self.items.insert(pos, item)
++            self.itemMap[text] = item
++            pos += 1
++
++        if index <= self.currentIndex():
++            self._onItemClicked(self.currentIndex() + pos - index)
++
+     def _closeComboMenu(self):
+         if not self.dropMenu:
+             return
+ 
+         self.dropMenu.close()
+         self.dropMenu = None
+```
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/icon_widget.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/icon_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/info_bar.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/info_bar.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/label.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/label.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/line_edit.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/line_edit.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/menu.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/menu.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/scroll_area.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/scroll_area.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/slider.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/slider.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/spin_box.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/spin_box.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/stacked_widget.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/stacked_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/state_tool_tip.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/state_tool_tip.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/switch_button.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/switch_button.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/three_state_button.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/three_state_button.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/qfluentwidgets/components/widgets/tool_tip.py` & `PySide6-Fluent-Widgets-0.6.7/qfluentwidgets/components/widgets/tool_tip.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PySide6-Fluent-Widgets-0.6.5/setup.py` & `PySide6-Fluent-Widgets-0.6.7/setup.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -2,15 +2,15 @@
+ 
+ 
+ with open('README.md', encoding='utf-8') as f:
+     long_description = f.read()
+ 
+ setuptools.setup(
+     name="PySide6-Fluent-Widgets",
+-    version="0.6.5",
++    version="0.6.7",
+     keywords="pyside6 fluent widgets",
+     author="zhiyiYo",
+     author_email="shokokawaii@outlook.com",
+     description="A fluent design widgets library based on PySide6",
+     long_description=long_description,
+     long_description_content_type='text/markdown',
+     license="LGPLv3",
+```
+

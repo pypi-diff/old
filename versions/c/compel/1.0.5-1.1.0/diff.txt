@@ -1,0 +1,616 @@
+--- tmp/compel-1.0.5.tar.gz
++++ tmp/compel-1.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "/Users/damian/2.current/stablediffusion/compel/dist/.tmp-_vmc6znd/compel-1.0.5.tar", last modified: Mon Apr  3 08:26:58 2023, max compression
+│ +gzip compressed data, was "/Users/damian/2.current/stablediffusion/compel/dist/.tmp-vxcwh51c/compel-1.1.0.tar", last modified: Fri Apr  7 12:11:04 2023, max compression
+│   --- compel-1.0.5.tar
+├── +++ compel-1.1.0.tar
+│ ├── file list
+│ │ @@ -1,24 +1,24 @@
+│ │ -drwxr-xr-x   0 damian     (501) staff       (20)        0 2023-04-03 08:26:58.000000 compel-1.0.5/
+│ │ --rw-r--r--   0 damian     (501) staff       (20)     1064 2023-03-07 13:01:09.000000 compel-1.0.5/LICENSE
+│ │ --rw-r--r--   0 damian     (501) staff       (20)     6088 2023-04-03 08:26:58.000000 compel-1.0.5/PKG-INFO
+│ │ --rw-r--r--   0 damian     (501) staff       (20)     5510 2023-04-03 08:26:19.000000 compel-1.0.5/README.md
+│ │ --rw-r--r--   0 damian     (501) staff       (20)      761 2023-04-03 08:06:37.000000 compel-1.0.5/pyproject.toml
+│ │ --rw-r--r--   0 damian     (501) staff       (20)       38 2023-04-03 08:26:58.000000 compel-1.0.5/setup.cfg
+│ │ -drwxr-xr-x   0 damian     (501) staff       (20)        0 2023-04-03 08:26:58.000000 compel-1.0.5/src/
+│ │ -drwxr-xr-x   0 damian     (501) staff       (20)        0 2023-04-03 08:26:58.000000 compel-1.0.5/src/compel/
+│ │ --rw-r--r--   0 damian     (501) staff       (20)      124 2023-01-26 00:22:00.000000 compel-1.0.5/src/compel/__init__.py
+│ │ --rw-r--r--   0 damian     (501) staff       (20)    13768 2023-03-23 19:57:03.000000 compel-1.0.5/src/compel/compel.py
+│ │ --rw-r--r--   0 damian     (501) staff       (20)     1833 2023-03-15 21:38:57.000000 compel-1.0.5/src/compel/conditioning_scheduler.py
+│ │ --rw-r--r--   0 damian     (501) staff       (20)     1581 2023-03-07 13:01:09.000000 compel-1.0.5/src/compel/cross_attention_control.py
+│ │ --rw-r--r--   0 damian     (501) staff       (20)    23408 2023-03-23 21:25:41.000000 compel-1.0.5/src/compel/embeddings_provider.py
+│ │ --rw-r--r--   0 damian     (501) staff       (20)    28558 2023-04-03 08:04:29.000000 compel-1.0.5/src/compel/prompt_parser.py
+│ │ -drwxr-xr-x   0 damian     (501) staff       (20)        0 2023-04-03 08:26:58.000000 compel-1.0.5/src/compel.egg-info/
+│ │ --rw-r--r--   0 damian     (501) staff       (20)     6088 2023-04-03 08:26:58.000000 compel-1.0.5/src/compel.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 damian     (501) staff       (20)      462 2023-04-03 08:26:58.000000 compel-1.0.5/src/compel.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 damian     (501) staff       (20)        1 2023-04-03 08:26:58.000000 compel-1.0.5/src/compel.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 damian     (501) staff       (20)       56 2023-04-03 08:26:58.000000 compel-1.0.5/src/compel.egg-info/requires.txt
+│ │ --rw-r--r--   0 damian     (501) staff       (20)        7 2023-04-03 08:26:58.000000 compel-1.0.5/src/compel.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 damian     (501) staff       (20)        0 2023-04-03 08:26:58.000000 compel-1.0.5/test/
+│ │ --rw-r--r--   0 damian     (501) staff       (20)    18392 2023-04-03 07:52:15.000000 compel-1.0.5/test/test_compel.py
+│ │ --rw-r--r--   0 damian     (501) staff       (20)    13788 2023-04-03 07:41:02.000000 compel-1.0.5/test/test_embeddings_provider.py
+│ │ --rw-r--r--   0 damian     (501) staff       (20)    44984 2023-04-03 07:53:56.000000 compel-1.0.5/test/test_prompt_parser.py
+│ │ +drwxr-xr-x   0 damian     (501) staff       (20)        0 2023-04-07 12:11:04.000000 compel-1.1.0/
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)     1064 2023-03-07 13:01:09.000000 compel-1.1.0/LICENSE
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)     6463 2023-04-07 12:11:04.000000 compel-1.1.0/PKG-INFO
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)     5885 2023-04-07 11:43:19.000000 compel-1.1.0/README.md
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)      761 2023-04-07 11:44:18.000000 compel-1.1.0/pyproject.toml
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)       38 2023-04-07 12:11:04.000000 compel-1.1.0/setup.cfg
+│ │ +drwxr-xr-x   0 damian     (501) staff       (20)        0 2023-04-07 12:11:04.000000 compel-1.1.0/src/
+│ │ +drwxr-xr-x   0 damian     (501) staff       (20)        0 2023-04-07 12:11:04.000000 compel-1.1.0/src/compel/
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)      124 2023-01-26 00:22:00.000000 compel-1.1.0/src/compel/__init__.py
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)    13867 2023-04-07 10:02:49.000000 compel-1.1.0/src/compel/compel.py
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)     1833 2023-03-15 21:38:57.000000 compel-1.1.0/src/compel/conditioning_scheduler.py
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)     1581 2023-03-07 13:01:09.000000 compel-1.1.0/src/compel/cross_attention_control.py
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)    23408 2023-04-07 09:51:02.000000 compel-1.1.0/src/compel/embeddings_provider.py
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)    29480 2023-04-07 11:53:23.000000 compel-1.1.0/src/compel/prompt_parser.py
+│ │ +drwxr-xr-x   0 damian     (501) staff       (20)        0 2023-04-07 12:11:04.000000 compel-1.1.0/src/compel.egg-info/
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)     6463 2023-04-07 12:11:04.000000 compel-1.1.0/src/compel.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)      462 2023-04-07 12:11:04.000000 compel-1.1.0/src/compel.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)        1 2023-04-07 12:11:04.000000 compel-1.1.0/src/compel.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)       56 2023-04-07 12:11:04.000000 compel-1.1.0/src/compel.egg-info/requires.txt
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)        7 2023-04-07 12:11:04.000000 compel-1.1.0/src/compel.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 damian     (501) staff       (20)        0 2023-04-07 12:11:04.000000 compel-1.1.0/test/
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)    18392 2023-04-03 07:52:15.000000 compel-1.1.0/test/test_compel.py
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)    13788 2023-04-07 09:51:02.000000 compel-1.1.0/test/test_embeddings_provider.py
+│ │ +-rw-r--r--   0 damian     (501) staff       (20)    46708 2023-04-07 11:49:56.000000 compel-1.1.0/test/test_prompt_parser.py
+│ │   --- compel-1.0.5/LICENSE
+│ ├── +++ compel-1.1.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- compel-1.0.5/PKG-INFO
+│ ├── +++ compel-1.1.0/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: compel
+│ │ -Version: 1.0.5
+│ │ +Version: 1.1.0
+│ │  Summary: A prompting enhancement library for transformers-type text embedding systems.
+│ │  Author-email: Damian Stewart <null@damianstewart.com>
+│ │  Project-URL: Homepage, https://github.com/damian0815/compel
+│ │  Project-URL: Bug Tracker, https://github.com/damian0815/compel/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -71,14 +71,19 @@
+│ │  
+│ │  images[0].save("image0.jpg")
+│ │  images[1].save("image1.jpg")
+│ │  ```
+│ │  
+│ │  ## Changelog
+│ │  
+│ │ +#### 1.1.0 - support for parsing `withLora`/`useLora` on `parse_prompt_string()`.
+│ │ +
+│ │ +* `Compel.parse_prompt_string()` now returns a `Conjunction`
+│ │ +* any appearances of `withLora(name[, weight])` or `useLora(name[, weight])` anywhere in the prompt string will be parsed to `LoraWeight` instances, and returned on the outermost `Conjunction` returned by `parse_prompt_string()`.
+│ │ +
+│ │  #### 1.0.5 - fix incorrect parsing when passing invalid (auto1111) syntax that has a float
+│ │  
+│ │  also fix test case for default swap parameters
+│ │  
+│ │  #### 1.0.4 - fix embeddings for empty swap target (eg `cat.swap("")`) when truncation is disabled 
+│ │  
+│ │  #### 1.0.3 - better defaults for .swap (https://github.com/damian0815/compel/issues/8)
+│ │   --- compel-1.0.5/README.md
+│ ├── +++ compel-1.1.0/README.md
+│ │┄ Files 6% similar despite different names
+│ │ @@ -57,14 +57,19 @@
+│ │  
+│ │  images[0].save("image0.jpg")
+│ │  images[1].save("image1.jpg")
+│ │  ```
+│ │  
+│ │  ## Changelog
+│ │  
+│ │ +#### 1.1.0 - support for parsing `withLora`/`useLora` on `parse_prompt_string()`.
+│ │ +
+│ │ +* `Compel.parse_prompt_string()` now returns a `Conjunction`
+│ │ +* any appearances of `withLora(name[, weight])` or `useLora(name[, weight])` anywhere in the prompt string will be parsed to `LoraWeight` instances, and returned on the outermost `Conjunction` returned by `parse_prompt_string()`.
+│ │ +
+│ │  #### 1.0.5 - fix incorrect parsing when passing invalid (auto1111) syntax that has a float
+│ │  
+│ │  also fix test case for default swap parameters
+│ │  
+│ │  #### 1.0.4 - fix embeddings for empty swap target (eg `cat.swap("")`) when truncation is disabled 
+│ │  
+│ │  #### 1.0.3 - better defaults for .swap (https://github.com/damian0815/compel/issues/8)
+│ │   --- compel-1.0.5/pyproject.toml
+│ ├── +++ compel-1.1.0/pyproject.toml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [project]
+│ │  name = "compel"
+│ │ -version = "1.0.5"
+│ │ +version = "1.1.0"
+│ │  authors = [
+│ │    { name="Damian Stewart", email="null@damianstewart.com" },
+│ │  ]
+│ │  description = "A prompting enhancement library for transformers-type text embedding systems."
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.7"
+│ │  classifiers = [
+│ │   --- compel-1.0.5/src/compel/compel.py
+│ ├── +++ compel-1.1.0/src/compel/compel.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -3,15 +3,15 @@
+│ │  
+│ │  import torch
+│ │  from transformers import CLIPTokenizer, CLIPTextModel
+│ │  
+│ │  from . import cross_attention_control
+│ │  from .conditioning_scheduler import ConditioningScheduler, StaticConditioningScheduler
+│ │  from .embeddings_provider import EmbeddingsProvider, BaseTextualInversionManager, DownweightMode
+│ │ -from .prompt_parser import Blend, FlattenedPrompt, PromptParser, CrossAttentionControlSubstitute
+│ │ +from .prompt_parser import Blend, FlattenedPrompt, PromptParser, CrossAttentionControlSubstitute, Conjunction
+│ │  
+│ │  __all__ = ["Compel", "DownweightMode"]
+│ │  
+│ │  @dataclass
+│ │  class ExtraConditioningInfo:
+│ │      pass
+│ │  
+│ │ @@ -62,15 +62,18 @@
+│ │          [positive_conditioning, negative_conditioning] = self.pad_conditioning_tensors_to_same_length(
+│ │              [positive_conditioning, negative_conditioning]
+│ │          )
+│ │          return StaticConditioningScheduler(positive_conditioning=positive_conditioning,
+│ │                                             negative_conditioning=negative_conditioning)
+│ │  
+│ │      def build_conditioning_tensor(self, text: str) -> torch.Tensor:
+│ │ -        prompt_object = self.parse_prompt_string(text)
+│ │ +        conjunction = self.parse_prompt_string(text)
+│ │ +        if len(conjunction.prompts)>1:
+│ │ +            raise ValueError("Conjunctions of >1 prompt are currently not supported by build_conditioning_tensor()")
+│ │ +        prompt_object = conjunction.prompts[0]
+│ │          conditioning, _ = self.build_conditioning_tensor_for_prompt_object(prompt_object)
+│ │          return conditioning
+│ │  
+│ │      @torch.no_grad()
+│ │      def __call__(self, text: Union[str, List[str]]) -> torch.Tensor:
+│ │          if not isinstance(text, list):
+│ │              text = [text]
+│ │ @@ -80,20 +83,18 @@
+│ │              cond_tensor.append(self.build_conditioning_tensor(text_input))
+│ │  
+│ │          cond_tensor = torch.cat(cond_tensor)
+│ │  
+│ │          return cond_tensor
+│ │  
+│ │      @classmethod
+│ │ -    def parse_prompt_string(cls, prompt_string: str) -> Union[FlattenedPrompt, Blend]:
+│ │ +    def parse_prompt_string(cls, prompt_string: str) -> Conjunction:
+│ │          pp = PromptParser()
+│ │          conjunction = pp.parse_conjunction(prompt_string)
+│ │ -        # we don't support conjunctions for now
+│ │ -        parsed_prompt = conjunction.prompts[0]
+│ │ -        return parsed_prompt
+│ │ +        return conjunction
+│ │  
+│ │      def describe_tokenization(self, text: str) -> List[str]:
+│ │          """
+│ │          For the given text, return a list of strings showing how it will be tokenized.
+│ │  
+│ │          :param text: The text that is to be tokenized.
+│ │          :return: A list of strings representing the output of the tokenizer. It's expected that the output list may be
+│ │   --- compel-1.0.5/src/compel/conditioning_scheduler.py
+│ ├── +++ compel-1.1.0/src/compel/conditioning_scheduler.py
+│ │┄ Files identical despite different names
+│ │   --- compel-1.0.5/src/compel/cross_attention_control.py
+│ ├── +++ compel-1.1.0/src/compel/cross_attention_control.py
+│ │┄ Files identical despite different names
+│ │   --- compel-1.0.5/src/compel/embeddings_provider.py
+│ ├── +++ compel-1.1.0/src/compel/embeddings_provider.py
+│ │┄ Files identical despite different names
+│ │   --- compel-1.0.5/src/compel/prompt_parser.py
+│ ├── +++ compel-1.1.0/src/compel/prompt_parser.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -62,27 +62,26 @@
+│ │  
+│ │  class FlattenedPrompt():
+│ │      """
+│ │      A Prompt that has been passed through flatten(). Its children can be readily tokenized.
+│ │      """
+│ │      def __init__(self, parts: Optional[list] = None):
+│ │          self.children = []
+│ │ -        self.lora_weights = []
+│ │  
+│ │          if parts is not None:
+│ │              for part in parts:
+│ │                  self.append(part)
+│ │  
+│ │      def append(self, fragment: Union[list, BaseFragment, tuple]):
+│ │          # verify type correctness
+│ │          if type(fragment) is list:
+│ │              for x in fragment:
+│ │                  self.append(x)
+│ │          elif type(fragment) is LoraWeight:
+│ │ -            self.lora_weights.append(fragment)
+│ │ +            raise ValueError("FlattenedPrompt cannot contain a LoraWeight")
+│ │          elif issubclass(type(fragment), BaseFragment):
+│ │              self.children.append(fragment)
+│ │          elif type(fragment) is tuple:
+│ │              # upgrade tuples to Fragments
+│ │              if type(fragment[0]) is not str or (type(fragment[1]) is not float and type(fragment[1]) is not int):
+│ │                  raise PromptParser.ParsingException(
+│ │                      f"FlattenedPrompt cannot contain {fragment}, only Fragments or (str, float) tuples are allowed")
+│ │ @@ -99,19 +98,18 @@
+│ │      @property
+│ │      def wants_cross_attention_control(self):
+│ │          return any(
+│ │              [issubclass(type(x), CrossAttentionControlledFragment) for x in self.children]
+│ │          )
+│ │  
+│ │      def __repr__(self):
+│ │ -        return f"FlattenedPrompt:{self.children}"
+│ │ +        return (f"FlattenedPrompt:{self.children}")
+│ │      def __eq__(self, other):
+│ │          return (type(other) is FlattenedPrompt
+│ │ -               and other.children == self.children
+│ │ -                and other.lora_weights == self.lora_weights)
+│ │ +               and other.children == self.children)
+│ │  
+│ │  
+│ │  class Fragment(BaseFragment):
+│ │      """
+│ │      A Fragment is a chunk of plain text and an optional weight. The text should be passed as-is to the CLIP tokenizer.
+│ │      """
+│ │      def __init__(self, text: str, weight: float=1):
+│ │ @@ -224,32 +222,34 @@
+│ │  
+│ │  
+│ │  class Conjunction():
+│ │      """
+│ │      Storage for one or more Prompts or Blends, each of which is to be separately diffused and then the results merged
+│ │      by weighted sum in latent space.
+│ │      """
+│ │ -    def __init__(self, prompts: list, weights: list = None):
+│ │ +    def __init__(self, prompts: List, weights: List[float] = None, lora_weights: List[LoraWeight] = None):
+│ │          # force everything to be a Prompt
+│ │          #print("making conjunction with", prompts, "types", [type(p).__name__ for p in prompts])
+│ │          self.prompts = [x if (type(x) is Prompt
+│ │                            or type(x) is Blend
+│ │                            or type(x) is FlattenedPrompt)
+│ │                        else Prompt(x) for x in prompts]
+│ │          self.weights = [1.0]*len(self.prompts) if (weights is None or len(weights)==0) else list(weights)
+│ │          if len(self.weights) != len(self.prompts):
+│ │              raise PromptParser.ParsingException(f"while parsing Conjunction: mismatched parts/weights counts {prompts}, {weights}")
+│ │ +        self.lora_weights = lora_weights or []
+│ │          self.type = 'AND'
+│ │  
+│ │      def __repr__(self):
+│ │ -        return f"Conjunction:{self.prompts} | type {self.type} | weights {self.weights}"
+│ │ +        return f"Conjunction:{self.prompts} | type {self.type} | weights {self.weights} | loras {self.lora_weights}"
+│ │      def __eq__(self, other):
+│ │          return type(other) is Conjunction \
+│ │                 and other.prompts == self.prompts \
+│ │ -               and other.weights == self.weights
+│ │ +               and other.weights == self.weights \
+│ │ +               and other.lora_weights == self.lora_weights
+│ │  
+│ │  
+│ │  class Blend():
+│ │      """
+│ │      Stores a Blend of multiple Prompts. To apply, build feature vectors for each of the child Prompts and then perform a
+│ │      weighted blend of the feature vectors to produce a single feature vector that is effectively a lerp between the
+│ │      Prompts.
+│ │ @@ -326,87 +326,101 @@
+│ │          producing from each of these walks a linear sequence of Fragment or CrossAttentionControlSubstitute objects
+│ │          that can be readily tokenized without the need to walk a complex tree structure.
+│ │  
+│ │          :param root: The Conjunction to flatten.
+│ │          :return: A Conjunction containing the result of flattening each of the prompts in the passed-in root.
+│ │          """
+│ │  
+│ │ -        def fuse_fragments(items) -> Tuple[List, List]:
+│ │ -            # print("fusing fragments in ", items)
+│ │ +        def fuse_fragments(items) -> List:
+│ │ +            # verbose and print("fusing fragments in ", items)
+│ │              fused_fragments = []
+│ │ -            extras = []
+│ │              for x in items:
+│ │                  if type(x) is CrossAttentionControlSubstitute:
+│ │ -                    original_fused, _ = fuse_fragments(x.original)
+│ │ -                    edited_fused, _ = fuse_fragments(x.edited)
+│ │ +                    original_fused = fuse_fragments(x.original)
+│ │ +                    edited_fused = fuse_fragments(x.edited)
+│ │                      fused_fragments.append(CrossAttentionControlSubstitute(original_fused, edited_fused, options=x.options))
+│ │ -                elif type(x) is LoraWeight:
+│ │ -                    extras.append(x)
+│ │                  else:
+│ │                      last_weight = fused_fragments[-1].weight \
+│ │                          if (len(fused_fragments) > 0 and not issubclass(type(fused_fragments[-1]), CrossAttentionControlledFragment)) \
+│ │                          else None
+│ │                      this_text = x.text
+│ │                      this_weight = x.weight
+│ │                      if last_weight is not None and last_weight == this_weight:
+│ │                          last_text = fused_fragments[-1].text
+│ │                          fused_fragments[-1] = Fragment(last_text + ' ' + this_text, last_weight)
+│ │                      else:
+│ │                          fused_fragments.append(x)
+│ │ -            return fused_fragments, extras
+│ │ +            return fused_fragments
+│ │  
+│ │ -        def flatten_internal(node, weight_scale, results, prefix):
+│ │ +        def flatten_internal(node, weight_scale, prefix) -> Tuple[List[any], List[LoraWeight]]:
+│ │              verbose and print(prefix + "flattening", node, "...")
+│ │ +            results = []
+│ │ +            lora_weights = []
+│ │              if type(node) is pp.ParseResults or type(node) is list:
+│ │                  for x in node:
+│ │ -                    results = flatten_internal(x, weight_scale, results, prefix+' pr ')
+│ │ +                    r = flatten_internal(x, weight_scale, prefix+' pr ')
+│ │ +                    results.extend(r[0])
+│ │ +                    lora_weights.extend(r[1])
+│ │                  #print(prefix, " ParseResults expanded, results is now", results)
+│ │              elif type(node) is Attention:
+│ │ -                # if node.weight < 1:
+│ │ -                # todo: inject a blend when flattening attention with weight <1"
+│ │                  for index,c in enumerate(node.children):
+│ │ -                    results = flatten_internal(c, weight_scale * node.weight, results, prefix + f" att{index} ")
+│ │ +                    r = flatten_internal(c, weight_scale * node.weight, prefix + f" att{index} ")
+│ │ +                    results.extend(r[0])
+│ │ +                    lora_weights.extend(r[1])
+│ │              elif type(node) is LoraWeight:
+│ │ -                results.append(node)
+│ │ +                lora_weights += [node]
+│ │              elif type(node) is Fragment:
+│ │                  results += [Fragment(node.text, node.weight*weight_scale)]
+│ │              elif type(node) is CrossAttentionControlSubstitute:
+│ │ -                original = flatten_internal(node.original, weight_scale, [], prefix + ' CAo ')
+│ │ -                edited = flatten_internal(node.edited, weight_scale, [], prefix + ' CAe ')
+│ │ -                results += [CrossAttentionControlSubstitute(original, edited, options=node.options)]
+│ │ +                r_original = flatten_internal(node.original, weight_scale, prefix + ' CAo ')
+│ │ +                r_edited = flatten_internal(node.edited, weight_scale, prefix + ' CAe ')
+│ │ +                results += [CrossAttentionControlSubstitute(r_original[0], r_edited[0], options=node.options)]
+│ │ +                lora_weights.extend(r_original[1])
+│ │ +                lora_weights.extend(r_edited[1])
+│ │              elif type(node) is Blend:
+│ │                  flattened_subprompts = []
+│ │                  #print(" flattening blend with prompts", node.prompts, "weights", node.weights)
+│ │                  for prompt in node.prompts:
+│ │                      # prompt is a list
+│ │ -                    flattened_subprompts = flatten_internal(prompt, weight_scale, flattened_subprompts, prefix+'B ')
+│ │ +                    r = flatten_internal(prompt, weight_scale, prefix+'B ')
+│ │ +                    flattened_subprompts.extend(r[0])
+│ │ +                    lora_weights.extend(r[1])
+│ │                  results += [Blend(prompts=flattened_subprompts, weights=node.weights, normalize_weights=node.normalize_weights)]
+│ │              elif type(node) is Prompt:
+│ │                  verbose and print(prefix + "about to flatten Prompt with children", node.children)
+│ │ -                flattened_prompt = []
+│ │ +                unfused_fragments = []
+│ │                  for child in node.children:
+│ │ -                    flattened_prompt = flatten_internal(child, weight_scale, flattened_prompt, prefix+'P ')
+│ │ -                fused_fragments, extras = fuse_fragments(flattened_prompt)
+│ │ -                results += [FlattenedPrompt(parts=fused_fragments + extras)]
+│ │ +                    r = flatten_internal(child, weight_scale, prefix+'P ')
+│ │ +                    unfused_fragments.extend(r[0])
+│ │ +                    lora_weights.extend(r[1])
+│ │ +                fused_fragments = fuse_fragments(unfused_fragments)
+│ │ +                if len(fused_fragments)>0:
+│ │ +                    results += [FlattenedPrompt(parts=fused_fragments)]
+│ │                  verbose and print(prefix + "after flattening Prompt, results is", results)
+│ │              else:
+│ │                  raise PromptParser.ParsingException(f"unhandled node type {type(node)} when flattening {node}")
+│ │ -            verbose and print(prefix + "-> after flattening", type(node).__name__, "results is", results)
+│ │ -            return results
+│ │ +            verbose and print(prefix + "-> after flattening", type(node).__name__, "results is", results,
+│ │ +                              "lora weights is", lora_weights)
+│ │ +            return results, lora_weights
+│ │  
+│ │          verbose and print("flattening", root)
+│ │  
+│ │ +        weights = []
+│ │ +        loras = []
+│ │          flattened_parts = []
+│ │ -        for part in root.prompts:
+│ │ -            flattened_parts += flatten_internal(part, 1.0, [], ' C| ')
+│ │ +        for i, part in enumerate(root.prompts):
+│ │ +            flattened = flatten_internal(part, 1.0, f" C|{i} ")
+│ │ +            if len(flattened[0]) > 0:
+│ │ +                flattened_parts.extend(flattened[0])
+│ │ +                weights.append(root.weights[i])
+│ │ +            loras += flattened[1]
+│ │  
+│ │          verbose and print("flattened to", flattened_parts)
+│ │  
+│ │ -        weights = root.weights
+│ │ -        return Conjunction(flattened_parts, weights)
+│ │ +        return Conjunction(flattened_parts, weights, lora_weights=loras)
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  def build_parser_syntax(attention_plus_base: float, attention_minus_base: float):
+│ │      def make_operator_object(x):
+│ │          #print('making operator for', x)
+│ │ @@ -436,15 +450,15 @@
+│ │          elif operator == '.and' or operator == '.add':
+│ │              prompts = [Prompt(p) for p in x[0]]
+│ │              weights = [float(w[0]) for w in x[2]]
+│ │              return Conjunction(prompts=prompts, weights=weights)
+│ │  
+│ │          raise PromptParser.UnrecognizedOperatorException(operator)
+│ │  
+│ │ -    def parse_fragment_str(x, expression: pp.ParserElement, in_quotes: bool = False, in_parens: bool = False):
+│ │ +    def parse_fragment_str(x, expression: pp.ParserElement, in_quotes: bool = False):
+│ │          #print(f"parsing fragment string for {x}")
+│ │          fragment_string = x[0]
+│ │          if len(fragment_string.strip()) == 0:
+│ │              return Fragment('')
+│ │  
+│ │          if in_quotes:
+│ │              # escape unescaped quotes
+│ │ @@ -513,17 +527,19 @@
+│ │  
+│ │  
+│ │      # ok here we go. forward declare some things..
+│ │      attention = pp.Forward()
+│ │      cross_attention_substitute = pp.Forward()
+│ │      parenthesized_fragment = pp.Forward()
+│ │      quoted_fragment = pp.Forward()
+│ │ +    lora_weight = pp.Forward()
+│ │  
+│ │      # the types of things that can go into a fragment, consisting of syntax-full and/or strictly syntax-free components
+│ │      fragment_part_expressions = [
+│ │ +        lora_weight,
+│ │          attention,
+│ │          cross_attention_substitute,
+│ │          parenthesized_fragment,
+│ │          quoted_fragment,
+│ │          non_syntax_word
+│ │      ]
+│ │      # a fragment that is permitted to contain commas
+│ │ @@ -589,16 +605,18 @@
+│ │          + pp.Optional(comma + options).set_name('ca-options').set_debug(False)
+│ │          + rparen
+│ │      )
+│ │      cross_attention_substitute.set_name('cross_attention_substitute')
+│ │      cross_attention_substitute.set_debug(False)
+│ │      cross_attention_substitute.set_parse_action(make_operator_object)
+│ │  
+│ │ -    lora_weight = ("withLora" + lparen + keyword +
+│ │ -                   pp.Optional(comma + number).set_name('lora_weight').set_debug(False)
+│ │ +    lora_trigger_term = pp.Literal("useLora") | pp.Literal("withLora")
+│ │ +    lora_weight << (lora_trigger_term + lparen
+│ │ +                   + keyword # lora name
+│ │ +                   + pp.Optional(comma + number).set_name('lora_weight').set_debug(False)
+│ │                     + rparen)
+│ │      lora_weight.set_name('lora').set_debug(False)
+│ │      lora_weight.set_parse_action(lambda x: LoraWeight(model=x[1], weight=(x[2] if len(x) > 2 else 1)))
+│ │  
+│ │      # an entire self-contained prompt, which can be used in a Blend or Conjunction
+│ │      prompt = pp.ZeroOrMore(pp.MatchFirst([
+│ │          cross_attention_substitute,
+│ │ @@ -637,14 +655,15 @@
+│ │          + rparen
+│ │      )
+│ │      explicit_conjunction.set_name('explicit_conjunction')
+│ │      explicit_conjunction.set_debug(False)
+│ │      explicit_conjunction.set_parse_action(make_operator_object)
+│ │  
+│ │      # by default a prompt consists of a Conjunction with a single term
+│ │ -    implicit_conjunction = (blend | pp.Group(prompt)) + pp.StringEnd()
+│ │ +    optional_lora_weights = pp.Optional(pp.Group(pp.OneOrMore(lora_weight)))
+│ │ +    implicit_conjunction = optional_lora_weights + (blend | pp.Group(prompt)) + optional_lora_weights + pp.StringEnd()
+│ │      implicit_conjunction.set_parse_action(lambda x: Conjunction(x))
+│ │  
+│ │      conjunction = (explicit_conjunction | implicit_conjunction)
+│ │  
+│ │      return conjunction, prompt
+│ │   --- compel-1.0.5/src/compel.egg-info/PKG-INFO
+│ ├── +++ compel-1.1.0/src/compel.egg-info/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: compel
+│ │ -Version: 1.0.5
+│ │ +Version: 1.1.0
+│ │  Summary: A prompting enhancement library for transformers-type text embedding systems.
+│ │  Author-email: Damian Stewart <null@damianstewart.com>
+│ │  Project-URL: Homepage, https://github.com/damian0815/compel
+│ │  Project-URL: Bug Tracker, https://github.com/damian0815/compel/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -71,14 +71,19 @@
+│ │  
+│ │  images[0].save("image0.jpg")
+│ │  images[1].save("image1.jpg")
+│ │  ```
+│ │  
+│ │  ## Changelog
+│ │  
+│ │ +#### 1.1.0 - support for parsing `withLora`/`useLora` on `parse_prompt_string()`.
+│ │ +
+│ │ +* `Compel.parse_prompt_string()` now returns a `Conjunction`
+│ │ +* any appearances of `withLora(name[, weight])` or `useLora(name[, weight])` anywhere in the prompt string will be parsed to `LoraWeight` instances, and returned on the outermost `Conjunction` returned by `parse_prompt_string()`.
+│ │ +
+│ │  #### 1.0.5 - fix incorrect parsing when passing invalid (auto1111) syntax that has a float
+│ │  
+│ │  also fix test case for default swap parameters
+│ │  
+│ │  #### 1.0.4 - fix embeddings for empty swap target (eg `cat.swap("")`) when truncation is disabled 
+│ │  
+│ │  #### 1.0.3 - better defaults for .swap (https://github.com/damian0815/compel/issues/8)
+│ │   --- compel-1.0.5/test/test_compel.py
+│ ├── +++ compel-1.1.0/test/test_compel.py
+│ │┄ Files identical despite different names
+│ │   --- compel-1.0.5/test/test_embeddings_provider.py
+│ ├── +++ compel-1.1.0/test/test_embeddings_provider.py
+│ │┄ Files identical despite different names
+│ │   --- compel-1.0.5/test/test_prompt_parser.py
+│ ├── +++ compel-1.1.0/test/test_prompt_parser.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -543,38 +543,63 @@
+│ │                                 weights=[0.8,0.2]),
+│ │                           pp.parse_legacy_blend('"mountain man":4 man mountain'))
+│ │      """
+│ │  
+│ │      def test_lora(self):
+│ │          self.assertNotEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0)])]),
+│ │                           parse_prompt("mountain man withLora(hairy, 0.5)", verbose=False))
+│ │ -        self.assertEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0), LoraWeight('hairy', 1)])]),
+│ │ +        self.assertEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0)])], lora_weights=[LoraWeight('hairy', 1)]),
+│ │                           parse_prompt("mountain man withLora(hairy)", verbose=False))
+│ │ -        self.assertEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0), LoraWeight('hairy', 0.5)])]),
+│ │ +        self.assertNotEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0)])]),
+│ │ +                         parse_prompt("mountain man useLora(hairy, 0.5)", verbose=False))
+│ │ +        self.assertEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0)])], lora_weights=[LoraWeight('hairy', 1)]),
+│ │ +                         parse_prompt("mountain man useLora(hairy)", verbose=False))
+│ │ +        self.assertEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0)])], lora_weights=[LoraWeight('hairy', 0.5)]),
+│ │                           parse_prompt("mountain man withLora(hairy, 0.5)", verbose=False))
+│ │ -        self.assertEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0), LoraWeight('hairy', 0.5)])]),
+│ │ +        self.assertEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0)])], lora_weights=[LoraWeight('hairy', 0.5)]),
+│ │                           parse_prompt("withLora(hairy, 0.5) mountain man", verbose=False))
+│ │ -        self.assertEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0), LoraWeight('hairy', 0.5)])]),
+│ │ +        self.assertEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0)])], lora_weights=[LoraWeight('hairy', 0.5)]),
+│ │                           parse_prompt("mountain withLora(hairy, 0.5) man", verbose=False))
+│ │ -        self.assertEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0),
+│ │ +        self.assertEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0)])], lora_weights=[
+│ │                                                         LoraWeight('hairy', 0.5),
+│ │ -                                                       LoraWeight('ugly', 0.2)])]),
+│ │ +                                                       LoraWeight('ugly', 0.2)]),
+│ │                           parse_prompt("mountain withLora(hairy, 0.5) man withLora(ugly, 0.2)", verbose=False))
+│ │  
+│ │ +    def test_blend_and_lora(self):
+│ │ +        self.assertEqual(Conjunction([Blend([FlattenedPrompt([("mountain", 1.0)]), FlattenedPrompt([("man", 1.0)])],
+│ │ +                                            [1.0,1.0])],
+│ │ +                                            lora_weights=[LoraWeight('hairy', 0.5)]),
+│ │ +                         parse_prompt('("mountain", "man").blend() withLora(hairy, 0.5)',
+│ │ +                         verbose=False))
+│ │ +
+│ │ +        self.assertEqual(Conjunction([Blend([FlattenedPrompt([("mountain", 1.0)]), FlattenedPrompt([("man", 1.0)])],
+│ │ +                                            [1.0,1.0])],
+│ │ +                                            lora_weights=[LoraWeight('hairy', 0.5)]),
+│ │ +                         parse_prompt('("mountain withLora(hairy, 0.5)", "man").blend()',
+│ │ +                         verbose=False))
+│ │ +
+│ │ +        self.assertEqual(Conjunction([Blend([FlattenedPrompt([("mountain", 1.0)]), FlattenedPrompt([("man", 1.0)])],
+│ │ +                                            [1.0,1.0])],
+│ │ +                                            lora_weights=[LoraWeight('hairy', 0.5)]),
+│ │ +                         parse_prompt('("mountain", "man withLora(hairy, 0.5)").blend()',
+│ │ +                         verbose=False))
+│ │ +
+│ │  
+│ │      def test_single(self):
+│ │          self.assertEqual(Conjunction([FlattenedPrompt([("mountain man", 1.0)]),
+│ │                                        FlattenedPrompt([("a person with a hat", 1.0),
+│ │                                                         ("riding a", 1.1 * 1.1),
+│ │                                                         CrossAttentionControlSubstitute(
+│ │                                                             [Fragment("bicycle", pow(1.1, 2))],
+│ │                                                             [Fragment("skateboard", pow(1.1, 2))])
+│ │                                                         ])
+│ │                                        ], weights=[0.5, 0.5]),
+│ │ -                         parse_prompt("(\"mountain man\", \"a person with a hat (riding a bicycle.swap(skateboard))++\").and(0.5, 0.5)"))
+│ │ +                         parse_prompt(
+│ │ +                             "(\"mountain man\", \"a person with a hat (riding a bicycle.swap(skateboard))++\").and(0.5, 0.5)"
+│ │ +                         ))
+│ │          pass
+│ │  
+│ │  
+│ │      def test_bad_auto1111_syntax(self):
+│ │          self.assertEqual(Conjunction([FlattenedPrompt([("happy camper:0.3", 1.0)])]),
+│ │                           parse_prompt("(happy camper:0.3)"))

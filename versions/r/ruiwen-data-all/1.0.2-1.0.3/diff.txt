@@ -1,0 +1,77 @@
+--- tmp/ruiwen_data_all-1.0.2.tar.gz
++++ tmp/ruiwen_data_all-1.0.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "ruiwen_data_all-1.0.2.tar", last modified: Fri Apr  7 11:31:40 2023, max compression
+│ +gzip compressed data, was "ruiwen_data_all-1.0.3.tar", last modified: Fri Apr  7 12:10:43 2023, max compression
+│   --- ruiwen_data_all-1.0.2.tar
+├── +++ ruiwen_data_all-1.0.3.tar
+│ ├── file list
+│ │ @@ -1,12 +1,12 @@
+│ │ -drwxr-xr-x   0 xiaochuan   (501) staff       (20)        0 2023-04-07 11:31:40.150240 ruiwen_data_all-1.0.2/
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)       59 2023-04-07 11:31:40.149146 ruiwen_data_all-1.0.2/PKG-INFO
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)      673 2023-04-07 11:31:28.000000 ruiwen_data_all-1.0.2/pyproject.toml
+│ │ -drwxr-xr-x   0 xiaochuan   (501) staff       (20)        0 2023-04-07 11:31:40.139846 ruiwen_data_all-1.0.2/ruiwen_data_all/
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)    36688 2023-04-07 11:31:28.000000 ruiwen_data_all-1.0.2/ruiwen_data_all/__init__.py
+│ │ -drwxr-xr-x   0 xiaochuan   (501) staff       (20)        0 2023-04-07 11:31:40.146010 ruiwen_data_all-1.0.2/ruiwen_data_all.egg-info/
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)       59 2023-04-07 11:31:40.000000 ruiwen_data_all-1.0.2/ruiwen_data_all.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)      236 2023-04-07 11:31:40.000000 ruiwen_data_all-1.0.2/ruiwen_data_all.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)        1 2023-04-07 11:31:40.000000 ruiwen_data_all-1.0.2/ruiwen_data_all.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)       53 2023-04-07 11:31:40.000000 ruiwen_data_all-1.0.2/ruiwen_data_all.egg-info/requires.txt
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)       16 2023-04-07 11:31:40.000000 ruiwen_data_all-1.0.2/ruiwen_data_all.egg-info/top_level.txt
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)       38 2023-04-07 11:31:40.150828 ruiwen_data_all-1.0.2/setup.cfg
+│ │ +drwxr-xr-x   0 xiaochuan   (501) staff       (20)        0 2023-04-07 12:10:43.393750 ruiwen_data_all-1.0.3/
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)       59 2023-04-07 12:10:43.393466 ruiwen_data_all-1.0.3/PKG-INFO
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)      673 2023-04-07 12:10:33.000000 ruiwen_data_all-1.0.3/pyproject.toml
+│ │ +drwxr-xr-x   0 xiaochuan   (501) staff       (20)        0 2023-04-07 12:10:43.388739 ruiwen_data_all-1.0.3/ruiwen_data_all/
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)    36713 2023-04-07 12:10:09.000000 ruiwen_data_all-1.0.3/ruiwen_data_all/__init__.py
+│ │ +drwxr-xr-x   0 xiaochuan   (501) staff       (20)        0 2023-04-07 12:10:43.393099 ruiwen_data_all-1.0.3/ruiwen_data_all.egg-info/
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)       59 2023-04-07 12:10:43.000000 ruiwen_data_all-1.0.3/ruiwen_data_all.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)      236 2023-04-07 12:10:43.000000 ruiwen_data_all-1.0.3/ruiwen_data_all.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)        1 2023-04-07 12:10:43.000000 ruiwen_data_all-1.0.3/ruiwen_data_all.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)       53 2023-04-07 12:10:43.000000 ruiwen_data_all-1.0.3/ruiwen_data_all.egg-info/requires.txt
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)       16 2023-04-07 12:10:43.000000 ruiwen_data_all-1.0.3/ruiwen_data_all.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)       38 2023-04-07 12:10:43.393834 ruiwen_data_all-1.0.3/setup.cfg
+│ │   --- ruiwen_data_all-1.0.2/pyproject.toml
+│ ├── +++ ruiwen_data_all-1.0.3/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [project]
+│ │  name = "ruiwen_data_all"
+│ │ -version = "1.0.2"
+│ │ +version = "1.0.3"
+│ │  dependencies = [
+│ │    "redis",
+│ │    "requests",
+│ │    "asyncio",
+│ │    "urllib3",
+│ │    "pymongo",
+│ │    "w3lib",
+│ │   --- ruiwen_data_all-1.0.2/ruiwen_data_all/__init__.py
+│ ├── +++ ruiwen_data_all-1.0.3/ruiwen_data_all/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,7 +1,8 @@
+│ │ +# -*- coding: UTF-8 -*-
+│ │  import redis,re,random,requests,asyncio,warnings,sys,urllib3,smtplib,pymongo,hashlib
+│ │  from w3lib import html
+│ │  from aiohttp import ClientSession
+│ │  from email.mime.text import MIMEText
+│ │  
+│ │  class ruiwen_all():
+│ │      #   引入值
+│ │ @@ -60,14 +61,15 @@
+│ │                      data.encoding = "gbk"
+│ │                      return data.text
+│ │                  elif data.status_code == 403:
+│ │                      self.get(url)
+│ │                  elif data.status_code == 404:
+│ │                      return '无数据'
+│ │                  else:
+│ │ +
+│ │                      self.err += 1
+│ │                      if self.err >= 5:
+│ │                          self.err = 0
+│ │                          print("\n", "-" * 74, '此ip已被封禁！', "-" * 74, "\n")
+│ │                          exit()
+│ │                      return '无数据'
+│ │              except:

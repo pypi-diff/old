@@ -1,0 +1,83 @@
+--- tmp/structio-1.1.1.tar.gz
++++ tmp/structio-1.1.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "structio-1.1.1.tar", last modified: Sun Apr  2 22:52:28 2023, max compression
+│ +gzip compressed data, was "structio-1.1.2.tar", last modified: Fri Apr  7 12:17:11 2023, max compression
+│   --- structio-1.1.1.tar
+├── +++ structio-1.1.2.tar
+│ ├── file list
+│ │ @@ -1,11 +1,11 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-02 22:52:28.419018 structio-1.1.1/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11234 2023-04-02 22:52:28.419018 structio-1.1.1/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11293 2023-04-02 22:52:06.000000 structio-1.1.1/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      343 2023-04-02 22:52:06.000000 structio-1.1.1/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-02 22:52:28.419018 structio-1.1.1/setup.cfg
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-02 22:52:28.419018 structio-1.1.1/structio.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11234 2023-04-02 22:52:28.000000 structio-1.1.1/structio.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      164 2023-04-02 22:52:28.000000 structio-1.1.1/structio.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-02 22:52:28.000000 structio-1.1.1/structio.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-02 22:52:28.000000 structio-1.1.1/structio.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11147 2023-04-02 22:52:06.000000 structio-1.1.1/structio.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 12:17:11.080571 structio-1.1.2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11234 2023-04-07 12:17:11.080571 structio-1.1.2/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11293 2023-04-07 12:16:51.000000 structio-1.1.2/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      343 2023-04-07 12:16:51.000000 structio-1.1.2/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 12:17:11.080571 structio-1.1.2/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 12:17:11.080571 structio-1.1.2/structio.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11234 2023-04-07 12:17:11.000000 structio-1.1.2/structio.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      164 2023-04-07 12:17:11.000000 structio-1.1.2/structio.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 12:17:11.000000 structio-1.1.2/structio.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-07 12:17:11.000000 structio-1.1.2/structio.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11119 2023-04-07 12:16:51.000000 structio-1.1.2/structio.py
+│ │   --- structio-1.1.1/PKG-INFO
+│ ├── +++ structio-1.1.2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: structio
+│ │ -Version: 1.1.1
+│ │ +Version: 1.1.2
+│ │  Summary: A Library for unparsing, parsing, and editing binary files
+│ │  Project-URL: Homepage, https://github.com/lingeringwillx/StructIO
+│ │  Requires-Python: >=3.2
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  A small Python library based on the BytesIO object from the standard library, designed to make parsing and editing binary files easier.
+│ │   --- structio-1.1.1/README.md
+│ ├── +++ structio-1.1.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- structio-1.1.1/structio.egg-info/PKG-INFO
+│ ├── +++ structio-1.1.2/structio.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: structio
+│ │ -Version: 1.1.1
+│ │ +Version: 1.1.2
+│ │  Summary: A Library for unparsing, parsing, and editing binary files
+│ │  Project-URL: Homepage, https://github.com/lingeringwillx/StructIO
+│ │  Requires-Python: >=3.2
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  A small Python library based on the BytesIO object from the standard library, designed to make parsing and editing binary files easier.
+│ │   --- structio-1.1.1/structio.py
+│ ├── +++ structio-1.1.2/structio.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -249,15 +249,15 @@
+│ │          
+│ │      def write_cstr(self, string):
+│ │          return self.write(self._struct.pack_cstr(string))
+│ │          
+│ │      def append_cstr(self, string):
+│ │          return self.append(self._struct.pack_cstr(string))
+│ │          
+│ │ -    def overwrite_cstr(self, string, encoding=None, errors=None):
+│ │ +    def overwrite_cstr(self, string):
+│ │          end = self.find(b'\x00')
+│ │          
+│ │          if end == -1:
+│ │              raise ValueError('null termination not found')
+│ │              
+│ │          start = self.tell()
+│ │          return self.overwrite(start, end + 1, self._struct.pack_cstr(string))

@@ -1,0 +1,450 @@
+--- tmp/cli_command_parser-2023.4.6.tar.gz
++++ tmp/cli_command_parser-2023.4.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "cli_command_parser-2023.4.6.tar", last modified: Thu Apr  6 21:32:33 2023, max compression
+│ +gzip compressed data, was "cli_command_parser-2023.4.7.tar", last modified: Fri Apr  7 12:09:56 2023, max compression
+│   --- cli_command_parser-2023.4.6.tar
+├── +++ cli_command_parser-2023.4.7.tar
+│ ├── file list
+│ │ @@ -1,69 +1,69 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 21:32:33.677393 cli_command_parser-2023.4.6/
+│ │ --rw-rw-rw-   0        0        0    11341 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/LICENSE
+│ │ --rw-rw-rw-   0        0        0       64 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0     4730 2023-04-06 21:32:33.677393 cli_command_parser-2023.4.6/PKG-INFO
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 21:32:33.504876 cli_command_parser-2023.4.6/lib/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 21:32:33.584392 cli_command_parser-2023.4.6/lib/cli_command_parser/
+│ │ --rw-rw-rw-   0        0        0     1016 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/__init__.py
+│ │ --rw-rw-rw-   0        0        0      114 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/__main__.py
+│ │ --rw-rw-rw-   0        0        0      295 2023-04-06 21:32:23.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/__version__.py
+│ │ --rw-rw-rw-   0        0        0      463 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/actions.py
+│ │ --rw-rw-rw-   0        0        0     3017 2022-10-15 14:00:15.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/annotations.py
+│ │ --rw-rw-rw-   0        0        0    19746 2023-03-30 11:44:47.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/command_parameters.py
+│ │ --rw-rw-rw-   0        0        0    12491 2023-03-31 11:57:05.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/commands.py
+│ │ --rw-rw-rw-   0        0        0     7682 2023-01-14 20:20:57.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/compat.py
+│ │ --rw-rw-rw-   0        0        0    15527 2023-04-01 22:51:43.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/config.py
+│ │ --rw-rw-rw-   0        0        0    16854 2023-03-30 11:44:47.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/context.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 21:32:33.613392 cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/
+│ │ --rw-rw-rw-   0        0        0      234 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/__init__.py
+│ │ --rw-rw-rw-   0        0        0       54 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/__main__.py
+│ │ --rw-rw-rw-   0        0        0    12802 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/argparse_ast.py
+│ │ --rw-rw-rw-   0        0        0     1356 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/argparse_utils.py
+│ │ --rw-rw-rw-   0        0        0    21220 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/command_builder.py
+│ │ --rw-rw-rw-   0        0        0     1660 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/utils.py
+│ │ --rw-rw-rw-   0        0        0     7384 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/visitor.py
+│ │ --rw-rw-rw-   0        0        0     9792 2022-09-24 13:23:00.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/core.py
+│ │ --rw-rw-rw-   0        0        0    13416 2023-03-29 11:48:12.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/documentation.py
+│ │ --rw-rw-rw-   0        0        0     4800 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/error_handling.py
+│ │ --rw-rw-rw-   0        0        0     7775 2022-11-12 17:12:38.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/exceptions.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 21:32:33.624392 cli_command_parser-2023.4.6/lib/cli_command_parser/formatting/
+│ │ --rw-rw-rw-   0        0        0        0 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/formatting/__init__.py
+│ │ --rw-rw-rw-   0        0        0     6557 2022-09-24 13:23:00.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/formatting/commands.py
+│ │ --rw-rw-rw-   0        0        0    20593 2023-03-29 11:48:12.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/formatting/params.py
+│ │ --rw-rw-rw-   0        0        0     8572 2022-09-18 21:50:31.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/formatting/restructured_text.py
+│ │ --rw-rw-rw-   0        0        0     5440 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/formatting/utils.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 21:32:33.646392 cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/
+│ │ --rw-rw-rw-   0        0        0     2101 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1418 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/base.py
+│ │ --rw-rw-rw-   0        0        0     6313 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/choices.py
+│ │ --rw-rw-rw-   0        0        0     1122 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/exceptions.py
+│ │ --rw-rw-rw-   0        0        0     8408 2023-01-14 18:15:47.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/files.py
+│ │ --rw-rw-rw-   0        0        0     7242 2023-01-14 18:15:47.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/numeric.py
+│ │ --rw-rw-rw-   0        0        0    19507 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/time.py
+│ │ --rw-rw-rw-   0        0        0     6490 2023-01-14 20:20:57.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/utils.py
+│ │ --rw-rw-rw-   0        0        0     8145 2023-01-15 15:08:06.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/metadata.py
+│ │ --rw-rw-rw-   0        0        0     6538 2022-09-19 11:52:48.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/nargs.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 21:32:33.676392 cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/
+│ │ --rw-rw-rw-   0        0        0      300 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/__init__.py
+│ │ --rw-rw-rw-   0        0        0    25575 2023-04-01 22:51:43.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/base.py
+│ │ --rw-rw-rw-   0        0        0    17128 2022-09-18 21:50:31.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/choice_map.py
+│ │ --rw-rw-rw-   0        0        0    10236 2023-03-31 11:57:05.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/groups.py
+│ │ --rw-rw-rw-   0        0        0     6452 2023-03-30 11:44:47.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/option_strings.py
+│ │ --rw-rw-rw-   0        0        0    19899 2023-03-30 11:44:47.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/options.py
+│ │ --rw-rw-rw-   0        0        0     2039 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/pass_thru.py
+│ │ --rw-rw-rw-   0        0        0     3566 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/positionals.py
+│ │ --rw-rw-rw-   0        0        0    11704 2022-09-19 11:52:48.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/parse_tree.py
+│ │ --rw-rw-rw-   0        0        0    14238 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/parser.py
+│ │ --rw-rw-rw-   0        0        0     9623 2023-04-01 22:51:43.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/testing.py
+│ │ --rw-rw-rw-   0        0        0     1795 2023-01-14 18:15:47.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/typing.py
+│ │ --rw-rw-rw-   0        0        0     4548 2023-01-14 20:20:57.000000 cli_command_parser-2023.4.6/lib/cli_command_parser/utils.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 21:32:33.594394 cli_command_parser-2023.4.6/lib/cli_command_parser.egg-info/
+│ │ --rw-rw-rw-   0        0        0     4730 2023-04-06 21:32:33.000000 cli_command_parser-2023.4.6/lib/cli_command_parser.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     2314 2023-04-06 21:32:33.000000 cli_command_parser-2023.4.6/lib/cli_command_parser.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 21:32:33.000000 cli_command_parser-2023.4.6/lib/cli_command_parser.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       81 2023-04-06 21:32:33.000000 cli_command_parser-2023.4.6/lib/cli_command_parser.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       19 2023-04-06 21:32:33.000000 cli_command_parser-2023.4.6/lib/cli_command_parser.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0      324 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0     3500 2023-03-30 11:44:47.000000 cli_command_parser-2023.4.6/readme.rst
+│ │ --rw-rw-rw-   0        0        0       99 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.6/requirements-dev.txt
+│ │ --rw-rw-rw-   0        0        0     1333 2023-04-06 21:32:33.678393 cli_command_parser-2023.4.6/setup.cfg
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 12:09:56.513235 cli_command_parser-2023.4.7/
+│ │ +-rw-rw-rw-   0        0        0    11341 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/LICENSE
+│ │ +-rw-rw-rw-   0        0        0       64 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0     4713 2023-04-07 12:09:56.513235 cli_command_parser-2023.4.7/PKG-INFO
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 12:09:56.336222 cli_command_parser-2023.4.7/lib/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 12:09:56.419238 cli_command_parser-2023.4.7/lib/cli_command_parser/
+│ │ +-rw-rw-rw-   0        0        0     1016 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      114 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/__main__.py
+│ │ +-rw-rw-rw-   0        0        0      295 2023-04-07 12:09:46.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/__version__.py
+│ │ +-rw-rw-rw-   0        0        0      463 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/actions.py
+│ │ +-rw-rw-rw-   0        0        0     3017 2022-10-15 14:00:15.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/annotations.py
+│ │ +-rw-rw-rw-   0        0        0    19746 2023-03-30 11:44:47.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/command_parameters.py
+│ │ +-rw-rw-rw-   0        0        0    12491 2023-03-31 11:57:05.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/commands.py
+│ │ +-rw-rw-rw-   0        0        0     7682 2023-01-14 20:20:57.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/compat.py
+│ │ +-rw-rw-rw-   0        0        0    15521 2023-04-07 12:09:39.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/config.py
+│ │ +-rw-rw-rw-   0        0        0    16854 2023-03-30 11:44:47.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/context.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 12:09:56.447236 cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/
+│ │ +-rw-rw-rw-   0        0        0      234 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/__init__.py
+│ │ +-rw-rw-rw-   0        0        0       54 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/__main__.py
+│ │ +-rw-rw-rw-   0        0        0    12802 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/argparse_ast.py
+│ │ +-rw-rw-rw-   0        0        0     1356 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/argparse_utils.py
+│ │ +-rw-rw-rw-   0        0        0    21165 2023-04-07 12:09:39.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/command_builder.py
+│ │ +-rw-rw-rw-   0        0        0     1660 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/utils.py
+│ │ +-rw-rw-rw-   0        0        0     7403 2023-04-07 12:09:39.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/visitor.py
+│ │ +-rw-rw-rw-   0        0        0     9792 2022-09-24 13:23:00.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/core.py
+│ │ +-rw-rw-rw-   0        0        0    13416 2023-03-29 11:48:12.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/documentation.py
+│ │ +-rw-rw-rw-   0        0        0     4800 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/error_handling.py
+│ │ +-rw-rw-rw-   0        0        0     7775 2022-11-12 17:12:38.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/exceptions.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 12:09:56.463237 cli_command_parser-2023.4.7/lib/cli_command_parser/formatting/
+│ │ +-rw-rw-rw-   0        0        0        0 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/formatting/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     6557 2022-09-24 13:23:00.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/formatting/commands.py
+│ │ +-rw-rw-rw-   0        0        0    20593 2023-03-29 11:48:12.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/formatting/params.py
+│ │ +-rw-rw-rw-   0        0        0     8572 2022-09-18 21:50:31.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/formatting/restructured_text.py
+│ │ +-rw-rw-rw-   0        0        0     5440 2023-04-06 21:32:03.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/formatting/utils.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 12:09:56.485236 cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/
+│ │ +-rw-rw-rw-   0        0        0     2101 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1418 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/base.py
+│ │ +-rw-rw-rw-   0        0        0     6313 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/choices.py
+│ │ +-rw-rw-rw-   0        0        0     1122 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/exceptions.py
+│ │ +-rw-rw-rw-   0        0        0     8408 2023-01-14 18:15:47.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/files.py
+│ │ +-rw-rw-rw-   0        0        0     7242 2023-01-14 18:15:47.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/numeric.py
+│ │ +-rw-rw-rw-   0        0        0    19507 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/time.py
+│ │ +-rw-rw-rw-   0        0        0     6490 2023-01-14 20:20:57.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/utils.py
+│ │ +-rw-rw-rw-   0        0        0     8145 2023-01-15 15:08:06.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/metadata.py
+│ │ +-rw-rw-rw-   0        0        0     6538 2022-09-19 11:52:48.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/nargs.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 12:09:56.512236 cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/
+│ │ +-rw-rw-rw-   0        0        0      300 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    25575 2023-04-01 22:51:43.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/base.py
+│ │ +-rw-rw-rw-   0        0        0    17128 2022-09-18 21:50:31.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/choice_map.py
+│ │ +-rw-rw-rw-   0        0        0    10236 2023-03-31 11:57:05.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/groups.py
+│ │ +-rw-rw-rw-   0        0        0     6452 2023-03-30 11:44:47.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/option_strings.py
+│ │ +-rw-rw-rw-   0        0        0    19899 2023-03-30 11:44:47.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/options.py
+│ │ +-rw-rw-rw-   0        0        0     2039 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/pass_thru.py
+│ │ +-rw-rw-rw-   0        0        0     3566 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/positionals.py
+│ │ +-rw-rw-rw-   0        0        0    11704 2022-09-19 11:52:48.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/parse_tree.py
+│ │ +-rw-rw-rw-   0        0        0    14238 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/parser.py
+│ │ +-rw-rw-rw-   0        0        0     9623 2023-04-01 22:51:43.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/testing.py
+│ │ +-rw-rw-rw-   0        0        0     1795 2023-01-14 18:15:47.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/typing.py
+│ │ +-rw-rw-rw-   0        0        0     4548 2023-01-14 20:20:57.000000 cli_command_parser-2023.4.7/lib/cli_command_parser/utils.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 12:09:56.427236 cli_command_parser-2023.4.7/lib/cli_command_parser.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     4713 2023-04-07 12:09:56.000000 cli_command_parser-2023.4.7/lib/cli_command_parser.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     2314 2023-04-07 12:09:56.000000 cli_command_parser-2023.4.7/lib/cli_command_parser.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 12:09:56.000000 cli_command_parser-2023.4.7/lib/cli_command_parser.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       81 2023-04-07 12:09:56.000000 cli_command_parser-2023.4.7/lib/cli_command_parser.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       19 2023-04-07 12:09:56.000000 cli_command_parser-2023.4.7/lib/cli_command_parser.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0      324 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0     3483 2023-04-07 12:09:39.000000 cli_command_parser-2023.4.7/readme.rst
+│ │ +-rw-rw-rw-   0        0        0       99 2022-09-17 20:57:36.000000 cli_command_parser-2023.4.7/requirements-dev.txt
+│ │ +-rw-rw-rw-   0        0        0     1333 2023-04-07 12:09:56.514234 cli_command_parser-2023.4.7/setup.cfg
+│ │   --- cli_command_parser-2023.4.6/LICENSE
+│ ├── +++ cli_command_parser-2023.4.7/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/PKG-INFO
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │ -Name: cli_command_parser
+│ │ -Version: 2023.4.6
+│ │ +Name: cli-command-parser
+│ │ +Version: 2023.4.7
+│ │  Summary: CLI Command Parser
+│ │  Home-page: https://github.com/dskrypa/cli_command_parser
+│ │  Author: Doug Skrypa
+│ │  Author-email: dskrypa@gmail.com
+│ │  License: Apache 2.0
+│ │  Project-URL: Source, https://github.com/dskrypa/cli_command_parser
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │ @@ -89,15 +89,15 @@
+│ │      usage: hello_world.py [--name NAME] [--count COUNT] [--help]
+│ │  
+│ │      Simple greeting example
+│ │  
+│ │      Optional arguments:
+│ │        --name NAME, -n NAME        The person to say hello to (default: 'World')
+│ │        --count COUNT, -c COUNT     Number of times to repeat the message (default: 1)
+│ │ -      --help, -h                  Show this help message and exit (default: False)
+│ │ +      --help, -h                  Show this help message and exit
+│ │  
+│ │  
+│ │  Installing CLI Command Parser
+│ │  *****************************
+│ │  
+│ │  CLI Command Parser can be installed and updated via `pip <https://pip.pypa.io/en/stable/getting-started/>`__::
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/__init__.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/annotations.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/annotations.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/command_parameters.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/command_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/commands.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/commands.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/compat.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/compat.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/config.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/config.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -282,15 +282,15 @@
+│ │      #: Whether missing required arguments should be allowed (default: raise an exception when they are missing)
+│ │      allow_missing: Bool = ConfigItem(False, bool)
+│ │  
+│ │      #: Whether backtracking is enabled for positionals following params with variable nargs
+│ │      allow_backtrack: Bool = ConfigItem(True, bool)
+│ │  
+│ │      #: How the default long form that is added for Option/Flag/Counter/etc. Parameters should handle underscores/dashes
+│ │ -    option_name_mode: OptionNameMode = ConfigItem(OptionNameMode.UNDERSCORE, OptionNameMode)
+│ │ +    option_name_mode: OptionNameMode = ConfigItem(OptionNameMode.DASH, OptionNameMode)
+│ │  
+│ │      #: Whether ambiguous combinations of positional choices should result in an :class:`.AmbiguousParseTree` error
+│ │      reject_ambiguous_pos_combos: Bool = ConfigItem(False, bool)  # EXPERIMENTAL
+│ │  
+│ │      #: How potentially ambiguous combinations of short forms of Option/Flag/etc. Parameters should be handled
+│ │      ambiguous_short_combos: AmbiguousComboMode = ConfigItem(AmbiguousComboMode.PERMISSIVE, AmbiguousComboMode)
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/context.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/context.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/argparse_ast.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/argparse_ast.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/argparse_utils.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/argparse_utils.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/command_builder.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/command_builder.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -18,18 +18,15 @@
+│ │      from .argparse_ast import ArgCollection
+│ │  
+│ │  __all__ = ['convert_script']
+│ │  log = logging.getLogger(__name__)
+│ │  
+│ │  C = TypeVar('C', bound='Converter')
+│ │  
+│ │ -try:
+│ │ -    RESERVED = set(keyword.kwlist) | set(keyword.softkwlist)
+│ │ -except AttributeError:  # < 3.9
+│ │ -    RESERVED = set(keyword.kwlist)
+│ │ +RESERVED = set(keyword.kwlist) | set(getattr(keyword, 'softkwlist', ('_', 'case', 'match')))  # soft was added in 3.9
+│ │  
+│ │  
+│ │  def convert_script(script: Script) -> str:
+│ │      return ScriptConverter(script).convert()
+│ │  
+│ │  
+│ │  class Converter(ABC):
+│ │ @@ -295,25 +292,25 @@
+│ │          arg_str = args_obj.to_str(*self.get_pos_args())
+│ │          return f'{" " * indent}{self.attr_name} = {param_cls}({arg_str})'
+│ │  
+│ │      # region Naming
+│ │  
+│ │      @cached_property
+│ │      def attr_name(self) -> str:
+│ │ -        return self._attr_name.replace('-', '_') if self._name_mode else self._attr_name
+│ │ +        return self._attr_name.replace('-', '_')
+│ │  
+│ │      @cached_property
+│ │      def name_mode(self) -> str | None:
+│ │          return None if self.parent.name_mode else self._name_mode
+│ │  
+│ │      @cached_property
+│ │      def _name_mode(self) -> str | None:
+│ │          if not self.use_auto_long_opt_str:
+│ │              return None
+│ │ -        return "'-'" if '-' in self._attr_name else None
+│ │ +        return "'_'" if '_' in self._attr_name else None
+│ │  
+│ │      @cached_property
+│ │      def _attr_name(self) -> str:
+│ │          return next(name for name in self._attr_name_candidates() if name not in RESERVED)
+│ │  
+│ │      def _attr_name_candidates(self) -> Iterator[str]:
+│ │          long, short, plain = self._grouped_opt_strs
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/utils.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/utils.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/conversion/visitor.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/conversion/visitor.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -107,18 +107,18 @@
+│ │      def _visit_for_smart(self, node: For, loop_var: str, ele_names: List[str]):
+│ │          log.debug(f'Attempting smart for loop visit for loop_var={loop_var!r} in ele_names={ele_names!r}')
+│ │          refs = [ref for ref in (self.scopes.get(name) for name in ele_names) if ref]
+│ │          # log.debug(f'  > Found {len(refs)=}, {len(ele_names)=}')
+│ │  
+│ │          if len(refs) == len(ele_names) and all(isinstance(ref, AstArgumentParser) for ref in refs):
+│ │              parents = set(ref.parent for ref in refs)
+│ │ -            log.debug(f'  > Found parents={parents!r}')
+│ │ +            log.debug(f'  > Found parents={len(parents)}')
+│ │              if len(parents) == 1:
+│ │                  parent = next(iter(parents))
+│ │ -                if parent and set(parent.sub_parsers) == set(refs):
+│ │ +                if parent and set(getattr(parent, 'sub_parsers', ())) == set(refs):
+│ │                      self.scopes[loop_var] = parent
+│ │                      self.generic_visit(node)
+│ │                      return
+│ │  
+│ │          log.debug('Falling back to generic loop handling')
+│ │          self._visit_for_elements(node, loop_var, ele_names)
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/core.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/core.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/documentation.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/documentation.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/error_handling.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/error_handling.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/exceptions.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/formatting/commands.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/formatting/commands.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/formatting/params.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/formatting/params.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/formatting/restructured_text.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/formatting/restructured_text.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/formatting/utils.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/formatting/utils.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/__init__.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/base.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/base.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/choices.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/choices.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/exceptions.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/files.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/files.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/numeric.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/numeric.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/time.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/time.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/inputs/utils.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/inputs/utils.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/metadata.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/metadata.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/nargs.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/nargs.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/base.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/base.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/choice_map.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/choice_map.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/groups.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/groups.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/option_strings.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/option_strings.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/options.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/options.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/pass_thru.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/pass_thru.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/parameters/positionals.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/parameters/positionals.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/parse_tree.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/parse_tree.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/parser.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/parser.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/testing.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/testing.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/typing.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/typing.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser/utils.py
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser/utils.py
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser.egg-info/PKG-INFO
+│ ├── +++ cli_command_parser-2023.4.7/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │ -Name: cli-command-parser
+│ │ -Version: 2023.4.6
+│ │ +Name: cli_command_parser
+│ │ +Version: 2023.4.7
+│ │  Summary: CLI Command Parser
+│ │  Home-page: https://github.com/dskrypa/cli_command_parser
+│ │  Author: Doug Skrypa
+│ │  Author-email: dskrypa@gmail.com
+│ │  License: Apache 2.0
+│ │  Project-URL: Source, https://github.com/dskrypa/cli_command_parser
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │ @@ -89,15 +89,15 @@
+│ │      usage: hello_world.py [--name NAME] [--count COUNT] [--help]
+│ │  
+│ │      Simple greeting example
+│ │  
+│ │      Optional arguments:
+│ │        --name NAME, -n NAME        The person to say hello to (default: 'World')
+│ │        --count COUNT, -c COUNT     Number of times to repeat the message (default: 1)
+│ │ -      --help, -h                  Show this help message and exit (default: False)
+│ │ +      --help, -h                  Show this help message and exit
+│ │  
+│ │  
+│ │  Installing CLI Command Parser
+│ │  *****************************
+│ │  
+│ │  CLI Command Parser can be installed and updated via `pip <https://pip.pypa.io/en/stable/getting-started/>`__::
+│ │   --- cli_command_parser-2023.4.6/lib/cli_command_parser.egg-info/SOURCES.txt
+│ ├── +++ cli_command_parser-2023.4.7/lib/cli_command_parser.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- cli_command_parser-2023.4.6/readme.rst
+│ ├── +++ cli_command_parser-2023.4.7/readme.rst
+│ │┄ Files 1% similar despite different names
+│ │ @@ -60,15 +60,15 @@
+│ │      usage: hello_world.py [--name NAME] [--count COUNT] [--help]
+│ │  
+│ │      Simple greeting example
+│ │  
+│ │      Optional arguments:
+│ │        --name NAME, -n NAME        The person to say hello to (default: 'World')
+│ │        --count COUNT, -c COUNT     Number of times to repeat the message (default: 1)
+│ │ -      --help, -h                  Show this help message and exit (default: False)
+│ │ +      --help, -h                  Show this help message and exit
+│ │  
+│ │  
+│ │  Installing CLI Command Parser
+│ │  *****************************
+│ │  
+│ │  CLI Command Parser can be installed and updated via `pip <https://pip.pypa.io/en/stable/getting-started/>`__::
+│ │   --- cli_command_parser-2023.4.6/setup.cfg
+│ ├── +++ cli_command_parser-2023.4.7/setup.cfg
+│ │┄ Files identical despite different names
