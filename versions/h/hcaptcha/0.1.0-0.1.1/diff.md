@@ -1,0 +1,149 @@
+# Comparing `tmp/hcaptcha-0.1.0.tar.gz` & `tmp/hcaptcha-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "hcaptcha-0.1.0.tar", max compression
++gzip compressed data, was "hcaptcha-0.1.1.tar", max compression
+```
+
+## Comparing `hcaptcha-0.1.0.tar` & `hcaptcha-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,6 +1,6 @@
+--rw-r--r--   0        0        0     1304 2023-04-07 10:57:26.138924 hcaptcha-0.1.0/README.md
+--rw-r--r--   0        0        0       21 2023-04-06 18:01:56.802470 hcaptcha-0.1.0/hcaptcha/__init__.py
+--rw-r--r--   0        0        0     2926 2023-04-06 18:34:29.774278 hcaptcha-0.1.0/hcaptcha/hcaptcha.py
+--rw-r--r--   0        0        0     1528 2023-04-07 10:59:49.255408 hcaptcha-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0     2134 2023-04-07 11:00:17.864165 hcaptcha-0.1.0/setup.py
+--rw-r--r--   0        0        0     2230 2023-04-07 11:00:17.866184 hcaptcha-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0     1313 2023-04-07 11:01:29.432680 hcaptcha-0.1.1/README.md
++-rw-r--r--   0        0        0       21 2023-04-06 18:01:56.802470 hcaptcha-0.1.1/hcaptcha/__init__.py
++-rw-r--r--   0        0        0     2926 2023-04-06 18:34:29.774278 hcaptcha-0.1.1/hcaptcha/hcaptcha.py
++-rw-r--r--   0        0        0     1528 2023-04-07 11:01:11.722077 hcaptcha-0.1.1/pyproject.toml
++-rw-r--r--   0        0        0     2143 2023-04-07 11:02:22.385512 hcaptcha-0.1.1/setup.py
++-rw-r--r--   0        0        0     2239 2023-04-07 11:02:22.386513 hcaptcha-0.1.1/PKG-INFO
+```
+
+### Comparing `hcaptcha-0.1.0/README.md` & `hcaptcha-0.1.1/README.md`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -27,11 +27,11 @@
+ except HCaptchaVerificationError as e:
+     print(f"Verification failed with error: {str(e)}")
+ ```
+ ## Documentation
+ Documentation for hcaptcha is available [here](https://github.com/VaibhavSys/hcaptcha/blob/master/docs/sources/api/hcaptcha.md)
+ 
+ ## Contributing
+-If you find a bug or have a feature request, please open an issue on [GitHub](https://github.com/VaibhavSys).
++If you find a bug or have a feature request, please open an issue on [GitHub](https://github.com/VaibhavSys/hcaptcha).
+ 
+ ## Licence
+ hcaptcha is distributed under the MIT License. See LICENSE for more information.
+```
+
+### Comparing `hcaptcha-0.1.0/hcaptcha/hcaptcha.py` & `hcaptcha-0.1.1/hcaptcha/hcaptcha.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hcaptcha-0.1.0/pyproject.toml` & `hcaptcha-0.1.1/pyproject.toml`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "hcaptcha"
+-version = "0.1.0"
++version = "0.1.1"
+ description = "A Python package for integrating hCaptcha, a popular captcha service, into various applications for enhanced security and user verification."
+ authors = ["Vaibhav Dhiman <vaibhavsys@protonmail.com>"]
+ license = "MIT"
+ readme = "README.md"
+ homepage = "https://github.com/VaibhavSys/hcaptcha"
+ repository = "https://github.com/VaibhavSys/hcaptcha"
+ classifiers = [
+@@ -23,15 +23,15 @@
+ 
+ [build-system]
+ requires = ["poetry-core>=1.0.0"]
+ build-backend = "poetry.core.masonry.api"
+ 
+ [project]
+ name = "hcaptcha"
+-version = "0.1.0"
++version = "0.1.1"
+ description = "A Python package for integrating hCaptcha, a popular captcha service, into various applications for enhanced security and user verification."
+ readme = "README.md"
+ authors = [{ name = "Vaibhav Dhiman", email = "vaibhavsys@protonmail.com" }]
+ license = { text = "MIT" }
+ classifiers = [
+     "Intended Audience :: Developers",
+     "License :: OSI Approved :: MIT License",
+```
+
+### Comparing `hcaptcha-0.1.0/setup.py` & `hcaptcha-0.1.1/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -8,17 +8,17 @@
+ {'': ['*']}
+ 
+ install_requires = \
+ ['aiodns>=3.0.0,<4.0.0', 'aiohttp>=3.8.4,<4.0.0']
+ 
+ setup_kwargs = {
+     'name': 'hcaptcha',
+-    'version': '0.1.0',
++    'version': '0.1.1',
+     'description': 'A Python package for integrating hCaptcha, a popular captcha service, into various applications for enhanced security and user verification.',
+-    'long_description': '# hcaptcha\nhcaptcha is a Python module (unofficial) that provides an easy-to-use interface for verifying hcaptcha responses using the hcaptcha verification API.\n\n## Installation\nYou can install hcaptcha using pip:\n\n```bash\npip install hcaptcha\n```\n\n## Usage\nTo use hcaptcha, you\'ll need an hcaptcha secret key for your site. You can get one by signing up for an account at [hcaptcha website](https://hCaptcha.com/?r=cc7220f46013).\n\n```python\nfrom hcaptcha.hcaptcha import HCaptchaVerifier, HCaptchaVerificationError\n\n# Initialize the verifier with your hcaptcha secret key\nverifier = HCaptchaVerifier(your_hcaptcha_secret_key)\n\n# Verify an hcaptcha response\ntry:\n    is_valid = await verifier.verify(user_response_token)\n    if is_valid:\n        print("Captcha verified successfully.")\n    else:\n        print("Captcha verification failed.")\nexcept HCaptchaVerificationError as e:\n    print(f"Verification failed with error: {str(e)}")\n```\n## Documentation\nDocumentation for hcaptcha is available [here](https://github.com/VaibhavSys/hcaptcha/blob/master/docs/sources/api/hcaptcha.md)\n\n## Contributing\nIf you find a bug or have a feature request, please open an issue on [GitHub](https://github.com/VaibhavSys).\n\n## Licence\nhcaptcha is distributed under the MIT License. See LICENSE for more information.',
++    'long_description': '# hcaptcha\nhcaptcha is a Python module (unofficial) that provides an easy-to-use interface for verifying hcaptcha responses using the hcaptcha verification API.\n\n## Installation\nYou can install hcaptcha using pip:\n\n```bash\npip install hcaptcha\n```\n\n## Usage\nTo use hcaptcha, you\'ll need an hcaptcha secret key for your site. You can get one by signing up for an account at [hcaptcha website](https://hCaptcha.com/?r=cc7220f46013).\n\n```python\nfrom hcaptcha.hcaptcha import HCaptchaVerifier, HCaptchaVerificationError\n\n# Initialize the verifier with your hcaptcha secret key\nverifier = HCaptchaVerifier(your_hcaptcha_secret_key)\n\n# Verify an hcaptcha response\ntry:\n    is_valid = await verifier.verify(user_response_token)\n    if is_valid:\n        print("Captcha verified successfully.")\n    else:\n        print("Captcha verification failed.")\nexcept HCaptchaVerificationError as e:\n    print(f"Verification failed with error: {str(e)}")\n```\n## Documentation\nDocumentation for hcaptcha is available [here](https://github.com/VaibhavSys/hcaptcha/blob/master/docs/sources/api/hcaptcha.md)\n\n## Contributing\nIf you find a bug or have a feature request, please open an issue on [GitHub](https://github.com/VaibhavSys/hcaptcha).\n\n## Licence\nhcaptcha is distributed under the MIT License. See LICENSE for more information.',
+     'author': 'Vaibhav Dhiman',
+     'author_email': 'vaibhavsys@protonmail.com',
+     'maintainer': None,
+     'maintainer_email': None,
+     'url': 'https://github.com/VaibhavSys/hcaptcha',
+     'packages': packages,
+     'package_data': package_data,
+```
+
+### Comparing `hcaptcha-0.1.0/PKG-INFO` & `hcaptcha-0.1.1/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: hcaptcha
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: A Python package for integrating hCaptcha, a popular captcha service, into various applications for enhanced security and user verification.
+ Home-page: https://github.com/VaibhavSys/hcaptcha
+ License: MIT
+ Keywords: captcha,hcaptcha,async,aiohttp,aiodns,asyncio,async,user verification,security,enhanced security,captcha service,captcha integration
+ Author: Vaibhav Dhiman
+ Author-email: vaibhavsys@protonmail.com
+ Requires-Python: >=3.10,<4.0
+@@ -47,11 +47,11 @@
+ except HCaptchaVerificationError as e:
+     print(f"Verification failed with error: {str(e)}")
+ ```
+ ## Documentation
+ Documentation for hcaptcha is available [here](https://github.com/VaibhavSys/hcaptcha/blob/master/docs/sources/api/hcaptcha.md)
+ 
+ ## Contributing
+-If you find a bug or have a feature request, please open an issue on [GitHub](https://github.com/VaibhavSys).
++If you find a bug or have a feature request, please open an issue on [GitHub](https://github.com/VaibhavSys/hcaptcha).
+ 
+ ## Licence
+ hcaptcha is distributed under the MIT License. See LICENSE for more information.
+```
+

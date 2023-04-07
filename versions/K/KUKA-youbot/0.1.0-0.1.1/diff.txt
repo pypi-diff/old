@@ -1,0 +1,304 @@
+--- tmp/KUKA_youbot-0.1.0.tar.gz
++++ tmp/KUKA_youbot-0.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "KUKA_youbot-0.1.0.tar", last modified: Thu Apr  6 18:21:48 2023, max compression
+│ +gzip compressed data, was "KUKA_youbot-0.1.1.tar", last modified: Fri Apr  7 10:57:37 2023, max compression
+│   --- KUKA_youbot-0.1.0.tar
+├── +++ KUKA_youbot-0.1.1.tar
+│ ├── file list
+│ │ @@ -1,18 +1,18 @@
+│ │ -drwxrwxr-x   0 mark      (1000) mark      (1000)        0 2023-04-06 18:21:48.407027 KUKA_youbot-0.1.0/
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)     1074 2023-03-18 13:45:02.000000 KUKA_youbot-0.1.0/LICENSE
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)     4449 2023-04-06 18:21:48.403027 KUKA_youbot-0.1.0/PKG-INFO
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)     3944 2023-03-18 13:50:26.000000 KUKA_youbot-0.1.0/README.md
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)      752 2023-04-06 18:21:35.000000 KUKA_youbot-0.1.0/pyproject.toml
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)       38 2023-04-06 18:21:48.407027 KUKA_youbot-0.1.0/setup.cfg
+│ │ -drwxrwxr-x   0 mark      (1000) mark      (1000)        0 2023-04-06 18:21:48.403027 KUKA_youbot-0.1.0/src/
+│ │ -drwxrwxr-x   0 mark      (1000) mark      (1000)        0 2023-04-06 18:21:48.403027 KUKA_youbot-0.1.0/src/KUKA/
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)    33277 2023-04-06 18:19:30.000000 KUKA_youbot-0.1.0/src/KUKA/KUKA.py
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)     7226 2023-03-22 04:49:20.000000 KUKA_youbot-0.1.0/src/KUKA/SSH.py
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)       24 2023-03-17 08:35:01.000000 KUKA_youbot-0.1.0/src/KUKA/__init__.py
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)      382 2023-03-18 13:10:48.000000 KUKA_youbot-0.1.0/src/KUKA/service.py
+│ │ -drwxrwxr-x   0 mark      (1000) mark      (1000)        0 2023-04-06 18:21:48.403027 KUKA_youbot-0.1.0/src/KUKA_youbot.egg-info/
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)     4449 2023-04-06 18:21:48.000000 KUKA_youbot-0.1.0/src/KUKA_youbot.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)      300 2023-04-06 18:21:48.000000 KUKA_youbot-0.1.0/src/KUKA_youbot.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)        1 2023-04-06 18:21:48.000000 KUKA_youbot-0.1.0/src/KUKA_youbot.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)      103 2023-04-06 18:21:48.000000 KUKA_youbot-0.1.0/src/KUKA_youbot.egg-info/requires.txt
+│ │ --rw-rw-r--   0 mark      (1000) mark      (1000)        5 2023-04-06 18:21:48.000000 KUKA_youbot-0.1.0/src/KUKA_youbot.egg-info/top_level.txt
+│ │ +drwxrwxr-x   0 mark      (1000) mark      (1000)        0 2023-04-07 10:57:37.178055 KUKA_youbot-0.1.1/
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)     1074 2023-03-18 13:45:02.000000 KUKA_youbot-0.1.1/LICENSE
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)     4449 2023-04-07 10:57:37.178055 KUKA_youbot-0.1.1/PKG-INFO
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)     3944 2023-03-18 13:50:26.000000 KUKA_youbot-0.1.1/README.md
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)      752 2023-04-07 10:56:31.000000 KUKA_youbot-0.1.1/pyproject.toml
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)       38 2023-04-07 10:57:37.178055 KUKA_youbot-0.1.1/setup.cfg
+│ │ +drwxrwxr-x   0 mark      (1000) mark      (1000)        0 2023-04-07 10:57:37.174055 KUKA_youbot-0.1.1/src/
+│ │ +drwxrwxr-x   0 mark      (1000) mark      (1000)        0 2023-04-07 10:57:37.178055 KUKA_youbot-0.1.1/src/KUKA/
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)    33949 2023-04-07 10:55:44.000000 KUKA_youbot-0.1.1/src/KUKA/KUKA.py
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)     7355 2023-04-07 10:55:54.000000 KUKA_youbot-0.1.1/src/KUKA/SSH.py
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)       24 2023-03-17 08:35:01.000000 KUKA_youbot-0.1.1/src/KUKA/__init__.py
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)      382 2023-03-18 13:10:48.000000 KUKA_youbot-0.1.1/src/KUKA/service.py
+│ │ +drwxrwxr-x   0 mark      (1000) mark      (1000)        0 2023-04-07 10:57:37.178055 KUKA_youbot-0.1.1/src/KUKA_youbot.egg-info/
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)     4449 2023-04-07 10:57:37.000000 KUKA_youbot-0.1.1/src/KUKA_youbot.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)      300 2023-04-07 10:57:37.000000 KUKA_youbot-0.1.1/src/KUKA_youbot.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)        1 2023-04-07 10:57:37.000000 KUKA_youbot-0.1.1/src/KUKA_youbot.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)      103 2023-04-07 10:57:37.000000 KUKA_youbot-0.1.1/src/KUKA_youbot.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 mark      (1000) mark      (1000)        5 2023-04-07 10:57:37.000000 KUKA_youbot-0.1.1/src/KUKA_youbot.egg-info/top_level.txt
+│ │   --- KUKA_youbot-0.1.0/LICENSE
+│ ├── +++ KUKA_youbot-0.1.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- KUKA_youbot-0.1.0/PKG-INFO
+│ ├── +++ KUKA_youbot-0.1.1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: KUKA_youbot
+│ │ -Version: 0.1.0
+│ │ +Version: 0.1.1
+│ │  Summary: package for easy KUKA-youbot control
+│ │  Author-email: ZaSKaR <mark.turkov@mail.ru>
+│ │  Project-URL: Homepage, https://github.com/MarkT5/YouBotKUKA
+│ │  Project-URL: Bug Tracker, https://github.com/MarkT5/YouBotKUKA/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Framework :: Robot Framework :: Tool
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- KUKA_youbot-0.1.0/README.md
+│ ├── +++ KUKA_youbot-0.1.1/README.md
+│ │┄ Files identical despite different names
+│ │   --- KUKA_youbot-0.1.0/pyproject.toml
+│ ├── +++ KUKA_youbot-0.1.1/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  [build-system]
+│ │  requires = ["setuptools>=61.0"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  [project]
+│ │  name = "KUKA_youbot"
+│ │ -version = "0.1.0"
+│ │ +version = "0.1.1"
+│ │  authors = [
+│ │    { name="ZaSKaR", email="mark.turkov@mail.ru" },
+│ │  ]
+│ │  dependencies = [
+│ │      "setuptools >= 40.9.0",
+│ │      "numpy >= 1.24.2",
+│ │      "opencv-python >= 4.7.0.72",
+│ │   --- KUKA_youbot-0.1.0/src/KUKA/KUKA.py
+│ ├── +++ KUKA_youbot-0.1.1/src/KUKA/KUKA.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -86,14 +86,15 @@
+│ │          self.m3_len = 135
+│ │          self.m4_len = 200
+│ │  
+│ │          # sensor data
+│ │          self.lidar_data = None
+│ │          self.increment_data_lidar = [0,0,0]  # the closest to lidar read increment value
+│ │          self.increment_data = [0,0,0]
+│ │ +        self.odom_speed_data = [0,0,0]
+│ │          self.corr_arm_pos = [None, None]
+│ │          self.wheels_data = None
+│ │          self.wheels_data_lidar = None
+│ │          self.trace = 0
+│ │  
+│ │          # for position correction
+│ │          self.wheels_old = None
+│ │ @@ -293,14 +294,15 @@
+│ │          """
+│ │          Parses all received data and write values to variables\n
+│ │          keys available: ".laser#", ".odom#", ".manip#"
+│ │          :param data: received data
+│ │          """
+│ │          write_lidar = None
+│ │          write_increment = None
+│ │ +        write_odom_speed = None
+│ │          write_arm1 = None
+│ │          write_arm2 = None
+│ │          wheels = None
+│ │          if data[:7] == ".laser#":
+│ │              raw = list(data[7:].split(';'))
+│ │              if len(raw) < 200:
+│ │                  write_lidar = None
+│ │ @@ -309,19 +311,27 @@
+│ │                  for i in raw:
+│ │                      try:
+│ │                          write_lidar.append(float(i))
+│ │                      except:
+│ │                          if i != "":
+│ │                              write_lidar.append(5)
+│ │  
+│ │ +
+│ │          elif data[:6] == ".odom#":
+│ │              try:
+│ │                  write_increment = list(map(float, data[6:].split(';')))
+│ │              except:
+│ │                  write_increment = None
+│ │ +
+│ │ +        elif data[:11] == ".odomspeed#":
+│ │ +            try:
+│ │ +                write_odom_speed = list(map(float, data[11:].split(';')))
+│ │ +            except:
+│ │ +                write_odom_speed = None
+│ │ +
+│ │          elif data[:8] == ".manip0#":
+│ │              try:
+│ │                  write_arm1 = list(map(float, data[8:].split(';')))
+│ │  
+│ │              except:
+│ │                  write_arm1 = None
+│ │          elif data[:8] == ".manip1#":
+│ │ @@ -341,14 +351,16 @@
+│ │              if write_lidar:
+│ │                  self.lidar_data = write_lidar
+│ │                  self.increment_data_lidar = self.increment_data
+│ │                  self.calculated_pos_lidar = self.calculated_pos[:]
+│ │                  self.wheels_data_lidar = self.wheels_data
+│ │              if write_increment:
+│ │                  self.increment_data = write_increment
+│ │ +            if write_odom_speed:
+│ │ +                self.odom_speed_data = write_odom_speed
+│ │              if wheels:
+│ │                  self.wheels_data = wheels
+│ │  
+│ │              if write_arm1:
+│ │                  # arm_ID = 0  # затычка
+│ │                  m1 = -write_arm1[0] + 168
+│ │                  m2 = -write_arm1[1] + 66
+│ │ @@ -388,24 +400,26 @@
+│ │              except Exception as exc:
+│ │                  debug(f"_receive_data thread died due to {exc}")
+│ │                  break
+│ │  
+│ │              if el != b'':
+│ │                  self.data_buff += el
+│ │                  try:
+│ │ -                    str_data = str(self.data_buff[:-1], encoding='utf-8')
+│ │ +                    str_data = str(self.data_buff, encoding='utf-8')
+│ │                      last = str_data.rfind("\r\n")
+│ │  
+│ │                      if last == -1:
+│ │                          leftovers = self.data_buff[:]
+│ │                      else:
+│ │  
+│ │                          leftovers = str.encode(str_data[last+2:])
+│ │                          str_data = str_data[:last]
+│ │ -                        self._parse_data(str_data[:str_data.find("\r\n")])
+│ │ +                        splitted = str_data.split("\r\n")
+│ │ +                        for i in splitted:
+│ │ +                            self._parse_data(i)
+│ │                  except Exception as e:
+│ │                      debug(e)
+│ │                      pass
+│ │                  self.data_buff = leftovers
+│ │          self.threads_number -= 1
+│ │          debug(f"_receive_data thread terminated, {self.threads_number} threads remain")
+│ │  
+│ │ @@ -536,14 +550,24 @@
+│ │              self.data_lock.acquire()
+│ │              out = self.increment_data
+│ │              self.data_lock.release()
+│ │              return out
+│ │          else:
+│ │              return [0, 0, 0]
+│ │  
+│ │ +    @property
+│ │ +    def odom_speed(self):
+│ │ +        if self.connected:
+│ │ +            self.data_lock.acquire()
+│ │ +            out = self.odom_speed_data
+│ │ +            self.data_lock.release()
+│ │ +            return out
+│ │ +        else:
+│ │ +            return [0, 0, 0]
+│ │ +
+│ │      def camera(self):
+│ │          """
+│ │          Acquires variable camera lock and reads camera in RGB
+│ │          :return: MJPEG RGB image
+│ │          """
+│ │          if self.connected:
+│ │              self.cam_rgb_lock.acquire()
+│ │ @@ -870,7 +894,8 @@
+│ │  
+│ │  
+│ │  if __name__ == "__main__":
+│ │      robot = YouBot('192.168.88.21', ros=False, offline=False, camera_enable=True, advanced=False)
+│ │      print(robot.ssh.send_wait("echo 123", "root"))
+│ │      time.sleep(1)
+│ │  
+│ │ +
+│ │   --- KUKA_youbot-0.1.0/src/KUKA/SSH.py
+│ ├── +++ KUKA_youbot-0.1.1/src/KUKA/SSH.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -39,15 +39,15 @@
+│ │              return
+│ │          self.ssh_var = self.ssh_client.invoke_shell()
+│ │          self.send_wait("sudo -s", "[sudo] password for")
+│ │          debug("log as root")
+│ │          self.send_wait(password, "root@youbot:")
+│ │          debug("logged in")
+│ │  
+│ │ -    def send_wait(self, msg_send, wait_msg, /, timeout=None, timeout_msg=None, verbose=0):
+│ │ +    def send_wait(self, msg_send, wait_msg, /, timeout=None, timeout_msg=None, verbose=0, max_time=20):
+│ │          """
+│ │          Sends command to ssh and waits certain for response till timeout
+│ │          :param msg_send: command to send
+│ │          :param wait_msg: message to wait
+│ │          :param timeout: time after which function will be terminated if there is nothing to read
+│ │          :param timeout_msg: message that will be printed to prompt in case of timout
+│ │          :param verbose: 0 - prints nothing; 1 - prints whole input
+│ │ @@ -55,27 +55,30 @@
+│ │          return: whole received message
+│ │          """
+│ │          if not self.connected:
+│ │              raise SshNotConnected
+│ │          if not timeout:
+│ │              timeout = self.timeout
+│ │          init_time = time.time()
+│ │ +        max_time_time = time.time()
+│ │          msg = ''
+│ │          self.ssh_var.send(msg_send.encode("utf-8") + b"\n")
+│ │          while not msg.count(wait_msg):
+│ │              if self.ssh_var.recv_ready():
+│ │                  init_time = time.time()
+│ │                  read_char = self.ssh_var.recv(1).decode("utf-8")
+│ │                  if read_char != chr(0):
+│ │                      msg += read_char
+│ │                      if verbose:
+│ │                          debug(read_char, end='')
+│ │              else:
+│ │                  time.sleep(0.001)
+│ │ -            if time.time() - init_time > timeout:
+│ │ +            if time.time() - max_time_time > max_time:
+│ │ +                break
+│ │ +            elif time.time() - init_time > timeout:
+│ │                  if timeout_msg != None:
+│ │                      debug(timeout_msg, end='')
+│ │                  else:
+│ │                      debug(f"sent \"{msg_send}\" but didn't receive \"{wait_msg}\" in {timeout} seconds. Abort")
+│ │                  break
+│ │          return msg
+│ │  
+│ │ @@ -183,7 +186,8 @@
+│ │  
+│ │  
+│ │  if __name__ == "__main__":
+│ │      test_client = SSH(ip="192.168.88.21")
+│ │      test_client.launch_ROS(verbose=1)
+│ │      test_client.ROS_status()
+│ │  
+│ │ +
+│ │   --- KUKA_youbot-0.1.0/src/KUKA_youbot.egg-info/PKG-INFO
+│ ├── +++ KUKA_youbot-0.1.1/src/KUKA_youbot.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: KUKA-youbot
+│ │ -Version: 0.1.0
+│ │ +Version: 0.1.1
+│ │  Summary: package for easy KUKA-youbot control
+│ │  Author-email: ZaSKaR <mark.turkov@mail.ru>
+│ │  Project-URL: Homepage, https://github.com/MarkT5/YouBotKUKA
+│ │  Project-URL: Bug Tracker, https://github.com/MarkT5/YouBotKUKA/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Framework :: Robot Framework :: Tool
+│ │  Classifier: Operating System :: OS Independent
