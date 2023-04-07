@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/solcix-0.1.6.tar.gz tmp/solcix-0.1.7.tar.gz --html versions/s/solcix/0.1.6-0.1.7/index.html --text versions/s/solcix/0.1.6-0.1.7/diff.txt --markdown versions/s/solcix/0.1.6-0.1.7/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">9.51 KB</span></div>
+  <div><span class="source">tmp/solcix-0.1.6.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/solcix-0.1.7.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">180 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;solcix-0.1.<del>6</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;solcix-0.1.<ins>7</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">9.29 KB</span></div>
+    <div><span class="source">solcix-0.1.6.tar</span> vs.</div>
+    <div id="solcix--.-.-.tar"><span class="source">solcix-0.1.7.tar</span>
+      <a class="anchor" href="#solcix--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.44 KB</span></div>
+      <div id="solcix--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#solcix--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 17 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>34523<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>34523<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>82<del>12</del><span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>82<ins>08</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>871<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/pyproject.toml</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>871<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1109<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1109<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>89</del>8<del>7</del><span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/__main__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>90</ins>8<ins>1</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>182<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/compile/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>182<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/compile/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19156<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/compile/solc.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19156<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/compile/solc.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>618<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/constant.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>618<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/constant.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/datatypes/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/datatypes/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3949<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/datatypes/datatypes.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3949<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/datatypes/datatypes.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3407<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/errors.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3407<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/errors.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21648<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/installer.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21648<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/installer.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>241<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/manage/__init__.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>241<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/manage/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3773<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/manage/manage.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3773<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/manage/manage.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10656<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/resolver.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10656<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/resolver.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>597<span class="dp">·</span>2023-04-07<span class="dp">·</span><del>0</del>1:<del>15</del>:<del>56</del>.<del>610498</del><span class="dp">·</span>solcix-0.1.<del>6</del>/solcix/utils.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>597<span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>1</ins>1:<ins>28</ins>:<ins>07</ins>.<ins>282960</ins><span class="dp">·</span>solcix-0.1.<ins>7</ins>/solcix/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>93<del>73</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>solcix-0.1.<del>6</del>/PKG-INFO</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>93<ins>69</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>solcix-0.1.<ins>7</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">79.0 B</span></div>
+      <div><span class="source">solcix-0.1.6/LICENSE</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--LICENSE"><span class="source">solcix-0.1.7/LICENSE</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.13 KB</span></div>
+      <div><span class="source">solcix-0.1.6/README.md</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--README.md"><span class="source">solcix-0.1.7/README.md</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 109, 21 lines modified</td><td colspan="2">Offset 109, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">109 </td><td class="diffpresent">```bash</td><td class="diffline">109 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffunmodified"><td class="diffline">110 </td><td class="diffpresent">solcix<span class="dp">·</span>installed</td><td class="diffline">110 </td><td class="diffpresent">solcix<span class="dp">·</span>installed</td></tr>
+<tr class="diffunmodified"><td class="diffline">111 </td><td class="diffpresent">```</td><td class="diffline">111 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">112 </td><td class="diffpresent">If<span class="dp">·</span>global<span class="dp">·</span>/<span class="dp">·</span>local<span class="dp">·</span>version<span class="dp">·</span>is<span class="dp">·</span>set,<span class="dp">·</span>it<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>displayed<span class="dp">·</span>as<span class="dp">·</span>below:</td><td class="diffline">112 </td><td class="diffpresent">If<span class="dp">·</span>global<span class="dp">·</span>/<span class="dp">·</span>local<span class="dp">·</span>version<span class="dp">·</span>is<span class="dp">·</span>set,<span class="dp">·</span>it<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>displayed<span class="dp">·</span>as<span class="dp">·</span>below:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">113 </td><td class="diffpresent">```bash</td><td class="diffline">113 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffdeleted"><td class="diffline">114 </td><td class="diffpresent">0.8.19</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">115 </td><td class="diffpresent">0.5.2</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">116 </td><td class="diffpresent">0.5.1</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">117 </td><td class="diffpresent">0.5.0</td><td class="diffline">114 </td><td class="diffpresent">0.5.0</td></tr>
+<tr class="diffdeleted"><td class="diffline">118 </td><td class="diffpresent">0.8.0<span class="dp">·</span>&lt;-<span class="dp">·</span>current</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">119 </td><td class="diffpresent">0.8.0</td><td class="diffline">115 </td><td class="diffpresent">0.8.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">120 </td><td class="diffpresent">0.8.16</td><td class="diffline">116 </td><td class="diffpresent">0.8.16</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">117 </td><td class="diffpresent">0.8.17</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">118 </td><td class="diffpresent">0.8.18<span class="dp">·</span>&lt;-<span class="dp">·</span>current</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">119 </td><td class="diffpresent">0.8.19</td></tr>
+<tr class="diffunmodified"><td class="diffline">121 </td><td class="diffpresent">```</td><td class="diffline">120 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">122 </td><td class="diffpresent">###<span class="dp">·</span>Switching<span class="dp">·</span>between<span class="dp">·</span>Solidity<span class="dp">·</span>compilers</td><td class="diffline">121 </td><td class="diffpresent">###<span class="dp">·</span>Switching<span class="dp">·</span>between<span class="dp">·</span>Solidity<span class="dp">·</span>compilers</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">123 </td><td class="diffpresent">The<span class="dp">·</span>`use`<span class="dp">·</span>command<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>switch<span class="dp">·</span>between<span class="dp">·</span>installed<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Solidity<span class="dp">·</span>compiler,<span class="dp">·</span>either<span class="dp">·</span>globally<span class="dp">·</span>or<span class="dp">·</span>locally.</td><td class="diffline">122 </td><td class="diffpresent">The<span class="dp">·</span>`use`<span class="dp">·</span>command<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>switch<span class="dp">·</span>between<span class="dp">·</span>installed<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Solidity<span class="dp">·</span>compiler,<span class="dp">·</span>either<span class="dp">·</span>globally<span class="dp">·</span>or<span class="dp">·</span>locally.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">124 </td><td class="diffpresent">-<span class="dp">·</span>If<span class="dp">·</span>the<span class="dp">·</span>specified<span class="dp">·</span>version<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>installed,<span class="dp">·</span>it<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>installed<span class="dp">·</span>automatically.</td><td class="diffline">123 </td><td class="diffpresent">-<span class="dp">·</span>If<span class="dp">·</span>the<span class="dp">·</span>specified<span class="dp">·</span>version<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>installed,<span class="dp">·</span>it<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>installed<span class="dp">·</span>automatically.</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 172, 15 lines modified</td><td colspan="2">Offset 171, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">172 </td><td class="diffpresent">```</td><td class="diffline">171 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">173 </td><td class="diffpresent">###<span class="dp">·</span>Uninstall<span class="dp">·</span>all<span class="dp">·</span>Solidity<span class="dp">·</span>compilers</td><td class="diffline">172 </td><td class="diffpresent">###<span class="dp">·</span>Uninstall<span class="dp">·</span>all<span class="dp">·</span>Solidity<span class="dp">·</span>compilers</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">174 </td><td class="diffpresent">To<span class="dp">·</span>uninstall<span class="dp">·</span>all<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>Solidity<span class="dp">·</span>compiler<span class="dp">·</span>that<span class="dp">·</span>have<span class="dp">·</span>been<span class="dp">·</span>installed<span class="dp">·</span>using<span class="dp">·</span>solcix,<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>command:</td><td class="diffline">173 </td><td class="diffpresent">To<span class="dp">·</span>uninstall<span class="dp">·</span>all<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>Solidity<span class="dp">·</span>compiler<span class="dp">·</span>that<span class="dp">·</span>have<span class="dp">·</span>been<span class="dp">·</span>installed<span class="dp">·</span>using<span class="dp">·</span>solcix,<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>command:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">175 </td><td class="diffpresent">```bash</td><td class="diffline">174 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffchanged"><td class="diffline">176 </td><td class="diffpresent">solcix<span class="dp">·</span>p<del>run</del>e</td><td class="diffline">175 </td><td class="diffpresent">solcix<span class="dp">·</span>p<ins>urg</ins>e</td></tr>
+<tr class="diffunmodified"><td class="diffline">177 </td><td class="diffpresent">```</td><td class="diffline">176 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">178 </td><td class="diffpresent">This<span class="dp">·</span>will<span class="dp">·</span>remove<span class="dp">·</span>all<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Solidity<span class="dp">·</span>compilers<span class="dp">·</span>that<span class="dp">·</span>have<span class="dp">·</span>been<span class="dp">·</span>installed<span class="dp">·</span>by<span class="dp">·</span>solcix,<span class="dp">·</span>all<span class="dp">·</span>cached<span class="dp">·</span>files,<span class="dp">·</span>and<span class="dp">·</span>the<span class="dp">·</span>solcix<span class="dp">·</span>configuration<span class="dp">·</span>file<span class="dp">·</span>(local<span class="dp">·</span>config<span class="dp">·</span>takes<span class="dp">·</span>precedence<span class="dp">·</span>over<span class="dp">·</span>global<span class="dp">·</span>config).</td><td class="diffline">177 </td><td class="diffpresent">This<span class="dp">·</span>will<span class="dp">·</span>remove<span class="dp">·</span>all<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Solidity<span class="dp">·</span>compilers<span class="dp">·</span>that<span class="dp">·</span>have<span class="dp">·</span>been<span class="dp">·</span>installed<span class="dp">·</span>by<span class="dp">·</span>solcix,<span class="dp">·</span>all<span class="dp">·</span>cached<span class="dp">·</span>files,<span class="dp">·</span>and<span class="dp">·</span>the<span class="dp">·</span>solcix<span class="dp">·</span>configuration<span class="dp">·</span>file<span class="dp">·</span>(local<span class="dp">·</span>config<span class="dp">·</span>takes<span class="dp">·</span>precedence<span class="dp">·</span>over<span class="dp">·</span>global<span class="dp">·</span>config).</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">179 </td><td class="diffpresent">###<span class="dp">·</span>Verify<span class="dp">·</span>Solidity<span class="dp">·</span>compilers</td><td class="diffline">178 </td><td class="diffpresent">###<span class="dp">·</span>Verify<span class="dp">·</span>Solidity<span class="dp">·</span>compilers</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">180 </td><td class="diffpresent">The<span class="dp">·</span>`verify`<span class="dp">·</span>command<span class="dp">·</span>is<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>verify<span class="dp">·</span>the<span class="dp">·</span>checksums<span class="dp">·</span>of<span class="dp">·</span>installed<span class="dp">·</span>solc<span class="dp">·</span>binaries<span class="dp">·</span>and<span class="dp">·</span>to<span class="dp">·</span>reinstall<span class="dp">·</span>any<span class="dp">·</span>that<span class="dp">·</span>are<span class="dp">·</span>malformed.</td><td class="diffline">179 </td><td class="diffpresent">The<span class="dp">·</span>`verify`<span class="dp">·</span>command<span class="dp">·</span>is<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>verify<span class="dp">·</span>the<span class="dp">·</span>checksums<span class="dp">·</span>of<span class="dp">·</span>installed<span class="dp">·</span>solc<span class="dp">·</span>binaries<span class="dp">·</span>and<span class="dp">·</span>to<span class="dp">·</span>reinstall<span class="dp">·</span>any<span class="dp">·</span>that<span class="dp">·</span>are<span class="dp">·</span>malformed.</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">433 B</span></div>
+      <div><span class="source">solcix-0.1.6/pyproject.toml</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--pyproject.toml"><span class="source">solcix-0.1.7/pyproject.toml</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;solcix&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;solcix&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<del>6</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<ins>7</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>Python<span class="dp">·</span>wrapper<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Solidity<span class="dp">·</span>compiler.<span class="dp">·</span>Switch<span class="dp">·</span>between<span class="dp">·</span>versions,<span class="dp">·</span>compile,<span class="dp">·</span>and<span class="dp">·</span>manage<span class="dp">·</span>artifacts.&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>Python<span class="dp">·</span>wrapper<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Solidity<span class="dp">·</span>compiler.<span class="dp">·</span>Switch<span class="dp">·</span>between<span class="dp">·</span>versions,<span class="dp">·</span>compile,<span class="dp">·</span>and<span class="dp">·</span>manage<span class="dp">·</span>artifacts.&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;alan890104<span class="dp">·</span>&lt;alan890104@gmail.com&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;alan890104<span class="dp">·</span>&lt;alan890104@gmail.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">7 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.8&quot;</td><td class="diffline">8 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.8&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">cfgv<span class="dp">·</span>=<span class="dp">·</span>&quot;3.3.1&quot;</td><td class="diffline">9 </td><td class="diffpresent">cfgv<span class="dp">·</span>=<span class="dp">·</span>&quot;3.3.1&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">solcix-0.1.6/solcix/__init__.py</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--solcix-__init__.py"><span class="source">solcix-0.1.7/solcix/__init__.py</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--solcix-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.71 KB</span></div>
+      <div><span class="source">solcix-0.1.6/solcix/__main__.py</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--solcix-__main__.py"><span class="source">solcix-0.1.7/solcix/__main__.py</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--solcix-__main__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 95, 15 lines modified</td><td colspan="2">Offset 95, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">95 </td><td class="diffpresent">def<span class="dp">·</span>uninstall(version:<span class="dp">·</span>Union[List[str],<span class="dp">·</span>str]):</td><td class="diffline">95 </td><td class="diffpresent">def<span class="dp">·</span>uninstall(version:<span class="dp">·</span>Union[List[str],<span class="dp">·</span>str]):</td></tr>
+<tr class="diffunmodified"><td class="diffline">96 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>success,<span class="dp">·</span>skipped,<span class="dp">·</span>error<span class="dp">·</span>=<span class="dp">·</span>solcix.uninstall_solc(version)</td><td class="diffline">96 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>success,<span class="dp">·</span>skipped,<span class="dp">·</span>error<span class="dp">·</span>=<span class="dp">·</span>solcix.uninstall_solc(version)</td></tr>
+<tr class="diffunmodified"><td class="diffline">97 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(Fore.GREEN<span class="dp">·</span>+<span class="dp">·</span>f&quot;success:<span class="dp">·</span>{&#x27;,<span class="dp">·</span>&#x27;.join(success)}&quot;<span class="dp">·</span>+<span class="dp">·</span>Style.RESET_ALL)</td><td class="diffline">97 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(Fore.GREEN<span class="dp">·</span>+<span class="dp">·</span>f&quot;success:<span class="dp">·</span>{&#x27;,<span class="dp">·</span>&#x27;.join(success)}&quot;<span class="dp">·</span>+<span class="dp">·</span>Style.RESET_ALL)</td></tr>
+<tr class="diffunmodified"><td class="diffline">98 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(Fore.YELLOW<span class="dp">·</span>+<span class="dp">·</span>f&quot;skipped:<span class="dp">·</span>{&#x27;,<span class="dp">·</span>&#x27;.join(skipped)}&quot;<span class="dp">·</span>+<span class="dp">·</span>Style.RESET_ALL)</td><td class="diffline">98 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(Fore.YELLOW<span class="dp">·</span>+<span class="dp">·</span>f&quot;skipped:<span class="dp">·</span>{&#x27;,<span class="dp">·</span>&#x27;.join(skipped)}&quot;<span class="dp">·</span>+<span class="dp">·</span>Style.RESET_ALL)</td></tr>
+<tr class="diffunmodified"><td class="diffline">99 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(Fore.RED<span class="dp">·</span>+<span class="dp">·</span>f&quot;error<span class="dp">·</span><span class="dp">·</span>:<span class="dp">·</span>{&#x27;,<span class="dp">·</span>&#x27;.join(error)}&quot;<span class="dp">·</span>+<span class="dp">·</span>Style.RESET_ALL)</td><td class="diffline">99 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(Fore.RED<span class="dp">·</span>+<span class="dp">·</span>f&quot;error<span class="dp">·</span><span class="dp">·</span>:<span class="dp">·</span>{&#x27;,<span class="dp">·</span>&#x27;.join(error)}&quot;<span class="dp">·</span>+<span class="dp">·</span>Style.RESET_ALL)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">100 </td><td class="diffpresent">@cli.command(help=&quot;Uninstall<span class="dp">·</span>all<span class="dp">·</span>solc<span class="dp">·</span>binaries.&quot;)</td><td class="diffline">100 </td><td class="diffpresent">@cli.command(help=&quot;Uninstall<span class="dp">·</span>all<span class="dp">·</span>solc<span class="dp">·</span>binaries.&quot;)</td></tr>
+<tr class="diffchanged"><td class="diffline">101 </td><td class="diffpresent">def<span class="dp">·</span>p<del>run</del>e():</td><td class="diffline">101 </td><td class="diffpresent">def<span class="dp">·</span>p<ins>urg</ins>e():</td></tr>
+<tr class="diffunmodified"><td class="diffline">102 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>opt<span class="dp">·</span>=<span class="dp">·</span>click.confirm(default=False,<span class="dp">·</span>text=&quot;Are<span class="dp">·</span>you<span class="dp">·</span>sure<span class="dp">·</span>to<span class="dp">·</span>uninstall<span class="dp">·</span>all<span class="dp">·</span>solc<span class="dp">·</span>binaries,<span class="dp">·</span>caches,<span class="dp">·</span>and<span class="dp">·</span>config<span class="dp">·</span>files?&quot;)</td><td class="diffline">102 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>opt<span class="dp">·</span>=<span class="dp">·</span>click.confirm(default=False,<span class="dp">·</span>text=&quot;Are<span class="dp">·</span>you<span class="dp">·</span>sure<span class="dp">·</span>to<span class="dp">·</span>uninstall<span class="dp">·</span>all<span class="dp">·</span>solc<span class="dp">·</span>binaries,<span class="dp">·</span>caches,<span class="dp">·</span>and<span class="dp">·</span>config<span class="dp">·</span>files?&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">103 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>opt<span class="dp">·</span>is<span class="dp">·</span>False:</td><td class="diffline">103 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>opt<span class="dp">·</span>is<span class="dp">·</span>False:</td></tr>
+<tr class="diffunmodified"><td class="diffline">104 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(f&quot;👀{Fore.YELLOW}<span class="dp">·</span>You<span class="dp">·</span>have<span class="dp">·</span>canceled<span class="dp">·</span>the<span class="dp">·</span>operation.<span class="dp">·</span>Indeed,<span class="dp">·</span>a<span class="dp">·</span>wise<span class="dp">·</span>choice!{Style.RESET_ALL}<span class="dp">·</span>👀&quot;)</td><td class="diffline">104 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(f&quot;👀{Fore.YELLOW}<span class="dp">·</span>You<span class="dp">·</span>have<span class="dp">·</span>canceled<span class="dp">·</span>the<span class="dp">·</span>operation.<span class="dp">·</span>Indeed,<span class="dp">·</span>a<span class="dp">·</span>wise<span class="dp">·</span>choice!{Style.RESET_ALL}<span class="dp">·</span>👀&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">105 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return</td><td class="diffline">105 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return</td></tr>
+<tr class="diffunmodified"><td class="diffline">106 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Delete<span class="dp">·</span>all<span class="dp">·</span>cached<span class="dp">·</span>versions</td><td class="diffline">106 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Delete<span class="dp">·</span>all<span class="dp">·</span>cached<span class="dp">·</span>versions</td></tr>
+<tr class="diffunmodified"><td class="diffline">107 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>solcix.clear_cache()</td><td class="diffline">107 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>solcix.clear_cache()</td></tr>
+<tr class="diffunmodified"><td class="diffline">108 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Delete<span class="dp">·</span>all<span class="dp">·</span>config<span class="dp">·</span>files</td><td class="diffline">108 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Delete<span class="dp">·</span>all<span class="dp">·</span>config<span class="dp">·</span>files</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 132, 15 lines modified</td><td colspan="2">Offset 132, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">132 </td><td class="diffpresent">@click.pass_context</td><td class="diffline">132 </td><td class="diffpresent">@click.pass_context</td></tr>
+<tr class="diffunmodified"><td class="diffline">133 </td><td class="diffpresent">def<span class="dp">·</span>compile(ctx:<span class="dp">·</span>click.Context,<span class="dp">·</span>file:<span class="dp">·</span>str,<span class="dp">·</span>output:<span class="dp">·</span>str):</td><td class="diffline">133 </td><td class="diffpresent">def<span class="dp">·</span>compile(ctx:<span class="dp">·</span>click.Context,<span class="dp">·</span>file:<span class="dp">·</span>str,<span class="dp">·</span>output:<span class="dp">·</span>str):</td></tr>
+<tr class="diffunmodified"><td class="diffline">134 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Parse<span class="dp">·</span>arguments</td><td class="diffline">134 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Parse<span class="dp">·</span>arguments</td></tr>
+<tr class="diffunmodified"><td class="diffline">135 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>params<span class="dp">·</span>=<span class="dp">·</span>dict()</td><td class="diffline">135 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>params<span class="dp">·</span>=<span class="dp">·</span>dict()</td></tr>
+<tr class="diffunmodified"><td class="diffline">136 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>segment<span class="dp">·</span>in<span class="dp">·</span>ctx.args:</td><td class="diffline">136 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>segment<span class="dp">·</span>in<span class="dp">·</span>ctx.args:</td></tr>
+<tr class="diffunmodified"><td class="diffline">137 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>segment.startswith(&quot;--&quot;)<span class="dp">·</span>and<span class="dp">·</span>segment.find(&quot;=&quot;)<span class="dp">·</span>!=<span class="dp">·</span>1:</td><td class="diffline">137 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>segment.startswith(&quot;--&quot;)<span class="dp">·</span>and<span class="dp">·</span>segment.find(&quot;=&quot;)<span class="dp">·</span>!=<span class="dp">·</span>1:</td></tr>
+<tr class="diffunmodified"><td class="diffline">138 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key,<span class="dp">·</span>value<span class="dp">·</span>=<span class="dp">·</span>segment.strip(&quot;--&quot;).split(&quot;=&quot;)</td><td class="diffline">138 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key,<span class="dp">·</span>value<span class="dp">·</span>=<span class="dp">·</span>segment.strip(&quot;--&quot;).split(&quot;=&quot;)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">139 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td></tr>
+<tr class="diffchanged"><td class="diffline">139 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>params[key.replace(&quot;-&quot;,&quot;_&quot;)]<span class="dp">·</span>=<span class="dp">·</span>ast.literal_eval(value)</td><td class="diffline">140 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></ins>params[key.replace(&quot;-&quot;,&quot;_&quot;)]<span class="dp">·</span>=<span class="dp">·</span>ast.literal_eval(value)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">141 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">142 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>params[key.replace(&quot;-&quot;,&quot;_&quot;)]<span class="dp">·</span>=<span class="dp">·</span>value</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">140 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>check<span class="dp">·</span>output<span class="dp">·</span>directory</td><td class="diffline">143 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>check<span class="dp">·</span>output<span class="dp">·</span>directory</td></tr>
+<tr class="diffunmodified"><td class="diffline">141 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>output<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td><td class="diffline">144 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>output<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">142 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>params[&quot;output_dir&quot;]<span class="dp">·</span>=<span class="dp">·</span>output</td><td class="diffline">145 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>params[&quot;output_dir&quot;]<span class="dp">·</span>=<span class="dp">·</span>output</td></tr>
+<tr class="diffunmodified"><td class="diffline">143 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>os.path.exists(output)<span class="dp">·</span>and<span class="dp">·</span>&quot;overwrite&quot;<span class="dp">·</span>not<span class="dp">·</span>in<span class="dp">·</span>params:</td><td class="diffline">146 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>os.path.exists(output)<span class="dp">·</span>and<span class="dp">·</span>&quot;overwrite&quot;<span class="dp">·</span>not<span class="dp">·</span>in<span class="dp">·</span>params:</td></tr>
+<tr class="diffunmodified"><td class="diffline">144 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>click.confirm(f&quot;Output<span class="dp">·</span>path<span class="dp">·</span>`{output}`<span class="dp">·</span>already<span class="dp">·</span>exists,<span class="dp">·</span>do<span class="dp">·</span>you<span class="dp">·</span>want<span class="dp">·</span>to<span class="dp">·</span>overwrite<span class="dp">·</span>it?&quot;,<span class="dp">·</span>default=False,<span class="dp">·</span>abort=True)</td><td class="diffline">147 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>click.confirm(f&quot;Output<span class="dp">·</span>path<span class="dp">·</span>`{output}`<span class="dp">·</span>already<span class="dp">·</span>exists,<span class="dp">·</span>do<span class="dp">·</span>you<span class="dp">·</span>want<span class="dp">·</span>to<span class="dp">·</span>overwrite<span class="dp">·</span>it?&quot;,<span class="dp">·</span>default=False,<span class="dp">·</span>abort=True)</td></tr>
+<tr class="diffunmodified"><td class="diffline">145 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>params[&quot;overwrite&quot;]<span class="dp">·</span>=<span class="dp">·</span>True</td><td class="diffline">148 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>params[&quot;overwrite&quot;]<span class="dp">·</span>=<span class="dp">·</span>True</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">solcix-0.1.6/solcix/compile/solc.py</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--solcix-compile-solc.py"><span class="source">solcix-0.1.7/solcix/compile/solc.py</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--solcix-compile-solc.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">solcix-0.1.6/solcix/constant.py</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--solcix-constant.py"><span class="source">solcix-0.1.7/solcix/constant.py</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--solcix-constant.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">solcix-0.1.6/solcix/datatypes/datatypes.py</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--solcix-datatypes-datatypes.py"><span class="source">solcix-0.1.7/solcix/datatypes/datatypes.py</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--solcix-datatypes-datatypes.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">solcix-0.1.6/solcix/errors.py</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--solcix-errors.py"><span class="source">solcix-0.1.7/solcix/errors.py</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--solcix-errors.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">solcix-0.1.6/solcix/installer.py</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--solcix-installer.py"><span class="source">solcix-0.1.7/solcix/installer.py</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--solcix-installer.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">solcix-0.1.6/solcix/manage/manage.py</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--solcix-manage-manage.py"><span class="source">solcix-0.1.7/solcix/manage/manage.py</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--solcix-manage-manage.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">solcix-0.1.6/solcix/resolver.py</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--solcix-resolver.py"><span class="source">solcix-0.1.7/solcix/resolver.py</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--solcix-resolver.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">solcix-0.1.6/solcix/utils.py</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--solcix-utils.py"><span class="source">solcix-0.1.7/solcix/utils.py</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--solcix-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.56 KB</span></div>
+      <div><span class="source">solcix-0.1.6/PKG-INFO</span> vs.</div>
+      <div id="solcix--.-.-.tar---solcix--.-.--PKG-INFO"><span class="source">solcix-0.1.7/PKG-INFO</span>
+        <a class="anchor" href="#solcix--.-.-.tar---solcix--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>solcix</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>solcix</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>6</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>7</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>wrapper<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Solidity<span class="dp">·</span>compiler.<span class="dp">·</span>Switch<span class="dp">·</span>between<span class="dp">·</span>versions,<span class="dp">·</span>compile,<span class="dp">·</span>and<span class="dp">·</span>manage<span class="dp">·</span>artifacts.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>wrapper<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Solidity<span class="dp">·</span>compiler.<span class="dp">·</span>Switch<span class="dp">·</span>between<span class="dp">·</span>versions,<span class="dp">·</span>compile,<span class="dp">·</span>and<span class="dp">·</span>manage<span class="dp">·</span>artifacts.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>alan890104</td><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>alan890104</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>alan890104@gmail.com</td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>alan890104@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8,&lt;4.0</td><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 141, 21 lines modified</td><td colspan="2">Offset 141, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">141 </td><td class="diffpresent">```bash</td><td class="diffline">141 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffunmodified"><td class="diffline">142 </td><td class="diffpresent">solcix<span class="dp">·</span>installed</td><td class="diffline">142 </td><td class="diffpresent">solcix<span class="dp">·</span>installed</td></tr>
+<tr class="diffunmodified"><td class="diffline">143 </td><td class="diffpresent">```</td><td class="diffline">143 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">144 </td><td class="diffpresent">If<span class="dp">·</span>global<span class="dp">·</span>/<span class="dp">·</span>local<span class="dp">·</span>version<span class="dp">·</span>is<span class="dp">·</span>set,<span class="dp">·</span>it<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>displayed<span class="dp">·</span>as<span class="dp">·</span>below:</td><td class="diffline">144 </td><td class="diffpresent">If<span class="dp">·</span>global<span class="dp">·</span>/<span class="dp">·</span>local<span class="dp">·</span>version<span class="dp">·</span>is<span class="dp">·</span>set,<span class="dp">·</span>it<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>displayed<span class="dp">·</span>as<span class="dp">·</span>below:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">145 </td><td class="diffpresent">```bash</td><td class="diffline">145 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffdeleted"><td class="diffline">146 </td><td class="diffpresent">0.8.19</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">147 </td><td class="diffpresent">0.5.2</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">148 </td><td class="diffpresent">0.5.1</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">149 </td><td class="diffpresent">0.5.0</td><td class="diffline">146 </td><td class="diffpresent">0.5.0</td></tr>
+<tr class="diffdeleted"><td class="diffline">150 </td><td class="diffpresent">0.8.0<span class="dp">·</span>&lt;-<span class="dp">·</span>current</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">151 </td><td class="diffpresent">0.8.0</td><td class="diffline">147 </td><td class="diffpresent">0.8.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">152 </td><td class="diffpresent">0.8.16</td><td class="diffline">148 </td><td class="diffpresent">0.8.16</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">149 </td><td class="diffpresent">0.8.17</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">150 </td><td class="diffpresent">0.8.18<span class="dp">·</span>&lt;-<span class="dp">·</span>current</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">151 </td><td class="diffpresent">0.8.19</td></tr>
+<tr class="diffunmodified"><td class="diffline">153 </td><td class="diffpresent">```</td><td class="diffline">152 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">154 </td><td class="diffpresent">###<span class="dp">·</span>Switching<span class="dp">·</span>between<span class="dp">·</span>Solidity<span class="dp">·</span>compilers</td><td class="diffline">153 </td><td class="diffpresent">###<span class="dp">·</span>Switching<span class="dp">·</span>between<span class="dp">·</span>Solidity<span class="dp">·</span>compilers</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">155 </td><td class="diffpresent">The<span class="dp">·</span>`use`<span class="dp">·</span>command<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>switch<span class="dp">·</span>between<span class="dp">·</span>installed<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Solidity<span class="dp">·</span>compiler,<span class="dp">·</span>either<span class="dp">·</span>globally<span class="dp">·</span>or<span class="dp">·</span>locally.</td><td class="diffline">154 </td><td class="diffpresent">The<span class="dp">·</span>`use`<span class="dp">·</span>command<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>switch<span class="dp">·</span>between<span class="dp">·</span>installed<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Solidity<span class="dp">·</span>compiler,<span class="dp">·</span>either<span class="dp">·</span>globally<span class="dp">·</span>or<span class="dp">·</span>locally.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">156 </td><td class="diffpresent">-<span class="dp">·</span>If<span class="dp">·</span>the<span class="dp">·</span>specified<span class="dp">·</span>version<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>installed,<span class="dp">·</span>it<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>installed<span class="dp">·</span>automatically.</td><td class="diffline">155 </td><td class="diffpresent">-<span class="dp">·</span>If<span class="dp">·</span>the<span class="dp">·</span>specified<span class="dp">·</span>version<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>installed,<span class="dp">·</span>it<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>installed<span class="dp">·</span>automatically.</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 204, 15 lines modified</td><td colspan="2">Offset 203, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">204 </td><td class="diffpresent">```</td><td class="diffline">203 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">205 </td><td class="diffpresent">###<span class="dp">·</span>Uninstall<span class="dp">·</span>all<span class="dp">·</span>Solidity<span class="dp">·</span>compilers</td><td class="diffline">204 </td><td class="diffpresent">###<span class="dp">·</span>Uninstall<span class="dp">·</span>all<span class="dp">·</span>Solidity<span class="dp">·</span>compilers</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">206 </td><td class="diffpresent">To<span class="dp">·</span>uninstall<span class="dp">·</span>all<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>Solidity<span class="dp">·</span>compiler<span class="dp">·</span>that<span class="dp">·</span>have<span class="dp">·</span>been<span class="dp">·</span>installed<span class="dp">·</span>using<span class="dp">·</span>solcix,<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>command:</td><td class="diffline">205 </td><td class="diffpresent">To<span class="dp">·</span>uninstall<span class="dp">·</span>all<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>Solidity<span class="dp">·</span>compiler<span class="dp">·</span>that<span class="dp">·</span>have<span class="dp">·</span>been<span class="dp">·</span>installed<span class="dp">·</span>using<span class="dp">·</span>solcix,<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>command:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">207 </td><td class="diffpresent">```bash</td><td class="diffline">206 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffchanged"><td class="diffline">208 </td><td class="diffpresent">solcix<span class="dp">·</span>p<del>run</del>e</td><td class="diffline">207 </td><td class="diffpresent">solcix<span class="dp">·</span>p<ins>urg</ins>e</td></tr>
+<tr class="diffunmodified"><td class="diffline">209 </td><td class="diffpresent">```</td><td class="diffline">208 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">210 </td><td class="diffpresent">This<span class="dp">·</span>will<span class="dp">·</span>remove<span class="dp">·</span>all<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Solidity<span class="dp">·</span>compilers<span class="dp">·</span>that<span class="dp">·</span>have<span class="dp">·</span>been<span class="dp">·</span>installed<span class="dp">·</span>by<span class="dp">·</span>solcix,<span class="dp">·</span>all<span class="dp">·</span>cached<span class="dp">·</span>files,<span class="dp">·</span>and<span class="dp">·</span>the<span class="dp">·</span>solcix<span class="dp">·</span>configuration<span class="dp">·</span>file<span class="dp">·</span>(local<span class="dp">·</span>config<span class="dp">·</span>takes<span class="dp">·</span>precedence<span class="dp">·</span>over<span class="dp">·</span>global<span class="dp">·</span>config).</td><td class="diffline">209 </td><td class="diffpresent">This<span class="dp">·</span>will<span class="dp">·</span>remove<span class="dp">·</span>all<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Solidity<span class="dp">·</span>compilers<span class="dp">·</span>that<span class="dp">·</span>have<span class="dp">·</span>been<span class="dp">·</span>installed<span class="dp">·</span>by<span class="dp">·</span>solcix,<span class="dp">·</span>all<span class="dp">·</span>cached<span class="dp">·</span>files,<span class="dp">·</span>and<span class="dp">·</span>the<span class="dp">·</span>solcix<span class="dp">·</span>configuration<span class="dp">·</span>file<span class="dp">·</span>(local<span class="dp">·</span>config<span class="dp">·</span>takes<span class="dp">·</span>precedence<span class="dp">·</span>over<span class="dp">·</span>global<span class="dp">·</span>config).</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">211 </td><td class="diffpresent">###<span class="dp">·</span>Verify<span class="dp">·</span>Solidity<span class="dp">·</span>compilers</td><td class="diffline">210 </td><td class="diffpresent">###<span class="dp">·</span>Verify<span class="dp">·</span>Solidity<span class="dp">·</span>compilers</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">212 </td><td class="diffpresent">The<span class="dp">·</span>`verify`<span class="dp">·</span>command<span class="dp">·</span>is<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>verify<span class="dp">·</span>the<span class="dp">·</span>checksums<span class="dp">·</span>of<span class="dp">·</span>installed<span class="dp">·</span>solc<span class="dp">·</span>binaries<span class="dp">·</span>and<span class="dp">·</span>to<span class="dp">·</span>reinstall<span class="dp">·</span>any<span class="dp">·</span>that<span class="dp">·</span>are<span class="dp">·</span>malformed.</td><td class="diffline">211 </td><td class="diffpresent">The<span class="dp">·</span>`verify`<span class="dp">·</span>command<span class="dp">·</span>is<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>verify<span class="dp">·</span>the<span class="dp">·</span>checksums<span class="dp">·</span>of<span class="dp">·</span>installed<span class="dp">·</span>solc<span class="dp">·</span>binaries<span class="dp">·</span>and<span class="dp">·</span>to<span class="dp">·</span>reinstall<span class="dp">·</span>any<span class="dp">·</span>that<span class="dp">·</span>are<span class="dp">·</span>malformed.</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

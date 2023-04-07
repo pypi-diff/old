@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/aws-cloud9-cli-0.1.5.tar.gz tmp/aws-cloud9-cli-0.1.6.tar.gz --html versions/a/aws-cloud9-cli/0.1.5-0.1.6/index.html --text versions/a/aws-cloud9-cli/0.1.5-0.1.6/diff.txt --markdown versions/a/aws-cloud9-cli/0.1.5-0.1.6/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.7 KB</span></div>
+  <div><span class="source">tmp/aws-cloud9-cli-0.1.5.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/aws-cloud9-cli-0.1.6.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">278 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;aws-cloud9-cli-0.1.<del>5</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Sat</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>1</del><span class="dp">·</span><del>00</del>:<del>53</del>:<del>14</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;aws-cloud9-cli-0.1.<ins>6</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Fri</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>33</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">7.37 KB</span></div>
+    <div><span class="source">aws-cloud9-cli-0.1.5.tar</span> vs.</div>
+    <div id="aws-cloud--cli--.-.-.tar"><span class="source">aws-cloud9-cli-0.1.6.tar</span>
+      <a class="anchor" href="#aws-cloud--cli--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.35 KB</span></div>
+      <div id="aws-cloud--cli--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#aws-cloud--cli--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 21 lines modified</td><td colspan="2">Offset 1, 21 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>53</del>:<del>14</del>.<del>084</del>4<del>9</del>6<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>33</ins>.<ins>533</ins>4<ins>4</ins>6<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1069<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>52</del>:<del>54</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1069<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>15</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>354<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>53</del>:<del>14</del>.<del>084</del>4<del>9</del>6<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>354<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>33</ins>.<ins>533</ins>4<ins>4</ins>6<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>588<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>52</del>:<del>54</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>588<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>15</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>53</del>:<del>14</del>.<del>084</del>4<del>9</del>6<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/aws_cloud9_cli.egg-info/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>33</ins>.<ins>529</ins>4<ins>4</ins>6<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/aws_cloud9_cli.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>354<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>53</del>:<del>14</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/aws_cloud9_cli.egg-info/PKG-INFO</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>354<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>33</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/aws_cloud9_cli.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>426<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>53</del>:<del>14</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/aws_cloud9_cli.egg-info/SOURCES.txt</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>426<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>33</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/aws_cloud9_cli.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>53</del>:<del>14</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/aws_cloud9_cli.egg-info/dependency_links.txt</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>33</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/aws_cloud9_cli.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>48<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>53</del>:<del>14</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/aws_cloud9_cli.egg-info/entry_points.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>48<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>33</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/aws_cloud9_cli.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>323<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>53</del>:<del>14</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/aws_cloud9_cli.egg-info/requires.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>323<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>33</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/aws_cloud9_cli.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>53</del>:<del>14</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/aws_cloud9_cli.egg-info/top_level.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>33</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/aws_cloud9_cli.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>53</del>:<del>14</del>.<del>084</del>4<del>9</del>6<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/cloud9_cli/</td><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>33</ins>.<ins>533</ins>4<ins>4</ins>6<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/cloud9_cli/</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>52</del>:<del>54</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/cloud9_cli/__init__.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>15</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/cloud9_cli/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7497<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>52</del>:<del>54</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/cloud9_cli/command.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7497<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>15</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/cloud9_cli/command.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5078<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>52</del>:<del>54</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/cloud9_cli/create_yaml.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5078<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>15</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/cloud9_cli/create_yaml.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6614<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>52</del>:<del>54</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/cloud9_cli/deploy_cfn.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6614<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>15</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/cloud9_cli/deploy_cfn.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>639<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>52</del>:<del>54</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/cloud9_cli/main.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>639<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>15</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/cloud9_cli/main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>146<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>52</del>:<del>54</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/cloud9_cli/utils.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>146<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>15</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/cloud9_cli/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1721<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>52</del>:<del>54</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/cloud9_cli/validators.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1721<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>15</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/cloud9_cli/validators.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>195<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>53</del>:<del>14</del>.<del>084</del>4<del>9</del>6<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/setup.cfg</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>195<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>33</ins>.<ins>533</ins>4<ins>4</ins>6<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1069<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span><del>00</del>:<del>52</del>:<del>54</del>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<del>5</del>/setup.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1069<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>26</ins>:<ins>15</ins>.000000<span class="dp">·</span>aws-cloud9-cli-0.1.<ins>6</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">aws-cloud9-cli-0.1.5/LICENSE</span> vs.</div>
+      <div id="aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--LICENSE"><span class="source">aws-cloud9-cli-0.1.6/LICENSE</span>
+        <a class="anchor" href="#aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">aws-cloud9-cli-0.1.5/README.md</span> vs.</div>
+      <div id="aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--README.md"><span class="source">aws-cloud9-cli-0.1.6/README.md</span>
+        <a class="anchor" href="#aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">aws-cloud9-cli-0.1.5/cloud9_cli/command.py</span> vs.</div>
+      <div id="aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--cloud-_cli-command.py"><span class="source">aws-cloud9-cli-0.1.6/cloud9_cli/command.py</span>
+        <a class="anchor" href="#aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--cloud-_cli-command.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">aws-cloud9-cli-0.1.5/cloud9_cli/create_yaml.py</span> vs.</div>
+      <div id="aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--cloud-_cli-create_yaml.py"><span class="source">aws-cloud9-cli-0.1.6/cloud9_cli/create_yaml.py</span>
+        <a class="anchor" href="#aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--cloud-_cli-create_yaml.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">aws-cloud9-cli-0.1.5/cloud9_cli/deploy_cfn.py</span> vs.</div>
+      <div id="aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--cloud-_cli-deploy_cfn.py"><span class="source">aws-cloud9-cli-0.1.6/cloud9_cli/deploy_cfn.py</span>
+        <a class="anchor" href="#aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--cloud-_cli-deploy_cfn.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">aws-cloud9-cli-0.1.5/cloud9_cli/main.py</span> vs.</div>
+      <div id="aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--cloud-_cli-main.py"><span class="source">aws-cloud9-cli-0.1.6/cloud9_cli/main.py</span>
+        <a class="anchor" href="#aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--cloud-_cli-main.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">aws-cloud9-cli-0.1.5/cloud9_cli/validators.py</span> vs.</div>
+      <div id="aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--cloud-_cli-validators.py"><span class="source">aws-cloud9-cli-0.1.6/cloud9_cli/validators.py</span>
+        <a class="anchor" href="#aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--cloud-_cli-validators.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.17 KB</span></div>
+      <div><span class="source">aws-cloud9-cli-0.1.5/setup.py</span> vs.</div>
+      <div id="aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--setup.py"><span class="source">aws-cloud9-cli-0.1.6/setup.py</span>
+        <a class="anchor" href="#aws-cloud--cli--.-.-.tar---aws-cloud--cli--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages</td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ansicon==1.89.0&#x27;,</td><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ansicon==1.89.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;aws-cloudformation-visualizer==0.0.2&#x27;,</td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;aws-cloudformation-visualizer==0.0.2&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;blessed==1.<del>19</del>.<del>1</del>&#x27;,</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;blessed==1.<ins>20</ins>.<ins>0</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;boto3==1.26.104&#x27;,</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;boto3==1.26.104&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;botocore==1.29.104&#x27;,</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;botocore==1.29.104&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;inquirer==3.1.3&#x27;,</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;inquirer==3.1.3&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;jinxed==1.2.0&#x27;,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;jinxed==1.2.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;jmespath==1.0.1&#x27;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;jmespath==1.0.1&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;prettytable==3.6.0&#x27;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;prettytable==3.6.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pyfiglet==0.8.post1&#x27;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pyfiglet==0.8.post1&#x27;,</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 19, 25 lines modified</td><td colspan="2">Offset 19, 25 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;six==1.16.0&#x27;,</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;six==1.16.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;urllib3==1.26.14&#x27;,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;urllib3==1.26.14&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;wcwidth==0.2.6&#x27;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;wcwidth==0.2.6&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">]</td><td class="diffline">22 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">setup(</td><td class="diffline">23 </td><td class="diffpresent">setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;aws-cloud9-cli&#x27;,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;aws-cloud9-cli&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;0.1.<del>5</del>&#x27;,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;0.1.<ins>6</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;marcus16-kang&#x27;,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;marcus16-kang&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;AWS<span class="dp">·</span>Cloud9<span class="dp">·</span>Environment<span class="dp">·</span>Stack<span class="dp">·</span>Generator&#x27;,</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;AWS<span class="dp">·</span>Cloud9<span class="dp">·</span>Environment<span class="dp">·</span>Stack<span class="dp">·</span>Generator&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;marcus16-kang@outlook.com&#x27;,</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;marcus16-kang@outlook.com&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;MIT&#x27;,</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;MIT&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>entry_points={</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>entry_points={</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;console_scripts&#x27;:<span class="dp">·</span>[</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;console_scripts&#x27;:<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;c9-cli=cloud9_cli.main:main&#x27;</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;c9-cli=cloud9_cli.main:main&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>]</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>]</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>},</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>},</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=requires,</td><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=requires,</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>packages=find_packages(),</td><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>packages=find_packages(),</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>python_requires=&#x27;&gt;=3.<del>7</del>&#x27;,</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>python_requires=&#x27;&gt;=3.<ins>8</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/marcus16-kang/aws-cloud9-cli&#x27;,</td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/marcus16-kang/aws-cloud9-cli&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>project_urls={</td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>project_urls={</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Source&#x27;:<span class="dp">·</span>&#x27;https://github.com/marcus16-kang/aws-cloud9-cli&#x27;</td><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Source&#x27;:<span class="dp">·</span>&#x27;https://github.com/marcus16-kang/aws-cloud9-cli&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">)</td><td class="diffline">42 </td><td class="diffpresent">)</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

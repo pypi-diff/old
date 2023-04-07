@@ -1,0 +1,2347 @@
+--- tmp/dbm-agent-8.32.4.tar.gz
++++ tmp/dbm-agent-8.32.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dbm-agent-8.32.4.tar", last modified: Mon Apr  3 07:57:16 2023, max compression
+│ +gzip compressed data, was "dbm-agent-8.32.6.tar", last modified: Fri Apr  7 11:28:37 2023, max compression
+│   --- dbm-agent-8.32.4.tar
+├── +++ dbm-agent-8.32.6.tar
+│ ├── file list
+│ │ @@ -1,94 +1,95 @@
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.324391 dbm-agent-8.32.4/
+│ │ --rw-r--r--   0 root         (0) root         (0)      651 2023-04-03 07:57:16.324391 dbm-agent-8.32.4/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)     8388 2023-03-31 10:01:25.000000 dbm-agent-8.32.4/README.md
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.314391 dbm-agent-8.32.4/bin/
+│ │ --rw-r--r--   0 root         (0) root         (0)      860 2023-03-29 11:53:15.000000 dbm-agent-8.32.4/bin/dbm-agent
+│ │ --rw-r--r--   0 root         (0) root         (0)      322 2023-03-21 10:44:08.000000 dbm-agent-8.32.4/bin/dbm-bt-conn-stack
+│ │ --rw-r--r--   0 root         (0) root         (0)      797 2023-03-29 12:36:40.000000 dbm-agent-8.32.4/bin/dbma-cli-init
+│ │ --rw-r--r--   0 root         (0) root         (0)     1571 2023-03-30 08:39:06.000000 dbm-agent-8.32.4/bin/dbma-cli-single-instance
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.314391 dbm-agent-8.32.4/dbm_agent.egg-info/
+│ │ --rw-r--r--   0 root         (0) root         (0)      651 2023-04-03 07:57:16.000000 dbm-agent-8.32.4/dbm_agent.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)     2390 2023-04-03 07:57:16.000000 dbm-agent-8.32.4/dbm_agent.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        1 2023-04-03 07:57:16.000000 dbm-agent-8.32.4/dbm_agent.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)      106 2023-04-03 07:57:16.000000 dbm-agent-8.32.4/dbm_agent.egg-info/requires.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)      162 2023-04-03 07:57:16.000000 dbm-agent-8.32.4/dbm_agent.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.314391 dbm-agent-8.32.4/dbma/
+│ │ --rw-r--r--   0 root         (0) root         (0)        0 2023-03-30 02:17:13.000000 dbm-agent-8.32.4/dbma/__init__.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.316391 dbm-agent-8.32.4/dbma/bil/
+│ │ --rw-r--r--   0 root         (0) root         (0)      103 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/bil/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      409 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/bil/cmdexecutor.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     3784 2023-03-11 06:58:25.000000 dbm-agent-8.32.4/dbma/bil/daemon.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     1888 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/bil/fs.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      229 2023-03-30 09:20:43.000000 dbm-agent-8.32.4/dbma/bil/fun.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      704 2023-03-13 06:38:08.000000 dbm-agent-8.32.4/dbma/bil/net.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     5986 2023-03-31 07:09:14.000000 dbm-agent-8.32.4/dbma/bil/osuser.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      546 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/bil/sudos.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.316391 dbm-agent-8.32.4/dbma/components/
+│ │ --rw-r--r--   0 root         (0) root         (0)        0 2023-03-28 02:20:28.000000 dbm-agent-8.32.4/dbma/components/__init__.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.317391 dbm-agent-8.32.4/dbma/components/mysql/
+│ │ --rw-r--r--   0 root         (0) root         (0)        0 2023-03-28 02:20:47.000000 dbm-agent-8.32.4/dbma/components/mysql/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     3502 2023-04-03 07:35:48.000000 dbm-agent-8.32.4/dbma/components/mysql/commons.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    20276 2023-04-03 07:22:09.000000 dbm-agent-8.32.4/dbma/components/mysql/config.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      483 2023-03-29 06:52:54.000000 dbm-agent-8.32.4/dbma/components/mysql/exceptions.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    15158 2023-04-03 03:16:21.000000 dbm-agent-8.32.4/dbma/components/mysql/install.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      668 2023-03-31 08:18:38.000000 dbm-agent-8.32.4/dbma/components/mysql/instance.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.317391 dbm-agent-8.32.4/dbma/components/mysql/views/
+│ │ --rw-r--r--   0 root         (0) root         (0)        0 2023-03-29 08:25:42.000000 dbm-agent-8.32.4/dbma/components/mysql/views/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     7622 2023-03-31 09:46:21.000000 dbm-agent-8.32.4/dbma/components/mysql/views/defaultsview.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     1852 2023-03-30 03:42:36.000000 dbm-agent-8.32.4/dbma/components/mysql/views/handlers.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.317391 dbm-agent-8.32.4/dbma/components/redis/
+│ │ --rw-r--r--   0 root         (0) root         (0)        0 2023-03-28 02:21:47.000000 dbm-agent-8.32.4/dbma/components/redis/__init__.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.318391 dbm-agent-8.32.4/dbma/core/
+│ │ --rw-r--r--   0 root         (0) root         (0)        0 2023-03-11 07:21:13.000000 dbm-agent-8.32.4/dbma/core/__init__.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.318391 dbm-agent-8.32.4/dbma/core/agent/
+│ │ --rw-r--r--   0 root         (0) root         (0)        0 2023-03-10 06:58:11.000000 dbm-agent-8.32.4/dbma/core/agent/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     2063 2023-03-13 06:52:04.000000 dbm-agent-8.32.4/dbma/core/agent/init.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      118 2023-03-10 07:18:49.000000 dbm-agent-8.32.4/dbma/core/agent/upgrade.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     3452 2023-04-03 03:10:59.000000 dbm-agent-8.32.4/dbma/core/configs.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      101 2023-03-28 09:16:32.000000 dbm-agent-8.32.4/dbma/core/exception.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     2258 2023-03-31 07:43:41.000000 dbm-agent-8.32.4/dbma/core/httpserver.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      687 2023-03-30 11:21:35.000000 dbm-agent-8.32.4/dbma/core/messages.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      101 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/core/router.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.319391 dbm-agent-8.32.4/dbma/core/threads/
+│ │ --rw-r--r--   0 root         (0) root         (0)       89 2023-03-09 11:22:45.000000 dbm-agent-8.32.4/dbma/core/threads/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     1796 2023-03-13 08:33:26.000000 dbm-agent-8.32.4/dbma/core/threads/backends.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.319391 dbm-agent-8.32.4/dbma/core/views/
+│ │ --rw-r--r--   0 root         (0) root         (0)        0 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/core/views/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      461 2023-03-29 11:52:43.000000 dbm-agent-8.32.4/dbma/core/views/dbmagentview.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      480 2023-03-31 07:46:12.000000 dbm-agent-8.32.4/dbma/core/views/response.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.313391 dbm-agent-8.32.4/dbma/static/
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.323391 dbm-agent-8.32.4/dbma/static/cnfs/
+│ │ --rw-r--r--   0 root         (0) root         (0)     1396 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/auto-inseption-db.sql
+│ │ --rw-r--r--   0 root         (0) root         (0)      168 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/create-innodb-cluster.js
+│ │ --rw-r--r--   0 root         (0) root         (0)      286 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/dbm-backup-proxyd.service.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)      385 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/dbm-monitor-gatewayd.service.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)      372 2023-04-03 04:00:32.000000 dbm-agent-8.32.4/dbma/static/cnfs/init-5.7.x.sql
+│ │ --rw-r--r--   0 root         (0) root         (0)      372 2023-03-30 08:56:18.000000 dbm-agent-8.32.4/dbma/static/cnfs/init-8.0.x.sql
+│ │ --rw-r--r--   0 root         (0) root         (0)     6681 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/init-users.sql.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    10685 2023-04-03 07:33:25.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-5.7-init-only.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    10847 2023-04-03 07:45:13.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-5.7.25.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    14716 2023-04-03 03:33:55.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0-init-only.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17621 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.17.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17631 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.18.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17687 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.19.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17766 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.20.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17766 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.21.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17767 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.22.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17767 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.23.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17767 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.25.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17767 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.26.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17528 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.27.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17528 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.28.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17528 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.29.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17799 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.30.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17894 2023-03-29 03:33:50.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.31.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)    17894 2023-03-30 12:28:43.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.32.cnf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)      465 2023-03-29 06:32:45.000000 dbm-agent-8.32.4/dbma/static/cnfs/mysqld.service.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)      362 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/zabbix-agentd.service
+│ │ --rw-r--r--   0 root         (0) root         (0)    10464 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/zabbix_agentd.conf.jinja
+│ │ --rw-r--r--   0 root         (0) root         (0)      258 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/cnfs/zoo.cnf.jinja
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-03 07:57:16.323391 dbm-agent-8.32.4/dbma/static/sql-scripts/
+│ │ --rw-r--r--   0 root         (0) root         (0)     9468 2023-03-09 09:18:42.000000 dbm-agent-8.32.4/dbma/static/sql-scripts/常用SQL.md
+│ │ --rw-r--r--   0 root         (0) root         (0)      338 2023-04-03 07:54:38.000000 dbm-agent-8.32.4/dbma/version.py
+│ │ --rw-r--r--   0 root         (0) root         (0)       38 2023-04-03 07:57:16.324391 dbm-agent-8.32.4/setup.cfg
+│ │ --rw-r--r--   0 root         (0) root         (0)     1806 2023-03-30 12:30:28.000000 dbm-agent-8.32.4/setup.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.474272 dbm-agent-8.32.6/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      651 2023-04-07 11:28:37.474272 dbm-agent-8.32.6/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)     4333 2023-04-07 08:20:26.000000 dbm-agent-8.32.6/README.md
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.453272 dbm-agent-8.32.6/bin/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      860 2023-03-29 11:53:15.000000 dbm-agent-8.32.6/bin/dbm-agent
+│ │ +-rw-r--r--   0 root         (0) root         (0)      322 2023-04-06 12:14:18.000000 dbm-agent-8.32.6/bin/dbm-bt-conn-stack
+│ │ +-rw-r--r--   0 root         (0) root         (0)      797 2023-03-29 12:36:40.000000 dbm-agent-8.32.6/bin/dbma-cli-init
+│ │ +-rw-r--r--   0 root         (0) root         (0)     2388 2023-04-06 12:03:55.000000 dbm-agent-8.32.6/bin/dbma-cli-single-instance
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.453272 dbm-agent-8.32.6/dbm_agent.egg-info/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      651 2023-04-07 11:28:37.000000 dbm-agent-8.32.6/dbm_agent.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)     2423 2023-04-07 11:28:37.000000 dbm-agent-8.32.6/dbm_agent.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 11:28:37.000000 dbm-agent-8.32.6/dbm_agent.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)      106 2023-04-07 11:28:37.000000 dbm-agent-8.32.6/dbm_agent.egg-info/requires.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)      162 2023-04-07 11:28:37.000000 dbm-agent-8.32.6/dbm_agent.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.454272 dbm-agent-8.32.6/dbma/
+│ │ +-rw-r--r--   0 root         (0) root         (0)        0 2023-03-30 02:17:13.000000 dbm-agent-8.32.6/dbma/__init__.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.456272 dbm-agent-8.32.6/dbma/bil/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      104 2023-04-07 07:23:15.000000 dbm-agent-8.32.6/dbma/bil/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      411 2023-04-07 07:23:15.000000 dbm-agent-8.32.6/dbma/bil/cmdexecutor.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     3740 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/bil/daemon.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1891 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/bil/fs.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      225 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/bil/fun.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      700 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/bil/net.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     5900 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/bil/osuser.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      542 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/bil/sudos.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.456272 dbm-agent-8.32.6/dbma/components/
+│ │ +-rw-r--r--   0 root         (0) root         (0)        0 2023-03-28 02:20:28.000000 dbm-agent-8.32.6/dbma/components/__init__.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.460272 dbm-agent-8.32.6/dbma/components/mysql/
+│ │ +-rw-r--r--   0 root         (0) root         (0)        0 2023-03-28 02:20:47.000000 dbm-agent-8.32.6/dbma/components/mysql/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     5094 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/components/mysql/commons.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    20733 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/components/mysql/config.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      473 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/components/mysql/exceptions.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    15306 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/components/mysql/install.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      646 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/components/mysql/instance.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     4005 2023-04-07 09:37:23.000000 dbm-agent-8.32.6/dbma/components/mysql/replica.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.461272 dbm-agent-8.32.6/dbma/components/mysql/views/
+│ │ +-rw-r--r--   0 root         (0) root         (0)        0 2023-03-29 08:25:42.000000 dbm-agent-8.32.6/dbma/components/mysql/views/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     9574 2023-04-07 11:21:43.000000 dbm-agent-8.32.6/dbma/components/mysql/views/defaultsview.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     3369 2023-04-07 09:24:03.000000 dbm-agent-8.32.6/dbma/components/mysql/views/handlers.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.461272 dbm-agent-8.32.6/dbma/components/redis/
+│ │ +-rw-r--r--   0 root         (0) root         (0)        0 2023-03-28 02:21:47.000000 dbm-agent-8.32.6/dbma/components/redis/__init__.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.462272 dbm-agent-8.32.6/dbma/core/
+│ │ +-rw-r--r--   0 root         (0) root         (0)        0 2023-03-11 07:21:13.000000 dbm-agent-8.32.6/dbma/core/__init__.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.463272 dbm-agent-8.32.6/dbma/core/agent/
+│ │ +-rw-r--r--   0 root         (0) root         (0)        0 2023-03-10 06:58:11.000000 dbm-agent-8.32.6/dbma/core/agent/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     2094 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/core/agent/init.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      117 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/core/agent/upgrade.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     3535 2023-04-07 07:23:17.000000 dbm-agent-8.32.6/dbma/core/configs.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      103 2023-04-07 07:23:16.000000 dbm-agent-8.32.6/dbma/core/exception.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     2263 2023-04-07 07:23:17.000000 dbm-agent-8.32.6/dbma/core/httpserver.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      688 2023-04-07 07:23:17.000000 dbm-agent-8.32.6/dbma/core/messages.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      102 2023-04-07 07:23:17.000000 dbm-agent-8.32.6/dbma/core/router.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.464272 dbm-agent-8.32.6/dbma/core/threads/
+│ │ +-rw-r--r--   0 root         (0) root         (0)       90 2023-04-07 07:23:17.000000 dbm-agent-8.32.6/dbma/core/threads/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1987 2023-04-07 07:23:17.000000 dbm-agent-8.32.6/dbma/core/threads/backends.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.465272 dbm-agent-8.32.6/dbma/core/views/
+│ │ +-rw-r--r--   0 root         (0) root         (0)        0 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/core/views/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      455 2023-04-07 07:23:17.000000 dbm-agent-8.32.6/dbma/core/views/dbmagentview.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      466 2023-04-07 07:23:17.000000 dbm-agent-8.32.6/dbma/core/views/response.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.451272 dbm-agent-8.32.6/dbma/static/
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.473272 dbm-agent-8.32.6/dbma/static/cnfs/
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1396 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/auto-inseption-db.sql
+│ │ +-rw-r--r--   0 root         (0) root         (0)      168 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/create-innodb-cluster.js
+│ │ +-rw-r--r--   0 root         (0) root         (0)      286 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/dbm-backup-proxyd.service.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)      385 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/dbm-monitor-gatewayd.service.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)      514 2023-04-06 08:26:15.000000 dbm-agent-8.32.6/dbma/static/cnfs/init-5.7.x.sql
+│ │ +-rw-r--r--   0 root         (0) root         (0)      514 2023-04-06 09:18:43.000000 dbm-agent-8.32.6/dbma/static/cnfs/init-8.0.x.sql
+│ │ +-rw-r--r--   0 root         (0) root         (0)     6681 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/init-users.sql.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    10685 2023-04-03 07:33:25.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-5.7-init-only.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    10847 2023-04-03 07:45:13.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-5.7.25.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    14716 2023-04-03 03:33:55.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0-init-only.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17621 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.17.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17631 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.18.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17687 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.19.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17766 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.20.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17766 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.21.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17767 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.22.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17767 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.23.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17767 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.25.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17767 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.26.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17528 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.27.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17528 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.28.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17528 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.29.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17799 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.30.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17894 2023-03-29 03:33:50.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.31.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)    17894 2023-03-30 12:28:43.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.32.cnf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)      465 2023-03-29 06:32:45.000000 dbm-agent-8.32.6/dbma/static/cnfs/mysqld.service.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)      362 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/zabbix-agentd.service
+│ │ +-rw-r--r--   0 root         (0) root         (0)    10464 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/zabbix_agentd.conf.jinja
+│ │ +-rw-r--r--   0 root         (0) root         (0)      258 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/cnfs/zoo.cnf.jinja
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 11:28:37.473272 dbm-agent-8.32.6/dbma/static/sql-scripts/
+│ │ +-rw-r--r--   0 root         (0) root         (0)     9468 2023-03-09 09:18:42.000000 dbm-agent-8.32.6/dbma/static/sql-scripts/常用SQL.md
+│ │ +-rw-r--r--   0 root         (0) root         (0)      346 2023-04-07 11:24:03.000000 dbm-agent-8.32.6/dbma/version.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)       38 2023-04-07 11:28:37.474272 dbm-agent-8.32.6/setup.cfg
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1806 2023-03-30 12:30:28.000000 dbm-agent-8.32.6/setup.py
+│ │   --- dbm-agent-8.32.4/PKG-INFO
+│ ├── +++ dbm-agent-8.32.6/PKG-INFO
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dbm-agent
+│ │ -Version: 8.32.4
+│ │ +Version: 8.32.6
+│ │  Summary: dbm-agent 数据库管理中心客户端程序
+│ │  Home-page: https://github.com/Neeky/dbm-agent
+│ │  Author: Neeky
+│ │  Author-email: neeky@live.com
+│ │  Maintainer: Neeky
+│ │  Maintainer-email: neeky@live.com
+│ │  Classifier: Development Status :: 4 - Beta
+│ │   --- dbm-agent-8.32.4/bin/dbm-agent
+│ ├── +++ dbm-agent-8.32.6/bin/dbm-agent
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/bin/dbma-cli-init
+│ ├── +++ dbm-agent-8.32.6/bin/dbma-cli-init
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/bin/dbma-cli-single-instance
+│ ├── +++ dbm-agent-8.32.6/bin/dbma-cli-single-instance
+│ │┄ Files 25% similar despite different names
+│ │ @@ -5,44 +5,63 @@
+│ │  """
+│ │  
+│ │  import logging
+│ │  import argparse
+│ │  from pathlib import Path
+│ │  from dbma.components.mysql.install import default_pkg
+│ │  from dbma.components.mysql.install import install_mysql, uninstall_mysql
+│ │ +from dbma.components.mysql.replica import install_replica
+│ │  
+│ │  
+│ │  def parser_cmd_args():
+│ │      """
+│ │      实现命令行参数的处理
+│ │      """
+│ │      parser = argparse.ArgumentParser(__name__)
+│ │      parser.add_argument('--port', type=int, default=3306, help="instance port")
+│ │      parser.add_argument(
+│ │          '--pkg-name', type=str, default=default_pkg.name, help="mysql install package name default {}".format(default_pkg.name))
+│ │      parser.add_argument('--ibps', type=str, default='128M',
+│ │                          help="innodb-buffer-pool-size  et: 128M , 512M, 1G, 2G")
+│ │ +    parser.add_argument('--source', type=str, default='',
+│ │ +                        help="mysql source instance. et: '127.0.0.1:3306' ")
+│ │      parser.add_argument('action', type=str, choices=[
+│ │                          'master', 'slave', 'source', 'replica', 'uninstall'])
+│ │      args = parser.parse_args()
+│ │      return args
+│ │  
+│ │  
+│ │  def main():
+│ │      #
+│ │      args = parser_cmd_args()
+│ │ -
+│ │ +    pkg = Path("/usr/local/dbm-agent/pkgs/") / args.pkg_name
+│ │ +    port = args.port
+│ │ +    innodb_buffer_pool_size = args.ibps
+│ │ +    source=args.source
+│ │      logging.basicConfig(level=logging.INFO,
+│ │                          format="[%(asctime)s %(levelname)s] - [%(threadName)s] - [%(pathname)s %(lineno)d line]  ~  %(message)s")
+│ │  
+│ │      if args.action in ('master', 'source'):
+│ │ -        pkg = Path("/usr/local/dbm-agent/pkgs/") / args.pkg_name
+│ │ -        port = args.port
+│ │ -        innodb_buffer_pool_size = args.ibps
+│ │          install_mysql(port=port, pkg=pkg,
+│ │ -                      innodb_buffer_pool_size=innodb_buffer_pool_size)
+│ │ +                      innodb_buffer_pool_size=innodb_buffer_pool_size, read_only=False)
+│ │ +    elif args.action in ('slave', 'replica'):
+│ │ +        if source == '':
+│ │ +            logging.error("--source is missing , can't find master|source mysql instance .")
+│ │ +            return 
+│ │ +        
+│ │ +        if ":" not in source:
+│ │ +            logging.error("format error --source shuild be ip:port format. ")
+│ │ +            return 
+│ │ +        
+│ │ +        # 解析出 master 实例的地址
+│ │ +        source_ip, source_port = source.split(":")
+│ │ +        source_port = int(source_port)
+│ │ +        
+│ │ +        # 配置 replica 实例
+│ │ +        install_replica(port, pkg, innodb_buffer_pool_size, source_ip, source_port)
+│ │ +        
+│ │      elif args.action == 'uninstall':
+│ │          uninstall_mysql(args.port)
+│ │  
+│ │  
+│ │  if __name__ == "__main__":
+│ │      main()
+│ │   --- dbm-agent-8.32.4/dbm_agent.egg-info/PKG-INFO
+│ ├── +++ dbm-agent-8.32.6/dbm_agent.egg-info/PKG-INFO
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dbm-agent
+│ │ -Version: 8.32.4
+│ │ +Version: 8.32.6
+│ │  Summary: dbm-agent 数据库管理中心客户端程序
+│ │  Home-page: https://github.com/Neeky/dbm-agent
+│ │  Author: Neeky
+│ │  Author-email: neeky@live.com
+│ │  Maintainer: Neeky
+│ │  Maintainer-email: neeky@live.com
+│ │  Classifier: Development Status :: 4 - Beta
+│ │   --- dbm-agent-8.32.4/dbm_agent.egg-info/SOURCES.txt
+│ ├── +++ dbm-agent-8.32.6/dbm_agent.egg-info/SOURCES.txt
+│ │┄ Files 4% similar despite different names
+│ │ @@ -22,14 +22,15 @@
+│ │  dbma/components/__init__.py
+│ │  dbma/components/mysql/__init__.py
+│ │  dbma/components/mysql/commons.py
+│ │  dbma/components/mysql/config.py
+│ │  dbma/components/mysql/exceptions.py
+│ │  dbma/components/mysql/install.py
+│ │  dbma/components/mysql/instance.py
+│ │ +dbma/components/mysql/replica.py
+│ │  dbma/components/mysql/views/__init__.py
+│ │  dbma/components/mysql/views/defaultsview.py
+│ │  dbma/components/mysql/views/handlers.py
+│ │  dbma/components/redis/__init__.py
+│ │  dbma/core/__init__.py
+│ │  dbma/core/configs.py
+│ │  dbma/core/exception.py
+│ │   --- dbm-agent-8.32.4/dbma/bil/daemon.py
+│ ├── +++ dbm-agent-8.32.6/dbma/bil/daemon.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -6,74 +6,70 @@
+│ │  import errno
+│ │  import signal
+│ │  import argparse
+│ │  from datetime import datetime
+│ │  import atexit
+│ │  
+│ │  
+│ │ -__ALL__ = ['start_daemon', 'stop_daemon']
+│ │ +__ALL__ = ["start_daemon", "stop_daemon"]
+│ │  
+│ │  
+│ │  def auto_clean_pid(fileno, pid_file):
+│ │      """
+│ │      当程序自动退出时清理 pid 文件
+│ │      """
+│ │      os.close(fileno)
+│ │      os.remove(pid_file)
+│ │  
+│ │  
+│ │  def signal_handler(sig, _):
+│ │ -    """定义信息处理逻辑
+│ │ -    """
+│ │ +    """定义信息处理逻辑"""
+│ │      if sig == signal.SIGINT or sig == signal.SIGTERM:
+│ │          # signal.SIGINT == 2
+│ │          # signal.SIGTERM == 15
+│ │          sys.exit(1)
+│ │  
+│ │  
+│ │  def write_pid_file(pid, pid_file):
+│ │ -    """创建 pid 文件并向其中写入 pid，成功返回 0 异常返回 1
+│ │ -    """
+│ │ +    """创建 pid 文件并向其中写入 pid，成功返回 0 异常返回 1"""
+│ │      # 取得 pid 文件的文件描述符
+│ │ -    pid_desc = os.open(pid_file, os.O_CREAT | os.O_RDWR,
+│ │ -                       stat.S_IRUSR | stat.S_IWUSR)
+│ │ +    pid_desc = os.open(pid_file, os.O_CREAT | os.O_RDWR, stat.S_IRUSR | stat.S_IWUSR)
+│ │      try:
+│ │          fcntl.lockf(pid_desc, fcntl.LOCK_EX | fcntl.LOCK_NB)
+│ │      except IOError as err:
+│ │          # 排他访问有异常的话，说明已经有一个守护进程在运行了
+│ │          print(err)
+│ │          return 1
+│ │      # 如果能运行到这里说明排他访问是正常的
+│ │      # 清空 pid 文件
+│ │      os.truncate(pid_desc, 0)
+│ │      s_pid = str(pid)
+│ │ -    os.write(pid_desc, s_pid.encode('utf8'))
+│ │ +    os.write(pid_desc, s_pid.encode("utf8"))
+│ │      atexit.register(auto_clean_pid, pid_desc, pid_file)
+│ │      return 0
+│ │      # 注意 pid 文件不应该被 close ，因为如果 close 的话其它进程就查询不到是否有进程在用着它了，pid 文件应该是独占的
+│ │  
+│ │  
+│ │  def start_server(pid_file="/tmp/daemon.pid"):
+│ │ -    """启动服务并把 pid 写入到 pid 文件
+│ │ -    """
+│ │ +    """启动服务并把 pid 写入到 pid 文件"""
+│ │      # 注册信号处理函数
+│ │      signal.signal(signal.SIGTERM, signal_handler)
+│ │      signal.signal(signal.SIGINT, signal_handler)
+│ │  
+│ │      pid = os.fork()
+│ │  
+│ │      # 如果 pid 大于 0 说明这个进程是父进程
+│ │      if pid > 0:
+│ │          # 等待 5s 这样子进程就应该已经启动了，于是退出父进程
+│ │          time.sleep(5)
+│ │          sys.exit(0)
+│ │  
+│ │      # 如果是父进程它上一个 if 就已经退出了，所以不不会执行到这个，也就是说下面的代码都是子进程的逻辑
+│ │      ppid = os.getppid()  # 获取父进程的 id
+│ │ -    pid = os.getpid()   # 获取自己的进程 id
+│ │ +    pid = os.getpid()  # 获取自己的进程 id
+│ │  
+│ │      if write_pid_file(pid, pid_file) != 0:
+│ │          # 如果执行到这里说明守护进程已经存在了
+│ │          # 那么要退出父进程、退出当前进程
+│ │          os.kill(ppid, signal.SIGTERM)
+│ │          sys.exit(1)
+│ │  
+│ │ @@ -82,16 +78,15 @@
+│ │      signal.signal(signal.SIGHUP, signal.SIG_IGN)
+│ │      os.kill(ppid, signal.SIGTERM)  # 主动的kill父进程
+│ │      # 后台运行不要接收键盘输入
+│ │      sys.stdin.close()
+│ │  
+│ │  
+│ │  def stop_server(pid_file="/tmp/daemon.pid"):
+│ │ -    """退出守护进程并删除 pid 文件,并且退出当前程序
+│ │ -    """
+│ │ +    """退出守护进程并删除 pid 文件,并且退出当前程序"""
+│ │      try:
+│ │          with open(pid_file) as pid_file_ojb:
+│ │              s_pid = pid_file_ojb.read()
+│ │      except IOError as err:
+│ │          # pid 文件都不存在所以守护进程也是不存在的，也就没有必要 kill 它了
+│ │          sys.exit(0)
+│ │      pid = int(s_pid)
+│ │   --- dbm-agent-8.32.4/dbma/bil/fs.py
+│ ├── +++ dbm-agent-8.32.6/dbma/bil/fs.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -3,20 +3,22 @@
+│ │  """
+│ │  实现文件系统的相关操作
+│ │  """
+│ │  
+│ │  import os
+│ │  import tarfile
+│ │  
+│ │ +
+│ │  def is_file_exists(file_path):
+│ │      """
+│ │      判断文件是否存在
+│ │      """
+│ │      return os.path.exists(file_path)
+│ │  
+│ │ +
+│ │  def extract_tar_file(tar_file_path, extract_dir):
+│ │      """
+│ │      解压tar文件
+│ │  
+│ │      Parameters:
+│ │      ----------
+│ │      tar_file_path: str
+│ │ @@ -29,34 +31,36 @@
+│ │      -------
+│ │          None
+│ │      """
+│ │      tar = tarfile.open(tar_file_path)
+│ │      tar.extractall(extract_dir)
+│ │      tar.close()
+│ │  
+│ │ +
+│ │  def get_tar_file_name(tar_file_path):
+│ │      """
+│ │      获取tar文件的名称
+│ │  
+│ │      Parameters:
+│ │      -----------
+│ │ -    tar_file_path: str 
+│ │ +    tar_file_path: str
+│ │          tar 文件的全路径
+│ │  
+│ │      Return:
+│ │      -------
+│ │          str
+│ │      """
+│ │      tar = tarfile.open(tar_file_path)
+│ │      name = tar.getnames()[0]
+│ │      tar.close()
+│ │      if os.sep in name:
+│ │          name, *_ = name.split(os.sep)
+│ │      return name
+│ │  
+│ │ +
+│ │  def link(src, dest):
+│ │      """
+│ │      创建链接
+│ │  
+│ │      Parameters:
+│ │      -----------
+│ │      src: str
+│ │ @@ -67,14 +71,15 @@
+│ │  
+│ │      Return:
+│ │      -------
+│ │          None
+│ │      """
+│ │      os.symlink(src, dest)
+│ │  
+│ │ +
+│ │  def is_line_in_etc_profile(line):
+│ │      """
+│ │      /etc/profile 中是否有以 line 开头的行存在
+│ │  
+│ │      Parameters:
+│ │      -----------
+│ │      line: str
+│ │ @@ -86,30 +91,32 @@
+│ │      """
+│ │      with open("/etc/profile", "r") as f:
+│ │          for l in f:
+│ │              if l.startswith(line):
+│ │                  return True
+│ │      return False
+│ │  
+│ │ +
+│ │  def append_new_line_to_etc_profile(line):
+│ │      """
+│ │      在 /etc/profile 中添加一行
+│ │      Parameters:
+│ │      -----------
+│ │      line: str
+│ │          要写入的新行
+│ │ -    
+│ │ +
+│ │      Returns:
+│ │      --------
+│ │          None
+│ │      """
+│ │      with open("/etc/profile", "a") as f:
+│ │          f.write(line)
+│ │          f.write("\n")
+│ │  
+│ │ +
+│ │  join = os.path.join
+│ │  
+│ │  readlink = os.readlink
+│ │  
+│ │  listdir = os.listdir
+│ │  
+│ │ -mkdir = os.mkdir
+│ │ +mkdir = os.mkdir
+│ │   --- dbm-agent-8.32.4/dbma/bil/osuser.py
+│ ├── +++ dbm-agent-8.32.6/dbma/bil/osuser.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -6,14 +6,15 @@
+│ │  
+│ │  import os
+│ │  import pwd
+│ │  import grp
+│ │  from dbma.bil.cmdexecutor import exe_shell_cmd
+│ │  from dbma.bil.sudos import sudo
+│ │  
+│ │ +
+│ │  def is_root() -> bool:
+│ │      """
+│ │      检查当前的 euser 是不是 root
+│ │      """
+│ │      return os.geteuid() == 0
+│ │  
+│ │  
+│ │ @@ -53,36 +54,36 @@
+│ │          grp.getgrnam(group)
+│ │          return True
+│ │      except KeyError as err:
+│ │          return False
+│ │      except TypeError as err:
+│ │          return False
+│ │  
+│ │ +
+│ │  def get_uid_gid(user_name):
+│ │      """
+│ │      返回给定用户的 (uid,gid) 组成的元组. 如果给定的用户不存在就返回 (0,0)
+│ │      """
+│ │      try:
+│ │          user = pwd.getpwnam(user_name)
+│ │          return user.pw_uid, user.pw_gid
+│ │      except Exception as err:
+│ │          return 0, 0
+│ │  
+│ │  
+│ │  class Identify(object):
+│ │ -    """
+│ │ -    """
+│ │ +    """ """
+│ │ +
+│ │      _not_implement_message = "please impolement it in sub class ."
+│ │  
+│ │      # 标识名(用户名 | 组名)
+│ │ -    name = ''
+│ │ +    name = ""
+│ │  
+│ │      def __init__(self, name):
+│ │ -        """
+│ │ -        """
+│ │ +        """ """
+│ │          self.name = name
+│ │  
+│ │      def create_shell_str(self) -> str:
+│ │          """返回创建对象的 shell 命令行模式
+│ │  
+│ │          Return
+│ │          ------
+│ │ @@ -100,15 +101,15 @@
+│ │          raise NotImplementedError(self._not_implement_message)
+│ │  
+│ │      def is_exists(self):
+│ │          """检查给定的标识是否存在
+│ │  
+│ │          Return
+│ │          ------
+│ │ -            bool  
+│ │ +            bool
+│ │          """
+│ │          raise NotImplementedError(self._not_implement_message)
+│ │  
+│ │      def create(self):
+│ │          """创建用户|属组
+│ │  
+│ │          Return
+│ │ @@ -127,16 +128,16 @@
+│ │              None
+│ │          """
+│ │          if self.is_exists():
+│ │              exe_shell_cmd(self.drop_shell_str())
+│ │  
+│ │  
+│ │  class BaseGroup(Identify):
+│ │ -    """所有操作系统用户属组的基类
+│ │ -    """
+│ │ +    """所有操作系统用户属组的基类"""
+│ │ +
+│ │      def __init__(self, name):
+│ │          Identify.__init__(self, name)
+│ │  
+│ │      def create_shell_str(self) -> str:
+│ │          return f"groupadd {self.name}"
+│ │  
+│ │      def drop_shell_str(self) -> str:
+│ │ @@ -146,34 +147,34 @@
+│ │          return is_group_exists(self.name)
+│ │  
+│ │      def __repr__(self):
+│ │          return f"BaseGroup{{name={self.name}}}"
+│ │  
+│ │      def __str__(self):
+│ │          return f"{self.name}"
+│ │ -    
+│ │ +
+│ │  
+│ │  class BaseUser(Identify):
+│ │ -    """所有用户的基类
+│ │ -    """
+│ │ +    """所有用户的基类"""
+│ │ +
+│ │      group = None
+│ │ -    home = ''
+│ │ +    home = ""
+│ │  
+│ │ -    def __init__(self, name, home=''):
+│ │ -        Identify.__init__(self,name)
+│ │ +    def __init__(self, name, home=""):
+│ │ +        Identify.__init__(self, name)
+│ │  
+│ │          # 添加定制 home-dir 的支持
+│ │          self.home = home
+│ │  
+│ │      def create_shell_str(self) -> str:
+│ │ -        if self.home == '':
+│ │ +        if self.home == "":
+│ │              return f"useradd {self.name} -g {self.group.name}"
+│ │          else:
+│ │              return f"useradd {self.name} -g {self.group.name} -d {self.home}"
+│ │ -    
+│ │ +
+│ │      def drop_shell_str(self) -> str:
+│ │          return f"userdel {self.name}"
+│ │  
+│ │      def is_exists(self):
+│ │          return is_user_exists(self.name)
+│ │  
+│ │      def create(self):
+│ │ @@ -181,101 +182,98 @@
+│ │          在创建用户的时候如果组不存在，要去创建组
+│ │          """
+│ │          if (self.group is not None) and (not self.group.is_exists()):
+│ │              self.group.create()
+│ │          Identify.create(self)
+│ │  
+│ │      def chown(self, path, recursive=True):
+│ │ -        """
+│ │ -        """
+│ │ +        """ """
+│ │          if recursive == True:
+│ │              cmd = f"chown -R {str(self)} {path}"
+│ │          else:
+│ │              cmd = f"chown {str(self)} {path}"
+│ │  
+│ │          with sudo():
+│ │              exe_shell_cmd(cmd)
+│ │ -            
+│ │ -        
+│ │ +
+│ │      def __str__(self):
+│ │          """
+│ │          返回 user:group 的形式
+│ │          """
+│ │          return f"{self.name}:{self.group}"
+│ │  
+│ │  
+│ │  class DBMAGroup(BaseGroup):
+│ │ -    """
+│ │ -    """
+│ │ +    """ """
+│ │ +
+│ │      def __init__(self, name="dbma"):
+│ │ -        BaseGroup.__init__(self,name)
+│ │ +        BaseGroup.__init__(self, name)
+│ │  
+│ │  
+│ │  class DBMAUser(BaseUser):
+│ │ -    """
+│ │ -    """
+│ │ +    """ """
+│ │ +
+│ │      group = DBMAGroup()
+│ │  
+│ │      def __init__(self, name="dbma"):
+│ │          BaseUser.__init__(self, name)
+│ │  
+│ │  
+│ │  class MySQLGroup(BaseGroup):
+│ │ -    def __init__(self,name="mysql"):
+│ │ -        BaseGroup.__init__(self,name)
+│ │ +    def __init__(self, name="mysql"):
+│ │ +        BaseGroup.__init__(self, name)
+│ │  
+│ │  
+│ │  class MySQLUser(BaseUser):
+│ │ -    """
+│ │ -    """
+│ │ +    """ """
+│ │ +
+│ │      # MySQL 端口
+│ │      port = 3306
+│ │      # 所有的 MySQL 都共用一个 MySQL 组
+│ │      group = MySQLGroup()
+│ │  
+│ │ -    def __init__(self,port:int=3306):
+│ │ +    def __init__(self, port: int = 3306):
+│ │          """根据 MySQL 监听的端口创建用户
+│ │  
+│ │          Parameter
+│ │          ---------
+│ │              port: int
+│ │          """
+│ │          self.name = f"mysql{port}"
+│ │          self.port = port
+│ │ -        BaseUser.__init__(self,self.name)
+│ │ -    
+│ │ +        BaseUser.__init__(self, self.name)
+│ │ +
+│ │      def create(self):
+│ │ -        """创建 MySQL 实例用户(如果属组不存在就先创建属组)
+│ │ -        """
+│ │ +        """创建 MySQL 实例用户(如果属组不存在就先创建属组)"""
+│ │          if self.group.is_exists() == False:
+│ │              self.group.create()
+│ │ -        
+│ │ +
+│ │          BaseUser.create(self)
+│ │  
+│ │      def __str__(self):
+│ │          return f"{self.name}:{self.group}"
+│ │  
+│ │  
+│ │  class RootGroup(BaseGroup):
+│ │ -    """
+│ │ -    """    
+│ │ +    """ """
+│ │ +
+│ │      def __init__(self, name="root"):
+│ │ -        BaseGroup.__init__(self,name)
+│ │ +        BaseGroup.__init__(self, name)
+│ │  
+│ │      def drop(self):
+│ │          """
+│ │          root 组是不能删除的、所以这里不做任何实现
+│ │          """
+│ │          pass
+│ │  
+│ │  
+│ │  class RootUser(BaseUser):
+│ │      group = RootGroup()
+│ │ -    
+│ │ +
+│ │      def __init__(self):
+│ │ -        BaseGroup.__init__(self,"root")
+│ │ +        BaseGroup.__init__(self, "root")
+│ │  
+│ │      def drop(self):
+│ │          """
+│ │          root 组是不能删除的、所以这里不做任何实现
+│ │          """
+│ │          pass
+│ │   --- dbm-agent-8.32.4/dbma/bil/sudos.py
+│ ├── +++ dbm-agent-8.32.6/dbma/bil/sudos.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -6,18 +6,18 @@
+│ │  
+│ │  import os
+│ │  import contextlib
+│ │  from threading import RLock
+│ │  
+│ │  _user_sudo_lock = RLock()
+│ │  
+│ │ +
+│ │  @contextlib.contextmanager
+│ │  def sudo(message="sudo"):
+│ │ -    """临时升级权限到 root .
+│ │ -    """
+│ │ +    """临时升级权限到 root ."""
+│ │      # 对于权限这个临界区的访问要串行化
+│ │      with _user_sudo_lock as lk:
+│ │          # 得到当前进程的 euid
+│ │          old_euid = os.geteuid()
+│ │          # 提升权限到 root
+│ │          os.seteuid(0)
+│ │          yield message
+│ │   --- dbm-agent-8.32.4/dbma/components/mysql/config.py
+│ ├── +++ dbm-agent-8.32.6/dbma/components/mysql/config.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -18,30 +18,30 @@
+│ │  from dbma.core import messages
+│ │  from dbma.bil.fun import fname
+│ │  from dbma.core.configs import dbm_agent_config
+│ │  from dbma.components.mysql.exceptions import MySQLTemplateFileNotExistsException
+│ │  
+│ │  
+│ │  class MySQLTemplateTypes(Enum):
+│ │ -    """定义配置文件模板类型
+│ │ -    """
+│ │ +    """定义配置文件模板类型"""
+│ │ +
+│ │      # MySQL 配置文件
+│ │      MYSQL_CONFIG_FILE = 1
+│ │  
+│ │      # MySQL init 专用配置文件
+│ │      MYSQL_INIT_CONFIG_FILE = 2
+│ │  
+│ │      # MySQL systemd 配置文件
+│ │      MYSQL_SYSTEMD_FILE = 3
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class MySQLConfig(object):
+│ │ -    """MySQL 配置文件的动态生成
+│ │ -    """
+│ │ +    """MySQL 配置文件的动态生成"""
+│ │ +
+│ │      # basic
+│ │      basedir: str = None
+│ │      port: str = None
+│ │      innodb_buffer_pool_size: str = None
+│ │  
+│ │      # region global-config
+│ │      version: str = None
+│ │ @@ -166,15 +166,15 @@
+│ │      clone_enable_compression: str = "OFF"
+│ │      clone_max_concurrency: int = 16
+│ │      # endregion clone
+│ │  
+│ │      # region replication
+│ │      rpl_semi_sync_master_enabled: str = "ON"
+│ │      rpl_semi_sync_slave_enabled: str = "ON"
+│ │ -    rpl_semi_sync_master_timeout: int = 10000
+│ │ +    rpl_semi_sync_master_timeout: int = 1000
+│ │      rpl_semi_sync_master_wait_point: str = "AFTER_SYNC"
+│ │      rpl_semi_sync_master_wait_no_slave: str = "ON"
+│ │      rpl_semi_sync_master_wait_for_slave_count: int = 1
+│ │      sync_source_info: int = 10000
+│ │      skip_slave_start: str = "ON"
+│ │      skip_replica_start: str = "ON"
+│ │      log_slave_updates: str = "ON"
+│ │ @@ -311,16 +311,15 @@
+│ │      # endregion innodbs
+│ │  
+│ │      # region ps
+│ │      performance_schema: str = "ON"
+│ │      # endregion ps
+│ │  
+│ │      def calcu_second_attrs(self):
+│ │ -        """根据已有的配置推导出相关的其它配置
+│ │ -        """
+│ │ +        """根据已有的配置推导出相关的其它配置"""
+│ │          logging.info(messages.FUN_STARTS.format(fname()))
+│ │  
+│ │          self._calcu_deps_port()
+│ │          self._calcu_random_attrs()
+│ │          self._calcu_deps_mem()
+│ │          self._calcu_deps_basedir()
+│ │  
+│ │ @@ -342,22 +341,23 @@
+│ │              json_file = Path(self.datadir) / "mysql-config.json"
+│ │          else:
+│ │              json_file = Path(target_dir) / "mysql-config.json"
+│ │  
+│ │          # 检查目录是否存在
+│ │          if not Path(target_dir).exists():
+│ │              logging.error(
+│ │ -                "dir '{}' not exists, skip save config to it .".format(target_dir))
+│ │ +                "dir '{}' not exists, skip save config to it .".format(target_dir)
+│ │ +            )
+│ │              logging.info(messages.FUN_ENDS.format(fname()))
+│ │              return
+│ │  
+│ │          # 保存到给定目录
+│ │          logging.info("write config file to '{}' .".format(json_file))
+│ │          json_data = asdict(self)
+│ │ -        with open(json_file, 'w') as f:
+│ │ +        with open(json_file, "w") as f:
+│ │              f.write(json.dumps(json_data, indent=4))
+│ │  
+│ │          logging.info(messages.FUN_ENDS.format(fname()))
+│ │  
+│ │      def find_mysql_template_file(self, mtt: MySQLTemplateTypes = None):
+│ │          """根据版本号加载配置文件模板，如果找不到对应的模板文件就返回 None
+│ │  
+│ │ @@ -375,82 +375,93 @@
+│ │          MySQLTemplateFileNotExistsException
+│ │  
+│ │          """
+│ │          logging.info(messages.FUN_STARTS.format(fname()))
+│ │  
+│ │          # 根据需要的配置文件类型返回模板文件(Path)
+│ │          import dbma
+│ │ +
+│ │          if mtt == MySQLTemplateTypes.MYSQL_CONFIG_FILE:
+│ │ -            template_file = Path(dbma.__file__).parent / \
+│ │ -                "static/cnfs/mysql-{}.cnf.jinja".format(self.version)
+│ │ +            template_file = Path(
+│ │ +                dbma.__file__
+│ │ +            ).parent / "static/cnfs/mysql-{}.cnf.jinja".format(self.version)
+│ │ +            # dbm-agent 只对 5.7.x 提供有限的支持、配置文件的模板最高为 5.7.25 、也就是说所有的版本都用这个一个模板
+│ │ +            if self.version.startswith("5.7"):
+│ │ +                template_file = Path(
+│ │ +                    dbma.__file__
+│ │ +                ).parent / "static/cnfs/mysql-{}.cnf.jinja".format("5.7.25")
+│ │ +                logging.info(
+│ │ +                    "5.7.xx version well using config template {}".format(template_file)
+│ │ +                )
+│ │ +
+│ │          elif mtt == MySQLTemplateTypes.MYSQL_INIT_CONFIG_FILE:
+│ │              short_version = "8.0" if self.version.startswith("8.0") else "5.7"
+│ │ -            template_file = Path(dbma.__file__).parent / \
+│ │ -                "static/cnfs/mysql-{}-init-only.jinja".format(short_version)
+│ │ +            template_file = Path(
+│ │ +                dbma.__file__
+│ │ +            ).parent / "static/cnfs/mysql-{}-init-only.jinja".format(short_version)
+│ │          elif mtt == MySQLTemplateTypes.MYSQL_SYSTEMD_FILE:
+│ │ -            template_file = Path(dbma.__file__).parent / \
+│ │ -                "static/cnfs/mysqld.service.jinja"
+│ │ +            template_file = (
+│ │ +                Path(dbma.__file__).parent / "static/cnfs/mysqld.service.jinja"
+│ │ +            )
+│ │          logging.info("using template file {}".format(template_file))
+│ │ -        
+│ │ +
+│ │          # 检查一下是否存在
+│ │          if template_file.exists():
+│ │              logging.info(messages.FUN_ENDS.format(fname()))
+│ │              return template_file
+│ │ -        
+│ │ +
+│ │          logging.warning("template file '{}' not exists ".format(template_file))
+│ │          raise MySQLTemplateFileNotExistsException(template_file)
+│ │  
+│ │      def render_mysql_template(self, template: str = None):
+│ │          """渲染给定的 template 文件
+│ │ -        
+│ │ +
+│ │          Parameters:
+│ │          -----------
+│ │          template: str
+│ │              模板文件的文字内容
+│ │ -        
+│ │ +
+│ │          Return:
+│ │          -------
+│ │          str
+│ │              渲染之后的配置文件
+│ │          """
+│ │          logging.info(messages.FUN_STARTS.format(fname()))
+│ │          if template is None:
+│ │              logging.error("template is None .")
+│ │              return
+│ │  
+│ │          if not template.exists():
+│ │              logging.error("template not exists .")
+│ │              return
+│ │  
+│ │ -        with open(template, 'r') as f:
+│ │ +        with open(template, "r") as f:
+│ │              content = f.read()
+│ │  
+│ │          t = Template(content)
+│ │          logging.info(messages.FUN_ENDS.format(fname()))
+│ │          return t.render(asdict(self))
+│ │ -    
+│ │  
+│ │      def generate_cnf_config_file(self):
+│ │ -        """ 生成配置文件  /etc/my-{port}-cnf
+│ │ -        """
+│ │ +        """生成配置文件  /etc/my-{port}-cnf"""
+│ │          logging.info(messages.FUN_STARTS.format(fname()))
+│ │          # 根据版本号加载配置文件模板
+│ │          # 渲染模板
+│ │          # 保存渲染后的内容到文件
+│ │          try:
+│ │              tempate = self.find_mysql_template_file(
+│ │ -                MySQLTemplateTypes.MYSQL_CONFIG_FILE)
+│ │ +                MySQLTemplateTypes.MYSQL_CONFIG_FILE
+│ │ +            )
+│ │          except MySQLTemplateFileNotExistsException as err:
+│ │ -            logging.error(
+│ │ -                "cannot generate cnf config file, becuase {}".format(err))
+│ │ +            logging.error("cannot generate cnf config file, becuase {}".format(err))
+│ │              raise err
+│ │  
+│ │          content = self.render_mysql_template(tempate)
+│ │  
+│ │ -        with open(Path("/etc/my-{}.cnf".format(self.port)), 'w') as f:
+│ │ +        with open(Path("/etc/my-{}.cnf".format(self.port)), "w") as f:
+│ │              f.write(content)
+│ │          logging.info(messages.FUN_ENDS.format(fname()))
+│ │  
+│ │      def generate_init_cnf_config_file(self):
+│ │          """生成初始化专用文件, 用于解决 plugin-add 导致的一系列问题
+│ │  
+│ │          2023-03-29T11:25:08.320436+08:00 0 [Warning] [MY-013501] [Server] Ignoring --plugin-load[_add] list as the server is running with --initialize(-insecure).
+│ │ @@ -459,82 +470,83 @@
+│ │  
+│ │          所以我们要在 init 的时候生成一份没有 plugin-add 的版本
+│ │          """
+│ │          logging.info("starts generate init cnf config file .")
+│ │          # 查询 mysql-init 的配置文件模板
+│ │          try:
+│ │              tempate = self.find_mysql_template_file(
+│ │ -                MySQLTemplateTypes.MYSQL_INIT_CONFIG_FILE)
+│ │ +                MySQLTemplateTypes.MYSQL_INIT_CONFIG_FILE
+│ │ +            )
+│ │          except MySQLTemplateFileNotExistsException as err:
+│ │ -            logging.error(
+│ │ -                "cannot generate cnf config file, becuase {}".format(err))
+│ │ +            logging.error("cannot generate cnf config file, becuase {}".format(err))
+│ │              raise err
+│ │  
+│ │          content = self.render_mysql_template(tempate)
+│ │  
+│ │ -        with open(Path(dbm_agent_config.mysql_init_cnf), 'w') as f:
+│ │ +        with open(Path(dbm_agent_config.mysql_init_cnf), "w") as f:
+│ │              f.write(content)
+│ │  
+│ │          logging.info("starts generate init cnf config file .")
+│ │  
+│ │      def generate_systemd_cnf_config(self):
+│ │ -        """
+│ │ -        """
+│ │ +        """ """
+│ │          logging.info("starts generate systemd config file .")
+│ │          # 查询 mysql-init 的配置文件模板
+│ │          try:
+│ │              tempate = self.find_mysql_template_file(
+│ │ -                MySQLTemplateTypes.MYSQL_SYSTEMD_FILE)
+│ │ +                MySQLTemplateTypes.MYSQL_SYSTEMD_FILE
+│ │ +            )
+│ │          except MySQLTemplateFileNotExistsException as err:
+│ │ -            logging.error(
+│ │ -                "cannot generate cnf config file, becuase {}".format(err))
+│ │ +            logging.error("cannot generate cnf config file, becuase {}".format(err))
+│ │              raise err
+│ │  
+│ │          content = self.render_mysql_template(tempate)
+│ │  
+│ │ -        with open(Path("/usr/lib/systemd/system/mysqld-{}.service".format(self.port)), 'w') as f:
+│ │ +        with open(
+│ │ +            Path("/usr/lib/systemd/system/mysqld-{}.service".format(self.port)), "w"
+│ │ +        ) as f:
+│ │              f.write(content)
+│ │  
+│ │          logging.info("ends generate systemd config file .")
+│ │  
+│ │      def _calcu_deps_port(self):
+│ │          """计算依赖于 port 的配置项
+│ │  
+│ │          user = 'mysql' + str(port)
+│ │          """
+│ │          logging.info("starts _calcu_dep_port fun . ")
+│ │          # 设置参数
+│ │          # 目前 json 模块还不支持序列化 Path 对象，所以这里统一用 str 来表示路径
+│ │          self.user = dbm_agent_config.mysql_user_prefix + str(self.port)
+│ │          self.datadir = os.path.join(
+│ │ -            dbm_agent_config.mysql_datadir_parent, str(self.port))
+│ │ +            dbm_agent_config.mysql_datadir_parent, str(self.port)
+│ │ +        )
+│ │          self.admin_port = self.port * 10 + 2
+│ │          self.mysqlx_port = self.port * 10
+│ │          self.log_bin = os.path.join(
+│ │ -            dbm_agent_config.mysql_binlogdir_parent, str(self.port)+"/binlog")
+│ │ +            dbm_agent_config.mysql_binlogdir_parent, str(self.port) + "/binlog"
+│ │ +        )
+│ │  
+│ │          # 跟据 datadir 计算 socket 文件的位置
+│ │ -        self.socket = os.path.join(self.datadir, 'mysql.sock')
+│ │ -        self.mysqlx_socket = os.path.join(self.datadir, 'mysqlx.sock')
+│ │ -        self.pid_file = os.path.join(self.datadir, 'mysql.pid')
+│ │ +        self.socket = os.path.join(self.datadir, "mysql.sock")
+│ │ +        self.mysqlx_socket = os.path.join(self.datadir, "mysqlx.sock")
+│ │ +        self.pid_file = os.path.join(self.datadir, "mysql.pid")
+│ │  
+│ │          logging.info("set user to {} .".format(self.user))
+│ │          logging.info("set datadir to {} .".format(self.datadir))
+│ │          logging.info("set admin_port to {} .".format(self.admin_port))
+│ │          logging.info("set mysqlx_port to {} .".format(self.mysqlx_port))
+│ │          logging.info("ends _calcu_dep_port fun . ")
+│ │  
+│ │      def _calcu_random_attrs(self):
+│ │ -        """生成随机值
+│ │ -        """
+│ │ +        """生成随机值"""
+│ │          self.server_id = random.randint(1024, 8192)
+│ │  
+│ │      def _calcu_deps_mem(self):
+│ │ -        """计算内存相关的值
+│ │ -        """
+│ │ +        """计算内存相关的值"""
+│ │          if self.innodb_buffer_pool_size.endswith("M"):
+│ │              # M 级别
+│ │              self.innodb_buffer_pool_instances = 1
+│ │              self.innodb_log_buffer_size = "64M"
+│ │          elif self.innodb_buffer_pool_size.endswith("G"):
+│ │              # G 级别
+│ │              size = re.match("\d*", self.innodb_buffer_pool_size).group(0)
+│ │ @@ -552,12 +564,10 @@
+│ │                  self.innodb_buffer_pool_instances = size
+│ │                  self.innodb_log_buffer_size = "512M"
+│ │              else:
+│ │                  self.innodb_buffer_pool_instances = 16
+│ │                  self.innodb_log_buffer_size = "1G"
+│ │  
+│ │      def _calcu_deps_basedir(self):
+│ │ -        """根据 basedir 计算出 MySQL 的 version
+│ │ -        """
+│ │ -        m = re.search(
+│ │ -            r"mysql-(?P<version>\d{1}.\d{1,2}.\d{1,2})-linux", self.basedir)
+│ │ +        """根据 basedir 计算出 MySQL 的 version"""
+│ │ +        m = re.search(r"mysql-(?P<version>\d{1}.\d{1,2}.\d{1,2})-linux", self.basedir)
+│ │          self.version = m.group("version")
+│ │   --- dbm-agent-8.32.4/dbma/components/mysql/install.py
+│ ├── +++ dbm-agent-8.32.6/dbma/components/mysql/install.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -39,39 +39,38 @@
+│ │      Exception:
+│ │      ----------
+│ │      ValueError
+│ │      """
+│ │      logging.info(messages.FUN_STARTS.format(fname()))
+│ │  
+│ │      import dbma
+│ │ +
+│ │      if version is None:
+│ │          message = "mysql version is None, can't create init-sql-file ."
+│ │          logging.error(message)
+│ │          raise ValueError(messages)
+│ │  
+│ │      # 检查版本号并根据版本号生成配置文件
+│ │      if version.startswith("8.0"):
+│ │          sql_file = Path(dbma.__file__).parent / "static/cnfs/init-8.0.x.sql"
+│ │      elif version.startswith("5.7"):
+│ │          sql_file = Path(dbma.__file__).parent / "static/cnfs/init-5.7.x.sql"
+│ │      else:
+│ │ -        message = "mysql version is '{}', can't create init-sql-file .".format(
+│ │ -            version)
+│ │ +        message = "mysql version is '{}', can't create init-sql-file .".format(version)
+│ │          logging.error(message)
+│ │          raise ValueError(messages)
+│ │      logging.info("init sql file = {}".format(sql_file))
+│ │  
+│ │      # 复制文件
+│ │      shutil.copy(sql_file, dbm_agent_config.mysql_init_user_sql_file)
+│ │      logging.info(messages.FUN_ENDS.format(fname()))
+│ │  
+│ │  
+│ │  def remove_init_sql_file():
+│ │ -    """清理 /tmp/mysql-init.sql 文件
+│ │ -    """
+│ │ +    """清理 /tmp/mysql-init.sql 文件"""
+│ │      logging.info(messages.FUN_STARTS.format(fname()))
+│ │  
+│ │      init_sql_file = Path(dbm_agent_config.mysql_init_user_sql_file)
+│ │      if init_sql_file.exists():
+│ │          os.remove(init_sql_file)
+│ │  
+│ │      logging.info(messages.FUN_ENDS.format(fname()))
+│ │ @@ -99,16 +98,15 @@
+│ │      InstanceHasBeenInstalledException
+│ │  
+│ │      """
+│ │      # 检查安装包是否存在
+│ │      logging.info(messages.FUN_STARTS.format(fname()))
+│ │      if not pkg.exists():
+│ │          logging.warn(messages.FILE_NOT_EXISTS.format(pkg))
+│ │ -        raise MySQLPkgFileNotExistsException(
+│ │ -            messages.FILE_NOT_EXISTS.format(pkg))
+│ │ +        raise MySQLPkgFileNotExistsException(messages.FILE_NOT_EXISTS.format(pkg))
+│ │  
+│ │      # 检查给定的实例是不是已经安装过了
+│ │      datadir = Path(dbm_agent_config.mysql_datadir_parent) / "{}".format(port)
+│ │      if datadir.exists():
+│ │          logging.warn(messages.MYSQL_INSTANCE_HAS_EXISTS.format(port))
+│ │          raise InstanceHasBeenInstalledException(str(port))
+│ │  
+│ │ @@ -129,16 +127,15 @@
+│ │  
+│ │      Exceptions:
+│ │      -----------
+│ │      MySQLSystemdFileNotExists
+│ │      """
+│ │      logging.info(messages.FUN_STARTS.format(fname()))
+│ │  
+│ │ -    systemd_file = Path("/usr/lib/systemd/system/") / \
+│ │ -        "mysqld-{}.service".format(port)
+│ │ +    systemd_file = Path("/usr/lib/systemd/system/") / "mysqld-{}.service".format(port)
+│ │      if not systemd_file.exists():
+│ │          logging.error(messages.FILE_NOT_EXISTS.format(systemd_file))
+│ │          raise MySQLSystemdFileNotExists(systemd_file)
+│ │  
+│ │      logging.info(messages.FUN_ENDS.format(fname()))
+│ │  
+│ │  
+│ │ @@ -325,22 +322,22 @@
+│ │      --------
+│ │      None
+│ │      """
+│ │      logging.info(messages.FUN_STARTS.format(fname()))
+│ │  
+│ │      # 计算 suffix
+│ │      if suffix is None:
+│ │ -        suffix = datetime.now().isoformat().replace(':', '-').replace('.', '-')
+│ │ +        suffix = datetime.now().isoformat().replace(":", "-").replace(".", "-")
+│ │  
+│ │      # 计算当前的 datadir 和 binlogdir
+│ │      datadir = Path(dbm_agent_config.mysql_datadir_parent) / str(port)
+│ │      binlogdir = Path(dbm_agent_config.mysql_binlogdir_parent) / str(port)
+│ │  
+│ │ -    datadir_backup_dir = '{}-backup-{}'.format(datadir, suffix)
+│ │ -    binlogdir_backup_dir = '{}-backup-{}'.format(binlogdir, suffix)
+│ │ +    datadir_backup_dir = "{}-backup-{}".format(datadir, suffix)
+│ │ +    binlogdir_backup_dir = "{}-backup-{}".format(binlogdir, suffix)
+│ │  
+│ │      shutil.move(datadir, datadir_backup_dir)
+│ │      shutil.move(binlogdir, binlogdir_backup_dir)
+│ │  
+│ │      logging.info(messages.FUN_ENDS.format(fname()))
+│ │  
+│ │  
+│ │ @@ -359,15 +356,15 @@
+│ │      -------
+│ │  
+│ │      """
+│ │      logging.info(messages.FUN_STARTS.format(fname()))
+│ │  
+│ │      # 计算 suffix
+│ │      if suffix is None:
+│ │ -        suffix = datetime.now().isoformat().replace(':', '-').replace('.', '-')
+│ │ +        suffix = datetime.now().isoformat().replace(":", "-").replace(".", "-")
+│ │      datadir = Path(dbm_agent_config.mysql_datadir_parent) / str(port)
+│ │      if not datadir.exists():
+│ │          logging.warn(messages.DIR_NOT_EXISTS.format(datadir))
+│ │          return
+│ │  
+│ │      config_file = "/etc/my-{}.cnf".format(port)
+│ │      config_backup_file = datadir / "my-{}.cnf-backup-{}".format(port, suffix)
+│ │ @@ -395,59 +392,72 @@
+│ │      ---------
+│ │          MySQLPkgFileNotExistsException
+│ │      """
+│ │      logging.info(messages.FUN_STARTS.format(fname()))
+│ │  
+│ │      if not pkg.exists():
+│ │          logging.error(messages.FILE_NOT_EXISTS.format(pkg))
+│ │ -        raise MySQLPkgFileNotExistsException(
+│ │ -            messages.FILE_NOT_EXISTS.format(pkg))
+│ │ +        raise MySQLPkgFileNotExistsException(messages.FILE_NOT_EXISTS.format(pkg))
+│ │  
+│ │      basedir = pkg_to_basedir(pkg)
+│ │      flag_file = basedir / ".dbm-agent-decompression.txt"
+│ │      if flag_file.exists():
+│ │          logging.info("ends decompression pkg .")
+│ │          return
+│ │  
+│ │      # 准备解压
+│ │      with tarfile.open(pkg) as tar_pkg:
+│ │          tar_pkg.extractall("/usr/local/")
+│ │  
+│ │      # 解压完成之后写入标记文件 basedir/.dbm-agent-decompression.txt
+│ │ -    with open(flag_file, 'w') as f:
+│ │ -        f.write('dbm-agent')
+│ │ +    with open(flag_file, "w") as f:
+│ │ +        f.write("dbm-agent")
+│ │  
+│ │      # 解压完成
+│ │      logging.info(messages.FUN_ENDS.format(fname()))
+│ │  
+│ │  
+│ │ -def create_mysql_config_file(port: int = 3306, basedir: Path = None, innodb_buffer_pool_size: str = "128M"):
+│ │ +def create_mysql_config_file(
+│ │ +    port: int = 3306,
+│ │ +    basedir: Path = None,
+│ │ +    innodb_buffer_pool_size: str = "128M",
+│ │ +    read_only=True,
+│ │ +):
+│ │      """创建 MySQL 配置文件
+│ │  
+│ │      Parameter:
+│ │      ----------
+│ │ -    port: int 
+│ │ +    port: int
+│ │          MySQL 端口号、默认值 3306
+│ │  
+│ │      basedir: Path
+│ │          MySQL basedir
+│ │  
+│ │      innodb_buffer_pool_size: int
+│ │          缓冲池的大小
+│ │  
+│ │      Return:
+│ │      -------
+│ │          None
+│ │      """
+│ │      logging.info(messages.FUN_STARTS.format(fname()))
+│ │      logging.info(
+│ │ -        "basedir = '{}', port = '{}', innodb_buffer_pool_size = '{}' .".format(basedir, port, innodb_buffer_pool_size))
+│ │ +        "basedir = '{}', port = '{}', innodb_buffer_pool_size = '{}' .".format(
+│ │ +            basedir, port, innodb_buffer_pool_size
+│ │ +        )
+│ │ +    )
+│ │ +
+│ │ +    config = MySQLConfig(
+│ │ +        basedir=str(basedir), port=port, innodb_buffer_pool_size=innodb_buffer_pool_size
+│ │ +    )
+│ │ +
+│ │ +    if read_only == False:
+│ │ +        config.read_only = "OFF"
+│ │ +        config.super_read_only = "OFF"
+│ │  
+│ │ -    config = MySQLConfig(basedir=str(basedir), port=port,
+│ │ -                         innodb_buffer_pool_size=innodb_buffer_pool_size)
+│ │      config.calcu_second_attrs()
+│ │      config.generate_cnf_config_file()
+│ │      config.generate_init_cnf_config_file()
+│ │      config.generate_systemd_cnf_config()
+│ │  
+│ │      logging.info(messages.FUN_ENDS.format(fname()))
+│ │  
+│ │ @@ -464,30 +474,35 @@
+│ │          MySQL basedir
+│ │  
+│ │      Return:
+│ │      -------
+│ │          None
+│ │      """
+│ │      logging.info(messages.FUN_STARTS.format(fname()))
+│ │ -    logging.info(
+│ │ -        "port = '{}', basedir = '{}' .".format(port, basedir))
+│ │ +    logging.info("port = '{}', basedir = '{}' .".format(port, basedir))
+│ │  
+│ │      mysqld = Path(basedir) / "bin/mysqld"
+│ │      config = Path(dbm_agent_config.mysql_init_cnf)
+│ │  
+│ │      init_cmd = "{} --defaults-file={} --init-file={} --initialize-insecure".format(
+│ │ -        mysqld, config, dbm_agent_config.mysql_init_user_sql_file)
+│ │ +        mysqld, config, dbm_agent_config.mysql_init_user_sql_file
+│ │ +    )
+│ │      logging.info("init-cmd = '{}' .".format(init_cmd))
+│ │      # 执行 init 操作
+│ │      exe_shell_cmd(init_cmd)
+│ │  
+│ │      logging.info(messages.FUN_ENDS.format(fname()))
+│ │  
+│ │  
+│ │ -def install_mysql(port: int = 3306, pkg: Path = None, innodb_buffer_pool_size: str = "128M"):
+│ │ +def install_mysql(
+│ │ +    port: int = 3306,
+│ │ +    pkg: Path = None,
+│ │ +    innodb_buffer_pool_size: str = "128M",
+│ │ +    read_only=True,
+│ │ +):
+│ │      """安装 MySQL 实例
+│ │  
+│ │      Parameter:
+│ │      ----------
+│ │      port: int
+│ │          MySQL 端口号
+│ │  
+│ │ @@ -528,16 +543,20 @@
+│ │      # 第二步 解压安装包
+│ │      decompression_pkg(pkg)
+│ │  
+│ │      # 第三步 计算 basedir
+│ │      basedir = pkg_to_basedir(pkg)
+│ │  
+│ │      # 第四步 创建配置文件
+│ │ -    create_mysql_config_file(port=port, basedir=basedir,
+│ │ -                             innodb_buffer_pool_size=innodb_buffer_pool_size)
+│ │ +    create_mysql_config_file(
+│ │ +        port=port,
+│ │ +        basedir=basedir,
+│ │ +        innodb_buffer_pool_size=innodb_buffer_pool_size,
+│ │ +        read_only=read_only,
+│ │ +    )
+│ │  
+│ │      # 第五步 复制 init 文件
+│ │      create_init_sql_file(version)
+│ │  
+│ │      # 第五步 初始化 mysql 实例
+│ │      init_mysql(port=port, basedir=basedir)
+│ │  
+│ │ @@ -545,21 +564,21 @@
+│ │      enable_systemd_for_mysql(port)
+│ │  
+│ │      # 第七步 启动 mysql 实例
+│ │      start_mysql(port)
+│ │  
+│ │      # 第八步 导出 PATH 环境变量
+│ │      export_cmds_to_path(basedir)
+│ │ -    
+│ │ +
+│ │      # 第九步 导出头文件
+│ │      export_header_files(pkg)
+│ │ -    
+│ │ +
+│ │      # 第十步 导出 so 文件
+│ │      export_so_files(pkg)
+│ │ -    
+│ │ +
+│ │      # 清理 init-sql
+│ │      remove_init_sql_file()
+│ │  
+│ │      logging.info(messages.FUN_ENDS.format(fname()))
+│ │  
+│ │  
+│ │  def uninstall_mysql(port: int = 3306):
+│ │   --- dbm-agent-8.32.4/dbma/components/mysql/instance.py
+│ ├── +++ dbm-agent-8.32.6/dbma/components/mysql/instance.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -9,25 +9,23 @@
+│ │  from pathlib import Path
+│ │  from mysql.connector import connect
+│ │  from dbma.core.configs import dbm_agent_config
+│ │  
+│ │  
+│ │  def is_instance_exists(port: int = None):
+│ │      """检查给定端口的实例在当前的机器上是否存在(只要 datadir 存在就算是这个实例存在)
+│ │ -    
+│ │ +
+│ │      Paramters:
+│ │      ----------
+│ │      port: int
+│ │          MySQL 端口
+│ │ -    
+│ │ +
+│ │      Return:
+│ │      -------
+│ │      bool
+│ │ -    
+│ │ +
+│ │      Exceptions:
+│ │      -----------
+│ │      Exception
+│ │      """
+│ │      datadir = Path(dbm_agent_config.mysql_datadir_parent) / str(port)
+│ │      return datadir.exists()
+│ │ -    
+│ │ -
+│ │   --- dbm-agent-8.32.4/dbma/components/mysql/views/defaultsview.py
+│ ├── +++ dbm-agent-8.32.6/dbma/components/mysql/views/defaultsview.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,156 +1,217 @@
+│ │  # -*- encoding: utf-8 -*-
+│ │  
+│ │  """MySQL 安装的相关接口
+│ │  """
+│ │  
+│ │ +import re
+│ │  import logging
+│ │  from aiohttp import web
+│ │  from pathlib import Path
+│ │  from dbma.bil.sudos import sudo
+│ │  from dbma.core.router import routes
+│ │  from dbma.core.configs import dbm_agent_config
+│ │  from dbma.core.threads.backends import threads
+│ │  from dbma.core.views.response import ResponseEntity
+│ │  from dbma.components.mysql.instance import is_instance_exists
+│ │  from dbma.components.mysql.install import install_mysql, uninstall_mysql
+│ │  from dbma.components.mysql.views.handlers import install_mysql_task_handler
+│ │ +from dbma.components.mysql.views.handlers import install_mysql_replica_task_handler
+│ │  
+│ │  
+│ │  @routes.view("/apis/mysqls/defaults")
+│ │  class MySQLDefaultsView(web.View):
+│ │      """
+│ │      MySQL 的全局默认配置
+│ │      """
+│ │ +
+│ │      async def get(self):
+│ │ -        """返回 MySQL 的全局默认配置
+│ │ -        """
+│ │ +        """返回 MySQL 的全局默认配置"""
+│ │          logging.info("view-request-starts: {}".format(self.request.url))
+│ │ -        resposne = ResponseEntity(message="", error="",
+│ │ -                                  data={"mysql-datadir-parent": dbm_agent_config.mysql_datadir_parent,
+│ │ -                                        "mysql-default-version": dbm_agent_config.mysql_default_version,
+│ │ -                                        "mysql-binlogdir-parent": dbm_agent_config.mysql_binlogdir_parent})
+│ │ +        resposne = ResponseEntity(
+│ │ +            message="",
+│ │ +            error="",
+│ │ +            data={
+│ │ +                "mysql-datadir-parent": dbm_agent_config.mysql_datadir_parent,
+│ │ +                "mysql-default-version": dbm_agent_config.mysql_default_version,
+│ │ +                "mysql-binlogdir-parent": dbm_agent_config.mysql_binlogdir_parent,
+│ │ +            },
+│ │ +        )
+│ │          logging.info("view-requests-ends: {}".format(self.request.url))
+│ │          return web.json_response(resposne.to_dict())
+│ │  
+│ │  
+│ │  @routes.view("/apis/mysqls/install")
+│ │  class MySQLInstallView(web.View):
+│ │      """
+│ │      MySQL 安装逻辑
+│ │ -    
+│ │ +
+│ │      详细步骤:
+│ │      1. 检查 post 参数
+│ │      2. 如果参数中带了 task-id 就以任务的方式，放后台执行 & 返回结果告诉调用方，任务已经提交
+│ │      3. 如果参数中没有 task-id 就同步以同步的方式安装 MySQL & 返回结果告诉调用方，安装失败还是成功
+│ │      """
+│ │ +
+│ │      async def post(self):
+│ │          logging.info("view-request-starts: {}".format(self.request.url))
+│ │  
+│ │          data = await self.request.json()
+│ │          response = ResponseEntity(message="", error="", data=None)
+│ │  
+│ │          # region args-check
+│ │          # 检查 port
+│ │ -        if 'port' not in data:
+│ │ +        if "port" not in data:
+│ │              response.message = "port not in post dict"
+│ │              logging.warn(response.message)
+│ │              return web.json_response(response.to_dict(), status=500)
+│ │ -        port = data['port']
+│ │ +        port = data["port"]
+│ │  
+│ │          # 检查 innodb-buffer-pool-size
+│ │ -        if 'ibps' not in data:
+│ │ +        if "ibps" not in data:
+│ │              response.message = "ibps not in post dict"
+│ │              logging.warn(response.message)
+│ │              return web.json_response(response.to_dict(), status=500)
+│ │ -        ibps = data['ibps']
+│ │ +        ibps = data["ibps"]
+│ │  
+│ │          # 检查 pkg-name
+│ │ -        if 'pkg-name' not in data:
+│ │ +        if "pkg-name" not in data:
+│ │              response.message = "pkg-name not in post dict"
+│ │              logging.warn(response.message)
+│ │              return web.json_response(response.to_dict(), status=500)
+│ │ -        pkg_name = data['pkg-name']
+│ │ +        pkg_name = data["pkg-name"]
+│ │          pkg = Path("/usr/local/dbm-agent/pkgs/") / pkg_name
+│ │          
+│ │ +        # 检查 source ? 
+│ │ +        if "source" not in data:
+│ │ +            source = None
+│ │ +        else:
+│ │ +            source = data['source']
+│ │ +            # 检查格式是否有问题
+│ │ +            p = re.compile("\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}:\d{1,4}")
+│ │ +            if not p.match(source):
+│ │ +                response.message = "source arg format error"
+│ │ +                return web.json_response(response.to_dict(), status=500)
+│ │ +            source_ip, source_port = source.split(":")
+│ │ +        
+│ │ +        # 检查 role 
+│ │ +        if "role" not in data:
+│ │ +            response.message = "instance 'role' arg missage, you can choise one of ['master', 'slave', 'source', 'replica']"
+│ │ +            return web.json_response(response.to_dict(), status=500)
+│ │ +        else:
+│ │ +            role = data['role']
+│ │ +
+│ │          # 检查 task-id ? 参数
+│ │ -        if 'task-id' not in data:
+│ │ +        if "task-id" not in data:
+│ │              task_id = None
+│ │          else:
+│ │ -            task_id = data['task-id']
+│ │ +            task_id = data["task-id"]
+│ │ +            
+│ │ +        # 检查各个参数之间的逻辑关系
+│ │ +        if role in ('slave', 'replica'):
+│ │ +            # 在 role 是备机的情况下要求指定 source 参数
+│ │ +            if source is None:
+│ │ +                response.message = "args role = '{}', you must give 'source' arg ".format(role)
+│ │ +                return web.json_response(response.to_dict(), status=500)     
+│ │ +
+│ │          # endregion args-check
+│ │  
+│ │          # 打印一下接收到的参数
+│ │          logging.info(
+│ │ -            "port = '{}', ibps = '{}', pkg-name = '{}', pkg = '{}' task-id = {}.".format(port, ibps, pkg_name, pkg, task_id))
+│ │ -
+│ │ -        # region post-task-to-backends
+│ │ -        # 检查是不是 dbm-center 发过来的请求(如果是它会带上 task_id)
+│ │ -        if not task_id is None:
+│ │ -            threads.submit(install_mysql_task_handler, port=port,
+│ │ -                           ibps=ibps, pkg=pkg, task_id=task_id)
+│ │ -            response.message = "submit install mysql task to backends threads."
+│ │ -            logging.info(response.message)
+│ │ +            "port = '{}', ibps = '{}', pkg-name = '{}', pkg = '{}', source = '{}', role = '{}' task-id = {} .".format(
+│ │ +                port, ibps, pkg_name, pkg, source, role, task_id
+│ │ +            )
+│ │ +        )
+│ │ +        
+│ │ +        # 根据 task_id 是不是 None 来决定接口是同步执行还是异步执行
+│ │ +        if task_id is not None:
+│ │ +            # 进入异步处理逻辑
+│ │ +            #---------------
+│ │ +            if role in ('master', 'source'):
+│ │ +                # 进入安装单机/主库的处理逻辑
+│ │ +                threads.submit(
+│ │ +                    install_mysql_task_handler,
+│ │ +                    port=port,
+│ │ +                    ibps=ibps,
+│ │ +                    pkg=pkg,
+│ │ +                    task_id=task_id
+│ │ +                )
+│ │ +                response.message = "submit install mysql 'master|source' task to backends threads."
+│ │ +            elif role in ('slave', 'replica'):
+│ │ +                # 进入备机的处理逻辑
+│ │ +                threads.submit(
+│ │ +                    install_mysql_replica_task_handler,
+│ │ +                    port=port,
+│ │ +                    ibps=ibps,
+│ │ +                    pkg=pkg,
+│ │ +                    source_ip=source_ip,
+│ │ +                    source_port=source_port,
+│ │ +                    task_id=task_id
+│ │ +                )
+│ │ +                response.message = "submit install mysql 'slave|replica' task to backends threads."
+│ │ +                
+│ │ +            return web.json_response(response.to_dict(), status=200)
+│ │ +        else:
+│ │ +            # 进入同步处理逻辑
+│ │ +            # -------------
+│ │ +            if role in ('master', 'source'):
+│ │ +                # 进入安装单机/主库的处理逻辑
+│ │ +                install_mysql_task_handler(
+│ │ +                    port=port,
+│ │ +                    ibps=ibps,
+│ │ +                    pkg=pkg,
+│ │ +                    task_id=task_id)
+│ │ +                response.message = "install mysql 'master|source' complete ."
+│ │ +            elif role in ('slave', 'replica'):
+│ │ +                # 进入备机的处理逻辑
+│ │ +                install_mysql_replica_task_handler(
+│ │ +                    port=port,
+│ │ +                    ibps=ibps,
+│ │ +                    pkg=pkg,
+│ │ +                    source_ip=source_ip,
+│ │ +                    source_port=source_port,
+│ │ +                    task_id=task_id
+│ │ +                )
+│ │ +                response.message = "install mysql 'slave|replica' complete ."
+│ │              
+│ │ -            # 任务放后台
+│ │ -            logging.info("view-requests-ends: {}".format(self.request.url))
+│ │              return web.json_response(response.to_dict(), status=200)
+│ │ -        # endregion post-task-to-backends
+│ │  
+│ │ -        # region sync-install-mysql
+│ │ -        try:
+│ │ -            # 临时把权限提升到 root (创建目录、用户 ... 都会用到)
+│ │ -            with sudo("install mysql {}".format(port)):
+│ │ -                install_mysql(port, pkg, innodb_buffer_pool_size=ibps)
+│ │ -            logging.info("install mysql compelete. ")
+│ │ -
+│ │ -        except Exception as err:
+│ │ -            response.message = "install mysql got exception {}".format(err)
+│ │ -            response.error = str(err)
+│ │ -            logging.info(response.message)
+│ │ -            return web.json_response(response.to_dict(), status=500)
+│ │ -        
+│ │ -        # 执行到这里说明已经安装完成了
+│ │ -        logging.info("view-requests-ends: {}".format(self.request.url))
+│ │ -        response.message = "install mysql compelet."
+│ │ -        return web.json_response(response.to_dict(), status=200)
+│ │ -        # endregion sync-install-mysql
+│ │  
+│ │  
+│ │  @routes.view("/apis/mysqls/uninstall")
+│ │  class MySQLUninstallView(web.View):
+│ │      """MySQL 卸载逻辑
+│ │ -    
+│ │ +
+│ │      1. 检查 port 参数有没有传递
+│ │      2. 检查 port 对应的实例是否存在于当前机器上
+│ │      3. 执行删除逻辑
+│ │      """
+│ │ +
+│ │      async def post(self):
+│ │          logging.info("view-request-starts: {}".format(self.request.url))
+│ │  
+│ │          data = await self.request.json()
+│ │          response = ResponseEntity(message="", error="", data=None)
+│ │  
+│ │          # region args-check
+│ │          # 检查 port 参数
+│ │ -        if 'port' not in data:
+│ │ +        if "port" not in data:
+│ │              response.message = "port not in post dict"
+│ │              logging.warn(response.message)
+│ │              return web.json_response(response.to_dict(), status=500)
+│ │ -        port = int(data['port'])
+│ │ +        port = int(data["port"])
+│ │          # endregion args-check
+│ │ -        
+│ │ +
+│ │          # region instance-exists-check
+│ │          # 检查给定的实例是否存在
+│ │          if not is_instance_exists(port):
+│ │              response.message = "instance {} not exists.".format(port)
+│ │              response.error = response.message
+│ │              return web.json_response(response.to_dict(), status=500)
+│ │          # endregion instance-exists-check
+│ │ -        
+│ │ +
+│ │          # region uninstall-mysql
+│ │          try:
+│ │              with sudo("install mysql {}".format(port)):
+│ │                  uninstall_mysql(port)
+│ │              response.message = "uninstall mysql complete ."
+│ │              logging.info(response.message)
+│ │          except Exception as err:
+│ │ @@ -164,29 +225,27 @@
+│ │          return web.json_response(response.to_dict(), status=200)
+│ │          # endregion uninstall-mysql
+│ │  
+│ │  
+│ │  @routes.view("/apis/mysqls/{port}/exists")
+│ │  class MySQLInstanceInfoView(web.View):
+│ │      async def get(self):
+│ │ -        """检查给定端口的 MySQL 数据库实例是否存在
+│ │ -        """
+│ │ +        """检查给定端口的 MySQL 数据库实例是否存在"""
+│ │          logging.info("view-request-starts: {}".format(self.request.url))
+│ │          # 准备返回结果对象
+│ │ -        resposne = ResponseEntity(message="", error=None, data={
+│ │ -            "exists": False,
+│ │ -            "port": None
+│ │ -        })
+│ │ -        
+│ │ +        resposne = ResponseEntity(
+│ │ +            message="", error=None, data={"exists": False, "port": None}
+│ │ +        )
+│ │ +
+│ │          # 检查参数
+│ │ -        if self.request.match_info.get('port'):
+│ │ -            port = int(self.request.match_info.get('port'))
+│ │ -            resposne.data['exists'] = is_instance_exists(port)
+│ │ -            resposne.data['port'] = port
+│ │ +        if self.request.match_info.get("port"):
+│ │ +            port = int(self.request.match_info.get("port"))
+│ │ +            resposne.data["exists"] = is_instance_exists(port)
+│ │ +            resposne.data["port"] = port
+│ │          else:
+│ │              # 缺少参数 port 的时候直接返回
+│ │              resposne.message = "dict miss port argument."
+│ │              resposne.error = resposne.message
+│ │ -        
+│ │ +
+│ │          # 检查实例是否存在并返回结果
+│ │          logging.info("view-requests-ends: {}".format(self.request.url))
+│ │ -        return web.json_response(resposne.to_dict())
+│ │ +        return web.json_response(resposne.to_dict())
+│ │   --- dbm-agent-8.32.4/dbma/components/mysql/views/handlers.py
+│ ├── +++ dbm-agent-8.32.6/dbma/components/mysql/views/handlers.py
+│ │┄ Files 26% similar despite different names
+│ │ @@ -2,29 +2,32 @@
+│ │  
+│ │  """dbm-agent 收到操作请求(task)之后，如果请求中没有带 task_id ，说明要求同步执行；如果有带 task_id 那么我们要把 task 放到后台线程中执行。
+│ │  
+│ │  """
+│ │  
+│ │  import logging
+│ │  from pathlib import Path
+│ │ -from typing import Callable
+│ │  from dbma.bil.sudos import sudo
+│ │  from dbma.components.mysql.install import install_mysql
+│ │ +from dbma.components.mysql.replica import install_replica
+│ │  
+│ │  
+│ │ -def update_task_state_callback(task_id: int = None, state: str = None, message: str = None):
+│ │ -    """调用 dbm-center 的接口更新回调任务的状态
+│ │ -    """
+│ │ +def update_task_state_callback(
+│ │ +    task_id: int = None, state: str = None, message: str = None
+│ │ +):
+│ │ +    """调用 dbm-center 的接口更新回调任务的状态"""
+│ │      logging.info("starts update task state callback .")
+│ │      # TODO 调用更新接口ends
+│ │      logging.info("task_id = {}".format(task_id))
+│ │      logging.info("ends update task state callback .")
+│ │  
+│ │  
+│ │ -def install_mysql_task_handler(port: int = 3306, ibps: str = "128M", pkg: Path = None, task_id: int = None):
+│ │ +def install_mysql_task_handler(
+│ │ +    port: int = 3306, ibps: str = "128M", pkg: Path = None, task_id: int = None
+│ │ +):
+│ │      """让安装 MySQL 的逻辑放后台执行
+│ │  
+│ │      Parameters:
+│ │      -----------
+│ │  
+│ │      port: int
+│ │          MySQL 端口号
+│ │ @@ -35,24 +38,68 @@
+│ │      pkg: str
+│ │          MySQL 安装包全路径
+│ │  
+│ │      Return:
+│ │      -------
+│ │      None
+│ │      """
+│ │ -    logging.info("starts install mysql task handler .")
+│ │ +    logging.info("starts install mysql 'master|source' task handler .")
+│ │      try:
+│ │          # 提升后台线程的权限到 root
+│ │          with sudo("install mysql task handler"):
+│ │              install_mysql(port=port, innodb_buffer_pool_size=ibps, pkg=pkg)
+│ │          logging.info("install mysql complete")
+│ │  
+│ │          # 是否更新任务信息到 dbm-center
+│ │          if not task_id is None:
+│ │              logging.warn(
+│ │ -                "install mysql task handler's callback function is None, skip callback")
+│ │ +                "install mysql task handler's callback function is None, skip callback"
+│ │ +            )
+│ │          else:
+│ │              update_task_state_callback(task_id, 200, "install mysql complete")
+│ │  
+│ │      except Exception as err:
+│ │          logging.error("install mysql task handler got error ")
+│ │      logging.info("ends install mysql task handler .")
+│ │ +
+│ │ +
+│ │ +def install_mysql_replica_task_handler(
+│ │ +    port: int = 3306, ibps: str = "128M", pkg: Path = None, source_ip: str = None, source_port: str = None, task_id: int = None
+│ │ +):
+│ │ +    """让安装 MySQL 备机的逻辑放后台执行
+│ │ +
+│ │ +    Parameters:
+│ │ +    -----------
+│ │ +
+│ │ +    port: int
+│ │ +        MySQL 端口号
+│ │ +
+│ │ +    ibps: str
+│ │ +        innodb_buffer_pool_size 的大小， et 128M, 2G, 8G ...
+│ │ +
+│ │ +    pkg: str
+│ │ +        MySQL 安装包全路径
+│ │ +
+│ │ +    Return:
+│ │ +    -------
+│ │ +    None
+│ │ +    """
+│ │ +    logging.info("starts install mysql 'slave|replica' task handler .")
+│ │ +    try:
+│ │ +        # 提升后台线程的权限到 root
+│ │ +        with sudo("install mysql task handler"):
+│ │ +            # install_mysql(port=port, innodb_buffer_pool_size=ibps, pkg=pkg)
+│ │ +            install_replica(port=port, pkg=pkg, innodb_buffer_pool_size=ibps,
+│ │ +                            source_ip=source_ip, source_port=source_port)
+│ │ +        logging.info("install mysql 'slave|replica' complete")
+│ │ +
+│ │ +        # 是否更新任务信息到 dbm-center
+│ │ +        if not task_id is None:
+│ │ +            logging.warn(
+│ │ +                "install mysql 'slave|replica' task handler's callback function is None, skip callback"
+│ │ +            )
+│ │ +        else:
+│ │ +            update_task_state_callback(task_id, 200, "install mysql 'slave|replica' complete")
+│ │ +
+│ │ +    except Exception as err:
+│ │ +        logging.error("install mysql 'slave|replica' task handler got error ")
+│ │ +    logging.info("ends install mysql 'slave|replica' task handler .")
+│ │   --- dbm-agent-8.32.4/dbma/core/agent/init.py
+│ ├── +++ dbm-agent-8.32.6/dbma/core/agent/init.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -11,19 +11,21 @@
+│ │  import atexit
+│ │  from pathlib import Path
+│ │  from dbma.bil.osuser import DBMAUser
+│ │  from dbma.core.configs import DBM_AGENT_BASE_DIR, DBMAgentConfig
+│ │  from dbma.bil.net import get_ip_by_card_name
+│ │  
+│ │  
+│ │ -def init(net_card_name:str, dbm_center_url_prefix:str):
+│ │ -    """安装 dbm-agent
+│ │ -    """
+│ │ +def init(net_card_name: str, dbm_center_url_prefix: str):
+│ │ +    """安装 dbm-agent"""
+│ │      # 配置日志
+│ │ -    logging.basicConfig(level=logging.INFO, format="[%(asctime)s %(levelname)s] - [%(threadName)s] - [%(pathname)s %(lineno)d line]  ~  %(message)s")
+│ │ +    logging.basicConfig(
+│ │ +        level=logging.INFO,
+│ │ +        format="[%(asctime)s %(levelname)s] - [%(threadName)s] - [%(pathname)s %(lineno)d line]  ~  %(message)s",
+│ │ +    )
+│ │      logging.info("start install dbm-agent .")
+│ │  
+│ │      # 检查给定的网卡是否存在
+│ │      ip = get_ip_by_card_name(net_card_name)
+│ │      if ip is None:
+│ │          logging.error("not find any ip on {}".format(net_card_name))
+│ │          return
+│ │ @@ -34,24 +36,25 @@
+│ │      dbma_user.create()
+│ │      logging.info("create user dbma done .")
+│ │  
+│ │      # 创建目录和子目录
+│ │      logging.info("prepare create directions .")
+│ │      if not DBM_AGENT_BASE_DIR.exists():
+│ │          DBM_AGENT_BASE_DIR.mkdir()
+│ │ -    
+│ │ +
+│ │      for subdir in ("etc", "pkgs", "logs", "etc/templates"):
+│ │          item = DBM_AGENT_BASE_DIR / subdir
+│ │          if not item.exists():
+│ │              item.mkdir()
+│ │      logging.info("create directions done .")
+│ │  
+│ │      # 复制模板文件
+│ │      logging.info("prepare copy template files .")
+│ │      import dbma
+│ │ +
+│ │      basedir = Path(dbma.__file__).parent
+│ │      src = basedir / "static/cnfs/"
+│ │      dest = DBM_AGENT_BASE_DIR / "etc/templates"
+│ │      shutil.copytree(src, dest, dirs_exist_ok=True)
+│ │      logging.info("copy template files done .")
+│ │  
+│ │      # 更新配置并保存到磁盘
+│ │ @@ -60,8 +63,10 @@
+│ │      dbm_agent_config.dbmcenter_url_prefix = dbm_center_url_prefix
+│ │      dbm_agent_config.sync_to_disk()
+│ │  
+│ │      ## 权限调整
+│ │      dbma_user.chown(DBM_AGENT_BASE_DIR)
+│ │  
+│ │      # 给到启动 dbm-agent 的命令提示
+│ │ -    logging.info("install dbm-agent done . \n dbm-agent start \n to start dbm-agent service . ")
+│ │ +    logging.info(
+│ │ +        "install dbm-agent done . \n dbm-agent start \n to start dbm-agent service . "
+│ │ +    )
+│ │   --- dbm-agent-8.32.4/dbma/core/configs.py
+│ ├── +++ dbm-agent-8.32.6/dbma/core/configs.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -8,76 +8,74 @@
+│ │  
+│ │  import json
+│ │  import atexit
+│ │  from pathlib import Path
+│ │  from dataclasses import dataclass, asdict
+│ │  from dbma.version import VERSION
+│ │  from dbma.bil.osuser import DBMAUser
+│ │ +
+│ │  # TODO
+│ │  # 这里之后要改成 dbma.core.version 文件中的 VERSION 值
+│ │  
+│ │  DBM_AGENT_BASE_DIR = Path("/usr/local/dbm-agent/")
+│ │  DBM_AGENT_ETC_DIR = DBM_AGENT_BASE_DIR / "etc"
+│ │  CONFIG_FILE_PATH = DBM_AGENT_BASE_DIR / "etc/dbm-agent.json"
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class DBMAgentConfig(object):
+│ │ -    """
+│ │ -    """
+│ │ +    """ """
+│ │ +
+│ │      host: str = "127.0.0.1"
+│ │      port: int = 8086
+│ │      version: str = VERSION
+│ │      dbmcenter_url_prefix: str = "http://127.0.0.1:8080"
+│ │      pid_file: str = "/tmp/dbm-agent.pid"
+│ │ -    log_level: str = 'info'
+│ │ +    log_level: str = "info"
+│ │      log_file: str = "/tmp/dbm-agent.log"
+│ │  
+│ │      # backends_xxx 后端线程运行周期
+│ │      backends_register_time_interval: int = 15
+│ │  
+│ │      # 单例模式
+│ │      _instance = None
+│ │  
+│ │      # MySQL 相关的默认配置
+│ │      mysql_datadir_parent: str = "/database/mysql/data/"
+│ │      mysql_binlogdir_parent: str = "/database/mysql/binlog/"
+│ │      mysql_user_prefix: str = "mysql"
+│ │      mysql_default_version: str = "8.0.32"
+│ │  
+│ │ -    # hiden
+│ │ +    mysql_dbma_user: str = "dbma"
+│ │ +    mysql_dbma_password: str = "dbma@0352"
+│ │ +    # mysql_consts
+│ │ +    mysql_repl_user: str = "repl"
+│ │ +    mysql_repl_password: str = "2-4nw9A0-459st36"
+│ │      mysql_init_cnf: str = "/tmp/mysql-init.cnf"
+│ │      mysql_init_user_sql_file: str = "/tmp/mysql-init-user.sql"
+│ │  
+│ │      def make_register_data(self):
+│ │ -        """
+│ │ -        """
+│ │ -        return {
+│ │ -            'host': self.host,
+│ │ -            'port': self.port,
+│ │ -            'version': self.version
+│ │ -        }
+│ │ +        """ """
+│ │ +        return {"host": self.host, "port": self.port, "version": self.version}
+│ │  
+│ │      # 保存配置到磁盘
+│ │      def sync_to_disk(self):
+│ │ -        """对象的生命周期结束的时候保存信息到磁盘
+│ │ -        """
+│ │ +        """对象的生命周期结束的时候保存信息到磁盘"""
+│ │          if CONFIG_FILE_PATH.parent.exists():
+│ │              config = asdict(self)
+│ │              json_str = json.dumps(config, indent=4)
+│ │ -            with open(CONFIG_FILE_PATH, 'w') as c_file:
+│ │ +            with open(CONFIG_FILE_PATH, "w") as c_file:
+│ │                  c_file.write(json_str)
+│ │  
+│ │      # 读取配置文件
+│ │      def read_from_disk(self):
+│ │ -        """对象创建的时候从磁盘读取配置文件的内容
+│ │ -        """
+│ │ +        """对象创建的时候从磁盘读取配置文件的内容"""
+│ │          if CONFIG_FILE_PATH.exists():
+│ │              json_str = ""
+│ │ -            with open(CONFIG_FILE_PATH, 'r') as c_file:
+│ │ +            with open(CONFIG_FILE_PATH, "r") as c_file:
+│ │                  json_str = c_file.read()
+│ │  
+│ │              try:
+│ │                  json_data = json.loads(json_str)
+│ │                  self.__dict__.update(json_data)
+│ │              except Exception as err:
+│ │                  pass
+│ │ @@ -85,41 +83,40 @@
+│ │      def __new__(cls, *args, **kw):
+│ │          if cls._instance is None:
+│ │              cls._instance = object.__new__(cls, *args, **kw)
+│ │          return cls._instance
+│ │  
+│ │      # 从配置文件中读取配置项
+│ │      def __post_init__(self):
+│ │ -        """从配置文件中读取配置、如果配置文件不存在就使用默认值
+│ │ -        """
+│ │ +        """从配置文件中读取配置、如果配置文件不存在就使用默认值"""
+│ │          self.read_from_disk()
+│ │  
+│ │  
+│ │  dbm_agent_config = DBMAgentConfig()
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class DBMCenterUrlConfig(object):
+│ │ -    """
+│ │ -    """
+│ │ +    """ """
+│ │ +
+│ │      register_agent_url = "{0}/{1}".format(
+│ │ -        dbm_agent_config.dbmcenter_url_prefix, "apis/agents/")
+│ │ +        dbm_agent_config.dbmcenter_url_prefix, "apis/agents/"
+│ │ +    )
+│ │  
+│ │      # 单例模式
+│ │      _instance = None
+│ │  
+│ │      def __new__(cls, *args, **kw):
+│ │          if cls._instance is None:
+│ │              cls._instance = object.__new__(cls, *args, **kw)
+│ │          return cls._instance
+│ │  
+│ │  
+│ │  def _auto_save_to_disk():
+│ │ -    """
+│ │ -    """
+│ │ +    """ """
+│ │      if DBM_AGENT_BASE_DIR.exists():
+│ │          dbm_user = DBMAUser()
+│ │          dbm_user.chown(DBM_AGENT_BASE_DIR)
+│ │          dbm_agent_config.version = VERSION
+│ │          dbm_agent_config.sync_to_disk()
+│ │          dbm_user.chown(DBM_AGENT_BASE_DIR)
+│ │   --- dbm-agent-8.32.4/dbma/core/httpserver.py
+│ ├── +++ dbm-agent-8.32.6/dbma/core/httpserver.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -12,17 +12,17 @@
+│ │  from dbma.bil.osuser import get_uid_gid, is_root, DBMAUser
+│ │  from dbma.core.router import routes
+│ │  from dbma.core.threads import backends
+│ │  from dbma.core.configs import DBMAgentConfig
+│ │  from dbma.core.views import dbmagentview as _
+│ │  from dbma.components.mysql.views import defaultsview as _
+│ │  
+│ │ +
+│ │  def start():
+│ │ -    """
+│ │ -    """
+│ │ +    """ """
+│ │      # 检查用户
+│ │      if not is_root():
+│ │          print("please use root use run this program! ")
+│ │          exit(1)
+│ │  
+│ │      dbma_user = DBMAUser()
+│ │      if not dbma_user.is_exists():
+│ │ @@ -37,39 +37,45 @@
+│ │      # 以服务运行
+│ │      dbm_agent_config = DBMAgentConfig()
+│ │      start_daemon(dbm_agent_config.pid_file)
+│ │      print("log file '{}' .".format(dbm_agent_config.log_file))
+│ │  
+│ │      # 配置日志
+│ │      levels = {
+│ │ -        'info': logging.INFO,
+│ │ -        'debug': logging.DEBUG,
+│ │ -        'error': logging.ERROR,
+│ │ -        'warn': logging.WARN
+│ │ +        "info": logging.INFO,
+│ │ +        "debug": logging.DEBUG,
+│ │ +        "error": logging.ERROR,
+│ │ +        "warn": logging.WARN,
+│ │      }
+│ │ -    handler = RotatingFileHandler(filename=dbm_agent_config.log_file,
+│ │ -                                  maxBytes=128 * 1024 * 1024, backupCount=8, encoding="utf8")
+│ │ -    logging.basicConfig(handlers=[handler], level=levels[dbm_agent_config.log_level],
+│ │ -                        format="[%(asctime)s %(levelname)s] - [%(threadName)s] - [%(pathname)s %(lineno)d line]  ~  %(message)s")
+│ │ +    handler = RotatingFileHandler(
+│ │ +        filename=dbm_agent_config.log_file,
+│ │ +        maxBytes=128 * 1024 * 1024,
+│ │ +        backupCount=8,
+│ │ +        encoding="utf8",
+│ │ +    )
+│ │ +    logging.basicConfig(
+│ │ +        handlers=[handler],
+│ │ +        level=levels[dbm_agent_config.log_level],
+│ │ +        format="[%(asctime)s %(levelname)s] - [%(threadName)s] - [%(pathname)s %(lineno)d line]  ~  %(message)s",
+│ │ +    )
+│ │  
+│ │      # 服务启动的日志头
+│ │ -    logging.info('-' * 21)
+│ │ +    logging.info("-" * 21)
+│ │      logging.info("| start dbm-agent . |")
+│ │ -    logging.info('-' * 21)
+│ │ +    logging.info("-" * 21)
+│ │      logging.info("logging-level {}".format(dbm_agent_config.log_level))
+│ │  
+│ │      # 启动后台线程
+│ │      logging.info("start backends threads .")
+│ │      backends.start_cycle_tasks()
+│ │  
+│ │      # 启动 http 服务
+│ │      logging.info("going to start dbm-agent http-server bind on 0.0.0.0:8086 .")
+│ │      app = web.Application()
+│ │      app.add_routes(routes)
+│ │      web.run_app(app, host="0.0.0.0", port=8086, access_log=None)
+│ │  
+│ │  
+│ │  def stop():
+│ │ -    """关闭 dbm-agent 服务
+│ │ -    """
+│ │ +    """关闭 dbm-agent 服务"""
+│ │      dbm_agent_config = DBMAgentConfig()
+│ │      stop_daemon(dbm_agent_config.pid_file)
+│ │   --- dbm-agent-8.32.4/dbma/core/messages.py
+│ ├── +++ dbm-agent-8.32.6/dbma/core/messages.py
+│ │┄ Ordering differences only
+│ │┄ Files 0% similar despite different names
+│ │ @@ -25,8 +25,8 @@
+│ │  CREATE_DIR = "create dir '{}' ."
+│ │  DIR_EXISTS = "dir '{}' exists ."
+│ │  DIR_NOT_EXISTS = "dir '{}' not exists ."
+│ │  MOVE_FILE_TO = "move '{}' to '{}' "
+│ │  
+│ │  
+│ │  # MySQL MESSAGES
+│ │ -MYSQL_INSTANCE_HAS_EXISTS = "mysql instance '{}' has exists ."
+│ │ +MYSQL_INSTANCE_HAS_EXISTS = "mysql instance '{}' has exists ."
+│ │   --- dbm-agent-8.32.4/dbma/core/threads/backends.py
+│ ├── +++ dbm-agent-8.32.6/dbma/core/threads/backends.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -18,36 +18,47 @@
+│ │  keep_threads_running = True
+│ │  dbm_center_url_config = DBMCenterUrlConfig()
+│ │  dbm_agent_config = DBMAgentConfig()
+│ │  threads = ThreadPoolExecutor(max_workers=2, thread_name_prefix="backends")
+│ │  
+│ │  
+│ │  def registor_agent_to_center():
+│ │ -    """注册 agent 的信息到 dbm-center
+│ │ -    """
+│ │ +    """注册 agent 的信息到 dbm-center"""
+│ │      while keep_threads_running:
+│ │          try:
+│ │ -            logging.info("agent ifo  = {} .".format(dbm_agent_config.make_register_data()))
+│ │ -            response = requests.post(dbm_center_url_config.register_agent_url, json=dbm_agent_config.make_register_data())
+│ │ +            logging.info(
+│ │ +                "agent ifo  = {} .".format(dbm_agent_config.make_register_data())
+│ │ +            )
+│ │ +            response = requests.post(
+│ │ +                dbm_center_url_config.register_agent_url,
+│ │ +                json=dbm_agent_config.make_register_data(),
+│ │ +            )
+│ │              data = response.json()
+│ │ -            if data['message'].startswith("UNIQUE constraint failed: agents_agent.host"):
+│ │ +            if data["message"].startswith(
+│ │ +                "UNIQUE constraint failed: agents_agent.host"
+│ │ +            ):
+│ │                  logging.info("agent has been registed. ")
+│ │          except ConnectionError as err:
+│ │ -            logging.info("register agent info to dbm-center '{}' got ConnectionError. maybe dbm-center is done. .".format(dbm_center_url_config.register_agent_url))
+│ │ +            logging.info(
+│ │ +                "register agent info to dbm-center '{}' got ConnectionError. maybe dbm-center is done. .".format(
+│ │ +                    dbm_center_url_config.register_agent_url
+│ │ +                )
+│ │ +            )
+│ │          except Exception as err:
+│ │ -            logging.error("registor_agent_to_center fail err-type {}.".format(type(err)))
+│ │ +            logging.error(
+│ │ +                "registor_agent_to_center fail err-type {}.".format(type(err))
+│ │ +            )
+│ │              logging.exception(err)
+│ │          # 默认 15 分钟注册一次
+│ │          time.sleep(dbm_agent_config.backends_register_time_interval)
+│ │  
+│ │  
+│ │  def _stop_threads():
+│ │ -    """关闭后台任务
+│ │ -    """
+│ │ +    """关闭后台任务"""
+│ │      global keep_threads_running
+│ │      keep_threads_running = False
+│ │  
+│ │ +
+│ │  def start_cycle_tasks():
+│ │ -    """提交所有后台任务到线程池
+│ │ -    """
+│ │ +    """提交所有后台任务到线程池"""
+│ │      threads.submit(registor_agent_to_center)
+│ │      atexit.register(_stop_threads)
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/auto-inseption-db.sql
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/auto-inseption-db.sql
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/init-users.sql.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/init-users.sql.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-5.7-init-only.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-5.7-init-only.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-5.7.25.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-5.7.25.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0-init-only.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0-init-only.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.17.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.17.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.18.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.18.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.19.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.19.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.20.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.20.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.21.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.21.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.22.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.22.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.23.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.23.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.25.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.25.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.26.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.26.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.27.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.27.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.28.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.28.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.29.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.29.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.30.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.30.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.31.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.31.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/mysql-8.0.32.cnf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/mysql-8.0.32.cnf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/cnfs/zabbix_agentd.conf.jinja
+│ ├── +++ dbm-agent-8.32.6/dbma/static/cnfs/zabbix_agentd.conf.jinja
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/dbma/static/sql-scripts/常用SQL.md
+│ ├── +++ dbm-agent-8.32.6/dbma/static/sql-scripts/常用SQL.md
+│ │┄ Files identical despite different names
+│ │   --- dbm-agent-8.32.4/setup.py
+│ ├── +++ dbm-agent-8.32.6/setup.py
+│ │┄ Files identical despite different names

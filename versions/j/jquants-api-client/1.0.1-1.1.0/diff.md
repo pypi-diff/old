@@ -1,0 +1,689 @@
+# Comparing `tmp/jquants_api_client-1.0.1.tar.gz` & `tmp/jquants_api_client-1.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "jquants_api_client-1.0.1.tar", max compression
++gzip compressed data, was "jquants_api_client-1.1.0.tar", max compression
+```
+
+## Comparing `jquants_api_client-1.0.1.tar` & `jquants_api_client-1.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,8 +1,8 @@
+--rw-r--r--   0        0        0    11357 2023-04-05 01:43:08.261869 jquants_api_client-1.0.1/LICENSE
+--rw-r--r--   0        0        0     4812 2023-04-05 01:43:08.261869 jquants_api_client-1.0.1/README.md
+--rw-r--r--   0        0        0       66 2023-04-05 01:43:08.265869 jquants_api_client-1.0.1/jquantsapi/__init__.py
+--rw-r--r--   0        0        0    27952 2023-04-05 01:43:08.265869 jquants_api_client-1.0.1/jquantsapi/client.py
+--rw-r--r--   0        0        0    16989 2023-04-05 01:43:08.265869 jquants_api_client-1.0.1/jquantsapi/constants.py
+--rw-r--r--   0        0        0      517 2023-04-05 01:43:08.265869 jquants_api_client-1.0.1/jquantsapi/enums.py
+--rw-r--r--   0        0        0     1676 2023-04-05 01:43:21.021954 jquants_api_client-1.0.1/pyproject.toml
+--rw-r--r--   0        0        0     6322 1970-01-01 00:00:00.000000 jquants_api_client-1.0.1/PKG-INFO
++-rw-r--r--   0        0        0    11357 2023-04-07 11:26:49.404079 jquants_api_client-1.1.0/LICENSE
++-rw-r--r--   0        0        0     5631 2023-04-07 11:26:49.404079 jquants_api_client-1.1.0/README.md
++-rw-r--r--   0        0        0       66 2023-04-07 11:26:49.408079 jquants_api_client-1.1.0/jquantsapi/__init__.py
++-rw-r--r--   0        0        0    48096 2023-04-07 11:26:49.408079 jquants_api_client-1.1.0/jquantsapi/client.py
++-rw-r--r--   0        0        0    15206 2023-04-07 11:26:49.408079 jquants_api_client-1.1.0/jquantsapi/constants.py
++-rw-r--r--   0        0        0      517 2023-04-07 11:26:49.408079 jquants_api_client-1.1.0/jquantsapi/enums.py
++-rw-r--r--   0        0        0     1676 2023-04-07 11:27:02.236171 jquants_api_client-1.1.0/pyproject.toml
++-rw-r--r--   0        0        0     7141 1970-01-01 00:00:00.000000 jquants_api_client-1.1.0/PKG-INFO
+```
+
+### Comparing `jquants_api_client-1.0.1/LICENSE` & `jquants_api_client-1.1.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `jquants_api_client-1.0.1/jquantsapi/constants.py` & `jquants_api_client-1.1.0/jquantsapi/constants.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,24 +1,24 @@
+-# ref. ja https://jpx.gitbook.io/j-quants-api/api-reference/listed-api
+-# ref. en https://jpx.gitbook.io/j-quants-api-en/api-reference/listed-api
++# ref. ja https://jpx.gitbook.io/j-quants-ja/api-reference/listed_info
++# ref. en https://jpx.gitbook.io/j-quants-en/api-reference/listed_info
+ LISTED_INFO_COLUMNS = [
+     "Date",
+     "Code",
+     "CompanyName",
+     "Sector17Code",
+     "Sector17CodeName",
+     "Sector33Code",
+     "Sector33CodeName",
+     "ScaleCategory",
+     "MarketCode",
+     "MarketCodeName",
+ ]
+ 
+-# ref. ja https://jpx.gitbook.io/j-quants-api/api-reference/listed-api/17-sector
+-# ref. en https://jpx.gitbook.io/j-quants-api-en/api-reference/listed-api/17-sector
++# ref. ja https://jpx.gitbook.io/j-quants-ja/api-reference/listed_info/sector17code
++# ref. en https://jpx.gitbook.io/j-quants-en/api-reference/listed_info/sector17code
+ SECTOR_17_COLUMNS = ["Sector17Code", "Sector17CodeName", "Sector17CodeNameEnglish"]
+ SECTOR_17_DATA = [
+     ("1", "食品", "FOODS"),
+     ("2", "エネルギー資源", "ENERGY RESOURCES"),
+     ("3", "建設・資材", "CONSTRUCTION & MATERIALS"),
+     ("4", "素材・化学", "RAW MATERIALS & CHEMICALS"),
+     ("5", "医薬品", "PHARMACEUTICAL"),
+@@ -33,16 +33,16 @@
+     ("14", "小売", "RETAIL TRADE"),
+     ("15", "銀行", "BANKS"),
+     ("16", "金融（除く銀行）", "FINANCIALS (EX BANKS) "),
+     ("17", "不動産", "REAL ESTATE"),
+     ("99", "その他", "OTHER"),
+ ]
+ 
+-# ref. ja https://jpx.gitbook.io/j-quants-api/api-reference/listed-api/33-sector
+-# ref. en https://jpx.gitbook.io/j-quants-api-en/api-reference/listed-api/33-sector
++# ref. ja https://jpx.gitbook.io/j-quants-ja/api-reference/listed_info/sector33code
++# ref. en https://jpx.gitbook.io/j-quants-en/api-reference/listed_info/sector33code
+ # ref. 33-17 mapping https://www.jpx.co.jp/markets/indices/line-up/files/fac_13_sector.pdf
+ SECTOR_33_COLUMNS = [
+     "Sector33Code",
+     "Sector33CodeName",
+     "Sector33CodeNameEnglish",
+     "Sector17Code",
+ ]
+@@ -79,17 +79,16 @@
+     ("7150", "保険業", "Insurance", "16"),
+     ("7200", "その他金融業", "Other Financing Business", "16"),
+     ("8050", "不動産業", "Real Estate", "17"),
+     ("9050", "サービス業", "Services", "10"),
+     ("9999", "その他", "Other", "99"),
+ ]
+ 
+-# ref. ja https://jpx.gitbook.io/j-quants-api/api-reference/prices-api#no
+-# ref. en https://jpx.gitbook.io/j-quants-api-en/api-reference/prices-api#daily-stock-price-information
+-
++# ref. ja https://jpx.gitbook.io/j-quants-ja/api-reference/daily_quotes
++# ref. en https://jpx.gitbook.io/j-quants-en/api-reference/daily_quotes
+ PRICES_DAILY_QUOTES_COLUMNS = [
+     "Date",
+     "Code",
+     "Open",
+     "High",
+     "Low",
+     "Close",
+@@ -97,14 +96,31 @@
+     "TurnoverValue",
+     "AdjustmentFactor",
+     "AdjustmentOpen",
+     "AdjustmentHigh",
+     "AdjustmentLow",
+     "AdjustmentClose",
+     "AdjustmentVolume",
++]
++
++PRICES_DAILY_QUOTES_PREMIUM_COLUMNS = [
++    "Date",
++    "Code",
++    "Open",
++    "High",
++    "Low",
++    "Close",
++    "Volume",
++    "TurnoverValue",
++    "AdjustmentFactor",
++    "AdjustmentOpen",
++    "AdjustmentHigh",
++    "AdjustmentLow",
++    "AdjustmentClose",
++    "AdjustmentVolume",
+     "MorningOpen",
+     "MorningHigh",
+     "MorningLow",
+     "MorningClose",
+     "MorningVolume",
+     "MorningTurnoverValue",
+     "MorningAdjustmentOpen",
+@@ -120,26 +136,26 @@
+     "AfternoonAdjustmentOpen",
+     "AfternoonAdjustmentHigh",
+     "AfternoonAdjustmentLow",
+     "AfternoonAdjustmentClose",
+     "AfternoonAdjustmentVolume",
+ ]
+ 
+-# ref. ja https://jpx.gitbook.io/j-quants-api/api-reference/indices#notopix
+-# ref. en https://jpx.gitbook.io/j-quants-api-en/api-reference/indices#daily-topix-information
++# ref. ja https://jpx.gitbook.io/j-quants-ja/api-reference/topix
++# ref. en https://jpx.gitbook.io/j-quants-en/api-reference/topix
+ INDICES_TOPIX_COLUMNS = [
+     "Date",
+     "Open",
+     "High",
+     "Low",
+     "Close",
+ ]
+ 
+-# ref. ja https://jpx.gitbook.io/j-quants-api/api-reference/market-api#no
+-# ref. en https://jpx.gitbook.io/j-quants-api-en/api-reference/market-api#weekly-trading-by-type-of-investors
++# ref. ja https://jpx.gitbook.io/j-quants-ja/api-reference/trades_spec
++# ref. en https://jpx.gitbook.io/j-quants-en/api-reference/trades_spec
+ MARKETS_TRADES_SPEC = [
+     "Section",
+     "PublishedDate",
+     "StartDate",
+     "EndDate",
+     "ProprietarySales",
+     "ProprietaryPurchases",
+@@ -191,16 +207,30 @@
+     "TrustBanksBalance",
+     "OtherFinancialInstitutionsSales",
+     "OtherFinancialInstitutionsPurchases",
+     "OtherFinancialInstitutionsTotal",
+     "OtherFinancialInstitutionsBalance",
+ ]
+ 
+-# ref. ja https://jpx.gitbook.io/j-quants-api/api-reference/listed-api/segment
+-# ref. en https://jpx.gitbook.io/j-quants-api-en/api-reference/listed-api/segment
++# ref. ja https://jpx.gitbook.io/j-quants-ja/api-reference/weekly_margin_interest
++# ref. en https://jpx.gitbook.io/j-quants-en/api-reference/weekly_margin_interest
++MARKETS_WEEKLY_MARGIN_INTEREST = [
++    "Date",
++    "Code",
++    "ShortMarginTradeVolume",
++    "LongMarginTradeVolume",
++    "ShortNegotiableMarginTradeVolume",
++    "LongNegotiableMarginTradeVolume",
++    "ShortStandardizedMarginTradeVolume",
++    "LongStandardizedMarginTradeVolume",
++    "IssueType",
++]
++
++# ref. ja https://jpx.gitbook.io/j-quants-ja/api-reference/listed_info/marketcode
++# ref. en https://jpx.gitbook.io/j-quants-en/api-reference/listed_info/marketcode
+ MARKET_SEGMENT_COLUMNS = [
+     "MarketCode",
+     "MarketCodeName",
+     "MarketCodeNameEnglish",
+ ]
+ MARKET_SEGMENT_DATA = [
+     ("0101", "東証一部", "1st Section"),
+@@ -211,16 +241,16 @@
+     ("0107", "JASDAQ グロース", "JASDAQ Growth"),
+     ("0109", "その他", "Others"),
+     ("0111", "プライム", "Prime"),
+     ("0112", "スタンダード", "Standard"),
+     ("0113", "グロース", "Growth"),
+ ]
+ 
+-# ref ja https://jpx.gitbook.io/j-quants-api/api-reference/finance-api#no
+-# ref en https://jpx.gitbook.io/j-quants-api-en/api-reference/finance-api#financial-information-for-the-quarter
++# ref ja https://jpx.gitbook.io/j-quants-ja/api-reference/statements
++# ref en https://jpx.gitbook.io/j-quants-en/api-reference/statements
+ FINS_STATEMENTS_COLUMNS = [
+     "DisclosedDate",
+     "DisclosedTime",
+     "LocalCode",
+     "DisclosureNumber",
+     "TypeOfDocument",
+     "TypeOfCurrentPeriod",
+@@ -322,141 +352,118 @@
+     "NextYearForecastNonConsolidatedNetSales",
+     "NextYearForecastNonConsolidatedOperatingProfit",
+     "NextYearForecastNonConsolidatedOrdinaryProfit",
+     "NextYearForecastNonConsolidatedProfit",
+     "NextYearForecastNonConsolidatedEarningsPerShare",
+ ]
+ 
+-# ref. ja https://jpx.gitbook.io/j-quants-api/api-reference/finance-api#jue-suan-fa-biao-yu-ding-ri
+-# ref. en https://jpx.gitbook.io/j-quants-api-en/api-reference/finance-api#schedule-of-financial-announcement
++# ref. ja https://jpx.gitbook.io/j-quants-ja/api-reference/announcement
++# ref. en https://jpx.gitbook.io/j-quants-en/api-reference/announcement
+ FINS_ANNOUNCEMENT_COLUMNS = [
+     "Code",
+     "Date",
+     "CompanyName",
+     "FiscalYear",
+     "SectorName",
+     "FiscalQuarter",
+     "Section",
+ ]
+ 
+-# ref ja https://jpx.gitbook.io/j-quants-api/api-reference/finance-api#no
+-# ref en https://jpx.gitbook.io/j-quants-api-en/api-reference/finance-api#financial-information-for-the-quarter
+-FINS_STATEMENTS_COLUMNS = [
+-    "DisclosedDate",
+-    "DisclosedTime",
+-    "LocalCode",
+-    "DisclosureNumber",
+-    "TypeOfDocument",
+-    "TypeOfCurrentPeriod",
+-    "CurrentPeriodStartDate",
+-    "CurrentPeriodEndDate",
+-    "CurrentFiscalYearStartDate",
+-    "CurrentFiscalYearEndDate",
+-    "NextFiscalYearStartDate",
+-    "NextFiscalYearEndDate",
+-    "NetSales",
+-    "OperatingProfit",
+-    "OrdinaryProfit",
+-    "Profit",
+-    "EarningsPerShare",
+-    "DilutedEarningsPerShare",
+-    "TotalAssets",
+-    "Equity",
+-    "EquityToAssetRatio",
+-    "BookValuePerShare",
+-    "CashFlowsFromOperatingActivities",
+-    "CashFlowsFromInvestingActivities",
+-    "CashFlowsFromFinancingActivities",
+-    "CashAndEquivalents",
+-    "ResultDividendPerShare1stQuarter",
+-    "ResultDividendPerShare2ndQuarter",
+-    "ResultDividendPerShare3rdQuarter",
+-    "ResultDividendPerShareFiscalYearEnd",
+-    "ResultDividendPerShareAnnual",
+-    "DistributionsPerUnit(REIT)",
+-    "ResultTotalDividendPaidAnnual",
+-    "ResultPayoutRatioAnnual",
+-    "ForecastDividendPerShare1stQuarter",
+-    "ForecastDividendPerShare2ndQuarter",
+-    "ForecastDividendPerShare3rdQuarter",
+-    "ForecastDividendPerShareFiscalYearEnd",
+-    "ForecastDividendPerShareAnnual",
+-    "ForecastDistributionsPerUnit(REIT)",
+-    "ForecastTotalDividendPaidAnnual",
+-    "ForecastPayoutRatioAnnual",
+-    "NextYearForecastDividendPerShare1stQuarter",
+-    "NextYearForecastDividendPerShare2ndQuarter",
+-    "NextYearForecastDividendPerShare3rdQuarter",
+-    "NextYearForecastDividendPerShareFiscalYearEnd",
+-    "NextYearForecastDividendPerShareAnnual",
+-    "NextYearForecastDistributionsPerUnit(REIT)",
+-    "NextYearForecastPayoutRatioAnnual",
+-    "ForecastNetSales2ndQuarter",
+-    "ForecastOperatingProfit2ndQuarter",
+-    "ForecastOrdinaryProfit2ndQuarter",
+-    "ForecastProfit2ndQuarter",
+-    "ForecastEarningsPerShare2ndQuarter",
+-    "NextYearForecastNetSales2ndQuarter",
+-    "NextYearForecastOperatingProfit2ndQuarter",
+-    "NextYearForecastOrdinaryProfit2ndQuarter",
+-    "NextYearForecastProfit2ndQuarter",
+-    "NextYearForecastEarningsPerShare2ndQuarter",
+-    "ForecastNetSales",
+-    "ForecastOperatingProfit",
+-    "ForecastOrdinaryProfit",
+-    "ForecastProfit",
+-    "ForecastEarningsPerShare",
+-    "NextYearForecastNetSales",
+-    "NextYearForecastOperatingProfit",
+-    "NextYearForecastOrdinaryProfit",
+-    "NextYearForecastProfit",
+-    "NextYearForecastEarningsPerShare",
+-    "MaterialChangesInSubsidiaries",
+-    "ChangesBasedOnRevisionsOfAccountingStandard",
+-    "ChangesOtherThanOnesBasedOnRevisionsOfAccountingStandard",
+-    "ChangesInAccountingEstimates",
+-    "RetrospectiveRestatement",
+-    "NumberOfIssuedAndOutstandingSharesAtTheEndOfFiscalYearIncludingTreasuryStock",
+-    "NumberOfTreasuryStockAtTheEndOfFiscalYear",
+-    "AverageNumberOfShares",
+-    "NonConsolidatedNetSales",
+-    "NonConsolidatedOperatingProfit",
+-    "NonConsolidatedOrdinaryProfit",
+-    "NonConsolidatedProfit",
+-    "NonConsolidatedEarningsPerShare",
+-    "NonConsolidatedTotalAssets",
+-    "NonConsolidatedEquity",
+-    "NonConsolidatedEquityToAssetRatio",
+-    "NonConsolidatedBookValuePerShare",
+-    "ForecastNonConsolidatedNetSales2ndQuarter",
+-    "ForecastNonConsolidatedOperatingProfit2ndQuarter",
+-    "ForecastNonConsolidatedOrdinaryProfit2ndQuarter",
+-    "ForecastNonConsolidatedProfit2ndQuarter",
+-    "ForecastNonConsolidatedEarningsPerShare2ndQuarter",
+-    "NextYearForecastNonConsolidatedNetSales2ndQuarter",
+-    "NextYearForecastNonConsolidatedOperatingProfit2ndQuarter",
+-    "NextYearForecastNonConsolidatedOrdinaryProfit2ndQuarter",
+-    "NextYearForecastNonConsolidatedProfit2ndQuarter",
+-    "NextYearForecastNonConsolidatedEarningsPerShare2ndQuarter",
+-    "ForecastNonConsolidatedNetSales",
+-    "ForecastNonConsolidatedOperatingProfit",
+-    "ForecastNonConsolidatedOrdinaryProfit",
+-    "ForecastNonConsolidatedProfit",
+-    "ForecastNonConsolidatedEarningsPerShare",
+-    "NextYearForecastNonConsolidatedNetSales",
+-    "NextYearForecastNonConsolidatedOperatingProfit",
+-    "NextYearForecastNonConsolidatedOrdinaryProfit",
+-    "NextYearForecastNonConsolidatedProfit",
+-    "NextYearForecastNonConsolidatedEarningsPerShare",
++# ref. ja https://jpx.gitbook.io/j-quants-ja/api-reference/short_selling
++# ref. en https://jpx.gitbook.io/j-quants-en/api-reference/short_selling
++MARKET_SHORT_SELLING_COLUMNS = [
++    "Date",
++    "Sector33Code",
++    "SellingExcludingShortSellingTurnoverValue",
++    "ShortSellingWithRestrictionsTurnoverValue",
++    "ShortSellingWithoutRestrictionsTurnoverValue",
++]
++# ref. ja https://jpx.gitbook.io/j-quants-ja/api-reference/index_option
++# ref. en https://jpx.gitbook.io/j-quants-en/api-reference/index_option
++OPTION_INDEX_OPTION_COLUMNS = [
++    "Date",
++    "Code",
++    "WholeDayOpen",
++    "WholeDayHigh",
++    "WholeDayLow",
++    "WholeDayClose",
++    "NightSessionOpen",
++    "NightSessionHigh",
++    "NightSessionLow",
++    "NightSessionClose",
++    "DaySessionOpen",
++    "DaySessionHigh",
++    "DaySessionLow",
++    "DaySessionClose",
++    "Volume",
++    "OpenInterest",
++    "TurnoverValue",
++    "ContractMonth",
++    "StrikePrice",
++    "Volume(OnlyAuction)",
++    "EmergencyMarginTriggerDivision",
++    "PutCallDivision",
++    "LastTradingDay",
++    "SpecialQuotationDay",
++    "SettlementPrice",
++    "TheoreticalPrice",
++    "BaseVolatility",
++    "UnderlyingPrice",
++    "ImpliedVolatility",
++    "InterestRate",
+ ]
+ 
+-# ref. ja https://jpx.gitbook.io/j-quants-api/api-reference/finance-api#jue-suan-fa-biao-yu-ding-ri
+-# ref. en https://jpx.gitbook.io/j-quants-api-en/api-reference/finance-api#schedule-of-financial-announcement
+-FINS_ANNOUNCEMENT_COLUMNS = [
++MARKETS_BREAKDOWN_COLUMNS = [
++    "Date",
+     "Code",
++    "LongSellValue",
++    "ShortSellWithoutMarginValue",
++    "MarginSellNewValue",
++    "MarginSellCloseValue",
++    "LongBuyValue",
++    "MarginBuyNewValue",
++    "MarginBuyCloseValue",
++    "LongSellVolume",
++    "ShortSellWithoutMarginVolume",
++    "MarginSellNewVolume",
++    "MarginSellCloseVolume",
++    "LongBuyVolume",
++    "MarginBuyNewVolume",
++    "MarginBuyCloseVolume",
++]
++
++FINS_DIVIDEND_COLUMNS = [
++    "AnnouncementDate",
++    "AnnouncementTime",
++    "Code",
++    "ReferenceNumber",
++    "StatusCode",
++    "BoardMeetingDate",
++    "InterimFinalCode",
++    "ForecastResultCode",
++    "InterimFinalTerm",
++    "GrossDividendRate",
++    "RecordDate",
++    "ExDate",
++    "ActualRecordDate",
++    "PayableDate",
++    "CAReferenceNumber",
++    "DistributionAmount",
++    "RetainedEarnings",
++    "DeemedDividend",
++    "DeemedCapitalGains",
++    "NetAssetDecreaseRatio",
++    "CommemorativeSpecialCode",
++    "CommemorativeDividendRate",
++    "SpecialDividendRate",
++]
++
++PRICES_PRICES_AM_COLUMNS = [
+     "Date",
+-    "CompanyName",
+-    "FiscalYear",
+-    "SectorName",
+-    "FiscalQuarter",
+-    "Section",
++    "Code",
++    "MorningOpen",
++    "MorningHigh",
++    "MorningLow",
++    "MorningClose",
++    "MorningVolume",
++    "MorningTurnoverValue",
+ ]
+```
+
+### Comparing `jquants_api_client-1.0.1/jquantsapi/enums.py` & `jquants_api_client-1.1.0/jquantsapi/enums.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jquants_api_client-1.0.1/pyproject.toml` & `jquants_api_client-1.1.0/pyproject.toml`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "jquants-api-client"
+-version = "1.0.1" # use poetry-dynamic-versioning
++version = "1.1.0" # use poetry-dynamic-versioning
+ authors = [
+     "J-Quants Project Contributors <j-quants@jpx.co.jp>",
+ ]
+ description = "J-Quants API Client Library"
+ readme = "README.md"
+ license = "Apache-2.0"
+ classifiers = [
+```
+
+### Comparing `jquants_api_client-1.0.1/PKG-INFO` & `jquants_api_client-1.1.0/PKG-INFO`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: jquants-api-client
+-Version: 1.0.1
++Version: 1.1.0
+ Summary: J-Quants API Client Library
+ Home-page: https://github.com/J-Quants/jquants-api-client-python
+ License: Apache-2.0
+ Keywords: jquants,api,client,J-Quants
+ Author: J-Quants Project Contributors
+ Author-email: j-quants@jpx.co.jp
+ Requires-Python: >=3.7.1,<4.0.0
+@@ -29,35 +29,35 @@
+ Project-URL: Bug Tracker, https://github.com/J-Quants/jquants-api-client-python/issues
+ Description-Content-Type: text/markdown
+ 
+ # jquants-api-client
+ 
+ [![PyPI version](https://badge.fury.io/py/jquants-api-client.svg)](https://badge.fury.io/py/jquants-api-client)
+ 
+-個人投資家向けデータAPI配信サービス「 [J-Quants API](https://jpx-jquants.com/#jquants-api) 」のPythonクライアントライブラリです。
+-J-QuantsやAPI仕様についての詳細を知りたい方は [公式ウェブサイト](https://jpx-jquants.com/) をご参照ください。
+-現在、J-Quants APIはベータ版サービスとして提供されています。
++個人投資家向けデータ API 配信サービス「 [J-Quants API](https://jpx-jquants.com/#jquants-api) 」の Python クライアントライブラリです。
++J-Quants や API 仕様についての詳細を知りたい方は [公式ウェブサイト](https://jpx-jquants.com/) をご参照ください。
++現在、J-Quants API は有償版サービスとして提供されています。
+ 
+ ## 使用方法
+ 
+-pip経由でインストールします。
++pip 経由でインストールします。
+ 
+ ```shell
+ pip install jquants-api-client
+ ```
+ 
+ ### J-Quants API の利用
+ 
+-To use J-Quants API, you need to "Applications for J-Quants API" from [J-Quants API Web site](https://jpx-jquants.com/?lang=en#jquants-api).
++To use J-Quants API, you need to "Applications for J-Quants API" from [J-Quants API Web site](https://jpx-jquants.com/?lang=en) and to select a plan.
+ 
+-J-Quants APIを利用するためには[J-Quants API の Web サイト](https://jpx-jquants.com/#jquants-api) から「J-Quants API申し込み」が必要になります。
++J-Quants API を利用するためには[J-Quants API の Web サイト](https://jpx-jquants.com/) から「J-Quants API 申し込み」及び利用プランの選択が必要になります。
+ 
+-jquants-api-client-python を使用するためには「J-Quants API ログインページで使用するメールアドレスおよびパスワード」または「J-Quants API メニューページから取得したリフレッシュトークン」が必要になります。必要に応じて下記のWebサイトより取得してください。
++jquants-api-client-python を使用するためには「J-Quants API ログインページで使用するメールアドレスおよびパスワード」または「J-Quants API メニューページから取得したリフレッシュトークン」が必要になります。必要に応じて下記の Web サイトより取得してください。
+ 
+-[J-Quants API ログインページ](https://application.jpx-jquants.com/)
++[J-Quants API ログインページ](https://jpx-jquants.com/auth/signin/)
+ 
+ ### サンプルコード
+ 
+ ```python
+ from datetime import datetime
+ from dateutil import tz
+ import jquantsapi
+@@ -68,15 +68,15 @@
+ df = cli.get_price_range(
+     start_dt=datetime(2022, 7, 25, tzinfo=tz.gettz("Asia/Tokyo")),
+     end_dt=datetime(2022, 7, 26, tzinfo=tz.gettz("Asia/Tokyo")),
+ )
+ print(df)
+ ```
+ 
+-APIレスポンスがDataframeの形式で取得できます。
++API レスポンスが Dataframe の形式で取得できます。
+ 
+ ```shell
+        Code       Date  ...  AdjustmentClose  AdjustmentVolume
+ 0     13010 2022-07-25  ...           3630.0            8100.0
+ 1     13050 2022-07-25  ...           2023.0           54410.0
+ 2     13060 2022-07-25  ...           2001.0          943830.0
+ 3     13080 2022-07-25  ...           1977.5          121300.0
+@@ -89,49 +89,79 @@
+ 4193  99970 2022-07-26  ...            825.0          133600.0
+ 
+ [8388 rows x 14 columns]
+ ```
+ 
+ より具体的な使用例は [サンプルノートブック(/examples)](examples) をご参照ください。
+ 
+-## 対応API
++## 対応 API
+ 
+-### ラッパー群　 
++### ラッパー群　
+ 
+-J-Quants API の各APIエンドポイントに対応しています。
++J-Quants API の各 API エンドポイントに対応しています。
+ 
+-  - get_refresh_token
+-  - get_id_token
+-  - get_listed_info
+-  - get_listed_sections
+-  - get_prices_daily_quotes
+-  - get_indices_topix
+-  - get_markets_trades_spec
+-  - get_fins_statements
+-  - get_fins_announcement
++------------------ Free plan or higher is required ------------------
++
++- get_refresh_token
++- get_id_token
++- get_listed_info
++- get_prices_daily_quotes
++- get_fins_statements
++- get_fins_announcement
++
++------------------ Light plan or higher is required ------------------
++
++- get_markets_trades_spec
++- get_indices_topix
++
++------------------ Standard plan or higher is required ------------------
++
++- get_option_index_option
++- get_markets_weekly_margin_interest
++- get_markets_short_selling
++
++------------------ Premium plan or higher is required ------------------
++
++- get_markets_breakdown
++- get_prices_prices_am
++- get_fins_dividend
+ 
+ ### ユーティリティ群
+ 
+ 業種や市場区分一覧などを返します。
+-  - get_market_segments
+-  - get_17_sectors
+-  - get_33_sectors
++
++- get_market_segments
++- get_17_sectors
++- get_33_sectors
+ 
+ 日付範囲を指定して一括でデータ取得して、取得したデータを結合して返すようなユーティリティが用意されています。
+ 
+-  - get_list
+-  - get_price_range
+-  - get_statements_range
++------------------ Free plan or higher is required ------------------
++
++- get_list
++- get_price_range
++- get_statements_range
++
++------------------ Standard plan or higher is required ------------------
++
++- get_weekly_margin_range
++- get_short_selling_range
++- get_index_option_range
++
++------------------ Premium plan or higher is required ------------------
++
++- get_breakdown_range
++- get_dividend_range
+ 
+ ## 設定
+ 
+ 認証用のメールアドレス/パスワードおよびリフレッシュトークンは設定ファイルおよび環境変数を使用して指定することも可能です。
+ 設定は下記の順に読み込まれ、設定項目が重複している場合は後に読み込まれた値で上書きされます。
+ 
+-1. `/content/drive/MyDrive/drive_ws/secret/jquants-api.toml` (Google Colabのみ)
++1. `/content/drive/MyDrive/drive_ws/secret/jquants-api.toml` (Google Colab のみ)
+ 2. `${HOME}/.jquants-api/jquants-api.toml`
+ 3. `jquants-api.toml`
+ 4. `os.environ["JQUANTS_API_CLIENT_CONFIG_FILE"]`
+ 5. `${JQUANTS_API_MAIL_ADDRESS}`, `${JQUANTS_API_PASSWORD}`, `${JQUANTS_API_REFRESH_TOKEN}`
+ 
+ ### 設定ファイル例
+ 
+@@ -142,17 +172,17 @@
+ mail_address = "*****"
+ password = "*****"
+ refresh_token = "*****"
+ ```
+ 
+ ## 動作確認
+ 
+-Google Colab および Python 3.10 で動作確認を行っています。
+-J-Quants APIは現在β版のため、本ライブラリも今後仕様が変更となる可能性があります。
++Google Colab および Python 3.11 で動作確認を行っています。
++J-Quants API は有償版で継続開発されているため、本ライブラリも今後仕様が変更となる可能性があります。
+ Python 3.7 サポートは廃止予定です。将来のバージョンではサポート対象外となります。
+ Please note Python 3.7 support is deprecated.
+ 
+ ## 開発
+ 
+-J-Quants API Clientの開発に是非ご協力ください。
+-Github上でIssueやPull Requestをお待ちしております。
++J-Quants API Client の開発に是非ご協力ください。
++Github 上で Issue や Pull Request をお待ちしております。
+```
+

@@ -1,0 +1,115 @@
+# Comparing `tmp/roblox-game-performance-0.1.0.tar.gz` & `tmp/roblox-game-performance-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "roblox-game-performance-0.1.0.tar", last modified: Fri Apr  7 10:10:00 2023, max compression
++gzip compressed data, was "roblox-game-performance-0.1.1.tar", last modified: Fri Apr  7 11:26:37 2023, max compression
+```
+
+## Comparing `roblox-game-performance-0.1.0.tar` & `roblox-game-performance-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 10:10:00.954427 roblox-game-performance-0.1.0/
+--rw-rw-rw-   0        0        0    11558 2023-04-07 09:15:29.000000 roblox-game-performance-0.1.0/LICENSE
+--rw-rw-rw-   0        0        0      572 2023-04-07 10:10:00.953460 roblox-game-performance-0.1.0/PKG-INFO
+--rw-rw-rw-   0        0        0      144 2023-04-07 09:15:29.000000 roblox-game-performance-0.1.0/README.md
+--rw-rw-rw-   0        0        0      512 2023-04-07 10:05:36.000000 roblox-game-performance-0.1.0/pyproject.toml
+--rw-rw-rw-   0        0        0       42 2023-04-07 10:10:00.954427 roblox-game-performance-0.1.0/setup.cfg
+-drwxrwxrwx   0        0        0        0 2023-04-07 10:10:00.918776 roblox-game-performance-0.1.0/src/
+-drwxrwxrwx   0        0        0        0 2023-04-07 10:10:00.948692 roblox-game-performance-0.1.0/src/roblox_game_performance.egg-info/
+--rw-rw-rw-   0        0        0      572 2023-04-07 10:10:00.000000 roblox-game-performance-0.1.0/src/roblox_game_performance.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      263 2023-04-07 10:10:00.000000 roblox-game-performance-0.1.0/src/roblox_game_performance.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 10:10:00.000000 roblox-game-performance-0.1.0/src/roblox_game_performance.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       11 2023-04-07 10:10:00.000000 roblox-game-performance-0.1.0/src/roblox_game_performance.egg-info/top_level.txt
+-drwxrwxrwx   0        0        0        0 2023-04-07 10:10:00.950666 roblox-game-performance-0.1.0/src/rogameperf/
+--rw-rw-rw-   0        0        0     6186 2023-04-07 10:01:27.000000 roblox-game-performance-0.1.0/src/rogameperf/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-07 11:26:37.981360 roblox-game-performance-0.1.1/
++-rw-rw-rw-   0        0        0    11558 2023-04-07 09:15:29.000000 roblox-game-performance-0.1.1/LICENSE
++-rw-rw-rw-   0        0        0      572 2023-04-07 11:26:37.980362 roblox-game-performance-0.1.1/PKG-INFO
++-rw-rw-rw-   0        0        0      144 2023-04-07 09:15:29.000000 roblox-game-performance-0.1.1/README.md
++-rw-rw-rw-   0        0        0      512 2023-04-07 11:26:01.000000 roblox-game-performance-0.1.1/pyproject.toml
++-rw-rw-rw-   0        0        0       42 2023-04-07 11:26:37.981360 roblox-game-performance-0.1.1/setup.cfg
++drwxrwxrwx   0        0        0        0 2023-04-07 11:26:37.958574 roblox-game-performance-0.1.1/src/
++drwxrwxrwx   0        0        0        0 2023-04-07 11:26:37.977517 roblox-game-performance-0.1.1/src/roblox_game_performance.egg-info/
++-rw-rw-rw-   0        0        0      572 2023-04-07 11:26:37.000000 roblox-game-performance-0.1.1/src/roblox_game_performance.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      263 2023-04-07 11:26:37.000000 roblox-game-performance-0.1.1/src/roblox_game_performance.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 11:26:37.000000 roblox-game-performance-0.1.1/src/roblox_game_performance.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       11 2023-04-07 11:26:37.000000 roblox-game-performance-0.1.1/src/roblox_game_performance.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-07 11:26:37.979373 roblox-game-performance-0.1.1/src/rogameperf/
++-rw-rw-rw-   0        0        0     6186 2023-04-07 10:01:27.000000 roblox-game-performance-0.1.1/src/rogameperf/__init__.py
+```
+
+### Comparing `roblox-game-performance-0.1.0/LICENSE` & `roblox-game-performance-0.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `roblox-game-performance-0.1.0/PKG-INFO` & `roblox-game-performance-0.1.1/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: roblox-game-performance
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: a python package which scrapes the roblox website for advertisement and game metrics, useful for game analytics
+ Author-email: nightcycle <coyer@nightcycle.us>
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Operating System :: OS Independent
+ Requires-Python: >=3.10
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `roblox-game-performance-0.1.0/pyproject.toml` & `roblox-game-performance-0.1.1/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ requires = ["setuptools>=61.0"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "roblox-game-performance"
+-version = "0.1.0"
++version = "0.1.1"
+ authors = [
+ 	{ name="nightcycle", email="coyer@nightcycle.us" },
+ ]
+ description = "a python package which scrapes the roblox website for advertisement and game metrics, useful for game analytics"
+ readme = "README.md"
+ requires-python = ">=3.10"
+ classifiers = [
+```
+
+### Comparing `roblox-game-performance-0.1.0/src/roblox_game_performance.egg-info/PKG-INFO` & `roblox-game-performance-0.1.1/src/roblox_game_performance.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: roblox-game-performance
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: a python package which scrapes the roblox website for advertisement and game metrics, useful for game analytics
+ Author-email: nightcycle <coyer@nightcycle.us>
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Operating System :: OS Independent
+ Requires-Python: >=3.10
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `roblox-game-performance-0.1.0/src/rogameperf/__init__.py` & `roblox-game-performance-0.1.1/src/rogameperf/__init__.py`
+
+ * *Files identical despite different names*
+

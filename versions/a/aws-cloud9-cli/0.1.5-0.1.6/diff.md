@@ -1,0 +1,138 @@
+# Comparing `tmp/aws-cloud9-cli-0.1.5.tar.gz` & `tmp/aws-cloud9-cli-0.1.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "aws-cloud9-cli-0.1.5.tar", last modified: Sat Apr  1 00:53:14 2023, max compression
++gzip compressed data, was "aws-cloud9-cli-0.1.6.tar", last modified: Fri Apr  7 11:26:33 2023, max compression
+```
+
+## Comparing `aws-cloud9-cli-0.1.5.tar` & `aws-cloud9-cli-0.1.6.tar`
+
+### file list
+
+```diff
+@@ -1,21 +1,21 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 00:53:14.084496 aws-cloud9-cli-0.1.5/
+--rw-r--r--   0 runner    (1001) docker     (123)     1069 2023-04-01 00:52:54.000000 aws-cloud9-cli-0.1.5/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      354 2023-04-01 00:53:14.084496 aws-cloud9-cli-0.1.5/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      588 2023-04-01 00:52:54.000000 aws-cloud9-cli-0.1.5/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 00:53:14.084496 aws-cloud9-cli-0.1.5/aws_cloud9_cli.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)      354 2023-04-01 00:53:14.000000 aws-cloud9-cli-0.1.5/aws_cloud9_cli.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      426 2023-04-01 00:53:14.000000 aws-cloud9-cli-0.1.5/aws_cloud9_cli.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-01 00:53:14.000000 aws-cloud9-cli-0.1.5/aws_cloud9_cli.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       48 2023-04-01 00:53:14.000000 aws-cloud9-cli-0.1.5/aws_cloud9_cli.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      323 2023-04-01 00:53:14.000000 aws-cloud9-cli-0.1.5/aws_cloud9_cli.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       11 2023-04-01 00:53:14.000000 aws-cloud9-cli-0.1.5/aws_cloud9_cli.egg-info/top_level.txt
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 00:53:14.084496 aws-cloud9-cli-0.1.5/cloud9_cli/
+--rw-r--r--   0 runner    (1001) docker     (123)       18 2023-04-01 00:52:54.000000 aws-cloud9-cli-0.1.5/cloud9_cli/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7497 2023-04-01 00:52:54.000000 aws-cloud9-cli-0.1.5/cloud9_cli/command.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5078 2023-04-01 00:52:54.000000 aws-cloud9-cli-0.1.5/cloud9_cli/create_yaml.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6614 2023-04-01 00:52:54.000000 aws-cloud9-cli-0.1.5/cloud9_cli/deploy_cfn.py
+--rw-r--r--   0 runner    (1001) docker     (123)      639 2023-04-01 00:52:54.000000 aws-cloud9-cli-0.1.5/cloud9_cli/main.py
+--rw-r--r--   0 runner    (1001) docker     (123)      146 2023-04-01 00:52:54.000000 aws-cloud9-cli-0.1.5/cloud9_cli/utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1721 2023-04-01 00:52:54.000000 aws-cloud9-cli-0.1.5/cloud9_cli/validators.py
+--rw-r--r--   0 runner    (1001) docker     (123)      195 2023-04-01 00:53:14.084496 aws-cloud9-cli-0.1.5/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1069 2023-04-01 00:52:54.000000 aws-cloud9-cli-0.1.5/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:26:33.533446 aws-cloud9-cli-0.1.6/
++-rw-r--r--   0 runner    (1001) docker     (123)     1069 2023-04-07 11:26:15.000000 aws-cloud9-cli-0.1.6/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      354 2023-04-07 11:26:33.533446 aws-cloud9-cli-0.1.6/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      588 2023-04-07 11:26:15.000000 aws-cloud9-cli-0.1.6/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:26:33.529446 aws-cloud9-cli-0.1.6/aws_cloud9_cli.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)      354 2023-04-07 11:26:33.000000 aws-cloud9-cli-0.1.6/aws_cloud9_cli.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      426 2023-04-07 11:26:33.000000 aws-cloud9-cli-0.1.6/aws_cloud9_cli.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 11:26:33.000000 aws-cloud9-cli-0.1.6/aws_cloud9_cli.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       48 2023-04-07 11:26:33.000000 aws-cloud9-cli-0.1.6/aws_cloud9_cli.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      323 2023-04-07 11:26:33.000000 aws-cloud9-cli-0.1.6/aws_cloud9_cli.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       11 2023-04-07 11:26:33.000000 aws-cloud9-cli-0.1.6/aws_cloud9_cli.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:26:33.533446 aws-cloud9-cli-0.1.6/cloud9_cli/
++-rw-r--r--   0 runner    (1001) docker     (123)       18 2023-04-07 11:26:15.000000 aws-cloud9-cli-0.1.6/cloud9_cli/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7497 2023-04-07 11:26:15.000000 aws-cloud9-cli-0.1.6/cloud9_cli/command.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5078 2023-04-07 11:26:15.000000 aws-cloud9-cli-0.1.6/cloud9_cli/create_yaml.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6614 2023-04-07 11:26:15.000000 aws-cloud9-cli-0.1.6/cloud9_cli/deploy_cfn.py
++-rw-r--r--   0 runner    (1001) docker     (123)      639 2023-04-07 11:26:15.000000 aws-cloud9-cli-0.1.6/cloud9_cli/main.py
++-rw-r--r--   0 runner    (1001) docker     (123)      146 2023-04-07 11:26:15.000000 aws-cloud9-cli-0.1.6/cloud9_cli/utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1721 2023-04-07 11:26:15.000000 aws-cloud9-cli-0.1.6/cloud9_cli/validators.py
++-rw-r--r--   0 runner    (1001) docker     (123)      195 2023-04-07 11:26:33.533446 aws-cloud9-cli-0.1.6/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1069 2023-04-07 11:26:15.000000 aws-cloud9-cli-0.1.6/setup.py
+```
+
+### Comparing `aws-cloud9-cli-0.1.5/LICENSE` & `aws-cloud9-cli-0.1.6/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `aws-cloud9-cli-0.1.5/README.md` & `aws-cloud9-cli-0.1.6/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `aws-cloud9-cli-0.1.5/cloud9_cli/command.py` & `aws-cloud9-cli-0.1.6/cloud9_cli/command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aws-cloud9-cli-0.1.5/cloud9_cli/create_yaml.py` & `aws-cloud9-cli-0.1.6/cloud9_cli/create_yaml.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aws-cloud9-cli-0.1.5/cloud9_cli/deploy_cfn.py` & `aws-cloud9-cli-0.1.6/cloud9_cli/deploy_cfn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aws-cloud9-cli-0.1.5/cloud9_cli/main.py` & `aws-cloud9-cli-0.1.6/cloud9_cli/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aws-cloud9-cli-0.1.5/cloud9_cli/validators.py` & `aws-cloud9-cli-0.1.6/cloud9_cli/validators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aws-cloud9-cli-0.1.5/setup.py` & `aws-cloud9-cli-0.1.6/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ from setuptools import setup, find_packages
+ 
+ requires = [
+     'ansicon==1.89.0',
+     'aws-cloudformation-visualizer==0.0.2',
+-    'blessed==1.19.1',
++    'blessed==1.20.0',
+     'boto3==1.26.104',
+     'botocore==1.29.104',
+     'inquirer==3.1.3',
+     'jinxed==1.2.0',
+     'jmespath==1.0.1',
+     'prettytable==3.6.0',
+     'pyfiglet==0.8.post1',
+@@ -19,25 +19,25 @@
+     'six==1.16.0',
+     'urllib3==1.26.14',
+     'wcwidth==0.2.6',
+ ]
+ 
+ setup(
+     name='aws-cloud9-cli',
+-    version='0.1.5',
++    version='0.1.6',
+     author='marcus16-kang',
+     description='AWS Cloud9 Environment Stack Generator',
+     author_email='marcus16-kang@outlook.com',
+     license='MIT',
+     entry_points={
+         'console_scripts': [
+             'c9-cli=cloud9_cli.main:main'
+         ]
+     },
+     install_requires=requires,
+     # packages=find_packages(),
+-    python_requires='>=3.7',
++    python_requires='>=3.8',
+     url='https://github.com/marcus16-kang/aws-cloud9-cli',
+     project_urls={
+         'Source': 'https://github.com/marcus16-kang/aws-cloud9-cli'
+     }
+ )
+```
+

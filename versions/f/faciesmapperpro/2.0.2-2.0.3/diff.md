@@ -1,0 +1,256 @@
+# Comparing `tmp/faciesmapperpro-2.0.2.tar.gz` & `tmp/faciesmapperpro-2.0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "faciesmapperpro-2.0.2.tar", last modified: Tue Apr  4 12:39:19 2023, max compression
++gzip compressed data, was "faciesmapperpro-2.0.3.tar", last modified: Fri Apr  7 11:26:27 2023, max compression
+```
+
+## Comparing `faciesmapperpro-2.0.2.tar` & `faciesmapperpro-2.0.3.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,17 @@
+-drwxrwxrwx   0        0        0        0 2023-04-04 12:39:19.989288 faciesmapperpro-2.0.2/
+--rw-rw-rw-   0        0        0     1094 2023-03-23 13:11:53.000000 faciesmapperpro-2.0.2/LICENSE
+--rw-rw-rw-   0        0        0       24 2023-03-23 13:24:29.000000 faciesmapperpro-2.0.2/MANIFEST.in
+--rw-rw-rw-   0        0        0      690 2023-04-04 12:39:19.988296 faciesmapperpro-2.0.2/PKG-INFO
+--rw-rw-rw-   0        0        0       66 2023-03-23 13:11:53.000000 faciesmapperpro-2.0.2/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-04 12:39:19.961288 faciesmapperpro-2.0.2/faciesmapperpro/
+--rw-rw-rw-   0        0        0     9703 2023-04-04 12:38:30.000000 faciesmapperpro-2.0.2/faciesmapperpro/data_processor.py
+--rw-rw-rw-   0        0        0       21 2023-03-24 09:17:28.000000 faciesmapperpro-2.0.2/faciesmapperpro/version.py
+-drwxrwxrwx   0        0        0        0 2023-04-04 12:39:19.985284 faciesmapperpro-2.0.2/faciesmapperpro.egg-info/
+--rw-rw-rw-   0        0        0      690 2023-04-04 12:39:19.000000 faciesmapperpro-2.0.2/faciesmapperpro.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      310 2023-04-04 12:39:19.000000 faciesmapperpro-2.0.2/faciesmapperpro.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-04 12:39:19.000000 faciesmapperpro-2.0.2/faciesmapperpro.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       55 2023-04-04 12:39:19.000000 faciesmapperpro-2.0.2/faciesmapperpro.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       16 2023-04-04 12:39:19.000000 faciesmapperpro-2.0.2/faciesmapperpro.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       56 2023-03-31 12:37:56.000000 faciesmapperpro-2.0.2/requirements.txt
+--rw-rw-rw-   0        0        0       42 2023-04-04 12:39:19.990285 faciesmapperpro-2.0.2/setup.cfg
+--rw-rw-rw-   0        0        0     1014 2023-04-04 12:36:39.000000 faciesmapperpro-2.0.2/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 11:26:27.469118 faciesmapperpro-2.0.3/
++-rw-rw-rw-   0        0        0     1094 2023-03-23 13:11:53.000000 faciesmapperpro-2.0.3/LICENSE
++-rw-rw-rw-   0        0        0       24 2023-03-23 13:24:29.000000 faciesmapperpro-2.0.3/MANIFEST.in
++-rw-rw-rw-   0        0        0      707 2023-04-07 11:26:27.467806 faciesmapperpro-2.0.3/PKG-INFO
++-rw-rw-rw-   0        0        0       66 2023-03-23 13:11:53.000000 faciesmapperpro-2.0.3/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 11:26:27.416464 faciesmapperpro-2.0.3/faciesmapperpro/
++-rw-rw-rw-   0        0        0    10136 2023-04-07 11:24:58.000000 faciesmapperpro-2.0.3/faciesmapperpro/data_processor.py
++-rw-rw-rw-   0        0        0       21 2023-03-24 09:17:28.000000 faciesmapperpro-2.0.3/faciesmapperpro/version.py
++drwxrwxrwx   0        0        0        0 2023-04-07 11:26:27.463118 faciesmapperpro-2.0.3/faciesmapperpro.egg-info/
++-rw-rw-rw-   0        0        0      707 2023-04-07 11:26:27.000000 faciesmapperpro-2.0.3/faciesmapperpro.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      310 2023-04-07 11:26:27.000000 faciesmapperpro-2.0.3/faciesmapperpro.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 11:26:27.000000 faciesmapperpro-2.0.3/faciesmapperpro.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       27 2023-04-07 11:26:27.000000 faciesmapperpro-2.0.3/faciesmapperpro.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       16 2023-04-07 11:26:27.000000 faciesmapperpro-2.0.3/faciesmapperpro.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       26 2023-04-06 10:39:24.000000 faciesmapperpro-2.0.3/requirements.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 11:26:27.469490 faciesmapperpro-2.0.3/setup.cfg
++-rw-rw-rw-   0        0        0     1031 2023-04-07 11:17:06.000000 faciesmapperpro-2.0.3/setup.py
+```
+
+### Comparing `faciesmapperpro-2.0.2/LICENSE` & `faciesmapperpro-2.0.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `faciesmapperpro-2.0.2/PKG-INFO` & `faciesmapperpro-2.0.3/PKG-INFO`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ Metadata-Version: 2.1
+ Name: faciesmapperpro
+-Version: 2.0.2
+-Summary: FaciesMapperPro aims to automate the process of facies interpretation in borehole images using deep learning techniques.                     The system is designed to be integrated with Techlog; a software platform developed by SLB for enabling the integration                     of all wellbore-centric data types into multi-discipline workflows including geological data analysis.                    In 2.0.2 I added timer decorator to calculate the time taken by the predict function.
++Version: 2.0.3
++Summary: FaciesMapperPro aims to automate the process of facies interpretation in borehole images using deep learning techniques.                     The system is designed to be integrated with Techlog; a software platform developed by SLB for enabling the integration                     of all wellbore-centric data types into multi-discipline workflows including geological data analysis.                    In 2.0.3 I use concurrent programming and also modify the requirements.txt file for easy installation.
+ Author: Srv
+ Author-email: smukherjee10@slb.com
+ Maintainer: Srv
+ Maintainer-email: smukherjee10@slb.com
+ License-File: LICENSE
+```
+
+### Comparing `faciesmapperpro-2.0.2/faciesmapperpro/data_processor.py` & `faciesmapperpro-2.0.3/faciesmapperpro/data_processor.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -3,14 +3,15 @@
+ import time
+ import io
+ 
+ import dataikuapi
+ import numpy as np
+ import pandas as pd
+ from PIL import Image
++from multiprocessing import Pool
+ 
+ import TechlogDatabase as db
+ 
+ class DataProcessor:
+     def __init__(self, fmi_array, tdep):
+         self.fmi_array = fmi_array
+         self.tdep = tdep
+@@ -125,65 +126,77 @@
+         X_norm *= 255
+         
+         # Convert to type uint8
+         X = X_norm.astype('uint8')   
+ 
+         return df_final, X
+     
++    def _predict_single_image(self, base64_str):
++        """
++        Predicts facies for a single image represented as a base64 string
++        """
++        client = dataikuapi.APINodeClient("http://136.252.73.83:12000", "faciesmapperpro")
++        class_labels = ['Mature Paleosol', 'Heterolithic Shale', 'Silt stone', 'Massive Sand', 'Immature Paleosol', 'Heterolithic Sandstone', 'Laminated Sand', 'CrossBedded Sandstone', 'Undefined']
++
++        payload = {'input': base64_str}
++        prediction = client.predict_record("predict-facies", payload)
++        prediction_result = prediction.get("result", {})
++        prediction_value = prediction_result.get("prediction")
++        if prediction_value is not None:
++            print('prediction value: ', prediction_value)
++            label = class_labels[int(prediction_value)-1]
++            print('label: ', label)             
++            max_prob = max(prediction_result['probas'].values())
++            predicted_probability = np.round(max_prob, 2) * 100
++        else:
++            # handle missing prediction value
++            print('prediction_value from json is None')
++            label = "unknown"
++            predicted_probability = 0
++
++        return label, predicted_probability
++
+     @timer_decorator
+     def predict(self, df, img_data):
+         """
+         This function takes in a dataframe of subsampled images, preprocesses them, and makes predictions using a trained model
+         Arguments:
+         - df: A pandas dataframe containing subsampled images and their corresponding heights
+         - img_data: A numpy array containing the subsampled images
+         - wellname: Name of the well to create a new zone for
+         
+         Returns:
+         - res_df: A pandas dataframe with predicted facies and corresponding probabilities
+         """
+         res_df = df.copy()
+-        class_labels = ['Mature Paleosol', 'Heterolithic Shale', 'Silt stone', 'Massive Sand', 'Immature Paleosol', 'Heterolithic Sandstone', 'Laminated Sand', 'CrossBedded Sandstone', 'Undefined']
+ 
+-        client = dataikuapi.APINodeClient("http://136.252.73.83:12000", "faciesmapperpro")
+-        predicted_class_labels = []
+-        predicted_probabilities = []
+-
+-        #base64_list = []
+-        for i in range(img_data.shape[0]):
+-            img_data_c = (img_data[i]).astype(np.uint8)  # convert to uint8
+-            image = Image.fromarray(img_data_c)
+-            buffer = io.BytesIO()
+-            image.save(buffer, format='PNG')
+-            base64_str = base64.b64encode(buffer.getvalue()).decode('utf-8')
+-            #base64_list.append(base64_str)
+-
+-            payload = {'input': base64_str}
+-            prediction = client.predict_record("predict-facies", payload)
+-            prediction_result = prediction.get("result", {})
+-            prediction_value = prediction_result.get("prediction")
+-            if prediction_value is not None:
+-                print('prediction value: ', prediction_value)
+-                label = class_labels[int(prediction_value)-1]
+-                print('label: ', label)             
++        # Split img_data into smaller chunks to process in parallel
++        n_processes = 4 # can adjust based on available CPU cores
++        chunks = np.array_split(img_data, n_processes)
++
++        # Process each chunk in parallel using a multiprocessing.Pool
++        with Pool(n_processes) as pool:
++            results = pool.map(
++                lambda chunk: [self._predict_single_image(
++                    base64.b64encode(Image.fromarray(img_data_c.astype(np.uint8)).save(
++                        io.BytesIO(), format='PNG'
++                    ).getvalue()).decode('utf-8')
++                ) for img_data_c in chunk], 
++                chunks
++            )
++
++        # Concatenate results from each process into final output dataframe
++        predicted_class_labels, predicted_probabilities = [], []
++        for result in results:
++            for label, predicted_probability in result:
+                 predicted_class_labels.append(label)
+-                max_prob = max(prediction_result['probas'].values())
+-                predicted_probabilities.append(np.round(max_prob, 2) * 100)            
+-            else:
+-                # handle missing prediction value
+-                print('prediction_value from json is None')
+-                predicted_class_labels.append("unknown")
+-                predicted_probabilities.append(0)
++                predicted_probabilities.append(predicted_probability)
+ 
+         res_df['predicted_facies'] = predicted_class_labels
+         res_df['probability'] = predicted_probabilities
+-        
+-        #with open('D:/Work/capstone_project/data/predictions/base64.txt', 'w') as file:
+-            #for base64_str in base64_list:
+-                #file.write(base64_str + '\n')
+ 
+         return res_df
+     
+     def createNewZone(self, df):
+         """
+         Given well name, dataset name, variable name, unit and a pandas dataframe containing predicted facies values, create
+         a new dataset with intervals defined by the predicted facies values.
+```
+
+### Comparing `faciesmapperpro-2.0.2/faciesmapperpro.egg-info/PKG-INFO` & `faciesmapperpro-2.0.3/faciesmapperpro.egg-info/PKG-INFO`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ Metadata-Version: 2.1
+ Name: faciesmapperpro
+-Version: 2.0.2
+-Summary: FaciesMapperPro aims to automate the process of facies interpretation in borehole images using deep learning techniques.                     The system is designed to be integrated with Techlog; a software platform developed by SLB for enabling the integration                     of all wellbore-centric data types into multi-discipline workflows including geological data analysis.                    In 2.0.2 I added timer decorator to calculate the time taken by the predict function.
++Version: 2.0.3
++Summary: FaciesMapperPro aims to automate the process of facies interpretation in borehole images using deep learning techniques.                     The system is designed to be integrated with Techlog; a software platform developed by SLB for enabling the integration                     of all wellbore-centric data types into multi-discipline workflows including geological data analysis.                    In 2.0.3 I use concurrent programming and also modify the requirements.txt file for easy installation.
+ Author: Srv
+ Author-email: smukherjee10@slb.com
+ Maintainer: Srv
+ Maintainer-email: smukherjee10@slb.com
+ License-File: LICENSE
+```
+
+### Comparing `faciesmapperpro-2.0.2/setup.py` & `faciesmapperpro-2.0.3/setup.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -3,18 +3,18 @@
+ 
+ # list dependencies from file
+ with open('requirements.txt') as f:
+     content = f.readlines()
+ requirements = [x.strip() for x in content]
+ 
+ setup(name='faciesmapperpro',
+-      version='2.0.2',
++      version='2.0.3',
+       author='Srv',
+       author_email='smukherjee10@slb.com',
+       maintainer='Srv',
+       maintainer_email='smukherjee10@slb.com',
+       description="FaciesMapperPro aims to automate the process of facies interpretation in borehole images using deep learning techniques. \
+                     The system is designed to be integrated with Techlog; a software platform developed by SLB for enabling the integration \
+                     of all wellbore-centric data types into multi-discipline workflows including geological data analysis.\
+-                    In 2.0.2 I added timer decorator to calculate the time taken by the predict function.",
++                    In 2.0.3 I use concurrent programming and also modify the requirements.txt file for easy installation.",
+       packages=['faciesmapperpro'], # NEW: find packages automatically
+       install_requires=requirements)
+```
+
