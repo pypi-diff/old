@@ -1,0 +1,228 @@
+# Comparing `tmp/pywnp-1.0.8.tar.gz` & `tmp/pywnp-1.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pywnp-1.0.8.tar", last modified: Fri Apr  7 03:30:37 2023, max compression
++gzip compressed data, was "pywnp-1.1.0.tar", last modified: Fri Apr  7 04:47:48 2023, max compression
+```
+
+## Comparing `pywnp-1.0.8.tar` & `pywnp-1.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,16 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 03:30:37.424034 pywnp-1.0.8/
+--rw-rw-rw-   0        0        0     1060 2023-03-20 18:31:19.000000 pywnp-1.0.8/LICENSE
+--rw-rw-rw-   0        0        0     5353 2023-04-07 03:30:37.423032 pywnp-1.0.8/PKG-INFO
+--rw-rw-rw-   0        0        0     3627 2023-03-30 12:26:36.000000 pywnp-1.0.8/README.md
+--rw-rw-rw-   0        0        0      669 2023-04-07 03:30:16.000000 pywnp-1.0.8/pyproject.toml
+--rw-rw-rw-   0        0        0       42 2023-04-07 03:30:37.424034 pywnp-1.0.8/setup.cfg
+-drwxrwxrwx   0        0        0        0 2023-04-07 03:30:37.398734 pywnp-1.0.8/src/
+-drwxrwxrwx   0        0        0        0 2023-04-07 03:30:37.407809 pywnp-1.0.8/src/pywnp/
+--rw-rw-rw-   0        0        0       27 2023-03-20 19:19:07.000000 pywnp-1.0.8/src/pywnp/__init__.py
+--rw-rw-rw-   0        0        0    10730 2023-04-07 03:30:00.000000 pywnp-1.0.8/src/pywnp/pywnp.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 03:30:37.422032 pywnp-1.0.8/src/pywnp.egg-info/
+--rw-rw-rw-   0        0        0     5353 2023-04-07 03:30:37.000000 pywnp-1.0.8/src/pywnp.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      237 2023-04-07 03:30:37.000000 pywnp-1.0.8/src/pywnp.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 03:30:37.000000 pywnp-1.0.8/src/pywnp.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       11 2023-04-07 03:30:37.000000 pywnp-1.0.8/src/pywnp.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        6 2023-04-07 03:30:37.000000 pywnp-1.0.8/src/pywnp.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-07 04:47:48.950752 pywnp-1.1.0/
++-rw-rw-rw-   0        0        0     1060 2023-03-20 18:31:19.000000 pywnp-1.1.0/LICENSE
++-rw-rw-rw-   0        0        0     5353 2023-04-07 04:47:48.949755 pywnp-1.1.0/PKG-INFO
++-rw-rw-rw-   0        0        0     3627 2023-03-30 12:26:36.000000 pywnp-1.1.0/README.md
++-rw-rw-rw-   0        0        0      669 2023-04-07 04:47:27.000000 pywnp-1.1.0/pyproject.toml
++-rw-rw-rw-   0        0        0       42 2023-04-07 04:47:48.950752 pywnp-1.1.0/setup.cfg
++drwxrwxrwx   0        0        0        0 2023-04-07 04:47:48.930726 pywnp-1.1.0/src/
++drwxrwxrwx   0        0        0        0 2023-04-07 04:47:48.933724 pywnp-1.1.0/src/pywnp/
++-rw-rw-rw-   0        0        0       27 2023-03-20 19:19:07.000000 pywnp-1.1.0/src/pywnp/__init__.py
++-rw-rw-rw-   0        0        0    10528 2023-04-07 04:45:38.000000 pywnp-1.1.0/src/pywnp/pywnp.py
++drwxrwxrwx   0        0        0        0 2023-04-07 04:47:48.948752 pywnp-1.1.0/src/pywnp.egg-info/
++-rw-rw-rw-   0        0        0     5353 2023-04-07 04:47:48.000000 pywnp-1.1.0/src/pywnp.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      237 2023-04-07 04:47:48.000000 pywnp-1.1.0/src/pywnp.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 04:47:48.000000 pywnp-1.1.0/src/pywnp.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       11 2023-04-07 04:47:48.000000 pywnp-1.1.0/src/pywnp.egg-info/requires.txt
++-rw-rw-rw-   0        0        0        6 2023-04-07 04:47:48.000000 pywnp-1.1.0/src/pywnp.egg-info/top_level.txt
+```
+
+### Comparing `pywnp-1.0.8/LICENSE` & `pywnp-1.1.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pywnp-1.0.8/PKG-INFO` & `pywnp-1.1.0/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pywnp
+-Version: 1.0.8
++Version: 1.1.0
+ Summary: A python library to communicate with the WebNowPlaying-Redux browser extension
+ Author-email: keifufu <keifufu@noonly.net>
+ License: Copyright 2023 keifufu
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+         
+         The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+```
+
+### Comparing `pywnp-1.0.8/README.md` & `pywnp-1.1.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pywnp-1.0.8/pyproject.toml` & `pywnp-1.1.0/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [project]
+ name = "pywnp"
+-version = "1.0.8"
++version = "1.1.0"
+ description = "A python library to communicate with the WebNowPlaying-Redux browser extension"
+ authors = [ { name="keifufu", email="keifufu@noonly.net" } ]
+ readme = "README.md"
+ license = { file = "LICENSE" }
+ keywords = [ "webnowplaying", "wnp", "youtube", "spotify", "media", "music" ]
+ requires-python = ">=3.7"
+ classifiers = [
+```
+
+### Comparing `pywnp-1.0.8/src/pywnp/pywnp.py` & `pywnp-1.1.0/src/pywnp/pywnp.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ import asyncio
+-from websockets import serve
++import websockets
+ from datetime import datetime
+ from threading import Thread
+ import time
+ import json
+ 
+ class MediaInfo:
+   def __init__(self):
+@@ -118,46 +118,39 @@
+ 
+ class WNPRedux:
+   isInitialized = False
+   mediaInfo = MediaInfo()
+   mediaEvents = MediaEvents()
+   _mediaInfoDictionary = list()
+   _server = None
++  _loop = None
+   _recipients = set()
+   _clients = set()
+   clients = 0
+   _version = '0.0.0'
+-  _future = None
+   _logger = None
+ 
+   def Initialize(port, version, logger, listenAddress = '127.0.0.1'):
+     if WNPRedux.isInitialized: return
+     WNPRedux.isInitialized = True
+     WNPRedux.mediaInfo = MediaInfo()
+     WNPRedux._mediaInfoDictionary = list()
+     WNPRedux._recipients = set()
+     WNPRedux._clients = set()
+     WNPRedux.clients = 0
+     WNPRedux._version = version
+     WNPRedux._logger = logger
+-    Thread(target = WNPRedux._threaded_start, args = (port, listenAddress,), daemon=True).start()
++    WNPRedux._loop = asyncio.new_event_loop()
++    WNPRedux._server = WNPRedux._loop.run_until_complete(websockets.serve(
++      WNPRedux._onConnect, listenAddress, port, loop=WNPRedux._loop
++    ))
++    Thread(target = WNPRedux._threaded_start).start()
+ 
+-  def _threaded_start(port, listenAddress):
+-    asyncio.run(WNPRedux._start(port, listenAddress))
+-
+-  async def _start(port, listenAddress):
+-    if not WNPRedux.isInitialized: return
+-    try:
+-      WNPRedux._server = serve(WNPRedux._onConnect, listenAddress, port)
+-      WNPRedux._future = asyncio.Future()
+-      async with WNPRedux._server:
+-        await WNPRedux._future
+-    except:
+-      time.sleep(5)
+-      await WNPRedux._start(port, listenAddress)
++  def _threaded_start():
++    WNPRedux._loop.run_until_complete(WNPRedux._server.wait_closed())
+ 
+   def _SendMessage(message):
+     for client in WNPRedux._clients:
+       if client.id == WNPRedux.mediaInfo.WebSocketID:
+         asyncio.run(client.send(message))
+         break
+ 
+@@ -165,27 +158,29 @@
+     if WNPRedux._logger == None: return
+     WNPRedux._logger(type, message)
+ 
+   def Close():
+     if not WNPRedux.isInitialized: return
+     try:
+       WNPRedux.isInitialized = False
+-      for client in WNPRedux._clients:
+-        try: asyncio.run(client.close())
+-        except: pass
+       WNPRedux.mediaInfo = MediaInfo()
++      WNPRedux._recipients.clear()
+       WNPRedux._mediaInfoDictionary = list()
+-      WNPRedux._recipients = set()
+-      WNPRedux._clients = set()
++      WNPRedux._clients.clear()
+       WNPRedux.clients = 0
+-      WNPRedux._server.ws_server.close()
+-      WNPRedux._server = None
+-      WNPRedux._future.set_result(None)
+-      WNPRedux._future = None
+-    except: pass
++
++      async def close():
++        WNPRedux._server.close()
++        await WNPRedux._server.wait_closed()
++
++      closed = asyncio.run_coroutine_threadsafe(close(), WNPRedux._loop)
++      closed.result(timeout=1.0)
++      WNPRedux._loop.stop()
++    except Exception as e:
++      print(e)
+ 
+   async def _onConnect(websocket):
+     WNPRedux._clients.add(websocket)
+     WNPRedux.clients = len(WNPRedux._clients)
+     websocket.id = str(datetime.now())
+     await websocket.send(f'ADAPTER_VERSION {WNPRedux._version};WNPRLIB_REVISION 1')
+     try:
+```
+
+### Comparing `pywnp-1.0.8/src/pywnp.egg-info/PKG-INFO` & `pywnp-1.1.0/src/pywnp.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pywnp
+-Version: 1.0.8
++Version: 1.1.0
+ Summary: A python library to communicate with the WebNowPlaying-Redux browser extension
+ Author-email: keifufu <keifufu@noonly.net>
+ License: Copyright 2023 keifufu
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+         
+         The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+```
+

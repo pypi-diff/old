@@ -1,0 +1,208 @@
+# Comparing `tmp/lu_vp_detect-1.0.3.tar.gz` & `tmp/lu_vp_detect-1.0.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "lu_vp_detect-1.0.3.tar", last modified: Wed Feb  1 17:50:51 2023, max compression
++gzip compressed data, was "lu_vp_detect-1.0.4.tar", last modified: Fri Apr  7 04:41:35 2023, max compression
+```
+
+## Comparing `lu_vp_detect-1.0.3.tar` & `lu_vp_detect-1.0.4.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,19 @@
+-drwxr-xr-x   0 rphan      (502) staff       (20)        0 2023-02-01 17:50:51.357394 lu_vp_detect-1.0.3/
+--rw-r--r--   0 rphan      (502) staff       (20)     1069 2023-02-01 17:37:03.000000 lu_vp_detect-1.0.3/LICENSE
+--rw-r--r--   0 rphan      (502) staff       (20)       25 2023-02-01 17:37:03.000000 lu_vp_detect-1.0.3/MANIFEST.in
+--rw-r--r--   0 rphan      (502) staff       (20)     8585 2023-02-01 17:50:51.357080 lu_vp_detect-1.0.3/PKG-INFO
+--rw-r--r--   0 rphan      (502) staff       (20)     7941 2023-02-01 17:37:03.000000 lu_vp_detect-1.0.3/README.md
+-drwxr-xr-x   0 rphan      (502) staff       (20)        0 2023-02-01 17:50:51.354797 lu_vp_detect-1.0.3/lu_vp_detect/
+--rw-r--r--   0 rphan      (502) staff       (20)       52 2023-02-01 17:37:03.000000 lu_vp_detect-1.0.3/lu_vp_detect/__init__.py
+--rw-r--r--   0 rphan      (502) staff       (20)       63 2023-02-01 17:49:43.000000 lu_vp_detect-1.0.3/lu_vp_detect/__version__.py
+--rw-r--r--   0 rphan      (502) staff       (20)     3149 2023-02-01 17:37:03.000000 lu_vp_detect-1.0.3/lu_vp_detect/run_vp_detect.py
+--rw-r--r--   0 rphan      (502) staff       (20)    21299 2023-02-01 17:37:03.000000 lu_vp_detect-1.0.3/lu_vp_detect/vp_detection.py
+-drwxr-xr-x   0 rphan      (502) staff       (20)        0 2023-02-01 17:50:51.356706 lu_vp_detect-1.0.3/lu_vp_detect.egg-info/
+--rw-r--r--   0 rphan      (502) staff       (20)     8585 2023-02-01 17:50:51.000000 lu_vp_detect-1.0.3/lu_vp_detect.egg-info/PKG-INFO
+--rw-r--r--   0 rphan      (502) staff       (20)      368 2023-02-01 17:50:51.000000 lu_vp_detect-1.0.3/lu_vp_detect.egg-info/SOURCES.txt
+--rw-r--r--   0 rphan      (502) staff       (20)        1 2023-02-01 17:50:51.000000 lu_vp_detect-1.0.3/lu_vp_detect.egg-info/dependency_links.txt
+--rw-r--r--   0 rphan      (502) staff       (20)       66 2023-02-01 17:50:51.000000 lu_vp_detect-1.0.3/lu_vp_detect.egg-info/entry_points.txt
+--rw-r--r--   0 rphan      (502) staff       (20)       28 2023-02-01 17:50:51.000000 lu_vp_detect-1.0.3/lu_vp_detect.egg-info/requires.txt
+--rw-r--r--   0 rphan      (502) staff       (20)       13 2023-02-01 17:50:51.000000 lu_vp_detect-1.0.3/lu_vp_detect.egg-info/top_level.txt
+--rw-r--r--   0 rphan      (502) staff       (20)       38 2023-02-01 17:50:51.357436 lu_vp_detect-1.0.3/setup.cfg
+--rw-r--r--   0 rphan      (502) staff       (20)     2266 2023-02-01 17:37:03.000000 lu_vp_detect-1.0.3/setup.py
++drwxr-xr-x   0 rphan      (502) staff       (20)        0 2023-04-07 04:41:35.049296 lu_vp_detect-1.0.4/
++-rw-r--r--   0 rphan      (502) staff       (20)     1069 2023-02-01 17:37:03.000000 lu_vp_detect-1.0.4/LICENSE
++-rw-r--r--   0 rphan      (502) staff       (20)       25 2023-02-01 17:37:03.000000 lu_vp_detect-1.0.4/MANIFEST.in
++-rw-r--r--   0 rphan      (502) staff       (20)     8622 2023-04-07 04:41:35.049008 lu_vp_detect-1.0.4/PKG-INFO
++-rw-r--r--   0 rphan      (502) staff       (20)     7936 2023-04-07 04:36:20.000000 lu_vp_detect-1.0.4/README.md
++drwxr-xr-x   0 rphan      (502) staff       (20)        0 2023-04-07 04:41:35.046065 lu_vp_detect-1.0.4/lu_vp_detect/
++-rw-r--r--   0 rphan      (502) staff       (20)       52 2023-02-01 17:37:03.000000 lu_vp_detect-1.0.4/lu_vp_detect/__init__.py
++-rw-r--r--   0 rphan      (502) staff       (20)       63 2023-04-07 04:40:28.000000 lu_vp_detect-1.0.4/lu_vp_detect/__version__.py
++-rw-r--r--   0 rphan      (502) staff       (20)     3149 2023-02-01 17:37:03.000000 lu_vp_detect-1.0.4/lu_vp_detect/run_vp_detect.py
++-rw-r--r--   0 rphan      (502) staff       (20)    21299 2023-02-01 17:37:03.000000 lu_vp_detect-1.0.4/lu_vp_detect/vp_detection.py
++drwxr-xr-x   0 rphan      (502) staff       (20)        0 2023-04-07 04:41:35.048607 lu_vp_detect-1.0.4/lu_vp_detect.egg-info/
++-rw-r--r--   0 rphan      (502) staff       (20)     8622 2023-04-07 04:41:35.000000 lu_vp_detect-1.0.4/lu_vp_detect.egg-info/PKG-INFO
++-rw-r--r--   0 rphan      (502) staff       (20)      368 2023-04-07 04:41:35.000000 lu_vp_detect-1.0.4/lu_vp_detect.egg-info/SOURCES.txt
++-rw-r--r--   0 rphan      (502) staff       (20)        1 2023-04-07 04:41:35.000000 lu_vp_detect-1.0.4/lu_vp_detect.egg-info/dependency_links.txt
++-rw-r--r--   0 rphan      (502) staff       (20)       66 2023-04-07 04:41:35.000000 lu_vp_detect-1.0.4/lu_vp_detect.egg-info/entry_points.txt
++-rw-r--r--   0 rphan      (502) staff       (20)       28 2023-04-07 04:41:35.000000 lu_vp_detect-1.0.4/lu_vp_detect.egg-info/requires.txt
++-rw-r--r--   0 rphan      (502) staff       (20)       13 2023-04-07 04:41:35.000000 lu_vp_detect-1.0.4/lu_vp_detect.egg-info/top_level.txt
++-rw-r--r--   0 rphan      (502) staff       (20)       38 2023-04-07 04:41:35.049371 lu_vp_detect-1.0.4/setup.cfg
++-rw-r--r--   0 rphan      (502) staff       (20)     2307 2023-04-07 04:36:20.000000 lu_vp_detect-1.0.4/setup.py
+```
+
+### Comparing `lu_vp_detect-1.0.3/LICENSE` & `lu_vp_detect-1.0.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `lu_vp_detect-1.0.3/PKG-INFO` & `lu_vp_detect-1.0.4/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,31 +1,32 @@
+ Metadata-Version: 2.1
+ Name: lu_vp_detect
+-Version: 1.0.3
++Version: 1.0.4
+ Summary: Xiaohu Lu's Vanishing Point Detection algorithm
+ Home-page: https://github.com/rayryeng/XiaohuLuVPDetection
+ Author: Ray Phan
+ Author-email: rphan@ryerson.ca
+ License: MIT
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Classifier: Programming Language :: Python :: Implementation :: PyPy
+-Requires-Python: >= 3.8, <= 3.10
++Requires-Python: >= 3.8
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ 
+ # XiaohuLuVPDetection
+ This is a Python + OpenCV implementation of the Vanishing Point algorithm by Xiaohu Lu et al. - http://xiaohulugo.github.io/papers/Vanishing_Point_Detection_WACV2017.pdf
+ 
+ # Requirements
+-* Python 3.8 to 3.10
++* Python >= 3.8
+ * OpenCV Contrib 4.x
+ * NumPy
+ 
+ # Setup
+ 
+ ## Method #1 - Cloning this repo and installing locally
+```
+
+### Comparing `lu_vp_detect-1.0.3/README.md` & `lu_vp_detect-1.0.4/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ # XiaohuLuVPDetection
+ This is a Python + OpenCV implementation of the Vanishing Point algorithm by Xiaohu Lu et al. - http://xiaohulugo.github.io/papers/Vanishing_Point_Detection_WACV2017.pdf
+ 
+ # Requirements
+-* Python 3.8 to 3.10
++* Python >= 3.8
+ * OpenCV Contrib 4.x
+ * NumPy
+ 
+ # Setup
+ 
+ ## Method #1 - Cloning this repo and installing locally
+```
+
+### Comparing `lu_vp_detect-1.0.3/lu_vp_detect/run_vp_detect.py` & `lu_vp_detect-1.0.4/lu_vp_detect/run_vp_detect.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lu_vp_detect-1.0.3/lu_vp_detect/vp_detection.py` & `lu_vp_detect-1.0.4/lu_vp_detect/vp_detection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `lu_vp_detect-1.0.3/lu_vp_detect.egg-info/PKG-INFO` & `lu_vp_detect-1.0.4/lu_vp_detect.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,31 +1,32 @@
+ Metadata-Version: 2.1
+ Name: lu-vp-detect
+-Version: 1.0.3
++Version: 1.0.4
+ Summary: Xiaohu Lu's Vanishing Point Detection algorithm
+ Home-page: https://github.com/rayryeng/XiaohuLuVPDetection
+ Author: Ray Phan
+ Author-email: rphan@ryerson.ca
+ License: MIT
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Classifier: Programming Language :: Python :: Implementation :: PyPy
+-Requires-Python: >= 3.8, <= 3.10
++Requires-Python: >= 3.8
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ 
+ # XiaohuLuVPDetection
+ This is a Python + OpenCV implementation of the Vanishing Point algorithm by Xiaohu Lu et al. - http://xiaohulugo.github.io/papers/Vanishing_Point_Detection_WACV2017.pdf
+ 
+ # Requirements
+-* Python 3.8 to 3.10
++* Python >= 3.8
+ * OpenCV Contrib 4.x
+ * NumPy
+ 
+ # Setup
+ 
+ ## Method #1 - Cloning this repo and installing locally
+```
+
+### Comparing `lu_vp_detect-1.0.3/setup.py` & `lu_vp_detect-1.0.4/setup.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -13,15 +13,15 @@
+ 
+ # Package meta-data.
+ NAME = 'lu_vp_detect'
+ DESCRIPTION = "Xiaohu Lu's Vanishing Point Detection algorithm"
+ URL = 'https://github.com/rayryeng/XiaohuLuVPDetection'
+ EMAIL = 'rphan@ryerson.ca'
+ AUTHOR = 'Ray Phan'
+-REQUIRES_PYTHON = '>= 3.8, <= 3.10'
++REQUIRES_PYTHON = '>= 3.8'
+ VERSION = None
+ 
+ # Required packages
+ REQUIRED = ['numpy', 'opencv-contrib-python']
+ 
+ here = os.path.abspath(os.path.dirname(__file__))
+ 
+@@ -66,10 +66,11 @@
+         # Trove classifiers
+         # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
+         'License :: OSI Approved :: MIT License',
+         'Programming Language :: Python',
+         'Programming Language :: Python :: 3.8',
+         'Programming Language :: Python :: 3.9',
+         'Programming Language :: Python :: 3.10',
++        'Programming Language :: Python :: 3.11',
+         'Programming Language :: Python :: Implementation :: PyPy'
+     ],
+ )
+```
+

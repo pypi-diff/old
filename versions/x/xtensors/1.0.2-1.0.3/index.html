@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/xtensors-1.0.2.tar.gz tmp/xtensors-1.0.3.tar.gz --html versions/x/xtensors/1.0.2-1.0.3/index.html --text versions/x/xtensors/1.0.2-1.0.3/diff.txt --markdown versions/x/xtensors/1.0.2-1.0.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">22.9 KB</span></div>
+  <div><span class="source">tmp/xtensors-1.0.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/xtensors-1.0.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">266 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;xtensors-1.0.<del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span><del>Dec</del><span class="dp">·</span><del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del><span class="dp">·</span>202<del>2</del>,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;xtensors-1.0.<ins>3</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span><ins>Apr</ins><span class="dp">·</span><ins><span class="dp">·</span>7</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins><span class="dp">·</span>202<ins>3</ins>,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">22.6 KB</span></div>
+    <div><span class="source">xtensors-1.0.2.tar</span> vs.</div>
+    <div id="xtensors--.-.-.tar"><span class="source">xtensors-1.0.3.tar</span>
+      <a class="anchor" href="#xtensors--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">15.3 KB</span></div>
+      <div id="xtensors--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 60 lines modified</td><td colspan="2">Offset 1, 60 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>139929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1070<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:31.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1070<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:31.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>781<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>139929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>781<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>283<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:31.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/README.rst</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>283<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:31.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>102<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:31.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/pyproject.toml</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>102<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:31.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>673<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>139929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/setup.cfg</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>673<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:31.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/setup.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:31.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>135929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/src/</td><td class="diffline">8 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>754641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>135929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/</td><td class="diffline">9 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>221<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/__init__.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>221<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>135929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/base/</td><td class="diffline">11 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/base/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1127<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/base/__init__.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1127<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/base/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2854<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/base/_arg.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2854<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/base/_arg.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2543<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/base/_args.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2543<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/base/_args.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2967<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/base/_binary_op.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2967<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/base/_binary_op.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3237<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/base/_coords.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3237<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/base/_coords.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>825<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/base/_misc.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>825<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/base/_misc.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3156<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/base/_reduc.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3156<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/base/_reduc.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>607<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/base/_reduc_2to1.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>607<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/base/_reduc_2to1.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1855<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/base/_ufuncs.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1855<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/base/_ufuncs.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>135929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/functionals/</td><td class="diffline">21 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/functionals/</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>149<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/functionals/__init__.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>149<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/functionals/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>853<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/functionals/base.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>853<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/functionals/base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2755<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/functionals/reductions.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2755<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/functionals/reductions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>135929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/learn/</td><td class="diffline">25 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/learn/</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>60<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/learn/__init__.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>60<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/learn/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<del>15</del><span class="dp">·</span>202<del>2</del>-<del>12</del>-0<del>9</del><span class="dp">·</span>0<del>2</del>:<del>26</del>:<del>32</del>.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/learn/confmat.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<ins>37</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-0<ins>7</ins><span class="dp">·</span>0<ins>4</ins>:<ins>44</ins>:<ins>08</ins>.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/learn/confmat.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>135929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/numpy/</td><td class="diffline">28 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/numpy/</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>176<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/numpy/__init__.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>176<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/numpy/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>941<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/numpy/_args.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>941<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/numpy/_args.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>360</del><span class="dp">·</span>202<del>2</del>-<del>12</del>-0<del>9</del><span class="dp">·</span>0<del>2</del>:<del>26</del>:<del>32</del>.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/numpy/_np.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>637</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-0<ins>7</ins><span class="dp">·</span>0<ins>4</ins>:<ins>43</ins>:<ins>13</ins>.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/numpy/_np.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>135929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/</td><td class="diffline">32 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>227<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/__init__.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>227<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11303<span class="dp">·</span>2022-12-23<span class="dp">·</span>05:44:38.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/_base.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11303<span class="dp">·</span>2022-12-23<span class="dp">·</span>05:44:38.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/_base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2365<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/_decors.py</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2365<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/_decors.py</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1563<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/_slice.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1563<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/_slice.py</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>139929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/basic_utils/</td><td class="diffline">37 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/basic_utils/</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>451<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/basic_utils/__init__.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>451<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/basic_utils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5981<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/basic_utils/_axes.py</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5981<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/basic_utils/_axes.py</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>754<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/basic_utils/_base.py</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>754<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/basic_utils/_base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1765<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/basic_utils/_coords.py</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1765<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/basic_utils/_coords.py</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4111<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/basic_utils/_dims.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4111<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/basic_utils/_dims.py</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2244<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/basic_utils/_generalize.py</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2244<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/basic_utils/_generalize.py</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1093<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/basic_utils/_misc.py</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1093<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/basic_utils/_misc.py</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>139929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/broadcast/</td><td class="diffline">45 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/broadcast/</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3002<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/broadcast/__init__.py</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3002<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/broadcast/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4475<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/broadcast/_broadcast.py</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4475<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/broadcast/_broadcast.py</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3409<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/broadcast/_dimcast.py</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3409<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/broadcast/_dimcast.py</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6454<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/broadcast/_template.py</td><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6454<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/broadcast/_template.py</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1739<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/broadcast/_types.py</td><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1739<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/broadcast/_types.py</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>139929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/typing/</td><td class="diffline">51 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/typing/</td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>320<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/typing/__init__.py</td><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>320<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/typing/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">53 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1880<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/tensor/typing/_typing.py</td><td class="diffline">53 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1880<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/tensor/typing/_typing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">54 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>73<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors/version.py</td><td class="diffline">54 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>73<span class="dp">·</span>2022-12-09<span class="dp">·</span>02:26:32.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors/version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">55 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.<del>135929</del><span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors.egg-info/</td><td class="diffline">55 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.<ins>758641</ins><span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">56 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>781<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors.egg-info/PKG-INFO</td><td class="diffline">56 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>781<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">57 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1504<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors.egg-info/SOURCES.txt</td><td class="diffline">57 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1504<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">58 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors.egg-info/dependency_links.txt</td><td class="diffline">58 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">59 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors.egg-info/requires.txt</td><td class="diffline">59 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">60 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span>202<del>2</del>-<del>12</del>-<del>23</del><span class="dp">·</span>0<del>5</del>:45:0<del>5</del>.000000<span class="dp">·</span>xtensors-1.0.<del>2</del>/src/xtensors.egg-info/top_level.txt</td><td class="diffline">60 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>michael<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>4</ins>:45:0<ins>3</ins>.000000<span class="dp">·</span>xtensors-1.0.<ins>3</ins>/src/xtensors.egg-info/top_level.txt</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">xtensors-1.0.2/LICENSE</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--LICENSE"><span class="source">xtensors-1.0.3/LICENSE</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">499 B</span></div>
+      <div><span class="source">xtensors-1.0.2/PKG-INFO</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--PKG-INFO"><span class="source">xtensors-1.0.3/PKG-INFO</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 16% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>xtensors</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>xtensors</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>ND<span class="dp">·</span>named<span class="dp">·</span>tensor<span class="dp">·</span>utilities</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>ND<span class="dp">·</span>named<span class="dp">·</span>tensor<span class="dp">·</span>utilities</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/michael-960/xtensor</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/michael-960/xtensor</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Michael<span class="dp">·</span>Wang</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Michael<span class="dp">·</span>Wang</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mike.wang96029@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mike.wang96029@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/michael-960/xtensor/issues</td><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/michael-960/xtensor/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">418 B</span></div>
+      <div><span class="source">xtensors-1.0.2/setup.cfg</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--setup.cfg"><span class="source">xtensors-1.0.3/setup.cfg</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[metadata]</td><td class="diffline">1 </td><td class="diffpresent">[metadata]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>xtensors</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>xtensors</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>1.0.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>1.0.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">author<span class="dp">·</span>=<span class="dp">·</span>Michael<span class="dp">·</span>Wang</td><td class="diffline">4 </td><td class="diffpresent">author<span class="dp">·</span>=<span class="dp">·</span>Michael<span class="dp">·</span>Wang</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">author_email<span class="dp">·</span>=<span class="dp">·</span>mike.wang96029@gmail.com</td><td class="diffline">5 </td><td class="diffpresent">author_email<span class="dp">·</span>=<span class="dp">·</span>mike.wang96029@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>ND<span class="dp">·</span>named<span class="dp">·</span>tensor<span class="dp">·</span>utilities</td><td class="diffline">6 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>ND<span class="dp">·</span>named<span class="dp">·</span>tensor<span class="dp">·</span>utilities</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">long_description<span class="dp">·</span>=<span class="dp">·</span>file:<span class="dp">·</span>README.rst</td><td class="diffline">7 </td><td class="diffpresent">long_description<span class="dp">·</span>=<span class="dp">·</span>file:<span class="dp">·</span>README.rst</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">long_description_content_type<span class="dp">·</span>=<span class="dp">·</span>text/x-rst</td><td class="diffline">8 </td><td class="diffpresent">long_description_content_type<span class="dp">·</span>=<span class="dp">·</span>text/x-rst</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">url<span class="dp">·</span>=<span class="dp">·</span>https://github.com/michael-960/xtensor</td><td class="diffline">9 </td><td class="diffpresent">url<span class="dp">·</span>=<span class="dp">·</span>https://github.com/michael-960/xtensor</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">project_urls<span class="dp">·</span>=<span class="dp">·</span></td><td class="diffline">10 </td><td class="diffpresent">project_urls<span class="dp">·</span>=<span class="dp">·</span></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/base/__init__.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-__init__.py"><span class="source">xtensors-1.0.3/src/xtensors/base/__init__.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/base/_arg.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_arg.py"><span class="source">xtensors-1.0.3/src/xtensors/base/_arg.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_arg.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/base/_args.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_args.py"><span class="source">xtensors-1.0.3/src/xtensors/base/_args.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_args.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/base/_binary_op.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_binary_op.py"><span class="source">xtensors-1.0.3/src/xtensors/base/_binary_op.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_binary_op.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/base/_coords.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_coords.py"><span class="source">xtensors-1.0.3/src/xtensors/base/_coords.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_coords.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/base/_misc.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_misc.py"><span class="source">xtensors-1.0.3/src/xtensors/base/_misc.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_misc.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/base/_reduc.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_reduc.py"><span class="source">xtensors-1.0.3/src/xtensors/base/_reduc.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_reduc.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/base/_reduc_2to1.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_reduc_-to-.py"><span class="source">xtensors-1.0.3/src/xtensors/base/_reduc_2to1.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_reduc_-to-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/base/_ufuncs.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_ufuncs.py"><span class="source">xtensors-1.0.3/src/xtensors/base/_ufuncs.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-base-_ufuncs.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/functionals/base.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-functionals-base.py"><span class="source">xtensors-1.0.3/src/xtensors/functionals/base.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-functionals-base.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/functionals/reductions.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-functionals-reductions.py"><span class="source">xtensors-1.0.3/src/xtensors/functionals/reductions.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-functionals-reductions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">738 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/learn/confmat.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-learn-confmat.py"><span class="source">xtensors-1.0.3/src/xtensors/learn/confmat.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-learn-confmat.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 13% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 5, 15 lines modified</td><td colspan="2">Offset 5, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">def<span class="dp">·</span>confusion_matrix(truth:<span class="dp">·</span>np.ndarray,<span class="dp">·</span>pred:<span class="dp">·</span>np.ndarray,<span class="dp">·</span>/,<span class="dp">·</span>*,<span class="dp">·</span>n_classes:<span class="dp">·</span>int)<span class="dp">·</span>-&gt;<span class="dp">·</span>np.ndarray:</td><td class="diffline">5 </td><td class="diffpresent">def<span class="dp">·</span>confusion_matrix(truth:<span class="dp">·</span>np.ndarray,<span class="dp">·</span>pred:<span class="dp">·</span>np.ndarray,<span class="dp">·</span>/,<span class="dp">·</span>*,<span class="dp">·</span>n_classes:<span class="dp">·</span>int)<span class="dp">·</span>-&gt;<span class="dp">·</span>np.ndarray:</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;&#x27;&#x27;</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;&#x27;&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>X:<span class="dp">·</span>(*,<span class="dp">·</span>M)</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>X:<span class="dp">·</span>(*,<span class="dp">·</span>M)</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Y:<span class="dp">·</span>(*,<span class="dp">·</span>M)</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Y:<span class="dp">·</span>(*,<span class="dp">·</span>M)</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;&#x27;&#x27;</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;&#x27;&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>z<span class="dp">·</span>=<span class="dp">·</span>truth*<span class="dp">·</span>n_classes<span class="dp">·</span>+<span class="dp">·</span>pred</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>z<span class="dp">·</span>=<span class="dp">·</span>truth*<span class="dp">·</span>n_classes<span class="dp">·</span>+<span class="dp">·</span>pred</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cmat<span class="dp">·</span>=<span class="dp">·</span>xtnp.bincount(z,<span class="dp">·</span>N=n_classes**2)</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cmat<span class="dp">·</span>=<span class="dp">·</span>xtnp.bincount(z,<span class="dp">·</span>N=n_classes**2<ins>,<span class="dp">·</span>ignore_negative=True</ins>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>cmat.reshape(*cmat.shape[:-1],<span class="dp">·</span>n_classes,<span class="dp">·</span>n_classes)</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>cmat.reshape(*cmat.shape[:-1],<span class="dp">·</span>n_classes,<span class="dp">·</span>n_classes)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">def<span class="dp">·</span>get_confmat_function(target_dim:<span class="dp">·</span>str,<span class="dp">·</span>truth_dim:<span class="dp">·</span>str,<span class="dp">·</span>pred_dim:<span class="dp">·</span>str,<span class="dp">·</span>n_classes:<span class="dp">·</span>int):</td><td class="diffline">13 </td><td class="diffpresent">def<span class="dp">·</span>get_confmat_function(target_dim:<span class="dp">·</span>str,<span class="dp">·</span>truth_dim:<span class="dp">·</span>str,<span class="dp">·</span>pred_dim:<span class="dp">·</span>str,<span class="dp">·</span>n_classes:<span class="dp">·</span>int):</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@xtt.generalize_at_0</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@xtt.generalize_at_0</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@xtt.generalize_at_1</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@xtt.generalize_at_1</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>wrapped_confmat(truth:<span class="dp">·</span>xtt.XTensor,<span class="dp">·</span>pred:<span class="dp">·</span>xtt.XTensor)<span class="dp">·</span>-&gt;<span class="dp">·</span>xtt.XTensor:</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>wrapped_confmat(truth:<span class="dp">·</span>xtt.XTensor,<span class="dp">·</span>pred:<span class="dp">·</span>xtt.XTensor)<span class="dp">·</span>-&gt;<span class="dp">·</span>xtt.XTensor:</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/numpy/_args.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-numpy-_args.py"><span class="source">xtensors-1.0.3/src/xtensors/numpy/_args.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-numpy-_args.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.28 KB</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/numpy/_np.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-numpy-_np.py"><span class="source">xtensors-1.0.3/src/xtensors/numpy/_np.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-numpy-_np.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 15% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 65, 35 lines modified</td><td colspan="2">Offset 65, 44 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>_indices.append(indices<span class="dp">·</span>%<span class="dp">·</span>l)</td><td class="diffline">65 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>_indices.append(indices<span class="dp">·</span>%<span class="dp">·</span>l)</td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>indices<span class="dp">·</span>//=<span class="dp">·</span>l</td><td class="diffline">66 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>indices<span class="dp">·</span>//=<span class="dp">·</span>l</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>np.array(_indices[::-1]).transpose(*[i+1<span class="dp">·</span>for<span class="dp">·</span>i<span class="dp">·</span>in<span class="dp">·</span>range(len(indices.shape))],<span class="dp">·</span>0)</td><td class="diffline">67 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>np.array(_indices[::-1]).transpose(*[i+1<span class="dp">·</span>for<span class="dp">·</span>i<span class="dp">·</span>in<span class="dp">·</span>range(len(indices.shape))],<span class="dp">·</span>0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">68 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">69 </td><td class="diffpresent">def<span class="dp">·</span>bincount(x:<span class="dp">·</span>NDArray[np.int_],<span class="dp">·</span>N:<span class="dp">·</span>int|None=None)<span class="dp">·</span>-&gt;<span class="dp">·</span>NDArray[np.int_]:</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">70 </td><td class="diffpresent"><span class="dp">·</span><del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;&#x27;&#x27;</del></td><td class="diffline">69 </td><td class="diffpresent"><ins>def</ins><span class="dp">·</span><ins>bin</ins><ins>count(</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">70 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>x:<span class="dp">·</span>NDArray[np.int_],<span class="dp">·</span>N:<span class="dp">·</span>int|None=None,<span class="dp">·</span>*,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">71 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ignore_negative:<span class="dp">·</span>bool<span class="dp">·</span>=<span class="dp">·</span>False<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">72 </td><td class="diffpresent">)<span class="dp">·</span>-&gt;<span class="dp">·</span>NDArray[np.int_]:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">71 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>x:<span class="dp">·</span>(*,<span class="dp">·</span>M)</td><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>x:<span class="dp">·</span>(*,<span class="dp">·</span>M)</td></tr>
+<tr class="diffunmodified"><td class="diffline">72 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return:<span class="dp">·</span>(*,<span class="dp">·</span>N)</td><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return:<span class="dp">·</span>(*,<span class="dp">·</span>N)</td></tr>
+<tr class="diffdeleted"><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;&#x27;&#x27;</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>count<span class="dp">·</span>the<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>occurrences<span class="dp">·</span>along<span class="dp">·</span>the<span class="dp">·</span>last<span class="dp">·</span>axis<span class="dp">·</span>of<span class="dp">·</span>x</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">77 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>N:<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>bins</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">78 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ignore_negative:<span class="dp">·</span>whether<span class="dp">·</span>to<span class="dp">·</span>ignore<span class="dp">·</span>negative<span class="dp">·</span>numbers</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">79 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>N<span class="dp">·</span>is<span class="dp">·</span>None:</td><td class="diffline">80 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>N<span class="dp">·</span>is<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>N<span class="dp">·</span>=<span class="dp">·</span>np.max(x)<span class="dp">·</span>+<span class="dp">·</span>1</td><td class="diffline">81 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>N<span class="dp">·</span>=<span class="dp">·</span>np.max(x)<span class="dp">·</span>+<span class="dp">·</span>1</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>shape<span class="dp">·</span>=<span class="dp">·</span>x.shape[:-1]</td><td class="diffline">82 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>shape<span class="dp">·</span>=<span class="dp">·</span>x.shape[:-1]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>(D,<span class="dp">·</span>M)</td><td class="diffline">83 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>(D,<span class="dp">·</span>M)</td></tr>
+<tr class="diffunmodified"><td class="diffline">78 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>_x<span class="dp">·</span>=<span class="dp">·</span>flatten(x,<span class="dp">·</span>[a<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>in<span class="dp">·</span>range(len(x.shape))][:-1],<span class="dp">·</span>position=&#x27;left&#x27;)</td><td class="diffline">84 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>_x<span class="dp">·</span>=<span class="dp">·</span>flatten(x,<span class="dp">·</span>[a<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>in<span class="dp">·</span>range(len(x.shape))][:-1],<span class="dp">·</span>position=&#x27;left&#x27;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">79 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>D<span class="dp">·</span>=<span class="dp">·</span>_x.shape[0]</td><td class="diffline">85 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>D<span class="dp">·</span>=<span class="dp">·</span>_x.shape[0]</td></tr>
+<tr class="diffunmodified"><td class="diffline">80 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>index<span class="dp">·</span>=<span class="dp">·</span>np.arange(D).reshape(D,<span class="dp">·</span>1)</td><td class="diffline">86 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>index<span class="dp">·</span>=<span class="dp">·</span>np.arange(D).reshape(D,<span class="dp">·</span>1)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">81 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>N<span class="dp">·</span>=<span class="dp">·</span>cast(int,<span class="dp">·</span>N)</td><td class="diffline">87 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>N<span class="dp">·</span>=<span class="dp">·</span>cast(int,<span class="dp">·</span>N)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">82 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>y<span class="dp">·</span>=<span class="dp">·</span>np.b</del><del>incount(</del>(index*N<span class="dp">·</span>+<span class="dp">·</span>_x).reshape(-1<del>),<span class="dp">·</span>minlength=N*D).reshape(*shape,<span class="dp">·</span>N</del>)</td><td class="diffline">88 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>stats<span class="dp">·</span>=<span class="dp">·</span></ins>(index*N<span class="dp">·</span>+<span class="dp">·</span>_x).reshape(-1)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">83 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>re<del>turn<span class="dp">·</span>y</del></td><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>if<span class="dp">·</span>igno</ins>r<ins>e_n</ins>e<ins>g</ins><ins>ative:</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">90 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>stats<span class="dp">·</span>=<span class="dp">·</span>stats[np.where(stats<span class="dp">·</span>&gt;=<span class="dp">·</span>0)]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">91 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>y<span class="dp">·</span>=<span class="dp">·</span>np.bincount(stats,<span class="dp">·</span>minlength=N*D).reshape(*shape,<span class="dp">·</span>N)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">92 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>y</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">84 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">85 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/_base.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-_base.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/_base.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-_base.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/_decors.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-_decors.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/_decors.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-_decors.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/_slice.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-_slice.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/_slice.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-_slice.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/basic_utils/_axes.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-basic_utils-_axes.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/basic_utils/_axes.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-basic_utils-_axes.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/basic_utils/_base.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-basic_utils-_base.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/basic_utils/_base.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-basic_utils-_base.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/basic_utils/_coords.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-basic_utils-_coords.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/basic_utils/_coords.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-basic_utils-_coords.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/basic_utils/_dims.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-basic_utils-_dims.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/basic_utils/_dims.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-basic_utils-_dims.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/basic_utils/_generalize.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-basic_utils-_generalize.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/basic_utils/_generalize.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-basic_utils-_generalize.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/basic_utils/_misc.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-basic_utils-_misc.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/basic_utils/_misc.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-basic_utils-_misc.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/broadcast/__init__.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-broadcast-__init__.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/broadcast/__init__.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-broadcast-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/broadcast/_broadcast.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-broadcast-_broadcast.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/broadcast/_broadcast.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-broadcast-_broadcast.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/broadcast/_dimcast.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-broadcast-_dimcast.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/broadcast/_dimcast.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-broadcast-_dimcast.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/broadcast/_template.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-broadcast-_template.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/broadcast/_template.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-broadcast-_template.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/broadcast/_types.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-broadcast-_types.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/broadcast/_types.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-broadcast-_types.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors/tensor/typing/_typing.py</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-typing-_typing.py"><span class="source">xtensors-1.0.3/src/xtensors/tensor/typing/_typing.py</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors-tensor-typing-_typing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">543 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors.egg-info/PKG-INFO</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors.egg-info-PKG-INFO"><span class="source">xtensors-1.0.3/src/xtensors.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 16% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>xtensors</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>xtensors</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>ND<span class="dp">·</span>named<span class="dp">·</span>tensor<span class="dp">·</span>utilities</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>ND<span class="dp">·</span>named<span class="dp">·</span>tensor<span class="dp">·</span>utilities</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/michael-960/xtensor</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/michael-960/xtensor</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Michael<span class="dp">·</span>Wang</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Michael<span class="dp">·</span>Wang</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mike.wang96029@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mike.wang96029@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/michael-960/xtensor/issues</td><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/michael-960/xtensor/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">xtensors-1.0.2/src/xtensors.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="xtensors--.-.-.tar---xtensors--.-.--src-xtensors.egg-info-SOURCES.txt"><span class="source">xtensors-1.0.3/src/xtensors.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#xtensors--.-.-.tar---xtensors--.-.--src-xtensors.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
