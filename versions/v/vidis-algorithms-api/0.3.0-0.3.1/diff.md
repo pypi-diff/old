@@ -1,0 +1,122 @@
+# Comparing `tmp/vidis_algorithms_api-0.3.0.tar.gz` & `tmp/vidis_algorithms_api-0.3.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "vidis_algorithms_api-0.3.0.tar", last modified: Fri Apr  7 06:18:36 2023, max compression
++gzip compressed data, was "vidis_algorithms_api-0.3.1.tar", last modified: Fri Apr  7 07:15:43 2023, max compression
+```
+
+## Comparing `vidis_algorithms_api-0.3.0.tar` & `vidis_algorithms_api-0.3.1.tar`
+
+### file list
+
+```diff
+@@ -1,26 +1,26 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:18:36.696200 vidis_algorithms_api-0.3.0/
+--rw-r--r--   0 root         (0) root         (0)      383 2023-04-07 06:18:36.696200 vidis_algorithms_api-0.3.0/PKG-INFO
+--rw-rw-rw-   0 root         (0) root         (0)     1370 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.0/README.md
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:18:36.692200 vidis_algorithms_api-0.3.0/examples/
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:18:36.692200 vidis_algorithms_api-0.3.0/examples/dummy_example/
+--rw-rw-rw-   0 root         (0) root         (0)      528 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.0/examples/dummy_example/algorithm.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:18:36.692200 vidis_algorithms_api-0.3.0/examples/neural_network/
+--rw-rw-rw-   0 root         (0) root         (0)     3626 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.0/examples/neural_network/algorithm.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:18:36.692200 vidis_algorithms_api-0.3.0/examples/neural_network/model/
+--rw-rw-rw-   0 root         (0) root         (0)     3737 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.0/examples/neural_network/model/model.py
+--rw-rw-rw-   0 root         (0) root         (0)      471 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.0/pyproject.toml
+--rw-r--r--   0 root         (0) root         (0)       38 2023-04-07 06:18:36.696200 vidis_algorithms_api-0.3.0/setup.cfg
+--rw-rw-rw-   0 root         (0) root         (0)      654 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.0/setup.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:18:36.692200 vidis_algorithms_api-0.3.0/vidis_algorithms_api/
+--rw-rw-rw-   0 root         (0) root         (0)      568 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.0/vidis_algorithms_api/Main.py
+--rw-rw-rw-   0 root         (0) root         (0)     1091 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.0/vidis_algorithms_api/Task.py
+--rw-rw-rw-   0 root         (0) root         (0)       56 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.0/vidis_algorithms_api/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:18:36.696200 vidis_algorithms_api-0.3.0/vidis_algorithms_api/core/
+--rw-rw-rw-   0 root         (0) root         (0)      217 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.0/vidis_algorithms_api/core/Settings.py
+--rw-rw-rw-   0 root         (0) root         (0)       54 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.0/vidis_algorithms_api/core/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 06:18:36.696200 vidis_algorithms_api-0.3.0/vidis_algorithms_api.egg-info/
+--rw-r--r--   0 root         (0) root         (0)      383 2023-04-07 06:18:36.000000 vidis_algorithms_api-0.3.0/vidis_algorithms_api.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)      531 2023-04-07 06:18:36.000000 vidis_algorithms_api-0.3.0/vidis_algorithms_api.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 06:18:36.000000 vidis_algorithms_api-0.3.0/vidis_algorithms_api.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)       59 2023-04-07 06:18:36.000000 vidis_algorithms_api-0.3.0/vidis_algorithms_api.egg-info/requires.txt
+--rw-r--r--   0 root         (0) root         (0)       42 2023-04-07 06:18:36.000000 vidis_algorithms_api-0.3.0/vidis_algorithms_api.egg-info/top_level.txt
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 07:15:43.572188 vidis_algorithms_api-0.3.1/
++-rw-r--r--   0 root         (0) root         (0)      383 2023-04-07 07:15:43.572188 vidis_algorithms_api-0.3.1/PKG-INFO
++-rw-rw-rw-   0 root         (0) root         (0)     1370 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.1/README.md
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 07:15:43.568188 vidis_algorithms_api-0.3.1/examples/
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 07:15:43.572188 vidis_algorithms_api-0.3.1/examples/dummy_example/
++-rw-rw-rw-   0 root         (0) root         (0)      528 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.1/examples/dummy_example/algorithm.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 07:15:43.572188 vidis_algorithms_api-0.3.1/examples/neural_network/
++-rw-rw-rw-   0 root         (0) root         (0)     3626 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.1/examples/neural_network/algorithm.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 07:15:43.572188 vidis_algorithms_api-0.3.1/examples/neural_network/model/
++-rw-rw-rw-   0 root         (0) root         (0)     3737 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.1/examples/neural_network/model/model.py
++-rw-rw-rw-   0 root         (0) root         (0)      471 2023-04-07 07:06:59.000000 vidis_algorithms_api-0.3.1/pyproject.toml
++-rw-r--r--   0 root         (0) root         (0)       38 2023-04-07 07:15:43.572188 vidis_algorithms_api-0.3.1/setup.cfg
++-rw-rw-rw-   0 root         (0) root         (0)      654 2023-04-07 07:06:59.000000 vidis_algorithms_api-0.3.1/setup.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 07:15:43.572188 vidis_algorithms_api-0.3.1/vidis_algorithms_api/
++-rw-rw-rw-   0 root         (0) root         (0)      568 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.1/vidis_algorithms_api/Main.py
++-rw-rw-rw-   0 root         (0) root         (0)     1091 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.1/vidis_algorithms_api/Task.py
++-rw-rw-rw-   0 root         (0) root         (0)       23 2023-04-07 07:06:59.000000 vidis_algorithms_api-0.3.1/vidis_algorithms_api/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 07:15:43.572188 vidis_algorithms_api-0.3.1/vidis_algorithms_api/core/
++-rw-rw-rw-   0 root         (0) root         (0)      217 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.1/vidis_algorithms_api/core/Settings.py
++-rw-rw-rw-   0 root         (0) root         (0)       54 2023-04-06 10:48:38.000000 vidis_algorithms_api-0.3.1/vidis_algorithms_api/core/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 07:15:43.572188 vidis_algorithms_api-0.3.1/vidis_algorithms_api.egg-info/
++-rw-r--r--   0 root         (0) root         (0)      383 2023-04-07 07:15:43.000000 vidis_algorithms_api-0.3.1/vidis_algorithms_api.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)      531 2023-04-07 07:15:43.000000 vidis_algorithms_api-0.3.1/vidis_algorithms_api.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 07:15:43.000000 vidis_algorithms_api-0.3.1/vidis_algorithms_api.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)       59 2023-04-07 07:15:43.000000 vidis_algorithms_api-0.3.1/vidis_algorithms_api.egg-info/requires.txt
++-rw-r--r--   0 root         (0) root         (0)       42 2023-04-07 07:15:43.000000 vidis_algorithms_api-0.3.1/vidis_algorithms_api.egg-info/top_level.txt
+```
+
+### Comparing `vidis_algorithms_api-0.3.0/README.md` & `vidis_algorithms_api-0.3.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `vidis_algorithms_api-0.3.0/examples/dummy_example/algorithm.py` & `vidis_algorithms_api-0.3.1/examples/dummy_example/algorithm.py`
+
+ * *Files identical despite different names*
+
+### Comparing `vidis_algorithms_api-0.3.0/examples/neural_network/algorithm.py` & `vidis_algorithms_api-0.3.1/examples/neural_network/algorithm.py`
+
+ * *Files identical despite different names*
+
+### Comparing `vidis_algorithms_api-0.3.0/examples/neural_network/model/model.py` & `vidis_algorithms_api-0.3.1/examples/neural_network/model/model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `vidis_algorithms_api-0.3.0/setup.py` & `vidis_algorithms_api-0.3.1/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -8,15 +8,15 @@
+ ]
+ 
+ with open('README.md', 'r') as f:
+     description = f.read()
+ 
+ 
+ def setup_package():
+-    __version__ = '0.3.0'
++    __version__ = '0.3.1'
+     url = 'https://github.com/Banayaki'
+ 
+     setup(name='vidis_algorithms_api',
+           description=description,
+           version=__version__,
+           url=url,
+           license='MIT',
+```
+
+### Comparing `vidis_algorithms_api-0.3.0/vidis_algorithms_api/Main.py` & `vidis_algorithms_api-0.3.1/vidis_algorithms_api/Main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `vidis_algorithms_api-0.3.0/vidis_algorithms_api/Task.py` & `vidis_algorithms_api-0.3.1/vidis_algorithms_api/Task.py`
+
+ * *Files identical despite different names*
+
+### Comparing `vidis_algorithms_api-0.3.0/vidis_algorithms_api.egg-info/SOURCES.txt` & `vidis_algorithms_api-0.3.1/vidis_algorithms_api.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+

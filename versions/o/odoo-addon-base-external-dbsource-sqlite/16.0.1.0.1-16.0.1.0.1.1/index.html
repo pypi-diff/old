@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1-py3-none-any.whl.zip tmp/odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1-py3-none-any.whl.zip --html versions/o/odoo-addon-base-external-dbsource-sqlite/16.0.1.0.1-16.0.1.0.1.1/index.html --text versions/o/odoo-addon-base-external-dbsource-sqlite/16.0.1.0.1-16.0.1.0.1.1/diff.txt --markdown versions/o/odoo-addon-base-external-dbsource-sqlite/16.0.1.0.1-16.0.1.0.1.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">21.0 KB</span></div>
+  <div><span class="source">tmp/odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">6.69 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 30 lines modified</td><td colspan="2">Offset 1, 30 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>3<del>0345</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>28</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>3<ins>1406</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>28</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3955<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/README.rst</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3955<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>634<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/__manifest__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>634<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/__manifest__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>293<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/demo/base_external_dbsource.xml</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>293<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/demo/base_external_dbsource.xml</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1200<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/base_external_dbsource_sqlite.pot</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1200<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/base_external_dbsource_sqlite.pot</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>855</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/de.po</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1511</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/de.po</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>870</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/es.po</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1526</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/es.po</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>894</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/hr.po</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1550</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/hr.po</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>876</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/nl_NL.po</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1532</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/nl_NL.po</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>895</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/pt_BR.po</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1551</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/pt_BR.po</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>932</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/sl.po</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1588</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/sl.po</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>874</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/tr.po</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1530</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/i18n/tr.po</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/models/__init__.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/models/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1422<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/models/base_external_dbsource.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1422<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/models/base_external_dbsource.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>126<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/readme/CONFIGURE.rst</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>126<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/readme/CONFIGURE.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>300<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/readme/CONTRIBUTORS.rst</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>300<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/readme/CONTRIBUTORS.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>118<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/readme/DESCRIPTION.rst</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>118<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/readme/DESCRIPTION.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>78<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/readme/INSTALL.rst</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>78<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/readme/INSTALL.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/readme/ROADMAP.rst</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/readme/ROADMAP.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>281<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/readme/USAGE.rst</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>281<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/readme/USAGE.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9455<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/static/description/icon.png</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9455<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/static/description/icon.png</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14407<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/static/description/index.html</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14407<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/static/description/index.html</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/tests/__init__.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1690<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/tests/test_base_external_dbsource.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1690<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/tests/test_base_external_dbsource.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>463<del>2</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/METADATA</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>463<ins>4</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0<ins>.1</ins>.1.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/WHEEL</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0<ins>.1</ins>.1.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/top_level.txt</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0<ins>.1</ins>.1.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>32<del>60</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>12</del>:<del>12</del><span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/RECORD</td><td class="diffline">29 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>32<ins>75</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>23</ins><span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0<ins>.1</ins>.1.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">28<span class="dp">·</span>files,<span class="dp">·</span><del>48271</del><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>2<del>4</del>7<del>05</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span><del>48</del>.<del>8</del>%</td><td class="diffline">30 </td><td class="diffpresent">28<span class="dp">·</span>files,<span class="dp">·</span><ins>52880</ins><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>2<ins>5</ins>7<ins>50</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span><ins>51</ins>.<ins>3</ins>%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">965 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 66, 20 lines modified</td><td colspan="2">Offset 66, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/tests/__init__.py</td><td class="diffline">66 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/tests/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">67 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/tests/test_base_external_dbsource.py</td><td class="diffline">68 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_external_dbsource_sqlite/tests/test_base_external_dbsource.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">69 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">70 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/METADATA</td><td class="diffline">70 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.<ins>1.</ins>dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">71 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">71 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">72 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/WHEEL</td><td class="diffline">72 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.<ins>1.</ins>dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">73 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">73 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">74 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/top_level.txt</td><td class="diffline">74 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.<ins>1.</ins>dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">75 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">76 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/RECORD</td><td class="diffline">76 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.<ins>1.</ins>dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">77 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">78 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">78 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.13 KB</span></div>
+    <div id="odoo-addons-base_external_dbsource_sqlite-i--n-de.po"><span class="source">odoo/addons/base_external_dbsource_sqlite/i18n/de.po</span>
+      <a class="anchor" href="#odoo-addons-base_external_dbsource_sqlite-i--n-de.po">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 15, 10 lines modified</td><td colspan="2">Offset 15, 27 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">&quot;Language:<span class="dp">·</span>de\n&quot;</td><td class="diffline">15 </td><td class="diffpresent">&quot;Language:<span class="dp">·</span>de\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td><td class="diffline">16 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td><td class="diffline">17 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=2;<span class="dp">·</span>plural=(n<span class="dp">·</span>!=<span class="dp">·</span>1);\n&quot;</td><td class="diffline">19 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=2;<span class="dp">·</span>plural=(n<span class="dp">·</span>!=<span class="dp">·</span>1);\n&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td><td class="diffline">20 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">21 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Connector&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td><td class="diffline">25 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td><td class="diffline">26 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Externe<span class="dp">·</span>Datenbankquellen&quot;</td><td class="diffline">27 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Externe<span class="dp">·</span>Datenbankquellen&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">28 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">30 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">31 </td><td class="diffpresent">&quot;If<span class="dp">·</span>a<span class="dp">·</span>connector<span class="dp">·</span>is<span class="dp">·</span>missing<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>list,<span class="dp">·</span>check<span class="dp">·</span>the<span class="dp">·</span>server<span class="dp">·</span>log<span class="dp">·</span>to<span class="dp">·</span>confirm<span class="dp">·</span>&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent">&quot;that<span class="dp">·</span>the<span class="dp">·</span>required<span class="dp">·</span>components<span class="dp">·</span>were<span class="dp">·</span>detected.&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">33 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;SQLite&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.15 KB</span></div>
+    <div id="odoo-addons-base_external_dbsource_sqlite-i--n-es.po"><span class="source">odoo/addons/base_external_dbsource_sqlite/i18n/es.po</span>
+      <a class="anchor" href="#odoo-addons-base_external_dbsource_sqlite-i--n-es.po">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 15, 10 lines modified</td><td colspan="2">Offset 15, 27 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">&quot;Language:<span class="dp">·</span>es\n&quot;</td><td class="diffline">15 </td><td class="diffpresent">&quot;Language:<span class="dp">·</span>es\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td><td class="diffline">16 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td><td class="diffline">17 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=2;<span class="dp">·</span>plural=(n<span class="dp">·</span>!=<span class="dp">·</span>1);\n&quot;</td><td class="diffline">19 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=2;<span class="dp">·</span>plural=(n<span class="dp">·</span>!=<span class="dp">·</span>1);\n&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td><td class="diffline">20 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">21 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Connector&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td><td class="diffline">25 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td><td class="diffline">26 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Fuentes<span class="dp">·</span>externas<span class="dp">·</span>de<span class="dp">·</span>la<span class="dp">·</span>base<span class="dp">·</span>de<span class="dp">·</span>datos&quot;</td><td class="diffline">27 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Fuentes<span class="dp">·</span>externas<span class="dp">·</span>de<span class="dp">·</span>la<span class="dp">·</span>base<span class="dp">·</span>de<span class="dp">·</span>datos&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">28 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">30 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">31 </td><td class="diffpresent">&quot;If<span class="dp">·</span>a<span class="dp">·</span>connector<span class="dp">·</span>is<span class="dp">·</span>missing<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>list,<span class="dp">·</span>check<span class="dp">·</span>the<span class="dp">·</span>server<span class="dp">·</span>log<span class="dp">·</span>to<span class="dp">·</span>confirm<span class="dp">·</span>&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent">&quot;that<span class="dp">·</span>the<span class="dp">·</span>required<span class="dp">·</span>components<span class="dp">·</span>were<span class="dp">·</span>detected.&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">33 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;SQLite&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.18 KB</span></div>
+    <div id="odoo-addons-base_external_dbsource_sqlite-i--n-hr.po"><span class="source">odoo/addons/base_external_dbsource_sqlite/i18n/hr.po</span>
+      <a class="anchor" href="#odoo-addons-base_external_dbsource_sqlite-i--n-hr.po">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 16, 10 lines modified</td><td colspan="2">Offset 16, 27 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td><td class="diffline">16 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td><td class="diffline">17 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=3;<span class="dp">·</span>plural=n%10==1<span class="dp">·</span>&amp;&amp;<span class="dp">·</span>n%100!=11<span class="dp">·</span>?<span class="dp">·</span>0<span class="dp">·</span>:<span class="dp">·</span>n%10&gt;=2<span class="dp">·</span>&amp;&amp;<span class="dp">·</span>n&quot;</td><td class="diffline">19 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=3;<span class="dp">·</span>plural=n%10==1<span class="dp">·</span>&amp;&amp;<span class="dp">·</span>n%100!=11<span class="dp">·</span>?<span class="dp">·</span>0<span class="dp">·</span>:<span class="dp">·</span>n%10&gt;=2<span class="dp">·</span>&amp;&amp;<span class="dp">·</span>n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">&quot;%10&lt;=4<span class="dp">·</span>&amp;&amp;<span class="dp">·</span>(n%100&lt;10<span class="dp">·</span>||<span class="dp">·</span>n%100&gt;=20)<span class="dp">·</span>?<span class="dp">·</span>1<span class="dp">·</span>:<span class="dp">·</span>2;\n&quot;</td><td class="diffline">20 </td><td class="diffpresent">&quot;%10&lt;=4<span class="dp">·</span>&amp;&amp;<span class="dp">·</span>(n%100&lt;10<span class="dp">·</span>||<span class="dp">·</span>n%100&gt;=20)<span class="dp">·</span>?<span class="dp">·</span>1<span class="dp">·</span>:<span class="dp">·</span>2;\n&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td><td class="diffline">21 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Connector&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">25 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td><td class="diffline">26 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td><td class="diffline">27 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Vanjske<span class="dp">·</span>baze&quot;</td><td class="diffline">28 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Vanjske<span class="dp">·</span>baze&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">30 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">31 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent">&quot;If<span class="dp">·</span>a<span class="dp">·</span>connector<span class="dp">·</span>is<span class="dp">·</span>missing<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>list,<span class="dp">·</span>check<span class="dp">·</span>the<span class="dp">·</span>server<span class="dp">·</span>log<span class="dp">·</span>to<span class="dp">·</span>confirm<span class="dp">·</span>&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">33 </td><td class="diffpresent">&quot;that<span class="dp">·</span>the<span class="dp">·</span>required<span class="dp">·</span>components<span class="dp">·</span>were<span class="dp">·</span>detected.&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;SQLite&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">38 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.14 KB</span></div>
+    <div id="odoo-addons-base_external_dbsource_sqlite-i--n-nl_NL.po"><span class="source">odoo/addons/base_external_dbsource_sqlite/i18n/nl_NL.po</span>
+      <a class="anchor" href="#odoo-addons-base_external_dbsource_sqlite-i--n-nl_NL.po">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 16, 10 lines modified</td><td colspan="2">Offset 16, 27 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">&quot;Language:<span class="dp">·</span>nl_NL\n&quot;</td><td class="diffline">16 </td><td class="diffpresent">&quot;Language:<span class="dp">·</span>nl_NL\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td><td class="diffline">17 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td><td class="diffline">19 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=2;<span class="dp">·</span>plural=(n<span class="dp">·</span>!=<span class="dp">·</span>1);\n&quot;</td><td class="diffline">20 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=2;<span class="dp">·</span>plural=(n<span class="dp">·</span>!=<span class="dp">·</span>1);\n&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td><td class="diffline">21 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Connector&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">25 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td><td class="diffline">26 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td><td class="diffline">27 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Externe<span class="dp">·</span>databasebronnen&quot;</td><td class="diffline">28 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Externe<span class="dp">·</span>databasebronnen&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">30 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">31 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent">&quot;If<span class="dp">·</span>a<span class="dp">·</span>connector<span class="dp">·</span>is<span class="dp">·</span>missing<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>list,<span class="dp">·</span>check<span class="dp">·</span>the<span class="dp">·</span>server<span class="dp">·</span>log<span class="dp">·</span>to<span class="dp">·</span>confirm<span class="dp">·</span>&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">33 </td><td class="diffpresent">&quot;that<span class="dp">·</span>the<span class="dp">·</span>required<span class="dp">·</span>components<span class="dp">·</span>were<span class="dp">·</span>detected.&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;SQLite&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">38 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.15 KB</span></div>
+    <div id="odoo-addons-base_external_dbsource_sqlite-i--n-pt_BR.po"><span class="source">odoo/addons/base_external_dbsource_sqlite/i18n/pt_BR.po</span>
+      <a class="anchor" href="#odoo-addons-base_external_dbsource_sqlite-i--n-pt_BR.po">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 16, 10 lines modified</td><td colspan="2">Offset 16, 27 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">&quot;Language:<span class="dp">·</span>pt_BR\n&quot;</td><td class="diffline">16 </td><td class="diffpresent">&quot;Language:<span class="dp">·</span>pt_BR\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td><td class="diffline">17 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td><td class="diffline">19 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=2;<span class="dp">·</span>plural=(n<span class="dp">·</span>&gt;<span class="dp">·</span>1);\n&quot;</td><td class="diffline">20 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=2;<span class="dp">·</span>plural=(n<span class="dp">·</span>&gt;<span class="dp">·</span>1);\n&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td><td class="diffline">21 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Connector&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">25 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td><td class="diffline">26 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td><td class="diffline">27 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Fontes<span class="dp">·</span>Banco<span class="dp">·</span>de<span class="dp">·</span>Dados<span class="dp">·</span>Externo&quot;</td><td class="diffline">28 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Fontes<span class="dp">·</span>Banco<span class="dp">·</span>de<span class="dp">·</span>Dados<span class="dp">·</span>Externo&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">30 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">31 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent">&quot;If<span class="dp">·</span>a<span class="dp">·</span>connector<span class="dp">·</span>is<span class="dp">·</span>missing<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>list,<span class="dp">·</span>check<span class="dp">·</span>the<span class="dp">·</span>server<span class="dp">·</span>log<span class="dp">·</span>to<span class="dp">·</span>confirm<span class="dp">·</span>&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">33 </td><td class="diffpresent">&quot;that<span class="dp">·</span>the<span class="dp">·</span>required<span class="dp">·</span>components<span class="dp">·</span>were<span class="dp">·</span>detected.&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;SQLite&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">38 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.18 KB</span></div>
+    <div id="odoo-addons-base_external_dbsource_sqlite-i--n-sl.po"><span class="source">odoo/addons/base_external_dbsource_sqlite/i18n/sl.po</span>
+      <a class="anchor" href="#odoo-addons-base_external_dbsource_sqlite-i--n-sl.po">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 16, 10 lines modified</td><td colspan="2">Offset 16, 27 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td><td class="diffline">16 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td><td class="diffline">17 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=4;<span class="dp">·</span>plural=(n%100==1<span class="dp">·</span>?<span class="dp">·</span>0<span class="dp">·</span>:<span class="dp">·</span>n%100==2<span class="dp">·</span>?<span class="dp">·</span>1<span class="dp">·</span>:<span class="dp">·</span>n%100==3<span class="dp">·</span>||<span class="dp">·</span>n&quot;</td><td class="diffline">19 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=4;<span class="dp">·</span>plural=(n%100==1<span class="dp">·</span>?<span class="dp">·</span>0<span class="dp">·</span>:<span class="dp">·</span>n%100==2<span class="dp">·</span>?<span class="dp">·</span>1<span class="dp">·</span>:<span class="dp">·</span>n%100==3<span class="dp">·</span>||<span class="dp">·</span>n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">&quot;%100==4<span class="dp">·</span>?<span class="dp">·</span>2<span class="dp">·</span>:<span class="dp">·</span>3);\n&quot;</td><td class="diffline">20 </td><td class="diffpresent">&quot;%100==4<span class="dp">·</span>?<span class="dp">·</span>2<span class="dp">·</span>:<span class="dp">·</span>3);\n&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td><td class="diffline">21 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Connector&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">25 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td><td class="diffline">26 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td><td class="diffline">27 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Viri<span class="dp">·</span>zunanjih<span class="dp">·</span>podatkovnih<span class="dp">·</span>baz&quot;</td><td class="diffline">28 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Viri<span class="dp">·</span>zunanjih<span class="dp">·</span>podatkovnih<span class="dp">·</span>baz&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">30 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">31 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent">&quot;If<span class="dp">·</span>a<span class="dp">·</span>connector<span class="dp">·</span>is<span class="dp">·</span>missing<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>list,<span class="dp">·</span>check<span class="dp">·</span>the<span class="dp">·</span>server<span class="dp">·</span>log<span class="dp">·</span>to<span class="dp">·</span>confirm<span class="dp">·</span>&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">33 </td><td class="diffpresent">&quot;that<span class="dp">·</span>the<span class="dp">·</span>required<span class="dp">·</span>components<span class="dp">·</span>were<span class="dp">·</span>detected.&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;SQLite&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">38 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.13 KB</span></div>
+    <div id="odoo-addons-base_external_dbsource_sqlite-i--n-tr.po"><span class="source">odoo/addons/base_external_dbsource_sqlite/i18n/tr.po</span>
+      <a class="anchor" href="#odoo-addons-base_external_dbsource_sqlite-i--n-tr.po">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 15, 10 lines modified</td><td colspan="2">Offset 15, 27 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">&quot;Language:<span class="dp">·</span>tr\n&quot;</td><td class="diffline">15 </td><td class="diffpresent">&quot;Language:<span class="dp">·</span>tr\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td><td class="diffline">16 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td><td class="diffline">17 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td><td class="diffline">18 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=2;<span class="dp">·</span>plural=(n<span class="dp">·</span>&gt;<span class="dp">·</span>1);\n&quot;</td><td class="diffline">19 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>nplurals=2;<span class="dp">·</span>plural=(n<span class="dp">·</span>&gt;<span class="dp">·</span>1);\n&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td><td class="diffline">20 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">21 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Connector&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td><td class="diffline">25 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td><td class="diffline">26 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;External<span class="dp">·</span>Database<span class="dp">·</span>Sources&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Dış<span class="dp">·</span>veritabanı<span class="dp">·</span>kaynakları&quot;</td><td class="diffline">27 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Dış<span class="dp">·</span>veritabanı<span class="dp">·</span>kaynakları&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">28 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">30 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">31 </td><td class="diffpresent">&quot;If<span class="dp">·</span>a<span class="dp">·</span>connector<span class="dp">·</span>is<span class="dp">·</span>missing<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>list,<span class="dp">·</span>check<span class="dp">·</span>the<span class="dp">·</span>server<span class="dp">·</span>log<span class="dp">·</span>to<span class="dp">·</span>confirm<span class="dp">·</span>&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent">&quot;that<span class="dp">·</span>the<span class="dp">·</span>required<span class="dp">·</span>components<span class="dp">·</span>were<span class="dp">·</span>detected.&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">33 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>base_external_dbsource_sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;SQLite&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">595 B</span></div>
+    <div><span class="source">odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/METADATA</span> vs.</div>
+    <div id="odoo_addon_base_external_dbsource_sqlite---.-.-.-.-.dist-info-METADATA"><span class="source">odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/METADATA</span>
+      <a class="anchor" href="#odoo_addon_base_external_dbsource_sqlite---.-.-.-.-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 0% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>odoo-addon-base-external-dbsource-sqlite</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>odoo-addon-base-external-dbsource-sqlite</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>16.0.1.0.1</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>16.0.1.0.1<ins>.1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>External<span class="dp">·</span>Database<span class="dp">·</span>Source<span class="dp">·</span>-<span class="dp">·</span>SQLite</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>External<span class="dp">·</span>Database<span class="dp">·</span>Source<span class="dp">·</span>-<span class="dp">·</span>SQLite</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OCA/server-backend</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OCA/server-backend</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Daniel<span class="dp">·</span>Reis,<span class="dp">·</span>LasLabs,<span class="dp">·</span>Odoo<span class="dp">·</span>Community<span class="dp">·</span>Association<span class="dp">·</span>(OCA)</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Daniel<span class="dp">·</span>Reis,<span class="dp">·</span>LasLabs,<span class="dp">·</span>Odoo<span class="dp">·</span>Community<span class="dp">·</span>Association<span class="dp">·</span>(OCA)</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>support@odoo-community.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>support@odoo-community.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>LGPL-3</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>LGPL-3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">4.61 KB</span></div>
+    <div><span class="source">odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/RECORD</span> vs.</div>
+    <div id="odoo_addon_base_external_dbsource_sqlite---.-.-.-.-.dist-info-RECORD"><span class="source">odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/RECORD</span>
+      <a class="anchor" href="#odoo_addon_base_external_dbsource_sqlite---.-.-.-.-.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 9% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 28 lines modified</td><td colspan="2">Offset 1, 28 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/README.rst,sha256=-sR-F9aBge0VkaVPXFLYwQNCFPbnYuhzGI4pYcSNOx8,3955</td><td class="diffline">1 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/README.rst,sha256=-sR-F9aBge0VkaVPXFLYwQNCFPbnYuhzGI4pYcSNOx8,3955</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21</td><td class="diffline">2 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/__manifest__.py,sha256=sKZkvMfA7_mKUuhl21aD3XJBypwpgJvivBvMoagPuow,634</td><td class="diffline">3 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/__manifest__.py,sha256=sKZkvMfA7_mKUuhl21aD3XJBypwpgJvivBvMoagPuow,634</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/demo/base_external_dbsource.xml,sha256=FwJubZxpNCoFsdM96HL-Wo89BYoiYP1q_m6Y2QcP2iQ,293</td><td class="diffline">4 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/demo/base_external_dbsource.xml,sha256=FwJubZxpNCoFsdM96HL-Wo89BYoiYP1q_m6Y2QcP2iQ,293</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/base_external_dbsource_sqlite.pot,sha256=CSu8kFoPWHey7Kq9SuGi-AKPC13eXIPcpG-yDcDeqic,1200</td><td class="diffline">5 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/base_external_dbsource_sqlite.pot,sha256=CSu8kFoPWHey7Kq9SuGi-AKPC13eXIPcpG-yDcDeqic,1200</td></tr>
+<tr class="diffdeleted"><td class="diffline">6 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/de.po,sha256=CV3UqOU-kNVEB4KowaEzw_5Qr_lTt0SV0NGoEetEH88,855</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/es.po,sha256=bPZCABMFf_ixCZIdp5j0j6StAS_kvY6JRTlv8g6lln8,870</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/hr.po,sha256=30Iwl0kBfxtEEB2ZBNJc6FxchRHhRKKoSOofR-2u3rg,894</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/nl_NL.po,sha256=m2a_vnLw2l7rZMfbGZNDcqxZis8VWpCv5s6ZmY2yirU,876</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">10 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/pt_BR.po,sha256=o_sZBZWKvwD53wECW8E6VSaXA-55Ff8WiYT7yu9Rp1s,895</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">11 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/sl.po,sha256=Bw7W3_pgLKzR5OEUUt6jS-MbLLFbWlEpJ3r3tfpl4e4,932</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/<del>tr</del>.po,sha256=<del>K</del><del>f7nDpW20r1lW</del>V<del>hQdWXofRC_7DI</del>-<del>8lvx</del>t<del>PgifdHL</del>5<del>uc</del>,<del>874</del></td><td class="diffline">6 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/<ins>de</ins>.po,sha256=<ins>rA8E8TiTGcKs</ins>V<ins>lwHa4_hZ8MaZE</ins>-<ins>PCcE</ins>t<ins>h</ins><ins>4OaAZ7I</ins>5<ins>4E</ins>,<ins>1</ins><ins>511</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/es.po,sha256=vyFthIPnL_ogtFct11570jPyv8l6sJZbtOavEHcJEtY,1526</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/hr.po,sha256=N-4akTDk3FBKzRxEoCoh6R_V-Y_OTotTfZQYDLydf1E,1550</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/nl_NL.po,sha256=ndTzr8muENDVfrCeB-xDaXoWK0Q3ikacXHP55H94t3g,1532</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/pt_BR.po,sha256=31Sce3ZMGg3I2aTHsTG_W6YmBawQExgH1m39wPXKwqQ,1551</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/sl.po,sha256=C25xYv5mlVGOSo7RpfV804hYcZ8stQO8ICtOsRWDPk8,1588</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/i18n/tr.po,sha256=BMRWzlSeVr7STQ6P3PDLTH7TtrVuex3SK7jkJwn45K8,1530</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/models/__init__.py,sha256=OrvryDFW1fFPbsXq2lpcvM3nsWmlsmM72jIUdWBg4sM,37</td><td class="diffline">13 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/models/__init__.py,sha256=OrvryDFW1fFPbsXq2lpcvM3nsWmlsmM72jIUdWBg4sM,37</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/models/base_external_dbsource.py,sha256=_qPHftBJzm3PoHVfF9hVsJIUMPS9lW3GL0Ke32QPCvM,1422</td><td class="diffline">14 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/models/base_external_dbsource.py,sha256=_qPHftBJzm3PoHVfF9hVsJIUMPS9lW3GL0Ke32QPCvM,1422</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/readme/CONFIGURE.rst,sha256=FhN_roZXtVf3FJwVfkZ9WyirrwT_3U1-nirl3paxUPM,126</td><td class="diffline">15 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/readme/CONFIGURE.rst,sha256=FhN_roZXtVf3FJwVfkZ9WyirrwT_3U1-nirl3paxUPM,126</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/readme/CONTRIBUTORS.rst,sha256=o7cOdX6kSCclRucAeItJDkdo_povLCs9BKNBYl_EnEw,300</td><td class="diffline">16 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/readme/CONTRIBUTORS.rst,sha256=o7cOdX6kSCclRucAeItJDkdo_povLCs9BKNBYl_EnEw,300</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/readme/DESCRIPTION.rst,sha256=RsxS5aEZESbz2caJRFQJk1SygelXeZeHrjweKKyX8Hc,118</td><td class="diffline">17 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/readme/DESCRIPTION.rst,sha256=RsxS5aEZESbz2caJRFQJk1SygelXeZeHrjweKKyX8Hc,118</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/readme/INSTALL.rst,sha256=SKGvRdqY07K_yoGoyYu1WqEzjw4uE-Ffy2WWTew1LgM,78</td><td class="diffline">18 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/readme/INSTALL.rst,sha256=SKGvRdqY07K_yoGoyYu1WqEzjw4uE-Ffy2WWTew1LgM,78</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/readme/ROADMAP.rst,sha256=9MxatZ8a0qDjDzNIYvtBg7XNBwCacKHju9Gu-FV2q4w,27</td><td class="diffline">19 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/readme/ROADMAP.rst,sha256=9MxatZ8a0qDjDzNIYvtBg7XNBwCacKHju9Gu-FV2q4w,27</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/readme/USAGE.rst,sha256=T9UGRifeZTHVxTMmqGXn1zMupDNiPaFeJgJrO0HoQqQ,281</td><td class="diffline">20 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/readme/USAGE.rst,sha256=T9UGRifeZTHVxTMmqGXn1zMupDNiPaFeJgJrO0HoQqQ,281</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455</td><td class="diffline">21 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/static/description/index.html,sha256=qhPa5aYfIc0VvquU-tyr9Fid5JvaZESGSn5GGf3RIXU,14407</td><td class="diffline">22 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/static/description/index.html,sha256=qhPa5aYfIc0VvquU-tyr9Fid5JvaZESGSn5GGf3RIXU,14407</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/tests/__init__.py,sha256=EKOgAaiMX5R7Zx98NP4cHhRD5_QuCWTC73XxChPlF-U,42</td><td class="diffline">23 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/tests/__init__.py,sha256=EKOgAaiMX5R7Zx98NP4cHhRD5_QuCWTC73XxChPlF-U,42</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/tests/test_base_external_dbsource.py,sha256=qeqXCksMPby0GSfgWiHS3CyxND698MplrK5rBiQJyEc,1690</td><td class="diffline">24 </td><td class="diffpresent">odoo/addons/base_external_dbsource_sqlite/tests/test_base_external_dbsource.py,sha256=qeqXCksMPby0GSfgWiHS3CyxND698MplrK5rBiQJyEc,1690</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/METADATA,sha256=<del>Bve</del><del>6KNGblek</del>y<del>JAEMU3u2ZqZ</del>0<del>Nt</del>n<del>GMFNeVIBPxK</del>-<del>5G5I</del>,463<del>2</del></td><td class="diffline">25 </td><td class="diffpresent">odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.<ins>1.</ins>dist-info/METADATA,sha256=<ins>U24ZDQmO</ins>y<ins>qpb2eblRBBW</ins>0<ins>4</ins><ins>Cn</ins>n<ins>c</ins><ins>eHp_WigHEcP</ins>-<ins>y</ins><ins>6wsc</ins>,463<ins>4</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92</td><td class="diffline">26 </td><td class="diffpresent">odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.<ins>1.</ins>dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5</td><td class="diffline">27 </td><td class="diffpresent">odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.<ins>1.</ins>dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/RECORD,,</td><td class="diffline">28 </td><td class="diffpresent">odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.<ins>1.</ins>dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

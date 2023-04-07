@@ -1,0 +1,639 @@
+# Comparing `tmp/twnet_parser-0.3.1.tar.gz` & `tmp/twnet_parser-0.3.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "twnet_parser-0.3.1.tar", last modified: Thu Apr  6 16:15:43 2023, max compression
++gzip compressed data, was "twnet_parser-0.3.2.tar", last modified: Fri Apr  7 07:28:21 2023, max compression
+```
+
+## Comparing `twnet_parser-0.3.1.tar` & `twnet_parser-0.3.2.tar`
+
+### file list
+
+```diff
+@@ -1,92 +1,111 @@
+-drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-06 16:15:43.458241 twnet_parser-0.3.1/
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1324 2023-03-16 13:24:33.000000 twnet_parser-0.3.1/LICENSE.txt
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     3673 2023-04-06 16:15:43.458241 twnet_parser-0.3.1/PKG-INFO
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     3121 2023-04-06 16:10:36.000000 twnet_parser-0.3.1/README.md
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      678 2023-04-06 16:15:39.000000 twnet_parser-0.3.1/pyproject.toml
+--rw-r--r--   0 chiller   (1000) chiller   (1000)       38 2023-04-06 16:15:43.458241 twnet_parser-0.3.1/setup.cfg
+-drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-06 16:15:43.448241 twnet_parser-0.3.1/twnet_parser/
+--rw-r--r--   0 chiller   (1000) chiller   (1000)        0 2023-03-25 12:29:07.000000 twnet_parser-0.3.1/twnet_parser/__init__.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      991 2023-03-25 14:50:23.000000 twnet_parser-0.3.1/twnet_parser/chunk_header.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      207 2023-04-06 15:01:21.000000 twnet_parser-0.3.1/twnet_parser/ctrl_message.py
+-drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-06 16:15:43.448241 twnet_parser-0.3.1/twnet_parser/external/
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     8373 2023-03-25 15:06:05.000000 twnet_parser-0.3.1/twnet_parser/external/huffman.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      629 2023-03-31 08:21:54.000000 twnet_parser-0.3.1/twnet_parser/message_parser.py
+-drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-06 16:15:43.448241 twnet_parser-0.3.1/twnet_parser/messages7/
+-drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-06 16:15:43.454908 twnet_parser-0.3.1/twnet_parser/messages7/game/
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1273 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/cl_call_vote.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      982 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/cl_command.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      854 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/cl_emoticon.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      577 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/cl_kill.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      592 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/cl_ready_change.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1131 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/cl_say.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1049 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/cl_set_spectator_mode.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      833 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/cl_set_team.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1335 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/cl_skin_change.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1770 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/cl_start_info.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      803 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/cl_vote.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1148 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/de_client_enter.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1143 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/de_client_leave.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      836 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_broadcast.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1305 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_chat.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      815 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_checkpoint.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1154 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_client_drop.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     2385 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_client_info.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1166 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_command_info.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      839 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_command_info_remove.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1011 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_emoticon.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      890 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_extra_projectile.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1528 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_game_info.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      584 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_game_msg.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1276 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_kill_msg.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      826 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_motd.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1491 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_race_finish.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      595 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_ready_to_enter.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1703 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_server_settings.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1492 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_skin_change.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1313 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_team.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     7501 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_tune_params.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      603 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_vote_clear_options.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      866 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_vote_option_add.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      606 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_vote_option_list_add.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      872 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_vote_option_remove.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1472 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_vote_set.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1207 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_vote_status.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      853 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/game/sv_weapon_pickup.py
+-drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-06 16:15:43.458241 twnet_parser-0.3.1/twnet_parser/messages7/system/
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      580 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/con_ready.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      582 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/enter_game.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1237 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/info.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1349 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/input.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1024 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/input_timing.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1656 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/map_change.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      763 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/map_data.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      829 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/maplist_entry_add.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      829 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/maplist_entry_rem.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      571 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/ping.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      582 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/ping_reply.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      834 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_auth.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      587 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_auth_off.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      585 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_auth_on.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      807 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_cmd.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1109 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_cmd_add.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      819 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_cmd_rem.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      814 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_line.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      573 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/ready.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      593 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/request_map_data.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      769 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/server_info.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1507 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/snap.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      970 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/snap_empty.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1231 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/messages7/system/snap_single.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     1784 2023-04-02 18:36:07.000000 twnet_parser-0.3.1/twnet_parser/msg7.py
+-drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-06 16:15:43.458241 twnet_parser-0.3.1/twnet_parser/msg_matcher/
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     7692 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/msg_matcher/game7.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     4599 2023-04-02 18:03:38.000000 twnet_parser-0.3.1/twnet_parser/msg_matcher/system7.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      275 2023-03-26 10:26:20.000000 twnet_parser-0.3.1/twnet_parser/net_message.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     3295 2023-03-26 09:17:35.000000 twnet_parser-0.3.1/twnet_parser/packer.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     6164 2023-04-06 15:00:48.000000 twnet_parser-0.3.1/twnet_parser/packet.py
+--rw-r--r--   0 chiller   (1000) chiller   (1000)      222 2023-03-25 13:17:57.000000 twnet_parser-0.3.1/twnet_parser/pretty_print.py
+-drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-06 16:15:43.448241 twnet_parser-0.3.1/twnet_parser.egg-info/
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     3673 2023-04-06 16:15:43.000000 twnet_parser-0.3.1/twnet_parser.egg-info/PKG-INFO
+--rw-r--r--   0 chiller   (1000) chiller   (1000)     3356 2023-04-06 16:15:43.000000 twnet_parser-0.3.1/twnet_parser.egg-info/SOURCES.txt
+--rw-r--r--   0 chiller   (1000) chiller   (1000)        1 2023-04-06 16:15:43.000000 twnet_parser-0.3.1/twnet_parser.egg-info/dependency_links.txt
+--rw-r--r--   0 chiller   (1000) chiller   (1000)       13 2023-04-06 16:15:43.000000 twnet_parser-0.3.1/twnet_parser.egg-info/top_level.txt
++drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-07 07:28:21.556803 twnet_parser-0.3.2/
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1324 2023-03-16 13:24:33.000000 twnet_parser-0.3.2/LICENSE.txt
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     3854 2023-04-07 07:28:21.556803 twnet_parser-0.3.2/PKG-INFO
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     3121 2023-04-06 16:55:09.000000 twnet_parser-0.3.2/README.md
++-rw-r--r--   0 chiller   (1000) chiller   (1000)       86 2023-04-07 07:26:05.000000 twnet_parser-0.3.2/pyproject.toml
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      801 2023-04-07 07:28:21.556803 twnet_parser-0.3.2/setup.cfg
++drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-07 07:28:21.543470 twnet_parser-0.3.2/tests/
++-rw-r--r--   0 chiller   (1000) chiller   (1000)        0 2023-03-16 11:52:21.000000 twnet_parser-0.3.2/tests/__init__.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      693 2023-04-02 18:23:19.000000 twnet_parser-0.3.2/tests/control_packets7_test.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     9627 2023-04-06 15:42:28.000000 twnet_parser-0.3.2/tests/ctrl_packets_test.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     3748 2023-03-19 15:03:24.000000 twnet_parser-0.3.2/tests/int_packer_test.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      289 2023-04-02 18:22:11.000000 twnet_parser-0.3.2/tests/invalid_packet_header7_test.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      716 2023-03-25 13:15:25.000000 twnet_parser-0.3.2/tests/packet_header6_test.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     2118 2023-04-02 18:06:01.000000 twnet_parser-0.3.2/tests/packet_header7_test.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      998 2023-04-02 18:06:01.000000 twnet_parser-0.3.2/tests/packet_invalid_test.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     9723 2023-04-02 08:23:56.000000 twnet_parser-0.3.2/tests/packet_with_chunks7_test.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     2942 2023-03-31 07:31:27.000000 twnet_parser-0.3.2/tests/repack_chunks7_test.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     2525 2023-03-26 09:59:51.000000 twnet_parser-0.3.2/tests/unpacker_state_test.py
++drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-07 07:28:21.546804 twnet_parser-0.3.2/twnet_parser/
++-rw-r--r--   0 chiller   (1000) chiller   (1000)        0 2023-03-25 12:29:07.000000 twnet_parser-0.3.2/twnet_parser/__init__.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      991 2023-03-25 14:50:23.000000 twnet_parser-0.3.2/twnet_parser/chunk_header.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      207 2023-04-06 15:01:21.000000 twnet_parser-0.3.2/twnet_parser/ctrl_message.py
++drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-07 07:28:21.546804 twnet_parser-0.3.2/twnet_parser/external/
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     8373 2023-03-25 15:06:05.000000 twnet_parser-0.3.2/twnet_parser/external/huffman.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      629 2023-03-31 08:21:54.000000 twnet_parser-0.3.2/twnet_parser/message_parser.py
++drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-07 07:28:21.540137 twnet_parser-0.3.2/twnet_parser/messages7/
++drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-07 07:28:21.546804 twnet_parser-0.3.2/twnet_parser/messages7/control/
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      317 2023-04-06 15:34:44.000000 twnet_parser-0.3.2/twnet_parser/messages7/control/accept.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      811 2023-04-06 15:01:54.000000 twnet_parser-0.3.2/twnet_parser/messages7/control/close.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      579 2023-04-06 15:02:02.000000 twnet_parser-0.3.2/twnet_parser/messages7/control/connect.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      303 2023-04-06 15:02:11.000000 twnet_parser-0.3.2/twnet_parser/messages7/control/keep_alive.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      716 2023-04-06 15:11:53.000000 twnet_parser-0.3.2/twnet_parser/messages7/control/token.py
++drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-07 07:28:21.553470 twnet_parser-0.3.2/twnet_parser/messages7/game/
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1273 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/cl_call_vote.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      982 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/cl_command.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      854 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/cl_emoticon.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      577 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/cl_kill.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      592 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/cl_ready_change.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1131 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/cl_say.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1049 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/cl_set_spectator_mode.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      833 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/cl_set_team.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1335 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/cl_skin_change.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1770 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/cl_start_info.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      803 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/cl_vote.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1148 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/de_client_enter.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1143 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/de_client_leave.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      836 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_broadcast.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1305 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_chat.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      815 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_checkpoint.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1154 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_client_drop.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     2385 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_client_info.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1166 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_command_info.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      839 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_command_info_remove.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1011 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_emoticon.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      890 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_extra_projectile.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1528 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_game_info.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      584 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_game_msg.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1276 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_kill_msg.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      826 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_motd.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1491 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_race_finish.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      595 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_ready_to_enter.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1703 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_server_settings.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1492 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_skin_change.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1313 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_team.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     7501 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_tune_params.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      603 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_vote_clear_options.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      866 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_vote_option_add.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      606 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_vote_option_list_add.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      872 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_vote_option_remove.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1472 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_vote_set.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1207 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_vote_status.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      853 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/game/sv_weapon_pickup.py
++drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-07 07:28:21.556803 twnet_parser-0.3.2/twnet_parser/messages7/system/
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      580 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/con_ready.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      582 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/enter_game.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1237 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/info.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1349 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/input.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1024 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/input_timing.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1656 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/map_change.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      763 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/map_data.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      829 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/maplist_entry_add.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      829 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/maplist_entry_rem.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      571 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/ping.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      582 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/ping_reply.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      834 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_auth.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      587 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_auth_off.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      585 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_auth_on.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      807 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_cmd.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1109 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_cmd_add.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      819 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_cmd_rem.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      814 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_line.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      573 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/ready.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      593 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/request_map_data.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      769 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/server_info.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1507 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/snap.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      970 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/snap_empty.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1231 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/messages7/system/snap_single.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1784 2023-04-02 18:36:07.000000 twnet_parser-0.3.2/twnet_parser/msg7.py
++drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-07 07:28:21.556803 twnet_parser-0.3.2/twnet_parser/msg_matcher/
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     1089 2023-04-06 14:44:00.000000 twnet_parser-0.3.2/twnet_parser/msg_matcher/control7.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     7692 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/msg_matcher/game7.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     4599 2023-04-02 18:03:38.000000 twnet_parser-0.3.2/twnet_parser/msg_matcher/system7.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      275 2023-03-26 10:26:20.000000 twnet_parser-0.3.2/twnet_parser/net_message.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     3295 2023-03-26 09:17:35.000000 twnet_parser-0.3.2/twnet_parser/packer.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     6164 2023-04-06 15:00:48.000000 twnet_parser-0.3.2/twnet_parser/packet.py
++-rw-r--r--   0 chiller   (1000) chiller   (1000)      222 2023-03-25 13:17:57.000000 twnet_parser-0.3.2/twnet_parser/pretty_print.py
++drwxr-xr-x   0 chiller   (1000) chiller   (1000)        0 2023-04-07 07:28:21.546804 twnet_parser-0.3.2/twnet_parser.egg-info/
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     3854 2023-04-07 07:28:21.000000 twnet_parser-0.3.2/twnet_parser.egg-info/PKG-INFO
++-rw-r--r--   0 chiller   (1000) chiller   (1000)     3928 2023-04-07 07:28:21.000000 twnet_parser-0.3.2/twnet_parser.egg-info/SOURCES.txt
++-rw-r--r--   0 chiller   (1000) chiller   (1000)        1 2023-04-07 07:28:21.000000 twnet_parser-0.3.2/twnet_parser.egg-info/dependency_links.txt
++-rw-r--r--   0 chiller   (1000) chiller   (1000)       19 2023-04-07 07:28:21.000000 twnet_parser-0.3.2/twnet_parser.egg-info/top_level.txt
+```
+
+### Comparing `twnet_parser-0.3.1/LICENSE.txt` & `twnet_parser-0.3.2/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/PKG-INFO` & `twnet_parser-0.3.2/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,18 +1,21 @@
+ Metadata-Version: 2.1
+ Name: twnet_parser
+-Version: 0.3.1
++Version: 0.3.2
+ Summary: A teeworlds network protocol library, designed according to sans I/O (http://sans-io.readthedocs.io/) principles
+-Author-email: ChillerDragon <chillerdragon@gmail.com>
++Home-page: https://gitlab.com/teeworlds-network/twnet_parser
++Author: ChillerDragon
++Author-email: chillerdragon@gmail.com
++License: BSD-2.0
++Project-URL: Bug Tracker, https://gitlab.com/teeworlds-network/twnet_parser/-/issues
++Project-URL: repository, https://gitlab.com/teeworlds-network/twnet_parser
+ Classifier: Development Status :: 3 - Alpha
++Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: BSD License
+-Classifier: Natural Language :: English
+ Classifier: Operating System :: OS Independent
+-Classifier: Programming Language :: Python :: 3
+-Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+ License-File: LICENSE.txt
+ 
+ A teeworlds network protocol library, designed according to sans I/O (http://sans-io.readthedocs.io/) principles
+ 
+ # THIS LIBRARY IS IN EARLY DEVELOPMENT
+```
+
+### Comparing `twnet_parser-0.3.1/README.md` & `twnet_parser-0.3.2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/chunk_header.py` & `twnet_parser-0.3.2/twnet_parser/chunk_header.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/external/huffman.py` & `twnet_parser-0.3.2/twnet_parser/external/huffman.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/message_parser.py` & `twnet_parser-0.3.2/twnet_parser/message_parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/cl_call_vote.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/cl_call_vote.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/cl_command.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/cl_command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/cl_emoticon.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/cl_emoticon.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/cl_kill.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/cl_kill.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/cl_ready_change.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/cl_ready_change.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/cl_say.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/cl_say.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/cl_set_spectator_mode.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/cl_set_spectator_mode.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/cl_set_team.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/cl_set_team.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/cl_skin_change.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/cl_skin_change.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/cl_start_info.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/cl_start_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/cl_vote.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/cl_vote.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/de_client_enter.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/de_client_enter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/de_client_leave.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/de_client_leave.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_broadcast.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_broadcast.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_chat.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_chat.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_checkpoint.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_checkpoint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_client_drop.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_client_drop.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_client_info.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_client_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_command_info.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_command_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_command_info_remove.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_command_info_remove.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_emoticon.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_emoticon.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_extra_projectile.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_extra_projectile.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_game_info.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_game_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_game_msg.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_game_msg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_kill_msg.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_kill_msg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_motd.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_motd.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_race_finish.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_race_finish.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_ready_to_enter.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_ready_to_enter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_server_settings.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_server_settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_skin_change.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_skin_change.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_team.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_team.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_tune_params.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_tune_params.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_vote_clear_options.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_vote_clear_options.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_vote_option_add.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_vote_option_add.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_vote_option_list_add.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_vote_option_list_add.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_vote_option_remove.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_vote_option_remove.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_vote_set.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_vote_set.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_vote_status.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_vote_status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/game/sv_weapon_pickup.py` & `twnet_parser-0.3.2/twnet_parser/messages7/game/sv_weapon_pickup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/con_ready.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/con_ready.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/enter_game.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/enter_game.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/info.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/input.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/input.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/input_timing.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/input_timing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/map_change.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/map_change.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/map_data.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/map_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/maplist_entry_add.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/maplist_entry_add.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/maplist_entry_rem.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/maplist_entry_rem.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/ping.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/ping.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/ping_reply.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/ping_reply.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_auth.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_auth.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_auth_off.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_auth_off.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_auth_on.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_auth_on.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_cmd.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_cmd.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_cmd_add.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_cmd_add.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_cmd_rem.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_cmd_rem.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/rcon_line.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/rcon_line.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/ready.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/ready.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/request_map_data.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/request_map_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/server_info.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/server_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/snap.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/snap.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/snap_empty.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/snap_empty.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/messages7/system/snap_single.py` & `twnet_parser-0.3.2/twnet_parser/messages7/system/snap_single.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/msg7.py` & `twnet_parser-0.3.2/twnet_parser/msg7.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/msg_matcher/game7.py` & `twnet_parser-0.3.2/twnet_parser/msg_matcher/game7.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/msg_matcher/system7.py` & `twnet_parser-0.3.2/twnet_parser/msg_matcher/system7.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/packer.py` & `twnet_parser-0.3.2/twnet_parser/packer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser/packet.py` & `twnet_parser-0.3.2/twnet_parser/packet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `twnet_parser-0.3.1/twnet_parser.egg-info/PKG-INFO` & `twnet_parser-0.3.2/twnet_parser.egg-info/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,18 +1,21 @@
+ Metadata-Version: 2.1
+ Name: twnet-parser
+-Version: 0.3.1
++Version: 0.3.2
+ Summary: A teeworlds network protocol library, designed according to sans I/O (http://sans-io.readthedocs.io/) principles
+-Author-email: ChillerDragon <chillerdragon@gmail.com>
++Home-page: https://gitlab.com/teeworlds-network/twnet_parser
++Author: ChillerDragon
++Author-email: chillerdragon@gmail.com
++License: BSD-2.0
++Project-URL: Bug Tracker, https://gitlab.com/teeworlds-network/twnet_parser/-/issues
++Project-URL: repository, https://gitlab.com/teeworlds-network/twnet_parser
+ Classifier: Development Status :: 3 - Alpha
++Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: BSD License
+-Classifier: Natural Language :: English
+ Classifier: Operating System :: OS Independent
+-Classifier: Programming Language :: Python :: 3
+-Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+ License-File: LICENSE.txt
+ 
+ A teeworlds network protocol library, designed according to sans I/O (http://sans-io.readthedocs.io/) principles
+ 
+ # THIS LIBRARY IS IN EARLY DEVELOPMENT
+```
+
+### Comparing `twnet_parser-0.3.1/twnet_parser.egg-info/SOURCES.txt` & `twnet_parser-0.3.2/twnet_parser.egg-info/SOURCES.txt`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,24 +1,41 @@
+ LICENSE.txt
+ README.md
+ pyproject.toml
++setup.cfg
++tests/__init__.py
++tests/control_packets7_test.py
++tests/ctrl_packets_test.py
++tests/int_packer_test.py
++tests/invalid_packet_header7_test.py
++tests/packet_header6_test.py
++tests/packet_header7_test.py
++tests/packet_invalid_test.py
++tests/packet_with_chunks7_test.py
++tests/repack_chunks7_test.py
++tests/unpacker_state_test.py
+ twnet_parser/__init__.py
+ twnet_parser/chunk_header.py
+ twnet_parser/ctrl_message.py
+ twnet_parser/message_parser.py
+ twnet_parser/msg7.py
+ twnet_parser/net_message.py
+ twnet_parser/packer.py
+ twnet_parser/packet.py
+ twnet_parser/pretty_print.py
+ twnet_parser.egg-info/PKG-INFO
+ twnet_parser.egg-info/SOURCES.txt
+ twnet_parser.egg-info/dependency_links.txt
+ twnet_parser.egg-info/top_level.txt
+ twnet_parser/external/huffman.py
++twnet_parser/messages7/control/accept.py
++twnet_parser/messages7/control/close.py
++twnet_parser/messages7/control/connect.py
++twnet_parser/messages7/control/keep_alive.py
++twnet_parser/messages7/control/token.py
+ twnet_parser/messages7/game/cl_call_vote.py
+ twnet_parser/messages7/game/cl_command.py
+ twnet_parser/messages7/game/cl_emoticon.py
+ twnet_parser/messages7/game/cl_kill.py
+ twnet_parser/messages7/game/cl_ready_change.py
+ twnet_parser/messages7/game/cl_say.py
+ twnet_parser/messages7/game/cl_set_spectator_mode.py
+@@ -74,9 +91,10 @@
+ twnet_parser/messages7/system/rcon_line.py
+ twnet_parser/messages7/system/ready.py
+ twnet_parser/messages7/system/request_map_data.py
+ twnet_parser/messages7/system/server_info.py
+ twnet_parser/messages7/system/snap.py
+ twnet_parser/messages7/system/snap_empty.py
+ twnet_parser/messages7/system/snap_single.py
++twnet_parser/msg_matcher/control7.py
+ twnet_parser/msg_matcher/game7.py
+ twnet_parser/msg_matcher/system7.py
+```
+

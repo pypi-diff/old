@@ -1,0 +1,1170 @@
+--- tmp/unigbsa-0.1.2.tar.gz
++++ tmp/unigbsa-0.1.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "unigbsa-0.1.2.tar", last modified: Fri Jan  6 03:59:34 2023, max compression
+│ +gzip compressed data, was "unigbsa-0.1.3.tar", last modified: Fri Apr  7 07:27:48 2023, max compression
+│   --- unigbsa-0.1.2.tar
+├── +++ unigbsa-0.1.3.tar
+│ ├── file list
+│ │ @@ -1,62 +1,68 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:34.424042 unigbsa-0.1.2/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11358 2023-01-06 03:59:24.000000 unigbsa-0.1.2/LICENCE.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       49 2023-01-06 03:59:24.000000 unigbsa-0.1.2/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12124 2023-01-06 03:59:34.420041 unigbsa-0.1.2/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12143 2023-01-06 03:59:24.000000 unigbsa-0.1.2/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-01-06 03:59:34.424042 unigbsa-0.1.2/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1750 2023-01-06 03:59:25.000000 unigbsa-0.1.2/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:34.416041 unigbsa-0.1.2/unigbsa/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    15685 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/CLI.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       33 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:34.416041 unigbsa-0.1.2/unigbsa/data/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:34.420041 unigbsa-0.1.2/unigbsa/data/Calibri/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   327124 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/data/Calibri/Calibri.ttf
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   327124 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/data/Calibri/calibribold.ttf
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2518 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/data/default.ini
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      534 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/data/default.json
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17448 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/data/mmpbsa.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      558 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/data/scan.json
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1699 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/data/template.json
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:34.420041 unigbsa-0.1.2/unigbsa/gbsa/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/gbsa/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6927 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/gbsa/gbsarun.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7226 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/gbsa/io.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5016 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/gbsa/parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7165 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/gbsa/plots.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1030 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/gbsa/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13702 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/pipeline.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:34.420041 unigbsa-0.1.2/unigbsa/scanparas/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/scanparas/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17264 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/scanparas/scan.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2677 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/settings.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:34.420041 unigbsa-0.1.2/unigbsa/simulation/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:34.420041 unigbsa-0.1.2/unigbsa/simulation/mdp/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1006 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/ions.mdp
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2471 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/md.mdp
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10952 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/mdout.mdp
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1049 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/minim.mdp
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:34.420041 unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1094 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/s1-cg.mdp
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1099 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/s1-steep.mdp
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1081 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/s2-cg.mdp
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1086 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/s2-steep.mdp
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1081 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/s3-steep.mdp
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1078 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/s4-cg.mdp
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2298 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/npt.mdp
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2064 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/nvt.mdp
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2437 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdp/vaccum.mdp
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20758 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/mdrun.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9790 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/openmm-em.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10622 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/topology.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11779 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/simulation/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6962 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       21 2023-01-06 03:59:25.000000 unigbsa-0.1.2/unigbsa/version.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-06 03:59:34.416041 unigbsa-0.1.2/unigbsa.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12124 2023-01-06 03:59:34.000000 unigbsa-0.1.2/unigbsa.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1419 2023-01-06 03:59:34.000000 unigbsa-0.1.2/unigbsa.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-06 03:59:34.000000 unigbsa-0.1.2/unigbsa.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      353 2023-01-06 03:59:34.000000 unigbsa-0.1.2/unigbsa.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-06 03:59:34.000000 unigbsa-0.1.2/unigbsa.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       32 2023-01-06 03:59:34.000000 unigbsa-0.1.2/unigbsa.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        8 2023-01-06 03:59:34.000000 unigbsa-0.1.2/unigbsa.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:48.647512 unigbsa-0.1.3/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11358 2023-04-07 07:27:39.000000 unigbsa-0.1.3/LICENCE.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       65 2023-04-07 07:27:39.000000 unigbsa-0.1.3/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12899 2023-04-07 07:27:48.647512 unigbsa-0.1.3/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12919 2023-04-07 07:27:39.000000 unigbsa-0.1.3/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:48.643512 unigbsa-0.1.3/launching/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10937 2023-04-07 07:27:39.000000 unigbsa-0.1.3/launching/app.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3928 2023-04-07 07:27:39.000000 unigbsa-0.1.3/launching/pipeline.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4231 2023-04-07 07:27:39.000000 unigbsa-0.1.3/launching/scan.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 07:27:48.647512 unigbsa-0.1.3/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1766 2023-04-07 07:27:39.000000 unigbsa-0.1.3/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:48.643512 unigbsa-0.1.3/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2784 2023-04-07 07:27:39.000000 unigbsa-0.1.3/tests/test_pipline.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:48.643512 unigbsa-0.1.3/unigbsa/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15685 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/CLI.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       33 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:48.643512 unigbsa-0.1.3/unigbsa/data/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:48.643512 unigbsa-0.1.3/unigbsa/data/Calibri/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   327124 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/data/Calibri/Calibri.ttf
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   327124 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/data/Calibri/calibribold.ttf
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2518 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/data/default.ini
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      534 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/data/default.json
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17448 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/data/mmpbsa.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      558 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/data/scan.json
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1699 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/data/template.json
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:48.647512 unigbsa-0.1.3/unigbsa/gbsa/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/gbsa/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6927 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/gbsa/gbsarun.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7226 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/gbsa/io.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5016 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/gbsa/parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7165 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/gbsa/plots.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1030 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/gbsa/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14569 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/pipeline.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:48.647512 unigbsa-0.1.3/unigbsa/scanparas/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/scanparas/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18546 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/scanparas/scan.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2677 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/settings.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:48.647512 unigbsa-0.1.3/unigbsa/simulation/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:48.647512 unigbsa-0.1.3/unigbsa/simulation/mdp/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1006 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/ions.mdp
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2471 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/md.mdp
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10952 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/mdout.mdp
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1049 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/minim.mdp
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:48.647512 unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1094 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/s1-cg.mdp
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1099 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/s1-steep.mdp
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1081 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/s2-cg.mdp
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1086 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/s2-steep.mdp
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1081 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/s3-steep.mdp
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1078 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/s4-cg.mdp
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2298 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/npt.mdp
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2064 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/nvt.mdp
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2437 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdp/vaccum.mdp
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20758 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/mdrun.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9790 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/openmm-em.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10650 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/topology.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11753 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/simulation/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6962 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       21 2023-04-07 07:27:39.000000 unigbsa-0.1.3/unigbsa/version.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:27:48.643512 unigbsa-0.1.3/unigbsa.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12899 2023-04-07 07:27:48.000000 unigbsa-0.1.3/unigbsa.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1498 2023-04-07 07:27:48.000000 unigbsa-0.1.3/unigbsa.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 07:27:48.000000 unigbsa-0.1.3/unigbsa.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      353 2023-04-07 07:27:48.000000 unigbsa-0.1.3/unigbsa.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 07:27:48.000000 unigbsa-0.1.3/unigbsa.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       37 2023-04-07 07:27:48.000000 unigbsa-0.1.3/unigbsa.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-07 07:27:48.000000 unigbsa-0.1.3/unigbsa.egg-info/top_level.txt
+│ │   --- unigbsa-0.1.2/LICENCE.txt
+│ ├── +++ unigbsa-0.1.3/LICENCE.txt
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/PKG-INFO
+│ ├── +++ unigbsa-0.1.3/PKG-INFO
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: unigbsa
+│ │ -Version: 0.1.2
+│ │ +Version: 0.1.3
+│ │  Summary: MMPB(GB)SA tools for calculate energy.
+│ │  Home-page: https://github.com/dptech-corp/Uni-GBSA
+│ │  Author: dptech.net
+│ │  Author-email: hermite@dptech.net
+│ │  Keywords: MMPBSA MMGBSA
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENCE.txt
+│ │  
+│ │ -Uni-GBSA: An Automatic Workflow to Perform MM/GB(PB)SA Calculations for Virtual Screening==============================================================================[[ChemRxiv](https://chemrxiv.org/engage/chemrxiv/article-details/63345399f764e656800664e7)]## BackgroudMolecular mechanics/Generalized-Born (Poisson–Boltzmann) surface area (MM/GB(PB)SA), which balance accuracy and efficiency, is a good choice for evaluating binding free energy in virtual screening. Uni-GBSA, an automatic workflow to perform MM/GB(PB)SA calculations from force field building, structure optimization to free energy calculation. ## Install### Install by condaTo run uni-GBSA, you need install some third-party software( acpype, gmx_MMPBSA, lickit, etc.).```Bashconda create -n gbsa -c conda-forge acpype openmpi mpi4py gromacsconda activate gbsapip install unigbsa gmx_MMPBSA>=1.5.6 lickit```### Install by dokcer imagesYou can build a dokcer image by this file or just pull from the docker hub `docker pull dockerymh/unigbsa````PlaintextFROM continuumio/miniconda3# 1. create a enveriomentSHELL ["/bin/bash", "-c"]RUN conda create -n gbsa -c conda-forge acpype openmpi mpi4py gromacs \&&  echo 'conda activate gbsa' >> ~/.bashrc \&&  rm -rf /opt/conda/pkgs/* # 2. install unigbsaRUN source ~/.bashrc \ &&  pip install unigbsa gmx_MMPBSA>=1.5.6 lickit \&&  rm -rf ~/.cache/*```## Usage & Examples### Usage```bash$ unigbsa-pipeline -husage: unigbsa-pipeline [-h] -i RECEPTOR [-l LIGAND [LIGAND ...]] [-c CONFIG] [-d LIGDIR] [-f PBSAFILE] [-o OUTFILE] [-nt THREAD]                        [--decomp] [--verbose] [-v]GBSA Calculation. Version: 0.0.9_devoptions:  -h, --help            show this help message and exit  -i RECEPTOR           Input protein file with pdb format.  -l LIGAND [LIGAND ...]                        Ligand files to calculate binding energy.  -c CONFIG             Configue file, default: /opt/miniconda3/envs/test/lib/python3.10/site-packages/unigbsa-0.0.9.dev0-py3.10.egg/unigbsa/data/default.ini  -d LIGDIR             Floder contains many ligand files. file format: .mol or .sdf  -f PBSAFILE           gmx_MMPBSA input file. default=None  -o OUTFILE            Output file.  -nt THREAD            Set number of thread to run this program.  --decomp              Decompose the free energy. default:False  --verbose             Keep all the files.  -v, --version         show program's version number and exit```### Example```bash$ unigbsa-pipeline -i example/1ceb/1ceb_protein.pdb -l example/1ceb/1ceb_ligand.sdf -o BindingEnergy.csv10/08/2022 13:46:09 PM - INFO - Build protein topology.10/08/2022 13:46:10 PM - INFO - Build ligand topology: 1ceb_ligand1 molecule converted10/08/2022 13:46:13 PM - INFO - Running energy minimization: 1ceb_ligand10/08/2022 13:46:14 PM - INFO - Run the MMPB(GB)SA.10/08/2022 13:46:18 PM - INFO - Clean the results.================================================================================Results: Energy.csv Dec.csvFrames    mode    detal_G(kcal/mole)     1      gb              -20.4421```## Other ToolsThis packge contains many command lines: `unigbsa-scan`, `unigbsa-pipeline`, `unigbsa-traj`, `unigbsa-pbc`, `unigbsa-buildtop`, `unigbsa-buildsys`, `unigbsa-md`.### unigbsa-scan>Scan best GB/PBSA parameters with experient data.```Bashusage: unigbsa-scan [-h] [-i RECEPTOR] [-pd PROTDIR] [-l LIGAND [LIGAND ...]] [-ld LIGDIR] -e E -c PARASFILE [-o OUTDIR]                    [-nt THREAD] [--verbose]GBSA Calculation.optional arguments:  -h, --help            show this help message and exit  -i RECEPTOR           Input protein file with pdb format.  -pd PROTDIR           Floder contains many protein files. file format: .pdb  -l LIGAND [LIGAND ...]                        Ligand files to calculate binding energy.  -ld LIGDIR            Floder contains many ligand files. file format: .mol or .sdf  -e E                  Experiment data file.  -c PARASFILE          Parameters to scan  -o OUTDIR             Output directory.  -nt THREAD            Set number of thread to run this program.  --verbose             Keep all the files.```>Example```Bashunigbsa-scan -i example/scan/protein.pdb -ld example/scan/ -e example/scan/ligands.csv -c example/scan/scan.json -o scan-demo -nt 4```### unigbsa-pipeline>A very simple pipeline to calculate the PBSA/GBSA value. You just need input a protein file and some ligands files. It will obtain the PBSA/GBSA value for this ligands.* If you want do minimization or MD simulation for the complex. Just use the ``unigbsa-pipeline`````Bashusage: unigbsa-pipeline [-h] -i RECEPTOR [-l LIGAND [LIGAND ...]] [-c CONFIG] [-d LIGDIR] [-f PBSAFILE] [-o OUTFILE] [-nt THREAD] [--decomp] [--verbose]GBSA Calculation.optional arguments:  -h, --help            show this help message and exit  -i RECEPTOR           Input protein file with pdb format.  -l LIGAND [LIGAND ...]                        Ligand files to calculate binding energy.  -c CONFIG             Configue file, default: default.ini  -d LIGDIR             Floder contains many ligand files. file format: .mol or .sdf  -f PBSAFILE           gmx_MMPBSA input file. default=None  -o OUTFILE            Output file.  -nt THREAD            Set number of thread to run this program.  --decomp              Decompose the free energy. default:False  --verbose             Keep all the files.```You can change the parameters for calculations by settig a configue file(`default.ini`). ```; parameters for simulation[simulation]; input pose process method: ;   input   -   just use input pose to calculation;   em      -   run a simple energy minimizaion for the input poses;   md      -   run a md simulation for the input posesmode = em; simulation box type: triclinic, cubic, dodecahedron, octahedronboxtype = triclinic; Distance between the solute and the simulation boxboxsize = 0.9; Specify salt concentration (mol/liter). This will add sufficient ions to reach up to the specified concentrationconc = 0.15; number of md simulation stepsnsteps = 500000; number of equilibrium simulation(nvt, npt) stepseqsteps = 50000; number of structure to save for the md simulationnframe = 100; protein forcefield (gromacs engine)proteinforcefield = amber03; ligand forcefield (acpype engine)ligandforcefield = gaff; ligand charge method: bcc, gasligandCharge = bcc; parameters for PBSA/GBSA calculation, support all the gmx_MMPBSA parameters[GBSA]; calculation namesys_name = GBSA; calculation mode, Separated by commas. gb,pb,decompositionmodes = gb; best parameters for PBSA/GBSA calculations obtained from Wang, Ercheng, et al. Chemical reviews 119.16 (2019): 9478-9508.igb = 2indi = 4.0exdi = 80.0```### unigbsa-traj>Calculate the PBSA/GBSA value for a md trajectory. Most important, you need to prepare a gromacs `index.ndx` file which contains two groups named `RECEPTOR` and `LIGAND`.````unigbsa-traj -husage: unigbsa-traj [-h] -i INP -p TOP -ndx NDX [-m {gb,pb,pb+gb,gb+pb}] [-t TRAJ] [-indi INDI] [-dec] [-D]Free energy calcaulated by PBSA method.optional arguments:  -h, --help            show this help message and exit  -i INP                A pdb file or a tpr file for the trajectory.  -p TOP                Gromacs topol file for the system.  -ndx NDX              Gromacs index file, must contain recepror and ligand group.  -m {gb,pb,pb+gb,gb+pb}                        Method to calculate: gb, pb, pb+gb. default:gb  -t TRAJ               A trajectory file contains many structure frames. File format: xtc, pdb, gro...  -indi INDI            External dielectric constant. detault: 1.0  -dec                  Decompose the energy. default:false  -D                    DEBUG model, keep all the files.````### unigbsa-buildtop>Build topology for protein or ligand by gromacs.```Bashunigbsa-buildtop -husage: unigbsa-buildtop [-h] [-p PROTEIN] [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-o OUTDIR] [-c] [-verbose]Build topology file for input file.optional arguments:  -h, --help        show this help message and exit  -p PROTEIN        Protein file or directory to build topology.  -l LIGAND         Ligand file or directory to build topology.  -pf PROTFORCE     Protein forcefield.  -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.  -o OUTDIR         A output directory.  -c                Combine the protein and ligand topology. Suppport for one protein and more ligands. default:True  -verbose          Keep the directory or not.```### unigbsa-buildsys>Build simulation system for protein or ligand.```bashunigbsa-buildsys -husage: unigbsa-buildsys [-h] -p PROTEIN [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-bt BOXTYPE] [-box BOX BOX BOX] [-d D] [-conc CONC] [-o OUTDIR]Build MD simulation for input file.optional arguments:  -h, --help        show this help message and exit  -p PROTEIN        Protein file for the simulation.  -l LIGAND         Ligand file or directory for the simulation.  -pf PROTFORCE     Protein forcefield.  -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.  -bt BOXTYPE       Simulation box type, default: triclinic  -box BOX BOX BOX  Simulation box size.  -d D              Distance between the solute and the box.  -conc CONC        Specify salt concentration (mol/liter). default=0.15  -o OUTDIR         A output directory.```### unigbsa-md>Run a MD simulation for input protein or ligand.```Bashunigbsa-md -husage: unigbsa-md [-h] -p PROTEIN [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-bt BOXTYPE] [-box BOX BOX BOX] [-d D] [-conc CONC] [-o OUTDIR] [-nstep NSTEP] [-nframe NFRAME] [-verbose]Run MD simulation for input file.optional arguments:  -h, --help        show this help message and exit  -p PROTEIN        Protein file for the simulation.  -l LIGAND         Ligand file or directory for the simulation.  -pf PROTFORCE     Protein forcefield.  -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.  -bt BOXTYPE       Simulation box type, default: triclinic  -box BOX BOX BOX  Simulation box size.  -d D              Distance between the solute and the box.  -conc CONC        Specify salt concentration (mol/liter). default=0.15  -o OUTDIR         A output directory.  -nstep NSTEP      Simulation steps. default:2500  -nframe NFRAME    Number of frame to save for the xtc file. default:100  -verbose          Keep all the files in the simulation.```### unigbsa-pbc>Process PBC condition for the gromacs trajectory.```Bashunigbsa-pbc -husage: unigbsa-pbc [-h] -s TPR -f XTC [-o OUT] [-n NDX]Auto process PBC for gromacs MD trajector.optional arguments:  -h, --help  show this help message and exit  -s TPR      TPR file generated from gromacs or coordinate file.  -f XTC      Trajector file to process PBC.  -o OUT      Result file after processed PBC.  -n NDX      Index file contains the center and output group.```### More Examples* Give a protein and some ligand files. Obtain the PBSA with ``unigbsa-pipeline``````Bashunigbsa-pipeline -i ./example/2fvy/protein.pdb -l ./example/2fvy/BGC.mol2````* Calculate PBSA value with ``unigbsa-traj`````Bashunigbsa-traj -i example/3f/complex.pdb -p example/3f/complex.top -ndx example/3f/index.ndx -m pb gb -t example/3f/complex.pdb```* Build topology for protein or ligand by gromacs. ``unigbsa-buildtop`````bashunigbsa-buildtop -p example/2fvy/protein.pdb -pf amber99sb -o topol  # build gromacs topology for a single proteinunigbsa-buildtop -p example/2fvy/protein.pdb -pf amber99sb -l example/2fvy/BGC.mol2 -lf gaff -o 2fvy_topol -c # build gromacs topology for protein and ligand complex```* Build simulation system with ``unigbsa-buildsys``* Run MD simulation with ``unigbsa-md``* Process PBC condition with ``unigbsa-pbc``## Citation```plaintextYang M, Wang D, Zheng H. Uni-GBSA: An Automatic Workflow to Perform MM/GB(PB)SA Calculations for Virtual Screening. ChemRxiv. Cambridge: Cambridge Open Engage; 2022; This content is a preprint and has not been peer-reviewed.```
+│ │ +Uni-GBSA: An Automatic Workflow to Perform MM/GB(PB)SA Calculations for Virtual Screening==============================================================================[[ChemRxiv](https://chemrxiv.org/engage/chemrxiv/article-details/63345399f764e656800664e7)]## BackgroudCalculating the binding free energy of a ligand to a protein receptor is a crucial goal in drug discovery. Molecular mechanics/Generalized-Born (Poisson–Boltzmann) surface area (MM/GB(PB)SA), which balances accuracy and efficiency, is one of the most widely used methods for evaluating ligand binding free energies in virtual screening. Uni-GBSA is an automatic workflow to perform MM/GB(PB)SA calculations. It includes several functions including but not limited to topology preparation, structure optimization, binding free energy calculation, and parameter scanning for MM/GB(PB)SA calculations. It also has a batch mode that allows the evaluation of thousands of molecules against one protein target simultaneously, enabling its application in virtual screening. ## Install### Install by condaTo run uni-GBSA, you need to install several third-party softwares including acpype, gmx_MMPBSA, lickit, etc.```Bashconda create -n gbsa -c conda-forge acpype openmpi mpi4py gromacsconda activate gbsapip install unigbsa gmx_MMPBSA>=1.5.6 lickit```### Install by dokcer imagesYou can also build a dokcer image using this file or pull from the docker hub `docker pull dockerymh/unigbsa````PlaintextFROM continuumio/miniconda3# 1. create a enveriomentSHELL ["/bin/bash", "-c"]RUN conda create -n gbsa -c conda-forge acpype openmpi mpi4py gromacs \&&  echo 'conda activate gbsa' >> ~/.bashrc \&&  rm -rf /opt/conda/pkgs/* # 2. install unigbsaRUN source ~/.bashrc \ &&  pip install unigbsa gmx_MMPBSA>=1.5.6 lickit \&&  rm -rf ~/.cache/*```## Usage & Example### Usage```bash$ unigbsa-pipeline -husage: unigbsa-pipeline [-h] -i RECEPTOR [-l LIGAND [LIGAND ...]] [-c CONFIG] [-d LIGDIR] [-f PBSAFILE] [-o OUTFILE] [-nt THREAD]                        [--decomp] [--verbose] [-v]GBSA Calculation. Version: 0.0.9_devoptions:  -h, --help            show this help message and exit  -i RECEPTOR           Input protein file with pdb format.  -l LIGAND [LIGAND ...]                        Ligand files to calculate binding energy.  -c CONFIG             Configue file, default: /opt/miniconda3/envs/test/lib/python3.10/site-packages/unigbsa-0.0.9.dev0-py3.10.egg/unigbsa/data/default.ini  -d LIGDIR             Floder contains many ligand files. file format: .mol or .sdf  -f PBSAFILE           gmx_MMPBSA input file. default=None  -o OUTFILE            Output file.  -nt THREAD            Set number of thread to run this program.  --decomp              Decompose the free energy. default:False  --verbose             Keep all the files.  -v, --version         show program's version number and exit```### Example```bash$ unigbsa-pipeline -i example/1ceb/1ceb_protein.pdb -l example/1ceb/1ceb_ligand.sdf -o BindingEnergy.csv10/08/2022 13:46:09 PM - INFO - Build protein topology.10/08/2022 13:46:10 PM - INFO - Build ligand topology: 1ceb_ligand1 molecule converted10/08/2022 13:46:13 PM - INFO - Running energy minimization: 1ceb_ligand10/08/2022 13:46:14 PM - INFO - Run the MMPB(GB)SA.10/08/2022 13:46:18 PM - INFO - Clean the results.================================================================================Results: Energy.csv Dec.csvFrames    mode    detal_G(kcal/mole)     1      gb              -20.4421```## Other ToolsThis packge contains many command lines: `unigbsa-scan`, `unigbsa-pipeline`, `unigbsa-traj`, `unigbsa-pbc`, `unigbsa-buildtop`, `unigbsa-buildsys`, `unigbsa-md`.### unigbsa-scan>An automatic parameter optimization prior to production MM/GB(PB)SA calculations.```Bashusage: unigbsa-scan [-h] [-i RECEPTOR] [-pd PROTDIR] [-l LIGAND [LIGAND ...]] [-ld LIGDIR] -e E -c PARASFILE [-o OUTDIR]                    [-nt THREAD] [--verbose]GBSA Calculation.optional arguments:  -h, --help            show this help message and exit  -i RECEPTOR           Input protein file with pdb format.  -pd PROTDIR           Floder contains many protein files. file format: .pdb  -l LIGAND [LIGAND ...]                        Ligand files to calculate binding energy.  -ld LIGDIR            Floder contains many ligand files. file format: .mol or .sdf  -e E                  Experiment data file.  -c PARASFILE          Parameters to scan  -o OUTDIR             Output directory.  -nt THREAD            Set number of thread to run this program.  --verbose             Keep all the files.```>Example```Bashunigbsa-scan -i example/scan/protein.pdb -ld example/scan/ -e example/scan/ligands.csv -c example/scan/scan.json -o scan-demo -nt 4```### unigbsa-pipeline>A simple, automatic pipeline to perform MM/GB(PB)SA calculations. You only need to provide a protein file (in the PDB format) and ligand files (in the MOL or SDF format). This function will perform an energy minimization then calculate the PBSA/GBSA values for the each input ligand.* If you want perform energy minimization or MD simulation for the complex automatically, use the ``unigbsa-pipeline`` function.```Bashusage: unigbsa-pipeline [-h] -i RECEPTOR [-l LIGAND [LIGAND ...]] [-c CONFIG] [-d LIGDIR] [-f PBSAFILE] [-o OUTFILE] [-nt THREAD] [--decomp] [--verbose]GBSA Calculation.optional arguments:  -h, --help            show this help message and exit  -i RECEPTOR           Input protein file with pdb format.  -l LIGAND [LIGAND ...]                        Ligand files to calculate binding energy.  -c CONFIG             Configue file, default: default.ini  -d LIGDIR             Floder contains many ligand files. file format: .mol or .sdf  -f PBSAFILE           gmx_MMPBSA input file. default=None  -o OUTFILE            Output file.  -nt THREAD            Set number of thread to run this program.  --decomp              Decompose the free energy. default:False  --verbose             Keep all the files.```You can change the parameters for the MM/GB(PB)SA calculations by providing a configue file(`default.ini`). ```; parameters for simulation[simulation]; input pose process method: ;   input   -   just use input pose to calculation;   em      -   run a simple energy minimizaion for the input poses;   md      -   run a md simulation for the input posesmode = em; simulation box type: triclinic, cubic, dodecahedron, octahedronboxtype = triclinic; Distance between the solute and the simulation boxboxsize = 0.9; Specify salt concentration (mol/liter). This will add sufficient ions to reach up to the specified concentrationconc = 0.15; number of md simulation stepsnsteps = 500000; number of equilibrium simulation(nvt, npt) stepseqsteps = 50000; number of structure to save for the md simulationnframe = 100; protein forcefield (gromacs engine)proteinforcefield = amber03; ligand forcefield (acpype engine)ligandforcefield = gaff; ligand charge method: bcc, gasligandCharge = bcc; parameters for PBSA/GBSA calculation, support all the gmx_MMPBSA parameters[GBSA]; calculation namesys_name = GBSA; calculation mode, Separated by commas. gb,pb,decompositionmodes = gb; best parameters for PBSA/GBSA calculations obtained from Wang, Ercheng, et al. Chemical reviews 119.16 (2019): 9478-9508.igb = 2indi = 4.0exdi = 80.0```### unigbsa-traj>Perform a PBSA/GBSA calculation of a complex from a MD trajectory. Note: you need to prepare a gromacs `index.ndx` file which contains two groups named `RECEPTOR` and `LIGAND`.````unigbsa-traj -husage: unigbsa-traj [-h] -i INP -p TOP -ndx NDX [-m {gb,pb,pb+gb,gb+pb}] [-t TRAJ] [-indi INDI] [-dec] [-D]Free energy calcaulated by PBSA method.optional arguments:  -h, --help            show this help message and exit  -i INP                A pdb file or a tpr file for the trajectory.  -p TOP                Gromacs topol file for the system.  -ndx NDX              Gromacs index file, must contain recepror and ligand group.  -m {gb,pb,pb+gb,gb+pb}                        Method to calculate: gb, pb, pb+gb. default:gb  -t TRAJ               A trajectory file contains many structure frames. File format: xtc, pdb, gro...  -indi INDI            External dielectric constant. detault: 1.0  -dec                  Decompose the energy. default:false  -D                    DEBUG model, keep all the files.````### unigbsa-buildtop>Topology preparation for a protein receptor and ligand(s) using gromacs.```Bashunigbsa-buildtop -husage: unigbsa-buildtop [-h] [-p PROTEIN] [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-o OUTDIR] [-c] [-verbose]Build topology file for input file.optional arguments:  -h, --help        show this help message and exit  -p PROTEIN        Protein file or directory to build topology.  -l LIGAND         Ligand file or directory to build topology.  -pf PROTFORCE     Protein forcefield.  -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.  -o OUTDIR         A output directory.  -c                Combine the protein and ligand topology. Suppport for one protein and more ligands. default:True  -verbose          Keep the directory or not.```### unigbsa-buildsys>Build a simulation box for a protein-ligand complex.```bashunigbsa-buildsys -husage: unigbsa-buildsys [-h] -p PROTEIN [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-bt BOXTYPE] [-box BOX BOX BOX] [-d D] [-conc CONC] [-o OUTDIR]Build MD simulation for input file.optional arguments:  -h, --help        show this help message and exit  -p PROTEIN        Protein file for the simulation.  -l LIGAND         Ligand file or directory for the simulation.  -pf PROTFORCE     Protein forcefield.  -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.  -bt BOXTYPE       Simulation box type, default: triclinic  -box BOX BOX BOX  Simulation box size.  -d D              Distance between the solute and the box.  -conc CONC        Specify salt concentration (mol/liter). default=0.15  -o OUTDIR         A output directory.```### unigbsa-md>Run a MD simulation of a protein-ligand complex.```Bashunigbsa-md -husage: unigbsa-md [-h] -p PROTEIN [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-bt BOXTYPE] [-box BOX BOX BOX] [-d D] [-conc CONC] [-o OUTDIR] [-nstep NSTEP] [-nframe NFRAME] [-verbose]Run MD simulation for input file.optional arguments:  -h, --help        show this help message and exit  -p PROTEIN        Protein file for the simulation.  -l LIGAND         Ligand file or directory for the simulation.  -pf PROTFORCE     Protein forcefield.  -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.  -bt BOXTYPE       Simulation box type, default: triclinic  -box BOX BOX BOX  Simulation box size.  -d D              Distance between the solute and the box.  -conc CONC        Specify salt concentration (mol/liter). default=0.15  -o OUTDIR         A output directory.  -nstep NSTEP      Simulation steps. default:2500  -nframe NFRAME    Number of frame to save for the xtc file. default:100  -verbose          Keep all the files in the simulation.```### unigbsa-pbc>Process PBC condition for a MD trajectory.```Bashunigbsa-pbc -husage: unigbsa-pbc [-h] -s TPR -f XTC [-o OUT] [-n NDX]Auto process PBC for gromacs MD trajector.optional arguments:  -h, --help  show this help message and exit  -s TPR      TPR file generated from gromacs or coordinate file.  -f XTC      Trajector file to process PBC.  -o OUT      Result file after processed PBC.  -n NDX      Index file contains the center and output group.```### More Examples* Perform a MM/GB(PB)SA calculation on a ligand file with a protein receptor with ``unigbsa-pipeline``````Bashunigbsa-pipeline -i ./example/2fvy/protein.pdb -l ./example/2fvy/BGC.mol2````* Perform a MM/GB(PB)SA calculation of a complex from a MD trajectory with ``unigbsa-traj`````Bashunigbsa-traj -i example/3f/complex.pdb -p example/3f/complex.top -ndx example/3f/index.ndx -m pb gb -t example/3f/complex.pdb```* Build topology for a protein receptor and a ligand using gromacs. ``unigbsa-buildtop`````bashunigbsa-buildtop -p example/2fvy/protein.pdb -pf amber99sb -o topol  # build gromacs topology for a single proteinunigbsa-buildtop -p example/2fvy/protein.pdb -pf amber99sb -l example/2fvy/BGC.mol2 -lf gaff -o 2fvy_topol -c # build gromacs topology for protein and ligand complex```* Build a simulation system with ``unigbsa-buildsys``* Run a MD simulation with ``unigbsa-md``* Process the PBC condition of a MD trjectorywith ``unigbsa-pbc``## Citation```plaintextYang M, Wang D, Zheng H. Uni-GBSA: An Automatic Workflow to Perform MM/GB(PB)SA Calculations for Virtual Screening. ChemRxiv. Cambridge: Cambridge Open Engage; 2022; This content is a preprint and has not been peer-reviewed.```
+│ │   --- unigbsa-0.1.2/README.md
+│ ├── +++ unigbsa-0.1.3/README.md
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,27 +1,27 @@
+│ │  Uni-GBSA: An Automatic Workflow to Perform MM/GB(PB)SA Calculations for Virtual Screening
+│ │  ==============================================================================
+│ │  
+│ │  [[ChemRxiv](https://chemrxiv.org/engage/chemrxiv/article-details/63345399f764e656800664e7)]
+│ │  
+│ │  ## Backgroud
+│ │  
+│ │ -Molecular mechanics/Generalized-Born (Poisson–Boltzmann) surface area (MM/GB(PB)SA), which balance accuracy and efficiency, is a good choice for evaluating binding free energy in virtual screening. Uni-GBSA, an automatic workflow to perform MM/GB(PB)SA calculations from force field building, structure optimization to free energy calculation. 
+│ │ +Calculating the binding free energy of a ligand to a protein receptor is a crucial goal in drug discovery. Molecular mechanics/Generalized-Born (Poisson–Boltzmann) surface area (MM/GB(PB)SA), which balances accuracy and efficiency, is one of the most widely used methods for evaluating ligand binding free energies in virtual screening. Uni-GBSA is an automatic workflow to perform MM/GB(PB)SA calculations. It includes several functions including but not limited to topology preparation, structure optimization, binding free energy calculation, and parameter scanning for MM/GB(PB)SA calculations. It also has a batch mode that allows the evaluation of thousands of molecules against one protein target simultaneously, enabling its application in virtual screening. 
+│ │  
+│ │  ## Install
+│ │  ### Install by conda
+│ │ -To run uni-GBSA, you need install some third-party software( acpype, gmx_MMPBSA, lickit, etc.).
+│ │ +To run uni-GBSA, you need to install several third-party softwares including acpype, gmx_MMPBSA, lickit, etc.
+│ │  ```Bash
+│ │  conda create -n gbsa -c conda-forge acpype openmpi mpi4py gromacs
+│ │  conda activate gbsa
+│ │  pip install unigbsa gmx_MMPBSA>=1.5.6 lickit
+│ │  ```
+│ │  
+│ │  ### Install by dokcer images
+│ │ -You can build a dokcer image by this file or just pull from the docker hub `docker pull dockerymh/unigbsa`
+│ │ +You can also build a dokcer image using this file or pull from the docker hub `docker pull dockerymh/unigbsa`
+│ │  ```Plaintext
+│ │  FROM continuumio/miniconda3
+│ │  
+│ │  # 1. create a enverioment
+│ │  SHELL ["/bin/bash", "-c"]
+│ │  RUN conda create -n gbsa -c conda-forge acpype openmpi mpi4py gromacs \
+│ │  &&  echo 'conda activate gbsa' >> ~/.bashrc \
+│ │ @@ -30,15 +30,15 @@
+│ │  # 2. install unigbsa
+│ │  RUN source ~/.bashrc \ 
+│ │  &&  pip install unigbsa gmx_MMPBSA>=1.5.6 lickit \
+│ │  &&  rm -rf ~/.cache/*
+│ │  
+│ │  ```
+│ │  
+│ │ -## Usage & Examples
+│ │ +## Usage & Example
+│ │  
+│ │  ### Usage
+│ │  ```bash
+│ │  $ unigbsa-pipeline -h
+│ │  usage: unigbsa-pipeline [-h] -i RECEPTOR [-l LIGAND [LIGAND ...]] [-c CONFIG] [-d LIGDIR] [-f PBSAFILE] [-o OUTFILE] [-nt THREAD]
+│ │                          [--decomp] [--verbose] [-v]
+│ │  
+│ │ @@ -76,15 +76,15 @@
+│ │  
+│ │  ```
+│ │  
+│ │  ## Other Tools
+│ │  This packge contains many command lines: `unigbsa-scan`, `unigbsa-pipeline`, `unigbsa-traj`, `unigbsa-pbc`, `unigbsa-buildtop`, `unigbsa-buildsys`, `unigbsa-md`.
+│ │  
+│ │  ### unigbsa-scan
+│ │ ->Scan best GB/PBSA parameters with experient data.
+│ │ +>An automatic parameter optimization prior to production MM/GB(PB)SA calculations.
+│ │  ```Bash
+│ │  usage: unigbsa-scan [-h] [-i RECEPTOR] [-pd PROTDIR] [-l LIGAND [LIGAND ...]] [-ld LIGDIR] -e E -c PARASFILE [-o OUTDIR]
+│ │                      [-nt THREAD] [--verbose]
+│ │  
+│ │  GBSA Calculation.
+│ │  
+│ │  optional arguments:
+│ │ @@ -103,18 +103,18 @@
+│ │  >Example
+│ │  ```Bash
+│ │  unigbsa-scan -i example/scan/protein.pdb -ld example/scan/ -e example/scan/ligands.csv -c example/scan/scan.json -o scan-demo -nt 4
+│ │  ```
+│ │  
+│ │  
+│ │  ### unigbsa-pipeline
+│ │ ->A very simple pipeline to calculate the PBSA/GBSA value. You just need input a protein file and some ligands files. It will obtain the PBSA/GBSA value for this ligands.
+│ │ +>A simple, automatic pipeline to perform MM/GB(PB)SA calculations. You only need to provide a protein file (in the PDB format) and ligand files (in the MOL or SDF format). This function will perform an energy minimization then calculate the PBSA/GBSA values for the each input ligand.
+│ │  
+│ │  
+│ │ -* If you want do minimization or MD simulation for the complex. Just use the ``unigbsa-pipeline``
+│ │ +* If you want perform energy minimization or MD simulation for the complex automatically, use the ``unigbsa-pipeline`` function.
+│ │  ```Bash
+│ │  usage: unigbsa-pipeline [-h] -i RECEPTOR [-l LIGAND [LIGAND ...]] [-c CONFIG] [-d LIGDIR] [-f PBSAFILE] [-o OUTFILE] [-nt THREAD] [--decomp] [--verbose]
+│ │  
+│ │  GBSA Calculation.
+│ │  
+│ │  optional arguments:
+│ │    -h, --help            show this help message and exit
+│ │ @@ -126,15 +126,15 @@
+│ │    -f PBSAFILE           gmx_MMPBSA input file. default=None
+│ │    -o OUTFILE            Output file.
+│ │    -nt THREAD            Set number of thread to run this program.
+│ │    --decomp              Decompose the free energy. default:False
+│ │    --verbose             Keep all the files.
+│ │  ```
+│ │  
+│ │ -You can change the parameters for calculations by settig a configue file(`default.ini`). 
+│ │ +You can change the parameters for the MM/GB(PB)SA calculations by providing a configue file(`default.ini`). 
+│ │  ```
+│ │  ; parameters for simulation
+│ │  [simulation]
+│ │  ; input pose process method: 
+│ │  ;   input   -   just use input pose to calculation
+│ │  ;   em      -   run a simple energy minimizaion for the input poses
+│ │  ;   md      -   run a md simulation for the input poses
+│ │ @@ -178,15 +178,15 @@
+│ │  ; best parameters for PBSA/GBSA calculations obtained from Wang, Ercheng, et al. Chemical reviews 119.16 (2019): 9478-9508.
+│ │  igb = 2
+│ │  indi = 4.0
+│ │  exdi = 80.0
+│ │  ```
+│ │  
+│ │  ### unigbsa-traj
+│ │ ->Calculate the PBSA/GBSA value for a md trajectory. Most important, you need to prepare a gromacs `index.ndx` file which contains two groups named `RECEPTOR` and `LIGAND`.
+│ │ +>Perform a PBSA/GBSA calculation of a complex from a MD trajectory. Note: you need to prepare a gromacs `index.ndx` file which contains two groups named `RECEPTOR` and `LIGAND`.
+│ │  
+│ │  ````
+│ │  unigbsa-traj -h
+│ │  usage: unigbsa-traj [-h] -i INP -p TOP -ndx NDX [-m {gb,pb,pb+gb,gb+pb}] [-t TRAJ] [-indi INDI] [-dec] [-D]
+│ │  
+│ │  Free energy calcaulated by PBSA method.
+│ │  
+│ │ @@ -200,15 +200,15 @@
+│ │    -t TRAJ               A trajectory file contains many structure frames. File format: xtc, pdb, gro...
+│ │    -indi INDI            External dielectric constant. detault: 1.0
+│ │    -dec                  Decompose the energy. default:false
+│ │    -D                    DEBUG model, keep all the files.
+│ │  ````
+│ │  
+│ │  ### unigbsa-buildtop
+│ │ ->Build topology for protein or ligand by gromacs.
+│ │ +>Topology preparation for a protein receptor and ligand(s) using gromacs.
+│ │  ```Bash
+│ │  unigbsa-buildtop -h
+│ │  usage: unigbsa-buildtop [-h] [-p PROTEIN] [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-o OUTDIR] [-c] [-verbose]
+│ │  
+│ │  Build topology file for input file.
+│ │  
+│ │  optional arguments:
+│ │ @@ -218,15 +218,15 @@
+│ │    -pf PROTFORCE     Protein forcefield.
+│ │    -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.
+│ │    -o OUTDIR         A output directory.
+│ │    -c                Combine the protein and ligand topology. Suppport for one protein and more ligands. default:True
+│ │    -verbose          Keep the directory or not.
+│ │  ```
+│ │  ### unigbsa-buildsys
+│ │ ->Build simulation system for protein or ligand.
+│ │ +>Build a simulation box for a protein-ligand complex.
+│ │  ```bash
+│ │  unigbsa-buildsys -h
+│ │  usage: unigbsa-buildsys [-h] -p PROTEIN [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-bt BOXTYPE] [-box BOX BOX BOX] [-d D] [-conc CONC] [-o OUTDIR]
+│ │  
+│ │  Build MD simulation for input file.
+│ │  
+│ │  optional arguments:
+│ │ @@ -239,15 +239,15 @@
+│ │    -box BOX BOX BOX  Simulation box size.
+│ │    -d D              Distance between the solute and the box.
+│ │    -conc CONC        Specify salt concentration (mol/liter). default=0.15
+│ │    -o OUTDIR         A output directory.
+│ │  ```
+│ │  
+│ │  ### unigbsa-md
+│ │ ->Run a MD simulation for input protein or ligand.
+│ │ +>Run a MD simulation of a protein-ligand complex.
+│ │  ```Bash
+│ │  unigbsa-md -h
+│ │  usage: unigbsa-md [-h] -p PROTEIN [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-bt BOXTYPE] [-box BOX BOX BOX] [-d D] [-conc CONC] [-o OUTDIR] [-nstep NSTEP] [-nframe NFRAME] [-verbose]
+│ │  
+│ │  Run MD simulation for input file.
+│ │  
+│ │  optional arguments:
+│ │ @@ -263,15 +263,15 @@
+│ │    -o OUTDIR         A output directory.
+│ │    -nstep NSTEP      Simulation steps. default:2500
+│ │    -nframe NFRAME    Number of frame to save for the xtc file. default:100
+│ │    -verbose          Keep all the files in the simulation.
+│ │  ```
+│ │  
+│ │  ### unigbsa-pbc
+│ │ ->Process PBC condition for the gromacs trajectory.
+│ │ +>Process PBC condition for a MD trajectory.
+│ │  ```Bash
+│ │  unigbsa-pbc -h
+│ │  usage: unigbsa-pbc [-h] -s TPR -f XTC [-o OUT] [-n NDX]
+│ │  
+│ │  Auto process PBC for gromacs MD trajector.
+│ │  
+│ │  optional arguments:
+│ │ @@ -281,34 +281,34 @@
+│ │    -o OUT      Result file after processed PBC.
+│ │    -n NDX      Index file contains the center and output group.
+│ │  ```
+│ │  
+│ │  
+│ │  ### More Examples
+│ │  
+│ │ -* Give a protein and some ligand files. Obtain the PBSA with ``unigbsa-pipeline``
+│ │ +* Perform a MM/GB(PB)SA calculation on a ligand file with a protein receptor with ``unigbsa-pipeline``
+│ │  ````Bash
+│ │  unigbsa-pipeline -i ./example/2fvy/protein.pdb -l ./example/2fvy/BGC.mol2
+│ │  ````
+│ │  
+│ │ -* Calculate PBSA value with ``unigbsa-traj``
+│ │ +* Perform a MM/GB(PB)SA calculation of a complex from a MD trajectory with ``unigbsa-traj``
+│ │  ```Bash
+│ │  unigbsa-traj -i example/3f/complex.pdb -p example/3f/complex.top -ndx example/3f/index.ndx -m pb gb -t example/3f/complex.pdb
+│ │  ```
+│ │  
+│ │ -* Build topology for protein or ligand by gromacs. ``unigbsa-buildtop``
+│ │ +* Build topology for a protein receptor and a ligand using gromacs. ``unigbsa-buildtop``
+│ │  ```bash
+│ │  unigbsa-buildtop -p example/2fvy/protein.pdb -pf amber99sb -o topol  # build gromacs topology for a single protein
+│ │  unigbsa-buildtop -p example/2fvy/protein.pdb -pf amber99sb -l example/2fvy/BGC.mol2 -lf gaff -o 2fvy_topol -c # build gromacs topology for protein and ligand complex
+│ │  ```
+│ │  
+│ │ -* Build simulation system with ``unigbsa-buildsys``
+│ │ +* Build a simulation system with ``unigbsa-buildsys``
+│ │  
+│ │ -* Run MD simulation with ``unigbsa-md``
+│ │ +* Run a MD simulation with ``unigbsa-md``
+│ │  
+│ │ -* Process PBC condition with ``unigbsa-pbc``
+│ │ +* Process the PBC condition of a MD trjectorywith ``unigbsa-pbc``
+│ │  
+│ │  
+│ │  ## Citation
+│ │  ```plaintext
+│ │  Yang M, Wang D, Zheng H. Uni-GBSA: An Automatic Workflow to Perform MM/GB(PB)SA Calculations for Virtual Screening. ChemRxiv. Cambridge: Cambridge Open Engage; 2022; This content is a preprint and has not been peer-reviewed.
+│ │ -```
+│ │ +```
+│ │   --- unigbsa-0.1.2/setup.py
+│ ├── +++ unigbsa-0.1.3/setup.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -21,15 +21,16 @@
+│ │      for line in read(rel_path).splitlines():
+│ │          readme += line
+│ │      return readme
+│ │  
+│ │  install_requires = [
+│ │          'acpype',
+│ │          'gmx_MMPBSA>=1.5.6',
+│ │ -        'lickit'
+│ │ +        'lickit',
+│ │ +        'tqdm'
+│ │  ]
+│ │  setup(
+│ │      name = 'unigbsa',
+│ │      version=get_version("unigbsa/version.py"),
+│ │      author='dptech.net',
+│ │      author_email='hermite@dptech.net',
+│ │      description=('MMPB(GB)SA tools for calculate energy.'),
+│ │   --- unigbsa-0.1.2/unigbsa/CLI.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/CLI.py
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/data/Calibri/Calibri.ttf
+│ ├── +++ unigbsa-0.1.3/unigbsa/data/Calibri/Calibri.ttf
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/data/Calibri/calibribold.ttf
+│ ├── +++ unigbsa-0.1.3/unigbsa/data/Calibri/calibribold.ttf
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/data/default.ini
+│ ├── +++ unigbsa-0.1.3/unigbsa/data/default.ini
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/data/default.json
+│ ├── +++ unigbsa-0.1.3/unigbsa/data/default.json
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/data/mmpbsa.in
+│ ├── +++ unigbsa-0.1.3/unigbsa/data/mmpbsa.in
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/data/scan.json
+│ ├── +++ unigbsa-0.1.3/unigbsa/data/scan.json
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/data/template.json
+│ ├── +++ unigbsa-0.1.3/unigbsa/data/template.json
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/gbsa/gbsarun.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/gbsa/gbsarun.py
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/gbsa/io.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/gbsa/io.py
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/gbsa/parameters.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/gbsa/parameters.py
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/gbsa/plots.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/gbsa/plots.py
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/gbsa/utils.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/gbsa/utils.py
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/pipeline.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/pipeline.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,20 +1,25 @@
+│ │  import os
+│ │  import shutil
+│ │  import argparse
+│ │  import traceback
+│ │  import pandas as pd
+│ │ +import multiprocessing
+│ │  
+│ │  from unigbsa.version import __version__
+│ │  from unigbsa.gbsa.gbsarun import GBSA
+│ │  from unigbsa.utils import generate_index_file, load_configue_file
+│ │  from unigbsa.simulation.mdrun import GMXEngine
+│ │  from unigbsa.simulation.topology import build_topol, build_protein
+│ │  from unigbsa.settings import logging, DEFAULT_CONFIGURE_FILE, GMXEXE, set_OMP_NUM_THREADS
+│ │  
+│ │ +from tqdm import tqdm
+│ │ +from multiprocessing import Pool
+│ │ +
+│ │ +
+│ │  KEY = ['ligandName', 'Frames', 'mode', 'complex','receptor','ligand','Internal','Van der Waals','Electrostatic','Polar Solvation','Non-Polar Solvation','Gas','Solvation','TOTAL', 'status']
+│ │  def traj_pipeline(complexfile, trajfile, topolfile, indexfile, pbsaParas=None, mmpbsafile=None, nt=1, verbose=False):
+│ │      """
+│ │      A pipeline for calculate GBSA/PBSA for trajectory
+│ │      
+│ │      Args:
+│ │        complexfile: The name of the PDB file containing the protein-ligand complex.
+│ │ @@ -105,14 +110,74 @@
+│ │              df = pd.concat([df, dl])
+│ │          os.chdir(cwd)
+│ │      df['ligandName'] = ligandnames
+│ │      df['status'] = status
+│ │      df[KEY].to_csv(outfile, index=False)
+│ │  
+│ │  
+│ │ +def single(arg):
+│ │ +    receptor, ligandfile, simParas, ligandfiles, mmpbsafile, nt, pbsaParas, verbose = arg
+│ │ +    d1 = pd.DataFrame({'Frames': 1, 'mode':pbsaParas['modes'], 'complex':0.0,'receptor':0.0,'ligand':0.0,'Internal':0.0,'Van der Waals':0.0,'Electrostatic':0,'Polar Solvation':0.0,'Non-Polar Solvation':0.0,'Gas':0.0,'Solvation':0.0,'TOTAL':0.0}, index=[1])
+│ │ +    cwd = os.getcwd()
+│ │ +    statu = 'S'
+│ │ +    ligandfile = os.path.abspath(ligandfile)
+│ │ +    ligandName = os.path.split(ligandfile)[-1][:-4]
+│ │ +    if not os.path.exists(ligandName):
+│ │ +        os.mkdir(ligandName)
+│ │ +    os.chdir(ligandName)
+│ │ +    grofile = 'complex.pdb'
+│ │ +    topfile = 'complex.top'
+│ │ +    if len(ligandfiles) == 1:
+│ │ +        logging.info('Build ligand topology: %s' % ligandName)
+│ │ +    try:
+│ │ +        build_topol(receptor, ligandfile, outpdb=grofile, outtop=topfile,
+│ │ +                    ligandforce=simParas['ligandforcefield'],
+│ │ +                    charge_method=simParas['ligandCharge'], nt=nt)
+│ │ +    except Exception as e:
+│ │ +        statu = 'F_top'
+│ │ +        if len(ligandfiles) == 1:
+│ │ +            traceback.print_exc()
+│ │ +            logging.warning('Failed to generate forcefield for ligand: %s' % ligandName)
+│ │ +            exit(256)
+│ │ +    if len(ligandfiles) == 1:
+│ │ +        logging.info('Running energy minimization: %s' % ligandName)
+│ │ +    engine = GMXEngine()
+│ │ +    try:
+│ │ +        minimgro, outtop = engine.run_to_minim(grofile, topfile,
+│ │ +                                               boxtype=simParas['boxtype'],
+│ │ +                                               boxsize=simParas['boxsize'],
+│ │ +                                               conc=simParas['conc'],
+│ │ +                                               maxsol=simParas['maxsol'],
+│ │ +                                               nt=1)
+│ │ +        cmd = '%s editconf -f %s -o %s -resnr 1 >/dev/null 2>&1' % (GMXEXE, minimgro, grofile)
+│ │ +        RC = os.system(cmd)
+│ │ +        if RC != 0:
+│ │ +            raise Exception('Error convert %s to %s'%(minimgro, grofile))
+│ │ +        shutil.copy(topfile, outtop)
+│ │ +    except Exception as e:
+│ │ +        if len(ligandfiles) == 1:
+│ │ +            traceback.print_exc()
+│ │ +            logging.warning('Failed to run simulation for ligand: %s' % ligandName)
+│ │ +            exit(256)
+│ │ +        statu = 'F_md'
+│ │ +    indexfile = generate_index_file(grofile)
+│ │ +    if statu == 'S':
+│ │ +        try:
+│ │ +            d1 = traj_pipeline(grofile, trajfile=grofile, topolfile=topfile, indexfile=indexfile, pbsaParas=pbsaParas, mmpbsafile=mmpbsafile, verbose=verbose, nt=nt)
+│ │ +        except:
+│ │ +            if len(ligandfiles) == 1:
+│ │ +                logging.warning('Failed to run GBSA for ligand: %s'%ligandName)
+│ │ +                traceback.print_exc()
+│ │ +            statu = 'F_GBSA'
+│ │ +    if not verbose:
+│ │ +        engine.clean(pdbfile=grofile)
+│ │ +    os.chdir(cwd)
+│ │ +    d1['ligandName'] = ligandName
+│ │ +    d1['status'] = statu
+│ │ +    return d1
+│ │  
+│ │  def minim_pipeline(receptorfile, ligandfiles, paras, mmpbsafile=None, nt=1, outfile='BindingEnergy.csv', verbose=False):
+│ │      """
+│ │      It runs the simulation pipeline for each ligand.
+│ │      
+│ │      Args:
+│ │        receptorfile: The name of the receptor file.
+│ │ @@ -122,94 +187,39 @@
+│ │      """
+│ │      simParas = paras['simulation']
+│ │      pbsaParas = paras['GBSA']
+│ │  
+│ │      receptorfile = os.path.abspath(receptorfile)
+│ │      logging.info('Build protein topology.')
+│ │      receptor = build_protein(receptorfile, forcefield=simParas['proteinforcefield'])
+│ │ -    
+│ │ -    cwd = os.getcwd()
+│ │ -    df = None
+│ │ -    ligandnames = []
+│ │ -    status = []
+│ │ -    d = pd.DataFrame({'Frames': 1, 'mode':pbsaParas['modes'], 'complex':0.0,'receptor':0.0,'ligand':0.0,'Internal':0.0,'Van der Waals':0.0,'Electrostatic':0,'Polar Solvation':0.0,'Non-Polar Solvation':0.0,'Gas':0.0,'Solvation':0.0,'TOTAL':0.0}, index=[1])
+│ │ -    for ligandfile in ligandfiles:
+│ │ -        statu = 'S'
+│ │ -        ligandfile = os.path.abspath(ligandfile)
+│ │ -        ligandName = os.path.split(ligandfile)[-1][:-4]
+│ │ -        if not os.path.exists(ligandName):
+│ │ -            os.mkdir(ligandName)
+│ │ -        os.chdir(ligandName)
+│ │  
+│ │ -        grofile = 'complex.pdb'
+│ │ -        topfile = 'complex.top'
+│ │ -        logging.info('Build ligand topology: %s'%ligandName)
+│ │ -        try:
+│ │ -            build_topol(receptor, ligandfile, outpdb=grofile, outtop=topfile, ligandforce=simParas['ligandforcefield'], charge_method=simParas['ligandCharge'], nt=nt)
+│ │ -        except Exception as e:
+│ │ -            if len(ligandfiles)==1:
+│ │ -                traceback.print_exc()
+│ │ -                exit(256)
+│ │ -            statu = 'F_top'
+│ │ -            dl = d
+│ │ -            logging.warning('Failed to generate forcefield for ligand: %s'%ligandName)   
+│ │  
+│ │ -        logging.info('Running energy minimization: %s'%ligandName)
+│ │ -        engine = GMXEngine()
+│ │ -        try:
+│ │ -            minimgro, outtop = engine.run_to_minim(grofile, topfile, boxtype=simParas['boxtype'], boxsize=simParas['boxsize'], conc=simParas['conc'], maxsol=simParas['maxsol'], nt=nt)
+│ │ -            cmd = '%s editconf -f %s -o %s -resnr 1 >/dev/null 2>&1'%(GMXEXE, minimgro, grofile)
+│ │ -            RC = os.system(cmd)
+│ │ -            if RC!=0:
+│ │ -                raise Exception('Error convert %s to %s'%(minimgro, grofile))
+│ │ -            shutil.copy(topfile, outtop)
+│ │ -        except Exception as e:
+│ │ -            if len(ligandfiles)==1:
+│ │ -                traceback.print_exc()
+│ │ -                exit(256)
+│ │ -            statu = 'F_md'
+│ │ -            dl = d
+│ │ -            logging.warning('Failed to run simulation for ligand: %s'%ligandName)  
+│ │ -
+│ │ -
+│ │ -        indexfile = generate_index_file(grofile)
+│ │ -        if statu == 'S':
+│ │ -            try:
+│ │ -                dl = traj_pipeline(grofile, trajfile=grofile, topolfile=topfile, indexfile=indexfile, pbsaParas=pbsaParas, mmpbsafile=mmpbsafile, verbose=verbose, nt=nt)
+│ │ -            except:
+│ │ -                if len(ligandfiles)==1:
+│ │ -                    traceback.print_exc()
+│ │ -                statu = 'F_GBSA'
+│ │ -                dl = d
+│ │ -                logging.warning('Failed to run GBSA for ligand: %s'%ligandName)
+│ │ -        ligandnames.extend([ligandName]*len(dl))
+│ │ -        status.extend([statu]*len(dl))
+│ │ -        if df is None:
+│ │ -            df = dl
+│ │ -        else:
+│ │ -            df = pd.concat([df, dl])
+│ │ -        if not verbose:
+│ │ -            engine.clean(pdbfile=grofile)
+│ │ -        os.chdir(cwd)
+│ │ -
+│ │ -        os.chdir(cwd)
+│ │ -    df['ligandName'] = ligandnames
+│ │ -    df['status'] = status
+│ │ +    args = [(receptor, ligandfile, simParas,
+│ │ +             ligandfiles, mmpbsafile, 1,
+│ │ +             pbsaParas, verbose) for ligandfile in sorted(ligandfiles)]
+│ │ +    if len(args) == 1:
+│ │ +        df = single(args[0])
+│ │ +    else:
+│ │ +        with Pool(nt) as pool:
+│ │ +            dlist = list(tqdm(pool.imap(single, args), total=len(args)))
+│ │ +            df = pd.concat(dlist)
+│ │      df[KEY].to_csv(outfile, index=False)
+│ │  
+│ │ +
+│ │  def md_pipeline(receptorfile, ligandfiles, paras, mmpbsafile=None, nt=1, outfile='BindingEnergy.csv', verbose=False):
+│ │      """
+│ │      The main function of this script
+│ │      
+│ │      Args:
+│ │        receptorfile: the protein file
+│ │        ligandfiles: a list of ligand files
+│ │        paras: a dictionary of parameters
+│ │        outfile: the output file name. Defaults to BindingEnergy.csv
+│ │      """
+│ │ +    set_OMP_NUM_THREADS(nt)
+│ │      simParas = paras['simulation']
+│ │      pbsaParas = paras['GBSA']
+│ │  
+│ │      receptorfile = os.path.abspath(receptorfile)
+│ │      logging.info('Build protein topology.')
+│ │      receptor = build_protein(receptorfile, forcefield=simParas['proteinforcefield'])
+│ │  
+│ │ @@ -267,15 +277,15 @@
+│ │      parser = argparse.ArgumentParser(description='GBSA Calculation.  Version: %s'%__version__)
+│ │      parser.add_argument('-i', dest='receptor', help='Input protein file with pdb format.', required=True)
+│ │      parser.add_argument('-l', dest='ligand', help='Ligand files to calculate binding energy.', nargs='+', default=None)
+│ │      parser.add_argument('-c', dest='config', help='Configue file, default: %s'%DEFAULT_CONFIGURE_FILE, default=DEFAULT_CONFIGURE_FILE)
+│ │      parser.add_argument('-d', dest='ligdir', help='Floder contains many ligand files. file format: .mol or .sdf', default=None)
+│ │      parser.add_argument('-f', dest='pbsafile', help='gmx_MMPBSA input file. default=None', default=None)
+│ │      parser.add_argument('-o', dest='outfile', help='Output file.', default='BindingEnergy.csv')
+│ │ -    parser.add_argument('-nt', dest='thread', help='Set number of thread to run this program.', type=int, default=1)
+│ │ +    parser.add_argument('-nt', dest='thread', help='Set number of thread to run this program.', type=int, default=multiprocessing.cpu_count())
+│ │      parser.add_argument('--decomp', help='Decompose the free energy. default:False', action='store_true', default=False)
+│ │      parser.add_argument('--verbose', help='Keep all the files.', action='store_true', default=False)
+│ │      parser.add_argument('-v', '--version', action='version', version="{prog}s ({version})".format(prog="%(prog)", version=__version__))
+│ │  
+│ │      args = parser.parse_args(args)
+│ │      receptor, ligands, conf, ligdir, outfile, decomposition, nt, verbose = args.receptor, args.ligand, args.config, args.ligdir, args.outfile, args.decomp, args.thread, args.verbose
+│ │      
+│ │ @@ -288,18 +298,29 @@
+│ │      if len(ligands)==0:
+│ │          raise Exception('No ligands file found.')
+│ │  
+│ │      if not os.path.exists(conf):
+│ │          raise Exception("Not found the configure file! %s"%conf)
+│ │  
+│ │      mmpbsafile = os.path.abspath(args.pbsafile) if args.pbsafile else args.pbsafile
+│ │ -    set_OMP_NUM_THREADS(nt)
+│ │      paras = load_configue_file(conf)
+│ │ +    gbsa_modes = paras['GBSA']['modes']
+│ │      if decomposition:
+│ │          paras['GBSA']['modes'] += ',decomposition'
+│ │ +    if '-' in gbsa_modes:
+│ │ +        tmplist = gbsa_modes.split(',')[0].split('-')
+│ │ +        gbtype = tmplist[0]
+│ │ +        gbnum = tmplist[1]
+│ │ +        if gbtype.upper() == 'GB':
+│ │ +            paras['GBSA']['igb'] = gbnum
+│ │ +        elif gbtype.upper() == 'PB':
+│ │ +            paras['GBSA']['ipb'] = gbnum
+│ │ +        if 'decomposition' in gbsa_modes:
+│ │ +            gbtype += ',decomposition'
+│ │ +        paras['GBSA']['modes'] = gbtype
+│ │  
+│ │      if paras['simulation']['mode'] == 'em':
+│ │          minim_pipeline(receptorfile=receptor, ligandfiles=ligands, paras=paras, outfile=outfile, mmpbsafile=mmpbsafile, verbose=verbose, nt=nt)
+│ │      elif paras['simulation']['mode'] == 'md':
+│ │          md_pipeline(receptorfile=receptor, ligandfiles=ligands, paras=paras, outfile=outfile, mmpbsafile=mmpbsafile, verbose=verbose, nt=nt)
+│ │      elif paras['simulation']['mode'] == 'input':
+│ │          base_pipeline(receptorfile=receptor, ligandfiles=ligands, paras=paras, outfile=outfile, mmpbsafile=mmpbsafile, verbose=verbose, nt=nt)
+│ │   --- unigbsa-0.1.2/unigbsa/scanparas/scan.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/scanparas/scan.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,35 +1,41 @@
+│ │  import os
+│ │  
+│ │  import json
+│ │  import shutil
+│ │  import argparse
+│ │  import itertools
+│ │  import pandas as pd
+│ │ +import multiprocessing
+│ │  
+│ │  from copy import deepcopy as copy
+│ │  from concurrent.futures import ProcessPoolExecutor
+│ │  
+│ │  from unigbsa.simulation.mdrun import GMXEngine
+│ │ -from unigbsa.settings import logging, PathManager, GMXEXE
+│ │ +from unigbsa.settings import PathManager, GMXEXE
+│ │  from unigbsa.simulation.topology import build_topol, build_protein
+│ │  from unigbsa.pipeline import traj_pipeline
+│ │  from unigbsa.utils import load_configue_file, generate_index_file
+│ │ +from unigbsa.utils import logging
+│ │  
+│ │  
+│ │  KEY = ['ligandName', 'Frames', 'mode', 'complex','receptor','ligand','Internal','Van der Waals','Electrostatic','Polar Solvation','Non-Polar Solvation','Gas','Solvation','TOTAL']
+│ │ +
+│ │ +
+│ │  def reres_gro(infile, outfile):
+│ │      cmd = '%s editconf -f %s -o %s -resnr 1 >/dev/null 2>&1'%(GMXEXE, infile, outfile)
+│ │      RC = os.system(cmd)
+│ │      if RC!=0:
+│ │          raise Exception('Error convert %s to %s'%(infile, outfile))
+│ │      return outfile
+│ │  
+│ │  def thread_split(njob, nt):
+│ │ -    return max([round(nt/njob), 1])
+│ │ +    thread = max([round(nt/njob), 1])
+│ │ +    nt = njob if njob < nt else nt
+│ │ +    return thread, nt
+│ │  
+│ │  def load_scan_paras(jsonfile: str, scantype='fixed') -> dict:
+│ │      parasdict = {}
+│ │      with open(jsonfile)  as fr:
+│ │          data = json.load(fr)
+│ │      defaultparas = load_configue_file()
+│ │      scantypes = 'fixed all'
+│ │ @@ -57,14 +63,16 @@
+│ │          'pb': 'ipb'
+│ │      }
+│ │      varparas = {}
+│ │      for ki, vi in data.items():
+│ │          for kj, vi in vi.items():
+│ │              if not isinstance(vi, list):
+│ │                  defaultparas[ki][kj] = vi
+│ │ +            elif isinstance(vi, list) and len(vi) == 1:
+│ │ +                defaultparas[ki][kj] = vi[0]
+│ │              elif (ki=="simulation" and kj in ['mode', 'ligandCharge', 'ligandforcefield', 'proteinforcefield']) or \
+│ │                   (ki == "GBSA" and kj in ['modes', 'indi', 'exdi']):
+│ │                  key = f'{ki}_{kj}'
+│ │                  varparas[key] = vi
+│ │      if scantype == 'fixed':
+│ │          for k, v in varparas.items():
+│ │              ki, kj = k.split('_')
+│ │ @@ -97,28 +105,34 @@
+│ │                      dic[ki][modedict[mode]] = modevalue
+│ │                  else:
+│ │                      dic[ki][kj] = v
+│ │                  name.append('%s_%s'%(str(k), str(v)))
+│ │              parasdict['__'.join(name)] = dic
+│ │      else:
+│ │          raise Exception(f'scantype {scantype} not one of the: {scantypes}')
+│ │ +
+│ │ +    parasdict_unique = {}
+│ │ +    for k, v in parasdict.items():
+│ │ +        if v not in parasdict_unique.values():
+│ │ +            parasdict_unique[k] = v
+│ │ +
+│ │      simulationparas = {}
+│ │ -    for name, v in parasdict.items():
+│ │ +    for name, v in parasdict_unique.items():
+│ │          simparas = v['simulation']
+│ │          forcefieldkey = f"{simparas['proteinforcefield']}_{simparas['ligandforcefield']}_{simparas['ligandCharge']}"
+│ │          if simparas['mode'] == 'md':
+│ │              simulationkey = f"{simparas['mode']}_{simparas['nsteps']}"
+│ │          else:
+│ │              simulationkey = f"{simparas['mode']}"
+│ │          if forcefieldkey not in simulationparas:
+│ │              simulationparas[forcefieldkey] = {simulationkey:v}
+│ │          elif simulationkey not in simulationparas[forcefieldkey]:
+│ │              simulationparas[forcefieldkey][simulationkey] = v
+│ │  
+│ │ -    return parasdict, simulationparas
+│ │ +    return parasdict_unique, simulationparas
+│ │  
+│ │  def calc_R2(expfile, gbsa):
+│ │      exp = pd.read_csv(expfile)
+│ │      if isinstance(gbsa, str):
+│ │          GBSA = pd.read_csv(gbsa)
+│ │      else:
+│ │          GBSA = gbsa
+│ │ @@ -172,24 +186,24 @@
+│ │              'complexfile': grofile,
+│ │              'topolfile0': topfile,
+│ │              'GBSAinput': grofile
+│ │          }
+│ │      return ligandName, outfiles
+│ │  
+│ │  def build_topology_MPI(receptorfiles, ligandfiles, paras, outdir, nt=4):
+│ │ -    thread = thread_split(len(ligandfiles), nt)
+│ │ +    thread, nworker = thread_split(len(ligandfiles), nt)
+│ │      with PathManager(outdir) as pm:
+│ │          if isinstance(receptorfiles, str):
+│ │              receptor = build_protein(pm.abspath(receptorfiles, parent=True), forcefield=paras['simulation']['proteinforcefield'])
+│ │              receptors = [receptor] * len(ligandfiles)
+│ │          else:
+│ │              receptors = pm.abspath(receptorfiles, parent=True)
+│ │          ligandfiles = pm.abspath(ligandfiles, parent=True)
+│ │          args = [ (receptor, ligandfile, paras, thread) for receptor, ligandfile in zip(receptors, ligandfiles) ]
+│ │ -        with ProcessPoolExecutor(max_workers=nt) as pool:
+│ │ +        with ProcessPoolExecutor(max_workers=nworker) as pool:
+│ │              outdict = { out[0]:out[1] for out in list(pool.map(build_topology_walker, args)) if out is not None }
+│ │      outparas = copy(paras)
+│ │      outparas['files'] = outdict
+│ │      return outparas
+│ │  
+│ │  def structural_optimization_walker(arg):
+│ │      paras, ligandName, outdir, thread = arg
+│ │ @@ -230,17 +244,17 @@
+│ │              return None
+│ │          indexfile = generate_index_file(files['GBSAinput'])
+│ │          files['indexfile'] = indexfile
+│ │      return ligandName, files
+│ │  
+│ │  def structural_optimization_MPI(paras, outdir=None, nt=4):
+│ │      ligandNames = paras['files'].keys()
+│ │ -    thread = thread_split(len(ligandNames), nt)
+│ │ +    thread, nworker = thread_split(len(ligandNames), nt)
+│ │      args = [ (paras, ligandName, outdir, thread) for ligandName in ligandNames ]
+│ │ -    with ProcessPoolExecutor(max_workers=nt) as pool:
+│ │ +    with ProcessPoolExecutor(max_workers=nworker) as pool:
+│ │          outfiles = { out[0]:out[1] for out in list(pool.map(structural_optimization_walker, args)) if out is not None }
+│ │      outparas = copy(paras)
+│ │      outparas['files'] = outfiles
+│ │      return outparas
+│ │  
+│ │  def gbsa_calculation_walker(arg):
+│ │      paras, ligandName, outdir, thread = arg
+│ │ @@ -253,17 +267,17 @@
+│ │      with PathManager(ligandir) as pm:
+│ │          deltaG = traj_pipeline(files['GBSAinput'], trajfile=files['GBSAtraj'], topolfile=files['topolfile'], indexfile=files['indexfile'], pbsaParas=paras['GBSA'], mmpbsafile=None, nt=thread, verbose=False)
+│ │          deltaG['ligandName'] = ligandName
+│ │      return ligandName, deltaG
+│ │  
+│ │  def gbsa_calculation_MPI(paras, outdir, nt=4):
+│ │      ligandNames = paras['files'].keys()
+│ │ -    thread = thread_split(len(ligandNames), nt)
+│ │ +    thread, nworker = thread_split(len(ligandNames), nt)
+│ │      args = [ (paras, ligandName, outdir, thread) for ligandName in ligandNames ]
+│ │ -    with ProcessPoolExecutor(max_workers=nt) as pool:
+│ │ +    with ProcessPoolExecutor(max_workers=nworker) as pool:
+│ │          results = [ out for out in list(pool.map(gbsa_calculation_walker, args)) if out is not None ]
+│ │      df = None
+│ │      for result in results:
+│ │          if df is None:
+│ │              df = result[1]
+│ │          else:
+│ │              df = pd.concat([df, result[1]])
+│ │ @@ -300,17 +314,18 @@
+│ │      if len(ligands) == 0 or len(receptors) == 0:
+│ │          raise Exception('No ligands or receptors file found.')
+│ │      with PathManager(outdir) as pm:
+│ │          expdatfile = pm.abspath(expdatfile, parent=True)
+│ │          parasfile = pm.abspath(parasfile, parent=True)
+│ │          ligands = pm.abspath(sorted([lig for lig in ligands]), parent=True)
+│ │          receptors = pm.abspath(sorted([prot for prot in receptors]), parent=True)
+│ │ -        R2max = ('', 0)
+│ │ +        logging.info('load scan paras.')
+│ │          parasdicts, simulationparas = load_scan_paras(parasfile)
+│ │          for name, parasdic in simulationparas.items():
+│ │ +            logging.info('Building protein and ligand topology.')
+│ │              topfileparas = build_topology_MPI(receptors, ligands, parasdic[list(parasdic.keys())[0]], name, nt=nt)
+│ │              for k, v in parasdic.items():
+│ │                  outdir = os.path.join(name, k)
+│ │                  topfileparas['simulation'] = v['simulation']
+│ │                  outparas = structural_optimization_MPI(topfileparas, outdir=outdir, nt=nt)
+│ │                  simulationparas[name][k] = outparas
+│ │          outset = []
+│ │ @@ -319,40 +334,53 @@
+│ │              forcefieldkey = f"{simparas['proteinforcefield']}_{simparas['ligandforcefield']}_{simparas['ligandCharge']}"
+│ │              if simparas['mode'] == 'md':
+│ │                  simulationkey = f"{simparas['mode']}_{simparas['nsteps']}"
+│ │              else:
+│ │                  simulationkey = f"{simparas['mode']}"
+│ │              paras = simulationparas[forcefieldkey][simulationkey]
+│ │              paras['GBSA'] = v['GBSA']
+│ │ +            modes = paras['GBSA']['modes']
+│ │ +            if '-' in modes:
+│ │ +                gmode, gtype = modes.split('-')
+│ │ +                paras['GBSA']['modes'] = gmode
+│ │ +                if gmode.upper() == 'GB':
+│ │ +                    paras['GBSA']['igb'] = gtype
+│ │ +                elif gmode.upper() == 'PB':
+│ │ +                    paras['GBSA']['ipb'] = gtype
+│ │              outdir = os.path.join(forcefieldkey, f"{simulationkey}/{k}")
+│ │ +            logging.info(f'GBSA calculation: {forcefieldkey} {simulationkey} {k}')
+│ │              outparas = gbsa_calculation_MPI(paras, outdir=outdir, nt=nt)
+│ │              if outparas is None:
+│ │                  R, R2 = 0, -10
+│ │              else:
+│ │                  R, R2 = calc_R2(expdatfile, outparas['results'])
+│ │ -            outset.append((k, R, R2))
+│ │ -            
+│ │ -        with open('paras_performance.csv', 'w') as fw:
+│ │ -            fw.write('name,R,R2\n')
+│ │ -            for outline in outset:
+│ │ -                fw.write('%s,%.6f,%.6f\n'%(outline[0], outline[1], outline[2]))
+│ │ -                if outline[2]>R2max[1]:
+│ │ -                    R2max = (outline[0], outline[2])
+│ │ +            logging.info(f'GBSA results: {R} {R2}')
+│ │ +            outparas['results']['R'] = R
+│ │ +            outparas['results']['R2'] = R2
+│ │ +            outset.append((k, R, R2, pm.abspath(outdir+'/paras.json')))
+│ │ +        logging.info('Write output: paras_performance.csv')
+│ │ +        df = pd.DataFrame(outset, columns=['name', 'R', 'R2', 'parasjson'])
+│ │ +        df = df.sort_values(by='R2', ascending=False).reset_index(drop=True)
+│ │ +        R2max = list(df.loc[0, :])
+│ │ +        df.to_csv('paras_performance.csv', index=False)
+│ │ +    print('='*80)
+│ │      print('The best para name is: %s'%R2max[0])
+│ │ -    print('The best para R2 is: %.4f'%R2max[1])
+│ │ +    print('The best para R2 is: %.4f'%R2max[2])
+│ │ +    print('The best para file is: %s'%R2max[3])
+│ │ +    print('='*80)
+│ │  
+│ │  def scan_parameters(receptor, ligands, ligdir, expdatfile, parasfile, verbose, outdir, nt=4) -> None:
+│ │      '''
+│ │      '''
+│ │      outfile = 'deltaG.csv'
+│ │      if ligands is None:
+│ │          ligands = []
+│ │      if ligdir:
+│ │          for fileName in os.listdir(ligdir):
+│ │ -            if fileName.endswith(('mol','sdf')):
+│ │ +            if fileName.endswith(('mol', 'sdf')):
+│ │                  ligands.append(os.path.join(ligdir, fileName))
+│ │      if len(ligands)==0:
+│ │          raise Exception('No ligands file found.')
+│ │      ligands = [ os.path.abspath(l) for l in ligands ]
+│ │      receptor = os.path.abspath(receptor)
+│ │  
+│ │      if not os.path.exists(outdir):
+│ │ @@ -386,15 +414,17 @@
+│ │      parser.add_argument('-i', dest='receptor', help='Input protein file with pdb format.', default=None)
+│ │      parser.add_argument('-pd', dest='protdir', help='Floder contains many protein files. file format: .pdb', default=None)
+│ │      parser.add_argument('-l', dest='ligand', help='Ligand files to calculate binding energy.', nargs='+', default=None)
+│ │      parser.add_argument('-ld', dest='ligdir', help='Floder contains many ligand files. file format: .mol or .sdf', default=None)
+│ │      parser.add_argument('-e', help='Experiment data file.', required=True)
+│ │      parser.add_argument('-c', dest='parasfile', help='Parameters to scan', required=True)
+│ │      parser.add_argument('-o', dest='outdir', help='Output directory.', default='pbsa.scan')
+│ │ -    parser.add_argument('-nt', dest='thread', help='Set number of thread to run this program.', type=int, default=1)
+│ │ +    parser.add_argument('-nt', dest='thread', help='Set number of thread to run this program.', type=int, default=multiprocessing.cpu_count())
+│ │      parser.add_argument('--verbose', help='Keep all the files.', action='store_true', default=False)
+│ │  
+│ │      args = parser.parse_args()
+│ │      receptor, protdir, ligands, ligdir, expdatfile, parasfile, verbose, outdir, nt = args.receptor, args.protdir, args.ligand, args.ligdir, os.path.abspath(args.e), os.path.abspath(args.parasfile), args.verbose, args.outdir, args.thread
+│ │      # scan_parameters(receptor, ligands, ligdir, expdatfile, parasfile, verbose, outdir, nt)
+│ │ -    scan_parameters_v2(receptor, protdir, ligands, ligdir, expdatfile, parasfile, outdir, nt=4)
+│ │ +    if isinstance(receptor, str):
+│ │ +        receptor = [receptor] * len(ligands)
+│ │ +    scan_parameters_v2(receptor, protdir, ligands, ligdir, expdatfile, parasfile, outdir, nt=nt)
+│ │   --- unigbsa-0.1.2/unigbsa/settings.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/settings.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -43,15 +43,15 @@
+│ │  if 'AMBERHOME' not in os.environ:
+│ │      #os.environ['AMBERHOME'] = set_amber_home(gmx_MMPBSA)
+│ │      raise Exception("Not found variable AMBERHOME")
+│ │  
+│ │  if 'OMP_NUM_THREADS' in os.environ:
+│ │      OMP_NUM_THREADS = os.environ['OMP_NUM_THREADS']
+│ │  else:
+│ │ -    OMP_NUM_THREADS = 4
+│ │ +    OMP_NUM_THREADS = 1
+│ │  
+│ │  def set_OMP_NUM_THREADS(nt):
+│ │      os.environ['OMP_NUM_THREADS'] = str(nt)
+│ │  
+│ │  def obtain_MMPBSA_version():
+│ │      versionFile = '/tmp/' + uuid.uuid1().hex
+│ │      os.system('gmx_MMPBSA -v >%s 2>&1 '%versionFile)
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/ions.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/ions.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/md.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/md.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/mdout.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/mdout.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/minim.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/minim.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/s1-cg.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/s1-cg.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/s1-steep.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/s1-steep.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/s2-cg.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/s2-cg.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/s2-steep.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/s2-steep.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/s3-steep.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/s3-steep.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/minimization/s4-cg.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/minimization/s4-cg.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/npt.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/npt.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/nvt.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/nvt.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdp/vaccum.mdp
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdp/vaccum.mdp
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/mdrun.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/mdrun.py
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/openmm-em.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/openmm-em.py
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/topology.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/topology.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -2,21 +2,21 @@
+│ │  import sys
+│ │  
+│ │  import uuid
+│ │  import json
+│ │  import shutil
+│ │  import parmed as pmd
+│ │  
+│ │ -from unigbsa.settings import GMXEXE,TEMPLATE_TOP
+│ │ +from unigbsa.settings import GMXEXE, TEMPLATE_TOP
+│ │  from unigbsa.simulation.mdrun import GMXEngine
+│ │  from unigbsa.simulation.utils import convert_format, guess_filetype, fix_insertions
+│ │  from unigbsa.simulation.utils import assign_partial_charge, write_position_restrain
+│ │  from unigbsa.simulation.utils import obtain_net_charge
+│ │  
+│ │ -def build_lignad(ligandfile, forcefield="gaff2", charge_method="bcc", engine="acpype", verbose=False, outtop=None, outcoord=None, molname='MOL', itpfile=None, sqm_key=None, nt=1):
+│ │ +def build_lignad(ligandfile, forcefield="gaff2", charge_method="bcc", engine="acpype", verbose=False, outtop=None, outcoord=None, molname='MOL', itpfile=None, sqm_opt=True, nt=1):
+│ │      """
+│ │      Build a ligand topology and coordinate file from a ligand file using acpype
+│ │      
+│ │      Args:
+│ │        ligandfile: The name of the ligand file.
+│ │        forcefield: The forcefield to use. Currently only "gaff2" is supported. Defaults to gaff2
+│ │        charge_method: The charge method to use. Valid options are "bcc" (the default) and "cm2". Defaults
+│ │ @@ -40,24 +40,26 @@
+│ │      elif filetype != 'mol':
+│ │          ligandfile = convert_format(ligandfile, filetype)
+│ │      if not os.path.exists(ligandName): 
+│ │          os.mkdir(ligandName)
+│ │      charge = obtain_net_charge(ligandfile)
+│ │      cwd = os.getcwd()
+│ │      os.chdir(ligandName)
+│ │ -    if sqm_key is None:
+│ │ -         sqm_key = "grms_tol=0.0005,qm_theory='AM1',scfconv=1.d-10,ndiis_attempts=700,"
+│ │ +    if sqm_opt:
+│ │ +        sqm_key = "grms_tol=0.005,qm_theory='AM1',scfconv=1.d-8,ndiis_attempts=700,maxcyc=0"
+│ │ +    else:
+│ │ +        sqm_key = "grms_tol=0.0005,qm_theory='AM1',scfconv=1.d-10,ndiis_attempts=700,"
+│ │      paras = {
+│ │          'thread': nt,
+│ │          'ligandfile': ligandfile,
+│ │          'forcefield': forcefield,
+│ │          'method': charge_method,
+│ │          'molname': molname,
+│ │          'net_charge': charge,
+│ │ -        'sqm_key': "grms_tol=0.005,qm_theory='AM1',scfconv=1.d-8,ndiis_attempts=700,maxcyc=0",
+│ │ +        'sqm_key': sqm_key,
+│ │      }
+│ │      if charge is None:
+│ │          cmd = '''export OMP_NUM_THREADS={thread};acpype -i {ligandfile} -b {molname} -a {forcefield} -c {method} -k "{sqm_key}" -f >acpype.log 2>&1 '''.format(**paras)
+│ │      else:
+│ │          cmd = '''export OMP_NUM_THREADS={thread};acpype -i {ligandfile} -b {molname} -a {forcefield} -c {method} -n {net_charge} -k "{sqm_key}" -f >acpype.log 2>&1 '''.format(**paras)
+│ │      RC = os.system(cmd)
+│ │      if RC != 0:
+│ │   --- unigbsa-0.1.2/unigbsa/simulation/utils.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/simulation/utils.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -292,20 +292,19 @@
+│ │      return outfile
+│ │  
+│ │  
+│ │  def obtain_net_charge(molfile):
+│ │      import uuid
+│ │      ftype = guess_filetype(molfile)
+│ │      mol2file = str(uuid.uuid4()) + '.mol2'
+│ │ -    cmd = f'obabel -i {ftype} {molfile} -omol2 -O {mol2file} --partialcharge gasteiger >/dev/null 2>&1 '
+│ │ +    cmd = f'obabel -i {ftype} {molfile} -omol2 -O {mol2file}  >/dev/null 2>&1 '
+│ │      RC = os.system(cmd)
+│ │      if RC != 0:
+│ │          print('Failed to obtain mol charge, use guess')
+│ │          return None
+│ │      charge = 0
+│ │      with open(mol2file) as fr:
+│ │          for line in fr:
+│ │              llist = line.split()
+│ │              if len(llist) >= 8:
+│ │                  charge += float(llist[-1])
+│ │      return int(round(charge))
+│ │ -
+│ │   --- unigbsa-0.1.2/unigbsa/utils.py
+│ ├── +++ unigbsa-0.1.3/unigbsa/utils.py
+│ │┄ Files identical despite different names
+│ │   --- unigbsa-0.1.2/unigbsa.egg-info/PKG-INFO
+│ ├── +++ unigbsa-0.1.3/unigbsa.egg-info/PKG-INFO
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: unigbsa
+│ │ -Version: 0.1.2
+│ │ +Version: 0.1.3
+│ │  Summary: MMPB(GB)SA tools for calculate energy.
+│ │  Home-page: https://github.com/dptech-corp/Uni-GBSA
+│ │  Author: dptech.net
+│ │  Author-email: hermite@dptech.net
+│ │  Keywords: MMPBSA MMGBSA
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENCE.txt
+│ │  
+│ │ -Uni-GBSA: An Automatic Workflow to Perform MM/GB(PB)SA Calculations for Virtual Screening==============================================================================[[ChemRxiv](https://chemrxiv.org/engage/chemrxiv/article-details/63345399f764e656800664e7)]## BackgroudMolecular mechanics/Generalized-Born (Poisson–Boltzmann) surface area (MM/GB(PB)SA), which balance accuracy and efficiency, is a good choice for evaluating binding free energy in virtual screening. Uni-GBSA, an automatic workflow to perform MM/GB(PB)SA calculations from force field building, structure optimization to free energy calculation. ## Install### Install by condaTo run uni-GBSA, you need install some third-party software( acpype, gmx_MMPBSA, lickit, etc.).```Bashconda create -n gbsa -c conda-forge acpype openmpi mpi4py gromacsconda activate gbsapip install unigbsa gmx_MMPBSA>=1.5.6 lickit```### Install by dokcer imagesYou can build a dokcer image by this file or just pull from the docker hub `docker pull dockerymh/unigbsa````PlaintextFROM continuumio/miniconda3# 1. create a enveriomentSHELL ["/bin/bash", "-c"]RUN conda create -n gbsa -c conda-forge acpype openmpi mpi4py gromacs \&&  echo 'conda activate gbsa' >> ~/.bashrc \&&  rm -rf /opt/conda/pkgs/* # 2. install unigbsaRUN source ~/.bashrc \ &&  pip install unigbsa gmx_MMPBSA>=1.5.6 lickit \&&  rm -rf ~/.cache/*```## Usage & Examples### Usage```bash$ unigbsa-pipeline -husage: unigbsa-pipeline [-h] -i RECEPTOR [-l LIGAND [LIGAND ...]] [-c CONFIG] [-d LIGDIR] [-f PBSAFILE] [-o OUTFILE] [-nt THREAD]                        [--decomp] [--verbose] [-v]GBSA Calculation. Version: 0.0.9_devoptions:  -h, --help            show this help message and exit  -i RECEPTOR           Input protein file with pdb format.  -l LIGAND [LIGAND ...]                        Ligand files to calculate binding energy.  -c CONFIG             Configue file, default: /opt/miniconda3/envs/test/lib/python3.10/site-packages/unigbsa-0.0.9.dev0-py3.10.egg/unigbsa/data/default.ini  -d LIGDIR             Floder contains many ligand files. file format: .mol or .sdf  -f PBSAFILE           gmx_MMPBSA input file. default=None  -o OUTFILE            Output file.  -nt THREAD            Set number of thread to run this program.  --decomp              Decompose the free energy. default:False  --verbose             Keep all the files.  -v, --version         show program's version number and exit```### Example```bash$ unigbsa-pipeline -i example/1ceb/1ceb_protein.pdb -l example/1ceb/1ceb_ligand.sdf -o BindingEnergy.csv10/08/2022 13:46:09 PM - INFO - Build protein topology.10/08/2022 13:46:10 PM - INFO - Build ligand topology: 1ceb_ligand1 molecule converted10/08/2022 13:46:13 PM - INFO - Running energy minimization: 1ceb_ligand10/08/2022 13:46:14 PM - INFO - Run the MMPB(GB)SA.10/08/2022 13:46:18 PM - INFO - Clean the results.================================================================================Results: Energy.csv Dec.csvFrames    mode    detal_G(kcal/mole)     1      gb              -20.4421```## Other ToolsThis packge contains many command lines: `unigbsa-scan`, `unigbsa-pipeline`, `unigbsa-traj`, `unigbsa-pbc`, `unigbsa-buildtop`, `unigbsa-buildsys`, `unigbsa-md`.### unigbsa-scan>Scan best GB/PBSA parameters with experient data.```Bashusage: unigbsa-scan [-h] [-i RECEPTOR] [-pd PROTDIR] [-l LIGAND [LIGAND ...]] [-ld LIGDIR] -e E -c PARASFILE [-o OUTDIR]                    [-nt THREAD] [--verbose]GBSA Calculation.optional arguments:  -h, --help            show this help message and exit  -i RECEPTOR           Input protein file with pdb format.  -pd PROTDIR           Floder contains many protein files. file format: .pdb  -l LIGAND [LIGAND ...]                        Ligand files to calculate binding energy.  -ld LIGDIR            Floder contains many ligand files. file format: .mol or .sdf  -e E                  Experiment data file.  -c PARASFILE          Parameters to scan  -o OUTDIR             Output directory.  -nt THREAD            Set number of thread to run this program.  --verbose             Keep all the files.```>Example```Bashunigbsa-scan -i example/scan/protein.pdb -ld example/scan/ -e example/scan/ligands.csv -c example/scan/scan.json -o scan-demo -nt 4```### unigbsa-pipeline>A very simple pipeline to calculate the PBSA/GBSA value. You just need input a protein file and some ligands files. It will obtain the PBSA/GBSA value for this ligands.* If you want do minimization or MD simulation for the complex. Just use the ``unigbsa-pipeline`````Bashusage: unigbsa-pipeline [-h] -i RECEPTOR [-l LIGAND [LIGAND ...]] [-c CONFIG] [-d LIGDIR] [-f PBSAFILE] [-o OUTFILE] [-nt THREAD] [--decomp] [--verbose]GBSA Calculation.optional arguments:  -h, --help            show this help message and exit  -i RECEPTOR           Input protein file with pdb format.  -l LIGAND [LIGAND ...]                        Ligand files to calculate binding energy.  -c CONFIG             Configue file, default: default.ini  -d LIGDIR             Floder contains many ligand files. file format: .mol or .sdf  -f PBSAFILE           gmx_MMPBSA input file. default=None  -o OUTFILE            Output file.  -nt THREAD            Set number of thread to run this program.  --decomp              Decompose the free energy. default:False  --verbose             Keep all the files.```You can change the parameters for calculations by settig a configue file(`default.ini`). ```; parameters for simulation[simulation]; input pose process method: ;   input   -   just use input pose to calculation;   em      -   run a simple energy minimizaion for the input poses;   md      -   run a md simulation for the input posesmode = em; simulation box type: triclinic, cubic, dodecahedron, octahedronboxtype = triclinic; Distance between the solute and the simulation boxboxsize = 0.9; Specify salt concentration (mol/liter). This will add sufficient ions to reach up to the specified concentrationconc = 0.15; number of md simulation stepsnsteps = 500000; number of equilibrium simulation(nvt, npt) stepseqsteps = 50000; number of structure to save for the md simulationnframe = 100; protein forcefield (gromacs engine)proteinforcefield = amber03; ligand forcefield (acpype engine)ligandforcefield = gaff; ligand charge method: bcc, gasligandCharge = bcc; parameters for PBSA/GBSA calculation, support all the gmx_MMPBSA parameters[GBSA]; calculation namesys_name = GBSA; calculation mode, Separated by commas. gb,pb,decompositionmodes = gb; best parameters for PBSA/GBSA calculations obtained from Wang, Ercheng, et al. Chemical reviews 119.16 (2019): 9478-9508.igb = 2indi = 4.0exdi = 80.0```### unigbsa-traj>Calculate the PBSA/GBSA value for a md trajectory. Most important, you need to prepare a gromacs `index.ndx` file which contains two groups named `RECEPTOR` and `LIGAND`.````unigbsa-traj -husage: unigbsa-traj [-h] -i INP -p TOP -ndx NDX [-m {gb,pb,pb+gb,gb+pb}] [-t TRAJ] [-indi INDI] [-dec] [-D]Free energy calcaulated by PBSA method.optional arguments:  -h, --help            show this help message and exit  -i INP                A pdb file or a tpr file for the trajectory.  -p TOP                Gromacs topol file for the system.  -ndx NDX              Gromacs index file, must contain recepror and ligand group.  -m {gb,pb,pb+gb,gb+pb}                        Method to calculate: gb, pb, pb+gb. default:gb  -t TRAJ               A trajectory file contains many structure frames. File format: xtc, pdb, gro...  -indi INDI            External dielectric constant. detault: 1.0  -dec                  Decompose the energy. default:false  -D                    DEBUG model, keep all the files.````### unigbsa-buildtop>Build topology for protein or ligand by gromacs.```Bashunigbsa-buildtop -husage: unigbsa-buildtop [-h] [-p PROTEIN] [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-o OUTDIR] [-c] [-verbose]Build topology file for input file.optional arguments:  -h, --help        show this help message and exit  -p PROTEIN        Protein file or directory to build topology.  -l LIGAND         Ligand file or directory to build topology.  -pf PROTFORCE     Protein forcefield.  -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.  -o OUTDIR         A output directory.  -c                Combine the protein and ligand topology. Suppport for one protein and more ligands. default:True  -verbose          Keep the directory or not.```### unigbsa-buildsys>Build simulation system for protein or ligand.```bashunigbsa-buildsys -husage: unigbsa-buildsys [-h] -p PROTEIN [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-bt BOXTYPE] [-box BOX BOX BOX] [-d D] [-conc CONC] [-o OUTDIR]Build MD simulation for input file.optional arguments:  -h, --help        show this help message and exit  -p PROTEIN        Protein file for the simulation.  -l LIGAND         Ligand file or directory for the simulation.  -pf PROTFORCE     Protein forcefield.  -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.  -bt BOXTYPE       Simulation box type, default: triclinic  -box BOX BOX BOX  Simulation box size.  -d D              Distance between the solute and the box.  -conc CONC        Specify salt concentration (mol/liter). default=0.15  -o OUTDIR         A output directory.```### unigbsa-md>Run a MD simulation for input protein or ligand.```Bashunigbsa-md -husage: unigbsa-md [-h] -p PROTEIN [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-bt BOXTYPE] [-box BOX BOX BOX] [-d D] [-conc CONC] [-o OUTDIR] [-nstep NSTEP] [-nframe NFRAME] [-verbose]Run MD simulation for input file.optional arguments:  -h, --help        show this help message and exit  -p PROTEIN        Protein file for the simulation.  -l LIGAND         Ligand file or directory for the simulation.  -pf PROTFORCE     Protein forcefield.  -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.  -bt BOXTYPE       Simulation box type, default: triclinic  -box BOX BOX BOX  Simulation box size.  -d D              Distance between the solute and the box.  -conc CONC        Specify salt concentration (mol/liter). default=0.15  -o OUTDIR         A output directory.  -nstep NSTEP      Simulation steps. default:2500  -nframe NFRAME    Number of frame to save for the xtc file. default:100  -verbose          Keep all the files in the simulation.```### unigbsa-pbc>Process PBC condition for the gromacs trajectory.```Bashunigbsa-pbc -husage: unigbsa-pbc [-h] -s TPR -f XTC [-o OUT] [-n NDX]Auto process PBC for gromacs MD trajector.optional arguments:  -h, --help  show this help message and exit  -s TPR      TPR file generated from gromacs or coordinate file.  -f XTC      Trajector file to process PBC.  -o OUT      Result file after processed PBC.  -n NDX      Index file contains the center and output group.```### More Examples* Give a protein and some ligand files. Obtain the PBSA with ``unigbsa-pipeline``````Bashunigbsa-pipeline -i ./example/2fvy/protein.pdb -l ./example/2fvy/BGC.mol2````* Calculate PBSA value with ``unigbsa-traj`````Bashunigbsa-traj -i example/3f/complex.pdb -p example/3f/complex.top -ndx example/3f/index.ndx -m pb gb -t example/3f/complex.pdb```* Build topology for protein or ligand by gromacs. ``unigbsa-buildtop`````bashunigbsa-buildtop -p example/2fvy/protein.pdb -pf amber99sb -o topol  # build gromacs topology for a single proteinunigbsa-buildtop -p example/2fvy/protein.pdb -pf amber99sb -l example/2fvy/BGC.mol2 -lf gaff -o 2fvy_topol -c # build gromacs topology for protein and ligand complex```* Build simulation system with ``unigbsa-buildsys``* Run MD simulation with ``unigbsa-md``* Process PBC condition with ``unigbsa-pbc``## Citation```plaintextYang M, Wang D, Zheng H. Uni-GBSA: An Automatic Workflow to Perform MM/GB(PB)SA Calculations for Virtual Screening. ChemRxiv. Cambridge: Cambridge Open Engage; 2022; This content is a preprint and has not been peer-reviewed.```
+│ │ +Uni-GBSA: An Automatic Workflow to Perform MM/GB(PB)SA Calculations for Virtual Screening==============================================================================[[ChemRxiv](https://chemrxiv.org/engage/chemrxiv/article-details/63345399f764e656800664e7)]## BackgroudCalculating the binding free energy of a ligand to a protein receptor is a crucial goal in drug discovery. Molecular mechanics/Generalized-Born (Poisson–Boltzmann) surface area (MM/GB(PB)SA), which balances accuracy and efficiency, is one of the most widely used methods for evaluating ligand binding free energies in virtual screening. Uni-GBSA is an automatic workflow to perform MM/GB(PB)SA calculations. It includes several functions including but not limited to topology preparation, structure optimization, binding free energy calculation, and parameter scanning for MM/GB(PB)SA calculations. It also has a batch mode that allows the evaluation of thousands of molecules against one protein target simultaneously, enabling its application in virtual screening. ## Install### Install by condaTo run uni-GBSA, you need to install several third-party softwares including acpype, gmx_MMPBSA, lickit, etc.```Bashconda create -n gbsa -c conda-forge acpype openmpi mpi4py gromacsconda activate gbsapip install unigbsa gmx_MMPBSA>=1.5.6 lickit```### Install by dokcer imagesYou can also build a dokcer image using this file or pull from the docker hub `docker pull dockerymh/unigbsa````PlaintextFROM continuumio/miniconda3# 1. create a enveriomentSHELL ["/bin/bash", "-c"]RUN conda create -n gbsa -c conda-forge acpype openmpi mpi4py gromacs \&&  echo 'conda activate gbsa' >> ~/.bashrc \&&  rm -rf /opt/conda/pkgs/* # 2. install unigbsaRUN source ~/.bashrc \ &&  pip install unigbsa gmx_MMPBSA>=1.5.6 lickit \&&  rm -rf ~/.cache/*```## Usage & Example### Usage```bash$ unigbsa-pipeline -husage: unigbsa-pipeline [-h] -i RECEPTOR [-l LIGAND [LIGAND ...]] [-c CONFIG] [-d LIGDIR] [-f PBSAFILE] [-o OUTFILE] [-nt THREAD]                        [--decomp] [--verbose] [-v]GBSA Calculation. Version: 0.0.9_devoptions:  -h, --help            show this help message and exit  -i RECEPTOR           Input protein file with pdb format.  -l LIGAND [LIGAND ...]                        Ligand files to calculate binding energy.  -c CONFIG             Configue file, default: /opt/miniconda3/envs/test/lib/python3.10/site-packages/unigbsa-0.0.9.dev0-py3.10.egg/unigbsa/data/default.ini  -d LIGDIR             Floder contains many ligand files. file format: .mol or .sdf  -f PBSAFILE           gmx_MMPBSA input file. default=None  -o OUTFILE            Output file.  -nt THREAD            Set number of thread to run this program.  --decomp              Decompose the free energy. default:False  --verbose             Keep all the files.  -v, --version         show program's version number and exit```### Example```bash$ unigbsa-pipeline -i example/1ceb/1ceb_protein.pdb -l example/1ceb/1ceb_ligand.sdf -o BindingEnergy.csv10/08/2022 13:46:09 PM - INFO - Build protein topology.10/08/2022 13:46:10 PM - INFO - Build ligand topology: 1ceb_ligand1 molecule converted10/08/2022 13:46:13 PM - INFO - Running energy minimization: 1ceb_ligand10/08/2022 13:46:14 PM - INFO - Run the MMPB(GB)SA.10/08/2022 13:46:18 PM - INFO - Clean the results.================================================================================Results: Energy.csv Dec.csvFrames    mode    detal_G(kcal/mole)     1      gb              -20.4421```## Other ToolsThis packge contains many command lines: `unigbsa-scan`, `unigbsa-pipeline`, `unigbsa-traj`, `unigbsa-pbc`, `unigbsa-buildtop`, `unigbsa-buildsys`, `unigbsa-md`.### unigbsa-scan>An automatic parameter optimization prior to production MM/GB(PB)SA calculations.```Bashusage: unigbsa-scan [-h] [-i RECEPTOR] [-pd PROTDIR] [-l LIGAND [LIGAND ...]] [-ld LIGDIR] -e E -c PARASFILE [-o OUTDIR]                    [-nt THREAD] [--verbose]GBSA Calculation.optional arguments:  -h, --help            show this help message and exit  -i RECEPTOR           Input protein file with pdb format.  -pd PROTDIR           Floder contains many protein files. file format: .pdb  -l LIGAND [LIGAND ...]                        Ligand files to calculate binding energy.  -ld LIGDIR            Floder contains many ligand files. file format: .mol or .sdf  -e E                  Experiment data file.  -c PARASFILE          Parameters to scan  -o OUTDIR             Output directory.  -nt THREAD            Set number of thread to run this program.  --verbose             Keep all the files.```>Example```Bashunigbsa-scan -i example/scan/protein.pdb -ld example/scan/ -e example/scan/ligands.csv -c example/scan/scan.json -o scan-demo -nt 4```### unigbsa-pipeline>A simple, automatic pipeline to perform MM/GB(PB)SA calculations. You only need to provide a protein file (in the PDB format) and ligand files (in the MOL or SDF format). This function will perform an energy minimization then calculate the PBSA/GBSA values for the each input ligand.* If you want perform energy minimization or MD simulation for the complex automatically, use the ``unigbsa-pipeline`` function.```Bashusage: unigbsa-pipeline [-h] -i RECEPTOR [-l LIGAND [LIGAND ...]] [-c CONFIG] [-d LIGDIR] [-f PBSAFILE] [-o OUTFILE] [-nt THREAD] [--decomp] [--verbose]GBSA Calculation.optional arguments:  -h, --help            show this help message and exit  -i RECEPTOR           Input protein file with pdb format.  -l LIGAND [LIGAND ...]                        Ligand files to calculate binding energy.  -c CONFIG             Configue file, default: default.ini  -d LIGDIR             Floder contains many ligand files. file format: .mol or .sdf  -f PBSAFILE           gmx_MMPBSA input file. default=None  -o OUTFILE            Output file.  -nt THREAD            Set number of thread to run this program.  --decomp              Decompose the free energy. default:False  --verbose             Keep all the files.```You can change the parameters for the MM/GB(PB)SA calculations by providing a configue file(`default.ini`). ```; parameters for simulation[simulation]; input pose process method: ;   input   -   just use input pose to calculation;   em      -   run a simple energy minimizaion for the input poses;   md      -   run a md simulation for the input posesmode = em; simulation box type: triclinic, cubic, dodecahedron, octahedronboxtype = triclinic; Distance between the solute and the simulation boxboxsize = 0.9; Specify salt concentration (mol/liter). This will add sufficient ions to reach up to the specified concentrationconc = 0.15; number of md simulation stepsnsteps = 500000; number of equilibrium simulation(nvt, npt) stepseqsteps = 50000; number of structure to save for the md simulationnframe = 100; protein forcefield (gromacs engine)proteinforcefield = amber03; ligand forcefield (acpype engine)ligandforcefield = gaff; ligand charge method: bcc, gasligandCharge = bcc; parameters for PBSA/GBSA calculation, support all the gmx_MMPBSA parameters[GBSA]; calculation namesys_name = GBSA; calculation mode, Separated by commas. gb,pb,decompositionmodes = gb; best parameters for PBSA/GBSA calculations obtained from Wang, Ercheng, et al. Chemical reviews 119.16 (2019): 9478-9508.igb = 2indi = 4.0exdi = 80.0```### unigbsa-traj>Perform a PBSA/GBSA calculation of a complex from a MD trajectory. Note: you need to prepare a gromacs `index.ndx` file which contains two groups named `RECEPTOR` and `LIGAND`.````unigbsa-traj -husage: unigbsa-traj [-h] -i INP -p TOP -ndx NDX [-m {gb,pb,pb+gb,gb+pb}] [-t TRAJ] [-indi INDI] [-dec] [-D]Free energy calcaulated by PBSA method.optional arguments:  -h, --help            show this help message and exit  -i INP                A pdb file or a tpr file for the trajectory.  -p TOP                Gromacs topol file for the system.  -ndx NDX              Gromacs index file, must contain recepror and ligand group.  -m {gb,pb,pb+gb,gb+pb}                        Method to calculate: gb, pb, pb+gb. default:gb  -t TRAJ               A trajectory file contains many structure frames. File format: xtc, pdb, gro...  -indi INDI            External dielectric constant. detault: 1.0  -dec                  Decompose the energy. default:false  -D                    DEBUG model, keep all the files.````### unigbsa-buildtop>Topology preparation for a protein receptor and ligand(s) using gromacs.```Bashunigbsa-buildtop -husage: unigbsa-buildtop [-h] [-p PROTEIN] [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-o OUTDIR] [-c] [-verbose]Build topology file for input file.optional arguments:  -h, --help        show this help message and exit  -p PROTEIN        Protein file or directory to build topology.  -l LIGAND         Ligand file or directory to build topology.  -pf PROTFORCE     Protein forcefield.  -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.  -o OUTDIR         A output directory.  -c                Combine the protein and ligand topology. Suppport for one protein and more ligands. default:True  -verbose          Keep the directory or not.```### unigbsa-buildsys>Build a simulation box for a protein-ligand complex.```bashunigbsa-buildsys -husage: unigbsa-buildsys [-h] -p PROTEIN [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-bt BOXTYPE] [-box BOX BOX BOX] [-d D] [-conc CONC] [-o OUTDIR]Build MD simulation for input file.optional arguments:  -h, --help        show this help message and exit  -p PROTEIN        Protein file for the simulation.  -l LIGAND         Ligand file or directory for the simulation.  -pf PROTFORCE     Protein forcefield.  -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.  -bt BOXTYPE       Simulation box type, default: triclinic  -box BOX BOX BOX  Simulation box size.  -d D              Distance between the solute and the box.  -conc CONC        Specify salt concentration (mol/liter). default=0.15  -o OUTDIR         A output directory.```### unigbsa-md>Run a MD simulation of a protein-ligand complex.```Bashunigbsa-md -husage: unigbsa-md [-h] -p PROTEIN [-l LIGAND] [-pf PROTFORCE] [-lf {gaff,gaff2}] [-bt BOXTYPE] [-box BOX BOX BOX] [-d D] [-conc CONC] [-o OUTDIR] [-nstep NSTEP] [-nframe NFRAME] [-verbose]Run MD simulation for input file.optional arguments:  -h, --help        show this help message and exit  -p PROTEIN        Protein file for the simulation.  -l LIGAND         Ligand file or directory for the simulation.  -pf PROTFORCE     Protein forcefield.  -lf {gaff,gaff2}  Ligand forcefiled: gaff or gaff2.  -bt BOXTYPE       Simulation box type, default: triclinic  -box BOX BOX BOX  Simulation box size.  -d D              Distance between the solute and the box.  -conc CONC        Specify salt concentration (mol/liter). default=0.15  -o OUTDIR         A output directory.  -nstep NSTEP      Simulation steps. default:2500  -nframe NFRAME    Number of frame to save for the xtc file. default:100  -verbose          Keep all the files in the simulation.```### unigbsa-pbc>Process PBC condition for a MD trajectory.```Bashunigbsa-pbc -husage: unigbsa-pbc [-h] -s TPR -f XTC [-o OUT] [-n NDX]Auto process PBC for gromacs MD trajector.optional arguments:  -h, --help  show this help message and exit  -s TPR      TPR file generated from gromacs or coordinate file.  -f XTC      Trajector file to process PBC.  -o OUT      Result file after processed PBC.  -n NDX      Index file contains the center and output group.```### More Examples* Perform a MM/GB(PB)SA calculation on a ligand file with a protein receptor with ``unigbsa-pipeline``````Bashunigbsa-pipeline -i ./example/2fvy/protein.pdb -l ./example/2fvy/BGC.mol2````* Perform a MM/GB(PB)SA calculation of a complex from a MD trajectory with ``unigbsa-traj`````Bashunigbsa-traj -i example/3f/complex.pdb -p example/3f/complex.top -ndx example/3f/index.ndx -m pb gb -t example/3f/complex.pdb```* Build topology for a protein receptor and a ligand using gromacs. ``unigbsa-buildtop`````bashunigbsa-buildtop -p example/2fvy/protein.pdb -pf amber99sb -o topol  # build gromacs topology for a single proteinunigbsa-buildtop -p example/2fvy/protein.pdb -pf amber99sb -l example/2fvy/BGC.mol2 -lf gaff -o 2fvy_topol -c # build gromacs topology for protein and ligand complex```* Build a simulation system with ``unigbsa-buildsys``* Run a MD simulation with ``unigbsa-md``* Process the PBC condition of a MD trjectorywith ``unigbsa-pbc``## Citation```plaintextYang M, Wang D, Zheng H. Uni-GBSA: An Automatic Workflow to Perform MM/GB(PB)SA Calculations for Virtual Screening. ChemRxiv. Cambridge: Cambridge Open Engage; 2022; This content is a preprint and has not been peer-reviewed.```
+│ │   --- unigbsa-0.1.2/unigbsa.egg-info/SOURCES.txt
+│ ├── +++ unigbsa-0.1.3/unigbsa.egg-info/SOURCES.txt
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,11 +1,15 @@
+│ │  LICENCE.txt
+│ │  MANIFEST.in
+│ │  README.md
+│ │  setup.py
+│ │ +launching/app.py
+│ │ +launching/pipeline.py
+│ │ +launching/scan.py
+│ │ +tests/test_pipline.py
+│ │  unigbsa/CLI.py
+│ │  unigbsa/__init__.py
+│ │  unigbsa/pipeline.py
+│ │  unigbsa/settings.py
+│ │  unigbsa/utils.py
+│ │  unigbsa/version.py
+│ │  unigbsa.egg-info/PKG-INFO

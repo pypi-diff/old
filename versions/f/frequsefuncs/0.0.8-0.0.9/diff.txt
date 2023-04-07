@@ -1,0 +1,144 @@
+--- tmp/frequsefuncs-0.0.8.tar.gz
++++ tmp/frequsefuncs-0.0.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "frequsefuncs-0.0.8.tar", last modified: Wed Apr  5 14:11:17 2023, max compression
+│ +gzip compressed data, was "frequsefuncs-0.0.9.tar", last modified: Fri Apr  7 07:25:06 2023, max compression
+│   --- frequsefuncs-0.0.8.tar
+├── +++ frequsefuncs-0.0.9.tar
+│ ├── file list
+│ │ @@ -1,21 +1,21 @@
+│ │ -drwxr-xr-x   0 yusimiao   (503) staff       (20)        0 2023-04-05 14:11:17.276842 frequsefuncs-0.0.8/
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)      414 2023-04-05 14:11:17.276627 frequsefuncs-0.0.8/PKG-INFO
+│ │ -drwxr-xr-x   0 yusimiao   (503) staff       (20)        0 2023-04-05 14:11:17.262957 frequsefuncs-0.0.8/frequsefuncs/
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)        0 2021-10-18 05:30:57.000000 frequsefuncs-0.0.8/frequsefuncs/__init__.py
+│ │ -drwxr-xr-x   0 yusimiao   (503) staff       (20)        0 2023-04-05 14:11:17.275041 frequsefuncs-0.0.8/frequsefuncs/odps/
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)      113 2021-10-15 05:28:41.000000 frequsefuncs-0.0.8/frequsefuncs/odps/__init__.py
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)     2149 2021-10-20 08:10:48.000000 frequsefuncs-0.0.8/frequsefuncs/odps/funcs.py
+│ │ -drwxr-xr-x   0 yusimiao   (503) staff       (20)        0 2023-04-05 14:11:17.275621 frequsefuncs-0.0.8/frequsefuncs/odps_passvar/
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)      113 2021-10-15 05:28:41.000000 frequsefuncs-0.0.8/frequsefuncs/odps_passvar/__init__.py
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)     4110 2023-04-05 14:10:52.000000 frequsefuncs-0.0.8/frequsefuncs/odps_passvar/funcs.py
+│ │ -drwxr-xr-x   0 yusimiao   (503) staff       (20)        0 2023-04-05 14:11:17.276221 frequsefuncs-0.0.8/frequsefuncs/selfdev/
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)       40 2021-10-18 05:57:19.000000 frequsefuncs-0.0.8/frequsefuncs/selfdev/__init__.py
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)     2135 2022-08-24 06:52:38.000000 frequsefuncs-0.0.8/frequsefuncs/selfdev/funcs.py
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)      947 2023-04-05 14:11:07.000000 frequsefuncs-0.0.8/frequsefuncs/setup.py
+│ │ -drwxr-xr-x   0 yusimiao   (503) staff       (20)        0 2023-04-05 14:11:17.274454 frequsefuncs-0.0.8/frequsefuncs.egg-info/
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)      414 2023-04-05 14:11:17.000000 frequsefuncs-0.0.8/frequsefuncs.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)      392 2023-04-05 14:11:17.000000 frequsefuncs-0.0.8/frequsefuncs.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)        1 2023-04-05 14:11:17.000000 frequsefuncs-0.0.8/frequsefuncs.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)       13 2023-04-05 14:11:17.000000 frequsefuncs-0.0.8/frequsefuncs.egg-info/top_level.txt
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)       38 2023-04-05 14:11:17.276904 frequsefuncs-0.0.8/setup.cfg
+│ │ --rw-r--r--   0 yusimiao   (503) staff       (20)      947 2023-04-05 14:11:04.000000 frequsefuncs-0.0.8/setup.py
+│ │ +drwxr-xr-x   0 yusimiao   (503) staff       (20)        0 2023-04-07 07:25:06.392845 frequsefuncs-0.0.9/
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)      414 2023-04-07 07:25:06.392670 frequsefuncs-0.0.9/PKG-INFO
+│ │ +drwxr-xr-x   0 yusimiao   (503) staff       (20)        0 2023-04-07 07:25:06.389928 frequsefuncs-0.0.9/frequsefuncs/
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)        0 2021-10-18 05:30:57.000000 frequsefuncs-0.0.9/frequsefuncs/__init__.py
+│ │ +drwxr-xr-x   0 yusimiao   (503) staff       (20)        0 2023-04-07 07:25:06.391172 frequsefuncs-0.0.9/frequsefuncs/odps/
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)      113 2021-10-15 05:28:41.000000 frequsefuncs-0.0.9/frequsefuncs/odps/__init__.py
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)     2149 2021-10-20 08:10:48.000000 frequsefuncs-0.0.9/frequsefuncs/odps/funcs.py
+│ │ +drwxr-xr-x   0 yusimiao   (503) staff       (20)        0 2023-04-07 07:25:06.391780 frequsefuncs-0.0.9/frequsefuncs/odps_passvar/
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)      113 2021-10-15 05:28:41.000000 frequsefuncs-0.0.9/frequsefuncs/odps_passvar/__init__.py
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)     4180 2023-04-07 07:24:51.000000 frequsefuncs-0.0.9/frequsefuncs/odps_passvar/funcs.py
+│ │ +drwxr-xr-x   0 yusimiao   (503) staff       (20)        0 2023-04-07 07:25:06.392296 frequsefuncs-0.0.9/frequsefuncs/selfdev/
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)       40 2021-10-18 05:57:19.000000 frequsefuncs-0.0.9/frequsefuncs/selfdev/__init__.py
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)     2135 2022-08-24 06:52:38.000000 frequsefuncs-0.0.9/frequsefuncs/selfdev/funcs.py
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)      947 2023-04-07 07:24:59.000000 frequsefuncs-0.0.9/frequsefuncs/setup.py
+│ │ +drwxr-xr-x   0 yusimiao   (503) staff       (20)        0 2023-04-07 07:25:06.390690 frequsefuncs-0.0.9/frequsefuncs.egg-info/
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)      414 2023-04-07 07:25:06.000000 frequsefuncs-0.0.9/frequsefuncs.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)      392 2023-04-07 07:25:06.000000 frequsefuncs-0.0.9/frequsefuncs.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)        1 2023-04-07 07:25:06.000000 frequsefuncs-0.0.9/frequsefuncs.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)       13 2023-04-07 07:25:06.000000 frequsefuncs-0.0.9/frequsefuncs.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)       38 2023-04-07 07:25:06.392901 frequsefuncs-0.0.9/setup.cfg
+│ │ +-rw-r--r--   0 yusimiao   (503) staff       (20)      947 2023-04-07 07:24:56.000000 frequsefuncs-0.0.9/setup.py
+│ │   --- frequsefuncs-0.0.8/frequsefuncs/odps/funcs.py
+│ ├── +++ frequsefuncs-0.0.9/frequsefuncs/odps/funcs.py
+│ │┄ Files identical despite different names
+│ │   --- frequsefuncs-0.0.8/frequsefuncs/odps_passvar/funcs.py
+│ ├── +++ frequsefuncs-0.0.9/frequsefuncs/odps_passvar/funcs.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -77,15 +77,15 @@
+│ │  #输入sql代码 和 临时表名，返回dataframe
+│ │  def func_run_sql_get_result(fpath_cfg, str_sql, nm_table, flag_mute, mode):
+│ │      func_run_sql(fpath_cfg, str_sql, flag_mute, mode)
+│ │      df_r = func_downloaddata(fpath_cfg, nm_table, flag_mute)
+│ │      return df_r
+│ │  
+│ │  
+│ │ -def func_downloaddata_bybatch(fpath_cfg, nm_table, flag_mute = 0, batch_size = 100000):
+│ │ +def func_downloaddata_bybatch(fpath_cfg, nm_table, flag_mute = 0, batch_size = 100000, sec_wait_retry = 30):
+│ │      odps = func_conn_odps(fpath_cfg)
+│ │      t = odps.get_table(nm_table)
+│ │      data = []
+│ │  
+│ │      with t.open_reader() as reader:
+│ │          num_rows = reader.count
+│ │          if flag_mute == 0:
+│ │ @@ -111,29 +111,29 @@
+│ │                      if flag_mute == 0:
+│ │                          rn = dft.shape[0]
+│ │                          print('start at {cur_i}, finish number of rows {rn}'.format(cur_i = cur_i, rn = rn))
+│ │                  break
+│ │              except:
+│ │                  if retry_i <= 4:
+│ │                      print('retry {} failed'.format(retry_i))
+│ │ -                    time.sleep(30)
+│ │ +                    time.sleep(sec_wait_retry)
+│ │                  else:
+│ │                      raise
+│ │          data.append(dft)
+│ │  
+│ │      import pandas as pd
+│ │      df_r = pd.concat(data, ignore_index = True, axis = 0)
+│ │      return(df_r)
+│ │  
+│ │  
+│ │  
+│ │  #输入sql代码 和 临时表名，返回dataframe - 分批下载数据
+│ │ -def func_run_sql_get_result_bybatch(fpath_cfg, str_sql, nm_table, flag_mute, mode, batch_size):
+│ │ +def func_run_sql_get_result_bybatch(fpath_cfg, str_sql, nm_table, flag_mute, mode, batch_size, sec_wait_retry = 30):
+│ │      func_run_sql(fpath_cfg, str_sql, flag_mute, mode)
+│ │ -    df_r = func_downloaddata_bybatch(fpath_cfg, nm_table, flag_mute, batch_size)
+│ │ +    df_r = func_downloaddata_bybatch(fpath_cfg, nm_table, flag_mute, batch_size, sec_wait_retry)
+│ │      return df_r
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  ########################### ###########################
+│ │   --- frequsefuncs-0.0.8/frequsefuncs/selfdev/funcs.py
+│ ├── +++ frequsefuncs-0.0.9/frequsefuncs/selfdev/funcs.py
+│ │┄ Files identical despite different names
+│ │   --- frequsefuncs-0.0.8/frequsefuncs/setup.py
+│ ├── +++ frequsefuncs-0.0.9/frequsefuncs/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  
+│ │  
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │ -VERSION = '0.0.8' 
+│ │ +VERSION = '0.0.9' 
+│ │  DESCRIPTION = 'python package of frequently used functions'
+│ │  LONG_DESCRIPTION = 'python package of frequently used functions'
+│ │  
+│ │  # Setting up
+│ │  setup(
+│ │         # the name must match the folder name 'frequsefuncs'
+│ │          name="frequsefuncs",
+│ │   --- frequsefuncs-0.0.8/setup.py
+│ ├── +++ frequsefuncs-0.0.9/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  
+│ │  
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │ -VERSION = '0.0.8' 
+│ │ +VERSION = '0.0.9' 
+│ │  DESCRIPTION = 'python package of frequently used functions'
+│ │  LONG_DESCRIPTION = 'python package of frequently used functions'
+│ │  
+│ │  # Setting up
+│ │  setup(
+│ │         # the name must match the folder name 'frequsefuncs'
+│ │          name="frequsefuncs",

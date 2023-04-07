@@ -1,0 +1,273 @@
+--- tmp/zerobouncesdk-0.0.6.tar.gz
++++ tmp/zerobouncesdk-1.0.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist\zerobouncesdk-0.0.6.tar", last modified: Wed Aug  7 07:52:50 2019, max compression
+│ +gzip compressed data, was "/home/sst/zero-bounce-python-sdk-setup/dist/.tmp-3m1q4xy4/zerobouncesdk-1.0.0.tar", last modified: Thu Mar 30 10:45:29 2023, max compression
+│   --- zerobouncesdk-0.0.6.tar
+├── +++ zerobouncesdk-1.0.0.tar
+│ ├── file list
+│ │ @@ -1,25 +1,31 @@
+│ │ -drwxrwxrwx   0        0        0        0 2019-08-07 07:52:50.000000 zerobouncesdk-0.0.6/
+│ │ --rw-rw-rw-   0        0        0      341 2019-08-07 07:52:50.000000 zerobouncesdk-0.0.6/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0       15 2019-07-12 08:52:18.000000 zerobouncesdk-0.0.6/README.rst
+│ │ --rw-rw-rw-   0        0        0       86 2019-08-07 07:52:50.000000 zerobouncesdk-0.0.6/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      458 2019-08-07 07:52:46.000000 zerobouncesdk-0.0.6/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2019-08-07 07:52:50.000000 zerobouncesdk-0.0.6/zerobouncesdk/
+│ │ --rw-rw-rw-   0        0        0      650 2019-08-07 07:32:06.000000 zerobouncesdk-0.0.6/zerobouncesdk/__init__.py
+│ │ --rw-rw-rw-   0        0        0      252 2019-07-15 09:54:50.000000 zerobouncesdk-0.0.6/zerobouncesdk/_zb_response.py
+│ │ --rw-rw-rw-   0        0        0      204 2019-07-15 09:56:41.000000 zerobouncesdk-0.0.6/zerobouncesdk/zb_delete_file_response.py
+│ │ --rw-rw-rw-   0        0        0      151 2019-08-07 07:31:52.000000 zerobouncesdk-0.0.6/zerobouncesdk/zb_exceptions.py
+│ │ --rw-rw-rw-   0        0        0      125 2019-07-15 09:06:11.000000 zerobouncesdk-0.0.6/zerobouncesdk/zb_file_status_response.py
+│ │ --rw-rw-rw-   0        0        0     1250 2019-07-15 09:36:35.000000 zerobouncesdk-0.0.6/zerobouncesdk/zb_get_api_usage_response.py
+│ │ --rw-rw-rw-   0        0        0      267 2019-07-15 08:27:20.000000 zerobouncesdk-0.0.6/zerobouncesdk/zb_get_credits_response.py
+│ │ --rw-rw-rw-   0        0        0      124 2019-07-15 09:54:50.000000 zerobouncesdk-0.0.6/zerobouncesdk/zb_get_file_response.py
+│ │ --rw-rw-rw-   0        0        0      202 2019-07-15 06:51:36.000000 zerobouncesdk-0.0.6/zerobouncesdk/zb_send_file_response.py
+│ │ --rw-rw-rw-   0        0        0     2657 2019-07-12 15:03:40.000000 zerobouncesdk-0.0.6/zerobouncesdk/zb_validate_response.py
+│ │ --rw-rw-rw-   0        0        0      239 2019-07-12 14:39:08.000000 zerobouncesdk-0.0.6/zerobouncesdk/zb_validate_status.py
+│ │ --rw-rw-rw-   0        0        0     1113 2019-07-12 14:42:12.000000 zerobouncesdk-0.0.6/zerobouncesdk/zb_validate_sub_status.py
+│ │ --rw-rw-rw-   0        0        0     8050 2019-08-07 07:27:56.000000 zerobouncesdk-0.0.6/zerobouncesdk/zerobouncesdk.py
+│ │ -drwxrwxrwx   0        0        0        0 2019-08-07 07:52:50.000000 zerobouncesdk-0.0.6/zerobouncesdk.egg-info/
+│ │ --rw-rw-rw-   0        0        0      341 2019-08-07 07:52:50.000000 zerobouncesdk-0.0.6/zerobouncesdk.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      688 2019-08-07 07:52:50.000000 zerobouncesdk-0.0.6/zerobouncesdk.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2019-08-07 07:52:50.000000 zerobouncesdk-0.0.6/zerobouncesdk.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       27 2019-08-07 07:52:50.000000 zerobouncesdk-0.0.6/zerobouncesdk.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       14 2019-08-07 07:52:50.000000 zerobouncesdk-0.0.6/zerobouncesdk.egg-info/top_level.txt
+│ │ +drwxrwxr-x   0 sst       (1000) sst       (1000)        0 2023-03-30 10:45:29.000000 zerobouncesdk-1.0.0/
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)     1067 2023-03-15 13:16:31.000000 zerobouncesdk-1.0.0/LICENSE.txt
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)     8875 2023-03-30 10:45:29.000000 zerobouncesdk-1.0.0/PKG-INFO
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)     8276 2023-03-29 11:39:04.000000 zerobouncesdk-1.0.0/README.md
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      755 2023-03-30 10:19:26.000000 zerobouncesdk-1.0.0/pyproject.toml
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)       38 2023-03-30 10:45:29.000000 zerobouncesdk-1.0.0/setup.cfg
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)       38 2023-03-29 11:52:16.000000 zerobouncesdk-1.0.0/setup.py
+│ │ +drwxrwxr-x   0 sst       (1000) sst       (1000)        0 2023-03-30 10:45:29.000000 zerobouncesdk-1.0.0/src/
+│ │ +drwxrwxr-x   0 sst       (1000) sst       (1000)        0 2023-03-30 10:45:29.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      842 2023-03-29 09:18:46.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/__init__.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      650 2023-03-27 07:43:07.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/_zb_response.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      203 2023-03-24 16:19:23.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_delete_file_response.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      134 2023-03-29 09:19:05.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_exceptions.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      589 2023-03-28 13:55:57.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_file_status_response.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      199 2023-03-28 07:44:29.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_get_activity_response.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)     4170 2023-03-23 16:56:00.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_get_api_usage_response.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      235 2023-03-24 08:47:02.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_get_credits_response.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      204 2023-03-24 15:17:11.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_get_file_response.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      200 2023-03-24 14:58:48.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_send_file_response.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      641 2023-03-28 11:49:51.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_validate_batch_element.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      770 2023-03-24 11:14:39.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_validate_batch_response.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)     2731 2023-03-28 12:33:59.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_validate_response.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      328 2023-03-17 12:13:40.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_validate_status.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)     1289 2023-03-23 16:43:33.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zb_validate_sub_status.py
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)    14644 2023-03-30 10:20:40.000000 zerobouncesdk-1.0.0/src/zerobouncesdk/zerobouncesdk.py
+│ │ +drwxrwxr-x   0 sst       (1000) sst       (1000)        0 2023-03-30 10:45:29.000000 zerobouncesdk-1.0.0/src/zerobouncesdk.egg-info/
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)     8875 2023-03-30 10:45:29.000000 zerobouncesdk-1.0.0/src/zerobouncesdk.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)      917 2023-03-30 10:45:29.000000 zerobouncesdk-1.0.0/src/zerobouncesdk.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)        1 2023-03-30 10:45:29.000000 zerobouncesdk-1.0.0/src/zerobouncesdk.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)       17 2023-03-30 10:45:29.000000 zerobouncesdk-1.0.0/src/zerobouncesdk.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 sst       (1000) sst       (1000)       14 2023-03-30 10:45:29.000000 zerobouncesdk-1.0.0/src/zerobouncesdk.egg-info/top_level.txt
+│ │   --- zerobouncesdk-0.0.6/zerobouncesdk/zb_validate_response.py
+│ ├── +++ zerobouncesdk-1.0.0/src/zerobouncesdk/zb_validate_response.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,78 +1,76 @@
+│ │ -from zerobouncesdk._zb_response import ZBResponse
+│ │ -from zerobouncesdk.zb_validate_status import ZBValidateStatus
+│ │ -from zerobouncesdk.zb_validate_sub_status import ZBValidateSubStatus
+│ │ -
+│ │ -
+│ │ -class ZBValidateResponse(ZBResponse):
+│ │ -    """This is the response for the validate API"""
+│ │ -
+│ │ -    address: str = None
+│ │ -    """The email address you are validating."""
+│ │ -
+│ │ -    status: ZBValidateStatus = None
+│ │ -    """one of [valid, invalid, catch-all, unknown, spamtrap, abuse, do_not_mail]"""
+│ │ -
+│ │ -    sub_status: ZBValidateSubStatus = None
+│ │ -    """one of [antispam_system, greylisted, mail_server_temporary_error, forcible_disconnect, 
+│ │ -    mail_server_did_not_respond, timeout_exceeded, failed_smtp_connection, mailbox_quota_exceeded, 
+│ │ -    exception_occurred, possible_traps, role_based, global_suppression, mailbox_not_found, no_dns_entries, 
+│ │ -    failed_syntax_check, possible_typo, unroutable_ip_address, leading_period_removed, does_not_accept_mail, 
+│ │ -    alias_address, role_based_catch_all, disposable, toxic] """
+│ │ -
+│ │ -    account: str = None
+│ │ -    """The portion of the email address before the "@" symbol."""
+│ │ -
+│ │ -    domain: str = None
+│ │ -    """The portion of the email address after the "@" symbol."""
+│ │ -
+│ │ -    did_you_mean: str = None
+│ │ -    """Suggestive Fix for an email typo"""
+│ │ -
+│ │ -    domain_age_days: str = None
+│ │ -    """Age of the email domain in days or [null]."""
+│ │ -
+│ │ -    free_email = False
+│ │ -    """[true/false] If the email comes from a free provider."""
+│ │ -
+│ │ -    mx_found = False
+│ │ -    """[true/false] Does the domain have an MX record."""
+│ │ -
+│ │ -    mx_record: str = None
+│ │ -    """ The preferred MX record of the domain"""
+│ │ -
+│ │ -    smtp_provider: str = None
+│ │ -    """The SMTP Provider of the email or [null] [BETA]."""
+│ │ -
+│ │ -    firstname: str = None
+│ │ -    """The first name of the owner of the email when available or [null]."""
+│ │ -
+│ │ -    lastname: str = None
+│ │ -    """The last name of the owner of the email when available or [null]."""
+│ │ -
+│ │ -    gender: str = None
+│ │ -    """The gender of the owner of the email when available or [null]."""
+│ │ -
+│ │ -    city: str = None
+│ │ -    """The city of the IP passed in."""
+│ │ -
+│ │ -    region: str = None
+│ │ -    """The region/state of the IP passed in."""
+│ │ -
+│ │ -    zipcode: str = None
+│ │ -    """The zipcode of the IP passed in."""
+│ │ -
+│ │ -    country: str = None
+│ │ -    """The country of the IP passed in."""
+│ │ -
+│ │ -    processed_at: str = None
+│ │ -    """The UTC time the email was validated."""
+│ │ -
+│ │ -    error: str = None
+│ │ -
+│ │ -    def __init__(self, j):
+│ │ -        super().__init__(j)
+│ │ -        self.status = None if self.status is None else ZBValidateStatus(self.status)
+│ │ -        self.sub_status = None if self.sub_status is None else ZBValidateSubStatus(self.sub_status)
+│ │ -
+│ │ -
+│ │ -
+│ │ +from datetime import datetime
+│ │ +
+│ │ +from . import ZBValidateStatus, ZBValidateSubStatus
+│ │ +from ._zb_response import ZBResponse
+│ │ +
+│ │ +
+│ │ +class ZBValidateResponse(ZBResponse):
+│ │ +    """This is the response for the GET /validate request."""
+│ │ +
+│ │ +    address: str = None
+│ │ +    """The email address you are validating."""
+│ │ +
+│ │ +    status: ZBValidateStatus = None
+│ │ +    """one of [valid, invalid, catch-all, unknown, spamtrap, abuse, do_not_mail]"""
+│ │ +
+│ │ +    sub_status: ZBValidateSubStatus = None
+│ │ +    """one of [antispam_system, greylisted, mail_server_temporary_error, forcible_disconnect,
+│ │ +    mail_server_did_not_respond, timeout_exceeded, failed_smtp_connection, mailbox_quota_exceeded,
+│ │ +    exception_occurred, possible_trap, role_based, global_suppression, mailbox_not_found, no_dns_entries,
+│ │ +    failed_syntax_check, possible_typo, unroutable_ip_address, leading_period_removed, does_not_accept_mail,
+│ │ +    alias_address, role_based_catch_all, disposable, toxic, alternate, mx_forward, blocked, allowed]"""
+│ │ +
+│ │ +    account: str = None
+│ │ +    """The portion of the email address before the "@" symbol."""
+│ │ +
+│ │ +    domain: str = None
+│ │ +    """The portion of the email address after the "@" symbol."""
+│ │ +
+│ │ +    did_you_mean: str = None
+│ │ +    """Suggestive Fix for an email typo"""
+│ │ +
+│ │ +    domain_age_days: str = None
+│ │ +    """Age of the email domain in days or [null]."""
+│ │ +
+│ │ +    free_email: bool = False
+│ │ +    """[true/false] If the email comes from a free provider."""
+│ │ +
+│ │ +    mx_found: bool = False
+│ │ +    """[true/false] Does the domain have an MX record."""
+│ │ +
+│ │ +    mx_record: str = None
+│ │ +    """ The preferred MX record of the domain"""
+│ │ +
+│ │ +    smtp_provider: str = None
+│ │ +    """The SMTP Provider of the email or [null] [BETA]."""
+│ │ +
+│ │ +    firstname: str = None
+│ │ +    """The first name of the owner of the email when available or [null]."""
+│ │ +
+│ │ +    lastname: str = None
+│ │ +    """The last name of the owner of the email when available or [null]."""
+│ │ +
+│ │ +    gender: str = None
+│ │ +    """The gender of the owner of the email when available or [null]."""
+│ │ +
+│ │ +    city: str = None
+│ │ +    """The city of the IP passed in or [null]"""
+│ │ +
+│ │ +    region: str = None
+│ │ +    """The region/state of the IP passed in or [null]"""
+│ │ +
+│ │ +    zipcode: str = None
+│ │ +    """The zipcode of the IP passed in or [null]"""
+│ │ +
+│ │ +    country: str = None
+│ │ +    """The country of the IP passed in or [null]"""
+│ │ +
+│ │ +    processed_at: datetime = None
+│ │ +    """The UTC time the email was validated."""
+│ │ +
+│ │ +    def __init__(self, data):
+│ │ +        super().__init__(data)
+│ │ +        self.status = None if self.status is None else ZBValidateStatus(self.status)
+│ │ +        self.sub_status = None if self.sub_status is None else ZBValidateSubStatus(self.sub_status)
+│ │ +        if self.processed_at is not None:
+│ │ +            self.processed_at = datetime.strptime(self.processed_at, "%Y-%m-%d %H:%M:%S.%f")
+│ │   --- zerobouncesdk-0.0.6/zerobouncesdk.egg-info/SOURCES.txt
+│ ├── +++ zerobouncesdk-1.0.0/src/zerobouncesdk.egg-info/SOURCES.txt
+│ │┄ Files 23% similar despite different names
+│ │ @@ -1,21 +1,25 @@
+│ │ -README.rst
+│ │ -setup.cfg
+│ │ +LICENSE.txt
+│ │ +README.md
+│ │ +pyproject.toml
+│ │  setup.py
+│ │ -zerobouncesdk/__init__.py
+│ │ -zerobouncesdk/_zb_response.py
+│ │ -zerobouncesdk/zb_delete_file_response.py
+│ │ -zerobouncesdk/zb_exceptions.py
+│ │ -zerobouncesdk/zb_file_status_response.py
+│ │ -zerobouncesdk/zb_get_api_usage_response.py
+│ │ -zerobouncesdk/zb_get_credits_response.py
+│ │ -zerobouncesdk/zb_get_file_response.py
+│ │ -zerobouncesdk/zb_send_file_response.py
+│ │ -zerobouncesdk/zb_validate_response.py
+│ │ -zerobouncesdk/zb_validate_status.py
+│ │ -zerobouncesdk/zb_validate_sub_status.py
+│ │ -zerobouncesdk/zerobouncesdk.py
+│ │ -zerobouncesdk.egg-info/PKG-INFO
+│ │ -zerobouncesdk.egg-info/SOURCES.txt
+│ │ -zerobouncesdk.egg-info/dependency_links.txt
+│ │ -zerobouncesdk.egg-info/requires.txt
+│ │ -zerobouncesdk.egg-info/top_level.txt
+│ │ +src/zerobouncesdk/__init__.py
+│ │ +src/zerobouncesdk/_zb_response.py
+│ │ +src/zerobouncesdk/zb_delete_file_response.py
+│ │ +src/zerobouncesdk/zb_exceptions.py
+│ │ +src/zerobouncesdk/zb_file_status_response.py
+│ │ +src/zerobouncesdk/zb_get_activity_response.py
+│ │ +src/zerobouncesdk/zb_get_api_usage_response.py
+│ │ +src/zerobouncesdk/zb_get_credits_response.py
+│ │ +src/zerobouncesdk/zb_get_file_response.py
+│ │ +src/zerobouncesdk/zb_send_file_response.py
+│ │ +src/zerobouncesdk/zb_validate_batch_element.py
+│ │ +src/zerobouncesdk/zb_validate_batch_response.py
+│ │ +src/zerobouncesdk/zb_validate_response.py
+│ │ +src/zerobouncesdk/zb_validate_status.py
+│ │ +src/zerobouncesdk/zb_validate_sub_status.py
+│ │ +src/zerobouncesdk/zerobouncesdk.py
+│ │ +src/zerobouncesdk.egg-info/PKG-INFO
+│ │ +src/zerobouncesdk.egg-info/SOURCES.txt
+│ │ +src/zerobouncesdk.egg-info/dependency_links.txt
+│ │ +src/zerobouncesdk.egg-info/requires.txt
+│ │ +src/zerobouncesdk.egg-info/top_level.txt

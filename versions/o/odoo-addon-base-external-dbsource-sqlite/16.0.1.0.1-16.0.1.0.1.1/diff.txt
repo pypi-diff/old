@@ -1,0 +1,351 @@
+--- tmp/odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1-py3-none-any.whl.zip
++++ tmp/odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,30 +1,30 @@
+│ -Zip file size: 30345 bytes, number of entries: 28
+│ --rw-r--r--  2.0 unx     3955 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/README.rst
+│ --rw-r--r--  2.0 unx       21 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/__init__.py
+│ --rw-r--r--  2.0 unx      634 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/__manifest__.py
+│ --rw-r--r--  2.0 unx      293 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/demo/base_external_dbsource.xml
+│ --rw-r--r--  2.0 unx     1200 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/i18n/base_external_dbsource_sqlite.pot
+│ --rw-r--r--  2.0 unx      855 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/i18n/de.po
+│ --rw-r--r--  2.0 unx      870 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/i18n/es.po
+│ --rw-r--r--  2.0 unx      894 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/i18n/hr.po
+│ --rw-r--r--  2.0 unx      876 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/i18n/nl_NL.po
+│ --rw-r--r--  2.0 unx      895 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/i18n/pt_BR.po
+│ --rw-r--r--  2.0 unx      932 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/i18n/sl.po
+│ --rw-r--r--  2.0 unx      874 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/i18n/tr.po
+│ --rw-r--r--  2.0 unx       37 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/models/__init__.py
+│ --rw-r--r--  2.0 unx     1422 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/models/base_external_dbsource.py
+│ --rw-r--r--  2.0 unx      126 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/readme/CONFIGURE.rst
+│ --rw-r--r--  2.0 unx      300 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/readme/CONTRIBUTORS.rst
+│ --rw-r--r--  2.0 unx      118 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/readme/DESCRIPTION.rst
+│ --rw-r--r--  2.0 unx       78 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/readme/INSTALL.rst
+│ --rw-r--r--  2.0 unx       27 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/readme/ROADMAP.rst
+│ --rw-r--r--  2.0 unx      281 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/readme/USAGE.rst
+│ --rw-r--r--  2.0 unx     9455 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/static/description/icon.png
+│ --rw-r--r--  2.0 unx    14407 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/static/description/index.html
+│ --rw-r--r--  2.0 unx       42 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/tests/__init__.py
+│ --rw-r--r--  2.0 unx     1690 b- defN 23-Apr-06 12:12 odoo/addons/base_external_dbsource_sqlite/tests/test_base_external_dbsource.py
+│ --rw-r--r--  2.0 unx     4632 b- defN 23-Apr-06 12:12 odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 12:12 odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 12:12 odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx     3260 b- defN 23-Apr-06 12:12 odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/RECORD
+│ -28 files, 48271 bytes uncompressed, 24705 bytes compressed:  48.8%
+│ +Zip file size: 31406 bytes, number of entries: 28
+│ +-rw-r--r--  2.0 unx     3955 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/README.rst
+│ +-rw-r--r--  2.0 unx       21 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/__init__.py
+│ +-rw-r--r--  2.0 unx      634 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/__manifest__.py
+│ +-rw-r--r--  2.0 unx      293 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/demo/base_external_dbsource.xml
+│ +-rw-r--r--  2.0 unx     1200 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/i18n/base_external_dbsource_sqlite.pot
+│ +-rw-r--r--  2.0 unx     1511 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/i18n/de.po
+│ +-rw-r--r--  2.0 unx     1526 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/i18n/es.po
+│ +-rw-r--r--  2.0 unx     1550 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/i18n/hr.po
+│ +-rw-r--r--  2.0 unx     1532 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/i18n/nl_NL.po
+│ +-rw-r--r--  2.0 unx     1551 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/i18n/pt_BR.po
+│ +-rw-r--r--  2.0 unx     1588 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/i18n/sl.po
+│ +-rw-r--r--  2.0 unx     1530 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/i18n/tr.po
+│ +-rw-r--r--  2.0 unx       37 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/models/__init__.py
+│ +-rw-r--r--  2.0 unx     1422 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/models/base_external_dbsource.py
+│ +-rw-r--r--  2.0 unx      126 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/readme/CONFIGURE.rst
+│ +-rw-r--r--  2.0 unx      300 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/readme/CONTRIBUTORS.rst
+│ +-rw-r--r--  2.0 unx      118 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/readme/DESCRIPTION.rst
+│ +-rw-r--r--  2.0 unx       78 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/readme/INSTALL.rst
+│ +-rw-r--r--  2.0 unx       27 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/readme/ROADMAP.rst
+│ +-rw-r--r--  2.0 unx      281 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/readme/USAGE.rst
+│ +-rw-r--r--  2.0 unx     9455 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/static/description/icon.png
+│ +-rw-r--r--  2.0 unx    14407 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/static/description/index.html
+│ +-rw-r--r--  2.0 unx       42 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/tests/__init__.py
+│ +-rw-r--r--  2.0 unx     1690 b- defN 23-Apr-07 07:23 odoo/addons/base_external_dbsource_sqlite/tests/test_base_external_dbsource.py
+│ +-rw-r--r--  2.0 unx     4634 b- defN 23-Apr-07 07:23 odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 07:23 odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 07:23 odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 unx     3275 b- defN 23-Apr-07 07:23 odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/RECORD
+│ +28 files, 52880 bytes uncompressed, 25750 bytes compressed:  51.3%
+├── zipnote {}
+│ @@ -66,20 +66,20 @@
+│  
+│  Filename: odoo/addons/base_external_dbsource_sqlite/tests/__init__.py
+│  Comment: 
+│  
+│  Filename: odoo/addons/base_external_dbsource_sqlite/tests/test_base_external_dbsource.py
+│  Comment: 
+│  
+│ -Filename: odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/METADATA
+│ +Filename: odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/WHEEL
+│ +Filename: odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/top_level.txt
+│ +Filename: odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/RECORD
+│ +Filename: odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── odoo/addons/base_external_dbsource_sqlite/i18n/de.po
+│ @@ -15,10 +15,27 @@
+│  "Language: de\n"
+│  "MIME-Version: 1.0\n"
+│  "Content-Type: text/plain; charset=UTF-8\n"
+│  "Content-Transfer-Encoding: \n"
+│  "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+│  
+│  #. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid "Connector"
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│  #: model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource
+│  msgid "External Database Sources"
+│  msgstr "Externe Datenbankquellen"
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid ""
+│ +"If a connector is missing from the list, check the server log to confirm "
+│ +"that the required components were detected."
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite
+│ +msgid "SQLite"
+│ +msgstr ""
+├── odoo/addons/base_external_dbsource_sqlite/i18n/es.po
+│ @@ -15,10 +15,27 @@
+│  "Language: es\n"
+│  "MIME-Version: 1.0\n"
+│  "Content-Type: text/plain; charset=UTF-8\n"
+│  "Content-Transfer-Encoding: \n"
+│  "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+│  
+│  #. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid "Connector"
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│  #: model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource
+│  msgid "External Database Sources"
+│  msgstr "Fuentes externas de la base de datos"
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid ""
+│ +"If a connector is missing from the list, check the server log to confirm "
+│ +"that the required components were detected."
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite
+│ +msgid "SQLite"
+│ +msgstr ""
+├── odoo/addons/base_external_dbsource_sqlite/i18n/hr.po
+│ @@ -16,10 +16,27 @@
+│  "MIME-Version: 1.0\n"
+│  "Content-Type: text/plain; charset=UTF-8\n"
+│  "Content-Transfer-Encoding: \n"
+│  "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+│  "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+│  
+│  #. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid "Connector"
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│  #: model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource
+│  msgid "External Database Sources"
+│  msgstr "Vanjske baze"
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid ""
+│ +"If a connector is missing from the list, check the server log to confirm "
+│ +"that the required components were detected."
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite
+│ +msgid "SQLite"
+│ +msgstr ""
+├── odoo/addons/base_external_dbsource_sqlite/i18n/nl_NL.po
+│ @@ -16,10 +16,27 @@
+│  "Language: nl_NL\n"
+│  "MIME-Version: 1.0\n"
+│  "Content-Type: text/plain; charset=UTF-8\n"
+│  "Content-Transfer-Encoding: \n"
+│  "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+│  
+│  #. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid "Connector"
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│  #: model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource
+│  msgid "External Database Sources"
+│  msgstr "Externe databasebronnen"
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid ""
+│ +"If a connector is missing from the list, check the server log to confirm "
+│ +"that the required components were detected."
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite
+│ +msgid "SQLite"
+│ +msgstr ""
+├── odoo/addons/base_external_dbsource_sqlite/i18n/pt_BR.po
+│ @@ -16,10 +16,27 @@
+│  "Language: pt_BR\n"
+│  "MIME-Version: 1.0\n"
+│  "Content-Type: text/plain; charset=UTF-8\n"
+│  "Content-Transfer-Encoding: \n"
+│  "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+│  
+│  #. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid "Connector"
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│  #: model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource
+│  msgid "External Database Sources"
+│  msgstr "Fontes Banco de Dados Externo"
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid ""
+│ +"If a connector is missing from the list, check the server log to confirm "
+│ +"that the required components were detected."
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite
+│ +msgid "SQLite"
+│ +msgstr ""
+├── odoo/addons/base_external_dbsource_sqlite/i18n/sl.po
+│ @@ -16,10 +16,27 @@
+│  "MIME-Version: 1.0\n"
+│  "Content-Type: text/plain; charset=UTF-8\n"
+│  "Content-Transfer-Encoding: \n"
+│  "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+│  "%100==4 ? 2 : 3);\n"
+│  
+│  #. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid "Connector"
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│  #: model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource
+│  msgid "External Database Sources"
+│  msgstr "Viri zunanjih podatkovnih baz"
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid ""
+│ +"If a connector is missing from the list, check the server log to confirm "
+│ +"that the required components were detected."
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite
+│ +msgid "SQLite"
+│ +msgstr ""
+├── odoo/addons/base_external_dbsource_sqlite/i18n/tr.po
+│ @@ -15,10 +15,27 @@
+│  "Language: tr\n"
+│  "MIME-Version: 1.0\n"
+│  "Content-Type: text/plain; charset=UTF-8\n"
+│  "Content-Transfer-Encoding: \n"
+│  "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+│  
+│  #. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,field_description:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid "Connector"
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│  #: model:ir.model,name:base_external_dbsource_sqlite.model_base_external_dbsource
+│  msgid "External Database Sources"
+│  msgstr "Dış veritabanı kaynakları"
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields,help:base_external_dbsource_sqlite.field_base_external_dbsource__connector
+│ +msgid ""
+│ +"If a connector is missing from the list, check the server log to confirm "
+│ +"that the required components were detected."
+│ +msgstr ""
+│ +
+│ +#. module: base_external_dbsource_sqlite
+│ +#: model:ir.model.fields.selection,name:base_external_dbsource_sqlite.selection__base_external_dbsource__connector__sqlite
+│ +msgid "SQLite"
+│ +msgstr ""
+│   --- odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/METADATA
+├── +++ odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/METADATA
+│┄ Files 0% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: odoo-addon-base-external-dbsource-sqlite
+│ -Version: 16.0.1.0.1
+│ +Version: 16.0.1.0.1.1
+│  Summary: External Database Source - SQLite
+│  Home-page: https://github.com/OCA/server-backend
+│  Author: Daniel Reis, LasLabs, Odoo Community Association (OCA)
+│  Author-email: support@odoo-community.org
+│  License: LGPL-3
+│  Platform: UNKNOWN
+│  Classifier: Programming Language :: Python
+│   --- odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/RECORD
+├── +++ odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/RECORD
+│┄ Files 9% similar despite different names
+│ @@ -1,28 +1,28 @@
+│  odoo/addons/base_external_dbsource_sqlite/README.rst,sha256=-sR-F9aBge0VkaVPXFLYwQNCFPbnYuhzGI4pYcSNOx8,3955
+│  odoo/addons/base_external_dbsource_sqlite/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+│  odoo/addons/base_external_dbsource_sqlite/__manifest__.py,sha256=sKZkvMfA7_mKUuhl21aD3XJBypwpgJvivBvMoagPuow,634
+│  odoo/addons/base_external_dbsource_sqlite/demo/base_external_dbsource.xml,sha256=FwJubZxpNCoFsdM96HL-Wo89BYoiYP1q_m6Y2QcP2iQ,293
+│  odoo/addons/base_external_dbsource_sqlite/i18n/base_external_dbsource_sqlite.pot,sha256=CSu8kFoPWHey7Kq9SuGi-AKPC13eXIPcpG-yDcDeqic,1200
+│ -odoo/addons/base_external_dbsource_sqlite/i18n/de.po,sha256=CV3UqOU-kNVEB4KowaEzw_5Qr_lTt0SV0NGoEetEH88,855
+│ -odoo/addons/base_external_dbsource_sqlite/i18n/es.po,sha256=bPZCABMFf_ixCZIdp5j0j6StAS_kvY6JRTlv8g6lln8,870
+│ -odoo/addons/base_external_dbsource_sqlite/i18n/hr.po,sha256=30Iwl0kBfxtEEB2ZBNJc6FxchRHhRKKoSOofR-2u3rg,894
+│ -odoo/addons/base_external_dbsource_sqlite/i18n/nl_NL.po,sha256=m2a_vnLw2l7rZMfbGZNDcqxZis8VWpCv5s6ZmY2yirU,876
+│ -odoo/addons/base_external_dbsource_sqlite/i18n/pt_BR.po,sha256=o_sZBZWKvwD53wECW8E6VSaXA-55Ff8WiYT7yu9Rp1s,895
+│ -odoo/addons/base_external_dbsource_sqlite/i18n/sl.po,sha256=Bw7W3_pgLKzR5OEUUt6jS-MbLLFbWlEpJ3r3tfpl4e4,932
+│ -odoo/addons/base_external_dbsource_sqlite/i18n/tr.po,sha256=Kf7nDpW20r1lWVhQdWXofRC_7DI-8lvxtPgifdHL5uc,874
+│ +odoo/addons/base_external_dbsource_sqlite/i18n/de.po,sha256=rA8E8TiTGcKsVlwHa4_hZ8MaZE-PCcEth4OaAZ7I54E,1511
+│ +odoo/addons/base_external_dbsource_sqlite/i18n/es.po,sha256=vyFthIPnL_ogtFct11570jPyv8l6sJZbtOavEHcJEtY,1526
+│ +odoo/addons/base_external_dbsource_sqlite/i18n/hr.po,sha256=N-4akTDk3FBKzRxEoCoh6R_V-Y_OTotTfZQYDLydf1E,1550
+│ +odoo/addons/base_external_dbsource_sqlite/i18n/nl_NL.po,sha256=ndTzr8muENDVfrCeB-xDaXoWK0Q3ikacXHP55H94t3g,1532
+│ +odoo/addons/base_external_dbsource_sqlite/i18n/pt_BR.po,sha256=31Sce3ZMGg3I2aTHsTG_W6YmBawQExgH1m39wPXKwqQ,1551
+│ +odoo/addons/base_external_dbsource_sqlite/i18n/sl.po,sha256=C25xYv5mlVGOSo7RpfV804hYcZ8stQO8ICtOsRWDPk8,1588
+│ +odoo/addons/base_external_dbsource_sqlite/i18n/tr.po,sha256=BMRWzlSeVr7STQ6P3PDLTH7TtrVuex3SK7jkJwn45K8,1530
+│  odoo/addons/base_external_dbsource_sqlite/models/__init__.py,sha256=OrvryDFW1fFPbsXq2lpcvM3nsWmlsmM72jIUdWBg4sM,37
+│  odoo/addons/base_external_dbsource_sqlite/models/base_external_dbsource.py,sha256=_qPHftBJzm3PoHVfF9hVsJIUMPS9lW3GL0Ke32QPCvM,1422
+│  odoo/addons/base_external_dbsource_sqlite/readme/CONFIGURE.rst,sha256=FhN_roZXtVf3FJwVfkZ9WyirrwT_3U1-nirl3paxUPM,126
+│  odoo/addons/base_external_dbsource_sqlite/readme/CONTRIBUTORS.rst,sha256=o7cOdX6kSCclRucAeItJDkdo_povLCs9BKNBYl_EnEw,300
+│  odoo/addons/base_external_dbsource_sqlite/readme/DESCRIPTION.rst,sha256=RsxS5aEZESbz2caJRFQJk1SygelXeZeHrjweKKyX8Hc,118
+│  odoo/addons/base_external_dbsource_sqlite/readme/INSTALL.rst,sha256=SKGvRdqY07K_yoGoyYu1WqEzjw4uE-Ffy2WWTew1LgM,78
+│  odoo/addons/base_external_dbsource_sqlite/readme/ROADMAP.rst,sha256=9MxatZ8a0qDjDzNIYvtBg7XNBwCacKHju9Gu-FV2q4w,27
+│  odoo/addons/base_external_dbsource_sqlite/readme/USAGE.rst,sha256=T9UGRifeZTHVxTMmqGXn1zMupDNiPaFeJgJrO0HoQqQ,281
+│  odoo/addons/base_external_dbsource_sqlite/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+│  odoo/addons/base_external_dbsource_sqlite/static/description/index.html,sha256=qhPa5aYfIc0VvquU-tyr9Fid5JvaZESGSn5GGf3RIXU,14407
+│  odoo/addons/base_external_dbsource_sqlite/tests/__init__.py,sha256=EKOgAaiMX5R7Zx98NP4cHhRD5_QuCWTC73XxChPlF-U,42
+│  odoo/addons/base_external_dbsource_sqlite/tests/test_base_external_dbsource.py,sha256=qeqXCksMPby0GSfgWiHS3CyxND698MplrK5rBiQJyEc,1690
+│ -odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/METADATA,sha256=Bve6KNGblekyJAEMU3u2ZqZ0NtnGMFNeVIBPxK-5G5I,4632
+│ -odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+│ -odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+│ -odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.dist-info/RECORD,,
+│ +odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/METADATA,sha256=U24ZDQmOyqpb2eblRBBW04CnnceHp_WigHEcP-y6wsc,4634
+│ +odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+│ +odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+│ +odoo_addon_base_external_dbsource_sqlite-16.0.1.0.1.1.dist-info/RECORD,,
