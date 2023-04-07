@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/basecfg-1.0.0.tar.gz tmp/basecfg-1.0.1.tar.gz --html versions/b/basecfg/1.0.0-1.0.1/index.html --text versions/b/basecfg/1.0.0-1.0.1/diff.txt --markdown versions/b/basecfg/1.0.0-1.0.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.72 KB</span></div>
+  <div><span class="source">tmp/basecfg-1.0.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/basecfg-1.0.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">264 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;basecfg-1.0.<del>0</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Thu</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>6</del><span class="dp">·</span><del>19</del>:<del>40</del>:<del>34</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;basecfg-1.0.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Fri</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>7</ins><span class="dp">·</span><ins>04</ins>:<ins>19</ins>:<ins>16</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.41 KB</span></div>
+    <div><span class="source">basecfg-1.0.0.tar</span> vs.</div>
+    <div id="basecfg--.-.-.tar"><span class="source">basecfg-1.0.1.tar</span>
+      <a class="anchor" href="#basecfg--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.51 KB</span></div>
+      <div id="basecfg--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#basecfg--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffdeleted"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>user<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:40:34.845751<span class="dp">·</span>basecfg-1.0.0/</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>user<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26526<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:34:25.000000<span class="dp">·</span>basecfg-1.0.0/LICENSE</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>user<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>886<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:40:34.845578<span class="dp">·</span>basecfg-1.0.0/PKG-INFO</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>user<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>322<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:34:25.000000<span class="dp">·</span>basecfg-1.0.0/README.md</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>user<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1288<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:34:25.000000<span class="dp">·</span>basecfg-1.0.0/pyproject.toml</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>user<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:40:34.845814<span class="dp">·</span>basecfg-1.0.0/setup.cfg</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>user<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:40:34.842964<span class="dp">·</span>basecfg-1.0.0/src/</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>u<del>s</del>er<del><span class="dp">·</span><span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(5</del>01)<span class="dp">·</span><del>staff<span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(</del>2<del>0</del>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>19</del>:<del>40</del>:<del>34</del>.<del>844</del>2<del>58</del><span class="dp">·</span>basecfg-1.0.<del>0/src/basecf</del><del>g</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>r</ins>u<ins>n</ins><ins>n</ins>er<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins>01)<span class="dp">·</span><ins>docker</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(1</ins>2<ins>3</ins>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>04</ins>:<ins>19</ins>:<ins>16</ins>.<ins>093</ins>2<ins>13</ins><span class="dp">·</span>basecfg-1.0.<ins>1</ins>/</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26526<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:18:47.000000<span class="dp">·</span>basecfg-1.0.1/LICENSE</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>887<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:19:16.093213<span class="dp">·</span>basecfg-1.0.1/PKG-INFO</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>322<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:18:47.000000<span class="dp">·</span>basecfg-1.0.1/README.md</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1289<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:18:47.000000<span class="dp">·</span>basecfg-1.0.1/pyproject.toml</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:19:16.093213<span class="dp">·</span>basecfg-1.0.1/setup.cfg</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:19:16.089213<span class="dp">·</span>basecfg-1.0.1/src/</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:19:16.093213<span class="dp">·</span>basecfg-1.0.1/src/basecfg/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>u<del>s</del>er<del><span class="dp">·</span><span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(5</del>01)<span class="dp">·</span><del>staff<span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(</del>2<del>0</del>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>19</del>:<del>34</del>:<del>25</del>.000000<span class="dp">·</span>basecfg-1.0.<del>0</del>/src/basecfg/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>r</ins>u<ins>n</ins><ins>n</ins>er<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins>01)<span class="dp">·</span><ins>docker</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(1</ins>2<ins>3</ins>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>04</ins>:<ins>18</ins>:<ins>47</ins>.000000<span class="dp">·</span>basecfg-1.0.<ins>1</ins>/src/basecfg/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>u<del>s</del>er<del><span class="dp">·</span><span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(5</del>01)<span class="dp">·</span><del>staff<span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(</del>2<del>0</del>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8614<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>19</del>:<del>34</del>:<del>25</del>.000000<span class="dp">·</span>basecfg-1.0.<del>0</del>/src/basecfg/basecfg.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>r</ins>u<ins>n</ins><ins>n</ins>er<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins>01)<span class="dp">·</span><ins>docker</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(1</ins>2<ins>3</ins>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8614<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>04</ins>:<ins>18</ins>:<ins>47</ins>.000000<span class="dp">·</span>basecfg-1.0.<ins>1</ins>/src/basecfg/basecfg.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>u<del>s</del>er<del><span class="dp">·</span><span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(5</del>01)<span class="dp">·</span><del>staff<span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(</del>2<del>0</del>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>19</del>:<del>40</del>:<del>34</del>.<del>845302</del><span class="dp">·</span>basecfg-1.0.<del>0</del>/src/basecfg.egg-info/</td><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>r</ins>u<ins>n</ins><ins>n</ins>er<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins>01)<span class="dp">·</span><ins>docker</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(1</ins>2<ins>3</ins>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>04</ins>:<ins>19</ins>:<ins>16</ins>.<ins>093213</ins><span class="dp">·</span>basecfg-1.0.<ins>1</ins>/src/basecfg.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>u<del>s</del>er<del><span class="dp">·</span><span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(5</del>01)<span class="dp">·</span><del>staff<span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(</del>2<del>0</del>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>88<del>6</del><span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>19</del>:<del>40</del>:<del>34</del>.000000<span class="dp">·</span>basecfg-1.0.<del>0</del>/src/basecfg.egg-info/PKG-INFO</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>r</ins>u<ins>n</ins><ins>n</ins>er<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins>01)<span class="dp">·</span><ins>docker</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(1</ins>2<ins>3</ins>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>88<ins>7</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>04</ins>:<ins>19</ins>:<ins>16</ins>.000000<span class="dp">·</span>basecfg-1.0.<ins>1</ins>/src/basecfg.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>u<del>s</del>er<del><span class="dp">·</span><span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(5</del>01)<span class="dp">·</span><del>staff<span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(</del>2<del>0</del>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>219<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>19</del>:<del>40</del>:<del>34</del>.000000<span class="dp">·</span>basecfg-1.0.<del>0</del>/src/basecfg.egg-info/SOURCES.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>r</ins>u<ins>n</ins><ins>n</ins>er<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins>01)<span class="dp">·</span><ins>docker</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(1</ins>2<ins>3</ins>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>219<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>04</ins>:<ins>19</ins>:<ins>16</ins>.000000<span class="dp">·</span>basecfg-1.0.<ins>1</ins>/src/basecfg.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>u<del>s</del>er<del><span class="dp">·</span><span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(5</del>01)<span class="dp">·</span><del>staff<span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(</del>2<del>0</del>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>19</del>:<del>40</del>:<del>34</del>.000000<span class="dp">·</span>basecfg-1.0.<del>0</del>/src/basecfg.egg-info/dependency_links.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>r</ins>u<ins>n</ins><ins>n</ins>er<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins>01)<span class="dp">·</span><ins>docker</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(1</ins>2<ins>3</ins>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>04</ins>:<ins>19</ins>:<ins>16</ins>.000000<span class="dp">·</span>basecfg-1.0.<ins>1</ins>/src/basecfg.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>u<del>s</del>er<del><span class="dp">·</span><span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(5</del>01)<span class="dp">·</span><del>staff<span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>(</del>2<del>0</del>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>19</del>:<del>40</del>:<del>34</del>.000000<span class="dp">·</span>basecfg-1.0.<del>0</del>/src/basecfg.egg-info/top_level.txt</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>r</ins>u<ins>n</ins><ins>n</ins>er<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins>01)<span class="dp">·</span><ins>docker</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(1</ins>2<ins>3</ins>)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>04</ins>:<ins>19</ins>:<ins>16</ins>.000000<span class="dp">·</span>basecfg-1.0.<ins>1</ins>/src/basecfg.egg-info/top_level.txt</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">basecfg-1.0.0/LICENSE</span> vs.</div>
+      <div id="basecfg--.-.-.tar---basecfg--.-.--LICENSE"><span class="source">basecfg-1.0.1/LICENSE</span>
+        <a class="anchor" href="#basecfg--.-.-.tar---basecfg--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.02 KB</span></div>
+      <div><span class="source">basecfg-1.0.0/PKG-INFO</span> vs.</div>
+      <div id="basecfg--.-.-.tar---basecfg--.-.--PKG-INFO"><span class="source">basecfg-1.0.1/PKG-INFO</span>
+        <a class="anchor" href="#basecfg--.-.-.tar---basecfg--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 12% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 17 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>basecfg</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>basecfg</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>typed<span class="dp">·</span>12-factor<span class="dp">·</span>app<span class="dp">·</span>configuration<span class="dp">·</span>helper</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>typed<span class="dp">·</span>12-factor<span class="dp">·</span>app<span class="dp">·</span>configuration<span class="dp">·</span>helper</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Ben<span class="dp">·</span>Burke<span class="dp">·</span>&lt;actualben@users.noreply.github.com&gt;</td><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Ben<span class="dp">·</span>Burke<span class="dp">·</span>&lt;actualben@users.noreply.github.com&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/edencehealth/basecfg</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/edencehealth/basecfg</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/edencehealth/basecfg/issues</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/edencehealth/basecfg/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>Lesser<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v2<span class="dp">·</span>(LGPLv2)</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>Lesser<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v2<span class="dp">·</span>(LGPLv2)</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.<del>9</del></td><td class="diffline">11 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.<ins>1</ins><ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">12 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">13 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">#<span class="dp">·</span>basecfg</td><td class="diffline">14 </td><td class="diffpresent">#<span class="dp">·</span>basecfg</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">This<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>class<span class="dp">·</span>for<span class="dp">·</span>specifying<span class="dp">·</span>the<span class="dp">·</span>configuration<span class="dp">·</span>that<span class="dp">·</span>an<span class="dp">·</span>application<span class="dp">·</span>can<span class="dp">·</span>take<span class="dp">·</span>using<span class="dp">·</span>type-annotated<span class="dp">·</span>class<span class="dp">·</span>attributes.<span class="dp">·</span>Once<span class="dp">·</span>a<span class="dp">·</span>config<span class="dp">·</span>class<span class="dp">·</span>is<span class="dp">·</span>created<span class="dp">·</span>it<span class="dp">·</span>populates<span class="dp">·</span>its<span class="dp">·</span>config<span class="dp">·</span>from<span class="dp">·</span>an<span class="dp">·</span>optional<span class="dp">·</span>JSON<span class="dp">·</span>file<span class="dp">·</span>(such<span class="dp">·</span>as<span class="dp">·</span>a<span class="dp">·</span>Kubernetes<span class="dp">·</span>configmap),<span class="dp">·</span>environment<span class="dp">·</span>variables,<span class="dp">·</span>and<span class="dp">·</span>command-line<span class="dp">·</span>arguments<span class="dp">·</span>(all<span class="dp">·</span>automatically).</td><td class="diffline">15 </td><td class="diffpresent">This<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>class<span class="dp">·</span>for<span class="dp">·</span>specifying<span class="dp">·</span>the<span class="dp">·</span>configuration<span class="dp">·</span>that<span class="dp">·</span>an<span class="dp">·</span>application<span class="dp">·</span>can<span class="dp">·</span>take<span class="dp">·</span>using<span class="dp">·</span>type-annotated<span class="dp">·</span>class<span class="dp">·</span>attributes.<span class="dp">·</span>Once<span class="dp">·</span>a<span class="dp">·</span>config<span class="dp">·</span>class<span class="dp">·</span>is<span class="dp">·</span>created<span class="dp">·</span>it<span class="dp">·</span>populates<span class="dp">·</span>its<span class="dp">·</span>config<span class="dp">·</span>from<span class="dp">·</span>an<span class="dp">·</span>optional<span class="dp">·</span>JSON<span class="dp">·</span>file<span class="dp">·</span>(such<span class="dp">·</span>as<span class="dp">·</span>a<span class="dp">·</span>Kubernetes<span class="dp">·</span>configmap),<span class="dp">·</span>environment<span class="dp">·</span>variables,<span class="dp">·</span>and<span class="dp">·</span>command-line<span class="dp">·</span>arguments<span class="dp">·</span>(all<span class="dp">·</span>automatically).</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">607 B</span></div>
+      <div><span class="source">basecfg-1.0.0/pyproject.toml</span> vs.</div>
+      <div id="basecfg--.-.-.tar---basecfg--.-.--pyproject.toml"><span class="source">basecfg-1.0.1/pyproject.toml</span>
+        <a class="anchor" href="#basecfg--.-.-.tar---basecfg--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[project]</td><td class="diffline">1 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;basecfg&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;basecfg&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.0.<del>0</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.0.<ins>1</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">4 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;Ben<span class="dp">·</span>Burke&quot;,<span class="dp">·</span>email=&quot;actualben@users.noreply.github.com&quot;<span class="dp">·</span>},</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;Ben<span class="dp">·</span>Burke&quot;,<span class="dp">·</span>email=&quot;actualben@users.noreply.github.com&quot;<span class="dp">·</span>},</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">]</td><td class="diffline">6 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;typed<span class="dp">·</span>12-factor<span class="dp">·</span>app<span class="dp">·</span>configuration<span class="dp">·</span>helper&quot;</td><td class="diffline">7 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;typed<span class="dp">·</span>12-factor<span class="dp">·</span>app<span class="dp">·</span>configuration<span class="dp">·</span>helper&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.<del>9</del>&quot;</td><td class="diffline">9 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.<ins>1</ins><ins>0</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">10 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>Lesser<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v2<span class="dp">·</span>(LGPLv2)&quot;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>Lesser<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v2<span class="dp">·</span>(LGPLv2)&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent&quot;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">]</td><td class="diffline">14 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">[build-system]</td><td class="diffline">15 </td><td class="diffpresent">[build-system]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">basecfg-1.0.0/src/basecfg/basecfg.py</span> vs.</div>
+      <div id="basecfg--.-.-.tar---basecfg--.-.--src-basecfg-basecfg.py"><span class="source">basecfg-1.0.1/src/basecfg/basecfg.py</span>
+        <a class="anchor" href="#basecfg--.-.-.tar---basecfg--.-.--src-basecfg-basecfg.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.06 KB</span></div>
+      <div><span class="source">basecfg-1.0.0/src/basecfg.egg-info/PKG-INFO</span> vs.</div>
+      <div id="basecfg--.-.-.tar---basecfg--.-.--src-basecfg.egg-info-PKG-INFO"><span class="source">basecfg-1.0.1/src/basecfg.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#basecfg--.-.-.tar---basecfg--.-.--src-basecfg.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 12% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 17 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>basecfg</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>basecfg</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>typed<span class="dp">·</span>12-factor<span class="dp">·</span>app<span class="dp">·</span>configuration<span class="dp">·</span>helper</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>typed<span class="dp">·</span>12-factor<span class="dp">·</span>app<span class="dp">·</span>configuration<span class="dp">·</span>helper</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Ben<span class="dp">·</span>Burke<span class="dp">·</span>&lt;actualben@users.noreply.github.com&gt;</td><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Ben<span class="dp">·</span>Burke<span class="dp">·</span>&lt;actualben@users.noreply.github.com&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/edencehealth/basecfg</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/edencehealth/basecfg</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/edencehealth/basecfg/issues</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/edencehealth/basecfg/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>Lesser<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v2<span class="dp">·</span>(LGPLv2)</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>Lesser<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v2<span class="dp">·</span>(LGPLv2)</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.<del>9</del></td><td class="diffline">11 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.<ins>1</ins><ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">12 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">13 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">#<span class="dp">·</span>basecfg</td><td class="diffline">14 </td><td class="diffpresent">#<span class="dp">·</span>basecfg</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">This<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>class<span class="dp">·</span>for<span class="dp">·</span>specifying<span class="dp">·</span>the<span class="dp">·</span>configuration<span class="dp">·</span>that<span class="dp">·</span>an<span class="dp">·</span>application<span class="dp">·</span>can<span class="dp">·</span>take<span class="dp">·</span>using<span class="dp">·</span>type-annotated<span class="dp">·</span>class<span class="dp">·</span>attributes.<span class="dp">·</span>Once<span class="dp">·</span>a<span class="dp">·</span>config<span class="dp">·</span>class<span class="dp">·</span>is<span class="dp">·</span>created<span class="dp">·</span>it<span class="dp">·</span>populates<span class="dp">·</span>its<span class="dp">·</span>config<span class="dp">·</span>from<span class="dp">·</span>an<span class="dp">·</span>optional<span class="dp">·</span>JSON<span class="dp">·</span>file<span class="dp">·</span>(such<span class="dp">·</span>as<span class="dp">·</span>a<span class="dp">·</span>Kubernetes<span class="dp">·</span>configmap),<span class="dp">·</span>environment<span class="dp">·</span>variables,<span class="dp">·</span>and<span class="dp">·</span>command-line<span class="dp">·</span>arguments<span class="dp">·</span>(all<span class="dp">·</span>automatically).</td><td class="diffline">15 </td><td class="diffpresent">This<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>class<span class="dp">·</span>for<span class="dp">·</span>specifying<span class="dp">·</span>the<span class="dp">·</span>configuration<span class="dp">·</span>that<span class="dp">·</span>an<span class="dp">·</span>application<span class="dp">·</span>can<span class="dp">·</span>take<span class="dp">·</span>using<span class="dp">·</span>type-annotated<span class="dp">·</span>class<span class="dp">·</span>attributes.<span class="dp">·</span>Once<span class="dp">·</span>a<span class="dp">·</span>config<span class="dp">·</span>class<span class="dp">·</span>is<span class="dp">·</span>created<span class="dp">·</span>it<span class="dp">·</span>populates<span class="dp">·</span>its<span class="dp">·</span>config<span class="dp">·</span>from<span class="dp">·</span>an<span class="dp">·</span>optional<span class="dp">·</span>JSON<span class="dp">·</span>file<span class="dp">·</span>(such<span class="dp">·</span>as<span class="dp">·</span>a<span class="dp">·</span>Kubernetes<span class="dp">·</span>configmap),<span class="dp">·</span>environment<span class="dp">·</span>variables,<span class="dp">·</span>and<span class="dp">·</span>command-line<span class="dp">·</span>arguments<span class="dp">·</span>(all<span class="dp">·</span>automatically).</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

@@ -1,0 +1,136 @@
+# Comparing `tmp/basecfg-1.0.0.tar.gz` & `tmp/basecfg-1.0.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "basecfg-1.0.0.tar", last modified: Thu Apr  6 19:40:34 2023, max compression
++gzip compressed data, was "basecfg-1.0.1.tar", last modified: Fri Apr  7 04:19:16 2023, max compression
+```
+
+## Comparing `basecfg-1.0.0.tar` & `basecfg-1.0.1.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,15 @@
+-drwxr-xr-x   0 user       (501) staff       (20)        0 2023-04-06 19:40:34.845751 basecfg-1.0.0/
+--rw-r--r--   0 user       (501) staff       (20)    26526 2023-04-06 19:34:25.000000 basecfg-1.0.0/LICENSE
+--rw-r--r--   0 user       (501) staff       (20)      886 2023-04-06 19:40:34.845578 basecfg-1.0.0/PKG-INFO
+--rw-r--r--   0 user       (501) staff       (20)      322 2023-04-06 19:34:25.000000 basecfg-1.0.0/README.md
+--rw-r--r--   0 user       (501) staff       (20)     1288 2023-04-06 19:34:25.000000 basecfg-1.0.0/pyproject.toml
+--rw-r--r--   0 user       (501) staff       (20)       38 2023-04-06 19:40:34.845814 basecfg-1.0.0/setup.cfg
+-drwxr-xr-x   0 user       (501) staff       (20)        0 2023-04-06 19:40:34.842964 basecfg-1.0.0/src/
+-drwxr-xr-x   0 user       (501) staff       (20)        0 2023-04-06 19:40:34.844258 basecfg-1.0.0/src/basecfg/
+--rw-r--r--   0 user       (501) staff       (20)      110 2023-04-06 19:34:25.000000 basecfg-1.0.0/src/basecfg/__init__.py
+--rw-r--r--   0 user       (501) staff       (20)     8614 2023-04-06 19:34:25.000000 basecfg-1.0.0/src/basecfg/basecfg.py
+-drwxr-xr-x   0 user       (501) staff       (20)        0 2023-04-06 19:40:34.845302 basecfg-1.0.0/src/basecfg.egg-info/
+--rw-r--r--   0 user       (501) staff       (20)      886 2023-04-06 19:40:34.000000 basecfg-1.0.0/src/basecfg.egg-info/PKG-INFO
+--rw-r--r--   0 user       (501) staff       (20)      219 2023-04-06 19:40:34.000000 basecfg-1.0.0/src/basecfg.egg-info/SOURCES.txt
+--rw-r--r--   0 user       (501) staff       (20)        1 2023-04-06 19:40:34.000000 basecfg-1.0.0/src/basecfg.egg-info/dependency_links.txt
+--rw-r--r--   0 user       (501) staff       (20)        8 2023-04-06 19:40:34.000000 basecfg-1.0.0/src/basecfg.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 04:19:16.093213 basecfg-1.0.1/
++-rw-r--r--   0 runner    (1001) docker     (123)    26526 2023-04-07 04:18:47.000000 basecfg-1.0.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      887 2023-04-07 04:19:16.093213 basecfg-1.0.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      322 2023-04-07 04:18:47.000000 basecfg-1.0.1/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)     1289 2023-04-07 04:18:47.000000 basecfg-1.0.1/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 04:19:16.093213 basecfg-1.0.1/setup.cfg
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 04:19:16.089213 basecfg-1.0.1/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 04:19:16.093213 basecfg-1.0.1/src/basecfg/
++-rw-r--r--   0 runner    (1001) docker     (123)      110 2023-04-07 04:18:47.000000 basecfg-1.0.1/src/basecfg/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8614 2023-04-07 04:18:47.000000 basecfg-1.0.1/src/basecfg/basecfg.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 04:19:16.093213 basecfg-1.0.1/src/basecfg.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)      887 2023-04-07 04:19:16.000000 basecfg-1.0.1/src/basecfg.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      219 2023-04-07 04:19:16.000000 basecfg-1.0.1/src/basecfg.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 04:19:16.000000 basecfg-1.0.1/src/basecfg.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-07 04:19:16.000000 basecfg-1.0.1/src/basecfg.egg-info/top_level.txt
+```
+
+### Comparing `basecfg-1.0.0/LICENSE` & `basecfg-1.0.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `basecfg-1.0.0/PKG-INFO` & `basecfg-1.0.1/PKG-INFO`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,17 +1,17 @@
+ Metadata-Version: 2.1
+ Name: basecfg
+-Version: 1.0.0
++Version: 1.0.1
+ Summary: typed 12-factor app configuration helper
+ Author-email: Ben Burke <actualben@users.noreply.github.com>
+ Project-URL: Homepage, https://github.com/edencehealth/basecfg
+ Project-URL: Bug Tracker, https://github.com/edencehealth/basecfg/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+ Classifier: Operating System :: OS Independent
+-Requires-Python: >=3.9
++Requires-Python: >=3.10
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # basecfg
+ 
+ This is a Python class for specifying the configuration that an application can take using type-annotated class attributes. Once a config class is created it populates its config from an optional JSON file (such as a Kubernetes configmap), environment variables, and command-line arguments (all automatically).
+```
+
+### Comparing `basecfg-1.0.0/pyproject.toml` & `basecfg-1.0.1/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ [project]
+ name = "basecfg"
+-version = "1.0.0"
++version = "1.0.1"
+ authors = [
+   { name="Ben Burke", email="actualben@users.noreply.github.com" },
+ ]
+ description = "typed 12-factor app configuration helper"
+ readme = "README.md"
+-requires-python = ">=3.9"
++requires-python = ">=3.10"
+ classifiers = [
+     "Programming Language :: Python :: 3",
+     "License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)",
+     "Operating System :: OS Independent",
+ ]
+ 
+ [build-system]
+```
+
+### Comparing `basecfg-1.0.0/src/basecfg/basecfg.py` & `basecfg-1.0.1/src/basecfg/basecfg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `basecfg-1.0.0/src/basecfg.egg-info/PKG-INFO` & `basecfg-1.0.1/src/basecfg.egg-info/PKG-INFO`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,17 +1,17 @@
+ Metadata-Version: 2.1
+ Name: basecfg
+-Version: 1.0.0
++Version: 1.0.1
+ Summary: typed 12-factor app configuration helper
+ Author-email: Ben Burke <actualben@users.noreply.github.com>
+ Project-URL: Homepage, https://github.com/edencehealth/basecfg
+ Project-URL: Bug Tracker, https://github.com/edencehealth/basecfg/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+ Classifier: Operating System :: OS Independent
+-Requires-Python: >=3.9
++Requires-Python: >=3.10
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # basecfg
+ 
+ This is a Python class for specifying the configuration that an application can take using type-annotated class attributes. Once a config class is created it populates its config from an optional JSON file (such as a Kubernetes configmap), environment variables, and command-line arguments (all automatically).
+```
+
