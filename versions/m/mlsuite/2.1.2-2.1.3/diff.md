@@ -1,0 +1,275 @@
+# Comparing `tmp/mlsuite-2.1.2.tar.gz` & `tmp/mlsuite-2.1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "mlsuite-2.1.2.tar", last modified: Thu Apr  6 09:31:17 2023, max compression
++gzip compressed data, was "mlsuite-2.1.3.tar", last modified: Fri Apr  7 03:43:14 2023, max compression
+```
+
+## Comparing `mlsuite-2.1.2.tar` & `mlsuite-2.1.3.tar`
+
+### file list
+
+```diff
+@@ -1,24 +1,24 @@
+-drwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)        0 2023-04-06 09:31:17.275000 mlsuite-2.1.2/
+--rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)     1067 2022-08-30 02:42:20.000000 mlsuite-2.1.2/LICENSE
+-drwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)        0 2023-04-06 09:31:17.261844 mlsuite-2.1.2/MLsuite/
+--rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     7701 2023-04-06 09:30:26.000000 mlsuite-2.1.2/MLsuite/MLArguments.py
+--rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)    26629 2023-02-15 07:37:37.000000 mlsuite-2.1.2/MLsuite/MLEstimators.py
+--rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     1931 2022-07-07 10:04:52.000000 mlsuite-2.1.2/MLsuite/MLLogging.py
+--rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     2219 2022-07-07 10:04:52.000000 mlsuite-2.1.2/MLsuite/MLOpenWrite.py
+--rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)      836 2022-09-06 09:45:06.000000 mlsuite-2.1.2/MLsuite/MLPipeline.py
+--rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     4438 2022-09-13 08:33:47.000000 mlsuite-2.1.2/MLsuite/MLPredicting.py
+--rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)    26637 2022-11-07 04:09:30.000000 mlsuite-2.1.2/MLsuite/MLSupervising.py
+--rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     3424 2022-07-07 10:04:52.000000 mlsuite-2.1.2/MLsuite/MLUtilities.py
+--rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)       17 2022-09-06 06:29:23.000000 mlsuite-2.1.2/MLsuite/__init__.py
+--rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     2118 2022-12-14 01:57:48.000000 mlsuite-2.1.2/MLsuite/main.py
+--rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)     1285 2023-04-06 09:31:17.273361 mlsuite-2.1.2/PKG-INFO
+--rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)     2614 2023-04-06 09:30:13.000000 mlsuite-2.1.2/README.md
+-drwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)        0 2023-04-06 09:31:17.270954 mlsuite-2.1.2/mlsuite.egg-info/
+--rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)     1285 2023-04-06 09:31:17.000000 mlsuite-2.1.2/mlsuite.egg-info/PKG-INFO
+--rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)      414 2023-04-06 09:31:17.000000 mlsuite-2.1.2/mlsuite.egg-info/SOURCES.txt
+--rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)        1 2023-04-06 09:31:17.000000 mlsuite-2.1.2/mlsuite.egg-info/dependency_links.txt
+--rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)      116 2023-04-06 09:31:17.000000 mlsuite-2.1.2/mlsuite.egg-info/requires.txt
+--rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)        8 2023-04-06 09:31:17.000000 mlsuite-2.1.2/mlsuite.egg-info/top_level.txt
+--rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)      455 2022-09-06 10:51:20.000000 mlsuite-2.1.2/mlsuite.py
+--rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)       38 2023-04-06 09:31:17.275535 mlsuite-2.1.2/setup.cfg
+--rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     1824 2023-04-06 09:28:55.000000 mlsuite-2.1.2/setup.py
++drwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)        0 2023-04-07 03:43:14.876309 mlsuite-2.1.3/
++-rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)     1067 2022-08-30 02:42:20.000000 mlsuite-2.1.3/LICENSE
++drwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)        0 2023-04-07 03:43:14.861553 mlsuite-2.1.3/MLsuite/
++-rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     7701 2023-04-07 02:12:17.000000 mlsuite-2.1.3/MLsuite/MLArguments.py
++-rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)    26629 2023-02-15 07:37:37.000000 mlsuite-2.1.3/MLsuite/MLEstimators.py
++-rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     1931 2022-07-07 10:04:52.000000 mlsuite-2.1.3/MLsuite/MLLogging.py
++-rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     2197 2023-04-07 02:10:21.000000 mlsuite-2.1.3/MLsuite/MLOpenWrite.py
++-rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)      836 2022-09-06 09:45:06.000000 mlsuite-2.1.3/MLsuite/MLPipeline.py
++-rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     4438 2022-09-13 08:33:47.000000 mlsuite-2.1.3/MLsuite/MLPredicting.py
++-rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)    26637 2022-11-07 04:09:30.000000 mlsuite-2.1.3/MLsuite/MLSupervising.py
++-rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     3424 2022-07-07 10:04:52.000000 mlsuite-2.1.3/MLsuite/MLUtilities.py
++-rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)       17 2022-09-06 06:29:23.000000 mlsuite-2.1.3/MLsuite/__init__.py
++-rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     2118 2022-12-14 01:57:48.000000 mlsuite-2.1.3/MLsuite/main.py
++-rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)     1285 2023-04-07 03:43:14.874685 mlsuite-2.1.3/PKG-INFO
++-rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)     2980 2023-04-07 03:40:56.000000 mlsuite-2.1.3/README.md
++drwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)        0 2023-04-07 03:43:14.872000 mlsuite-2.1.3/mlsuite.egg-info/
++-rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)     1285 2023-04-07 03:43:14.000000 mlsuite-2.1.3/mlsuite.egg-info/PKG-INFO
++-rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)      414 2023-04-07 03:43:14.000000 mlsuite-2.1.3/mlsuite.egg-info/SOURCES.txt
++-rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)        1 2023-04-07 03:43:14.000000 mlsuite-2.1.3/mlsuite.egg-info/dependency_links.txt
++-rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)      115 2023-04-07 03:43:14.000000 mlsuite-2.1.3/mlsuite.egg-info/requires.txt
++-rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)        8 2023-04-07 03:43:14.000000 mlsuite-2.1.3/mlsuite.egg-info/top_level.txt
++-rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)      455 2022-09-06 10:51:20.000000 mlsuite-2.1.3/mlsuite.py
++-rw-r--r--   0 li.suxing (31799) basic_bioinfo  (2003)       38 2023-04-07 03:43:14.876929 mlsuite-2.1.3/setup.cfg
++-rwxr-xr-x   0 li.suxing (31799) basic_bioinfo  (2003)     1823 2023-04-07 03:42:00.000000 mlsuite-2.1.3/setup.py
+```
+
+### Comparing `mlsuite-2.1.2/LICENSE` & `mlsuite-2.1.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `mlsuite-2.1.2/MLsuite/MLArguments.py` & `mlsuite-2.1.3/MLsuite/MLArguments.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -22,15 +22,15 @@
+ Example:
+ 1. python mlsuite.py Auto    -i data.traintest.txt -g group.new.txt -p data.predict.txt -o testdt/ -m DT
+ 2. python mlsuite.py Auto    -i data.traintest.txt -g group.new.txt -o testdt/ -m DT
+ 3. python mlsuite.py Fitting -i data.traintest.txt -g group.new.txt -o testdt/ -m DT
+ 4. python mlsuite.py Predict -p data.predict.txt   -g group.new.txt -x modelpath/ -y predictdt/ -m DT.''')
+ 
+     parser.add_argument('-V','--version',action ='version',
+-                version='mlsuite version 2.1.2')
++                version='mlsuite version 2.1.3')
+     subparsers = parser.add_subparsers(dest="commands",
+                     help='machine learning models help.')
+     ### Fitting module
+     P_fitting  = subparsers.add_parser('Fitting',conflict_handler='resolve', add_help=False)
+     P_fitting.add_argument("-i", "--input",type=str,
+                     help='''the input train and test data file with dataframe format  by row(samples) x columns (features and Y). the sample column name must be Sample.
+ ''')
+```
+
+### Comparing `mlsuite-2.1.2/MLsuite/MLEstimators.py` & `mlsuite-2.1.3/MLsuite/MLEstimators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mlsuite-2.1.2/MLsuite/MLLogging.py` & `mlsuite-2.1.3/MLsuite/MLLogging.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mlsuite-2.1.2/MLsuite/MLOpenWrite.py` & `mlsuite-2.1.3/MLsuite/MLOpenWrite.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -26,15 +26,15 @@
+         os.makedirs( os.path.dirname(self.file), exist_ok=True )
+         f= open(self.file, 'w',encoding='utf-8')
+         f.write(self.array[0])
+         f.close()
+     def openv(self):
+         os.makedirs( os.path.dirname(self.file), exist_ok=True )
+         df = self.array[0]
+-        df.to_csv(self.file, sep=self.sep, index=self.index, index_label=self.index_label, header=True, line_terminator='\n')
++        df.to_csv(self.file, sep=self.sep, index=self.index, index_label=self.index_label, header=True)
+ 
+ class OpenM():
+     def __init__(self, arg, log):
+         self.arg = arg
+         self.log = log
+ 
+     def openi(self):
+```
+
+### Comparing `mlsuite-2.1.2/MLsuite/MLPipeline.py` & `mlsuite-2.1.3/MLsuite/MLPipeline.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mlsuite-2.1.2/MLsuite/MLPredicting.py` & `mlsuite-2.1.3/MLsuite/MLPredicting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mlsuite-2.1.2/MLsuite/MLSupervising.py` & `mlsuite-2.1.3/MLsuite/MLSupervising.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mlsuite-2.1.2/MLsuite/MLUtilities.py` & `mlsuite-2.1.3/MLsuite/MLUtilities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mlsuite-2.1.2/MLsuite/main.py` & `mlsuite-2.1.3/MLsuite/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mlsuite-2.1.2/PKG-INFO` & `mlsuite-2.1.3/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mlsuite
+-Version: 2.1.2
++Version: 2.1.3
+ Summary: The traditional machine learning analysis based on sklearn package
+ Home-page: https://git.genecast.com.cn/narwhal/mlsuite
+ Author: suxing li
+ Author-email: li.suxing@genecast.com.cn
+ Maintainer: suxing li
+ Maintainer-email: li.suxing@genecast.com.cn
+ Platform: all
+```
+
+### Comparing `mlsuite-2.1.2/README.md` & `mlsuite-2.1.3/README.md`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # mlsuite
+ 
+ ## Install
+ 
+ ```
+-pip install mlsuite==2.1.2
++pip install mlsuite==2.1.3
+ pip install https://github.com/JamesRitchie/scikit-rvm/archive/master.zip
+ ```
+ 
+ ## Usage
+ 
+ Notice: used pyhton3, not python2
+ 
+@@ -30,14 +30,27 @@
+ 
+ 1. python mlsuite.py Auto    -i data.traintest.txt -g group.new.txt -p data.predict.txt -o testdt/ -m DT
+ 2. python mlsuite.py Auto    -i data.traintest.txt -g group.new.txt -o testdt/ -m DT
+ 3. python mlsuite.py Fitting -i data.traintest.txt -g group.new.txt -o testdt/ -m DT
+ 4. python mlsuite.py Predict -p data.predict.txt   -g group.new.txt -x modelpath/ -y predictdt/ -m DT.
+ 
+ ## Update log
++### v2.1.3
++1. pandas's parameter "line_terminator" had changed into "lineterminator" in the 2.0.0 version, so drop "line_terminator" in "MLOpenWrite.py" script.
++2. fixed same packages' version:
++```
++    lightgbm == 3.3.3,
++    joblib == 1.2.0,
++    numpy == 1.21.4,
++    pandas == 1.1.5,
++    scikit-learn == 1.2.0,
++    sklearn_pandas == 2.2.0,
++    xgboost == 1.7.2
++```
++
+ ### v2.1.2
+ 1. revised same packages' version:
+ ```
+     lightgbm == 3.3.3,
+     joblib == 1.2.0,
+     numpy >= 1.16.4,
+     pandas >= 0.24.2,
+```
+
+### Comparing `mlsuite-2.1.2/mlsuite.egg-info/PKG-INFO` & `mlsuite-2.1.3/mlsuite.egg-info/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mlsuite
+-Version: 2.1.2
++Version: 2.1.3
+ Summary: The traditional machine learning analysis based on sklearn package
+ Home-page: https://git.genecast.com.cn/narwhal/mlsuite
+ Author: suxing li
+ Author-email: li.suxing@genecast.com.cn
+ Maintainer: suxing li
+ Maintainer-email: li.suxing@genecast.com.cn
+ Platform: all
+```
+
+### Comparing `mlsuite-2.1.2/setup.py` & `mlsuite-2.1.3/setup.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -4,30 +4,30 @@
+ from setuptools import find_packages, setup
+ from glob import glob
+ from os.path import dirname, join
+ import os
+ 
+ setup(
+     name='mlsuite',
+-    version='2.1.2',
++    version='2.1.3',
+     description='The traditional machine learning analysis based on sklearn package',
+     author='suxing li',
+     author_email='li.suxing@genecast.com.cn',
+     maintainer='suxing li',
+     maintainer_email='li.suxing@genecast.com.cn',
+     packages=find_packages(where='.', exclude=(), include=('*',)),
+     include_package_data=True,
+     platforms=['all'],
+     url='https://git.genecast.com.cn/narwhal/mlsuite',
+     scripts=['./mlsuite.py'],
+     install_requires=[
+         'lightgbm == 3.3.3',
+         'joblib == 1.2.0',
+-        'numpy >= 1.16.4',
+-        'pandas >= 0.24.2',
++        'numpy == 1.21.4',
++        'pandas == 1.1.5',
+         'scikit-learn == 1.2.0',
+         'sklearn_pandas == 2.2.0',
+         'xgboost == 1.7.2'
+     ],
+     classifiers=[
+         "Development Status :: 4 - Beta",
+         "Environment :: Console",
+```
+

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/mlsuite-2.1.2.tar.gz tmp/mlsuite-2.1.3.tar.gz --html versions/m/mlsuite/2.1.2-2.1.3/index.html --text versions/m/mlsuite/2.1.2-2.1.3/diff.txt --markdown versions/m/mlsuite/2.1.2-2.1.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">12.2 KB</span></div>
+  <div><span class="source">tmp/mlsuite-2.1.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/mlsuite-2.1.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">264 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;mlsuite-2.1.<del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Thu</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>6</del><span class="dp">·</span>0<del>9</del>:<del>31</del>:1<del>7</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;mlsuite-2.1.<ins>3</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Fri</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>43</ins>:1<ins>4</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">11.9 KB</span></div>
+    <div><span class="source">mlsuite-2.1.2.tar</span> vs.</div>
+    <div id="mlsuite--.-.-.tar"><span class="source">mlsuite-2.1.3.tar</span>
+      <a class="anchor" href="#mlsuite--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.9 KB</span></div>
+      <div id="mlsuite--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 24 lines modified</td><td colspan="2">Offset 1, 24 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>31</del>:1<del>7</del>.<del>2</del>7<del>50</del>0<del>0</del><span class="dp">·</span>mlsuite-2.1.<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>43</ins>:1<ins>4</ins>.<ins>8</ins>7<ins>63</ins>0<ins>9</ins><span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1067<span class="dp">·</span>2022-08-30<span class="dp">·</span>02:42:20.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1067<span class="dp">·</span>2022-08-30<span class="dp">·</span>02:42:20.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>31</del>:1<del>7</del>.<del>2</del>61<del>844</del><span class="dp">·</span>mlsuite-2.1.<del>2</del>/MLsuite/</td><td class="diffline">3 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>43</ins>:1<ins>4</ins>.<ins>8</ins>61<ins>553</ins><span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/MLsuite/</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7701<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>30</del>:<del>26</del>.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/MLsuite/MLArguments.py</td><td class="diffline">4 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7701<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>2</ins>:<ins>12</ins>:<ins>17</ins>.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/MLsuite/MLArguments.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26629<span class="dp">·</span>2023-02-15<span class="dp">·</span>07:37:37.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/MLsuite/MLEstimators.py</td><td class="diffline">5 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26629<span class="dp">·</span>2023-02-15<span class="dp">·</span>07:37:37.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/MLsuite/MLEstimators.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1931<span class="dp">·</span>2022-07-07<span class="dp">·</span>10:04:52.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/MLsuite/MLLogging.py</td><td class="diffline">6 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1931<span class="dp">·</span>2022-07-07<span class="dp">·</span>10:04:52.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/MLsuite/MLLogging.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>2</del>19<span class="dp">·</span>202<del>2</del>-0<del>7</del>-07<span class="dp">·</span><del>10</del>:<del>04</del>:<del>52</del>.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/MLsuite/MLOpenWrite.py</td><td class="diffline">7 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>219<ins>7</ins><span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-07<span class="dp">·</span><ins>02</ins>:<ins>10</ins>:<ins>21</ins>.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/MLsuite/MLOpenWrite.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>836<span class="dp">·</span>2022-09-06<span class="dp">·</span>09:45:06.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/MLsuite/MLPipeline.py</td><td class="diffline">8 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>836<span class="dp">·</span>2022-09-06<span class="dp">·</span>09:45:06.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/MLsuite/MLPipeline.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4438<span class="dp">·</span>2022-09-13<span class="dp">·</span>08:33:47.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/MLsuite/MLPredicting.py</td><td class="diffline">9 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4438<span class="dp">·</span>2022-09-13<span class="dp">·</span>08:33:47.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/MLsuite/MLPredicting.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26637<span class="dp">·</span>2022-11-07<span class="dp">·</span>04:09:30.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/MLsuite/MLSupervising.py</td><td class="diffline">10 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26637<span class="dp">·</span>2022-11-07<span class="dp">·</span>04:09:30.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/MLsuite/MLSupervising.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3424<span class="dp">·</span>2022-07-07<span class="dp">·</span>10:04:52.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/MLsuite/MLUtilities.py</td><td class="diffline">11 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3424<span class="dp">·</span>2022-07-07<span class="dp">·</span>10:04:52.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/MLsuite/MLUtilities.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17<span class="dp">·</span>2022-09-06<span class="dp">·</span>06:29:23.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/MLsuite/__init__.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17<span class="dp">·</span>2022-09-06<span class="dp">·</span>06:29:23.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/MLsuite/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2118<span class="dp">·</span>2022-12-14<span class="dp">·</span>01:57:48.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/MLsuite/main.py</td><td class="diffline">13 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2118<span class="dp">·</span>2022-12-14<span class="dp">·</span>01:57:48.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/MLsuite/main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1285<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>31</del>:1<del>7</del>.<del>2</del>7<del>3361</del><span class="dp">·</span>mlsuite-2.1.<del>2</del>/PKG-INFO</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1285<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>43</ins>:1<ins>4</ins>.<ins>8</ins>7<ins>4685</ins><span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>614</del><span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>3</del>0:<del>13</del>.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/README.md</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>980</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>4</ins>0:<ins>56</ins>.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>31</del>:1<del>7</del>.<del>2</del>7<del>0954</del><span class="dp">·</span>mlsuite-2.1.<del>2</del>/mlsuite.egg-info/</td><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>43</ins>:1<ins>4</ins>.<ins>8</ins>7<ins>2000</ins><span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/mlsuite.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1285<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>31</del>:1<del>7</del>.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/mlsuite.egg-info/PKG-INFO</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1285<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>43</ins>:1<ins>4</ins>.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/mlsuite.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>414<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>31</del>:1<del>7</del>.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/mlsuite.egg-info/SOURCES.txt</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>414<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>43</ins>:1<ins>4</ins>.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/mlsuite.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>31</del>:1<del>7</del>.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/mlsuite.egg-info/dependency_links.txt</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>43</ins>:1<ins>4</ins>.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/mlsuite.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<del>6</del><span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>31</del>:1<del>7</del>.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/mlsuite.egg-info/requires.txt</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<ins>5</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>43</ins>:1<ins>4</ins>.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/mlsuite.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>31</del>:1<del>7</del>.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/mlsuite.egg-info/top_level.txt</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>43</ins>:1<ins>4</ins>.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/mlsuite.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>455<span class="dp">·</span>2022-09-06<span class="dp">·</span>10:51:20.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/mlsuite.py</td><td class="diffline">22 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>455<span class="dp">·</span>2022-09-06<span class="dp">·</span>10:51:20.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/mlsuite.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>31</del>:1<del>7</del>.<del>2</del>7<del>5535</del><span class="dp">·</span>mlsuite-2.1.<del>2</del>/setup.cfg</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>43</ins>:1<ins>4</ins>.<ins>8</ins>7<ins>6929</ins><span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>182<del>4</del><span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>28</del>:<del>55</del>.000000<span class="dp">·</span>mlsuite-2.1.<del>2</del>/setup.py</td><td class="diffline">24 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>li.suxing<span class="dp">·</span>(31799)<span class="dp">·</span>basic_bioinfo<span class="dp">·</span><span class="dp">·</span>(2003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>182<ins>3</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>3</ins>:<ins>42</ins>:<ins>00</ins>.000000<span class="dp">·</span>mlsuite-2.1.<ins>3</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">mlsuite-2.1.2/LICENSE</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--LICENSE"><span class="source">mlsuite-2.1.3/LICENSE</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.13 KB</span></div>
+      <div><span class="source">mlsuite-2.1.2/MLsuite/MLArguments.py</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLArguments.py"><span class="source">mlsuite-2.1.3/MLsuite/MLArguments.py</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLArguments.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 22, 15 lines modified</td><td colspan="2">Offset 22, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">Example:</td><td class="diffline">22 </td><td class="diffpresent">Example:</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">1.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Auto<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-i<span class="dp">·</span>data.traintest.txt<span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-p<span class="dp">·</span>data.predict.txt<span class="dp">·</span>-o<span class="dp">·</span>testdt/<span class="dp">·</span>-m<span class="dp">·</span>DT</td><td class="diffline">23 </td><td class="diffpresent">1.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Auto<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-i<span class="dp">·</span>data.traintest.txt<span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-p<span class="dp">·</span>data.predict.txt<span class="dp">·</span>-o<span class="dp">·</span>testdt/<span class="dp">·</span>-m<span class="dp">·</span>DT</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">2.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Auto<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-i<span class="dp">·</span>data.traintest.txt<span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-o<span class="dp">·</span>testdt/<span class="dp">·</span>-m<span class="dp">·</span>DT</td><td class="diffline">24 </td><td class="diffpresent">2.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Auto<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-i<span class="dp">·</span>data.traintest.txt<span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-o<span class="dp">·</span>testdt/<span class="dp">·</span>-m<span class="dp">·</span>DT</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">3.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Fitting<span class="dp">·</span>-i<span class="dp">·</span>data.traintest.txt<span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-o<span class="dp">·</span>testdt/<span class="dp">·</span>-m<span class="dp">·</span>DT</td><td class="diffline">25 </td><td class="diffpresent">3.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Fitting<span class="dp">·</span>-i<span class="dp">·</span>data.traintest.txt<span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-o<span class="dp">·</span>testdt/<span class="dp">·</span>-m<span class="dp">·</span>DT</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">4.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Predict<span class="dp">·</span>-p<span class="dp">·</span>data.predict.txt<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-x<span class="dp">·</span>modelpath/<span class="dp">·</span>-y<span class="dp">·</span>predictdt/<span class="dp">·</span>-m<span class="dp">·</span>DT.&#x27;&#x27;&#x27;)</td><td class="diffline">26 </td><td class="diffpresent">4.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Predict<span class="dp">·</span>-p<span class="dp">·</span>data.predict.txt<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-x<span class="dp">·</span>modelpath/<span class="dp">·</span>-y<span class="dp">·</span>predictdt/<span class="dp">·</span>-m<span class="dp">·</span>DT.&#x27;&#x27;&#x27;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>parser.add_argument(&#x27;-V&#x27;,&#x27;--version&#x27;,action<span class="dp">·</span>=&#x27;version&#x27;,</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>parser.add_argument(&#x27;-V&#x27;,&#x27;--version&#x27;,action<span class="dp">·</span>=&#x27;version&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;mlsuite<span class="dp">·</span>version<span class="dp">·</span>2.1.<del>2</del>&#x27;)</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;mlsuite<span class="dp">·</span>version<span class="dp">·</span>2.1.<ins>3</ins>&#x27;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>subparsers<span class="dp">·</span>=<span class="dp">·</span>parser.add_subparsers(dest=&quot;commands&quot;,</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>subparsers<span class="dp">·</span>=<span class="dp">·</span>parser.add_subparsers(dest=&quot;commands&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&#x27;machine<span class="dp">·</span>learning<span class="dp">·</span>models<span class="dp">·</span>help.&#x27;)</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&#x27;machine<span class="dp">·</span>learning<span class="dp">·</span>models<span class="dp">·</span>help.&#x27;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>Fitting<span class="dp">·</span>module</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>Fitting<span class="dp">·</span>module</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>P_fitting<span class="dp">·</span><span class="dp">·</span>=<span class="dp">·</span>subparsers.add_parser(&#x27;Fitting&#x27;,conflict_handler=&#x27;resolve&#x27;,<span class="dp">·</span>add_help=False)</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>P_fitting<span class="dp">·</span><span class="dp">·</span>=<span class="dp">·</span>subparsers.add_parser(&#x27;Fitting&#x27;,conflict_handler=&#x27;resolve&#x27;,<span class="dp">·</span>add_help=False)</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>P_fitting.add_argument(&quot;-i&quot;,<span class="dp">·</span>&quot;--input&quot;,type=str,</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>P_fitting.add_argument(&quot;-i&quot;,<span class="dp">·</span>&quot;--input&quot;,type=str,</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&#x27;&#x27;&#x27;the<span class="dp">·</span>input<span class="dp">·</span>train<span class="dp">·</span>and<span class="dp">·</span>test<span class="dp">·</span>data<span class="dp">·</span>file<span class="dp">·</span>with<span class="dp">·</span>dataframe<span class="dp">·</span>format<span class="dp">·</span><span class="dp">·</span>by<span class="dp">·</span>row(samples)<span class="dp">·</span>x<span class="dp">·</span>columns<span class="dp">·</span>(features<span class="dp">·</span>and<span class="dp">·</span>Y).<span class="dp">·</span>the<span class="dp">·</span>sample<span class="dp">·</span>column<span class="dp">·</span>name<span class="dp">·</span>must<span class="dp">·</span>be<span class="dp">·</span>Sample.</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&#x27;&#x27;&#x27;the<span class="dp">·</span>input<span class="dp">·</span>train<span class="dp">·</span>and<span class="dp">·</span>test<span class="dp">·</span>data<span class="dp">·</span>file<span class="dp">·</span>with<span class="dp">·</span>dataframe<span class="dp">·</span>format<span class="dp">·</span><span class="dp">·</span>by<span class="dp">·</span>row(samples)<span class="dp">·</span>x<span class="dp">·</span>columns<span class="dp">·</span>(features<span class="dp">·</span>and<span class="dp">·</span>Y).<span class="dp">·</span>the<span class="dp">·</span>sample<span class="dp">·</span>column<span class="dp">·</span>name<span class="dp">·</span>must<span class="dp">·</span>be<span class="dp">·</span>Sample.</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">&#x27;&#x27;&#x27;)</td><td class="diffline">35 </td><td class="diffpresent">&#x27;&#x27;&#x27;)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">mlsuite-2.1.2/MLsuite/MLEstimators.py</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLEstimators.py"><span class="source">mlsuite-2.1.3/MLsuite/MLEstimators.py</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLEstimators.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">mlsuite-2.1.2/MLsuite/MLLogging.py</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLLogging.py"><span class="source">mlsuite-2.1.3/MLsuite/MLLogging.py</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLLogging.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">773 B</span></div>
+      <div><span class="source">mlsuite-2.1.2/MLsuite/MLOpenWrite.py</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLOpenWrite.py"><span class="source">mlsuite-2.1.3/MLsuite/MLOpenWrite.py</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLOpenWrite.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 11% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 26, 15 lines modified</td><td colspan="2">Offset 26, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os.makedirs(<span class="dp">·</span>os.path.dirname(self.file),<span class="dp">·</span>exist_ok=True<span class="dp">·</span>)</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os.makedirs(<span class="dp">·</span>os.path.dirname(self.file),<span class="dp">·</span>exist_ok=True<span class="dp">·</span>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f=<span class="dp">·</span>open(self.file,<span class="dp">·</span>&#x27;w&#x27;,encoding=&#x27;utf-8&#x27;)</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f=<span class="dp">·</span>open(self.file,<span class="dp">·</span>&#x27;w&#x27;,encoding=&#x27;utf-8&#x27;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.write(self.array[0])</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.write(self.array[0])</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.close()</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.close()</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>openv(self):</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>openv(self):</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os.makedirs(<span class="dp">·</span>os.path.dirname(self.file),<span class="dp">·</span>exist_ok=True<span class="dp">·</span>)</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os.makedirs(<span class="dp">·</span>os.path.dirname(self.file),<span class="dp">·</span>exist_ok=True<span class="dp">·</span>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>df<span class="dp">·</span>=<span class="dp">·</span>self.array[0]</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>df<span class="dp">·</span>=<span class="dp">·</span>self.array[0]</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>df.to_csv(self.file,<span class="dp">·</span>sep=self.sep,<span class="dp">·</span>index=self.index,<span class="dp">·</span>index_label=self.index_label,<span class="dp">·</span>header=True<del>,<span class="dp">·</span>line_terminator=&#x27;\n&#x27;</del>)</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>df.to_csv(self.file,<span class="dp">·</span>sep=self.sep,<span class="dp">·</span>index=self.index,<span class="dp">·</span>index_label=self.index_label,<span class="dp">·</span>header=True)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">class<span class="dp">·</span>OpenM():</td><td class="diffline">34 </td><td class="diffpresent">class<span class="dp">·</span>OpenM():</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(self,<span class="dp">·</span>arg,<span class="dp">·</span>log):</td><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(self,<span class="dp">·</span>arg,<span class="dp">·</span>log):</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.arg<span class="dp">·</span>=<span class="dp">·</span>arg</td><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.arg<span class="dp">·</span>=<span class="dp">·</span>arg</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.log<span class="dp">·</span>=<span class="dp">·</span>log</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.log<span class="dp">·</span>=<span class="dp">·</span>log</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>openi(self):</td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>openi(self):</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">mlsuite-2.1.2/MLsuite/MLPipeline.py</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLPipeline.py"><span class="source">mlsuite-2.1.3/MLsuite/MLPipeline.py</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLPipeline.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">mlsuite-2.1.2/MLsuite/MLPredicting.py</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLPredicting.py"><span class="source">mlsuite-2.1.3/MLsuite/MLPredicting.py</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLPredicting.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">mlsuite-2.1.2/MLsuite/MLSupervising.py</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLSupervising.py"><span class="source">mlsuite-2.1.3/MLsuite/MLSupervising.py</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLSupervising.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">mlsuite-2.1.2/MLsuite/MLUtilities.py</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLUtilities.py"><span class="source">mlsuite-2.1.3/MLsuite/MLUtilities.py</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-MLUtilities.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">mlsuite-2.1.2/MLsuite/main.py</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-main.py"><span class="source">mlsuite-2.1.3/MLsuite/main.py</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--MLsuite-main.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">448 B</span></div>
+      <div><span class="source">mlsuite-2.1.2/PKG-INFO</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--PKG-INFO"><span class="source">mlsuite-2.1.3/PKG-INFO</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>mlsuite</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>mlsuite</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.1.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.1.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>The<span class="dp">·</span>traditional<span class="dp">·</span>machine<span class="dp">·</span>learning<span class="dp">·</span>analysis<span class="dp">·</span>based<span class="dp">·</span>on<span class="dp">·</span>sklearn<span class="dp">·</span>package</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>The<span class="dp">·</span>traditional<span class="dp">·</span>machine<span class="dp">·</span>learning<span class="dp">·</span>analysis<span class="dp">·</span>based<span class="dp">·</span>on<span class="dp">·</span>sklearn<span class="dp">·</span>package</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://git.genecast.com.cn/narwhal/mlsuite</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://git.genecast.com.cn/narwhal/mlsuite</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>suxing<span class="dp">·</span>li</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>suxing<span class="dp">·</span>li</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>li.suxing@genecast.com.cn</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>li.suxing@genecast.com.cn</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>suxing<span class="dp">·</span>li</td><td class="diffline">8 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>suxing<span class="dp">·</span>li</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>li.suxing@genecast.com.cn</td><td class="diffline">9 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>li.suxing@genecast.com.cn</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>all</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>all</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.24 KB</span></div>
+      <div><span class="source">mlsuite-2.1.2/README.md</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--README.md"><span class="source">mlsuite-2.1.3/README.md</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>mlsuite</td><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>mlsuite</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">##<span class="dp">·</span>Install</td><td class="diffline">2 </td><td class="diffpresent">##<span class="dp">·</span>Install</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">```</td><td class="diffline">3 </td><td class="diffpresent">```</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>mlsuite==2.1.<del>2</del></td><td class="diffline">4 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>mlsuite==2.1.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>https://github.com/JamesRitchie/scikit-rvm/archive/master.zip</td><td class="diffline">5 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>https://github.com/JamesRitchie/scikit-rvm/archive/master.zip</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">```</td><td class="diffline">6 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">##<span class="dp">·</span>Usage</td><td class="diffline">7 </td><td class="diffpresent">##<span class="dp">·</span>Usage</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Notice:<span class="dp">·</span>used<span class="dp">·</span>pyhton3,<span class="dp">·</span>not<span class="dp">·</span>python2</td><td class="diffline">8 </td><td class="diffpresent">Notice:<span class="dp">·</span>used<span class="dp">·</span>pyhton3,<span class="dp">·</span>not<span class="dp">·</span>python2</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 30, 14 lines modified</td><td colspan="2">Offset 30, 27 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">1.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Auto<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-i<span class="dp">·</span>data.traintest.txt<span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-p<span class="dp">·</span>data.predict.txt<span class="dp">·</span>-o<span class="dp">·</span>testdt/<span class="dp">·</span>-m<span class="dp">·</span>DT</td><td class="diffline">30 </td><td class="diffpresent">1.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Auto<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-i<span class="dp">·</span>data.traintest.txt<span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-p<span class="dp">·</span>data.predict.txt<span class="dp">·</span>-o<span class="dp">·</span>testdt/<span class="dp">·</span>-m<span class="dp">·</span>DT</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">2.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Auto<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-i<span class="dp">·</span>data.traintest.txt<span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-o<span class="dp">·</span>testdt/<span class="dp">·</span>-m<span class="dp">·</span>DT</td><td class="diffline">31 </td><td class="diffpresent">2.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Auto<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-i<span class="dp">·</span>data.traintest.txt<span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-o<span class="dp">·</span>testdt/<span class="dp">·</span>-m<span class="dp">·</span>DT</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">3.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Fitting<span class="dp">·</span>-i<span class="dp">·</span>data.traintest.txt<span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-o<span class="dp">·</span>testdt/<span class="dp">·</span>-m<span class="dp">·</span>DT</td><td class="diffline">32 </td><td class="diffpresent">3.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Fitting<span class="dp">·</span>-i<span class="dp">·</span>data.traintest.txt<span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-o<span class="dp">·</span>testdt/<span class="dp">·</span>-m<span class="dp">·</span>DT</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">4.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Predict<span class="dp">·</span>-p<span class="dp">·</span>data.predict.txt<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-x<span class="dp">·</span>modelpath/<span class="dp">·</span>-y<span class="dp">·</span>predictdt/<span class="dp">·</span>-m<span class="dp">·</span>DT.</td><td class="diffline">33 </td><td class="diffpresent">4.<span class="dp">·</span>python<span class="dp">·</span>mlsuite.py<span class="dp">·</span>Predict<span class="dp">·</span>-p<span class="dp">·</span>data.predict.txt<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-g<span class="dp">·</span>group.new.txt<span class="dp">·</span>-x<span class="dp">·</span>modelpath/<span class="dp">·</span>-y<span class="dp">·</span>predictdt/<span class="dp">·</span>-m<span class="dp">·</span>DT.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">##<span class="dp">·</span>Update<span class="dp">·</span>log</td><td class="diffline">34 </td><td class="diffpresent">##<span class="dp">·</span>Update<span class="dp">·</span>log</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">###<span class="dp">·</span>v2.1.3</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent">1.<span class="dp">·</span>pandas&#x27;s<span class="dp">·</span>parameter<span class="dp">·</span>&quot;line_terminator&quot;<span class="dp">·</span>had<span class="dp">·</span>changed<span class="dp">·</span>into<span class="dp">·</span>&quot;lineterminator&quot;<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>2.0.0<span class="dp">·</span>version,<span class="dp">·</span>so<span class="dp">·</span>drop<span class="dp">·</span>&quot;line_terminator&quot;<span class="dp">·</span>in<span class="dp">·</span>&quot;MLOpenWrite.py&quot;<span class="dp">·</span>script.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent">2.<span class="dp">·</span>fixed<span class="dp">·</span>same<span class="dp">·</span>packages&#x27;<span class="dp">·</span>version:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">38 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>lightgbm<span class="dp">·</span>==<span class="dp">·</span>3.3.3,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>joblib<span class="dp">·</span>==<span class="dp">·</span>1.2.0,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>numpy<span class="dp">·</span>==<span class="dp">·</span>1.21.4,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pandas<span class="dp">·</span>==<span class="dp">·</span>1.1.5,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">43 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>scikit-learn<span class="dp">·</span>==<span class="dp">·</span>1.2.0,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">44 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sklearn_pandas<span class="dp">·</span>==<span class="dp">·</span>2.2.0,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">45 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>xgboost<span class="dp">·</span>==<span class="dp">·</span>1.7.2</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">46 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">###<span class="dp">·</span>v2.1.2</td><td class="diffline">47 </td><td class="diffpresent">###<span class="dp">·</span>v2.1.2</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">1.<span class="dp">·</span>revised<span class="dp">·</span>same<span class="dp">·</span>packages&#x27;<span class="dp">·</span>version:</td><td class="diffline">48 </td><td class="diffpresent">1.<span class="dp">·</span>revised<span class="dp">·</span>same<span class="dp">·</span>packages&#x27;<span class="dp">·</span>version:</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">```</td><td class="diffline">49 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>lightgbm<span class="dp">·</span>==<span class="dp">·</span>3.3.3,</td><td class="diffline">50 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>lightgbm<span class="dp">·</span>==<span class="dp">·</span>3.3.3,</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>joblib<span class="dp">·</span>==<span class="dp">·</span>1.2.0,</td><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>joblib<span class="dp">·</span>==<span class="dp">·</span>1.2.0,</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>numpy<span class="dp">·</span>&gt;=<span class="dp">·</span>1.16.4,</td><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>numpy<span class="dp">·</span>&gt;=<span class="dp">·</span>1.16.4,</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pandas<span class="dp">·</span>&gt;=<span class="dp">·</span>0.24.2,</td><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pandas<span class="dp">·</span>&gt;=<span class="dp">·</span>0.24.2,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">482 B</span></div>
+      <div><span class="source">mlsuite-2.1.2/mlsuite.egg-info/PKG-INFO</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--mlsuite.egg-info-PKG-INFO"><span class="source">mlsuite-2.1.3/mlsuite.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--mlsuite.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>mlsuite</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>mlsuite</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.1.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.1.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>The<span class="dp">·</span>traditional<span class="dp">·</span>machine<span class="dp">·</span>learning<span class="dp">·</span>analysis<span class="dp">·</span>based<span class="dp">·</span>on<span class="dp">·</span>sklearn<span class="dp">·</span>package</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>The<span class="dp">·</span>traditional<span class="dp">·</span>machine<span class="dp">·</span>learning<span class="dp">·</span>analysis<span class="dp">·</span>based<span class="dp">·</span>on<span class="dp">·</span>sklearn<span class="dp">·</span>package</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://git.genecast.com.cn/narwhal/mlsuite</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://git.genecast.com.cn/narwhal/mlsuite</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>suxing<span class="dp">·</span>li</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>suxing<span class="dp">·</span>li</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>li.suxing@genecast.com.cn</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>li.suxing@genecast.com.cn</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>suxing<span class="dp">·</span>li</td><td class="diffline">8 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>suxing<span class="dp">·</span>li</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>li.suxing@genecast.com.cn</td><td class="diffline">9 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>li.suxing@genecast.com.cn</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>all</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>all</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.11 KB</span></div>
+      <div><span class="source">mlsuite-2.1.2/setup.py</span> vs.</div>
+      <div id="mlsuite--.-.-.tar---mlsuite--.-.--setup.py"><span class="source">mlsuite-2.1.3/setup.py</span>
+        <a class="anchor" href="#mlsuite--.-.-.tar---mlsuite--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 4, 30 lines modified</td><td colspan="2">Offset 4, 30 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>find_packages,<span class="dp">·</span>setup</td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>find_packages,<span class="dp">·</span>setup</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>glob<span class="dp">·</span>import<span class="dp">·</span>glob</td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>glob<span class="dp">·</span>import<span class="dp">·</span>glob</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>os.path<span class="dp">·</span>import<span class="dp">·</span>dirname,<span class="dp">·</span>join</td><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>os.path<span class="dp">·</span>import<span class="dp">·</span>dirname,<span class="dp">·</span>join</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">import<span class="dp">·</span>os</td><td class="diffline">7 </td><td class="diffpresent">import<span class="dp">·</span>os</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">setup(</td><td class="diffline">8 </td><td class="diffpresent">setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;mlsuite&#x27;,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;mlsuite&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;2.1.<del>2</del>&#x27;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;2.1.<ins>3</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;The<span class="dp">·</span>traditional<span class="dp">·</span>machine<span class="dp">·</span>learning<span class="dp">·</span>analysis<span class="dp">·</span>based<span class="dp">·</span>on<span class="dp">·</span>sklearn<span class="dp">·</span>package&#x27;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;The<span class="dp">·</span>traditional<span class="dp">·</span>machine<span class="dp">·</span>learning<span class="dp">·</span>analysis<span class="dp">·</span>based<span class="dp">·</span>on<span class="dp">·</span>sklearn<span class="dp">·</span>package&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;suxing<span class="dp">·</span>li&#x27;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;suxing<span class="dp">·</span>li&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;li.suxing@genecast.com.cn&#x27;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;li.suxing@genecast.com.cn&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>maintainer=&#x27;suxing<span class="dp">·</span>li&#x27;,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>maintainer=&#x27;suxing<span class="dp">·</span>li&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>maintainer_email=&#x27;li.suxing@genecast.com.cn&#x27;,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>maintainer_email=&#x27;li.suxing@genecast.com.cn&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=find_packages(where=&#x27;.&#x27;,<span class="dp">·</span>exclude=(),<span class="dp">·</span>include=(&#x27;*&#x27;,)),</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=find_packages(where=&#x27;.&#x27;,<span class="dp">·</span>exclude=(),<span class="dp">·</span>include=(&#x27;*&#x27;,)),</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_package_data=True,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_package_data=True,</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>platforms=[&#x27;all&#x27;],</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>platforms=[&#x27;all&#x27;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://git.genecast.com.cn/narwhal/mlsuite&#x27;,</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://git.genecast.com.cn/narwhal/mlsuite&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>scripts=[&#x27;./mlsuite.py&#x27;],</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>scripts=[&#x27;./mlsuite.py&#x27;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;lightgbm<span class="dp">·</span>==<span class="dp">·</span>3.3.3&#x27;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;lightgbm<span class="dp">·</span>==<span class="dp">·</span>3.3.3&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;joblib<span class="dp">·</span>==<span class="dp">·</span>1.2.0&#x27;,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;joblib<span class="dp">·</span>==<span class="dp">·</span>1.2.0&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;numpy<span class="dp">·</span><del>&gt;</del>=<span class="dp">·</span>1.<del>16</del>.4&#x27;,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;numpy<span class="dp">·</span><ins>=</ins>=<span class="dp">·</span>1.<ins>21</ins>.4&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pandas<span class="dp">·</span><del>&gt;</del>=<span class="dp">·</span><del>0</del>.<del>2</del><del>4</del>.<del>2</del>&#x27;,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pandas<span class="dp">·</span><ins>=</ins>=<span class="dp">·</span><ins>1</ins>.<ins>1</ins>.<ins>5</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;scikit-learn<span class="dp">·</span>==<span class="dp">·</span>1.2.0&#x27;,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;scikit-learn<span class="dp">·</span>==<span class="dp">·</span>1.2.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;sklearn_pandas<span class="dp">·</span>==<span class="dp">·</span>2.2.0&#x27;,</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;sklearn_pandas<span class="dp">·</span>==<span class="dp">·</span>2.2.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;xgboost<span class="dp">·</span>==<span class="dp">·</span>1.7.2&#x27;</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;xgboost<span class="dp">·</span>==<span class="dp">·</span>1.7.2&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>classifiers=[</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>classifiers=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta&quot;,</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Environment<span class="dp">·</span>::<span class="dp">·</span>Console&quot;,</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Environment<span class="dp">·</span>::<span class="dp">·</span>Console&quot;,</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

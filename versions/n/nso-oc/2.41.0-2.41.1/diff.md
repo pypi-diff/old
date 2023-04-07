@@ -1,0 +1,290 @@
+# Comparing `tmp/nso-oc-2.41.0.tar.gz` & `tmp/nso-oc-2.41.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "nso-oc-2.41.0.tar", last modified: Wed Apr  5 13:11:41 2023, max compression
++gzip compressed data, was "nso-oc-2.41.1.tar", last modified: Fri Apr  7 03:44:28 2023, max compression
+```
+
+## Comparing `nso-oc-2.41.0.tar` & `nso-oc-2.41.1.tar`
+
+### file list
+
+```diff
+@@ -1,41 +1,41 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 13:11:41.221156 nso-oc-2.41.0/
+--rw-r--r--   0 runner    (1001) docker     (123)     5030 2023-04-05 13:11:13.000000 nso-oc-2.41.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)       35 2023-04-05 13:11:13.000000 nso-oc-2.41.0/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     1414 2023-04-05 13:11:41.221156 nso-oc-2.41.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1694 2023-04-05 13:11:13.000000 nso-oc-2.41.0/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 13:11:41.217157 nso-oc-2.41.0/nso_oc.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     1414 2023-04-05 13:11:41.000000 nso-oc-2.41.0/nso_oc.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1019 2023-04-05 13:11:41.000000 nso-oc-2.41.0/nso_oc.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-05 13:11:41.000000 nso-oc-2.41.0/nso_oc.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       55 2023-04-05 13:11:41.000000 nso-oc-2.41.0/nso_oc.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-05 13:11:41.000000 nso-oc-2.41.0/nso_oc.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       18 2023-04-05 13:11:41.000000 nso-oc-2.41.0/nso_oc.egg-info/top_level.txt
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 13:11:41.217157 nso-oc-2.41.0/package_nso_to_oc/
+--rw-r--r--   0 runner    (1001) docker     (123)     1197 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7506 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/common.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     3569 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/main.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 13:11:41.217157 nso-oc-2.41.0/package_nso_to_oc/xe/
+--rw-r--r--   0 runner    (1001) docker     (123)       29 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6036 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/common_xe.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2185 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/main_xe.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)    29664 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/xe_acls.py
+--rw-r--r--   0 runner    (1001) docker     (123)    36678 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/xe_bgp.py
+--rw-r--r--   0 runner    (1001) docker     (123)    58208 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/xe_interfaces.py
+--rw-r--r--   0 runner    (1001) docker     (123)    37067 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/xe_network_instances.py
+--rw-r--r--   0 runner    (1001) docker     (123)    38030 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/xe_ospfv2.py
+--rw-r--r--   0 runner    (1001) docker     (123)    29011 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/xe_routing_policy.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8857 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/xe_static_route.py
+--rw-r--r--   0 runner    (1001) docker     (123)    32957 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/xe_stp.py
+--rw-r--r--   0 runner    (1001) docker     (123)    90722 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/xe_system.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4489 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xe/xe_vlans.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 13:11:41.221156 nso-oc-2.41.0/package_nso_to_oc/xr/
+--rw-r--r--   0 runner    (1001) docker     (123)       29 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xr/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      711 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xr/common_xr.py
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xr/main_xr.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)    23665 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xr/xr_acls.py
+--rw-r--r--   0 runner    (1001) docker     (123)    50090 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xr/xr_interfaces.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8348 2023-04-05 13:11:13.000000 nso-oc-2.41.0/package_nso_to_oc/xr/xr_system.py
+--rw-r--r--   0 runner    (1001) docker     (123)       92 2023-04-05 13:11:13.000000 nso-oc-2.41.0/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)       67 2023-04-05 13:11:41.221156 nso-oc-2.41.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)      811 2023-04-05 13:11:13.000000 nso-oc-2.41.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:44:28.532979 nso-oc-2.41.1/
++-rw-r--r--   0 runner    (1001) docker     (123)     5030 2023-04-07 03:43:51.000000 nso-oc-2.41.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)       35 2023-04-07 03:43:51.000000 nso-oc-2.41.1/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     1414 2023-04-07 03:44:28.532979 nso-oc-2.41.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1694 2023-04-07 03:43:51.000000 nso-oc-2.41.1/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:44:28.528979 nso-oc-2.41.1/nso_oc.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     1414 2023-04-07 03:44:28.000000 nso-oc-2.41.1/nso_oc.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1019 2023-04-07 03:44:28.000000 nso-oc-2.41.1/nso_oc.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 03:44:28.000000 nso-oc-2.41.1/nso_oc.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       55 2023-04-07 03:44:28.000000 nso-oc-2.41.1/nso_oc.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-07 03:44:28.000000 nso-oc-2.41.1/nso_oc.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       18 2023-04-07 03:44:28.000000 nso-oc-2.41.1/nso_oc.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:44:28.532979 nso-oc-2.41.1/package_nso_to_oc/
++-rw-r--r--   0 runner    (1001) docker     (123)     1197 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7506 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/common.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     3569 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/main.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:44:28.532979 nso-oc-2.41.1/package_nso_to_oc/xe/
++-rw-r--r--   0 runner    (1001) docker     (123)       29 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6036 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/common_xe.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2185 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/main_xe.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)    30054 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/xe_acls.py
++-rw-r--r--   0 runner    (1001) docker     (123)    36678 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/xe_bgp.py
++-rw-r--r--   0 runner    (1001) docker     (123)    58208 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/xe_interfaces.py
++-rw-r--r--   0 runner    (1001) docker     (123)    37067 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/xe_network_instances.py
++-rw-r--r--   0 runner    (1001) docker     (123)    38030 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/xe_ospfv2.py
++-rw-r--r--   0 runner    (1001) docker     (123)    29011 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/xe_routing_policy.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8857 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/xe_static_route.py
++-rw-r--r--   0 runner    (1001) docker     (123)    32957 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/xe_stp.py
++-rw-r--r--   0 runner    (1001) docker     (123)    90722 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/xe_system.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4489 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xe/xe_vlans.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:44:28.532979 nso-oc-2.41.1/package_nso_to_oc/xr/
++-rw-r--r--   0 runner    (1001) docker     (123)       29 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xr/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      711 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xr/common_xr.py
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xr/main_xr.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)    23665 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xr/xr_acls.py
++-rw-r--r--   0 runner    (1001) docker     (123)    50090 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xr/xr_interfaces.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8348 2023-04-07 03:43:51.000000 nso-oc-2.41.1/package_nso_to_oc/xr/xr_system.py
++-rw-r--r--   0 runner    (1001) docker     (123)       92 2023-04-07 03:43:51.000000 nso-oc-2.41.1/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)       67 2023-04-07 03:44:28.536980 nso-oc-2.41.1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)      811 2023-04-07 03:43:51.000000 nso-oc-2.41.1/setup.py
+```
+
+### Comparing `nso-oc-2.41.0/LICENSE` & `nso-oc-2.41.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/PKG-INFO` & `nso-oc-2.41.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: nso-oc
+-Version: 2.41.0
++Version: 2.41.1
+ Summary: Cisco NSO OpenConfig Tools
+ Home-page: https://github.com/model-driven-devops/nso-oc-services
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ ## NSO NED device configuration to OpenConfig
+```
+
+### Comparing `nso-oc-2.41.0/README.md` & `nso-oc-2.41.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/nso_oc.egg-info/PKG-INFO` & `nso-oc-2.41.1/nso_oc.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: nso-oc
+-Version: 2.41.0
++Version: 2.41.1
+ Summary: Cisco NSO OpenConfig Tools
+ Home-page: https://github.com/model-driven-devops/nso-oc-services
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ ## NSO NED device configuration to OpenConfig
+```
+
+### Comparing `nso-oc-2.41.0/nso_oc.egg-info/SOURCES.txt` & `nso-oc-2.41.1/nso_oc.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/README.md` & `nso-oc-2.41.1/package_nso_to_oc/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/common.py` & `nso-oc-2.41.1/package_nso_to_oc/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/main.py` & `nso-oc-2.41.1/package_nso_to_oc/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xe/common_xe.py` & `nso-oc-2.41.1/package_nso_to_oc/xe/common_xe.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xe/main_xe.py` & `nso-oc-2.41.1/package_nso_to_oc/xe/main_xe.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xe/xe_acls.py` & `nso-oc-2.41.1/package_nso_to_oc/xe/xe_acls.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -292,16 +292,28 @@
+                 or (rule_parts[0].isdigit() and len(rule_parts) == 4 and rule_parts[-1] == "log-input") \
+                 or len(rule_parts) == 2 \
+                 or (len(rule_parts) == 3 and rule_parts[-1] == "log") \
+                 or (len(rule_parts) == 3 and rule_parts[-1] == "log-input"):
+             self.__get_ipv4_config(entry)[self._src_addr_key] = f"{ip}/32"
+ 
+             return current_index + 1
++        elif not common.is_valid_ip(ip):
++            return current_index
++        
+         hostmask = rule_parts[current_index + 1]
+-        temp_ip = IPv4Network((0, hostmask))
++        
++        if hostmask in port_operators:
++            return current_index + 1
++        
++        try:
++            temp_ip = IPv4Network((0, hostmask))
++        except Exception as err:
++            self.__add_acl_entry_note(" ".join(rule_parts), err)
++            self.acl_success = False
++            raise Exception(str(err))
+ 
+         # 0.0.0.0 and 255.255.255.255 are wrong using IPv4Network.prefixlen()
+         if hostmask == "0.0.0.0":
+             prefixlen = "32"
+         elif hostmask == "255.255.255.255":
+             prefixlen = "0"
+         else:
+@@ -325,22 +337,22 @@
+ 
+             return current_index
+ 
+         current_port = rule_parts[current_index + 1]
+ 
+         try:
+             current_port = current_port if current_port.isdigit() else socket.getservbyname(current_port)
+-        except OSError:
++        except OSError as os_err:
+             try:
+                 current_port = common.port_name_number_mapping[current_port]
+             except Exception as err:
+                 self.__add_acl_entry_note(" ".join(rule_parts),
+                                           f"Unable to convert service {current_port} to a port number")
+                 self.acl_success = False
+-                raise Exception
++                raise Exception(str(os_err))
+ 
+         if rule_parts[current_index] == "range":
+             end_port = rule_parts[current_index + 2]
+ 
+             if is_source:
+                 self.__get_transport_config(entry)["openconfig-acl:source-port"] = f"{current_port}..{end_port}"
+             else:
+```
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xe/xe_bgp.py` & `nso-oc-2.41.1/package_nso_to_oc/xe/xe_bgp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xe/xe_interfaces.py` & `nso-oc-2.41.1/package_nso_to_oc/xe/xe_interfaces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xe/xe_network_instances.py` & `nso-oc-2.41.1/package_nso_to_oc/xe/xe_network_instances.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xe/xe_ospfv2.py` & `nso-oc-2.41.1/package_nso_to_oc/xe/xe_ospfv2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xe/xe_routing_policy.py` & `nso-oc-2.41.1/package_nso_to_oc/xe/xe_routing_policy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xe/xe_static_route.py` & `nso-oc-2.41.1/package_nso_to_oc/xe/xe_static_route.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xe/xe_stp.py` & `nso-oc-2.41.1/package_nso_to_oc/xe/xe_stp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xe/xe_system.py` & `nso-oc-2.41.1/package_nso_to_oc/xe/xe_system.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xe/xe_vlans.py` & `nso-oc-2.41.1/package_nso_to_oc/xe/xe_vlans.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xr/common_xr.py` & `nso-oc-2.41.1/package_nso_to_oc/xr/common_xr.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xr/main_xr.py` & `nso-oc-2.41.1/package_nso_to_oc/xr/main_xr.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xr/xr_acls.py` & `nso-oc-2.41.1/package_nso_to_oc/xr/xr_acls.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xr/xr_interfaces.py` & `nso-oc-2.41.1/package_nso_to_oc/xr/xr_interfaces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/package_nso_to_oc/xr/xr_system.py` & `nso-oc-2.41.1/package_nso_to_oc/xr/xr_system.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nso-oc-2.41.0/setup.py` & `nso-oc-2.41.1/setup.py`
+
+ * *Files identical despite different names*
+

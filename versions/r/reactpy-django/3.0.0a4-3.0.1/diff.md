@@ -1,0 +1,406 @@
+# Comparing `tmp/reactpy_django-3.0.0a4.tar.gz` & `tmp/reactpy_django-3.0.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "reactpy_django-3.0.0a4.tar", last modified: Thu Mar 30 09:06:17 2023, max compression
++gzip compressed data, was "reactpy_django-3.0.1.tar", last modified: Fri Apr  7 03:45:33 2023, max compression
+```
+
+## Comparing `reactpy_django-3.0.0a4.tar` & `reactpy_django-3.0.1.tar`
+
+### file list
+
+```diff
+@@ -1,49 +1,49 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 09:06:17.779134 reactpy_django-3.0.0a4/
+--rw-r--r--   0 runner    (1001) docker     (123)     1083 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      136 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     5176 2023-03-30 09:06:17.779134 reactpy_django-3.0.0a4/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     4316 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)      564 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)      221 2023-03-30 09:06:17.779134 reactpy_django-3.0.0a4/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     5668 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 09:06:17.771134 reactpy_django-3.0.0a4/src/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 09:06:17.775134 reactpy_django-3.0.0a4/src/reactpy_django/
+--rw-r--r--   0 runner    (1001) docker     (123)      282 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      847 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/apps.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7522 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/components.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1268 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1337 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/decorators.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6652 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/hooks.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 09:06:17.775134 reactpy_django-3.0.0a4/src/reactpy_django/http/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/http/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      380 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/http/urls.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2316 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/http/views.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 09:06:17.775134 reactpy_django-3.0.0a4/src/reactpy_django/migrations/
+--rw-r--r--   0 runner    (1001) docker     (123)      648 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/migrations/0001_initial.py
+--rw-r--r--   0 runner    (1001) docker     (123)      378 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/migrations/0002_rename_created_at_componentparams_last_accessed.py
+--rw-r--r--   0 runner    (1001) docker     (123)      802 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/migrations/0003_componentsession_delete_componentparams.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/migrations/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      439 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/models.py
+--rw-r--r--   0 runner    (1001) docker     (123)       26 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/py.typed
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 09:06:17.771134 reactpy_django-3.0.0a4/src/reactpy_django/static/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 09:06:17.775134 reactpy_django-3.0.0a4/src/reactpy_django/static/reactpy_django/
+--rw-r--r--   0 runner    (1001) docker     (123)   166388 2023-03-30 09:06:17.000000 reactpy_django-3.0.0a4/src/reactpy_django/static/reactpy_django/client.js
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 09:06:17.771134 reactpy_django-3.0.0a4/src/reactpy_django/templates/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 09:06:17.775134 reactpy_django-3.0.0a4/src/reactpy_django/templates/reactpy/
+--rw-r--r--   0 runner    (1001) docker     (123)      481 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/templates/reactpy/component.html
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 09:06:17.775134 reactpy_django-3.0.0a4/src/reactpy_django/templatetags/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/templatetags/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2147 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/templatetags/reactpy.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2906 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/types.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13461 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/utils.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 09:06:17.775134 reactpy_django-3.0.0a4/src/reactpy_django/websocket/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/websocket/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5411 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/websocket/consumer.py
+--rw-r--r--   0 runner    (1001) docker     (123)      394 2023-03-30 09:05:29.000000 reactpy_django-3.0.0a4/src/reactpy_django/websocket/paths.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-30 09:06:17.775134 reactpy_django-3.0.0a4/src/reactpy_django.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     5176 2023-03-30 09:06:17.000000 reactpy_django-3.0.0a4/src/reactpy_django.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1270 2023-03-30 09:06:17.000000 reactpy_django-3.0.0a4/src/reactpy_django.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-30 09:06:17.000000 reactpy_django-3.0.0a4/src/reactpy_django.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-30 09:06:10.000000 reactpy_django-3.0.0a4/src/reactpy_django.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (123)       81 2023-03-30 09:06:17.000000 reactpy_django-3.0.0a4/src/reactpy_django.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       15 2023-03-30 09:06:17.000000 reactpy_django-3.0.0a4/src/reactpy_django.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:45:33.940506 reactpy_django-3.0.1/
++-rw-r--r--   0 runner    (1001) docker     (123)     1083 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      136 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     5177 2023-04-07 03:45:33.940506 reactpy_django-3.0.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     4319 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)      564 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)      221 2023-04-07 03:45:33.940506 reactpy_django-3.0.1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     5668 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:45:33.936506 reactpy_django-3.0.1/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:45:33.936506 reactpy_django-3.0.1/src/reactpy_django/
++-rw-r--r--   0 runner    (1001) docker     (123)      280 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      277 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/apps.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7522 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/components.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1268 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1337 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/decorators.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6652 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/hooks.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:45:33.940506 reactpy_django-3.0.1/src/reactpy_django/http/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/http/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      380 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/http/urls.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2316 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/http/views.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:45:33.940506 reactpy_django-3.0.1/src/reactpy_django/migrations/
++-rw-r--r--   0 runner    (1001) docker     (123)      648 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/migrations/0001_initial.py
++-rw-r--r--   0 runner    (1001) docker     (123)      378 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/migrations/0002_rename_created_at_componentparams_last_accessed.py
++-rw-r--r--   0 runner    (1001) docker     (123)      802 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/migrations/0003_componentsession_delete_componentparams.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/migrations/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      439 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/models.py
++-rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/py.typed
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:45:33.936506 reactpy_django-3.0.1/src/reactpy_django/static/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:45:33.940506 reactpy_django-3.0.1/src/reactpy_django/static/reactpy_django/
++-rw-r--r--   0 runner    (1001) docker     (123)   166388 2023-04-07 03:45:33.000000 reactpy_django-3.0.1/src/reactpy_django/static/reactpy_django/client.js
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:45:33.936506 reactpy_django-3.0.1/src/reactpy_django/templates/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:45:33.940506 reactpy_django-3.0.1/src/reactpy_django/templates/reactpy/
++-rw-r--r--   0 runner    (1001) docker     (123)      481 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/templates/reactpy/component.html
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:45:33.940506 reactpy_django-3.0.1/src/reactpy_django/templatetags/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/templatetags/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2147 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/templatetags/reactpy.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2906 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/types.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13461 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:45:33.940506 reactpy_django-3.0.1/src/reactpy_django/websocket/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/websocket/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5411 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/websocket/consumer.py
++-rw-r--r--   0 runner    (1001) docker     (123)      394 2023-04-07 03:44:59.000000 reactpy_django-3.0.1/src/reactpy_django/websocket/paths.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:45:33.940506 reactpy_django-3.0.1/src/reactpy_django.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     5177 2023-04-07 03:45:33.000000 reactpy_django-3.0.1/src/reactpy_django.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1270 2023-04-07 03:45:33.000000 reactpy_django-3.0.1/src/reactpy_django.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 03:45:33.000000 reactpy_django-3.0.1/src/reactpy_django.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 03:45:26.000000 reactpy_django-3.0.1/src/reactpy_django.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)       81 2023-04-07 03:45:33.000000 reactpy_django-3.0.1/src/reactpy_django.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       15 2023-04-07 03:45:33.000000 reactpy_django-3.0.1/src/reactpy_django.egg-info/top_level.txt
+```
+
+### Comparing `reactpy_django-3.0.0a4/LICENSE` & `reactpy_django-3.0.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/PKG-INFO` & `reactpy_django-3.0.1/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: reactpy_django
+-Version: 3.0.0a4
++Version: 3.0.1
+ Summary: Control the web with Python
+ Home-page: https://github.com/reactive-python/reactpy-django
+ Author: Ryan Morshead
+ Author-email: ryan.morshead@gmail.com
+ License: MIT
+ Keywords: interactive,widgets,DOM,React
+ Platform: Linux
+@@ -24,20 +24,20 @@
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # <img src="https://raw.githubusercontent.com/reactive-python/reactpy/main/branding/svg/reactpy-logo-square.svg" align="left" height="45"/> ReactPy Django
+ 
+ <!--badge-start-->
+ 
+-[![Tests](https://github.com/reactive-python/reactpy-django/workflows/Test/badge.svg?event=push)](https://github.com/reactive-python/reactpy-django/actions?query=workflow%3ATest) [![PyPI Version](https://img.shields.io/pypi/v/django-idom.svg?label=PyPI)](https://pypi.python.org/pypi/django-idom) [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/reactive-python/reactpy-django/blob/main/LICENSE) [![Docs](https://img.shields.io/website?down_message=offline&label=Docs&logo=read%20the%20docs&logoColor=white&up_message=online&url=https%3A%2F%2Freactive-python.github.io%2Freactpy-django%2F)](https://reactive-python.github.io/reactpy-django/)
++[![Tests](https://github.com/reactive-python/reactpy-django/workflows/Test/badge.svg?event=push)](https://github.com/reactive-python/reactpy-django/actions?query=workflow%3ATest) [![PyPI Version](https://img.shields.io/pypi/v/reactpy-django.svg?label=PyPI)](https://pypi.python.org/pypi/reactpy-django) [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/reactive-python/reactpy-django/blob/main/LICENSE) [![Docs](https://img.shields.io/website?down_message=offline&label=Docs&logo=read%20the%20docs&logoColor=white&up_message=online&url=https%3A%2F%2Freactive-python.github.io%2Freactpy-django%2F)](https://reactive-python.github.io/reactpy-django/)
+ 
+ <!--badge-end-->
+ <!--intro-start-->
+ 
+-[ReactPy](https://reactpy.dev/) is a library for building user interfaces in Python without Javascript. ReactPy interfaces are made from components which look and behave similarly to those found in [ReactJS](https://reactjs.org/). Designed with simplicity in mind, ReactPy can be used by those without web development experience while also being powerful enough to grow with your ambitions.
++[ReactPy](https://reactpy.dev/) is a library for building user interfaces in Python without Javascript. ReactPy interfaces are made from components that look and behave similar to those found in [ReactJS](https://reactjs.org/). Designed with simplicity in mind, ReactPy can be used by those without web development experience while also being powerful enough to grow with your ambitions.
+ 
+ <table align="center">
+     <thead>
+         <tr>
+             <th colspan="2" style="text-align: center">Supported Backends</th>
+         <tr>
+             <th style="text-align: center">Built-in</th>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,32 +1,32 @@
+-Metadata-Version: 2.1 Name: reactpy_django Version: 3.0.0a4 Summary: Control
+-the web with Python Home-page: https://github.com/reactive-python/reactpy-
+-django Author: Ryan Morshead Author-email: ryan.morshead@gmail.com License: MIT
++Metadata-Version: 2.1 Name: reactpy_django Version: 3.0.1 Summary: Control the
++web with Python Home-page: https://github.com/reactive-python/reactpy-django
++Author: Ryan Morshead Author-email: ryan.morshead@gmail.com License: MIT
+ Keywords: interactive,widgets,DOM,React Platform: Linux Platform: Mac OS X
+ Platform: Windows Classifier: Framework :: Django Classifier: Framework ::
+ Django :: 4.0 Classifier: Operating System :: OS Independent Classifier:
+ Intended Audience :: Developers Classifier: Intended Audience :: Science/
+ Research Classifier: Topic :: Multimedia :: Graphics Classifier: Programming
+ Language :: Python :: 3.8 Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10 Classifier: Environment ::
+ Web Environment Requires-Python: >=3.8 Description-Content-Type: text/markdown
+ License-File: LICENSE # [https://raw.githubusercontent.com/reactive-python/
+ reactpy/main/branding/svg/reactpy-logo-square.svg] ReactPy Django  [![Tests]
+ (https://github.com/reactive-python/reactpy-django/workflows/Test/
+ badge.svg?event=push)](https://github.com/reactive-python/reactpy-django/
+ actions?query=workflow%3ATest) [![PyPI Version](https://img.shields.io/pypi/v/
+-django-idom.svg?label=PyPI)](https://pypi.python.org/pypi/django-idom) [!
++reactpy-django.svg?label=PyPI)](https://pypi.python.org/pypi/reactpy-django) [!
+ [License](https://img.shields.io/badge/License-MIT-purple.svg)](https://
+ github.com/reactive-python/reactpy-django/blob/main/LICENSE) [![Docs](https://
+ img.shields.io/
+ website?down_message=offline&label=Docs&logo=read%20the%20docs&logoColor=white&up_message=online&url=https%3A%2F%2Freactive-
+ python.github.io%2Freactpy-django%2F)](https://reactive-python.github.io/
+ reactpy-django/)   [ReactPy](https://reactpy.dev/) is a library for building
+ user interfaces in Python without Javascript. ReactPy interfaces are made from
+-components which look and behave similarly to those found in [ReactJS](https://
++components that look and behave similar to those found in [ReactJS](https://
+ reactjs.org/). Designed with simplicity in mind, ReactPy can be used by those
+ without web development experience while also being powerful enough to grow
+ with your ambitions.
+           Supported Backends
+           Built-in                       External
+           Flask,_FastAPI,_Sanic,_Tornado Django, Jupyter, Plotly-Dash
+  # At a Glance ## `my_app/components.py`  You will need a file to define your
+```
+
+### Comparing `reactpy_django-3.0.0a4/README.md` & `reactpy_django-3.0.1/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,17 +1,17 @@
+ # <img src="https://raw.githubusercontent.com/reactive-python/reactpy/main/branding/svg/reactpy-logo-square.svg" align="left" height="45"/> ReactPy Django
+ 
+ <!--badge-start-->
+ 
+-[![Tests](https://github.com/reactive-python/reactpy-django/workflows/Test/badge.svg?event=push)](https://github.com/reactive-python/reactpy-django/actions?query=workflow%3ATest) [![PyPI Version](https://img.shields.io/pypi/v/django-idom.svg?label=PyPI)](https://pypi.python.org/pypi/django-idom) [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/reactive-python/reactpy-django/blob/main/LICENSE) [![Docs](https://img.shields.io/website?down_message=offline&label=Docs&logo=read%20the%20docs&logoColor=white&up_message=online&url=https%3A%2F%2Freactive-python.github.io%2Freactpy-django%2F)](https://reactive-python.github.io/reactpy-django/)
++[![Tests](https://github.com/reactive-python/reactpy-django/workflows/Test/badge.svg?event=push)](https://github.com/reactive-python/reactpy-django/actions?query=workflow%3ATest) [![PyPI Version](https://img.shields.io/pypi/v/reactpy-django.svg?label=PyPI)](https://pypi.python.org/pypi/reactpy-django) [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/reactive-python/reactpy-django/blob/main/LICENSE) [![Docs](https://img.shields.io/website?down_message=offline&label=Docs&logo=read%20the%20docs&logoColor=white&up_message=online&url=https%3A%2F%2Freactive-python.github.io%2Freactpy-django%2F)](https://reactive-python.github.io/reactpy-django/)
+ 
+ <!--badge-end-->
+ <!--intro-start-->
+ 
+-[ReactPy](https://reactpy.dev/) is a library for building user interfaces in Python without Javascript. ReactPy interfaces are made from components which look and behave similarly to those found in [ReactJS](https://reactjs.org/). Designed with simplicity in mind, ReactPy can be used by those without web development experience while also being powerful enough to grow with your ambitions.
++[ReactPy](https://reactpy.dev/) is a library for building user interfaces in Python without Javascript. ReactPy interfaces are made from components that look and behave similar to those found in [ReactJS](https://reactjs.org/). Designed with simplicity in mind, ReactPy can be used by those without web development experience while also being powerful enough to grow with your ambitions.
+ 
+ <table align="center">
+     <thead>
+         <tr>
+             <th colspan="2" style="text-align: center">Supported Backends</th>
+         <tr>
+             <th style="text-align: center">Built-in</th>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,20 +1,20 @@
+ # [https://raw.githubusercontent.com/reactive-python/reactpy/main/branding/svg/
+ reactpy-logo-square.svg] ReactPy Django  [![Tests](https://github.com/reactive-
+ python/reactpy-django/workflows/Test/badge.svg?event=push)](https://github.com/
+ reactive-python/reactpy-django/actions?query=workflow%3ATest) [![PyPI Version]
+-(https://img.shields.io/pypi/v/django-idom.svg?label=PyPI)](https://
+-pypi.python.org/pypi/django-idom) [![License](https://img.shields.io/badge/
++(https://img.shields.io/pypi/v/reactpy-django.svg?label=PyPI)](https://
++pypi.python.org/pypi/reactpy-django) [![License](https://img.shields.io/badge/
+ License-MIT-purple.svg)](https://github.com/reactive-python/reactpy-django/
+ blob/main/LICENSE) [![Docs](https://img.shields.io/
+ website?down_message=offline&label=Docs&logo=read%20the%20docs&logoColor=white&up_message=online&url=https%3A%2F%2Freactive-
+ python.github.io%2Freactpy-django%2F)](https://reactive-python.github.io/
+ reactpy-django/)   [ReactPy](https://reactpy.dev/) is a library for building
+ user interfaces in Python without Javascript. ReactPy interfaces are made from
+-components which look and behave similarly to those found in [ReactJS](https://
++components that look and behave similar to those found in [ReactJS](https://
+ reactjs.org/). Designed with simplicity in mind, ReactPy can be used by those
+ without web development experience while also being powerful enough to grow
+ with your ambitions.
+           Supported Backends
+           Built-in                       External
+           Flask,_FastAPI,_Sanic,_Tornado Django, Jupyter, Plotly-Dash
+  # At a Glance ## `my_app/components.py`  You will need a file to define your
+```
+
+### Comparing `reactpy_django-3.0.0a4/pyproject.toml` & `reactpy_django-3.0.1/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/setup.py` & `reactpy_django-3.0.1/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django/components.py` & `reactpy_django-3.0.1/src/reactpy_django/components.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django/config.py` & `reactpy_django-3.0.1/src/reactpy_django/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django/decorators.py` & `reactpy_django-3.0.1/src/reactpy_django/decorators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django/hooks.py` & `reactpy_django-3.0.1/src/reactpy_django/hooks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django/http/views.py` & `reactpy_django-3.0.1/src/reactpy_django/http/views.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django/migrations/0001_initial.py` & `reactpy_django-3.0.1/src/reactpy_django/migrations/0001_initial.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django/migrations/0003_componentsession_delete_componentparams.py` & `reactpy_django-3.0.1/src/reactpy_django/migrations/0003_componentsession_delete_componentparams.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django/static/reactpy_django/client.js` & `reactpy_django-3.0.1/src/reactpy_django/static/reactpy_django/client.js`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django/templatetags/reactpy.py` & `reactpy_django-3.0.1/src/reactpy_django/templatetags/reactpy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django/types.py` & `reactpy_django-3.0.1/src/reactpy_django/types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django/utils.py` & `reactpy_django-3.0.1/src/reactpy_django/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django/websocket/consumer.py` & `reactpy_django-3.0.1/src/reactpy_django/websocket/consumer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django.egg-info/PKG-INFO` & `reactpy_django-3.0.1/src/reactpy_django.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: reactpy-django
+-Version: 3.0.0a4
++Version: 3.0.1
+ Summary: Control the web with Python
+ Home-page: https://github.com/reactive-python/reactpy-django
+ Author: Ryan Morshead
+ Author-email: ryan.morshead@gmail.com
+ License: MIT
+ Keywords: interactive,widgets,DOM,React
+ Platform: Linux
+@@ -24,20 +24,20 @@
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # <img src="https://raw.githubusercontent.com/reactive-python/reactpy/main/branding/svg/reactpy-logo-square.svg" align="left" height="45"/> ReactPy Django
+ 
+ <!--badge-start-->
+ 
+-[![Tests](https://github.com/reactive-python/reactpy-django/workflows/Test/badge.svg?event=push)](https://github.com/reactive-python/reactpy-django/actions?query=workflow%3ATest) [![PyPI Version](https://img.shields.io/pypi/v/django-idom.svg?label=PyPI)](https://pypi.python.org/pypi/django-idom) [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/reactive-python/reactpy-django/blob/main/LICENSE) [![Docs](https://img.shields.io/website?down_message=offline&label=Docs&logo=read%20the%20docs&logoColor=white&up_message=online&url=https%3A%2F%2Freactive-python.github.io%2Freactpy-django%2F)](https://reactive-python.github.io/reactpy-django/)
++[![Tests](https://github.com/reactive-python/reactpy-django/workflows/Test/badge.svg?event=push)](https://github.com/reactive-python/reactpy-django/actions?query=workflow%3ATest) [![PyPI Version](https://img.shields.io/pypi/v/reactpy-django.svg?label=PyPI)](https://pypi.python.org/pypi/reactpy-django) [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/reactive-python/reactpy-django/blob/main/LICENSE) [![Docs](https://img.shields.io/website?down_message=offline&label=Docs&logo=read%20the%20docs&logoColor=white&up_message=online&url=https%3A%2F%2Freactive-python.github.io%2Freactpy-django%2F)](https://reactive-python.github.io/reactpy-django/)
+ 
+ <!--badge-end-->
+ <!--intro-start-->
+ 
+-[ReactPy](https://reactpy.dev/) is a library for building user interfaces in Python without Javascript. ReactPy interfaces are made from components which look and behave similarly to those found in [ReactJS](https://reactjs.org/). Designed with simplicity in mind, ReactPy can be used by those without web development experience while also being powerful enough to grow with your ambitions.
++[ReactPy](https://reactpy.dev/) is a library for building user interfaces in Python without Javascript. ReactPy interfaces are made from components that look and behave similar to those found in [ReactJS](https://reactjs.org/). Designed with simplicity in mind, ReactPy can be used by those without web development experience while also being powerful enough to grow with your ambitions.
+ 
+ <table align="center">
+     <thead>
+         <tr>
+             <th colspan="2" style="text-align: center">Supported Backends</th>
+         <tr>
+             <th style="text-align: center">Built-in</th>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,32 +1,32 @@
+-Metadata-Version: 2.1 Name: reactpy-django Version: 3.0.0a4 Summary: Control
+-the web with Python Home-page: https://github.com/reactive-python/reactpy-
+-django Author: Ryan Morshead Author-email: ryan.morshead@gmail.com License: MIT
++Metadata-Version: 2.1 Name: reactpy-django Version: 3.0.1 Summary: Control the
++web with Python Home-page: https://github.com/reactive-python/reactpy-django
++Author: Ryan Morshead Author-email: ryan.morshead@gmail.com License: MIT
+ Keywords: interactive,widgets,DOM,React Platform: Linux Platform: Mac OS X
+ Platform: Windows Classifier: Framework :: Django Classifier: Framework ::
+ Django :: 4.0 Classifier: Operating System :: OS Independent Classifier:
+ Intended Audience :: Developers Classifier: Intended Audience :: Science/
+ Research Classifier: Topic :: Multimedia :: Graphics Classifier: Programming
+ Language :: Python :: 3.8 Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10 Classifier: Environment ::
+ Web Environment Requires-Python: >=3.8 Description-Content-Type: text/markdown
+ License-File: LICENSE # [https://raw.githubusercontent.com/reactive-python/
+ reactpy/main/branding/svg/reactpy-logo-square.svg] ReactPy Django  [![Tests]
+ (https://github.com/reactive-python/reactpy-django/workflows/Test/
+ badge.svg?event=push)](https://github.com/reactive-python/reactpy-django/
+ actions?query=workflow%3ATest) [![PyPI Version](https://img.shields.io/pypi/v/
+-django-idom.svg?label=PyPI)](https://pypi.python.org/pypi/django-idom) [!
++reactpy-django.svg?label=PyPI)](https://pypi.python.org/pypi/reactpy-django) [!
+ [License](https://img.shields.io/badge/License-MIT-purple.svg)](https://
+ github.com/reactive-python/reactpy-django/blob/main/LICENSE) [![Docs](https://
+ img.shields.io/
+ website?down_message=offline&label=Docs&logo=read%20the%20docs&logoColor=white&up_message=online&url=https%3A%2F%2Freactive-
+ python.github.io%2Freactpy-django%2F)](https://reactive-python.github.io/
+ reactpy-django/)   [ReactPy](https://reactpy.dev/) is a library for building
+ user interfaces in Python without Javascript. ReactPy interfaces are made from
+-components which look and behave similarly to those found in [ReactJS](https://
++components that look and behave similar to those found in [ReactJS](https://
+ reactjs.org/). Designed with simplicity in mind, ReactPy can be used by those
+ without web development experience while also being powerful enough to grow
+ with your ambitions.
+           Supported Backends
+           Built-in                       External
+           Flask,_FastAPI,_Sanic,_Tornado Django, Jupyter, Plotly-Dash
+  # At a Glance ## `my_app/components.py`  You will need a file to define your
+```
+
+### Comparing `reactpy_django-3.0.0a4/src/reactpy_django.egg-info/SOURCES.txt` & `reactpy_django-3.0.1/src/reactpy_django.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
