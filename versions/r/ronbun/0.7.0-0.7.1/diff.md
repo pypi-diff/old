@@ -1,0 +1,130 @@
+# Comparing `tmp/ronbun-0.7.0.tar.gz` & `tmp/ronbun-0.7.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "ronbun-0.7.0.tar", last modified: Fri Apr  7 01:44:09 2023, max compression
++gzip compressed data, was "ronbun-0.7.1.tar", last modified: Fri Apr  7 01:58:07 2023, max compression
+```
+
+## Comparing `ronbun-0.7.0.tar` & `ronbun-0.7.1.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,16 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:44:09.243989 ronbun-0.7.0/
+--rw-r--r--   0 runner    (1001) docker     (123)     1071 2023-04-07 01:43:59.000000 ronbun-0.7.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      599 2023-04-07 01:44:09.239989 ronbun-0.7.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)       82 2023-04-07 01:43:59.000000 ronbun-0.7.0/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:44:09.239989 ronbun-0.7.0/ronbun/
+--rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-07 01:43:59.000000 ronbun-0.7.0/ronbun/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8551 2023-04-07 01:43:59.000000 ronbun-0.7.0/ronbun/readme.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:44:09.239989 ronbun-0.7.0/ronbun.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)      599 2023-04-07 01:44:09.000000 ronbun-0.7.0/ronbun.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      244 2023-04-07 01:44:09.000000 ronbun-0.7.0/ronbun.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 01:44:09.000000 ronbun-0.7.0/ronbun.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       46 2023-04-07 01:44:09.000000 ronbun-0.7.0/ronbun.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       27 2023-04-07 01:44:09.000000 ronbun-0.7.0/ronbun.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        7 2023-04-07 01:44:09.000000 ronbun-0.7.0/ronbun.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 01:44:09.243989 ronbun-0.7.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)      911 2023-04-07 01:43:59.000000 ronbun-0.7.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:58:07.776715 ronbun-0.7.1/
++-rw-r--r--   0 runner    (1001) docker     (123)     1071 2023-04-07 01:57:58.000000 ronbun-0.7.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      599 2023-04-07 01:58:07.772715 ronbun-0.7.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)       82 2023-04-07 01:57:58.000000 ronbun-0.7.1/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:58:07.772715 ronbun-0.7.1/ronbun/
++-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-07 01:57:58.000000 ronbun-0.7.1/ronbun/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8551 2023-04-07 01:57:58.000000 ronbun-0.7.1/ronbun/readme.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:58:07.772715 ronbun-0.7.1/ronbun.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)      599 2023-04-07 01:58:07.000000 ronbun-0.7.1/ronbun.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      244 2023-04-07 01:58:07.000000 ronbun-0.7.1/ronbun.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 01:58:07.000000 ronbun-0.7.1/ronbun.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       46 2023-04-07 01:58:07.000000 ronbun-0.7.1/ronbun.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       30 2023-04-07 01:58:07.000000 ronbun-0.7.1/ronbun.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        7 2023-04-07 01:58:07.000000 ronbun-0.7.1/ronbun.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 01:58:07.776715 ronbun-0.7.1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)      914 2023-04-07 01:57:58.000000 ronbun-0.7.1/setup.py
+```
+
+### Comparing `ronbun-0.7.0/LICENSE` & `ronbun-0.7.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `ronbun-0.7.0/PKG-INFO` & `ronbun-0.7.1/PKG-INFO`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: ronbun
+-Version: 0.7.0
++Version: 0.7.1
+ Summary: The Sample Programs README Automation Tool
+ Home-page: https://github.com/TheRenegadeCoder/sample-programs-readmes
+ Author: The Renegade Coder
+ Author-email: jeremy.grifski@therenegadecoder.com
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Operating System :: OS Independent
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `ronbun-0.7.0/ronbun/readme.py` & `ronbun-0.7.1/ronbun/readme.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ronbun-0.7.0/ronbun.egg-info/PKG-INFO` & `ronbun-0.7.1/ronbun.egg-info/PKG-INFO`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: ronbun
+-Version: 0.7.0
++Version: 0.7.1
+ Summary: The Sample Programs README Automation Tool
+ Home-page: https://github.com/TheRenegadeCoder/sample-programs-readmes
+ Author: The Renegade Coder
+ Author-email: jeremy.grifski@therenegadecoder.com
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Operating System :: OS Independent
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `ronbun-0.7.0/setup.py` & `ronbun-0.7.1/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,24 +1,24 @@
+ import setuptools
+ 
+ with open("README.md", "r") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name="ronbun",
+-    version="0.7.0",
++    version="0.7.1",
+     author="The Renegade Coder",
+     author_email="jeremy.grifski@therenegadecoder.com",
+     description="The Sample Programs README Automation Tool",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/TheRenegadeCoder/sample-programs-readmes",
+     packages=setuptools.find_packages(),
+     install_requires=[
+-        "SnakeMD>=0.15",
++        "SnakeMD>=2.0.0b1",
+         "subete>=0.11"
+     ],
+     entry_points={
+         "console_scripts": [
+             'ronbun = ronbun.readme:main'
+         ],
+     },
+```
+

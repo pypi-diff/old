@@ -1,0 +1,464 @@
+# Comparing `tmp/busy-3.4.1.tar.gz` & `tmp/busy-3.4.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "busy-3.4.1.tar", last modified: Fri Apr  7 00:03:25 2023, max compression
++gzip compressed data, was "busy-3.4.2.tar", last modified: Fri Apr  7 02:01:25 2023, max compression
+```
+
+## Comparing `busy-3.4.1.tar` & `busy-3.4.2.tar`
+
+### file list
+
+```diff
+@@ -1,108 +1,108 @@
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.866766 busy-3.4.1/
+--rw-r--r--   0 francispotter   (501) staff       (20)     1071 2023-03-30 16:53:52.000000 busy-3.4.1/LICENSE
+--rw-r--r--   0 francispotter   (501) staff       (20)    21774 2023-04-07 00:03:25.865909 busy-3.4.1/PKG-INFO
+--rw-r--r--   0 francispotter   (501) staff       (20)    21499 2023-04-07 00:00:49.000000 busy-3.4.1/README.md
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.652227 busy-3.4.1/busy/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.1/busy/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)       66 2023-03-30 16:53:52.000000 busy-3.4.1/busy/__main__.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.683573 busy-3.4.1/busy/command/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.1/busy/command/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     1872 2023-03-30 16:53:52.000000 busy-3.4.1/busy/command/activate_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      825 2023-03-30 16:53:52.000000 busy-3.4.1/busy/command/add_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      245 2023-03-30 16:53:52.000000 busy-3.4.1/busy/command/base_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     8907 2023-04-06 23:37:22.000000 busy-3.4.1/busy/command/command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      279 2023-04-06 23:37:22.000000 busy-3.4.1/busy/command/curses_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     1643 2023-03-30 16:53:52.000000 busy-3.4.1/busy/command/defer_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      981 2023-03-30 16:53:52.000000 busy-3.4.1/busy/command/delete_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     1333 2023-04-06 23:37:22.000000 busy-3.4.1/busy/command/drop_and_pop_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     1309 2023-03-30 16:53:52.000000 busy-3.4.1/busy/command/edit_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     1908 2023-04-06 23:37:22.000000 busy-3.4.1/busy/command/finish_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      681 2023-03-30 16:53:52.000000 busy-3.4.1/busy/command/list_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      212 2023-03-30 16:53:52.000000 busy-3.4.1/busy/command/queues_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      254 2023-03-30 16:53:52.000000 busy-3.4.1/busy/command/resource_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      950 2023-03-30 16:53:52.000000 busy-3.4.1/busy/command/switch_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      196 2023-03-30 16:53:52.000000 busy-3.4.1/busy/command/tags_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      476 2023-04-06 23:37:22.000000 busy-3.4.1/busy/command/top_command.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     3945 2023-04-06 23:37:22.000000 busy-3.4.1/busy/handler.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.687841 busy-3.4.1/busy/model/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.1/busy/model/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     1931 2023-04-06 23:37:22.000000 busy-3.4.1/busy/model/item.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     2598 2023-03-30 16:53:52.000000 busy-3.4.1/busy/model/task.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.689895 busy-3.4.1/busy/queue/
+--rw-r--r--   0 francispotter   (501) staff       (20)      102 2023-04-06 23:37:22.000000 busy-3.4.1/busy/queue/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     5099 2023-04-06 23:37:22.000000 busy-3.4.1/busy/queue/queue.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     2139 2023-04-06 23:37:22.000000 busy-3.4.1/busy/queue/todo_queue.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.690893 busy-3.4.1/busy/root/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.1/busy/root/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     2297 2023-04-07 00:01:46.000000 busy-3.4.1/busy/root/file_system_root.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     2204 2023-03-30 16:53:52.000000 busy-3.4.1/busy/selector.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.694454 busy-3.4.1/busy/ui/
+--rw-r--r--   0 francispotter   (501) staff       (20)      133 2023-03-30 16:53:52.000000 busy-3.4.1/busy/ui/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     6839 2023-04-06 23:37:22.000000 busy-3.4.1/busy/ui/curses_ui.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     1573 2023-04-06 23:37:22.000000 busy-3.4.1/busy/ui/shell_ui.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.697251 busy-3.4.1/busy/ui/tcl_ui/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.1/busy/ui/tcl_ui/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      824 2023-03-30 16:53:52.000000 busy-3.4.1/busy/ui/tcl_ui/edit_task_widget.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      701 2023-03-30 16:53:52.000000 busy-3.4.1/busy/ui/tcl_ui/get_item_widget.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     5178 2023-04-06 23:37:22.000000 busy-3.4.1/busy/ui/ui.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.701214 busy-3.4.1/busy/util/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.1/busy/util/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     6682 2023-04-06 23:37:22.000000 busy-3.4.1/busy/util/class_family.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     2882 2023-04-06 23:37:22.000000 busy-3.4.1/busy/util/date_util.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      217 2023-03-30 16:53:52.000000 busy-3.4.1/busy/util/python_version.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     1231 2023-04-06 23:39:24.000000 busy-3.4.1/busy/util/readline_util.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      973 2023-03-30 16:53:52.000000 busy-3.4.1/busy/util/super_wrapper.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      131 2023-03-30 16:53:52.000000 busy-3.4.1/busy/util/textbox_util.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.663597 busy-3.4.1/busy.egg-info/
+--rw-r--r--   0 francispotter   (501) staff       (20)    21774 2023-04-07 00:03:25.000000 busy-3.4.1/busy.egg-info/PKG-INFO
+--rw-r--r--   0 francispotter   (501) staff       (20)     2208 2023-04-07 00:03:25.000000 busy-3.4.1/busy.egg-info/SOURCES.txt
+--rw-r--r--   0 francispotter   (501) staff       (20)        1 2023-04-07 00:03:25.000000 busy-3.4.1/busy.egg-info/dependency_links.txt
+--rw-r--r--   0 francispotter   (501) staff       (20)       44 2023-04-07 00:03:25.000000 busy-3.4.1/busy.egg-info/entry_points.txt
+--rw-r--r--   0 francispotter   (501) staff       (20)        1 2023-01-01 23:16:57.000000 busy-3.4.1/busy.egg-info/not-zip-safe
+--rw-r--r--   0 francispotter   (501) staff       (20)       15 2023-04-07 00:03:25.000000 busy-3.4.1/busy.egg-info/top_level.txt
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.719947 busy-3.4.1/sand/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-02-25 16:13:53.000000 busy-3.4.1/sand/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      336 2023-02-23 13:30:28.000000 busy-3.4.1/sand/_dataclass.py
+--rw-r--r--   0 francispotter   (501) staff       (20)       74 2023-04-05 00:41:16.000000 busy-3.4.1/sand/_readline_util.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      676 2023-02-25 17:04:15.000000 busy-3.4.1/sand/_textpad.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      233 2023-03-06 16:05:27.000000 busy-3.4.1/sand/chooser.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      282 2023-03-01 14:38:38.000000 busy-3.4.1/sand/rl-io.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     1333 2023-03-01 15:07:59.000000 busy-3.4.1/sand/subprocess.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      806 2023-03-02 16:10:26.000000 busy-3.4.1/sand/wrapper.py
+--rw-r--r--   0 francispotter   (501) staff       (20)       38 2023-04-07 00:03:25.867016 busy-3.4.1/setup.cfg
+--rw-r--r--   0 francispotter   (501) staff       (20)      752 2023-04-07 00:02:23.000000 busy-3.4.1/setup.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.722372 busy-3.4.1/test/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.1/test/__init__.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.730433 busy-3.4.1/test/data_class_family/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.1/test/data_class_family/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      101 2023-03-30 16:53:52.000000 busy-3.4.1/test/data_class_family/atriarch.py
+--rw-r--r--   0 francispotter   (501) staff       (20)       76 2023-03-30 16:53:52.000000 busy-3.4.1/test/data_class_family/child.py
+--rw-r--r--   0 francispotter   (501) staff       (20)       74 2023-03-30 16:53:52.000000 busy-3.4.1/test/data_class_family/grandchild.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.734134 busy-3.4.1/test/handler/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.1/test/handler/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     1205 2023-03-30 16:53:52.000000 busy-3.4.1/test/handler/test_handler.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.745028 busy-3.4.1/test/integration/
+--rw-r--r--   0 francispotter   (501) staff       (20)      150 2023-04-06 23:37:22.000000 busy-3.4.1/test/integration/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      416 2023-04-06 23:37:22.000000 busy-3.4.1/test/integration/test_integration.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.852752 busy-3.4.1/test/model/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.1/test/model/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      433 2023-04-06 23:37:22.000000 busy-3.4.1/test/model/test_item.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      845 2023-04-06 23:37:22.000000 busy-3.4.1/test/model/test_item_io.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     2857 2023-04-06 23:37:22.000000 busy-3.4.1/test/model/test_queue.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      624 2023-04-06 23:37:22.000000 busy-3.4.1/test/model/test_queue_replace.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     1778 2023-04-06 23:37:22.000000 busy-3.4.1/test/model/test_task.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     4056 2023-04-06 23:37:22.000000 busy-3.4.1/test/model/test_todo_queue.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.854666 busy-3.4.1/test/root/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-04-06 23:37:22.000000 busy-3.4.1/test/root/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     1406 2023-04-06 23:37:22.000000 busy-3.4.1/test/root/test_file.py
+--rw-r--r--   0 francispotter   (501) staff       (20)     2529 2023-04-06 23:37:22.000000 busy-3.4.1/test/root/test_file_system_root.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.856469 busy-3.4.1/test/ui/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.1/test/ui/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      357 2023-03-30 16:53:52.000000 busy-3.4.1/test/ui/test_shell_ui.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      790 2023-03-30 16:53:52.000000 busy-3.4.1/test/ui/test_ui_terminal_editor.py
+-drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 00:03:25.861964 busy-3.4.1/test/util/
+--rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.1/test/util/__init__.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      797 2023-04-06 23:37:22.000000 busy-3.4.1/test/util/test_class_families.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      237 2023-03-30 16:53:52.000000 busy-3.4.1/test/util/test_class_family.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      452 2023-03-30 16:53:52.000000 busy-3.4.1/test/util/test_date.py
+--rw-r--r--   0 francispotter   (501) staff       (20)      508 2023-03-30 16:53:52.000000 busy-3.4.1/test/util/test_python_version.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.270043 busy-3.4.2/
++-rw-r--r--   0 francispotter   (501) staff       (20)     1071 2023-03-30 16:53:52.000000 busy-3.4.2/LICENSE
++-rw-r--r--   0 francispotter   (501) staff       (20)    21774 2023-04-07 02:01:25.269718 busy-3.4.2/PKG-INFO
++-rw-r--r--   0 francispotter   (501) staff       (20)    21499 2023-04-07 00:00:49.000000 busy-3.4.2/README.md
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.210960 busy-3.4.2/busy/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.2/busy/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)       66 2023-03-30 16:53:52.000000 busy-3.4.2/busy/__main__.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.232998 busy-3.4.2/busy/command/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.2/busy/command/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     1872 2023-03-30 16:53:52.000000 busy-3.4.2/busy/command/activate_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      825 2023-03-30 16:53:52.000000 busy-3.4.2/busy/command/add_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      245 2023-03-30 16:53:52.000000 busy-3.4.2/busy/command/base_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     8907 2023-04-06 23:37:22.000000 busy-3.4.2/busy/command/command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      279 2023-04-06 23:37:22.000000 busy-3.4.2/busy/command/curses_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     1643 2023-03-30 16:53:52.000000 busy-3.4.2/busy/command/defer_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      981 2023-03-30 16:53:52.000000 busy-3.4.2/busy/command/delete_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     1333 2023-04-06 23:37:22.000000 busy-3.4.2/busy/command/drop_and_pop_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     1309 2023-03-30 16:53:52.000000 busy-3.4.2/busy/command/edit_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     1908 2023-04-06 23:37:22.000000 busy-3.4.2/busy/command/finish_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      681 2023-03-30 16:53:52.000000 busy-3.4.2/busy/command/list_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      212 2023-03-30 16:53:52.000000 busy-3.4.2/busy/command/queues_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      254 2023-03-30 16:53:52.000000 busy-3.4.2/busy/command/resource_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      950 2023-03-30 16:53:52.000000 busy-3.4.2/busy/command/switch_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      196 2023-03-30 16:53:52.000000 busy-3.4.2/busy/command/tags_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      476 2023-04-06 23:37:22.000000 busy-3.4.2/busy/command/top_command.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     3957 2023-04-07 01:59:46.000000 busy-3.4.2/busy/handler.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.234669 busy-3.4.2/busy/model/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.2/busy/model/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     1931 2023-04-06 23:37:22.000000 busy-3.4.2/busy/model/item.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     2598 2023-03-30 16:53:52.000000 busy-3.4.2/busy/model/task.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.236366 busy-3.4.2/busy/queue/
++-rw-r--r--   0 francispotter   (501) staff       (20)      102 2023-04-06 23:37:22.000000 busy-3.4.2/busy/queue/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     5099 2023-04-06 23:37:22.000000 busy-3.4.2/busy/queue/queue.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     2139 2023-04-06 23:37:22.000000 busy-3.4.2/busy/queue/todo_queue.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.237115 busy-3.4.2/busy/root/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.2/busy/root/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     2297 2023-04-07 00:01:46.000000 busy-3.4.2/busy/root/file_system_root.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     2204 2023-03-30 16:53:52.000000 busy-3.4.2/busy/selector.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.240364 busy-3.4.2/busy/ui/
++-rw-r--r--   0 francispotter   (501) staff       (20)      133 2023-03-30 16:53:52.000000 busy-3.4.2/busy/ui/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     6839 2023-04-06 23:37:22.000000 busy-3.4.2/busy/ui/curses_ui.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     1573 2023-04-06 23:37:22.000000 busy-3.4.2/busy/ui/shell_ui.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.242054 busy-3.4.2/busy/ui/tcl_ui/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.2/busy/ui/tcl_ui/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      824 2023-03-30 16:53:52.000000 busy-3.4.2/busy/ui/tcl_ui/edit_task_widget.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      701 2023-03-30 16:53:52.000000 busy-3.4.2/busy/ui/tcl_ui/get_item_widget.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     5178 2023-04-06 23:37:22.000000 busy-3.4.2/busy/ui/ui.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.247121 busy-3.4.2/busy/util/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.2/busy/util/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     6682 2023-04-06 23:37:22.000000 busy-3.4.2/busy/util/class_family.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     2882 2023-04-06 23:37:22.000000 busy-3.4.2/busy/util/date_util.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      217 2023-03-30 16:53:52.000000 busy-3.4.2/busy/util/python_version.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     1231 2023-04-06 23:39:24.000000 busy-3.4.2/busy/util/readline_util.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      973 2023-03-30 16:53:52.000000 busy-3.4.2/busy/util/super_wrapper.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      131 2023-03-30 16:53:52.000000 busy-3.4.2/busy/util/textbox_util.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.216398 busy-3.4.2/busy.egg-info/
++-rw-r--r--   0 francispotter   (501) staff       (20)    21774 2023-04-07 02:01:25.000000 busy-3.4.2/busy.egg-info/PKG-INFO
++-rw-r--r--   0 francispotter   (501) staff       (20)     2208 2023-04-07 02:01:25.000000 busy-3.4.2/busy.egg-info/SOURCES.txt
++-rw-r--r--   0 francispotter   (501) staff       (20)        1 2023-04-07 02:01:25.000000 busy-3.4.2/busy.egg-info/dependency_links.txt
++-rw-r--r--   0 francispotter   (501) staff       (20)       44 2023-04-07 02:01:25.000000 busy-3.4.2/busy.egg-info/entry_points.txt
++-rw-r--r--   0 francispotter   (501) staff       (20)        1 2023-01-01 23:16:57.000000 busy-3.4.2/busy.egg-info/not-zip-safe
++-rw-r--r--   0 francispotter   (501) staff       (20)       15 2023-04-07 02:01:25.000000 busy-3.4.2/busy.egg-info/top_level.txt
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.256204 busy-3.4.2/sand/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-02-25 16:13:53.000000 busy-3.4.2/sand/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      336 2023-02-23 13:30:28.000000 busy-3.4.2/sand/_dataclass.py
++-rw-r--r--   0 francispotter   (501) staff       (20)       74 2023-04-05 00:41:16.000000 busy-3.4.2/sand/_readline_util.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      676 2023-02-25 17:04:15.000000 busy-3.4.2/sand/_textpad.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      233 2023-03-06 16:05:27.000000 busy-3.4.2/sand/chooser.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      282 2023-03-01 14:38:38.000000 busy-3.4.2/sand/rl-io.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     1333 2023-03-01 15:07:59.000000 busy-3.4.2/sand/subprocess.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      806 2023-03-02 16:10:26.000000 busy-3.4.2/sand/wrapper.py
++-rw-r--r--   0 francispotter   (501) staff       (20)       38 2023-04-07 02:01:25.270177 busy-3.4.2/setup.cfg
++-rw-r--r--   0 francispotter   (501) staff       (20)      752 2023-04-07 00:02:23.000000 busy-3.4.2/setup.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.256973 busy-3.4.2/test/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.2/test/__init__.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.258946 busy-3.4.2/test/data_class_family/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.2/test/data_class_family/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      101 2023-03-30 16:53:52.000000 busy-3.4.2/test/data_class_family/atriarch.py
++-rw-r--r--   0 francispotter   (501) staff       (20)       76 2023-03-30 16:53:52.000000 busy-3.4.2/test/data_class_family/child.py
++-rw-r--r--   0 francispotter   (501) staff       (20)       74 2023-03-30 16:53:52.000000 busy-3.4.2/test/data_class_family/grandchild.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.259986 busy-3.4.2/test/handler/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.2/test/handler/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     1205 2023-03-30 16:53:52.000000 busy-3.4.2/test/handler/test_handler.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.260950 busy-3.4.2/test/integration/
++-rw-r--r--   0 francispotter   (501) staff       (20)      150 2023-04-06 23:37:22.000000 busy-3.4.2/test/integration/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      416 2023-04-06 23:37:22.000000 busy-3.4.2/test/integration/test_integration.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.264132 busy-3.4.2/test/model/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.2/test/model/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      433 2023-04-06 23:37:22.000000 busy-3.4.2/test/model/test_item.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      845 2023-04-06 23:37:22.000000 busy-3.4.2/test/model/test_item_io.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     2857 2023-04-06 23:37:22.000000 busy-3.4.2/test/model/test_queue.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      624 2023-04-06 23:37:22.000000 busy-3.4.2/test/model/test_queue_replace.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     1778 2023-04-06 23:37:22.000000 busy-3.4.2/test/model/test_task.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     4056 2023-04-06 23:37:22.000000 busy-3.4.2/test/model/test_todo_queue.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.265407 busy-3.4.2/test/root/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-04-06 23:37:22.000000 busy-3.4.2/test/root/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     1406 2023-04-06 23:37:22.000000 busy-3.4.2/test/root/test_file.py
++-rw-r--r--   0 francispotter   (501) staff       (20)     2529 2023-04-06 23:37:22.000000 busy-3.4.2/test/root/test_file_system_root.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.266778 busy-3.4.2/test/ui/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.2/test/ui/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      357 2023-03-30 16:53:52.000000 busy-3.4.2/test/ui/test_shell_ui.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      790 2023-03-30 16:53:52.000000 busy-3.4.2/test/ui/test_ui_terminal_editor.py
++drwxr-xr-x   0 francispotter   (501) staff       (20)        0 2023-04-07 02:01:25.269207 busy-3.4.2/test/util/
++-rw-r--r--   0 francispotter   (501) staff       (20)        0 2023-03-30 16:53:52.000000 busy-3.4.2/test/util/__init__.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      797 2023-04-06 23:37:22.000000 busy-3.4.2/test/util/test_class_families.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      237 2023-03-30 16:53:52.000000 busy-3.4.2/test/util/test_class_family.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      452 2023-03-30 16:53:52.000000 busy-3.4.2/test/util/test_date.py
++-rw-r--r--   0 francispotter   (501) staff       (20)      508 2023-03-30 16:53:52.000000 busy-3.4.2/test/util/test_python_version.py
+```
+
+### Comparing `busy-3.4.1/LICENSE` & `busy-3.4.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/PKG-INFO` & `busy-3.4.2/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: busy
+-Version: 3.4.1
++Version: 3.4.2
+ Summary: Personal time management tool
+ Home-page: http://gitlab.com/steampunk-wizard/busy
+ Author: Francis Potter
+ Author-email: busy@steampunkwizard.ca
+ License: MIT
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `busy-3.4.1/README.md` & `busy-3.4.2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/command/activate_command.py` & `busy-3.4.2/busy/command/activate_command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/command/add_command.py` & `busy-3.4.2/busy/command/add_command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/command/command.py` & `busy-3.4.2/busy/command/command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/command/defer_command.py` & `busy-3.4.2/busy/command/defer_command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/command/delete_command.py` & `busy-3.4.2/busy/command/delete_command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/command/drop_and_pop_command.py` & `busy-3.4.2/busy/command/drop_and_pop_command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/command/edit_command.py` & `busy-3.4.2/busy/command/edit_command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/command/finish_command.py` & `busy-3.4.2/busy/command/finish_command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/command/list_command.py` & `busy-3.4.2/busy/command/list_command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/command/switch_command.py` & `busy-3.4.2/busy/command/switch_command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/handler.py` & `busy-3.4.2/busy/handler.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -66,15 +66,15 @@
+ 
+ 
+ class Handler():
+ 
+     def __init__(self, namespace):
+         self.namespace = namespace
+         self.root = FileSystemRoot(namespace.root)
+-        command_class = Command.family_member('name', namespace.command)
++        command_class = Command.family_member('name', namespace.command or 'curses')
+         if not command_class:
+             raise RuntimeError(f"Unknown command {namespace.command}")
+         self.ui = UI.family_member('name', command_class.ui)(self)
+         self.command = command_class(root=self.root, ui=self.ui, \
+                                      namespace=self.namespace)
+ 
+     # Handle the command and output its final status
+```
+
+### Comparing `busy-3.4.1/busy/model/item.py` & `busy-3.4.2/busy/model/item.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/model/task.py` & `busy-3.4.2/busy/model/task.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/queue/queue.py` & `busy-3.4.2/busy/queue/queue.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/queue/todo_queue.py` & `busy-3.4.2/busy/queue/todo_queue.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/root/file_system_root.py` & `busy-3.4.2/busy/root/file_system_root.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/selector.py` & `busy-3.4.2/busy/selector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/ui/curses_ui.py` & `busy-3.4.2/busy/ui/curses_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/ui/shell_ui.py` & `busy-3.4.2/busy/ui/shell_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/ui/tcl_ui/edit_task_widget.py` & `busy-3.4.2/busy/ui/tcl_ui/edit_task_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/ui/tcl_ui/get_item_widget.py` & `busy-3.4.2/busy/ui/tcl_ui/get_item_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/ui/ui.py` & `busy-3.4.2/busy/ui/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/util/class_family.py` & `busy-3.4.2/busy/util/class_family.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/util/date_util.py` & `busy-3.4.2/busy/util/date_util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/util/readline_util.py` & `busy-3.4.2/busy/util/readline_util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy/util/super_wrapper.py` & `busy-3.4.2/busy/util/super_wrapper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/busy.egg-info/PKG-INFO` & `busy-3.4.2/busy.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: busy
+-Version: 3.4.1
++Version: 3.4.2
+ Summary: Personal time management tool
+ Home-page: http://gitlab.com/steampunk-wizard/busy
+ Author: Francis Potter
+ Author-email: busy@steampunkwizard.ca
+ License: MIT
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `busy-3.4.1/busy.egg-info/SOURCES.txt` & `busy-3.4.2/busy.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/sand/_textpad.py` & `busy-3.4.2/sand/_textpad.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/sand/subprocess.py` & `busy-3.4.2/sand/subprocess.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/sand/wrapper.py` & `busy-3.4.2/sand/wrapper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/setup.py` & `busy-3.4.2/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/test/handler/test_handler.py` & `busy-3.4.2/test/handler/test_handler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/test/model/test_item_io.py` & `busy-3.4.2/test/model/test_item_io.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/test/model/test_queue.py` & `busy-3.4.2/test/model/test_queue.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/test/model/test_queue_replace.py` & `busy-3.4.2/test/model/test_queue_replace.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/test/model/test_task.py` & `busy-3.4.2/test/model/test_task.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/test/model/test_todo_queue.py` & `busy-3.4.2/test/model/test_todo_queue.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/test/root/test_file.py` & `busy-3.4.2/test/root/test_file.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/test/root/test_file_system_root.py` & `busy-3.4.2/test/root/test_file_system_root.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/test/ui/test_ui_terminal_editor.py` & `busy-3.4.2/test/ui/test_ui_terminal_editor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `busy-3.4.1/test/util/test_class_families.py` & `busy-3.4.2/test/util/test_class_families.py`
+
+ * *Files identical despite different names*
+
