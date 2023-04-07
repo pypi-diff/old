@@ -1,0 +1,217 @@
+--- tmp/davt_services_python-202303.0.2.tar.gz
++++ tmp/davt_services_python-202304.0.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "davt_services_python-202303.0.2.tar", max compression
+│ +gzip compressed data, was "davt_services_python-202304.0.1.tar", max compression
+│   --- davt_services_python-202303.0.2.tar
+├── +++ davt_services_python-202304.0.1.tar
+│ ├── file list
+│ │ @@ -1,28 +1,28 @@
+│ │ --rw-r--r--   0        0        0    11357 2023-04-07 02:20:44.682036 davt_services_python-202303.0.2/LICENSE.md
+│ │ --rw-r--r--   0        0        0      324 2023-04-07 02:20:44.682036 davt_services_python-202303.0.2/README.md
+│ │ --rw-r--r--   0        0        0      961 2023-04-07 02:20:44.682036 davt_services_python-202303.0.2/davt_services_python/__init__.py
+│ │ --rw-r--r--   0        0        0      857 2023-04-07 02:20:44.682036 davt_services_python-202303.0.2/davt_services_python/__main__.py
+│ │ --rw-r--r--   0        0        0     1116 2023-04-07 02:20:44.682036 davt_services_python-202303.0.2/davt_services_python/creator_service/__init__.py
+│ │ --rw-r--r--   0        0        0    41297 2023-04-07 02:20:44.682036 davt_services_python-202303.0.2/davt_services_python/creator_service/dataset_metadata.py
+│ │ --rw-r--r--   0        0        0    32631 2023-04-07 02:20:44.682036 davt_services_python-202303.0.2/davt_services_python/creator_service/environment_metadata.py
+│ │ --rw-r--r--   0        0        0    35950 2023-04-07 02:20:44.682036 davt_services_python-202303.0.2/davt_services_python/creator_service/job_metadata.py
+│ │ --rw-r--r--   0        0        0     2251 2023-04-07 02:20:44.682036 davt_services_python-202303.0.2/davt_services_python/creator_service/logging_metadata.py
+│ │ --rw-r--r--   0        0        0    22310 2023-04-07 02:20:44.682036 davt_services_python-202303.0.2/davt_services_python/creator_service/pipeline_metadata.py
+│ │ --rw-r--r--   0        0        0     1396 2023-04-07 02:20:44.682036 davt_services_python-202303.0.2/davt_services_python/developer_service/__init__.py
+│ │ --rw-r--r--   0        0        0    33691 2023-04-07 02:20:44.682036 davt_services_python-202303.0.2/davt_services_python/developer_service/dataset_convert.py
+│ │ --rw-r--r--   0        0        0     8716 2023-04-07 02:20:44.686036 davt_services_python-202303.0.2/davt_services_python/developer_service/dataset_core.py
+│ │ --rw-r--r--   0        0        0    24923 2023-04-07 02:20:44.686036 davt_services_python-202303.0.2/davt_services_python/developer_service/dataset_crud.py
+│ │ --rw-r--r--   0        0        0     3767 2023-04-07 02:20:44.686036 davt_services_python-202303.0.2/davt_services_python/developer_service/dataset_extract.py
+│ │ --rw-r--r--   0        0        0     1990 2023-04-07 02:20:44.686036 davt_services_python-202303.0.2/davt_services_python/developer_service/environment_core.py
+│ │ --rw-r--r--   0        0        0    26168 2023-04-07 02:20:44.686036 davt_services_python-202303.0.2/davt_services_python/developer_service/environment_file.py
+│ │ --rw-r--r--   0        0        0     4656 2023-04-07 02:20:44.686036 davt_services_python-202303.0.2/davt_services_python/developer_service/environment_logging.py
+│ │ --rw-r--r--   0        0        0     4581 2023-04-07 02:20:44.686036 davt_services_python-202303.0.2/davt_services_python/developer_service/environment_spark.py
+│ │ --rw-r--r--   0        0        0     4654 2023-04-07 02:20:44.686036 davt_services_python-202303.0.2/davt_services_python/developer_service/job_core.py
+│ │ --rw-r--r--   0        0        0    17221 2023-04-07 02:20:44.686036 davt_services_python-202303.0.2/davt_services_python/developer_service/repo_core.py
+│ │ --rw-r--r--   0        0        0    14616 2023-04-07 02:20:44.686036 davt_services_python-202303.0.2/davt_services_python/developer_service/security_core.py
+│ │ --rw-r--r--   0        0        0      779 2023-04-07 02:20:44.686036 davt_services_python-202303.0.2/davt_services_python/it_admin_service/__init__.py
+│ │ --rw-r--r--   0        0        0      835 2023-04-07 02:20:44.686036 davt_services_python-202303.0.2/davt_services_python/version_service/__init__.py
+│ │ --rw-r--r--   0        0        0     3313 2023-04-07 02:23:08.172000 davt_services_python-202303.0.2/pyproject.toml
+│ │ --rw-r--r--   0        0        0      162 2023-04-07 02:20:44.690036 davt_services_python-202303.0.2/setup.cfg
+│ │ --rw-r--r--   0        0        0      125 2023-04-07 02:20:44.690036 davt_services_python-202303.0.2/setup.py
+│ │ --rw-r--r--   0        0        0     3083 1970-01-01 00:00:00.000000 davt_services_python-202303.0.2/PKG-INFO
+│ │ +-rw-r--r--   0        0        0    11357 2023-04-07 02:21:54.285941 davt_services_python-202304.0.1/LICENSE.md
+│ │ +-rw-r--r--   0        0        0      324 2023-04-07 02:21:54.285941 davt_services_python-202304.0.1/README.md
+│ │ +-rw-r--r--   0        0        0      961 2023-04-07 02:21:54.285941 davt_services_python-202304.0.1/davt_services_python/__init__.py
+│ │ +-rw-r--r--   0        0        0      857 2023-04-07 02:21:54.285941 davt_services_python-202304.0.1/davt_services_python/__main__.py
+│ │ +-rw-r--r--   0        0        0     1116 2023-04-07 02:21:54.285941 davt_services_python-202304.0.1/davt_services_python/creator_service/__init__.py
+│ │ +-rw-r--r--   0        0        0    41323 2023-04-07 02:21:54.285941 davt_services_python-202304.0.1/davt_services_python/creator_service/dataset_metadata.py
+│ │ +-rw-r--r--   0        0        0    32631 2023-04-07 02:21:54.285941 davt_services_python-202304.0.1/davt_services_python/creator_service/environment_metadata.py
+│ │ +-rw-r--r--   0        0        0    35950 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/creator_service/job_metadata.py
+│ │ +-rw-r--r--   0        0        0     2251 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/creator_service/logging_metadata.py
+│ │ +-rw-r--r--   0        0        0    22310 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/creator_service/pipeline_metadata.py
+│ │ +-rw-r--r--   0        0        0     1396 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/developer_service/__init__.py
+│ │ +-rw-r--r--   0        0        0    33691 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/developer_service/dataset_convert.py
+│ │ +-rw-r--r--   0        0        0     8716 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/developer_service/dataset_core.py
+│ │ +-rw-r--r--   0        0        0    24923 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/developer_service/dataset_crud.py
+│ │ +-rw-r--r--   0        0        0     3767 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/developer_service/dataset_extract.py
+│ │ +-rw-r--r--   0        0        0     1990 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/developer_service/environment_core.py
+│ │ +-rw-r--r--   0        0        0    26168 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/developer_service/environment_file.py
+│ │ +-rw-r--r--   0        0        0     4656 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/developer_service/environment_logging.py
+│ │ +-rw-r--r--   0        0        0     4581 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/developer_service/environment_spark.py
+│ │ +-rw-r--r--   0        0        0     4654 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/developer_service/job_core.py
+│ │ +-rw-r--r--   0        0        0    17224 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/developer_service/repo_core.py
+│ │ +-rw-r--r--   0        0        0    14616 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/developer_service/security_core.py
+│ │ +-rw-r--r--   0        0        0      779 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/it_admin_service/__init__.py
+│ │ +-rw-r--r--   0        0        0      835 2023-04-07 02:21:54.289941 davt_services_python-202304.0.1/davt_services_python/version_service/__init__.py
+│ │ +-rw-r--r--   0        0        0     3313 2023-04-07 02:24:58.378708 davt_services_python-202304.0.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      162 2023-04-07 02:21:54.293941 davt_services_python-202304.0.1/setup.cfg
+│ │ +-rw-r--r--   0        0        0      125 2023-04-07 02:21:54.297941 davt_services_python-202304.0.1/setup.py
+│ │ +-rw-r--r--   0        0        0     3083 1970-01-01 00:00:00.000000 davt_services_python-202304.0.1/PKG-INFO
+│ │   --- davt_services_python-202303.0.2/LICENSE.md
+│ ├── +++ davt_services_python-202304.0.1/LICENSE.md
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/__init__.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/__main__.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/creator_service/__init__.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/creator_service/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/creator_service/dataset_metadata.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/creator_service/dataset_metadata.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -700,16 +700,17 @@
+│ │                  encoding = row["encoding"].upper().strip()
+│ │              else:
+│ │                  encoding = "UTF-8"
+│ │                  print("Error encoding:{str(encoding)} is not a string")
+│ │  
+│ │          config_dataset["encoding"] = encoding
+│ │  
+│ │ +        database_name = config["davt_database_name"]
+│ │          full_dataset_name = (
+│ │ -            "davt_" + project_id + "_" + environment + "." + dataset_name
+│ │ +            database_name + "." + dataset_name
+│ │          )
+│ │          config_dataset["full_dataset_name"] = full_dataset_name
+│ │  
+│ │          frequency = row["frequency"]
+│ │          if frequency is None:
+│ │              frequency = "daily"
+│ │          else:
+│ │   --- davt_services_python-202303.0.2/davt_services_python/creator_service/environment_metadata.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/creator_service/environment_metadata.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/creator_service/job_metadata.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/creator_service/job_metadata.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/creator_service/logging_metadata.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/creator_service/logging_metadata.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/creator_service/pipeline_metadata.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/creator_service/pipeline_metadata.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/developer_service/__init__.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/developer_service/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/developer_service/dataset_convert.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/developer_service/dataset_convert.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/developer_service/dataset_core.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/developer_service/dataset_core.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/developer_service/dataset_crud.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/developer_service/dataset_crud.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/developer_service/dataset_extract.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/developer_service/dataset_extract.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/developer_service/environment_core.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/developer_service/environment_core.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/developer_service/environment_file.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/developer_service/environment_file.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/developer_service/environment_logging.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/developer_service/environment_logging.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/developer_service/environment_spark.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/developer_service/environment_spark.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/developer_service/job_core.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/developer_service/job_core.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/developer_service/repo_core.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/developer_service/repo_core.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -220,25 +220,25 @@
+│ │          """
+│ │  
+│ │          GITHUB_USER = 'USER NAME'
+│ │          GITHUB_PASSWORD = 'PASSWORD'
+│ │          REPO = 'REPO NAME'  # format is username/repo
+│ │          ISSUES_FOR_REPO_URL = 'https://api.github.com/repos/%s/issues' % REPO
+│ │          AUTH = (GITHUB_USER, GITHUB_PASSWORD)
+│ │ -        arg="?state=all"
+│ │ +        arg = "?state=all"
+│ │  
+│ │          response = requests.get(ISSUES_FOR_REPO_URL+arg)
+│ │          file_csv = '%s-issues.csv' % (REPO.replace('/', '-'))
+│ │          file_csv_o = open(file_csv, 'wb')
+│ │          out_csv = csv.writer(file_csv_o)
+│ │          out_csv.writerow(('id', 'Title', 'Tag', 'State', 'Open Date', 'Close Date'))
+│ │  
+│ │          cls.write_issues(r, out_csv)
+│ │  
+│ │ -        #more pages? examine the 'link' header returned
+│ │ +        # more pages? examine the 'link' header returned
+│ │          if 'link' in response.headers:
+│ │              pages = dict(
+│ │                  [(rel[6:-1], url[url.index('<')+1:-1]) for url, rel in
+│ │                      [link.split(';') for link in
+│ │                          response.headers['link'].split(',')]])
+│ │  
+│ │              while 'last' in pages and 'next' in pages:
+│ │   --- davt_services_python-202303.0.2/davt_services_python/developer_service/security_core.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/developer_service/security_core.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/it_admin_service/__init__.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/it_admin_service/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/davt_services_python/version_service/__init__.py
+│ ├── +++ davt_services_python-202304.0.1/davt_services_python/version_service/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- davt_services_python-202303.0.2/pyproject.toml
+│ ├── +++ davt_services_python-202304.0.1/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -15,15 +15,15 @@
+│ │  [project.urls]
+│ │  "Homepage" = "https://test.pypi.org/project/davt-services-python"
+│ │  "Documentation" = "https://gift.readthedocs.io"
+│ │  "Repository" = "https://github.com/cdcent/davt"
+│ │  
+│ │  [tool.poetry]
+│ │  name="davt_services_python"
+│ │ -version="202303.0.2"
+│ │ +version="202304.0.1"
+│ │  description="Data, Analytics and Visualization Templates (DAVT) - Python Services"
+│ │  authors=["John Bowyer <zfi4@cdc.gov>"]
+│ │  readme = "README.md"
+│ │  license="Apache"
+│ │  homepage="https://test.pypi.org/project/davt-services-python"
+│ │  repository="https://github.com/cdcent/davt"
+│ │  classifiers=[
+│ │   --- davt_services_python-202303.0.2/PKG-INFO
+│ ├── +++ davt_services_python-202304.0.1/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: davt-services-python
+│ │ -Version: 202303.0.2
+│ │ +Version: 202304.0.1
+│ │  Summary: Data, Analytics and Visualization Templates (DAVT) - Python Services
+│ │  Home-page: https://test.pypi.org/project/davt-services-python
+│ │  License: Apache
+│ │  Author: John Bowyer
+│ │  Author-email: zfi4@cdc.gov
+│ │  Requires-Python: >=3.9,<4.0
+│ │  Classifier: Development Status :: 4 - Beta

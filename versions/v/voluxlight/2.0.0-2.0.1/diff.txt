@@ -1,0 +1,42 @@
+--- tmp/voluxlight-2.0.0.tar.gz
++++ tmp/voluxlight-2.0.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "voluxlight-2.0.0.tar", max compression
+│ +gzip compressed data, was "voluxlight-2.0.1.tar", max compression
+│   --- voluxlight-2.0.0.tar
+├── +++ voluxlight-2.0.1.tar
+│ ├── file list
+│ │ @@ -1,6 +1,6 @@
+│ │ --rw-r--r--   0        0        0       14 2022-05-02 03:44:00.066954 voluxlight-2.0.0/README.md
+│ │ --rw-r--r--   0        0        0     1064 2023-03-18 05:10:31.389659 voluxlight-2.0.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0     9246 2023-03-11 07:16:16.956772 voluxlight-2.0.0/voluxlight/__init__.py
+│ │ --rw-r--r--   0        0        0     7043 2022-05-02 03:44:00.066954 voluxlight-2.0.0/voluxlight/__init___WIP.py
+│ │ --rw-r--r--   0        0        0      112 2023-03-18 05:16:39.505562 voluxlight-2.0.0/voluxlight/__version__.py
+│ │ --rw-r--r--   0        0        0      720 1970-01-01 00:00:00.000000 voluxlight-2.0.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1806 2023-04-07 02:13:43.965454 voluxlight-2.0.1/README.md
+│ │ +-rw-r--r--   0        0        0     1064 2023-04-07 02:15:27.636423 voluxlight-2.0.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     9246 2023-03-11 07:16:16.956772 voluxlight-2.0.1/voluxlight/__init__.py
+│ │ +-rw-r--r--   0        0        0     7043 2022-05-02 03:44:00.066954 voluxlight-2.0.1/voluxlight/__init___WIP.py
+│ │ +-rw-r--r--   0        0        0      112 2023-04-07 02:15:46.620261 voluxlight-2.0.1/voluxlight/__version__.py
+│ │ +-rw-r--r--   0        0        0     2512 1970-01-01 00:00:00.000000 voluxlight-2.0.1/PKG-INFO
+│ │   --- voluxlight-2.0.0/pyproject.toml
+│ ├── +++ voluxlight-2.0.1/pyproject.toml
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "voluxlight"
+│ │ -version = "2.0.0"
+│ │ +version = "2.0.1"
+│ │  description = "Smart light control for Volux"
+│ │  authors = ["DrTexx <denver.opensource@tutanota.com>"]
+│ │  license = "AGPLv3"
+│ │  readme = "README.md"
+│ │  repository = "https://gitlab.com/volux/voluxlight/"
+│ │  # TODO: add extra project details (e.g. keywords, classifiers, etc.)
+│ │   --- voluxlight-2.0.0/voluxlight/__init__.py
+│ ├── +++ voluxlight-2.0.1/voluxlight/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- voluxlight-2.0.0/voluxlight/__init___WIP.py
+│ ├── +++ voluxlight-2.0.1/voluxlight/__init___WIP.py
+│ │┄ Files identical despite different names

@@ -1,0 +1,353 @@
+# Comparing `tmp/volkanic-0.4.4.tar.gz` & `tmp/volkanic-0.5.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "volkanic-0.4.4.tar", last modified: Fri Mar 24 01:47:21 2023, max compression
++gzip compressed data, was "volkanic-0.5.0.tar", last modified: Fri Apr  7 02:23:13 2023, max compression
+```
+
+## Comparing `volkanic-0.4.4.tar` & `volkanic-0.5.0.tar`
+
+### file list
+
+```diff
+@@ -1,25 +1,25 @@
+-drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2023-03-24 01:47:21.323736 volkanic-0.4.4/
+--rw-r--r--   0 Hailong    (502) staff       (20)    35149 2019-04-25 10:44:00.000000 volkanic-0.4.4/LICENSE
+--rw-r--r--   0 Hailong    (502) staff       (20)       25 2019-01-21 17:03:54.000000 volkanic-0.4.4/MANIFEST.in
+--rw-r--r--   0 Hailong    (502) staff       (20)     4714 2023-03-24 01:47:21.323403 volkanic-0.4.4/PKG-INFO
+--rw-r--r--   0 Hailong    (502) staff       (20)     3987 2021-09-05 13:58:09.000000 volkanic-0.4.4/README.md
+--rw-r--r--   0 Hailong    (502) staff       (20)       12 2022-02-03 05:01:45.000000 volkanic-0.4.4/requirements.txt
+--rw-r--r--   0 Hailong    (502) staff       (20)       38 2023-03-24 01:47:21.323824 volkanic-0.4.4/setup.cfg
+--rw-r--r--   0 Hailong    (502) staff       (20)     2093 2022-05-12 11:43:32.000000 volkanic-0.4.4/setup.py
+-drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2023-03-24 01:47:21.320118 volkanic-0.4.4/volkanic/
+--rw-r--r--   0 Hailong    (502) staff       (20)      204 2023-03-24 01:44:58.000000 volkanic-0.4.4/volkanic/__init__.py
+--rw-r--r--   0 Hailong    (502) staff       (20)      896 2022-01-21 13:22:00.000000 volkanic-0.4.4/volkanic/__main__.py
+--rw-r--r--   0 Hailong    (502) staff       (20)     4278 2022-04-18 13:34:09.000000 volkanic-0.4.4/volkanic/cmdline.py
+--rw-r--r--   0 Hailong    (502) staff       (20)     1085 2022-04-18 13:34:57.000000 volkanic-0.4.4/volkanic/compat.py
+--rw-r--r--   0 Hailong    (502) staff       (20)     9227 2023-03-24 01:46:12.000000 volkanic-0.4.4/volkanic/environ.py
+--rw-r--r--   0 Hailong    (502) staff       (20)      496 2022-01-21 13:14:07.000000 volkanic-0.4.4/volkanic/errors.py
+--rw-r--r--   0 Hailong    (502) staff       (20)     8856 2022-05-31 08:07:02.000000 volkanic-0.4.4/volkanic/introspect.py
+--rw-r--r--   0 Hailong    (502) staff       (20)     6418 2023-03-24 01:46:43.000000 volkanic-0.4.4/volkanic/utils.py
+-drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2023-03-24 01:47:21.322925 volkanic-0.4.4/volkanic.egg-info/
+--rw-r--r--   0 Hailong    (502) staff       (20)     4714 2023-03-24 01:47:21.000000 volkanic-0.4.4/volkanic.egg-info/PKG-INFO
+--rw-r--r--   0 Hailong    (502) staff       (20)      441 2023-03-24 01:47:21.000000 volkanic-0.4.4/volkanic.egg-info/SOURCES.txt
+--rw-r--r--   0 Hailong    (502) staff       (20)        1 2023-03-24 01:47:21.000000 volkanic-0.4.4/volkanic.egg-info/dependency_links.txt
+--rw-r--r--   0 Hailong    (502) staff       (20)       52 2023-03-24 01:47:21.000000 volkanic-0.4.4/volkanic.egg-info/entry_points.txt
+--rw-r--r--   0 Hailong    (502) staff       (20)        1 2021-08-14 03:53:40.000000 volkanic-0.4.4/volkanic.egg-info/not-zip-safe
+--rw-r--r--   0 Hailong    (502) staff       (20)       13 2023-03-24 01:47:21.000000 volkanic-0.4.4/volkanic.egg-info/requires.txt
+--rw-r--r--   0 Hailong    (502) staff       (20)        9 2023-03-24 01:47:21.000000 volkanic-0.4.4/volkanic.egg-info/top_level.txt
++drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2023-04-07 02:23:13.080869 volkanic-0.5.0/
++-rw-r--r--   0 Hailong    (502) staff       (20)    35149 2019-04-25 10:44:00.000000 volkanic-0.5.0/LICENSE
++-rw-r--r--   0 Hailong    (502) staff       (20)       25 2019-01-21 17:03:54.000000 volkanic-0.5.0/MANIFEST.in
++-rw-r--r--   0 Hailong    (502) staff       (20)     4714 2023-04-07 02:23:13.080538 volkanic-0.5.0/PKG-INFO
++-rw-r--r--   0 Hailong    (502) staff       (20)     3987 2021-09-05 13:58:09.000000 volkanic-0.5.0/README.md
++-rw-r--r--   0 Hailong    (502) staff       (20)       12 2022-02-03 05:01:45.000000 volkanic-0.5.0/requirements.txt
++-rw-r--r--   0 Hailong    (502) staff       (20)       38 2023-04-07 02:23:13.080978 volkanic-0.5.0/setup.cfg
++-rw-r--r--   0 Hailong    (502) staff       (20)     2093 2022-05-12 11:43:32.000000 volkanic-0.5.0/setup.py
++drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2023-04-07 02:23:13.077693 volkanic-0.5.0/volkanic/
++-rw-r--r--   0 Hailong    (502) staff       (20)      203 2023-04-07 02:22:23.000000 volkanic-0.5.0/volkanic/__init__.py
++-rw-r--r--   0 Hailong    (502) staff       (20)      896 2022-01-21 13:22:00.000000 volkanic-0.5.0/volkanic/__main__.py
++-rw-r--r--   0 Hailong    (502) staff       (20)     4278 2022-04-18 13:34:09.000000 volkanic-0.5.0/volkanic/cmdline.py
++-rw-r--r--   0 Hailong    (502) staff       (20)     1085 2022-04-18 13:34:57.000000 volkanic-0.5.0/volkanic/compat.py
++-rw-r--r--   0 Hailong    (502) staff       (20)     8403 2023-04-07 02:22:23.000000 volkanic-0.5.0/volkanic/environ.py
++-rw-r--r--   0 Hailong    (502) staff       (20)      474 2023-04-07 02:22:23.000000 volkanic-0.5.0/volkanic/errors.py
++-rw-r--r--   0 Hailong    (502) staff       (20)     8787 2023-04-07 02:22:23.000000 volkanic-0.5.0/volkanic/introspect.py
++-rw-r--r--   0 Hailong    (502) staff       (20)     6229 2023-04-07 02:22:23.000000 volkanic-0.5.0/volkanic/utils.py
++drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2023-04-07 02:23:13.080064 volkanic-0.5.0/volkanic.egg-info/
++-rw-r--r--   0 Hailong    (502) staff       (20)     4714 2023-04-07 02:23:13.000000 volkanic-0.5.0/volkanic.egg-info/PKG-INFO
++-rw-r--r--   0 Hailong    (502) staff       (20)      441 2023-04-07 02:23:13.000000 volkanic-0.5.0/volkanic.egg-info/SOURCES.txt
++-rw-r--r--   0 Hailong    (502) staff       (20)        1 2023-04-07 02:23:13.000000 volkanic-0.5.0/volkanic.egg-info/dependency_links.txt
++-rw-r--r--   0 Hailong    (502) staff       (20)       52 2023-04-07 02:23:13.000000 volkanic-0.5.0/volkanic.egg-info/entry_points.txt
++-rw-r--r--   0 Hailong    (502) staff       (20)        1 2021-08-14 03:53:40.000000 volkanic-0.5.0/volkanic.egg-info/not-zip-safe
++-rw-r--r--   0 Hailong    (502) staff       (20)       13 2023-04-07 02:23:13.000000 volkanic-0.5.0/volkanic.egg-info/requires.txt
++-rw-r--r--   0 Hailong    (502) staff       (20)        9 2023-04-07 02:23:13.000000 volkanic-0.5.0/volkanic.egg-info/top_level.txt
+```
+
+### Comparing `volkanic-0.4.4/LICENSE` & `volkanic-0.5.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `volkanic-0.4.4/PKG-INFO` & `volkanic-0.5.0/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: volkanic
+-Version: 0.4.4
++Version: 0.5.0
+ Summary: access config and CLI easily and elegantly
+ Home-page: https://github.com/frozflame/volkanic
+ Author: frozflame
+ Author-email: frozflame@outlook.com
+ License: GNU General Public License (GPL)
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `volkanic-0.4.4/README.md` & `volkanic-0.5.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `volkanic-0.4.4/setup.py` & `volkanic-0.5.0/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `volkanic-0.4.4/volkanic/__main__.py` & `volkanic-0.5.0/volkanic/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `volkanic-0.4.4/volkanic/cmdline.py` & `volkanic-0.5.0/volkanic/cmdline.py`
+
+ * *Files identical despite different names*
+
+### Comparing `volkanic-0.4.4/volkanic/compat.py` & `volkanic-0.5.0/volkanic/compat.py`
+
+ * *Files identical despite different names*
+
+### Comparing `volkanic-0.4.4/volkanic/environ.py` & `volkanic-0.5.0/volkanic/environ.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -127,19 +127,14 @@
+         for c in cls.mro():
+             options = c.__dict__.get('_options')
+             try:
+                 return options[key]
+             except (KeyError, TypeError):
+                 pass
+ 
+-    # deprecated; will be remove in ver 0.5.0
+-    @classmethod
+-    def _split_name(cls) -> list:
+-        return cls.namespaces
+-
+     @classmethod
+     def _fmt_name(cls, sep='-') -> str:
+         return sep.join(cls.namespaces)
+ 
+     @classmethod
+     def _get_conf_path_names(cls) -> list:
+         return [cls.project_name, cls._get_option('confpath_filename')]
+@@ -157,25 +152,19 @@
+             os.environ.get(envvar_name),
+             cls.under_project_dir(names[-1]),
+             utils.under_home_dir_hidden(relative_path),
+             os.path.join('/etc', relative_path),
+             os.path.join('/', relative_path),
+         ]
+ 
+-    # _get_conf_search_paths is deprecated
+-    # _get_conf_search_paths will be removed at ver 0.5.0
+-    _get_conf_search_paths = _get_conf_paths
+-
+     @classmethod
+     def _locate_conf(cls):
+         """
+         Returns: (str) absolute path to config file
+         """
+-        # _get_conf_search_paths is deprecated
+-        # _get_conf_search_paths will be removed at ver 0.5.0
+         func = getattr(cls, '_get_conf_search_paths', None)
+         if func is None:
+             func = cls._get_conf_paths
+         paths = func()
+         for path in paths:
+             if not path:
+                 continue
+@@ -249,26 +238,14 @@
+             'package_dir': cls.under_package_dir(),
+             'registered_instances': mcs.registered_instances,
+             'conf_paths': cls._get_conf_paths(),
+             'conf_path': cls._locate_conf(),
+             'conf': conf,
+         }
+ 
+-    # deprecated
+-    # this method will be removed at ver 0.5.0
+-    @cached_property
+-    def jinja2_env(self):
+-        # noinspection PyPackageRequirements
+-        from jinja2 import Environment, PackageLoader, select_autoescape
+-        return Environment(
+-            loader=PackageLoader(self.package_name, 'templates'),
+-            autoescape=select_autoescape(['html', 'xml']),
+-            **self.conf.get('_jinja2_env', {})
+-        )
+-
+     @classmethod
+     def setup_logging(cls, level=None, fmt=None):
+         if not level:
+             envvar_name = cls._fmt_envvar_name('loglevel')
+             level = os.environ.get(envvar_name, 'DEBUG')
+         fmt = fmt or cls.default_logfmt
+         logging.basicConfig(level=level, format=fmt)
+```
+
+### Comparing `volkanic-0.4.4/volkanic/introspect.py` & `volkanic-0.5.0/volkanic/introspect.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -174,42 +174,39 @@
+         frame = getattr(sys, '_getframe')(depth)
+     except (AttributeError, NotImplementedError, TypeError):
+         return {'_': 'sys._getframe not implemented'}
+     return razor(frame.f_locals)
+ 
+ 
+ class ErrorBase(Exception):
+-    extra = {}
++    code = 3
++
++    def __init__(self, message: str, error_key: str = None):
++        super().__init__(message)
++        self.error_key = error_key or self.__class__.__name__
+ 
+     @property
+-    def error_key(self):
+-        try:
+-            return str(self.args[1])
+-        except IndexError:
+-            return self.__class__.__name__
++    def message(self) -> str:
++        return self.args[0]
+ 
+     def __str__(self):
+         if not self.args:
+             return ''
+         return str(self.args[0])
+ 
+     def to_dict(self):
+-        if len(self.args) > 2 and isinstance(self.args[2], dict):
+-            return self.args[2]
+-        dic = {'message': str(self), 'error_key': self.error_key}
+-        dic.update(self.extra)
+-        return dic
++        return {
++            'code': self.code,
++            'data': self.error_key,
++            'message': self.message,
++        }
+ 
+     @classmethod
+     def from_dict(cls, dic: dict):
+-        return cls(
+-            dic.get('message', ''),
+-            dic.get('error_key', cls.__name__),
+-            dic,
+-        )
++        return cls(dic['message'], dic.get('data', cls.__name__))
+ 
+ 
+ class ErrorInfo:
+     module_prefix = ''
+     message = 'Application Error'
+ 
+     @staticmethod
+@@ -270,15 +267,15 @@
+                 yield ':'.join(mat.groupdict()[k] for k in keys)
+ 
+     def to_dict(self, code=3):
+         if isinstance(self.exc, ErrorBase):
+             return self.exc.to_dict()
+         return {
+             'code': code,
+-            'error_key': self.error_key,
++            'data': {'error_key': self.error_key},
+             'message': f'{self.message} <{self.error_key}>',
+         }
+ 
+     @cached_property
+     def debug_info(self):
+         tb = self.exc.__traceback__
+         if tb is None:
+```
+
+### Comparing `volkanic-0.4.4/volkanic/utils.py` & `volkanic-0.5.0/volkanic/utils.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -17,19 +17,14 @@
+     try:
+         return getattr(obj, attrname)
+     except AttributeError:
+         setattr(obj, attrname, value)
+         return value
+ 
+ 
+-# deprecated names; both will be removed at ver 0.5.0
+-query_attr = attr_query
+-subattr = query_attr
+-
+-
+ def merge_dicts(*dicts):
+     # a list of dicts is acceptable
+     if len(dicts) == 1 and isinstance(dicts[0], list):
+         dicts = dicts[0]
+     retdic = {}
+     for dic in dicts:
+         retdic.update(dic)
+@@ -45,15 +40,15 @@
+     return sub_dict
+ 
+ 
+ def load_symbol(symbolpath):
+     parts = symbolpath.split(':', 1)
+     symbol = importlib.import_module(parts.pop(0))
+     if parts:
+-        symbol = query_attr(symbol, *parts[0].split('.'))
++        symbol = attr_query(symbol, *parts[0].split('.'))
+     return symbol
+ 
+ 
+ def load_variables(*contexts):
+     import re
+     scope = {}
+     for ctx in contexts:
+@@ -231,18 +226,14 @@
+     @functools.wraps(func)
+     def _func(*_args, **_kwargs):
+         return func()
+ 
+     return _func
+ 
+ 
+-# discard_arguments will be removed at ver 0.5.0
+-discard_arguments = ignore_arguments
+-
+-
+ def printerr(*args, **kwargs):
+     kwargs.setdefault('file', sys.stderr)
+     print(*args, **kwargs)
+ 
+ 
+ def printfmt(*args, sep=' ', end=os.linesep):
+     sep = str(sep)
+```
+
+### Comparing `volkanic-0.4.4/volkanic.egg-info/PKG-INFO` & `volkanic-0.5.0/volkanic.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: volkanic
+-Version: 0.4.4
++Version: 0.5.0
+ Summary: access config and CLI easily and elegantly
+ Home-page: https://github.com/frozflame/volkanic
+ Author: frozflame
+ Author-email: frozflame@outlook.com
+ License: GNU General Public License (GPL)
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3
+```
+

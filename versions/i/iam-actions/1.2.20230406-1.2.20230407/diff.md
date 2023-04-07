@@ -1,0 +1,727 @@
+# Comparing `tmp/iam_actions-1.2.20230406.tar.gz` & `tmp/iam_actions-1.2.20230407.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "iam_actions-1.2.20230406.tar", max compression
++gzip compressed data, was "iam_actions-1.2.20230407.tar", max compression
+```
+
+## Comparing `iam_actions-1.2.20230406.tar` & `iam_actions-1.2.20230407.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,18 @@
+--rw-r--r--   0        0        0     1071 2023-04-06 02:24:12.069532 iam_actions-1.2.20230406/LICENSE
+--rw-r--r--   0        0        0     2302 2023-04-06 02:24:12.069532 iam_actions-1.2.20230406/README.md
+--rw-r--r--   0        0        0      228 2023-04-06 02:24:12.069532 iam_actions-1.2.20230406/iam_actions/__init__.py
+--rw-r--r--   0        0        0  4194935 2023-04-06 02:25:57.466721 iam_actions-1.2.20230406/iam_actions/actions.json
+--rw-r--r--   0        0        0      496 2023-04-06 02:24:12.069532 iam_actions-1.2.20230406/iam_actions/data.py
+--rw-r--r--   0        0        0       80 2023-04-06 02:24:12.069532 iam_actions-1.2.20230406/iam_actions/generate/__init__.py
+--rw-r--r--   0        0        0     3097 2023-04-06 02:24:12.069532 iam_actions-1.2.20230406/iam_actions/generate/action_map.py
+--rw-r--r--   0        0        0    23329 2023-04-06 02:24:12.069532 iam_actions-1.2.20230406/iam_actions/generate/aws_docs.py
+--rw-r--r--   0        0        0     3739 2023-04-06 02:24:12.069532 iam_actions-1.2.20230406/iam_actions/generate/generate.py
+--rw-r--r--   0        0        0     3272 2023-04-06 02:24:12.069532 iam_actions-1.2.20230406/iam_actions/generate/notifier.py
+--rw-r--r--   0        0        0     1902 2023-04-06 02:24:12.069532 iam_actions-1.2.20230406/iam_actions/generate/resource_type.py
+--rw-r--r--   0        0        0     2277 2023-04-06 02:24:12.069532 iam_actions-1.2.20230406/iam_actions/generate/services.py
+--rw-r--r--   0        0        0   538823 2023-04-06 02:25:57.466721 iam_actions-1.2.20230406/iam_actions/policies.json
+--rw-r--r--   0        0        0   190113 2023-04-06 02:25:57.466721 iam_actions-1.2.20230406/iam_actions/resourcetypes.json
+--rw-r--r--   0        0        0   522552 2023-04-06 02:25:57.466721 iam_actions-1.2.20230406/iam_actions/services.json
+--rw-r--r--   0        0        0     1154 2023-04-06 02:25:58.274730 iam_actions-1.2.20230406/pyproject.toml
+--rw-r--r--   0        0        0     3024 1970-01-01 00:00:00.000000 iam_actions-1.2.20230406/setup.py
+--rw-r--r--   0        0        0     2915 1970-01-01 00:00:00.000000 iam_actions-1.2.20230406/PKG-INFO
++-rw-r--r--   0        0        0     1071 2023-04-07 02:23:09.208074 iam_actions-1.2.20230407/LICENSE
++-rw-r--r--   0        0        0     2302 2023-04-07 02:23:09.208074 iam_actions-1.2.20230407/README.md
++-rw-r--r--   0        0        0      228 2023-04-07 02:23:09.208074 iam_actions-1.2.20230407/iam_actions/__init__.py
++-rw-r--r--   0        0        0  4197197 2023-04-07 02:24:45.447376 iam_actions-1.2.20230407/iam_actions/actions.json
++-rw-r--r--   0        0        0      496 2023-04-07 02:23:09.208074 iam_actions-1.2.20230407/iam_actions/data.py
++-rw-r--r--   0        0        0       80 2023-04-07 02:23:09.208074 iam_actions-1.2.20230407/iam_actions/generate/__init__.py
++-rw-r--r--   0        0        0     3097 2023-04-07 02:23:09.208074 iam_actions-1.2.20230407/iam_actions/generate/action_map.py
++-rw-r--r--   0        0        0    23329 2023-04-07 02:23:09.208074 iam_actions-1.2.20230407/iam_actions/generate/aws_docs.py
++-rw-r--r--   0        0        0     3739 2023-04-07 02:23:09.208074 iam_actions-1.2.20230407/iam_actions/generate/generate.py
++-rw-r--r--   0        0        0     3272 2023-04-07 02:23:09.208074 iam_actions-1.2.20230407/iam_actions/generate/notifier.py
++-rw-r--r--   0        0        0     1902 2023-04-07 02:23:09.208074 iam_actions-1.2.20230407/iam_actions/generate/resource_type.py
++-rw-r--r--   0        0        0     2277 2023-04-07 02:23:09.208074 iam_actions-1.2.20230407/iam_actions/generate/services.py
++-rw-r--r--   0        0        0   538909 2023-04-07 02:24:45.447376 iam_actions-1.2.20230407/iam_actions/policies.json
++-rw-r--r--   0        0        0   189999 2023-04-07 02:24:45.447376 iam_actions-1.2.20230407/iam_actions/resourcetypes.json
++-rw-r--r--   0        0        0   522582 2023-04-07 02:24:45.447376 iam_actions-1.2.20230407/iam_actions/services.json
++-rw-r--r--   0        0        0     1154 2023-04-07 02:24:46.271371 iam_actions-1.2.20230407/pyproject.toml
++-rw-r--r--   0        0        0     3024 1970-01-01 00:00:00.000000 iam_actions-1.2.20230407/setup.py
++-rw-r--r--   0        0        0     2915 1970-01-01 00:00:00.000000 iam_actions-1.2.20230407/PKG-INFO
+```
+
+### Comparing `iam_actions-1.2.20230406/LICENSE` & `iam_actions-1.2.20230407/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `iam_actions-1.2.20230406/README.md` & `iam_actions-1.2.20230407/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `iam_actions-1.2.20230406/iam_actions/actions.json` & `iam_actions-1.2.20230407/iam_actions/actions.json`
+
+ * *Files 1% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9965156596439472%*
+
+ * *Differences: {"'codecatalyst'": "{'UntagResource': OrderedDict([('access_level', 'Undocumented'), ('action', "*
+
+ * *                   "'UntagResource'), ('condition_keys', []), ('description', 'Not Documented by "*
+
+ * *                   "AWS'), ('orphan', False), ('resources', [])]), 'TagResource': "*
+
+ * *                   "OrderedDict([('access_level', 'Undocumented'), ('action', 'TagResource'), "*
+
+ * *                   "('condition_keys', []), ('description', 'Not Documented by AWS'), ('orphan', "*
+
+ * *                   "False), ('resour […]*
+
+```diff
+@@ -22444,14 +22444,22 @@
+             "condition_keys": [],
+             "description": "Grants permission to list IAM roles associated with a connection",
+             "orphan": false,
+             "resources": [
+                 "connections"
+             ]
+         },
++        "ListTagsForResource": {
++            "access_level": "Undocumented",
++            "action": "ListTagsForResource",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
++        },
+         "PutBillingAuthorization": {
+             "access_level": "Write",
+             "action": "PutBillingAuthorization",
+             "condition_keys": [],
+             "description": "Grants permission to creates or update the billing authorization for a connection",
+             "orphan": false,
+             "resources": [
+@@ -22461,14 +22469,30 @@
+         "RejectConnection": {
+             "access_level": "Write",
+             "action": "RejectConnection",
+             "condition_keys": [],
+             "description": "Grants permission to reject a request to connect this account to a CodeCatalyst space",
+             "orphan": false,
+             "resources": []
++        },
++        "TagResource": {
++            "access_level": "Undocumented",
++            "action": "TagResource",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
++        },
++        "UntagResource": {
++            "access_level": "Undocumented",
++            "action": "UntagResource",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
+         }
+     },
+     "codecommit": {
+         "AssociateApprovalRuleTemplateWithRepository": {
+             "access_level": "Write",
+             "action": "AssociateApprovalRuleTemplateWithRepository",
+             "condition_keys": [],
+@@ -54411,15 +54435,14 @@
+                 "file-system"
+             ]
+         },
+         "DeleteTags": {
+             "access_level": "Tagging",
+             "action": "DeleteTags",
+             "condition_keys": [
+-                "aws:RequestTag/${TagKey}",
+                 "aws:TagKeys"
+             ],
+             "description": "Grants permission to delete the specified tags from a file system; deprecated, see UntagResource",
+             "orphan": false,
+             "resources": [
+                 "file-system"
+             ]
+@@ -54607,15 +54630,14 @@
+                 "file-system"
+             ]
+         },
+         "UntagResource": {
+             "access_level": "Tagging",
+             "action": "UntagResource",
+             "condition_keys": [
+-                "aws:RequestTag/${TagKey}",
+                 "aws:TagKeys"
+             ],
+             "description": "Grants permission to delete the specified tags from an Amazon EFS resource",
+             "orphan": false,
+             "resources": [
+                 "access-point",
+                 "file-system"
+@@ -138790,34 +138812,14 @@
+             "orphan": false,
+             "resources": [
+                 "role",
+                 "user"
+             ]
+         }
+     },
+-    "sumerian": {
+-        "Login": {
+-            "access_level": "Write",
+-            "action": "Login",
+-            "condition_keys": [],
+-            "description": "Grants permission to log into the Sumerian console",
+-            "orphan": false,
+-            "resources": []
+-        },
+-        "ViewRelease": {
+-            "access_level": "Read",
+-            "action": "ViewRelease",
+-            "condition_keys": [],
+-            "description": "Grants permission to view a project release",
+-            "orphan": false,
+-            "resources": [
+-                "project"
+-            ]
+-        }
+-    },
+     "support": {
+         "AddAttachmentsToSet": {
+             "access_level": "Write",
+             "action": "AddAttachmentsToSet",
+             "condition_keys": [],
+             "description": "Adds one or more attachments to an AWS Support case.",
+             "orphan": false,
+@@ -142085,14 +142087,38 @@
+             "orphan": false,
+             "resources": [
+                 "parallel-data"
+             ]
+         }
+     },
+     "trustedadvisor": {
++        "CreateEngagement": {
++            "access_level": "Undocumented",
++            "action": "CreateEngagement",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
++        },
++        "CreateEngagementAttachment": {
++            "access_level": "Undocumented",
++            "action": "CreateEngagementAttachment",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
++        },
++        "CreateEngagementCommunication": {
++            "access_level": "Undocumented",
++            "action": "CreateEngagementCommunication",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
++        },
+         "DeleteNotificationConfigurationForDelegatedAdmin": {
+             "access_level": "Write",
+             "action": "DeleteNotificationConfigurationForDelegatedAdmin",
+             "condition_keys": [],
+             "description": "Grants permission to the organization management account to delete email notification preferences from a delegated administrator account for Trusted Advisor Priority",
+             "orphan": false,
+             "resources": []
+@@ -142255,14 +142281,38 @@
+             "access_level": "Write",
+             "action": "GenerateReport",
+             "condition_keys": [],
+             "description": "Grants permission to create a report for AWS Trusted Advisor checks in your organization",
+             "orphan": false,
+             "resources": []
+         },
++        "GetEngagement": {
++            "access_level": "Undocumented",
++            "action": "GetEngagement",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
++        },
++        "GetEngagementAttachment": {
++            "access_level": "Undocumented",
++            "action": "GetEngagementAttachment",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
++        },
++        "GetEngagementType": {
++            "access_level": "Undocumented",
++            "action": "GetEngagementType",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
++        },
+         "IncludeCheckItems": {
+             "access_level": "Write",
+             "action": "IncludeCheckItems",
+             "condition_keys": [],
+             "description": "Grants permission to include recommendations for AWS Trusted Advisor checks",
+             "orphan": false,
+             "resources": [
+@@ -142273,14 +142323,38 @@
+             "access_level": "Read",
+             "action": "ListAccountsForParent",
+             "condition_keys": [],
+             "description": "Grants permission to view, in the Trusted Advisor console, all of the accounts in an AWS organization that are contained by a root or organizational unit (OU)",
+             "orphan": false,
+             "resources": []
+         },
++        "ListEngagementCommunications": {
++            "access_level": "Undocumented",
++            "action": "ListEngagementCommunications",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
++        },
++        "ListEngagementTypes": {
++            "access_level": "Undocumented",
++            "action": "ListEngagementTypes",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
++        },
++        "ListEngagements": {
++            "access_level": "Undocumented",
++            "action": "ListEngagements",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
++        },
+         "ListOrganizationalUnitsForParent": {
+             "access_level": "Read",
+             "action": "ListOrganizationalUnitsForParent",
+             "condition_keys": [],
+             "description": "Grants permission to view, in the Trusted Advisor console, all of the organizational units (OUs) in a parent organizational unit or root",
+             "orphan": false,
+             "resources": []
+@@ -142315,14 +142389,22 @@
+             "access_level": "Write",
+             "action": "SetOrganizationAccess",
+             "condition_keys": [],
+             "description": "Grants permission to enable the organizational view feature for AWS Trusted Advisor",
+             "orphan": false,
+             "resources": []
+         },
++        "UpdateEngagementStatus": {
++            "access_level": "Undocumented",
++            "action": "UpdateEngagementStatus",
++            "condition_keys": [],
++            "description": "Not Documented by AWS",
++            "orphan": false,
++            "resources": []
++        },
+         "UpdateNotificationConfigurations": {
+             "access_level": "Write",
+             "action": "UpdateNotificationConfigurations",
+             "condition_keys": [],
+             "description": "Grants permission to create or update your email notification preferences for Trusted Advisor Priority",
+             "orphan": false,
+             "resources": []
+@@ -146942,18 +147024,18 @@
+             "action": "RestoreDocumentVersions",
+             "condition_keys": [],
+             "description": "Grants permission to restore versions of a specified document",
+             "orphan": false,
+             "resources": []
+         },
+         "SearchResources": {
+-            "access_level": "Undocumented",
++            "access_level": "List",
+             "action": "SearchResources",
+             "condition_keys": [],
+-            "description": "Not Documented by AWS",
++            "description": "Grants permission to search metadata and the content of resources",
+             "orphan": false,
+             "resources": []
+         },
+         "UpdateDocument": {
+             "access_level": "Write",
+             "action": "UpdateDocument",
+             "condition_keys": [],
+```
+
+### Comparing `iam_actions-1.2.20230406/iam_actions/generate/action_map.py` & `iam_actions-1.2.20230407/iam_actions/generate/action_map.py`
+
+ * *Files identical despite different names*
+
+### Comparing `iam_actions-1.2.20230406/iam_actions/generate/aws_docs.py` & `iam_actions-1.2.20230407/iam_actions/generate/aws_docs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `iam_actions-1.2.20230406/iam_actions/generate/generate.py` & `iam_actions-1.2.20230407/iam_actions/generate/generate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `iam_actions-1.2.20230406/iam_actions/generate/notifier.py` & `iam_actions-1.2.20230407/iam_actions/generate/notifier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `iam_actions-1.2.20230406/iam_actions/generate/resource_type.py` & `iam_actions-1.2.20230407/iam_actions/generate/resource_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `iam_actions-1.2.20230406/iam_actions/generate/services.py` & `iam_actions-1.2.20230407/iam_actions/generate/services.py`
+
+ * *Files identical despite different names*
+
+### Comparing `iam_actions-1.2.20230406/iam_actions/policies.json` & `iam_actions-1.2.20230407/iam_actions/policies.json`
+
+ * *Files 0% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9997246823257605%*
+
+ * *Differences: {"'serviceMap'": "{'Amazon CodeCatalyst': {'Actions': {insert: [(9, 'ListTagsForResource'), (12, "*
+
+ * *                 "'TagResource'), (13, 'UntagResource')]}}, 'AWS Trusted Advisor': {'Actions': "*
+
+ * *                 "{insert: [(0, 'CreateEngagement'), (1, 'CreateEngagementAttachment'), (2, "*
+
+ * *                 "'CreateEngagementCommunication'), (23, 'GetEngagement'), (24, "*
+
+ * *                 "'GetEngagementAttachment'), (25, 'GetEngagementType'), (28, "*
+
+ * *                 "'ListEngagementCommunications'), (29, 'Lis […]*
+
+```diff
+@@ -8824,14 +8824,17 @@
+                 "aws:TagKeys"
+             ]
+         },
+         "AWS Trusted Advisor": {
+             "ARNFormat": "arn:aws:trustedadvisor:${Region}:${Account}:checks/${Category}/${CheckId}",
+             "ARNRegex": "^arn:aws:trustedadvisor:.*",
+             "Actions": [
++                "CreateEngagement",
++                "CreateEngagementAttachment",
++                "CreateEngagementCommunication",
+                 "DeleteNotificationConfigurationForDelegatedAdmin",
+                 "DescribeAccount",
+                 "DescribeAccountAccess",
+                 "DescribeCheckItems",
+                 "DescribeCheckRefreshStatuses",
+                 "DescribeCheckStatusHistoryChanges",
+                 "DescribeCheckSummaries",
+@@ -8844,21 +8847,28 @@
+                 "DescribeRisk",
+                 "DescribeRiskResources",
+                 "DescribeRisks",
+                 "DescribeServiceMetadata",
+                 "DownloadRisk",
+                 "ExcludeCheckItems",
+                 "GenerateReport",
++                "GetEngagement",
++                "GetEngagementAttachment",
++                "GetEngagementType",
+                 "IncludeCheckItems",
+                 "ListAccountsForParent",
++                "ListEngagementCommunications",
++                "ListEngagementTypes",
++                "ListEngagements",
+                 "ListOrganizationalUnitsForParent",
+                 "ListRoots",
+                 "RefreshCheck",
+                 "SetAccountAccess",
+                 "SetOrganizationAccess",
++                "UpdateEngagementStatus",
+                 "UpdateNotificationConfigurations",
+                 "UpdateNotificationPreferences",
+                 "UpdateRiskStatus"
+             ],
+             "HasResource": true,
+             "StringPrefix": "trustedadvisor"
+         },
+@@ -10601,16 +10611,19 @@
+                 "DeleteConnection",
+                 "DisassociateIamRoleFromConnection",
+                 "GetBillingAuthorization",
+                 "GetConnection",
+                 "GetPendingConnection",
+                 "ListConnections",
+                 "ListIamRolesForConnection",
++                "ListTagsForResource",
+                 "PutBillingAuthorization",
+-                "RejectConnection"
++                "RejectConnection",
++                "TagResource",
++                "UntagResource"
+             ],
+             "HasResource": true,
+             "StringPrefix": "codecatalyst",
+             "conditionKeys": [
+                 "aws:RequestTag/${TagKey}",
+                 "aws:ResourceTag/${TagKey}",
+                 "aws:TagKeys"
+@@ -18537,24 +18550,14 @@
+                 "ListDomains",
+                 "PutAttributes",
+                 "Select"
+             ],
+             "HasResource": true,
+             "StringPrefix": "sdb"
+         },
+-        "Amazon Sumerian": {
+-            "ARNFormat": "arn:aws:sumerian:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+-            "ARNRegex": "^arn:aws:sumerian:.+:.+:.+",
+-            "Actions": [
+-                "Login",
+-                "ViewRelease"
+-            ],
+-            "HasResource": true,
+-            "StringPrefix": "sumerian"
+-        },
+         "Amazon Textract": {
+             "ARNFormat": "arn:${Partition}:textract:${Region}:${Account}:${RelativeId}",
+             "ARNRegex": "^arn:${Partition}:textract:.+",
+             "Actions": [
+                 "AnalyzeDocument",
+                 "AnalyzeExpense",
+                 "AnalyzeID",
+```
+
+### Comparing `iam_actions-1.2.20230406/iam_actions/resourcetypes.json` & `iam_actions-1.2.20230407/iam_actions/resourcetypes.json`
+
+ * *Files 0% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9971751412429378%*
+
+ * *Differences: {'delete': "['sumerian']"}*
+
+```diff
+@@ -6027,20 +6027,14 @@
+             "condition_keys": "aws:ResourceTag/${TagKey}"
+         },
+         "user": {
+             "arn_pattern": "arn:*:iam::*:user/*",
+             "condition_keys": null
+         }
+     },
+-    "sumerian": {
+-        "project": {
+-            "arn_pattern": "arn:*:sumerian:*:*:project:*",
+-            "condition_keys": null
+-        }
+-    },
+     "support": {},
+     "supportapp": {},
+     "supportplans": {},
+     "sustainability": {},
+     "swf": {
+         "domain": {
+             "arn_pattern": "arn:*:swf::*:/domain/*",
+```
+
+### Comparing `iam_actions-1.2.20230406/iam_actions/services.json` & `iam_actions-1.2.20230407/iam_actions/services.json`
+
+ * *Files 0% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9971204936776971%*
+
+ * *Differences: {"'codecatalyst'": "{'Actions': {insert: [(9, 'ListTagsForResource'), (12, 'TagResource'), (13, "*
+
+ * *                   "'UntagResource')]}}",*
+
+ * * "'trustedadvisor'": "{'Actions': {insert: [(0, 'CreateEngagement'), (1, "*
+
+ * *                     "'CreateEngagementAttachment'), (2, 'CreateEngagementCommunication'), (23, "*
+
+ * *                     "'GetEngagement'), (24, 'GetEngagementAttachment'), (25, "*
+
+ * *                     "'GetEngagementType'), (28, 'ListEngagementCommunications'), (29, "*
+
+ * *                     "'ListEng […]*
+
+```diff
+@@ -3453,16 +3453,19 @@
+             "DeleteConnection",
+             "DisassociateIamRoleFromConnection",
+             "GetBillingAuthorization",
+             "GetConnection",
+             "GetPendingConnection",
+             "ListConnections",
+             "ListIamRolesForConnection",
++            "ListTagsForResource",
+             "PutBillingAuthorization",
+-            "RejectConnection"
++            "RejectConnection",
++            "TagResource",
++            "UntagResource"
+         ],
+         "ConditionKeys": [
+             "aws:RequestTag/${TagKey}",
+             "aws:ResourceTag/${TagKey}",
+             "aws:TagKeys"
+         ],
+         "HasResource": true,
+@@ -19364,31 +19367,14 @@
+             "www.amazon.com:user_id"
+         ],
+         "HasResource": true,
+         "ServiceNames": [
+             "AWS Security Token Service"
+         ]
+     },
+-    "sumerian": {
+-        "ARNFormats": [
+-            "arn:aws:sumerian:${Region}:${Account}:${ResourceType}/${ResourcePath}"
+-        ],
+-        "ARNRegexes": [
+-            "^arn:aws:sumerian:.+:.+:.+"
+-        ],
+-        "Actions": [
+-            "Login",
+-            "ViewRelease"
+-        ],
+-        "ConditionKeys": [],
+-        "HasResource": true,
+-        "ServiceNames": [
+-            "Amazon Sumerian"
+-        ]
+-    },
+     "support": {
+         "ARNFormats": [],
+         "ARNRegexes": [],
+         "Actions": [
+             "AddAttachmentsToSet",
+             "AddCommunicationToCase",
+             "CreateCase",
+@@ -19982,14 +19968,17 @@
+         "ARNFormats": [
+             "arn:aws:trustedadvisor:${Region}:${Account}:checks/${Category}/${CheckId}"
+         ],
+         "ARNRegexes": [
+             "^arn:aws:trustedadvisor:.*"
+         ],
+         "Actions": [
++            "CreateEngagement",
++            "CreateEngagementAttachment",
++            "CreateEngagementCommunication",
+             "DeleteNotificationConfigurationForDelegatedAdmin",
+             "DescribeAccount",
+             "DescribeAccountAccess",
+             "DescribeCheckItems",
+             "DescribeCheckRefreshStatuses",
+             "DescribeCheckStatusHistoryChanges",
+             "DescribeCheckSummaries",
+@@ -20002,21 +19991,28 @@
+             "DescribeRisk",
+             "DescribeRiskResources",
+             "DescribeRisks",
+             "DescribeServiceMetadata",
+             "DownloadRisk",
+             "ExcludeCheckItems",
+             "GenerateReport",
++            "GetEngagement",
++            "GetEngagementAttachment",
++            "GetEngagementType",
+             "IncludeCheckItems",
+             "ListAccountsForParent",
++            "ListEngagementCommunications",
++            "ListEngagementTypes",
++            "ListEngagements",
+             "ListOrganizationalUnitsForParent",
+             "ListRoots",
+             "RefreshCheck",
+             "SetAccountAccess",
+             "SetOrganizationAccess",
++            "UpdateEngagementStatus",
+             "UpdateNotificationConfigurations",
+             "UpdateNotificationPreferences",
+             "UpdateRiskStatus"
+         ],
+         "ConditionKeys": [],
+         "HasResource": true,
+         "ServiceNames": [
+```
+
+### Comparing `iam_actions-1.2.20230406/pyproject.toml` & `iam_actions-1.2.20230407/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "iam-actions"
+-version = "1.2.20230406"
++version = "1.2.20230407"
+ description = "JSON of AWS policy components"
+ authors = ["Constable <info@constableapp.com>"]
+ license = "MIT"
+ readme = "README.md"
+ repository = "https://github.com/constableapp/iam_actions"
+ packages = [{include = "iam_actions"}]
+```
+
+### Comparing `iam_actions-1.2.20230406/setup.py` & `iam_actions-1.2.20230407/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -5,15 +5,15 @@
+ ['iam_actions', 'iam_actions.generate']
+ 
+ package_data = \
+ {'': ['*']}
+ 
+ setup_kwargs = {
+     'name': 'iam-actions',
+-    'version': '1.2.20230406',
++    'version': '1.2.20230407',
+     'description': 'JSON of AWS policy components',
+     'long_description': '# iam_actions\n\n`iam_actions` is a python module which contains a dictionary of AWS IAM information. Ideally, it is a complete catalog of all AWS services, actions, and resource types. The information is scraped from the AWS documentation pages.\n\nNightly, the scraping service runs, and publishes a new version with the date appended. \n\nThe package is meant to be used as a consumable package, but it also contains the code to generate the definitions for packaging.\n\nThere are three "roots" that you can consume: actions, resource_types, and services. They all currently return as dict\'s. *However, in a future release, it will be returned as python data structures*\n\n## Actions\n\nActions is a listing of all the actions for a given service. The structure is as follows:\n```\n{\n    "service_name": {\n        "action_name: {\n            "access_level": access_level,\n            "action": action_name,\n            "condition_keys": [condition_key1, ...],\n            "description": description\n        }\n    }\n}\n```\n\nTherefore, you can find information about an action as follows\n\n```\n>>> iam_actions.actions[\'s3\'][\'GetObject\']\n{\'access_level\': \'Read\', \'action\': \'GetObject\', \'condition_keys\': [\'s3:AccessPointNetworkOrigin\', \'s3:DataAccessPointAccount\', \'s3:DataAccessPointArn\', \'s3:ExistingObjectTag/<key>\', \'s3:ResourceAccount\', \'s3:TlsVersion\', \'s3:authType\', \'s3:signatureAge\', \'s3:signatureversion\', \'s3:x-amz-content-sha256\'], \'description\': \'Grants permission to retrieve objects from Amazon S3\', \'orphan\': False, \'resources\': [\'object\']}\n```\n\n## Services\n\nServices list information about the service. The structure is as follows:\n\n```\n{\n    "service_name": {\n        "Actions": [action1, ...]\n        "ServiceNames": [service_name1, ...]\n        "ARNFormats": [arn_format1, ...]\n        "ConditionKeys": [condition_key1, ...]\n        "HasResource": bool\n    }\n}\n```\n\n## Resource Types\n\nResource Types list information about the resource types for the service. The structure is as follows:\n\n```\n{\n    "service_name": {\n        "resource_name": {\n            "arn_pattern": arn_pattern,\n            "condition_keys": [condition_key1, ...]\n        }\n    }\n}\n```\n\n## Usage\n\n```python\nimport iam_actions\n\nprint(item_actions.services)\nprint(item_actions.actions)\nprint(item_actions.resource_types)\n```\n',
+     'author': 'Constable',
+     'author_email': 'info@constableapp.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'https://github.com/constableapp/iam_actions',
+```
+
+### Comparing `iam_actions-1.2.20230406/PKG-INFO` & `iam_actions-1.2.20230407/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: iam-actions
+-Version: 1.2.20230406
++Version: 1.2.20230407
+ Summary: JSON of AWS policy components
+ Home-page: https://github.com/constableapp/iam_actions
+ License: MIT
+ Author: Constable
+ Author-email: info@constableapp.com
+ Requires-Python: >=3.9,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+```
+

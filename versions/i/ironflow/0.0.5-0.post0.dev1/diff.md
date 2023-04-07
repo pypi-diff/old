@@ -1,0 +1,3551 @@
+# Comparing `tmp/ironflow-0.0.5.tar.gz` & `tmp/ironflow-0.post0.dev1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "ironflow-0.0.5.tar", last modified: Fri Apr  7 02:23:35 2023, max compression
++gzip compressed data, was "ironflow-0.post0.dev1.tar", last modified: Thu Nov 10 17:19:15 2022, max compression
+```
+
+## Comparing `ironflow-0.0.5.tar` & `ironflow-0.post0.dev1.tar`
+
+### file list
+
+```diff
+@@ -1,76 +1,61 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.923070 ironflow-0.0.5/
+--rw-r--r--   0 runner    (1001) docker     (123)     1592 2023-04-07 02:23:32.000000 ironflow-0.0.5/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)       67 2023-04-07 02:23:32.000000 ironflow-0.0.5/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)      893 2023-04-07 02:23:35.923070 ironflow-0.0.5/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    15954 2023-04-07 02:23:32.000000 ironflow-0.0.5/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.923070 ironflow-0.0.5/ironflow/
+--rw-r--r--   0 runner    (1001) docker     (123)      464 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      497 2023-04-07 02:23:35.923070 ironflow-0.0.5/ironflow/_version.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.915070 ironflow-0.0.5/ironflow/gui/
+--rw-r--r--   0 runner    (1001) docker     (123)      302 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      561 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)      862 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/browser.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3874 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/draws_widgets.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6958 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/gui.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4309 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/log.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.915070 ironflow-0.0.5/ironflow/gui/workflows/
+--rw-r--r--   0 runner    (1001) docker     (123)       90 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.919070 ironflow-0.0.5/ironflow/gui/workflows/boxes/
+--rw-r--r--   0 runner    (1001) docker     (123)      288 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/boxes/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      931 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/boxes/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3801 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/boxes/flow.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.919070 ironflow-0.0.5/ironflow/gui/workflows/boxes/node_interface/
+--rw-r--r--   0 runner    (1001) docker     (123)      262 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/boxes/node_interface/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10444 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/boxes/node_interface/control.py
+--rw-r--r--   0 runner    (1001) docker     (123)      994 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/boxes/node_interface/input_widgets.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3595 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/boxes/node_interface/representation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1251 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/boxes/text_output.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3208 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/boxes/toolbar.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3547 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/boxes/user_input.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.919070 ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/
+--rw-r--r--   0 runner    (1001) docker     (123)      301 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5785 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6542 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/buttons.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11009 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/flow.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1591 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/layouts.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10278 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/nodes.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4180 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/ports.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10371 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/gui/workflows/screen.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.919070 ironflow-0.0.5/ironflow/model/
+--rw-r--r--   0 runner    (1001) docker     (123)      663 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/model/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15371 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/model/dtypes.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2390 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/model/flow.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11204 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/model/model.py
+--rw-r--r--   0 runner    (1001) docker     (123)    23029 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/model/node.py
+--rw-r--r--   0 runner    (1001) docker     (123)      938 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/model/otypes.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9768 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/model/port.py
+--rw-r--r--   0 runner    (1001) docker     (123)      837 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/model/script.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1294 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/model/session.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.919070 ironflow-0.0.5/ironflow/node_tools/
+--rw-r--r--   0 runner    (1001) docker     (123)     1217 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/node_tools/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.919070 ironflow-0.0.5/ironflow/node_tools/input_widgets/
+--rw-r--r--   0 runner    (1001) docker     (123)      386 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/node_tools/input_widgets/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      380 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/node_tools/main_widgets.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.919070 ironflow-0.0.5/ironflow/nodes/
+--rw-r--r--   0 runner    (1001) docker     (123)      252 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/nodes/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7164 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/nodes/built_in.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.919070 ironflow-0.0.5/ironflow/nodes/pyiron/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/nodes/pyiron/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    44915 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/nodes/pyiron/atomistics_nodes.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.923070 ironflow-0.0.5/ironflow/nodes/std/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/nodes/std/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6400 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/nodes/std/basic_operators.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4880 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/nodes/std/control_structures.py
+--rw-r--r--   0 runner    (1001) docker     (123)    21853 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/nodes/std/special_nodes.py
+--rw-r--r--   0 runner    (1001) docker     (123)      541 2023-04-07 02:23:32.000000 ironflow-0.0.5/ironflow/utils.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.915070 ironflow-0.0.5/ironflow.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)      893 2023-04-07 02:23:35.000000 ironflow-0.0.5/ironflow.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1930 2023-04-07 02:23:35.000000 ironflow-0.0.5/ironflow.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 02:23:35.000000 ironflow-0.0.5/ironflow.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      169 2023-04-07 02:23:35.000000 ironflow-0.0.5/ironflow.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-07 02:23:35.000000 ironflow-0.0.5/ironflow.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      174 2023-04-07 02:23:35.923070 ironflow-0.0.5/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1656 2023-04-07 02:23:35.000000 ironflow-0.0.5/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:23:35.923070 ironflow-0.0.5/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)      211 2023-04-07 02:23:32.000000 ironflow-0.0.5/tests/test_tests.py
+--rw-r--r--   0 runner    (1001) docker     (123)    68611 2023-04-07 02:23:32.000000 ironflow-0.0.5/versioneer.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.858988 ironflow-0.post0.dev1/
++-rw-r--r--   0 runner    (1001) docker     (122)     1592 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (122)       67 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (122)      782 2022-11-10 17:19:15.858988 ironflow-0.post0.dev1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (122)     6474 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/README.md
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.862988 ironflow-0.post0.dev1/ironflow/
++-rw-r--r--   0 runner    (1001) docker     (122)      466 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)      503 2022-11-10 17:19:15.862988 ironflow-0.post0.dev1/ironflow/_version.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.850988 ironflow-0.post0.dev1/ironflow/custom_nodes/
++-rw-r--r--   0 runner    (1001) docker     (122)     1024 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/custom_nodes/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.850988 ironflow-0.post0.dev1/ironflow/custom_nodes/input_widgets/
++-rw-r--r--   0 runner    (1001) docker     (122)      376 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/custom_nodes/input_widgets/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.850988 ironflow-0.post0.dev1/ironflow/gui/
++-rw-r--r--   0 runner    (1001) docker     (122)      302 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.854988 ironflow-0.post0.dev1/ironflow/gui/boxes/
++-rw-r--r--   0 runner    (1001) docker     (122)      559 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/boxes/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)      931 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/boxes/base.py
++-rw-r--r--   0 runner    (1001) docker     (122)     3161 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/boxes/flow.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.854988 ironflow-0.post0.dev1/ironflow/gui/boxes/node_interface/
++-rw-r--r--   0 runner    (1001) docker     (122)      407 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/boxes/node_interface/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)      915 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/boxes/node_interface/base.py
++-rw-r--r--   0 runner    (1001) docker     (122)     6039 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/boxes/node_interface/control.py
++-rw-r--r--   0 runner    (1001) docker     (122)      951 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/boxes/node_interface/input_widgets.py
++-rw-r--r--   0 runner    (1001) docker     (122)     3488 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/boxes/node_interface/representation.py
++-rw-r--r--   0 runner    (1001) docker     (122)     1213 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/boxes/text_output.py
++-rw-r--r--   0 runner    (1001) docker     (122)     3144 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/boxes/toolbar.py
++-rw-r--r--   0 runner    (1001) docker     (122)     3436 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/boxes/user_input.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.854988 ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/
++-rw-r--r--   0 runner    (1001) docker     (122)      433 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)     5590 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/base.py
++-rw-r--r--   0 runner    (1001) docker     (122)     6488 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/buttons.py
++-rw-r--r--   0 runner    (1001) docker     (122)     9088 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/flow.py
++-rw-r--r--   0 runner    (1001) docker     (122)     1373 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/layouts.py
++-rw-r--r--   0 runner    (1001) docker     (122)    10037 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/nodes.py
++-rw-r--r--   0 runner    (1001) docker     (122)     2563 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/ports.py
++-rw-r--r--   0 runner    (1001) docker     (122)    13291 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/gui/gui.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.858988 ironflow-0.post0.dev1/ironflow/model/
++-rw-r--r--   0 runner    (1001) docker     (122)      398 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/model/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)     1013 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/model/dtypes.py
++-rw-r--r--   0 runner    (1001) docker     (122)     9619 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/model/model.py
++-rw-r--r--   0 runner    (1001) docker     (122)     3584 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/model/node.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.858988 ironflow-0.post0.dev1/ironflow/nodes/
++-rw-r--r--   0 runner    (1001) docker     (122)      252 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/nodes/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)     7179 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/nodes/built_in.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.858988 ironflow-0.post0.dev1/ironflow/nodes/pyiron/
++-rw-r--r--   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/nodes/pyiron/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)    19938 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/nodes/pyiron/atomistics_nodes.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.858988 ironflow-0.post0.dev1/ironflow/nodes/std/
++-rw-r--r--   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/nodes/std/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)     6428 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/nodes/std/basic_operators.py
++-rw-r--r--   0 runner    (1001) docker     (122)     4909 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/nodes/std/control_structures.py
++-rw-r--r--   0 runner    (1001) docker     (122)    21897 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/ironflow/nodes/std/special_nodes.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-10 17:19:15.850988 ironflow-0.post0.dev1/ironflow.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (122)      782 2022-11-10 17:19:15.000000 ironflow-0.post0.dev1/ironflow.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (122)     1447 2022-11-10 17:19:15.000000 ironflow-0.post0.dev1/ironflow.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (122)        1 2022-11-10 17:19:15.000000 ironflow-0.post0.dev1/ironflow.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (122)      100 2022-11-10 17:19:15.000000 ironflow-0.post0.dev1/ironflow.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (122)        9 2022-11-10 17:19:15.000000 ironflow-0.post0.dev1/ironflow.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (122)      174 2022-11-10 17:19:15.858988 ironflow-0.post0.dev1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (122)     1385 2022-11-10 17:19:15.000000 ironflow-0.post0.dev1/setup.py
++-rw-r--r--   0 runner    (1001) docker     (122)    68611 2022-11-10 17:19:12.000000 ironflow-0.post0.dev1/versioneer.py
+```
+
+### Comparing `ironflow-0.0.5/LICENSE` & `ironflow-0.post0.dev1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/boxes/base.py` & `ironflow-0.post0.dev1/ironflow/gui/boxes/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/boxes/flow.py` & `ironflow-0.post0.dev1/ironflow/gui/boxes/flow.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -5,25 +5,22 @@
+ Widgets for interacting with the flow diagram.
+ """
+ 
+ from __future__ import annotations
+ 
+ import ipywidgets as widgets
+ 
+-from ironflow.gui.draws_widgets import DrawsWidgets, draws_widgets
++from ironflow.gui.boxes.base import Box
+ 
+ 
+-class NodeSelector(DrawsWidgets):
+-    main_widget_class = widgets.VBox
++class NodeSelector(Box):
++    box_class = widgets.VBox
+ 
+-    def __new__(cls, nodes_dictionary, *args, **kwargs):
+-        return super().__new__(cls, *args, **kwargs)
+-
+-    def __init__(self, nodes_dictionary, *args, **kwargs):
+-        super().__init__(*args, **kwargs)
++    def __init__(self, nodes_dictionary):
++        super().__init__()
+         self._nodes_dictionary = nodes_dictionary
+ 
+         self.modules_dropdown = widgets.Dropdown(
+             options=self.module_options,
+             value=list(self.module_options)[0],
+             disabled=False,
+             layout=widgets.Layout(width="130px"),
+@@ -33,15 +30,15 @@
+             options=self.nodes_options,
+             value=list(self.nodes_options)[0],
+             disabled=False,
+         )
+ 
+         self.modules_dropdown.observe(self.change_modules_dropdown, names="value")
+ 
+-        self.widget.children = [self.modules_dropdown, self.node_selector]
++        self.box.children = [self.modules_dropdown, self.node_selector]
+ 
+     def change_modules_dropdown(self, change: dict) -> None:
+         self.node_selector.options = sorted(
+             self._nodes_dictionary[self.modules_dropdown.value].keys()
+         )
+ 
+     @property
+@@ -57,55 +54,42 @@
+     @property
+     def nodes_options(self) -> list[str]:
+         return sorted(self._nodes_dictionary[self.modules_dropdown.value].keys())
+ 
+     def update(self, nodes_dictionary: dict) -> None:
+         self._nodes_dictionary = nodes_dictionary
+         self.modules_dropdown.options = self.module_options
+-        self.node_selector.options = self.nodes_options
+ 
+ 
+-class FlowBox(DrawsWidgets):
+-    def __new__(cls, nodes_dictionary, *args, **kwargs):
+-        return super().__new__(cls, *args, **kwargs)
++class FlowBox(Box):
++    box_class = widgets.HBox
+ 
+-    def __init__(self, nodes_dictionary: dict, *args, **kwargs):
+-        super().__init__(*args, **kwargs)
++    def __init__(self, nodes_dictionary: dict):
++        super().__init__()
+         self.node_selector = NodeSelector(nodes_dictionary=nodes_dictionary)
+         self.script_tabs = widgets.Tab([])
+ 
+-        self.node_selector.widget.layout.width = "15%"
++        self.node_selector.box.layout.width = "15%"
+         self.script_tabs.layout.width = "85%"
+ 
+-        self.widget.children = [self.node_selector.widget, self.script_tabs]
++        self.box.children = [self.node_selector.box, self.script_tabs]
++
++    def update_nodes(self, nodes_dictionary: dict):
++        self.node_selector.update(nodes_dictionary=nodes_dictionary)
+ 
+     def update_tabs(
+         self, outputs: list[widgets.Output], titles: list[str], active_index: int
+     ):
+-        self._outputs = outputs
+-        self._titles = titles
+-        self._active_index = active_index
+-        self.draw()
+-
+-    @draws_widgets
+-    def draw(self):
+         self.script_tabs.selected_index = None
+         # ^ To circumvent a bug where the index gets set to 0 on child changes
+         # https://github.com/jupyter-widgets/ipywidgets/issues/2988
+-        self.script_tabs.children = self._outputs
+-        for i, title in enumerate(self._titles):
++        self.script_tabs.children = outputs
++        for i, title in enumerate(titles):
+             self.script_tabs.set_title(i, title)
+         self._add_new_script_tab()
+-        self.script_tabs.selected_index = self._active_index
+-
+-    def update_nodes(self, nodes_dictionary: dict):
+-        self.node_selector.update(nodes_dictionary=nodes_dictionary)
++        self.script_tabs.selected_index = active_index
+ 
+     def _add_new_script_tab(self):
+         self.script_tabs.children += (
+             widgets.Output(layout={"border": "1px solid black"}),
+         )
+         self.script_tabs.set_title(len(self.script_tabs.children) - 1, "+")
+-
+-    def close(self):
+-        self.node_selector.close()
+-        super().close()
+```
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/boxes/node_interface/input_widgets.py` & `ironflow-0.post0.dev1/ironflow/gui/boxes/node_interface/input_widgets.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -9,24 +9,24 @@
+ 
+ from typing import TYPE_CHECKING
+ 
+ import ipywidgets as widgets
+ 
+ if TYPE_CHECKING:
+     from ironflow.model.node import Node
+-    from ironflow.gui.workflows.screen import WorkflowsGUI
++    from ironflow.gui.gui import GUI
+ 
+ 
+ class SliderControl:
+-    def __init__(self, screen: WorkflowsGUI, node: Node):
+-        self.screen = screen
++    def __init__(self, gui: GUI, node: Node):
++        self.gui = gui
+         self.node = node
+         self.widget = widgets.FloatSlider(
+             value=self.node.val, min=0, max=10, continuous_update=False
+         )
+ 
+         self.widget.observe(self.widget_change, names="value")
+ 
+     def widget_change(self, change: dict) -> None:
+         self.node.set_state({"val": change["new"]}, 0)
+         self.node.update_event()
+-        self.screen.redraw_active_flow_canvas()
++        self.gui.redraw_active_flow_canvas()
+```
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/boxes/node_interface/representation.py` & `ironflow-0.post0.dev1/ironflow/gui/boxes/node_interface/representation.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -8,75 +8,49 @@
+ from __future__ import annotations
+ 
+ from typing import TYPE_CHECKING
+ 
+ import ipywidgets as widgets
+ from IPython.display import display
+ 
+-from ironflow.gui.draws_widgets import DrawsWidgets, draws_widgets
++from ironflow.gui.boxes.node_interface.base import NodeInterfaceBase
+ 
+ if TYPE_CHECKING:
+-    from ironflow.gui.workflows.canvas_widgets import NodeWidget
++    from ironflow.gui.canvas_widgets import NodeWidget
+ 
+ 
+-class NodePresenter(DrawsWidgets):
++class NodePresenter(NodeInterfaceBase):
+     """Handles the display of nodes with a representation."""
+ 
+-    main_widget_class = widgets.VBox
+-
+     def __init__(self):
+         super().__init__()
+-        self.node_widget = None
++        self._node_widget = None
+         self._widgets = []
+         self._toggles = []
+ 
+-        self._toggle_box = widgets.HBox([], layout={"flex_flow": "row wrap"})
+-        self._representation_box = widgets.VBox([], layout={"max_height": "325px"})
+-
+-        self._border = "1px solid black"
+-        self.widget.children = [self._toggle_box, self._representation_box]
+-        self.widget.layout.width = "100%"
+-        self.widget.layout.border = ""
+-
+-    def draw_for_node_widget(self, node_widget: NodeWidget):
+-        self.clear()
+-        self.node_widget = node_widget
+-        if node_widget is not None:
+-            self.draw()
+-
+-    def update(self) -> None:
+-        if (
+-            self.node_widget is not None
+-            and self.node_widget.node.representation_updated
+-        ):
+-            self.draw()
+-
+-    @draws_widgets
+-    def draw(self):
+-        representations_dict = self.node_widget.node.representations
+-
+-        if len(representations_dict) != len(self._widgets):
+-            self._widgets = self._build_widgets(representations_dict)
+-            self._toggles = self._build_toggles(representations_dict)
+-
+-        for toggle, widget, representation in zip(
+-            self._toggles, self._widgets, representations_dict.values()
+-        ):
+-            widget.clear_output()
+-            widget.layout.border = ""
+-            if toggle.value:
+-                widget.layout.border = self._border
+-                with widget:
+-                    display(representation)
+-
+-        self._toggle_box.children = self._toggles
+-        self._representation_box.children = self._widgets
+-
+-        self.node_widget.node.representation_updated = False
+-        return self.widget
++    @property
++    def node_widget(self) -> NodeWidget | None:
++        return self._node_widget
++
++    @node_widget.setter
++    def node_widget(self, new_node_widget: NodeWidget | None):
++        if self._node_widget is not None:
++            self.clear_output()
++            self._node_widget.represent_button.pressed = False
++            self._node_widget.represent_button.draw()  # Re-draw it as un-pressed
++
++        if new_node_widget is not None:
++            new_node_widget.node.representation_updated = True
++            self._node_widget = new_node_widget
++            self._widgets = self._build_widgets(new_node_widget.node.representations)
++            self._toggles = self._build_toggles(new_node_widget.node.representations)
++        else:
++            self._node_widget = None
++            self._widgets = []
++            self._toggles = []
+ 
+     @staticmethod
+     def _build_widgets(representations: dict) -> list[widgets.Output]:
+         return [
+             widgets.Output(layout={"border": "solid 1px gray"}) for _ in representations
+         ]
+ 
+@@ -88,22 +62,47 @@
+             )
+             toggle.observe(self._on_toggle)
+             toggles.append(toggle)
+         return toggles
+ 
+     def _on_toggle(self, change: dict) -> None:
+         if change["name"] == "value":
+-            self.draw()
++            self._draw()
+ 
+-    def clear(self):
+-        if self.node_widget is not None:
+-            self.node_widget.represent_button.pressed = False
+-            self.node_widget.represent_button.draw()  # Re-draw it as un-pressed
+-        self.node_widget = None
++    def _draw(self):
++        self.clear_output()
+ 
+-        self._widgets = []
+-        self._toggles = []
++        representations = []
++        for (toggle, widget, representation) in zip(
++            self._toggles, self._widgets, self.node_widget.node.representations.values()
++        ):
++            if toggle.value:
++                with widget:
++                    display(representation)
++                representations.append(widget)
++
++        with self.output:
++            display(
++                widgets.VBox(
++                    [
++                        widgets.HBox(self._toggles, layout={"flex_flow": "row wrap"}),
++                        *representations,
++                    ]
++                )
++            )
++
++    def draw(self) -> None:
++        if (
++            self.node_widget is not None
++            and self.node_widget.node.representation_updated
++        ):
++            self._draw()
++            self.node_widget.node.representation_updated = False
+ 
+-        self.widget.layout.border = ""
+-        self._toggle_box.children = []
+-        self._representation_box.children = []
+-        super().clear()
++    def clear_output(self) -> None:
++        for w in self._widgets:
++            w.clear_output()
++        super().clear_output()
++
++    def close(self) -> None:
++        self.node_widget = None
++        self.clear_output()
+```
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/boxes/text_output.py` & `ironflow-0.post0.dev1/ironflow/gui/boxes/text_output.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -6,38 +6,42 @@
+ """
+ 
+ from __future__ import annotations
+ 
+ import ipywidgets as widgets
+ from IPython.display import display
+ 
+-from ironflow.gui.draws_widgets import DrawsWidgets
++from ironflow.gui.boxes.base import Box
+ 
+ 
+-class TextOut(DrawsWidgets):
+-    main_widget_class = widgets.VBox
++class TextOut(Box):
++    box_class = widgets.VBox
+ 
+-    def __init__(self, *args, **kwargs):
+-        super().__init__(*args, **kwargs)
+-        self.widget.width = "100%"
+-        self.widget.border = "1px solid black"
++    def __init__(self):
++        super().__init__()
+         self._output = widgets.Output()
+         self._button = widgets.Button(
+             tooltip="Clear output",
+             description="clear",
+             layout={"width": "100px"},
+         )
+         self._button.on_click(self._click_button)
+ 
++    @property
++    def layout(self):
++        return widgets.Layout(
++            width="100%",
++            border="1px solid black",
++        )
++
+     def clear(self):
+-        self._output.clear_output()
+-        self.widget.children = []
+         super().clear()
++        self._output.clear_output()
+ 
+     def _click_button(self, change: dict) -> None:
+         self.clear()
+ 
+     def print(self, msg: str):
+         self._output.clear_output()
+         with self._output:
+             display(msg)
+-        self.widget.children = [self._output, self._button]
++        self.box.children = [self._output, self._button]
+```
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/boxes/toolbar.py` & `ironflow-0.post0.dev1/ironflow/gui/boxes/toolbar.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -5,15 +5,15 @@
+ A place to collect all the UI buttons.
+ """
+ 
+ from __future__ import annotations
+ 
+ import ipywidgets as widgets
+ 
+-from ironflow.gui.draws_widgets import DrawsWidgets
++from ironflow.gui.boxes.base import Box
+ 
+ 
+ class Buttons:
+     def __init__(self):
+         """Toolbar buttons, declared in the order they will appear."""
+         layout = widgets.Layout(width="50px")
+         # Icon source: https://fontawesome.com
+@@ -68,21 +68,21 @@
+         )
+ 
+     def __iter__(self):
+         """Iterates like a list based on order of attribute declaration"""
+         return self.__dict__.values().__iter__()
+ 
+ 
+-class Toolbar(DrawsWidgets):
+-    main_widget_class = widgets.HBox
++class Toolbar(Box):
++    box_class = widgets.HBox
+ 
+-    def __init__(self, *args, **kwargs):
+-        super().__init__(*args, **kwargs)
++    def __init__(self):
++        super().__init__()
+         alg_modes = ["data", "exec"]
+         self.alg_mode_dropdown = widgets.Dropdown(
+             options=alg_modes,
+             value=alg_modes[0],
+             disabled=False,
+             layout=widgets.Layout(width="80px"),
+         )
+         self.buttons = Buttons()
+-        self.widget.children = [self.alg_mode_dropdown, *self.buttons]
++        self.box.children = [self.alg_mode_dropdown, *self.buttons]
+```
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/boxes/user_input.py` & `ironflow-0.post0.dev1/ironflow/gui/boxes/user_input.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -7,39 +7,38 @@
+ 
+ from __future__ import annotations
+ 
+ from typing import Any, Optional
+ 
+ import ipywidgets as widgets
+ 
+-from ironflow.gui.draws_widgets import DrawsWidgets
++from ironflow.gui.boxes.base import Box
+ 
+ 
+-class UserInput(DrawsWidgets):
+-    main_widget_class = widgets.HBox
++class UserInput(Box):
++    box_class = widgets.HBox
+ 
+-    def __init__(self, *args, **kwargs):
+-        super().__init__(*args, **kwargs)
++    def __init__(self):
++        super().__init__()
+         self.input_field = widgets.Text(value="INIT VALUE", description="DESCRIPTION")
+         self.decision_info = widgets.Label(value="INIT VALUE")
+         button_layout = widgets.Layout(width="50px")
+         self.ok_button = widgets.Button(
+             tooltip="Confirm", icon="check", layout=button_layout
+         )
+         self._last_ok_callback = None
+         self.cancel_button = widgets.Button(
+             tooltip="Cancel", icon="ban", layout=button_layout
+         )
+         # Todo: Use xmark once this is available
+-        self.cancel_button.on_click(self._click_clear)
++        self.cancel_button.on_click(self.close)
+ 
+     def clear(self):
+-        self._clear_callback()
+-        self.widget.children = []
+         super().clear()
++        self._clear_callback()
+ 
+     @property
+     def text(self):
+         return self.input_field.value
+ 
+     def wrap_callback(self, callback: callable) -> callable:
+         def wrapped_callback(change: dict) -> None:
+@@ -64,15 +63,15 @@
+     def _open(
+         self,
+         widget: widgets.Widget,
+         callback: callable,
+         ok_tooltip: str,
+         cancel_tooltip: str,
+     ):
+-        self.widget.children = [widget, self.ok_button, self.cancel_button]
++        self._box.children = [widget, self.ok_button, self.cancel_button]
+         self.ok_button.tooltip = ok_tooltip
+         self.cancel_button.tooltip = cancel_tooltip
+         self._set_callback(callback)
+ 
+     def open_text(
+         self,
+         description: str,
+@@ -96,9 +95,9 @@
+         callback: callable,
+         ok_tooltip: str = "Confirm",
+         cancel_tooltip: str = "Cancel",
+     ):
+         self.decision_info.value = description
+         self._open(self.decision_info, callback, ok_tooltip, cancel_tooltip)
+ 
+-    def _click_clear(self, change: None):
++    def close(self, change: None):
+         self.clear()
+```
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/base.py` & `ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/base.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -6,22 +6,23 @@
+ """
+ 
+ from __future__ import annotations
+ 
+ from abc import ABC, abstractmethod
+ from typing import TYPE_CHECKING, Optional, Union
+ 
++from ipycanvas import Canvas
++
++from ironflow.gui.canvas_widgets.layouts import Layout
++
+ Number = Union[int, float]
+ if TYPE_CHECKING:
+-    from ipycanvas import Canvas
+-    from ironflow.gui.workflows.canvas_widgets.flow import FlowCanvas
+-    from ironflow.gui.workflows.screen import WorkflowsGUI
+-    from ironflow.model.flow import Flow
+-    from ironflow.model.model import HasSession
+-    from ironflow.gui.workflows.canvas_widgets.layouts import Layout
++    from ironflow.gui.gui import GUI
++    from ironflow.gui.canvas_widgets.flow import FlowCanvas
++    from ironflow.model import Flow
+ 
+ 
+ class CanvasWidget(ABC):
+     """
+     Parent class for all "widgets" that exist inside the scope of the flow canvas.
+     """
+ 
+@@ -72,22 +73,18 @@
+         return self.parent.y + self._y
+ 
+     @property
+     def canvas(self) -> Canvas:
+         return self.parent.canvas
+ 
+     @property
+-    def gui(self) -> HasSession:
++    def gui(self) -> GUI:
+         return self.parent.gui
+ 
+     @property
+-    def screen(self) -> WorkflowsGUI:
+-        return self.parent.screen
+-
+-    @property
+     def flow(self) -> Flow:
+         return self.parent.flow
+ 
+     @property
+     def flow_canvas(self) -> FlowCanvas:
+         return self.parent.flow_canvas
+```
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/buttons.py` & `ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/buttons.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -6,21 +6,21 @@
+ """
+ 
+ from __future__ import annotations
+ 
+ from abc import ABC, abstractmethod
+ from typing import TYPE_CHECKING, Optional
+ 
+-from ironflow.model.port import NodeInput, NodeOutput
+-from ironflow.gui.workflows.canvas_widgets.base import CanvasWidget, HideableWidget
+-from ironflow.gui.workflows.canvas_widgets.layouts import ButtonLayout
++from ironflow.gui.canvas_widgets.base import CanvasWidget, HideableWidget
++from ironflow.gui.canvas_widgets.layouts import ButtonLayout
++from ironflow.model import NodeInput, NodeOutput
+ 
+ if TYPE_CHECKING:
+-    from ironflow.gui.workflows.canvas_widgets.base import Number
+-    from ironflow.gui.workflows.canvas_widgets.nodes import NodeWidget
++    from ironflow.gui.canvas_widgets.base import Number
++    from ironflow.gui.canvas_widgets.nodes import NodeWidget
+     from ironflow.model import NodePort
+ 
+ 
+ class ButtonWidget(CanvasWidget, ABC):
+     def __init__(
+         self,
+         x: Number,
+@@ -45,15 +45,15 @@
+         self.deselect()
+         return last_selected_object
+ 
+     def press(self):
+         self.pressed = True
+         self.on_pressed()
+         # Ok, now here is a weird hack:
+-        self.screen.update_node_control()
++        self.gui.update_node_control()
+         # This way, if a button causes some change in node-state, it gets reflected in the node_controller,
+         # e.g. if we `run` or `remove` some job, but a nodestream node is taking that job as input.
+         # Performance and usability hits are minimal, but from a maintenance perspective it is super bad, confusing,
+         # and hard to maintain, so it would be much nicer in the future to find a way to hook the node_controller right
+         #  onto input updates on the nodes
+ 
+     def unpress(self):
+@@ -96,18 +96,18 @@
+         layout: ButtonLayout,
+         selected: bool = False,
+         title="SHOW",
+     ):
+         super().__init__(x, y, parent, layout, selected, title=title)
+ 
+     def on_pressed(self):
+-        self.screen.open_node_presenter(self.parent)
++        self.gui.open_node_presenter(self.parent)
+ 
+     def on_unpressed(self):
+-        self.screen.close_node_presenter()
++        self.gui.close_node_presenter()
+ 
+ 
+ class ExpandCollapseButtonWidget(ButtonWidget, HideableWidget, ABC):
+     def __init__(
+         self,
+         x: Number,
+         y: Number,
+```
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/flow.py` & `ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/flow.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -10,25 +10,24 @@
+ from time import time
+ from typing import TYPE_CHECKING, Optional
+ 
+ import ipywidgets as widgets
+ from ipycanvas import Canvas, hold_canvas
+ from IPython.display import display
+ 
+-from ironflow.model.port import NodeInput, NodeOutput
+-from ironflow.gui.workflows.canvas_widgets.base import CanvasWidget
+-from ironflow.gui.workflows.canvas_widgets.layouts import NodeLayout
+-from ironflow.gui.workflows.canvas_widgets.nodes import NodeWidget
+-from ironflow.gui.workflows.canvas_widgets.ports import PortWidget
++from ironflow.gui.canvas_widgets.base import CanvasWidget
++from ironflow.gui.canvas_widgets.buttons import RepresentButtonWidget
++from ironflow.gui.canvas_widgets.layouts import NodeLayout
++from ironflow.gui.canvas_widgets.nodes import NodeWidget, ButtonNodeWidget
++from ironflow.gui.canvas_widgets.ports import PortWidget
+ 
+ if TYPE_CHECKING:
++    from ironflow.gui.canvas_widgets.base import Number
+     from ironflow.gui.gui import GUI
+-    from ironflow.gui.workflows.canvas_widgets.base import Number
+-    from ironflow.gui.workflows.screen import WorkflowsGUI
+-    from ironflow.model.flow import Flow
++    from ironflow.model import Flow
+     from ironflow.model.node import Node
+ 
+ 
+ class FlowCanvas:
+     """
+     A canvas for representing a particular Ryven script, which is determined at instantiation by the currently active
+     gui script.
+@@ -44,17 +43,17 @@
+     Keyboard behaviour: Todo
+         - ESC: Deselect all.
+         - Backspace/Delete:
+             - If a node is selected, deletes it
+             - If a port is selected, deletes all connections it is part of
+     """
+ 
+-    def __init__(self, screen: WorkflowsGUI, flow: Flow):
+-        self.screen = screen
+-        self.flow = flow
++    def __init__(self, gui: GUI, flow: Optional[Flow] = None):
++        self._gui = gui
++        self.flow = flow if flow is not None else gui.flow
+ 
+         self._standard_size = (1800, 800)
+         self._zoom_factors = [0.50, 0.75, 1.00, 1.25, 1.50, 1.75, 2.00]
+         self._zoom_index = 2
+         self._width, self._height = self._get_size()
+ 
+         self._canvas_color = "black"  # "#584f4e"
+@@ -86,27 +85,26 @@
+         self._mouse_is_down = False
+         self._last_mouse_down = time()
+         self._double_click_speed = (
+             0.25  # In seconds. Todo: Put this in a config somewhere
+         )
+ 
+         self._object_to_gui_dict = {}
+-        self._highlighted_ports: list[PortWidget] = []
+ 
+     @property
+     def canvas(self):
+         return self._canvas
+ 
+     @property
+-    def flow_canvas(self) -> FlowCanvas:
+-        return self
++    def gui(self):
++        return self._gui
+ 
+     @property
+-    def gui(self) -> GUI:
+-        return self.screen.gui
++    def flow_canvas(self) -> FlowCanvas:
++        return self
+ 
+     @property
+     def title(self) -> str:
+         return self.flow.script.title
+ 
+     def display(self):
+         self.output.clear_output()
+@@ -157,15 +155,15 @@
+         sel_object = self.get_element_at_xy(x, y)
+         last_object = self._last_selected_object
+ 
+         if sel_object is None:
+             if last_object is not None:
+                 last_object.deselect()
+             elif time_since_last_click < self._double_click_speed:
+-                self.add_node(x, y, self.screen.new_node_class)
++                self.add_node(x, y, self.gui.new_node_class)
+                 self._built_object_to_gui_dict()
+         else:
+             if (
+                 sel_object == last_object
+                 and time_since_last_click < self._double_click_speed
+             ):
+                 sel_object = sel_object.on_double_click()
+@@ -204,15 +202,15 @@
+ 
+     def redraw(self) -> None:
+         with hold_canvas(self._canvas):
+             self.canvas_restart()
+             [o.draw() for o in self.objects_to_draw]
+             for c in self.flow.connections:
+                 self.draw_connection(c.inp, c.out)
+-        self.screen.update_node_presenter()
++        self.gui.update_node_presenter()
+ 
+     def load_node(self, x: Number, y: Number, node: Node) -> NodeWidget:
+         layout = NodeLayout()
+ 
+         if hasattr(node, "main_widget_class") and node.main_widget_class is not None:
+             if isinstance(node.main_widget_class, str):
+                 node_class = eval(node.main_widget_class)
+@@ -249,63 +247,14 @@
+         if zoom_index != self._zoom_index:
+             self._zoom_index = zoom_index
+             self._width, self._height = self._get_size()
+             self._canvas.width = self._width
+             self._canvas.height = self._height
+             self.redraw()
+         else:
+-            self.screen.print("Zoom limit reached")
++            self.gui.print("Zoom limit reached")
+ 
+     def zoom_in(self) -> None:
+         self._zoom(max(self._zoom_index - 1, 0))
+ 
+     def zoom_out(self) -> None:
+         self._zoom(min(self._zoom_index + 1, len(self._zoom_factors) - 1))
+-
+-    def highlight_compatible_ports(self, selected: PortWidget):
+-        if selected.port.otype is None:
+-            return
+-
+-        compatible_port_widgets = self._get_port_widgets_ontologically_compatible_with(
+-            selected.port
+-        )
+-
+-        for port_widget in compatible_port_widgets:
+-            port_widget.highlight()
+-        self._highlighted_ports = compatible_port_widgets
+-
+-    def _get_port_widgets_ontologically_compatible_with(self, port):
+-        if isinstance(port, NodeInput):
+-            input_tree = port.otype.get_source_tree(
+-                additional_requirements=port.get_downstream_requirements()
+-            )
+-            return [
+-                subwidget
+-                for subwidget in self._port_widgets
+-                if isinstance(subwidget.port, NodeOutput)
+-                and subwidget.port.all_connections_found_in(input_tree)
+-            ]
+-        elif isinstance(port, NodeOutput):
+-            return [
+-                subwidget
+-                for subwidget in self._port_widgets
+-                if subwidget.port.otype is not None  # Progressively expensive checks
+-                and port.otype in subwidget.port.otype.get_sources()
+-                and subwidget.port.workflow_tree_contains_connections_of(port)
+-            ]
+-        else:
+-            raise TypeError(
+-                f"Expected a {NodeInput} or {NodeOutput} but got {type(port)}"
+-            )
+-
+-    @property
+-    def _port_widgets(self):
+-        return [
+-            subwidget
+-            for node_widget in self.objects_to_draw
+-            for subwidget in node_widget.objects_to_draw
+-            if isinstance(subwidget, PortWidget)
+-        ]
+-
+-    def clear_port_highlighting(self):
+-        for port_widget in self._highlighted_ports:
+-            port_widget.dehighlight()
+```
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/layouts.py` & `ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/layouts.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -24,43 +24,37 @@
+     @property
+     def font_string(self):
+         return f"{self.font_size}px {self.font}"
+ 
+ 
+ @dataclass
+ class NodeLayout(Layout):
+-    width: int = 240
++    width: int = 200
+     height: int = 100
+     font_size: int = 22
+     title_box_height: int = 30
+     updating_color: str = "red"
+-    max_title_chars: int = 14
+ 
+ 
+ @dataclass
+ class PortLayout(Layout, ABC):
+     width: int = 20
+     height: int = 20
+-    max_title_chars: int = 10
+-    highlight_color = "white"
+ 
+ 
+ @dataclass
+ class DataPortLayout(PortLayout):
+-    valid_color: str = "lightgreen"
+-    valid_selected_color: str = "darkgreen"
+-    invalid_color: str = "red"
+-    invalid_selected_color: str = "darkred"
++    background_color: str = "lightgreen"
++    selected_color: str = "darkgreen"
+ 
+ 
+ @dataclass
+ class ExecPortLayout(PortLayout):
+-    # Exec ports have no data, so are always valid
+-    valid_color: str = "lightblue"
+-    valid_selected_color: str = "darkblue"
++    background_color: str = "lightblue"
++    selected_color: str = "darkblue"
+ 
+ 
+ @dataclass
+ class ButtonLayout(Layout):
+     font_size: int = 16
+     width: int = 60
+     height: int = 20
+```
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/canvas_widgets/nodes.py` & `ironflow-0.post0.dev1/ironflow/gui/canvas_widgets/nodes.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -8,33 +8,33 @@
+ from __future__ import annotations
+ 
+ from typing import TYPE_CHECKING, Optional
+ 
+ import numpy as np
+ from ipycanvas import hold_canvas
+ 
+-from ironflow.gui.workflows.canvas_widgets.base import CanvasWidget
+-from ironflow.gui.workflows.canvas_widgets.buttons import (
++from ironflow.gui.canvas_widgets.base import CanvasWidget
++from ironflow.gui.canvas_widgets.buttons import (
+     RepresentButtonWidget,
+     ExpandButtonWidget,
+     CollapseButtonWidget,
+     ExecButtonWidget,
+ )
+-from ironflow.gui.workflows.canvas_widgets.layouts import (
++from ironflow.gui.canvas_widgets.layouts import (
+     NodeLayout,
+     DataPortLayout,
+     ExecPortLayout,
+     ButtonLayout,
+ )
+-from ironflow.gui.workflows.canvas_widgets.ports import PortWidget
++from ironflow.gui.canvas_widgets.ports import PortWidget
+ 
+ if TYPE_CHECKING:
+-    from ironflow.gui.workflows.canvas_widgets.flow import FlowCanvas
+-    from ironflow.gui.workflows.canvas_widgets.base import Number
+-    from ironflow.model.port import NodeInputBP, NodeOutputBP
++    from ironflow.gui.canvas_widgets.flow import FlowCanvas
++    from ironflow.gui.canvas_widgets.base import Number
++    from ironflow.model import NodeInputBP, NodeOutputBP
+     from ironflow.model.node import Node
+ 
+ 
+ class NodeWidget(CanvasWidget):
+     """
+     The main ipycanvas representation of a node. Has graphical elements for IO ports. Collapsable to save space.
+ 
+@@ -133,21 +133,21 @@
+         if last_selected_object == self:
+             return self
+         else:
+             if last_selected_object is not None:
+                 last_selected_object.deselect()
+             self.select()
+             try:
+-                self.screen.open_node_control(self.node)
++                self.gui.open_node_control(self.node)
+                 return self
+             except Exception as e:
+-                self.screen.print(
++                self.gui.print(
+                     f"Failed to handle selection of {self} with exception {e}"
+                 )
+-                self.screen.close_node_control()
++                self.gui.close_node_control()
+                 self.deselect()
+                 return None
+ 
+     def on_double_click(self) -> None:
+         self.delete()
+         return None
+ 
+@@ -175,31 +175,29 @@
+     def draw_title(self) -> None:
+         self.canvas.fill_style = self.node.color
+         self.canvas.fill_rect(self.x, self.y, self.width, self._title_box_height)
+         self.canvas.font = self.layout.font_string
+         self.canvas.fill_style = self.layout.font_color
+         x = self.x + (self.width * 0.04)
+         y = self.y + self._title_box_height - 8
+-        self.canvas.fill_text(self.title[: self.layout.max_title_chars], x, y)
++        self.canvas.fill_text(self.title, x, y)
+ 
+     def _add_ports(
+         self,
+         radius: Number,
+         inputs: Optional[list[NodeInputBP]] = None,
+         outputs: Optional[list[NodeOutputBP]] = None,
+         border: Number = 1.4,
+     ) -> None:
+         if inputs is not None:
+             x = radius * border
+             data = inputs
+-            title_alignment = "start"
+         elif outputs is not None:
+             x = self.width - radius * border
+             data = outputs
+-            title_alignment = "end"
+         else:
+             return
+ 
+         n_ports = len(data)
+         for i_port in range(n_ports):
+             port = data[i_port]
+             data_or_exec = port.type_
+@@ -209,15 +207,14 @@
+                     y=self._subwidget_y_locs[i_port],
+                     parent=self,
+                     layout=self.port_layouts[data_or_exec],
+                     port=port,
+                     hidden_x=x,
+                     hidden_y=self._subwidget_y_locs[0],
+                     radius=radius,
+-                    title_alignment=title_alignment,
+                 )
+             )
+             if data_or_exec == "exec" and inputs is not None:
+                 button_layout = ButtonLayout()
+                 self.add_widget(
+                     ExecButtonWidget(
+                         x=x + radius,
+@@ -231,28 +228,28 @@
+     def add_inputs(self) -> None:
+         self._add_ports(radius=self.port_radius, inputs=self.inputs)
+ 
+     def add_outputs(self) -> None:
+         self._add_ports(radius=self.port_radius, outputs=self.outputs)
+ 
+     def delete(self) -> None:
+-        self.screen.ensure_node_not_presented(self)
+-        self.screen.ensure_node_not_controlled(self.node)
++        self.gui.ensure_node_not_presented(self)
++        self.gui.ensure_node_not_controlled(self.node)
+         for c in self.flow.connections[
+             ::-1
+         ]:  # Reverse to make sure we traverse whole thing even if we delete
+             # Todo: Can we be more efficient than looping over all nodes?
+             if (c.inp.node == self.node) or (c.out.node == self.node):
+                 self.flow.remove_connection(c)
+         self.flow.remove_node(self.node)
+         self.parent.objects_to_draw.remove(self)
+ 
+     def deselect(self) -> None:
+         super().deselect()
+-        self.screen.ensure_node_not_controlled(self.node)
++        self.gui.ensure_node_not_controlled(self.node)
+ 
+     @property
+     def port_widgets(self) -> list[PortWidget]:
+         return [o for o in self.objects_to_draw if isinstance(o, PortWidget)]
+ 
+     def expand_io(self):
+         self._height = self._expanded_height
+```
+
+### Comparing `ironflow-0.0.5/ironflow/gui/workflows/screen.py` & `ironflow-0.post0.dev1/ironflow/gui/gui.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,247 +1,325 @@
+ # coding: utf-8
+ # Copyright (c) Max-Planck-Institut für Eisenforschung GmbH - Computational Materials Design (CM) Department
+ # Distributed under the terms of "New BSD License", see the LICENSE file.
+ """
+-An interface for doing the visual scripting
++Top-level objects for getting the front and back end (and various parts of the front end) to talk to each other.
+ """
+ 
+ from __future__ import annotations
+ 
+-from typing import TYPE_CHECKING
++from typing import TYPE_CHECKING, Optional, Type
+ 
+ import ipywidgets as widgets
++from IPython.display import HTML
+ 
+-from ironflow.gui.draws_widgets import DrawsWidgets, draws_widgets
+-from ironflow.gui.workflows.boxes.flow import FlowBox
+-from ironflow.gui.workflows.boxes.node_interface.control import NodeController
+-from ironflow.gui.workflows.boxes.node_interface.representation import NodePresenter
+-from ironflow.gui.workflows.boxes.text_output import TextOut
+-from ironflow.gui.workflows.boxes.toolbar import Toolbar
+-from ironflow.gui.workflows.boxes.user_input import UserInput
+-from ironflow.gui.workflows.canvas_widgets.flow import FlowCanvas
+-from ironflow.utils import display_string
++from ironflow.gui.boxes import (
++    Toolbar,
++    NodeController,
++    NodePresenter,
++    TextOut,
++    UserInput,
++    FlowBox,
++)
++from ironflow.gui.canvas_widgets import FlowCanvas
++from ironflow.model.model import HasSession
+ 
+ if TYPE_CHECKING:
+-    from ironflow.gui.gui import GUI
+-    from ironflow.gui.workflows.canvas_widgets.nodes import NodeWidget
+-    from ironflow.model.flow import Flow
+     from ironflow.model.node import Node
+-    from ironflow.model.port import NodeInput, NodeOutput
++    from ironflow.gui.canvas_widgets.nodes import NodeWidget
+ 
++debug_view = widgets.Output(layout={"border": "1px solid black"})
+ 
+-class WorkflowsGUI(DrawsWidgets):
+-    main_widget_class = widgets.VBox
+ 
+-    def __new__(cls, gui, *args, **kwargs):
+-        return super().__new__(cls, *args, **kwargs)
+-
+-    def __init__(self, gui: GUI, *args, **kwargs):
+-        super().__init__(*args, **kwargs)
++class GUI(HasSession):
++    """
++    The main ironflow object, connecting a ryven backend with a jupyter-friendly ipywidgets+ipycanvas frontend.
++
++    Methods:
++        draw: Build the ipywidget to interact with.
++        register_user_node: Register with ironflow a new node from the current python process.
++    """
++
++    def __init__(
++        self,
++        session_title: str,
++        extra_nodes_packages: Optional[list] = None,
++        script_title: Optional[str] = None,
++    ):
++        """
++        Create a new gui instance.
++
++        Args:
++            session_title (str): Title of the session to use. Will look for a json file of the same name and try to
++                read it. If no such file exists, simply makes a new script instead.
++            extra_nodes_packages (list | None): an optional list of nodes to register at instantiation. List items can
++                be either a list of `ironflow.model.node.Node` subclasses, a module containing such subclasses, or a .py
++                file of a module containing such subclasses. In all cases only those subclasses with the name pattern
++                `*_Node` will be registered. (Default is None, don't register any extra nodes.)
++            script_title (str|None): Title for an initial script. (Default is None, which generates "script_0" if a
++                new script is needed on initialization, i.e. when existing session data cannot be read.)
++        """
++        super().__init__(
++            session_title=session_title, extra_nodes_packages=extra_nodes_packages
++        )
+ 
+-        self.gui = gui
+         self.flow_canvases = []
+-
+         self.toolbar = Toolbar()
+         self.node_controller = NodeController(self)
+         self.node_presenter = NodePresenter()
+         self.text_out = TextOut()
+         self.input = UserInput()
+-        self.flow_box = FlowBox(self.gui.nodes_dictionary)
++        self.flow_box = FlowBox(self.nodes_dictionary)
+ 
+-        self.toolbar.alg_mode_dropdown.observe(
+-            self._change_alg_mode_dropdown, names="value"
+-        )
+-        self.toolbar.buttons.help_node.on_click(self._click_node_help)
+-        self.toolbar.buttons.load.on_click(self._click_load)
+-        self.toolbar.buttons.save.on_click(self._click_save)
+-        self.toolbar.buttons.add_node.on_click(self._click_add_node)
+-        self.toolbar.buttons.delete_node.on_click(self._click_delete_node)
+-        self.toolbar.buttons.create_script.on_click(self._click_create_script)
+-        self.toolbar.buttons.rename_script.on_click(self._click_rename_script)
+-        self.toolbar.buttons.delete_script.on_click(self._click_delete_script)
+-        self.toolbar.buttons.zero_location.on_click(self._click_zero_location)
+-        self.toolbar.buttons.zoom_in.on_click(self._click_zoom_in)
+-        self.toolbar.buttons.zoom_out.on_click(self._click_zoom_out)
+-        self.flow_box.script_tabs.observe(self._change_script_tabs)
++        try:
++            self.load(f"{self.session_title}.json")
++            print(f"Loaded session data for {self.session_title}")
++        except FileNotFoundError:
++            print(
++                f"No session data found for {self.session_title}, making a new script."
++            )
++            self.create_script(script_title)
++        self.update_tabs()
+ 
+-        self.widget.children = [
+-            self.toolbar.widget,
+-            self.input.widget,
+-            self.flow_box.widget,
+-            self.text_out.widget,
+-            widgets.HBox([self.node_controller.widget, self.node_presenter.widget]),
+-        ]
++    def create_script(
++        self,
++        title: Optional[str] = None,
++        create_default_logs: bool = True,
++        data: Optional[dict] = None,
++    ) -> None:
++        super().create_script(
++            title=title, create_default_logs=create_default_logs, data=data
++        )
++        self.flow_canvases.append(FlowCanvas(gui=self))
+ 
+-    @property
+-    def new_node_class(self):
+-        return self.flow_box.node_selector.new_node_class
++    def delete_script(self) -> None:
++        self.flow_canvases.pop(self.active_script_index)
++        self.node_controller.close()
++        self.node_presenter.close()
++        super().delete_script()
+ 
+     @property
+     def flow_canvas(self):
+-        return self.flow_canvases[self.gui.active_script_index]
++        return self.flow_canvases[self.active_script_index]
+ 
+     @property
+-    def selected_node(self) -> Node | None:
+-        selected = self.flow_canvas.get_selected_objects()
+-        return selected[0].node if len(selected) > 0 else None
+-
+-    def update_tabs(self):
+-        self.flow_box.update_tabs(
+-            outputs=[fc.output for fc in self.flow_canvases],
+-            titles=[fc.title for fc in self.flow_canvases],
+-            active_index=self.gui.active_script_index,
+-        )
+-        for fc in self.flow_canvases:
+-            fc.display()
++    def new_node_class(self):
++        return self.flow_box.node_selector.new_node_class
+ 
+-    @draws_widgets
+-    def add_flow(self, flow: Flow):
+-        self.flow_canvases.append(FlowCanvas(screen=self, flow=flow))
++    def serialize(self) -> dict:
++        data = super().serialize()
++        currently_active = self.active_script_index
++        for i_script, script in enumerate(self.session.scripts):
++            all_data = data["scripts"][i_script]["flow"]["nodes"]
++            self.active_script_index = i_script
++            for i, node_widget in enumerate(self.flow_canvas.objects_to_draw):
++                all_data[i]["pos x"] = node_widget.x
++                all_data[i]["pos y"] = node_widget.y
++        self.active_script_index = currently_active
++        return data
+ 
+-    @draws_widgets
+-    def load_from_data(self, data: dict):
++    def load_from_data(self, data: dict) -> None:
++        super().load_from_data(data)
+         self.flow_canvases = []
+-        for i_script, script in enumerate(self.gui.session.scripts):
+-            flow_canvas = FlowCanvas(screen=self, flow=script.flow)
++        for i_script, script in enumerate(self.session.scripts):
++            flow_canvas = FlowCanvas(gui=self, flow=script.flow)
+             all_data = data["scripts"][i_script]["flow"]["nodes"]
+             for i_node, node in enumerate(script.flow.nodes):
+                 flow_canvas.load_node(
+                     all_data[i_node]["pos x"], all_data[i_node]["pos y"], node
+                 )
+             flow_canvas._built_object_to_gui_dict()
+             flow_canvas.redraw()
+             self.flow_canvases.append(flow_canvas)
+ 
++    def register_node(self, node_class: Type[Node], node_group: Optional[str] = None):
++        # Inherited __doc__ still applies just fine, all we do here is update a menu item afterwards.
++        super().register_node(node_class=node_class, node_group=node_group)
++        try:
++            self.flow_box.node_selector.update(self.nodes_dictionary)
++        except AttributeError:
++            pass  # It's not defined yet in the super().__init__ call, which is fine
++
++    def update_tabs(self):
++        self.flow_box.update_tabs(
++            outputs=[fc.output for fc in self.flow_canvases],
++            titles=[fc.title for fc in self.flow_canvases],
++            active_index=self.active_script_index,
++        )
++        for fc in self.flow_canvases:
++            fc.display()
++
+     def open_node_control(self, node: Node) -> None:
+         self.node_controller.draw_for_node(node)
+ 
+     def update_node_control(self) -> None:
+-        self.node_controller.update()
++        self.node_controller.draw()
+ 
+     def close_node_control(self) -> None:
+-        self.node_controller.clear()
++        self.node_controller.node = None
++        self.node_controller.clear_output()
+ 
+     def ensure_node_not_controlled(self, node: Node) -> None:
+         if self.node_controller.node == node:
+-            self.node_controller.clear()
++            self.node_controller.draw_for_node(None)
+ 
+     def open_node_presenter(self, node_widget: NodeWidget):
+-        self.node_presenter.draw_for_node_widget(node_widget)
++        self.node_presenter.node_widget = node_widget
+ 
+     def update_node_presenter(self):
+-        self.node_presenter.update()
++        self.node_presenter.draw()
+ 
+     def close_node_presenter(self):
+-        self.node_presenter.clear()
++        self.node_presenter.close()
+ 
+     def ensure_node_not_presented(self, node_widget: NodeWidget) -> None:
+         if self.node_presenter.node_widget == node_widget:
+-            self.node_presenter.clear()
++            self.node_presenter.node_widget = None
+ 
+     def redraw_active_flow_canvas(self):
+         self.flow_canvas.redraw()
+ 
+     def print(self, msg: str):
+         self.text_out.print(msg)
+ 
+-    def update_nodes_selector(self, nodes_dictionary: dict):
+-        self.flow_box.node_selector.update(nodes_dictionary)
++    @debug_view.capture(clear_output=True)
++    def draw(self) -> widgets.VBox:
++        """
++        Build the gui.
++
++        Returns:
++            ipywidgets.VBox: The gui.
++        """
+ 
+-    def delete_flow(self, i: int):
+-        self.flow_canvases.pop(i)
+-        self.node_controller.close()
+-        self.node_presenter.clear()
++        # Wire callbacks
++        self.toolbar.alg_mode_dropdown.observe(
++            self._change_alg_mode_dropdown, names="value"
++        )
++        self.toolbar.buttons.help_node.on_click(self._click_node_help)
++        self.toolbar.buttons.load.on_click(self._click_load)
++        self.toolbar.buttons.save.on_click(self._click_save)
++        self.toolbar.buttons.add_node.on_click(self._click_add_node)
++        self.toolbar.buttons.delete_node.on_click(self._click_delete_node)
++        self.toolbar.buttons.create_script.on_click(self._click_create_script)
++        self.toolbar.buttons.rename_script.on_click(self._click_rename_script)
++        self.toolbar.buttons.delete_script.on_click(self._click_delete_script)
++        self.toolbar.buttons.zero_location.on_click(self._click_zero_location)
++        self.toolbar.buttons.zoom_in.on_click(self._click_zoom_in)
++        self.toolbar.buttons.zoom_out.on_click(self._click_zoom_out)
++        self.flow_box.script_tabs.observe(self._change_script_tabs)
+ 
++        return widgets.VBox(
++            [
++                self.toolbar.box,
++                self.input.box,
++                self.flow_box.box,
++                self.text_out.box,
++                widgets.HBox([self.node_controller.box, self.node_presenter.box]),
++                debug_view,
++            ]
++        )
++
++    # Type hinting for unused `change` argument in callbacks taken from ipywidgets docs:
++    # https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Events.html#Traitlet-events
+     def _change_alg_mode_dropdown(self, change: dict) -> None:
+         # Current behaviour: Updates the flow mode for all scripts
+         # Todo: Change only for the active script, and update the dropdown on tab (script) switching
+-        for script in self.gui.session.scripts:
++        for script in self.session.scripts:
+             script.flow.set_algorithm_mode(self.toolbar.alg_mode_dropdown.value)
+ 
+     def _click_save(self, change: dict) -> None:
+         self.input.open_text(
+             "Save file",
+             self._click_confirm_save,
+-            self.gui.session_title,
++            self.session_title,
+             description_tooltip="Save to file name (omit the file extension, .json)",
+         )
+         self.print("Choose a file name to save to (omit the file extension, .json)")
+ 
+     def _click_confirm_save(self, change: dict) -> None:
+         file_name = self.input.text
+-        self.gui.save(f"{file_name}.json")
++        self.save(f"{file_name}.json")
+         self.print(f"Session saved to {file_name}.json")
+         self.input.clear()
+ 
+     def _click_load(self, change: dict) -> None:
+         self.input.open_text(
+             "Load file",
+             self._click_confirm_load,
+-            self.gui.session_title,
++            self.session_title,
+             description_tooltip="Load from file name (omit the file extension, .json).",
+         )
+         self.print("Choose a file name to load (omit the file extension, .json)")
+ 
+     def _click_confirm_load(self, change: dict) -> None:
+         file_name = self.input.text
+-        self.gui.load(f"{file_name}.json")
++        self.load(f"{file_name}.json")
+         self.update_tabs()
+-        self.node_presenter.clear()
++        self.node_presenter.clear_output()
+         self.print(f"Session loaded from {file_name}.json")
+         self.input.clear()
+ 
+     def _click_node_help(self, change: dict) -> None:
+-        self.print(
+-            display_string(
+-                f"{self.new_node_class.__name__.replace('_Node', '')}:\n{self.new_node_class.__doc__}"
++        def _pretty_docstring(node_class):
++            """
++            If we just pass a string, `display` doesn't resolve newlines.
++            If we pass a `print`ed string, `display` also shows the `None` value returned by `print`
++            So we use this ugly hack.
++            """
++            string = (
++                f"{node_class.__name__.replace('_Node', '')}:\n{node_class.__doc__}"
++            )
++            return HTML(
++                string.replace("\n", "<br>")
++                .replace("\t", "&emsp;")
++                .replace(" ", "&nbsp;")
+             )
+-        )
++
++        self.print(_pretty_docstring(self.new_node_class))
+ 
+     def _click_add_node(self, change: dict) -> None:
+         self.flow_canvas.add_node(10, 10, self.new_node_class)
+ 
+     def _click_delete_node(self, change: dict) -> None:
+         self.flow_canvas.delete_selected()
+ 
+     def _click_create_script(self, change: dict) -> None:
+-        self.gui.create_script()
++        self.create_script()
+         self.update_tabs()
+ 
+     def _click_rename_script(self, change: dict) -> None:
+         self.input.open_text(
+             "New name",
+             self._click_confirm_rename,
+-            self.gui.script.title,
++            self.script.title,
+             description_tooltip="New script name",
+         )
+         self.print("Choose a new name for the current script")
+ 
+     def _click_confirm_rename(self, change: dict) -> None:
+         new_name = self.input.text
+-        old_name = self.gui.script.title
+-        rename_success = self.gui.rename_script(new_name)
++        old_name = self.script.title
++        rename_success = self.rename_script(new_name)
+         if rename_success:
+-            self.flow_box.script_tabs.set_title(self.gui.active_script_index, new_name)
++            self.flow_box.script_tabs.set_title(self.active_script_index, new_name)
+             self.print(f"Script '{old_name}' renamed '{new_name}'")
+         else:
+             self.print(
+-                f"INVALID NAME: Failed to rename script '{self.gui.script.title}' to '{new_name}'."
++                f"INVALID NAME: Failed to rename script '{self.script.title}' to '{new_name}'."
+             )
+ 
+     def _click_delete_script(self, change: dict) -> None:
+         self.input.open_bool(
+-            f"Delete the entire script {self.gui.script.title}?",
++            f"Delete the entire script {self.script.title}?",
+             self._click_confirm_delete_script,
+         )
+ 
+     def _click_confirm_delete_script(self, change: dict) -> None:
+-        script_name = self.gui.script.title
+-        self.delete_flow(self.gui.active_script_index)
+-        self.gui.delete_script()
++        script_name = self.script.title
++        self.delete_script()
+         self.update_tabs()
+         self.print(f"Script {script_name} deleted")
+ 
+     def _click_zero_location(self, change: dict) -> None:
+         self.flow_canvas.x = 0
+         self.flow_canvas.y = 0
+         self.flow_canvas.redraw()
+@@ -256,21 +334,12 @@
+         self.input.clear()
+         self.text_out.clear()
+ 
+     def _change_script_tabs(self, change: dict):
+         if change["name"] == "selected_index" and change["new"] is not None:
+             self.input.clear()
+             self.flow_canvas.deselect_all()
+-            if self.flow_box.script_tabs.selected_index == self.gui.n_scripts:
+-                self.gui.create_script()
++            if self.flow_box.script_tabs.selected_index == self.n_scripts:
++                self.create_script()
+                 self.update_tabs()
+             else:
+-                self.gui.active_script_index = self.flow_box.script_tabs.selected_index
+-
+-    def close(self):
+-        self.toolbar.close()
+-        self.node_controller.close()
+-        self.node_presenter.close()
+-        self.text_out.close()
+-        self.input.close()
+-        self.flow_box.close()
+-        super().close()
++                self.active_script_index = self.flow_box.script_tabs.selected_index
+```
+
+### Comparing `ironflow-0.0.5/ironflow/model/model.py` & `ironflow-0.post0.dev1/ironflow/model/model.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -12,41 +12,28 @@
+ import types
+ from abc import ABC
+ from inspect import isclass
+ from pathlib import Path
+ from types import ModuleType
+ from typing import Optional, Type
+ 
++from ryvencore import Session, Script, Flow
++
+ from ironflow.model.node import Node
+-from ironflow.model.port import NodeInput, NodeOutput
+-from ironflow.model.session import Session
+-from ironflow.model.flow import Flow
+-from ironflow.model.script import Script
+ 
+ 
+ class HasSession(ABC):
+     """Mixin for an object which has a Ryven session as the underlying model"""
+ 
+-    def __init__(
+-        self,
+-        session_title: str,
+-        *args,
+-        extra_nodes_packages: Optional[list] = None,
+-        enable_ryven_log: bool = False,
+-        **kwargs,
+-    ):
+-        super().__init__(*args, **kwargs)
++    def __init__(self, session_title: str, extra_nodes_packages: Optional[list] = None):
+         self._session = Session()
+         self.session_title = session_title
+         self._active_script_index = 0
+ 
+-        if enable_ryven_log:
+-            self.session.info_messenger().enable()
+-
+-        self.nodes_dictionary = {"recommended": {}}
++        self.nodes_dictionary = {}
+         from ironflow.nodes import built_in
+         from ironflow.nodes.pyiron import atomistics_nodes
+         from ironflow.nodes.std import (
+             basic_operators,
+             control_structures,
+             special_nodes,
+         )
+@@ -167,15 +154,15 @@
+                 update. Already-placed nodes are still instances of the old class and need to be deleted.
+ 
+         Note: You can save the graph as normal, but new gui instances will need to register the same custom nodes before
+             loading the saved graph is possible.
+ 
+         Example:
+             >>> from ironflow import GUI
+-            >>> from ironflow.node_tools import Node, NodeInputBP, NodeOutputBP, dtypes, input_widgets
++            >>> from ironflow.custom_nodes import Node, NodeInputBP, NodeOutputBP, dtypes, input_widgets
+             >>> gui = GUI(script_title='foo')
+             >>>
+             >>> class MyNode(Node):
+             >>>     title = "MyUserNode"
+             >>>     init_inputs = [
+             >>>         NodeInputBP(dtype=dtypes.Integer(default=1), label="foo")
+             >>>     ]
+@@ -257,43 +244,11 @@
+         node_group: Optional[str] = None,
+     ) -> None:
+         if isinstance(source, (str, Path)):
+             self.register_nodes_from_file(source, node_group=node_group)
+         elif isinstance(source, types.ModuleType):
+             self.register_nodes_from_module(source, node_group=node_group)
+         elif isinstance(source, (list, tuple)) and all(
+-            issubclass(item, Node) for item in source
++            [issubclass(item, Node) for item in source]
+         ):
+             for node_class in source:
+                 self.register_node(node_class, node_group=node_group)
+-
+-    def recommend_nodes(self, port: NodeInput | NodeOutput):
+-        recommendations = {}
+-        if port.otype is not None:
+-            if isinstance(port, NodeInput):
+-                recommendations = self._get_nodes_giving_matching_output(port)
+-            elif isinstance(port, NodeOutput):
+-                recommendations = self._get_nodes_taking_matching_input(port)
+-        self.nodes_dictionary["recommended"] = recommendations
+-
+-    def _get_nodes_giving_matching_output(self, port: NodeInput):
+-        requirements = port.get_downstream_requirements()
+-        sources = port.otype.get_sources(requirements)
+-        return {
+-            node.title: node
+-            for node in self.session.nodes
+-            if any(out.otype in sources for out in node.init_outputs)
+-        }
+-
+-    def _get_nodes_taking_matching_input(self, port: NodeOutput):
+-        return {
+-            node.title: node
+-            for node in self.session.nodes
+-            if any(
+-                port.otype in inp.otype.get_sources()
+-                for inp in node.init_inputs
+-                if inp.otype is not None
+-            )
+-        }
+-
+-    def clear_recommended_nodes(self):
+-        self.nodes_dictionary["recommended"] = {}
+```
+
+### Comparing `ironflow-0.0.5/ironflow/model/node.py` & `ironflow-0.post0.dev1/ironflow/nodes/pyiron/atomistics_nodes.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,666 +1,692 @@
+ # coding: utf-8
+ # Copyright (c) Max-Planck-Institut für Eisenforschung GmbH - Computational Materials Design (CM) Department
+ # Distributed under the terms of "New BSD License", see the LICENSE file.
++"""
++Ryven nodes specifc to pyiron (or with ironflow improvements like an ipywidgets representation).
++"""
++
+ from __future__ import annotations
+ 
+-import inspect
++import json
+ from abc import ABC, abstractmethod
+-from typing import Callable, Optional
++from typing import TYPE_CHECKING
+ 
++import matplotlib.pylab as plt
+ import numpy as np
+-from owlready2 import Thing
++
+ from pyiron_atomistics import Project
+-from pyiron_base import GenericJob
+-from ryvencore import Node as NodeCore
+-from ryvencore.Base import Event
+-from ryvencore.InfoMsgs import InfoMsgs
+-from ryvencore.NodePort import NodePort
+-from ryvencore.utils import deserialize
+-
+-from ironflow.gui.workflows.canvas_widgets.nodes import NodeWidget
+-from ironflow.model import dtypes
+-from ironflow.model.otypes import otype_from_str
+-from ironflow.model.port import NodeInput, NodeInputBP, NodeOutput, NodeOutputBP
+-from ironflow.utils import display_string
+-
+-
+-class PortList(list):
+-    """
+-    When used to hold a collection of `NodePort` objects, the values of these ports then become accessible by their
+-    labels, as long as those labels do not match an existing method of the builtin list class.
+-
+-    Warning:
+-        This class makes no check that these labels are unique; if multiple items have the same label, the first one
+-        is returned.
+-
+-    Warning:
+-        Accessing port values in this way side-steps ryven functionality when in exec mode or using an executor
+-        (i.e. when `running_with_executor`).
+-    """
+-
+-    def __init__(self, *args, **kwargs):
+-        super().__init__(self, *args, **kwargs)
+-        self._port_finder = PortFinder(self)
+-        self._value_finder = ValueFinder(self)
+-        # This additional mis-direction is necessary so that ports can have the same labels as list class methods
++from pyiron_atomistics.atomistics.structure.factory import StructureFactory
++from pyiron_atomistics.atomistics.job.atomistic import AtomisticGenericJob
++from pyiron_atomistics.lammps import list_potentials
+ 
+-    @property
+-    def ports(self):
+-        """
+-        Allows attribute-like access to ports by their `label_str`
+-        """
+-        return self._port_finder
++from ironflow.gui.canvas_widgets import ButtonNodeWidget
++from ironflow.model import dtypes, NodeInputBP, NodeOutputBP
++from ironflow.model.node import Node
++from ironflow.nodes.std.special_nodes import DualNodeBase
+ 
+-    @property
+-    def values(self):
+-        """
+-        Allows attribute-like access to port values by their `label_str`
+-
+-        Calling `port_list.values.some_label` is equivalent to `port_list.ports.some_label.val`
+-        """
+-        return self._value_finder
++if TYPE_CHECKING:
++    from pyiron_base import HasGroups
+ 
+-    @property
+-    def labels(self):
+-        return [item.label_str if isinstance(item, NodePort) else None for item in self]
++STRUCTURE_FACTORY = StructureFactory()
+ 
+ 
+-class PortFinder:
+-    def __init__(self, port_list: PortList):
+-        self._port_list = port_list
++class BeautifulHasGroups:
++    """
++    A helper class for giving classes that inherit from `pyiron_base.HasGroups` a more appealing representation in
++    ipywidgets.
++    """
+ 
+-    @property
+-    def _filtered_port_list(self):
+-        return [item for item in self._port_list if isinstance(item, NodePort)]
++    def __init__(self, has_groups: HasGroups | None):
++        self._has_groups = has_groups
+ 
+-    def __getattr__(self, key):
+-        for node_port in self._filtered_port_list:
+-            if node_port.label_str == key:
+-                return node_port
+-        raise AttributeError(f"No port found with the label {key}")
++    def to_builtin(self, has_groups=None):
++        has_groups = has_groups if has_groups is not None else self._has_groups
++        if has_groups is not None:
++            repr_dict = {}
++            for k in has_groups.list_groups():
++                repr_dict[k] = self.to_builtin(has_groups[k])
++            for k in has_groups.list_nodes():
++                repr_dict[k] = str(has_groups[k])
++            return repr_dict
++        else:
++            return None
+ 
+-    def __getitem__(self, item):
+-        return self.__getattr__(item)
++    def _repr_json_(self):
++        return self.to_builtin()
+ 
+-    def __iter__(self):
+-        return self._filtered_port_list.__iter__()
++    def _repr_html_(self):
++        name = self._has_groups.__class__.__name__
++        plain = f"{name}({json.dumps(self.to_builtin(), indent=2, default=str)})"
++        return "<pre>" + plain + "</pre>"
+ 
+-    def __len__(self):
+-        return len(self._port_list)
+ 
++class Project_Node(Node):
++    """
++    Create a pyiron project.
+ 
+-class ValueFinder(PortFinder):
+-    def __getattr__(self, key):
+-        node_port = super().__getattr__(key)
+-        return node_port.val
++    Inputs:
++        name (str): The name of the project. Will access existing project data under that name. (Default is ".".)
+ 
+-    def __iter__(self):
+-        val_list = [p.val for p in self._filtered_port_list]
+-        return val_list.__iter__()
++    Outputs:
++        project (pyiron_atomistics.Project): The project object.
++    """
+ 
++    # this __doc__ string will be displayed as tooltip in the editor
+ 
+-class Node(NodeCore):
+-    """
+-    A parent class for all ironflow nodes. Apart from a small quality-of-life difference where outputs are
+-    accessible in the same way as inputs (i.e. with a method `output(i)`), the main change here is the `before_update`
+-    and `after_update` events. Callbacks to happen before and after the update can be added to (removed from) these with
+-    the `connect` (`disconnect`) methods on the event. Such callbacks need to take the node itself as the first
+-    argument, and the integer specifying which input channel is being updated as the second argument.
++    title = "Project"
++    init_inputs = [
++        NodeInputBP(dtype=dtypes.Char(default="."), label="name"),
++    ]
++    init_outputs = [
++        NodeOutputBP(label="project"),
++    ]
++    color = "#aabb44"
+ 
+-    Also provides a "representation" that gets used in the GUI to give a more detailed look at node data, which defaults
+-    to showing output channel values.
++    def place_event(self):
++        super().place_event()
++        self.update()
+ 
+-    Children should specify a title and some combination of initial input, output, and what to do when updated, e.g.:
++    def update_event(self, inp=-1):
++        pr = Project(self.input(0))
++        self.set_output_val(0, pr)
+ 
+-    >>> class My_Node(Node):
+-    >>>     title = "MyUserNode"
+-    >>>     init_inputs = [
+-    >>>         NodeInputBP(dtype=dtypes.Integer(default=1), label="foo")
+-    >>>     ]
+-    >>>     init_outputs = [
+-    >>>        NodeOutputBP(label="bar")
+-    >>>     ]
+-    >>>     color = 'cyan'
+-    >>>
+-    >>> def update_event(self, inp=-1):
+-    >>>     self.set_output_val(0, self.input(0) + 42)
++    @property
++    def _project(self):
++        return self.output(0)
+ 
+-    Note:
+-        When registering nodes from a module or .py file, only children of this class with names ending in `_Node` will
+-        get registered.
+-    """
++    @property
++    def representations(self) -> dict:
++        return {
++            "name": str(self.input(0)),
++            # "job_table": self._project.job_table() if self._project is not None else None
++            # Todo: Figure out how to display this without breaking the gui size; right now it automatically grows
++            # the gui because the table is so wide.
++        }
+ 
+-    main_widget_class = NodeWidget
+ 
+-    color = "#ff69b4"  # Add an abrasive default color -- won't crash if you forget to add one, but pops out a bit
++class OutputsOnlyAtoms(Node, ABC):
++    """
++    A helper class that manages representations for nodes whose only output is a `pyiron_atomistics.Atoms` object.
+ 
+-    def __init__(self, params):
+-        super().__init__(params)
+-        self.inputs = PortList()
+-        self.outputs = PortList()
++    Outputs:
++        structure (pyiron_atomistics.Atoms): An atomic structure.
++    """
+ 
+-        self.before_update = Event(self, int)
+-        self.after_update = Event(self, int)
+-        self.actions = (
+-            dict()
+-        )  # Resolves Todo from ryven.NENV, moving it to our node class instead of ryvencore
+-
+-        self.representation_updated = False
+-        self.after_update.connect(self._representation_update)
+-
+-    def _add_io(self, io_group, new_io, insert: int = None):
+-        if insert is not None:
+-            io_group.insert(insert, new_io)
+-        else:
+-            io_group.append(new_io)
++    init_outputs = [
++        NodeOutputBP(label="structure"),
++    ]
++    color = "#aabb44"
+ 
+-    def create_input(
+-        self,
+-        type_: str = "data",
+-        label: str = "",
+-        add_data: Optional[dict] = None,
+-        dtype: Optional[dtypes.DType] = None,
+-        otype: Optional[Thing] = None,
+-        insert: Optional[int] = None,
+-    ):
+-        """Creates and add a new input port"""
+-        inp = NodeInput(
+-            node=self,
+-            type_=type_,
+-            label_str=label,
+-            add_data=add_data,
+-            dtype=dtype,
+-            otype=otype,
+-        )
+-        self._add_io(self.inputs, inp, insert=insert)
++    @abstractmethod
++    def update_event(self, inp=-1):
++        """Must set output 0 to an instance of pyiron_atomistics.atomistics.atoms.Atoms"""
++        pass
+ 
+-    def create_input_dt(
+-        self, dtype: dtypes.DType, label: str = "", add_data={}, insert: int = None
+-    ):
+-        raise RuntimeError(
+-            "Ironflow uses custom NodePort classes and this method is not supported. "
+-            "Please use create_input instead."
+-        )
++    @property
++    def representations(self) -> dict:
++        return {"plot3d": self.output(0).plot3d(), "print": self.output(0)}
+ 
+-    def create_output(
+-        self,
+-        type_: str = "data",
+-        label: str = "",
+-        dtype: Optional[dtypes.DType] = None,
+-        otype: Optional[Thing] = None,
+-        insert: Optional[int] = None,
+-    ):
+-        """Create and add a new output port"""
+-        out = NodeOutput(
+-            node=self,
+-            type_=type_,
+-            label_str=label,
+-            dtype=dtype,
+-            otype=otype,
+-        )
+-        self._add_io(self.outputs, out, insert=insert)
+ 
+-    def _load_otype(self, data: dict):
+-        try:
+-            return otype_from_str(data["otype_namespace"], data["otype_name"])
+-        except KeyError:
+-            return None
++class BulkStructure_Node(OutputsOnlyAtoms):
++    """
++    Generate a bulk atomic structure.
+ 
+-    def setup_ports(self, inputs_data=None, outputs_data=None):
+-        # A streamlined version of the ryvencore method which exploits our NodeInput
+-        # and NodeOutput classes instead, and for which all ports have a dtype
+-        if not inputs_data and not outputs_data:
+-            for i in range(len(self.init_inputs)):
+-                inp = self.init_inputs[i]
+-                self.create_input(
+-                    type_=inp.type_,
+-                    label=inp.label,
+-                    add_data=inp.add_data,
+-                    dtype=inp.dtype,
+-                    otype=inp.otype,
+-                )
+-
+-            for o in range(len(self.init_outputs)):
+-                out = self.init_outputs[o]
+-                self.create_output(
+-                    type_=out.type_,
+-                    label=out.label,
+-                    dtype=out.dtype,
+-                    otype=out.otype,
+-                )
++    Inputs:
++        element (str): The atomic symbol for the desired atoms. (Default is "Fe".)
++        crystal_structure (str | None): Must be one of sc, fcc, bcc, hcp, diamond, zincblende,
++                                rocksalt, cesiumchloride, fluorite or wurtzite.
++        a (float | None): Lattice constant.
++        c (float | None): Lattice constant.
++        c_over_a (float | None): c/a ratio used for hcp.  Default is ideal ratio: sqrt(8/3).
++        u (float | None): Internal coordinate for Wurtzite structure.
++        orthorhombic (bool): Construct orthorhombic unit cell instead of primitive cell. (Takes precedence over cubic
++            flag when both are true.)
++        cubic (bool): Construct cubic unit cell if possible.
+ 
+-        else:
+-            # load from data
+-            # initial ports specifications are irrelevant then
++    Outputs:
++        structure (pyiron_atomistics.Atoms): A mono-species bulk structure.
++    """
+ 
+-            for inp in inputs_data:
+-                dtype = dtypes.DType.from_str(inp["dtype"])(
+-                    _load_state=deserialize(inp["dtype state"])
+-                )
+-                self.create_input(
+-                    type_=inp["type"],
+-                    label=inp["label"],
+-                    add_data=inp,
+-                    dtype=dtype,
+-                    otype=self._load_otype(inp),
+-                )
+-
+-                if "val" in inp:
+-                    # this means the input is 'data' and did not have any connections,
+-                    # so we saved its value which was probably represented by some
+-                    # widget in the front end which has probably overridden the
+-                    # Node.input() method
+-                    self.inputs[-1].val = deserialize(inp["val"])
+-                    self.inputs[-1].set_dtype_ok()
+-
+-            for out in outputs_data:
+-                dtype = dtypes.DType.from_str(out["dtype"])(
+-                    _load_state=deserialize(out["dtype state"])
+-                )
+-                self.create_output(
+-                    type_=out["type"],
+-                    label=out["label"],
+-                    dtype=dtype,
+-                    otype=self._load_otype(out),
+-                )
++    # this __doc__ string will be displayed as tooltip in the editor
+ 
+-    @property
+-    def all_input_is_valid(self):
+-        return all(p.ready for p in self.inputs.ports)
++    title = "BulkStructure"
++    init_inputs = [
++        NodeInputBP(dtype=dtypes.Char(default="Fe"), label="element"),
++        NodeInputBP(
++            dtype=dtypes.Choice(
++                default=None,
++                items=[
++                    None,
++                    "sc",
++                    "fcc",
++                    "bcc",
++                    "hcp",
++                    "diamond",
++                    "zincblende",
++                    "rocksalt",
++                    "cesiumchloride",
++                    "fluorite",
++                    "wurtzite",
++                ],
++            ),
++            label="crystal_structure",
++        ),
++        NodeInputBP(dtype=dtypes.Float(default=None), label="a"),
++        NodeInputBP(dtype=dtypes.Float(default=None), label="c"),
++        NodeInputBP(dtype=dtypes.Float(default=None), label="c_over_a"),
++        NodeInputBP(dtype=dtypes.Float(default=None), label="u"),
++        NodeInputBP(dtype=dtypes.Boolean(default=False), label="orthorhombic"),
++        NodeInputBP(dtype=dtypes.Boolean(default=False), label="cubic"),
++    ]
++
++    def update_event(self, inp=-1):
++        self.set_output_val(
++            0,
++            STRUCTURE_FACTORY.bulk(
++                self.input(0),
++                crystalstructure=self.input(1),
++                a=self.input(2),
++                c=self.input(3),
++                covera=self.input(4),
++                u=self.input(5),
++                orthorhombic=self.input(6),
++                cubic=self.input(7),
++            ),
++        )
+ 
+     def place_event(self):
+-        # place_event() is executed *before* the connections are built
+         super().place_event()
+-        for inp in self.inputs:
+-            if (
+-                inp.val is None
+-            ):  # Don't over-write data from loaded sessions with defaults
+-                if inp.dtype is not None:
+-                    inp.update(inp.dtype.default)
+-                elif "val" in inp.add_data.keys():
+-                    inp.update(inp.add_data["val"])
+-
+-    def update(self, inp=-1):
+-        self.before_update.emit(self, inp)
+-        super().update(inp=inp)
+-        self.after_update.emit(self, inp)
+-
+-    def output(self, i):
+-        return self.outputs[i].val
+-
+-    @staticmethod
+-    def _representation_update(self, inp):
+-        self.representation_updated = True
++        self.update()
+ 
+-    @property
+-    def _source_code(self):
+-        try:
+-            return inspect.getsource(self.__class__)
+-        except TypeError:
+-            # Classes defined in the notebook can't access their source this way
+-            return ""
+ 
+-    @property
+-    def _standard_representations(self):
+-        standard_reps = {
+-            o.label_str if o.label_str != "" else f"output{i}": o.val
+-            for i, o in enumerate(self.outputs)
+-            if o.type_ == "data"
+-        }
+-        standard_reps["source code"] = display_string(self._source_code)
+-        return standard_reps
++class Repeat_Node(OutputsOnlyAtoms):
++    """
++    Repeat atomic structure supercell.
+ 
+-    @property
+-    def extra_representations(self):
+-        """
+-        When developing nodes, override this with any desired additional representations.
+-
+-        Note that standard representations exist for all output ports using the port's label (where available), so if
+-        you add a key here matching one of those labels, you will override the standard output.
+-        """
+-        return {}
++    Inputs:
++        structure (pyiron_atomistics.Atoms): The structure to repeat periodically.
++        all (int): The number of times to repeat it in each of the three bravais lattice directions.
+ 
+-    @property
+-    def representations(self) -> dict:
+-        return {**self._standard_representations, **self.extra_representations}
++    Outputs:
++        structure (pyiron_atomistics.Atoms): A repeated copy of the input structure.
++    """
+ 
+-    def set_all_outputs_to_none(self):
+-        for i in range(len(self.outputs)):
+-            self.set_output_val(i, None)
++    # this __doc__ string will be displayed as tooltip in the editor
+ 
++    title = "Repeat"
++    init_inputs = [
++        NodeInputBP(dtype=dtypes.Data(size="m"), label="structure"),
++        NodeInputBP(dtype=dtypes.Integer(default=1, bounds=(1, 100)), label="all"),
++    ]
++
++    def update_event(self, inp=-1):
++        self.set_output_val(0, self.input(0).repeat(self.input(1)))
+ 
+-class PlaceholderWidgetsContainer:
++
++class ApplyStrain_Node(OutputsOnlyAtoms):
+     """
+-    An object that just returns None for all accessed attributes so widgets.MyWidget in the non-ironflow nodes files
+-    just returns None.
++    Apply strain on atomic structure supercell.
++
++    Inputs:
++        structure (pyiron_atomistics.Atoms): The atomic structure to strain.
++        strain (float): The isotropic strain to apply, where 0 is unstrained. (Default is 0.)
++
++    Outputs:
++        (pyiron_atomistics.Atoms): A strained copy of the input structure.
+     """
+ 
+-    def __getattr__(self, item):
+-        return None
++    title = "ApplyStrain"
++    init_inputs = [
++        NodeInputBP(dtype=dtypes.Data(size="m"), label="structure"),
++        NodeInputBP(dtype=dtypes.Float(default=0, bounds=(-100, 100)), label="strain"),
++    ]
+ 
++    def update_event(self, inp=-1):
++        self.set_output_val(
++            0, self.input(0).apply_strain(float(self.input(1)), return_box=True)
++        )
+ 
+-class BatchingNode(Node, ABC):
++
++class Lammps_Node(Node):
+     """
+-    A node whose update behaviour supports batched inputs.
++    WIP.
+     """
+ 
+-    @property
+-    def batched_inputs(self):
+-        return {
+-            inp.label_str: inp
+-            for inp in self.inputs
+-            if inp.type_ == "data" and inp.dtype.batched
+-        }
++    title = "Lammps"
++    version = "v0.1"
++    init_inputs = [
++        NodeInputBP(type_="exec", label="run"),
++        NodeInputBP(type_="exec", label="remove"),
++        NodeInputBP(dtype=dtypes.Data(size="m"), label="project"),
++        NodeInputBP(dtype=dtypes.Char(default="job"), label="name"),
++        NodeInputBP(dtype=dtypes.Data(size="m"), label="structure"),
++        NodeInputBP(
++            dtype=dtypes.Choice(
++                default="Set structure first", items=["Set structure first"]
++            ),
++            label="potential",
++        ),
++    ]
++    init_outputs = [
++        NodeOutputBP(type_="exec"),
++        NodeOutputBP(label="job"),
++    ]
++    color = "#5d95de"
+ 
+     @property
+-    def unbatched_inputs(self):
+-        return {
+-            inp.label_str: inp
+-            for inp in self.inputs
+-            if inp.type_ == "data" and not inp.dtype.batched
+-        }
++    def _project(self):
++        return self.input(2)
+ 
+     @property
+-    def batched(self):
+-        return len(self.batched_inputs) > 0
++    def _name(self):
++        return self.input(3)
+ 
+     @property
+-    def batch_lengths(self):
+-        return {k: len(v.val) for k, v in self.batched_inputs.items()}
++    def _structure(self):
++        return self.input(4)
+ 
+     @property
+-    def _unbatched_kwargs(self):
+-        return {k: v.val for k, v in self.unbatched_inputs.items()}
++    def _potential(self):
++        return self.input(5)
+ 
+-    @property
+-    def _batched_kwargs(self):
+-        return [
+-            {
+-                k: v.val[i]
+-                for k, v in zip(
+-                    self.batched_inputs.keys(), self.batched_inputs.values()
+-                )
+-            }
+-            for i in range(list(self.batch_lengths.values())[0])
+-        ]
+-
+-    def generate_output(self) -> dict:
+-        if self.batched:
+-            batch_length_vals = list(self.batch_lengths.values())
+-            if len(batch_length_vals) > 0 and not np.all(
+-                np.array(batch_length_vals) == batch_length_vals[0]
+-            ):
+-                raise ValueError(
+-                    f"Not all batch lengths are the same: {self.batch_lengths}"
+-                )
+-            return self.generate_batched_output()
++    def _run(self):
++        job = self._project.create.job.Lammps(self._name)
++        job.structure = self._structure
++        job.potential = self._potential
++        self._job = job
++        job.run()
++        self.set_output_val(1, job)
++        self.exec_output(0)
++
++    def _remove(self):
++        try:
++            name = (
++                self._job.name
++            )  # Remove based on the run job, not the input name which might have changed...
++            self._project.remove_job(name)
++            self.set_output_val(1, None)
++        except AttributeError:
++            pass
++
++    def _update_potential_choices(self):
++        potl_input = self.inputs[5]
++        last_potential = potl_input.val
++        structure = self.inputs[4].val
++        available_potentials = list_potentials(structure)
++
++        if len(available_potentials) == 0:
++            potl_input.val = "No valid potential"
++            potl_input.dtype.items = ["No valid potential"]
+         else:
+-            return self.generate_unbatched_output()
++            if last_potential not in available_potentials:
++                potl_input.val = available_potentials[0]
++            potl_input.dtype.items = available_potentials
++
++    def update_event(self, inp=-1):
++        if inp == 0:
++            self._run()
++        elif inp == 1:
++            self._remove()
++        elif inp == 4:
++            self._update_potential_choices()
++
++    @property
++    def representations(self) -> dict:
++        return {"job": BeautifulHasGroups(self.output(1))}
+ 
+-    def generate_unbatched_output(self):
+-        return self.node_function(**self._unbatched_kwargs)
+ 
+-    def generate_batched_output(self):
+-        outputs = []
+-        for i, kwargs in enumerate(self._batched_kwargs):
+-            kwargs.update(self._unbatched_kwargs)
+-            outputs.append(self.node_function(batch_index=i, **kwargs))
+-        return {key: [d[key] for d in outputs] for key in outputs[0].keys()}
++class GenericOutput_Node(Node):
++    """
++    Select Generic Output item.
+ 
+-    def set_output(self):
+-        try:
+-            output = self.generate_output()
+-        except Exception as e:
+-            self.clear_output()
+-            raise e
+-        for k, v in output.items():
+-            self.outputs.ports[k].dtype.batched = self.batched
+-            self.outputs.ports[k].set_val(v)
+-
+-    def clear_output(self):
+-        for p in self.outputs.ports:
+-            if p.type_ == "data":
+-                p.set_val(None)
+-                p.dtype.batched = self.batched
+-
+-    def batched_representation(
+-        self, label: str, representation_function: Callable, *args
+-    ) -> dict | None:
+-        """
+-        Batched output requires multiple representations instead of a single one. Use
+-        this function to wrap a function that produces your desired representation.
+-        Resulting batched representations simply get an index added to their label.
+-
+-        Args:
+-            label (str): The name of the representation.
+-            representation_function (Callable): A function producing the representation.
+-            *args: Members of `self.inputs.values` or `self.outputs.values` needed for
+-                the representation.
+-
+-        Returns:
+-            (dict): The representation(s).
+-
+-        Examples:
+-            >>> def extra_representations(self):
+-            >>>     return {
+-            >>>         **self.batched_representation(
+-            >>>             "bigger", self._add5, self.outputs.values.n
+-            >>>        )
+-            >>>     }
+-            >>>
+-            >>> @staticmethod
+-            >>> def _add5(n: int):
+-            >>>     return n + 5
+-        """
+-        try:
+-            if self.batched:
+-                return {
+-                    f"{label}_{i}": representation_function(*batch_args)
+-                    for i, batch_args in enumerate(zip(*args))
+-                }
+-            else:
+-                return {label: representation_function(*args)}
+-        except Exception as e:
+-            return {label: f"Failed with: {e}"}
++    Inputs:
++        job (AtomisticGenericJob): A job with an `output` attribute of type
++            `pyiron_atomistics.atomistics.job.atomistic.GenericOutput`.
++        field (dtypes.Choice): Which output field to look at. Automatically populates once the job is valid.
+ 
+-    @abstractmethod
+-    def node_function(self, *args, **kwargs) -> dict:
+-        """
+-        Takes all data input as kwargs, must return a dict with one entry for each data
+-        output
+-        """
+-        pass
++    Outputs:
++        output (numpy.ndarray): The selected output field.
++    """
++
++    version = "v0.1"
++    title = "GenericOutput"
++    init_inputs = [
++        NodeInputBP(dtype=dtypes.Data(size="m"), label="job"),
++        NodeInputBP(
++            dtype=dtypes.Choice(
++                default="Input an atomistic job", items=["Input an atomistic job"]
++            ),
++            label="field",
++        ),
++    ]
++    init_outputs = [
++        NodeOutputBP(label="output"),
++    ]
++    color = "#c69a15"
++
++    def __init__(self, params):
++        super().__init__(params)
++
++    @property
++    def _job(self):
++        return self.input(0)
++
++    def _update_fields(self):
++        if isinstance(self._job, AtomisticGenericJob):
++            self.inputs[1].dtype.items = self._job["output/generic"].list_nodes()
++            self.inputs[1].val = self.inputs[1].dtype.items[0]
++        else:
++            self.inputs[1].dtype.items = [self.init_inputs[1].dtype.default]
++            # Note: It would be sensible to use `self.init_outputs[1].dtype.items` above, but this field gets updated
++            # to `self.inputs[1].dtype.items`, probably because of the mutability of lists.
++            self.inputs[1].val = self.init_inputs[1].dtype.default
++
++    def _update_value(self):
++        if isinstance(self._job, AtomisticGenericJob):
++            val = self._job[f"output/generic/{self.input(1)}"]
++        else:
++            val = None
++        self.set_output_val(0, val)
++
++    def update_event(self, inp=-1):
++        if inp == 0:
++            self._update_fields()
++            self._update_value()
++        elif inp == 1:
++            self._update_value()
+ 
+ 
+-class DataNode(BatchingNode, ABC):
++class IntRand_Node(Node):
+     """
+-    A node that can update as soon as all input is valid and produces output data.
++    Generate a random non-negative integer.
++
++    Inputs:
++        high (int): Biggest possible integer. (Default is 1).
++        length (int): How many random numbers to generate. (Default is 1.)
++
++    Outputs:
++        randint (int|numpy.ndarray): The randomly generated value(s).
+     """
+ 
++    # this __doc__ string will be displayed as tooltip in the editor
++
++    title = "IntRandom"
++    init_inputs = [
++        NodeInputBP(dtype=dtypes.Integer(default=1, bounds=(10, 100)), label="high"),
++        NodeInputBP(dtype=dtypes.Integer(default=1, bounds=(1, 100)), label="length"),
++    ]
++    init_outputs = [
++        NodeOutputBP(label="randint"),
++    ]
++    color = "#aabb44"
++
+     def update_event(self, inp=-1):
+-        if self.all_input_is_valid:
+-            self.set_output()
+-        else:
+-            self.clear_output()
++        val = np.random.randint(0, high=self.input(0), size=self.input(1))
++        self.set_output_val(0, val)
+ 
+-    def place_event(self):
+-        super().place_event()
+-        self.update()
+ 
++class JobName_Node(Node):
++    """
++    Create job name for parameters.
++
++    Inputs:
++        base (str): The stem for the final name. (Default is "job_".)
++        float (float): The parameter value to add to the name.
++
++    Outputs:
++        job_name (str): The base plus float sanitized into a valid job name.
+ 
+-class JobNode(BatchingNode, ABC):
++    Todo:
++        There has been some work in pyiron_base on getting a cleaner job name sanitizer, so lean on that.
+     """
+-    A parent class for nodes that run a pyiron job.
+ 
+-    Child classes are required to specify a `_generate_job` method, which takes the
+-    node input data and returns a `pyiron_base.GenericJob` object, and (optionally) a
+-    `_get_output_from_job` method which takes the executed job and the node input data
+-    and returns a dictionary of output with keys corresponding to node output port
+-    labels. The `job` output type can be made more specific with the `valid_job_classes`
+-    class attribute.
++    title = "JobName"
++    init_inputs = [
++        NodeInputBP(dtype=dtypes.Char(default="job_"), label="base"),
++        NodeInputBP(dtype=dtypes.Float(default=0), label="float"),
++    ]
++    init_outputs = [
++        NodeOutputBP(label="job_name"),
++    ]
++    color = "#aabb44"
+ 
+-    In the event that some of the input is batched but the `name` input is *not*
+-    batched, then the `name` argument passed to `_generate_job` is automatically
+-    appended with batch index information to prevent jobs from having the same name.
++    def update_event(self, inp=-1):
++        val = self.input(0) + f"{float(self.input(1))}".replace("-", "m").replace(
++            ".", "p"
++        )
++        self.set_output_val(0, val)
+ 
+-    The node has `run` and `remove` input exec ports and a `ran` output exec port.
+-    Once the node has been run, all inputs get locked and remain locked until the
+-    removal process is triggered. Remove clears all the outputs and sets them to `None`.
+ 
+-    If a failure is encountered during the `run` process, the exception is raised, all
+-    pyiron jobs are deleted (this might need to change if we want to do more expensive
+-    jobs in the future!), the node output is cleared, and the offending exception is
+-    raised to the log.
++class Linspace_Node(Node):
++    """
++    Generate a linear mesh in a given range using `np.linspace`.
+ 
+-    All descendant classes from this node class expect to have `run`, `remove`, and
+-    `name` input, and `ran` output. Therefore, when defining additional ports, use this
+-    format:
++    Inputs:
++        min (int): The lower bound (inclusive). (Default is 1.)
++        max (int): The upper bound (inclusive). (Default is 2.)
++        steps (int): How many samples to take inside (min, max). (Default is 10.)
+ 
+-    >>> init_inputs = JobNode.init_inputs + [WHATEVER_ELSE_YOU_WANT]
+-    >>> init_outputs = JobNode.init_outputs + [OTHER_STUFF]
++    Outputs:
++        linspace (numpy.ndarray): A uniform sampling over the requested range.
+     """
+ 
+-    color = "#c4473f"
+-    valid_job_classes = None
++    # this __doc__ string will be displayed as tooltip in the editor
++
++    title = "Linspace"
+     init_inputs = [
+-        NodeInputBP(type_="exec", label="run"),
+-        NodeInputBP(type_="exec", label="remove"),
+-        NodeInputBP(dtype=dtypes.String(default="calc"), label="name"),
++        NodeInputBP(dtype=dtypes.Integer(default=1, bounds=(0, 100)), label="min"),
++        NodeInputBP(dtype=dtypes.Integer(default=2, bounds=(0, 100)), label="max"),
++        NodeInputBP(dtype=dtypes.Integer(default=10, bounds=(1, 100)), label="steps"),
+     ]
+     init_outputs = [
+-        NodeOutputBP(type_="exec", label="ran"),
+-        NodeOutputBP(dtype=dtypes.Data(valid_classes=GenericJob), label="job"),
++        NodeOutputBP(label="linspace"),
+     ]
++    color = "#aabb44"
+ 
+     def place_event(self):
+         super().place_event()
+-        if self.valid_job_classes is not None:
+-            self.outputs.ports.job.dtype.valid_classes = self.valid_job_classes
++        self.update()
+ 
+     def update_event(self, inp=-1):
+-        if inp == 0 and (not self.block_updates) and self.all_input_is_valid:
+-            self.block_updates = True
+-            try:
+-                self._jobs = []
+-                self.set_output()
+-                self.exec_output(0)
+-            except Exception as e:
+-                self._on_remove_signal()
+-                raise e
+-        else:
+-            self.clear_output()
+-
+-    def update(self, inp=-1):
+-        if inp == 1:
+-            # Bypass the `lock_updates` to delete the executed job and unlock updates
+-            self._on_remove_signal()
+-            # self.update(-1)
+-        else:
+-            super().update(inp=inp)
++        val = np.linspace(self.input(0), self.input(1), self.input(2))
++        self.set_output_val(0, val)
+ 
+-    def node_function(self, name, *args, **kwargs):
+-        if self.batched and not self.inputs.ports.name.dtype.batched:
+-            name = f"{name}_batch{kwargs['batch_index']}"
+-        job = self._raise_error_if_not_initialized(
+-            self._generate_job(name, *args, **kwargs)
+-        )
+-        self._jobs.append(job)
+-        job.run()
+-        data = self._get_output_from_job(job, *args, name=name, **kwargs)
+-        return {
+-            "job": job,
+-            **data,
+-        }
+ 
+-    def _on_remove_signal(self):
+-        if hasattr(self, "_jobs"):
+-            for job in self._jobs:
+-                job.remove()
+-        self.clear_output()
+-        self.block_updates = False
+-
+-    def _raise_error_if_not_initialized(self, job: GenericJob) -> GenericJob:
+-        if job.status == "initialized":
+-            return job
+-        else:
+-            self.block_updates = False
+-            raise RuntimeError(
+-                f"The job {self.inputs.values.name} already exists. Delete it first or"
+-                f"choose a different name."
+-            )
++class Plot3d_Node(Node):
++    """
++    Plot a structure with NGLView.
+ 
+-    @abstractmethod
+-    def _generate_job(self, name: str, *args, **kwargs) -> GenericJob:
+-        """
+-        Takes a (potentially modified[^1]) name and the rest of the input data and
+-        returns a job to `.run()`
+-
+-        [^1]: If some of the input is batched, but the `name` field is not batched, the
+-              batch index information will get automatically appended to the name.
+-        """
++    Inputs:
++        structure (pyiron_atomistics.Atoms): The structure to plot.
+ 
+-        pass
++    Outputs:
++        plot3d (nglview.widget.NGLWidget): The plot object.
++        structure (pyiron_atomistics.Atoms): The raw structure object passed in.
++    """
+ 
+-    def _get_output_from_job(self, finished_job: GenericJob, *args, **kwargs) -> dict:
+-        """
+-        Takes the executed job and all the node input data, and should return relevant
+-        output data as a dictionary with keys matching the output port labels.
+-        """
++    title = "Plot3d"
++    version = "v0.1"
++    init_inputs = [
++        NodeInputBP(dtype=dtypes.Data(size="m"), label="structure"),
++    ]
++    init_outputs = [
++        NodeOutputBP(type_="data", label="plot3d"),
++        NodeOutputBP(type_="data", label="structure"),
++    ]
++    color = "#5d95de"
+ 
+-        return {}
++    def update_event(self, inp=-1):
++        self.set_output_val(0, self.input(0).plot3d())
++        self.set_output_val(1, self.input(0))
+ 
+ 
+-class JobMaker(JobNode, ABC):
++class Matplot_Node(Node):
+     """
+-    A job-running node that takes creates a new job instance from scratch, ready to
+-    `.run()`.
++    A 2D matplotlib plot.
+ 
+-    All descendant classes from this node class expect to have `run`, `remove`, `name`,
+-    and `project` input, and `ran` output. Therefore, when defining additional ports,
+-    use this format:
++    Inputs:
++        x (list|numpy.ndarray|...): Data for the x-axis.
++        y (list|numpy.ndarray|...): Data for the y-axis.
+ 
+-    >>> init_inputs = JobMaker.init_inputs + [WHATEVER_ELSE_YOU_WANT]
+-    >>> init_outputs = JobMaker.init_outputs + [OTHER_STUFF]
++    Outputs:
++        fig (matplotlib.figure.Figure): The resulting figure after a `matplotlib.pyplot.plot` call on x and y.
+     """
+ 
+-    init_inputs = JobNode.init_inputs + [
+-        NodeInputBP(dtype=dtypes.Data(valid_classes=Project), label="project")
++    title = "MatPlot"
++    version = "v0.1"
++    init_inputs = [
++        NodeInputBP(dtype=dtypes.Data(size="m"), label="x"),
++        NodeInputBP(dtype=dtypes.Data(size="m"), label="y"),
+     ]
++    init_outputs = [
++        NodeOutputBP(type_="data", label="fig"),
++    ]
++    color = "#5d95de"
+ 
++    def update_event(self, inp=-1):
++        super().update_event()
++        plt.ioff()
++        fig = plt.figure()
++        plt.clf()
++        plt.plot(self.input(0), self.input(1))
++        self.set_output_val(0, fig)
++        plt.ion()
+ 
+-class JobTaker(JobNode, ABC):
+-    """
+-    A job-running node that takes a template job instance as input, and copies and
+-    modifies it prior to use.
+ 
+-    Valid classes for the `job` input can be overriden with the `valid_job_classes`
+-    attribute.
++class Sin_Node(Node):
++    """
++    Call `numpy.sin` on a value.
+ 
+-    All descendant classes from this node class expect to have `run`, `remove`, `name`,
+-    and `job` input, and `ran` output. Therefore, when defining additional ports, use
+-    this format:
++    Inputs:
++        x (int|float|list|numpy.ndarray|...): The value to sine transform.
+ 
+-    >>> init_inputs = JobTaker.init_inputs + [WHATEVER_ELSE_YOU_WANT]
+-    >>> init_outputs = JobTaker.init_outputs + [OTHER_STUFF]
++    Outputs:
++        sin (float|numpy.ndarray): The sine of x.
+     """
+ 
+-    init_inputs = JobNode.init_inputs + [
+-        NodeInputBP(dtype=dtypes.Data(valid_classes=GenericJob), label="job")
++    title = "Sin"
++    version = "v0.1"
++    init_inputs = [
++        NodeInputBP(dtype=dtypes.Data(size="m"), label="x"),
++    ]
++    init_outputs = [
++        NodeOutputBP(label="sin"),
+     ]
++    color = "#5d95de"
++
++    def update_event(self, inp=-1):
++        self.set_output_val(0, np.sin(self.input(0)))
++
++
++class Result_Node(Node):
++    """Simply shows a value converted to str"""
++
++    version = "v0.1"
++
++    title = "Result"
++    init_inputs = [
++        NodeInputBP(type_="data"),
++    ]
++    color = "#c69a15"
++
++    def __init__(self, params):
++        super().__init__(params)
++        self.val = None
+ 
+     def place_event(self):
+         super().place_event()
+-        if self.valid_job_classes is not None:
+-            self.inputs.ports.job.dtype.valid_classes = self.valid_job_classes
++        self.update()
+ 
+-    def _generate_job(self, name: str, job: GenericJob, **kwargs) -> GenericJob:
+-        copied_job = job.copy_to(new_job_name=name)
+-        return self._modify_job(copied_job, **kwargs)
++    def view_place_event(self):
++        self.main_widget().show_val(self.val)
+ 
+-    @abstractmethod
+-    def _modify_job(self, copied_job: GenericJob, *args, **kwargs) -> GenericJob:
+-        """
+-        Takes the generated job, modifies it in place using the input data (except for
+-        the `job` and `name` input values) and returns it ready to be `.run()`
+-        """
+-        pass
++    def update_event(self, inp=-1):
++        self.val = self.input(0)
++        if self.session.gui:
++            self.main_widget().show_val(self.val)
++
++
++class ForEach_Node(Node):
++    title = "ForEach"
++    version = "v0.1"
++    init_inputs = [
++        NodeInputBP(type_="exec", label="start"),
++        NodeInputBP(type_="exec", label="reset"),
++        NodeInputBP(dtype=dtypes.List(), label="elements"),
++    ]
++    init_outputs = [
++        NodeOutputBP(label="loop", type_="exec"),
++        NodeOutputBP(label="e", type_="data"),
++        NodeOutputBP(label="finished", type_="exec"),
++    ]
++    color = "#b33a27"
++
++    _count = 0
++
++    def update_event(self, inp=-1):
++        if inp == 0:
++            self._count += 1
++            if len(self.input(2)) > self._count:
++                e = self.input(2)[self._count]
++                self.set_output_val(1, e)
++                self.exec_output(0)
++            else:
++                self.exec_output(2)
++        elif inp > 0:
++            self._count = 0
++        self.val = self._count
++
++
++class ExecCounter_Node(DualNodeBase):
++    title = "ExecCounter"
++    version = "v0.1"
++    init_inputs = [
++        NodeInputBP(type_="exec"),
++    ]
++    init_outputs = [
++        NodeOutputBP(type_="exec"),
++    ]
++    color = "#5d95de"
++
++    def __init__(self, params):
++        super().__init__(params, active=True)
++        self._count = 0
++
++    def update_event(self, inp=-1):
++        if self.active and inp == 0:
++            self._count += 1
++            self.val = self._count
++        elif not self.active:
++            self.val = self.input(0)
++
++
++class Click_Node(Node):
++    title = "Click"
++    version = "v0.1"
++    main_widget_class = ButtonNodeWidget
++    init_inputs = []
++    init_outputs = [NodeOutputBP(type_="exec")]
++    color = "#99dd55"
++
++    def update_event(self, inp=-1):
++        self.exec_output(0)
++
++
++nodes = [
++    Project_Node,
++    BulkStructure_Node,
++    Repeat_Node,
++    ApplyStrain_Node,
++    Lammps_Node,
++    JobName_Node,
++    GenericOutput_Node,
++    Plot3d_Node,
++    IntRand_Node,
++    Linspace_Node,
++    Sin_Node,
++    Result_Node,
++    ExecCounter_Node,
++    Matplot_Node,
++    Click_Node,
++    ForEach_Node,
++]
+```
+
+### Comparing `ironflow-0.0.5/ironflow/node_tools/__init__.py` & `ironflow-0.post0.dev1/ironflow/custom_nodes/__init__.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ # coding: utf-8
+ # Copyright (c) Max-Planck-Institut für Eisenforschung GmbH - Computational Materials Design (CM) Department
+ # Distributed under the terms of "New BSD License", see the LICENSE file.
+ """
+-The necessary classes for creating new nodes.
++The necessary classes for creating custom nodes.
+ 
+ Example:
+     >>> from ironflow import GUI
+-    >>> from ironflow.node_tools import Node, NodeInputBP, NodeOutputBP, dtypes, input_widgets
++    >>> from ironflow.custom_nodes import Node, NodeInputBP, NodeOutputBP, dtypes, input_widgets
+     >>> gui = GUI(script_title='foo')
+     >>>
+     >>> class MyNode(Node):
+     >>>     title = "MyUserNode"
+     >>>     init_inputs = [
+     >>>         NodeInputBP(dtype=dtypes.Integer(default=1), label="foo")
+     >>>     ]
+@@ -21,21 +21,10 @@
+     >>>
+     >>>     def update_event(self, inp=-1):
+     >>>         self.set_output_val(0, self.input(0) + 42)
+     >>>
+     >>> gui.register_node(MyNode)
+ """
+ 
+-import ironflow.node_tools.input_widgets
+-import ironflow.node_tools.main_widgets
+-from ironflow.model import dtypes
+-from ironflow.model.node import (
+-    Node,
+-    PlaceholderWidgetsContainer,
+-    PortList,
+-    BatchingNode,
+-    DataNode,
+-    JobMaker,
+-    JobNode,
+-    JobTaker,
+-)
+-from ironflow.model.port import NodeInputBP, NodeOutputBP
++import ironflow.custom_nodes.input_widgets
++from ironflow.model import dtypes, NodeInputBP, NodeOutputBP
++from ironflow.model.node import Node
+```
+
+### Comparing `ironflow-0.0.5/ironflow/nodes/built_in.py` & `ironflow-0.post0.dev1/ironflow/nodes/built_in.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,9 @@
+-from ironflow.node_tools import (
+-    dtypes,
+-    Node,
+-    NodeInputBP,
+-    NodeOutputBP,
+-    PlaceholderWidgetsContainer,
+-)
++from ironflow.model import dtypes, NodeInputBP, NodeOutputBP
++from ironflow.model.node import Node, PlaceholderWidgetsContainer
+ 
+ widgets = PlaceholderWidgetsContainer()
+ 
+ 
+ class NodeBase(Node):
+     pass
+ 
+@@ -16,15 +11,15 @@
+ class GetVar_Node(NodeBase):
+     """Gets the value of a script variable"""
+ 
+     version = "v0.1"
+ 
+     title = "get var"
+     init_inputs = [
+-        NodeInputBP(dtype=dtypes.String()),
++        NodeInputBP(dtype=dtypes.String(size="m")),
+     ]
+     init_outputs = [NodeOutputBP(label="val")]
+     color = "#c69a15"
+ 
+     def __init__(self, params):
+         super().__init__(params)
+ 
+@@ -35,14 +30,15 @@
+         self.update()
+ 
+     def view_place_event(self):
+         self.var_name = self.input(0)
+ 
+     def update_event(self, input_called=-1):
+         if self.input(0) != self.var_name:
++
+             if self.var_name != "":  # disconnect old var val update connection
+                 self.unregister_var_receiver(self.var_name, self.var_val_changed)
+ 
+             self.var_name = self.input(0)
+ 
+             # create new var update connection
+             self.register_var_receiver(self.var_name, self.var_val_changed)
+@@ -88,15 +84,15 @@
+     version = "v0.1"
+ 
+     title = "val"
+     init_inputs = [
+         NodeInputBP(dtype=dtypes.Data(size="s")),
+     ]
+     init_outputs = [
+-        NodeOutputBP(type_="data"),
++        NodeInputBP(type_="data"),
+     ]
+     style = "small"
+     color = "#c69a15"
+ 
+     def __init__(self, params):
+         super().__init__(params)
+ 
+@@ -128,14 +124,15 @@
+     def get_state(self):
+         return {"val": self.val}  # self.main_widget().get_val()
+ 
+     def set_state(self, data, version):
+         self.val = data["val"]
+ 
+         if version is None:
++
+             self.display_title = ""
+ 
+             self.create_input_dt(dtype=dtypes.Data(size="s"))
+ 
+             # the old version didn't use a dtype
+             self.inputs[0].dtype.val = self.val
+             self.inputs[0].update(self.val)
+@@ -165,20 +162,23 @@
+         self.actions["make passive"] = {"method": self.action_make_passive}
+         self.active = True
+ 
+         self.var_name = ""
+         self.num_vars = 1
+ 
+     def update_event(self, input_called=-1):
++
+         if self.active and input_called == 0:
++
+             if self.set_var_val(self.input(1), self.input(2)):
+                 self.set_output_val(1, self.input(2))
+             self.exec_output(0)
+ 
+         elif not self.active:
++
+             self.var_name = self.input(0)
+             if self.set_var_val(self.input(0), self.input(1)):
+                 self.set_output_val(0, self.get_var_val(self.var_name))
+ 
+     def action_make_passive(self):
+         self.active = False
+         self.delete_input(0)
+@@ -235,14 +235,15 @@
+     def remove_var_input(self, number):
+         self.delete_input((number - 1) * 2)
+         self.delete_input((number - 1) * 2)
+         self.num_vars -= 1
+         self.rebuild_remove_actions()
+ 
+     def rebuild_remove_actions(self):
++
+         remove_keys = []
+         for k, v in self.actions.items():
+             if k.startswith("remove var"):
+                 remove_keys.append(k)
+ 
+         for k in remove_keys:
+             del self.actions[k]
+@@ -250,14 +251,15 @@
+         for i in range(self.num_vars):
+             self.actions[f"remove var {i+1}"] = {
+                 "method": self.remove_var_input,
+                 "data": i + 1,
+             }
+ 
+     def update_event(self, input_called=-1):
++
+         var_names = [self.input(i) for i in range(0, len(self.inputs), 2)]
+         values = [self.input(i) for i in range(1, len(self.inputs), 2)]
+ 
+         for i in range(len(var_names)):
+             self.set_var_val(var_names[i], values[i])
+ 
+     def get_state(self):
+```
+
+### Comparing `ironflow-0.0.5/ironflow/nodes/std/basic_operators.py` & `ironflow-0.post0.dev1/ironflow/nodes/std/basic_operators.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,11 +1,13 @@
+-from ironflow.node_tools import dtypes, Node, NodeInputBP, NodeOutputBP
++from ironflow.model import dtypes, NodeInputBP, NodeOutputBP
++from ironflow.model.node import Node
+ 
+ 
+ class OperatorNodeBase(Node):
++
+     version = "v0.0"
+ 
+     init_inputs = [
+         NodeInputBP(dtype=dtypes.Data(size="s")),
+         NodeInputBP(dtype=dtypes.Data(size="s")),
+     ]
+ 
+@@ -41,14 +43,15 @@
+         self.actions[f"remove input {index}"] = {
+             "method": self.remove_operand_input,
+             "data": index,
+         }
+         self.num_inputs += 1
+ 
+     def rebuild_remove_actions(self):
++
+         remove_keys = []
+         for k, v in self.actions.items():
+             if k.startswith("remove input"):
+                 remove_keys.append(k)
+ 
+         for k in remove_keys:
+             del self.actions[k]
+```
+
+### Comparing `ironflow-0.0.5/ironflow/nodes/std/control_structures.py` & `ironflow-0.post0.dev1/ironflow/nodes/std/control_structures.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+-from ironflow.node_tools import dtypes, Node, NodeInputBP, NodeOutputBP
++from ironflow.model import dtypes, NodeInputBP, NodeOutputBP
++from ironflow.model.node import Node
+ 
+ 
+ class CSNodeBase(Node):
+     version = "v0.1"
+     style = "normal"
+     color = "#b33a27"
+ 
+@@ -74,14 +75,15 @@
+         self.delete_output(out_index)
+         self.delete_output(out_index)
+         self.dims -= 1
+         # del self.actions[f'remove dimension {dim}']
+         self.rebuild_remove_actions()
+ 
+     def rebuild_remove_actions(self):
++
+         remove_keys = []
+         for k, v in self.actions.items():
+             if k.startswith("remove dimension"):
+                 remove_keys.append(k)
+ 
+         for k in remove_keys:
+             del self.actions[k]
+@@ -100,20 +102,22 @@
+ 
+     def update_event(self, inp=-1):
+         if inp == 0:
+             self.iterate(1)
+             self.exec_output(len(self.outputs) - 1)
+ 
+     def iterate(self, dim):
++
+         inp_index = self.input_from_dim(dim)
+ 
+         exec_out_index = self.output_from_dim(dim)
+         data_out_index = exec_out_index + 1
+ 
+         for i in range(self.input(inp_index), self.input(inp_index + 1)):
++
+             self.set_output_val(data_out_index, i)
+             self.exec_output(exec_out_index)
+ 
+             if dim < self.dims:
+                 self.iterate(dim + 1)
+```
+
+### Comparing `ironflow-0.0.5/ironflow/nodes/std/special_nodes.py` & `ironflow-0.post0.dev1/ironflow/nodes/std/special_nodes.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,18 +1,13 @@
+ import code
+ from contextlib import redirect_stdout, redirect_stderr
+ 
+-from ironflow.node_tools import (
+-    dtypes,
+-    input_widgets,
+-    Node,
+-    NodeInputBP,
+-    NodeOutputBP,
+-    PlaceholderWidgetsContainer,
+-)
++from ironflow.model import dtypes, NodeInputBP, NodeOutputBP
++from ironflow.model.node import Node, PlaceholderWidgetsContainer
++from ironflow.gui.boxes.node_interface.input_widgets import SliderControl
+ 
+ widgets = PlaceholderWidgetsContainer()
+ 
+ 
+ class NodeBase(Node):
+     version = "v0.1"
+     color = "#FFCA00"
+@@ -277,14 +272,15 @@
+     def __init__(self, params):
+         super().__init__(params)
+ 
+         self.actions["start"] = {"method": self.start}
+         self.actions["stop"] = {"method": self.stop}
+ 
+         if self.session.gui:
++
+             from qtpy.QtCore import QTimer
+ 
+             self.timer = QTimer(self)
+             self.timer.timeout.connect(self.timeouted)
+             self.iteration = 0
+ 
+     def timeouted(self):
+@@ -333,29 +329,30 @@
+         NodeInputBP(dtype=dtypes.Boolean(default=False), label="round"),
+     ]
+     init_outputs = [
+         NodeOutputBP(),
+     ]
+     main_widget_class = widgets.SliderNode_MainWidget
+     main_widget_pos = "below ports"
+-    input_widget = input_widgets.SliderControl
++    input_widget = SliderControl
+ 
+     def __init__(self, params):
+         super().__init__(params)
+ 
+         self.val = 0
+ 
+     def place_event(self):
+         self.update()
+ 
+     def view_place_event(self):
+         # when running in gui mode, the value might come from the input widget
+         self.update()
+ 
+     def update_event(self, inp=-1):
++
+         v = self.input(0) * self.val
+         if self.input(1):
+             v = round(v)
+ 
+         self.set_output_val(0, v)
+ 
+     def get_state(self) -> dict:
+```
+
+### Comparing `ironflow-0.0.5/ironflow.egg-info/SOURCES.txt` & `ironflow-0.post0.dev1/ironflow.egg-info/SOURCES.txt`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -2,59 +2,46 @@
+ MANIFEST.in
+ README.md
+ setup.cfg
+ setup.py
+ versioneer.py
+ ironflow/__init__.py
+ ironflow/_version.py
+-ironflow/utils.py
+ ironflow.egg-info/PKG-INFO
+ ironflow.egg-info/SOURCES.txt
+ ironflow.egg-info/dependency_links.txt
+ ironflow.egg-info/requires.txt
+ ironflow.egg-info/top_level.txt
++ironflow/custom_nodes/__init__.py
++ironflow/custom_nodes/input_widgets/__init__.py
+ ironflow/gui/__init__.py
+-ironflow/gui/base.py
+-ironflow/gui/browser.py
+-ironflow/gui/draws_widgets.py
+ ironflow/gui/gui.py
+-ironflow/gui/log.py
+-ironflow/gui/workflows/__init__.py
+-ironflow/gui/workflows/screen.py
+-ironflow/gui/workflows/boxes/__init__.py
+-ironflow/gui/workflows/boxes/base.py
+-ironflow/gui/workflows/boxes/flow.py
+-ironflow/gui/workflows/boxes/text_output.py
+-ironflow/gui/workflows/boxes/toolbar.py
+-ironflow/gui/workflows/boxes/user_input.py
+-ironflow/gui/workflows/boxes/node_interface/__init__.py
+-ironflow/gui/workflows/boxes/node_interface/control.py
+-ironflow/gui/workflows/boxes/node_interface/input_widgets.py
+-ironflow/gui/workflows/boxes/node_interface/representation.py
+-ironflow/gui/workflows/canvas_widgets/__init__.py
+-ironflow/gui/workflows/canvas_widgets/base.py
+-ironflow/gui/workflows/canvas_widgets/buttons.py
+-ironflow/gui/workflows/canvas_widgets/flow.py
+-ironflow/gui/workflows/canvas_widgets/layouts.py
+-ironflow/gui/workflows/canvas_widgets/nodes.py
+-ironflow/gui/workflows/canvas_widgets/ports.py
++ironflow/gui/boxes/__init__.py
++ironflow/gui/boxes/base.py
++ironflow/gui/boxes/flow.py
++ironflow/gui/boxes/text_output.py
++ironflow/gui/boxes/toolbar.py
++ironflow/gui/boxes/user_input.py
++ironflow/gui/boxes/node_interface/__init__.py
++ironflow/gui/boxes/node_interface/base.py
++ironflow/gui/boxes/node_interface/control.py
++ironflow/gui/boxes/node_interface/input_widgets.py
++ironflow/gui/boxes/node_interface/representation.py
++ironflow/gui/canvas_widgets/__init__.py
++ironflow/gui/canvas_widgets/base.py
++ironflow/gui/canvas_widgets/buttons.py
++ironflow/gui/canvas_widgets/flow.py
++ironflow/gui/canvas_widgets/layouts.py
++ironflow/gui/canvas_widgets/nodes.py
++ironflow/gui/canvas_widgets/ports.py
+ ironflow/model/__init__.py
+ ironflow/model/dtypes.py
+-ironflow/model/flow.py
+ ironflow/model/model.py
+ ironflow/model/node.py
+-ironflow/model/otypes.py
+-ironflow/model/port.py
+-ironflow/model/script.py
+-ironflow/model/session.py
+-ironflow/node_tools/__init__.py
+-ironflow/node_tools/main_widgets.py
+-ironflow/node_tools/input_widgets/__init__.py
+ ironflow/nodes/__init__.py
+ ironflow/nodes/built_in.py
+ ironflow/nodes/pyiron/__init__.py
+ ironflow/nodes/pyiron/atomistics_nodes.py
+ ironflow/nodes/std/__init__.py
+ ironflow/nodes/std/basic_operators.py
+ ironflow/nodes/std/control_structures.py
+-ironflow/nodes/std/special_nodes.py
+-tests/test_tests.py
++ironflow/nodes/std/special_nodes.py
+```
+
+### Comparing `ironflow-0.0.5/setup.py` & `ironflow-0.post0.dev1/setup.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -3,46 +3,40 @@
+ """
+ from setuptools import setup, find_packages
+ import versioneer
+ 
+ setup(
+     name='ironflow',
+     version=versioneer.get_version(),
+-    description='ironflow - A visual scripting interface for pyiron.',
+-    long_description='Ironflow combines ryven, ipycanvas and ipywidgets to provide a Jupyter-based visual scripting '
+-                     'gui for running pyiron workflow graphs.',
++    description='ironflow - module extension to pyiron.',
++    long_description='http://pyiron.org',
+ 
+     url='https://github.com/pyiron/ironflow',
+     author='Max-Planck-Institut für Eisenforschung GmbH - Computational Materials Design (CM) Department',
+     author_email='liamhuber@greyhavensolutions.com',
+     license='BSD',
+ 
+-    classifiers=['Development Status :: 3 - Alpha',
++    classifiers=['Development Status :: 5 - Production/Stable',
+                  'Topic :: Scientific/Engineering :: Physics',
+                  'License :: OSI Approved :: BSD License',
+                  'Intended Audience :: Science/Research',
+                  'Operating System :: OS Independent',
++                 'Programming Language :: Python :: 3.7',
+                  'Programming Language :: Python :: 3.8',
+-                 'Programming Language :: Python :: 3.9',
+-                 'Programming Language :: Python :: 3.10'],
++                 'Programming Language :: Python :: 3.9'],
+ 
+     keywords='pyiron',
+     packages=find_packages(exclude=["*tests*", "*docs*", "*binder*", "*conda*", "*notebooks*", "*.ci_support*"]),
+     install_requires=[
+         'ipycanvas',
+         'ipython',
+         'ipywidgets >= 7,< 8',
+         'matplotlib',
+         'nglview',
+         'numpy',
+-        'owlready2',
+         'pyiron_base',
+         'pyiron_atomistics',
+-        'pyiron_gui >= 0.0.8',
+-        'pyiron_ontology >= 0.1.1',
+-        'ryvencore',
+-        'seaborn',
+-        'traitlets',
++        'ryvencore'
+     ],
+     cmdclass=versioneer.get_cmdclass(),
+ 
+     )
+```
+
+### Comparing `ironflow-0.0.5/versioneer.py` & `ironflow-0.post0.dev1/versioneer.py`
+
+ * *Files identical despite different names*
+

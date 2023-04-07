@@ -1,0 +1,17179 @@
+# Comparing `tmp/PrettyQt-0.99.0.tar.gz` & `tmp/prettyqt-1.0.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "PrettyQt-0.99.0.tar", last modified: Sat Jul 18 01:11:26 2020, max compression
++gzip compressed data, was "prettyqt-1.0.0.tar", max compression
+```
+
+## Comparing `PrettyQt-0.99.0.tar` & `prettyqt-1.0.0.tar`
+
+### file list
+
+```diff
+@@ -1,251 +1,744 @@
+--rw-r--r--   0        0        0     1078 2020-07-18 01:09:32.710258 PrettyQt-0.99.0/LICENSE
+--rw-r--r--   0        0        0     2969 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/docs/index.md
+--rw-r--r--   0        0        0      316 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/__init__.py
+--rw-r--r--   0        0        0      377 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/charts/__init__.py
+--rw-r--r--   0        0        0      541 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/charts/abstractseries.py
+--rw-r--r--   0        0        0     2553 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/charts/chart.py
+--rw-r--r--   0        0        0     4501 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/charts/chartview.py
+--rw-r--r--   0        0        0      810 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/charts/lineseries.py
+--rw-r--r--   0        0        0      211 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/charts/scatterseries.py
+--rw-r--r--   0        0        0      575 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/charts/xyseries.py
+--rw-r--r--   0        0        0     1346 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/constants/__init__.py
+--rw-r--r--   0        0        0     2375 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/core/__init__.py
+--rw-r--r--   0        0        0     3680 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/core/abstractitemmodel.py
+--rw-r--r--   0        0        0      213 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/core/abstractlistmodel.py
+--rw-r--r--   0        0        0      216 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/core/abstractproxymodel.py
+--rw-r--r--   0        0        0      216 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/core/abstracttablemodel.py
+--rw-r--r--   0        0        0      413 2020-07-18 01:09:32.714259 PrettyQt-0.99.0/prettyqt/core/buffer.py
+--rw-r--r--   0        0        0      325 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/coreapplication.py
+--rw-r--r--   0        0        0      255 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/date.py
+--rw-r--r--   0        0        0      376 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/datetime.py
+--rw-r--r--   0        0        0      246 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/dir.py
+--rw-r--r--   0        0        0      254 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/diriterator.py
+--rw-r--r--   0        0        0      150 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/event.py
+--rw-r--r--   0        0        0      409 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/file.py
+--rw-r--r--   0        0        0      183 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/filedevice.py
+--rw-r--r--   0        0        0      639 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/iodevice.py
+--rw-r--r--   0        0        0      205 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/itemselectionmodel.py
+--rw-r--r--   0        0        0      713 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/mimedata.py
+--rw-r--r--   0        0        0      161 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/modelindex.py
+--rw-r--r--   0        0        0     1986 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/object.py
+--rw-r--r--   0        0        0      163 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/point.py
+--rw-r--r--   0        0        0      166 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/pointf.py
+--rw-r--r--   0        0        0      189 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/rect.py
+--rw-r--r--   0        0        0      192 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/rectf.py
+--rw-r--r--   0        0        0      312 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/regexp.py
+--rw-r--r--   0        0        0     6133 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/regularexpression.py
+--rw-r--r--   0        0        0     2147 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/regularexpressionmatch.py
+--rw-r--r--   0        0        0      581 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/regularexpressionmatchiterator.py
+--rw-r--r--   0        0        0      102 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/runnable.py
+--rw-r--r--   0        0        0     6192 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/settings.py
+--rw-r--r--   0        0        0      165 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/size.py
+--rw-r--r--   0        0        0      168 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/sizef.py
+--rw-r--r--   0        0        0      237 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/sortfilterproxymodel.py
+--rw-r--r--   0        0        0       98 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/thread.py
+--rw-r--r--   0        0        0      181 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/threadpool.py
+--rw-r--r--   0        0        0      327 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/timer.py
+--rw-r--r--   0        0        0      181 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/translator.py
+--rw-r--r--   0        0        0      405 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/core/url.py
+--rw-r--r--   0        0        0      298 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/custom_models/__init__.py
+--rw-r--r--   0        0        0     2028 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/custom_models/regexmatchesmodel.py
+--rw-r--r--   0        0        0     1531 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/custom_models/selectionmixin.py
+--rw-r--r--   0        0        0     1355 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/custom_models/transposeproxymodel.py
+--rw-r--r--   0        0        0      580 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/custom_validators/__init__.py
+--rw-r--r--   0        0        0     1049 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/custom_validators/compositevalidator.py
+--rw-r--r--   0        0        0      614 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/custom_validators/notemptyvalidator.py
+--rw-r--r--   0        0        0      613 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/custom_validators/notzerovalidator.py
+--rw-r--r--   0        0        0      630 2020-07-18 01:09:32.718259 PrettyQt-0.99.0/prettyqt/custom_validators/pathvalidator.py
+--rw-r--r--   0        0        0     1214 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_validators/regexpatternvalidator.py
+--rw-r--r--   0        0        0     2258 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_validators/regexvalidators.py
+--rw-r--r--   0        0        0     1907 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/__init__.py
+--rw-r--r--   0        0        0     1103 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/booldicttoolbutton.py
+--rw-r--r--   0        0        0      870 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/buttondelegate.py
+--rw-r--r--   0        0        0     1502 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/checkboxdelegate.py
+--rw-r--r--   0        0        0     2831 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/codeeditor.py
+--rw-r--r--   0        0        0     2088 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/colorchooserbutton.py
+--rw-r--r--   0        0        0    21507 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/dataset.py
+--rw-r--r--   0        0        0     2998 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/filechooserbutton.py
+--rw-r--r--   0        0        0     1871 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/flagselectionwidget.py
+--rw-r--r--   0        0        0     3311 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/flowlayout.py
+--rw-r--r--   0        0        0     1853 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/fontchooserbutton.py
+--rw-r--r--   0        0        0     1142 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/iconlabel.py
+--rw-r--r--   0        0        0     1647 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/image.py
+--rw-r--r--   0        0        0      471 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/imageviewer.py
+--rw-r--r--   0        0        0     1826 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/inputandslider.py
+--rw-r--r--   0        0        0     4518 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/labeledslider.py
+--rw-r--r--   0        0        0     1262 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/listinput.py
+--rw-r--r--   0        0        0     8031 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/logtextedit.py
+--rw-r--r--   0        0        0      660 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/mappedcheckbox.py
+--rw-r--r--   0        0        0     2344 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/markdownwidget.py
+--rw-r--r--   0        0        0      922 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/optionalwidget.py
+--rw-r--r--   0        0        0     1428 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/popupinfo.py
+--rw-r--r--   0        0        0     3223 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/promptlineedit.py
+--rw-r--r--   0        0        0     4195 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/radiodelegate.py
+--rw-r--r--   0        0        0      115 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/regexeditor/__init__.py
+--rw-r--r--   0        0        0     5833 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/regexeditor/editor.py
+--rw-r--r--   0        0        0      942 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/regexeditor/quick_ref.py
+--rw-r--r--   0        0        0    19388 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/regexeditor/ref.html
+--rw-r--r--   0        0        0     3002 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/regexinput.py
+--rw-r--r--   0        0        0     3777 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/selectionwidget.py
+--rw-r--r--   0        0        0     5601 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/sidebarwidget.py
+--rw-r--r--   0        0        0      982 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/singlelinetextedit.py
+--rw-r--r--   0        0        0    17666 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/spanslider.py
+--rw-r--r--   0        0        0     2204 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/stringornumberwidget.py
+--rw-r--r--   0        0        0     8413 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/custom_widgets/waitingspinner.py
+--rw-r--r--   0        0        0     1910 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/gui/__init__.py
+--rw-r--r--   0        0        0       94 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/gui/brush.py
+--rw-r--r--   0        0        0     1174 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/gui/color.py
+--rw-r--r--   0        0        0      948 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/gui/cursor.py
+--rw-r--r--   0        0        0      594 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/gui/doublevalidator.py
+--rw-r--r--   0        0        0     2673 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/gui/font.py
+--rw-r--r--   0        0        0     1144 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/gui/fontdatabase.py
+--rw-r--r--   0        0        0      526 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/gui/fontmetrics.py
+--rw-r--r--   0        0        0      199 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/gui/guiapplication.py
+--rw-r--r--   0        0        0     2326 2020-07-18 01:09:32.722259 PrettyQt-0.99.0/prettyqt/gui/icon.py
+--rw-r--r--   0        0        0      215 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/image.py
+--rw-r--r--   0        0        0      515 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/intvalidator.py
+--rw-r--r--   0        0        0      569 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/keysequence.py
+--rw-r--r--   0        0        0      260 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/pagedpaintdevice.py
+--rw-r--r--   0        0        0      162 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/paintdevice.py
+--rw-r--r--   0        0        0     3870 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/painter.py
+--rw-r--r--   0        0        0      239 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/palette.py
+--rw-r--r--   0        0        0      387 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/pdfwriter.py
+--rw-r--r--   0        0        0      235 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/pen.py
+--rw-r--r--   0        0        0      172 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/picture.py
+--rw-r--r--   0        0        0      517 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/pixmap.py
+--rw-r--r--   0        0        0     1079 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/polygonf.py
+--rw-r--r--   0        0        0      736 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/regexpvalidator.py
+--rw-r--r--   0        0        0       96 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/region.py
+--rw-r--r--   0        0        0     1025 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/regularexpressionvalidator.py
+--rw-r--r--   0        0        0     1478 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/regularexpressionvalidator_pyside.py
+--rw-r--r--   0        0        0     1277 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/standarditem.py
+--rw-r--r--   0        0        0     1968 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/standarditemmodel.py
+--rw-r--r--   0        0        0      945 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/syntaxhighlighter.py
+--rw-r--r--   0        0        0      540 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/textblockuserdata.py
+--rw-r--r--   0        0        0     3590 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/textcharformat.py
+--rw-r--r--   0        0        0     3632 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/textcursor.py
+--rw-r--r--   0        0        0      762 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/gui/validator.py
+--rw-r--r--   0        0        0     8387 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/re.py
+--rw-r--r--   0        0        0      129 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/scintilla/__init__.py
+--rw-r--r--   0        0        0     7517 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/scintilla/sciscintilla.py
+--rw-r--r--   0        0        0      699 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/syntaxhighlighters/__init__.py
+--rw-r--r--   0        0        0     1190 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/syntaxhighlighters/highlightrule.py
+--rw-r--r--   0        0        0     1273 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/syntaxhighlighters/jsonhighlighter.py
+--rw-r--r--   0        0        0     2990 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/syntaxhighlighters/markdownhighlighter.py
+--rw-r--r--   0        0        0      849 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/syntaxhighlighters/pygments/regularexpressionlexer.py
+--rw-r--r--   0        0        0     8370 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/syntaxhighlighters/pygmentshighlighter.py
+--rw-r--r--   0        0        0     4590 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/syntaxhighlighters/pythonhighlighter.py
+--rw-r--r--   0        0        0     2001 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/syntaxhighlighters/regexmatchhighlighter.py
+--rw-r--r--   0        0        0     2113 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/syntaxhighlighters/xmlhighlighter.py
+--rw-r--r--   0        0        0     2062 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/syntaxhighlighters/yamlhighlighter.py
+--rw-r--r--   0        0        0      271 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/utils/__init__.py
+--rw-r--r--   0        0        0     2768 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/utils/colors.py
+--rw-r--r--   0        0        0      914 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/utils/convertuifiles.py
+--rw-r--r--   0        0        0     1338 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/utils/helpers.py
+--rw-r--r--   0        0        0      199 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/utils/icons.py
+--rw-r--r--   0        0        0    20613 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/utils/modeltest.py
+--rw-r--r--   0        0        0      671 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/utils/signallogger.py
+--rw-r--r--   0        0        0      381 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/webenginewidgets/__init__.py
+--rw-r--r--   0        0        0     3306 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/webenginewidgets/webenginepage.py
+--rw-r--r--   0        0        0     3278 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/webenginewidgets/webengineview.py
+--rw-r--r--   0        0        0     5352 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/__init__.py
+--rw-r--r--   0        0        0     2038 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/abstractbutton.py
+--rw-r--r--   0        0        0      220 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/abstractitemdelegate.py
+--rw-r--r--   0        0        0    10314 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/abstractitemview.py
+--rw-r--r--   0        0        0     4711 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/abstractscrollarea.py
+--rw-r--r--   0        0        0     2572 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/abstractslider.py
+--rw-r--r--   0        0        0     3274 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/abstractspinbox.py
+--rw-r--r--   0        0        0     4431 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/action.py
+--rw-r--r--   0        0        0     1478 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/actiongroup.py
+--rw-r--r--   0        0        0     3341 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/application.py
+--rw-r--r--   0        0        0     1533 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/boxlayout.py
+--rw-r--r--   0        0        0      173 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/buttongroup.py
+--rw-r--r--   0        0        0     1933 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/calendarwidget.py
+--rw-r--r--   0        0        0     2513 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/checkbox.py
+--rw-r--r--   0        0        0     1142 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/colordialog.py
+--rw-r--r--   0        0        0      367 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/columnview.py
+--rw-r--r--   0        0        0     6098 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/combobox.py
+--rw-r--r--   0        0        0      393 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/commandlinkbutton.py
+--rw-r--r--   0        0        0     3202 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/completer.py
+--rw-r--r--   0        0        0     1395 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/dateedit.py
+--rw-r--r--   0        0        0     4054 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/datetimeedit.py
+--rw-r--r--   0        0        0      118 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/desktopwidget.py
+--rw-r--r--   0        0        0     2734 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/dialog.py
+--rw-r--r--   0        0        0     5320 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/dialogbuttonbox.py
+--rw-r--r--   0        0        0     2091 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/dockwidget.py
+--rw-r--r--   0        0        0     2050 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/doublespinbox.py
+--rw-r--r--   0        0        0      354 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/errormessage.py
+--rw-r--r--   0        0        0     7405 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/filedialog.py
+--rw-r--r--   0        0        0     2971 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/filesystemmodel.py
+--rw-r--r--   0        0        0      387 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/fontdialog.py
+--rw-r--r--   0        0        0     3139 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/formlayout.py
+--rw-r--r--   0        0        0     1227 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/frame.py
+--rw-r--r--   0        0        0      117 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/graphicsitem.py
+--rw-r--r--   0        0        0     2388 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/gridlayout.py
+--rw-r--r--   0        0        0     1895 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/groupbox.py
+--rw-r--r--   0        0        0     3368 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/headerview.py
+--rw-r--r--   0        0        0     1283 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/inputdialog.py
+--rw-r--r--   0        0        0      216 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/itemdelegate.py
+--rw-r--r--   0        0        0      864 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/keysequenceedit.py
+--rw-r--r--   0        0        0     7119 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/label.py
+--rw-r--r--   0        0        0     3265 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/layout.py
+--rw-r--r--   0        0        0      112 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/layoutitem.py
+--rw-r--r--   0        0        0     4214 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/lineedit.py
+--rw-r--r--   0        0        0     1034 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/listview.py
+--rw-r--r--   0        0        0     3261 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/listwidget.py
+--rw-r--r--   0        0        0     1914 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/listwidgetitem.py
+--rw-r--r--   0        0        0     6752 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/mainwindow.py
+--rw-r--r--   0        0        0     3959 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/mdiarea.py
+--rw-r--r--   0        0        0      317 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/mdisubwindow.py
+--rw-r--r--   0        0        0     3695 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/menu.py
+--rw-r--r--   0        0        0     1288 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/menubar.py
+--rw-r--r--   0        0        0     4427 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/messagebox.py
+--rw-r--r--   0        0        0     5693 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/plaintextedit.py
+--rw-r--r--   0        0        0     2384 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/progressbar.py
+--rw-r--r--   0        0        0     1007 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/progressdialog.py
+--rw-r--r--   0        0        0     1031 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/pushbutton.py
+--rw-r--r--   0        0        0      905 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/radiobutton.py
+--rw-r--r--   0        0        0      522 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/scrollarea.py
+--rw-r--r--   0        0        0      622 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/scrollbar.py
+--rw-r--r--   0        0        0     4354 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/sizepolicy.py
+--rw-r--r--   0        0        0     3358 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/slider.py
+--rw-r--r--   0        0        0      806 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/spaceritem.py
+--rw-r--r--   0        0        0     2175 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/spinbox.py
+--rw-r--r--   0        0        0     1250 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/splashscreen.py
+--rw-r--r--   0        0        0     3279 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/splitter.py
+--rw-r--r--   0        0        0      968 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/stackedlayout.py
+--rw-r--r--   0        0        0     1501 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/statusbar.py
+--rw-r--r--   0        0        0      102 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/style.py
+--rw-r--r--   0        0        0      129 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/styleditemdelegate.py
+--rw-r--r--   0        0        0      116 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/stylefactory.py
+--rw-r--r--   0        0        0      114 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/styleoption.py
+--rw-r--r--   0        0        0      124 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/styleoptionframe.py
+--rw-r--r--   0        0        0     1917 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/styleoptionslider.py
+--rw-r--r--   0        0        0      195 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/stylepainter.py
+--rw-r--r--   0        0        0     1537 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/systemtrayicon.py
+--rw-r--r--   0        0        0     4223 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/tabbar.py
+--rw-r--r--   0        0        0     1514 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/tableview.py
+--rw-r--r--   0        0        0      494 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/tablewidget.py
+--rw-r--r--   0        0        0      122 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/tablewidgetitem.py
+--rw-r--r--   0        0        0     8149 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/tabwidget.py
+--rw-r--r--   0        0        0     2088 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/textbrowser.py
+--rw-r--r--   0        0        0     1805 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/textedit.py
+--rw-r--r--   0        0        0     1410 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/timeedit.py
+--rw-r--r--   0        0        0     4156 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/toolbar.py
+--rw-r--r--   0        0        0     1900 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/toolbox.py
+--rw-r--r--   0        0        0     2694 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/toolbutton.py
+--rw-r--r--   0        0        0      234 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/tooltip.py
+--rw-r--r--   0        0        0     1602 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/treeview.py
+--rw-r--r--   0        0        0      489 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/treewidget.py
+--rw-r--r--   0        0        0     1922 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/treewidgetitem.py
+--rw-r--r--   0        0        0    12511 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/widget.py
+--rw-r--r--   0        0        0      398 2020-07-18 01:09:32.726260 PrettyQt-0.99.0/prettyqt/widgets/widgetaction.py
+--rw-r--r--   0        0        0      530 2020-07-18 01:09:32.730260 PrettyQt-0.99.0/prettyqt/widgets/wizard.py
+--rw-r--r--   0        0        0      196 2020-07-18 01:09:32.730260 PrettyQt-0.99.0/prettyqt/widgets/wizardpage.py
+--rw-r--r--   0        0        0      360 2020-07-18 01:09:32.730260 PrettyQt-0.99.0/prettyqt/winextras/__init__.py
+--rw-r--r--   0        0        0      738 2020-07-18 01:09:32.730260 PrettyQt-0.99.0/prettyqt/winextras/winjumplist.py
+--rw-r--r--   0        0        0     1472 2020-07-18 01:09:32.730260 PrettyQt-0.99.0/prettyqt/winextras/winjumplistcategory.py
+--rw-r--r--   0        0        0     1431 2020-07-18 01:09:32.730260 PrettyQt-0.99.0/prettyqt/winextras/winjumplistitem.py
+--rw-r--r--   0        0        0     3170 2020-07-18 01:09:32.730260 PrettyQt-0.99.0/pyproject.toml
+--rw-r--r--   0        0        0     4759 2020-07-18 01:11:27.056488 PrettyQt-0.99.0/setup.py
+--rw-r--r--   0        0        0     4217 2020-07-18 01:11:27.056881 PrettyQt-0.99.0/PKG-INFO
++-rw-r--r--   0        0        0     1078 2023-04-07 02:23:06.195781 prettyqt-1.0.0/LICENSE
++-rw-r--r--   0        0        0     2875 2023-04-07 02:23:06.195781 prettyqt-1.0.0/docs/index.md
++-rw-r--r--   0        0        0      687 2023-04-07 02:23:06.195781 prettyqt-1.0.0/prettyqt/__init__.py
++-rw-r--r--   0        0        0      122 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/__pyinstaller/__init__.py
++-rw-r--r--   0        0        0      860 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/__pyinstaller/hook-prettyqt.py
++-rw-r--r--   0        0        0      517 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/bluetooth/__init__.py
++-rw-r--r--   0        0        0      334 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/bluetooth/bluetoothaddress.py
++-rw-r--r--   0        0        0     2649 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/bluetooth/bluetoothdevicediscoveryagent.py
++-rw-r--r--   0        0        0     1421 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/bluetooth/bluetoothservicediscoveryagent.py
++-rw-r--r--   0        0        0     1872 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/bluetooth/bluetoothserviceinfo.py
++-rw-r--r--   0        0        0    11927 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/bluetooth/bluetoothuuid.py
++-rw-r--r--   0        0        0     1792 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/__init__.py
++-rw-r--r--   0        0        0     2245 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/abstractaxis.py
++-rw-r--r--   0        0        0     1603 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/abstractbarseries.py
++-rw-r--r--   0        0        0      554 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/abstractseries.py
++-rw-r--r--   0        0        0      517 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/barcategoryaxis.py
++-rw-r--r--   0        0        0      177 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/barseries.py
++-rw-r--r--   0        0        0      932 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/barset.py
++-rw-r--r--   0        0        0     1692 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/boxset.py
++-rw-r--r--   0        0        0      609 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/candlestickset.py
++-rw-r--r--   0        0        0     1767 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/categoryaxis.py
++-rw-r--r--   0        0        0     5315 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/chart.py
++-rw-r--r--   0        0        0     5622 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/chartview.py
++-rw-r--r--   0        0        0      381 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/datetimeaxis.py
++-rw-r--r--   0        0        0      197 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/horizontalbarseries.py
++-rw-r--r--   0        0        0      217 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/horizontalpercentbarseries.py
++-rw-r--r--   0        0        0      217 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/horizontalstackedbarseries.py
++-rw-r--r--   0        0        0     2742 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/legend.py
++-rw-r--r--   0        0        0      645 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/lineseries.py
++-rw-r--r--   0        0        0      178 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/logvalueaxis.py
++-rw-r--r--   0        0        0      191 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/percentbarseries.py
++-rw-r--r--   0        0        0     2038 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/pieslice.py
++-rw-r--r--   0        0        0      739 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/polarchart.py
++-rw-r--r--   0        0        0      176 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/scatterseries.py
++-rw-r--r--   0        0        0      191 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/stackedbarseries.py
++-rw-r--r--   0        0        0     1044 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/valueaxis.py
++-rw-r--r--   0        0        0     1219 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/charts/xyseries.py
++-rw-r--r--   0        0        0    34636 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/constants/__init__.py
++-rw-r--r--   0        0        0     9001 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/__init__.py
++-rw-r--r--   0        0        0     1098 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/_calendar.py
++-rw-r--r--   0        0        0     2000 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/_datetime.py
++-rw-r--r--   0        0        0      478 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/_time.py
++-rw-r--r--   0        0        0     3286 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/abstractanimation.py
++-rw-r--r--   0        0        0      186 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/abstracteventdispatcher.py
++-rw-r--r--   0        0        0     5354 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/abstractitemmodel.py
++-rw-r--r--   0        0        0      250 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/abstractlistmodel.py
++-rw-r--r--   0        0        0      146 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/abstractnativeeventfilter.py
++-rw-r--r--   0        0        0      254 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/abstractproxymodel.py
++-rw-r--r--   0        0        0      254 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/abstracttablemodel.py
++-rw-r--r--   0        0        0     2060 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/animationgroup.py
++-rw-r--r--   0        0        0      533 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/basictimer.py
++-rw-r--r--   0        0        0      154 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/buffer.py
++-rw-r--r--   0        0        0      173 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/bytearray.py
++-rw-r--r--   0        0        0      369 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/bytearraymatcher.py
++-rw-r--r--   0        0        0      959 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/collator.py
++-rw-r--r--   0        0        0      126 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/collatorsortkey.py
++-rw-r--r--   0        0        0      324 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/commandlineoption.py
++-rw-r--r--   0        0        0     2231 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/commandlineparser.py
++-rw-r--r--   0        0        0      211 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/concatenatetablesproxymodel.py
++-rw-r--r--   0        0        0     3940 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/coreapplication.py
++-rw-r--r--   0        0        0     2038 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/cryptographichash.py
++-rw-r--r--   0        0        0     3426 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/datastream.py
++-rw-r--r--   0        0        0      470 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/date.py
++-rw-r--r--   0        0        0      766 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/deadlinetimer.py
++-rw-r--r--   0        0        0     1153 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/debug.py
++-rw-r--r--   0        0        0     4369 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/dir.py
++-rw-r--r--   0        0        0      264 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/diriterator.py
++-rw-r--r--   0        0        0     4500 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/easingcurve.py
++-rw-r--r--   0        0        0      918 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/elapsedtimer.py
++-rw-r--r--   0        0        0     7128 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/event.py
++-rw-r--r--   0        0        0     1225 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/eventloop.py
++-rw-r--r--   0        0        0      191 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/file.py
++-rw-r--r--   0        0        0     3694 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/filedevice.py
++-rw-r--r--   0        0        0     1492 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/fileinfo.py
++-rw-r--r--   0        0        0      560 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/fileselector.py
++-rw-r--r--   0        0        0      879 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/filesystemwatcher.py
++-rw-r--r--   0        0        0      188 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/identityproxymodel.py
++-rw-r--r--   0        0        0     1485 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/iodevice.py
++-rw-r--r--   0        0        0      122 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/itemselection.py
++-rw-r--r--   0        0        0      176 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/itemselectionmodel.py
++-rw-r--r--   0        0        0      696 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/itemselectionrange.py
++-rw-r--r--   0        0        0     1661 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/jsondocument.py
++-rw-r--r--   0        0        0      538 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/jsonvalue.py
++-rw-r--r--   0        0        0     1248 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/library.py
++-rw-r--r--   0        0        0     1692 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/libraryinfo.py
++-rw-r--r--   0        0        0     1868 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/line.py
++-rw-r--r--   0        0        0     1997 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/linef.py
++-rw-r--r--   0        0        0    16492 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/locale.py
++-rw-r--r--   0        0        0      810 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/lockfile.py
++-rw-r--r--   0        0        0      708 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/margins.py
++-rw-r--r--   0        0        0      713 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/marginsf.py
++-rw-r--r--   0        0        0     1110 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/metaenum.py
++-rw-r--r--   0        0        0     1423 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/metamethod.py
++-rw-r--r--   0        0        0     3703 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/metaobject.py
++-rw-r--r--   0        0        0      511 2023-04-07 02:23:06.199781 prettyqt-1.0.0/prettyqt/core/metaproperty.py
++-rw-r--r--   0        0        0     1802 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/mimedata.py
++-rw-r--r--   0        0        0      948 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/mimedatabase.py
++-rw-r--r--   0        0        0      208 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/mimetype.py
++-rw-r--r--   0        0        0      176 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/modelindex.py
++-rw-r--r--   0        0        0      336 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/mutex.py
++-rw-r--r--   0        0        0     3583 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/object.py
++-rw-r--r--   0        0        0     2562 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/operatingsystemversion.py
++-rw-r--r--   0        0        0      356 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/parallelanimationgroup.py
++-rw-r--r--   0        0        0      253 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/pauseanimation.py
++-rw-r--r--   0        0        0      338 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/persistentmodelindex.py
++-rw-r--r--   0        0        0      811 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/pluginloader.py
++-rw-r--r--   0        0        0      349 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/point.py
++-rw-r--r--   0        0        0      353 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/pointf.py
++-rw-r--r--   0        0        0     4839 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/process.py
++-rw-r--r--   0        0        0     1340 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/processenvironment.py
++-rw-r--r--   0        0        0      774 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/propertyanimation.py
++-rw-r--r--   0        0        0      126 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/randomgenerator.py
++-rw-r--r--   0        0        0      231 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/randomgenerator64.py
++-rw-r--r--   0        0        0      878 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/rect.py
++-rw-r--r--   0        0        0      442 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/rectf.py
++-rw-r--r--   0        0        0     6515 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/regularexpression.py
++-rw-r--r--   0        0        0     2579 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/regularexpressionmatch.py
++-rw-r--r--   0        0        0      613 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/regularexpressionmatchiterator.py
++-rw-r--r--   0        0        0     1702 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/resource.py
++-rw-r--r--   0        0        0      112 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/runnable.py
++-rw-r--r--   0        0        0      160 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/savefile.py
++-rw-r--r--   0        0        0      281 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/semaphore.py
++-rw-r--r--   0        0        0      202 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/sequentialanimationgroup.py
++-rw-r--r--   0        0        0     6990 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/settings.py
++-rw-r--r--   0        0        0      122 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/signalblocker.py
++-rw-r--r--   0        0        0      451 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/signalmapper.py
++-rw-r--r--   0        0        0     1124 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/size.py
++-rw-r--r--   0        0        0     1142 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/sizef.py
++-rw-r--r--   0        0        0      471 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/slot.py
++-rw-r--r--   0        0        0      930 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/socketnotifier.py
++-rw-r--r--   0        0        0     2681 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/sortfilterproxymodel.py
++-rw-r--r--   0        0        0     2622 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/standardpaths.py
++-rw-r--r--   0        0        0     1184 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/storageinfo.py
++-rw-r--r--   0        0        0      339 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/stringlistmodel.py
++-rw-r--r--   0        0        0      980 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/temporarydir.py
++-rw-r--r--   0        0        0      164 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/temporaryfile.py
++-rw-r--r--   0        0        0     2583 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/textboundaryfinder.py
++-rw-r--r--   0        0        0     3862 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/textstream.py
++-rw-r--r--   0        0        0      108 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/thread.py
++-rw-r--r--   0        0        0      160 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/threadpool.py
++-rw-r--r--   0        0        0     2291 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/timeline.py
++-rw-r--r--   0        0        0     1761 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/timer.py
++-rw-r--r--   0        0        0     2076 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/timezone.py
++-rw-r--r--   0        0        0     1722 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/translator.py
++-rw-r--r--   0        0        0      190 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/transposeproxymodel.py
++-rw-r--r--   0        0        0     3968 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/url.py
++-rw-r--r--   0        0        0      770 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/urlquery.py
++-rw-r--r--   0        0        0     1837 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/uuid.py
++-rw-r--r--   0        0        0     1519 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/variantanimation.py
++-rw-r--r--   0        0        0     2614 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/versionnumber.py
++-rw-r--r--   0        0        0     2614 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/core/xmlstreamreader.py
++-rw-r--r--   0        0        0      253 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_animations/__init__.py
++-rw-r--r--   0        0        0     1579 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_animations/bounceanimation.py
++-rw-r--r--   0        0        0      644 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_animations/fadeinanimation.py
++-rw-r--r--   0        0        0      978 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_animations/slideanimation.py
++-rw-r--r--   0        0        0      535 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_delegates/__init__.py
++-rw-r--r--   0        0        0      887 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_delegates/buttondelegate.py
++-rw-r--r--   0        0        0     1001 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_delegates/checkboxdelegate.py
++-rw-r--r--   0        0        0     2556 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_delegates/icondelegate.py
++-rw-r--r--   0        0        0      596 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_delegates/nofocusdelegate.py
++-rw-r--r--   0        0        0     1474 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_delegates/progressbardelegate.py
++-rw-r--r--   0        0        0     4731 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_delegates/radiodelegate.py
++-rw-r--r--   0        0        0     2574 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_delegates/renderlinkdelegate.py
++-rw-r--r--   0        0        0     6634 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_delegates/stardelegate.py
++-rw-r--r--   0        0        0      735 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_models/__init__.py
++-rw-r--r--   0        0        0     5921 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_models/columnitemmodel.py
++-rw-r--r--   0        0        0     3585 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_models/importlibdistributionmodel.py
++-rw-r--r--   0        0        0     4214 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_models/jsonmodel.py
++-rw-r--r--   0        0        0     3099 2023-04-07 02:23:06.203781 prettyqt-1.0.0/prettyqt/custom_models/listmixin.py
++-rw-r--r--   0        0        0     2553 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_models/modelmixin.py
++-rw-r--r--   0        0        0     2298 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_models/nesteditem.py
++-rw-r--r--   0        0        0     2177 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_models/nestedmodel.py
++-rw-r--r--   0        0        0     2114 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_models/regexmatchesmodel.py
++-rw-r--r--   0        0        0     1689 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_models/selectionmixin.py
++-rw-r--r--   0        0        0     5230 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_models/storageinfomodel.py
++-rw-r--r--   0        0        0     2858 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_models/subsequencesortfilterproxymodel.py
++-rw-r--r--   0        0        0      635 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_validators/__init__.py
++-rw-r--r--   0        0        0     2060 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_validators/compositevalidator.py
++-rw-r--r--   0        0        0     1114 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_validators/integervalidator.py
++-rw-r--r--   0        0        0      704 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_validators/notemptyvalidator.py
++-rw-r--r--   0        0        0      700 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_validators/notzerovalidator.py
++-rw-r--r--   0        0        0      620 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_validators/pathvalidator.py
++-rw-r--r--   0        0        0     1554 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_validators/regexpatternvalidator.py
++-rw-r--r--   0        0        0     3143 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_validators/regexvalidators.py
++-rw-r--r--   0        0        0     2704 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/__init__.py
++-rw-r--r--   0        0        0     1638 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/booldicttoolbutton.py
++-rw-r--r--   0        0        0     7588 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/borderlayout.py
++-rw-r--r--   0        0        0     3046 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/codeeditor.py
++-rw-r--r--   0        0        0     2588 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/collapsibleframe.py
++-rw-r--r--   0        0        0     2468 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/colorchooserbutton.py
++-rw-r--r--   0        0        0     7429 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/completionwidget.py
++-rw-r--r--   0        0        0    17651 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/dataset.py
++-rw-r--r--   0        0        0     2219 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/elidedlabel.py
++-rw-r--r--   0        0        0     3429 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/expandableline.py
++-rw-r--r--   0        0        0     3194 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/filechooserbutton.py
++-rw-r--r--   0        0        0     2155 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/flagselectionwidget.py
++-rw-r--r--   0        0        0     3847 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/flowlayout.py
++-rw-r--r--   0        0        0     2156 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/fontchooserbutton.py
++-rw-r--r--   0        0        0     9168 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/framelesswindow.py
++-rw-r--r--   0        0        0     5371 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/iconbrowser.py
++-rw-r--r--   0        0        0     1311 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/iconlabel.py
++-rw-r--r--   0        0        0     1661 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/iconwidget.py
++-rw-r--r--   0        0        0     1292 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/image.py
++-rw-r--r--   0        0        0      644 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/imageviewer.py
++-rw-r--r--   0        0        0     1931 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/inputandslider.py
++-rw-r--r--   0        0        0     2106 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/joystickbutton.py
++-rw-r--r--   0        0        0     4175 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/labeledslider.py
++-rw-r--r--   0        0        0     1214 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/listinput.py
++-rw-r--r--   0        0        0     8209 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/logtextedit.py
++-rw-r--r--   0        0        0      738 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/mappedcheckbox.py
++-rw-r--r--   0        0        0     2388 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/markdownwidget.py
++-rw-r--r--   0        0        0     6576 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/menurecentfiles.py
++-rw-r--r--   0        0        0    18758 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/notification.py
++-rw-r--r--   0        0        0     1038 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/optionalwidget.py
++-rw-r--r--   0        0        0     1332 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/popupinfo.py
++-rw-r--r--   0        0        0      145 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/regexeditor/__init__.py
++-rw-r--r--   0        0        0      431 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/regexeditor/__main__.py
++-rw-r--r--   0        0        0     1039 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/regexeditor/quick_ref.py
++-rw-r--r--   0        0        0    19388 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/regexeditor/ref.html
++-rw-r--r--   0        0        0     6186 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/regexeditor/regexeditorwidget.py
++-rw-r--r--   0        0        0     3110 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/regexinput.py
++-rw-r--r--   0        0        0    10458 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/roundprogressbar.py
++-rw-r--r--   0        0        0     4250 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/selectionwidget.py
++-rw-r--r--   0        0        0     6318 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/sidebarwidget.py
++-rw-r--r--   0        0        0     1036 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/singlelinetextedit.py
++-rw-r--r--   0        0        0    18587 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/spanslider.py
++-rw-r--r--   0        0        0     1286 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/standardiconswidget.py
++-rw-r--r--   0        0        0     2289 2023-04-07 02:23:06.207780 prettyqt-1.0.0/prettyqt/custom_widgets/stringornumberwidget.py
++-rw-r--r--   0        0        0     1774 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/custom_widgets/subsequencecompleter.py
++-rw-r--r--   0        0        0     8034 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/custom_widgets/timeline.py
++-rw-r--r--   0        0        0     9009 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/custom_widgets/waitingspinner.py
++-rw-r--r--   0        0        0      255 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/eventfilters/__init__.py
++-rw-r--r--   0        0        0     2485 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/eventfilters/animatedtooltipeventfilter.py
++-rw-r--r--   0        0        0      751 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/eventfilters/hovericoneventfilter.py
++-rw-r--r--   0        0        0     7619 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/__init__.py
++-rw-r--r--   0        0        0     1269 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/abstracttextdocumentlayout.py
++-rw-r--r--   0        0        0      235 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/bitmap.py
++-rw-r--r--   0        0        0      979 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/brush.py
++-rw-r--r--   0        0        0     2490 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/clipboard.py
++-rw-r--r--   0        0        0     6681 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/color.py
++-rw-r--r--   0        0        0     3045 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/colorspace.py
++-rw-r--r--   0        0        0      485 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/conicalgradient.py
++-rw-r--r--   0        0        0     1255 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/cursor.py
++-rw-r--r--   0        0        0      439 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/desktopservices.py
++-rw-r--r--   0        0        0     1094 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/doublevalidator.py
++-rw-r--r--   0        0        0      973 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/drag.py
++-rw-r--r--   0        0        0     9049 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/font.py
++-rw-r--r--   0        0        0     4694 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/fontdatabase.py
++-rw-r--r--   0        0        0      243 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/fontinfo.py
++-rw-r--r--   0        0        0      878 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/fontmetrics.py
++-rw-r--r--   0        0        0      719 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/fontmetricsf.py
++-rw-r--r--   0        0        0     5331 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/gradient.py
++-rw-r--r--   0        0        0     5027 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/guiapplication.py
++-rw-r--r--   0        0        0     3970 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/icon.py
++-rw-r--r--   0        0        0     4053 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/iconengine.py
++-rw-r--r--   0        0        0     1260 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/image.py
++-rw-r--r--   0        0        0     3778 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/imageiohandler.py
++-rw-r--r--   0        0        0     3838 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/imagereader.py
++-rw-r--r--   0        0        0     2791 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/imagewriter.py
++-rw-r--r--   0        0        0     1315 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/inputmethod.py
++-rw-r--r--   0        0        0      921 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/intvalidator.py
++-rw-r--r--   0        0        0     6168 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/keysequence.py
++-rw-r--r--   0        0        0      636 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/lineargradient.py
++-rw-r--r--   0        0        0      302 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/matrix4x4.py
++-rw-r--r--   0        0        0     1969 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/movie.py
++-rw-r--r--   0        0        0      297 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/pagedpaintdevice.py
++-rw-r--r--   0        0        0     2923 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/pagelayout.py
++-rw-r--r--   0        0        0     7838 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/pagesize.py
++-rw-r--r--   0        0        0     1676 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/paintdevice.py
++-rw-r--r--   0        0        0      319 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/paintdevicewindow.py
++-rw-r--r--   0        0        0     7557 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/painter.py
++-rw-r--r--   0        0        0     2425 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/painterpath.py
++-rw-r--r--   0        0        0     1641 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/painterpathstroker.py
++-rw-r--r--   0        0        0     5859 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/palette.py
++-rw-r--r--   0        0        0     1026 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/pdfwriter.py
++-rw-r--r--   0        0        0     2841 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/pen.py
++-rw-r--r--   0        0        0      471 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/picture.py
++-rw-r--r--   0        0        0     4827 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/pixmap.py
++-rw-r--r--   0        0        0      796 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/pixmapcache.py
++-rw-r--r--   0        0        0     3489 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/polygon.py
++-rw-r--r--   0        0        0     4325 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/polygonf.py
++-rw-r--r--   0        0        0      898 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/radialgradient.py
++-rw-r--r--   0        0        0      233 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/rasterwindow.py
++-rw-r--r--   0        0        0     1145 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/region.py
++-rw-r--r--   0        0        0     1290 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/regularexpressionvalidator.py
++-rw-r--r--   0        0        0     2963 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/screen.py
++-rw-r--r--   0        0        0     1291 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/sessionmanager.py
++-rw-r--r--   0        0        0     6188 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/standarditem.py
++-rw-r--r--   0        0        0     4758 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/standarditemmodel.py
++-rw-r--r--   0        0        0     2225 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/statictext.py
++-rw-r--r--   0        0        0     1303 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/surface.py
++-rw-r--r--   0        0        0     1352 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/syntaxhighlighter.py
++-rw-r--r--   0        0        0     5251 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/textblock.py
++-rw-r--r--   0        0        0      623 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/textblockgroup.py
++-rw-r--r--   0        0        0      536 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/textblockuserdata.py
++-rw-r--r--   0        0        0     4878 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/textcharformat.py
++-rw-r--r--   0        0        0     5551 2023-04-07 02:23:06.211781 prettyqt-1.0.0/prettyqt/gui/textcursor.py
++-rw-r--r--   0        0        0     7781 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textdocument.py
++-rw-r--r--   0        0        0      949 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textdocumentfragment.py
++-rw-r--r--   0        0        0     1062 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textdocumentwriter.py
++-rw-r--r--   0        0        0     3262 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textformat.py
++-rw-r--r--   0        0        0      534 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textframe.py
++-rw-r--r--   0        0        0     3627 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textframeformat.py
++-rw-r--r--   0        0        0      297 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textimageformat.py
++-rw-r--r--   0        0        0      517 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textlayout.py
++-rw-r--r--   0        0        0      725 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textlength.py
++-rw-r--r--   0        0        0     1649 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textline.py
++-rw-r--r--   0        0        0     1327 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textlistformat.py
++-rw-r--r--   0        0        0      445 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textobject.py
++-rw-r--r--   0        0        0      199 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textobjectinterface.py
++-rw-r--r--   0        0        0     1560 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/textoption.py
++-rw-r--r--   0        0        0     4104 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/texttablecellformat.py
++-rw-r--r--   0        0        0     2605 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/transform.py
++-rw-r--r--   0        0        0      755 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/validator.py
++-rw-r--r--   0        0        0      575 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/vector3d.py
++-rw-r--r--   0        0        0      578 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/vector4d.py
++-rw-r--r--   0        0        0     2338 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/gui/window.py
++-rw-r--r--   0        0        0    10227 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/iconprovider/__init__.py
++-rw-r--r--   0        0        0     1387 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/iconprovider/animation.py
++-rw-r--r--   0        0        0     3059 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/iconprovider/awesomefileiconprovider.py
++-rw-r--r--   0        0        0      539 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/iconprovider/awesomequickimageprovider.py
++-rw-r--r--   0        0        0      832 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/iconprovider/chariconengine.py
++-rw-r--r--   0        0        0    10996 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/codicon-charmap.json
++-rw-r--r--   0        0        0    68076 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/codicon.ttf
++-rw-r--r--   0        0        0     7924 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/elusiveicons-webfont-charmap.json
++-rw-r--r--   0        0        0    79556 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/elusiveicons-webfont.ttf
++-rw-r--r--   0        0        0    11206 2023-04-07 02:23:06.215781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/fontawesome5-brands-webfont-charmap.json
++-rw-r--r--   0        0        0   134316 2023-04-07 02:23:06.219781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/fontawesome5-brands-webfont.ttf
++-rw-r--r--   0        0        0     3947 2023-04-07 02:23:06.219781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/fontawesome5-regular-webfont-charmap.json
++-rw-r--r--   0        0        0    33692 2023-04-07 02:23:06.219781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/fontawesome5-regular-webfont.ttf
++-rw-r--r--   0        0        0    25663 2023-04-07 02:23:06.219781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/fontawesome5-solid-webfont-charmap.json
++-rw-r--r--   0        0        0   203644 2023-04-07 02:23:06.219781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/fontawesome5-solid-webfont.ttf
++-rw-r--r--   0        0        0   200215 2023-04-07 02:23:06.223781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/materialdesignicons5-webfont-charmap.json
++-rw-r--r--   0        0        0  1026284 2023-04-07 02:23:06.231781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/materialdesignicons5-webfont.ttf
++-rw-r--r--   0        0        0   216192 2023-04-07 02:23:06.231781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/materialdesignicons6-webfont-charmap.json
++-rw-r--r--   0        0        0  1108672 2023-04-07 02:23:06.235781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/materialdesignicons6-webfont.ttf
++-rw-r--r--   0        0        0   151941 2023-04-07 02:23:06.235781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/phosphor-charmap.json
++-rw-r--r--   0        0        0  1392088 2023-04-07 02:23:06.243781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/phosphor.ttf
++-rw-r--r--   0        0        0    72655 2023-04-07 02:23:06.247781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/remixicon-charmap.json
++-rw-r--r--   0        0        0   403056 2023-04-07 02:23:06.247781 prettyqt-1.0.0/prettyqt/iconprovider/fonts/remixicon.ttf
++-rw-r--r--   0        0        0     8417 2023-04-07 02:23:06.247781 prettyqt-1.0.0/prettyqt/iconprovider/iconic_font.py
++-rw-r--r--   0        0        0     2468 2023-04-07 02:23:06.247781 prettyqt-1.0.0/prettyqt/iconprovider/svgbuffericonengine.py
++-rw-r--r--   0        0        0   154232 2023-04-07 02:23:06.251781 prettyqt-1.0.0/prettyqt/localization/language_ar.qm
++-rw-r--r--   0        0        0   155315 2023-04-07 02:23:06.251781 prettyqt-1.0.0/prettyqt/localization/language_bg.qm
++-rw-r--r--   0        0        0   178552 2023-04-07 02:23:06.251781 prettyqt-1.0.0/prettyqt/localization/language_ca.qm
++-rw-r--r--   0        0        0   151054 2023-04-07 02:23:06.251781 prettyqt-1.0.0/prettyqt/localization/language_cs.qm
++-rw-r--r--   0        0        0   179910 2023-04-07 02:23:06.251781 prettyqt-1.0.0/prettyqt/localization/language_da.qm
++-rw-r--r--   0        0        0   212675 2023-04-07 02:23:06.255781 prettyqt-1.0.0/prettyqt/localization/language_de.qm
++-rw-r--r--   0        0        0   154543 2023-04-07 02:23:06.255781 prettyqt-1.0.0/prettyqt/localization/language_es.qm
++-rw-r--r--   0        0        0    97872 2023-04-07 02:23:06.255781 prettyqt-1.0.0/prettyqt/localization/language_fa.qm
++-rw-r--r--   0        0        0   174500 2023-04-07 02:23:06.255781 prettyqt-1.0.0/prettyqt/localization/language_fi.qm
++-rw-r--r--   0        0        0   154190 2023-04-07 02:23:06.259781 prettyqt-1.0.0/prettyqt/localization/language_fr.qm
++-rw-r--r--   0        0        0   183091 2023-04-07 02:23:06.259781 prettyqt-1.0.0/prettyqt/localization/language_gd.qm
++-rw-r--r--   0        0        0   108600 2023-04-07 02:23:06.259781 prettyqt-1.0.0/prettyqt/localization/language_gl.qm
++-rw-r--r--   0        0        0   130568 2023-04-07 02:23:06.259781 prettyqt-1.0.0/prettyqt/localization/language_he.qm
++-rw-r--r--   0        0        0   150033 2023-04-07 02:23:06.263781 prettyqt-1.0.0/prettyqt/localization/language_hu.qm
++-rw-r--r--   0        0        0   153570 2023-04-07 02:23:06.263781 prettyqt-1.0.0/prettyqt/localization/language_it.qm
++-rw-r--r--   0        0        0   122385 2023-04-07 02:23:06.263781 prettyqt-1.0.0/prettyqt/localization/language_ja.qm
++-rw-r--r--   0        0        0   120318 2023-04-07 02:23:06.263781 prettyqt-1.0.0/prettyqt/localization/language_ko.qm
++-rw-r--r--   0        0        0    90502 2023-04-07 02:23:06.267781 prettyqt-1.0.0/prettyqt/localization/language_lt.qm
++-rw-r--r--   0        0        0   143558 2023-04-07 02:23:06.267781 prettyqt-1.0.0/prettyqt/localization/language_lv.qm
++-rw-r--r--   0        0        0   161318 2023-04-07 02:23:06.267781 prettyqt-1.0.0/prettyqt/localization/language_pl.qm
++-rw-r--r--   0        0        0    50541 2023-04-07 02:23:06.267781 prettyqt-1.0.0/prettyqt/localization/language_pt.qm
++-rw-r--r--   0        0        0   197476 2023-04-07 02:23:06.267781 prettyqt-1.0.0/prettyqt/localization/language_ru.qm
++-rw-r--r--   0        0        0   115250 2023-04-07 02:23:06.271781 prettyqt-1.0.0/prettyqt/localization/language_sk.qm
++-rw-r--r--   0        0        0    96357 2023-04-07 02:23:06.271781 prettyqt-1.0.0/prettyqt/localization/language_sl.qm
++-rw-r--r--   0        0        0    47206 2023-04-07 02:23:06.271781 prettyqt-1.0.0/prettyqt/localization/language_sv.qm
++-rw-r--r--   0        0        0   148437 2023-04-07 02:23:06.271781 prettyqt-1.0.0/prettyqt/localization/language_uk.qm
++-rw-r--r--   0        0        0    61089 2023-04-07 02:23:06.275781 prettyqt-1.0.0/prettyqt/localization/language_zh_CN.qm
++-rw-r--r--   0        0        0   125250 2023-04-07 02:23:06.275781 prettyqt-1.0.0/prettyqt/localization/language_zh_TW.qm
++-rw-r--r--   0        0        0     2384 2023-04-07 02:23:06.275781 prettyqt-1.0.0/prettyqt/location/__init__.py
++-rw-r--r--   0        0        0      387 2023-04-07 02:23:06.275781 prettyqt-1.0.0/prettyqt/location/geocodingmanager.py
++-rw-r--r--   0        0        0     2867 2023-04-07 02:23:06.275781 prettyqt-1.0.0/prettyqt/location/geomaneuver.py
++-rw-r--r--   0        0        0     1055 2023-04-07 02:23:06.275781 prettyqt-1.0.0/prettyqt/location/georoute.py
++-rw-r--r--   0        0        0     5266 2023-04-07 02:23:06.275781 prettyqt-1.0.0/prettyqt/location/georouterequest.py
++-rw-r--r--   0        0        0      657 2023-04-07 02:23:06.275781 prettyqt-1.0.0/prettyqt/location/georoutesegment.py
++-rw-r--r--   0        0        0     2021 2023-04-07 02:23:06.275781 prettyqt-1.0.0/prettyqt/location/georoutingmanager.py
++-rw-r--r--   0        0        0     5880 2023-04-07 02:23:06.275781 prettyqt-1.0.0/prettyqt/location/geoserviceprovider.py
++-rw-r--r--   0        0        0     2387 2023-04-07 02:23:06.275781 prettyqt-1.0.0/prettyqt/location/place.py
++-rw-r--r--   0        0        0      864 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placeattribute.py
++-rw-r--r--   0        0        0      737 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placecategory.py
++-rw-r--r--   0        0        0      844 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placecontactdetail.py
++-rw-r--r--   0        0        0     1030 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placecontent.py
++-rw-r--r--   0        0        0     1275 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placecontentreply.py
++-rw-r--r--   0        0        0      947 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placecontentrequest.py
++-rw-r--r--   0        0        0      562 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placedetailsreply.py
++-rw-r--r--   0        0        0      849 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placeicon.py
++-rw-r--r--   0        0        0     1185 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placeidreply.py
++-rw-r--r--   0        0        0     2233 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placemanager.py
++-rw-r--r--   0        0        0     1066 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placematchreply.py
++-rw-r--r--   0        0        0      726 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placematchrequest.py
++-rw-r--r--   0        0        0      223 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placeproposedsearchresult.py
++-rw-r--r--   0        0        0      316 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placeratings.py
++-rw-r--r--   0        0        0     1923 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placereply.py
++-rw-r--r--   0        0        0      267 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placeresult.py
++-rw-r--r--   0        0        0     1651 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placesearchreply.py
++-rw-r--r--   0        0        0     2230 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placesearchrequest.py
++-rw-r--r--   0        0        0      884 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placesearchresult.py
++-rw-r--r--   0        0        0      675 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placesupplier.py
++-rw-r--r--   0        0        0      215 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/placeuser.py
++-rw-r--r--   0        0        0      621 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/location/qlocation.py
++-rw-r--r--   0        0        0      167 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/multimediawidgets/__init__.py
++-rw-r--r--   0        0        0     1353 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/multimediawidgets/graphicsvideoitem.py
++-rw-r--r--   0        0        0      872 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/multimediawidgets/videowidget.py
++-rw-r--r--   0        0        0     1172 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/__init__.py
++-rw-r--r--   0        0        0     8113 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/abstractsocket.py
++-rw-r--r--   0        0        0     1775 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/hostaddress.py
++-rw-r--r--   0        0        0     1465 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/httpmultipart.py
++-rw-r--r--   0        0        0      823 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/httppart.py
++-rw-r--r--   0        0        0     1310 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/localserver.py
++-rw-r--r--   0        0        0     2392 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/localsocket.py
++-rw-r--r--   0        0        0     2313 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/networkaccessmanager.py
++-rw-r--r--   0        0        0     2000 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/networkaddressentry.py
++-rw-r--r--   0        0        0     1551 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/networkcookie.py
++-rw-r--r--   0        0        0      850 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/networkcookiejar.py
++-rw-r--r--   0        0        0      627 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/networkdatagram.py
++-rw-r--r--   0        0        0     3011 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/networkinterface.py
++-rw-r--r--   0        0        0     3361 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/networkproxy.py
++-rw-r--r--   0        0        0     6462 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/networkrequest.py
++-rw-r--r--   0        0        0      779 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/tcpserver.py
++-rw-r--r--   0        0        0      178 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/tcpsocket.py
++-rw-r--r--   0        0        0      671 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/network/udpsocket.py
++-rw-r--r--   0        0        0       26 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/objbrowser/__init__.py
++-rw-r--r--   0        0        0     9184 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/objbrowser/attribute_model.py
++-rw-r--r--   0        0        0    14897 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/objbrowser/objectbrowser.py
++-rw-r--r--   0        0        0    17704 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/objbrowser/objectbrowsertreemodel.py
++-rw-r--r--   0        0        0      356 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/paths.py
++-rw-r--r--   0        0        0     1169 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/__init__.py
++-rw-r--r--   0        0        0      171 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geoaddress.py
++-rw-r--r--   0        0        0     1157 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geoareamonitorinfo.py
++-rw-r--r--   0        0        0     1260 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geoareamonitorsource.py
++-rw-r--r--   0        0        0     1072 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geocircle.py
++-rw-r--r--   0        0        0     1172 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geocoordinate.py
++-rw-r--r--   0        0        0      706 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geolocation.py
++-rw-r--r--   0        0        0     1021 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geopath.py
++-rw-r--r--   0        0        0     1145 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geopolygon.py
++-rw-r--r--   0        0        0     1687 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geopositioninfo.py
++-rw-r--r--   0        0        0     2960 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geopositioninfosource.py
++-rw-r--r--   0        0        0      769 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/georectangle.py
++-rw-r--r--   0        0        0     1861 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geosatelliteinfo.py
++-rw-r--r--   0        0        0     1110 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geosatelliteinfosource.py
++-rw-r--r--   0        0        0      755 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/geoshape.py
++-rw-r--r--   0        0        0     1196 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/positioning/nmeapositioninginfosource.py
++-rw-r--r--   0        0        0        0 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/py.typed
++-rw-r--r--   0        0        0      943 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qml/__init__.py
++-rw-r--r--   0        0        0     1212 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qml/jsengine.py
++-rw-r--r--   0        0        0     2351 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qml/jsvalue.py
++-rw-r--r--   0        0        0      295 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qml/jsvalueiterator.py
++-rw-r--r--   0        0        0      955 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qml/qmlapplicationengine.py
++-rw-r--r--   0        0        0      907 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qml/qmlcomponent.py
++-rw-r--r--   0        0        0     2020 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qml/qmlengine.py
++-rw-r--r--   0        0        0      536 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qml/qmlimageproviderbase.py
++-rw-r--r--   0        0        0      185 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qml/qmlparserstatus.py
++-rw-r--r--   0        0        0      251 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qt/Qsci/__init__.py
++-rw-r--r--   0        0        0      268 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qt/QtBluetooth/__init__.py
++-rw-r--r--   0        0        0      683 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qt/QtCharts/__init__.py
++-rw-r--r--   0        0        0     3505 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qt/QtCore/__init__.py
++-rw-r--r--   0        0        0      739 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qt/QtGui/__init__.py
++-rw-r--r--   0        0        0      303 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qt/QtHelp/__init__.py
++-rw-r--r--   0        0        0      335 2023-04-07 02:23:06.279781 prettyqt-1.0.0/prettyqt/qt/QtLocation/__init__.py
++-rw-r--r--   0        0        0      327 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtMultimedia/__init__.py
++-rw-r--r--   0        0        0      355 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtMultimediaWidgets/__init__.py
++-rw-r--r--   0        0        0      331 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtNetwork/__init__.py
++-rw-r--r--   0        0        0      331 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtPositioning/__init__.py
++-rw-r--r--   0        0        0      315 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtQml/__init__.py
++-rw-r--r--   0        0        0      323 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtQuick/__init__.py
++-rw-r--r--   0        0        0      307 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtScxml/__init__.py
++-rw-r--r--   0        0        0      601 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtStateMachine/__init__.py
++-rw-r--r--   0        0        0      381 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtSvg/__init__.py
++-rw-r--r--   0        0        0      319 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtTest/__init__.py
++-rw-r--r--   0        0        0      213 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtTextToSpeech/__init__.py.old
++-rw-r--r--   0        0        0      614 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtUiTools/__init__.py
++-rw-r--r--   0        0        0      330 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtWebChannel/__init__.py
++-rw-r--r--   0        0        0      715 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtWebEngineCore/__init__.py
++-rw-r--r--   0        0        0      351 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtWebEngineWidgets/__init__.py
++-rw-r--r--   0        0        0     1408 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/QtWidgets/__init__.py
++-rw-r--r--   0        0        0     1431 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qt/__init__.py
++-rw-r--r--   0        0        0      969 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/__init__.py
++-rw-r--r--   0        0        0      271 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/helpcontentitem.py
++-rw-r--r--   0        0        0      183 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/helpcontentmodel.py
++-rw-r--r--   0        0        0      460 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/helpcontentwidget.py
++-rw-r--r--   0        0        0      260 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/helpengine.py
++-rw-r--r--   0        0        0      978 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/helpenginecore.py
++-rw-r--r--   0        0        0      302 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/helpfilterengine.py
++-rw-r--r--   0        0        0      177 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/helpindexmodel.py
++-rw-r--r--   0        0        0      178 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/helpindexwidget.py
++-rw-r--r--   0        0        0      442 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/helpsearchengine.py
++-rw-r--r--   0        0        0      188 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/helpsearchquerywidget.py
++-rw-r--r--   0        0        0      216 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/helpsearchresult.py
++-rw-r--r--   0        0        0      403 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qthelp/helpsearchresultwidget.py
++-rw-r--r--   0        0        0     8290 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/qtre.py
++-rw-r--r--   0        0        0      868 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/quick/__init__.py
++-rw-r--r--   0        0        0      208 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/quick/quickasyncimageprovider.py
++-rw-r--r--   0        0        0      257 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/quick/quickimageprovider.py
++-rw-r--r--   0        0        0      239 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/quick/quickimageresponse.py
++-rw-r--r--   0        0        0     3753 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/quick/quickitem.py
++-rw-r--r--   0        0        0      519 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/quick/quickitemgrabresult.py
++-rw-r--r--   0        0        0     1495 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/quick/quickpainteditem.py
++-rw-r--r--   0        0        0      239 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/quick/quickrendercontrol.py
++-rw-r--r--   0        0        0      271 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/quick/quicktextdocument.py
++-rw-r--r--   0        0        0     1204 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/quick/quickview.py
++-rw-r--r--   0        0        0     3637 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/quick/quickwindow.py
++-rw-r--r--   0        0        0      123 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/scintilla/__init__.py
++-rw-r--r--   0        0        0     9347 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/scintilla/sciscintilla.py
++-rw-r--r--   0        0        0      193 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/scxml/__init__.py
++-rw-r--r--   0        0        0      362 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/scxml/scxmlcompiler.py
++-rw-r--r--   0        0        0      176 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/scxml/scxmlstatemachine.py
++-rw-r--r--   0        0        0      785 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/statemachine/__init__.py
++-rw-r--r--   0        0        0      361 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/statemachine/abstractstate.py
++-rw-r--r--   0        0        0     1159 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/statemachine/abstracttransition.py
++-rw-r--r--   0        0        0      220 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/statemachine/eventtransition.py
++-rw-r--r--   0        0        0      199 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/statemachine/finalstate.py
++-rw-r--r--   0        0        0     1104 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/statemachine/historystate.py
++-rw-r--r--   0        0        0      223 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/statemachine/keyeventtransition.py
++-rw-r--r--   0        0        0      227 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/statemachine/mouseeventtransition.py
++-rw-r--r--   0        0        0      222 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/statemachine/signaltransition.py
++-rw-r--r--   0        0        0     1276 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/statemachine/state.py
++-rw-r--r--   0        0        0     2222 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/statemachine/statemachine.py
++-rw-r--r--   0        0        0      368 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/svg/__init__.py
++-rw-r--r--   0        0        0      182 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/svg/graphicssvgitem.py
++-rw-r--r--   0        0        0      405 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/svg/svggenerator.py
++-rw-r--r--   0        0        0     1080 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/svg/svgrenderer.py
++-rw-r--r--   0        0        0      279 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/svg/svgwidget.py
++-rw-r--r--   0        0        0      675 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/syntaxhighlighters/__init__.py
++-rw-r--r--   0        0        0     1236 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/syntaxhighlighters/highlightrule.py
++-rw-r--r--   0        0        0     1271 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/syntaxhighlighters/jsonhighlighter.py
++-rw-r--r--   0        0        0     3178 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/syntaxhighlighters/markdownhighlighter.py
++-rw-r--r--   0        0        0      872 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/syntaxhighlighters/pygments/regularexpressionlexer.py
++-rw-r--r--   0        0        0     8523 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/syntaxhighlighters/pygmentshighlighter.py
++-rw-r--r--   0        0        0     4836 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/syntaxhighlighters/pythonhighlighter.py
++-rw-r--r--   0        0        0     2079 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/syntaxhighlighters/regexmatchhighlighter.py
++-rw-r--r--   0        0        0     2192 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/syntaxhighlighters/xmlhighlighter.py
++-rw-r--r--   0        0        0     2106 2023-04-07 02:23:06.283781 prettyqt-1.0.0/prettyqt/syntaxhighlighters/yamlhighlighter.py
++-rw-r--r--   0        0        0      180 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/texttospeech/__init__.py
++-rw-r--r--   0        0        0     1327 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/texttospeech/texttospeech.py
++-rw-r--r--   0        0        0      903 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/texttospeech/voice.py
++-rw-r--r--   0        0        0    15547 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/themes/darktheme.qss
++-rw-r--r--   0        0        0      845 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/__init__.py
++-rw-r--r--   0        0        0     3534 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/autoslot.py
++-rw-r--r--   0        0        0     3307 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/colors.py
++-rw-r--r--   0        0        0     2337 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/debugging.py
++-rw-r--r--   0        0        0     3598 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/helpers.py
++-rw-r--r--   0        0        0      939 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/mappers.py
++-rw-r--r--   0        0        0     1054 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/prettyprinter.py
++-rw-r--r--   0        0        0     5537 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/searchandreplacemixin.py
++-rw-r--r--   0        0        0      629 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/signallogger.py
++-rw-r--r--   0        0        0     2306 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/singleapplication.py
++-rw-r--r--   0        0        0      493 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/singleton.py
++-rw-r--r--   0        0        0     2142 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/syncedproperty.py
++-rw-r--r--   0        0        0     1887 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/treeitem.py
++-rw-r--r--   0        0        0     3738 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/utils/types.py
++-rw-r--r--   0        0        0      303 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webchannel/__init__.py
++-rw-r--r--   0        0        0      228 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webchannel/webchannel.py
++-rw-r--r--   0        0        0     1337 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/__init__.py
++-rw-r--r--   0        0        0     3315 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/webenginecontextmenurequest.py
++-rw-r--r--   0        0        0     4498 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/webenginedownloadrequest.py
++-rw-r--r--   0        0        0     1299 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/webenginehistory.py
++-rw-r--r--   0        0        0      422 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/webenginehistoryitem.py
++-rw-r--r--   0        0        0     1776 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/webenginehttprequest.py
++-rw-r--r--   0        0        0    14235 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/webenginepage.py
++-rw-r--r--   0        0        0     2461 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/webengineprofile.py
++-rw-r--r--   0        0        0     1574 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/webenginescript.py
++-rw-r--r--   0        0        0     1429 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/webenginescriptcollection.py
++-rw-r--r--   0        0        0     7469 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/webenginesettings.py
++-rw-r--r--   0        0        0     2044 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/webengineurlscheme.py
++-rw-r--r--   0        0        0      282 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginecore/webengineurlschemehandler.py
++-rw-r--r--   0        0        0      330 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginewidgets/__init__.py
++-rw-r--r--   0        0        0     4593 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/webenginewidgets/webengineview.py
++-rw-r--r--   0        0        0    13586 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/__init__.py
++-rw-r--r--   0        0        0     3797 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/abstractbutton.py
++-rw-r--r--   0        0        0      406 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/abstractgraphicsshapeitem.py
++-rw-r--r--   0        0        0      257 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/abstractitemdelegate.py
++-rw-r--r--   0        0        0    11893 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/abstractitemview.py
++-rw-r--r--   0        0        0     5361 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/abstractscrollarea.py
++-rw-r--r--   0        0        0     5560 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/abstractslider.py
++-rw-r--r--   0        0        0     3715 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/abstractspinbox.py
++-rw-r--r--   0        0        0     8383 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/action.py
++-rw-r--r--   0        0        0     2143 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/actiongroup.py
++-rw-r--r--   0        0        0     7998 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/application.py
++-rw-r--r--   0        0        0     2754 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/boxlayout.py
++-rw-r--r--   0        0        0      342 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/buttongroup.py
++-rw-r--r--   0        0        0     2960 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/calendarwidget.py
++-rw-r--r--   0        0        0     1647 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/checkbox.py
++-rw-r--r--   0        0        0     3856 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/colordialog.py
++-rw-r--r--   0        0        0      331 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/columnview.py
++-rw-r--r--   0        0        0     7000 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/combobox.py
++-rw-r--r--   0        0        0      365 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/commandlinkbutton.py
++-rw-r--r--   0        0        0      280 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/commonstyle.py
++-rw-r--r--   0        0        0     3501 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/completer.py
++-rw-r--r--   0        0        0     2700 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/datawidgetmapper.py
++-rw-r--r--   0        0        0     1412 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/dateedit.py
++-rw-r--r--   0        0        0     4324 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/datetimeedit.py
++-rw-r--r--   0        0        0     1079 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/dial.py
++-rw-r--r--   0        0        0     2813 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/dialog.py
++-rw-r--r--   0        0        0     5950 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/dialogbuttonbox.py
++-rw-r--r--   0        0        0     2356 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/dockwidget.py
++-rw-r--r--   0        0        0     1772 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/doublespinbox.py
++-rw-r--r--   0        0        0      328 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/errormessage.py
++-rw-r--r--   0        0        0     7406 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/filedialog.py
++-rw-r--r--   0        0        0     1256 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/fileiconprovider.py
++-rw-r--r--   0        0        0     3492 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/filesystemmodel.py
++-rw-r--r--   0        0        0      289 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/focusframe.py
++-rw-r--r--   0        0        0     2477 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/fontcombobox.py
++-rw-r--r--   0        0        0      363 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/fontdialog.py
++-rw-r--r--   0        0        0     4998 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/formlayout.py
++-rw-r--r--   0        0        0     2540 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/frame.py
++-rw-r--r--   0        0        0     1822 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/gesture.py
++-rw-r--r--   0        0        0     2334 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/graphicsanchorlayout.py
++-rw-r--r--   0        0        0     1360 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/graphicsblureffect.py
++-rw-r--r--   0        0        0      469 2023-04-07 02:23:06.287781 prettyqt-1.0.0/prettyqt/widgets/graphicscolorizeeffect.py
++-rw-r--r--   0        0        0      435 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsdropshadoweffect.py
++-rw-r--r--   0        0        0      416 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicseffect.py
++-rw-r--r--   0        0        0      559 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsellipseitem.py
++-rw-r--r--   0        0        0     3589 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsgridlayout.py
++-rw-r--r--   0        0        0     4694 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsitem.py
++-rw-r--r--   0        0        0      192 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsitemgroup.py
++-rw-r--r--   0        0        0     1173 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicslayout.py
++-rw-r--r--   0        0        0      262 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicslayoutitem.py
++-rw-r--r--   0        0        0     1098 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicslinearlayout.py
++-rw-r--r--   0        0        0      651 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicslineitem.py
++-rw-r--r--   0        0        0      700 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsobject.py
++-rw-r--r--   0        0        0      538 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsopacityeffect.py
++-rw-r--r--   0        0        0      209 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicspathitem.py
++-rw-r--r--   0        0        0     2241 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicspixmapitem.py
++-rw-r--r--   0        0        0      800 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicspolygonitem.py
++-rw-r--r--   0        0        0      198 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsproxywidget.py
++-rw-r--r--   0        0        0      542 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsrectitem.py
++-rw-r--r--   0        0        0      495 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsrotation.py
++-rw-r--r--   0        0        0      250 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsscale.py
++-rw-r--r--   0        0        0     8553 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsscene.py
++-rw-r--r--   0        0        0      293 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicssimpletextitem.py
++-rw-r--r--   0        0        0      707 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicstextitem.py
++-rw-r--r--   0        0        0      310 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicstransform.py
++-rw-r--r--   0        0        0     8390 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicsview.py
++-rw-r--r--   0        0        0     2753 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/graphicswidget.py
++-rw-r--r--   0        0        0     4121 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/gridlayout.py
++-rw-r--r--   0        0        0     1955 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/groupbox.py
++-rw-r--r--   0        0        0     5318 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/headerview.py
++-rw-r--r--   0        0        0     3755 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/inputdialog.py
++-rw-r--r--   0        0        0      190 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/itemdelegate.py
++-rw-r--r--   0        0        0      144 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/itemeditorcreatorbase.py
++-rw-r--r--   0        0        0     2331 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/itemeditorfactory.py
++-rw-r--r--   0        0        0      846 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/keysequenceedit.py
++-rw-r--r--   0        0        0     8512 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/label.py
++-rw-r--r--   0        0        0     3961 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/layout.py
++-rw-r--r--   0        0        0     1272 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/layoutitem.py
++-rw-r--r--   0        0        0     2416 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/lcdnumber.py
++-rw-r--r--   0        0        0     6525 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/lineedit.py
++-rw-r--r--   0        0        0     5606 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/listview.py
++-rw-r--r--   0        0        0     5823 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/listwidget.py
++-rw-r--r--   0        0        0     2851 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/listwidgetitem.py
++-rw-r--r--   0        0        0     6705 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/mainwindow.py
++-rw-r--r--   0        0        0     4584 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/mdiarea.py
++-rw-r--r--   0        0        0      689 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/mdisubwindow.py
++-rw-r--r--   0        0        0     4397 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/menu.py
++-rw-r--r--   0        0        0     2145 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/menubar.py
++-rw-r--r--   0        0        0     7314 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/messagebox.py
++-rw-r--r--   0        0        0      542 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/pangesture.py
++-rw-r--r--   0        0        0     1902 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/pinchgesture.py
++-rw-r--r--   0        0        0      415 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/plaintextdocumentlayout.py
++-rw-r--r--   0        0        0     9079 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/plaintextedit.py
++-rw-r--r--   0        0        0     3564 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/progressbar.py
++-rw-r--r--   0        0        0     1029 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/progressdialog.py
++-rw-r--r--   0        0        0      231 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/proxystyle.py
++-rw-r--r--   0        0        0      795 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/pushbutton.py
++-rw-r--r--   0        0        0      517 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/radiobutton.py
++-rw-r--r--   0        0        0      758 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/rubberband.py
++-rw-r--r--   0        0        0      611 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/scrollarea.py
++-rw-r--r--   0        0        0      707 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/scrollbar.py
++-rw-r--r--   0        0        0     3060 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/scroller.py
++-rw-r--r--   0        0        0     3937 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/scrollerproperties.py
++-rw-r--r--   0        0        0     1399 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/shortcut.py
++-rw-r--r--   0        0        0      309 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/sizegrip.py
++-rw-r--r--   0        0        0     5373 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/sizepolicy.py
++-rw-r--r--   0        0        0     2654 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/slider.py
++-rw-r--r--   0        0        0     1297 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/spaceritem.py
++-rw-r--r--   0        0        0     1837 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/spinbox.py
++-rw-r--r--   0        0        0     1181 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/splashscreen.py
++-rw-r--r--   0        0        0     3908 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/splitter.py
++-rw-r--r--   0        0        0     1417 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/splitterhandle.py
++-rw-r--r--   0        0        0      983 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/stackedlayout.py
++-rw-r--r--   0        0        0     1372 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/stackedwidget.py
++-rw-r--r--   0        0        0     1677 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/statusbar.py
++-rw-r--r--   0        0        0    19383 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/style.py
++-rw-r--r--   0        0        0      208 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/styleditemdelegate.py
++-rw-r--r--   0        0        0      126 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/stylefactory.py
++-rw-r--r--   0        0        0      318 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/styleoption.py
++-rw-r--r--   0        0        0      686 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/styleoptionbutton.py
++-rw-r--r--   0        0        0      208 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/styleoptioncombobox.py
++-rw-r--r--   0        0        0      260 2023-04-07 02:23:06.291781 prettyqt-1.0.0/prettyqt/widgets/styleoptioncomplex.py
++-rw-r--r--   0        0        0      199 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptiondockwidget.py
++-rw-r--r--   0        0        0      197 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptionfocusrect.py
++-rw-r--r--   0        0        0      189 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptionframe.py
++-rw-r--r--   0        0        0      209 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptiongraphicsitem.py
++-rw-r--r--   0        0        0      197 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptiongroupbox.py
++-rw-r--r--   0        0        0      912 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptionheader.py
++-rw-r--r--   0        0        0     1032 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptionmenuitem.py
++-rw-r--r--   0        0        0      201 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptionprogressbar.py
++-rw-r--r--   0        0        0      199 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptionrubberband.py
++-rw-r--r--   0        0        0      208 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptionsizegrip.py
++-rw-r--r--   0        0        0     1046 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptionslider.py
++-rw-r--r--   0        0        0      195 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptionspinbox.py
++-rw-r--r--   0        0        0     1135 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptiontab.py
++-rw-r--r--   0        0        0      199 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptiontabbarbase.py
++-rw-r--r--   0        0        0      213 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptiontabwidgetframe.py
++-rw-r--r--   0        0        0      197 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptiontitlebar.py
++-rw-r--r--   0        0        0      397 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptiontoolbar.py
++-rw-r--r--   0        0        0     1176 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptiontoolbox.py
++-rw-r--r--   0        0        0      201 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptiontoolbutton.py
++-rw-r--r--   0        0        0     1344 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/styleoptionviewitem.py
++-rw-r--r--   0        0        0      397 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/stylepainter.py
++-rw-r--r--   0        0        0     1311 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/swipegesture.py
++-rw-r--r--   0        0        0     1732 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/systemtrayicon.py
++-rw-r--r--   0        0        0     5232 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/tabbar.py
++-rw-r--r--   0        0        0     3112 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/tableview.py
++-rw-r--r--   0        0        0     1085 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/tablewidget.py
++-rw-r--r--   0        0        0     3368 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/tablewidgetitem.py
++-rw-r--r--   0        0        0     1920 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/tablewidgetselectionrange.py
++-rw-r--r--   0        0        0    10591 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/tabwidget.py
++-rw-r--r--   0        0        0      392 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/tapandholdgesture.py
++-rw-r--r--   0        0        0      371 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/tapgesture.py
++-rw-r--r--   0        0        0     2400 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/textbrowser.py
++-rw-r--r--   0        0        0     6089 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/textedit.py
++-rw-r--r--   0        0        0     1526 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/timeedit.py
++-rw-r--r--   0        0        0     4981 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/toolbar.py
++-rw-r--r--   0        0        0     2568 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/toolbox.py
++-rw-r--r--   0        0        0     3175 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/toolbutton.py
++-rw-r--r--   0        0        0      710 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/tooltip.py
++-rw-r--r--   0        0        0     2532 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/treeview.py
++-rw-r--r--   0        0        0      630 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/treewidget.py
++-rw-r--r--   0        0        0     4841 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/treewidgetitem.py
++-rw-r--r--   0        0        0     4142 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/treewidgetitemiterator.py
++-rw-r--r--   0        0        0      652 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/undocommand.py
++-rw-r--r--   0        0        0      368 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/undogroup.py
++-rw-r--r--   0        0        0      986 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/undostack.py
++-rw-r--r--   0        0        0     1011 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/undoview.py
++-rw-r--r--   0        0        0      552 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/whatsthis.py
++-rw-r--r--   0        0        0    19395 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/widget.py
++-rw-r--r--   0        0        0      545 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/widgetaction.py
++-rw-r--r--   0        0        0      248 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/widgetitem.py
++-rw-r--r--   0        0        0     9052 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/wizard.py
++-rw-r--r--   0        0        0     1997 2023-04-07 02:23:06.295781 prettyqt-1.0.0/prettyqt/widgets/wizardpage.py
++-rw-r--r--   0        0        0     4767 2023-04-07 02:23:06.295781 prettyqt-1.0.0/pyproject.toml
++-rw-r--r--   0        0        0     4515 1970-01-01 00:00:00.000000 prettyqt-1.0.0/PKG-INFO
+```
+
+### Comparing `PrettyQt-0.99.0/LICENSE` & `prettyqt-1.0.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `PrettyQt-0.99.0/docs/index.md` & `prettyqt-1.0.0/docs/index.md`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,19 +1,19 @@
+-# prettyqt: Pythonic layer on top of PyQt5 / PySide2
++# prettyqt: Pythonic layer on top of PyQt5 / PyQt6 / PySide6
+ [![PyPI Latest Release](https://img.shields.io/pypi/v/prettyqt.svg)](https://pypi.org/project/prettyqt/)
+ [![Package Status](https://img.shields.io/pypi/status/prettyqt.svg)](https://pypi.org/project/prettyqt/)
+-[![License](https://img.shields.io/pypi/l/prettyqt.svg)](https://github.com/prettyqt-dev/prettyqt/blob/master/LICENSE)
+-[![Travis Build Status](https://travis-ci.org/prettyqt-dev/prettyqt.svg?branch=master)](https://travis-ci.org/prettyqt-dev/prettyqt)
++[![License](https://img.shields.io/pypi/l/prettyqt.svg)](https://github.com/phil65/PrettyQt/blob/master/LICENSE)
++[![Travis Build Status](https://travis-ci.org/phil65/prettyqt.svg?branch=master)](https://travis-ci.org/phil65/prettyqt)
+ [![CodeCov](https://codecov.io/gh/phil65/PrettyQt/branch/master/graph/badge.svg)](https://codecov.io/gh/phil65/PrettyQt)
+ [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+ [![PyUp](https://pyup.io/repos/github/phil65/PrettyQt/shield.svg)](https://pyup.io/repos/github/phil65/PrettyQt/)
+ 
+ ## What is it?
+ 
+-**PrettyQt** is a Python package that provides a pythonic layer on top of the GUI frameworks PyQt5 / PySide2.
++**PrettyQt** is a Python package that provides a pythonic layer on top of the GUI frameworks PyQt5 / PyQt6 / PySide6.
+ 
+ ## Main Features
+ Here are just a few of the things that PrettyQt does well:
+ 
+   - Large parts of the Qt API are available in a **PEP-8**-compliant way.
+   - Several predefined widgets, validators, models, syntax highlighters are included.
+   - A regex module based on QRegularExpression with the same API as Pythons core re module.
+@@ -34,16 +34,14 @@
+ 
+ ```sh
+ # or PyPI
+ pip install prettyqt
+ ```
+ 
+ ## Dependencies
+-- [qtpy](https://pypi.org/project/prettyqt)
+-- [qtawesome](https://pypi.org/project/qtawesome)
+ - [bidict](https://pypi.org/project/bidict)
+ - [orjson](https://pypi.org/project/orjson)
+ - [regex](https://pypi.org/project/regex)
+ - [docutils](https://pypi.org/project/docutils)
+ 
+ 
+ ## Installation from sources
+@@ -58,12 +56,12 @@
+ 
+ ## License
+ [MIT](LICENSE)
+ 
+ ## Documentation
+ The official documentation is hosted on Github Pages: https://phil65.github.io/PrettyQt/
+ 
+-## Contributing to pandas [![Open Source Helpers](https://www.codetriage.com/phil65/prettyqt/badges/users.svg)](https://www.codetriage.com/phil65/prettyqt)
++## Contributing to prettyqt [![Open Source Helpers](https://www.codetriage.com/phil65/prettyqt/badges/users.svg)](https://www.codetriage.com/phil65/prettyqt)
+ 
+ All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
+ 
+ Or maybe through using PrettyQt you have an idea of your own or are looking for something in the documentation and thinking ‘this can be improved’...you can do something about it!
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/charts/abstractseries.py` & `prettyqt-1.0.0/prettyqt/charts/abstractseries.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,29 +1,24 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy.QtCharts import QtCharts
++from __future__ import annotations
+ 
+ from prettyqt import core
++from prettyqt.qt import QtCharts
+ 
+ 
+-QtCharts.QAbstractSeries.__bases__ = (core.Object,)
+-
+-
+-class AbstractSeries(QtCharts.QAbstractSeries):
+-
+-    """
+-    QAbstractSeries with some custom properties
+-    """
++class AbstractSeriesMixin(core.ObjectMixin):
++    """QAbstractSeries with some custom properties."""
+ 
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+         self._group = ""
+ 
+     def get_group(self):
+         return self._group
+ 
+     def set_group(self, value):
+         self._group = value
+ 
+     group = core.Property(str, get_group, set_group)
++
++
++class AbstractSeries(AbstractSeriesMixin, QtCharts.QAbstractSeries):
++    pass
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/charts/lineseries.py` & `prettyqt-1.0.0/prettyqt/charts/lineseries.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,32 +1,15 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtCore
+-from qtpy.QtCharts import QtCharts
++from __future__ import annotations
+ 
+ from prettyqt import charts, core
++from prettyqt.qt import QtCharts, QtCore
+ 
+ 
+-STYLES = {
+-    QtCore.Qt.SolidLine: "Solid",
+-    QtCore.Qt.DotLine: "Dot",
+-    QtCore.Qt.DashDotLine: "Dash-dot",
+-}
+-
+-
+-QtCharts.QLineSeries.__bases__ = (charts.XYSeries,)
+-
+-
+-class LineSeries(QtCharts.QLineSeries):
+-
+-    """
+-    QLineSeries with some custom properties
+-    """
++class LineSeries(charts.XYSeriesMixin, QtCharts.QLineSeries):
++    """QLineSeries with some custom properties."""
+ 
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+         self._process_name = ""
+ 
+     def get_process_name(self):
+         return self._process_name
+@@ -35,8 +18,8 @@
+         self._process_name = value
+ 
+     process_name = core.Property(str, get_process_name, set_process_name)
+ 
+ 
+ if __name__ == "__main__":
+     line = LineSeries()
+-    line.append(0, 1)
++    line += QtCore.QPointF(1, 1)
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/core/__init__.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/__init__.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,97 +1,88 @@
+-# -*- coding: utf-8 -*-
++"""Module containing custom widget classes."""
+ 
+-"""core module
+-
+-contains QtCore-based classes
+-"""
+-
+-# from qtpy.QtCore import Signal
+-
+-from .object import Object
+-from .url import Url
+-from .coreapplication import CoreApplication
+-from .iodevice import IODevice
+-from .filedevice import FileDevice
+-from .file import File
+-from .buffer import Buffer
+-from .settings import Settings
+-from .date import Date
+-from .datetime import DateTime
+-
+-# from .size import Size
+-# from .sizef import SizeF
+-# from .point import Point
+-# from .pointf import PointF
+-from .timer import Timer
+-from .translator import Translator
+-from .thread import Thread
+-
+-# from .rect import Rect
+-# from .rectf import RectF
+-from .regularexpressionmatch import RegularExpressionMatch
+-from .regularexpressionmatchiterator import RegularExpressionMatchIterator
+-from .regexp import RegExp
+-from .regularexpression import RegularExpression
+-from .mimedata import MimeData
+-from .runnable import Runnable
+-from .modelindex import ModelIndex
+-from .threadpool import ThreadPool
+-from .dir import Dir
+-from .event import Event
+-from .itemselectionmodel import ItemSelectionModel
+-from .diriterator import DirIterator
+-from .abstractitemmodel import AbstractItemModel
+-from .abstractproxymodel import AbstractProxyModel
+-from .abstractlistmodel import AbstractListModel
+-from .sortfilterproxymodel import SortFilterProxyModel
+-from .abstracttablemodel import AbstractTableModel
+-
+-from qtpy.QtCore import Slot, Signal, Property
+-from qtpy.QtCore import QPoint as Point
+-from qtpy.QtCore import QPointF as PointF
+-from qtpy.QtCore import QSize as Size
+-from qtpy.QtCore import QSizeF as SizeF
+-from qtpy.QtCore import QRect as Rect
+-from qtpy.QtCore import QRectF as RectF
++from .image import Image
++from .listinput import ListInput
++from .booldicttoolbutton import BoolDictToolButton
++from .optionalwidget import OptionalWidget
++from .collapsibleframe import CollapsibleFrame
++from .expandableline import ExpandableLine
++from .singlelinetextedit import SingleLineTextEdit
++from .regexinput import RegexInput
++from .mappedcheckbox import MappedCheckBox
++from .logtextedit import LogTextEdit
++from .flagselectionwidget import FlagSelectionWidget
++from .stringornumberwidget import StringOrNumberWidget
++from .iconlabel import IconLabel
++from .iconwidget import IconWidget
++from .flowlayout import FlowLayout
++from .borderlayout import BorderLayout
++from .completionwidget import CompletionWidget
++from .sidebarwidget import SidebarWidget
++from .colorchooserbutton import ColorChooserButton
++from .filechooserbutton import FileChooserButton
++from .fontchooserbutton import FontChooserButton
++from .inputandslider import InputAndSlider
++from .spanslider import SpanSlider
++from .labeledslider import LabeledSlider
++from .waitingspinner import WaitingSpinner
++from .markdownwidget import MarkdownWindow
++from .imageviewer import ImageViewer
++from .popupinfo import PopupInfo
++from .selectionwidget import SelectionWidget
++from .codeeditor import CodeEditor
++from .roundprogressbar import RoundProgressBar
++from .subsequencecompleter import SubsequenceCompleter
++from .framelesswindow import FramelessWindow
++
++# from .stareditor import StarEditor, StarRating
++from .timeline import Timeline, VideoSample
++from .standardiconswidget import StandardIconsWidget
++
++# Deprecated: should be imported from custom_delegates instead
++from prettyqt.custom_delegates.buttondelegate import ButtonDelegate
++from prettyqt.custom_delegates.radiodelegate import RadioDelegate
+ 
+ __all__ = [
+-    "Object",
+-    "Url",
+-    "CoreApplication",
+-    "IODevice",
+-    "FileDevice",
+-    "File",
+-    "Buffer",
+-    "Settings",
+-    "Date",
+-    "DateTime",
+-    "Size",
+-    "SizeF",
+-    "Point",
+-    "PointF",
+-    "Timer",
+-    "Translator",
+-    "Thread",
+-    "Rect",
+-    "RectF",
+-    "MimeData",
+-    "Dir",
+-    "Event",
+-    "DirIterator",
+-    "ItemSelectionModel",
+-    "Slot",
+-    "Property",
+-    "RegularExpressionMatch",
+-    "RegularExpressionMatchIterator",
+-    "RegExp",
+-    "RegularExpression",
+-    "Runnable",
+-    "ModelIndex",
+-    "ThreadPool",
+-    "Signal",
+-    "AbstractItemModel",
+-    "AbstractProxyModel",
+-    "AbstractListModel",
+-    "SortFilterProxyModel",
+-    "AbstractTableModel",
++    "Image",
++    "ListInput",
++    "BoolDictToolButton",
++    "OptionalWidget",
++    "CollapsibleFrame",
++    "CompletionWidget",
++    "ExpandableLine",
++    "SingleLineTextEdit",
++    "RegexInput",
++    "MappedCheckBox",
++    "LogTextEdit",
++    "FlagSelectionWidget",
++    "StringOrNumberWidget",
++    "IconLabel",
++    "IconWidget",
++    "FlowLayout",
++    "BorderLayout",
++    "SidebarWidget",
++    "ColorChooserButton",
++    "FileChooserButton",
++    "FontChooserButton",
++    "InputAndSlider",
++    "SpanSlider",
++    "LabeledSlider",
++    "WaitingSpinner",
++    "RoundProgressBar",
++    "PopupInfo",
++    "ButtonDelegate",
++    "RadioDelegate",
++    "SelectionWidget",
++    "ImageViewer",
++    "MarkdownWindow",
++    "CodeEditor",
++    "Player",
++    "Timeline",
++    # "StarEditor",
++    # "StarRating",
++    "VideoSample",
++    "RegexEditorWidget",
++    "StandardIconsWidget",
++    "SubsequenceCompleter",
++    "FramelessWindow",
+ ]
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/core/object.py` & `prettyqt-1.0.0/prettyqt/core/mimedata.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,77 +1,60 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from typing import Optional, Union, DefaultDict
+-from collections import defaultdict
+-from contextlib import contextmanager
+-import itertools
+-
+-from qtpy import QtCore
+-
+-counter_dict: DefaultDict = defaultdict(itertools.count)
+-
+-
+-class Object(QtCore.QObject):
+-    def __getstate__(self):
+-        return dict(object_name=self.objectName())
+-
+-    def __setstate__(self, state):
+-        self.__init__()
+-        self.set_id(state["object_name"])
+-
+-    @contextmanager
+-    def block_signals(self):
+-        self.blockSignals(True)
+-        yield None
+-        self.blockSignals(False)
+-
+-    def to_json(self):
+-        dct = self.__getstate__()
+-        for k, v in dct.items():
+-            if isinstance(v, QtCore.QObject):
+-                dct[k] = v.to_json()
+-        return dct
+-
+-    def set_unique_id(self):
+-        class_name = type(self).__name__
+-        count = next(counter_dict[class_name])
+-        self.set_id(f"{class_name}_{count}")
+-
+-    def set_id(self, name: str):
+-        self.setObjectName(name)
+-
+-    def get_id(self) -> str:
+-        return self.objectName()
+-
+-    @property
+-    def id(self) -> str:
+-        return self.objectName()
+-
+-    @id.setter
+-    def id(self, name: str):
+-        self.setObjectName(name)
+-
+-    def find_children(
+-        self,
+-        typ=QtCore.QObject,
+-        name: Optional[Union[str, QtCore.QRegularExpression]] = None,
+-        recursive: bool = True,
+-    ):
+-        if recursive:
+-            flag = QtCore.Qt.FindChildrenRecursively
+-        else:
+-            flag = QtCore.Qt.FindDirectChildrenOnly
+-        return self.findChildren(typ, name=name, options=flag)
+-
+-    def find_child(
+-        self,
+-        typ=QtCore.QObject,
+-        name: Optional[Union[str, QtCore.QRegularExpression]] = None,
+-        recursive: bool = True,
+-    ):
+-        if recursive:
+-            flag = QtCore.Qt.FindChildrenRecursively
+-        else:
+-            flag = QtCore.Qt.FindDirectChildrenOnly
+-        return self.findChild(typ, name, options=flag)
++from __future__ import annotations
++
++from collections.abc import Iterator
++from typing import Any
++
++from prettyqt import core
++from prettyqt.qt import QtCore
++from prettyqt.utils import helpers, types
++
++
++class MimeData(core.ObjectMixin, QtCore.QMimeData):
++    def __len__(self):
++        return len(self.formats())
++
++    def __getitem__(self, index: str) -> str:
++        return self.get_data(index)
++
++    def __setitem__(self, index: str, value: types.ByteArrayType):
++        if isinstance(value, str):
++            value = value.encode()
++        if not isinstance(value, QtCore.QByteArray):
++            value = QtCore.QByteArray(value)
++        self.setData(index, value)
++
++    def __contains__(self, fmt: str):
++        return self.hasFormat(fmt)
++
++    def __delitem__(self, index: str):
++        self.removeFormat(index)
++
++    def set_data(self, mime_type: str, data: str):
++        self.setData(mime_type, QtCore.QByteArray(data.encode()))
++
++    def set_json_data(self, mime_type: str, data: types.JSONType):
++        self.setData(mime_type, QtCore.QByteArray(helpers.dump_json(data)))
++
++    def get_data(self, mime_type: str) -> str:
++        return bytes(self.data(mime_type)).decode()
++
++    def get_json_data(self, mime_type: str) -> types.JSONType:
++        data = self.data(mime_type)
++        return helpers.load_json(bytes(data))
++
++    def keys(self) -> list[str]:
++        return self.formats()
++
++    def values(self) -> Iterator[Any]:
++        return (self.get_data(key) for key in self.formats())
++
++    def set_svg_data(self, string: str):
++        data = string.encode()
++        self.setData("image/svg+xml", data)
++
++    def set_path_data(self, paths: list[types.PathType]):
++        urls = [core.Url.from_local_file(p) for p in paths]
++        self.setUrls(urls)
++
++
++if __name__ == "__main__":
++    mime_data = MimeData()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/core/regularexpression.py` & `prettyqt-1.0.0/prettyqt/core/regularexpression.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,137 +1,147 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Callable, Iterator, Optional, Union
++from collections.abc import Iterator
++from typing import Callable, Literal
+ 
+-from qtpy import QtCore
+-
+-from prettyqt import core
++from prettyqt import core, qt
++from prettyqt.qt import QtCore
+ from prettyqt.utils import bidict
+ 
+ 
++mod = QtCore.QRegularExpression
++
+ FLAGS = bidict(
+-    none=QtCore.QRegularExpression.NoPatternOption,
+-    ignorecase=QtCore.QRegularExpression.CaseInsensitiveOption,
+-    dotall=QtCore.QRegularExpression.DotMatchesEverythingOption,
+-    multiline=QtCore.QRegularExpression.MultilineOption,
+-    verbose=QtCore.QRegularExpression.ExtendedPatternSyntaxOption,
+-    inverted_greedyness=QtCore.QRegularExpression.InvertedGreedinessOption,
+-    dont_capture=QtCore.QRegularExpression.DontCaptureOption,
+-    unicode=QtCore.QRegularExpression.UseUnicodePropertiesOption,
++    none=mod.PatternOption.NoPatternOption,
++    ignorecase=mod.PatternOption.CaseInsensitiveOption,
++    dotall=mod.PatternOption.DotMatchesEverythingOption,
++    multiline=mod.PatternOption.MultilineOption,
++    verbose=mod.PatternOption.ExtendedPatternSyntaxOption,
++    inverted_greedyness=mod.PatternOption.InvertedGreedinessOption,
++    dont_capture=mod.PatternOption.DontCaptureOption,
++    unicode=mod.PatternOption.UseUnicodePropertiesOption,
+ )
+ 
+-MATCH_TYPES = bidict(
+-    normal=QtCore.QRegularExpression.NormalMatch,
+-    prefer_complete=QtCore.QRegularExpression.PartialPreferCompleteMatch,
+-    prefer_first=QtCore.QRegularExpression.PartialPreferFirstMatch,
+-    no_match=QtCore.QRegularExpression.NoMatch,
++MATCH_TYPE = bidict(
++    normal=mod.MatchType.NormalMatch,
++    prefer_complete=mod.MatchType.PartialPreferCompleteMatch,
++    prefer_first=mod.MatchType.PartialPreferFirstMatch,
++    no_match=mod.MatchType.NoMatch,
+ )
+ 
++MatchTypeStr = Literal["normal", "prefer_complete", "prefer_first", "no_match"]
++
+ MATCH_OPTIONS = bidict(
+-    none=QtCore.QRegularExpression.NoMatchOption,
+-    anchored=QtCore.QRegularExpression.AnchoredMatchOption,
++    none=mod.MatchOption.NoMatchOption,
++    anchored=mod.MatchOption.AnchorAtOffsetMatchOption,  # type: ignore
+ )
+ 
+ 
+ class RegularExpression(QtCore.QRegularExpression):
+-    def __init__(self, pattern="", flags=FLAGS["none"]):
++    def __init__(
++        self,
++        pattern: str | QtCore.QRegularExpression = "",
++        flags: QtCore.QRegularExpression.PatternOption = FLAGS["none"],
++    ):
+         if isinstance(pattern, QtCore.QRegularExpression):
+             super().__init__(pattern)
+         else:
+             if isinstance(flags, int):
+-                flags = core.RegularExpression.PatternOptions(flags)
+-            super().__init__(pattern, flags)
++                flags = core.RegularExpression.PatternOption(flags)  # type: ignore
++            super().__init__(pattern, flags)  # type: ignore
+ 
+     def __repr__(self):
+-        return f"RegularExpression({self.pattern()!r})"
++        return f"{type(self).__name__}({self.pattern()!r})"
+ 
+     def __reduce__(self):
+-        return (self.__class__, (self.pattern(), int(self.flags)))
++        return type(self), (self.pattern(), qt.flag_to_int(self.flags))
+ 
+     def globalMatch(self, *args, **kwargs) -> core.RegularExpressionMatchIterator:
+         it = super().globalMatch(*args, **kwargs)
+         return core.RegularExpressionMatchIterator(it)
+ 
+     def global_match(
+         self,
+         text: str,
+         offset: int = 0,
+-        match_type: str = "normal",
++        match_type: MatchTypeStr = "normal",
+         anchored: bool = False,
+     ):
+         options = MATCH_OPTIONS["anchored"] if anchored else MATCH_OPTIONS["none"]
+-        return self.globalMatch(text, offset, MATCH_TYPES[match_type], options)
++        return self.globalMatch(text, offset, MATCH_TYPE[match_type], options)
+ 
+-    def match(
++    def match(  # type: ignore
+         self,
+         text: str,
+         offset: int = 0,
+-        match_type: str = "normal",
++        match_type: MatchTypeStr | QtCore.QRegularExpression.MatchType = "normal",
+         anchored: bool = False,
+-    ):
++    ) -> core.RegularExpressionMatch:
+         if isinstance(match_type, str):
+-            match_type = MATCH_TYPES[match_type]
++            typ = MATCH_TYPE[match_type]
++        else:
++            typ = match_type
+         if isinstance(anchored, bool):
+             options = MATCH_OPTIONS["anchored"] if anchored else MATCH_OPTIONS["none"]
+         else:
+             options = anchored
+-        match = super().match(text, offset, match_type, options)
++        match = super().match(text, offset, typ, options)
+         return core.RegularExpressionMatch(match)
+ 
+-    def fullmatch(self, string: str, pos: int = 0, endpos: Optional[int] = None):
++    def fullmatch(
++        self, string: str, pos: int = 0, endpos: int | None = None
++    ) -> core.RegularExpressionMatch | None:
+         if endpos:
+             string = string[:endpos]
+         match = super().match(string, pos)
+         if match.hasMatch() and len(string) == match.end() - match.start():
+             return core.RegularExpressionMatch(match)
+         else:
+             return None
+ 
+     def finditer(
+-        self, string: str, pos: int = 0, endpos: Optional[int] = None
++        self, string: str, pos: int = 0, endpos: int | None = None
+     ) -> Iterator[core.RegularExpressionMatch]:
+         for match in self.globalMatch(string[:endpos], offset=pos):
+             match.pos = pos
+             match.endpos = endpos
+             match.string = string
+             yield match
+ 
+-    def findall(self, string: str, pos: int = 0, endpos: Optional[int] = None) -> list:
+-        matches = [m for m in self.globalMatch(string[:endpos], offset=pos)]
++    def findall(self, string: str, pos: int = 0, endpos: int | None = None) -> list:
++        matches = list(self.globalMatch(string[:endpos], offset=pos))
+         return [m.groups() if len(m.groups()) > 1 else m.group(0) for m in matches]
+ 
+-    def subn(self, repl: Union[str, Callable], string: str, count: int = 0):
++    def subn(self, repl: str | Callable, string: str, count: int = 0) -> tuple[str, int]:
+         result = string
+         matches = self.global_match(string)
+         matches = list(matches)
+         if count > 0:
+             matches = matches[:count]
+         matches = list(reversed(matches))
+         for m in matches:
+             to_replace = repl if isinstance(repl, str) else repl(m)
+             for j in range(self.groups):
+-                to_replace = to_replace.replace(fr"\g<{j}>", m.group(j))
+-            for j in self.groupindex.keys():
+-                to_replace = to_replace.replace(fr"\g<{j}>", m.group(j))
++                to_replace = to_replace.replace(rf"\g<{j}>", m.group(j))
++            for k in self.groupindex.keys():
++                to_replace = to_replace.replace(rf"\g<{k}>", m.group(k))
+             result = result[: m.start()] + to_replace + result[m.end() :]
+         return (result, min(len(matches), count))
+ 
+-    def sub(self, repl: Union[str, Callable], string: str, count: int = 0):
++    def sub(self, repl: str | Callable, string: str, count: int = 0) -> str:
+         res = self.subn(repl, string, count)
+         return res[0]
+ 
+-    def search(self, string: str, pos: int = 0, endpos: Optional[int] = None):
++    def search(self, string: str, pos: int = 0, endpos: int | None = None):
+         match = super().match(string[:endpos], pos)
+         return match if match.hasMatch() else None
+ 
+     def split(self, string: str, maxsplit: int = 0):
+         raise NotImplementedError()
+-        # result = list()
++        # result = []
+         # matches = self.global_match(string)
+         # matches = list(matches)
+         # if 0 < maxsplit <= len(matches):
+         #     remainder = string[matches[maxsplit - 1].end() :]
+         #     print(remainder)
+         # else:
+         #     print(None)
+@@ -155,19 +165,19 @@
+         #         result.append("")
+         #     prev_match = m
+         # if remainder:
+         #     result.append(remainder)
+         # return result
+ 
+     @property
+-    def groups(self):
++    def groups(self) -> int:
+         return self.captureCount()
+ 
+     @property
+-    def groupindex(self):
++    def groupindex(self) -> dict[str, int]:
+         return {k: i for i, k in enumerate(self.namedCaptureGroups()[1:], start=1)}
+ 
+     @property
+     def flags(self):
+         return self.patternOptions()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/core/regularexpressionmatch.py` & `prettyqt-1.0.0/prettyqt/core/regularexpressionmatch.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,78 +1,89 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Optional, Union
++from typing import TYPE_CHECKING, Any
+ 
+-from qtpy import QtCore
++from prettyqt.qt import QtCore
++
++
++if TYPE_CHECKING:
++    from prettyqt import core
+ 
+ 
+ class RegularExpressionMatch(QtCore.QRegularExpressionMatch):
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+         self.string = None
+         self.pos = None
+         self.endpos = None
+ 
+     def __repr__(self):
+-        return "RegularExpressionMatch()"
++        return f"{type(self).__name__}()"
++
++    def __getitem__(self, item: int | str) -> str:
++        captured = self.captured(item)
++        if not captured:
++            raise KeyError(item)
++        return captured
++
++    def __bool__(self):
++        return self.isValid()
+ 
+-    def __getitem__(self, item):
+-        return self.group(item)
++    def get_match_type(self) -> core.regularexpression.MatchTypeStr:
++        return core.regularexpression.MATCH_TYPE.inverse[self.matchType()]
+ 
+-    def group(self, *groups) -> Union[tuple, str]:
++    def group(self, *groups: int | str) -> tuple[str, ...] | str:
+         if len(groups) > 1:
+             return tuple(self.captured(i) for i in groups)
+         if len(groups) == 0:
+             return self.captured(0)
+         return self.captured(groups[0])
+ 
+     def groups(self, default=None) -> tuple:
+         if self.lastindex is None:
+             return tuple()
+         return tuple(
+             self.group(i) if i <= self.lastindex else default
+             for i in range(self.re.captureCount())
+         )
+ 
+-    def groupdict(self, default=None) -> dict:
++    def groupdict(self, default=None) -> dict[str, Any]:
+         if self.lastindex is None:
+-            return dict()
++            return {}
+         groups = [
+             self.group(i) if i <= self.lastindex else default
+             for i in range(self.re.captureCount())
+         ]
+         names = self.re.namedCaptureGroups()
+         return {names[i]: groups[i] for i in range(self.re.captureCount())}
+ 
+     def start(self, group: int = 0) -> int:
+         return self.capturedStart(group)
+ 
+     def end(self, group: int = 0) -> int:
+         return self.capturedEnd(group)
+ 
+-    def span(self, group: int = 0) -> tuple:
++    def span(self, group: int = 0) -> tuple[int, int]:
+         return (self.capturedStart(group), self.capturedEnd(group))
+ 
+     @property
+-    def lastindex(self) -> Optional[int]:
++    def lastindex(self) -> int | None:
+         idx = self.lastCapturedIndex()
+         return None if idx == -1 else idx
+ 
+     @property
+-    def lastgroup(self) -> Optional[str]:
++    def lastgroup(self) -> str | None:
+         if self.lastCapturedIndex() == -1:
+             return None
+         return self.re.namedCaptureGroups()[self.lastCapturedIndex()]
+ 
+     @property
+-    def re(self):
++    def re(self) -> QtCore.QRegularExpression:
+         return self.regularExpression()
+ 
+     @property
+-    def partial(self):
++    def partial(self) -> bool:
+         return self.hasPartialMatch()
+ 
+ 
+ if __name__ == "__main__":
+     reg = RegularExpressionMatch()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/core/regularexpressionmatchiterator.py` & `prettyqt-1.0.0/prettyqt/core/regularexpressionmatchiterator.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,27 +1,24 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtCore
++from __future__ import annotations
+ 
+ from prettyqt import core
++from prettyqt.qt import QtCore
+ 
+ 
+ class RegularExpressionMatchIterator(QtCore.QRegularExpressionMatchIterator):
+     def __repr__(self):
+-        return "RegularExpressionMatchIterator()"
++        return f"{type(self).__name__}()"
+ 
+     def __iter__(self):
+         return self
+ 
+     def __next__(self):
+         if self.hasNext():
+             return core.RegularExpressionMatch(self.next())
+         raise StopIteration
+ 
+-    def peek_next(self):
++    def peek_next(self) -> core.RegularExpressionMatch:
+         return core.RegularExpressionMatch(self.peekNext())
+ 
+ 
+ if __name__ == "__main__":
+     reg = RegularExpressionMatchIterator()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/core/settings.py` & `prettyqt-1.0.0/prettyqt/core/settings.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,38 +1,44 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
++from collections.abc import Iterator, Mapping
+ import contextlib
+-import pathlib
+-from typing import List, Mapping, Optional, Union
+ import logging
++import os
++from typing import Any, Literal
+ 
+-from qtpy import QtCore
++from deprecated import deprecated
+ 
+ from prettyqt import core
+-from prettyqt.utils import bidict
++from prettyqt.qt import QtCore
++from prettyqt.utils import InvalidParamError, bidict, types
++
+ 
+ logger = logging.getLogger(__name__)
+ 
+-FORMATS = bidict(native=QtCore.QSettings.NativeFormat, ini=QtCore.QSettings.IniFormat)
++FORMAT = bidict(
++    native=QtCore.QSettings.Format.NativeFormat, ini=QtCore.QSettings.Format.IniFormat
++)
+ 
+-SCOPES = bidict(user=QtCore.QSettings.UserScope, system=QtCore.QSettings.SystemScope)
++FormatStr = Literal["user", "system"]
+ 
++SCOPE = bidict(
++    user=QtCore.QSettings.Scope.UserScope, system=QtCore.QSettings.Scope.SystemScope
++)
+ 
+-QtCore.QSettings.__bases__ = (core.Object,)
++ScopeStr = Literal["user", "system"]
+ 
+ 
+-class Settings(QtCore.QSettings):
+-    def __init__(self, *args, settings_id: Optional[str] = None):
++class Settings(core.ObjectMixin, QtCore.QSettings):
++    def __init__(self, *args, settings_id: str | None = None):
+         super().__init__(*args)
+         self.settings_id = settings_id
+ 
+     def __repr__(self):
+-        return f"Settings: {self.as_dict()}"
++        return f"{type(self).__name__}: {self.as_dict()}"
+ 
+     def __contains__(self, key: str) -> bool:
+         return self.contains(key)
+ 
+     def __enter__(self):
+         if self.settings_id:
+             self.beginGroup(self.settings_id)
+@@ -49,178 +55,194 @@
+         return self.set_value(name, value)
+ 
+     def __delitem__(self, key: str):
+         if not self.contains(key):
+             raise KeyError(key)
+         return self.remove(key)
+ 
+-    def __iter__(self):
+-        return iter(self.allKeys())
++    def __iter__(self) -> Iterator[tuple[str, Any]]:
++        return iter(self.items())
+ 
+-    def __len__(self):
++    def __len__(self) -> int:
+         return len(self.allKeys())
+ 
+     @classmethod
+-    def build_from_dict(cls, dct: dict):
++    def build_from_dict(cls, dct: dict[str, Any]):
+         settings = cls()
+         for k, v in dct.items():
+             settings.set_value(k, v)
+         return settings
+ 
+-    def as_dict(self):
+-        return {k: v for k, v in self.items()}
++    def as_dict(self) -> dict[str, Any]:
++        return dict(self.items())
+ 
+     def set_value(self, key: str, value):
+         if not self.applicationName():
+-            raise ValueError("no app name defined")
++            raise RuntimeError("no app name defined")
+         self.setValue(key, dict(value=value))
+ 
++    def set_values(self, dct: dict[str, Any]):
++        for k, v in dct.items():
++            self.set_value(k, v)
++
+     def get_value(self, key: str, default=None):
+         if not self.contains(key):
+             return default
+         val = self.value(key)
+         # this is for migration
+         if not isinstance(val, dict) or "value" not in val:
+             self.set_value(key, val)
+             return val
+         return val["value"]
+ 
+     @classmethod
+-    def set_default_format(cls, fmt: str):
+-        """sets the default format
+-
+-        possible values are "native", "ini"
++    def set_default_format(cls, fmt: FormatStr):
++        """Set the default format.
+ 
+         Args:
+             fmt: the default format to use
+ 
+         Raises:
+-            ValueError: invalid format
++            InvalidParamError: invalid format
+         """
+-        if fmt not in FORMATS:
+-            raise ValueError(f"Invalid value. Valid values: {FORMATS.keys()}")
+-        cls.setDefaultFormat(FORMATS[fmt])
++        if fmt not in FORMAT:
++            raise InvalidParamError(fmt, FORMAT)
++        cls.setDefaultFormat(FORMAT[fmt])
+ 
+     @classmethod
+-    def get_default_format(cls) -> str:
+-        """returns default settings format
+-
+-        possible values are "native", "ini"
++    def get_default_format(cls) -> FormatStr:
++        """Return default settings format.
+ 
+         Returns:
+             default settings format
+         """
+-        return FORMATS.inv[cls.defaultFormat()]
+-
+-    def get_scope(self) -> str:
+-        """returns scope
++        return FORMAT.inverse[cls.defaultFormat()]
+ 
+-        possible values are "user", "system"
++    def get_scope(self) -> ScopeStr:
++        """Return scope.
+ 
+         Returns:
+             scope
+         """
+-        return SCOPES.inv[self.scope()]
++        return SCOPE.inverse[self.scope()]
+ 
+     @classmethod
+-    def set_path(cls, fmt: str, scope: str, path: Union[str, pathlib.Path]):
+-        """sets the path to the settings file
++    def set_path(cls, fmt: FormatStr, scope: ScopeStr, path: types.PathType):
++        """Set the path to the settings file.
+ 
+         Args:
+             fmt: the default format to use
+             scope: the scope to use
++            path: the path to set
+ 
+         Raises:
+-            ValueError: invalid format or scope
++            InvalidParamError: invalid format or scope
+         """
+-        if fmt not in FORMATS:
+-            raise ValueError(f"Invalid format. Valid values: {FORMATS.keys()}")
+-        if scope not in SCOPES:
+-            raise ValueError(f"Invalid scope. Valid values: {SCOPES.keys()}")
+-        cls.setPath(FORMATS[fmt], SCOPES[scope], str(path))
++        if fmt not in FORMAT:
++            raise InvalidParamError(fmt, FORMAT)
++        if scope not in SCOPE:
++            raise InvalidParamError(scope, SCOPE)
++        cls.setPath(FORMAT[fmt], SCOPE[scope], os.fspath(path))
+ 
+     @contextlib.contextmanager
+-    def group(self, prefix: str):
+-        """context manager for setting groups
++    def edit_group(self, prefix: str):
++        """Context manager for setting groups.
+ 
+         Args:
+             prefix: setting prefix for group
+         """
+         self.beginGroup(prefix)
+         yield None
+         self.endGroup()
+ 
+     @contextlib.contextmanager
+-    def write_array(self, prefix: str, size: int = -1):
+-        """context manager for writing arrays
++    def write_array(self, prefix: str, size: int | None = None):
++        """Context manager for writing arrays.
+ 
+         Args:
+             prefix: prefix for settings array
+             size: size of settings array
+         """
++        if size is None:
++            size = -1
+         self.beginWriteArray(prefix, size)
+         yield None
+         self.endArray()
+ 
+     @contextlib.contextmanager
+     def read_array(self, prefix: str):
+-        """context manager for reading arrays
++        """Context manager for reading arrays.
+ 
+         Args:
+             prefix: prefix for settings array
+         """
+         self.beginReadArray(prefix)
+         yield None
+         self.endArray()
+ 
+     # Dictionary interface
+ 
+-    def get(self, key: str, default=None):
++    def get(self, key: str, default: Any = None) -> Any:
+         return self.get_value(key, default)
+ 
+-    def setdefault(self, key: str, default=None):
++    def setdefault(self, key: str, default: Any = None) -> Any:
+         if not self.contains(key):
+             self.set_value(key, default)
+             return default
+         return self.get_value(key)
+ 
+-    def keys(self) -> List[str]:
++    def keys(self) -> list[str]:
+         return self.allKeys()
+ 
+-    def values(self):
++    def values(self) -> Iterator[Any]:
+         return (self.get_value(key) for key in self.allKeys())
+ 
+     def items(self):
+         return zip(self.keys(), self.values())
+ 
+     def pop(self, key: str):
+         if self.contains(key):
+             return self.get_value(key)
+         raise KeyError(key)
+ 
+-    def popitem(self) -> tuple:
++    def popitem(self) -> tuple[str, Any]:
+         key = self.keys()[0]
+         return (key, self.get_value(key))
+ 
+-    def update(self, other: Mapping):
++    def update(self, other: Mapping[str, Any]):
+         for k, v in other.items():
+             self.set_value(k, v)
+ 
+-
+-def register_extensions(*exts, app_name=None, app_path=None):
+-    logger.debug(f"assigning extensions {exts} to {app_name}")
+-    s = Settings("HKEY_CURRENT_USER\\SOFTWARE\\Classes", Settings.NativeFormat)
+-    if app_path is None:
+-        app_path = core.Dir.toNativeSeparators(core.CoreApplication.applicationFilePath())
+-    if app_name is None:
+-        app_name = core.CoreApplication.applicationName()
+-    for ext in exts:
+-        s.setValue(f"{ext}/DefaultIcon/.", app_path)  # perhaps ,0 after app_path
+-        s.setValue(f"{ext}/.", app_name)
+-    s.setValue(f"{app_name}/shell/open/command/.", app_path + " %1")
++    @classmethod
++    def register_extensions(
++        cls,
++        *exts: str,
++        app_name: str | None = None,
++        app_path: None | types.PathType = None,
++    ):
++        logger.debug(f"assigning extensions {exts} to {app_name}")
++        s = cls("HKEY_CURRENT_USER\\SOFTWARE\\Classes", Settings.Format.NativeFormat)
++        if app_path is None:
++            app_path = str(core.CoreApplication.get_application_file_path())
++        app_path = os.fspath(app_path)
++        if app_name is None:
++            app_name = core.CoreApplication.applicationName()
++        for ext in exts:
++            s.setValue(f"{ext}/DefaultIcon/.", app_path)  # perhaps ,0 after app_path
++            s.setValue(f"{ext}/.", app_name)
++        s.setValue(f"{app_name}/shell/open/command/.", f"{app_path} %1")
++
++
++@deprecated(reason="This method is deprecated, use Settings.register_extensions instead.")
++def register_extensions(
++    *exts: str,
++    app_name: str | None = None,
++    app_path: None | types.PathType = None,
++):
++    core.Settings.register_extensions(*exts, app_name=app_name, app_path=app_path)
+ 
+ 
+ if __name__ == "__main__":
+     settings = Settings("1", "2")
+     settings["1"] = True
+     print(settings["1"])
+     print(type(settings.get("1")))
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_models/regexmatchesmodel.py` & `prettyqt-1.0.0/prettyqt/custom_models/regexmatchesmodel.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,31 +1,29 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from typing import Optional
++from __future__ import annotations
+ 
+ from prettyqt import constants, core, widgets
++from prettyqt.qt import QtCore
+ 
+ 
+ class RegexMatchesModel(core.AbstractTableModel):
+-
+     HEADER = ["Start", "End", "Value", "Groups"]
+ 
+-    def __init__(self, matches: Optional[list] = None, parent=None):
++    def __init__(self, matches: list | None = None, parent: QtCore.QObject | None = None):
+         super().__init__(parent=parent)
+-        self.matches = matches if matches else list()
++        self.matches = matches if matches else []
+ 
+     def columnCount(self, parent=None):
+         return len(self.HEADER)
+ 
+-    def headerData(self, offset: int, orientation, role):
++    def headerData(  # type: ignore
++        self, section: int, orientation: QtCore.Qt.Orientation, role: int
++    ) -> str | None:
+         if role == constants.DISPLAY_ROLE:
+             if orientation == constants.HORIZONTAL:
+-                return self.HEADER[offset]
++                return self.HEADER[section]
+ 
+     def data(self, index, role):
+         if not index.isValid():
+             return None
+         item = self.matches[index.row()]
+         if role in [constants.DISPLAY_ROLE]:
+             if index.column() == 0:
+@@ -36,17 +34,15 @@
+                 return repr(item.group())
+             elif index.column() == 3:
+                 return str(len(item.groups()))
+         if role in [constants.USER_ROLE]:
+             return item.span()
+ 
+     def rowCount(self, parent=None):
+-        """
+-        required override for AbstractitemModels
+-        """
++        """Override for AbstractitemModel base method."""
+         return len(self.matches)
+ 
+ 
+ if __name__ == "__main__":
+     import re
+ 
+     app = widgets.Application([])
+@@ -55,15 +51,15 @@
+     regex = r"(?:[0-9])*.([0-9])"
+     teststring = "SH_6208069141055_BC000388_20110412101855"
+     regex = r"(?:([a-z]{2,})_)?(\d+)_([a-z]{2,}\d+)_(\d+)$"
+     compiled = re.compile(regex, re.IGNORECASE)
+     matches = list(compiled.finditer(teststring))
+     model = RegexMatchesModel(matches)
+ 
+-    view.setModel(model)
++    view.set_model(model)
+     dlg = widgets.Dialog(layout="horizontal")
+     dlg.add_widget(view)
+     dlg.show_blocking()
+     view.resize(500, 300)
+     print(view.model())
+     print(view.model().rowCount())
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_models/selectionmixin.py` & `prettyqt-1.0.0/prettyqt/custom_models/selectionmixin.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,52 +1,49 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Dict
++from typing import Callable
+ 
+ from prettyqt import constants
+-from qtpy import QtCore
++from prettyqt.qt import QtCore
+ 
+ 
+-class SelectionMixin(object):
+-
+-    CHECKSTATE: Dict = {}  # column: identifier
++class SelectionMixin:
++    CHECKSTATE: dict[int, Callable] = {}  # column: identifier
+     dataChanged: QtCore.Signal
++    DATA_ROLE: int
+ 
+     def __init__(self):
+         super().__init__()
+-        self.selected = dict()
++        self.selected = {}
+ 
+-    def setData(self, index, value, role):
++    def setData(self, index: QtCore.QModelIndex, value, role) -> bool:
+         if not index.isValid():
+             return False
+         elif role == constants.CHECKSTATE_ROLE:
+             name = self._get_selection_id(index)
+             self.selected[name] = not self.selected[name]
+             self.dataChanged.emit(index, index)
+             return True
+-        return super().setData(index, value, role)
++        return super().setData(index, value, role)  # type: ignore
+ 
+-    def data(self, index, role=constants.DISPLAY_ROLE):
++    def data(self, index: QtCore.QModelIndex, role=constants.DISPLAY_ROLE):
+         if not index.isValid():
+             return False
+         if role == constants.CHECKSTATE_ROLE:
+             if index.column() == 0:
+                 name = self._get_selection_id(index)
+                 selected = self.selected.get(name, False)
+                 if name not in self.selected:
+                     self.selected[name] = selected
+                 return selected
+-        return super().data(index, role)
++        return super().data(index, role)  # type: ignore
+ 
+-    def flags(self, index):
+-        flags = super().flags(index)
++    def flags(self, index: QtCore.QModelIndex):
++        flags = super().flags(index)  # type: ignore
+         if index.column() in self.CHECKSTATE:
+             return flags | constants.IS_CHECKABLE
+         return flags
+ 
+-    def _get_selection_id(self, index):
++    def _get_selection_id(self, index: QtCore.QModelIndex):
+         item = index.data(self.DATA_ROLE)
+-        id_fn = self.CHECKSTATE.get(index.column())
+-        if id_fn:
++        if id_fn := self.CHECKSTATE.get(index.column()):
+             return id_fn(item)
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_validators/__init__.py` & `prettyqt-1.0.0/prettyqt/custom_validators/__init__.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,24 +1,24 @@
+-# -*- coding: utf-8 -*-
++"""Custom_validators module.
+ 
+-"""custom_models module
+-
+-contains custom models
++Contains custom validators
+ """
+ 
+ 
+ from .compositevalidator import CompositeValidator
+ from .notemptyvalidator import NotEmptyValidator
+ from .notzerovalidator import NotZeroValidator
+ from .pathvalidator import PathValidator
++from .integervalidator import IntegerValidator
+ from .regexvalidators import FloatListValidator, IntListValidator
+ from .regexpatternvalidator import RegexPatternValidator
+ 
+ __all__ = [
+     "PathValidator",
+     "NotEmptyValidator",
++    "IntegerValidator",
+     "IntListValidator",
+     "FloatListValidator",
+     "NotZeroValidator",
+     "CompositeValidator",
+     "RegexPatternValidator",
+ ]
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_validators/notemptyvalidator.py` & `prettyqt-1.0.0/prettyqt/widgets/graphicsrectitem.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,29 +1,21 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from prettyqt import gui
++from prettyqt import core, widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+-class NotEmptyValidator(gui.Validator):
+-    def __getstate__(self):
+-        return dict()
++class GraphicsRectItem(
++    widgets.AbstractGraphicsShapeItemMixin, QtWidgets.QGraphicsRectItem
++):
++    def __repr__(self):
++        return f"{type(self).__name__}({repr(self.get_rect())})"
+ 
+-    def __setstate__(self, state):
+-        self.__init__()
++    def get_rect(self):
++        return core.RectF(self.rect())
++
++    def serialize_fields(self):
++        return dict(rect=self.get_rect())
+ 
+-    def validate(self, text: str, pos: int = 0) -> tuple:
+-        if text == "":
+-            return (self.Intermediate, text, pos)
+-        return (self.Acceptable, text, pos)
+-
+-
+-if __name__ == "__main__":
+-    from prettyqt import widgets
+-
+-    val = NotEmptyValidator()
+-    app = widgets.app()
+-    widget = widgets.LineEdit("This is a test")
+-    widget.setValidator(val)
+-    widget.show()
+-    app.exec_()
++    def __setstate__(self, state):
++        super().__setstate__(state)
++        self.setRect(state["rect"])
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_validators/pathvalidator.py` & `prettyqt-1.0.0/prettyqt/custom_validators/pathvalidator.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,31 +1,26 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+ import pathlib
+ 
+ from prettyqt import gui
+ 
+ 
+ class PathValidator(gui.Validator):
+-    def __getstate__(self):
+-        return dict()
+-
+-    def __setstate__(self, state):
+-        self.__init__()
++    def __eq__(self, other: object):
++        return isinstance(other, PathValidator)
+ 
+     def validate(self, text: str, pos: int = 0):
+         if pathlib.Path(text).exists():
+-            return (self.Acceptable, text, pos)
+-        return (self.Intermediate, text, pos)
++            return self.State.Acceptable, text, pos
++        return self.State.Intermediate, text, pos
+ 
+ 
+ if __name__ == "__main__":
+     from prettyqt import widgets
+ 
+     val = PathValidator()
+     app = widgets.app()
+     widget = widgets.LineEdit("This is a test")
+     widget.setValidator(val)
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_validators/regexvalidators.py` & `prettyqt-1.0.0/prettyqt/custom_validators/regexvalidators.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,82 +1,105 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
++
++from re import Pattern
++from typing import Union
+ 
+ import regex as re
+ 
+ from prettyqt import gui
++from prettyqt.qt import QtCore, QtGui
++
++
++PatternType = Union[str, Pattern]  # todo: move this to types?
+ 
+ 
+ class BaseRegexValidator(gui.Validator):
+-    def __init__(self, parent=None, regex=None):
++    def __init__(
++        self, parent: QtCore.QObject | None = None, regex: PatternType | None = None
++    ):
+         super().__init__(parent)
+-        self.regex = None
++        self.regex: Pattern | None = None
+         if regex:
+             self.set_regex(regex)
+ 
+     def __repr__(self):
+-        return f"BaseRegexValidator({self.get_regex()!r})"
+-
+-    def __getstate__(self):
+-        return dict(regexp=self.regex)
++        return f"{type(self).__name__}({self.get_regex()!r})"
+ 
+-    def __setstate__(self, state):
+-        self.__init__()
+-        self.set_regex(state["regexp"])
++    def __reduce__(self):
++        return type(self), (self.get_regex(),)
+ 
+-    def set_regex(self, regex: str):
+-        self.regex = re.compile(regex)
++    def __eq__(self, other: object):
++        if not isinstance(other, type(self)):
++            return False
++        return self.regex == other.regex
++
++    def set_regex(self, regex: PatternType):
++        if isinstance(regex, str):
++            self.regex = re.compile(regex)
++        else:
++            self.regex = regex
+ 
+     def get_regex(self) -> str:
++        if self.regex is None:
++            raise TypeError("Validator not initialized")
+         return self.regex.pattern
+ 
+-    def validate(self, text: str, pos: int = 0) -> tuple:
++    def validate(  # type: ignore
++        self, text: str, pos: int = 0
++    ) -> tuple[QtGui.QValidator.State, str, int]:
++        if self.regex is None:
++            raise TypeError("Validator not initialized")
+         if text == "":
+-            return (self.Intermediate, text, pos)
+-        match = self.regex.match(text, partial=True)
++            return self.State.Intermediate, text, pos
++        match = self.regex.match(text, partial=True)  # type: ignore
+         if match is None:
+-            return (self.Invalid, text, pos)
+-        if match.partial:
+-            return (self.Intermediate, text, pos)
++            return self.State.Invalid, text, pos
++        elif match.partial:  # type: ignore
++            return self.State.Intermediate, text, pos
+         else:
+-            return (self.Acceptable, text, pos)
++            return self.State.Acceptable, text, pos
+ 
+ 
+ class IntListValidator(BaseRegexValidator):
+-    def __init__(self, allow_single: bool = True, parent=None):
++    def __init__(self, allow_single: bool = True, parent: QtCore.QObject | None = None):
+         super().__init__(parent=parent)
+         self.allow_single = allow_single
+         if allow_single:
+             self.set_regex(r"^(\d+)(,\s*\d+)*$")
+         else:
+             self.set_regex(r"^[0-9][0-9\,]+[0-9]$")
+ 
++    def __reduce__(self):
++        return type(self), (self.allow_single,)
++
+     def __repr__(self):
+-        return f"IntListValidator(allow_single={self.allow_single})"
++        return f"{type(self).__name__}(allow_single={self.allow_single})"
+ 
+ 
+ class FloatListValidator(BaseRegexValidator):
+-    def __init__(self, allow_single: bool = True, parent=None):
++    def __init__(self, allow_single: bool = True, parent: QtCore.QObject | None = None):
+         super().__init__(parent=parent)
+         self.allow_single = allow_single
+         if allow_single:
+             self.set_regex(r"^(\s*-?\d+(\.\d+)?)(\s*,\s*-?\d+(\.\d+)?)*$")
+         else:
+             self.set_regex(
+                 r"^(\s*-?\d+(\.\d+)?)(\s*,\s*-?\d+(\.\d+)?)" r"(\s*,\s*-?\d+(\.\d+)?)*$"
+             )
+ 
++    def __reduce__(self):
++        return type(self), (self.allow_single,)
++
+     def __repr__(self):
+-        return f"FloatListValidator(allow_single={self.allow_single})"
++        return f"{type(self).__name__}(allow_single={self.allow_single})"
+ 
+ 
+ if __name__ == "__main__":
+     from prettyqt import widgets
+ 
+     app = widgets.app()
+     w = widgets.LineEdit()
+     val = BaseRegexValidator()
+     val.set_regex(r"\w\d\d")
+     w.set_validator(val)
+     w.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/buttondelegate.py` & `prettyqt-1.0.0/prettyqt/custom_delegates/buttondelegate.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,34 +1,32 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtCore
++from __future__ import annotations
+ 
+ from prettyqt import core, widgets
++from prettyqt.qt import QtCore, QtWidgets
+ 
+ 
+ class ButtonDelegate(widgets.ItemDelegate):
+-    def __init__(self, parent, role=QtCore.Qt.UserRole):
++    def __init__(
++        self, parent: QtWidgets.QWidget | None, role=QtCore.Qt.ItemDataRole.UserRole
++    ):
+         super().__init__(parent)
+         self.fn_role = role
+ 
+     def createEditor(self, parent, option, index) -> widgets.PushButton:
+         label = index.data()
+         btn_callback = index.data(self.fn_role)
+         btn = widgets.PushButton(label, parent)
+         if not btn_callback:
+             btn.set_disabled()
+         else:
+             btn.clicked.connect(btn_callback)
+         return btn
+ 
+     def setEditorData(self, editor, index):
+-        editor.blockSignals(True)
+-        editor.blockSignals(False)
++        pass
+ 
+     def setModelData(self, editor, model, index):
+         pass
+ 
+     @core.Slot()
+     def currentIndexChanged(self):
+         self.commitData.emit(self.sender())
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/checkboxdelegate.py` & `prettyqt-1.0.0/prettyqt/custom_delegates/checkboxdelegate.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,57 +1,39 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+ import logging
+ 
+ from prettyqt import core, widgets
+ 
+ 
+ logger = logging.getLogger(__name__)
+ 
+ 
+ class CheckBoxDelegate(widgets.ItemDelegate):
+-    """
+-    A delegate that places a fully functioning CheckBox in every
+-    cell of the column to which it's applied
+-    """
++    """Delegate that places a CheckBox in every cell."""
+ 
+     def __init__(self, *args, **kwargs):
+-
+         super().__init__(*args, **kwargs)
+         self.selected = []
+ 
+     def createEditor(self, parent, option, index):
+-        """
+-        override
++        """Override.
++
+         instanciate the editor widget and initialize it
+-        also connect currentIndexChanged signal
++        also connect currentIndexChanged signal.
+         """
+         cb = widgets.CheckBox(parent)
+         cb.currentIndexChanged.connect(self.currentIndexChanged)
+         return cb
+ 
+     def setEditorData(self, cb, index):
+-        """
+-        override
++        """Override.
++
+         set correct initial value for editor widget
+         """
+         current_selection = index.data()
+         with cb.block_signals():
+             cb.setCurrentText(current_selection)
+ 
+-    def setModelData(self, combo, model, index):
+-        """
+-        override, gets called on self.commitData (?)
+-        apply the newly selected dtype to the column if possible
+-        """
+-        dtype = self.dtypes[combo.currentText()]
+-        # s = model.data(index, model.DATA_ROLE)
+-        try:
+-            model.setData(index, dtype, model.DTYPE_ROLE)
+-        except ValueError as e:
+-            logger.error(e)
+-
+     @core.Slot()
+     def currentIndexChanged(self):
+         self.commitData.emit(self.sender())
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/codeeditor.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/codeeditor.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,30 +1,15 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtCore
+-
+-from prettyqt import core, gui, widgets
+-
+-
+-class LineNumberArea(widgets.Widget):
+-    def __init__(self, editor):
+-        super().__init__(editor)
+-        self.editor = editor
+-
+-    def sizeHint(self):
+-        return core.Size(self.editor.line_area_width(), 0)
+-
+-    def paintEvent(self, event):
+-        self.editor.line_area_paintevent(event)
++from prettyqt import constants, core, gui, widgets
++from prettyqt.qt import QtCore, QtWidgets
+ 
+ 
+ class CodeEditor(widgets.PlainTextEdit):
+-    def __init__(self, language="python", parent=None):
++    def __init__(self, language: str = "python", parent: QtWidgets.QWidget | None = None):
+         super().__init__(parent=parent)
+         self.line_area = LineNumberArea(self)
+         self.blockCountChanged.connect(self.update_line_area_width)
+         self.updateRequest.connect(self.update_line_area)
+         self.cursorPositionChanged.connect(self.highlight_current_line)
+         self.set_font("Consolas")
+         self.update_line_area_width(0)
+@@ -39,48 +24,61 @@
+         self.line_area.setGeometry(rect)
+ 
+     def text(self) -> str:
+         return self.toPlainText()
+ 
+     def line_area_width(self) -> int:
+         digits = len(str(self.blockCount()))
+-        space = 3 + self.fontMetrics().boundingRect("9").width() * digits
+-        return space
++        return 3 + self.fontMetrics().boundingRect("9").width() * digits
+ 
+     def update_line_area_width(self, _):
+         self.setViewportMargins(self.line_area_width(), 0, 0, 0)
+ 
+-    def update_line_area(self, rect, dy):
++    def update_line_area(self, rect: QtCore.QRect, dy: int):
+         if dy:
+             self.line_area.scroll(0, dy)
+         else:
+             self.line_area.update(0, rect.y(), self.line_area.width(), rect.height())
+ 
+         if rect.contains(self.viewport().rect()):
+             self.update_line_area_width(0)
+ 
+     def line_area_paintevent(self, event):
+-        painter = gui.Painter(self.line_area)
+-        painter.fill_rect(event.rect(), "lightgray")
++        with gui.Painter(self.line_area) as painter:
++            painter.fill_rect(event.rect(), "lightgray")
+ 
+-        block = self.firstVisibleBlock()
+-        block_number = block.blockNumber()
+-        top = self.blockBoundingGeometry(block).translated(self.contentOffset()).top()
+-        bottom = top + self.blockBoundingRect(block).height()
+-        width = self.line_area.width()
+-        height = self.fontMetrics().height()
+-        painter.set_color("black")
+-        while block.isValid() and (top <= event.rect().bottom()):
+-            if block.isVisible() and (bottom >= event.rect().top()):
+-                number = str(block_number + 1)
+-                painter.drawText(0, top, width, height, QtCore.Qt.AlignRight, number)
+-            block = block.next()
+-            top = bottom
++            block = self.firstVisibleBlock()
++            block_number = block.blockNumber()
++            top = self.blockBoundingGeometry(block).translated(self.contentOffset()).top()
+             bottom = top + self.blockBoundingRect(block).height()
+-            block_number += 1
++            width = self.line_area.width()
++            height = self.fontMetrics().height()
++            painter.set_color("black")
++            while block.isValid() and (top <= event.rect().bottom()):
++                if block.isVisible() and (bottom >= event.rect().top()):
++                    number = str(block_number + 1)
++                    painter.drawText(
++                        0, int(top), width, height, constants.ALIGN_RIGHT, number
++                    )
++                block = block.next()
++                top = bottom
++                bottom = top + self.blockBoundingRect(block).height()
++                block_number += 1
++
++
++class LineNumberArea(widgets.Widget):
++    def __init__(self, editor: CodeEditor):
++        super().__init__(editor)
++        self.editor = editor
++
++    def sizeHint(self) -> core.Size:
++        return core.Size(self.editor.line_area_width(), 0)
++
++    def paintEvent(self, event):
++        self.editor.line_area_paintevent(event)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     dlg = CodeEditor()
+     dlg.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/colorchooserbutton.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/colorchooserbutton.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,71 +1,75 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from prettyqt import core, gui, widgets
+-from prettyqt.utils import colors
++from prettyqt import core, gui, iconprovider, widgets
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import colors, types
+ 
+ 
+ class ColorChooserButton(widgets.Widget):
+-
+     value_changed = core.Signal(gui.Color)
+ 
+-    def __init__(self, color=None, parent=None):
++    def __init__(
++        self, color: types.ColorType = None, parent: QtWidgets.QWidget | None = None
++    ):
+         super().__init__(parent)
+         layout = widgets.BoxLayout("horizontal", self)
+         layout.set_margin(0)
+         self.lineedit = widgets.LineEdit()
+         self.lineedit.set_regex_validator(r"^#(?:[0-9a-fA-F]{6})$")
+-        layout += self.lineedit
++        layout.add(self.lineedit)
+         action = widgets.Action(icon="mdi.format-color-fill")
+         action.triggered.connect(self.choose_color)
+         self.button = widgets.ToolButton()
+         self.button.setDefaultAction(action)
+-        layout += self.button
++        layout.add(self.button)
++        self._current_color: gui.Color = gui.Color("white")
+         if color is not None:
+-            self.set_color(color)
++            self.set_current_color(color)
+ 
+     def __repr__(self):
+-        return f"ColorChooserButton({self.current_color})"
++        return f"{type(self).__name__}({self._current_color})"
+ 
+-    def __getstate__(self):
+-        return dict(color=self.current_color, enabled=self.isEnabled())
++    def serialize_fields(self):
++        return dict(current_color=self._current_color, enabled=self.isEnabled())
+ 
+     def __setstate__(self, state):
+-        self.__init__()
+-        if state["color"]:
+-            self.set_color(state["color"])
++        if state["current_color"]:
++            self.set_current_color(state["current_color"])
+         self.setEnabled(state.get("enabled", True))
+ 
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
+     @core.Slot()
+     def choose_color(self):
+         dlg = widgets.ColorDialog()
+-        if self.current_color:
+-            dlg.setCurrentColor(self.current_color)
++        if self._current_color:
++            dlg.setCurrentColor(self._current_color)
+ 
+-        if dlg.exec_():
+-            self.set_color(dlg.current_color())
+-            self.value_changed.emit(dlg.current_color())
+-
+-    def set_color(self, color: colors.ColorType):
+-        self.current_color = colors.get_color(color)
+-        self.lineedit.set_text(self.current_color.name().upper())
+-        icon = gui.Icon.for_color(self.current_color)
++        if dlg.main_loop():
++            new_color = dlg.current_color()
++            self.set_current_color(new_color)
++            self.value_changed.emit(new_color)
++
++    def set_current_color(self, color: types.ColorType):
++        self._current_color = colors.get_color(color)
++        self.lineedit.set_text(self._current_color.name().upper())
++        icon = iconprovider.for_color(self._current_color)
+         self.button.set_icon(icon)
+ 
+     def is_valid(self) -> bool:
+         return self.lineedit.is_valid()
+ 
+-    def get_value(self):
+-        return self.current_color
++    def get_value(self) -> gui.Color:
++        return self._current_color
+ 
+-    def set_value(self, value):
+-        self.set_color(value)
++    def set_value(self, value: types.ColorType):
++        self.set_current_color(value)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     btn = ColorChooserButton(gui.Color("green"))
+     btn.show()
+     btn.value_changed.connect(print)
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/dataset.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/dataset.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,46 +1,44 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
++from collections.abc import Iterable, Mapping
+ import functools
+ import pathlib
+-from typing import Optional, Mapping, Iterable, Union, Callable, Any, Dict
++from typing import Any, Callable
+ 
+ from prettyqt import custom_validators, custom_widgets, gui, widgets
++from prettyqt.utils import types
+ 
+ 
+-class DataItem(object):
++class DataItem:
+     def __init__(
+         self,
+         label: str,
+         value=None,
+-        optional: bool = False,
++        optional: str | None = None,
+         include: bool = True,
+         enabled_on=None,
+         disabled_on=None,
+     ):
+         self.set_value(value)
+-        self.enabled_on = [enabled_on] if enabled_on else list()
+-        self.disabled_on = [disabled_on] if disabled_on else list()
++        self.enabled_on = [enabled_on] if enabled_on else []
++        self.disabled_on = [disabled_on] if disabled_on else []
+         self.name = None
+         self.label = label
+         self.optional = optional
+         self.include = include
+         self.colspan = 1
+         self.label_col = 0
+         self.is_enabled = True
+ 
+     def __get__(self, instance, owner):
+         return self.value
+ 
+     def set_pos(self, col=0, colspan=None):
+-        """
+-        Set data item's position on a GUI layout
+-        """
++        """Set data item's position on a GUI layout."""
+         self.label_col = col
+         self.colspan = colspan
+         return self
+ 
+     def set_value(self, value):
+         self.value = value
+ 
+@@ -62,362 +60,258 @@
+ 
+ 
+ class Fixed(DataItem):
+     pass
+ 
+ 
+ class Float(DataItem):
+-    """
+-    Construct a float data item
+-        * label [string]: name
+-        * value [float]: default value (optional)
+-        * min [float]: minimum value (optional)
+-        * max [float]: maximum value (optional)
+-        * slider [bool]: if True, shows a slider widget right after the line
+-          edit widget (default is False)
+-        * step [float]: step between tick values with a slider widget (optional)
+-        * unit [string]: physical unit (optional)
+-        * check [bool]: if False, value is not checked (optional, value=True)
+-    """
+-
+     def __init__(
+         self,
+         label: str,
+-        value: Optional[float] = None,
+-        min_val: Optional[float] = None,
+-        max_val: Optional[float] = None,
++        value: float | None = None,
++        min_val: float | None = None,
++        max_val: float | None = None,
+         unit: str = "",
+         step: float = 0.1,
+         slider: bool = False,
+         **kwargs,
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.range = (min_val, max_val)
+         self.step = step
+         self.unit = unit
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> widgets.DoubleSpinBox:
+         widget = widgets.DoubleSpinBox()
+         widget.set_range(*self.range)
+         widget.setSingleStep(self.step)
+         widget.setSuffix(self.unit)
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class Int(DataItem):
+-    """
+-    Construct an integer data item
+-        * label [string]: name
+-        * value [int]: default value (optional)
+-        * min [int]: minimum value (optional)
+-        * max [int]: maximum value (optional)
+-        * unit [string]: physical unit (optional)
+-        * slider [bool]: if True, shows a slider widget right after the line
+-          edit widget (default is False)
+-        * check [bool]: if False, value is not checked (optional, value=True)
+-    """
+-
+     def __init__(
+         self,
+         label: str,
+-        value: Optional[int] = None,
+-        min_val: Optional[int] = 0,
+-        max_val: Optional[int] = None,
++        value: int | None = None,
++        min_val: int | None = 0,
++        max_val: int | None = None,
+         unit: str = "",
+         step: int = 1,
+         slider: bool = False,
+         **kwargs,
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.range = (min_val, max_val)
+         self.step = step
+         self.unit = unit
+         self.slider = slider
+ 
+-    def _create_widget(self):
+-        if self.slider:
++    def _create_widget(self) -> custom_widgets.InputAndSlider | widgets.SpinBox:
++        min_val = self.range[0]
++        max_val = self.range[1]
++        if min_val is not None and max_val is not None:
+             widget = custom_widgets.InputAndSlider()
++            widget.set_range(min_val, max_val)
+         else:
+             widget = widgets.SpinBox()
++            widget.set_range(min_val, max_val)
+             widget.setSuffix(self.unit)
+-        widget.set_range(*self.range)
+         widget.set_step_size(self.step)
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class Range(DataItem):
+-    """
+-    Construct a Range data item
+-        * label [string]: name
+-        * value [int]: default value (optional)
+-        * min [int]: minimum value (optional)
+-        * max [int]: maximum value (optional)
+-        * unit [string]: physical unit (optional)
+-        * slider [bool]: if True, shows a slider widget right after the line
+-          edit widget (default is False)
+-        * check [bool]: if False, value is not checked (optional, value=True)
+-    """
+-
+     def __init__(
+         self, label: str, value=None, min_val: int = 0, max_val: int = 1, **kwargs
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.range = (min_val, max_val)
+         # self.step = step
+         # self.unit = unit
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> custom_widgets.SpanSlider:
+         widget = custom_widgets.SpanSlider()
+         # widget.setSuffix(self.unit)
+         widget.set_range(*self.range)
+         # widget.set_step_size(self.step)
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class String(DataItem):
+-    """
+-    Construct a string data item
+-        * label [string]: name
+-        * value [string]: default value (optional)
+-        * notempty [bool]: if True, empty string is not a valid value (opt.)
+-    """
+-
+     def __init__(
+         self,
+         label: str,
+-        value: Optional[str] = None,
++        value: str | None = None,
+         notempty: bool = False,
+-        regex: Optional[str] = None,
++        regex: str | None = None,
+         **kwargs,
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.notempty = notempty
+         self.regex = regex
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> widgets.LineEdit:
+         widget = widgets.LineEdit()
+         if self.notempty:
+             val = custom_validators.NotEmptyValidator()
+             widget.set_validator(val)
+         if self.regex is not None:
+-            val = gui.RegExpValidator()
++            val = gui.RegularExpressionValidator()
+             val.set_regex(self.regex)
+             widget.set_validator(val)
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class RegexPattern(DataItem):
+-    """
+-    Construct a string data item
+-        * label [string]: name
+-        * value [string]: default value (optional)
+-        * notempty [bool]: if True, empty string is not a valid value (opt.)
+-    """
+-
+     def __init__(
+-        self, label: str, value: Optional[str] = None, notempty: bool = False, **kwargs
++        self, label: str, value: str | None = None, notempty: bool = False, **kwargs
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.notempty = notempty
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> custom_widgets.SingleLineTextEdit:
+         widget = custom_widgets.SingleLineTextEdit()
+         if self.notempty:
+             val = custom_validators.NotEmptyValidator()
+             widget.set_validator(val)
+         widget.set_syntaxhighlighter("regex")
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class Code(DataItem):
+-    """
+-    Construct a code data item
+-        * label [string]: name
+-        * value [string]: default value (optional)
+-        * language [string]: language for syntax highlighting
+-    """
+-
+     def __init__(
+-        self, label: str, value: Optional[str] = None, language: str = "python", **kwargs
++        self, label: str, value: str | None = None, language: str = "python", **kwargs
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.language = language
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> custom_widgets.CodeEditor:
+         widget = custom_widgets.CodeEditor()
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class Regex(DataItem):
+-    """
+-    Construct a code data item
+-        * label [string]: name
+-        * value [string]: default value (optional)
+-        * language [string]: language for syntax highlighting
+-    """
+-
+     def __init__(
+         self,
+         label: str,
+-        value: Optional[str] = None,
++        value: str | None = None,
+         show_flags: bool = True,
+         show_error: bool = False,
+         **kwargs,
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.show_flags = show_flags
+         self.show_error = show_error
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> custom_widgets.RegexInput:
+         widget = custom_widgets.RegexInput(
+             show_flags=self.show_flags, show_error=self.show_error
+         )
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class IntList(DataItem):
+-    """
+-    Construct an IntList data item
+-        * label [string]: name
+-        * value [string]: default value (optional)
+-        * notempty [bool]: if True, empty string is not a valid value (opt.)
+-    """
+-
+     def __init__(
+         self,
+         label: str,
+-        value: Optional[list] = None,
++        value: list[int] | None = None,
+         allow_single: bool = False,
+         **kwargs,
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.allow_single = allow_single
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> custom_widgets.ListInput:
+         widget = custom_widgets.ListInput(allow_single=self.allow_single)
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class FloatList(DataItem):
+-    """
+-    Construct an FloatList data item
+-        * label [string]: name
+-        * value [string]: default value (optional)
+-        * notempty [bool]: if True, empty string is not a valid value (opt.)
+-    """
+-
+     def __init__(
+         self,
+         label: str,
+-        value: Optional[list] = None,
++        value: list[float] | None = None,
+         allow_single: bool = False,
+         **kwargs,
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.allow_single = allow_single
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> custom_widgets.ListInput:
+         widget = custom_widgets.ListInput(allow_single=self.allow_single, typ=float)
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class Bool(DataItem):
+-    """
+-    Construct a boolean data item
+-        * text [string]: form's field name (optional)
+-        * label [string]: name
+-        * value [string]: default value (optional)
+-        * check [bool]: if False, value is not checked (optional, value=True)
+-    """
+-
+     def __init__(
+         self,
+         label: str,
+         value: bool = False,
+         true_value: Any = True,
+         false_value: Any = False,
+         **kwargs,
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.true_value = true_value
+         self.false_value = false_value
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> custom_widgets.MappedCheckBox:
+         widget = custom_widgets.MappedCheckBox(
+             true_value=self.true_value, false_value=self.false_value
+         )
+         widget.set_value(self.value)
+         return widget
+ 
+ 
+ class Color(DataItem):
+-    """
+-    Construct a color data item
+-        * label [string]: name
+-        * value [string]: default value (optional)
+-        * check [bool]: if False, value is not checked (optional, value=True)
+-
+-    Color values are encoded as hexadecimal strings or Qt color names
+-    """
+-
+     def __init__(self, label: str, value=None, **kwargs):
+         super().__init__(label, value=value, **kwargs)
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> custom_widgets.ColorChooserButton:
+         widget = custom_widgets.ColorChooserButton()
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class Enum(DataItem):
+-    """
+-    Construct a data item for a list of choices.
+-        * label [string]: name
+-        * choices [list, tuple or function]: string list or (key, label) list
+-          function of two arguments (item, value) returning a list of tuples
+-          (key, label: str, image) where image is an icon path, a QIcon instance
+-          or a function of one argument (key) returning a QIcon instance
+-        * value [-]: default label or default key (optional)
+-        * check [bool]: if False, value is not checked (optional, value=True)
+-        * radio [bool]: if True, shows radio buttons instead of a combo box
+-          (default is False)
+-    """
+-
+     def __init__(
+         self,
+         label: str,
+-        choices: Union[Iterable, Mapping],
++        choices: Iterable | Mapping,
+         value: Any = None,
+         radio: bool = False,
+         **kwargs,
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.radio = radio
+         self.choices = choices
+ 
+-    def _create_widget(self):
++    def _create_widget(
++        self,
++    ) -> custom_widgets.ColorChooserButton | widgets.ComboBox:
+         if self.radio:
+             widget = custom_widgets.SelectionWidget(layout="vertical")
+         else:
+             widget = widgets.ComboBox()
+         if isinstance(self.choices, Mapping):
+             widget.add_items(self.choices)
+         else:
+@@ -432,20 +326,24 @@
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class MultipleChoice(DataItem):
+     def __init__(
+-        self, label: str, choices: Union[Iterable, Mapping], value: list = None, **kwargs
++        self,
++        label: str,
++        choices: Iterable | Mapping,
++        value: list | None = None,
++        **kwargs,
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.choices = choices
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> widgets.ListWidget:
+         widget = widgets.ListWidget()
+         widget.set_selection_mode("multi")
+         if isinstance(self.choices, Mapping):
+             widget.add_items(self.choices)
+         else:
+             for item in self.choices:
+                 if isinstance(item, tuple):
+@@ -460,125 +358,105 @@
+         return widget
+ 
+ 
+ class File(DataItem):
+     def __init__(
+         self,
+         label: str,
+-        formats="*",
+-        value: Union[None, str, pathlib.Path] = None,
++        formats: str = "*",
++        value: None | str | pathlib.Path = None,
+         save: bool = True,
+-        root=None,
++        root: None | str | pathlib.Path = None,
+         **kwargs,
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.formats = formats.lstrip(".")
+         self.root = root
+         self.save = save
+ 
+-    def _create_widget(self):
+-        file_mode = "any_file" if self.save else "existing_file"
+-        mode = "save" if self.save else "open"
++    def _create_widget(self) -> custom_widgets.FileChooserButton:
+         widget = custom_widgets.FileChooserButton(
+-            file_mode=file_mode, mode=mode, root=self.root
++            file_mode="any_file" if self.save else "existing_file",
++            mode="save" if self.save else "open",
++            root=self.root,
+         )
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class Folder(DataItem):
+     def __init__(
+         self,
+         label: str,
+-        value: Union[None, str, pathlib.Path] = None,
+-        root=None,
+-        mode="open",
++        value: None | str | pathlib.Path = None,
++        root: None | str | pathlib.Path = None,
++        mode: widgets.filedialog.AcceptModeStr = "open",
+         **kwargs,
+     ):
+         super().__init__(label, value=value, **kwargs)
+         self.mode = mode
+         self.root = root
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> custom_widgets.FileChooserButton:
+         widget = custom_widgets.FileChooserButton(
+             file_mode="directory", mode=self.mode, root=self.root
+         )
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class StringOrNumber(DataItem):
+-    def _create_widget(self):
++    def _create_widget(self) -> custom_widgets.StringOrNumberWidget:
+         widget = custom_widgets.StringOrNumberWidget(self.label)
+         if self.value is not None:
+             widget.set_value(self.value)
+         return widget
+ 
+ 
+ class Button(DataItem):
+-    """
+-    Construct a simple button that calls a method when hit
+-        * label [string]: text shown on the button
+-        * callback [function]: function with four params (dataset, item, value, parent)
+-            - dataset [DataSet]: instance of the parent dataset
+-            - item [DataItem]: instance of Button (i.e. self)
+-            - value [unspecified]: value of Button (default Button
+-              value or last value returned by the callback)
+-            - parent [QObject]: button's parent widget
+-        * icon [QIcon or string]: icon show on the button (optional)
+-        * check [bool]: if False, value is not checked (optional, value=True)
+-    """
+-
+-    def __init__(self, label: str, callback: Callable, icon: gui.icon.IconType = None):
++    def __init__(self, label: str, callback: Callable, icon: types.IconType = None):
+         super().__init__("", value=None, include=False)
+         self.button_label = label
+         self.icon = icon
+         self.callback = callback
+ 
+-    def _create_widget(self):
++    def _create_widget(self) -> widgets.PushButton:
+         widget = widgets.PushButton(self.button_label)
+         widget.set_icon(self.icon)
+         callback = functools.partial(self.callback, parent=widget.window())
+         widget.clicked.connect(callback)
+         return widget
+ 
+ 
+ class DataSetMeta(type):
+-    """
+-    DataSet metaclass
+-
+-    Create class attribute `_items`: list of the DataSet class attributes,
+-    created in the same order as these attributes were written
+-    """
+-
+     def __new__(mcs, name, bases, dct):
+         filtered = [b for b in bases if getattr(b, "__metaclass__", None) is DataSetMeta]
+         items = {item._name: item for b in filtered for item in b._items}
+         # items should contain DataItems of parent classes
+         for attrname, value in list(dct.items()):
+             if isinstance(value, DataItem):
+                 value.name = attrname
+                 items[attrname] = value
+         dct["_items"] = items
+         return type.__new__(mcs, name, bases, dct)
+ 
+ 
+-class DataSet(object, metaclass=DataSetMeta):
+-    _items: Dict[str, DataItem]
++class DataSet(metaclass=DataSetMeta):
++    _items: dict[str, DataItem]
+ 
+-    def __init__(self, title: str = "", comment: Optional[str] = None, icon=""):
++    def __init__(self, title: str = "", comment: str | None = None, icon=""):
+         # self.widget = custom_widgets.SettingsWidget()
+         self.dialog_title = title
+         self.dialog_comment = comment
+         self.dialog_icon = icon
+ 
+     def create_dialog(self):
+-        dialog = widgets.BaseDialog()
++        dialog = widgets.Dialog()
+         dialog.set_modality("application")
+         dialog.setMinimumWidth(400)
+         dialog.set_title(self.dialog_title)
+         dialog.set_icon(self.dialog_icon)
+         dialog.set_layout("grid")
+         dialog.box.set_spacing(10)
+         dialog.box.set_margin(20)
+@@ -614,25 +492,30 @@
+             label = widgets.Label(self.dialog_comment)
+             label.setWordWrap(True)
+             dialog.box[len(self._items) + 1, 0:3] = label
+         dialog.box.append(button_box)
+         on_update()
+         return dialog
+ 
+-    def edit(self, preset: Optional[dict] = None) -> bool:
++    def edit(self, preset: dict | None = None) -> bool:
+         dialog = self.create_dialog()
+         if preset:
+             for item in dialog.layout():
+-                if item.id in preset and preset[item.id] is not None:
+-                    item.set_value(preset[item.id])
++                item_id = item.get_id()
++                if item_id in preset and preset[item_id] is not None:
++                    item.set_value(preset[item_id])
+ 
+         if not dialog.show_blocking():
+             return False
+-        new_values = {item.id: item.get_value() for item in dialog.layout() if item.id}
+-        enabled = {item.id: item.isEnabled() for item in dialog.layout() if item.id}
++        new_values = {
++            item.get_id(): item.get_value() for item in dialog.layout() if item.has_id()
++        }
++        enabled = {
++            item.get_id(): item.isEnabled() for item in dialog.layout() if item.has_id()
++        }
+         # new_values = {a: (str(b) if isinstance(b, pathlib.Path) else b)
+         #               for a, b in dct.items()}
+         for k, item in self._items.items():
+             if k in new_values:
+                 item.set_value(new_values[k])
+                 item.is_enabled = enabled[k]
+         return True
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/filechooserbutton.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/filechooserbutton.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,100 +1,101 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
++import os
+ import pathlib
+-from typing import Optional, Union, List, Dict
+-
+-from qtpy import QtWidgets
+ 
+ from prettyqt import core, widgets
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import types
+ 
+ 
+ class FileChooserButton(widgets.Widget):
+-
+     value_changed = core.Signal(pathlib.Path)
+ 
+     def __init__(
+         self,
+-        extensions: Optional[Dict[str, List[str]]] = None,
+-        mode: str = "save",
+-        file_mode: str = "existing_files",
+-        root: Union[None, str, pathlib.Path] = None,
+-        parent: Optional[QtWidgets.QWidget] = None,
++        extensions: dict[str, list[str]] | None = None,
++        mode: widgets.filedialog.AcceptModeStr = "save",
++        file_mode: widgets.filedialog.FileModeStr = "existing_files",
++        root: None | str | pathlib.Path = None,
++        parent: QtWidgets.QWidget | None = None,
+     ):
+-        """initialize FileChooserButton
++        """Initialize FileChooserButton.
+ 
+         Args:
+             extensions: dict allowed extensions
+                         form: "'name': ['.ext1', '.ext2']"
+             mode: Accept mode ("save" or "load")
+             file_mode: File mode ("existing_files", "existing_file", "any_file",
+                                   or "directory")
++            root: Root path
+             parent: parent widget
+         """
+         super().__init__(parent)
+-        self.path: Optional[pathlib.Path] = None
++        self.path: pathlib.Path | None = None
+         self.extensions = extensions
+-        self.mode = mode
+-        self.file_mode = file_mode
++        self.mode: widgets.filedialog.AcceptModeStr = mode
++        self.file_mode: widgets.filedialog.FileModeStr = file_mode
+         self.root = root
+         layout = widgets.BoxLayout("horizontal", self)
+         layout.set_margin(0)
+         self.lineedit = widgets.LineEdit()
+         self.lineedit.set_read_only()
+-        layout += self.lineedit
++        layout.add(self.lineedit)
+         action = widgets.Action()
+         if self.file_mode == "directory":
+             action.set_icon("mdi.folder-outline")
+         else:
+             action.set_icon("mdi.file-outline")
+         action.triggered.connect(self.open_file)
+ 
+         self.button = widgets.ToolButton()
+         self.button.setDefaultAction(action)
+-        layout += self.button
++        layout.add(self.button)
+ 
+-    def __getstate__(self):
++    def serialize_fields(self):
+         return dict(path=self.path, extensions=self.extensions, enabled=self.isEnabled())
+ 
+     def __setstate__(self, state):
+-        self.__init__(state["extensions"])
+         self.set_path(state["path"])
+         self.set_enabled(state.get("enabled", True))
+ 
++    def __reduce__(self):
++        return type(self), (self.extensions,), self.__getstate__()
++
+     @core.Slot()
+     def open_file(self):
+         dialog = widgets.FileDialog(
+             parent=self,
+             path_id="file_path",
+             mode=self.mode,
+             path=self.root,
+             file_mode=self.file_mode,
+         )
+         if self.extensions:
+             dialog.set_extension_filter(self.extensions)
+         if not dialog.choose():
+-            return None
++            return
+         self.set_path(dialog.selected_file())
+         self.value_changed.emit(self.path)
+ 
+-    def set_path(self, path: Union[str, pathlib.Path, None]):
+-        if isinstance(path, str):
+-            self.path = pathlib.Path(path)
++    def set_path(self, path: types.PathType | None):
++        if path is None:
++            self.path = None
++            self.lineedit.set_text("")
+         else:
+-            self.path = path
+-        self.lineedit.set_text(str(path) if path is not None else "")
++            self.path = pathlib.Path(path)
++            self.lineedit.set_text(os.fspath(path))
+ 
+-    def get_value(self) -> Optional[pathlib.Path]:
++    def get_value(self) -> pathlib.Path | None:
+         return self.path
+ 
+-    def set_value(self, value: Union[str, pathlib.Path]):
++    def set_value(self, value: types.PathType | None):
+         self.set_path(value)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     btn = FileChooserButton()
+     btn.show()
+     btn.value_changed.connect(print)
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/flagselectionwidget.py` & `prettyqt-1.0.0/prettyqt/widgets/stackedwidget.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,69 +1,51 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from typing import Mapping, Union, Iterable
+-
+-from prettyqt import core, widgets
+-
+-
+-class FlagSelectionWidget(widgets.GroupBox):
+-    value_changed = core.Signal(int)
+-
+-    def __init__(self, label="", layout="vertical", parent=None):
+-        super().__init__(title=label, parent=parent)
+-        self.box = widgets.BoxLayout(layout)
+-        self.buttons = dict()
+-        self.set_layout(self.box)
+-
+-    def __iter__(self):
+-        return iter(self.buttons.items())
+-
+-    def add_items(self, items: Union[Iterable, Mapping]):
+-        if isinstance(items, Mapping):
+-            for k, v in items.items():
+-                self.add(v, k)
+-        else:
+-            for i in items:
+-                if isinstance(i, Iterable):
+-                    self.add(*i)
+-                else:
+-                    raise TypeError("Invalid item type")
+-
+-    def add(self, title: str, flag):
+-        checkbox = widgets.CheckBox(title)
+-        checkbox.toggled.connect(self.update_choice)
+-        self.buttons[checkbox] = flag
+-        self.box += checkbox
+-
+-    def current_choice(self):
+-        ret_val = 0
+-        for btn, flag in self.buttons.items():
+-            if btn.isChecked():
+-                ret_val |= flag
+-        return int(ret_val)
+-
+-    @core.Slot(bool)
+-    def update_choice(self, checked):
+-        choice = self.current_choice()
+-        self.value_changed.emit(choice)
+-
+-    def set_value(self, value):
+-        value = int(value)
+-        for btn, flag in self.buttons.items():
+-            btn.setChecked(bool(value & flag))
++from __future__ import annotations
+ 
+-    def get_value(self):
+-        return self.current_choice()
++from collections.abc import Iterator
++
++from prettyqt import widgets
++from prettyqt.qt import QtWidgets
++
++
++class StackedWidget(widgets.FrameMixin, QtWidgets.QStackedWidget):
++    def __setstate__(self, state):
++        for item in state["items"]:
++            self.add(item)
++
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
++    def __add__(self, other: QtWidgets.QWidget) -> StackedWidget:
++        self.addWidget(other)
++        return self
++
++    def __getitem__(self, index: int) -> QtWidgets.QWidget:
++        return self.widget(index)
++
++    def __iter__(self) -> Iterator[QtWidgets.QWidget]:
++        return iter(self.widget(i) for i in range(self.count()))
++
++    def __len__(self):
++        # needed for PySide2
++        return self.count()
++
++    def __contains__(self, item: QtWidgets.QWidget):
++        return self.indexOf(item) >= 0
++
++    def serialize_fields(self):
++        return dict(items=list(self))
++
++    def set_current_widget(self, widget: QtWidgets.QWidget):
++        self.setCurrentWidget(widget)
+ 
+ 
+ if __name__ == "__main__":
+-    import re
++    from prettyqt import widgets
+ 
+     app = widgets.app()
+-    widget = FlagSelectionWidget()
+-    items = {re.MULTILINE: "MultiLine", re.IGNORECASE: "Ignore case"}
+-    widget.add_items(items)
+-    widget.show()
+-    app.exec_()
+-    print(widget.get_value())
++    stackedwidget = StackedWidget()
++    widget2 = widgets.RadioButton("Test")
++    widget3 = widgets.RadioButton("Test 2")
++    stackedwidget += widget2
++    stackedwidget += widget3
++    stackedwidget.show()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/flowlayout.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/flowlayout.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,100 +1,103 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtCore, QtWidgets
+-
+-from prettyqt import core, widgets
++from prettyqt import constants, core, widgets
++from prettyqt.qt import QtCore, QtWidgets
+ 
+ 
+ class FlowLayout(widgets.Layout):
+-    def __init__(self, parent=None, margin=None, spacing=-1):
+-        super().__init__(parent)
++    def __init__(
++        self,
++        parent: QtWidgets.QWidget | None = None,
++        margin: int | None = None,
++        spacing: int = -1,
++    ):
++        super().__init__(parent)  # type: ignore
+         if margin is not None:
+             self.set_margin(margin)
+         self.set_spacing(spacing)
+-        self.items = []
++        self.items: list[QtWidgets.QLayoutItem] = []
+ 
+-    def __getstate__(self):
++    def serialize_fields(self):
+         return dict(items=self.get_children())
+ 
+-    def __add__(self, other):
+-        if isinstance(other, (QtWidgets.QWidget, QtWidgets.QLayout)):
+-            self.add(other)
+-            return self
++    def __add__(self, other: QtWidgets.QWidget | QtWidgets.QLayout) -> FlowLayout:
++        if not isinstance(other, (QtWidgets.QWidget, QtWidgets.QLayout)):
++            raise TypeError()
++        self.add(other)
++        return self
++
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
+ 
+     def __setstate__(self, state):
+-        self.__init__()
+         for item in state["items"]:
+             self.add(item)
+ 
+     def __del__(self):
+         item = self.takeAt(0)
+         while item:
+             item = self.takeAt(0)
+ 
+-    def addItem(self, item):
++    def addItem(self, item: QtWidgets.QLayoutItem):
+         self.items.append(item)
+ 
+     def count(self) -> int:
+         return len(self.items)
+ 
+-    def itemAt(self, index):
++    def itemAt(self, index: int) -> QtWidgets.QLayoutItem | None:  # type: ignore
+         if 0 <= index < len(self.items):
+             return self.items[index]
+-
+         return None
+ 
+-    def takeAt(self, index):
++    def takeAt(self, index: int) -> QtWidgets.QLayoutItem | None:  # type: ignore
+         if 0 <= index < len(self.items):
+             return self.items.pop(index)
+-
+         return None
+ 
+-    def expandingDirections(self):
+-        return QtCore.Qt.Orientations(QtCore.Qt.Orientation(0))
++    # def expandingDirections(self) -> QtCore.Qt.Orientations:
++    #     return QtCore.Qt.Orientations(0)
+ 
+-    def hasHeightForWidth(self):
++    def hasHeightForWidth(self) -> bool:
+         return True
+ 
+-    def heightForWidth(self, width):
+-        return self.do_layout(core.Rect(0, 0, width, 0), True)
++    def heightForWidth(self, width: int) -> int:
++        rect = QtCore.QRect(0, 0, width, 0)
++        return self.do_layout(rect, True)
+ 
+-    def setGeometry(self, rect):
++    def setGeometry(self, rect: QtCore.QRect):
+         super().setGeometry(rect)
+         self.do_layout(rect, False)
+ 
+-    def sizeHint(self):
++    def sizeHint(self) -> QtCore.QSize:
+         return self.minimumSize()
+ 
+-    def minimumSize(self):
+-        size = core.Size()
++    def minimumSize(self) -> QtCore.QSize:
++        size = QtCore.QSize()
+ 
+         for item in self.items:
+             size = size.expandedTo(item.minimumSize())
+ 
+         margin_width = 2 * self.contentsMargins().top()
+-        size += core.Size(margin_width, margin_width)
++        size += QtCore.QSize(margin_width, margin_width)
+         return size
+ 
+-    def do_layout(self, rect, test_only):
++    def do_layout(self, rect: QtCore.QRect, test_only: bool) -> int:
+         x = rect.x()
+         y = rect.y()
+         line_height = 0
+-
++        space = self.spacing()
++        pb = widgets.SizePolicy.ControlType.PushButton
+         for item in self.items:
+             wid = item.widget()
+-            pb = widgets.SizePolicy.PushButton
+-            space = self.spacing()
+-            space_x = space + wid.style().layoutSpacing(pb, pb, QtCore.Qt.Horizontal)
++            space_x = space + wid.style().layoutSpacing(pb, pb, constants.HORIZONTAL)
+             next_x = x + item.sizeHint().width() + space_x
+             if next_x - space_x > rect.right() and line_height > 0:
+                 x = rect.x()
+-                space_y = space + wid.style().layoutSpacing(pb, pb, QtCore.Qt.Vertical)
++                space_y = space + wid.style().layoutSpacing(pb, pb, constants.VERTICAL)
+                 y = y + line_height + space_y
+                 next_x = x + item.sizeHint().width() + space_x
+                 line_height = 0
+ 
+             if not test_only:
+                 item.setGeometry(core.Rect(core.Point(x, y), item.sizeHint()))
+ 
+@@ -104,16 +107,15 @@
+         return y + line_height - rect.y()
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = widgets.Widget()
+     layout = FlowLayout()
+-    layout += FlowLayout()
+-    layout += widgets.PushButton("Short")
+-    layout += widgets.PushButton("Longer")
+-    layout += widgets.PushButton("Different text")
+-    layout += widgets.PushButton("More text")
+-    layout += widgets.PushButton("Even longer button text")
++    layout.add(widgets.PushButton("Short"))
++    layout.add(widgets.PushButton("Longer"))
++    layout.add(widgets.PushButton("Different text"))
++    layout.add(widgets.PushButton("More text"))
++    layout.add(widgets.PushButton("Even longer button text"))
+     widget.set_layout(layout)
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/fontchooserbutton.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/fontchooserbutton.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,68 +1,73 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+ from prettyqt import core, gui, widgets
++from prettyqt.qt import QtGui, QtWidgets
+ 
+ 
+ class FontChooserButton(widgets.Widget):
+-
+     value_changed = core.Signal(gui.Font)
+ 
+-    def __init__(self, font=None, parent=None):
++    def __init__(
++        self,
++        font: QtGui.QFont | None = None,
++        parent: QtWidgets.QWidget | None = None,
++    ):
+         super().__init__(parent)
+         self._current_font = font
+         layout = widgets.BoxLayout("horizontal", self)
+         layout.set_margin(0)
+         self.lineedit = widgets.LineEdit()
+         self.lineedit.set_read_only()
+-        layout += self.lineedit
++        layout.add(self.lineedit)
+         action = widgets.Action()
+         action.triggered.connect(self.choose_font)
+         self.button = widgets.ToolButton()
+         self.button.setDefaultAction(action)
+-        layout += self.button
++        layout.add(self.button)
+ 
+     def __repr__(self):
+-        return f"FontChooserButton({self._current_font})"
++        return f"{type(self).__name__}({self._current_font})"
+ 
+-    def __getstate__(self):
+-        return dict(font=self._current_font, enabled=self.isEnabled())
++    def serialize_fields(self):
++        return dict(current_font=self._current_font)
+ 
+     def __setstate__(self, state):
+-        self.__init__()
+-        if state["font"]:
+-            self.set_font(state["font"])
++        super().__setstate__(state)
++        if state["current_font"]:
++            self.set_value(state["current_font"])
+         self.set_enabled(state.get("enabled", True))
+ 
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
+     @core.Slot()
+     def choose_font(self):
+         dlg = widgets.FontDialog()
+         if self._current_font:
+             dlg.setCurrentFont(self._current_font)
+ 
+-        if dlg.exec_():
+-            self.set_font(dlg.current_font())
++        if dlg.main_loop():
++            self.set_current_font(dlg.current_font())
+             self.value_changed.emit(dlg.current_font())
+ 
+-    def set_font(self, font):
++    def set_current_font(self, font: str | QtGui.QFont):
+         if isinstance(font, str):
+             self._current_font = gui.Font(font)
+         else:
+             self._current_font = font
+         self.lineedit.setText(self._current_font.family())
+ 
+-    def set_value(self, value):
+-        self.set_font(value)
++    def set_value(self, value: str | QtGui.QFont):
++        self.set_current_font(value)
+ 
+     def get_value(self):
+         return self._current_font
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     btn = FontChooserButton()
+-    btn.set_font("Consolas")
++    btn.set_current_font("Consolas")
+     btn.show()
+     btn.value_changed.connect(print)
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/image.py` & `prettyqt-1.0.0/prettyqt/widgets/groupbox.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,59 +1,68 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-import pathlib
+-from typing import Union
++from prettyqt import constants, widgets
++from prettyqt.qt import QtWidgets
+ 
+-from qtpy import QtCore
+ 
+-from prettyqt import gui, widgets
++class GroupBox(widgets.WidgetMixin, QtWidgets.QGroupBox):
++    """GroupBox widget.
+ 
+-
+-class Image(widgets.Label):
+-    def __init__(self, path=None, parent=None):
+-        super().__init__(parent=parent)
+-        if path:
+-            self.set_image(path)
++    A group box provides a frame, a title on top, a keyboard shortcut,
++    and displays various other widgets inside itself.
++    The keyboard shortcut moves keyboard focus to one of the group box's child widgets.
++    """
++
++    def __init__(
++        self,
++        title: str = "",
++        checkable: bool = False,
++        parent: QtWidgets.QWidget | None = None,
++    ):
++        super().__init__(title, parent)
++        self.setCheckable(checkable)
+ 
+     def __repr__(self):
+-        return f"Image({self.text()!r})"
++        return f"{type(self).__name__}({self.title()!r})"
+ 
+-    def __getstate__(self):
++    def serialize_fields(self):
+         return dict(
+-            text=self.text(),
+-            scaled_contents=self.hasScaledContents(),
+-            margin=self.margin(),
+-            alignment=int(self.alignment()),
++            checkable=self.isCheckable(),
++            checked=self.isChecked(),
++            layout=self.layout(),
++            flat=self.isFlat(),
++            # alignment=self.alignment(),
++            title=self.title(),
+         )
+ 
+     def __setstate__(self, state):
+-        self.__init__()
+-        self.setText(state.get("text", ""))
+-        self.setMargin(state.get("margin", 0))
+-        self.setAlignment(QtCore.Qt.Alignment(state.get("alignment")))
+-        self.setScaledContents(state["scaled_contents"])
+-
+-    def set_image(self, path: Union[pathlib.Path, str], width: int = 300):
+-        self.setScaledContents(True)
+-        self.set_alignment(horizontal="center")
+-        self.setText(
+-            "<html><head/><body><p>"
+-            f"<img src={str(path)!r} width={str(width)!r}/>"
+-            "</p></body></html>"
+-        )
+-
+-    @classmethod
+-    def from_path(cls, path: Union[pathlib.Path, str], parent=None) -> "Image":
+-        pixmap = gui.Pixmap.from_file(path)
+-        label = cls(parent=parent)
+-        label.setPixmap(pixmap)
+-        label.resize(pixmap.width(), pixmap.height())
+-        return label
++        super().__setstate__(state)
++        self.setTitle(state["title"])
++        self.set_layout(state["layout"])
++        self.setCheckable(state["checkable"])
++        self.setChecked(state.get("checked", False))
++        self.setFlat(state["flat"])
++        self.setToolTip(state.get("tool_tip", ""))
++        # self.setAlignment(state["alignment"])
++
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
++    def set_title(self, title: str):
++        self.setTitle(title)
++
++    def set_alignment(self, alignment):
++        self.setAlignment(constants.H_ALIGNMENT[alignment])
++
++    def set_enabled(self, state):
++        for widget in self.layout():
++            widget.setEnabled(state)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+-    widget = Image("https://act-crm-addon.de/wp-content/uploads/2018/12/test.png")
++    widget = GroupBox()
++    ly = widgets.BoxLayout()
++    ly += widgets.RadioButton("test")
++    widget.set_layout(ly)
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/inputandslider.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/joystickbutton.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,65 +1,82 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-import pathlib
++from math import hypot
+ 
+ from prettyqt import core, widgets
++from prettyqt.qt import QtGui, QtWidgets
+ 
+ 
+-class InputAndSlider(widgets.Widget):
++class JoystickButton(widgets.PushButton):
++    state_changed = core.Signal(object)
+ 
+-    value_changed = core.Signal(pathlib.Path)
+-
+-    def __init__(self, bounds=None, parent=None):
++    def __init__(self, parent: QtWidgets.QWidget | None = None):
+         super().__init__(parent)
+-        self.path = None
+-        layout = widgets.BoxLayout("horizontal", self)
+-        layout.set_margin(0)
+-        self.spinbox = widgets.SpinBox()
+-        layout += self.spinbox
+-        self.slider = widgets.Slider()
+-        layout += self.slider
+-        if bounds:
+-            self.set_range(*bounds)
+-        self.spinbox.valueChanged.connect(self.slider.set_value)
+-        self.slider.valueChanged.connect(self.spinbox.set_value)
+-
+-    # def __getstate__(self):
+-    #     return dict(path=self.path,
+-    #                 extensions=self.extensions,
+-    #                 enabled=self.isEnabled())
+-
+-    # def __setstate__(self, state):
+-    #     self.__init__(state["extensions"])
+-    #     self.set_path(state["path"])
+-    #     self.set_enabled(state.get("enabled", True))
+-
+-    def set_range(self, min_val: int, max_val: int):
+-        self.spinbox.set_range(min_val, max_val)
+-        self.slider.set_range(min_val, max_val)
+-
+-    def get_value(self) -> int:
+-        return self.spinbox.get_value()
+-
+-    def set_value(self, value: int):
+-        self.spinbox.set_value(value)
+-        self.slider.set_value(value)
+-
+-    def is_valid(self) -> bool:
+-        return self.spinbox.is_valid()
+-
+-    def set_step_size(self, step_size: int):
+-        self.spinbox.set_step_size(step_size)
+-        self.slider.set_step_size(step_size)
+-        self.slider.setTickInterval(step_size)
++        self.radius = 200
++        self.setCheckable(True)
++        self.state = [0, 0]
++        self.set_state(0, 0)
++        self.setFixedWidth(50)
++        self.setFixedHeight(50)
++
++    def mousePressEvent(self, ev):
++        self.setChecked(True)
++        self.press_pos = ev.position()
++        ev.accept()
++
++    def mouseMoveEvent(self, ev):
++        dif = ev.position() - self.press_pos
++        self.set_state(dif.x(), -dif.y())
++
++    def mouseReleaseEvent(self, ev):
++        self.setChecked(False)
++        self.set_state(0, 0)
++
++    def wheelEvent(self, ev):
++        ev.accept()
++
++    def doubleClickEvent(self, ev):
++        ev.accept()
++
++    def get_state(self):
++        return self.state
++
++    def set_state(self, x, y):
++        xy = [x, y]
++        d = hypot(xy[0], xy[1])  # length
++        nxy = [0, 0]
++        for i in [0, 1]:
++            if xy[i] == 0:
++                nxy[i] = 0
++            else:
++                nxy[i] = xy[i] / d
++
++        if d > self.radius:
++            d = self.radius
++        d = (d / self.radius) ** 2
++        xy = [nxy[0] * d, nxy[1] * d]
++
++        w2 = self.width() / 2
++        h2 = self.height() / 2
++        self.spot_pos = core.Point(int(w2 * (1 + xy[0])), int(h2 * (1 - xy[1])))
++        self.update()
++        if self.state == xy:
++            return
++        self.state = xy
++        self.state_changed.emit(self.state)
++
++    def paintEvent(self, ev):
++        super().paintEvent(ev)
++        p = QtGui.QPainter(self)
++        p.setBrush(QtGui.QBrush(QtGui.QColor(0, 0, 0)))
++        p.drawEllipse(self.spot_pos.x() - 3, self.spot_pos.y() - 3, 6, 6)
++
++    def resizeEvent(self, ev):
++        self.set_state(*self.state)
++        super().resizeEvent(ev)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+-    btn = InputAndSlider()
+-    btn.set_step_size(2)
+-    btn.slider.set_tick_position("below")
+-    btn.set_value(4)
+-    btn.show()
+-    app.exec_()
++    widget = JoystickButton()
++    widget.show()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/labeledslider.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/labeledslider.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,132 +1,122 @@
+-# -*- coding: utf-8 -*-
+-
+ # credits to https://stackoverflow.com/a/54819051
+ 
+-from qtpy import QtCore
++from __future__ import annotations
+ 
+-from prettyqt import core, gui, widgets
++from collections.abc import Sequence
+ 
++from prettyqt import constants, core, gui, widgets
++from prettyqt.qt import QtWidgets
+ 
+-class LabeledSlider(widgets.Widget):
+ 
++class LabeledSlider(widgets.Widget):
+     value_changed = core.Signal(int)
+ 
+-    def __init__(self, labels, orientation="horizontal", parent=None):
++    def __init__(
++        self,
++        labels: Sequence[str],
++        orientation: constants.OrientationStr = "horizontal",
++        parent: QtWidgets.QWidget | None = None,
++    ):
+         super().__init__(parent=parent)
+ 
+-        if not isinstance(labels, (tuple, list)):
+-            raise ValueError("<labels> must be a list or tuple.")
+-        levels = range(len(labels))
+-        self.levels = list(zip(levels, labels))
+-        self.layout = widgets.BoxLayout(orientation, self)
++        if not isinstance(labels, Sequence):
++            raise ValueError("<labels> must be a sequence.")
++        self.levels = list(enumerate(labels))
++        self.set_layout(orientation)
+ 
+         # gives some space to print labels
+         self.left_margin = 10
+         self.top_margin = 10
+         self.right_margin = 10
+         self.bottom_margin = 10
+-        self.layout.set_margin(10)
++        self.box.set_margin(10)
+ 
+         self.sl = widgets.Slider(orientation)
+         self.sl.value_changed.connect(self.value_changed)
+-        self.sl.set_range(0, len(labels) - 1)
++        self.sl.set_range(0, len(self.levels) - 1)
+         self.sl.set_value(0)
+         if orientation == "horizontal":
+             self.sl.set_tick_position("below")
+             self.sl.setMinimumWidth(300)
+         else:
+             self.sl.set_tick_position("left")
+             self.sl.setMinimumHeight(300)
+         self.sl.setTickInterval(1)
+         self.sl.setSingleStep(1)
+ 
+-        self.layout.add(self.sl)
++        self.box.add(self.sl)
+ 
+     def paintEvent(self, e):
+-
+         super().paintEvent(e)
+ 
+         style = self.sl.style()
+-        painter = gui.Painter(self)
+         st_slider = widgets.StyleOptionSlider()
+         st_slider.initFrom(self.sl)
+         st_slider.orientation = self.sl.orientation()
+ 
+-        length = style.pixelMetric(widgets.Style.PM_SliderLength, st_slider, self.sl)
++        length = style.pixelMetric(
++            widgets.Style.PixelMetric.PM_SliderLength, st_slider, self.sl
++        )
+         available = style.pixelMetric(
+-            widgets.Style.PM_SliderSpaceAvailable, st_slider, self.sl
++            widgets.Style.PixelMetric.PM_SliderSpaceAvailable, st_slider, self.sl
+         )
+ 
++        painter = gui.Painter(self)
+         for v, v_str in self.levels:
+-
+             # get the size of the label
+-            rect = painter.drawText(core.Rect(), QtCore.Qt.TextDontPrint, v_str)
++            rect = painter.get_text_rect(v_str)
+ 
+             if self.sl.is_horizontal():
+                 x_loc = widgets.Style.sliderPositionFromValue(
+                     self.sl.minimum(), self.sl.maximum(), v, available
+                 )
+                 # I assume the offset is half the length of slider, therefore
+                 # + length//2
+                 x_loc += length // 2
+ 
+                 # left bound of the text = center - half of text width + L_margin
+                 left = x_loc - rect.width() // 2 + self.left_margin
+                 bottom = self.rect().bottom()
+-
+                 # enlarge margins if clipping
+                 if v == self.sl.minimum():
+                     if left <= 0:
+                         self.left_margin = rect.width() // 2 - x_loc
+-                    if self.bottom_margin <= rect.height():
+-                        self.bottom_margin = rect.height()
+-
+-                    self.layout.setContentsMargins(
+-                        self.left_margin,
+-                        self.top_margin,
+-                        self.right_margin,
+-                        self.bottom_margin,
+-                    )
+-
++                    self.bottom_margin = max(self.bottom_margin, rect.height())
++                    self.adjust_margins()
+                 if v == self.sl.maximum() and rect.width() // 2 >= self.right_margin:
+                     self.right_margin = rect.width() // 2
+-                    self.layout.setContentsMargins(
+-                        self.left_margin,
+-                        self.top_margin,
+-                        self.right_margin,
+-                        self.bottom_margin,
+-                    )
+-
++                    self.adjust_margins()
+             else:
+                 y_loc = widgets.Style.sliderPositionFromValue(
+                     self.sl.minimum(), self.sl.maximum(), v, available, upsideDown=True
+                 )
+ 
+                 bottom = y_loc + length // 2 + rect.height() // 2 + self.top_margin - 3
+                 # there is a 3 px offset that I can't attribute to any metric
+ 
+                 left = self.left_margin - rect.width()
+                 if left <= 0:
+                     self.left_margin = rect.width() + 2
+-                    self.layout.setContentsMargins(
+-                        self.left_margin,
+-                        self.top_margin,
+-                        self.right_margin,
+-                        self.bottom_margin,
+-                    )
++                    self.adjust_margins()
+             painter.drawText(left, bottom, v_str)
+ 
+-        return
++    def adjust_margins(self):
++        self.box.setContentsMargins(
++            self.left_margin,
++            self.top_margin,
++            self.right_margin,
++            self.bottom_margin,
++        )
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.Application([])
+     frame = widgets.Widget()
+     ha = widgets.BoxLayout("horizontal")
+     frame.setLayout(ha)
+ 
+     w = LabeledSlider(labels=["test", "test2", "test3"], orientation="vertical")
+ 
+     ha.addWidget(w)
+     frame.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/listinput.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/listinput.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,43 +1,40 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import List, Union, Optional, Type
+-from qtpy import QtWidgets
+ from prettyqt import custom_validators, widgets
++from prettyqt.qt import QtWidgets
+ from prettyqt.utils import helpers
+ 
+ 
+ class ListInput(widgets.LineEdit):
+     def __init__(
+         self,
+-        default_value: Union[List[float], str] = "",
+-        typ: Type = int,
++        default_value: list[float] | str = "",
++        typ: type = int,
+         allow_single: bool = False,
+-        parent: Optional[QtWidgets.QWidget] = None,
++        parent: QtWidgets.QWidget | None = None,
+     ):
+         super().__init__(parent=parent)
+         if typ is int:
+             val = custom_validators.IntListValidator(allow_single=allow_single)
+         elif typ is float:
+             val = custom_validators.FloatListValidator(allow_single=allow_single)
+         else:
+             raise ValueError(f"Invalid type {typ}")
+         self.set_validator(val)
+         self.set_value(default_value)
+ 
+-    def get_value(self) -> List[float]:  # type: ignore[override]
++    def get_value(self) -> list[float]:  # type: ignore[override]
+         return helpers.string_to_num_array(self.text())
+ 
+-    def set_value(self, value: Union[List[float], str]):
++    def set_value(self, value: list[float] | str):
+         if isinstance(value, list):
+             value = str(value)[1:-1].replace(" ", "")
+         self.set_text(value)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = ListInput()
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+     print(widget.get_value())
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/logtextedit.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/logtextedit.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,52 +1,52 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from abc import ABC, abstractmethod
+ import logging
+ import re
+ import sys
++import traceback
+ 
+-from prettyqt import constants, gui, widgets
++from prettyqt import core, gui, widgets
+ from prettyqt.utils import signallogger
+ 
+ 
++logger = logging.getLogger(__name__)
++
+ # from SublimeText Regex:
+ # (?x:
+ #   (?:.? [<>=^])?     # fill align
+ #   [ +-]?             # sign
+ #   \#?                # alternate form
+ #   # technically, octal and hexadecimal integers are also supported as 'width'
+ #   \d*                # width
+ #   ,?                 # thousands separator
+ #   (?:\.\d+)?         # precision
+ #   [bcdeEfFgGnosxX%]? # type
+ # )
+ 
+ 
+-class Highlighter(ABC):
++class Highlighter:
+     placeholder: str
+-    color = "black"
+-    italic = False
+-    bold = False
+-    value = None
++    color: str | None = None
++    italic: bool = False
++    bold: bool = False
+ 
+-    def __init__(self, formatter):
++    def __init__(self, formatter: logging.Formatter):
+         self.formatter = formatter
+         self.format = gui.TextCharFormat(self.color, self.bold, self.italic)
+         text = re.escape(self.placeholder)
+-        pat = fr"{text[:-1]}([ +-]?\#?\#?\d*,?(?:\.\d+)?[bcdeEfFgGnosxX%]?)"
++        pat = rf"{text[:-1]}([ +-]?\#?\#?\d*,?(?:\.\d+)?[bcdeEfFgGnosxX%]?)"
+         self.pattern = re.compile(pat)
++        if self.formatter._fmt is None:
++            raise TypeError("Formatter does not contain format string")
+         self.is_included = self.pattern.search(self.formatter._fmt) is not None
+ 
+     def get_format(self, value) -> gui.TextCharFormat:
+         return self.format
+ 
+-    @abstractmethod
+     def format_string(self, record: logging.LogRecord):
+         raise NotImplementedError()
+ 
+ 
+ class AscTime(Highlighter):
+     placeholder = "%(asctime)s"
+     italic = True
+@@ -56,21 +56,21 @@
+ 
+ 
+ class Message(Highlighter):
+     placeholder = "%(message)s"
+     bold = True
+ 
+     def format_string(self, record: logging.LogRecord) -> str:
+-        if isinstance(record.msg, Exception):
++        if record.exc_info is not None:
+             val = self.formatter.formatException(record.exc_info)
++        elif isinstance(record.msg, Exception):
++            val = traceback.format_exc()
+         else:
+             val = record.msg % record.args
+-        if "\n" in val:
+-            val = f"\n{val}"
+-        return val
++        return f"\n{val}" if "\n" in val else val
+ 
+ 
+ class FileName(Highlighter):
+     placeholder = "%(filename)s"
+     bold = True
+ 
+     def format_string(self, record: logging.LogRecord) -> str:
+@@ -134,23 +134,25 @@
+ 
+ 
+ class ThreadName(Highlighter):
+     placeholder = "%(threadName)s"
+     bold = True
+ 
+     def format_string(self, record: logging.LogRecord) -> str:
+-        return record.threadName
++        name = record.threadName
++        return name or ""
+ 
+ 
+ class ProcessName(Highlighter):
+     placeholder = "%(processName)s"
+     bold = True
+ 
+     def format_string(self, record: logging.LogRecord) -> str:
+-        return record.processName
++        name = record.processName
++        return name or ""
+ 
+ 
+ class RelativeCreated(Highlighter):
+     placeholder = "%(relativeCreated)s"
+     bold = True
+ 
+     def format_string(self, record: logging.LogRecord) -> str:
+@@ -190,44 +192,39 @@
+     def get_format(self, value) -> gui.TextCharFormat:
+         return self.formats[value]
+ 
+ 
+ class LogTextEdit(widgets.PlainTextEdit):
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
++        self.rules = []
++        self.allow_wheel_zoom()
+         self.set_font("Consolas")
+         self.append_text(f"Python version: {sys.version}")
+         logger = logging.getLogger()
+         # self.handler = signallogger.LineSignalLogger()
+         # self.handler.log_line.connect(self.append_text)
+         self.handler = signallogger.RecordSignalLogger()
+-        self.handler.log_record.connect(self.append_record)
+-        widgets.Application.call_on_exit(lambda: logger.removeHandler(self.handler))
++        self.handler.signals.log_record.connect(self.append_record)
++        core.CoreApplication.call_on_exit(lambda: logger.removeHandler(self.handler))
+         self.handler.setLevel(logging.INFO)
+         logger.addHandler(self.handler)
+-        fmt = logging.Formatter("%(asctime)s  %(levelname)i  %(message)s")
++        fmt = logging.Formatter("%(asctime)s  %(levelname)s  %(message)s")
+         self.set_formatter(fmt)
+ 
+-    def wheelEvent(self, event):
+-        """
+-        handle wheel event for zooming
+-        """
+-        if event.modifiers() & constants.CTRL_MOD:
+-            self.zoomIn() if event.angleDelta().y() > 0 else self.zoomOut()
+-        else:
+-            super().wheelEvent(event)
+-
+-    def set_formatter(self, formatter):
++    def set_formatter(self, formatter: logging.Formatter):
+         self.formatter = formatter
+-        self.handler.setFormatter(self.formatter)
+         rules = [klass(self.formatter) for klass in Highlighter.__subclasses__()]
+         self.rules = [r for r in rules if r.is_included]
++        self.handler.setFormatter(formatter)
+ 
+-    def append_record(self, record):
++    def append_record(self, record: logging.LogRecord):
+         start_of_line = len(self.text())
++        if self.formatter._fmt is None:
++            raise TypeError("Formatter does not contain format string")
+         self.append_text(self.formatter._fmt)
+         old_fmt = self.textCursor().charFormat()
+         with self.create_cursor() as c:
+             c.move_position("end")
+             c.move_position("start_of_block")
+             start_pos = c.position()
+             for r in self.rules:
+@@ -268,8 +265,8 @@
+     w.box.add(widgets.PushButton("Info", callback=lambda: logger.info("Info")))
+     w.box.add(widgets.PushButton("Warning", callback=lambda: logger.warning("Warning")))
+     w.box.add(
+         widgets.PushButton("Critical", callback=lambda: logger.critical("Critical"))
+     )
+     w.box.add(widget)
+     w.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/mappedcheckbox.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/mappedcheckbox.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,28 +1,29 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+ from prettyqt import widgets
+ from prettyqt.utils import bidict
+ 
+ 
+ class MappedCheckBox(widgets.CheckBox):
+     def __init__(self, *args, true_value=True, false_value=False, **kwargs):
+         super().__init__(*args, **kwargs)
+         dct = {True: true_value, False: false_value}
+         self.map = bidict(dct)
+ 
++    def serialize_fields(self):
++        return dict(map=self.map)
++
+     def get_value(self):
+         return self.map[self.isChecked()]
+ 
+     def set_value(self, value):
+-        val = self.map.inv[value]
++        val = self.map.inverse[value]
+         super().set_value(val)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = MappedCheckBox("Test")
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+     print(widget.get_value())
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/markdownwidget.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/markdownwidget.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,42 +1,44 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from prettyqt import gui, widgets
++from prettyqt import widgets
+ 
+ 
+ class MarkdownWindow(widgets.MainWindow):
+     def __init__(self):
+         super().__init__()
+         self.resize(500, 500)
+-        self.web_view = widgets.TextBrowser()
+-        self.setCentralWidget(self.web_view)
+-        # self.web_view.loadFinished.connect(self._load_finished)
++        self.text_browser = widgets.TextBrowser()
++        self.setCentralWidget(self.text_browser)
++        # self.text_browser.loadFinished.connect(self._load_finished)
+         self.create_menu()
+ 
+     # def _load_finished(self):
+-    # frame = self.web_view.page()
+-    # self.web_view.page().setViewportSize(frame.contentsSize())
++    # frame = self.text_browser.page()
++    # self.text_browser.page().setViewportSize(frame.contentsSize())
+     # self.resize(frame.contentsSize())
+     # html_data = frame.toHtml()
+ 
+     def create_menu(self):
+-        act_exit = widgets.Action(text="&Exit", icon=gui.Icon("exit.png"), parent=self)
+-        act_exit.set_shortcut("Ctrl+Q")
+-        act_exit.setStatusTip("Exit application")
+-        act_exit.triggered.connect(self.close)
+-
+-        act_open = widgets.Action(text="&Open", icon=gui.Icon("open.png"), parent=self)
+-        act_open.set_shortcut("Ctrl+O")
+-        act_open.setStatusTip("Open Markdown file")
+-        act_open.triggered.connect(self.open_new_file)
+-
+-        self.statusBar()
+-
++        act_exit = widgets.Action(
++            text="&Exit",
++            icon="mdi.exit-to-app",
++            parent=self,
++            shortcut="Ctrl+Q",
++            statustip="Exit application",
++            callback=self.close,
++        )
++        act_open = widgets.Action(
++            text="&Open",
++            icon="mdi.open-in-app",
++            parent=self,
++            shortcut="Ctrl+O",
++            statustip="Open Markdown file",
++            callback=self.open_new_file,
++        )
+         menubar = self.menuBar()
+         menu_file = menubar.addMenu("&File")
+         menu_file.addAction(act_open)
+         menu_file.addAction(act_exit)
+ 
+     # def dragEnterEvent(self, event):
+     #     u = event.mimeData().urls()
+@@ -51,24 +53,23 @@
+ 
+     # def dropEvent(self, event):
+     #     event.accept()
+     #     self.show_markdown(self.filePath)
+ 
+     def open_new_file(self):
+         try:
+-            dlg = widgets.FileDialog
+-            fname = dlg.getOpenFileName(
+-                self, "open file", "", "All Text Files (*.md *.markdown *.txt *.*)", None
+-            )
+-            self.web_view.set_markdown_file(fname[0])
++            ext = {"All Text Files": [".md", ".markdown", ".txt"]}
++            dlg = widgets.FileDialog(mode="open", extension_filter=ext)
++            if (fname := dlg.open_file()) is not None:
++                self.text_browser.set_markdown_file(fname[0])
+         except UnicodeDecodeError:
+             self.statusBar().showMessage("Please select only text files")
+-        except IOError:
++        except OSError:
+             self.statusBar().showMessage("File open canceled!")
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     reader = MarkdownWindow()
+-    # reader.web_view.load(QtCore.QUrl("blank"))
++    # reader.text_browser.load(QtCore.QUrl("blank"))
+     reader.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/optionalwidget.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/optionalwidget.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,39 +1,41 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+ from prettyqt import widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+ class OptionalWidget(widgets.GroupBox):
+-    def __init__(self, widget, title="", parent=None):
++    def __init__(
++        self,
++        widget: QtWidgets.QWidget,
++        title: str = "",
++        parent: QtWidgets.QWidget | None = None,
++    ):
+         super().__init__(checkable=True, title=title)
+         self.set_layout("vertical")
+         self.box.add(widget)
+         self.widget = widget
+         self.toggled.connect(self.widget.setEnabled)
+ 
+-    def __getattr__(self, value):
++    def __getattr__(self, value: str):
+         return self.widget.__getattribute__(value)
+ 
+     @property
+     def enabled(self) -> bool:
+         return self.isChecked()
+ 
+     @enabled.setter
+     def enabled(self, state: bool):
+         self.setChecked(state)
+ 
+     def get_value(self):
+-        if self.isChecked():
+-            return self.widget.get_value()
+-        return None
++        return self.widget.get_value() if self.isChecked() else None
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     img = widgets.RadioButton("test")
+     widget = OptionalWidget(img, "Test")
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+     print(widget.enabled)
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/popupinfo.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/popupinfo.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,52 +1,42 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtCore
++from __future__ import annotations
+ 
+ from prettyqt import core, gui, widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+ class PopupInfo(widgets.Dialog):
+-    """
+-    dialog overlay to show some info to user
+-    """
++    """Dialog overlay to show some info to user."""
+ 
+-    def __init__(self, parent=None, text=None):
++    def __init__(self, parent: QtWidgets.QWidget | None = None, text: str | None = None):
+         super().__init__(parent=parent)
+         self.timer = core.Timer.single_shot(callback=self.close)
+         self.label = widgets.Label()
+-        self.setWindowFlags(
+-            self.windowFlags()
+-            | QtCore.Qt.Tool
+-            | QtCore.Qt.WindowStaysOnTopHint
+-            | QtCore.Qt.FramelessWindowHint
+-        )
++        self.set_flags(stay_on_top=True, frameless=True, tool=True)
+         layout = widgets.BoxLayout("vertical")
+         layout.set_margin(20)
+         self.set_layout(layout)
+         self.set_background_color("black")
+         self.label.set_color("white")
+-        layout += self.label
++        layout.add(self.label)
+         # signals.signals.popup_info.connect(self.popup)
+ 
+-    def show(self, *args, **kwargs):
++    def show(self):
+         self.hide()
+-        screen_geo = gui.GuiApplication.screens()[0].geometry()
++        screen_geo = gui.GuiApplication.primaryScreen().geometry()
+         size = self.label.sizeHint()
+-        x = (screen_geo.width() - size.width()) / 2
+-        y = (screen_geo.height() - size.height()) / 2
++        x = (screen_geo.width() - size.width()) // 2
++        y = (screen_geo.height() - size.height()) // 2
+         self.move(x, y - 200)
+-        super().show(*args, **kwargs)
++        super().show()
+         self.timer.start(2500)
+ 
+     def show_popup(self, text: str):
+         self.label.setText(text)
+         self.show()
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = PopupInfo()
+     widget.show_popup("test")
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/regexeditor/editor.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/regexeditor/regexeditorwidget.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,44 +1,58 @@
+-"""
+-This module contains the editor widget implementation.
+-"""
+-import sre_constants
++"""This module contains the editor widget implementation."""
++
++from __future__ import annotations
++
++from re import Match, Pattern
++
++
++try:  # pragma: no cover
++    import re._constants as sre_constants
++except ImportError:  # Python < 3.11
++    import sre_constants  # type: ignore
+ 
+ import regex as re
+ 
+ from prettyqt import constants, core, custom_models, custom_widgets, widgets
++from prettyqt.qt import QtWidgets
+ from prettyqt.syntaxhighlighters import RegexMatchHighlighter
+ 
+ 
+ class RegexEditorWidget(widgets.Widget):
+     quick_ref_requested = core.Signal(int)
+ 
+-    def __init__(self, title="Regex Editor", regex="", teststring="", parent=None):
++    def __init__(
++        self,
++        title: str = "Regex Editor",
++        regex: str = "",
++        teststring: str = "",
++        parent: QtWidgets.QWidget | None = None,
++    ):
+         super().__init__(parent)
+         self.resize(1200, 800)
+         self.set_title(title)
+         self.set_icon("mdi.regex")
+         self.set_layout("horizontal")
+         self.left_layout = widgets.BoxLayout("vertical")
+         self.right_layout = widgets.BoxLayout("vertical")
+-        self.prog = None
+-        self.matches = None
++        self.prog: Pattern | None = None
++        self.matches: list[Match] = []
+         self.groupbox = widgets.GroupBox(title="Regular expression")
+         self.grid = widgets.GridLayout(self.groupbox)
+         self.layout_toprow = widgets.BoxLayout("horizontal")
+         self.regexinput = custom_widgets.RegexInput()
+         self.regexinput.set_min_size(400, 0)
+         self.layout_toprow.add(self.regexinput)
+         self.grid.add(self.layout_toprow, 1, 0)
+         self.left_layout.add(self.groupbox)
+         self.groupbox_teststring = widgets.GroupBox(title="Test strings")
+-        self.layout_teststring = widgets.GridLayout(self.groupbox_teststring)
++        self.groupbox_teststring.set_layout("grid")
+         self.textedit_teststring = widgets.PlainTextEdit(teststring)
+         self.textedit_teststring.set_min_size(400, 0)
+-        self.layout_teststring.add(self.textedit_teststring, 0, 0)
++        self.groupbox_teststring.box.add(self.textedit_teststring, 0, 0)
+         self.label_num_matches = widgets.Label("No match")
+         self.label_num_matches.set_alignment("center")
+         self.left_layout.add(self.groupbox_teststring)
+         self.groupbox_sub = widgets.GroupBox(title="Substitution", checkable=True)
+         self.layout_sub = widgets.GridLayout(self.groupbox_sub)
+         self.lineedit_sub = widgets.LineEdit()
+         self.lineedit_sub.textChanged.connect(self.update_sub_textedit)
+@@ -64,27 +78,28 @@
+         self.groupbox_sub.toggled.connect(self.textedit_sub.setVisible)
+         doc = self.textedit_teststring.document()
+         self._highlighter = RegexMatchHighlighter(doc)
+         self._highlighter.rehighlight()
+         self.cb_quickref.stateChanged.connect(self.quick_ref_requested)
+         self.regexinput.value_changed.connect(self._update_view)
+         self.textedit_teststring.textChanged.connect(self._update_view)
++        self.regexinput.pattern = regex
+         self._update_view()
+ 
+     def __getattr__(self, attr):
+         return self.regexinput.__getattribute__(attr)
+ 
+     def on_match_list_current_change(self, index_new, index_old):
+         model = self.table_matches.model()
+-        span = model.data(index_new, constants.USER_ROLE)
++        span = model.data(index_new, constants.USER_ROLE)  # type: ignore
+         self.textedit_teststring.select_text(*span)
+ 
+-    def _update_view(self):
++    def _update_view(self) -> None:
+         self.prog = None
+-        self.matches = None
++        self.matches = []
+         with self.textedit_teststring.block_signals():
+             if not self.pattern:
+                 self._highlighter.set_spans(None)
+                 self.table_matches.set_model(None)
+                 self.label_num_matches.set_text("0 matches")
+                 return None
+             try:
+@@ -115,20 +130,15 @@
+             replace_with = self.lineedit_sub.text()
+             substituted = self.prog.sub(replace_with, text)
+             self.textedit_sub.set_text(substituted)
+         else:
+             self.textedit_sub.set_text("")
+ 
+ 
+-def run():
+-    app = widgets.app()
+-    widget = RegexEditorWidget()
+-    widget.show()
+-    app.main_loop()
+-
+-
+ if __name__ == "__main__":
+     app = widgets.app()
++    app.setApplicationName("Test")
++    app.setOrganizationName("Test")
+     teststring = "aa356aa356aa356aa356aa356aa356aa356aa3a356aa356"
+     widget = RegexEditorWidget(regex="aa[0-9]", teststring=teststring)
+     widget.show()
+     app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/regexeditor/ref.html` & `prettyqt-1.0.0/prettyqt/custom_widgets/regexeditor/ref.html`
+
+ * *Files identical despite different names*
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/regexinput.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/regexinput.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,100 +1,106 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
++
++from re import Pattern
+ 
+ import regex as re
+ 
+ from prettyqt import core, custom_validators, custom_widgets, widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+-class RegexInput(widgets.Widget):
++MAP = dict(
++    multiline=re.MULTILINE,
++    ignorecase=re.IGNORECASE,
++    ascii=re.ASCII,
++    dotall=re.DOTALL,
++    verbose=re.VERBOSE,
++)
++
+ 
+-    value_changed = core.Signal()
++class RegexInput(widgets.Widget):
++    value_changed = core.Signal(object)
+ 
+-    def __init__(self, show_flags=True, show_error=True, parent=None):
++    def __init__(
++        self,
++        show_flags: bool = True,
++        show_error: bool = True,
++        parent: QtWidgets.QWidget | None = None,
++    ):
+         super().__init__(parent=parent)
+         self.set_layout("grid")
+         self.lineedit = custom_widgets.SingleLineTextEdit()
+         self.lineedit.set_syntaxhighlighter("regex")
+         self.tb_flags = custom_widgets.BoolDictToolButton(
+             "Flags", icon="mdi.flag-variant-outline"
+         )
+         self.label_error = widgets.Label()
+-        self.label_error.set_color("red")
++        error_color = self.get_palette().get_color("highlight")
++        self.label_error.set_color(error_color)
+         self.box[0, 0:1] = self.lineedit
+         if show_flags:
+             self.box[0, 2] = self.tb_flags
+         if show_error:
+             self.box[1, 0:2] = self.label_error
+-        self.tb_flags.triggered.connect(self._on_value_change)
+-        self.lineedit.textChanged.connect(self._on_value_change)
+         val = custom_validators.RegexPatternValidator()
++        val.error_occured.connect(self.label_error.set_text)
++        val.pattern_updated.connect(self.value_changed)
++        self.tb_flags.value_changed.connect(self._on_value_change)
+         self.lineedit.set_validator(val)
+-        dct = {
+-            "multiline": "MultiLine",
+-            "ignorecase": "Ignore case",
+-            "ascii": "ASCII-only matching",
+-            "dotall": "Dot matches newline",
+-            "verbose": "Ignore whitespace",
+-        }
+-        self._mapping = {
+-            "ignorecase": re.IGNORECASE,
+-            "multiline": re.MULTILINE,
+-            "ascii": re.ASCII,
+-            "dotall": re.DOTALL,
+-            "verbose": re.VERBOSE,
+-        }
++        dct = dict(
++            multiline="MultiLine",
++            ignorecase="Ignore case",
++            ascii="ASCII-only matching",
++            dotall="Dot matches newline",
++            verbose="Ignore whitespace",
++        )
+         self.tb_flags.set_dict(dct)
+ 
+     def _on_value_change(self):
+-        self.value_changed.emit()
+-        if self.lineedit.is_valid():
+-            self.label_error.set_text("")
+-        else:
+-            message = self.lineedit.validator.error_message
+-            self.label_error.set_text(message)
++        val = self.get_value()
++        self.value_changed.emit(val)
+ 
+     @property
+     def pattern(self) -> str:
+         return self.lineedit.text()
+ 
+     @pattern.setter
+     def pattern(self, value: str):
+         self.lineedit.set_text(value)
+ 
+     @property
+-    def compile_flags(self):
++    def compile_flags(self) -> int:
+         ret_val = 0
+-        for identifier, flag in self._mapping.items():
++        for identifier, flag in MAP.items():
+             if self.tb_flags[identifier]:
+                 ret_val |= flag
+         return ret_val
+ 
+     @compile_flags.setter
+-    def compile_flags(self, value):
+-        for identifier, flag in self._mapping.items():
++    def compile_flags(self, value: int):
++        for identifier, flag in MAP.items():
+             self.tb_flags[identifier] = bool(value & flag)
+ 
+-    def set_value(self, value):
++    def set_value(self, value: str | Pattern | None):
+         if value is None:
+             self.pattern = ""
+-            self.flags = 0
+-        if isinstance(value, str):
++            self.compile_flags = 0
++        elif isinstance(value, str):
+             self.pattern = value
+-            self.flags = 0
++            self.compile_flags = 0
+         else:
+             self.pattern = value.pattern
+             self.compile_flags = value.flags
+ 
+-    def get_value(self):
++    def get_value(self) -> Pattern:
+         return re.compile(self.pattern, self.compile_flags)
+ 
+     def is_valid(self) -> bool:
+         return self.lineedit.is_valid()
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+-    widget = RegexInput(show_flags=False, show_error=False)
++    widget = RegexInput(show_flags=True, show_error=True)
+     widget.show()
+-    app.exec_()
++    widget.value_changed.connect(print)
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/selectionwidget.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/selectionwidget.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,31 +1,40 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Optional, Mapping, Iterable, Union
++from collections.abc import Iterable, Iterator, Mapping
++from typing import Any, Literal
+ 
+-from prettyqt import core, gui, widgets
++from prettyqt import constants, core, iconprovider, widgets
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import types
++
++
++TypeStr = Literal["string", "int", "float"]
+ 
+ 
+ class SelectionWidget(widgets.GroupBox):
+     value_changed = core.Signal(object)
+ 
+-    def __init__(self, label="", layout="horizontal", parent=None):
++    def __init__(
++        self,
++        label: str = "",
++        layout: constants.OrientationStr = "horizontal",
++        parent: QtWidgets.QWidget | None = None,
++    ):
+         super().__init__(title=label, parent=parent)
+         self.box = widgets.BoxLayout(layout)
+-        self.widget_custom = None
++        self.widget_custom: widgets.Widget | None = None
+         self.rb_other = widgets.RadioButton()
+-        self.buttons = dict()
++        self.buttons: dict[widgets.RadioButton, Any] = {}
+         self.set_layout(self.box)
+ 
+-    def __iter__(self):
++    def __iter__(self) -> Iterator[tuple[widgets.RadioButton, Any]]:
+         return iter(self.buttons.items())
+ 
+-    def add_items(self, items: Union[Iterable, Mapping]):
++    def add_items(self, items: Iterable | Mapping):
+         if isinstance(items, Mapping):
+             for k, v in items.items():
+                 self.add(v, k)
+         else:
+             for i in items:
+                 if isinstance(i, (tuple, list)):
+                     self.add(*i)
+@@ -34,37 +43,38 @@
+ 
+     def select_radio_by_data(self, value):
+         for rb, data in self.buttons.items():
+             if data == value:
+                 rb.setChecked(True)
+                 break
+ 
+-    def add(self, title: str, data=None):
++    def add(self, title: str, data=None, icon: types.IconType = None):
++        # TODO: make use of icon kwarg
+         rb = widgets.RadioButton(title)
+         rb.toggled.connect(self.update_choice)
+         self.buttons[rb] = data
+         if len(self.buttons) == 1:
+             with rb.block_signals():
+                 rb.set_value(True)
+-        self.box += rb
++        self.box.add(rb)
+ 
+     def add_tooltip_icon(self, text: str):
+         label = widgets.Label(text)
+         label.setToolTip(text)
+-        icon = gui.icon.get_icon("mdi.help-circle-outline")
+-        pixmap = icon.pixmap(core.Size(20, 20))
++        icon = iconprovider.get_icon("mdi.help-circle-outline")
++        pixmap = icon.pixmap(20, 20)
+         label.setPixmap(pixmap)
+-        self.box += label
++        self.box.add(label)
+ 
+     def add_custom(
+         self,
+         label: str = "Other",
+-        typ: str = "string",
+-        default=None,
+-        regex: Optional[str] = None,
++        typ: TypeStr = "string",
++        default: None | float | str = None,
++        regex: str | None = None,
+     ):
+         if typ == "string":
+             self.widget_custom = widgets.LineEdit()
+         elif typ == "int":
+             self.widget_custom = widgets.SpinBox()
+         elif typ == "float":
+             self.widget_custom = widgets.DoubleSpinBox()
+@@ -78,30 +88,30 @@
+         self.rb_other.toggled.connect(self.widget_custom.set_enabled)  # type: ignore
+         self.widget_custom.value_changed.connect(  # type: ignore
+             lambda: self.update_choice(True)
+         )
+         if regex and typ == "string":
+             self.widget_custom.set_regex_validator(regex)  # type: ignore
+         layout = widgets.BoxLayout("horizontal")
+-        layout += self.rb_other
+-        layout += self.widget_custom
+-        self.box += layout
++        layout.add(self.rb_other)
++        layout.add(self.widget_custom)
++        self.box.add(layout)
+ 
+-    def current_choice(self):
++    def current_choice(self) -> Any:
+         for k, v in self.buttons.items():
+             if k.isChecked():
+                 return v
+         if self.rb_other.isChecked() and self.widget_custom is not None:
+             return self.widget_custom.get_value()
+-        return
++        return None
+ 
+     @core.Slot(bool)
+-    def update_choice(self, checked):
++    def update_choice(self, checked: bool):
+         if not checked:
+-            return None
++            return
+         choice = self.current_choice()
+         if choice is not None:
+             self.value_changed.emit(choice)
+ 
+     def set_value(self, value):
+         self.select_radio_by_data(value)
+ 
+@@ -112,9 +122,9 @@
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = SelectionWidget(layout="horizontal")
+     items = {";": "Semicolon", "\t": "Tab", ",": "Comma"}
+     widget.add_items(items)
+     widget.add_custom(label="custom", typ="float")
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+     print(widget.get_value())
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/sidebarwidget.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/sidebarwidget.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,156 +1,178 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Callable, Optional, Union
++from typing import Callable, Literal
+ 
+-from qtpy import QtWidgets, QtCore
++from prettyqt import constants, gui, iconprovider, widgets
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import types
+ 
+-from prettyqt import gui, widgets
++
++AreaStr = Literal["top", "bottom"]
+ 
+ 
+ class SidebarWidget(widgets.MainWindow):
+     BUTTON_WIDTH = 100
++    SETTINGS_BUTTON_HEIGHT = 28
+ 
+-    def __init__(self, parent=None, show_settings=False, main_layout="vertical"):
+-        super().__init__(parent=None)
+-        self.button_map = dict()
++    def __init__(
++        self,
++        parent: QtWidgets.QWidget | None = None,
++        show_settings: bool = False,
++        main_layout: widgets.widget.LayoutStr | QtWidgets.QLayout = "vertical",
++    ):
++        super().__init__(parent=parent)
++        self.button_map: dict[QtWidgets.QWidget, QtWidgets.QToolButton] = {}
++        self.icon_map: dict[QtWidgets.QWidget, gui.Icon] = {}
+         self.sidebar = widgets.ToolBar()
+         self.sidebar.set_id("SidebarWidget")
+         self.sidebar.set_title("Sidebar")
+         self.sidebar.set_style("text_below_icon")
+-        self.sidebar.set_contextmenu_policy("prevent")
++        self.sidebar.set_context_menu_policy("prevent")
+         self.sidebar.setFloatable(False)
+         self.sidebar.set_allowed_areas("all")
+         self.settings_menu = widgets.Menu()
+         self.sidebar.set_icon_size(60)
+         if show_settings:
+             self.settings_btn = self.sidebar.add_menu_button(
+-                "", icon="mdi.settings", menu=self.settings_menu
++                "", icon="mdi.wrench", menu=self.settings_menu
+             )
+-            self.settings_btn.setFixedWidth(self.BUTTON_WIDTH)
+-            self.settings_btn.setFixedHeight(24)
++            self.settings_btn.setFixedSize(self.BUTTON_WIDTH, self.SETTINGS_BUTTON_HEIGHT)
+             self.settings_btn.set_style("icon")
+-            self.sidebar.orientationChanged.connect(self.on_orientation_change)
++            self.sidebar.orientationChanged.connect(self._on_orientation_change)
+             self.sidebar.add_separator()
+         self.spacer_action = self.sidebar.add_spacer()
+         self.add_toolbar(self.sidebar, "left")
+         self.area = widgets.Widget()
+         self.area.set_layout("stacked")
+         w = widgets.Widget()
+         w.set_layout(main_layout)
+         self.main_layout = w.box
+         self.main_layout.set_margin(0)
+         self.main_layout += self.area
+         self.setCentralWidget(w)
+ 
+-    def on_orientation_change(self, orientation):
+-        if orientation == QtCore.Qt.Horizontal:
+-            self.settings_btn.setFixedWidth(34)
+-            self.settings_btn.setFixedHeight(34)
++    def _on_orientation_change(self, orientation: QtCore.Qt.Orientation):
++        if orientation == constants.HORIZONTAL:
++            self.settings_btn.setFixedSize(34, 34)
+         else:
+-            self.settings_btn.setFixedWidth(self.BUTTON_WIDTH)
+-            self.settings_btn.setFixedHeight(24)
++            self.settings_btn.setFixedSize(self.BUTTON_WIDTH, self.SETTINGS_BUTTON_HEIGHT)
+ 
+     def add_tab(
+         self,
+-        item,
++        item: QtWidgets.QWidget,
+         title: str,
+-        icon: gui.icon.IconType = None,
++        icon: types.IconType = None,
+         show: bool = False,
+-        shortcut: Optional[str] = None,
+-        area: str = "top",
++        shortcut: str | None = None,
++        area: AreaStr = "top",
+     ):
+-        page = item
+-        self.area.box.add(page)
+-        # button = widgets.ToolButton()
+-        # button.set_text(title)
+-        # button.set_icon_size(40)
+-        # button.setFixedSize(80, 80)
+-        # button.set_icon(icon)
+-        # button.clicked.connect(lambda: self.area.box.setCurrentWidget(page))
+-        # self.sidebar.addWidget(button)
+-        # self.sidebar.add_separator()
++        self.area.box.add(item)
++        act = widgets.Action(
++            text=title,
++            icon=icon,
++            shortcut=shortcut,
++            parent=self.sidebar,
++            checkable=True,
++            callback=lambda: self.set_tab(item),
++        )
++        button = widgets.ToolButton(self.sidebar)
++        button.setDefaultAction(act)
++        button.setFixedWidth(self.BUTTON_WIDTH)
++        button.set_style("text_below_icon")
+         if area == "top":
+-            act = widgets.Action(
+-                text=title, icon=icon, shortcut=shortcut, parent=self.sidebar
+-            )
+-            act.setCheckable(True)
+-            act.triggered.connect(lambda: self.set_tab(page))
+-            self.sidebar.insertAction(self.spacer_action, act)
++            self.sidebar.insertWidget(self.spacer_action, button)
+         else:
+-            act = self.sidebar.add_action(
+-                title, icon, lambda: self.set_tab(page), checkable=True
+-            )
+-        button = self.sidebar.widgetForAction(act)
+-        button.setFixedWidth(self.BUTTON_WIDTH)
++            self.sidebar.addWidget(button)
+         if len(self.area.box) == 1:
+             button.setChecked(True)
+-        self.button_map[page] = button
++        self.button_map[item] = button
++        self.icon_map[item] = iconprovider.get_icon(icon)
+         if show:
+-            self.area.box.setCurrentWidget(page)
+-        return page
++            self.area.box.setCurrentWidget(item)
+ 
+-    def set_tab(self, item: Union[str, int, widgets.Widget]):
++    def set_marker(
++        self, item: str | int | widgets.Widget, color: types.ColorType = "red"
++    ):
++        widget = self._get_widget(item)
++        if widget == self._get_current_widget():
++            return
++        template = self.icon_map[widget]
++        px = template.pixmap(100, 100)
++        with gui.Painter(px) as painter:
++            dot = gui.Pixmap.create_dot(color)
++            painter.drawPixmap(0, 0, dot)
++        icon = gui.Icon(px)
++        self.button_map[widget].set_icon(icon)
++
++    def _get_widget(self, item: str | int | widgets.Widget):
++        """Returns widget page specified by name, offset or content."""
+         if isinstance(item, int):
+-            item = self.area.box[item]
++            return self.area.box[item]
+         elif isinstance(item, str):
+-            item = self.find_child(QtWidgets.QWidget, name=item, recursive=False)
+-        if item not in self.area.box:
+-            raise ValueError("Layout does not contain the chosen widget")
++            item = self.area.find_child(QtWidgets.QWidget, name=item, recursive=False)
++            if item not in self.area.box:
++                raise ValueError("Layout does not contain the chosen widget")
++        return item
++
++    def _get_current_widget(self) -> QtWidgets.QWidget:
++        """Returns the currently selected widget page."""
++        for k, v in self.button_map.items():
++            if v.isChecked():
++                return k
++        raise RuntimeError("no page activated.")
++
++    def set_tab(self, item: str | int | widgets.Widget):
++        widget = self._get_widget(item)
+         current = self.area.box.currentWidget()
+         self.button_map[current].setChecked(False)
+-        self.area.box.setCurrentWidget(item)
+-        self.button_map[item].setChecked(True)
+-
+-    def show_tab(self, index):
+-        widget = self.area.box[index]
+         self.area.box.setCurrentWidget(widget)
++        self.button_map[widget].setChecked(True)
+ 
+-    def add_spacer(self):
+-        self.sidebar.add_spacer()
++    def add_spacer(self) -> widgets.Widget:
++        return self.sidebar.add_spacer()
+ 
+-    def add_separator(self, text: Optional[str] = None, area: str = "top"):
++    def add_separator(self, text: str | None = None, area: AreaStr = "top"):
+         if area == "top":
+             self.sidebar.add_separator(text, before=self.spacer_action)
+         else:
+             self.sidebar.add_separator(text)
+ 
+     def add_action(
+         self,
+         title: str,
+-        icon: gui.icon.IconType = None,
++        icon: types.IconType = None,
+         callback: Callable = None,
+         checkable: bool = False,
+-        shortcut: Optional[str] = None,
+-        area: str = "top",
++        shortcut: str | None = None,
++        area: AreaStr = "top",
+     ):
+-        # act = self.sidebar.add_action(label=title,
+-        #                                      icon=icon,
+-        #                                      callback=callback,
+-        #                                      checkable=checkable)
+-        act = widgets.Action(text=title, icon=icon, shortcut=shortcut)
+-        act.setCheckable(checkable)
+-        if callback:
+-            act.triggered.connect(callback)
+-        if area == "top":
+-            self.sidebar.insertAction(self.spacer_action, act)
+-        if area == "bottom":
+-            self.sidebar.addAction(act)
+-        button = self.sidebar.widgetForAction(act)
++        act = widgets.Action(
++            text=title,
++            icon=icon,
++            shortcut=shortcut,
++            checkable=checkable,
++            callback=callback,
++        )
++        button = widgets.ToolButton(self.sidebar)
++        button.setDefaultAction(act)
+         button.setFixedWidth(self.BUTTON_WIDTH)
++        button.set_style("text_below_icon")
++        if area == "top":
++            self.sidebar.insertWidget(self.spacer_action, button)
++        else:
++            self.sidebar.addWidget(button)
+         return act
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     ex = SidebarWidget(show_settings=True)
+     page_1 = widgets.PlainTextEdit()
+     page_2 = widgets.ColorDialog()
+     page_3 = widgets.FileDialog()
+     ex.add_tab(page_1, "Text", "mdi.timer")
+     ex.add_tab(page_2, "Color", "mdi.format-color-fill", area="bottom")
+     ex.add_tab(page_3, "Help", "mdi.help-circle-outline")
+-    # ex.show_tab(0)
++    ex.set_marker(page_3)
+     ex.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/singlelinetextedit.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/singlelinetextedit.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,21 +1,20 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from prettyqt import gui, widgets
++from prettyqt import widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+ class SingleLineTextEdit(widgets.PlainTextEdit):
+-    def __init__(self, parent=None):
++    def __init__(self, parent: QtWidgets.QWidget | None = None):
+         super().__init__(parent=parent)
+         self.textChanged.connect(self._on_text_changed)
+-        font_metrics = gui.FontMetrics(self.font())
+-        self.row_height = font_metrics.lineSpacing()
+-        self.setFixedHeight(self.row_height * 1.5)
++        font_metrics = self.get_font_metrics()
++        row_height = font_metrics.lineSpacing()
++        self.setFixedHeight(int(row_height * 1.5))
+         self.set_size_policy(vertical="fixed")
+         self.set_line_wrap_mode("none")
+         self.set_scrollbar_policy("always_off")
+ 
+     def _on_text_changed(self):
+         text = self.text()
+         with self.current_cursor() as c:
+@@ -26,8 +25,8 @@
+             c.setPosition(pos - num_linebreaks)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = SingleLineTextEdit()
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/spanslider.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/spanslider.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,470 +1,485 @@
+-# -*- coding: utf-8 -*-
+-
+ # The MIT License (MIT)
+ 
+ # Copyright (c) 2011-2014 Marvin Killing
+ 
++from __future__ import annotations
++
++from typing import Literal
++
++from prettyqt import core, gui, widgets
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import colors, types
++
++
+ # Permission is hereby granted, free of charge, to any person obtaining a copy
+ # of this software and associated documentation files (the "Software"), to deal
+ # in the Software without restriction, including without limitation the rights
+ # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ # copies of the Software, and to permit persons to whom the Software is
+ # furnished to do so, subject to the following conditions:
+-
+ # The above copyright notice and this permission notice shall be included in
+ # all copies or substantial portions of the Software.
+ 
+ # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ # THE SOFTWARE.
+ 
+-from typing import Tuple
+ 
+-from qtpy import QtCore, QtGui
++SLIDER_STYLE = widgets.Style.ComplexControl.CC_Slider
++HANDLE_STYLE = widgets.Style.SubControl.SC_SliderHandle
++GROOVE_STYLE = widgets.Style.SubControl.SC_SliderGroove
+ 
+-from prettyqt import core, gui, widgets
+-from prettyqt.utils import colors
+ 
++MOVEMENT_MODE = ["no_crossing", "no_overlap", "free"]
++
++MovementModeStr = Literal["no_crossing", "no_overlap", "free"]
+ 
+-SLIDER_STYLE = widgets.Style.CC_Slider
+-HANDLE_STYLE = widgets.Style.SC_SliderHandle
+-GROOVE_STYLE = widgets.Style.SC_SliderGroove
++HandleStr = Literal["upper", "lower"]
+ 
++ActionStr = Literal[
++    "single_step_add", "single_step_sub", "to_minimum", "to_maximum", "move", "none"
++]
+ 
+-def clamp(v, lower, upper):
++
++def clamp(v: float, lower: float, upper: float) -> float:
+     return min(upper, max(lower, v))
+ 
+ 
+ class SpanSlider(widgets.Slider):
+-    NO_HANDLE = None
+-    LOWER_HANDLE = 1
+-    UPPER_HANDLE = 2
+-
+-    value_changed = core.Signal(int, int)
+-    lower_pos_changed = core.Signal(int)
+-    upper_pos_changed = core.Signal(int)
++    value_changed = core.Signal(object)
++    lower_pos_changed = core.Signal(float)
++    upper_pos_changed = core.Signal(float)
+     slider_pressed = core.Signal(object)
+ 
+-    def __init__(self, parent=None):
++    def __init__(self, parent: QtWidgets.QWidget | None = None):
+         super().__init__("horizontal", parent)
+         self.rangeChanged.connect(self.update_range)
+-        self.sliderReleased.connect(self.move_pressed_handle)
++        self.sliderReleased.connect(self._move_pressed_handle)
+ 
+-        self.lower = 0
+-        self.upper = 0
+-        self.lower_pos = 0
+-        self.upper_pos = 0
++        self.lower_val = 0.0
++        self.upper_val = 0.0
++        self.lower_pos = 0.0
++        self.upper_pos = 0.0
+         self.offset = 0
+-        self.position = 0
+-        self.last_pressed = self.NO_HANDLE
+-        self.upper_pressed = widgets.Style.SC_None
+-        self.lower_pressed = widgets.Style.SC_None
+-        self.movement = "free"
+-        self.main_control = self.LOWER_HANDLE
+-        self.first_movement = False
+-        self.block_tracking = False
+-        self.gradient_left = self.palette().color(gui.Palette.Dark).lighter(110)
+-        self.gradient_right = self.palette().color(gui.Palette.Dark).lighter(110)
+-
+-    @core.Property(int)
+-    def lower_value(self) -> int:
+-        return min(self.lower, self.upper)
+-
+-    def set_lower_value(self, lower: int):
+-        self.set_span(lower, self.upper)
+-
+-    @core.Property(int)
+-    def upper_value(self):
+-        return max(self.lower, self.upper)
++        self.position = 0.0
++        self.last_pressed: str | None = None
++        self.upper_pressed = widgets.Style.SubControl.SC_None
++        self.lower_pressed = widgets.Style.SubControl.SC_None
++        self.movement: MovementModeStr = "no_crossing"
++        self._main_control: Literal["lower", "upper"] = "lower"
++        self._first_movement = False
++        self._block_tracking = False
++        dark_color = self.palette().color(gui.Palette.ColorRole.Dark)
++        self.gradient_left = dark_color.lighter(110)
++        self.gradient_right = dark_color.lighter(110)
++
++    def mousePressEvent(self, event):
++        if self.minimum() == self.maximum() or event.buttons() ^ event.button():
++            event.ignore()
++            return
++
++        self.upper_pressed = self._handle_mouse_press(
++            event.position(), self.upper_pressed, self.upper_val, "upper"
++        )
++        if self.upper_pressed != HANDLE_STYLE:
++            self.lower_pressed = self._handle_mouse_press(
++                event.position(), self.lower_pressed, self.lower_val, "lower"
++            )
++
++        self._first_movement = True
++        event.accept()
++
++    def mouseMoveEvent(self, event):
++        if self.lower_pressed != HANDLE_STYLE and self.upper_pressed != HANDLE_STYLE:
++            event.ignore()
++            return
++
++        opt = widgets.StyleOptionSlider()
++        self.initStyleOption(opt)
++        m = self.style().pixelMetric(
++            widgets.Style.PixelMetric.PM_MaximumDragDistance, opt, self
++        )
++        pixel_pos = self.pick(event.position()) - self.offset
++        new_pos = float(self._pixel_pos_to_value(pixel_pos))
++        if m >= 0:
++            r = self.rect().adjusted(-m, -m, m, m)
++            if not r.contains(event.position()):
++                new_pos = self.position
++
++        # pick the preferred handle on the first movement
++        if self._first_movement:
++            if self.lower_val == self.upper_val:
++                if new_pos < self.lower_value:
++                    self._swap_controls()
++                    self._first_movement = False
++            else:
++                self._first_movement = False
++
++        if self.lower_pressed == HANDLE_STYLE:
++            if self.movement == "no_crossing":
++                new_pos = min(new_pos, self.upper_val)
++            elif self.movement == "no_overlap":
++                new_pos = min(new_pos, self.upper_val - 1)
+ 
+-    def set_upper_value(self, upper: int):
+-        self.set_span(self.lower, upper)
++            if self.movement == "free" and new_pos > self.upper_val:
++                self._swap_controls()
++                self.set_upper_pos(new_pos)
++            else:  # movement "none"
++                self.set_lower_pos(new_pos)
++        elif self.upper_pressed == HANDLE_STYLE:
++            if self.movement == "no_crossing":
++                new_pos = max(new_pos, self.lower_value)
++            elif self.movement == "no_overlap":
++                new_pos = max(new_pos, self.lower_value + 1)
++
++            if self.movement == "free" and new_pos < self.lower_val:
++                self._swap_controls()
++                self.set_lower_pos(new_pos)
++            else:  # movement "none"
++                self.set_upper_pos(new_pos)
++        event.accept()
++
++    def mouseReleaseEvent(self, event):
++        super().mouseReleaseEvent(event)
++        self.setSliderDown(False)
++        self.lower_pressed = self.upper_pressed = widgets.Style.SubControl.SC_None
++        self.update()
++
++    def paintEvent(self, event):
++        painter = widgets.StylePainter(self)
++
++        # ticks
++        opt = widgets.StyleOptionSlider()
++        self.initStyleOption(opt)
++        opt.subControls = widgets.Style.SubControl.SC_SliderTickmarks
++        painter.draw_complex_control("slider", opt)
++
++        # groove
++        opt.sliderPosition = 20
++        opt.sliderValue = 0
++        opt.subControls = GROOVE_STYLE
++        painter.draw_complex_control("slider", opt)
++
++        # handle rects
++        opt.sliderPosition = self.lower_pos
++        lr = self.style().subControlRect(SLIDER_STYLE, opt, HANDLE_STYLE, self)
++        lrv = self.pick(lr.center())
++        opt.sliderPosition = self.upper_pos
++        ur = self.style().subControlRect(SLIDER_STYLE, opt, HANDLE_STYLE, self)
++        urv = self.pick(ur.center())
++
++        # span
++        minv = min(lrv, urv)
++        maxv = max(lrv, urv)
++        c = self.style().subControlRect(SLIDER_STYLE, opt, GROOVE_STYLE, self).center()
++        if self.is_horizontal():
++            rect = core.Rect(core.Point(minv, c.y() - 2), core.Point(maxv, c.y() + 1))
++        else:
++            rect = core.Rect(core.Point(c.x() - 2, minv), core.Point(c.x() + 1, maxv))
++        self._draw_span(painter, rect)
++
++        # handles
++        if self.last_pressed == "lower":
++            self.draw_handle(painter, "upper")
++            self.draw_handle(painter, "lower")
++        else:
++            self.draw_handle(painter, "lower")
++            self.draw_handle(painter, "upper")
++
++    @core.Property(float)
++    def lower_value(self) -> float:
++        return min(self.lower_val, self.upper_val)
++
++    def set_lower_value(self, lower: float):
++        self.set_span(lower, self.upper_val)
++
++    @core.Property(float)
++    def upper_value(self) -> float:
++        return max(self.lower_val, self.upper_val)
++
++    def set_upper_value(self, upper: float):
++        self.set_span(self.lower_val, upper)
+ 
+     def on_value_change(self):
+-        self.value_changed.emit(self.lower, self.upper)
++        self.value_changed.emit((self.lower_val, self.upper_val))
+ 
+-    def get_value(self) -> Tuple[int, int]:
+-        return (self.lower, self.upper)
++    def get_value(self) -> tuple[float, float]:
++        return (self.lower_val, self.upper_val)
+ 
+-    def set_value(self, value: Tuple[int, int]):
++    def set_value(self, value: tuple[float, float]):
+         self.set_lower_value(value[0])
+         self.set_upper_value(value[1])
+ 
+-    @core.Property(object)
+-    def movement_mode(self) -> str:
++    def get_movement_mode(self) -> MovementModeStr:
+         return self.movement
+ 
+-    def set_movement_mode(self, mode: str):
++    def set_movement_mode(self, mode: MovementModeStr):
++        """Set movement mode.
++
++        Args:
++            mode: movement mode for the main window
++
++        Raises:
++            ValueError: movement mode type does not exist
++        """
++        if mode not in MOVEMENT_MODE:
++            raise ValueError("Invalid movement mode")
+         self.movement = mode
+ 
+-    def set_span(self, lower: int, upper: int):
++    def set_span(self, lower: float, upper: float):
+         low = clamp(min(lower, upper), self.minimum(), self.maximum())
+         upp = clamp(max(lower, upper), self.minimum(), self.maximum())
+         changed = False
+-        if low != self.lower:
+-            self.lower = low
++        if low != self.lower_val:
++            self.lower_val = low
+             self.lower_pos = low
+             changed = True
+-        if upp != self.upper:
+-            self.upper = upp
++        if upp != self.upper_val:
++            self.upper_val = upp
+             self.upper_pos = upp
+             changed = True
+         if changed:
+             self.on_value_change()
+             self.update()
+ 
+-    def set_lower_pos(self, lower: int):
++    def set_lower_pos(self, lower: float):
+         if self.lower_pos == lower:
+-            return None
++            return
+         self.lower_pos = lower
+         if not self.hasTracking():
+             self.update()
+         if self.isSliderDown():
+             self.lower_pos_changed.emit(lower)
+-        if self.hasTracking() and not self.block_tracking:
+-            main = self.main_control == self.LOWER_HANDLE
+-            self.trigger_action(self.SliderMove, main)
++        if self.hasTracking() and not self._block_tracking:
++            main = self._main_control == "lower"
++            self.trigger_action("move", main)
+ 
+-    def set_upper_pos(self, upper: int):
++    def set_upper_pos(self, upper: float):
+         if self.upper_pos == upper:
+-            return None
++            return
+         self.upper_pos = upper
+         if not self.hasTracking():
+             self.update()
+         if self.isSliderDown():
+             self.upper_pos_changed.emit(upper)
+-        if self.hasTracking() and not self.block_tracking:
+-            main = self.main_control == self.UPPER_HANDLE
+-            self.trigger_action(self.SliderMove, main)
++        if self.hasTracking() and not self._block_tracking:
++            main = self._main_control == "upper"
++            self.trigger_action("move", main)
+ 
+-    def set_left_color(self, color: colors.ColorType):
+-        self.gradient_left = color
++    def set_left_color(self, color: types.ColorType):
++        self.gradient_left = colors.get_color(color)
+         self.update()
+ 
+-    def set_right_color(self, color: colors.ColorType):
+-        self.gradient_right = color
++    def set_right_color(self, color: types.ColorType):
++        self.gradient_right = colors.get_color(color)
+         self.update()
+ 
+-    def move_pressed_handle(self):
+-        if self.last_pressed == self.LOWER_HANDLE:
+-            if self.lower_pos != self.lower:
+-                main = self.main_control == self.LOWER_HANDLE
+-                self.trigger_action(self.SliderMove, main)
+-        elif self.last_pressed == self.UPPER_HANDLE:
+-            if self.upper_pos != self.upper:
+-                main = self.main_control == self.UPPER_HANDLE
+-                self.trigger_action(self.SliderMove, main)
+-
+-    def pick(self, p):
+-        return p.x() if self.is_horizontal() else p.y()
++    def _move_pressed_handle(self):
++        if self.last_pressed == "lower":
++            if self.lower_pos != self.lower_val:
++                main = self._main_control == "lower"
++                self.trigger_action("move", main)
++        elif self.last_pressed == "upper":
++            if self.upper_pos != self.upper_val:
++                main = self._main_control == "upper"
++                self.trigger_action("move", main)
++
++    def pick(self, p: types.PointType) -> int:
++        if isinstance(p, tuple):
++            return p[0] if self.is_horizontal() else p[1]
++        else:
++            return p.x() if self.is_horizontal() else p.y()
+ 
+-    def trigger_action(self, action, main):
+-        value = 0
++    def trigger_action(self, action: ActionStr, main: bool):
++        value = 0.0
+         no = False
+         up = False
+         my_min = self.minimum()
+         my_max = self.maximum()
+-        alt_control = self.LOWER_HANDLE
+-        if self.main_control == self.LOWER_HANDLE:
+-            alt_control = self.UPPER_HANDLE
+-
+-        self.block_tracking = True
+-        main_control = main and self.main_control == self.UPPER_HANDLE
+-        alt_control = not main and alt_control == self.UPPER_HANDLE
++        self._block_tracking = True
++        main_control = main and self._main_control == "upper"
++        alt_control = not main and self._main_control == "lower"
+         is_upper_handle = main_control or alt_control
+-        val = self.upper if is_upper_handle else self.lower
+-        if action == self.SliderSingleStepAdd:
++        val = self.upper_val if is_upper_handle else self.lower_val
++        if action == "single_step_add":
+             up = is_upper_handle
+             value = clamp(val + self.singleStep(), my_min, my_max)
+-        elif action == self.SliderSingleStepSub:
++        elif action == "single_step_sub":
+             up = is_upper_handle
+             value = clamp(val - self.singleStep(), my_min, my_max)
+-        elif action == self.SliderToMinimum:
++        elif action == "to_minimum":
++            up = is_upper_handle
+             value = my_min
++        elif action == "to_maximum":
+             up = is_upper_handle
+-        elif action == self.SliderToMaximum:
+             value = my_max
+-            up = is_upper_handle
+-        elif action == self.SliderMove:
++        elif action == "move":
+             up = is_upper_handle
+             no = True
+-        elif action == self.SliderNoAction:
++        elif action == "none":
+             no = True
+ 
+         if not no and not up:
+             if self.movement == "no_crossing":
+-                value = min(value, self.upper)
++                value = min(value, self.upper_val)
+             elif self.movement == "no_overlap":
+-                value = min(value, self.upper - 1)
++                value = min(value, self.upper_val - 1)
+ 
+-            if self.movement == "free" and value > self.upper:
+-                self.swap_controls()
++            if self.movement == "free" and value > self.upper_val:
++                self._swap_controls()
+                 self.set_upper_pos(value)
+             else:
+                 self.set_lower_pos(value)
+         elif not no:
+             if self.movement == "no_crossing":
+-                value = max(value, self.lower)
++                value = max(value, self.lower_val)
+             elif self.movement == "no_overlap":
+-                value = max(value, self.lower + 1)
++                value = max(value, self.lower_val + 1)
+ 
+-            if self.movement == "free" and value < self.lower:
+-                self.swap_controls()
++            if self.movement == "free" and value < self.lower_val:
++                self._swap_controls()
+                 self.set_lower_pos(value)
+             else:
+                 self.set_upper_pos(value)
+ 
+-        self.block_tracking = False
++        self._block_tracking = False
+         self.set_lower_value(self.lower_pos)
+         self.set_upper_value(self.upper_pos)
+ 
+-    def swap_controls(self):
+-        self.lower, self.upper = self.upper, self.lower
++    def _swap_controls(self):
++        self.lower_val, self.upper_val = self.upper_val, self.lower_val
+         self.lower_pressed, self.upper_pressed = self.upper_pressed, self.lower_pressed
+-        self.last_pressed = (
+-            self.UPPER_HANDLE
+-            if self.last_pressed == self.LOWER_HANDLE
+-            else self.LOWER_HANDLE
+-        )
+-        self.main_control = (
+-            self.UPPER_HANDLE
+-            if self.main_control == self.LOWER_HANDLE
+-            else self.LOWER_HANDLE
+-        )
++        self.last_pressed = "upper" if self.last_pressed == "lower" else "lower"
++        self._main_control = "upper" if self._main_control == "lower" else "lower"
+ 
+     def update_range(self, min_, max_):
+         # set_span() takes care of keeping span in range
+-        self.set_span(self.lower, self.upper)
+-
+-    def paintEvent(self, event):
+-        painter = widgets.StylePainter(self)
+-
+-        # ticks
+-        opt = widgets.StyleOptionSlider()
+-        self.initStyleOption(opt)
+-        opt.subControls = widgets.Style.SC_SliderTickmarks
+-        painter.drawComplexControl(SLIDER_STYLE, opt)
+-
+-        # groove
+-        opt.sliderPosition = 20
+-        opt.sliderValue = 0
+-        opt.subControls = GROOVE_STYLE
+-        painter.drawComplexControl(SLIDER_STYLE, opt)
+-
+-        # handle rects
+-        opt.sliderPosition = self.lower_pos
+-        lr = self.style().subControlRect(SLIDER_STYLE, opt, HANDLE_STYLE, self)
+-        lrv = self.pick(lr.center())
+-        opt.sliderPosition = self.upper_pos
+-        ur = self.style().subControlRect(SLIDER_STYLE, opt, HANDLE_STYLE, self)
+-        urv = self.pick(ur.center())
++        self.set_span(self.lower_val, self.upper_val)
+ 
+-        # span
+-        minv = min(lrv, urv)
+-        maxv = max(lrv, urv)
+-        c = self.style().subControlRect(SLIDER_STYLE, opt, GROOVE_STYLE, self).center()
+-        spanRect = core.Rect(core.Point(c.x() - 2, minv), core.Point(c.x() + 1, maxv))
+-        if self.is_horizontal():
+-            spanRect = core.Rect(core.Point(minv, c.y() - 2), core.Point(maxv, c.y() + 1))
+-        self.draw_span(painter, spanRect)
+-
+-        # handles
+-        if self.last_pressed == self.LOWER_HANDLE:
+-            self.draw_handle(painter, self.UPPER_HANDLE)
+-            self.draw_handle(painter, self.LOWER_HANDLE)
+-        else:
+-            self.draw_handle(painter, self.LOWER_HANDLE)
+-            self.draw_handle(painter, self.UPPER_HANDLE)
+-
+-    def setup_painter(self, painter, orientation, x1, y1, x2, y2):
+-        highlight = self.palette().color(gui.Palette.Highlight)
+-        gradient = QtGui.QLinearGradient(x1, y1, x2, y2)
+-        gradient.setColorAt(0, highlight.darker(120))
+-        gradient.setColorAt(1, highlight.lighter(108))
++    def _setup_painter(
++        self,
++        painter: widgets.StylePainter,
++        orientation: Literal["horizontal", "vertical"],
++        x1: int,
++        y1: int,
++        x2: int,
++        y2: int,
++    ):
++        highlight = self.palette().color(gui.Palette.ColorRole.Highlight)
++        gradient = gui.LinearGradient(x1, y1, x2, y2)
++        gradient[0] = highlight.darker(120)
++        gradient[1] = highlight.lighter(108)
+         painter.setBrush(gradient)
+ 
+-        val = 130 if orientation == QtCore.Qt.Horizontal else 150
+-        painter.setPen(gui.Pen(highlight.darker(val), 0))
++        val = 130 if orientation == "horizontal" else 150
++        painter.set_pen(color=highlight.darker(val), width=0)
+ 
+-    def draw_span(self, painter, rect):
++    def _draw_span(self, painter: widgets.StylePainter, rect: core.Rect):
+         opt = widgets.StyleOptionSlider()
+-        super().initStyleOption(opt)
+-
+-        # area
++        self.initStyleOption(opt)
++        painter.set_pen(color=self.gradient_left, width=0)
+         groove = self.style().subControlRect(SLIDER_STYLE, opt, GROOVE_STYLE, self)
+         if opt.is_horizontal():
+             groove.adjust(0, 0, -1, 0)
+-        else:
+-            groove.adjust(0, 0, 0, -1)
+-
+-        # pen & brush
+-        painter.setPen(gui.Pen(self.gradient_left, 0))
+-        if opt.is_horizontal():
+-            self.setup_painter(
++            self._setup_painter(
+                 painter,
+-                opt.orientation,
++                opt.get_orientation(),
+                 groove.center().x(),
+                 groove.top(),
+                 groove.center().x(),
+                 groove.bottom(),
+             )
+         else:
+-            self.setup_painter(
++            groove.adjust(0, 0, 0, -1)
++            self._setup_painter(
+                 painter,
+-                opt.orientation,
++                opt.get_orientation(),
+                 groove.left(),
+                 groove.center().y(),
+                 groove.right(),
+                 groove.center().y(),
+             )
+ 
+         # draw groove
+         intersected = core.RectF(rect.intersected(groove))
+-        gradient = QtGui.QLinearGradient(intersected.topLeft(), intersected.topRight())
+-        gradient.setColorAt(0, self.gradient_left)
+-        gradient.setColorAt(1, self.gradient_right)
++        gradient = gui.LinearGradient(intersected.topLeft(), intersected.topRight())
++        gradient[0] = self.gradient_left
++        gradient[1] = self.gradient_right
+         painter.fillRect(intersected, gradient)
+ 
+-    def draw_handle(self, painter, handle):
+-        opt = widgets.StyleOptionSlider()
+-        self._initStyleOption(opt, handle)
++    def draw_handle(self, painter: widgets.StylePainter, handle: HandleStr):
++        opt = self.get_style_option(handle)
+         opt.subControls = HANDLE_STYLE
+         pressed = self.upper_pressed
+-        if handle == self.LOWER_HANDLE:
++        if handle == "lower":
+             pressed = self.lower_pressed
+ 
+         if pressed == HANDLE_STYLE:
+             opt.activeSubControls = pressed
+-            opt.state |= widgets.Style.State_Sunken
+-        painter.drawComplexControl(SLIDER_STYLE, opt)
++            opt.state |= widgets.Style.StateFlag.State_Sunken
++        painter.draw_complex_control("slider", opt)
+ 
+-    def _initStyleOption(self, option, handle):
++    def get_style_option(self, handle: HandleStr) -> widgets.StyleOptionSlider:
++        option = widgets.StyleOptionSlider()
+         self.initStyleOption(option)
+-
+-        option.sliderPosition = self.upper_pos
+-        option.sliderValue = self.upper
+-        if handle == self.LOWER_HANDLE:
++        if handle == "lower":
+             option.sliderPosition = self.lower_pos
+-            option.sliderValue = self.lower
+-
+-    def handle_mouse_press(self, pos, control, value, handle):
+-        opt = widgets.StyleOptionSlider()
+-        self._initStyleOption(opt, handle)
++            option.sliderValue = self.lower_val
++        else:
++            option.sliderPosition = self.upper_pos
++            option.sliderValue = self.upper_val
++        return option
++
++    def _handle_mouse_press(
++        self, pos: QtCore.QPoint, control, value: float, handle: HandleStr
++    ):
++        opt = self.get_style_option(handle)
+         old_control = control
+         control = self.style().hitTestComplexControl(SLIDER_STYLE, opt, pos, self)
+         sr = self.style().subControlRect(SLIDER_STYLE, opt, HANDLE_STYLE, self)
+         if control == HANDLE_STYLE:
+             self.position = value
+             self.offset = self.pick(pos - sr.topLeft())
+             self.last_pressed = handle
+             self.setSliderDown(True)
+             self.slider_pressed.emit(handle)
+         if control != old_control:
+             self.update(sr)
+         return control
+ 
+-    def mousePressEvent(self, event):
+-        if self.minimum() == self.maximum() or event.buttons() ^ event.button():
+-            event.ignore()
+-            return
+-
+-        self.upper_pressed = self.handle_mouse_press(
+-            event.pos(), self.upper_pressed, self.upper, self.UPPER_HANDLE
+-        )
+-        if self.upper_pressed != HANDLE_STYLE:
+-            self.lower_pressed = self.handle_mouse_press(
+-                event.pos(), self.lower_pressed, self.lower, self.LOWER_HANDLE
+-            )
+-
+-        self.first_movement = True
+-        event.accept()
+-
+-    def mouseMoveEvent(self, event):
+-        if self.lower_pressed != HANDLE_STYLE and self.upper_pressed != HANDLE_STYLE:
+-            event.ignore()
+-            return
+-
+-        opt = widgets.StyleOptionSlider()
+-        self.initStyleOption(opt)
+-        m = self.style().pixelMetric(widgets.Style.PM_MaximumDragDistance, opt, self)
+-        new_pos = self.pixel_pos_to_value(self.pick(event.pos()) - self.offset)
+-        if m >= 0:
+-            r = self.rect().adjusted(-m, -m, m, m)
+-            if not r.contains(event.pos()):
+-                new_pos = self.position
+-
+-        # pick the preferred handle on the first movement
+-        if self.first_movement:
+-            if self.lower == self.upper:
+-                if new_pos < self.lower_value:
+-                    self.swap_controls()
+-                    self.first_movement = False
+-            else:
+-                self.first_movement = False
+-
+-        if self.lower_pressed == HANDLE_STYLE:
+-            if self.movement == "no_crossing":
+-                new_pos = min(new_pos, self.upper)
+-            elif self.movement == "no_overlap":
+-                new_pos = min(new_pos, self.upper - 1)
+-
+-            if self.movement == "free" and new_pos > self.upper:
+-                self.swap_controls()
+-                self.set_upper_pos(new_pos)
+-            else:
+-                self.set_lower_pos(new_pos)
+-        elif self.upper_pressed == HANDLE_STYLE:
+-            if self.movement == "no_crossing":
+-                new_pos = max(new_pos, self.lower_value)
+-            elif self.movement == "no_overlap":
+-                new_pos = max(new_pos, self.lower_value + 1)
+-
+-            if self.movement == "free" and new_pos < self.lower:
+-                self.swap_controls()
+-                self.set_lower_pos(new_pos)
+-            else:
+-                self.set_upper_pos(new_pos)
+-        event.accept()
+-
+-    def mouseReleaseEvent(self, event):
+-        super().mouseReleaseEvent(event)
+-        self.setSliderDown(False)
+-        self.lower_pressed = self.upper_pressed = widgets.Style.SC_None
+-        self.update()
+-
+-    def pixel_pos_to_value(self, pos):
++    def _pixel_pos_to_value(self, pos: int) -> int:
+         opt = widgets.StyleOptionSlider()
+         self.initStyleOption(opt)
+         gr = self.style().subControlRect(SLIDER_STYLE, opt, GROOVE_STYLE, self)
+         sr = self.style().subControlRect(SLIDER_STYLE, opt, HANDLE_STYLE, self)
+         if self.is_horizontal():
+             len_slider = sr.width()
+             slider_min = gr.x()
+-            slider_max = gr.right() - len_slider + 1
++            slider_end = gr.right()
+         else:
+             len_slider = sr.height()
+             slider_min = gr.y()
+-            slider_max = gr.bottom() - len_slider + 1
++            slider_end = gr.bottom()
+ 
+         return widgets.Style.sliderValueFromPosition(
+             self.minimum(),
+             self.maximum(),
+             pos - slider_min,
+-            slider_max - slider_min,
++            slider_end - len_slider + 1 - slider_min,
+             opt.upsideDown,
+         )
+ 
+ 
+ class SpanSliderWidget(widgets.Widget):
+-    def __init__(self, *args, parent=None, **kwargs):
++    def __init__(self, parent: QtWidgets.QWidget | None = None):
+         super().__init__(parent=parent)
+         self.set_layout("grid")
+         self.slider = SpanSlider()
+         self.label_lower = widgets.Label()
+         self.label_upper = widgets.Label()
+         self.box[0, 0:3] = self.slider
+         self.box[1, 0] = self.label_lower
+@@ -486,8 +501,8 @@
+     slider.set_span(30, 70)
+     slider.setRange(0, 100)
+     slider.value_changed.connect(print)
+     # color = gui.Color("blue").lighter(150)
+     # slider.set_left_color(color)
+     # slider.set_right_color(color)
+     slider.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/stringornumberwidget.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/stringornumberwidget.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,19 +1,17 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+ from prettyqt import core, widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+ class StringOrNumberWidget(widgets.GroupBox):
+-
+     value_changed = core.Signal(object)
+ 
+-    def __init__(self, title="", parent=None):
++    def __init__(self, title: str = "", parent: QtWidgets.QWidget | None = None):
+         super().__init__(checkable=False, title=title)
+         self.set_layout("vertical")
+         self.rb_lineedit = widgets.RadioButton("String")
+         self.lineedit = widgets.LineEdit()
+         self.rb_spinbox = widgets.RadioButton("Number")
+         self.spinbox = widgets.DoubleSpinBox()
+         layout_lineedit = widgets.BoxLayout("horizontal")
+@@ -32,22 +30,21 @@
+         self.lineedit.value_changed.connect(self.on_value_change)
+         self.rb_lineedit.setChecked(True)
+ 
+     def on_value_change(self):
+         value = self.get_value()
+         self.value_changed.emit(value)
+ 
+-    def get_value(self):
+-        if self.rb_spinbox.isChecked():
+-            val = self.spinbox.get_value()
+-            return int(val) if val.is_integer() else val
+-        else:
++    def get_value(self) -> float | str:
++        if not self.rb_spinbox.isChecked():
+             return self.lineedit.get_value()
++        val = self.spinbox.get_value()
++        return int(val) if val.is_integer() else val
+ 
+-    def set_value(self, value):
++    def set_value(self, value: float | str):
+         if isinstance(value, str):
+             self.rb_lineedit.setChecked(True)
+             self.lineedit.set_value(value)
+         elif isinstance(value, (int, float)):
+             self.rb_spinbox.setChecked(True)
+             self.spinbox.set_value(value)
+         else:
+@@ -55,9 +52,9 @@
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = StringOrNumberWidget("Test")
+     widget.value_changed.connect(print)
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+     print(widget.enabled)
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/custom_widgets/waitingspinner.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/waitingspinner.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,10 +1,8 @@
+-# -*- coding: utf-8 -*-
+-"""
+-The MIT License (MIT)
++"""The MIT License (MIT).
+ 
+ Copyright (c) 2012-2014 Alexander Turkin
+ Copyright (c) 2014 William Hallatt
+ Copyright (c) 2015 Jacob Dawid
+ Copyright (c) 2016 Luca Weiss
+ Copyright (c) 2017 Philipp Temminghoff
+ 
+@@ -23,130 +21,129 @@
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+ """
+ 
+-import math
++from __future__ import annotations
+ 
+-from qtpy import QtCore
++import math
+ 
+-from prettyqt import core, gui, widgets
+-from prettyqt.utils import colors
++from prettyqt import constants, core, gui, widgets
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import colors, types
+ 
+ 
+ class BaseWaitingSpinner(widgets.Widget):
+-    def __init__(self, parent, modality=QtCore.Qt.NonModal):
++    def __init__(
++        self,
++        parent: QtWidgets.QWidget | None,
++        modality: constants.ModalityStr = "none",
++    ):
+         super().__init__(parent=parent)
+ 
+         # WAS IN initialize()
+-        self._color = gui.Color("black")
++        self._color = self.get_palette().get_color("text")
+         self._roundness = 100.0
+         self._minimum_trail_opacity = 3.14159265358979323846
+         self._trail_fade_percentage = 80.0
+         self._revolutions_per_second = 1.57079632679489661923
+         self._line_num = 20
+         self._line_length = 10
+         self._line_width = 2
+         self._inner_radius = 10
+         self._current_counter = 0
+-        self._is_spinning = False
+-
+         self._timer = core.Timer(self)
+-        self._timer.timeout.connect(self.rotate)
+-        self.update_size()
+-        self.update_timer()
++        self._timer.timeout.connect(self._rotate)
++        self._update_size()
++        self._update_timer()
+         self.hide()
+         # END initialize()
+ 
+-        self.setWindowModality(modality)
++        self.set_modality(modality)
+         # self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+ 
+     def paintEvent(self, event):
+         painter = gui.Painter(self)
+         painter.fill_rect(self.rect(), "transparent")
+         painter.use_antialiasing()
+ 
+         if self._current_counter >= self._line_num:
+             self._current_counter = 0
+ 
+-        painter.set_pen("none")
+-        for i in range(0, self._line_num):
+-            painter.save()
+-            painter.translate(
+-                self._inner_radius + self._line_length,
+-                self._inner_radius + self._line_length,
+-            )
+-            rotate_angle = float(360 * i) / float(self._line_num)
+-            painter.rotate(rotate_angle)
+-            painter.translate(self._inner_radius, 0)
+-            distance = self.linecount_distance_from_primary(
+-                i, self._current_counter, self._line_num
+-            )
+-            color = self.current_line_color(
+-                distance,
+-                self._line_num,
+-                self._trail_fade_percentage,
+-                self._minimum_trail_opacity,
+-                self._color,
+-            )
+-            painter.setBrush(color)
+-            rect = core.Rect(
+-                0, -self._line_width / 2, self._line_length, self._line_width
+-            )
+-            painter.drawRoundedRect(
+-                rect, self._roundness, self._roundness, QtCore.Qt.RelativeSize
+-            )
+-            painter.restore()
++        painter.set_pen(style="none")
++        painter.translate(
++            self._inner_radius + self._line_length, self._inner_radius + self._line_length
++        )
++        rect = core.RectF(0, -self._line_width / 2, self._line_length, self._line_width)
++        for i in range(self._line_num):
++            with painter.backup_state():
++                rotate_angle = 360 * i / self._line_num
++                painter.rotate(rotate_angle)
++                painter.translate(self._inner_radius, 0)
++                distance = self.linecount_distance_from_primary(
++                    i, self._current_counter, self._line_num
++                )
++                color = self._current_line_color(
++                    distance,
++                    self._line_num,
++                    self._trail_fade_percentage,
++                    self._minimum_trail_opacity,
++                    self._color,
++                )
++                painter.setBrush(color)
++                painter.drawRoundedRect(
++                    rect,
++                    self._roundness,
++                    self._roundness,
++                    QtCore.Qt.SizeMode.RelativeSize,
++                )
+ 
+     def start(self):
+-        self._is_spinning = True
+         self.show()
+         if not self._timer.isActive():
+             self._timer.start()
+             self._current_counter = 0
+ 
+     def stop(self):
+-        self._is_spinning = False
+         self.hide()
+         if self._timer.isActive():
+             self._timer.stop()
+             self._current_counter = 0
+ 
+     def set_line_num(self, lines: int):
+         self._line_num = lines
+         self._current_counter = 0
+-        self.update_timer()
++        self._update_timer()
+ 
+     def set_line_length(self, length: int):
+         self._line_length = length
+-        self.update_size()
++        self._update_size()
+ 
+     def set_line_width(self, width: int):
+         self._line_width = width
+-        self.update_size()
+ 
+     def set_inner_radius(self, radius: int):
+         self._inner_radius = radius
+-        self.update_size()
++        self._update_size()
+ 
+-    def color(self):
++    def color(self) -> gui.Color:
+         return self._color
+ 
+-    def roundness(self):
++    def roundness(self) -> float:
+         return self._roundness
+ 
+-    def minimum_trail_opacity(self):
++    def minimum_trail_opacity(self) -> float:
+         return self._minimum_trail_opacity
+ 
+-    def trail_fade_percentage(self):
++    def trail_fade_percentage(self) -> float:
+         return self._trail_fade_percentage
+ 
+-    def revolutions_per_second(self):
++    def revolutions_per_second(self) -> float:
+         return self._revolutions_per_second
+ 
+     def line_num(self) -> int:
+         return self._line_num
+ 
+     def line_length(self) -> int:
+         return self._line_length
+@@ -154,102 +151,123 @@
+     def line_width(self) -> int:
+         return self._line_width
+ 
+     def inner_radius(self) -> int:
+         return self._inner_radius
+ 
+     def is_spinning(self) -> bool:
+-        return self._is_spinning
++        return self._timer.isActive()
+ 
+-    def set_roundness(self, roundness):
++    def set_roundness(self, roundness: float):
+         self._roundness = max(0.0, min(100.0, roundness))
+ 
+-    def set_color(self, color: colors.ColorType = "black"):
++    def set_color(self, color: types.ColorType = "black"):
+         self._color = colors.get_color(color)
+ 
+-    def set_revolutions_per_second(self, _revolutions_per_second):
++    def set_revolutions_per_second(self, _revolutions_per_second: float):
+         self._revolutions_per_second = _revolutions_per_second
+-        self.update_timer()
++        self._update_timer()
+ 
+-    def set_trail_fade_percentage(self, trail):
++    def set_trail_fade_percentage(self, trail: float):
+         self._trail_fade_percentage = trail
+ 
+-    def set_minimum_trail_opacity(self, minimum_trail_opacity):
++    def set_minimum_trail_opacity(self, minimum_trail_opacity: float):
+         self._minimum_trail_opacity = minimum_trail_opacity
+ 
+-    def rotate(self):
++    def _rotate(self):
+         self._current_counter += 1
+         if self._current_counter >= self._line_num:
+             self._current_counter = 0
+         self.update()
+ 
+-    def update_size(self):
++    def _update_size(self):
+         size = (self._inner_radius + self._line_length) * 2
+         self.setFixedSize(size, size)
+ 
+-    def update_timer(self):
+-        self._timer.setInterval(1000 / (self._line_num * self._revolutions_per_second))
+-
+-    def linecount_distance_from_primary(self, current, primary, total_lines):
++    def _update_timer(self):
++        divider = int(self._line_num * self._revolutions_per_second)
++        self._timer.setInterval(1000 // divider)
++
++    def linecount_distance_from_primary(
++        self, current: int, primary: int, total_lines: int
++    ) -> int:
+         distance = primary - current
+         if distance < 0:
+             distance += total_lines
+         return distance
+ 
+-    def current_line_color(
+-        self, count_distance, total_lines, fade_perc, min_opacity, color
+-    ):
++    def _current_line_color(
++        self,
++        count_distance: int,
++        total_lines: int,
++        fade_perc: float,
++        min_opacity: float,
++        color: gui.Color,
++    ) -> gui.Color:
++        color = gui.Color(color)
+         if count_distance == 0:
+             return color
+-        min_alpha_f = min_opacity / 100.0
+-        dist_threshold = int(math.ceil((total_lines - 1) * fade_perc / 100.0))
++        min_alpha_f = min_opacity / 100
++        dist_threshold = int(math.ceil((total_lines - 1) * fade_perc / 100))
+         if count_distance > dist_threshold:
+             color.setAlphaF(min_alpha_f)
+         else:
+-            alpha_diff = color.alphaF() - min_alpha_f
+-            gradient = alpha_diff / float(dist_threshold + 1)
+-            result_alpha = color.alphaF() - gradient * count_distance
++            alpha = color.alphaF()
++            alpha_diff = alpha - min_alpha_f
++            gradient = alpha_diff / (dist_threshold + 1)
++            result_alpha = alpha - gradient * count_distance
+             # If alpha is out of bounds, clip it.
+             result_alpha = min(1.0, max(0.0, result_alpha))
+             color.setAlphaF(result_alpha)
+         return color
+ 
+ 
+ class WaitingSpinner(BaseWaitingSpinner):
+     def __init__(
+         self,
+-        parent,
+-        center_on_parent=True,
+-        disable_parent=True,
+-        modality=QtCore.Qt.NonModal,
++        parent: QtWidgets.QWidget | None,
++        center_on_parent: bool = True,
++        disable_parent: bool = True,
++        modality: constants.ModalityStr = "none",
+         additional_disabled=None,
+     ):
+         super().__init__(parent=parent, modality=modality)
+         self._center_on_parent = center_on_parent
+         self._disable_parent = disable_parent
+-        self.additional_disabled = additional_disabled if additional_disabled else []
++        self.additional_disabled = additional_disabled or []
+ 
+     def paintEvent(self, event):
+-        self.update_position()
++        self._update_position()
+         super().paintEvent(event)
+ 
+     def start(self):
+-        self.update_position()
++        self._update_position()
+         super().start()
+         if self.parentWidget and self._disable_parent:
+             self.parentWidget().setEnabled(False)
+             for item in self.additional_disabled:
+                 item.setEnabled(False)
+ 
+     def stop(self):
+         super().stop()
+         if self.parentWidget() and self._disable_parent:
+             self.parentWidget().setEnabled(True)
+             for item in self.additional_disabled:
+                 item.setEnabled(True)
+ 
+-    def update_position(self):
+-        if self.parentWidget() and self._center_on_parent:
++    def _update_position(self):
++        parent = self.parentWidget()
++        if parent and self._center_on_parent:
+             self.move(
+-                self.parentWidget().width() / 2 - self.width() / 2,
+-                self.parentWidget().height() / 2 - self.height() / 2,
++                parent.width() // 2 - self.width() // 2,
++                parent.height() // 2 - self.height() // 2,
+             )
++
++
++if __name__ == "__main__":
++    app = widgets.app()
++    # app.set_theme("dark")
++    mainwindow = widgets.MainWindow()
++    spinner = WaitingSpinner(mainwindow)
++    mainwindow.show()
++    spinner.start()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/gui/color.py` & `prettyqt-1.0.0/prettyqt/gui/intvalidator.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,44 +1,32 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtGui
++from prettyqt import gui
++from prettyqt.qt import QtGui
+ 
+ 
+-class Color(QtGui.QColor):
++class IntValidator(gui.ValidatorMixin, QtGui.QIntValidator):
+     def __repr__(self):
+-        return f"Color({self.red()}, {self.green()}, {self.blue()}, {self.alpha()})"
++        return f"{type(self).__name__}({self.bottom()}, {self.top()})"
+ 
+-    def __str__(self):
+-        return self.name()
++    def __getstate__(self):
++        return dict(bottom=self.bottom(), top=self.top())
+ 
+     def __reduce__(self):
+-        return (self.__class__, (self.red(), self.green(), self.blue(), self.alpha()))
++        return type(self), (self.bottom(), self.top()), None
+ 
+-    def set_color(self, color):
+-        if isinstance(color, str):
+-            self.setNamedColor(color)
+-        else:
+-            self.setRgb(*color)
+-
+-    @classmethod
+-    def from_text(cls, text):
+-        """Create a QColor from specified string"""
+-        color = cls()
+-        text = str(text)
+-        if text.startswith("#") and len(text) == 7:
+-            correct = "#0123456789abcdef"
+-            for char in text:
+-                if char.lower() not in correct:
+-                    return color
+-        elif text not in list(cls.colorNames()):
+-            return color
+-        color.setNamedColor(text)
+-        return color
+-
+-    @classmethod
+-    def from_cmyk(cls, *args, **kwargs):
+-        return cls(cls.fromCmykF(*args, **kwargs))
+-
+-    def as_qt(self) -> QtGui.QColor:
+-        return QtGui.QColor(self)
++    def __eq__(self, other: object):
++        if not isinstance(other, type(self)):
++            return False
++        return self.bottom() == other.bottom() and self.top() == other.top()
++
++    def set_range(self, lower: int | None, upper: int | None):
++        if lower is None:
++            lower = 2147483647  # number from docs
++        if upper is None:
++            upper = 2147483647
++        self.setRange(lower, upper)
++
++
++if __name__ == "__main__":
++    val = IntValidator()
++    val.setRange(0, 9)
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/gui/painter.py` & `prettyqt-1.0.0/prettyqt/widgets/completer.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,121 +1,124 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtCore, QtGui
+-
+-from prettyqt import core, gui
+-from prettyqt.utils import bidict, colors
+-
+-
+-PEN_TYPES = bidict(none=QtCore.Qt.NoPen)
+-
+-COMP_MODES = bidict(
+-    source_over=QtGui.QPainter.CompositionMode_SourceOver,
+-    destination_over=QtGui.QPainter.CompositionMode_DestinationOver,
+-    clear=QtGui.QPainter.CompositionMode_Clear,
+-    source=QtGui.QPainter.CompositionMode_Source,
+-    destination=QtGui.QPainter.CompositionMode_Destination,
+-    source_in=QtGui.QPainter.CompositionMode_SourceIn,
+-    destination_in=QtGui.QPainter.CompositionMode_DestinationIn,
+-    source_out=QtGui.QPainter.CompositionMode_SourceOut,
+-    destination_out=QtGui.QPainter.CompositionMode_DestinationOut,
+-    source_atop=QtGui.QPainter.CompositionMode_SourceAtop,
+-    destination_atop=QtGui.QPainter.CompositionMode_DestinationAtop,
++from __future__ import annotations
++
++from typing import Literal
++
++from prettyqt import constants, core
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import InvalidParamError, bidict
++
++
++COMPLETION_MODE = bidict(
++    popup=QtWidgets.QCompleter.CompletionMode.PopupCompletion,
++    inline=QtWidgets.QCompleter.CompletionMode.InlineCompletion,
++    unfiltered_popup=QtWidgets.QCompleter.CompletionMode.UnfilteredPopupCompletion,
+ )
+ 
+-PATTERNS = bidict(
+-    solid=QtCore.Qt.SolidPattern,
+-    none=QtCore.Qt.NoBrush,
+-    cross=QtCore.Qt.CrossPattern,
+-    linear_gradient=QtCore.Qt.LinearGradientPattern,
+-    radial_gradient=QtCore.Qt.RadialGradientPattern,
++CompletionModeStr = Literal["popup", "inline", "unfiltered_popup"]
++
++SORT_MODE = bidict(
++    unsorted=QtWidgets.QCompleter.ModelSorting.UnsortedModel,
++    case_sensitive=QtWidgets.QCompleter.ModelSorting.CaseSensitivelySortedModel,
++    case_insensitive=QtWidgets.QCompleter.ModelSorting.CaseInsensitivelySortedModel,
+ )
+ 
++SortModeStr = Literal["unsorted", "case_sensitive", "case_insensitive"]
+ 
+-class Painter(QtGui.QPainter):
+-    def __enter__(self):
+-        return self
+-
+-    def __exit__(self, typ, value, traceback):
+-        self.end()
+-
+-    def draw_image(self, point, frame_buffer):
+-        self.set_composition_mode("source_atop")
+-        self.drawImage(point, frame_buffer)
+-
+-    def use_antialiasing(self):
+-        self.setRenderHint(self.Antialiasing, True)
+-
+-    def fill_rect(self, rect, color, pattern="solid"):
+-        if pattern not in PATTERNS:
+-            raise ValueError(f"Invalid pattern. Valid values: {PATTERNS.keys()}")
+-        if isinstance(rect, tuple):
+-            rect = core.Rect(*rect)
+-        if isinstance(color, str):
+-            if color not in gui.Color.colorNames():
+-                raise ValueError("Invalid value for color.")
+-            color = gui.Color(color)
+-        if pattern != "solid":
+-            color = gui.Brush(color, PATTERNS[pattern])
+-        self.fillRect(rect, color)
+ 
+-    def set_pen(self, pen_type: str):
+-        """set pen type to use
++class Completer(core.ObjectMixin, QtWidgets.QCompleter):
++    def __init__(self, parent: QtWidgets.QWidget | None = None):
++        super().__init__(parent)
+ 
+-        Allowed values are "none",
++    def set_sort_mode(self, mode: SortModeStr | None):
++        """Set sort mode to use.
+ 
+         Args:
+-            pen_type: pen type to use
++            mode: sort mode to use
+ 
+         Raises:
+-            ValueError: pen type does not exist
++            InvalidParamError: sort mode does not exist
+         """
+-        if pen_type not in PEN_TYPES:
+-            raise ValueError(f"Invalid pen type. Valid values: {PEN_TYPES.keys()}")
+-        self.setPen(PEN_TYPES[pen_type])
+-
+-    def get_pen(self) -> str:
+-        """returns current pen type
++        if mode is None:
++            mode = "unsorted"
++        if mode not in SORT_MODE:
++            raise InvalidParamError(mode, SORT_MODE)
++        self.setModelSorting(SORT_MODE[mode])
+ 
+-        Possible values: "none",
++    def get_sort_mode(self) -> SortModeStr:
++        """Return current sort mode.
+ 
+         Returns:
+-            pen type
++            sort mode
++        """
++        return SORT_MODE.inverse[self.modelSorting()]
++
++    def set_completion_mode(self, mode: CompletionModeStr):
++        """Set completion mode to use.
++
++        Args:
++            mode: completion mode to use
++
++        Raises:
++            InvalidParamError: completion mode does not exist
+         """
+-        return PEN_TYPES.inv[self.pen()]
++        if mode not in COMPLETION_MODE:
++            raise InvalidParamError(mode, COMPLETION_MODE)
++        self.setCompletionMode(COMPLETION_MODE[mode])
++
++    def get_completion_mode(self) -> CompletionModeStr:
++        """Return current completion mode.
+ 
+-    def set_color(self, color: colors.ColorType):
+-        color = colors.get_color(color)
+-        self.setPen(color)
++        Returns:
++            completion mode
++        """
++        return COMPLETION_MODE.inverse[self.completionMode()]
+ 
+-    def set_composition_mode(self, mode: str):
+-        """set the current composition mode
++    def set_filter_mode(self, mode: constants.FilterModeStr):
++        """Set filter mode to use.
+ 
+-        Possible values: "source_over", "destination_over", "clear", "source",
+-                         "destination", "source_in", "destination_in", "source_out",
+-                         "destination_out", "source_atop", "destination_atop",
++        Args:
++            mode: filter mode to use
+ 
+         Raises:
+-            ValueError: composition mode does not exist
++            InvalidParamError: filter mode does not exist
++        """
++        if mode not in constants.FILTER_MODES:
++            raise InvalidParamError(mode, constants.FILTER_MODES)
++        self.setFilterMode(constants.FILTER_MODES[mode])
++
++    def get_filter_mode(self) -> constants.FilterModeStr:
++        """Return current filter mode.
++
++        Returns:
++            filter mode
++        """
++        return constants.FILTER_MODES.inverse[self.filterMode()]
++
++    def set_case_sensitive(self, state: bool):
++        """Set case sensitivity.
++
++        Args:
++            state: case sensitive
++
+         """
+-        if mode not in COMP_MODES:
+-            raise ValueError(
+-                "Invalid composition mode." f" Valid values: {COMP_MODES.keys()}"
+-            )
+-        self.setCompositionMode(COMP_MODES[mode])
+-
+-    def get_composition_mode(self) -> str:
+-        """get the current composition mode
+-
+-        Possible values: "source_over", "destination_over", "clear", "source",
+-                         "destination", "source_in", "destination_in", "source_out",
+-                         "destination_out", "source_atop", "destination_atop",
++        sensitivity = (
++            QtCore.Qt.CaseSensitivity.CaseSensitive
++            if state
++            else QtCore.Qt.CaseSensitivity.CaseInsensitive
++        )
++        self.setCaseSensitivity(sensitivity)
++
++    def is_case_sensitive(self) -> bool:
++        """Return case sensitivity.
+ 
+         Returns:
+-            composition mode
++            case sensitivity
+         """
+-        return COMP_MODES.inv[self.compositionMode()]
++        return bool(self.caseSensitivity())
++
++
++if __name__ == "__main__":
++    from prettyqt import widgets
+ 
+-    def draw_text(self, x, y, text):
+-        self.drawText(x, y, text)
++    app = widgets.app()
++    completer = Completer()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/gui/regularexpressionvalidator.py` & `prettyqt-1.0.0/prettyqt/gui/regularexpressionvalidator.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,33 +1,35 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtGui
++from __future__ import annotations
+ 
+ from prettyqt import core, gui
++from prettyqt.qt import QtGui
+ 
+ 
+-QtGui.QRegularExpressionValidator.__bases__ = (gui.Validator,)
+-
+-
+-class RegularExpressionValidator(QtGui.QRegularExpressionValidator):
++class RegularExpressionValidator(gui.ValidatorMixin, QtGui.QRegularExpressionValidator):
+     def __repr__(self):
+-        return f"RegularExpressionValidator(RegularExpression({self.get_regex()!r}))"
++        return f"{type(self).__name__}(RegularExpression({self.get_regex()!r}))"
+ 
+     def __getstate__(self):
+         return dict(pattern=core.RegularExpression(self.regularExpression()))
+ 
+     def __setstate__(self, state):
+-        self.__init__()
+         self.setRegularExpression(state["pattern"])
+ 
+-    def set_regex(self, regex: str, flags=0):
+-        re = core.RegularExpression(regex, flags)
+-        self.setRegularExpression(re)
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
++    def __eq__(self, other: object):
++        if not isinstance(other, type(self)):
++            return False
++        return self.regularExpression() == other.regularExpression()
++
++    def set_regex(self, regex: str | core.RegularExpression, flags=0):
++        if isinstance(regex, str):
++            regex = core.RegularExpression(regex, flags)
++        self.setRegularExpression(regex)
+ 
+     def get_regex(self) -> str:
+         val = self.regularExpression()
+         return val.pattern()
+ 
+ 
+ if __name__ == "__main__":
+@@ -35,8 +37,8 @@
+ 
+     app = widgets.app()
+     w = widgets.LineEdit()
+     val = RegularExpressionValidator()
+     val.set_regex(r"\w\d\d")
+     w.set_validator(val)
+     w.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/gui/regularexpressionvalidator_pyside.py` & `prettyqt-1.0.0/prettyqt/custom_validators/integervalidator.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,56 +1,34 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from prettyqt import core, gui
+-
+-
+-class RegularExpressionValidator(gui.Validator):
+-    def __init__(self, regex=None):
+-        super().__init__()
+-        self.regex = None
+-        self.set_regex(regex)
+-
+-    def __repr__(self):
+-        return f"RegularExpressionValidator(RegularExpression({self.get_regex()!r}))"
+-
+-    def __getstate__(self):
+-        return dict(regexp=core.RegularExpression(self.regex))
+-
+-    def __setstate__(self, state):
+-        self.__init__()
+-        self.regex = state["regexp"]
+-
+-    def setRegularExpression(self, re):
+-        self.regex = re
+-
+-    def regularExpression(self):
+-        return self.regex
+-
+-    def set_regex(self, regex: str, flags: int = 0):
+-        self.regex = core.RegularExpression(regex, flags)
+-
+-    def get_regex(self) -> str:
+-        return self.regex.pattern()
+-
+-    def validate(self, text: str, pos: int = 0) -> tuple:
+-        if text == "":
+-            return (self.Intermediate, text, pos)
+-        match = self.regex.match(text, match_type="prefer_first")
+-        if match.hasPartialMatch():
+-            return (self.Intermediate, text, pos)
+-        if match.hasMatch():
+-            return (self.Acceptable, text, pos)
+-        return (self.Invalid, text, pos)
++from __future__ import annotations
++
++from prettyqt import gui
++from prettyqt.qt import QtCore
++
++
++class IntegerValidator(gui.Validator):
++    def __init__(self, parent: QtCore.QObject | None = None):
++        super().__init__(parent)
++        self.range: tuple[int | None, int | None] = (None, None)
++
++    def set_range(self, lower: int | None, upper: int | None):
++        self.range = (lower, upper)
++
++    def validate(self, text: str, pos: int):
++        if not text.lstrip("-"):
++            return self.State.Intermediate, text, len(text)
++        if text.lstrip("-").isnumeric():
++            left = float("-inf") if self.range[0] is None else self.range[0]
++            right = float("inf") if self.range[1] is None else self.range[1]
++            if left <= int(text) <= right:
++                return self.State.Acceptable, text, len(text)
++        return self.State.Invalid, text, len(text)
+ 
+ 
+ if __name__ == "__main__":
+     from prettyqt import widgets
+ 
++    val = IntegerValidator()
+     app = widgets.app()
+-    w = widgets.LineEdit()
+-    val = RegularExpressionValidator()
+-    val.set_regex(r"\w\d\d")
+-    w.set_validator(val)
+-    w.show()
+-    app.exec_()
++    widget = widgets.LineEdit("This is a test")
++    widget.setValidator(val)
++    widget.show()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/gui/validator.py` & `prettyqt-1.0.0/prettyqt/custom_validators/notemptyvalidator.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,35 +1,27 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtGui
++from prettyqt import gui
++from prettyqt.qt import QtGui
+ 
+-from prettyqt import core
+ 
+-
+-QtGui.QValidator.__bases__ = (core.Object,)
+-
+-
+-class Validator(QtGui.QValidator):
+-    def __repr__(self):
+-        return f"{self.__class__.__name__}()"
+-
+-    def __add__(self, other):
+-        if isinstance(other, Validator):
+-            from prettyqt import custom_validators
+-
+-            return custom_validators.CompositeValidator([self, other])
+-
+-    def __radd__(self, other: QtGui.QValidator):
+-        """
+-        needed for sum()
+-        """
+-        return self.__add__(other)
+-
+-    def is_valid_value(self, value: str, pos: int = 0) -> bool:
+-        val = self.validate(value, pos)
+-        return val[0] == self.Acceptable
++class NotEmptyValidator(gui.Validator):
++    def __eq__(self, other: object):
++        return isinstance(other, NotEmptyValidator)
++
++    def validate(  # type: ignore
++        self, text: str, pos: int = 0
++    ) -> tuple[QtGui.QValidator.State, str, int]:
++        if text == "":
++            return (self.State.Intermediate, text, pos)
++        return self.State.Acceptable, text, pos
+ 
+ 
+ if __name__ == "__main__":
+-    val = Validator()
++    from prettyqt import widgets
++
++    val = NotEmptyValidator()
++    app = widgets.app()
++    widget = widgets.LineEdit("This is a test")
++    widget.setValidator(val)
++    widget.show()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/re.py` & `prettyqt-1.0.0/prettyqt/qtre.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,25 +1,25 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
++from collections.abc import Iterator
+ import re
+-from typing import Callable, Dict, Iterator, List, Optional, Tuple, Union
+-
+-from qtpy import QtCore
++from typing import Any, Callable
+ 
+ from prettyqt import core
++from prettyqt.qt import QtCore
+ from prettyqt.utils import bidict
+ 
+ 
+ # IGNORECASE = QtCore.QRegularExpression.CaseInsensitiveOption
+ # MULTILINE = QtCore.QRegularExpression.MultilineOption
+ # DOTALL = QtCore.QRegularExpression.DotMatchesEverythingOption
+ # VERBOSE = QtCore.QRegularExpression.ExtendedPatternSyntaxOption
+ 
++DONT_ESCAPE = {"!", '"', "%", "'", ",", "/", ":", ";", "<", "=", ">", "@", "`"}
++
+ IGNORECASE = re.IGNORECASE
+ MULTILINE = re.MULTILINE
+ DOTALL = re.DOTALL
+ VERBOSE = re.VERBOSE
+ 
+ MAP = bidict(
+     {
+@@ -37,148 +37,144 @@
+         self.string = None
+         self.pos = None
+         self.endpos = None
+ 
+     def __repr__(self):
+         return f"<re.Match object; span={self.span()}, match={self.groups()}>"
+ 
+-    def __getitem__(self, item):
+-        return self.group(item)
++    def __getitem__(self, item: str | int) -> str:
++        return self.captured(item)
+ 
+-    def group(self, *groups: Union[str, int]) -> Union[tuple, str]:
++    def group(self, *groups: str | int) -> tuple | str:
+         if len(groups) > 1:
+             return tuple(self.captured(i) for i in groups)
+         if len(groups) == 0:
+             return self.captured(0)
+         return self.captured(groups[0])
+ 
+     def groups(self, default=None) -> tuple:
+         if self.lastindex is None:
+             return tuple()
+         return tuple(
+             self.group(i) if i <= self.lastindex else default
+             for i in range(self.re.captureCount())
+         )
+ 
+-    def groupdict(self, default=None) -> dict:
++    def groupdict(self, default=None) -> dict[str, Any]:
+         if self.lastindex is None:
+-            return dict()
++            return {}
+         groups = [
+             self.group(i) if i <= self.lastindex else default
+             for i in range(self.re.captureCount())
+         ]
+         names = self.re.namedCaptureGroups()
+         return {names[i]: groups[i] for i in range(self.re.captureCount())}
+ 
+     def start(self, group: int = 0) -> int:
+         return self.capturedStart(group)
+ 
+     def end(self, group: int = 0) -> int:
+         return self.capturedEnd(group)
+ 
+-    def span(self, group: int = 0) -> tuple:
++    def span(self, group: int = 0) -> tuple[int, int]:
+         return (self.capturedStart(group), self.capturedEnd(group))
+ 
+     @property
+-    def lastindex(self) -> Optional[int]:
++    def lastindex(self) -> int | None:
+         idx = self.lastCapturedIndex()
+         return None if idx == -1 else idx
+ 
+     @property
+-    def lastgroup(self) -> Optional[str]:
++    def lastgroup(self) -> str | None:
+         if self.lastCapturedIndex() == -1:
+             return None
+         return self.re.namedCaptureGroups()[self.lastCapturedIndex()]
+ 
+     @property
+-    def re(self):
++    def re(self) -> QtCore.QRegularExpression:
+         return self.regularExpression()
+ 
+     @property
+-    def partial(self):
++    def partial(self) -> bool:
+         return self.hasPartialMatch()
+ 
+ 
+ class Pattern(core.RegularExpression):
+-    def __init__(self, pattern="", flags=0):
++    def __init__(self, pattern: str = "", flags: int = 0):
+         flag = QtCore.QRegularExpression.NoPatternOption
+         for k, v in MAP.items():
+             if k & flags:
+                 flag |= v
+-        super().__init__(pattern, flags)
+-
+-    def __repr__(self):
+-        return f"RegularExpression({self.pattern()!r})"
++        super().__init__(pattern, flag)
+ 
+     def match(  # type: ignore[override]
+-        self, string: str, pos: int = 0, endpos: Optional[int] = None
+-    ) -> Optional[Match]:
++        self, string: str, pos: int = 0, endpos: int | None = None
++    ) -> Match | None:
+         match = super().match(string[:endpos], pos)
+         return Match(match) if match.hasMatch() else None
+ 
+     def fullmatch(
+-        self, string: str, pos: int = 0, endpos: Optional[int] = None
+-    ) -> Optional[Match]:
++        self, string: str, pos: int = 0, endpos: int | None = None
++    ) -> Match | None:
+         if endpos:
+             string = string[:endpos]
+         match = super().match(string, pos)
+         if match.hasMatch() and len(string) == match.end() - match.start():
+             return Match(match)
+         else:
+             return None
+ 
+     def finditer(
+-        self, string: str, pos: int = 0, endpos: Optional[int] = None
++        self, string: str, pos: int = 0, endpos: int | None = None
+     ) -> Iterator[Match]:
+         for match in self.globalMatch(string[:endpos], offset=pos):
+             match.pos = pos
+             match.endpos = endpos
+             match.string = string
+             yield match
+ 
+-    def findall(self, string: str, pos: int = 0, endpos: Optional[int] = None) -> list:
+-        matches = [m for m in self.globalMatch(string[:endpos], offset=pos)]
++    def findall(self, string: str, pos: int = 0, endpos: int | None = None) -> list:
++        matches = list(self.globalMatch(string[:endpos], offset=pos))
+         return [m.groups() if len(m.groups()) > 1 else m.group(0) for m in matches]
+ 
+-    def subn(self, repl: Union[str, Callable], string: str, count: int = 0):
++    def subn(self, repl: str | Callable, string: str, count: int = 0):
+         result = string
+         matches = self.global_match(string)
+         matches = list(matches)
+         if count > 0:
+             matches = matches[:count]
+         matches = list(reversed(matches))
+         for m in matches:
+             to_replace = repl if isinstance(repl, str) else repl(m)
+             for j in range(self.groups):
+-                to_replace = to_replace.replace(fr"\g<{j}>", m.group(j))
++                to_replace = to_replace.replace(rf"\g<{j}>", m.group(j))
+             for k, v in self.groupindex.items():
+-                to_replace = to_replace.replace(fr"\g<{k}>", m.group(v))
++                to_replace = to_replace.replace(rf"\g<{k}>", m.group(v))
+             result = result[: m.start()] + to_replace + result[m.end() :]
+         return (result, min(len(matches), count))
+ 
+-    def sub(self, repl: Union[str, Callable], string: str, count: int = 0):
++    def sub(self, repl: str | Callable, string: str, count: int = 0):
+         res = self.subn(repl, string, count)
+         return res[0]
+ 
+-    def search(self, string: str, pos: int = 0, endpos: Optional[int] = None):
++    def search(self, string: str, pos: int = 0, endpos: int | None = None):
+         match = super().match(string[:endpos], pos)
+         return match if match.hasMatch() else None
+ 
+     def split(self, string: str, maxsplit: int = 0):
+-        result = list()
++        result = []
+         matches = self.global_match(string)
+         matches = list(matches)
+         prev_match = None
+         num_split = min(maxsplit, len(matches)) if maxsplit > 0 else len(matches)
+         if matches[0].start() == 0:
+             result.append("")
+         else:
+             result.append(string[0 : matches[0].start()])
+         for m in matches[:num_split]:
+-            print(m.span())
+             if prev_match is not None:
+                 result.append(string[prev_match.end() : m.start()])
+             for g in m.groups():
+                 result.append(g)
+             prev_match = m
+         if matches[num_split - 1].end() == len(string):
+             result.append("")
+@@ -188,50 +184,48 @@
+         return result
+ 
+     @property
+     def groups(self) -> int:
+         return self.captureCount()
+ 
+     @property
+-    def groupindex(self) -> Dict[str, int]:
++    def groupindex(self) -> dict[str, int]:
+         return {k: i for i, k in enumerate(self.namedCaptureGroups()[1:], start=1)}
+ 
+     @property
+     def flags(self):
+         return self.patternOptions()
+ 
+ 
+ def compile(pattern: str, flags: int = 0) -> Pattern:
+     return Pattern(pattern, flags)
+ 
+ 
+-def search(pattern: str, string: str, flags: int = 0) -> Optional[core.RegularExpression]:
++def search(pattern: str, string: str, flags: int = 0) -> core.RegularExpression | None:
+     compiled = compile(pattern, flags)
+     match = compiled.search(string)
+     return match
+ 
+ 
+-def match(pattern: str, string: str, flags: int = 0) -> Optional[core.RegularExpression]:
++def match(pattern: str, string: str, flags: int = 0) -> core.RegularExpression | None:
+     compiled = compile(pattern, flags)
+     return compiled.match(string)
+ 
+ 
+-def fullmatch(
+-    pattern: str, string: str, flags: int = 0
+-) -> Optional[core.RegularExpression]:
++def fullmatch(pattern: str, string: str, flags: int = 0) -> core.RegularExpression | None:
+     compiled = compile(pattern, flags)
+     return compiled.fullmatch(string)
+ 
+ 
+ # def split(pattern: str, string: str, maxsplit=0, flags=0) -> list:
+ #     compiled = compile(pattern, flags)
+ #     return compiled.split(string, maxsplit)
+ 
+ 
+-def findall(pattern: str, string: str, flags: int = 0) -> List[str]:
++def findall(pattern: str, string: str, flags: int = 0) -> list[str]:
+     compiled = compile(pattern, flags)
+     return compiled.findall(string)
+ 
+ 
+ def finditer(pattern, string: str, flags: int = 0):
+     compiled = compile(pattern, flags)
+     return compiled.finditer(string)
+@@ -240,22 +234,21 @@
+ def sub(pattern: str, repl: str, string: str, count: int = 0, flags: int = 0) -> str:
+     compiled = compile(pattern, flags)
+     return compiled.sub(repl, string, count)
+ 
+ 
+ def subn(
+     pattern: str, repl: str, string: str, count: int = 0, flags: int = 0
+-) -> Tuple[str, int]:
++) -> tuple[str, int]:
+     compiled = compile(pattern, flags)
+     return compiled.subn(repl, string, count)
+ 
+ 
+ def escape(pattern: str):
+-    dont_escape = ["!", '"', "%", "'", ",", "/", ":", ";", "<", "=", ">", "@", "`"]
+     result = core.RegularExpression.escape(pattern)
+-    for i in dont_escape:
++    for i in DONT_ESCAPE:
+         result.replace(i, r"\i")
+     return result
+ 
+ 
+ if __name__ == "__main__":
+     reg = compile("[0-9]+ [a-z] [0-9]+")
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/syntaxhighlighters/__init__.py` & `prettyqt-1.0.0/prettyqt/syntaxhighlighters/__init__.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,10 +1,8 @@
+-# -*- coding: utf-8 -*-
+-
+-"""syntaxhighlighters module
++"""syntaxhighlighters module.
+ 
+ contains some custom syntax highlighers
+ """
+ 
+ from .highlightrule import HighlightRule
+ from .jsonhighlighter import JsonHighlighter
+ from .pythonhighlighter import PythonHighlighter
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/syntaxhighlighters/jsonhighlighter.py` & `prettyqt-1.0.0/prettyqt/syntaxhighlighters/jsonhighlighter.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,10 +1,8 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+ import regex as re
+ 
+ from prettyqt import gui
+ 
+ 
+ BRACKETS = re.compile(r"(\{|\}|\[|\]|\:|\,)")
+@@ -20,16 +18,15 @@
+ 
+ VALUE_FORMAT = gui.TextCharFormat()
+ VALUE_FORMAT.set_foreground_color("darkgreen")
+ 
+ 
+ class JsonHighlighter(gui.SyntaxHighlighter):
+     def highlightBlock(self, text: str):
+-        """ Highlight a block of code using the rules outlined in the Constructor
+-        """
++        """Highlight a block of code using the rules outlined in the Constructor."""
+         for m in BRACKETS.finditer(text):
+             self.setFormat(m.span()[0], m.span()[1] - m.span()[0], SYMBOL_FORMAT)
+ 
+         text.replace('\\"', "  ")
+         for m in REGEXP1.finditer(text):
+             self.setFormat(m.span()[0], m.span()[1] - m.span()[0], NAME_FORMAT)
+         for m in REGEXP2.finditer(text):
+@@ -39,8 +36,8 @@
+ if __name__ == "__main__":
+     from prettyqt import widgets
+ 
+     app = widgets.app()
+     editor = widgets.PlainTextEdit()
+     highlighter = JsonHighlighter(editor.document())
+     editor.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/syntaxhighlighters/markdownhighlighter.py` & `prettyqt-1.0.0/prettyqt/syntaxhighlighters/markdownhighlighter.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,11 +1,10 @@
+-# -*- coding: utf-8 -*-
+-"""
+-Syntax highlighter for Markdown markup language
+-"""
++"""Syntax highlighter for Markdown markup language."""
++
++from __future__ import annotations
+ 
+ from prettyqt import core, gui, syntaxhighlighters
+ 
+ 
+ BASE_FONT = 12.0
+ 
+ 
+@@ -74,59 +73,63 @@
+ class Strong(Rule):
+     regex = r"(\*{2})([^\*\*]+)\1"
+     color = "#D19A66"
+     bold = True
+ 
+ 
+ class Code(Rule):
+-    regex = [r"`[^`]*`", r"^((?:(?:[ ]{4}|\t).*(\R|$))+)"]
++    regex = [r"`[^`]*`", r"^((?:(?:[ ]{4}|\t).*(\\R|$))+)"]
+     color = "grey"
+ 
+ 
+-TRI_SINGLE = (core.RegExp("```"), Code.get_format())
++TRI_SINGLE = (core.RegularExpression("```"), Code.get_format())
+ 
+ 
+ class MarkdownHighlighter(gui.SyntaxHighlighter):
+-
+     RULES = Rule.__subclasses__()
+ 
+     def highlightBlock(self, text: str):
+         super().highlightBlock(text)
+         self.setCurrentBlockState(0)
+         self._match_multiline(text, *TRI_SINGLE)
+ 
+-    def _match_multiline(self, text, delimiter, style):
++    def _match_multiline(
++        self, text: str, delimiter: core.RegularExpression, style: gui.TextCharFormat
++    ):
+         # If inside triple-single quotes, start at 0
+         if self.previousBlockState() == 1:
+             start = 0
+             add = 0
+         # Otherwise, look for the delimiter on this line
+         else:
+-            start = delimiter.indexIn(text)
+-            # Move past this match
+-            add = delimiter.matchedLength()
++            match = delimiter.match(text)
++            if not match.hasMatch():
++                return
++            start = match.capturedStart()
++            add = match.capturedLength()
+ 
+         # As long as there's a delimiter match on this line...
+         while start >= 0:
+             # Look for the ending delimiter
+-            end = delimiter.indexIn(text, start + add)
++            match = delimiter.match(text, start + add)
++            end = match.capturedStart()
+             # Ending delimiter on this line?
+             if end >= add:
+-                length = end - start + add + delimiter.matchedLength()
++                length = end + match.capturedLength()
+                 self.setCurrentBlockState(0)
+             # No; multi-line string
+             else:
+                 self.setCurrentBlockState(1)
+-                length = len(text) - start + add
+-            self.setFormat(start, length, style)
++                length = len(text)
++            self.setFormat(start, length - start + add, style)
+             # Look for the next match
+-            start = delimiter.indexIn(text, start + length)
++            start = delimiter.match(text, start + length).capturedStart()
+ 
+ 
+ if __name__ == "__main__":
+     from prettyqt import widgets
+ 
+     app = widgets.app()
+     editor = widgets.PlainTextEdit()
+     highlighter = MarkdownHighlighter(editor.document())
+     editor.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/syntaxhighlighters/pygments/regularexpressionlexer.py` & `prettyqt-1.0.0/prettyqt/syntaxhighlighters/pygments/regularexpressionlexer.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,16 +1,17 @@
+-# -*- coding: utf-8 -*-
++from __future__ import annotations
++
+ from pygments.lexer import RegexLexer, bygroups
+ from pygments.token import Comment, Keyword, Name, Number, Operator, Text, Token
+ 
+ 
+ class CustomLexer(RegexLexer):
+     name = "regex"
+     aliases = ["regex"]
+-    filenames = []
++    filenames: list[str] = []
+ 
+     tokens = {
+         "root": [
+             (r"\w+", Name),
+             (r"\d+", Number),
+             (r"[\s\,\:\-\"\']+", Text),
+             (r"[\$\^]", Token),
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/syntaxhighlighters/pygmentshighlighter.py` & `prettyqt-1.0.0/prettyqt/syntaxhighlighters/pygmentshighlighter.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,56 +1,60 @@
+-# -*- coding: utf-8 -*-
++from __future__ import annotations
+ 
+-import pathlib
++import functools
++import logging
+ 
+ from pygments.formatters.html import HtmlFormatter
+ from pygments.lexer import Error, RegexLexer, Text, _TokenType
+ from pygments.lexers import get_lexer_by_name, load_lexer_from_file
++from pygments.style import Style
+ from pygments.styles import get_style_by_name
+ 
+-from prettyqt import gui
++from prettyqt import gui, paths
++from prettyqt.qt import QtGui
+ 
+ 
+-def qstring_length(text):
+-    """
+-    Tries to compute what the length of an utf16-encoded QString would be.
+-    """
++logger = logging.getLogger(__name__)
++
++
++def qstring_length(text: str) -> int:
++    """Tries to compute what the length of an utf16-encoded QString would be."""
+     utf16_text = text.encode("utf16")
+     length = len(utf16_text) // 2
+     # Remove Byte order mark.
+     # TODO: All unicode Non-characters should be removed
+     if utf16_text[:2] in [b"\xff\xfe", b"\xff\xff", b"\xfe\xff"]:
+         length -= 1
+     return length
+ 
+ 
+-def get_tokens_unprocessed(self, text, stack=("root",)):
+-    """ Split ``text`` into (tokentype, text) pairs.
++def get_tokens_unprocessed(self, text: str, stack=("root",)):
++    """Split ``text`` into (tokentype, text) pairs.
+ 
+-        Monkeypatched to store the final stack on the object itself.
++    Monkeypatched to store the final stack on the object itself.
+ 
+-        The `text` parameter this gets passed is only the current line, so to
+-        highlight things like multiline strings correctly, we need to retrieve
+-        the state from the previous line (this is done in PygmentsHighlighter,
+-        below), and use it to continue processing the current line.
++    The `text` parameter this gets passed is only the current line, so to
++    highlight things like multiline strings correctly, we need to retrieve
++    the state from the previous line (this is done in PygmentsHighlighter,
++    below), and use it to continue processing the current line.
+     """
+     pos = 0
+     tokendefs = self._tokens
+     if hasattr(self, "_saved_state_stack"):
+         statestack = list(self._saved_state_stack)
+     else:
+         statestack = list(stack)
+     statetokens = tokendefs[statestack[-1]]
+-    while 1:
++    while True:
+         for rexmatch, action, new_state in statetokens:
+             m = rexmatch(text, pos)
+             if not m:
+                 continue
+             if action is not None:
+-                if type(action) is _TokenType:
++                if isinstance(action, _TokenType):
+                     yield pos, action, m.group()
+                 else:
+                     yield from action(self, m)
+             pos = m.end()
+             if new_state is None:
+                 break
+             # state transition
+@@ -64,59 +68,58 @@
+                         statestack.append(state)
+             elif isinstance(new_state, int):
+                 # pop
+                 del statestack[new_state:]
+             elif new_state == "#push":
+                 statestack.append(statestack[-1])
+             else:
+-                assert False, "wrong state def: %r" % new_state
++                assert False, f"wrong state def: {new_state!r}"
+             statetokens = tokendefs[statestack[-1]]
+             break
+         else:
+             try:
+                 if text[pos] == "\n":
+                     # at EOL, reset state to "root"
+-                    pos += 1
+                     statestack = ["root"]
+                     statetokens = tokendefs["root"]
+-                    yield pos, Text, "\n"
+-                    continue
+-                yield pos, Error, text[pos]
++                    yield pos + 1, Text, "\n"
++                else:
++                    yield pos, Error, text[pos]
+                 pos += 1
+             except IndexError:
+                 break
+     self._saved_state_stack = list(statestack)
+ 
+ 
+ # Monkeypatch!
+ RegexLexer.get_tokens_unprocessed = get_tokens_unprocessed
+ 
+ 
+ class PygmentsHighlighter(gui.SyntaxHighlighter):
+-    """ Syntax highlighter that uses Pygments for parsing. """
++    """Syntax highlighter that uses Pygments for parsing."""
+ 
+     # ---------------------------------------------------------------------------
+     #  "QSyntaxHighlighter" interface
+     # ---------------------------------------------------------------------------
+ 
+-    def __init__(self, parent, lexer=None):
++    def __init__(self, parent: QtGui.QTextDocument, lexer: str, style: str = "default"):
+         super().__init__(parent)
+         self._document = self.document()
+         self._formatter = HtmlFormatter(nowrap=True)
+-        self.set_style("default")
++        self.set_style(style)
+         if lexer == "regex":
+-            path = pathlib.Path(__file__).parent
+-            path = path / "pygments" / "regularexpressionlexer.py"
+-            self._lexer = load_lexer_from_file(str(path))
++            self._lexer = load_lexer_from_file(str(paths.RE_LEXER_PATH))
+         else:
+             self._lexer = get_lexer_by_name(lexer)
+ 
++    def __repr__(self):
++        return f"{type(self).__name__}(lexer={self._lexer.aliases[0]!r})"
++
+     def highlightBlock(self, string):
+-        """ Highlight a block of text.
+-        """
++        """Highlight a block of text."""
+         prev_data = self.currentBlock().previous().userData()
+         if prev_data is not None:
+             self._lexer._saved_state_stack = prev_data.syntax_stack
+         elif hasattr(self._lexer, "_saved_state_stack"):
+             del self._lexer._saved_state_stack
+ 
+         # Lex the text using Pygments
+@@ -132,25 +135,26 @@
+             # Clean up for the next go-round.
+             del self._lexer._saved_state_stack
+ 
+     # ---------------------------------------------------------------------------
+     # "PygmentsHighlighter" interface
+     # ---------------------------------------------------------------------------
+ 
+-    def set_style(self, style):
+-        """ Sets the style to the specified Pygments style.
+-        """
+-        if isinstance(style, str):
++    def set_style(self, style: None | str | Style):
++        if style is None:
++            style = get_style_by_name("default")
++        elif isinstance(style, str):
+             style = get_style_by_name(style)
+         self._style = style
+         self._clear_caches()
+ 
+-    def set_style_sheet(self, stylesheet):
+-        """ Sets a CSS stylesheet. The classes in the stylesheet should
+-        correspond to those generated by:
++    def set_style_sheet(self, stylesheet: str):
++        """Sets a CSS stylesheet.
++
++        The classes in the stylesheet should correspond to those generated by:
+ 
+             pygmentize -S <style> -f html
+ 
+         Note that "set_style" and "set_style_sheet" completely override each
+         other, i.e. they cannot be used in conjunction.
+         """
+         self._document.setDefaultStyleSheet(stylesheet)
+@@ -158,45 +162,42 @@
+         self._clear_caches()
+ 
+     # ---------------------------------------------------------------------------
+     # Protected interface
+     # ---------------------------------------------------------------------------
+ 
+     def _clear_caches(self):
+-        """ Clear caches for brushes and formats.
+-        """
+-        self._brushes = {}
+-        self._formats = {}
+-
+-    def _get_format(self, token):
+-        """ Returns a QTextCharFormat for token or None.
+-        """
+-        if token in self._formats:
+-            return self._formats[token]
+-
++        """Clear caches for brushes and formats."""
++        self._get_brush.cache_clear()
++        self._get_format.cache_clear()
++
++    @functools.cache
++    def _get_format(self, token: str) -> QtGui.QTextCharFormat:
++        """Returns a QTextCharFormat for token or None."""
+         if self._style is None:
+-            result = self._get_format_from_document(token, self._document)
++            return self._get_format_from_document(token, self._document)
+         else:
+-            result = self._get_format_from_style(token, self._style)
+-
+-        self._formats[token] = result
+-        return result
++            return self._get_format_from_style(token, self._style)
+ 
+-    def _get_format_from_document(self, token, document):
+-        """ Returns a QTextCharFormat for token by
+-        """
++    def _get_format_from_document(
++        self, token: str, document: QtGui.QTextDocument
++    ) -> QtGui.QTextCharFormat:
++        """Return a QTextCharFormat for token from document."""
+         code, html = next(self._formatter._format_lines([(token, "dummy")]))
+         self._document.setHtml(html)
+         return gui.TextCursor(self._document).charFormat()
+ 
+-    def _get_format_from_style(self, token, style):
+-        """ Returns a QTextCharFormat for token by reading a Pygments style.
+-        """
++    def _get_format_from_style(self, token: str, style: Style) -> gui.TextCharFormat:
++        """Return a QTextCharFormat for token by reading a Pygments style."""
+         result = gui.TextCharFormat()
+-        for key, value in style.style_for_token(token).items():
++        try:
++            token_style = style.style_for_token(token)
++        except KeyError:
++            return result
++        for key, value in token_style.items():
+             if value:
+                 if key == "color":
+                     result.set_foreground_color(self._get_brush(value))
+                 elif key == "bgcolor":
+                     result.set_background_color(self._get_brush(value))
+                 elif key == "bold":
+                     result.set_font_weight("bold")
+@@ -208,26 +209,22 @@
+                     result.set_font_style_hint("sans_serif")
+                 elif key == "roman":
+                     result.set_font_style_hint("serif")
+                 elif key == "mono":
+                     result.set_font_style_hint("typewriter")
+         return result
+ 
+-    def _get_brush(self, color):
+-        """ Returns a brush for the color.
+-        """
+-        result = self._brushes.get(color)
+-        if result is None:
+-            qcolor = gui.Color(f"#{color[:6]}")
+-            result = gui.Brush(qcolor)
+-            self._brushes[color] = result
+-        return result
++    @functools.cache
++    def _get_brush(self, color: str) -> gui.Brush:
++        """Return a brush for the color."""
++        qcolor = gui.Color(f"#{color[:6]}")
++        return gui.Brush(qcolor)
+ 
+ 
+ if __name__ == "__main__":
+     from prettyqt import widgets
+ 
+     app = widgets.app()
+     editor = widgets.PlainTextEdit()
+-    highlighter = PygmentsHighlighter(editor.document(), lexer="regex")
++    highlighter = PygmentsHighlighter(editor.document(), lexer="python")
+     editor.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/syntaxhighlighters/pythonhighlighter.py` & `prettyqt-1.0.0/prettyqt/syntaxhighlighters/pythonhighlighter.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,11 +1,10 @@
+-# -*- coding: utf-8 -*-
+-"""
+-Syntax highlighter for the programming language Python
+-"""
++"""Syntax highlighter for the programming language Python."""
++
++from __future__ import annotations
+ 
+ from prettyqt import core, gui, syntaxhighlighters
+ 
+ 
+ KEYWORDS = [
+     "and",
+     "assert",
+@@ -128,74 +127,83 @@
+     color = gui.Color(100, 150, 190)
+ 
+ 
+ # Multi-line strings (expression, flag, style)
+ # FIXME: The triple-quotes in these two lines will mess up the
+ # syntax highlighting from this point onward
+ fmt = gui.TextCharFormat()
+-fmt.set_foreground_color([30, 120, 110])
+-TRI_SINGLE = (core.RegExp("'''"), 1, fmt)
+-TRI_DOUBLE = (core.RegExp('"""'), 2, fmt)
++fmt.set_foreground_color((30, 120, 110))
++TRI_SINGLE = (core.RegularExpression("'''"), 1, fmt)
++TRI_DOUBLE = (core.RegularExpression('"""'), 2, fmt)
+ 
+ 
+ class PythonHighlighter(gui.SyntaxHighlighter):
+-    """Syntax highlighter for the Python language.
+-    """
++    """Syntax highlighter for the Python language."""
+ 
+     RULES = Rule.__subclasses__()
+ 
+     def highlightBlock(self, text: str):
+-        """Apply syntax highlighting to the given block of text.
+-        """
++        """Apply syntax highlighting to the given block of text."""
+         # Do other syntax formatting
+         super().highlightBlock(text)
+         self.setCurrentBlockState(0)
+         # Do multi-line strings
+         if not self.match_multiline(text, *TRI_SINGLE):
+             self.match_multiline(text, *TRI_DOUBLE)
+ 
+-    def match_multiline(self, text, delimiter, in_state, style):
+-        """Do highlighting of multi-line strings. ``delimiter`` should be a
++    def match_multiline(
++        self,
++        text: str,
++        delimiter: core.RegularExpression,
++        in_state: int,
++        style: gui.TextCharFormat,
++    ):
++        """Do highlighting of multi-line strings.
++
++        ``delimiter`` should be a
+         ``core.RegExp`` for triple-single-quotes or triple-double-quotes, and
+         ``in_state`` should be a unique integer to represent the corresponding
+         state changes when inside those strings. Returns True if we're still
+         inside a multi-line string when this function is finished.
+         """
+         # If inside triple-single quotes, start at 0
+         if self.previousBlockState() == in_state:
+             start = 0
+             add = 0
+         # Otherwise, look for the delimiter on this line
+         else:
+-            start = delimiter.indexIn(text)
+-            # Move past this match
+-            add = delimiter.matchedLength()
++            match = delimiter.match(text)
++            if not match.hasMatch():
++                return
++            start = match.capturedStart()
++            add = match.capturedLength()
+ 
+         # As long as there's a delimiter match on this line...
+         while start >= 0:
+             # Look for the ending delimiter
+-            end = delimiter.indexIn(text, start + add)
++            match = delimiter.match(text, start + add)
++            end = match.capturedStart()
+             # Ending delimiter on this line?
+             if end >= add:
+-                length = end - start + add + delimiter.matchedLength()
++                length = end - start + add + match.capturedLength()
+                 self.setCurrentBlockState(0)
+             # No; multi-line string
+             else:
+                 self.setCurrentBlockState(in_state)
+                 length = len(text) - start + add
+             # Apply formatting
+             self.setFormat(start, length, style)
+             # Look for the next match
+-            start = delimiter.indexIn(text, start + length)
++            start = delimiter.match(text, start + length).capturedStart()
+ 
+         # Return True if still inside a multi-line string, False otherwise
+         return self.currentBlockState() == in_state
+ 
+ 
+ if __name__ == "__main__":
+     from prettyqt import widgets
+ 
+     app = widgets.app()
+     editor = widgets.PlainTextEdit()
+     highlighter = PythonHighlighter(editor.document())
+     editor.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/syntaxhighlighters/regexmatchhighlighter.py` & `prettyqt-1.0.0/prettyqt/syntaxhighlighters/regexmatchhighlighter.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,31 +1,29 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+ from prettyqt import gui
+ 
+ 
+ FORMAT_1 = gui.TextCharFormat()
+ FORMAT_1.set_background_color("lightgreen")
+ FORMAT_2 = gui.TextCharFormat()
+ FORMAT_2.set_background_color("lightblue")
+ 
+ 
+ class RegexMatchHighlighter(gui.SyntaxHighlighter):
+     def __init__(self, document=None):
+         super().__init__(document)
+-        self.spans = []
++        self.spans: list[tuple[int, int]] | None = []
+ 
+-    def set_spans(self, spans):
++    def set_spans(self, spans: list[tuple[int, int]] | None):
+         self.spans = spans
+         # print(self.spans)
+         self.rehighlight()
+ 
+-    def _colorize(self, line_pos, match_len, match_num):
++    def _colorize(self, line_pos: int, match_len: int, match_num: int):
+         fmt = FORMAT_1 if match_num % 2 == 0 else FORMAT_2
+         self.setFormat(line_pos, match_len, fmt)
+ 
+     def highlightBlock(self, text: str):
+         block = self.currentBlock()
+         # line_no = block.blockNumber()
+         # if line_no == 0:
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/syntaxhighlighters/xmlhighlighter.py` & `prettyqt-1.0.0/prettyqt/syntaxhighlighters/yamlhighlighter.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,82 +1,101 @@
+-# -*- coding: utf-8 -*-
+-"""
+-based on http://www.yasinuludag.com/blog/?p=49
+-"""
++# see https://github.com/ITVRoC/SeekurJr/blob/master/seekur_12.04/packages/
++# multimaster_fkie/node_manager_fkie/src/node_manager_fkie/yaml_highlighter.py
++
++
++from __future__ import annotations
+ 
+ from prettyqt import core, gui, syntaxhighlighters
+ 
+ 
++COMMENT_START = core.RegularExpression("#")
++COMMENT_END = core.RegularExpression("\n|\r")  # Unused?
++COMMENT_FORMAT = gui.TextCharFormat()
++COMMENT_FORMAT.setFontItalic(True)
++COMMENT_FORMAT.set_foreground_color("darkgray")
++
++
+ class Rule(syntaxhighlighters.HighlightRule):
+-    pass
++    minimal = True
+ 
+ 
+-class Element(Rule):
+-    regex = r"\b[A-Za-z0-9_]+(?=[\s/>])"
++class Bool(Rule):
++    regex = [r"\btrue\b", r"\bfalse\b"]
+     color = "blue"
++    bold = True
+ 
+ 
+-class Attribute(Rule):
+-    regex = r"\b[A-Za-z0-9_]+(?=\=)"
+-    color = "darkgreen"
+-    italic = True
++class Decimal(Rule):
++    regex = r"\d+"
++    color = "darkMagenta"
+ 
+ 
+-class EqualSign(Rule):
+-    regex = r"="
+-    color = "darkgreen"
++class Rule2(Rule):
++    regex = r"^\s*[_.\w]*\s*:"
++    color = "blue"
++
++
++class Rule3(Rule):
++    regex = r":\s*:[_\.\w]*$|:\s*\@[_\.\w]*$"
++    color = "blue"
+ 
+ 
+-class LineComment(Rule):
+-    regex = r"<!--[^\n]*-->"
+-    color = "lightgrey"
++class ListMember(Rule):
++    regex = r"^\s*-"
++    color = "red"
++    bold = True
+ 
+ 
+-class Text(Rule):
+-    regex = r">(.+)(?=</)"
++class DocumentStart(Rule):
++    regex = r"^---$"
++    color = "red"
++    bold = True
+ 
+ 
+-class Keyword(Rule):
+-    regex = [r"\b?xml\b", "/>", ">", "<", "</"]
++class Brackets(Rule):
++    regex = r"[\[\]\{\}\,]"
++    color = "darkgreen"
+     bold = True
+-    color = "red"
+ 
+ 
+-VALUE_FORMAT = gui.TextCharFormat()
+-VALUE_FORMAT.set_foreground_color("orange")
+-VALUE_START_EXPRESSION = core.RegExp(r"\"")
+-VALUE_END_EXPRESSION = core.RegExp(r"\"(?=[\s></])")
++class Rule7(Rule):
++    regex = r"\".*\"|\'.*\'"
++    color = "darkorange"
++
++
++class Rule8(Rule):
++    regex = r"\$\(.*\)"
++    color = "orange"
++
++
++class DocType(Rule):
++    regex = r"<!DOCTYPE.*>"
++    color = "lightgray"
++
+ 
++class Xml(Rule):
++    regex = r"<\?xml.*\?>"
++    color = "lightgray"
+ 
+-class XmlHighlighter(gui.SyntaxHighlighter):
+ 
++class YamlHighlighter(gui.SyntaxHighlighter):
+     RULES = Rule.__subclasses__()
+ 
+     def highlightBlock(self, text: str):
+         super().highlightBlock(text)
+-        # HANDLE QUOTATION MARKS NOW.. WE WANT TO START WITH " AND END WITH "..
+-        # A THIRD " SHOULD NOT CAUSE THE WORDS INBETWEEN SECOND AND THIRD
+-        # TO BE COLORED
+         self.setCurrentBlockState(0)
+         start_index = 0
+         if self.previousBlockState() != 1:
+-            start_index = VALUE_START_EXPRESSION.indexIn(text)
+-        while start_index >= 0:
+-            end_index = VALUE_END_EXPRESSION.indexIn(text, start_index)
+-            if end_index == -1:
+-                self.setCurrentBlockState(1)
++            start_index = COMMENT_START.match(text).capturedStart()
++            if start_index >= 0:
+                 comment_len = len(text) - start_index
+-            else:
+-                matched_len = VALUE_END_EXPRESSION.matchedLength()
+-                comment_len = end_index - start_index + matched_len
+-            self.setFormat(start_index, comment_len, VALUE_FORMAT)
+-            start_index = VALUE_START_EXPRESSION.indexIn(text, start_index + comment_len)
++                self.setFormat(start_index, comment_len, COMMENT_FORMAT)
+ 
+ 
+ if __name__ == "__main__":
+     from prettyqt import widgets
+ 
+     app = widgets.app()
+     editor = widgets.PlainTextEdit()
+-    highlighter = XmlHighlighter(editor.document())
++    highlighter = YamlHighlighter(editor.document())
+     editor.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/utils/colors.py` & `prettyqt-1.0.0/prettyqt/utils/colors.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,35 +1,23 @@
+-# -*- coding: utf-8 -*-
+-"""
+-
+-for full list, see:
+-- https://cdn.materialdesignicons.com/3.0.39/
+-"""
+-
+-from typing import Union
+-
+-from qtpy import QtCore, QtGui
++from __future__ import annotations
+ 
+ from prettyqt import gui
++from prettyqt.utils import types
+ 
+ 
+-ColorType = Union[
+-    str, int, QtGui.QRgba64, QtCore.Qt.GlobalColor, QtGui.QColor, tuple, None
+-]
+-
+ WINDOW_ICON_COLOR = "darkcyan"
+ 
+ 
+-def set_window_icon_color(color):
++def set_window_icon_color(color: str):
+     global WINDOW_ICON_COLOR
+     WINDOW_ICON_COLOR = color
+ 
+ 
+-def get_color(color: ColorType) -> gui.Color:
+-    """get gui.Color instance for given parameter
++def get_color(color: types.ColorType) -> gui.Color:
++    """Get gui.Color instance for given parameter.
+ 
+     named colors are 'aliceblue', 'antiquewhite', 'aqua', 'aquamarine',
+     'azure', 'beige', 'bisque', 'black', 'blanchedalmond', 'blue', 'blueviolet',
+     'brown', 'burlywood', 'cadetblue', 'chartreuse', 'chocolate', 'coral',
+     'cornflowerblue', 'cornsilk', 'crimson', 'cyan', 'darkblue', 'darkcyan',
+     'darkgoldenrod', 'darkgray', 'darkgreen', 'darkgrey', 'darkkhaki',
+     'darkmagenta', 'darkolivegreen', 'darkorange', 'darkorchid', 'darkred',
+@@ -59,7 +47,27 @@
+ 
+     Returns:
+         gui.Color: color instance
+     """
+     if isinstance(color, (tuple, list)):
+         return gui.Color(*color)
+     return gui.Color(color)
++
++
++def interpolate_text_colors(
++    bg: types.ColorType, fg: types.ColorType, n_colors: int
++) -> list[gui.Color]:
++    bg = get_color(bg)
++    fg = get_color(fg)
++    pal = []
++    M = 35
++    HUE_BASE = 90 if bg.hue() == -1 else bg.hue()
++    for i in range(n_colors):
++        h = HUE_BASE + (360.0 / n_colors * i) % 360
++        s = 240.0
++        v = max(bg.value(), fg.value()) * 0.85
++        if (bg.hue() - M < h < bg.hue() + M) or (fg.hue() - M < h < fg.hue() + M):
++            h = ((bg.hue() + fg.hue()) / (i + 1)) % 360
++            s = ((bg.saturation() + fg.saturation() + 2 * i) / 2) % 256
++            v = ((bg.value() + fg.value() + 2 * i) / 2) % 256
++        pal.append(gui.Color.from_hsv(h, s, v))
++    return pal
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/utils/signallogger.py` & `prettyqt-1.0.0/prettyqt/utils/signallogger.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,13 +1,8 @@
+-# -*- coding: utf-8 -*-
+-"""
+-
+-for full list, see:
+-- https://cdn.materialdesignicons.com/3.0.39/
+-"""
++from __future__ import annotations
+ 
+ import logging
+ 
+ from prettyqt import core
+ 
+ 
+ class LineSignalLogger(logging.Handler, core.Object):
+@@ -18,16 +13,18 @@
+         core.Object.__init__(self)
+ 
+     def emit(self, record):
+         msg = self.format(record)
+         self.log_line.emit(msg)
+ 
+ 
+-class RecordSignalLogger(logging.Handler, core.Object):
++class Signals(core.Object):
+     log_record = core.Signal(logging.LogRecord)
+ 
++
++class RecordSignalLogger(logging.Handler):
+     def __init__(self):
+         super().__init__()
+-        core.Object.__init__(self)
++        self.signals = Signals()
+ 
+     def emit(self, record):
+-        self.log_record.emit(record)
++        self.signals.log_record.emit(record)
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/webenginewidgets/webengineview.py` & `prettyqt-1.0.0/prettyqt/webenginewidgets/webengineview.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,72 +1,75 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-import pathlib
+-from typing import Callable, Union
++import os
++from typing import Callable
++import webbrowser
+ 
+-from qtpy import QtWebEngineWidgets
++from prettyqt import core, webenginecore, widgets
++from prettyqt.qt import QtWebEngineWidgets
++from prettyqt.utils import types
+ 
+-from prettyqt import core, widgets
+ 
++class WebEngineView(widgets.WidgetMixin, QtWebEngineWidgets.QWebEngineView):
++    def __init__(self, *args, **kwargs):
++        super().__init__(*args, **kwargs)
++        self.setPage(webenginecore.WebEnginePage(self))
+ 
+-QtWebEngineWidgets.QWebEngineView.__bases__ = (widgets.Widget,)
+-
+-
+-class WebEngineView(QtWebEngineWidgets.QWebEngineView):
+-    def set_url(self, url: Union[str, pathlib.Path]):
+-        """set the url of the WebEngineView.
++    def set_url(self, url: types.UrlType | types.PathType):
++        """Set the url of the WebEngineView.
+ 
+         Clears the view and loads the URL.
+ 
+         Args:
+             url: URL to set
+         """
+-        if isinstance(url, pathlib.Path):
+-            url = core.Url.fromLocalFile(str(url))
++        if isinstance(url, os.PathLike):
++            url = core.Url.fromLocalFile(os.fspath(url))
+         elif isinstance(url, str):
+             url = core.Url(url)
+         self.setUrl(url)
+ 
+-    def load_url(self, url: Union[str, pathlib.Path]):
+-        """load the URL
++    def get_url(self) -> core.Url:
++        return core.Url(self.url())
++
++    def load_url(self, url: types.UrlType | types.PathType):
++        """Load the URL.
+ 
+         Loads the specified url and displays it.
+ 
+         Note: The view remains the same until enough data has arrived
+         to display the new URL.
+ 
+         Args:
+             url: URL to load
+         """
+-        if isinstance(url, pathlib.Path):
+-            url = core.Url.fromLocalFile(str(url))
++        if isinstance(url, os.PathLike):
++            url = core.Url.fromLocalFile(os.fspath(url))
+         elif isinstance(url, str):
+             url = core.Url(url)
+         self.load(url)
+ 
+     def set_zoom(self, zoom: float):
+-        """Set the zoom factor for the view
++        """Set the zoom factor for the view.
+ 
+         Valid values are within the range from 0.25 to 5.0. The default factor is 1.0.
+ 
+         Args:
+             zoom: Zoom factor
+         """
+         self.setZoomFactor(zoom)
+ 
+     def find_text(
+         self,
+         string: str,
+         backward: bool = False,
+         case_sensitive: bool = False,
+-        callback: Callable = None,
++        callback: Callable[[bool], None] = None,
+     ):
+-        """Find text in the current page
++        """Find text in the current page.
+ 
+         Finds the specified string, subString, in the page, using the given options.
+         The findTextFinished() signal is emitted when a string search is completed.
+ 
+         To clear the search highlight, just pass an empty string.
+ 
+         The resultCallback must take a boolean parameter.
+@@ -86,25 +89,55 @@
+         """
+         if callback is None:
+ 
+             def do_nothing(x):
+                 pass
+ 
+             callback = do_nothing
+-        flag = QtWebEngineWidgets.QWebEnginePage.FindFlag()
++        flag = webenginecore.WebEnginePage.FindFlag(0)
+         if case_sensitive:
+-            flag |= QtWebEngineWidgets.QWebEnginePage.FindCaseSensitively
++            flag |= webenginecore.WebEnginePage.FindFlag.FindCaseSensitively
+         if backward:
+-            flag |= QtWebEngineWidgets.QWebEnginePage.FindBackward
++            flag |= webenginecore.WebEnginePage.FindFlag.FindBackward
+         self.findText(string, flag, callback)
+ 
++    def get_settings(self) -> webenginecore.WebEngineSettings:
++        settings = self.settings()
++        return webenginecore.WebEngineSettings(settings)
++
++    def set_setting(
++        self,
++        setting_name: webenginecore.webenginesettings.WebAttributeStr,
++        value: bool,
++    ):
++        self.get_settings()[setting_name] = value
++
++    def get_setting(
++        self, setting_name: webenginecore.webenginesettings.WebAttributeStr
++    ) -> bool:
++        return self.get_settings()[setting_name]
++
++    @classmethod
++    def register_as_browser(cls, tabwidget: widgets.TabWidget):
++        class BuiltInBrowser(webbrowser.BaseBrowser):
++            def open(self, url: str, new: int = 0, autoraise: bool = True):
++                # logger.info(f"opening {url} with builtin browser..")
++                webview = cls()
++                webview.load_url(url)
++                if new == 1:
++                    webview.show()
++                else:
++                    tabwidget.add_tab(webview, str(url), show=autoraise)
++
++        webbrowser.register("BuiltInBrowser", BuiltInBrowser)
++
+ 
+ if __name__ == "__main__":
+     from prettyqt import widgets
+ 
+     app = widgets.app()
+-    path = path = "E:\\dev\\datacook\\processanalyzer\\docs\\index.html"
++    path = "https://www.google.com"
+     widget = WebEngineView()
+     widget.set_url(path)
+     widget.find_text("test", backward=True, case_sensitive=True, callback=None)
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/abstractbutton.py` & `prettyqt-1.0.0/prettyqt/widgets/listwidgetitem.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,74 +1,105 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtWidgets
++from prettyqt import constants, core, gui, iconprovider
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import InvalidParamError, types
+ 
+-from prettyqt import core, gui, widgets
+ 
++class ListWidgetItem(QtWidgets.QListWidgetItem):
++    def __repr__(self):
++        return f"{type(self).__name__}({self.icon()}, {self.text()!r})"
+ 
+-STYLES = dict(
+-    close=QtWidgets.QStyle.SP_TitleBarCloseButton,
+-    maximise=QtWidgets.QStyle.SP_TitleBarMaxButton,
+-)
++    def __setitem__(self, index: int, value):
++        self.setData(index, value)
+ 
++    def __getitem__(self, index: int):
++        return self.data(index)
+ 
+-QtWidgets.QAbstractButton.__bases__ = (widgets.Widget,)
+-
+-
+-class AbstractButton(QtWidgets.QAbstractButton):
+-    def __getstate__(self):
++    def serialize_fields(self):
+         return dict(
+-            object_name=self.id,
+             text=self.text(),
+-            icon=gui.Icon(self.icon()) if not self.icon().isNull() else None,
+-            checkable=self.isCheckable(),
+-            checked=self.isChecked(),
+-            tooltip=self.toolTip(),
+-            statustip=self.statusTip(),
+-            enabled=self.isEnabled(),
++            tool_tip=self.toolTip(),
++            status_tip=self.statusTip(),
++            checkstate=self.get_checkstate(),
++            icon=self.get_icon(),
++            data=self.data(constants.USER_ROLE),  # type: ignore
+         )
+ 
+-    def __setstate__(self, state):
+-        self.__init__()
+-        self.setText(state["text"])
+-        self.set_id(state.get("object_name", ""))
+-        self.set_icon(state["icon"])
+-        self.setEnabled(state.get("enabled", True))
+-        self.setChecked(state.get("checked", False))
+-        self.setCheckable(state["checkable"])
+-        self.setToolTip(state.get("tooltip", ""))
+-        self.setStatusTip(state.get("statustip", ""))
++    def __getstate__(self):
++        return bytes(self)
++
++    def __setstate__(self, ba):
++        core.DataStream.write_bytearray(ba, self)
++
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
+ 
+-    def set_icon(self, icon: gui.icon.IconType):
+-        """set the icon for the button
++    def __bytes__(self):
++        ba = core.DataStream.create_bytearray(self)
++        return bytes(ba)
++
++    def set_icon(self, icon: types.IconType):
++        """Set the icon for the action.
+ 
+         Args:
+             icon: icon to use
+         """
+-        icon = gui.icon.get_icon(icon)
++        icon = iconprovider.get_icon(icon)
+         self.setIcon(icon)
+ 
+-    def set_style_icon(self, icon: str, size: int = 15):
+-        if icon not in STYLES:
+-            raise ValueError(f"{icon!r} not a valid icon.")
+-        qicon = self.style().standardIcon(STYLES[icon], None, self)
+-        self.set_icon(qicon)
+-        self.setIconSize(core.Size(size, size))
+-
+-    def set_shortcut(self, shortcut):
+-        if shortcut:
+-            self.setShortcut(shortcut)
++    def set_checkstate(self, state: constants.StateStr):
++        """Set checkstate of the checkbox.
++
++        Args:
++            state: checkstate to use
++
++        Raises:
++            InvalidParamError: invalid checkstate
++        """
++        if state not in constants.STATE:
++            raise InvalidParamError(state, constants.STATE)
++        self.setCheckState(constants.STATE[state])
++
++    def get_checkstate(self) -> constants.StateStr:
++        """Return checkstate.
+ 
+-    def set_text(self, text: str):
+-        self.setText(text)
++        Returns:
++            checkstate
++        """
++        return constants.STATE.inverse[self.checkState()]
++
++    def get_background(self) -> gui.Brush:
++        return gui.Brush(self.background())
+ 
+-    def set_icon_size(self, size: int):
+-        self.setIconSize(core.Size(size, size))
++    def get_foreground(self) -> gui.Brush:
++        return gui.Brush(self.foreground())
++
++    def get_font(self) -> gui.Font:
++        return gui.Font(self.font())
++
++    def get_icon(self) -> gui.Icon | None:
++        icon = self.icon()
++        if icon.isNull():
++            return None
++        return gui.Icon(icon)
++
++    def set_data(self, role: str, data):
++        role_id = constants.ITEM_DATA_ROLE[role]
++        self.setData(role_id, data)
++
++    def set_size_hint(self, hint: types.SizeType):
++        if isinstance(hint, tuple):
++            hint = QtCore.QSize(*hint)
++        self.setSizeHint(hint)
+ 
+ 
+ if __name__ == "__main__":
++    from prettyqt import widgets
++
+     app = widgets.app()
+-    widget = AbstractButton()
++    widget = widgets.ListWidget()
++    item = ListWidgetItem("AB")
++    item.set_data("display", "test")
++    widget.add(item)
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/abstractitemview.py` & `prettyqt-1.0.0/prettyqt/widgets/abstractitemview.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,94 +1,107 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-import functools
++from collections.abc import Generator
+ import logging
+-import operator
+-from typing import Any, Generator, List, Optional
+-
+-from qtpy import QtCore, QtWidgets
++from typing import Any, Literal
+ 
+ from prettyqt import constants, gui, widgets
+-from prettyqt.utils import bidict
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import InvalidParamError, bidict, helpers, types
++
+ 
+ logger = logging.getLogger(__name__)
+ 
+-TRIGGERS = bidict(
+-    none=QtWidgets.QAbstractItemView.NoEditTriggers,
+-    double_click=QtWidgets.QAbstractItemView.DoubleClicked,
+-    edit_key=QtWidgets.QAbstractItemView.EditKeyPressed,
++EDIT_TRIGGERS = bidict(
++    none=QtWidgets.QAbstractItemView.EditTrigger.NoEditTriggers,
++    double_click=QtWidgets.QAbstractItemView.EditTrigger.DoubleClicked,
++    edit_key=QtWidgets.QAbstractItemView.EditTrigger.EditKeyPressed,
+ )
+ 
+-SELECTION_BEHAVIOURS = bidict(
+-    rows=QtWidgets.QAbstractItemView.SelectRows,
+-    columns=QtWidgets.QAbstractItemView.SelectColumns,
+-    items=QtWidgets.QAbstractItemView.SelectItems,
++EditTriggerStr = Literal["none", "double_click", "edit_key"]
++
++SELECTION_BEHAVIOUR = bidict(
++    rows=QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows,
++    columns=QtWidgets.QAbstractItemView.SelectionBehavior.SelectColumns,
++    items=QtWidgets.QAbstractItemView.SelectionBehavior.SelectItems,
+ )
+ 
+-SELECTION_MODES = bidict(
+-    single=QtWidgets.QAbstractItemView.SingleSelection,
+-    extended=QtWidgets.QAbstractItemView.ExtendedSelection,
+-    multi=QtWidgets.QAbstractItemView.MultiSelection,
+-    none=QtWidgets.QAbstractItemView.NoSelection,
++SelectionBehaviourStr = Literal["rows", "columns", "items"]
++
++SELECTION_MODE = bidict(
++    single=QtWidgets.QAbstractItemView.SelectionMode.SingleSelection,
++    extended=QtWidgets.QAbstractItemView.SelectionMode.ExtendedSelection,
++    multi=QtWidgets.QAbstractItemView.SelectionMode.MultiSelection,
++    none=QtWidgets.QAbstractItemView.SelectionMode.NoSelection,
+ )
+ 
+-SCROLL_MODES = bidict(
+-    item=QtWidgets.QAbstractItemView.ScrollPerItem,
+-    pixel=QtWidgets.QAbstractItemView.ScrollPerPixel,
++SelectionModeStr = Literal["single", "extended", "multi", "none"]
++
++SCROLL_MODE = bidict(
++    item=QtWidgets.QAbstractItemView.ScrollMode.ScrollPerItem,
++    pixel=QtWidgets.QAbstractItemView.ScrollMode.ScrollPerPixel,
+ )
+ 
+-SCROLL_HINTS = bidict(
+-    ensure_visible=QtWidgets.QAbstractItemView.EnsureVisible,
+-    position_at_top=QtWidgets.QAbstractItemView.PositionAtTop,
+-    position_at_bottom=QtWidgets.QAbstractItemView.PositionAtBottom,
+-    position_at_center=QtWidgets.QAbstractItemView.PositionAtCenter,
++ScrollModeStr = Literal["item", "pixel"]
++
++SCROLL_HINT = bidict(
++    ensure_visible=QtWidgets.QAbstractItemView.ScrollHint.EnsureVisible,
++    position_at_top=QtWidgets.QAbstractItemView.ScrollHint.PositionAtTop,
++    position_at_bottom=QtWidgets.QAbstractItemView.ScrollHint.PositionAtBottom,
++    position_at_center=QtWidgets.QAbstractItemView.ScrollHint.PositionAtCenter,
+ )
+ 
+-QtWidgets.QAbstractItemView.__bases__ = (widgets.AbstractScrollArea,)
++ScrollHintStr = Literal[
++    "ensure_visible", "position_at_top", "position_at_bottom", "position_at_center"
++]
++
++DRAG_DROP_MODE = bidict(
++    none=QtWidgets.QAbstractItemView.DragDropMode.NoDragDrop,
++    drag=QtWidgets.QAbstractItemView.DragDropMode.DragOnly,
++    drop=QtWidgets.QAbstractItemView.DragDropMode.DropOnly,
++    drag_drop=QtWidgets.QAbstractItemView.DragDropMode.DragDrop,
++    internal_move=QtWidgets.QAbstractItemView.DragDropMode.InternalMove,
++)
+ 
++DragDropModeStr = Literal["none", "drag", "drop", "drag_drop", "internal"]
+ 
+-class AbstractItemView(QtWidgets.QAbstractItemView):
+-    def __len__(self):
++
++class AbstractItemViewMixin(widgets.AbstractScrollAreaMixin):
++    def __len__(self) -> int:
+         if self.model() is not None:
+             return self.model().rowCount()
+         return 0
+ 
+     def selectAll(self):
+-        """
+-        Override, we dont want to selectAll for too many items for performance reasons
+-        """
++        """Override, we dont want to selectAll for too many items bc of performance."""
+         if self.model() is None:
+-            return None
++            return
+         if self.model().rowCount() * self.model().columnCount() > 1_000_000:
+             logger.warning("Too many cells to select.")
+-            return None
++            return
+         super().selectAll()
+ 
+-    def set_model(self, model: Optional[QtCore.QAbstractItemModel]):
+-        """
+-        delete old selection model explicitely, seems to help with memory usage
+-        """
++    def set_model(self, model: QtCore.QAbstractItemModel | None):
++        """Delete old selection model explicitely, seems to help with memory usage."""
+         old_model = self.model()
+         old_sel_model = self.selectionModel()
+         if old_model is not None or model is not None:
+-            self.setModel(model)
++            self.setModel(model)  # type: ignore
+         # if old_model:
+         #     old_model.deleteLater()
+         #     del old_model
+         if old_sel_model:
+             old_sel_model.deleteLater()
+             del old_sel_model
+ 
+     def set_delegate(
+         self,
+         delegate: QtWidgets.QItemDelegate,
+-        column: Optional[int] = None,
+-        row: Optional[int] = None,
++        column: int | None = None,
++        row: int | None = None,
+         persistent: bool = False,
+     ):
+         if column is not None:
+             self.setItemDelegateForColumn(column, delegate)
+             if persistent:
+                 model = self.model()
+                 for i in range(0, model.rowCount()):
+@@ -99,232 +112,238 @@
+                 model = self.model()
+                 for i in range(0, model.columnCount()):
+                     self.openPersistentEditor(model.index(row, i))
+         else:
+             self.setItemDelegate(delegate)
+ 
+     def toggle_select_all(self):
+-        """
+-        select all items from list (deselect when all selected)
+-        """
++        """Select all items from list (deselect when all selected)."""
+         if self.selectionModel() is None:
+-            return None
++            return
+         if self.selectionModel().hasSelection():
+             self.clearSelection()
+         else:
+             self.selectAll()
+ 
+     def set_table_color(self, color: str):
+         with self.edit_stylesheet() as ss:
+             ss.QHeaderView.section.backgroundColor.setValue(color)
+ 
+-    def current_index(self) -> Optional[QtCore.QModelIndex]:
++    def current_index(self) -> QtCore.QModelIndex | None:
+         if self.selectionModel() is None:
+             return None
+         return self.selectionModel().currentIndex()
+ 
+     def current_data(self):
+-        if self.model() is None:
++        if self.selectionModel() is None:
+             return None
+-        return self.current_index().data(QtCore.Qt.UserRole)
++        idx = self.selectionModel().currentIndex()
++        return idx.data(constants.USER_ROLE)  # type: ignore
+ 
+-    def current_row(self) -> Optional[int]:
++    def current_row(self) -> int | None:
+         if self.selectionModel() is None:
+             return None
+         return self.selectionModel().currentIndex().row()
+ 
+-    def current_column(self) -> Optional[int]:
++    def current_column(self) -> int | None:
+         if self.selectionModel() is None:
+             return None
+         return self.selectionModel().currentIndex().column()
+ 
+-    def selected_indexes(self) -> List[QtCore.QModelIndex]:
+-        """
+-        returns list of selected indexes in first row
+-        """
+-        indexes = (x for x in self.selectedIndexes() if x.column() == 0)
+-        return sorted(indexes, key=lambda x: x.row())
++    def selected_indexes(self) -> list[QtCore.QModelIndex]:
++        """Returns list of selected indexes in first row."""
++        indexes = (x for x in self.selectedIndexes() if x.column() == 0)  # type: ignore
++        return sorted(indexes, key=lambda x: x.row())  # type: ignore
+ 
+     def selected_names(self) -> Generator[Any, None, None]:
+-        """
+-        returns generator yielding item names
+-        """
++        """Returns generator yielding item names."""
+         return (x.data(constants.NAME_ROLE) for x in self.selected_indexes())
+ 
+     def selected_rows(self) -> Generator[int, None, None]:
+-        """
+-        returns generator yielding row nums
+-        """
++        """Returns generator yielding row nums."""
+         return (x.row() for x in self.selected_indexes())
+ 
+     def selected_data(self) -> Generator[Any, None, None]:
+-        """
+-        returns generator yielding selected userData
+-        """
+-        return (x.data(constants.USER_ROLE) for x in self.selected_indexes())
++        """Returns generator yielding selected userData."""
++        return (
++            x.data(constants.USER_ROLE) for x in self.selected_indexes()  # type: ignore
++        )
+ 
+     def setup_dragdrop_move(self):
+         self.setDragEnabled(True)
+         self.setAcceptDrops(True)
+-        self.setDragDropMode(self.DragDrop)
+-        self.setDefaultDropAction(QtCore.Qt.MoveAction)
++        self.setDragDropMode(self.DragDropMode.DragDrop)
++        self.setDefaultDropAction(constants.MOVE_ACTION)
+         self.setDropIndicatorShown(True)
+ 
+-    def set_edit_triggers(self, *triggers: Optional[str]):
++    def set_edit_triggers(self, *triggers: EditTriggerStr | None):
+         items = ["none" if t is None else t for t in triggers]
+         for item in items:
+-            if item not in TRIGGERS:
+-                raise ValueError("trigger type not available")
+-        flags = functools.reduce(operator.ior, [TRIGGERS[t] for t in items])
++            if item not in EDIT_TRIGGERS:
++                raise InvalidParamError(item, EDIT_TRIGGERS)
++        flags = helpers.merge_flags(items, EDIT_TRIGGERS)
+         self.setEditTriggers(flags)
+ 
+-    def get_edit_triggers(self) -> list:
+-        return [k for k, v in TRIGGERS.items() if v & self.editTriggers()]
+-
+-    def set_selection_behaviour(self, behaviour: str):
+-        """set selection behaviour for given item view
++    def get_edit_triggers(self) -> list[EditTriggerStr]:
++        return [k for k, v in EDIT_TRIGGERS.items() if v & self.editTriggers()]
+ 
+-        Allowed values are "rows", "columns", "items"
++    def set_selection_behaviour(self, behaviour: SelectionBehaviourStr):
++        """Set selection behaviour for given item view.
+ 
+         Args:
+             behaviour: selection behaviour to use
+ 
+         Raises:
+-            ValueError: behaviour does not exist
++            InvalidParamError: behaviour does not exist
+         """
+-        if behaviour not in SELECTION_BEHAVIOURS:
+-            raise ValueError("invalid selection behaviour")
+-        self.setSelectionBehavior(SELECTION_BEHAVIOURS[behaviour])
++        if behaviour not in SELECTION_BEHAVIOUR:
++            raise InvalidParamError(behaviour, SELECTION_BEHAVIOUR)
++        self.setSelectionBehavior(SELECTION_BEHAVIOUR[behaviour])
+ 
+-    def get_selection_behaviour(self) -> str:
+-        """returns current selection behaviour
+-
+-        Possible values: "rows", "columns", "items"
++    def get_selection_behaviour(self) -> SelectionBehaviourStr:
++        """Return current selection behaviour.
+ 
+         Returns:
+             selection behaviour
+         """
+-        return SELECTION_BEHAVIOURS.inv[self.selectionBehavior()]
++        return SELECTION_BEHAVIOUR.inverse[self.selectionBehavior()]
++
++    def set_drag_drop_mode(self, mode: DragDropModeStr):
++        """Set drag-drop mode for given item view.
++
++        Args:
++            mode: drag-drop mode to use
++
++        Raises:
++            InvalidParamError: mode does not exist
++        """
++        if mode not in DRAG_DROP_MODE:
++            raise InvalidParamError(mode, DRAG_DROP_MODE)
++        self.setDragDropMode(DRAG_DROP_MODE[mode])
++
++    def get_drag_drop_mode(self) -> DragDropModeStr:
++        """Return current drag-drop mode.
+ 
+-    def set_selection_mode(self, mode: Optional[str]):
+-        """set selection mode for given item view
++        Returns:
++            drag-drop mode
++        """
++        return DRAG_DROP_MODE.inverse[self.dragDropMode()]
+ 
+-        Allowed values are "single", "extended", "multi" or "none"
++    def set_selection_mode(self, mode: SelectionModeStr | None):
++        """Set selection mode for given item view.
+ 
+         Args:
+             mode: selection mode to use
+ 
+         Raises:
+-            ValueError: mode does not exist
++            InvalidParamError: mode does not exist
+         """
+         if mode is None:
+             mode = "none"
+-        if mode not in SELECTION_MODES:
+-            raise ValueError(
+-                "Format must be either 'single', 'extended'," "'multi' or 'None'"
+-            )
+-        self.setSelectionMode(SELECTION_MODES[mode])
+-
+-    def get_selection_mode(self) -> str:
+-        """returns current selection mode
++        if mode not in SELECTION_MODE:
++            raise InvalidParamError(mode, SELECTION_MODE)
++        self.setSelectionMode(SELECTION_MODE[mode])
+ 
+-        Possible values: "single", "extended", "multi" or "none"
++    def get_selection_mode(self) -> SelectionModeStr:
++        """Return current selection mode.
+ 
+         Returns:
+             selection mode
+         """
+-        return SELECTION_MODES.inv[self.selectionMode()]
+-
+-    def set_scroll_mode(self, mode: str):
+-        """sets the scroll mode for both directions
++        return SELECTION_MODE.inverse[self.selectionMode()]
+ 
+-        possible values are "item", "pixel"
++    def set_scroll_mode(self, mode: ScrollModeStr):
++        """Set the scroll mode for both directions.
+ 
+         Args:
+             mode: mode to set
+ 
+         Raises:
+-            ValueError: invalid scroll mode
++            InvalidParamError: invalid scroll mode
+         """
+-        if mode not in SCROLL_MODES:
+-            raise ValueError("Invalid scroll mode")
+-        self.setHorizontalScrollMode(SCROLL_MODES[mode])
+-        self.setVerticalScrollMode(SCROLL_MODES[mode])
++        if mode not in SCROLL_MODE:
++            raise InvalidParamError(mode, SCROLL_MODE)
++        self.setHorizontalScrollMode(SCROLL_MODE[mode])
++        self.setVerticalScrollMode(SCROLL_MODE[mode])
+ 
+-    def set_horizontal_scroll_mode(self, mode: str):
+-        """sets the horizontal scroll mode
+-
+-        possible values are "item", "pixel"
++    def set_horizontal_scroll_mode(self, mode: ScrollModeStr):
++        """Set the horizontal scroll mode.
+ 
+         Args:
+             mode: mode to set
+ 
+         Raises:
+-            ValueError: invalid scroll mode
++            InvalidParamError: invalid scroll mode
+         """
+-        if mode not in SCROLL_MODES:
+-            raise ValueError("Invalid scroll mode")
+-        self.setHorizontalScrollMode(SCROLL_MODES[mode])
+-
+-    def set_vertical_scroll_mode(self, mode: str):
+-        """sets the vertical scroll mode
++        if mode not in SCROLL_MODE:
++            raise InvalidParamError(mode, SCROLL_MODE)
++        self.setHorizontalScrollMode(SCROLL_MODE[mode])
+ 
+-        possible values are "item", "pixel"
++    def set_vertical_scroll_mode(self, mode: ScrollModeStr):
++        """Set the vertical scroll mode.
+ 
+         Args:
+             mode: mode to set
+ 
+         Raises:
+-            ValueError: invalid scroll mode
++            InvalidParamError: invalid scroll mode
+         """
+-        if mode not in SCROLL_MODES:
+-            raise ValueError("Invalid scroll mode")
+-        self.setVerticalScrollMode(SCROLL_MODES[mode])
++        if mode not in SCROLL_MODE:
++            raise InvalidParamError(mode, SCROLL_MODE)
++        self.setVerticalScrollMode(SCROLL_MODE[mode])
+ 
+     def num_selected(self) -> int:
+-        """returns amount of selected rows
++        """Return amount of selected rows.
+ 
+         Returns:
+             amount of selected rows
+         """
+         if self.selectionModel() is None:
+             return 0
+         return len(self.selectionModel().selectedRows())
+ 
+     def jump_to_column(self, col_num: int):
+-        """make sure column at given index is visible
++        """Make sure column at given index is visible.
+ 
+         scrolls to column at given index
+ 
+         Args:
+             col_num: column to scroll to
+         """
+         if self.model() is None:
+-            return None
++            return
+         idx = self.model().index(0, col_num)
+         self.scrollTo(idx)
+ 
+     def scroll_to_top(self):
+-        """override to use abstractitemview-way of scrolling to top
+-        """
++        """Override to use abstractitemview-way of scrolling to top."""
+         self.scrollToTop()
+ 
+     def scroll_to_bottom(self):
+-        """override to use abstractitemview-way of scrolling to bottom
+-        """
++        """Override to use abstractitemview-way of scrolling to bottom."""
+         self.scrollToBottom()
+ 
+     def select_last_row(self):
+         idx = self.model().createIndex(self.model().rowCount() - 1, 0)
+         self.setCurrentIndex(idx)
+ 
+-    def scroll_to(self, index, mode: str = "ensure_visible"):
+-        if mode not in SCROLL_HINTS:
+-            raise ValueError("Invalid scroll mode")
+-        self.scrollTo(index, SCROLL_HINTS[mode])
++    def scroll_to(self, index, mode: ScrollHintStr = "ensure_visible"):
++        if mode not in SCROLL_HINT:
++            raise InvalidParamError(mode, SCROLL_HINT)
++        self.scrollTo(index, SCROLL_HINT[mode])
+ 
+     def highlight_when_inactive(self):
+-        """also highlight items when widget does not have focus
+-        """
++        """Highlight items when widget does not have focus."""
+         p = gui.Palette()
+         p.highlight_inactive()
+         self.setPalette(p)
++
++    def set_icon_size(self, size: int | types.SizeType):
++        if isinstance(size, tuple):
++            size = QtCore.QSize(*size)
++        elif isinstance(size, int):
++            size = QtCore.QSize(size, size)
++        self.setIconSize(size)
++
++
++class AbstractItemView(AbstractItemViewMixin, QtWidgets.QAbstractItemView):
++    pass
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/abstractscrollarea.py` & `prettyqt-1.0.0/prettyqt/widgets/abstractscrollarea.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,168 +1,167 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtCore, QtWidgets
++from typing import Literal
+ 
+-from prettyqt import widgets
+-from prettyqt.utils import bidict
++from prettyqt import constants, widgets
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import InvalidParamError, bidict
+ 
+ 
+ area = QtWidgets.QAbstractScrollArea
+ 
+-SIZE_POLICIES = bidict(
+-    content=area.AdjustToContents,
+-    first_show=area.AdjustToContentsOnFirstShow,
+-    ignored=area.AdjustIgnored,
++SIZE_POLICY = bidict(
++    content=area.SizeAdjustPolicy.AdjustToContents,
++    first_show=area.SizeAdjustPolicy.AdjustToContentsOnFirstShow,
++    ignored=area.SizeAdjustPolicy.AdjustIgnored,
+ )
+ 
++SizePolicyStr = Literal["content", "first_show", "ignored"]
+ 
+-SCROLLBAR_POLICY = bidict(
+-    always_on=QtCore.Qt.ScrollBarAlwaysOn,
+-    always_off=QtCore.Qt.ScrollBarAlwaysOff,
+-    as_needed=QtCore.Qt.ScrollBarAsNeeded,
+-)
+-
+-
+-QtWidgets.QAbstractScrollArea.__bases__ = (widgets.Frame,)
+ 
+-
+-class AbstractScrollArea(QtWidgets.QAbstractScrollArea):
++class AbstractScrollAreaMixin(widgets.FrameMixin):
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+-        self.h_scrollbar = widgets.ScrollBar()
+-        self.v_scrollbar = widgets.ScrollBar()
+-        self.setHorizontalScrollBar(self.h_scrollbar)
+-        self.setVerticalScrollBar(self.v_scrollbar)
+-
+-    # @property
+-    # def h_scrollbar(self):
+-    #     return self.horizontalScrollbar()
+-
+-    # @h_scrollbar.setter
+-    # def h_scrollbar(self, scrollbar):
+-    #     self.setHorizontalScrollBar(scrollbar)
+-
+-    # @property
+-    # def v_scrollbar(self):
+-    #     return self.verticalScrollBar()
+-
+-    # @v_scrollbar.setter
+-    # def v_scrollbar(self, scrollbar):
+-    #     self.setVerticalScrollBar(scrollbar)
++        self.setHorizontalScrollBar(widgets.ScrollBar(parent=self))
++        self.setVerticalScrollBar(widgets.ScrollBar(parent=self))
+ 
+-    def set_size_adjust_policy(self, policy: str):
+-        """set size adjust policy
++    def serialize_fields(self):
++        return dict(
++            size_adjust_policy=self.get_size_adjust_policy(),
++            horizontal_scrollbar_policy=self.get_horizontal_scrollbar_policy(),
++            vertical_scrollbar_policy=self.get_vertical_scrollbar_policy(),
++        )
++
++    def __setstate__(self, state):
++        super().__setstate__(state)
++        self.set_size_adjust_policy(state["size_adjust_policy"])
++        self.set_horizontal_scrollbar_policy(state["horizontal_scrollbar_policy"])
++        self.set_vertical_scrollbar_policy(state["vertical_scrollbar_policy"])
++
++    @property
++    def h_scrollbar(self):
++        return self.horizontalScrollBar()
++
++    @h_scrollbar.setter
++    def h_scrollbar(self, scrollbar):
++        self.setHorizontalScrollBar(scrollbar)
++
++    @property
++    def v_scrollbar(self):
++        return self.verticalScrollBar()
++
++    @v_scrollbar.setter
++    def v_scrollbar(self, scrollbar):
++        self.setVerticalScrollBar(scrollbar)
+ 
+-        Valid values are "content", "first_show", "ignored"
++    def set_size_adjust_policy(self, policy: SizePolicyStr):
++        """Set size adjust policy.
+ 
+         Args:
+             policy: size adjust policy to use
+ 
+         Raises:
+-            ValueError: invalid size adjust policy
++            InvalidParamError: invalid size adjust policy
+         """
+-        if policy not in SIZE_POLICIES:
+-            raise ValueError("Policy not available")
+-        policy = SIZE_POLICIES.get(policy)
+-        self.setSizeAdjustPolicy(policy)
+-
+-    def get_size_adjust_policy(self) -> str:
+-        """returns size adjust policy
++        if policy not in SIZE_POLICY:
++            raise InvalidParamError(policy, SIZE_POLICY)
++        self.setSizeAdjustPolicy(SIZE_POLICY[policy])
+ 
+-        possible values are "content", "first_show", "ignored"
++    def get_size_adjust_policy(self) -> SizePolicyStr:
++        """Return size adjust policy.
+ 
+         Returns:
+             size adjust policy
+         """
+-        return SIZE_POLICIES.inv[self.sizeAdjustPolicy()]
+-
+-    def set_scrollbar_policy(self, mode: str):
+-        """sets the policy for both scrollbars
++        return SIZE_POLICY.inverse[self.sizeAdjustPolicy()]
+ 
+-        possible values are "always_on", "always_off", "as_needed"
++    def set_scrollbar_policy(self, mode: constants.ScrollBarPolicyStr):
++        """Set the policy for both scrollbars.
+ 
+         Args:
+             mode: visibilty to set
+ 
+         Raises:
+-            ValueError: invalid scrollbar policy
++            InvalidParamError: invalid scrollbar policy
+         """
+-        if mode not in SCROLLBAR_POLICY:
+-            raise ValueError("Invalid scrollbar policy")
+-        self.setHorizontalScrollBarPolicy(SCROLLBAR_POLICY[mode])
+-        self.setVerticalScrollBarPolicy(SCROLLBAR_POLICY[mode])
++        if mode not in constants.SCROLLBAR_POLICY:
++            raise InvalidParamError(mode, constants.SCROLLBAR_POLICY)
++        self.setHorizontalScrollBarPolicy(constants.SCROLLBAR_POLICY[mode])
++        self.setVerticalScrollBarPolicy(constants.SCROLLBAR_POLICY[mode])
+ 
+-    def set_horizontal_scrollbar_policy(self, mode: str):
+-        """sets the horizontal scrollbar visibility
+-
+-        possible values are "always_on", "always_off", "as_needed"
++    def set_horizontal_scrollbar_policy(self, mode: constants.ScrollBarPolicyStr):
++        """Set the horizontal scrollbar visibility.
+ 
+         Args:
+             mode: visibilty to set
+ 
+         Raises:
+-            ValueError: invalid scrollbar policy
++            InvalidParamError: invalid scrollbar policy
+         """
+-        if mode not in SCROLLBAR_POLICY:
+-            raise ValueError("Invalid scrollbar policy")
+-        self.setHorizontalScrollBarPolicy(SCROLLBAR_POLICY[mode])
++        if mode not in constants.SCROLLBAR_POLICY:
++            raise InvalidParamError(mode, constants.SCROLLBAR_POLICY)
++        self.setHorizontalScrollBarPolicy(constants.SCROLLBAR_POLICY[mode])
+ 
+-    def set_vertical_scrollbar_policy(self, mode: str):
+-        """sets the vertical scrollbar visibility
++    def get_horizontal_scrollbar_policy(self):
++        return constants.SCROLLBAR_POLICY.inverse[self.horizontalScrollBarPolicy()]
+ 
+-        possible values are "always_on", "always_off", "as_needed"
++    def set_vertical_scrollbar_policy(self, mode: constants.ScrollBarPolicyStr):
++        """Set the vertical scrollbar visibility.
+ 
+         Args:
+             mode: visibilty to set
+ 
+         Raises:
+-            ValueError: invalid scrollbar policy
++            InvalidParamError: invalid scrollbar policy
+         """
+-        if mode not in SCROLLBAR_POLICY:
+-            raise ValueError("Invalid scrollbar policy")
+-        self.setVerticalScrollBarPolicy(SCROLLBAR_POLICY[mode])
++        if mode not in constants.SCROLLBAR_POLICY:
++            raise InvalidParamError(mode, constants.SCROLLBAR_POLICY)
++        self.setVerticalScrollBarPolicy(constants.SCROLLBAR_POLICY[mode])
++
++    def get_vertical_scrollbar_policy(self):
++        return constants.SCROLLBAR_POLICY.inverse[self.verticalScrollBarPolicy()]
+ 
+     def set_scrollbar_width(self, width: int):
+-        """sets the width for both scrollbars
++        """Set the width for both scrollbars.
+ 
+         Args:
+             width: width in pixels
+         """
+         self.set_horizontal_scrollbar_width(width)
+         self.set_vertical_scrollbar_width(width)
+ 
+     def set_horizontal_scrollbar_width(self, width: int):
+-        """sets the horizontal scrollbar width
++        """Set the horizontal scrollbar width.
+ 
+         Args:
+             width: width in pixels
+         """
+         with self.h_scrollbar.edit_stylesheet() as ss:
+             ss.QScrollBar.horizontal.height.setValue(f"{width}px")
+ 
+     def set_vertical_scrollbar_width(self, width: int):
+-        """sets the vertical scrollbar width
++        """Set the vertical scrollbar width.
+ 
+         Args:
+             width: width in pixels
+         """
+         with self.v_scrollbar.edit_stylesheet() as ss:
+             ss.QScrollBar.horizontal.height.setValue(f"{width}px")
+ 
+     def scroll_to_top(self):
+-        """scroll to the top of the scroll area
+-        """
++        """Scroll to the top of the scroll area."""
+         self.verticalScrollBar().scroll_to_min()
+ 
+     def scroll_to_bottom(self):
+-        """scroll to the bottom of the scroll area
+-        """
++        """Scroll to the bottom of the scroll area."""
+         self.verticalScrollBar().scroll_to_max()
+ 
+ 
++class AbstractScrollArea(AbstractScrollAreaMixin, QtWidgets.QAbstractScrollArea):
++    pass
++
++
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = AbstractScrollArea()
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/abstractspinbox.py` & `prettyqt-1.0.0/prettyqt/widgets/abstractspinbox.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,132 +1,137 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtWidgets
++from typing import Literal
+ 
+ from prettyqt import gui, widgets
+-from prettyqt.utils import bidict
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import InvalidParamError, bidict
+ 
+ 
+ CORRECTION_MODES = bidict(
+-    to_previous=QtWidgets.QSpinBox.CorrectToPreviousValue,
+-    to_nearest=QtWidgets.QSpinBox.CorrectToNearestValue,
++    to_previous=QtWidgets.QSpinBox.CorrectionMode.CorrectToPreviousValue,
++    to_nearest=QtWidgets.QSpinBox.CorrectionMode.CorrectToNearestValue,
+ )
+ 
++CorrectionModeStr = Literal["to_previous", "to_nearest"]
++
+ SYMBOLS = bidict(
+-    up_down=QtWidgets.QSpinBox.UpDownArrows,
+-    plus_minus=QtWidgets.QSpinBox.PlusMinus,
+-    none=QtWidgets.QSpinBox.NoButtons,
++    up_down=QtWidgets.QSpinBox.ButtonSymbols.UpDownArrows,
++    plus_minus=QtWidgets.QSpinBox.ButtonSymbols.PlusMinus,
++    none=QtWidgets.QSpinBox.ButtonSymbols.NoButtons,
+ )
+ 
++SymbolStr = Literal["up_down", "plus_minus", "none"]
++
+ STEP_TYPES = bidict(
+-    default=QtWidgets.QSpinBox.DefaultStepType,
+-    adaptive=QtWidgets.QSpinBox.AdaptiveDecimalStepType,
++    default=QtWidgets.QSpinBox.StepType.DefaultStepType,
++    adaptive=QtWidgets.QSpinBox.StepType.AdaptiveDecimalStepType,
+ )
+ 
+-
+-QtWidgets.QAbstractSpinBox.__bases__ = (widgets.Widget,)
++StepTypeStr = Literal["default", "adaptive"]
+ 
+ 
+-class AbstractSpinBox(QtWidgets.QAbstractSpinBox):
++class AbstractSpinBoxMixin(widgets.WidgetMixin):
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+         self.setLineEdit(widgets.LineEdit())
+         self.setGroupSeparatorShown(True)
+ 
++    def serialize_fields(self):
++        return dict(
++            button_symbols=self.get_button_symbols(),
++            correction_mode=self.get_correction_mode(),
++        )
++
++    def __setstate__(self, state):
++        super().__setstate__(state)
++        self.set_correction_mode(state["correction_mode"])
++        self.set_button_symbols(state["button_symbols"])
++
+     def is_valid(self) -> bool:
+         return self.hasAcceptableInput()
+ 
+     def set_validator(self, validator: gui.Validator):
+         self.lineEdit().setValidator(validator)
+ 
+-    def get_button_symbols(self) -> str:
+-        """returns button symbol type
+-
+-        possible values are "none", "up_down", "plus_minus"
++    def get_button_symbols(self) -> SymbolStr:
++        """Return button symbol type.
+ 
+         Returns:
+             button symbol type
+         """
+-        return SYMBOLS.inv[self.buttonSymbols()]
+-
+-    def set_button_symbols(self, mode: str):
+-        """sets button symbol type
++        return SYMBOLS.inverse[self.buttonSymbols()]
+ 
+-        possible values are "none", "up_down", "plus_minus"
++    def set_button_symbols(self, mode: SymbolStr):
++        """Set button symbol type.
+ 
+         Args:
+             mode: button symbol type to use
+ 
+         Raises:
+-            ValueError: invalid button symbol type
++            InvalidParamError: invalid button symbol type
+         """
+         if mode not in SYMBOLS:
+-            raise ValueError("Invalid button symbol type.")
++            raise InvalidParamError(mode, SYMBOLS)
+         self.setButtonSymbols(SYMBOLS[mode])
+ 
+-    def set_correction_mode(self, mode: str):
+-        """sets correction mode
+-
+-        possible values are "to_previous", "to_nearest"
++    def set_correction_mode(self, mode: CorrectionModeStr):
++        """Set correction mode.
+ 
+         Args:
+             mode: correction mode to use
+ 
+         Raises:
+-            ValueError: invalid correction mode
++            InvalidParamError: invalid correction mode
+         """
+         if mode not in CORRECTION_MODES:
+-            raise ValueError("Invalid correction mode.")
++            raise InvalidParamError(mode, CORRECTION_MODES)
+         self.setCorrectionMode(CORRECTION_MODES[mode])
+ 
+-    def get_correction_mode(self) -> str:
+-        """returns correction mode
+-
+-        possible values are "to_previous", "to_nearest"
++    def get_correction_mode(self) -> CorrectionModeStr:
++        """Return correction mode.
+ 
+         Returns:
+             correction mode
+         """
+-        return CORRECTION_MODES.inv[self.correctionMode()]
+-
+-    def set_step_type(self, mode: str):
+-        """sets step type
++        return CORRECTION_MODES.inverse[self.correctionMode()]
+ 
+-        possible values are "default", "adaptive"
++    def set_step_type(self, mode: StepTypeStr):
++        """Set step type.
+ 
+         Args:
+             mode: step type to use
+ 
+         Raises:
+-            ValueError: invalid step type
++            InvalidParamError: invalid step type
+         """
+         if mode not in STEP_TYPES:
+-            raise ValueError("Invalid step type.")
++            raise InvalidParamError(mode, STEP_TYPES)
+         self.setStepType(STEP_TYPES[mode])
+ 
+-    def get_step_type(self) -> str:
+-        """returns step type
+-
+-        possible values are "default", "adaptive"
++    def get_step_type(self) -> StepTypeStr:
++        """Return step type.
+ 
+         Returns:
+             step type
+         """
+-        return STEP_TYPES.inv[self.stepType()]
++        return STEP_TYPES.inverse[self.stepType()]
+ 
+     def set_special_value(self, value: str):
+         self.setSpecialValueText(value)
+ 
+     def get_value(self) -> int:
+         return self.value()
+ 
+     def set_value(self, value: int):
+         self.setValue(value)
+ 
+ 
++class AbstractSpinBox(AbstractSpinBoxMixin, QtWidgets.QAbstractSpinBox):
++    pass
++
++
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = AbstractSpinBox()
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/action.py` & `prettyqt-1.0.0/prettyqt/gui/guiapplication.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,167 +1,166 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Optional
++from collections.abc import Iterator
++import contextlib
+ 
+-from qtpy import QtCore, QtWidgets
++from prettyqt import constants, core, gui, iconprovider
++from prettyqt.qt import QtCore, QtGui
++from prettyqt.utils import InvalidParamError, colors, types
++
++
++class GuiApplicationMixin(core.CoreApplicationMixin):
++    def serialize_fields(self):
++        return dict(icon=self.get_icon())
++
++    @classmethod
++    @contextlib.contextmanager
++    def override_cursor(cls, cursor: constants.CursorShapeStr):
++        cls.set_override_cursor(cursor)
++        yield cursor
++        cls.restore_override_cursor()
++
++    @classmethod
++    def set_override_cursor(cls, cursor: constants.CursorShapeStr):
++        crs = gui.Cursor(constants.CURSOR_SHAPE[cursor])
++        cls.setOverrideCursor(crs)
++
++    @classmethod
++    def restore_override_cursor(cls):
++        cls.restoreOverrideCursor()
++
++    @classmethod
++    def get_clipboard(cls) -> gui.Clipboard:
++        return gui.Clipboard(cls.clipboard())
++
++    @classmethod
++    @contextlib.contextmanager
++    def edit_palette(cls) -> Iterator[gui.Palette]:
++        palette = gui.Palette(cls.palette())
++        yield palette
++        cls.setPalette(palette)
+ 
+-from prettyqt import core, gui
+-from prettyqt.utils import bidict
+-
+-
+-PRIORITIES = bidict(
+-    low=QtWidgets.QAction.LowPriority,
+-    normal=QtWidgets.QAction.NormalPriority,
+-    high=QtWidgets.QAction.HighPriority,
+-)
+-
+-CONTEXTS = bidict(
+-    widget=QtCore.Qt.WidgetShortcut,
+-    widget_with_children=QtCore.Qt.WidgetWithChildrenShortcut,
+-    window=QtCore.Qt.WindowShortcut,
+-    application=QtCore.Qt.ApplicationShortcut,
+-)
+-
+-
+-QtWidgets.QAction.__bases__ = (core.Object,)
+-
+-
+-class Action(QtWidgets.QAction):
+-    def __init__(
+-        self,
+-        parent=None,
+-        text: str = "",
+-        icon: gui.icon.IconType = None,
+-        shortcut: Optional[str] = None,
+-        tooltip: str = "",
+-    ):
+-        super().__init__(parent)
+-        self.set_text(text)
+-        self.set_icon(icon)
+-        self.set_shortcut(shortcut)
+-        self.set_tooltip(tooltip)
+-
+-    def __getstate__(self):
+-        return dict(
+-            text=self.text(),
+-            enabled=self.isEnabled(),
+-            shortcut=self.shortcut(),
+-            tooltip=self.toolTip(),
+-            checkable=self.isCheckable(),
+-            checked=self.isChecked(),
+-            priority=self.get_priority(),
+-            shortcut_context=self.get_shortcut_context(),
+-            statustip=self.statusTip(),
+-        )
+-
+-    def __setstate__(self, state):
+-        self.__init__()
+-        self.set_text(state.get("text", ""))
+-        self.set_enabled(state.get("enabled", True))
+-        self.set_shortcut(state["shortcut"])
+-        self.set_tooltip(state.get("tooltip", ""))
+-        self.set_statustip(state.get("statustip", ""))
+-        self.set_checked(state.get("checked", False))
+-        self.set_priority(state["priority"])
+-        self.set_shortcut_context(state["shortcut_context"])
+-        self.set_checkable(state["checkable"])
+-
+-    def set_text(self, text: str):
+-        self.setText(text)
+-
+-    def set_enabled(self, enabled: bool = True):
+-        self.setEnabled(enabled)
+-
+-    def set_disabled(self):
+-        self.setEnabled(False)
+-
+-    def set_tooltip(self, text: str):
+-        self.setToolTip(text)
+-
+-    def set_statustip(self, text: str):
+-        self.setStatusTip(text)
+-
+-    def set_checked(self, value: bool):
+-        self.setChecked(value)
+-
+-    def set_checkable(self, value: bool):
+-        self.setCheckable(value)
+-
+-    def set_icon(self, icon: gui.icon.IconType):
+-        """set the icon for the action
++    def set_layout_direction(self, direction: constants.LayoutDirectionStr):
++        """Set layout direction.
+ 
+         Args:
+-            icon: icon to use
+-        """
+-        icon = gui.icon.get_icon(icon)
+-        self.setIcon(icon)
+-
+-    def set_shortcut(self, shortcut):
+-        if shortcut:
+-            self.setShortcut(shortcut)
+-
+-    def set_menu(self, menu):
+-        self.setMenu(menu)
+-
+-    def set_priority(self, priority: str):
+-        """set priority of the action
+-
+-        Allowed values are "low", "normal", "high"
+-
+-        Args:
+-            priority: priority for the action
++            direction: layout direction
+ 
+         Raises:
+-            ValueError: priority does not exist
++            InvalidParamError: layout direction does not exist
+         """
+-        if priority not in PRIORITIES:
+-            raise ValueError(f"{priority} not a valid priority.")
+-        self.setPriority(PRIORITIES[priority])
+-
+-    def get_priority(self) -> str:
+-        """returns current priority
++        if direction not in constants.LAYOUT_DIRECTION:
++            raise InvalidParamError(direction, constants.LAYOUT_DIRECTION)
++        self.setLayoutDirection(constants.LAYOUT_DIRECTION[direction])
+ 
+-        Possible values: "low", "normal", "high"
++    def get_layout_direction(self) -> constants.LayoutDirectionStr:
++        """Get the current layout direction.
+ 
+         Returns:
+-            priority
++            layout direction
+         """
+-        return PRIORITIES.inv[self.priority()]
++        return constants.LAYOUT_DIRECTION.inverse[self.layoutDirection()]
+ 
+-    def set_shortcut_context(self, context: str):
+-        """set shortcut context
+-
+-        Allowed values are "widget", "widget_with_children", "window", "application"
++    @classmethod
++    def set_high_dpi_scale_factor_rounding_policy(
++        cls, policy: constants.HighDpiScaleFactorRoundingPolicyStr
++    ):
++        """Set high dpi scale factor rounding policy.
+ 
+         Args:
+-            context: shortcut context
++            policy: rounding policy
+ 
+         Raises:
+-            ValueError: shortcut context does not exist
++            InvalidParamError: rounding policy does not exist
+         """
+-        if context not in CONTEXTS:
+-            raise ValueError(f"{context} not a valid shortcut context.")
+-        self.setShortcutContext(CONTEXTS[context])
++        if policy not in constants.HIGH_DPI_SCALE_FACTOR_ROUNDING_POLICY:
++            raise InvalidParamError(
++                policy, constants.HIGH_DPI_SCALE_FACTOR_ROUNDING_POLICY
++            )
++        cls.setHighDpiScaleFactorRoundingPolicy(
++            constants.HIGH_DPI_SCALE_FACTOR_ROUNDING_POLICY[policy]
++        )
+ 
+-    def get_shortcut_context(self) -> str:
+-        """returns shortcut context
++    @classmethod
++    def get_high_dpi_scale_factor_rounding_policy(
++        cls,
++    ) -> constants.HighDpiScaleFactorRoundingPolicyStr:
++        """Get the current high dpi scale factor rounding policy.
+ 
+-        Possible values: "widget", "widget_with_children", "window", "application"
++        Returns:
++            rounding policy
++        """
++        return constants.HIGH_DPI_SCALE_FACTOR_ROUNDING_POLICY.inverse[
++            cls.highDpiScaleFactorRoundingPolicy()
++        ]
++
++    @classmethod
++    def get_application_state(cls) -> list[constants.ApplicationStateStr]:
++        """Get the current application state.
+ 
+         Returns:
+-            shortcut context
++            application state
+         """
+-        return CONTEXTS.inv[self.shortcutContext()]
++        return [
++            k
++            for k, v in constants.APPLICATION_STATES.items()
++            if v & cls.applicationState()  # type: ignore
++        ]
++
++    def get_primary_screen(self) -> gui.Screen:
++        return gui.Screen(self.primaryScreen())
++
++    def get_screen_at(self, point: types.PointType) -> gui.Screen:
++        if isinstance(point, tuple):
++            point = QtCore.QPoint(*point)
++        return gui.Screen(self.screenAt(point))
++
++    def get_screens(self) -> list[gui.Screen]:
++        return [gui.Screen(i) for i in self.screens()]
++
++    @classmethod
++    def get_input_method(cls) -> gui.InputMethod:
++        return gui.InputMethod(cls.inputMethod())
++
++    @classmethod
++    def copy_to_clipboard(cls, text: str):
++        """Sets clipboard to supplied text."""
++        cb = cls.clipboard()
++        cb.clear(mode=cb.Mode.Clipboard)
++        cb.setText(text, mode=cb.Mode.Clipboard)
++
++    @classmethod
++    def get_font(cls) -> gui.Font:
++        return gui.Font(cls.font())
++
++    def set_icon(self, icon: types.IconType):
++        """Set the default window icon.
+ 
+-    def show_shortcut_in_contextmenu(self, state: bool = True):
+-        self.setShortcutVisibleInContextMenu(state)
++        Args:
++            icon: icon to use
++        """
++        icon = iconprovider.get_icon(icon, color=colors.WINDOW_ICON_COLOR)
++        self.setWindowIcon(icon)
+ 
++    def get_icon(self) -> gui.Icon | None:
++        icon = self.windowIcon()
++        if icon.isNull():
++            return None
++        return gui.Icon(self.windowIcon())
++
++    @classmethod
++    def set_palette(cls, palette: constants.ThemeStr | QtGui.QPalette):
++        if palette == "default":
++            pal = gui.Palette()
++        elif palette == "dark":
++            pal = gui.Palette.create_dark_palette()
++        else:
++            pal = palette
++        cls.setPalette(pal)
++
++    @classmethod
++    def get_palette(cls) -> gui.Palette:
++        return gui.Palette(cls.palette())
+ 
+-if __name__ == "__main__":
+-    from prettyqt import widgets
+ 
+-    app = widgets.app()
+-    action = Action("This is a test")
+-    print(action.__getstate__())
+-    app.exec_()
++class GuiApplication(GuiApplicationMixin, QtGui.QGuiApplication):
++    pass
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/boxlayout.py` & `prettyqt-1.0.0/prettyqt/widgets/dockwidget.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,59 +1,78 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtWidgets
++from typing import Any
+ 
+-from prettyqt import widgets
++from deprecated import deprecated
+ 
++from prettyqt import constants, widgets
++from prettyqt.qt import QtWidgets
+ 
+-QtWidgets.QBoxLayout.__bases__ = (widgets.Layout,)
+ 
+-
+-class BoxLayout(QtWidgets.QBoxLayout):
+-    def __init__(self, orientation="horizontal", parent=None, margin=None):
+-        o = self.TopToBottom if orientation == "vertical" else self.LeftToRight
+-        super().__init__(o, parent)
+-        if margin is not None:
+-            self.set_margin(margin)
+-
+-    def __getstate__(self):
+-        return dict(items=self.get_children(), direction=int(self.direction()))
+-
+-    def __setstate__(self, state):
+-        self.__init__()
+-        direction = self.Direction(state["direction"])
+-        self.setDirection(direction)
+-        for item in state["items"]:
+-            self.add(item)
+-
+-    def __add__(self, other):
+-        if isinstance(other, (QtWidgets.QWidget, QtWidgets.QLayout)):
+-            self.add(other)
+-            return self
+-
+-    def add(self, *item):
+-        for i in item:
+-            if isinstance(i, QtWidgets.QWidget):
+-                self.addWidget(i)
+-            else:
+-                self.addLayout(i)
+-
+-    def add_stretch(self, stretch: int = 0):
+-        self.addStretch(stretch)
+-
+-    def add_spacing(self, size: int):
+-        self.addSpacing(size)
++class DockWidget(widgets.WidgetMixin, QtWidgets.QDockWidget):
++    """Customized DockWidget class.
++
++    Contains a custom TitleBar with maximize button
++    """
++
++    def __init__(self, *args, **kwargs):
++        name = kwargs.pop("name", None)
++        title = kwargs.pop("title", None)
++        super().__init__(*args, **kwargs)
++        if name:
++            self.set_id(name)
++        if title:
++            self.set_title(title)
++        self.set_allowed_areas("all")
++
++    def __setstate__(self, state: dict[str, Any]) -> None:
++        self.set_widget(state["widget"])
++
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
++    def serialize_fields(self) -> dict[str, Any]:
++        return dict(widget=self.widget())
++
++    def set_widget(self, widget: QtWidgets.QWidget):
++        self.setWidget(widget)
++
++    def set_allowed_areas(self, area: constants.DockPositionsStr):
++        self.setAllowedAreas(constants.DOCK_POSITIONS[area])
++
++    def setup_title_bar(self):
++        title_bar = widgets.Widget()
++        layout = widgets.BoxLayout("horizontal")
++        layout.set_margin(0)
++        layout.set_alignment("right")
++        title_bar.set_layout(layout)
++        maximize_button = widgets.PushButton()
++        layout.add(maximize_button)
++        maximize_button.set_style_icon("titlebar_max_button")
++        maximize_button.clicked.connect(self.maximize)
++        close_button = widgets.PushButton()
++        close_button.set_style_icon("titlebar_close_button")
++        layout.add(close_button)
++        close_button.clicked.connect(self.close)
++        self.setTitleBarWidget(title_bar)
++
++    @deprecated(reason="This method is deprecated, use 'maximize' instead.")
++    def maximise(self):
++        self.maximize()
++
++    def maximize(self):
++        if not self.isFloating():
++            self.setFloating(True)
++        if not self.isMaximized():
++            self.showMaximized()
++        else:
++            self.showMinimized()
+ 
+ 
+ if __name__ == "__main__":
+-    from prettyqt import widgets
+-
+     app = widgets.app()
+-    layout = BoxLayout("vertical")
+-    widget = widgets.Widget()
+-    widget2 = widgets.RadioButton("Test")
+-    layout += widget2
+-    widget.set_layout(layout)
+-    widget.show()
+-    app.exec_()
++    win = widgets.MainWindow()
++    dock_widget = DockWidget(name="aa", title="Test")
++    dock_widget.setup_title_bar()
++    win.add_dockwidget(dock_widget, "left")
++    win.show()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/calendarwidget.py` & `prettyqt-1.0.0/prettyqt/widgets/calendarwidget.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,80 +1,97 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+ import datetime
+-from typing import Optional
+-
+-from qtpy import QtWidgets
++from typing import Literal
+ 
+ from prettyqt import widgets
+-from prettyqt.utils import bidict
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import InvalidParamError, bidict, types
+ 
+ 
+-SELECTION_MODES = bidict(
+-    none=QtWidgets.QCalendarWidget.NoSelection,
+-    single=QtWidgets.QCalendarWidget.SingleSelection,
++SELECTION_MODE = bidict(
++    none=QtWidgets.QCalendarWidget.SelectionMode.NoSelection,
++    single=QtWidgets.QCalendarWidget.SelectionMode.SingleSelection,
+ )
+ 
+-HEADER_FORMATS = bidict(
+-    none=QtWidgets.QCalendarWidget.NoVerticalHeader,
+-    week_numbers=QtWidgets.QCalendarWidget.ISOWeekNumbers,
++SelectionModeStr = Literal["none", "single"]
++
++VERTICAL_HEADER_FORMAT = bidict(
++    none=QtWidgets.QCalendarWidget.VerticalHeaderFormat.NoVerticalHeader,
++    week_numbers=QtWidgets.QCalendarWidget.VerticalHeaderFormat.ISOWeekNumbers,
+ )
+ 
++VerticalHeaderFormatStr = Literal["none", "week_numbers"]
++
++HORIZONTAL_HEADER_FORMAT = bidict(
++    single_letter=QtWidgets.QCalendarWidget.HorizontalHeaderFormat.SingleLetterDayNames,
++    short=QtWidgets.QCalendarWidget.HorizontalHeaderFormat.ShortDayNames,
++    long=QtWidgets.QCalendarWidget.HorizontalHeaderFormat.LongDayNames,
++    none=QtWidgets.QCalendarWidget.HorizontalHeaderFormat.NoHorizontalHeader,
++)
+ 
+-QtWidgets.QCalendarWidget.__bases__ = (widgets.Widget,)
++HorizontalHeaderFormatStr = Literal["single_letter", "short", "long", "none"]
+ 
+ 
+-class CalendarWidget(QtWidgets.QCalendarWidget):
+-    def __getstate__(self):
+-        return dict(date=self.selectedDate())
++class CalendarWidget(widgets.WidgetMixin, QtWidgets.QCalendarWidget):
++    def serialize_fields(self):
++        return dict(date=self.get_date())
+ 
+     def __setstate__(self, state):
+-        self.__init__()
++        super().__setstate__(state)
+         self.setSelectedDate(state["date"])
+ 
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
+     def get_date(self) -> datetime.date:
+-        try:
+-            return self.selectedDate().toPyDate()  # pyqt5
+-        except (TypeError, AttributeError):
+-            return self.selectedDate().toPython()
++        return self.selectedDate().toPython()  # type: ignore
+ 
+     def get_value(self) -> datetime.date:
+         return self.get_date()
+ 
+-    def set_value(self, value):
+-        self.setSelectedDate(value)
+-
+-    def set_selection_mode(self, mode: Optional[str]):
+-        """set selection mode for given calendar widget
++    def set_value(self, value: types.DateType):
++        if isinstance(value, str):
++            value = QtCore.QDate.fromString(value)
++        self.setSelectedDate(value)  # type: ignore
++
++    def set_range(
++        self,
++        lower: types.DateType,
++        upper: types.DateType,
++    ):
++        if isinstance(lower, str):
++            lower = QtCore.QDate.fromString(lower)
++        if isinstance(upper, str):
++            upper = QtCore.QDate.fromString(upper)
++        self.setMinimumDate(lower)  # type: ignore
++        self.setMaximumDate(upper)  # type: ignore
+ 
+-        Allowed values are "single" or "none"
++    def set_selection_mode(self, mode: SelectionModeStr | None):
++        """Set selection mode for given calendar widget.
+ 
+         Args:
+             mode: selection mode to use
+ 
+         Raises:
+-            ValueError: mode does not exist
++            InvalidParamError: mode does not exist
+         """
+         if mode is None:
+             mode = "none"
+-        if mode not in SELECTION_MODES:
+-            raise ValueError("Format must be either 'single' or 'None'")
+-        self.setSelectionMode(SELECTION_MODES[mode])
+-
+-    def get_selection_mode(self) -> str:
+-        """returns current selection mode
++        if mode not in SELECTION_MODE:
++            raise InvalidParamError(mode, SELECTION_MODE)
++        self.setSelectionMode(SELECTION_MODE[mode])
+ 
+-        Possible values: "single" or "none"
++    def get_selection_mode(self) -> SelectionModeStr:
++        """Return current selection mode.
+ 
+         Returns:
+             selection mode
+         """
+-        return SELECTION_MODES.inv[self.selectionMode()]
++        return SELECTION_MODE.inverse[self.selectionMode()]
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     w = CalendarWidget()
+     w.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/checkbox.py` & `prettyqt-1.0.0/prettyqt/widgets/checkbox.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,100 +1,61 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtCore, QtWidgets
++from prettyqt import constants, core, widgets
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import InvalidParamError
+ 
+-from prettyqt import core, widgets
+-from prettyqt.utils import bidict
+-
+-
+-STATES = bidict(
+-    unchecked=QtCore.Qt.Unchecked,
+-    partial=QtCore.Qt.PartiallyChecked,
+-    checked=QtCore.Qt.Checked,
+-)
+-
+-
+-QtWidgets.QCheckBox.__bases__ = (widgets.AbstractButton,)
+-
+-
+-class CheckBox(QtWidgets.QCheckBox):
+ 
++class CheckBox(widgets.AbstractButtonMixin, QtWidgets.QCheckBox):
+     value_changed = core.Signal(int)
+ 
+-    def __init__(self, label="", parent=None, checked=False):
++    def __init__(
++        self,
++        label: str = "",
++        parent: QtWidgets.QWidget | None = None,
++        checked: bool = False,
++    ):
+         super().__init__(label, parent)
+         self.stateChanged.connect(self.value_changed)
+         self.setChecked(checked)
+ 
+-    def __getstate__(self):
+-        return dict(
+-            object_name=self.id,
+-            checkable=self.isCheckable(),
+-            checkstate=self.get_checkstate(),
+-            tooltip=self.toolTip(),
+-            statustip=self.statusTip(),
+-            is_tristate=self.isTristate(),
+-            text=self.text(),
+-            enabled=self.isEnabled(),
+-        )
+-
+     def __setstate__(self, state):
+-        self.__init__()
+-        self.set_id(state.get("object_name", ""))
+-        self.setCheckable(state["checkable"])
++        super().__setstate__(state)
+         self.setTristate(state.get("is_tristate", False))
+         self.set_checkstate(state["checkstate"])
+-        self.setText(state.get("text", ""))
+-        self.setEnabled(state.get("enabled", True))
+-        self.setToolTip(state.get("tooltip", ""))
+-        self.setStatusTip(state.get("statustip", ""))
+-
+-    def __bool__(self):
+-        return self.isChecked()
+-
+-    @property
+-    def is_on(self) -> bool:
+-        return self.isChecked()
+-
+-    @is_on.setter
+-    def is_on(self, state: bool):
+-        self.setChecked(state)
+ 
+-    def set_checkstate(self, state: str):
+-        """set checkstate of the checkbox
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
+ 
+-        valid values are: unchecked, partial, checked
++    def serialize_fields(self):
++        return dict(
++            checkstate=self.get_checkstate(),
++            is_tristate=self.isTristate(),
++        )
++
++    def set_checkstate(self, state: constants.StateStr):
++        """Set checkstate of the checkbox.
+ 
+         Args:
+             state: checkstate to use
+ 
+         Raises:
+-            ValueError: invalid checkstate
++            InvalidParamError: invalid checkstate
+         """
+-        if state not in STATES:
+-            raise ValueError("Invalid checkstate.")
+-        self.setCheckState(STATES[state])
+-
+-    def get_checkstate(self) -> bool:
+-        """returns checkstate
++        if state not in constants.STATE:
++            raise InvalidParamError(state, constants.STATE)
++        self.setCheckState(constants.STATE[state])
+ 
+-        possible values are "unchecked", "partial", "checked"
++    def get_checkstate(self) -> constants.StateStr:
++        """Return checkstate.
+ 
+         Returns:
+             checkstate
+         """
+-        return STATES.inv[self.checkState()]
+-
+-    def get_value(self) -> bool:
+-        return self.isChecked()
+-
+-    def set_value(self, value: bool):
+-        self.setChecked(value)
++        return constants.STATE.inverse[self.checkState()]
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = CheckBox("test")
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/combobox.py` & `prettyqt-1.0.0/prettyqt/widgets/combobox.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,175 +1,194 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from typing import Iterable, Union, Mapping, Any
+-
+-from qtpy import QtCore, QtWidgets
+-
+-from prettyqt import core, gui, widgets
+-from prettyqt.utils import bidict
+-
+-
+-box = QtWidgets.QComboBox
+-INSERT_POLICIES = bidict(
+-    no_insert=box.NoInsert,
+-    top=box.InsertAtTop,
+-    current=box.InsertAtCurrent,
+-    bottom=box.InsertAtBottom,
+-    after_current=box.InsertAfterCurrent,
+-    before_current=box.InsertBeforeCurrent,
+-    alphabetically=box.InsertAlphabetically,
+-)
++from __future__ import annotations
+ 
+-SIZE_POLICIES = bidict(
+-    content=box.AdjustToContents,
+-    first_show=box.AdjustToContentsOnFirstShow,
+-    min_length=box.AdjustToMinimumContentsLength,
+-    min_length_with_icon=box.AdjustToMinimumContentsLengthWithIcon,
+-)
++from collections.abc import Iterable, Mapping
++from typing import Any, Literal
+ 
++from prettyqt import core, gui, iconprovider, widgets
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import InvalidParamError, bidict, types
++
++
++mod = QtWidgets.QComboBox
++
++INSERT_POLICY = bidict(
++    no_insert=mod.InsertPolicy.NoInsert,
++    top=mod.InsertPolicy.InsertAtTop,
++    current=mod.InsertPolicy.InsertAtCurrent,
++    bottom=mod.InsertPolicy.InsertAtBottom,
++    after_current=mod.InsertPolicy.InsertAfterCurrent,
++    before_current=mod.InsertPolicy.InsertBeforeCurrent,
++    alphabetically=mod.InsertPolicy.InsertAlphabetically,
++)
+ 
+-class NoData(object):
+-    pass
++InsertPolicyStr = Literal[
++    "no_insert",
++    "top",
++    "current",
++    "bottom",
++    "after_current",
++    "before_current",
++    "alphabetically",
++]
++
++SIZE_ADJUST_POLICY = bidict(
++    content=mod.SizeAdjustPolicy.AdjustToContents,
++    first_show=mod.SizeAdjustPolicy.AdjustToContentsOnFirstShow,
++    # min_length=mod.SizeAdjustPolicy.AdjustToMinimumContentsLength,
++    min_length_with_icon=mod.SizeAdjustPolicy.AdjustToMinimumContentsLengthWithIcon,
++)
+ 
++SizeAdjustPolicyStr = Literal[
++    "content",
++    "first_show",
++    # "min_length",
++    "min_length_with_icon",
++]
+ 
+-QtWidgets.QComboBox.__bases__ = (widgets.Widget,)
+ 
++class NoData:
++    pass
+ 
+-class ComboBox(QtWidgets.QComboBox):
+ 
++class ComboBoxMixin(widgets.WidgetMixin):
+     value_changed = core.Signal(object)
+ 
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+         self.currentIndexChanged.connect(self.index_changed)
+ 
+-    def __getstate__(self):
++    def serialize_fields(self):
+         items = [
+             (self.itemText(i), self.itemData(i), self.item_icon(i))
+             for i in range(self.count())
+         ]
+-        return dict(
+-            object_name=self.id,
++        dct = dict(
+             index=self.currentIndex(),
+-            enabled=self.isEnabled(),
+             editable=self.isEditable(),
+-            tooltip=self.toolTip(),
+-            statustip=self.statusTip(),
+             max_count=self.maxCount(),
+             has_frame=self.hasFrame(),
++            icon_size=self.iconSize(),
++            insert_policy=self.insertPolicy(),
++            model_column=self.modelColumn(),
+             max_visible_items=self.maxVisibleItems(),
++            size_adjust_policy=self.get_size_adjust_policy(),
+             duplicates_enabled=self.duplicatesEnabled(),
+             min_contents_length=self.minimumContentsLength(),
++            placeholder_text=self.placeholderText(),
+             items=items,
+         )
++        return dct
+ 
+     def __setstate__(self, state):
+-        self.__init__()
++        super().__setstate__(state)
+         for label, data, icon in state["items"]:
+             self.add(label, data, icon=icon)
+-        self.set_id(state.get("object_name", ""))
+         self.setCurrentIndex(state["index"])
+-        self.setEnabled(state.get("enabled", True))
+-        self.setToolTip(state.get("tooltip", ""))
+-        self.setStatusTip(state.get("statustip", ""))
+         self.setEditable(state["editable"])
+         self.setMaxCount(state["max_count"])
+         self.setMaxVisibleItems(state["max_visible_items"])
+         self.setMinimumContentsLength(state["min_contents_length"])
+         self.setDuplicatesEnabled(state["duplicates_enabled"])
+         self.setFrame(state["has_frame"])
+ 
+-    def __len__(self):
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
++    def __len__(self) -> int:
+         return self.count()
+ 
+     def index_changed(self, index: int):
+         data = self.itemData(index)
+         self.value_changed.emit(data)
+ 
+-    def add_items(self, items: Union[Iterable, Mapping]):
++    def add_items(self, items: Iterable | Mapping, default=NoData):
+         if isinstance(items, Mapping):
+             for k, v in items.items():
+                 self.addItem(v, userData=k)
+         else:
+             for i in items:
+                 if isinstance(i, (tuple, list)):
+                     self.add(*i)
+                 else:
+                     self.addItem(i, i)
++        if default is not NoData:
++            self.set_value(default)
+ 
+-    def add(self, label: str, data=NoData, icon: gui.icon.IconType = None):
++    def add(self, label: str, data=NoData, icon: types.IconType = None):
+         if data is NoData:
+             data = label
+         if icon is not None:
+-            icon = gui.icon.get_icon(icon)
++            icon = iconprovider.get_icon(icon)
+             self.addItem(gui.Icon(icon), label, userData=data)
+         else:
+             self.addItem(label, userData=data)
+ 
+-    def item_icon(self, index: int) -> gui.Icon:
+-        return gui.Icon(self.itemIcon(index))
+-
+-    def set_insert_policy(self, policy: str):
+-        """set insert policy
++    def item_icon(self, index: int) -> gui.Icon | None:
++        icon = self.itemIcon(index)
++        if icon.isNull():
++            return None
++        return gui.Icon(icon)
++
++    def set_editable(self, editable: bool):
++        self.setEditable(editable)
++        if self.completer() is None and editable:
++            self.setCompleter(widgets.Completer(self))
+ 
+-        valid values are "no_insert", "top", "current", "bottom", "after_current",
+-        "before_current", "alphabetically"
++    def set_insert_policy(self, policy: InsertPolicyStr):
++        """Set insert policy.
+ 
+         Args:
+             policy: insert policy to use
+ 
+         Raises:
+-            ValueError: invalid insert policy
++            InvalidParamError: invalid insert policy
+         """
+-        if policy not in INSERT_POLICIES:
+-            raise ValueError("Policy not available")
+-        policy = INSERT_POLICIES.get(policy)
+-        self.setInsertPolicy(policy)
++        if policy not in INSERT_POLICY:
++            raise InvalidParamError(policy, INSERT_POLICY)
++        self.setInsertPolicy(INSERT_POLICY[policy])
+ 
+-    def get_insert_policy(self) -> str:
+-        """returns insert policy
+-
+-        possible values are "no_insert", "top", "current", "bottom", "after_current",
+-        "before_current", "alphabetically"
++    def get_insert_policy(self) -> InsertPolicyStr:
++        """Return insert policy.
+ 
+         Returns:
+             insert policy
+         """
+-        return INSERT_POLICIES.inv[self.insertPolicy()]
+-
+-    def set_size_adjust_policy(self, policy: str):
+-        """set size adjust policy
++        return INSERT_POLICY.inverse[self.insertPolicy()]
+ 
+-        possible values are "content", "first_show", "min_length", "min_length_with_icon"
++    def set_size_adjust_policy(self, policy: SizeAdjustPolicyStr):
++        """Set size adjust policy.
+ 
+         Args:
+             policy: size adjust policy to use
+ 
+         Raises:
+-            ValueError: invalid size adjust policy
++            InvalidParamError: invalid size adjust policy
+         """
+-        if policy not in SIZE_POLICIES:
+-            raise ValueError("Policy not available")
+-        policy = SIZE_POLICIES.get(policy)
+-        self.setSizeAdjustPolicy(policy)
++        if policy not in SIZE_ADJUST_POLICY:
++            raise InvalidParamError(policy, SIZE_ADJUST_POLICY)
++        self.setSizeAdjustPolicy(SIZE_ADJUST_POLICY[policy])
+ 
+-    def get_size_adjust_policy(self) -> str:
+-        """returns size adjust policy
+-
+-        possible values are "content", "first_show", "min_length", "min_length_with_icon"
++    def get_size_adjust_policy(self) -> SizeAdjustPolicyStr:
++        """Return size adjust policy.
+ 
+         Returns:
+             size adjust policy
+         """
+-        return SIZE_POLICIES.inv[self.sizeAdjustPolicy()]
++        return SIZE_ADJUST_POLICY.inverse[self.sizeAdjustPolicy()]
++
++    def set_icon_size(self, size: int | types.SizeType):
++        """Set size of the icons."""
++        if isinstance(size, int):
++            size = core.Size(size, size)
++        elif isinstance(size, tuple):
++            size = core.Size(*size)
++        self.setIconSize(size)
+ 
+-    def set_icon_size(self, size: int):
+-        self.setIconSize(QtCore.QSize(size, size))
++    def get_icon_size(self) -> core.Size:
++        return core.Size(self.iconSize())
+ 
+     def set_min_char_length(self, chars: int):
+         self.setMinimumContentsLength(chars)
+ 
+     def get_value(self) -> Any:
+         # if all(self.itemData(i) is None for i in range(self.count())):
+         #     return self.currentText()
+@@ -188,17 +207,26 @@
+         if idx == -1:
+             raise ValueError("invalid data")
+         self.setCurrentIndex(idx)
+ 
+     def text(self) -> str:
+         return self.currentText()
+ 
++    def hide_completer(self):
++        """Hides the completion widget."""
++        completer = widgets.Completer(self)
++        self.setCompleter(completer)
++
++
++class ComboBox(ComboBoxMixin, QtWidgets.QComboBox):
++    pass
++
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = ComboBox()
+     widget.value_changed.connect(print)
+     w = ComboBox()
+     widget.add("test", data="aa", icon="mdi.timer")
+     widget.add("test2", data="aa2", icon="mdi.timer")
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/dialog.py` & `prettyqt-1.0.0/prettyqt/widgets/dialog.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,103 +1,96 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Union
++from prettyqt import qt, widgets
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import types
+ 
+-from qtpy import QtCore, QtWidgets
+-
+-from prettyqt import gui, widgets
+-
+-
+-QtWidgets.QDialog.__bases__ = (widgets.Widget,)
+ 
++class DialogMixin(widgets.WidgetMixin):
++    def __init__(
++        self,
++        title: str = "",
++        icon: types.IconType = None,
++        parent: QtWidgets.QWidget | None = None,
++        delete_on_close: bool = False,
++        layout: None | str | QtWidgets.QLayout = None,
++    ):
++        super().__init__(parent=parent)
++        self.set_title(title)
++        self.set_icon(icon)
++        if delete_on_close:
++            self.delete_on_close()
++        if layout is not None:
++            self.set_layout(layout)
+ 
+-class BaseDialog(QtWidgets.QDialog):
+-    def __getitem__(self, index):
+-        return self.findChild(QtWidgets.QWidget, index)
++    def __getitem__(self, index: str) -> QtWidgets.QWidget:
++        result = self.find_child(QtWidgets.QWidget, index)
++        if result is None:
++            raise KeyError("Widget not found")
++        return result
+ 
+-    def __getstate__(self):
+-        icon = gui.Icon(self.windowIcon())
++    def serialize_fields(self):
+         return dict(
++            # modal=self.isModal(),
+             layout=self.layout(),
+-            title=self.windowTitle(),
+-            is_maximized=self.isMaximized(),
+-            has_sizegrip=self.isSizeGripEnabled(),
+-            icon=icon if not icon.isNull() else None,
++            size_grip_enabled=self.isSizeGripEnabled(),
+             size=(self.size().width(), self.size().height()),
+         )
+ 
+     def __setstate__(self, state):
+-        self.__init__()
+-        self.set_title(state["title"])
+-        self.set_icon(state["icon"])
++        super().__setstate__(state)
+         if state["layout"]:
+             self.set_layout(state["layout"])
+-        self.resize(state["size"])
+-        self.setSizeGripEnabled(state["has_sizegrip"])
+-        if state["is_maximized"]:
+-            self.showMaximized()
+         self.resize(*state["size"])
+-        self.box = self.layout()
++        self.setSizeGripEnabled(state["size_grip_enabled"])
++
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
+ 
+     def keyPressEvent(self, e):
+-        if e.key() == QtCore.Qt.Key_Escape:
++        if e.key() == QtCore.Qt.Key.Key_Escape:
+             self.close()
+-        elif e.key() == QtCore.Qt.Key_F11:
++        elif e.key() == QtCore.Qt.Key.Key_F11:
+             self.showNormal() if self.isMaximized() else self.showMaximized()
+         else:
+             super().keyPressEvent(e)
+ 
+     def delete_on_close(self):
+-        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
++        self.setAttribute(QtCore.Qt.WidgetAttribute.WA_DeleteOnClose)
+ 
+-    def add_widget(self, widget):
++    def add_widget(self, widget: QtWidgets.QWidget) -> QtWidgets.QWidget:
+         self.box += widget
+         return widget
+ 
+-    def add_buttonbox(self):
++    def add_buttonbox(self) -> widgets.DialogButtonBox:
+         button_box = widgets.DialogButtonBox.create(ok=self.accept, cancel=self.reject)
+-        self.box += button_box
++        self.box.add(button_box)
+         return button_box
+ 
+     def show_blocking(self) -> bool:
+         self.show()
+-        return bool(self.exec_())
++        return bool(self.main_loop())
+ 
+-    def is_accepted(self):
++    def is_accepted(self) -> bool:
+         return self.result() == QtWidgets.QDialog.Accepted
+ 
++    def main_loop(self) -> int:
++        if qt.API.startswith("pyqt"):
++            return self.exec()
++        else:
++            return self.exec_()
+ 
+-class Dialog(BaseDialog):
+-
+-    DEFAULT_SIZE = None
+ 
+-    def __init__(
+-        self,
+-        title: str = "",
+-        icon=None,
+-        parent=None,
+-        delete_on_close: bool = True,
+-        layout: Union[None, str, QtWidgets.QLayout] = None,
+-    ):
+-        super().__init__(parent=parent)
+-        if self.DEFAULT_SIZE:
+-            self.resize(*self.DEFAULT_SIZE)
+-        self.set_title(title)
+-        self.set_icon(icon)
+-        if delete_on_close:
+-            self.delete_on_close()
+-        if layout is not None:
+-            self.set_layout(layout)
++class Dialog(DialogMixin, QtWidgets.QDialog):
++    pass
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     w = Dialog()
+     import pickle
+ 
+-    with open("data.pkl", "wb") as jar:
+-        pickle.dump(w, jar)
+-    with open("data.pkl", "rb") as jar:
+-        w = pickle.load(jar)
++    with open("data.pkl", "wb") as writer:
++        pickle.dump(w, writer)
++    with open("data.pkl", "rb") as reader:
++        w = pickle.load(reader)
+     w.show_blocking()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/dialogbuttonbox.py` & `prettyqt-1.0.0/prettyqt/widgets/dialogbuttonbox.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,169 +1,186 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Callable, List, Optional, Union
++from collections.abc import Iterator, Sequence
++from typing import Callable, Literal
+ 
+-from qtpy import QtCore, QtWidgets
+-
+-from prettyqt import core, widgets
+-from prettyqt.utils import bidict
++from prettyqt import constants, core, widgets
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import InvalidParamError, bidict
+ 
+ 
+ BUTTONS = bidict(
+-    cancel=QtWidgets.QDialogButtonBox.Cancel,
+-    ok=QtWidgets.QDialogButtonBox.Ok,
+-    save=QtWidgets.QDialogButtonBox.Save,
+-    open=QtWidgets.QDialogButtonBox.Open,
+-    close=QtWidgets.QDialogButtonBox.Close,
+-    discard=QtWidgets.QDialogButtonBox.Discard,
+-    apply=QtWidgets.QDialogButtonBox.Apply,
+-    reset=QtWidgets.QDialogButtonBox.Reset,
+-    restore_defaults=QtWidgets.QDialogButtonBox.RestoreDefaults,
+-    help=QtWidgets.QDialogButtonBox.Help,
+-    save_all=QtWidgets.QDialogButtonBox.SaveAll,
+-    yes=QtWidgets.QDialogButtonBox.Yes,
+-    yes_to_all=QtWidgets.QDialogButtonBox.YesToAll,
+-    no=QtWidgets.QDialogButtonBox.No,
+-    no_to_all=QtWidgets.QDialogButtonBox.NoToAll,
+-    abort=QtWidgets.QDialogButtonBox.Abort,
+-    retry=QtWidgets.QDialogButtonBox.Retry,
+-    ignore=QtWidgets.QDialogButtonBox.Ignore,
++    cancel=QtWidgets.QDialogButtonBox.StandardButton.Cancel,
++    ok=QtWidgets.QDialogButtonBox.StandardButton.Ok,
++    save=QtWidgets.QDialogButtonBox.StandardButton.Save,
++    open=QtWidgets.QDialogButtonBox.StandardButton.Open,
++    close=QtWidgets.QDialogButtonBox.StandardButton.Close,
++    discard=QtWidgets.QDialogButtonBox.StandardButton.Discard,
++    apply=QtWidgets.QDialogButtonBox.StandardButton.Apply,
++    reset=QtWidgets.QDialogButtonBox.StandardButton.Reset,
++    restore_defaults=QtWidgets.QDialogButtonBox.StandardButton.RestoreDefaults,
++    help=QtWidgets.QDialogButtonBox.StandardButton.Help,
++    save_all=QtWidgets.QDialogButtonBox.StandardButton.SaveAll,
++    yes=QtWidgets.QDialogButtonBox.StandardButton.Yes,
++    yes_to_all=QtWidgets.QDialogButtonBox.StandardButton.YesToAll,
++    no=QtWidgets.QDialogButtonBox.StandardButton.No,
++    no_to_all=QtWidgets.QDialogButtonBox.StandardButton.NoToAll,
++    abort=QtWidgets.QDialogButtonBox.StandardButton.Abort,
++    retry=QtWidgets.QDialogButtonBox.StandardButton.Retry,
++    ignore=QtWidgets.QDialogButtonBox.StandardButton.Ignore,
+ )
+ 
++ButtonStr = Literal[
++    "cancel",
++    "ok",
++    "save",
++    "open",
++    "close",
++    "discard",
++    "apply",
++    "reset",
++    "restore_defaults",
++    "help",
++    "save_all",
++    "yes",
++    "yes_to_all",
++    "no",
++    "no_to_all",
++    "abort",
++    "retry",
++    "ignore",
++]
++
+ ROLES = bidict(
+-    invalid=QtWidgets.QDialogButtonBox.InvalidRole,
+-    accept=QtWidgets.QDialogButtonBox.AcceptRole,
+-    reject=QtWidgets.QDialogButtonBox.RejectRole,
+-    destructive=QtWidgets.QDialogButtonBox.DestructiveRole,
+-    action=QtWidgets.QDialogButtonBox.ActionRole,
+-    help=QtWidgets.QDialogButtonBox.HelpRole,
+-    yes=QtWidgets.QDialogButtonBox.YesRole,
+-    no=QtWidgets.QDialogButtonBox.NoRole,
+-    apply=QtWidgets.QDialogButtonBox.ApplyRole,
+-    reset=QtWidgets.QDialogButtonBox.ResetRole,
++    invalid=QtWidgets.QDialogButtonBox.ButtonRole.InvalidRole,
++    accept=QtWidgets.QDialogButtonBox.ButtonRole.AcceptRole,
++    reject=QtWidgets.QDialogButtonBox.ButtonRole.RejectRole,
++    destructive=QtWidgets.QDialogButtonBox.ButtonRole.DestructiveRole,
++    action=QtWidgets.QDialogButtonBox.ButtonRole.ActionRole,
++    help=QtWidgets.QDialogButtonBox.ButtonRole.HelpRole,
++    yes=QtWidgets.QDialogButtonBox.ButtonRole.YesRole,
++    no=QtWidgets.QDialogButtonBox.ButtonRole.NoRole,
++    apply=QtWidgets.QDialogButtonBox.ButtonRole.ApplyRole,
++    reset=QtWidgets.QDialogButtonBox.ButtonRole.ResetRole,
+ )
+ 
+-ORIENTATIONS = bidict(horizontal=QtCore.Qt.Horizontal, vertical=QtCore.Qt.Vertical)
+-
+-
+-QtWidgets.QDialogButtonBox.__bases__ = (widgets.Widget,)
++RoleStr = Literal[
++    "invalid",
++    "accept",
++    "reject",
++    "destructive",
++    "action",
++    "help",
++    "yes",
++    "no",
++    "apply",
++    "reset",
++]
+ 
+ 
+-class DialogButtonBox(QtWidgets.QDialogButtonBox):
+-
++class DialogButtonBox(widgets.WidgetMixin, QtWidgets.QDialogButtonBox):
+     button_clicked = core.Signal(str)
+ 
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+         self.clicked.connect(self.on_click)
+ 
+-    def __len__(self):
++    def __len__(self) -> int:
+         return len(self.buttons())
+ 
+-    def __getitem__(self, index):
++    def __getitem__(self, index: ButtonStr) -> QtWidgets.QPushButton:
+         return self.button(BUTTONS[index])
+ 
+-    def __iter__(self):
++    def __iter__(self) -> Iterator[QtWidgets.QAbstractButton]:
+         return iter(self.buttons())
+ 
+-    def __contains__(self, item):
+-        return self[item] is not None
++    def __contains__(self, index: ButtonStr):
++        return self.button(BUTTONS[index]) is not None
+ 
+     @classmethod
+     def create(cls, **kwargs):
+         box = cls()
+         for k, v in kwargs.items():
+-            box.add_default_button(k, callback=v)
++            box.add_default_button(k, callback=v)  # type: ignore
+         return box
+ 
+-    def on_click(self, button):
++    def on_click(self, button: QtCore.QObject):
+         self.button_clicked.emit(button.objectName())
+ 
+     def set_horizontal(self):
+-        self.setOrientation(QtCore.Qt.Horizontal)
++        self.setOrientation(constants.HORIZONTAL)
+ 
+     def set_vertical(self):
+-        self.setOrientation(QtCore.Qt.Vertical)
+-
+-    def set_orientation(self, orientation: str):
+-        """set the orientation of the button box
++        self.setOrientation(constants.VERTICAL)
+ 
+-        Allowed values are "horizontal", "vertical"
++    def set_orientation(self, orientation: constants.OrientationStr):
++        """Set the orientation of the button box.
+ 
+         Args:
+             orientation: orientation for the button box
+ 
+         Raises:
+-            ValueError: orientation does not exist
++            InvalidParamError: orientation does not exist
+         """
+-        if orientation not in ORIENTATIONS:
+-            raise ValueError(f"{orientation} not a valid orientation.")
+-        self.setOrientation(ORIENTATIONS[orientation])
++        if orientation not in constants.ORIENTATION:
++            raise InvalidParamError(orientation, constants.ORIENTATION)
++        self.setOrientation(constants.ORIENTATION[orientation])
+ 
+-    def get_orientation(self) -> str:
+-        """returns current orientation
+-
+-        Possible values: "horizontal", "vertical"
++    def get_orientation(self) -> constants.OrientationStr:
++        """Return current orientation.
+ 
+         Returns:
+             orientation
+         """
+-        return ORIENTATIONS.inv[self.orientation()]
++        return constants.ORIENTATION.inverse[self.orientation()]
+ 
+-    def add_default_buttons(self, buttons: List[str]):
++    def add_default_buttons(self, buttons: Sequence[ButtonStr]):
+         return [self.add_default_button(btn) for btn in buttons]
+ 
+     def add_default_button(
+-        self, button: str, callback: Optional[Callable] = None
++        self, button: ButtonStr, callback: Callable | None = None
+     ) -> QtWidgets.QPushButton:
+-        """add a default button
+-
+-        Valid arguments: "cancel", "ok", "save", "open", "close",
+-                         "discard", "apply", "reset", "restore_defaults",
+-                         "help", "save_all", "yes", "yes_to_all", "no",
+-                         "no_to_all", "abort", "retry", "ignore"
++        """Add a default button.
+ 
+         Args:
+             button: button to add
+             callback: function to call when button gets clicked
+ 
+         Returns:
+             created button
+ 
+         Raises:
+-            ValueError: Button type not available
++            InvalidParamError: Button type not available
+         """
+         if button not in BUTTONS:
+-            raise ValueError("button type not available")
++            raise InvalidParamError(button, BUTTONS)
+         btn = self.addButton(BUTTONS[button])
+         btn.setObjectName(button)
+         if callback:
+             btn.clicked.connect(callback)
+         return btn
+ 
+     def add_button(
+         self,
+-        button: Union[QtWidgets.QPushButton, str],
+-        role: str = "accept",
+-        callback: Optional[Callable] = None,
++        button: QtWidgets.QPushButton | ButtonStr,
++        role: RoleStr = "accept",
++        callback: Callable | None = None,
+     ) -> widgets.PushButton:
+-        """add a button
++        """Add a button.
+ 
+         Args:
+             button: button to add
+             role: role of the button
+             callback: function to call when button gets clicked
+ 
+         Returns:
+             created button
+ 
+         Raises:
+-            ValueError: Button type not available
++            InvalidParamError: Button type not available
+         """
+         if isinstance(button, str):
+             button = widgets.PushButton(button)
+         self.addButton(button, ROLES[role])
+         if callback:
+             button.clicked.connect(callback)
+         return button
+@@ -174,8 +191,8 @@
+ 
+     app = widgets.app()
+     widget = DialogButtonBox()
+     buttons = list(BUTTONS.keys())
+     widget.add_default_buttons(buttons)
+     widget.button_clicked.connect(print)
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/doublespinbox.py` & `prettyqt-1.0.0/prettyqt/widgets/doublespinbox.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,67 +1,59 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtWidgets
++from __future__ import annotations
+ 
+ from prettyqt import core, widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+-QtWidgets.QDoubleSpinBox.__bases__ = (widgets.AbstractSpinBox,)
+-
+-
+-class DoubleSpinBox(QtWidgets.QDoubleSpinBox):
+-
++class DoubleSpinBox(widgets.AbstractSpinBoxMixin, QtWidgets.QDoubleSpinBox):
+     value_changed = core.Signal(float)
+ 
+-    def __init__(self, parent=None, min_value=None, max_value=None, default_value=None):
++    def __init__(
++        self,
++        parent: QtWidgets.QWidget | None = None,
++        min_value: float | None = None,
++        max_value: float | None = None,
++        default_value: float | None = None,
++    ):
+         super().__init__(parent)
+         self.valueChanged.connect(self.value_changed)
+         self.set_range(min_value, max_value)
+         if default_value is not None:
+             self.set_value(default_value)
+ 
+-    def __getstate__(self):
+-        return dict(
+-            range=(self.minimum(), self.maximum()),
+-            value=super().value(),
+-            enabled=self.isEnabled(),
+-            tooltip=self.toolTip(),
+-            statustip=self.statusTip(),
+-            step_type=self.get_step_type(),
+-            prefix=self.prefix(),
+-            correction_mode=self.get_correction_mode(),
+-            button_symbols=self.get_button_symbols(),
+-            decimals=self.decimals(),
+-            suffix=self.suffix(),
+-            single_step=self.singleStep(),
+-        )
+-
+     def __setstate__(self, state):
+-        self.__init__()
++        super().__setstate__(state)
+         self.set_range(*state["range"])
+         self.setValue(state["value"])
+-        self.setEnabled(state.get("enabled", True))
+-        self.setToolTip(state.get("tooltip", ""))
+-        self.setStatusTip(state.get("statustip", ""))
+         self.setPrefix(state["prefix"])
+         self.setSuffix(state["suffix"])
+         self.setDecimals(state["decimals"])
+         self.setSingleStep(state["single_step"])
+         self.set_step_type(state["step_type"])
+-        self.set_correction_mode(state["correction_mode"])
+-        self.set_button_symbols(state["button_symbols"])
+ 
+-    def set_range(self, start, end):
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
++    def serialize_fields(self):
++        return dict(
++            range=(self.minimum(), self.maximum()),
++            prefix=self.prefix(),
++            suffix=self.suffix(),
++            step_type=self.get_step_type(),
++            single_step=self.singleStep(),
++            value=self.value(),
++            decimals=self.decimals(),
++        )
++
++    def set_range(self, start: float | None, end: float | None):
+         if start is None:
+             start = -float("inf")
+         if end is None:
+             end = float("inf")
+         self.setRange(start, end)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = DoubleSpinBox()
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/filedialog.py` & `prettyqt-1.0.0/prettyqt/widgets/filedialog.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,253 +1,244 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
++import os
+ import pathlib
+-from typing import List, Optional, Union
+-
+-from qtpy import QtWidgets
++from typing import Literal
+ 
+ from prettyqt import core, widgets
+-from prettyqt.utils import bidict
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import InvalidParamError, bidict, helpers, types
+ 
+ 
+-MODES = bidict(
+-    existing_file=QtWidgets.QFileDialog.ExistingFile,
+-    existing_files=QtWidgets.QFileDialog.ExistingFiles,
+-    any_file=QtWidgets.QFileDialog.AnyFile,
+-    directory=QtWidgets.QFileDialog.Directory,
++FILE_MODE = bidict(
++    existing_file=QtWidgets.QFileDialog.FileMode.ExistingFile,
++    existing_files=QtWidgets.QFileDialog.FileMode.ExistingFiles,
++    any_file=QtWidgets.QFileDialog.FileMode.AnyFile,
++    directory=QtWidgets.QFileDialog.FileMode.Directory,
+ )
+ 
+-LABELS = bidict(
+-    look_in=QtWidgets.QFileDialog.LookIn,
+-    filename=QtWidgets.QFileDialog.FileName,
+-    filetype=QtWidgets.QFileDialog.FileType,
+-    accept=QtWidgets.QFileDialog.Accept,
+-    reject=QtWidgets.QFileDialog.Reject,
+-)
++FileModeStr = Literal["existing_file", "existing_files", "any_file", "directory"]
+ 
+-ACCEPT_MODES = bidict(
+-    save=QtWidgets.QFileDialog.AcceptSave, open=QtWidgets.QFileDialog.AcceptOpen
++LABEL = bidict(
++    look_in=QtWidgets.QFileDialog.DialogLabel.LookIn,
++    filename=QtWidgets.QFileDialog.DialogLabel.FileName,
++    filetype=QtWidgets.QFileDialog.DialogLabel.FileType,
++    accept=QtWidgets.QFileDialog.DialogLabel.Accept,
++    reject=QtWidgets.QFileDialog.DialogLabel.Reject,
+ )
+ 
+-VIEW_MODES = bidict(detail=QtWidgets.QFileDialog.Detail, list=QtWidgets.QFileDialog.List)
++LabelStr = Literal["look_in", "filename", "filetype", "accept"]
++
++ACCEPT_MODE = bidict(
++    save=QtWidgets.QFileDialog.AcceptMode.AcceptSave,
++    open=QtWidgets.QFileDialog.AcceptMode.AcceptOpen,
++)
+ 
+-FILTERS = bidict(dirs=core.Dir.Dirs, all_dirs=core.Dir.AllDirs, files=core.Dir.Files)
++AcceptModeStr = Literal["save", "open"]
+ 
++VIEW_MODE = bidict(
++    detail=QtWidgets.QFileDialog.ViewMode.Detail, list=QtWidgets.QFileDialog.ViewMode.List
++)
+ 
+-QtWidgets.QFileDialog.__bases__ = (widgets.BaseDialog,)
++ViewModeStr = Literal["detail", "list"]
+ 
+ 
+-class FileDialog(QtWidgets.QFileDialog):
+-    """
+-    simple dialog used to display some widget
+-    """
++class FileDialog(widgets.DialogMixin, QtWidgets.QFileDialog):
++    """Simple dialog used to display some widget."""
+ 
+     def __init__(
+         self,
+-        path: Union[None, str, pathlib.Path] = None,
+-        mode: str = "open",
+-        caption: Optional[str] = None,
+-        path_id: Optional[str] = None,
+-        extension_filter: Optional[dict] = None,
+-        file_mode: str = "existing_files",
+-        parent: Optional[QtWidgets.QWidget] = None,
++        path: None | types.PathType = None,
++        mode: AcceptModeStr = "open",
++        caption: str | None = None,
++        path_id: str | None = None,
++        extension_filter: dict | None = None,
++        file_mode: FileModeStr = "existing_files",
++        parent: QtWidgets.QWidget | None = None,
+     ):
+         super().__init__(parent=parent)
+         self.set_title(caption)
+         self.path_id = path_id
+         if extension_filter:
+             self.set_extension_filter(extension_filter)
+         if path_id is not None and path is None:
+             settings = core.Settings()
+             path = settings.get(path_id, "")
+-        self.set_directory(path)
++        if path is not None:
++            self.set_directory(path)
+         self.set_file_mode(file_mode)
+         self.set_accept_mode(mode)
+ 
+-    def __getstate__(self):
++    def serialize_fields(self):
+         return dict(
+             file_mode=self.get_file_mode(),
+             accept_mode=self.get_accept_mode(),
+-            filter=int(self.filter()),
++            filter=self.get_filter(),
+             view_mode=self.get_view_mode(),
+             name_filter=self.selectedNameFilter(),
+             default_suffix=self.defaultSuffix(),
+             name_filters=self.nameFilters(),
+             supported_schemes=self.supportedSchemes(),
+         )
+ 
+     def __setstate__(self, state):
+-        self.__init__()
+         self.set_file_mode(state["file_mode"])
+         self.set_accept_mode(state["accept_mode"])
+         self.set_view_mode(state["view_mode"])
+-        self.setFilter(core.Dir.Filters(state["filter"]))
++        self.set_filter(*state["filter"])
+         self.setNameFilters(state["name_filters"])
+         self.setNameFilter(state["name_filter"])
+         self.setDefaultSuffix(state["default_suffix"])
+         self.setSupportedSchemes(state["supported_schemes"])
+ 
+-    def set_accept_mode(self, mode: str):
+-        """set accept mode
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
+ 
+-        possible values are "save", "open"
++    def set_accept_mode(self, mode: AcceptModeStr):
++        """Set accept mode.
+ 
+         Args:
+             mode: accept mode to use
+ 
+         Raises:
+-            ValueError: invalid accept mode
++            InvalidParamError: invalid accept mode
+         """
+-        if mode not in ACCEPT_MODES:
+-            raise ValueError(f"Invalid value. Valid values: {ACCEPT_MODES.keys()}")
+-        self.setAcceptMode(ACCEPT_MODES[mode])
+-
+-    def get_accept_mode(self) -> str:
+-        """returns accept mode
++        if mode not in ACCEPT_MODE:
++            raise InvalidParamError(mode, ACCEPT_MODE)
++        self.setAcceptMode(ACCEPT_MODE[mode])
+ 
+-        possible values are "save", "open"
++    def get_accept_mode(self) -> AcceptModeStr:
++        """Return accept mode.
+ 
+         Returns:
+             accept mode
+         """
+-        return ACCEPT_MODES.inv[self.acceptMode()]
++        return ACCEPT_MODE.inverse[self.acceptMode()]
+ 
+-    def set_view_mode(self, mode: str):
+-        """set view mode
+-
+-        possible values are "detail", "list"
++    def set_view_mode(self, mode: ViewModeStr):
++        """Set view mode.
+ 
+         Args:
+             mode: view mode to use
+ 
+         Raises:
+-            ValueError: invalid view mode
++            InvalidParamError: invalid view mode
+         """
+-        if mode not in VIEW_MODES:
+-            raise ValueError(f"Invalid value. Valid values: {VIEW_MODES.keys()}")
+-        self.setViewMode(VIEW_MODES[mode])
+-
+-    def get_view_mode(self) -> str:
+-        """returns view mode
++        if mode not in VIEW_MODE:
++            raise InvalidParamError(mode, VIEW_MODE)
++        self.setViewMode(VIEW_MODE[mode])
+ 
+-        possible values are "detail", "list"
++    def get_view_mode(self) -> ViewModeStr:
++        """Return view mode.
+ 
+         Returns:
+             view mode
+         """
+-        return VIEW_MODES.inv[self.viewMode()]
++        return VIEW_MODE.inverse[self.viewMode()]
+ 
+-    def set_label_text(self, label: str, text: str):
+-        """sets the label text for button label
+-
+-        possible values for label are "look_in", "filename", "filetype",
+-        "accept", "reject"
++    def set_label_text(self, label: LabelStr, text: str):
++        """Set the label text for button label.
+ 
+         Args:
+             label: button to set text for
+             text: text to use
+         """
+-        if label not in LABELS:
+-            raise ValueError(f"Invalid value. Valid values: {LABELS.keys()}")
+-        self.setLabelText(LABELS[label], text)
+-
+-    def get_label_text(self, label) -> str:
+-        """returns label text
++        if label not in LABEL:
++            raise InvalidParamError(label, LABEL)
++        self.setLabelText(LABEL[label], text)
+ 
+-        possible values are "look_in", "filename", "filetype", "accept", "reject"
++    def get_label_text(self, label: LabelStr) -> str:
++        """Return label text.
+ 
+         Returns:
+             label text
+         """
+-        return self.labelText(LABELS.inv[label])
++        return self.labelText(LABEL[label])
+ 
+-    def get_file_mode(self) -> str:
+-        """returns file mode
+-
+-        possible values are "existing_file", "existing_files", "any_file", "directory"
++    def get_file_mode(self) -> FileModeStr:
++        """Return file mode.
+ 
+         Returns:
+             file mode
+         """
+-        return MODES.inv[self.fileMode()]
+-
+-    def set_file_mode(self, mode: str):
+-        """sets the file mode of the dialog
++        return FILE_MODE.inverse[self.fileMode()]
+ 
+-        allowed values are "existing_file", "existing_files", "any_file" "directory"
++    def set_file_mode(self, mode: FileModeStr):
++        """Set the file mode of the dialog.
+ 
+         Args:
+             mode: mode to use
+         """
+-        self.setFileMode(MODES[mode])
++        self.setFileMode(FILE_MODE[mode])
+ 
+-    def set_filter(self, to_filter: str):
+-        if to_filter not in FILTERS:
+-            raise ValueError(f"Invalid filter. Valid values: {FILTERS.keys()}")
+-        self.setFilter(FILTERS[to_filter])
+-
+-    def selected_files(self) -> List[pathlib.Path]:
++    def selected_files(self) -> list[pathlib.Path]:
+         return [pathlib.Path(p) for p in self.selectedFiles()]
+ 
+-    def selected_file(self) -> Optional[pathlib.Path]:
++    def selected_file(self) -> pathlib.Path | None:
+         selected = self.selectedFiles()
+         return pathlib.Path(selected[0]) if selected else None
+ 
+-    def choose_folder(self) -> Optional[List[pathlib.Path]]:
++    def choose_folder(self) -> list[pathlib.Path] | None:
+         self.set_file_mode("directory")
+         return self.choose()
+ 
+-    def open_file(self) -> Optional[List[pathlib.Path]]:
++    def open_file(self) -> list[pathlib.Path] | None:
+         self.set_file_mode("existing_file")
+         return self.choose()
+ 
+-    def choose(self) -> Optional[List[pathlib.Path]]:
+-        result = super().exec_()
++    def choose(self) -> list[pathlib.Path] | None:
++        result = self.main_loop()
+         if result != self.Accepted:
+             return None
+         paths = self.selected_files()
+         folder_path = paths[0].parent
+         if self.path_id:
+             settings = core.Settings()
+             settings.setValue(self.path_id, str(folder_path))
+         return paths
+ 
+-    def set_extension_filter(self, extension_dict: dict):
+-        """set filter based on given dictionary
++    def set_extension_filter(self, extension_dict: dict[str, list[str]]):
++        """Set filter based on given dictionary.
+ 
+         dict must contain "'name': ['.ext1', '.ext2']" as key-value pairs
+ 
+         Args:
+             extension_dict: filter dictionary
+         """
+         items = [
+             f"{k} ({' '.join(f'*{ext}' for ext in v)})" for k, v in extension_dict.items()
+         ]
+         filter_str = ";;".join(items)
+         self.setNameFilter(filter_str)
+ 
+-    def directory(self) -> pathlib.Path:
+-        """return current directory
++    def get_directory(self) -> pathlib.Path:
++        """Return current directory.
+ 
+         returns current directory level as a Pathlib object
+ 
+         Returns:
+             Pathlib object
+         """
+-        return pathlib.Path(super().directory())
++        return pathlib.Path(self.directory().absolutePath())
+ 
+-    def set_directory(self, path: Union[None, str, pathlib.Path]):
+-        """set start directory
+-        """
+-        if isinstance(path, pathlib.Path):
+-            path = str(path)
++    def set_directory(self, path: types.PathType):
++        """Set start directory."""
++        path = os.fspath(path)
+         self.setDirectory(path)
+ 
++    def set_filter(self, *filters: core.dir.FilterStr):
++        for item in filters:
++            if item not in core.dir.FILTERS:
++                raise InvalidParamError(item, core.dir.FILTERS)
++        flags = helpers.merge_flags(filters, core.dir.FILTERS)
++        self.setFilter(flags)
++
++    def get_filter(self) -> list[core.dir.FilterStr]:
++        return [k for k, v in core.dir.FILTERS.items() if v & self.filter()]
++
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = FileDialog()
+     widget.show()
+     print(widget.__getstate__())
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/formlayout.py` & `prettyqt-1.0.0/prettyqt/widgets/boxlayout.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,108 +1,101 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtWidgets
++from typing import Literal
+ 
+ from prettyqt import widgets
+-from prettyqt.utils import bidict
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import InvalidParamError, bidict
+ 
+ 
+-ROLES = bidict(
+-    left=QtWidgets.QFormLayout.LabelRole,
+-    right=QtWidgets.QFormLayout.FieldRole,
+-    both=QtWidgets.QFormLayout.SpanningRole,
++DIRECTION = bidict(
++    left_to_right=QtWidgets.QBoxLayout.Direction.LeftToRight,
++    right_to_left=QtWidgets.QBoxLayout.Direction.RightToLeft,
++    top_to_bottom=QtWidgets.QBoxLayout.Direction.TopToBottom,
++    bottom_to_top=QtWidgets.QBoxLayout.Direction.BottomToTop,
+ )
+ 
++DirectionStr = Literal["left_to_right", "right_to_left", "top_to_bottom", "bottom_to_top"]
+ 
+-QtWidgets.QFormLayout.__bases__ = (widgets.Layout,)
+ 
++class BoxLayoutMixin(widgets.LayoutMixin):
++    def __init__(
++        self,
++        orientation: Literal["horizontal", "vertical"] = "horizontal",
++        parent: QtWidgets.QWidget | None = None,
++        margin: int | None = None,
++    ):
++        o = (
++            self.Direction.TopToBottom
++            if orientation == "vertical"
++            else self.Direction.LeftToRight
++        )
++        super().__init__(o, parent)
++        if margin is not None:
++            self.set_margin(margin)
+ 
+-class FormLayout(QtWidgets.QFormLayout):
+-    def __init__(self, *args, **kwargs):
+-        super().__init__(*args, **kwargs)
+-        self.set_size_mode("maximum")
+-        self.setVerticalSpacing(8)
+-
+-    def __setitem__(self, index, value):
+-        if isinstance(index, tuple):
+-            row = index[0]
+-            role = index[1]
+-        else:
+-            row = index
+-            role = "both"
+-        self.set_widget(value, row, role)
++    def serialize_fields(self):
++        return dict(items=self.get_children(), direction=self.get_direction())
+ 
+-    def __iter__(self):
+-        return iter(self[i] for i in range(self.count()) if self[i] is not None)
++    def __setstate__(self, state):
++        super().__setstate__(state)
++        self.set_direction(state["direction"])
++        for item in state["items"]:
++            self.add(item)
++
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
++    def __add__(self, other: QtWidgets.QWidget | QtWidgets.QLayout):
++        self.add(other)
++        return self
++
++    def add(self, *item):
++        for i in item:
++            if isinstance(i, QtWidgets.QWidget):
++                self.addWidget(i)
++            else:
++                self.addLayout(i)
++
++    def add_stretch(self, stretch: int = 0):
++        self.addStretch(stretch)
++
++    def add_spacing(self, size: int):
++        self.addSpacing(size)
++
++    def set_direction(self, direction: DirectionStr):
++        """Set the direction.
+ 
+-    def __len__(self):
+-        """needed for PySide2
++        Args:
++            direction: direction
++
++        Raises:
++            InvalidParamError: direction does not exist
+         """
+-        return self.rowCount()
++        if direction not in DIRECTION:
++            raise InvalidParamError(direction, DIRECTION)
++        self.setDirection(DIRECTION[direction])
+ 
+-    def __add__(self, other):
+-        if isinstance(other, (QtWidgets.QWidget, QtWidgets.QLayout, tuple)):
+-            self.add(other)
+-            return self
+-        raise TypeError("Wrong type for addition")
+-
+-    def __getstate__(self):
+-        widget_list = []
+-        positions = []
+-        for i, item in enumerate(list(self)):
+-            widget_list.append(item)
+-            positions.append(self.get_item_pos(i))
+-        return dict(widgets=widget_list, positions=positions)
++    def get_direction(self) -> DirectionStr:
++        """Return current direction.
++
++        Returns:
++            direction
++        """
++        return DIRECTION.inverse[self.direction()]
+ 
+-    def __setstate__(self, state):
+-        self.__init__()
+-        for i, (item, pos) in enumerate(zip(state["widgets"], state["positions"])):
+-            self.set_widget(item, pos[0], pos[1])
+-
+-    def set_widget(self, widget, row, role: str = "both"):
+-        if isinstance(widget, str):
+-            widget = widgets.Label(widget)
+-        if isinstance(widget, QtWidgets.QLayout):
+-            self.set_layout(row, ROLES[role], widget)
+-        else:
+-            self.setWidget(row, ROLES[role], widget)
+-
+-    def get_widget(self, row: int, role: str = "both"):
+-        item = self.itemAt(row, ROLES[role])
+-        widget = item.widget()
+-        if widget is None:
+-            widget = item.layout()
+-        return widget
+-
+-    def get_item_pos(self, index):
+-        pos = self.getItemPosition(index)
+-        return pos[0], ROLES.inv[pos[1]]
+-
+-    @classmethod
+-    def build_from_dict(cls, dct, parent=None):
+-        formlayout = cls(parent)
+-        for i, (k, v) in enumerate(dct.items(), start=1):
+-            if k is not None:
+-                formlayout.set_widget(k, i, "left")
+-            if v is not None:
+-                formlayout.set_widget(v, i, "right")
+-        return formlayout
+-
+-    def add(self, *items):
+-        for i in items:
+-            if isinstance(i, (QtWidgets.QWidget, QtWidgets.QLayout)):
+-                self.addRow(i)
+-            if isinstance(i, tuple):
+-                self.addRow(*i)
++
++class BoxLayout(BoxLayoutMixin, QtWidgets.QBoxLayout):
++    pass
+ 
+ 
+ if __name__ == "__main__":
++    from prettyqt import widgets
++
+     app = widgets.app()
+-    dct = {"key": widgets.Label("test"), None: widgets.Label("test 2")}
+-    layout = FormLayout.build_from_dict(dct)
+-    layout[3] = "hellooo"
+-    w = widgets.Widget()
+-    w.set_layout(layout)
+-    w.show()
+-    app.exec_()
++    layout = BoxLayout("vertical")
++    widget = widgets.Widget()
++    widget2 = widgets.RadioButton("Test")
++    layout.add(widget2)
++    widget.set_layout(layout)
++    widget.show()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/groupbox.py` & `prettyqt-1.0.0/prettyqt/widgets/spinbox.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,71 +1,62 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtCore, QtWidgets
++from prettyqt import core, widgets
++from prettyqt.qt import QtWidgets
+ 
+-from prettyqt import widgets
+ 
++class SpinBox(widgets.AbstractSpinBoxMixin, QtWidgets.QSpinBox):
++    value_changed = core.Signal(int)
+ 
+-H_ALIGNMENTS = dict(
+-    left=QtCore.Qt.AlignLeft, right=QtCore.Qt.AlignRight, center=QtCore.Qt.AlignHCenter
+-)
++    def __init__(
++        self,
++        parent: QtWidgets.QWidget | None = None,
++        min_value: int | None = None,
++        max_value: int | None = None,
++        default_value: int | None = None,
++    ):
++        super().__init__(parent)
++        self.valueChanged.connect(self.value_changed)
++        self.set_range(min_value, max_value)
++        if default_value is not None:
++            self.set_value(default_value)
+ 
+-
+-QtWidgets.QGroupBox.__bases__ = (widgets.Widget,)
+-
+-
+-class GroupBox(QtWidgets.QGroupBox):
+-    """GroupBox widget
+-
+-    A group box provides a frame, a title on top, a keyboard shortcut,
+-    and displays various other widgets inside itself.
+-    The keyboard shortcut moves keyboard focus to one of the group box's child widgets.
+-    """
+-
+-    def __init__(self, title="", checkable=False, parent=None):
+-        super().__init__(title, parent)
+-        self.setCheckable(checkable)
+-
+-    def __repr__(self):
+-        return f"GroupBox({self.title()!r})"
+-
+-    def __getstate__(self):
++    def serialize_fields(self):
+         return dict(
+-            checkable=self.isCheckable(),
+-            checked=self.isChecked(),
+-            tooltip=self.toolTip(),
+-            layout=self.layout(),
+-            flat=self.isFlat(),
+-            # alignment=self.alignment(),
+-            title=self.title(),
++            range=(self.minimum(), self.maximum()),
++            value=self.value(),
++            prefix=self.prefix(),
++            suffix=self.suffix(),
++            step_type=self.get_step_type(),
++            single_step=self.singleStep(),
++            int_base=self.displayIntegerBase(),
+         )
+ 
+     def __setstate__(self, state):
+-        self.__init__(state["title"])
+-        self.set_layout(state["layout"])
+-        self.setCheckable(state["checkable"])
+-        self.setChecked(state.get("checked", False))
+-        self.setFlat(state["flat"])
+-        self.setToolTip(state.get("tooltip", ""))
+-        # self.setAlignment(state["alignment"])
+-
+-    def set_title(self, title: str):
+-        self.setTitle(title)
+-
+-    def set_alignment(self, alignment):
+-        self.setAlignment(H_ALIGNMENTS[alignment])
+-
+-    def set_enabled(self, state):
+-        for widget in self.layout():
+-            widget.setEnabled(state)
++        super().__setstate__(state)
++        self.set_range(*state["range"])
++        self.setValue(state["value"])
++        self.setSingleStep(state["single_step"])
++        self.setPrefix(state["prefix"])
++        self.setSuffix(state["suffix"])
++        self.setDisplayIntegerBase(state["int_base"])
++        self.set_step_type(state["step_type"])
++
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
++    def set_range(self, start: int | None, end: int | None):
++        if start is None:
++            start = -2147483647
++        if end is None:
++            end = 2147483647
++        self.setRange(start, end)
++
++    def set_step_size(self, step_size):
++        self.setSingleStep(step_size)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+-    widget = GroupBox()
+-    ly = widgets.BoxLayout()
+-    ly += widgets.RadioButton("test")
+-    widget.set_layout(ly)
++    widget = SpinBox()
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/headerview.py` & `prettyqt-1.0.0/prettyqt/widgets/tableview.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,108 +1,100 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-import functools
+-from typing import Iterable, Optional, Union
+-
+-from qtpy import QtCore, QtWidgets
+-
+-from prettyqt import core, widgets
+-from prettyqt.utils import bidict, helpers
+-
+-
+-ORIENTATIONS = bidict(horizontal=QtCore.Qt.Horizontal, vertical=QtCore.Qt.Vertical)
+-
+-MODES = bidict(
+-    interactive=QtWidgets.QHeaderView.Interactive,
+-    fixed=QtWidgets.QHeaderView.Fixed,
+-    stretch=QtWidgets.QHeaderView.Stretch,
+-    resize_to_contents=QtWidgets.QHeaderView.ResizeToContents,
+-)
+-
+-
+-QtWidgets.QHeaderView.__bases__ = (widgets.AbstractItemView,)
+-
+-
+-class HeaderView(QtWidgets.QHeaderView):
+-
+-    section_vis_changed = QtCore.Signal(int, bool)
+-
+-    def __init__(self, orientation: Union[str, int], parent=None):
+-        if orientation in ORIENTATIONS:
+-            orientation = ORIENTATIONS[orientation]
+-        super().__init__(orientation, parent=parent)
+-        self.setSectionsMovable(True)
+-        self.setSectionsClickable(True)
+-        self._widget_name = parent.id if parent is not None else ""
+-
+-    def save_state(self):
+-        settings = core.Settings()
+-        settings.setValue(f"{self._widget_name}.state", self.saveState())
++from prettyqt import constants, widgets
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import InvalidParamError
++
++
++class TableViewMixin(widgets.AbstractItemViewMixin):
++    def __init__(self, *args, **kwargs):
++        super().__init__(*args, **kwargs)
++        class_name = type(self).__name__
++        self.set_id(class_name)
++        self.setHorizontalHeader(widgets.HeaderView("horizontal", parent=self))
++        self.setVerticalHeader(widgets.HeaderView("vertical", parent=self))
++        self.setAlternatingRowColors(True)
++        self.setWordWrap(False)
++
++    def serialize_fields(self):
++        return dict(
++            corner_button_enabled=self.isCornerButtonEnabled(),
++            grid_style=self.get_grid_style(),
++            show_grid=self.showGrid(),
++            sorting_enabled=self.isSortingEnabled(),
++            word_wrap=self.wordWrap(),
++        )
++
++    def __setstate__(self, state):
++        super().__setstate__(state)
++        self.setCornerButtonEnabled(state["corner_button_enabled"])
++        self.set_grid_style(state["grid_style"])
++        self.setShowGrid(state["show_grid"])
++        self.setSortingEnabled(state["sorting_enabled"])
++        self.setWordWrap(state["word_wrap"])
++
++    @property
++    def h_header(self):
++        return self.horizontalHeader()
++
++    @h_header.setter
++    def h_header(self, header):
++        self.setHorizontalHeader(header)
++
++    @property
++    def v_header(self):
++        return self.verticalHeader()
++
++    @v_header.setter
++    def v_header(self, header):
++        self.setVerticalHeader(header)
++
++    def setup_list_style(self):
++        self.set_selection_behaviour("rows")
++        self.h_header.setStretchLastSection(True)
++        self.v_header.set_resize_mode("fixed")
++        self.v_header.set_default_section_size(28)
++
++    def adapt_sizes(self):
++        model = self.model()
++        if model is not None and (model.rowCount() * model.columnCount()) < 1000:
++            self.resizeColumnsToContents()
++        else:
++            self.h_header.resize_sections("interactive")
+ 
+-    def load_state(self):
+-        settings = core.Settings()
+-        state = settings.get(f"{self._widget_name}.state", None)
+-        if state is not None:
+-            self.restoreState(state)
++    def sort_by_column(self, column: int | None, ascending: bool = True):
++        column = -1 if column is None else column
++        order = constants.ASCENDING if ascending else constants.DESCENDING
++        self.sortByColumn(column, order)
+ 
+-    def resize_sections(self, mode: str):
+-        self.resizeSections(MODES[mode])
++    def set_grid_style(self, style: constants.PenStyleStr):
++        """Set grid style.
+ 
+-    @helpers.deprecated
+-    def resize_mode(self, mode: str, col: Optional[int] = None):
+-        self.set_resize_mode(mode, col)
++        Args:
++            style: grid style to use
+ 
+-    def set_resize_mode(self, mode: str, col: Optional[int] = None):
+-        if mode not in MODES:
+-            raise ValueError("mode not existing")
+-        if col is None:
+-            self.setSectionResizeMode(MODES[mode])
+-        else:
+-            self.setSectionResizeMode(col, MODES[mode])
++        Raises:
++            InvalidParamError: invalid grid style
++        """
++        if style not in constants.PEN_STYLE:
++            raise InvalidParamError(style, constants.PEN_STYLE)
++        self.setGridStyle(constants.PEN_STYLE[style])
+ 
+-    def section_labels(self) -> list:
+-        model = self.parent().model()
+-        return [
+-            model.headerData(i, QtCore.Qt.Horizontal, QtCore.Qt.DisplayRole)
+-            for i in range(self.count())
+-        ]
++    def get_grid_style(self) -> constants.PenStyleStr:
++        """Return grid style.
+ 
+-    def contextMenuEvent(self, event):
+-        """
+-        context menu for our files tree
++        Returns:
++            grid style
+         """
+-        menu = widgets.Menu(parent=self)
+-        for i, header_label in enumerate(self.section_labels()[1:], start=1):
+-            act = menu.addAction(header_label)
+-            act.setCheckable(True)
+-            val = not self.isSectionHidden(i)
+-            act.setChecked(val)
+-            fn = functools.partial(self.set_section_hidden, i=i, hide=val)
+-            act.triggered.connect(fn)
+-        menu.exec_(self.mapToGlobal(event.pos()))
+-
+-    def set_section_hidden(self, i: int, hide: bool):
+-        self.section_vis_changed.emit(i, hide)
+-        self.setSectionHidden(i, hide)
+-
+-    def set_sizes(self, sizes: Iterable):
+-        for i, size in enumerate(sizes):
+-            if size is not None:
+-                self.resizeSection(i, size)
+-
+-    def set_default_section_size(self, size: Optional[int]):
+-        if size is None:
+-            self.resetDefaultSectionSize()
+-        else:
+-            self.setDefaultSectionSize(size)
++        return constants.PEN_STYLE.inverse[self.gridStyle()]
++
+ 
+-    def stretch_last_section(self, stretch: bool = True):
+-        self.setStretchLastSection(stretch)
++class TableView(TableViewMixin, QtWidgets.QTableView):
++    pass
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+-    header = HeaderView("horizontal", parent=None)
+-    header.show()
+-    app.exec_()
++    widget = TableView()
++    widget.set_model(widgets.FileSystemModel())
++    widget.show()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/keysequenceedit.py` & `prettyqt-1.0.0/prettyqt/widgets/keysequenceedit.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,29 +1,22 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtGui, QtWidgets
++from __future__ import annotations
+ 
+ from prettyqt import core, gui, widgets
++from prettyqt.qt import QtGui, QtWidgets
+ 
+ 
+-QtWidgets.QKeySequenceEdit.__bases__ = (widgets.Widget,)
+-
+-
+-class KeySequenceEdit(QtWidgets.QKeySequenceEdit):
+-
++class KeySequenceEdit(widgets.WidgetMixin, QtWidgets.QKeySequenceEdit):
+     value_changed = core.Signal(QtGui.QKeySequence)
+ 
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+         self.keySequenceChanged.connect(self.value_changed)
+ 
+     def __repr__(self):
+-        return f"KeySequenceEdit({self.get_value()})"
++        return f"{type(self).__name__}({self.get_value()!r})"
+ 
+     def set_value(self, value: str):
+         seq = gui.KeySequence.fromString(value)
+         self.setKeySequence(seq)
+ 
+     def get_value(self) -> str:
+         return self.keySequence().toString()
+@@ -32,8 +25,8 @@
+         return True
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = KeySequenceEdit()
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/label.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/timeline.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,238 +1,235 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-import functools
+-import operator
+-import pathlib
+-
+-from typing import List, Optional, Union
+-
+-from qtpy import QtCore, QtWidgets
+-
+-from prettyqt import gui, widgets
+-from prettyqt.utils import bidict, colors
+-
+-
+-H_ALIGNMENTS = bidict(
+-    left=QtCore.Qt.AlignLeft,
+-    right=QtCore.Qt.AlignRight,
+-    center=QtCore.Qt.AlignHCenter,
+-    justify=QtCore.Qt.AlignJustify,
+-)
+-
+-V_ALIGNMENTS = bidict(
+-    top=QtCore.Qt.AlignTop,
+-    bottom=QtCore.Qt.AlignBottom,
+-    center=QtCore.Qt.AlignVCenter,
+-    baseline=QtCore.Qt.AlignBaseline,
+-)
+-
+-TEXT_INTERACTION = bidict(
+-    none=QtCore.Qt.NoTextInteraction,
+-    by_mouse=QtCore.Qt.TextSelectableByMouse,
+-    by_keyboard=QtCore.Qt.TextSelectableByKeyboard,
+-    accessible_by_mouse=QtCore.Qt.LinksAccessibleByMouse,
+-    accessible_by_keyboard=QtCore.Qt.LinksAccessibleByKeyboard,
+-    text_editable=QtCore.Qt.TextEditable,
+-    like_text_editor=QtCore.Qt.TextEditorInteraction,
+-    like_text_browser=QtCore.Qt.TextBrowserInteraction,
+-)
+-
+-TEXT_FORMATS = bidict(
+-    rich=QtCore.Qt.RichText, plain=QtCore.Qt.PlainText, auto=QtCore.Qt.AutoText
+-)
+-
+-WEIGHTS = gui.font.WEIGHTS  # type: ignore
+-
+-
+-QtWidgets.QLabel.__bases__ = (widgets.Frame,)
+-
+-
+-class Label(QtWidgets.QLabel):
+-    def __init__(self, *args, **kwargs):
+-        super().__init__(*args, **kwargs)
+-        self.openExternalLinks()
+-
+-    def __repr__(self):
+-        return f"Label({self.text()!r})"
+-
+-    def __getstate__(self):
+-        return dict(
+-            text=self.text(),
+-            scaled_contents=self.hasScaledContents(),
+-            indent=self.indent(),
+-            margin=self.margin(),
+-            text_format=self.get_text_format(),
+-            # pixmap=self.pixmap(),
+-            open_external_links=self.openExternalLinks(),
+-            alignment=int(self.alignment()),
+-            word_wrap=self.wordWrap(),
+-        )
+-
+-    def __setstate__(self, state):
+-        self.__init__()
+-        self.setText(state.get("text", ""))
+-        self.setIndent(state.get("indent", -1))
+-        self.setMargin(state.get("margin", 0))
+-        self.setWordWrap(state.get("word_wrap", 0))
+-        self.set_text_format(state.get("text_format", 0))
+-        # self.setPixmap(state.get("pixmap"))
+-        self.setOpenExternalLinks(state.get("open_external_links", False))
+-        self.setAlignment(QtCore.Qt.Alignment(state.get("alignment")))
+-        self.setScaledContents(state["scaled_contents"])
+-        self.setWordWrap(state["word_wrap"])
+-
+-    def allow_links(self):
+-        # self.setText("<a href=\"http://example.com/\">Click Here!</a>")
+-        self.setTextFormat(QtCore.Qt.RichText)
+-        self.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
+-        self.setOpenExternalLinks(True)
+-        return self
+-
+-    def set_alignment(
+-        self, horizontal: Optional[str] = None, vertical: Optional[str] = None
+-    ):
+-        if horizontal is None and vertical is not None:
+-            flag = V_ALIGNMENTS.get(vertical)
+-        elif vertical is None and horizontal is not None:
+-            flag = H_ALIGNMENTS.get(horizontal)
+-        elif vertical is not None and horizontal is not None:
+-            flag = V_ALIGNMENTS.get(vertical) | H_ALIGNMENTS.get(horizontal)
+-        else:
+-            return
+-        self.setAlignment(flag)
+-        return self
+-
+-    def set_indent(self, indent: int):
+-        self.setIndent(indent)
+-        return self
+-
+-    def set_text_format(self, text_format: str):
+-        """set the text format
+-
+-        Allowed values are "rich", "plain", "auto"
+-
+-        Args:
+-            text_format: text format to use
+-
+-        Raises:
+-            ValueError: text format does not exist
+-        """
+-        if text_format not in TEXT_FORMATS:
+-            raise ValueError("Invalid text format")
+-        self.setTextFormat(TEXT_FORMATS[text_format])
+-        return self
+-
+-    def get_text_format(self) -> str:
+-        """returns current text format
+-
+-        Possible values: "rich", "plain", "auto"
+-
+-        Returns:
+-            text format
+-        """
+-        return TEXT_FORMATS.inv[self.textFormat()]
+-
+-    def set_text_interaction(self, *types: str):
+-        """set the text interaction mode
+-
+-        Allowed values are "none", "by_mouse", "by_keyboard", "text_editable"
+-
+-        Args:
+-            types: text interaction mode to use
+-
+-        Raises:
+-            ValueError: text interaction mode does not exist
+-        """
+-        for item in types:
+-            if item not in TEXT_INTERACTION:
+-                raise ValueError("Invalid text interaction mode")
+-        flags = functools.reduce(operator.ior, [TEXT_INTERACTION[t] for t in types])
+-        self.setTextInteractionFlags(flags)
+-        return self
++from __future__ import annotations
+ 
+-    def get_text_interaction(self) -> List[str]:
+-        """returns current text interaction mode
++from prettyqt import constants, core, gui, iconprovider, widgets
++from prettyqt.qt import QtCore, QtGui
++from prettyqt.utils import colors, helpers, types
+ 
+-        Possible values: "none", "by_mouse", "by_keyboard", "text_editable"
+ 
+-        Returns:
+-            list of text interaction modes
+-        """
+-        return [k for k, v in TEXT_INTERACTION.items() if v & self.textInteractionFlags()]
++TEXT_COLOR = gui.Color("lightgray")
++BACKGROUND_COLOR = gui.Color("dimgrey")
++PEN_COLOR = "cyan"
++FONT = gui.Font("Decorative", 10)
+ 
+-    def set_text(self, text: str):
+-        self.setText(text)
+-        return self
+-
+-    def set_bold(self, bold: bool = True):
+-        font = self.font()
+-        font.setBold(bold)
+-        self.setFont(font)
+-        return self
+-
+-    def set_italic(self, italic: bool = True):
+-        font = self.font()
+-        font.setItalic(italic)
+-        self.setFont(font)
+-        return self
+-
+-    def set_point_size(self, size: int):
+-        font = self.font()
+-        font.setPointSize(size)
+-        self.setFont(font)
+-        return self
+-
+-    def set_weight(self, weight: str):
+-        """sets the font weight
+ 
+-        Valid values are "thin", "extra_light", light", "medium", "demi_bold", "bold",
+-                         "extra_bold", normal", "black"
++class VideoSample:
++    def __init__(
++        self,
++        duration: float,
++        color: types.ColorType = "yellow",
++        picture: QtGui.QPixmap | None = None,
++    ):
++        self.duration = duration
++        self.color = colors.get_color(color)  # Floating color
++        self.def_color = colors.get_color(color)  # DefaultColor
++        self.picture = None if picture is None else picture.scaledToHeight(45)
++        self.start_pos = 0.0  # Initial position
++        self.end_pos = self.duration  # End position
++
++
++class Timeline(widgets.Widget):
++    position_changed = core.Signal(int)
++    selection_changed = core.Signal(VideoSample)
++
++    def __init__(self, duration: int, length: int):
++        super().__init__()
++        self.set_title("Timeline")
++        self.duration = duration
++        self.length = length
++
++        # Set variables
++        self.set_background_color(BACKGROUND_COLOR)
++        self.set_text_color(TEXT_COLOR)
++        self.set_text_font(FONT)
++        self._position = None
++        self.pointer_time_pos = 0.0
++        self.selected_sample = None
++        self._clicking = False  # Check if mouse left button is being pressed
++        self._is_in = False  # check if user is in the widget
++        self.video_samples: list[VideoSample] = []  # List of video samples
++        self.setMouseTracking(True)  # Mouse events
++        self.setAutoFillBackground(True)  # background
++        self.setGeometry(300, 300, self.length, 200)
++
++        # Set Background
++        with self.edit_palette() as pal:
++            pal.set_color("window", self.background_color)
++
++    def __len__(self):
++        return len(self.video_samples)
++
++    def __getitem__(self, index: int) -> VideoSample:
++        return self.video_samples[index]
++
++    def __setitem__(self, index: int, value: VideoSample):
++        self.video_samples[index] = value
++
++    def __add__(self, other: VideoSample) -> Timeline:
++        self.add(other)
++        return self
++
++    def add_sample(
++        self,
++        duration: int,
++        color: types.ColorType = "yellow",
++        picture: QtGui.QPixmap | None = None,
++    ) -> VideoSample:
++        sample = VideoSample(duration, color, picture)
++        self.add(sample)
++        return sample
++
++    def add(self, sample: VideoSample):
++        self.video_samples.append(sample)
++
++    def paintEvent(self, event):
++        # Draw time
++        scale = self.get_scale()
++        with gui.Painter(self) as qp:
++            qp.set_color(self.text_color)
++            qp.setFont(self.text_font)
++            qp.use_antialiasing()
++            w = 0
++            while (w := w + 100) <= self.width():
++                time_string = helpers.format_seconds(w * scale)
++                rect = core.Rect(w - 50, 0, 100, 100)
++                qp.drawText(rect, constants.ALIGN_H_CENTER, time_string)
++            # Draw down line
++            qp.set_pen(color=PEN_COLOR, width=5)
++            qp.drawLine(0, 40, self.width(), 40)
++
++            # Draw dash lines
++            point = 0
++            qp.set_pen(color=self.text_color)
++            qp.drawLine(0, 40, self.width(), 40)
++            while point <= self.width():
++                y2 = 30 if point % 30 != 0 else 20
++                qp.drawLine(3 * point, 40, 3 * point, y2)
++                point += 10
++
++            if self._position is not None and self._is_in:
++                qp.drawLine(self._position.x(), 0, self._position.x(), 40)
++
++            poly = gui.Polygon()
++            if self._position is not None:
++                val = self.pointer_time_pos / self.get_scale()
++                line = core.Line(val, 40, val, self.height())
++                poly.add_points((val - 10, 20), (val + 10, 20), (val, 40))
++            else:
++                line = core.Line(0, 0, 0, self.height())
++                poly.add_points((-10, 20), (10, 20), (0, 40))
+ 
+-        Args:
+-            weight: font weight
++            # Draw samples
++            t = 0.0
++            for sample in self.video_samples:
++                scaled_dur = sample.duration / scale
++                scaled_t = t / scale
++                t += sample.duration
++                # Clear clip path
++                with qp.clip_path() as path:
++                    rect = core.RectF(scaled_t, 50, scaled_dur, 200)
++                    path.addRoundedRect(rect, 10, 10)
++
++                # Draw sample
++                path = gui.PainterPath()
++                qp.set_pen(color=sample.color)
++                rect = core.RectF(scaled_t, 50, scaled_dur, 50)
++                path.addRoundedRect(rect, 10, 10)
++                sample.start_pos = scaled_t
++                sample.end_pos = scaled_t + scaled_dur
++                qp.fillPath(path, sample.color)
++                qp.drawPath(path)
++
++                # Draw preview pictures
++                if sample.picture is None:
++                    continue
++                pic_width = sample.picture.size().width()
++                if pic_width < scaled_dur:
++                    width = float(pic_width)
++                    pic = sample.picture
++                else:
++                    width = scaled_dur
++                    pic = sample.picture.copy(0, 0, int(scaled_dur), 45)
++                with qp.clip_path() as path:
++                    rect = core.RectF(scaled_t, 52.5, width, 45)
++                    path.addRoundedRect(rect, 10, 10)
++                qp.drawPixmap(int(scaled_t), int(52.5), int(width), 45, pic)
++
++            # Clear clip path
++            with qp.clip_path() as path:
++                path.add_rect(self.rect())
++
++            # Draw pointer
++            qp.set_color(PEN_COLOR)
++            qp.set_brush(PEN_COLOR)
++
++            qp.drawPolygon(poly)
++            qp.drawLine(line)
++
++    def mouseMoveEvent(self, e):
++        self._position = e.position()
++
++        # if mouse is being pressed, update pointer
++        if self._clicking:
++            x = self._position.x()
++            self.position_changed.emit(x)
++            self._check_selection(x)
++            self.pointer_time_pos = x * self.get_scale()
++
++        self.update()
++
++    def mousePressEvent(self, e):
++        if e.button() == QtCore.Qt.MouseButton.LeftButton:
++            x = e.position().x()
++            self.position_changed.emit(x)
++            self.pointer_time_pos = x * self.get_scale()
++
++            self._check_selection(x)
++
++            self.update()
++            self._clicking = True  # Set clicking check to true
++
++    def mouseReleaseEvent(self, e):
++        if e.button() == QtCore.Qt.MouseButton.LeftButton:
++            self._clicking = False  # Set clicking check to false
++
++    def enterEvent(self, e):
++        self._is_in = True
++
++    def leaveEvent(self, e):
++        self._is_in = False
++        self.update()
++
++    def _check_selection(self, x: int):
++        # Check if user clicked in video sample
++        for sample in self.video_samples:
++            if sample.start_pos < x < sample.end_pos:
++                sample.color = gui.Color(PEN_COLOR)
++                if self.selected_sample is not sample:
++                    self.selected_sample = sample
++                    self.selection_changed.emit(sample)
++            else:
++                sample.color = sample.def_color
+ 
+-        Raises:
+-            ValueError: invalid font weight
+-        """
+-        if weight not in WEIGHTS:
+-            raise ValueError(f"Invalid weight '{weight}'")
+-        font = self.font()
+-        font.setWeight(WEIGHTS[weight])
+-        self.setFont(font)
+-        return self
++    def get_scale(self) -> float:
++        return self.duration / self.width()
+ 
+-    def set_color(self, color: colors.ColorType):
+-        with self.edit_stylesheet() as ss:
+-            if color is None:
+-                ss.color.setValue("")
+-            else:
+-                color = colors.get_color(color)
+-                ss.color.setValue(color.name())
+-        return self
++    def set_background_color(self, color: types.ColorType):
++        color = colors.get_color(color)
++        self.background_color = color
+ 
+-    def set_image(self, path: Union[pathlib.Path, str], width: int = 300):
+-        self.setScaledContents(True)
+-        self.set_alignment(horizontal="center")
+-        self.setText(
+-            "<html><head/><body><p>"
+-            f"<img src={str(path)!r} width={str(width)!r}/>"
+-            "</p></body></html>"
+-        )
+-        return self
++    def set_text_color(self, color: types.ColorType):
++        color = colors.get_color(color)
++        self.text_color = color
+ 
+-    @classmethod
+-    def image_from_path(cls, path: Union[pathlib.Path, str], parent=None) -> "Label":
+-        pixmap = gui.Pixmap.from_file(path)
+-        label = cls(parent=parent)
+-        label.setPixmap(pixmap)
+-        label.resize(pixmap.width(), pixmap.height())
+-        return label
++    def set_text_font(self, font: QtGui.QFont):
++        self.text_font = font
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+-    widget = Label("http://www.test.de")
+-    widget.show()
+-    app.exec_()
++    tl = Timeline(60, 60)
++    icon = iconprovider.get_icon("mdi.folder")
++    px = icon.pixmap(256, 256)
++    sample = VideoSample(20, picture=px)
++    tl += sample
++    tl.show()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/layout.py` & `prettyqt-1.0.0/prettyqt/widgets/layout.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,114 +1,126 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtCore, QtWidgets
+-
+-from prettyqt import core, widgets
+-from prettyqt.utils import bidict
+-
+-
+-MODES = bidict(
+-    default=QtWidgets.QLayout.SetDefaultConstraint,
+-    fixed=QtWidgets.QLayout.SetFixedSize,
+-    minimum=QtWidgets.QLayout.SetMinimumSize,
+-    maximum=QtWidgets.QLayout.SetMaximumSize,
+-    min_and_max=QtWidgets.QLayout.SetMinAndMaxSize,
+-    none=QtWidgets.QLayout.SetNoConstraint,
+-)
+-
+-ALIGNMENTS = bidict(
+-    left=QtCore.Qt.AlignLeft,
+-    right=QtCore.Qt.AlignRight,
+-    top=QtCore.Qt.AlignTop,
+-    bottom=QtCore.Qt.AlignBottom,
+-)
++from __future__ import annotations
+ 
++from typing import Literal
+ 
+-QtWidgets.QLayout.__bases__ = (core.Object, widgets.LayoutItem)
++from prettyqt import constants, core, widgets
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import InvalidParamError, bidict
++
++
++SIZE_CONSTRAINT = bidict(
++    default=QtWidgets.QLayout.SizeConstraint.SetDefaultConstraint,
++    fixed=QtWidgets.QLayout.SizeConstraint.SetFixedSize,
++    minimum=QtWidgets.QLayout.SizeConstraint.SetMinimumSize,
++    maximum=QtWidgets.QLayout.SizeConstraint.SetMaximumSize,
++    min_and_max=QtWidgets.QLayout.SizeConstraint.SetMinAndMaxSize,
++    none=QtWidgets.QLayout.SizeConstraint.SetNoConstraint,
++)
+ 
++SizeConstraintStr = Literal[
++    "default", "fixed", "minimum", "maximum", "min_and_max", "none"
++]
++
++
++class LayoutMixin(core.ObjectMixin, widgets.LayoutItemMixin):
++    def __getitem__(
++        self, index: str | int
++    ) -> QtWidgets.QWidget | QtWidgets.QLayout | None:
++        if isinstance(index, int):
++            item = self.itemAt(index)
++            widget = item.widget()
++            if widget is None:
++                widget = item.layout()
++        elif isinstance(index, str):
++            return self.find_child(typ=QtCore.QObject, name=index)
++        return widget
+ 
+-class Layout(QtWidgets.QLayout):
+-    def __getitem__(self, index):
++    def __delitem__(self, index: int):
+         item = self.itemAt(index)
+-        widget = item.widget()
+-        if widget is None:
+-            widget = item.layout()
+-        return widget
++        self.removeItem(item)
+ 
+-    def __len__(self):
++    def __len__(self) -> int:
+         return self.count()
+ 
+     def __repr__(self):
+-        return f"{self.__class__.__name__}: {len(self)} children"
++        return f"{type(self).__name__}()"
+ 
+     def __iter__(self):
+         return iter(self[i] for i in range(self.count()))
+ 
+-    def __contains__(self, item):
+-        return item in self.get_children()
++    def __contains__(self, item: QtWidgets.QWidget | QtWidgets.QLayoutItem):
++        return self.indexOf(item) >= 0
+ 
+-    def get_children(self) -> list:
++    def serialize_fields(self):
++        return dict(
++            size_mode=self.get_size_mode(),
++            spacing=self.spacing(),
++            enabled=self.isEnabled(),
++        )
++
++    def get_children(self) -> list[QtWidgets.QWidget | QtWidgets.QLayout]:
+         return list(self)
+ 
+     def set_margin(self, margin: int):
+         self.setContentsMargins(margin, margin, margin, margin)
+ 
+     def set_spacing(self, pixels: int):
+         self.setSpacing(pixels)
+ 
+-    def set_size_mode(self, mode: str):
+-        """set the size mode of the layout
+-
+-        Allowed values are "default", "fixed", "minimum", "maximum", "min_and_max", "none"
++    def set_size_mode(self, mode: SizeConstraintStr):
++        """Set the size mode of the layout.
+ 
+         Args:
+             mode: size mode for the layout
+ 
+         Raises:
+-            ValueError: size mode does not exist
++            InvalidParamError: size mode does not exist
+         """
+-        if mode not in MODES:
+-            raise ValueError(f"{mode} not a valid size mode.")
+-        self.setSizeConstraint(MODES[mode])
+-
+-    def get_size_mode(self) -> str:
+-        """returns current size mode
++        if mode not in SIZE_CONSTRAINT:
++            raise InvalidParamError(mode, SIZE_CONSTRAINT)
++        self.setSizeConstraint(SIZE_CONSTRAINT[mode])
+ 
+-        Possible values: "default", "fixed", "minimum", "maximum", "min_and_max", "none"
++    def get_size_mode(self) -> SizeConstraintStr:
++        """Return current size mode.
+ 
+         Returns:
+             size mode
+         """
+-        return MODES.inv[self.sizeConstraint()]
++        return SIZE_CONSTRAINT.inverse[self.sizeConstraint()]
+ 
+-    def set_alignment(self, alignment: str, item=None):
+-        """Sets the alignment for widget / layout to alignment and
+-        returns true if w is found in this layout (not including child layouts)
++    def set_alignment(
++        self,
++        alignment: constants.AlignmentStr,
++        item: QtWidgets.QWidget | QtWidgets.QLayout | None = None,
++    ):
++        """Set the alignment for widget / layout to alignment.
+ 
+-        Allowed values for alignment:  "left", "right", "top", "bottom"
++        Returns true if w is found in this layout (not including child layouts).
+ 
+         Args:
+             alignment: alignment for the layout
+             item: set alignment for specific child only
+ 
+         Raises:
+-            ValueError: alignment does not exist
++            InvalidParamError: alignment does not exist
+         """
+-        if alignment not in ALIGNMENTS:
+-            raise ValueError(f"{alignment!r} not a valid alignment.")
++        if alignment not in constants.ALIGNMENTS:
++            raise InvalidParamError(alignment, constants.ALIGNMENTS)
+         if item is not None:
+-            return self.setAlignment(item, ALIGNMENTS[alignment])
++            return self.setAlignment(item, constants.ALIGNMENTS[alignment])
+         else:
+-            return self.setAlignment(ALIGNMENTS[alignment])
++            return self.setAlignment(constants.ALIGNMENTS[alignment])
+ 
+-    def add(self, *item):
++    def add(self, *item: QtWidgets.QWidget | QtWidgets.QLayout):
+         for i in item:
+             if isinstance(i, QtWidgets.QWidget):
+                 self.addWidget(i)
+             elif isinstance(i, QtWidgets.QLayout):
+                 w = widgets.Widget()
+                 w.set_layout(i)
+                 self.addWidget(w)
+             else:
+                 raise TypeError("add_item only supports widgets and layouts")
++
++
++class Layout(LayoutMixin, QtWidgets.QLayout):
++    pass
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/lineedit.py` & `prettyqt-1.0.0/prettyqt/widgets/lineedit.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,149 +1,208 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtWidgets
++from typing import Literal
+ 
+-from prettyqt import core, gui, widgets
+-from prettyqt.utils import bidict
++from prettyqt import constants, core, gui, widgets
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import InvalidParamError, bidict
+ 
+ 
+-ECHO_MODES = bidict(
+-    normal=QtWidgets.QLineEdit.Normal,
+-    no_echo=QtWidgets.QLineEdit.NoEcho,
+-    password=QtWidgets.QLineEdit.Password,
+-    echo_on_edit=QtWidgets.QLineEdit.PasswordEchoOnEdit,
++ECHO_MODE = bidict(
++    normal=QtWidgets.QLineEdit.EchoMode.Normal,
++    no_echo=QtWidgets.QLineEdit.EchoMode.NoEcho,
++    password=QtWidgets.QLineEdit.EchoMode.Password,
++    echo_on_edit=QtWidgets.QLineEdit.EchoMode.PasswordEchoOnEdit,
+ )
+ 
++EchoModeStr = Literal["normal", "no_echo", "password", "echo_on_edit"]
+ 
+-QtWidgets.QLineEdit.__bases__ = (widgets.Widget,)
++ACTION_POSITION = bidict(
++    leading=QtWidgets.QLineEdit.ActionPosition.LeadingPosition,
++    trailing=QtWidgets.QLineEdit.ActionPosition.TrailingPosition,
++)
++
++ActionPositionStr = Literal["leading", "trailing"]
+ 
+ 
+-class LineEdit(QtWidgets.QLineEdit):
++class LineEdit(widgets.WidgetMixin, QtWidgets.QLineEdit):
++    focusLost = core.Signal()
++    enterPressed = core.Signal()
++    editComplete = core.Signal(str)
+ 
+     value_changed = core.Signal(str)
+ 
+-    def __init__(self, default_value="", read_only=False, parent=None):
++    def __init__(
++        self,
++        default_value: str = "",
++        read_only: bool = False,
++        parent: QtWidgets.QWidget | None = None,
++    ):
+         super().__init__(default_value, parent)
+         self.textChanged.connect(self._set_validation_color)
+         self.textChanged.connect(self.value_changed)
+         self.set_read_only(read_only)
+ 
+     def __repr__(self):
+-        return f"LineEdit: {self.__getstate__()}"
++        return f"{type(self).__name__}: {self.serialize_fields()}"
++
++    def __setstate__(self, state):
++        super().__setstate__(state)
++        self.set_text(state["text"])
++        self.setValidator(state["validator"])
++        self.setInputMask(state["input_mask"])
++        self.setMaxLength(state["max_length"])
++        self.setPlaceholderText(state["placeholder_text"])
++        self.setReadOnly(state["read_only"])
++        self.setFrame(state["has_frame"])
++        self.setClearButtonEnabled(state["clear_button_enabled"])
++        # self.setAlignment(state["alignment"])
++        self.set_cursor_move_style(state["cursor_move_style"])
++        self.set_echo_mode(state["echo_mode"])
++        self.setCursorPosition(state["cursor_position"])
++        self.setDragEnabled(state["drag_enabled"])
++        self.setModified(state["is_modified"])
++
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
++    def __add__(self, other: str):
++        self.append_text(other)
++        return self
+ 
+-    def __getstate__(self):
++    def serialize_fields(self):
+         return dict(
+             text=self.text(),
+-            enabled=self.isEnabled(),
+-            tooltip=self.toolTip(),
+-            statustip=self.statusTip(),
+-            font=gui.Font(self.font()),
++            # alignment=self.alignment(),
+             validator=self.validator(),
+             max_length=self.maxLength(),
+             read_only=self.isReadOnly(),
+             input_mask=self.inputMask(),
+             has_frame=self.hasFrame(),
+             placeholder_text=self.placeholderText(),
++            clear_button_enabled=self.isClearButtonEnabled(),
++            cursor_move_style=self.get_cursor_move_style(),
++            echo_mode=self.get_echo_mode(),
++            cursor_position=self.cursorPosition(),
++            drag_enabled=self.dragEnabled(),
++            is_modified=self.isModified(),
+         )
+ 
+-    def __setstate__(self, state):
+-        self.__init__()
+-        self.set_text(state["text"])
+-        self.setEnabled(state.get("enabled", True))
+-        self.setFont(state["font"])
+-        self.setValidator(state["validator"])
+-        self.setInputMask(state["input_mask"])
+-        self.setMaxLength(state["max_length"])
+-        self.setPlaceholderText(state["placeholder_text"])
+-        self.setReadOnly(state["read_only"])
+-        self.setFrame(state["has_frame"])
+-        self.setToolTip(state.get("tooltip", ""))
+-        self.setStatusTip(state.get("statustip", ""))
++    def focusOutEvent(self, event):
++        self.focusLost.emit()
++        return super().focusOutEvent(event)
++
++    def keyPressEvent(self, event):
++        if event.key() in [QtCore.Qt.Key.Key_Enter, QtCore.Qt.Key.Key_Return]:
++            self.enterPressed.emit()
++        return super().keyPressEvent(event)
+ 
+-    def __add__(self, other):
+-        if isinstance(other, str):
+-            self.append_text(other)
+-            return self
++    def _on_edit_complete(self):
++        self.editComplete.emit(self.text())
+ 
+     def font(self) -> gui.Font:
+         return gui.Font(super().font())
+ 
+     def append_text(self, text: str):
+         self.set_text(self.text() + text)
+ 
+     def set_text(self, text: str):
+         self.setText(text)
+ 
+     def set_read_only(self, value: bool = True):
+-        """set test to read only
++        """Set text to read-only.
+ 
+         Args:
+             value: True, for read-only, otherwise False
+         """
+         self.setReadOnly(value)
+ 
+-    def set_regex_validator(self, regex: str, flags=0) -> gui.RegExpValidator:
++    def set_regex_validator(self, regex: str, flags=0) -> gui.RegularExpressionValidator:
+         validator = gui.RegularExpressionValidator(self)
+         validator.set_regex(regex, flags)
+         self.set_validator(validator)
+         return validator
+ 
+-    def set_range(self, lower, upper):
++    def set_range(self, lower: int | None, upper: int | None):
+         val = gui.IntValidator()
+-        val.setRange(lower, upper)
++        val.set_range(lower, upper)
+         self.set_validator(val)
+ 
+     def set_validator(self, validator: gui.Validator):
+         self.setValidator(validator)
+         self._set_validation_color()
+ 
+     def set_input_mask(self, mask: str):
+         self.setInputMask(mask)
+ 
+     def _set_validation_color(self, state: bool = True):
+         color = "orange" if not self.is_valid() else None
+         self.set_background_color(color)
+ 
+-    def set_echo_mode(self, mode: str):
+-        """set echo mode
+-
+-        Valid values are "normal", "no_echo", "password", "echo_on_edit"
++    def set_echo_mode(self, mode: EchoModeStr):
++        """Set echo mode.
+ 
+         Args:
+             mode: echo mode to use
+ 
+         Raises:
+-            ValueError: invalid echo mode
++            InvalidParamError: invalid echo mode
+         """
+-        if mode not in ECHO_MODES:
+-            raise ValueError("Invalid echo mode")
+-        self.setEchoMode(ECHO_MODES[mode])
++        if mode not in ECHO_MODE:
++            raise InvalidParamError(mode, ECHO_MODE)
++        self.setEchoMode(ECHO_MODE[mode])
+ 
+-    def get_echo_mode(self) -> str:
+-        """returns echo mode
+-
+-        possible values are "normal", "no_echo", "password", "echo_on_edit"
++    def get_echo_mode(self) -> EchoModeStr:
++        """Return echo mode.
+ 
+         Returns:
+             echo mode
+         """
+-        return ECHO_MODES.inv[self.echoMode()]
++        return ECHO_MODE.inverse[self.echoMode()]
++
++    def set_cursor_move_style(self, style: constants.CursorMoveStyleStr):
++        """Set cursor move style.
++
++        Args:
++            style: cursor move style to use
++
++        Raises:
++            InvalidParamError: invalid cursor move style
++        """
++        if style not in constants.CURSOR_MOVE_STYLE:
++            raise InvalidParamError(style, constants.CURSOR_MOVE_STYLE)
++        self.setCursorMoveStyle(constants.CURSOR_MOVE_STYLE[style])
++
++    def get_cursor_move_style(self) -> constants.CursorMoveStyleStr:
++        """Return cursor move style.
++
++        Returns:
++            cursor move style
++        """
++        return constants.CURSOR_MOVE_STYLE.inverse[self.cursorMoveStyle()]
++
++    def add_action(
++        self, action: QtWidgets.QAction, position: ActionPositionStr = "trailing"
++    ):
++        self.addAction(action, ACTION_POSITION[position])
+ 
+     def set_value(self, value: str):
+         self.setText(value)
+ 
+     def get_value(self) -> str:
+         return self.text()
+ 
+     def is_valid(self) -> bool:
+         return self.hasAcceptableInput()
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+-    widget = LineEdit("This is a test")
+-    widget.set_regex_validator("[0-9]+")
++    widget = LineEdit()
++    action = widgets.Action(text="hallo", icon="mdi.folder")
++    widget.add_action(action)
++    widget.setPlaceholderText("test")
++    widget.setClearButtonEnabled(True)
++    # widget.set_regex_validator("[0-9]+")
+     widget.setFont(gui.Font("Consolas"))
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/listwidget.py` & `prettyqt-1.0.0/prettyqt/custom_models/listmixin.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,113 +1,86 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from typing import Union, Iterable, Mapping, List, Any
+-
+-from qtpy import QtCore, QtWidgets
+-
+-from prettyqt import core, gui, widgets
+-
+-SCROLL_HINTS = widgets.abstractitemview.SCROLL_HINTS  # type: ignore
+-
+-QtWidgets.QListWidget.__bases__ = (widgets.ListView,)
+-
+-
+-class NoData(object):
+-    pass
+-
+-
+-class ListWidget(QtWidgets.QListWidget):
+-
+-    value_changed = core.Signal(object)
+-
+-    def __init__(self, parent=None, selection_mode: str = "single"):
+-        super().__init__(parent)
+-        self.itemSelectionChanged.connect(self.on_index_change)
+-        self.set_selection_mode(selection_mode)
+-
+-    def __repr__(self):
+-        return f"ListWidget: {self.count()} items"
+-
+-    def __getitem__(self, row: int):
+-        return self.item(row)
+-
+-    def __add__(self, other):
+-        if isinstance(other, QtWidgets.QListWidgetItem):
+-            self.addItem(other)
+-            return self
+-
+-    def __iter__(self):
+-        return iter(self.get_children())
+-
+-    def __len__(self):
+-        return self.count()
+-
+-    def __getstate__(self):
+-        return dict(
+-            items=self.get_children(),
+-            selection_mode=self.get_selection_mode(),
+-            sorting_enabled=self.isSortingEnabled(),
+-            current_row=self.currentRow(),
+-        )
+-
+-    def __setstate__(self, state):
+-        self.__init__()
+-        self.set_selection_mode(state["selection_mode"])
+-        self.setSortingEnabled(state["sorting_enabled"])
+-        self.setCurrentRow(state["current_row"])
+-        for item in state["items"]:
+-            self.addItem(item)
+-
+-    def sort(self, reverse: bool = False):
+-        order = QtCore.Qt.DescendingOrder if reverse else QtCore.Qt.AscendingOrder
+-        self.sortItems(order)
+-
+-    def on_index_change(self):
+-        data = self.get_value()
+-        self.value_changed.emit(data)
+-
+-    def get_children(self) -> list:
+-        return [self.item(row) for row in range(self.count())]
+-
+-    def add_items(self, items: Union[Iterable, Mapping]):
+-        if isinstance(items, Mapping):
+-            for k, v in items.items():
+-                self.add(v, k)
+-        else:
+-            for i in items:
+-                if isinstance(i, (tuple, list)):
+-                    self.add(*i)
+-                else:
+-                    self.add(i)
+-
+-    def add(self, label: str, data=NoData, icon: gui.icon.IconType = None):
+-        if data is NoData:
+-            data = label
+-        item = widgets.ListWidgetItem(label)
+-        item.set_icon(icon)
+-        item.setData(QtCore.Qt.UserRole, data)
+-        self.addItem(item)
+-
+-    def get_value(self) -> List[Any]:
+-        return [i.data(QtCore.Qt.UserRole) for i in self.selectedItems()]
+-
+-    def set_value(self, value):
+-        for i in self.get_children():
+-            if i.data(QtCore.Qt.UserRole) in value:
+-                self.setCurrentItem(i)
+-                break
+-
+-    def scroll_to_item(self, item, mode: str = "ensure_visible"):
+-        if mode not in SCROLL_HINTS:
+-            raise ValueError("Invalid scroll mode")
+-        self.scrollToItem(item, SCROLL_HINTS[mode])
+-
+-
+-if __name__ == "__main__":
+-    app = QtWidgets.QApplication([])
+-    widget = ListWidget()
+-    widget.add("test", icon="mdi.timer")
+-    widget.add("test", icon="mdi.timer")
+-    widget.show()
+-    app.exec_()
++from collections.abc import Iterable
++from typing import Any, Callable, Optional
++
++from prettyqt import constants
++
++
++class ListMixin:
++    remove_rows: Callable
++    SORT_METHODS: dict[int, Callable]
++    change_layout: Callable
++    insert_rows: Callable
++    removeRow: Callable
++    # setData: Callable
++    update_row: Callable
++    MIME_TYPE: str
++    DATA_ROLE = constants.USER_ROLE
++
++    def __init__(self, *args, **kwargs):
++        super().__init__(*args, **kwargs)  # type: ignore
++        self.items = []
++
++    def setData(self, index, value, role):
++        if role == self.DATA_ROLE:
++            self.items[index.row()] = value
++            self.update_row(index.row())
++            return True
++        return super().setData(index, value, role)  # type: ignore
++
++    def removeRows(self, row: int, count: int, parent):
++        end_row = row + count - 1
++        with self.remove_rows(row, end_row, parent):
++            for i in range(end_row, row - 1, -1):
++                self.items.pop(i)
++        return True
++
++    def rowCount(self, parent=None):
++        """Required override for AbstractitemModels."""
++        return len(self.items)
++
++    def data_by_index(self, index):
++        return self.items[index.row()]
++
++    def dropMimeData(self, mime_data, action, row, column, parent_index):
++        if not mime_data.hasFormat(self.MIME_TYPE):
++            return False
++        # Since we only drop in between items, parent_index must be invalid,
++        # and we use the row arg to know where the drop took place.
++        if parent_index.isValid():
++            return False
++        indexes = mime_data.get_json_data(self.MIME_TYPE)
++        pos = row if row < len(self.items) and row != -1 else len(self.items)
++        rem_offset = sum(i <= pos for i in indexes)
++        new = [self.items[i] for i in indexes]
++        with self.change_layout():
++            for i in sorted(indexes, reverse=True):
++                self.items.pop(i)
++            for item in reversed(new):
++                self.items.insert(pos - rem_offset, item)
++        return False
++
++    def sort(self, ncol: int, order):
++        """Sort table by given column number."""
++        is_asc = order == constants.ASCENDING
++        if sorter := self.SORT_METHODS.get(ncol):
++            with self.change_layout():
++                self.items.sort(key=sorter, reverse=is_asc)
++
++    def add(self, item: Any, position: Optional[int] = None):
++        """Append provided item to the list."""
++        self.add_items(items=[item], position=position)
++        return item
++
++    def add_items(self, items: Iterable[Any], position: Optional[int] = None):
++        """Append a list of items to the list."""
++        if position is None:
++            position = len(self.items)
++        items = list(items)
++        with self.insert_rows(position, position + len(items) - 1):
++            for i in range(len(items)):
++                self.items.insert(i + position, items[i])
++            # self.items.extend(items)
++        return items
++
++    def remove_items(self, offsets: Iterable[int]):
++        for offset in sorted(offsets, reverse=True):
++            self.removeRow(offset)
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/mainwindow.py` & `prettyqt-1.0.0/prettyqt/widgets/mainwindow.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,206 +1,196 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import List
++from collections.abc import Sequence
+ import logging
+ 
+-from qtpy import QtCore, QtWidgets
++from prettyqt import constants, core, widgets
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import InvalidParamError
+ 
+-from prettyqt import core, gui, widgets
+-from prettyqt.utils import bidict
+-
+-
+-DOCK_POSITIONS = bidict(
+-    top=QtCore.Qt.TopDockWidgetArea,
+-    bottom=QtCore.Qt.BottomDockWidgetArea,
+-    left=QtCore.Qt.LeftDockWidgetArea,
+-    right=QtCore.Qt.RightDockWidgetArea,
+-)
+-
+-TOOLBAR_AREAS = bidict(
+-    left=QtCore.Qt.LeftToolBarArea,
+-    right=QtCore.Qt.RightToolBarArea,
+-    top=QtCore.Qt.TopToolBarArea,
+-    bottom=QtCore.Qt.BottomToolBarArea,
+-    all=QtCore.Qt.AllToolBarAreas,
+-    none=QtCore.Qt.NoToolBarArea,
+-)
+ 
+ logger = logging.getLogger(__name__)
+ 
+-QtWidgets.QMainWindow.__bases__ = (widgets.Widget,)
+ 
++class MainWindow(widgets.WidgetMixin, QtWidgets.QMainWindow):
++    """Class for our mainWindow.
+ 
+-class MainWindow(QtWidgets.QMainWindow):
+-    """
+-    Class for our mainWindow
+-    includes all docks, a centralwidget and a toolbar
++    Includes all docks, a centralwidget and a toolbar
+     """
+ 
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
++        self.setMenuBar(widgets.MenuBar())
+         self.setDockOptions(
+-            self.AllowTabbedDocks
+-            | self.AllowNestedDocks
+-            | self.GroupedDragging
+-            | self.AnimatedDocks
++            self.DockOption.AllowTabbedDocks  # type: ignore
++            | self.DockOption.AllowNestedDocks
++            | self.DockOption.GroupedDragging
++            | self.DockOption.AnimatedDocks
+         )
+ 
+-    def __getitem__(self, index):
+-        return self.findChild(QtWidgets.QWidget, index)
++    def __getitem__(self, index: str) -> QtWidgets.QWidget:
++        result = self.find_child(QtWidgets.QWidget, index)
++        if result is None:
++            raise KeyError("Widget not found")
++        return result
+ 
+-    def __getstate__(self):
+-        icon = gui.Icon(self.windowIcon())
++    def serialize_fields(self):
+         return dict(
+             central_widget=self.centralWidget(),
+-            title=self.windowTitle(),
+             is_maximized=self.isMaximized(),
+-            icon=icon if not icon.isNull() else None,
+-            size=(self.size().width(), self.size().height()),
+         )
+ 
+     def __setstate__(self, state):
+-        self.__init__()
+-        self.set_title(state["title"])
+-        self.set_icon(state["icon"])
+         if state["central_widget"]:
+             self.setCentralWidget(state["central_widget"])
+-        self.resize(state["size"])
+         if state["is_maximized"]:
+             self.showMaximized()
+-        self.resize(*state["size"])
+         self.box = self.layout()
+ 
+-    def set_widget(self, widget):
+-        self.setCentralWidget(widget)
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
+ 
+-    def createPopupMenu(self):
++    def set_widget(self, widget: QtWidgets.QWidget | None):
++        if widget is None:
++            self.takeCentralWidget()
++        else:
++            self.setCentralWidget(widget)
++
++    def createPopupMenu(self) -> widgets.Menu:
+         # qactions = self.createPopupMenu()
+         menu = widgets.Menu(parent=self)
+         for i, item in enumerate(self.get_docks()):
+             action = widgets.Action(text=item.windowTitle(), parent=self)
+             action.set_checkable(True)
+             action.set_checked(item.isVisible())
+             action.set_shortcut(f"Ctrl+Shift+{i}")
+             action.set_shortcut_context("application")
+             action.toggled.connect(item.setVisible)
+-            menu.add_action(action)
++            menu.add(action)
+         menu.add_separator()
+-        for i in self.get_toolbars():
+-            action = widgets.Action(text=i.windowTitle(), parent=self)
++        for tb in self.get_toolbars():
++            action = widgets.Action(text=tb.windowTitle(), parent=self)
+             action.set_checkable(True)
+-            action.toggled.connect(i.setVisible)
+-            action.set_checked(i.isVisible())
+-            menu.add_action(action)
++            action.toggled.connect(tb.setVisible)
++            action.set_checked(tb.isVisible())
++            menu.add(action)
+         return menu
+ 
+-    def add_toolbar(self, toolbar, position: str = "top"):
+-        """adds a toolbar to the mainmenu at specified area
+-
+-        Valid values for position: "left", "right", "top", "bottom"
++    def add_toolbar(
++        self, toolbar: QtWidgets.QToolBar, position: constants.ToolbarAreaStr = "top"
++    ):
++        """Adds a toolbar to the mainmenu at specified area.
+ 
+         Args:
+             toolbar: toolbar to use
+             position: position of the toolbar
+ 
+         Raises:
+-            ValueError: position does not exist
++            InvalidParamError: position does not exist
+         """
+-        if position not in TOOLBAR_AREAS:
+-            raise ValueError("Position not existing")
+-        self.addToolBar(TOOLBAR_AREAS[position], toolbar)
+-
+-    def add_toolbar_break(self, position: str = "top"):
+-        """Adds a toolbar break to the given area
+-        after all the other objects that are present.
++        if position not in constants.TOOLBAR_AREA:
++            raise InvalidParamError(position, constants.TOOLBAR_AREA)
++        self.addToolBar(constants.TOOLBAR_AREA[position], toolbar)
+ 
+-        Valid values for position: "left", "right", "top", "bottom"
++    def add_toolbar_break(self, position: constants.ToolbarAreaStr = "top"):
++        """Adds a toolbar break to the given area behind the last item.
+ 
+         Args:
+             position: position of the toolbar
+ 
+         Raises:
+-            ValueError: position does not exist
++            InvalidParamError: position does not exist
+         """
+-        if position not in TOOLBAR_AREAS:
+-            raise ValueError("Position not existing")
+-        self.addToolBarBreak(TOOLBAR_AREAS[position])
++        if position not in constants.TOOLBAR_AREA:
++            raise InvalidParamError(position, constants.TOOLBAR_AREA)
++        self.addToolBarBreak(constants.TOOLBAR_AREA[position])
+ 
+-    def load_window_state(self, recursive=False):
++    def load_window_state(self, recursive: bool = False) -> bool:
+         settings = core.Settings()
+         name = self.get_id()
+         geom = settings.get(f"{name}.geometry")
+         state = settings.get(f"{name}.state")
++        restored = False
+         if geom is not None and state is not None:
+             try:
+-                logger.debug(f"Loading window state for {name}...")
++                logger.debug(f"Loading window state for {self.windowTitle()!r}...")
+                 self.restoreGeometry(geom)
++                if isinstance(state, str):
++                    state = state.encode()
+                 self.restoreState(state)
++                restored = True
+             except TypeError:
+                 logger.error("Wrong type for window state. Probably Qt binding switch?")
+         if recursive:
+             for window in self.find_children(MainWindow, recursive=True):
+                 if window.get_id():
+                     window.load_window_state()
++        return restored
+ 
+-    def save_window_state(self, recursive=False):
+-        """
+-        override, gets executed when app gets closed.
+-        saves GUI settings
++    def save_window_state(self, recursive: bool = False):
++        """Save current window state as QSetting.
++
++        Args:
++            recursive (bool, optional): Description
+         """
+         settings = core.Settings()
+         name = self.get_id()
+-        logger.debug(f"Saving window state for {name}...")
++        logger.debug(f"Saving window state for {self.windowTitle()!r}...")
+         settings[f"{name}.geometry"] = self.saveGeometry()
+         settings[f"{name}.state"] = self.saveState()
+         if recursive:
+             for window in self.find_children(MainWindow, recursive=True):
+                 if window.get_id():
+                     window.save_window_state()
+ 
+     def add_widget_as_dock(
+-        self, name: str, title: str, vertical: bool = True, position: str = "left"
++        self,
++        name: str,
++        title: str,
++        vertical: bool = True,
++        position: constants.DockPositionStr = "left",
+     ) -> widgets.DockWidget:
+         dock_widget = widgets.DockWidget(self, name=name, title=title)
+         widget = widgets.Widget()
+         widget.set_id(f"{name}.widget")
+-        orientation = "vertical" if vertical else "horizontal"
+-        layout = widgets.BoxLayout(orientation, widget, margin=0)
++        layout = widgets.BoxLayout(
++            "vertical" if vertical else "horizontal", widget, margin=0
++        )
+         dock_widget.setWidget(widget)
+         self.add_dockwidget(dock_widget, position)
+         dock_widget.box = layout
+         return dock_widget
+ 
+-    def add_dockwidget(self, dockwidget, position: str = "left"):
+-        position = DOCK_POSITIONS[position]
+-        self.addDockWidget(QtCore.Qt.DockWidgetArea(position), dockwidget)
++    def add_dockwidget(
++        self,
++        dockwidget: QtWidgets.QDockWidget,
++        position: constants.DockPositionStr = "left",
++    ):
++        self.addDockWidget(constants.DOCK_POSITION[position], dockwidget)
+ 
+-    def remove_dockwidgets(self, dockwidgets: list):
++    def remove_dockwidgets(self, dockwidgets: Sequence[QtWidgets.QDockWidget]):
+         for i in dockwidgets:
+             self.removeDockWidget(i)
+ 
+     def show_blocking(self):
+         self.set_modality("application")
+         self.show()
+ 
+-    def get_docks(self) -> List[QtWidgets.QDockWidget]:
++    def get_docks(self) -> list[QtWidgets.QDockWidget]:
+         return self.find_children(QtWidgets.QDockWidget, recursive=False)
+ 
+-    def get_toolbars(self) -> List[QtWidgets.QToolBar]:
++    def get_toolbars(self) -> list[QtWidgets.QToolBar]:
+         return self.find_children(QtWidgets.QToolBar, recursive=False)
+ 
+     def toggle_fullscreen(self):
+-        """toggle between fullscreen and regular size
+-        """
++        """Toggle between fullscreen and regular size."""
+         if self.isFullScreen():
+             self.showNormal()
+         else:
+             self.showFullScreen()
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     form = MainWindow()
+     form.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/menu.py` & `prettyqt-1.0.0/prettyqt/widgets/menu.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,60 +1,75 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Any, Callable, Optional, Union
++from collections.abc import Iterator
++from typing import Any, Callable
+ 
+-from qtpy import QtWidgets
++from prettyqt import core, gui, iconprovider, widgets
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import types
+ 
+-from prettyqt import core, gui, widgets
+ 
+-
+-QtWidgets.QMenu.__bases__ = (widgets.Widget,)
+-
+-
+-class Menu(QtWidgets.QMenu):
+-    def __init__(self, title: str = "", icon: gui.icon.IconType = None, parent=None):
++class MenuMixin(widgets.WidgetMixin):
++    def __init__(
++        self,
++        title: str = "",
++        icon: types.IconType = None,
++        parent: QtWidgets.QWidget | None = None,
++    ):
+         super().__init__(title, parent=parent)
+         self.set_icon(icon)
+         self.setToolTipsVisible(True)
+ 
+-    def __iter__(self):
++    def __iter__(self) -> Iterator[QtWidgets.QAction]:
+         return iter(self.actions())
+ 
+-    def __len__(self):
++    def __len__(self) -> int:
+         return len(self.actions())
+ 
+-    def __add__(self, other):
+-        if isinstance(other, QtWidgets.QAction):
+-            self.add(other)
+-            return self
+-        raise TypeError("Invalid Type")
++    def __add__(self, other: QtWidgets.QAction):
++        self.add(other)
++        return self
+ 
+-    def __getitem__(self, item):
++    def __getitem__(self, item: str) -> QtWidgets.QAction:
+         for action in self.actions():
+-            if action.id == item:
++            if action.objectName() == item:
+                 return action
+         raise KeyError(f"Action {item} not in menu")
+ 
+-    def add(self, *item):
++    def serialize_fields(self):
++        return dict(
++            separators_collapsible=self.separatorsCollapsible(),
++            tearoff_enabled=self.isTearOffEnabled(),
++            title=self.title(),
++            tool_tips_visible=self.toolTipsVisible(),
++            icon=self.get_icon(),
++        )
++
++    def add(self, *item: QtWidgets.QAction):
+         for i in item:
+-            self.add_action(i)
++            i.setParent(self)
++            self.addAction(i)
+ 
+-    def set_icon(self, icon: gui.icon.IconType):
+-        """set the icon for the menu
++    def set_icon(self, icon: types.IconType):
++        """Set the icon for the menu.
+ 
+         Args:
+             icon: icon to use
+         """
+-        icon = gui.icon.get_icon(icon)
++        icon = iconprovider.get_icon(icon)
+         self.setIcon(icon)
+ 
+-    def add_separator(self, text: Optional[str] = None) -> widgets.WidgetAction:
+-        """adds a separator showing an optional label
++    def get_icon(self) -> gui.Icon | None:
++        icon = self.icon()
++        if icon.isNull():
++            return None
++        return gui.Icon(icon)
++
++    def add_separator(self, text: str | None = None) -> widgets.WidgetAction:
++        """Adds a separator showing an optional label.
+ 
+         Args:
+             text: Text to show on separator
+ 
+         Returns:
+             Separator action
+         """
+@@ -63,30 +78,30 @@
+             separator.setSeparator(True)
+         else:
+             label = widgets.Label(text)
+             label.setMinimumWidth(self.minimumWidth())
+             with label.edit_stylesheet() as ss:
+                 ss.background.setValue("lightgrey")
+             label.set_alignment(horizontal="center")
+-            separator = widgets.WidgetAction(parent=self)
+             separator.setDefaultWidget(label)
++            separator.setEnabled(False)
+         self.add(separator)
+         return separator
+ 
+     def add_action(
+         self,
+-        label: Union[str, widgets.Action],
++        label: str | widgets.Action,
+         callback: Callable = None,
+-        icon: Optional[Any] = None,
++        icon: Any | None = None,
+         checkable: bool = False,
+         checked: bool = False,
+-        shortcut: Optional[str] = None,
+-        status_tip: Optional[str] = None,
++        shortcut: str | None = None,
++        status_tip: str | None = None,
+     ) -> widgets.Action:
+-        """Add an action to the menu
++        """Add an action to the menu.
+ 
+         Args:
+             label: Label for button
+             callback: gets called when action is triggered
+             icon: icon for button
+             checkable: as checkbox button
+             checked: if checkable, turn on by default
+@@ -109,19 +124,25 @@
+                 action.setStatusTip(status_tip)
+         else:
+             action = label
+             action.setParent(self)
+         self.addAction(action)
+         return action
+ 
+-    def add_actions(self, actions):
++    def add_actions(self, actions: list[QtWidgets.QAction]):
+         self.addActions(actions)
+ 
+-    def add_menu(self, menu: QtWidgets.QMenu):
+-        return self.addAction(menu.menuAction())
++    def add_menu(self, menu: QtWidgets.QMenu) -> QtWidgets.QAction:
++        action = menu.menuAction()
++        self.addAction(action)
++        return action
++
++
++class Menu(MenuMixin, QtWidgets.QMenu):
++    pass
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     menu = Menu("1")
+     action = widgets.Action(text="test")
+     menu.addAction(action)
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/menubar.py` & `prettyqt-1.0.0/prettyqt/widgets/menubar.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,53 +1,74 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Union
+-
+-from qtpy import QtWidgets
++from typing import overload
+ 
+ from prettyqt import widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+-QtWidgets.QMenuBar.__bases__ = (widgets.Widget,)
+-
++class MenuBar(widgets.WidgetMixin, QtWidgets.QMenuBar):
++    def __add__(self, other: QtWidgets.QAction | QtWidgets.QMenu):
++        self.add(other)
++        return self
+ 
+-class MenuBar(QtWidgets.QMenuBar):
+-    def __add__(self, other):
+-        if isinstance(other, (QtWidgets.QAction, QtWidgets.QMenu)):
+-            self.add(other)
+-            return self
++    def serialize_fields(self):
++        return dict(
++            default_up=self.isDefaultUp(),
++            native_menu_bar=self.isNativeMenuBar(),
++        )
+ 
+-    def add_action(self, action: Union[QtWidgets.QAction, str]):
++    def add_action(self, action: QtWidgets.QAction | str) -> QtWidgets.QAction:
+         if isinstance(action, str):
+-            action = widgets.Action(text=action)
++            action = widgets.Action(parent=self, text=action)
++        self.addAction(action)
++        return action
++
++    @overload
++    def add_menu(self, menu_or_str: str) -> widgets.Menu:
++        ...
++
++    @overload
++    def add_menu(self, menu_or_str: QtWidgets.QMenu) -> widgets.Action:
++        ...
++
++    def add_menu(self, menu_or_str):
++        action = widgets.Action(parent=self)
++        if isinstance(menu_or_str, str):
++            menu = widgets.Menu(menu_or_str)
++            action.set_text(menu_or_str)
++            action.set_menu(menu)
+             self.addAction(action)
+-            return action
+-        return self.addAction(action)
+-
+-    def add_menu(self, menu: Union[QtWidgets.QMenu, str]):
+-        if isinstance(menu, str):
+-            menu = widgets.Menu(menu)
+-            self.addMenu(menu)
+             return menu
+-        return self.addMenu(menu)
++        else:
++            action.set_menu(menu_or_str)
++            action.set_text(menu_or_str.title())
++            self.addAction(action)
++            return action
+ 
+     def add_separator(self):
+         self.addSeparator()
+ 
+-    def add(self, *item):
+-        for i in item:
++    def add(self, *items: QtWidgets.QMenu | QtWidgets.QAction):
++        for i in items:
+             if isinstance(i, QtWidgets.QMenu):
+-                return self.add_menu(i)
++                action = widgets.Action(parent=self)
++                action.set_text(i.title())
++                action.set_menu(i)
++                self.addAction(action)
+             else:
+-                return self.add_action(i)
++                self.addAction(i)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+-    win = QtWidgets.QMainWindow()
++    win = widgets.MainWindow()
+     menu_bar = MenuBar()
+-    act = menu_bar.add_menu("test")
++    menuaction = menu_bar.add_menu("test")
++    act = menu_bar.add_action("action")
++    sep = menu_bar.addSeparator()
++    act2 = menu_bar.add_action("action2")
++    menu = widgets.Menu("testaa")
++    menu_bar.add(menu)
+     win.setMenuBar(menu_bar)
+     win.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/plaintextedit.py` & `prettyqt-1.0.0/prettyqt/widgets/headerview.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,196 +1,150 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-import contextlib
++from collections.abc import Iterable
++import functools
++import hashlib
++from typing import Literal
+ 
+-from qtpy import QtGui, QtWidgets
++from deprecated import deprecated
+ 
+-from prettyqt import core, gui, widgets, syntaxhighlighters
+-from prettyqt.gui import textcursor
+-from prettyqt.utils import bidict
++from prettyqt import constants, core, widgets
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import InvalidParamError, bidict
+ 
+ 
+-WRAP_MODES = bidict(
+-    none=QtGui.QTextOption.NoWrap,
+-    word=QtGui.QTextOption.WordWrap,
+-    anywhere=QtGui.QTextOption.WrapAnywhere,
+-    boundary_or_anywhere=QtGui.QTextOption.WrapAtWordBoundaryOrAnywhere,
++MODES = bidict(
++    interactive=QtWidgets.QHeaderView.ResizeMode.Interactive,
++    fixed=QtWidgets.QHeaderView.ResizeMode.Fixed,
++    stretch=QtWidgets.QHeaderView.ResizeMode.Stretch,
++    resize_to_contents=QtWidgets.QHeaderView.ResizeMode.ResizeToContents,
+ )
+ 
+-LINE_WRAP_MODES = bidict(
+-    none=QtWidgets.QPlainTextEdit.NoWrap,
+-    widget_width=QtWidgets.QPlainTextEdit.WidgetWidth,
+-)
+-
+-MOVE_OPERATIONS = textcursor.MOVE_OPERATIONS
+-MOVE_MODES = textcursor.MOVE_MODES
+-
++ModeStr = Literal["interactive", "fixed", "stretch", "resize_to_contents"]
+ 
+-QtWidgets.QPlainTextEdit.__bases__ = (widgets.AbstractScrollArea,)
+ 
++class HeaderViewMixin(widgets.AbstractItemViewMixin):
++    section_vis_changed = core.Signal(int, bool)
++    section_resized_by_user = core.Signal(int, int, int)
++
++    def __init__(
++        self,
++        orientation: constants.OrientationStr | QtCore.Qt.Orientation,
++        parent: QtWidgets.QWidget | None = None,
++    ):
++        if isinstance(orientation, QtCore.Qt.Orientation):
++            ori = orientation
++        else:
++            ori = constants.ORIENTATION[orientation]
++        super().__init__(ori, parent=parent)
++        self.setSectionsMovable(True)
++        self.setSectionsClickable(True)
++        self.sectionResized.connect(self.sectionResizeEvent)
++        self._handle_section_is_pressed = False
++        self._widget_name = parent.get_id() if parent is not None else ""
++
++    def mousePressEvent(self, e):
++        super().mousePressEvent(e)
++        self._handle_section_is_pressed = self.cursor().shape() == QtCore.Qt.SplitHCursor
++
++    def mouseReleaseEvent(self, e):
++        super().mouseReleaseEvent(e)
++        self._handle_section_is_pressed = False
++
++    def sectionResizeEvent(self, logical_index, old_size, new_size):
++        if self._handle_section_is_pressed:
++            self.section_resized_by_user.emit(logical_index, old_size, new_size)
++
++    def generate_header_id(self):
++        # return f"{self._widget_name}.state"
++        column_names = ",".join(self.get_section_labels())
++        columns_hash = hashlib.md5(column_names.encode()).hexdigest()
++        return f"{type(self).__name__}_{columns_hash}.state"
++
++    def save_state(self, settings: core.Settings | None = None, key: str | None = None):
++        settings = core.Settings() if settings is None else settings
++        key = self.generate_header_id() if key is None else key
++        settings.set_value(key, self.saveState())
++
++    def load_state(
++        self, settings: core.Settings | None = None, key: str | None = None
++    ) -> bool:
++        settings = core.Settings() if settings is None else settings
++        key = self.generate_header_id() if key is None else key
++        state = settings.get(key, None)
++        if state is not None:
++            if isinstance(state, str):
++                state = state.encode()
++            self.restoreState(state)
++            return True
++        return False
+ 
+-class PlainTextEdit(QtWidgets.QPlainTextEdit):
++    def resize_sections(self, mode: ModeStr):
++        self.resizeSections(MODES[mode])
+ 
+-    value_changed = core.Signal()
+-
+-    def __init__(self, text="", parent=None, read_only=False):
+-        super().__init__(text, parent)
+-        self.validator = None
+-        self.textChanged.connect(self._on_value_change)
+-        self.set_read_only(read_only)
+-
+-    def __getstate__(self):
+-        return dict(
+-            text=self.text(),
+-            enabled=self.isEnabled(),
+-            read_only=self.isReadOnly(),
+-            font=gui.Font(self.font()),
+-        )
+-
+-    def __setstate__(self, state):
+-        self.__init__()
+-        self.set_text(state["text"])
+-        self.setEnabled(state.get("enabled", True))
+-        self.setFont(state["font"])
+-        self.setReadOnly(state["read_only"])
+-
+-    def __add__(self, other):
+-        if isinstance(other, str):
+-            self.append_text(other)
+-            return self
+-
+-    @contextlib.contextmanager
+-    def create_cursor(self):
+-        cursor = gui.TextCursor(self.document())
+-        yield cursor
+-        self.setTextCursor(cursor)
+-
+-    @contextlib.contextmanager
+-    def current_cursor(self):
+-        cursor = gui.TextCursor(self.textCursor())
+-        yield cursor
+-        self.setTextCursor(cursor)
+-
+-    def move_cursor(self, operation: str, mode: str = "move"):
+-        op = MOVE_OPERATIONS[operation]
+-        mode = MOVE_MODES[mode]
+-        self.moveCursor(op, mode)
+-
+-    def append_text(self, text: str, newline: bool = True):
+-        if newline:
+-            self.appendPlainText(text)
++    @deprecated(reason="This method is deprecated, use set_resize_mode instead.")
++    def resize_mode(self, mode: ModeStr, col: int | None = None):
++        self.set_resize_mode(mode, col)
++
++    def set_resize_mode(self, mode: ModeStr, col: int | None = None):
++        if mode not in MODES:
++            raise InvalidParamError(mode, MODES)
++        if col is None:
++            self.setSectionResizeMode(MODES[mode])
+         else:
+-            self.move_cursor("end")
+-            self.insertPlainText(text)
+-            self.move_cursor("end")
+-
+-    def set_text(self, text: str):
+-        self.setPlainText(text)
+-
+-    def set_syntaxhighlighter(self, syntax: str):
+-        self._hl = syntaxhighlighters.PygmentsHighlighter(self.document(), syntax)
+-
+-    def text(self) -> str:
+-        return self.toPlainText()
+-
+-    def select_text(self, start: int, end: int):
+-        with self.create_cursor() as c:
+-            c.select_text(start, end)
+-
+-    def set_read_only(self, value: bool = True):
+-        """make the PlainTextEdit read-only
+-
+-        Args:
+-            value: True, for read-only, otherwise False
+-        """
+-        self.setReadOnly(value)
+-
+-    def highlight_current_line(self, color="yellow"):
+-        extra_selections = []
+-
+-        if not self.isReadOnly():
+-            selection = widgets.TextEdit.ExtraSelection()
+-            line_color = gui.Color(color)
+-            selection.format.setBackground(line_color)
+-            selection.format.setProperty(QtGui.QTextFormat.FullWidthSelection, True)
+-            selection.cursor = self.textCursor()
+-            selection.cursor.clearSelection()
+-            extra_selections.append(selection)
+-
+-        self.setExtraSelections(extra_selections)
+-
+-    def set_wrap_mode(self, mode: str):
+-        """set word wrap mode
+-
+-        Allowed values are "none", "word", "anywhere", "boundary_or_anywhere"
+-
+-        Args:
+-            mode: word wrap mode to use
+-
+-        Raises:
+-            ValueError: wrap mode does not exist
+-        """
+-        if mode not in WRAP_MODES:
+-            raise ValueError(f"invalid wrap mode. Allowed values: {WRAP_MODES.keys()}")
+-        self.setWordWrapMode(WRAP_MODES[mode])
+-
+-    def set_line_wrap_mode(self, mode: str):
+-        """set line wrap mode
+-
+-        Allowed values are "none" and "widget width"
+-
+-        Args:
+-            mode: line wrap mode to use
+-
+-        Raises:
+-            ValueError: line wrap mode does not exist
+-        """
+-        if mode not in LINE_WRAP_MODES:
+-            raise ValueError(
+-                f"invalid wrap mode. " f"Allowed values: {LINE_WRAP_MODES.keys()}"
++            self.setSectionResizeMode(col, MODES[mode])
++
++    def get_section_labels(self) -> list[str]:
++        model = self.model()
++        return [
++            model.headerData(
++                i, constants.HORIZONTAL, constants.DISPLAY_ROLE  # type: ignore
+             )
+-        self.setLineWrapMode(LINE_WRAP_MODES[mode])
++            for i in range(self.count())
++        ]
+ 
+-    def _on_value_change(self):
+-        self.value_changed.emit()
+-        if self.validator is not None:
+-            self._set_validation_color()
+-
+-    def _set_validation_color(self, state: bool = True):
+-        color = "orange" if not self.is_valid() else None
+-        self.set_background_color(color)
+-
+-    def set_validator(self, validator: gui.Validator):
+-        self.validator = validator
+-        self._set_validation_color()
+-
+-    def set_regex_validator(self, regex: str, flags=0) -> gui.RegExpValidator:
+-        validator = gui.RegularExpressionValidator(self)
+-        validator.set_regex(regex, flags)
+-        self.set_validator(validator)
+-        return validator
++    def contextMenuEvent(self, event):
++        """Context menu for our files tree."""
++        menu = widgets.Menu(parent=self)
++        actions = self.get_header_actions()
++        menu.add_actions(actions)
++        menu.exec_(self.mapToGlobal(event.position()))
++
++    def get_header_actions(self) -> list[widgets.Action]:
++        actions = []
++        labels = self.get_section_labels()[1:]
++        for i, header_label in enumerate(labels, start=1):
++            val = not self.isSectionHidden(i)
++            action = widgets.Action(text=header_label, checkable=True, checked=val)
++            fn = functools.partial(self.set_section_hidden, i=i, hide=val)
++            action.triggered.connect(fn)
++            actions.append(action)
++        return actions
++
++    def set_section_hidden(self, i: int, hide: bool):
++        self.section_vis_changed.emit(i, hide)
++        self.setSectionHidden(i, hide)
++
++    def set_sizes(self, sizes: Iterable[int | None]):
++        for i, size in enumerate(sizes):
++            if size is not None:
++                self.resizeSection(i, size)
++
++    def set_default_section_size(self, size: int | None):
++        if size is None:
++            self.resetDefaultSectionSize()
++        else:
++            self.setDefaultSectionSize(size)
+ 
+-    def is_valid(self):
+-        if self.validator is None:
+-            return True
+-        return self.validator.is_valid_value(self.text())
++    def stretch_last_section(self, stretch: bool = True):
++        self.setStretchLastSection(stretch)
+ 
+-    def set_value(self, value: str):
+-        self.setPlainText(value)
+ 
+-    def get_value(self):
+-        return self.text()
++class HeaderView(HeaderViewMixin, QtWidgets.QHeaderView):
++    pass
+ 
+ 
+ if __name__ == "__main__":
+-    from prettyqt import custom_validators
+-
+-    val = custom_validators.RegexPatternValidator()
+     app = widgets.app()
+-    widget = PlainTextEdit("This is a test")
+-    widget.set_validator(val)
+-    with widget.current_cursor() as c:
+-        c.select_text(2, 4)
+-    widget.show()
+-    app.exec_()
++    header = HeaderView("horizontal")
++    header.show()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/progressdialog.py` & `prettyqt-1.0.0/prettyqt/widgets/progressdialog.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,44 +1,38 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtWidgets
++from __future__ import annotations
+ 
+ from prettyqt import widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+-QtWidgets.QProgressDialog.__bases__ = (widgets.BaseDialog,)
+-
+-
+-class ProgressDialog(QtWidgets.QProgressDialog):
+-    """Progress dialog
++class ProgressDialog(widgets.DialogMixin, QtWidgets.QProgressDialog):
++    """Progress dialog.
+ 
+-    wrapper for QtWidgets.QProgressDialog
++    Wrapper for QtWidgets.QProgressDialog
+     """
+ 
+-    def __init__(self, parent=None):
++    def __init__(self, parent: QtWidgets.QWidget | None = None):
+         super().__init__(parent=parent)
+ 
+         progress_bar = widgets.ProgressBar()
+         progress_bar.setRange(0, 0)
+         progress_bar.setTextVisible(False)
+         self.setBar(progress_bar)
+ 
+         self.set_icon("mdi.timer-sand-empty")
+         self.set_modality("application")
+         self.set_flags(
+             minimize=False, maximize=False, close=False, stay_on_top=True, window=True
+         )
+-        self.setCancelButton(None)
++        self.setCancelButton(None)  # type: ignore
+         self.cancel()
+ 
+-    def show_message(self, message):
++    def show_message(self, message: str):
+         self.setLabelText(message)
+         self.show()
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     widget = ProgressDialog()
+     widget.show_message("test")
+-    widget.exec_()
++    widget.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/pushbutton.py` & `prettyqt-1.0.0/prettyqt/widgets/stackedlayout.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,49 +1,38 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Optional, Callable
++from prettyqt import widgets
++from prettyqt.qt import QtWidgets
+ 
+-from qtpy import QtWidgets
+ 
+-from prettyqt import core, widgets
++class StackedLayout(widgets.LayoutMixin, QtWidgets.QStackedLayout):
++    def serialize_fields(self):
++        return dict(items=self.get_children())
+ 
++    def __setstate__(self, state):
++        for item in state["items"]:
++            self.add(item)
+ 
+-QtWidgets.QPushButton.__bases__ = (widgets.AbstractButton,)
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
+ 
++    def __add__(self, other: QtWidgets.QWidget | QtWidgets.QLayout):
++        self.add(other)
++        return self
+ 
+-class PushButton(QtWidgets.QPushButton):
+-
+-    value_changed = core.Signal(bool)
+-
+-    def __init__(
+-        self,
+-        label: Optional[str] = None,
+-        parent: Optional[QtWidgets.QWidget] = None,
+-        callback: Optional[Callable] = None,
+-    ):
+-        super().__init__(label, parent)
+-        if callback:
+-            self.clicked.connect(callback)
+-        self.toggled.connect(self.value_changed)
+-
+-    def get_value(self) -> bool:
+-        return self.isChecked()
+-
+-    def set_value(self, value: bool):
+-        self.setChecked(value)
+-
+-    @property
+-    def is_on(self) -> bool:
+-        return self.isChecked()
+-
+-    @is_on.setter
+-    def is_on(self, state: bool):
+-        self.setChecked(state)
++    def set_current_widget(self, widget: QtWidgets.QWidget):
++        self.setCurrentWidget(widget)
+ 
+ 
+ if __name__ == "__main__":
++    from prettyqt import widgets
++
+     app = widgets.app()
+-    widget = PushButton("This is a test")
++    layout = StackedLayout()
++    widget = widgets.Widget()
++    widget2 = widgets.RadioButton("Test")
++    widget3 = widgets.RadioButton("Test 2")
++    layout += widget2
++    layout += widget3
++    widget.set_layout(layout)
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/radiobutton.py` & `prettyqt-1.0.0/prettyqt/widgets/dial.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,44 +1,38 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtWidgets
++from __future__ import annotations
+ 
+ from prettyqt import core, widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+-QtWidgets.QRadioButton.__bases__ = (widgets.AbstractButton,)
+-
+-
+-class RadioButton(QtWidgets.QRadioButton):
+-
+-    value_changed = core.Signal(bool)
+-
+-    def __init__(self, *args, **kwargs):
+-        super().__init__(*args, **kwargs)
+-        self.toggled.connect(self.value_changed)
+-
+-    def __bool__(self):
+-        return self.isChecked()
+-
+-    @property
+-    def is_on(self) -> bool:
+-        return self.isChecked()
+-
+-    @is_on.setter
+-    def is_on(self, state: bool):
+-        self.setChecked(state)
++class Dial(widgets.AbstractSliderMixin, QtWidgets.QDial):
++    value_changed = core.Signal(int)
+ 
+-    def get_value(self) -> bool:
+-        return self.isChecked()
++    def __init__(self, parent: QtWidgets.QWidget | None = None):
++        super().__init__(parent)
++        self.valueChanged.connect(self.on_value_change)
++
++    def serialize_fields(self):
++        return dict(
++            # notch_size=self.notchSize(),
++            notch_target=self.notchTarget(),
++            notches_visible=self.notchesVisible(),
++            wrapping=self.wrapping(),
++        )
++
++    def __setstate__(self, state):
++        super().__setstate__(state)
++        self.setNotchTarget(state["notch_target"])
++        self.setNotchesVisible(state["notches_visible"])
++        self.setWrapping(state["wrapping"])
+ 
+-    def set_value(self, value: bool):
+-        self.setChecked(value)
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
+ 
+ 
+ if __name__ == "__main__":
+-    app = QtWidgets.QApplication([])
+-    widget = RadioButton("This is a test")
+-    widget.set_icon("mdi.timer")
+-    widget.show()
+-    app.exec_()
++    app = widgets.app()
++    slider = Dial()
++    slider.setRange(0, 100)
++    slider.value_changed.connect(print)
++    slider.show()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/scrollarea.py` & `prettyqt-1.0.0/prettyqt/widgets/scrollarea.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,23 +1,20 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtWidgets
++from __future__ import annotations
+ 
+ from prettyqt import widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+-QtWidgets.QScrollArea.__bases__ = (widgets.AbstractScrollArea,)
+-
+-
+-class ScrollArea(QtWidgets.QScrollArea):
+-    def __getstate__(self):
++class ScrollArea(widgets.AbstractScrollAreaMixin, QtWidgets.QScrollArea):
++    def serialize_fields(self):
+         return dict(widget=self.widget(), resizable=self.widgetResizable())
+ 
+     def __setstate__(self, state):
+-        self.__init__()
++        super().__setstate__(state)
+         self.set_widget(state["widget"])
+         self.setWidgetResizable(state["resizable"])
+ 
+-    def set_widget(self, widget):
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
++    def set_widget(self, widget: QtWidgets.QWidget):
+         self.setWidget(widget)
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/slider.py` & `prettyqt-1.0.0/prettyqt/widgets/slider.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,106 +1,86 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtCore, QtWidgets
++from typing import Literal
+ 
+-from prettyqt import core, widgets
+-from prettyqt.utils import bidict
++from prettyqt import constants, core, widgets
++from prettyqt.qt import QtCore, QtWidgets
++from prettyqt.utils import InvalidParamError, bidict
+ 
+ 
+-TICK_POSITIONS = bidict(
+-    none=QtWidgets.QSlider.NoTicks,
+-    both_sides=QtWidgets.QSlider.TicksBothSides,
+-    above=QtWidgets.QSlider.TicksAbove,
+-    below=QtWidgets.QSlider.TicksBelow,
++TICK_POSITION = bidict(
++    none=QtWidgets.QSlider.TickPosition.NoTicks,
++    both_sides=QtWidgets.QSlider.TickPosition.TicksBothSides,
++    above=QtWidgets.QSlider.TickPosition.TicksAbove,
++    below=QtWidgets.QSlider.TickPosition.TicksBelow,
+ )
+ 
+-ORIENTATIONS = bidict(horizontal=QtCore.Qt.Horizontal, vertical=QtCore.Qt.Vertical)
++TickPositionAllStr = Literal["none", "both_sides", "above", "below", "left", "right"]
++TickPositionStr = Literal["none", "both_sides", "above", "below"]
+ 
+ 
+-QtWidgets.QSlider.__bases__ = (widgets.AbstractSlider,)
+-
+-
+-class Slider(QtWidgets.QSlider):
+-
++class Slider(widgets.AbstractSliderMixin, QtWidgets.QSlider):
+     value_changed = core.Signal(int)
+ 
+-    def __init__(self, orientation="horizontal", parent=None):
+-        if orientation in ORIENTATIONS:
+-            orientation = ORIENTATIONS[orientation]
+-        super().__init__(orientation, parent)
++    def __init__(
++        self,
++        orientation: (constants.OrientationStr | QtCore.Qt.Orientation) = "horizontal",
++        parent: QtWidgets.QWidget | None = None,
++    ):
++        if isinstance(orientation, QtCore.Qt.Orientation):
++            ori = orientation
++        else:
++            ori = constants.ORIENTATION[orientation]
++        super().__init__(ori, parent)
+         self.valueChanged.connect(self.on_value_change)
+ 
+-    def __getstate__(self):
++    def serialize_fields(self):
+         return dict(
+-            range=(self.minimum(), self.maximum()),
+-            value=self.value(),
+-            tooltip=self.toolTip(),
+-            statustip=self.statusTip(),
+-            enabled=self.isEnabled(),
+-            has_tracking=self.hasTracking(),
+             tick_position=self.get_tick_position(),
+             tick_interval=self.tickInterval(),
+-            inverted_controls=self.invertedControls(),
+-            inverted_appearance=self.invertedAppearance(),
+-            single_step=self.singleStep(),
+-            page_step=self.pageStep(),
+         )
+ 
+     def __setstate__(self, state):
+-        self.__init__()
+-        self.set_range(*state["range"])
+-        self.set_value(state["value"])
+-        self.setToolTip(state.get("tooltip", ""))
+-        self.setStatusTip(state.get("statustip", ""))
+-        self.setEnabled(state.get("enabled", True))
+-        self.setSingleStep(state["single_step"])
+-        self.setPageStep(state["page_step"])
+-        self.setTracking(state["has_tracking"])
+-        self.setInvertedControls(state["inverted_controls"])
+-        self.setInvertedAppearance(state["inverted_appearance"])
++        super().__setstate__(state)
+         self.set_tick_position(state["tick_position"])
+         self.setTickInterval(state["tick_interval"])
+ 
+-    def set_tick_position(self, position: str):
+-        """sets the tick position for the slider
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
+ 
+-        allowed values are "none", "both_sides", "above", "below", "left", "right"
+-        for vertical orientation of the slider,
+-        "above" equals to "left" and "below" to "right"
++    def set_tick_position(self, position: TickPositionAllStr):
++        """Set the tick position for the slider.
++
++        For vertical orientation, "above" equals to "left" and "below" to "right".
+ 
+         Args:
+             position: position for the ticks
+         """
+         if position == "left":
+             position = "above"
+         elif position == "right":
+             position = "below"
+-        elif position not in TICK_POSITIONS:
+-            raise ValueError(f"{position} not a valid tick position.")
+-        self.setTickPosition(TICK_POSITIONS[position])
+-
+-    def get_tick_position(self) -> str:
+-        """returns tick position
++        elif position not in TICK_POSITION:
++            raise InvalidParamError(position, TICK_POSITION)
++        self.setTickPosition(TICK_POSITION[position])
+ 
+-        possible values are "none", "both_sides", "above", "below"
++    def get_tick_position(self) -> TickPositionStr:
++        """Return tick position.
+ 
+         Returns:
+             tick position
+         """
+-        val = TICK_POSITIONS.inv[self.tickPosition()]
++        return TICK_POSITION.inverse[self.tickPosition()]
+         # if self.is_vertical():
+         #     if val == "above":
+         #         return "left"
+         #     elif val == "below":
+         #         return "right"
+-        return val
+ 
+ 
+ if __name__ == "__main__":
+-    app = QtWidgets.QApplication([])
++    app = widgets.app()
+     slider = Slider()
+     slider.setRange(0, 100)
+     slider.value_changed.connect(print)
+     slider.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/spinbox.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/inputandslider.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,72 +1,65 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from typing import Optional
+-
+-from qtpy import QtWidgets
++from __future__ import annotations
+ 
+ from prettyqt import core, widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+-QtWidgets.QSpinBox.__bases__ = (widgets.AbstractSpinBox,)
+-
+-
+-class SpinBox(QtWidgets.QSpinBox):
+-
++class InputAndSlider(widgets.Widget):
+     value_changed = core.Signal(int)
+ 
+-    def __init__(self, parent=None, min_value=None, max_value=None, default_value=None):
++    def __init__(
++        self,
++        bounds: tuple[int, int] | None = None,
++        parent: QtWidgets.QWidget | None = None,
++    ):
+         super().__init__(parent)
+-        self.valueChanged.connect(self.value_changed)
+-        self.set_range(min_value, max_value)
+-        if default_value is not None:
+-            self.set_value(default_value)
+-
+-    def __getstate__(self):
+-        return dict(
+-            range=(self.minimum(), self.maximum()),
+-            value=self.value(),
+-            enabled=self.isEnabled(),
+-            tooltip=self.toolTip(),
+-            statustip=self.statusTip(),
+-            prefix=self.prefix(),
+-            suffix=self.suffix(),
+-            int_base=self.displayIntegerBase(),
+-            step_type=self.get_step_type(),
+-            button_symbols=self.get_button_symbols(),
+-            correction_mode=self.get_correction_mode(),
+-            single_step=self.singleStep(),
+-        )
+-
+-    def __setstate__(self, state):
+-        self.__init__()
+-        self.set_range(*state["range"])
+-        self.setValue(state["value"])
+-        self.setEnabled(state.get("enabled", True))
+-        self.setToolTip(state.get("tooltip", ""))
+-        self.setStatusTip(state.get("statustip", ""))
+-        self.setSingleStep(state["single_step"])
+-        self.setPrefix(state["prefix"])
+-        self.setSuffix(state["suffix"])
+-        self.set_button_symbols(state["button_symbols"])
+-        self.set_correction_mode(state["correction_mode"])
+-        self.setDisplayIntegerBase(state["int_base"])
+-        self.set_step_type(state["step_type"])
+-
+-    def set_range(self, start: Optional[int], end: Optional[int]):
+-        if start is None:
+-            start = -2147483647
+-        if end is None:
+-            end = 2147483647
+-        self.setRange(start, end)
+-
+-    def set_step_size(self, step_size):
+-        self.setSingleStep(step_size)
++        self.path = None
++        layout = widgets.BoxLayout("horizontal", self)
++        layout.set_margin(0)
++        self.spinbox = widgets.SpinBox()
++        layout.add(self.spinbox)
++        self.slider = widgets.Slider()
++        layout.add(self.slider)
++        if bounds:
++            self.set_range(*bounds)
++        self.spinbox.valueChanged.connect(self.slider.set_value)
++        self.slider.valueChanged.connect(self.spinbox.set_value)
++        self.spinbox.valueChanged.connect(self.value_changed)
++
++    def serialize_fields(self):
++        return dict(path=self.path)
++
++    # def __setstate__(self, state):
++    #     self.__init__(state["extensions"])
++    #     self.set_path(state["path"])
++    #     self.set_enabled(state.get("enabled", True))
++
++    def set_range(self, min_val: int, max_val: int):
++        self.spinbox.set_range(min_val, max_val)
++        self.slider.set_range(min_val, max_val)
++
++    def get_value(self) -> int:
++        return self.spinbox.get_value()
++
++    def set_value(self, value: int):
++        self.spinbox.set_value(value)
++        self.slider.set_value(value)
++
++    def is_valid(self) -> bool:
++        return self.spinbox.is_valid()
++
++    def set_step_size(self, step_size: int):
++        self.spinbox.set_step_size(step_size)
++        self.slider.set_step_size(step_size)
++        self.slider.setTickInterval(step_size)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+-    widget = SpinBox()
+-    widget.show()
+-    app.exec_()
++    btn = InputAndSlider()
++    btn.set_step_size(2)
++    btn.slider.set_tick_position("below")
++    btn.set_value(4)
++    btn.show()
++    btn.value_changed.connect(print)
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/splitter.py` & `prettyqt-1.0.0/prettyqt/gui/pagelayout.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,114 +1,118 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtCore, QtWidgets
++from typing import Literal
+ 
+-from prettyqt import widgets
+-from prettyqt.utils import bidict
++from prettyqt import gui
++from prettyqt.qt import QtGui
++from prettyqt.utils import InvalidParamError, bidict
+ 
+ 
+-ORIENTATIONS = bidict(horizontal=QtCore.Qt.Horizontal, vertical=QtCore.Qt.Vertical)
++MODES = bidict(
++    standard=QtGui.QPageLayout.Mode.StandardMode,
++    full_page=QtGui.QPageLayout.Mode.FullPageMode,
++)
+ 
++ModeStr = Literal["standard", "full_page"]
+ 
+-QtWidgets.QSplitter.__bases__ = (widgets.Frame,)
++ORIENTATIONS = bidict(
++    portrait=QtGui.QPageLayout.Orientation.Portrait,
++    landscape=QtGui.QPageLayout.Orientation.Landscape,
++)
+ 
++OrientationStr = Literal["portrait", "landscape"]
+ 
+-class Splitter(QtWidgets.QSplitter):
+-    def __init__(self, orientation="horizontal", parent=None):
+-        if orientation in ORIENTATIONS:
+-            orientation = ORIENTATIONS[orientation]
+-        super().__init__(orientation, parent)
++UNITS = bidict(
++    millimeter=QtGui.QPageLayout.Unit.Millimeter,
++    point=QtGui.QPageLayout.Unit.Point,
++    inch=QtGui.QPageLayout.Unit.Inch,
++    pica=QtGui.QPageLayout.Unit.Pica,
++    didot=QtGui.QPageLayout.Unit.Didot,
++    cicero=QtGui.QPageLayout.Unit.Cicero,
++)
+ 
+-    def __getitem__(self, index):
+-        if isinstance(index, int):
+-            return self.widget(index)
+-        else:
+-            return self.findChild(QtWidgets.QWidget, index)
++UnitStr = Literal["millimeter", "point", "inch", "pica", "didot", "cicero"]
+ 
+-    def __getstate__(self):
++
++class PageLayout(QtGui.QPageLayout):
++    def __repr__(self):
++        return f"{type(self).__name__}()"
++
++    def serialize_fields(self):
+         return dict(
+-            items=self.get_children(),
++            margins=self.margins(),
++            minimum_margins=self.minimumMargins(),
++            mode=self.get_mode(),
+             orientation=self.get_orientation(),
+-            handle_width=self.handleWidth(),
+-            children_collapsible=self.childrenCollapsible(),
+-            opaque_resize=self.opaqueResize(),
++            page_size=self.get_page_size(),
++            units=self.get_units(),
+         )
+ 
+-    def __setstate__(self, state):
+-        self.__init__(state["orientation"])
+-        for item in state["items"]:
+-            self.addWidget(item)
+-        self.setHandleWidth(state["handle_width"])
+-        self.setChildrenCollapsible(state["children_collapsible"])
+-        self.setOpaqueResize(state["opaque_resize"])
+-
+-    def __iter__(self):
+-        return iter(self.get_children())
+-
+-    def __len__(self):
+-        return self.count()
+-
+-    def __add__(self, other):
+-        if isinstance(other, (QtWidgets.QLayout, QtWidgets.QWidget)):
+-            self.add(other)
+-            return self
+-        raise TypeError(f"Invalid type: {type(other)}")
+-
+-    def get_children(self) -> list:
+-        return [self[i] for i in range(self.count())]
+-
+-    def add_widget(self, widget: QtWidgets.QWidget):
+-        self.addWidget(widget)
+-
+-    def add_layout(self, layout: QtWidgets.QLayout):
+-        widget = widgets.Widget()
+-        widget.set_layout(layout)
+-        self.addWidget(widget)
+-
+-    def add(self, *item):
+-        for i in item:
+-            if isinstance(i, QtWidgets.QWidget):
+-                self.add_widget(i)
+-            else:
+-                self.add_layout(i)
+-
+-    @classmethod
+-    def from_widgets(cls, *widgets, horizontal: bool = False, parent=None):
+-        orientation = "horizontal" if horizontal else "vertical"
+-        splitter = cls(orientation, parent=parent)
+-        for widget in widgets:
+-            splitter += widget
+-        return splitter
++    def set_units(self, unit: UnitStr):
++        """Set unit.
++
++        Args:
++            unit: unit
++
++        Raises:
++            InvalidParamError: unit does not exist
++        """
++        if unit not in UNITS:
++            raise InvalidParamError(unit, UNITS)
++        self.setUnits(UNITS[unit])
++
++    def get_units(self) -> UnitStr:
++        """Get the current unit.
++
++        Returns:
++            unit
++        """
++        return UNITS.inverse[self.units()]
++
++    def set_mode(self, mode: ModeStr):
++        """Set mode.
++
++        Args:
++            mode: mode
+ 
+-    def set_orientation(self, orientation: str):
+-        """set the orientation of the splitter
++        Raises:
++            InvalidParamError: mode does not exist
++        """
++        if mode not in MODES:
++            raise InvalidParamError(mode, MODES)
++        self.setMode(MODES[mode])
+ 
+-        Allowed values are "horizontal", "vertical"
++    def get_mode(self) -> ModeStr:
++        """Get the current mode.
++
++        Returns:
++            mode
++        """
++        return MODES.inverse[self.mode()]
++
++    def set_orientation(self, orientation: OrientationStr):
++        """Set orientation.
+ 
+         Args:
+-            orientation: orientation for the splitter
++            orientation: orientation
+ 
+         Raises:
+-            ValueError: orientation does not exist
++            InvalidParamError: orientation does not exist
+         """
+         if orientation not in ORIENTATIONS:
+-            raise ValueError(f"{orientation} not a valid orientation.")
++            raise InvalidParamError(orientation, ORIENTATIONS)
+         self.setOrientation(ORIENTATIONS[orientation])
+ 
+-    def get_orientation(self) -> str:
+-        """returns current orientation
+-
+-        Possible values: "horizontal", "vertical"
++    def get_orientation(self) -> OrientationStr:
++        """Get the current orientation.
+ 
+         Returns:
+             orientation
+         """
+-        return ORIENTATIONS.inv[self.orientation()]
++        return ORIENTATIONS.inverse[self.orientation()]
++
++    def get_page_size(self) -> gui.PageSize:
++        return gui.PageSize(self.pageSize())
+ 
+ 
+ if __name__ == "__main__":
+-    app = QtWidgets.QApplication([])
+-    widget = Splitter()
+-    widget.show()
+-    app.exec_()
++    movie = PageLayout()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/stackedlayout.py` & `prettyqt-1.0.0/prettyqt/widgets/graphicslinearlayout.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,43 +1,37 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtWidgets
++from prettyqt import constants, widgets
++from prettyqt.qt import QtCore, QtWidgets
+ 
+-from prettyqt import widgets
+ 
++class GraphicsLinearLayout(widgets.GraphicsLayoutMixin, QtWidgets.QGraphicsLinearLayout):
++    def __init__(
++        self,
++        orientation: (constants.OrientationStr | QtCore.Qt.Orientation) = "horizontal",
++        parent: QtWidgets.QGraphicsLayoutItem | None = None,
++    ):
++        if isinstance(orientation, QtCore.Qt.Orientation):
++            ori = orientation
++        else:
++            ori = constants.ORIENTATION[orientation]
++        super().__init__(ori, parent)
+ 
+-QtWidgets.QStackedLayout.__bases__ = (widgets.Layout,)
+-
+-
+-class StackedLayout(QtWidgets.QStackedLayout):
+-    def __getstate__(self):
++    def serialize_fields(self):
+         return dict(items=self.get_children())
+ 
+     def __setstate__(self, state):
+-        self.__init__()
+-        for item in state["items"]:
+-            self.add(item)
++        for i, (item, pos) in enumerate(zip(state["widgets"], state["positions"])):
++            x, y = pos
++            self[x, y] = item
+ 
+-    def __add__(self, other):
+-        if isinstance(other, (QtWidgets.QWidget, QtWidgets.QLayout)):
+-            self.add(other)
+-            return self
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
+ 
+-    def set_current_widget(self, widget):
+-        self.setCurrentWidget(widget)
++    def __add__(self, other):
++        self[self.count()] = other
++        return self
+ 
+ 
+ if __name__ == "__main__":
+-    from prettyqt import widgets
+-
+     app = widgets.app()
+-    layout = StackedLayout()
+-    widget = widgets.Widget()
+-    widget2 = widgets.RadioButton("Test")
+-    widget3 = widgets.RadioButton("Test 2")
+-    layout += widget2
+-    layout += widget3
+-    widget.set_layout(layout)
+-    widget.show()
+-    app.exec_()
++    layout = GraphicsLinearLayout()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/statusbar.py` & `prettyqt-1.0.0/prettyqt/widgets/statusbar.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,57 +1,53 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
+-
+-from qtpy import QtWidgets
++from __future__ import annotations
+ 
+ from prettyqt import widgets
++from prettyqt.qt import QtWidgets
+ 
+ 
+-QtWidgets.QStatusBar.__bases__ = (widgets.Widget,)
+-
+-
+-class StatusBar(QtWidgets.QStatusBar):
+-    def __init__(self, *args, **kwargs):
++class StatusBar(widgets.WidgetMixin, QtWidgets.QStatusBar):
++    def __init__(self, *args, **kwargs) -> None:
+         super().__init__(*args, **kwargs)
+         self.progress_bar = widgets.ProgressBar()
+ 
+-    def __add__(self, other):
++    def __add__(self, other: QtWidgets.QAction | QtWidgets.QWidget) -> StatusBar:
+         if isinstance(other, QtWidgets.QAction):
+-            self.add_action(other)
++            self.addAction(other)
+             return self
+-        if isinstance(other, QtWidgets.QWidget):
++        elif isinstance(other, QtWidgets.QWidget):
+             self.addWidget(other)
+             return self
++        else:
++            raise TypeError(other)
+ 
+-    def setup_default_bar(self):
++    def setup_default_bar(self) -> None:
+         # This is simply to show the bar
+         self.progress_bar.hide()
+         self.progress_bar.setRange(0, 0)
+         self.progress_bar.setFixedSize(200, 20)
+         self.progress_bar.setTextVisible(False)
+         self.addPermanentWidget(self.progress_bar)
+ 
+-    def add_action(self, action):
++    def add_action(self, action: QtWidgets.QAction) -> None:
+         self.addAction(action)
+ 
+-    def add_widget(self, widget, permanent=False):
++    def add_widget(self, widget: QtWidgets.QWidget, permanent: bool = False) -> None:
+         if permanent:
+             self.addPermanentWidget(widget)
+         else:
+             self.addWidget(widget)
+ 
+-    def show_message(self, message: str, timeout=0):
++    def show_message(self, message: str, timeout: int = 0) -> None:
+         self.showMessage(message, timeout)
+ 
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+     dlg = widgets.MainWindow()
+     status_bar = StatusBar()
+     status_bar.set_color("black")
+     label = widgets.Label("test")
+     status_bar.addWidget(label)
+     status_bar.setup_default_bar()
+     dlg.setStatusBar(status_bar)
+     dlg.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/systemtrayicon.py` & `prettyqt-1.0.0/prettyqt/widgets/systemtrayicon.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,60 +1,58 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtWidgets
++from prettyqt import core, gui, iconprovider
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import bidict, types
+ 
+-from prettyqt import gui
+-from prettyqt.utils import bidict
+ 
+ ACTIVATION_REASONS = bidict(
+-    unknown=QtWidgets.QSystemTrayIcon.Unknown,
+-    context=QtWidgets.QSystemTrayIcon.Context,
+-    double_click=QtWidgets.QSystemTrayIcon.DoubleClick,
+-    trigger=QtWidgets.QSystemTrayIcon.Trigger,
+-    middle_click=QtWidgets.QSystemTrayIcon.MiddleClick,
++    unknown=QtWidgets.QSystemTrayIcon.ActivationReason.Unknown,
++    context=QtWidgets.QSystemTrayIcon.ActivationReason.Context,
++    double_click=QtWidgets.QSystemTrayIcon.ActivationReason.DoubleClick,
++    trigger=QtWidgets.QSystemTrayIcon.ActivationReason.Trigger,
++    middle_click=QtWidgets.QSystemTrayIcon.ActivationReason.MiddleClick,
+ )
+ 
+ MESSAGE_ICONS = bidict(
+-    none=QtWidgets.QSystemTrayIcon.NoIcon,
+-    information=QtWidgets.QSystemTrayIcon.Information,
+-    warning=QtWidgets.QSystemTrayIcon.Warning,
+-    critical=QtWidgets.QSystemTrayIcon.Critical,
++    none=QtWidgets.QSystemTrayIcon.MessageIcon.NoIcon,
++    information=QtWidgets.QSystemTrayIcon.MessageIcon.Information,
++    warning=QtWidgets.QSystemTrayIcon.MessageIcon.Warning,
++    critical=QtWidgets.QSystemTrayIcon.MessageIcon.Critical,
+ )
+ 
+ 
+-class SystemTrayIcon(QtWidgets.QSystemTrayIcon):
+-    def set_icon(self, icon: gui.icon.IconType):
+-        """set the system tray icon
++class SystemTrayIcon(core.ObjectMixin, QtWidgets.QSystemTrayIcon):
++    def set_icon(self, icon: types.IconType):
++        """Set the system tray icon.
+ 
+         Args:
+             icon: icon to use
+         """
+-        icon = gui.icon.get_icon(icon)
++        icon = iconprovider.get_icon(icon)
+         self.setIcon(icon)
+ 
+     def show_message(
+         self,
+         title: str,
+         message: str = "",
+-        icon: gui.icon.IconType = None,
++        icon: types.IconType = None,
+         timeout: int = 10,
+     ):
+         if icon is None:
+-            icon = "none"
++            ico = gui.Icon()
+         if icon in MESSAGE_ICONS:
+-            icon = MESSAGE_ICONS[icon]
++            ico = MESSAGE_ICONS[icon]
+         else:
+-            icon = gui.icon.get_icon(icon)
+-        self.showMessage(title, message, icon, timeout * 1000)
++            ico = iconprovider.get_icon(icon)
++        self.showMessage(title, message, ico, timeout * 1000)
+ 
+ 
+ if __name__ == "__main__":
+     from prettyqt import widgets
+ 
+     app = widgets.app()
+     icon = SystemTrayIcon()
+     icon.set_icon("mdi.folder")
+     print(icon.isSystemTrayAvailable())
+     icon.show_message("a", "b", "information")
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/tabbar.py` & `prettyqt-1.0.0/prettyqt/widgets/tabbar.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,141 +1,164 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtCore, QtGui, QtWidgets
++from typing import Literal
+ 
+-from prettyqt import widgets
+-from prettyqt.utils import bidict
++from deprecated import deprecated
+ 
++from prettyqt import constants, core, widgets
++from prettyqt.qt import QtCore, QtGui, QtWidgets
++from prettyqt.utils import InvalidParamError, bidict, types
+ 
+-ELIDE_MODES = bidict(
+-    left=QtCore.Qt.ElideLeft,
+-    right=QtCore.Qt.ElideRight,
+-    middle=QtCore.Qt.ElideMiddle,
+-    none=QtCore.Qt.ElideNone,
+-)
+ 
+-REMOVE_BEHAVIOURS = bidict(
+-    left_tab=QtWidgets.QTabBar.SelectLeftTab,
+-    right_tab=QtWidgets.QTabBar.SelectRightTab,
+-    previous_tab=QtWidgets.QTabBar.SelectPreviousTab,
++REMOVE_BEHAVIOUR = bidict(
++    left_tab=QtWidgets.QTabBar.SelectionBehavior.SelectLeftTab,
++    right_tab=QtWidgets.QTabBar.SelectionBehavior.SelectRightTab,
++    previous_tab=QtWidgets.QTabBar.SelectionBehavior.SelectPreviousTab,
+ )
+ 
+-SHAPES = bidict(
+-    rounded_north=QtWidgets.QTabBar.RoundedNorth,
+-    rounded_south=QtWidgets.QTabBar.RoundedSouth,
+-    rounded_west=QtWidgets.QTabBar.RoundedWest,
+-    rounded_east=QtWidgets.QTabBar.RoundedEast,
+-    triangular_north=QtWidgets.QTabBar.TriangularNorth,
+-    triangular_south=QtWidgets.QTabBar.TriangularSouth,
+-    triangular_west=QtWidgets.QTabBar.TriangularWest,
+-    triangular_east=QtWidgets.QTabBar.TriangularEast,
+-)
++RemoveBehaviourStr = Literal["left_tab", "right_tab", "previous_tab"]
+ 
+-POSITIONS = bidict(left=QtWidgets.QTabBar.LeftSide, right=QtWidgets.QTabBar.RightSide)
++SHAPE = bidict(
++    rounded_north=QtWidgets.QTabBar.Shape.RoundedNorth,
++    rounded_south=QtWidgets.QTabBar.Shape.RoundedSouth,
++    rounded_west=QtWidgets.QTabBar.Shape.RoundedWest,
++    rounded_east=QtWidgets.QTabBar.Shape.RoundedEast,
++    triangular_north=QtWidgets.QTabBar.Shape.TriangularNorth,
++    triangular_south=QtWidgets.QTabBar.Shape.TriangularSouth,
++    triangular_west=QtWidgets.QTabBar.Shape.TriangularWest,
++    triangular_east=QtWidgets.QTabBar.Shape.TriangularEast,
++)
+ 
++ShapeStr = Literal[
++    "rounded_north",
++    "rounded_south",
++    "rounded_west",
++    "rounded_east",
++    "triangular_north",
++    "triangular_south",
++    "triangular_west",
++    "triangular_east",
++]
++
++POSITIONS = bidict(
++    left=QtWidgets.QTabBar.ButtonPosition.LeftSide,
++    right=QtWidgets.QTabBar.ButtonPosition.RightSide,
++)
+ 
+-QtWidgets.QTabBar.__bases__ = (widgets.Widget,)
++PositionStr = Literal["left", "right"]
+ 
+ 
+-class TabBar(QtWidgets.QTabBar):
++class TabBarMixin(widgets.WidgetMixin):
+     on_detach = QtCore.Signal(int, QtCore.QPoint)
+ 
+-    def __init__(self, parent=None):
++    def __init__(self, parent: QtWidgets.QWidget | None = None) -> None:
+         super().__init__(parent)
+ 
+         self.setAcceptDrops(True)
+         self.set_elide_mode("right")
+-        self.set_remove_behaviour("left_tab")
+-        self.mouse_cursor = QtGui.QCursor()
++        self.set_selection_behavior_on_remove("left_tab")
+ 
+-    def __getitem__(self, index):
++    def __getitem__(self, index: tuple[int, str]):
+         return self.tabButton(index[0], POSITIONS[index[1]])
+ 
+-    def __setitem__(self, index, value):
++    def __setitem__(
++        self, index: tuple[int, PositionStr], value: QtWidgets.QWidget | None
++    ):
+         self.set_tab(index[0], index[1], value)
+ 
+-    def __getstate__(self):
++    def serialize_fields(self):
+         return dict(
+             movable=self.isMovable(),
+             document_mode=self.documentMode(),
+             current_index=self.currentIndex(),
+             # shape=self.shape(),
+             draw_base=self.drawBase(),
+             elide_mode=self.get_elide_mode(),
+-            icon_size=self.iconSize(),
++            icon_size=core.Size(self.iconSize()),
+         )
+ 
+     def __setstate__(self, state):
+-        self.__init__()
+         self.setDocumentMode(state.get("document_mode", False))
+         self.setMovable(state.get("movable", False))
+         # self.setShape(state.get("shape", "rounded"))
+         self.setIconSize(state["icon_size"])
+         self.setDrawBase(state.get("draw_base"))
+         self.set_elide_mode(state.get("elide_mode"))
+         self.setCurrentIndex(state.get("index", 0))
+ 
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
+     #  Send the on_detach when a tab is double clicked
+     def mouseDoubleClickEvent(self, event):
+         event.accept()
+-        self.on_detach.emit(self.tabAt(event.pos()), self.mouse_cursor.pos())
+-
+-    def set_icon_size(self, size: int):
+-        """Set the icon size for the tabs
+-
+-        Args:
+-            size: height/width of the icons
+-        """
+-        self.setIconSize(QtCore.QSize(size, size))
+-
+-    def set_tab(self, index: int, position, widget):
+-        self.setTabButton(index, POSITIONS[position], widget)
++        tab = self.tabAt(event.position())
++        pos = QtGui.QCursor.pos()
++        self.on_detach.emit(tab, pos)
++
++    def set_icon_size(self, size: int | types.SizeType):
++        """Set size of the icons."""
++        if isinstance(size, int):
++            size = core.Size(size, size)
++        elif isinstance(size, tuple):
++            size = core.Size(*size)
++        self.setIconSize(size)
++
++    def get_icon_size(self) -> core.Size:
++        return core.Size(self.iconSize())
++
++    def set_tab(
++        self, index: int, position: PositionStr, widget: QtWidgets.QWidget | None
++    ) -> None:
++        self.setTabButton(index, POSITIONS[position], widget)  # type: ignore
++
++    @deprecated(
++        reason="This method is deprecated, use set_selection_behavior_on_remove instead."
++    )
++    def set_remove_behaviour(self, mode: RemoveBehaviourStr) -> None:
++        self.set_selection_behavior_on_remove(mode)
+ 
+-    def set_remove_behaviour(self, mode: str):
+-        """sets the remove hehaviour
++    def set_selection_behavior_on_remove(self, mode: RemoveBehaviourStr) -> None:
++        """Set the remove hehaviour.
+ 
+         What tab should be set as current when removeTab is called
+         if the removed tab is also the current tab.
+-        Possible values: left, right, previous
++
+         Args:
+             mode: new remove behaviour
+         """
+-        if mode not in REMOVE_BEHAVIOURS:
+-            raise ValueError("Mode not available")
+-        self.setSelectionBehaviorOnRemove(REMOVE_BEHAVIOURS[mode])
+-
+-    def get_remove_behaviour(self) -> str:
+-        """returns remove behaviour
++        if mode not in REMOVE_BEHAVIOUR:
++            raise InvalidParamError(mode, REMOVE_BEHAVIOUR)
++        self.setSelectionBehaviorOnRemove(REMOVE_BEHAVIOUR[mode])
+ 
+-        possible values are "left_tab", "right_tab", "previous_tab"
++    def get_remove_behaviour(self) -> RemoveBehaviourStr:
++        """Return remove behaviour.
+ 
+         Returns:
+             remove behaviour
+         """
+-        return REMOVE_BEHAVIOURS.inv[self.selectionBehaviorOnRemove()]
++        return REMOVE_BEHAVIOUR.inverse[self.selectionBehaviorOnRemove()]
+ 
+-    def set_elide_mode(self, mode: str):
+-        """set elide mode
+-
+-        Valid values are "left", "right", "middle", "none"
++    def set_elide_mode(self, mode: constants.ElideModeStr) -> None:
++        """Set elide mode.
+ 
+         Args:
+             mode: elide mode to use
+ 
+         Raises:
+-            ValueError: invalid elide mode
++            InvalidParamError: invalid elide mode
+         """
+-        if mode not in ELIDE_MODES:
+-            raise ValueError("Mode not available")
+-        self.setElideMode(ELIDE_MODES[mode])
+-
+-    def get_elide_mode(self) -> str:
+-        """returns elide mode
++        if mode not in constants.ELIDE_MODE:
++            raise InvalidParamError(mode, constants.ELIDE_MODE)
++        self.setElideMode(constants.ELIDE_MODE[mode])
+ 
+-        possible values are "left", "right", "middle", "none"
++    def get_elide_mode(self) -> constants.ElideModeStr:
++        """Return elide mode.
+ 
+         Returns:
+             elide mode
+         """
+-        return ELIDE_MODES.inv[self.elideMode()]
++        return constants.ELIDE_MODE.inverse[self.elideMode()]
++
++
++class TabBar(TabBarMixin, QtWidgets.QTabBar):
++    pass
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/tabwidget.py` & `prettyqt-1.0.0/prettyqt/widgets/action.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,270 +1,275 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Optional
++import os
++from typing import Callable, Literal
+ 
+-from qtpy import QtCore, QtGui, QtWidgets
++from prettyqt import constants, core, gui, iconprovider
++from prettyqt.qt import QtCore, QtGui, QtWidgets
++from prettyqt.utils import InvalidParamError, bidict, helpers, prettyprinter, types
+ 
+-from prettyqt import core, gui, widgets
+-from prettyqt.utils import bidict
+ 
+-
+-TAB_SHAPES = bidict(
+-    rounded=QtWidgets.QTabWidget.Rounded, triangular=QtWidgets.QTabWidget.Triangular
++PRIORITIES = bidict(
++    low=QtWidgets.QAction.Priority.LowPriority,
++    normal=QtWidgets.QAction.Priority.NormalPriority,
++    high=QtWidgets.QAction.Priority.HighPriority,
+ )
+ 
++PriorityStr = Literal["low", "normal", "high"]
+ 
+-QtWidgets.QTabWidget.__bases__ = (widgets.Widget,)
+-
++ROLES = bidict(
++    none=QtWidgets.QAction.MenuRole.NoRole,
++    text_heuristic=QtWidgets.QAction.MenuRole.TextHeuristicRole,
++    application_specific=QtWidgets.QAction.MenuRole.ApplicationSpecificRole,
++    about_qt=QtWidgets.QAction.MenuRole.AboutQtRole,
++    about=QtWidgets.QAction.MenuRole.AboutRole,
++    preferences=QtWidgets.QAction.MenuRole.PreferencesRole,
++    quit=QtWidgets.QAction.MenuRole.QuitRole,
++)
+ 
+-class TabWidget(QtWidgets.QTabWidget):
+-    """
+-    Widget for managing the tabs section
+-    """
++RoleStr = Literal[
++    "none",
++    "text_heuristic",
++    "application_specific",
++    "about_qt",
++    "about",
++    "preferences",
++    "quit",
++]
+ 
+-    def __init__(self, parent=None, closable=False, detachable=False):
+ 
+-        # Basic initalization
++class ActionMixin(core.ObjectMixin):
++    def __init__(
++        self,
++        parent: QtCore.QObject | None = None,
++        text: str = "",
++        icon: types.IconType = None,
++        shortcut: str | None = None,
++        tooltip: str = "",
++        checkable: bool = False,
++        checked: bool = False,
++        statustip: str = "",
++        enabled: bool = True,
++        callback: Callable | None = None,
++    ):
+         super().__init__(parent)
+-        self.tabCloseRequested.connect(self.remove_tab)
+-        self.tab_bar = widgets.TabBar(self)
+-
+-        self.setTabBar(self.tab_bar)
+-
+-        # Used to keep a reference to detached tabs since their QMainWindow
+-        # does not have a parent
+-        self.detached_tabs = dict()
+-        if detachable:
+-            self.set_detachable()
+-        self.set_closable(closable)
+-
+-    def __len__(self):
+-        return self.count()
+-
+-    def __getitem__(self, index):
+-        if isinstance(index, int):
+-            return self.widget(index)
+-        else:
+-            return self.findChild(QtWidgets.QWidget, index)
+-
+-    def __getstate__(self):
+-        return dict(
+-            tabbar=self.tabBar(),
+-            widgets=self.get_children(),
+-            movable=self.isMovable(),
+-            document_mode=self.documentMode(),
+-            current_index=self.currentIndex(),
+-            tab_shape=self.get_tab_shape(),
+-            # elide_mode=self.get_elide_mode(),
+-            icon_size=self.iconSize(),
++        self._menu = None
++        self.set_text(text)
++        self.set_icon(icon)
++        self.set_shortcut(shortcut)
++        self.set_tooltip(tooltip)
++        self.set_checkable(checkable)
++        self.set_checked(checked)
++        self.set_statustip(statustip)
++        self.set_enabled(enabled)
++        if callback is not None:
++            self.triggered.connect(callback)
++
++    def __repr__(self) -> str:
++        cls_name = type(self).__name__
++        return f"{cls_name}({helpers.format_kwargs(self.serialize_fields())})"
++
++    def serialize_fields(self):
++        dct = dict(
++            auto_repeat=self.autoRepeat(),
++            text=self.text(),
++            enabled=self.isEnabled(),
++            visible=self.isVisible(),
++            font=self.get_font(),
++            shortcut=self.get_shortcut(),
++            tool_tip=self.toolTip(),
++            checkable=self.isCheckable(),
++            checked=self.isChecked(),
++            icon=self.get_icon(),
++            icon_text=self.iconText(),
++            priority=self.get_priority(),
++            icon_visible_in_menu=self.isIconVisibleInMenu(),
++            shortcut_visible_in_context_menu=self.isShortcutVisibleInContextMenu(),
++            menu_role=self.get_menu_role(),
++            shortcut_context=self.get_shortcut_context(),
++            status_tip=self.statusTip(),
++            whats_this=self.whatsThis(),
+         )
++        if core.VersionNumber.get_qt_version() < (6, 0, 0):
++            dct["menu"] = self.menu()
++        return dct
+ 
+     def __setstate__(self, state):
+-        self.__init__()
+-        self.setTabBar(state["tabbar"])
+-        self.setDocumentMode(state.get("document_mode", False))
+-        self.setMovable(state.get("movable", False))
+-        self.set_tab_shape(state.get("tab_shape", "rounded"))
+-        self.setIconSize(state["icon_size"])
+-        for (widget, name, icon, tooltip, whatsthis) in state["widgets"]:
+-            i = self.add_tab(widget, name, icon)
+-            self.setTabToolTip(i, tooltip)
+-            self.setTabWhatsThis(i, whatsthis)
+-        self.setCurrentIndex(state.get("index", 0))
++        super().__setstate__(state)
++        self.set_text(state.get("text", ""))
++        self.set_enabled(state.get("enabled", True))
++        self.set_shortcut(state["shortcut"])
++        self.set_tooltip(state.get("tool_tip", ""))
++        self.set_statustip(state.get("status_tip", ""))
++        self.set_checked(state.get("checked", False))
++        self.set_priority(state["priority"])
++        self.set_shortcut_context(state["shortcut_context"])
++        self.set_checkable(state["checkable"])
++        self.setAutoRepeat(state["auto_repeat"])
++        self.setVisible(state["visible"])
++        self.setFont(state["font"])
++        # self.setIcon(state["icon"])
++        self.setIconText(state["icon_text"])
++        self.setIconVisibleInMenu(state["icon_visible_in_menu"])
++        self.setShortcutVisibleInContextMenu(state["shortcut_visible_in_context_menu"])
++        self.set_menu_role(state["menu_role"])
++        self.setWhatsThis(state["whats_this"])
++        # if core.VersionNumber.get_qt_version() < (6, 0, 0):
++        #     self.setMenu(state["menu"])
++
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
++
++    def set_text(self, text: str):
++        self.setText(text)
+ 
+-    def set_document_mode(self, state: bool = True):
+-        self.setDocumentMode(state)
++    def set_enabled(self, enabled: bool = True):
++        self.setEnabled(enabled)
+ 
+-    def set_tab_shape(self, shape: str):
+-        """set tab shape for the tabwidget
++    def set_disabled(self):
++        self.setEnabled(False)
+ 
+-        Valid values are "rounded" and "triangular"
++    def set_tooltip(
++        self,
++        tooltip: str | types.PathType,
++        size: types.SizeType | None = None,
++    ):
++        if isinstance(tooltip, os.PathLike):
++            path = os.fspath(tooltip)
++            if size is None:
++                tooltip = f"<img src={path!r}>"
++            else:
++                if isinstance(size, QtCore.QSize):
++                    size = (size.width(), size.height())
++                tooltip = f'<img src={path!r} width="{size[0]}" height="{size[1]}">'
++        self.setToolTip(tooltip)
++
++    def set_statustip(self, text: str):
++        self.setStatusTip(text)
+ 
+-        Args:
+-            shape: tab shape to use
++    def set_checked(self, value: bool):
++        self.setChecked(value)
+ 
+-        Raises:
+-            ValueError: tab shape does not exist
+-        """
+-        if shape not in TAB_SHAPES:
+-            raise ValueError("Invalid value for shape.")
+-        self.setTabShape(TAB_SHAPES[shape])
++    def set_checkable(self, value: bool):
++        self.setCheckable(value)
+ 
+-    def get_tab_shape(self) -> str:
+-        """returns tab shape
++    def set_icon(self, icon: types.IconType):
++        """Set the icon for the action.
+ 
+-        possible values are "roundes", "triangular"
+-
+-        Returns:
+-            tab shape
++        Args:
++            icon: icon to use
+         """
+-        return TAB_SHAPES.inv[self.tabShape()]
++        icon = iconprovider.get_icon(icon)
++        self.setIcon(icon)
+ 
+-    def get_children(self) -> list:
+-        return [
+-            (
+-                self.widget(i),
+-                self.tabText(i),
+-                self.tab_icon(i),
+-                self.tabToolTip(i),
+-                self.tabWhatsThis(i),
+-            )
+-            for i in range(self.count())
+-        ]
+-
+-    def tab_icon(self, i: int) -> gui.Icon:
+-        return gui.Icon(self.tabIcon(i))
++    def get_icon(self) -> gui.Icon | None:
++        icon = self.icon()
++        if icon.isNull():
++            return None
++        return gui.Icon(icon)
+ 
+-    def set_detachable(self):
+-        self.tab_bar.on_detach.connect(self.detach_tab)
+-        widgets.app().aboutToQuit.connect(self.close_detached_tabs)
+-        self.setMovable(True)
++    def set_shortcut(self, shortcut: None | QtGui.QKeySequence | str):
++        if shortcut is None:
++            shortcut = ""
++        if isinstance(shortcut, str):
++            shortcut = gui.KeySequence(
++                shortcut, gui.KeySequence.SequenceFormat.PortableText
++            )
++        self.setShortcut(shortcut)
+ 
+-    def set_closable(self, closable: bool = True):
+-        self.setTabsClosable(closable)
++    def get_shortcut(self) -> gui.KeySequence | None:
++        shortcut = self.shortcut()
++        if not shortcut:
++            return None
++        return gui.KeySequence(
++            shortcut.toString(), gui.KeySequence.SequenceFormat.PortableText
++        )
+ 
+-    @core.Slot(int, QtCore.QPoint)
+-    def detach_tab(self, index: int, point: QtCore.QPoint):
+-        """
+-        Detach the tab by removing it's contents and placing them in
+-        a DetachedTab window
+-
+-        @param index    index location of the tab to be detached
+-        @param point    screen pos for creating the new DetachedTab window
+-        """
+-        # Get the tab content
+-        name = self.tabText(index)
+-        icon = self.tabIcon(index)
+-        if icon.isNull():
+-            icon = self.window().windowIcon()
+-        widget = self.widget(index)
++    def get_font(self) -> gui.Font:
++        return gui.Font(self.font())
+ 
++    def set_menu(self, menu):
+         try:
+-            widget_rect = widget.frameGeometry()
++            self.setMenu(menu)
+         except AttributeError:
+-            return
++            self.triggered.connect(menu.exec_)
++            self._menu = menu
+ 
+-        # Create a new detached tab window
+-        detached_tab = DetachedTab(name, widget)
+-        detached_tab.set_modality("none")
+-        detached_tab.set_icon(icon)
+-        detached_tab.setGeometry(widget_rect)
+-        detached_tab.on_close.connect(self.attach_tab)
+-        detached_tab.move(point)
+-        detached_tab.show()
++    def menu(self):
++        return self._menu
+ 
+-        # Create a reference to maintain access to the detached tab
+-        self.detached_tabs[name] = detached_tab
++    def set_priority(self, priority: PriorityStr):
++        """Set priority of the action.
+ 
+-    def add_tab(
+-        self,
+-        item,
+-        label: str,
+-        icon: gui.icon.IconType = None,
+-        position: Optional[int] = None,
+-        show: bool = False,
+-    ):
+-        if isinstance(item, QtWidgets.QLayout):
+-            widget = widgets.Widget()
+-            widget.set_layout(item)
+-        else:
+-            widget = item
+-        if position is None:
+-            position = len(self)
+-        if not icon:
+-            index = self.insertTab(position, widget, label)
+-        else:
+-            icon = gui.icon.get_icon(icon)
+-            index = self.insertTab(position, widget, icon, label)
+-        if show:
+-            self.setCurrentIndex(index)
+-        return index
++        Args:
++            priority: priority for the action
+ 
+-    def attach_tab(
+-        self,
+-        widget,
+-        name: str,
+-        icon: gui.icon.IconType = None,
+-        insert_at: Optional[int] = None,
+-    ):
++        Raises:
++            InvalidParamError: priority does not exist
+         """
+-        Re-attach the tab by removing the content from the DetachedTab window,
+-        closing it, and placing the content back into the DetachableTabWidget
++        if priority not in PRIORITIES:
++            raise InvalidParamError(priority, PRIORITIES)
++        self.setPriority(PRIORITIES[priority])
+ 
+-        @param    widget    the content widget from the DetachedTab window
+-        @param    name             the name of the detached tab
+-        @param    icon             the window icon for the detached tab
+-        @param    insert_at         insert the re-attached tab at the given index
+-        """
++    def get_priority(self) -> PriorityStr:
++        """Return current priority.
+ 
+-        widget.setParent(self)
++        Returns:
++            priority
++        """
++        return PRIORITIES.inverse[self.priority()]
+ 
+-        # Remove the reference
+-        del self.detached_tabs[name]
++    def set_shortcut_context(self, context: constants.ContextStr):
++        """Set shortcut context.
+ 
+-        # Determine if the given image and the main window icon are the same.
+-        # If they are, then do not add the icon to the tab
+-        self.add_tab(widget, name, icon=icon, position=insert_at, show=True)
++        Args:
++            context: shortcut context
+ 
+-    def close_detached_tabs(self):
+-        """Close all tabs that are currently detached
++        Raises:
++            InvalidParamError: shortcut context does not exist
+         """
+-        for detached_tab in self.detached_tabs.values():
+-            detached_tab.close()
++        if context not in constants.CONTEXT:
++            raise InvalidParamError(context, constants.CONTEXT)
++        self.setShortcutContext(constants.CONTEXT[context])
+ 
+-    @core.Slot(int)
+-    def remove_tab(self, index: int):
+-        widget = self.widget(index)
+-        self.removeTab(index)
+-        if widget is not None:
+-            widget.deleteLater()
++    def get_shortcut_context(self) -> constants.ContextStr:
++        """Return shortcut context.
+ 
+-    @core.Slot(object, str)
+-    def open_widget(self, widget: QtWidgets.QWidget, title: str = "Unnamed"):
+-        """
+-        create a tab containing delivered widget
++        Returns:
++            shortcut context
+         """
+-        self.add_tab(widget, title, icon="mdi.widgets", show=True)
++        return constants.CONTEXT.inverse[self.shortcutContext()]
+ 
+-    def set_tab(self, index, position: str, widget=None):
+-        self.tabBar().set_tab(index, position, widget)
++    def set_menu_role(self, role: RoleStr):
++        """Set menu role.
+ 
++        Args:
++            role: menu role
+ 
+-class DetachedTab(widgets.MainWindow):
+-    """window containing a detached tab
+-
+-    When a tab is detached, the contents are placed into this QMainWindow.
+-    The tab can be re-attached by closing the dialog
+-
+-    Attributes:
+-        on_close: signal, emitted when window is closed (widget, title, icon)
+-    """
++        Raises:
++            InvalidParamError: menu role does not exist
++        """
++        if role not in ROLES:
++            raise InvalidParamError(role, ROLES)
++        self.setMenuRole(ROLES[role])
+ 
+-    on_close = core.Signal(QtWidgets.QWidget, str, QtGui.QIcon)
++    def get_menu_role(self) -> RoleStr:
++        """Return menu role.
+ 
+-    def __init__(self, name, widget):
+-        super().__init__(None)
++        Returns:
++            menu role
++        """
++        return ROLES.inverse[self.menuRole()]
+ 
+-        self.set_id(name)
+-        self.set_title(name)
++    def show_shortcut_in_contextmenu(self, state: bool = True):
++        self.setShortcutVisibleInContextMenu(state)
+ 
+-        self.widget = widget
+-        self.setCentralWidget(self.widget)
+-        self.widget.show()
+ 
+-    #  If the window is closed, emit the on_close and give the
+-    #  content widget back to the DetachableTabWidget
+-    def closeEvent(self, event):
+-        self.on_close.emit(self.widget, self.id, self.windowIcon())
++class Action(ActionMixin, prettyprinter.PrettyPrinter, QtWidgets.QAction):
++    pass
+ 
+ 
+ if __name__ == "__main__":
++    from prettyqt import widgets
++
+     app = widgets.app()
+-    tab_widget = TabWidget()
+-    widget = widgets.Widget()
+-    tab_widget.add_tab(widget, "Test")
+-    widget_2 = widgets.Widget()
+-    tab_widget.add_tab(widget_2, "Test 2")
+-    tab_widget.show()
+-    app.exec_()
++    action = Action(text="This is a test")
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/textedit.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/booldicttoolbutton.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,74 +1,54 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-import contextlib
++from prettyqt import core, widgets
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import types
++
++
++class BoolDictToolButton(widgets.ToolButton):
++    value_changed = core.Signal(dict)
++
++    def __init__(
++        self,
++        title: str,
++        icon: types.IconType = None,
++        dct: dict[str, str] = None,
++        parent: QtWidgets.QWidget | None = None,
++    ):
++        super().__init__(parent=parent)
++        self.set_text(title)
++        self.set_icon(icon)
++        self.button_menu = widgets.Menu()
++        self.setMenu(self.button_menu)
++        self.set_popup_mode("instant")
++        if dct:
++            self.set_dict(dct)
++
++    def __getitem__(self, key: str) -> bool:  # type: ignore
++        return self.button_menu[key].isChecked()
++
++    def __setitem__(self, key: str, value: bool):
++        self.button_menu[key].setChecked(value)
++        self.value_changed.emit(self.as_dict())
++
++    def set_dict(self, dct: dict[str, str]):
++        self.button_menu.clear()
++        for k, v in dct.items():
++            action = widgets.Action()
++            action.set_text(v)
++            action.setCheckable(True)
++            action.set_id(k)
++            action.triggered.connect(lambda: self.value_changed.emit(self.as_dict()))
++            self.button_menu.add(action)
++        self.value_changed.emit(self.as_dict())
+ 
+-from qtpy import QtWidgets
+-
+-from prettyqt import core, gui, widgets
+-from prettyqt.utils import colors
+-
+-
+-QtWidgets.QTextEdit.__bases__ = (widgets.AbstractScrollArea,)
+-
+-
+-class TextEdit(QtWidgets.QTextEdit):
+-
+-    value_changed = core.Signal(str)
+-
+-    def __init__(self, *args, **kwargs):
+-        super().__init__(*args, **kwargs)
+-        self.textChanged.connect(self.on_value_change)
+-
+-    def __getstate__(self):
+-        return dict(
+-            text=self.text(), enabled=self.isEnabled(), font=gui.Font(self.font())
+-        )
+-
+-    def __setstate__(self, state):
+-        self.__init__()
+-        self.set_text(state["text"])
+-        self.setEnabled(state.get("enabled", True))
+-        self.setFont(state["font"])
+-
+-    def __add__(self, other):
+-        if isinstance(other, str):
+-            self.append_text(other)
+-            return self
+-
+-    def on_value_change(self):
+-        self.value_changed.emit(self.text())
+-
+-    @contextlib.contextmanager
+-    def create_cursor(self):
+-        cursor = gui.TextCursor(self.document())
+-        yield cursor
+-        self.setTextCursor(cursor)
+-
+-    def set_text(self, text: str):
+-        self.setPlainText(text)
+-
+-    def append_text(self, text: str):
+-        self.append(text)
+-
+-    def text(self) -> str:
+-        return self.toPlainText()
+-
+-    def select_text(self, start: int, end: int):
+-        with self.create_cursor() as c:
+-            c.select_text(start, end)
+-
+-    def set_read_only(self, value: bool = True):
+-        self.setReadOnly(value)
+-
+-    def set_text_color(self, color: colors.ColorType):
+-        color = colors.get_color(color)
+-        self.setTextColor(color)
++    def as_dict(self) -> dict[str, bool]:
++        return {act.get_id(): act.isChecked() for act in self.button_menu}
+ 
+ 
+ if __name__ == "__main__":
+-    app = QtWidgets.QApplication([])
+-    widget = TextEdit("This is a test")
+-    widget.show()
+-    app.exec_()
++    app = widgets.app()
++    dct = dict(a="test", b="test2")
++    w = BoolDictToolButton("Title", None, dct)
++    w.show()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/toolbar.py` & `prettyqt-1.0.0/prettyqt/widgets/toolbar.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,62 +1,56 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Callable, Optional
+-import functools
+-import operator
++from typing import Any, Callable
+ 
+-from qtpy import QtCore, QtWidgets
++from prettyqt import constants, core, iconprovider, widgets
++from prettyqt.qt import QtWidgets
++from prettyqt.utils import InvalidParamError, helpers, types
+ 
+-from prettyqt import core, gui, widgets
+-from prettyqt.utils import bidict
+ 
++class ToolBarMixin(widgets.WidgetMixin):
++    def __init__(self, *args, **kwargs):
++        super().__init__(*args, **kwargs)
++        self.set_icon_size(24)
++        self.menu_buttons = []
+ 
+-STYLES = bidict(
+-    icon=QtCore.Qt.ToolButtonIconOnly,
+-    text=QtCore.Qt.ToolButtonTextOnly,
+-    text_beside_icon=QtCore.Qt.ToolButtonTextBesideIcon,
+-    text_below_icon=QtCore.Qt.ToolButtonTextUnderIcon,
+-)
+-
+-TOOLBAR_AREAS = bidict(
+-    left=QtCore.Qt.LeftToolBarArea,
+-    right=QtCore.Qt.RightToolBarArea,
+-    top=QtCore.Qt.TopToolBarArea,
+-    bottom=QtCore.Qt.BottomToolBarArea,
+-    all=QtCore.Qt.AllToolBarAreas,
+-    none=QtCore.Qt.NoToolBarArea,
+-)
++    def __setstate__(self, state: dict[str, Any]) -> None:
++        super().__setstate__(state)
++        self.addActions(state["actions"])
+ 
++    def __reduce__(self):
++        return type(self), (), self.__getstate__()
+ 
+-QtWidgets.QToolBar.__bases__ = (widgets.Widget,)
++    def serialize_fields(self):
++        return dict(actions=self.actions(), allowed_areas=self.get_allowed_areas())
+ 
++    def __repr__(self):
++        return f"{type(self).__name__}({self.windowTitle()!r})"
+ 
+-class ToolBar(QtWidgets.QToolBar):
+-    def __init__(self, *args, **kwargs):
+-        super().__init__(*args, **kwargs)
+-        self.set_icon_size(24)
+-        self.menu_buttons = list()
++    def add(self, item: QtWidgets.QAction | QtWidgets.QWidget):
++        if isinstance(item, QtWidgets.QAction):
++            self.addAction(item)
++        else:
++            self.addWidget(item)
+ 
+     def add_menu_button(
+-        self, label: str, icon: gui.icon.IconType, menu: QtWidgets.QMenu
++        self, label: str, icon: types.IconType, menu: QtWidgets.QMenu
+     ) -> widgets.ToolButton:
+         btn = widgets.ToolButton.for_menu(menu)
+         btn.setText(label)
+         btn.setToolButtonStyle(self.toolButtonStyle())
+         btn.set_icon(icon)
+         self.menu_buttons.append(btn)
+         self.addWidget(btn)
+         return btn
+ 
+     def add_separator(
+-        self, text: Optional[str] = None, before: QtWidgets.QAction = None
++        self, text: str | None = None, before: QtWidgets.QAction = None
+     ) -> QtWidgets.QAction:
+-        """adds a separator showing an optional label
++        """Adds a separator showing an optional label.
+ 
+         Args:
+             text: Text to show on separator
+             before: insert separator before specific action
+ 
+         Returns:
+             Separator action
+@@ -73,76 +67,92 @@
+                 ss.background.setValue("lightgrey")
+             label.set_alignment(horizontal="center")
+             if before:
+                 return self.insertWidget(before, label)
+             else:
+                 return self.addWidget(label)
+ 
+-    def set_style(self, style: str):
+-        if style is None:
+-            return None
+-        self.setToolButtonStyle(STYLES[style])
++    def set_style(self, style: constants.ToolButtonStyleStr):
++        self.setToolButtonStyle(constants.TOOLBUTTON_STYLE[style])
+         for btn in self.menu_buttons:
+             btn.set_style(style)
+ 
+-    def get_style(self) -> str:
+-        """returns current style
+-
+-        Possible values: "icon", "text", "text_below_icon", "text_beside_icon"
++    def get_style(self) -> constants.ToolButtonStyleStr:
++        """Return current style.
+ 
+         Returns:
+             style
+         """
+-        return STYLES.inv[self.toolButtonStyle()]
++        return constants.TOOLBUTTON_STYLE.inverse[self.toolButtonStyle()]
+ 
+     def add_action(
+         self,
+         label: str,
+-        icon: gui.icon.IconType = None,
+-        callback: Optional[Callable] = None,
++        icon: types.IconType = None,
++        callback: Callable | None = None,
+         checkable: bool = False,
+-    ):
+-        icon = gui.icon.get_icon(icon)
++    ) -> QtWidgets.QAction:
++        icon = iconprovider.get_icon(icon)
+         action = self.addAction(icon, label)
+         if callback is not None:
+             action.triggered.connect(callback)
+         if checkable:
+             action.setCheckable(True)
+         return action
+ 
+-    def add_spacer(self):
++    def add_spacer(self) -> QtWidgets.QAction:
+         spacer = widgets.Widget()
+         spacer.set_size_policy("expanding", "expanding")
+         return self.addWidget(spacer)
+ 
+-    def set_icon_size(self, size: int):
+-        self.setIconSize(core.Size(size, size))
++    def set_icon_size(self, size: int | types.SizeType):
++        """Set size of the icons."""
++        if isinstance(size, int):
++            size = core.Size(size, size)
++        elif isinstance(size, tuple):
++            size = core.Size(*size)
++        self.setIconSize(size)
++
++    def get_icon_size(self) -> core.Size:
++        return core.Size(self.iconSize())
+ 
+     def set_font_size(self, size: int):
+-        with self.current_font() as font:
++        with self.edit_font() as font:
+             font.set_size(size)
+ 
+-    def is_area_allowed(self, area: str):
+-        """check if toolbar is allowed at specified area
+-
+-        Valid values for area: "left", "right", "top", "bottom", "all"
++    def is_area_allowed(self, area: constants.ToolbarAreaStr) -> bool:
++        """Check if toolbar is allowed at specified area.
+ 
+         Args:
+             area: area of the toolbar
+ 
+         Raises:
+-            ValueError: area does not exist
++            InvalidParamError: area does not exist
+         """
+-        if area not in TOOLBAR_AREAS:
+-            raise ValueError(f"Invalid area '{area}'")
+-        return self.isAreaAllowed(TOOLBAR_AREAS[area])
+-
+-    def set_allowed_areas(self, *areas: str):
+-        flag = functools.reduce(operator.ior, [TOOLBAR_AREAS[t] for t in areas])
++        if area not in constants.TOOLBAR_AREA:
++            raise InvalidParamError(area, constants.TOOLBAR_AREA)
++        return self.isAreaAllowed(constants.TOOLBAR_AREA[area])
++
++    def set_allowed_areas(self, *areas: constants.ToolbarAreaStr):
++        for area in areas:
++            if area not in constants.TOOLBAR_AREA:
++                raise InvalidParamError(area, constants.TOOLBAR_AREA)
++        flag = helpers.merge_flags(areas, constants.TOOLBAR_AREA)
+         self.setAllowedAreas(flag)
+ 
++    def get_allowed_areas(self) -> list[constants.ToolbarAreaStr]:
++        return [
++            k
++            for k, v in constants.TOOLBAR_AREA.items()
++            if v & self.allowedAreas()  # type: ignore
++        ]
++
++
++class ToolBar(ToolBarMixin, QtWidgets.QToolBar):
++    pass
++
+ 
+ if __name__ == "__main__":
+     app = widgets.app()
+-    widget = ToolBar()
++    widget = ToolBar("test")
+     widget.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/toolbox.py` & `prettyqt-1.0.0/prettyqt/custom_widgets/flagselectionwidget.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,70 +1,74 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from typing import Optional
++from collections.abc import Iterable, Iterator, Mapping
++from typing import Literal
+ 
+-from qtpy import QtWidgets
++from prettyqt import core, widgets
++from prettyqt.qt import QtWidgets
+ 
+-from prettyqt import gui, widgets
+ 
++class FlagSelectionWidget(widgets.GroupBox):
++    value_changed = core.Signal(int)
+ 
+-QtWidgets.QToolBox.__bases__ = (widgets.Frame,)
+-
+-
+-class ToolBox(QtWidgets.QToolBox):
+-    def __getitem__(self, index):
+-        if isinstance(index, int):
+-            return self.widget(index)
+-        else:
+-            return self.findChild(QtWidgets.QWidget, index)
+-
+-    def __getstate__(self):
+-        children = list()
+-        for i, widget in enumerate(self.get_children()):
+-            dct = dict(
+-                widget=widget,
+-                icon=gui.Icon(self.itemIcon(i)),
+-                text=self.itemText(i),
+-                enabled=self.isItemEnabled(i),
+-                tooltip=self.itemToolTip(i),
+-            )
+-            children.append(dct)
+-        return dict(items=children, current_index=self.currentIndex())
+-
+-    def __setstate__(self, state):
+-        self.__init__()
+-        for i, item in enumerate(state["items"]):
+-            self.addItem(item["widget"], item["icon"], item["text"])
+-            self.setItemEnabled(i, item["enabled"])
+-            self.setItemToolTip(i, item["tooltip"])
+-        self.setCurrentIndex(state["current_index"])
+-
+-    def __iter__(self):
+-        return iter(self.get_children())
+-
+-    def get_children(self) -> list:
+-        return [self[i] for i in range(self.count())]
+-
+-    def add_widget(
+-        self, widget, title: Optional[str] = None, icon: gui.icon.IconType = None
++    def __init__(
++        self,
++        label: str = "",
++        layout: Literal["horizontal", "vertical"] = "vertical",
++        parent: QtWidgets.QWidget | None = None,
+     ):
+-        if title is None:
+-            title = widget.id
+-        if icon:
+-            icon = gui.icon.get_icon(icon)
+-            self.addItem(widget, icon, title)
++        super().__init__(title=label, parent=parent)
++        self.box = widgets.BoxLayout(layout)
++        self.buttons: dict[widgets.CheckBox, int] = {}
++        self.set_layout(self.box)
++
++    def __iter__(self) -> Iterator[tuple[widgets.CheckBox, int]]:
++        return iter(self.buttons.items())
++
++    def add_items(self, items: Iterable | Mapping):
++        if isinstance(items, Mapping):
++            for k, v in items.items():
++                self.add(v, k)
+         else:
+-            self.addItem(widget, title)
++            for i in items:
++                if isinstance(i, Iterable):
++                    self.add(*i)
++                else:
++                    raise TypeError("Invalid item type")
++
++    def add(self, title: str, flag: int):
++        checkbox = widgets.CheckBox(title)
++        checkbox.toggled.connect(self.update_choice)
++        self.buttons[checkbox] = flag
++        self.box.add(checkbox)
++
++    def current_choice(self) -> int:
++        ret_val = 0
++        for btn, flag in self.buttons.items():
++            if btn.isChecked():
++                ret_val |= flag
++        return int(ret_val)
++
++    @core.Slot(bool)
++    def update_choice(self, checked: bool):
++        choice = self.current_choice()
++        self.value_changed.emit(choice)
++
++    def set_value(self, value: int):
++        value = int(value)
++        for btn, flag in self.buttons.items():
++            btn.setChecked(bool(value & flag))
++
++    def get_value(self) -> int:
++        return self.current_choice()
+ 
+ 
+ if __name__ == "__main__":
++    import re
++
+     app = widgets.app()
+-    w = widgets.Widget()
+-    w2 = widgets.Widget()
+-    tb = ToolBox()
+-    tb.add_widget(w, "title")
+-    tb.add_widget(w2)
+-    print(len(tb))
+-    tb.show()
+-    app.exec_()
++    widget = FlagSelectionWidget()
++    items = {re.MULTILINE: "MultiLine", re.IGNORECASE: "Ignore case"}
++    widget.add_items(items)
++    widget.show()
++    app.main_loop()
++    print(widget.get_value())
+```
+
+### Comparing `PrettyQt-0.99.0/prettyqt/widgets/treeview.py` & `prettyqt-1.0.0/prettyqt/widgets/treeview.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,20 +1,14 @@
+-# -*- coding: utf-8 -*-
+-"""
+-"""
++from __future__ import annotations
+ 
+-from qtpy import QtWidgets
++from prettyqt import constants, widgets
++from prettyqt.qt import QtWidgets
+ 
+-from prettyqt import widgets
+ 
+-
+-QtWidgets.QTreeView.__bases__ = (widgets.AbstractItemView,)
+-
+-
+-class TreeView(QtWidgets.QTreeView):
++class TreeViewMixin(widgets.AbstractItemViewMixin):
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+         class_name = type(self).__name__
+         self.set_id(class_name)
+         # visual settings
+         self.setAnimated(True)
+         self.setRootIsDecorated(False)
+@@ -23,14 +17,29 @@
+         self.setAlternatingRowColors(True)
+         self.setWordWrap(False)
+ 
+         # misc
+         self.h_header = widgets.HeaderView("horizontal", parent=self)
+         self.set_selection_mode("extended")
+ 
++    def serialize_fields(self):
++        return dict(
++            all_columns_show_focus=self.allColumnsShowFocus(),
++            animated=self.isAnimated(),
++            auto_expand_delay=self.autoExpandDelay(),
++            expands_on_double_click=self.expandsOnDoubleClick(),
++            header_hidden=self.isHeaderHidden(),
++            indentation=self.indentation(),
++            items_expandable=self.itemsExpandable(),
++            root_is_decorated=self.rootIsDecorated(),
++            sorting_enabled=self.isSortingEnabled(),
++            uniform_row_heights=self.uniformRowHeights(),
++            word_wrap=self.wordWrap(),
++        )
++
+     @property
+     def h_header(self):
+         return self.header()
+ 
+     @h_header.setter
+     def h_header(self, header):
+         self.setHeader(header)
+@@ -38,24 +47,33 @@
+     def expand_all(self):
+         self.expandAll()
+ 
+     def set_indentation(self, indentation: int):
+         self.setIndentation(indentation)
+ 
+     def setup_list_style(self):
+-        self.setSelectionBehavior(self.SelectRows)
++        self.setSelectionBehavior(self.SelectionBehavior.SelectRows)
+         self.h_header.setStretchLastSection(True)
+ 
+     def adapt_sizes(self):
+         model = self.model()
+         if model is not None and (model.rowCount() * model.columnCount()) < 1000:
+-            self.h_header.resizeSections(self.h_header.ResizeToContents)
++            self.h_header.resizeSections(self.h_header.ResizeMode.ResizeToContents)
+         else:
+             self.h_header.resize_sections("interactive")
+ 
++    def sort_by_column(self, column: int | None, ascending: bool = True):
++        column = -1 if column is None else column
++        order = constants.ASCENDING if ascending else constants.DESCENDING
++        self.sortByColumn(column, order)
++
++
++class TreeView(TreeViewMixin, QtWidgets.QTreeView):
++    pass
++
+ 
+ if __name__ == "__main__":
+-    app = QtWidgets.QApplication([])
+-    dlg = QtWidgets.QMainWindow()
++    app = widgets.app()
++    dlg = widgets.MainWindow()
+     status_bar = TreeView()
+     dlg.show()
+-    app.exec_()
++    app.main_loop()
+```
+
+### Comparing `PrettyQt-0.99.0/PKG-INFO` & `prettyqt-1.0.0/PKG-INFO`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,49 +1,55 @@
+ Metadata-Version: 2.1
+ Name: prettyqt
+-Version: 0.99.0
+-Summary: A pythonic layer on top of qtpy
++Version: 1.0.0
++Summary: A pythonic layer on top of PyQt5 / PyQt6 / PySide6
+ Home-page: https://github.com/phil65/prettyqt
+ Author: phil65
+ Author-email: philipptemminghoff@googlemail.com
+-Requires-Python: >=3.6,<4.0
++Requires-Python: >=3.10,<4.0
+ Classifier: Programming Language :: Python :: 3
+-Classifier: Programming Language :: Python :: 3.6
+-Classifier: Programming Language :: Python :: 3.7
+-Classifier: Programming Language :: Python :: 3.8
++Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
++Provides-Extra: addons
+ Provides-Extra: pyqt5
+-Requires-Dist: PyQt5 (>=5.15.0,<6.0.0); extra == "pyqt5"
+-Requires-Dist: PyQtChart (>=5.15.0,<6.0.0); extra == "pyqt5"
+-Requires-Dist: PyQtWebEngine (>=5.15.0,<6.0.0); extra == "pyqt5"
+-Requires-Dist: QScintilla (>=2.11.5,<3.0.0); extra == "pyqt5"
++Provides-Extra: pyqt6
++Provides-Extra: pyside6
++Requires-Dist: PyQt6 (>=6.2,<7.0) ; extra == "pyqt6"
++Requires-Dist: PyQt6-Charts (>=6.2,<7.0) ; extra == "pyqt6"
++Requires-Dist: PyQt6-QScintilla (>=2.0,<3.0) ; extra == "pyqt6"
++Requires-Dist: PyQt6-WebEngine (>=6.2,<7.0) ; extra == "pyqt6"
++Requires-Dist: PyQtChart (>=5.15,<6.0) ; (python_version != "3.10" or sys_platform != "win32") and (extra == "pyqt5")
++Requires-Dist: PyQtWebEngine (>=5.15,<6.0) ; extra == "pyqt5"
++Requires-Dist: QScintilla (>=2.11,<3.0) ; extra == "pyqt5"
+ Requires-Dist: bidict (>=0,<1)
+-Requires-Dist: darkdetect (>=0,<1); sys_platform == "darwin"
+-Requires-Dist: dataclasses (>=0,<1); python_version >= "3.6" and python_version < "3.7"
+-Requires-Dist: docutils (>=0,<1)
+-Requires-Dist: orjson (>=3.2.0,<4.0.0)
+-Requires-Dist: pygments (>=2.6.1,<3.0.0)
+-Requires-Dist: qstylizer (>=0.1.9,<0.2.0)
+-Requires-Dist: qtawesome (>=0,<1)
+-Requires-Dist: qtpy (>=1.9.0,<2.0.0)
+-Requires-Dist: regex (>=2020.6.8,<2021.0.0)
++Requires-Dist: darkdetect (>=0,<1) ; sys_platform == "darwin"
++Requires-Dist: deprecated (>=1.2,<2.0)
++Requires-Dist: docutils (>=0.19,<0.20) ; extra == "addons"
++Requires-Dist: orjson (>=3,<4) ; (python_version < "3.12") and (extra == "addons")
++Requires-Dist: pygments (>=2.6,<3.0)
++Requires-Dist: pyside6 (>=6.4,<7.0) ; (python_version < "3.12") and (extra == "pyside6")
++Requires-Dist: pywin32 ; sys_platform == "win32"
++Requires-Dist: qstylizer (>=0.2,<0.3)
++Requires-Dist: regex (>=2023,<2024)
++Requires-Dist: types-Deprecated (>=1.2,<2.0)
+ Project-URL: Repository, https://github.com/phil65/prettyqt
+ Description-Content-Type: text/markdown
+ 
+-# prettyqt: Pythonic layer on top of PyQt5 / PySide2
++# prettyqt: Pythonic layer on top of PyQt5 / PyQt6 / PySide6
+ [![PyPI Latest Release](https://img.shields.io/pypi/v/prettyqt.svg)](https://pypi.org/project/prettyqt/)
+ [![Package Status](https://img.shields.io/pypi/status/prettyqt.svg)](https://pypi.org/project/prettyqt/)
+-[![License](https://img.shields.io/pypi/l/prettyqt.svg)](https://github.com/prettyqt-dev/prettyqt/blob/master/LICENSE)
+-[![Travis Build Status](https://travis-ci.org/prettyqt-dev/prettyqt.svg?branch=master)](https://travis-ci.org/prettyqt-dev/prettyqt)
++[![License](https://img.shields.io/pypi/l/prettyqt.svg)](https://github.com/phil65/PrettyQt/blob/master/LICENSE)
++[![Travis Build Status](https://travis-ci.org/phil65/prettyqt.svg?branch=master)](https://travis-ci.org/phil65/prettyqt)
+ [![CodeCov](https://codecov.io/gh/phil65/PrettyQt/branch/master/graph/badge.svg)](https://codecov.io/gh/phil65/PrettyQt)
+ [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+ [![PyUp](https://pyup.io/repos/github/phil65/PrettyQt/shield.svg)](https://pyup.io/repos/github/phil65/PrettyQt/)
+ 
+ ## What is it?
+ 
+-**PrettyQt** is a Python package that provides a pythonic layer on top of the GUI frameworks PyQt5 / PySide2.
++**PrettyQt** is a Python package that provides a pythonic layer on top of the GUI frameworks PyQt5 / PyQt6 / PySide6.
+ 
+ ## Main Features
+ Here are just a few of the things that PrettyQt does well:
+ 
+   - Large parts of the Qt API are available in a **PEP-8**-compliant way.
+   - Several predefined widgets, validators, models, syntax highlighters are included.
+   - A regex module based on QRegularExpression with the same API as Pythons core re module.
+@@ -64,16 +70,14 @@
+ 
+ ```sh
+ # or PyPI
+ pip install prettyqt
+ ```
+ 
+ ## Dependencies
+-- [qtpy](https://pypi.org/project/prettyqt)
+-- [qtawesome](https://pypi.org/project/qtawesome)
+ - [bidict](https://pypi.org/project/bidict)
+ - [orjson](https://pypi.org/project/orjson)
+ - [regex](https://pypi.org/project/regex)
+ - [docutils](https://pypi.org/project/docutils)
+ 
+ 
+ ## Installation from sources
+@@ -88,13 +92,13 @@
+ 
+ ## License
+ [MIT](LICENSE)
+ 
+ ## Documentation
+ The official documentation is hosted on Github Pages: https://phil65.github.io/PrettyQt/
+ 
+-## Contributing to pandas [![Open Source Helpers](https://www.codetriage.com/phil65/prettyqt/badges/users.svg)](https://www.codetriage.com/phil65/prettyqt)
++## Contributing to prettyqt [![Open Source Helpers](https://www.codetriage.com/phil65/prettyqt/badges/users.svg)](https://www.codetriage.com/phil65/prettyqt)
+ 
+ All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
+ 
+ Or maybe through using PrettyQt you have an idea of your own or are looking for something in the documentation and thinking ‘this can be improved’...you can do something about it!
+```
+
