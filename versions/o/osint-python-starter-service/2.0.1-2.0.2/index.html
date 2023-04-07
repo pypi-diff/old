@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/osint-python-starter-service-2.0.1.tar.gz tmp/osint-python-starter-service-2.0.2.tar.gz --html versions/o/osint-python-starter-service/2.0.1-2.0.2/index.html --text versions/o/osint-python-starter-service/2.0.1-2.0.2/diff.txt --markdown versions/o/osint-python-starter-service/2.0.1-2.0.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">14.9 KB</span></div>
+  <div><span class="source">tmp/osint-python-starter-service-2.0.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/osint-python-starter-service-2.0.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">306 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;osint-python-starter-service-2.0.<del>1</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>1<del>0</del>:<del>38</del>:<del>3</del>3<span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;osint-python-starter-service-2.0.<ins>2</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>1<ins>2</ins>:<ins>41</ins>:<ins>2</ins>3<span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">14.5 KB</span></div>
+    <div><span class="source">osint-python-starter-service-2.0.1.tar</span> vs.</div>
+    <div id="osint-python-starter-service--.-.-.tar"><span class="source">osint-python-starter-service-2.0.2.tar</span>
+      <a class="anchor" href="#osint-python-starter-service--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">9.34 KB</span></div>
+      <div id="osint-python-starter-service--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 34 lines modified</td><td colspan="2">Offset 1, 29 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:<del>38</del>:<del>3</del>3.6<del>88</del>3<del>21</del><span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>41</ins>:<ins>2</ins>3.6<ins>70</ins>3<ins>73</ins><span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1064<span class="dp">·</span>2022-04-23<span class="dp">·</span>22:07:41.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1064<span class="dp">·</span>2022-04-23<span class="dp">·</span>22:07:41.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2173<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:<del>38</del>:<del>3</del>3.6<del>88</del>3<del>21</del><span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2173<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>41</ins>:<ins>2</ins>3.6<ins>70</ins>3<ins>73</ins><span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1702<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1702<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:<del>38</del>:<del>3</del>3.6<del>88</del>3<del>21</del><span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/osint_python_starter_service.egg-info/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>41</ins>:<ins>2</ins>3.6<ins>70</ins>3<ins>73</ins><span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/osint_python_starter_service.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2173<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:<del>38</del>:<del>3</del>3.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/osint_python_starter_service.egg-info/PKG-INFO</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2173<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>41</ins>:<ins>2</ins>3.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/osint_python_starter_service.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>92</del>5<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:<del>38</del>:<del>3</del>3.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/osint_python_starter_service.egg-info/SOURCES.txt</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>74</ins>5<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>41</ins>:<ins>2</ins>3.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/osint_python_starter_service.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:<del>38</del>:<del>3</del>3.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/osint_python_starter_service.egg-info/dependency_links.txt</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>41</ins>:<ins>2</ins>3.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/osint_python_starter_service.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>108<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:<del>38</del>:<del>3</del>3.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/osint_python_starter_service.egg-info/requires.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>108<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>41</ins>:<ins>2</ins>3.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/osint_python_starter_service.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:<del>38</del>:<del>3</del>3.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/osint_python_starter_service.egg-info/top_level.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>41</ins>:<ins>2</ins>3.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/osint_python_starter_service.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:<del>38</del>:<del>3</del>3.6<del>88</del>3<del>21</del><span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/setup.cfg</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>41</ins>:<ins>2</ins>3.6<ins>70</ins>3<ins>73</ins><span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>778<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:<del>37</del>:<del>28</del>.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/setup.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>778<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>40</ins>:<ins>14</ins>.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:<del>38</del>:<del>3</del>3.6<del>88</del>3<del>21</del><span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/</td><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>41</ins>:<ins>2</ins>3.6<ins>70</ins>3<ins>73</ins><span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-06-04<span class="dp">·</span>21:05:58.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/__init__.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-06-04<span class="dp">·</span>21:05:58.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/__init__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>177<span class="dp">·</span>2023-04-07<span class="dp">·</span>11:36:44.000000<span class="dp">·</span>osint-python-starter-service-2.0.2/starter_service/aaaa.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>973<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:41:55.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/api.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>973<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:41:55.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/api.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6814<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/api_server.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6814<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/api_server.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4731<span class="dp">·</span>2023-04-06<span class="dp">·</span>18:13:23.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/avro_parser.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4731<span class="dp">·</span>2023-04-06<span class="dp">·</span>18:13:23.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/avro_parser.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2767<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/base_service.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2767<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/base_service.py</td></tr>
+<tr class="diffdeleted"><td class="diffline">19 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:38:33.688321<span class="dp">·</span>osint-python-starter-service-2.0.1/starter_service/classes/</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-04<span class="dp">·</span>14:29:02.000000<span class="dp">·</span>osint-python-starter-service-2.0.1/starter_service/classes/__init__.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2569<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:50:18.000000<span class="dp">·</span>osint-python-starter-service-2.0.1/starter_service/classes/article_raw_en.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2569<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:50:18.000000<span class="dp">·</span>osint-python-starter-service-2.0.1/starter_service/classes/article_raw_lt.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2569<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:50:18.000000<span class="dp">·</span>osint-python-starter-service-2.0.1/starter_service/classes/article_raw_nl.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2569<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:50:18.000000<span class="dp">·</span>osint-python-starter-service-2.0.1/starter_service/classes/article_raw_xx.py</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1275<span class="dp">·</span>2023-04-04<span class="dp">·</span>14:58:16.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/env.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1275<span class="dp">·</span>2023-04-04<span class="dp">·</span>14:58:16.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/env.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:<del>38</del>:<del>3</del>3.6<del>88</del>3<del>21</del><span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/examples/</td><td class="diffline">21 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:<ins>41</ins>:<ins>2</ins>3.6<ins>70</ins>3<ins>73</ins><span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/examples/</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-29<span class="dp">·</span>02:03:27.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/examples/__init__.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-29<span class="dp">·</span>02:03:27.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/examples/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>716<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/examples/error.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>716<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/examples/error.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>927<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/examples/manual_kafka.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>927<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/examples/manual_kafka.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1313<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/examples/multi.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1313<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/examples/multi.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1062<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/examples/single.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1062<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/examples/single.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6887<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/kafka_adapter.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6887<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/kafka_adapter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1064<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/messages.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1064<span class="dp">·</span>2023-04-07<span class="dp">·</span>10:37:28.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/messages.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<del>499</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>1<del>0</del>:3<del>7</del>:2<del>8</del>.000000<span class="dp">·</span>osint-python-starter-service-2.0.<del>1</del>/starter_service/schemas.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mindpetk<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<ins>552</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>1<ins>2</ins>:3<ins>9</ins>:2<ins>1</ins>.000000<span class="dp">·</span>osint-python-starter-service-2.0.<ins>2</ins>/starter_service/schemas.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/LICENSE</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--LICENSE"><span class="source">osint-python-starter-service-2.0.2/LICENSE</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">478 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/PKG-INFO</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--PKG-INFO"><span class="source">osint-python-starter-service-2.0.2/PKG-INFO</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>osint-python-starter-service</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>osint-python-starter-service</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.0.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.0.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>starter<span class="dp">·</span>service</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>starter<span class="dp">·</span>service</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OSINT-VDU-TNO/python-starter-service</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OSINT-VDU-TNO/python-starter-service</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>mindpetk</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>mindpetk</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>petkeviciusm@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>petkeviciusm@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/README.md</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--README.md"><span class="source">osint-python-starter-service-2.0.2/README.md</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">554 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/PKG-INFO</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--osint_python_starter_service.egg-info-PKG-INFO"><span class="source">osint-python-starter-service-2.0.2/osint_python_starter_service.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--osint_python_starter_service.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>osint-python-starter-service</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>osint-python-starter-service</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.0.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.0.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>starter<span class="dp">·</span>service</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>starter<span class="dp">·</span>service</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OSINT-VDU-TNO/python-starter-service</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OSINT-VDU-TNO/python-starter-service</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>mindpetk</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>mindpetk</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>petkeviciusm@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>petkeviciusm@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">699 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/setup.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--setup.py"><span class="source">osint-python-starter-service-2.0.2/setup.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 2, 15 lines modified</td><td colspan="2">Offset 2, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">with<span class="dp">·</span>open(&quot;README.md&quot;,<span class="dp">·</span>&quot;r&quot;)<span class="dp">·</span>as<span class="dp">·</span>fh:</td><td class="diffline">2 </td><td class="diffpresent">with<span class="dp">·</span>open(&quot;README.md&quot;,<span class="dp">·</span>&quot;r&quot;)<span class="dp">·</span>as<span class="dp">·</span>fh:</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>fh.read()</td><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>fh.read()</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">with<span class="dp">·</span>open(&#x27;requirements.txt&#x27;)<span class="dp">·</span>as<span class="dp">·</span>f:</td><td class="diffline">4 </td><td class="diffpresent">with<span class="dp">·</span>open(&#x27;requirements.txt&#x27;)<span class="dp">·</span>as<span class="dp">·</span>f:</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>required<span class="dp">·</span>=<span class="dp">·</span>f.read().splitlines()</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>required<span class="dp">·</span>=<span class="dp">·</span>f.read().splitlines()</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">setuptools.setup(</td><td class="diffline">6 </td><td class="diffpresent">setuptools.setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;osint-python-starter-service&quot;,</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;osint-python-starter-service&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;2.0.<del>1</del>&quot;,</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;2.0.<ins>2</ins>&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;mindpetk&quot;,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;mindpetk&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;petkeviciusm@gmail.com&quot;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;petkeviciusm@gmail.com&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Python<span class="dp">·</span>starter<span class="dp">·</span>service&quot;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Python<span class="dp">·</span>starter<span class="dp">·</span>service&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&quot;text/markdown&quot;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&quot;text/markdown&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;https://github.com/OSINT-VDU-TNO/python-starter-service&quot;,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;https://github.com/OSINT-VDU-TNO/python-starter-service&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_package_data=True,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_package_data=True,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/starter_service/api.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-api.py"><span class="source">osint-python-starter-service-2.0.2/starter_service/api.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-api.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/starter_service/api_server.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-api_server.py"><span class="source">osint-python-starter-service-2.0.2/starter_service/api_server.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-api_server.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/starter_service/avro_parser.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-avro_parser.py"><span class="source">osint-python-starter-service-2.0.2/starter_service/avro_parser.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-avro_parser.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/starter_service/base_service.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-base_service.py"><span class="source">osint-python-starter-service-2.0.2/starter_service/base_service.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-base_service.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/starter_service/env.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-env.py"><span class="source">osint-python-starter-service-2.0.2/starter_service/env.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-env.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">175 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/starter_service/examples/error.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-examples-error.py"><span class="source">osint-python-starter-service-2.0.2/starter_service/examples/error.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-examples-error.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">189 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/starter_service/examples/manual_kafka.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-examples-manual_kafka.py"><span class="source">osint-python-starter-service-2.0.2/starter_service/examples/manual_kafka.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-examples-manual_kafka.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">175 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/starter_service/examples/multi.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-examples-multi.py"><span class="source">osint-python-starter-service-2.0.2/starter_service/examples/multi.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-examples-multi.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">177 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/starter_service/examples/single.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-examples-single.py"><span class="source">osint-python-starter-service-2.0.2/starter_service/examples/single.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-examples-single.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">173 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/starter_service/kafka_adapter.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-kafka_adapter.py"><span class="source">osint-python-starter-service-2.0.2/starter_service/kafka_adapter.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-kafka_adapter.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/starter_service/messages.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-messages.py"><span class="source">osint-python-starter-service-2.0.2/starter_service/messages.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-messages.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.35 KB</span></div>
+      <div><span class="source">osint-python-starter-service-2.0.1/starter_service/schemas.py</span> vs.</div>
+      <div id="osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-schemas.py"><span class="source">osint-python-starter-service-2.0.2/starter_service/schemas.py</span>
+        <a class="anchor" href="#osint-python-starter-service--.-.-.tar---osint-python-starter-service--.-.--starter_service-schemas.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>json</td><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>json</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>logging</td><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>logging</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>os</td><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>os</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>pathlib<span class="dp">·</span>import<span class="dp">·</span>Path</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>pydoc<span class="dp">·</span>import<span class="dp">·</span>locate</td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>pydoc<span class="dp">·</span>import<span class="dp">·</span>locate</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>threading<span class="dp">·</span>import<span class="dp">·</span>Lock</td><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>threading<span class="dp">·</span>import<span class="dp">·</span>Lock</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>starter_service.avro_parser<span class="dp">·</span>import<span class="dp">·</span>avsc_to_pydantic</td><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>starter_service.avro_parser<span class="dp">·</span>import<span class="dp">·</span>avsc_to_pydantic</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">_path<span class="dp">·</span>=<span class="dp">·</span><del>o</del>s<del>.pa</del>t<del>h.di</del>r<del>name</del>(<del>os.</del><del>p</del>ath.abs<del>path(_</del><del>_fil</del>e<del>_</del><del>_</del>))</td><td class="diffline">8 </td><td class="diffpresent">_path<span class="dp">·</span>=<span class="dp">·</span>str(<ins>P</ins>ath<ins>()</ins>.abs<ins>olut</ins>e<ins>(</ins>))</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">_logger<span class="dp">·</span>=<span class="dp">·</span>logging.getLogger(__name__)</td><td class="diffline">9 </td><td class="diffpresent">_logger<span class="dp">·</span>=<span class="dp">·</span>logging.getLogger(__name__)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">class<span class="dp">·</span>Schema:</td><td class="diffline">10 </td><td class="diffpresent">class<span class="dp">·</span>Schema:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(self,<span class="dp">·</span>topic=None,<span class="dp">·</span>filename=None,<span class="dp">·</span>class_name=None,<span class="dp">·</span>class_obj=None,<span class="dp">·</span>full_path=None):</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(self,<span class="dp">·</span>topic=None,<span class="dp">·</span>filename=None,<span class="dp">·</span>class_name=None,<span class="dp">·</span>class_obj=None,<span class="dp">·</span>full_path=None):</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.topic<span class="dp">·</span>=<span class="dp">·</span>topic</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.topic<span class="dp">·</span>=<span class="dp">·</span>topic</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 152, 14 lines modified</td><td colspan="2">Offset 153, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">152 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.write(&quot;This<span class="dp">·</span>folder<span class="dp">·</span>contains<span class="dp">·</span>all<span class="dp">·</span>the<span class="dp">·</span>generated<span class="dp">·</span>classes<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>schemas&quot;)</td><td class="diffline">153 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.write(&quot;This<span class="dp">·</span>folder<span class="dp">·</span>contains<span class="dp">·</span>all<span class="dp">·</span>the<span class="dp">·</span>generated<span class="dp">·</span>classes<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>schemas&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">153 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception<span class="dp">·</span>as<span class="dp">·</span>e:</td><td class="diffline">154 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception<span class="dp">·</span>as<span class="dp">·</span>e:</td></tr>
+<tr class="diffunmodified"><td class="diffline">154 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._logger.error(f&quot;Error<span class="dp">·</span>creating<span class="dp">·</span>classes<span class="dp">·</span>folder<span class="dp">·</span>{e}&quot;)</td><td class="diffline">155 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._logger.error(f&quot;Error<span class="dp">·</span>creating<span class="dp">·</span>classes<span class="dp">·</span>folder<span class="dp">·</span>{e}&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">155 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>e</td><td class="diffline">156 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>e</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">156 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>not<span class="dp">·</span>os.path.exists(f&quot;{_path}/schemas&quot;):</td><td class="diffline">157 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>not<span class="dp">·</span>os.path.exists(f&quot;{_path}/schemas&quot;):</td></tr>
+<tr class="diffunmodified"><td class="diffline">157 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td><td class="diffline">158 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">159 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os.makedirs(f&quot;{_path}/schemas&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">158 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(f&quot;{_path}/schemas/readme.txt&quot;,<span class="dp">·</span>&quot;w&quot;)<span class="dp">·</span>as<span class="dp">·</span>f:</td><td class="diffline">160 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(f&quot;{_path}/schemas/readme.txt&quot;,<span class="dp">·</span>&quot;w&quot;)<span class="dp">·</span>as<span class="dp">·</span>f:</td></tr>
+<tr class="diffunmodified"><td class="diffline">159 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.write(</td><td class="diffline">161 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.write(</td></tr>
+<tr class="diffunmodified"><td class="diffline">160 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Use<span class="dp">·</span>this<span class="dp">·</span>folder<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>AVRO<span class="dp">·</span>schemas\n&quot;</td><td class="diffline">162 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Use<span class="dp">·</span>this<span class="dp">·</span>folder<span class="dp">·</span>to<span class="dp">·</span>provide<span class="dp">·</span>AVRO<span class="dp">·</span>schemas\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">161 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Consume<span class="dp">·</span>schemas<span class="dp">·</span>are<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>consume<span class="dp">·</span>messages\n&quot;</td><td class="diffline">163 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Consume<span class="dp">·</span>schemas<span class="dp">·</span>are<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>consume<span class="dp">·</span>messages\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">162 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Produce<span class="dp">·</span>schemas<span class="dp">·</span>are<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>produce<span class="dp">·</span>messages&quot;</td><td class="diffline">164 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Produce<span class="dp">·</span>schemas<span class="dp">·</span>are<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>produce<span class="dp">·</span>messages&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">163 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td><td class="diffline">165 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">164 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception<span class="dp">·</span>as<span class="dp">·</span>e:</td><td class="diffline">166 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception<span class="dp">·</span>as<span class="dp">·</span>e:</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

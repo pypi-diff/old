@@ -1,0 +1,200 @@
+--- tmp/osint-python-starter-service-2.0.1.tar.gz
++++ tmp/osint-python-starter-service-2.0.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "osint-python-starter-service-2.0.1.tar", last modified: Fri Apr  7 10:38:33 2023, max compression
+│ +gzip compressed data, was "osint-python-starter-service-2.0.2.tar", last modified: Fri Apr  7 12:41:23 2023, max compression
+│   --- osint-python-starter-service-2.0.1.tar
+├── +++ osint-python-starter-service-2.0.2.tar
+│ ├── file list
+│ │ @@ -1,34 +1,29 @@
+│ │ -drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1064 2022-04-23 22:07:41.000000 osint-python-starter-service-2.0.1/LICENSE
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2173 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/PKG-INFO
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1702 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/README.md
+│ │ -drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2173 2023-04-07 10:38:33.000000 osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      925 2023-04-07 10:38:33.000000 osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        1 2023-04-07 10:38:33.000000 osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      108 2023-04-07 10:38:33.000000 osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/requires.txt
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       16 2023-04-07 10:38:33.000000 osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/top_level.txt
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       38 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/setup.cfg
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      778 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/setup.py
+│ │ -drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/starter_service/
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2022-06-04 21:05:58.000000 osint-python-starter-service-2.0.1/starter_service/__init__.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      973 2023-04-06 22:41:55.000000 osint-python-starter-service-2.0.1/starter_service/api.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     6814 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/api_server.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     4731 2023-04-06 18:13:23.000000 osint-python-starter-service-2.0.1/starter_service/avro_parser.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2767 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/base_service.py
+│ │ -drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/starter_service/classes/
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-04 14:29:02.000000 osint-python-starter-service-2.0.1/starter_service/classes/__init__.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2569 2023-04-06 23:50:18.000000 osint-python-starter-service-2.0.1/starter_service/classes/article_raw_en.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2569 2023-04-06 23:50:18.000000 osint-python-starter-service-2.0.1/starter_service/classes/article_raw_lt.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2569 2023-04-06 23:50:18.000000 osint-python-starter-service-2.0.1/starter_service/classes/article_raw_nl.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2569 2023-04-06 23:50:18.000000 osint-python-starter-service-2.0.1/starter_service/classes/article_raw_xx.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1275 2023-04-04 14:58:16.000000 osint-python-starter-service-2.0.1/starter_service/env.py
+│ │ -drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/starter_service/examples/
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-29 02:03:27.000000 osint-python-starter-service-2.0.1/starter_service/examples/__init__.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      716 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/examples/error.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      927 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/examples/manual_kafka.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1313 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/examples/multi.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1062 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/examples/single.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     6887 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/kafka_adapter.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1064 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/messages.py
+│ │ --rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     6499 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/schemas.py
+│ │ +drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 12:41:23.670373 osint-python-starter-service-2.0.2/
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1064 2022-04-23 22:07:41.000000 osint-python-starter-service-2.0.2/LICENSE
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2173 2023-04-07 12:41:23.670373 osint-python-starter-service-2.0.2/PKG-INFO
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1702 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.2/README.md
+│ │ +drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 12:41:23.670373 osint-python-starter-service-2.0.2/osint_python_starter_service.egg-info/
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2173 2023-04-07 12:41:23.000000 osint-python-starter-service-2.0.2/osint_python_starter_service.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      745 2023-04-07 12:41:23.000000 osint-python-starter-service-2.0.2/osint_python_starter_service.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        1 2023-04-07 12:41:23.000000 osint-python-starter-service-2.0.2/osint_python_starter_service.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      108 2023-04-07 12:41:23.000000 osint-python-starter-service-2.0.2/osint_python_starter_service.egg-info/requires.txt
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       16 2023-04-07 12:41:23.000000 osint-python-starter-service-2.0.2/osint_python_starter_service.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       38 2023-04-07 12:41:23.670373 osint-python-starter-service-2.0.2/setup.cfg
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      778 2023-04-07 12:40:14.000000 osint-python-starter-service-2.0.2/setup.py
+│ │ +drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 12:41:23.670373 osint-python-starter-service-2.0.2/starter_service/
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2022-06-04 21:05:58.000000 osint-python-starter-service-2.0.2/starter_service/__init__.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      177 2023-04-07 11:36:44.000000 osint-python-starter-service-2.0.2/starter_service/aaaa.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      973 2023-04-06 22:41:55.000000 osint-python-starter-service-2.0.2/starter_service/api.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     6814 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.2/starter_service/api_server.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     4731 2023-04-06 18:13:23.000000 osint-python-starter-service-2.0.2/starter_service/avro_parser.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2767 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.2/starter_service/base_service.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1275 2023-04-04 14:58:16.000000 osint-python-starter-service-2.0.2/starter_service/env.py
+│ │ +drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 12:41:23.670373 osint-python-starter-service-2.0.2/starter_service/examples/
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-29 02:03:27.000000 osint-python-starter-service-2.0.2/starter_service/examples/__init__.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      716 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.2/starter_service/examples/error.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      927 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.2/starter_service/examples/manual_kafka.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1313 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.2/starter_service/examples/multi.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1062 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.2/starter_service/examples/single.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     6887 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.2/starter_service/kafka_adapter.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1064 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.2/starter_service/messages.py
+│ │ +-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     6552 2023-04-07 12:39:21.000000 osint-python-starter-service-2.0.2/starter_service/schemas.py
+│ │   --- osint-python-starter-service-2.0.1/LICENSE
+│ ├── +++ osint-python-starter-service-2.0.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/PKG-INFO
+│ ├── +++ osint-python-starter-service-2.0.2/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: osint-python-starter-service
+│ │ -Version: 2.0.1
+│ │ +Version: 2.0.2
+│ │  Summary: Python starter service
+│ │  Home-page: https://github.com/OSINT-VDU-TNO/python-starter-service
+│ │  Author: mindpetk
+│ │  Author-email: petkeviciusm@gmail.com
+│ │  License: UNKNOWN
+│ │  Platform: UNKNOWN
+│ │  Classifier: Programming Language :: Python :: 3
+│ │   --- osint-python-starter-service-2.0.1/README.md
+│ ├── +++ osint-python-starter-service-2.0.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/PKG-INFO
+│ ├── +++ osint-python-starter-service-2.0.2/osint_python_starter_service.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: osint-python-starter-service
+│ │ -Version: 2.0.1
+│ │ +Version: 2.0.2
+│ │  Summary: Python starter service
+│ │  Home-page: https://github.com/OSINT-VDU-TNO/python-starter-service
+│ │  Author: mindpetk
+│ │  Author-email: petkeviciusm@gmail.com
+│ │  License: UNKNOWN
+│ │  Platform: UNKNOWN
+│ │  Classifier: Programming Language :: Python :: 3
+│ │   --- osint-python-starter-service-2.0.1/setup.py
+│ ├── +++ osint-python-starter-service-2.0.2/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -2,15 +2,15 @@
+│ │  
+│ │  with open("README.md", "r") as fh:
+│ │      long_description = fh.read()
+│ │  with open('requirements.txt') as f:
+│ │      required = f.read().splitlines()
+│ │  setuptools.setup(
+│ │      name="osint-python-starter-service",
+│ │ -    version="2.0.1",
+│ │ +    version="2.0.2",
+│ │      author="mindpetk",
+│ │      author_email="petkeviciusm@gmail.com",
+│ │      description="Python starter service",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/OSINT-VDU-TNO/python-starter-service",
+│ │      include_package_data=True,
+│ │   --- osint-python-starter-service-2.0.1/starter_service/api.py
+│ ├── +++ osint-python-starter-service-2.0.2/starter_service/api.py
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/starter_service/api_server.py
+│ ├── +++ osint-python-starter-service-2.0.2/starter_service/api_server.py
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/starter_service/avro_parser.py
+│ ├── +++ osint-python-starter-service-2.0.2/starter_service/avro_parser.py
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/starter_service/base_service.py
+│ ├── +++ osint-python-starter-service-2.0.2/starter_service/base_service.py
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/starter_service/env.py
+│ ├── +++ osint-python-starter-service-2.0.2/starter_service/env.py
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/starter_service/examples/error.py
+│ ├── +++ osint-python-starter-service-2.0.2/starter_service/examples/error.py
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/starter_service/examples/manual_kafka.py
+│ ├── +++ osint-python-starter-service-2.0.2/starter_service/examples/manual_kafka.py
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/starter_service/examples/multi.py
+│ ├── +++ osint-python-starter-service-2.0.2/starter_service/examples/multi.py
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/starter_service/examples/single.py
+│ ├── +++ osint-python-starter-service-2.0.2/starter_service/examples/single.py
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/starter_service/kafka_adapter.py
+│ ├── +++ osint-python-starter-service-2.0.2/starter_service/kafka_adapter.py
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/starter_service/messages.py
+│ ├── +++ osint-python-starter-service-2.0.2/starter_service/messages.py
+│ │┄ Files identical despite different names
+│ │   --- osint-python-starter-service-2.0.1/starter_service/schemas.py
+│ ├── +++ osint-python-starter-service-2.0.2/starter_service/schemas.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,16 +1,17 @@
+│ │  import json
+│ │  import logging
+│ │  import os
+│ │ +from pathlib import Path
+│ │  from pydoc import locate
+│ │  from threading import Lock
+│ │  
+│ │  from starter_service.avro_parser import avsc_to_pydantic
+│ │  
+│ │ -_path = os.path.dirname(os.path.abspath(__file__))
+│ │ +_path = str(Path().absolute())
+│ │  _logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  class Schema:
+│ │  
+│ │      def __init__(self, topic=None, filename=None, class_name=None, class_obj=None, full_path=None):
+│ │          self.topic = topic
+│ │ @@ -152,14 +153,15 @@
+│ │                      f.write("This folder contains all the generated classes from the schemas")
+│ │              except Exception as e:
+│ │                  self._logger.error(f"Error creating classes folder {e}")
+│ │                  raise e
+│ │  
+│ │          if not os.path.exists(f"{_path}/schemas"):
+│ │              try:
+│ │ +                os.makedirs(f"{_path}/schemas")
+│ │                  with open(f"{_path}/schemas/readme.txt", "w") as f:
+│ │                      f.write(
+│ │                          "Use this folder to provide AVRO schemas\n"
+│ │                          "Consume schemas are used to consume messages\n"
+│ │                          "Produce schemas are used to produce messages"
+│ │                      )
+│ │              except Exception as e:

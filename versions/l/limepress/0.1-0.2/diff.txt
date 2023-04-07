@@ -1,0 +1,795 @@
+--- tmp/limepress-0.1.tar.gz
++++ tmp/limepress-0.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/limepress-0.1.tar", last modified: Sat Aug  6 10:33:47 2022, max compression
+│ +gzip compressed data, was "dist/limepress-0.2.tar", last modified: Fri Apr  7 12:39:08 2023, max compression
+│   --- limepress-0.1.tar
+├── +++ limepress-0.2.tar
+│ ├── file list
+│ │ @@ -1,37 +1,38 @@
+│ │ -drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2022-08-06 10:33:47.000000 limepress-0.1/
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1071 2022-07-16 10:37:06.000000 limepress-0.1/LICENSE.txt
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      120 2022-08-06 10:25:31.000000 limepress-0.1/MANIFEST.in
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1690 2022-08-06 10:33:47.000000 limepress-0.1/PKG-INFO
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      822 2022-08-06 10:25:31.000000 limepress-0.1/README.rst
+│ │ -drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2022-08-06 10:33:47.000000 limepress-0.1/bin/
+│ │ --rwxrwxr-x   0 fscherf   (1000) fscherf   (1000)     2155 2022-08-06 10:25:31.000000 limepress-0.1/bin/limepress
+│ │ -drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2022-08-06 10:33:47.000000 limepress-0.1/limepress/
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)       68 2022-08-06 10:29:53.000000 limepress-0.1/limepress/__init__.py
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1273 2022-08-06 10:25:31.000000 limepress-0.1/limepress/_logging.py
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      192 2022-08-06 10:25:31.000000 limepress-0.1/limepress/_pytest.py
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1741 2022-08-06 10:25:31.000000 limepress-0.1/limepress/build_environment.py
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)    12732 2022-08-06 10:25:31.000000 limepress-0.1/limepress/context.py
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      674 2022-08-06 10:25:31.000000 limepress-0.1/limepress/default_settings.py
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     2421 2022-08-06 10:25:31.000000 limepress-0.1/limepress/dependency_manager.py
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     2853 2022-08-06 10:25:31.000000 limepress-0.1/limepress/file_system.py
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1475 2022-08-06 10:25:31.000000 limepress-0.1/limepress/parsing.py
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      320 2022-08-06 10:25:31.000000 limepress-0.1/limepress/plugin_manager.py
+│ │ -drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2022-08-06 10:33:47.000000 limepress-0.1/limepress/plugins/
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)        0 2022-08-06 10:25:31.000000 limepress-0.1/limepress/plugins/__init__.py
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      695 2022-08-06 10:25:31.000000 limepress-0.1/limepress/plugins/html_parser.py
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1828 2022-08-06 10:25:31.000000 limepress-0.1/limepress/settings.py
+│ │ -drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2022-08-06 10:33:47.000000 limepress-0.1/limepress/templates/
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      390 2022-08-06 10:25:31.000000 limepress-0.1/limepress/templates/page.html
+│ │ -drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2022-08-06 10:33:47.000000 limepress-0.1/limepress/templates/snippets/
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)       29 2022-08-06 10:25:31.000000 limepress-0.1/limepress/templates/snippets/pre.html
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     3622 2022-08-06 10:25:31.000000 limepress-0.1/limepress/templating.py
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     5039 2022-08-06 10:25:31.000000 limepress-0.1/limepress/unit.py
+│ │ -drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2022-08-06 10:33:47.000000 limepress-0.1/limepress.egg-info/
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1690 2022-08-06 10:33:47.000000 limepress-0.1/limepress.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      715 2022-08-06 10:33:47.000000 limepress-0.1/limepress.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)        1 2022-08-06 10:33:47.000000 limepress-0.1/limepress.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)       42 2022-08-06 10:33:47.000000 limepress-0.1/limepress.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      122 2022-08-06 10:33:47.000000 limepress-0.1/limepress.egg-info/requires.txt
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)       10 2022-08-06 10:33:47.000000 limepress-0.1/limepress.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      518 2022-08-06 10:33:47.000000 limepress-0.1/setup.cfg
+│ │ --rwxrwxr-x   0 fscherf   (1000) fscherf   (1000)      733 2022-08-06 10:30:02.000000 limepress-0.1/setup.py
+│ │ +drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2023-04-07 12:39:08.000000 limepress-0.2/
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1071 2023-01-14 11:53:02.000000 limepress-0.2/LICENSE.txt
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      120 2023-01-14 11:53:02.000000 limepress-0.2/MANIFEST.in
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1690 2023-04-07 12:39:08.000000 limepress-0.2/PKG-INFO
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      822 2023-01-14 11:53:02.000000 limepress-0.2/README.rst
+│ │ +drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2023-04-07 12:39:08.000000 limepress-0.2/bin/
+│ │ +-rwxrwxr-x   0 fscherf   (1000) fscherf   (1000)     1043 2023-04-07 12:37:54.000000 limepress-0.2/bin/limepress
+│ │ +-rwxrwxr-x   0 fscherf   (1000) fscherf   (1000)      397 2023-04-07 12:37:54.000000 limepress-0.2/bin/limepress-build
+│ │ +-rwxrwxr-x   0 fscherf   (1000) fscherf   (1000)     4058 2023-04-07 12:37:54.000000 limepress-0.2/bin/limepress-dev-server
+│ │ +-rwxrwxr-x   0 fscherf   (1000) fscherf   (1000)      380 2023-04-07 12:37:54.000000 limepress-0.2/bin/limepress-shell
+│ │ +drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2023-04-07 12:39:08.000000 limepress-0.2/limepress/
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)       68 2023-04-07 12:38:14.000000 limepress-0.2/limepress/__init__.py
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1741 2023-01-14 11:53:02.000000 limepress-0.2/limepress/build_environment.py
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1030 2023-04-07 12:37:54.000000 limepress-0.2/limepress/command_line.py
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)    13535 2023-04-07 12:37:54.000000 limepress-0.2/limepress/context.py
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      841 2023-04-07 12:37:54.000000 limepress-0.2/limepress/default_settings.py
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     2692 2023-04-07 12:37:54.000000 limepress-0.2/limepress/dependency_manager.py
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     2882 2023-04-07 12:37:54.000000 limepress-0.2/limepress/file_system.py
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1475 2023-01-14 11:53:02.000000 limepress-0.2/limepress/parsing.py
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      320 2023-01-14 11:53:02.000000 limepress-0.2/limepress/plugin_manager.py
+│ │ +drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2023-04-07 12:39:08.000000 limepress-0.2/limepress/plugins/
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)        0 2023-01-14 11:53:02.000000 limepress-0.2/limepress/plugins/__init__.py
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      695 2023-01-14 11:53:02.000000 limepress-0.2/limepress/plugins/html_parser.py
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1866 2023-04-07 12:37:54.000000 limepress-0.2/limepress/settings.py
+│ │ +drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2023-04-07 12:39:08.000000 limepress-0.2/limepress/templates/
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      390 2023-01-14 11:53:02.000000 limepress-0.2/limepress/templates/page.html
+│ │ +drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2023-04-07 12:39:08.000000 limepress-0.2/limepress/templates/snippets/
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)       29 2023-01-14 11:53:02.000000 limepress-0.2/limepress/templates/snippets/pre.html
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     3660 2023-04-07 12:37:54.000000 limepress-0.2/limepress/templating.py
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     5105 2023-04-07 12:37:54.000000 limepress-0.2/limepress/unit.py
+│ │ +drwxrwxr-x   0 fscherf   (1000) fscherf   (1000)        0 2023-04-07 12:39:08.000000 limepress-0.2/limepress.egg-info/
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)     1690 2023-04-07 12:39:08.000000 limepress-0.2/limepress.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      727 2023-04-07 12:39:08.000000 limepress-0.2/limepress.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)        1 2023-04-07 12:39:08.000000 limepress-0.2/limepress.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      118 2023-04-07 12:39:08.000000 limepress-0.2/limepress.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)       10 2023-04-07 12:39:08.000000 limepress-0.2/limepress.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 fscherf   (1000) fscherf   (1000)      518 2023-04-07 12:39:08.000000 limepress-0.2/setup.cfg
+│ │ +-rwxrwxr-x   0 fscherf   (1000) fscherf   (1000)      712 2023-04-07 12:38:08.000000 limepress-0.2/setup.py
+│ │   --- limepress-0.1/LICENSE.txt
+│ ├── +++ limepress-0.2/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- limepress-0.1/PKG-INFO
+│ ├── +++ limepress-0.2/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 1.1
+│ │  Name: limepress
+│ │ -Version: 0.1
+│ │ +Version: 0.2
+│ │  Summary: LimePress
+│ │  Home-page: https://github.com/limepress/limepress
+│ │  Author: Florian Scherf
+│ │  Author-email: mail@florianscherf.de
+│ │  License: MIT
+│ │  Description: LimePress
+│ │          =========
+│ │   --- limepress-0.1/README.rst
+│ ├── +++ limepress-0.2/README.rst
+│ │┄ Files identical despite different names
+│ │   --- limepress-0.1/limepress/build_environment.py
+│ ├── +++ limepress-0.2/limepress/build_environment.py
+│ │┄ Files identical despite different names
+│ │   --- limepress-0.1/limepress/context.py
+│ ├── +++ limepress-0.2/limepress/context.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,27 +1,30 @@
+│ │  from __future__ import annotations
+│ │  
+│ │ -from typing import Dict, List, Any
+│ │ +from typing import Tuple, Dict, List, Any
+│ │ +import fnmatch
+│ │ +import logging
+│ │  import os
+│ │  
+│ │  from jinja2 import Environment, FileSystemLoader
+│ │ -from loguru import logger
+│ │  
+│ │  from limepress.file_system import copy_files, write_file, clean_directory
+│ │  from limepress.file_system import gen_limepress_src_path, iter_directory
+│ │  from limepress.templating import LimepressSnippetTag, string_is_template
+│ │  from limepress.dependency_manager import LimepressDependencyManager
+│ │  from limepress.plugin_manager import LimepressPluginManager
+│ │  from limepress.unit import LimepressUnit
+│ │  from limepress.settings import Settings
+│ │  
+│ │  DEFAULT_SETTINGS_PATHS = [
+│ │      gen_limepress_src_path('default_settings.py'),
+│ │  ]
+│ │  
+│ │ +logger = logging.getLogger('limepress')
+│ │ +
+│ │  
+│ │  class LimepressContext:
+│ │      # TODO: log exceptions
+│ │  
+│ │      def __init__(
+│ │              self,
+│ │              project_root: str,
+│ │ @@ -138,15 +141,15 @@
+│ │          abs_paths = self.gen_project_path('templates')
+│ │  
+│ │          if os.path.exists(abs_paths):
+│ │              self.logger.debug('template dir in project root discovered')
+│ │  
+│ │              self.template_dirs.insert(0, abs_paths)
+│ │  
+│ │ -        self.logger.debug('loaded template dirs: {}', self.template_dirs)
+│ │ +        self.logger.debug('loaded template dirs: %s', self.template_dirs)
+│ │  
+│ │      def _load_source_dirs(self) -> None:
+│ │          self.logger.debug('load source dirs')
+│ │  
+│ │          self.source_dirs.clear()
+│ │  
+│ │          # get source dirs from settings
+│ │ @@ -166,24 +169,24 @@
+│ │          abs_paths = self.gen_project_path('src')
+│ │  
+│ │          if os.path.exists(abs_paths):
+│ │              self.logger.debug('source dir in project root discovered')
+│ │  
+│ │              self.source_dirs.append(abs_paths)
+│ │  
+│ │ -        self.logger.debug('loaded source dirs: {}', self.source_dirs)
+│ │ +        self.logger.debug('loaded source dirs: %s', self.source_dirs)
+│ │  
+│ │      def _setup_build_dir(self) -> None:
+│ │          self.logger.debug('setup build dir')
+│ │  
+│ │          self.build_dir = self.gen_project_path(
+│ │              path=self.settings.BUILD_DIR,
+│ │          )
+│ │  
+│ │ -        self.logger.debug('build dir is set to {}', self.build_dir)
+│ │ +        self.logger.debug('build dir is set to %s', self.build_dir)
+│ │  
+│ │      def _setup_templating_environment(self) -> None:
+│ │          self.logger.debug('setup templating environment')
+│ │  
+│ │          # setup jinja2 environment
+│ │          self.jinja2_env = Environment(
+│ │              loader=FileSystemLoader(
+│ │ @@ -203,18 +206,30 @@
+│ │  
+│ │      def _discover_units(self) -> None:
+│ │          self.logger.debug('discover units')
+│ │  
+│ │          for raw_source_dir in self.source_dirs:
+│ │              source_dir = self.gen_project_path(raw_source_dir)
+│ │  
+│ │ -            self.logger.debug('scanning {}', source_dir)
+│ │ +            self.logger.debug('scanning %s', source_dir)
+│ │  
+│ │              for abs_path, rel_path in iter_directory(source_dir):
+│ │ -                self.logger.debug('processing {}', abs_path)
+│ │ +                self.logger.debug('processing %s', abs_path)
+│ │ +
+│ │ +                # check if path is ignored
+│ │ +                ignore, ignore_pattern = self.path_is_ignored(rel_path)
+│ │ +
+│ │ +                if ignore:
+│ │ +                    self.logger.debug(
+│ │ +                        '%s is ignored (%s)',
+│ │ +                        abs_path,
+│ │ +                        ignore_pattern,
+│ │ +                    )
+│ │ +
+│ │ +                    continue
+│ │  
+│ │                  # setup unit
+│ │                  unit = self.gen_unit()
+│ │  
+│ │                  unit.abs_path = abs_path
+│ │                  unit.rel_path = rel_path
+│ │                  unit.output_rel_path = rel_path
+│ │ @@ -284,14 +299,23 @@
+│ │              path = path[1:]
+│ │  
+│ │          return os.path.join(
+│ │              self.build_dir,
+│ │              path,
+│ │          )
+│ │  
+│ │ +    def path_is_ignored(self, path: str) -> Tuple[bool, str]:
+│ │ +        patterns = self.settings.DEFAULT_IGNORE + self.settings.IGNORE
+│ │ +
+│ │ +        for pattern in patterns:
+│ │ +            if fnmatch.fnmatch(path, pattern):
+│ │ +                return True, pattern
+│ │ +
+│ │ +        return False, ''
+│ │ +
+│ │      # units ###################################################################
+│ │      def gen_unit(self) -> LimepressUnit:
+│ │          unit: LimepressUnit = LimepressUnit(context=self)
+│ │  
+│ │          self.units.append(unit)
+│ │  
+│ │          return unit
+│ │ @@ -372,25 +396,30 @@
+│ │      def _render_units(self) -> List[LimepressUnit]:
+│ │          self.logger.debug('rendering units')
+│ │  
+│ │          rendered_units: List[LimepressUnit] = []
+│ │          exception_raised: bool = False
+│ │  
+│ │          for unit in self.units:
+│ │ -            self.logger.debug('rendering {}', unit)
+│ │ +            self.logger.debug('rendering %s', unit)
+│ │ +
+│ │ +            if unit.disabled:
+│ │ +                self.logger.debug('%s is disabled', unit)
+│ │ +
+│ │ +                continue
+│ │  
+│ │ -            if unit.is_disabled():
+│ │ -                self.logger.debug('{} is disabled', unit)
+│ │ +            if not unit.dirty:
+│ │ +                self.logger.debug('%s is not marked as dirty', unit)
+│ │  
+│ │                  continue
+│ │  
+│ │              try:
+│ │  
+│ │                  # template units
+│ │ -                if unit.is_template_unit():
+│ │ +                if unit.template:
+│ │                      self._render_template_unit(unit=unit)
+│ │  
+│ │                  # file units
+│ │                  else:
+│ │                      copy_files(
+│ │                          source=unit.abs_path,
+│ │                          destination=self.gen_output_path(
+│ │ @@ -400,15 +429,15 @@
+│ │  
+│ │                  rendered_units.append(unit)
+│ │  
+│ │              except Exception:
+│ │                  exception_raised = True
+│ │  
+│ │                  self.logger.exception(
+│ │ -                    'exception raised while rendering {}',
+│ │ +                    'exception raised while rendering %s',
+│ │                      unit,
+│ │                  )
+│ │  
+│ │          if len(rendered_units) == 0 and not exception_raised:
+│ │              self.logger.info('nothing to do')
+│ │  
+│ │          return rendered_units
+│ │ @@ -416,14 +445,14 @@
+│ │      def build(self, clean: bool = False) -> List[LimepressUnit]:
+│ │          self.logger.debug('start build')
+│ │  
+│ │          if clean:
+│ │              self._clean_build_dir()
+│ │  
+│ │          else:
+│ │ -            self.dependency_manager.disable_unchanged_units()
+│ │ +            self.dependency_manager.set_unchanged_units_not_dirty()
+│ │  
+│ │          rendered_units = self._render_units()
+│ │  
+│ │          self.logger.debug('build done')
+│ │  
+│ │          return rendered_units
+│ │   --- limepress-0.1/limepress/default_settings.py
+│ ├── +++ limepress-0.2/limepress/default_settings.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -25,7 +25,20 @@
+│ │  DEFAULT_TEMPLATE_CONTEXT: Dict[str, Any] = {
+│ │      'stylesheet': stylesheet,
+│ │      'script': script,
+│ │      'path': path,
+│ │  }
+│ │  
+│ │  TEMPLATE_CONTEXT: Dict[str, Any] = {}
+│ │ +
+│ │ +# links
+│ │ +SHORT_INDEX_LINKS: bool = True
+│ │ +APPEND_SLASH: bool = True
+│ │ +
+│ │ +# units
+│ │ +DEFAULT_IGNORE: List[str] = [
+│ │ +    '~*',
+│ │ +    '*.swp',
+│ │ +    '*.tmp',
+│ │ +]
+│ │ +
+│ │ +IGNORE: List[str] = []
+│ │   --- limepress-0.1/limepress/dependency_manager.py
+│ ├── +++ limepress-0.2/limepress/dependency_manager.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -18,63 +18,73 @@
+│ │      def get_last_modified_template_mtime(self) -> float:
+│ │          if not self.context.jinja2_env:
+│ │              raise RuntimeError('templating environment is not setup')
+│ │  
+│ │          mtime = 0.0
+│ │  
+│ │          for template_name in self.context.jinja2_env.list_templates():
+│ │ +            if self.context.path_is_ignored(template_name)[0]:
+│ │ +                continue
+│ │ +
+│ │              template = self.context.jinja2_env.get_template(template_name)
+│ │              template_mtime = self.get_mtime(str(template.filename))
+│ │  
+│ │              if template_mtime > mtime:
+│ │                  mtime = template_mtime
+│ │  
+│ │          return mtime
+│ │  
+│ │      def get_last_modified_settings_mtime(self) -> float:
+│ │          mtime = 0.0
+│ │  
+│ │          for settings_path in self.context.settings_paths:
+│ │ +            if self.context.path_is_ignored(settings_path)[0]:
+│ │ +                continue
+│ │ +
+│ │              settings_mtime = self.get_mtime(settings_path)
+│ │  
+│ │              if settings_mtime > mtime:
+│ │                  mtime = settings_mtime
+│ │  
+│ │          return mtime
+│ │  
+│ │ -    def disable_unchanged_units(self) -> None:
+│ │ +    def set_unchanged_units_not_dirty(self) -> None:
+│ │          last_modified_template_mtime = self.get_last_modified_template_mtime()
+│ │          last_modified_settings_mtime = self.get_last_modified_settings_mtime()
+│ │  
+│ │          for unit in self.context.units:
+│ │  
+│ │ -            # skip previously disabled files
+│ │ -            if unit.is_disabled():
+│ │ +            # skip previously disabled units
+│ │ +            if unit.disabled:
+│ │ +                continue
+│ │ +
+│ │ +            # skip non dirty units
+│ │ +            if not unit.dirty:
+│ │                  continue
+│ │  
+│ │              # skip units that have no path
+│ │              if not unit.abs_path:
+│ │                  continue
+│ │  
+│ │ -            # skip units that are not written yet
+│ │ +            # skip units that were never written before
+│ │              output_path = self.context.gen_output_path(
+│ │                  path=unit.output_rel_path,
+│ │              )
+│ │  
+│ │              if not os.path.exists(output_path):
+│ │                  continue
+│ │  
+│ │              # check if templates or settings changed
+│ │              dst_mtime = self.get_mtime(output_path)
+│ │  
+│ │              if last_modified_settings_mtime > dst_mtime:
+│ │                  continue
+│ │  
+│ │ -            if unit.is_template_unit():
+│ │ +            if unit.template:
+│ │                  if last_modified_template_mtime > dst_mtime:
+│ │                      continue
+│ │  
+│ │              # check if source file is newer than destination file
+│ │              src_mtime = self.get_mtime(unit.abs_path)
+│ │  
+│ │              if src_mtime < dst_mtime:
+│ │ -                unit.disable()
+│ │ +                unit.dirty = False
+│ │   --- limepress-0.1/limepress/file_system.py
+│ ├── +++ limepress-0.2/limepress/file_system.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,17 +1,18 @@
+│ │  from typing import Iterator, Tuple
+│ │ +import logging
+│ │  import shutil
+│ │  import os
+│ │  
+│ │ -from loguru import logger
+│ │ -
+│ │  import limepress
+│ │  
+│ │  LIMEPRESS_ROOT = os.path.dirname(limepress.__file__)
+│ │  
+│ │ +logger = logging.getLogger('limepress')
+│ │ +
+│ │  
+│ │  def gen_limepress_src_path(path: str) -> str:
+│ │      if path.startswith('/'):
+│ │          path = path[1:]
+│ │  
+│ │      return os.path.join(LIMEPRESS_ROOT, path)
+│ │  
+│ │ @@ -45,15 +46,15 @@
+│ │          root_dir=root_dir,
+│ │          path=path,
+│ │      )
+│ │  
+│ │      if os.path.exists(abs_path):
+│ │          return
+│ │  
+│ │ -    logger.debug('making directories {}', abs_path)
+│ │ +    logger.debug('making directories %s', abs_path)
+│ │  
+│ │      os.makedirs(abs_path)
+│ │  
+│ │  
+│ │  def read_file(
+│ │          root_dir: str,
+│ │          path: str,
+│ │ @@ -61,15 +62,15 @@
+│ │  ) -> str:
+│ │  
+│ │      abs_path = _gen_abs_path(
+│ │          root_dir=root_dir,
+│ │          path=path,
+│ │      )
+│ │  
+│ │ -    logger.debug('reading file {} (mode={})', abs_path, mode)
+│ │ +    logger.debug('reading file %s (mode=%s)', abs_path, mode)
+│ │  
+│ │      return str(open(abs_path, mode=mode).read())
+│ │  
+│ │  
+│ │  def write_file(
+│ │          root_dir: str,
+│ │          path: str,
+│ │ @@ -83,27 +84,27 @@
+│ │      )
+│ │  
+│ │      make_directories(
+│ │          root_dir=root_dir,
+│ │          path=os.path.dirname(path),
+│ │      )
+│ │  
+│ │ -    logger.info('writing file {} (mode={})', abs_path, mode)
+│ │ +    logger.info('writing file %s (mode=%s)', abs_path, mode)
+│ │  
+│ │      return open(abs_path, mode=mode).write(text),
+│ │  
+│ │  
+│ │  def copy_files(
+│ │          source: str,
+│ │          destination: str,
+│ │  ) -> None:
+│ │  
+│ │      destination_dirname = os.path.dirname(destination)
+│ │  
+│ │ -    logger.info('copying {} to {}', source, destination)
+│ │ +    logger.info('copying %s to %s', source, destination)
+│ │  
+│ │      if not os.path.exists(destination_dirname):
+│ │          os.makedirs(destination_dirname)
+│ │  
+│ │      shutil.copy(src=source, dst=destination)
+│ │  
+│ │  
+│ │ @@ -116,25 +117,25 @@
+│ │              abs_path = os.path.join(root, file)
+│ │              rel_path = os.path.relpath(abs_path, root_dir)
+│ │  
+│ │              yield abs_path, rel_path
+│ │  
+│ │  
+│ │  def clean_directory(path: str) -> None:
+│ │ -    logger.debug('cleaning directory {}', path)
+│ │ +    logger.debug('cleaning directory %s', path)
+│ │  
+│ │      if not os.path.exists(path):
+│ │ -        raise RuntimeError('{} does not exist', path)
+│ │ +        raise RuntimeError('%s does not exist', path)
+│ │  
+│ │      if not os.path.isdir(path):
+│ │ -        raise RuntimeError('{} is no directory', path)
+│ │ +        raise RuntimeError('%s is no directory', path)
+│ │  
+│ │      for rel_directory_entry in os.listdir(path):
+│ │          abs_directory_entry = os.path.join(path, rel_directory_entry)
+│ │  
+│ │ -        logger.debug('removing {}', abs_directory_entry)
+│ │ +        logger.debug('removing %s', abs_directory_entry)
+│ │  
+│ │          if os.path.isdir(abs_directory_entry):
+│ │              shutil.rmtree(abs_directory_entry)
+│ │  
+│ │          else:
+│ │              os.unlink(abs_directory_entry)
+│ │   --- limepress-0.1/limepress/parsing.py
+│ ├── +++ limepress-0.2/limepress/parsing.py
+│ │┄ Files identical despite different names
+│ │   --- limepress-0.1/limepress/plugins/html_parser.py
+│ ├── +++ limepress-0.2/limepress/plugins/html_parser.py
+│ │┄ Files identical despite different names
+│ │   --- limepress-0.1/limepress/settings.py
+│ ├── +++ limepress-0.2/limepress/settings.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,25 +1,26 @@
+│ │  from copy import deepcopy
+│ │ +import logging
+│ │  import types
+│ │  import runpy
+│ │  
+│ │ -from loguru import logger
+│ │ +logger = logging.getLogger('limepress.settings')
+│ │  
+│ │  
+│ │  class Settings:
+│ │      def __init__(self):
+│ │          self._paths = []
+│ │          self._values = {}
+│ │  
+│ │      def add(self, path):
+│ │ -        logger.debug('reading {}', path)
+│ │ +        logger.debug('reading %s', path)
+│ │  
+│ │          if not path.endswith('.py'):
+│ │              logger.error(
+│ │ -                "'{}' does not look like python script (modules are not supported)",  # NOQA
+│ │ +                "'%s' does not look like python script (modules are not supported)",  # NOQA
+│ │                  path,
+│ │              )
+│ │  
+│ │              return
+│ │  
+│ │          self._paths.append(path)
+│ │  
+│ │ @@ -28,15 +29,15 @@
+│ │                  path,
+│ │                  init_globals=self._values,
+│ │                  run_name=path,
+│ │              )
+│ │  
+│ │          except Exception:
+│ │              logger.exception(
+│ │ -                "exception raised while loading settings '{}'",
+│ │ +                "exception raised while loading settings '%s'",
+│ │                  path,
+│ │              )
+│ │  
+│ │              return
+│ │  
+│ │          self._values = {}
+│ │   --- limepress-0.1/limepress/templating.py
+│ ├── +++ limepress-0.2/limepress/templating.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,22 +1,24 @@
+│ │  # TODO: add snippets without body
+│ │  
+│ │  from __future__ import annotations
+│ │  
+│ │  from typing import Callable, Dict, Any
+│ │  import textwrap
+│ │ +import logging
+│ │  import os
+│ │  import re
+│ │  
+│ │  from jinja2_simple_tags import ContainerTag
+│ │  from jinja2 import pass_context
+│ │ -from loguru import logger
+│ │  
+│ │  from limepress.unit import LimepressUnit
+│ │  
+│ │ +logger = logging.getLogger('logging.templating')
+│ │ +
+│ │  
+│ │  def string_is_template(string: str) -> bool:
+│ │      return '{{' in string or '{%' in string
+│ │  
+│ │  
+│ │  @pass_context
+│ │  def path(
+│ │ @@ -63,15 +65,15 @@
+│ │          href: str,
+│ │          **kwargs: Dict[str, str],
+│ │  ) -> str:
+│ │  
+│ │      unit: LimepressUnit = context['unit']
+│ │  
+│ │      script_kwargs: Dict[str, str] = {
+│ │ -        'href': unit.gen_rel_path(output_rel_path=href),
+│ │ +        'src': unit.gen_rel_path(output_rel_path=href),
+│ │      }
+│ │  
+│ │      # FIXME
+│ │      script_kwargs.update(kwargs)  # type: ignore
+│ │  
+│ │      script_kwargs_string: str = ' '.join(
+│ │          [f'{key}="{value}"' for key, value in script_kwargs.items()]
+│ │ @@ -108,23 +110,23 @@
+│ │              snippet_raw_name = path_parts[-1]
+│ │  
+│ │              # remove extension
+│ │              snippet_name, _ = os.path.splitext(snippet_raw_name)
+│ │  
+│ │              # check if snippet name is valid
+│ │              if not self.SNIPPET_NAME_RE.match(snippet_name):
+│ │ -                logger.warning('invalid snippet name: {}', template_name)
+│ │ +                logger.warning('invalid snippet name: %s', template_name)
+│ │  
+│ │                  continue
+│ │  
+│ │              # register snippet
+│ │              self.tags.append(snippet_name)
+│ │              self.snippets[snippet_name] = template_name
+│ │  
+│ │ -        logger.debug('discovered snippets: {}', self.tags)
+│ │ +        logger.debug('discovered snippets: %s', self.tags)
+│ │  
+│ │      def render(
+│ │              self,
+│ │              caller: Callable,
+│ │              dedent_text: bool = True,
+│ │              **kwargs: Dict[Any, Any],
+│ │      ) -> str:
+│ │   --- limepress-0.1/limepress/unit.py
+│ ├── +++ limepress-0.2/limepress/unit.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,52 +1,46 @@
+│ │  from __future__ import annotations
+│ │  
+│ │  from dataclasses import dataclass, field
+│ │  from typing import TYPE_CHECKING
+│ │ -from loguru import logger
+│ │ +import logging
+│ │  import os
+│ │  
+│ │  from limepress.parsing import parse_unit_meta_data
+│ │  
+│ │  if TYPE_CHECKING:  # pragma: no cover
+│ │      from limepress.context import LimepressContext
+│ │  
+│ │ +logger = logging.getLogger('limepress')
+│ │ +
+│ │  
+│ │  @dataclass
+│ │  class LimepressUnit:
+│ │  
+│ │      # default attributes
+│ │      context: LimepressContext = field(repr=False)
+│ │      abs_path: str = field(default='')
+│ │      rel_path: str = field(default='')
+│ │      output_rel_path: str = field(default='')
+│ │ +    disabled: bool = field(default=False)
+│ │ +    dirty: bool = field(default=True)
+│ │  
+│ │      # templating
+│ │      template: str = field(default='')
+│ │      title: str = field(default='')
+│ │      body_title: str = field(default='')
+│ │      body_text: str = field(default='', repr=False)
+│ │  
+│ │      # meta data
+│ │      meta: dict = field(default_factory=dict, repr=False)
+│ │  
+│ │      # helper
+│ │ -    def is_disabled(self) -> bool:
+│ │ -        return not bool(self.output_rel_path)
+│ │ -
+│ │ -    def is_template_unit(self) -> bool:
+│ │ -        return bool(self.template)
+│ │ -
+│ │      def set_default_template(self) -> None:
+│ │          self.template = self.context.settings.DEFAULT_TEMPLATE
+│ │  
+│ │ -    def disable(self) -> None:
+│ │ -        self.output_rel_path = ''
+│ │ -        self.template = ''
+│ │ -
+│ │      def get_file_extension(self) -> str:
+│ │          if not self.abs_path:
+│ │              return ''
+│ │  
+│ │          return os.path.splitext(self.abs_path)[1][1:].lower()
+│ │  
+│ │      def gen_rel_path(
+│ │ @@ -119,35 +113,42 @@
+│ │  
+│ │          target_unit = resolve_unit(
+│ │              rel_path=rel_path,
+│ │              output_rel_path=output_rel_path,
+│ │              target_abs_path=target_abs_path,
+│ │          )
+│ │  
+│ │ -        # handling of index pages
+│ │ -        if not target_unit and not target_abs_path.endswith('index.html'):
+│ │ -            target_unit = resolve_unit(
+│ │ -                rel_path=rel_path,
+│ │ -                output_rel_path=output_rel_path,
+│ │ -                target_abs_path=os.path.join(target_abs_path, 'index.html'),
+│ │ -            )
+│ │ -
+│ │          # log warning or raise exception if target unit was not found
+│ │          if not target_unit:
+│ │              if rel_path:
+│ │                  warning_text = f'no unit with rel_path {rel_path} found'
+│ │  
+│ │              else:
+│ │                  warning_text = f'no unit with output_rel_path {output_rel_path} found'  # NOQA
+│ │  
+│ │              if raise_exception:
+│ │                  raise RuntimeError(warning_text)
+│ │  
+│ │              logger.warning(warning_text)
+│ │  
+│ │ +        # shorten index links
+│ │ +        if self.context.settings.SHORT_INDEX_LINKS:
+│ │ +            if target_rel_path.endswith('/index.html'):
+│ │ +                target_rel_path = os.path.dirname(target_rel_path)
+│ │ +
+│ │ +            elif target_rel_path == 'index.html':
+│ │ +                target_rel_path = '.'
+│ │ +
+│ │ +        # append slash
+│ │ +        if self.context.settings.APPEND_SLASH:
+│ │ +            base_name = os.path.basename(target_rel_path)
+│ │ +
+│ │ +            if base_name and '.' not in base_name:
+│ │ +                target_rel_path = target_rel_path + '/'
+│ │ +
+│ │          return target_rel_path
+│ │  
+│ │      # parsing
+│ │      def load_meta_data(self) -> None:
+│ │          for key, value in parse_unit_meta_data(path=self.abs_path).items():
+│ │              self.meta[key] = value
+│ │   --- limepress-0.1/limepress.egg-info/PKG-INFO
+│ ├── +++ limepress-0.2/limepress.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 1.1
+│ │  Name: limepress
+│ │ -Version: 0.1
+│ │ +Version: 0.2
+│ │  Summary: LimePress
+│ │  Home-page: https://github.com/limepress/limepress
+│ │  Author: Florian Scherf
+│ │  Author-email: mail@florianscherf.de
+│ │  License: MIT
+│ │  Description: LimePress
+│ │          =========
+│ │   --- limepress-0.1/setup.cfg
+│ ├── +++ limepress-0.2/setup.cfg
+│ │┄ Files identical despite different names

@@ -1,0 +1,386 @@
+# Comparing `tmp/pyprocessors-afp_sports-0.5.30.tar.gz` & `tmp/pyprocessors-afp_sports-0.5.8.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pyprocessors-afp_sports-0.5.30.tar", last modified: Fri Apr  7 12:39:13 2023, max compression
++gzip compressed data, was "pyprocessors-afp_sports-0.5.8.tar", last modified: Fri Jan 20 17:09:58 2023, max compression
+```
+
+## Comparing `pyprocessors-afp_sports-0.5.30.tar` & `pyprocessors-afp_sports-0.5.8.tar`
+
+### file list
+
+```diff
+@@ -1,35 +1,32 @@
+--rw-r--r--   0        0        0     1731 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.30/.gitignore
+--rw-r--r--   0        0        0      119 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.30/AUTHORS.md
+--rw-r--r--   0        0        0      268 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.30/CHANGELOG.md
+--rw-r--r--   0        0        0      476 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.30/Dockerfile
+--rw-r--r--   0        0        0    10219 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.30/Jenkinsfile
+--rw-r--r--   0        0        0     1082 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.30/LICENSE
+--rw-r--r--   0        0        0     1595 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.30/README.md
+--rw-r--r--   0        0        0      945 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.30/RELEASE.md
+--rw-r--r--   0        0        0     1559 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.30/bumpversion.py
+--rw-r--r--   0        0        0       62 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.30/docs/.gitignore
+--rw-r--r--   0        0        0      268 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.30/docs/CHANGELOG.md
+--rw-r--r--   0        0        0     1082 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.30/docs/LICENSE
+--rw-r--r--   0        0        0        0 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.30/docs/_static/.gitkeep
+--rw-r--r--   0        0        0        0 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.30/docs/_templates/.gitkeep
+--rw-r--r--   0        0        0     2889 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.30/docs/conf.py
+--rw-r--r--   0        0        0      144 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.30/docs/index.rst
+--rw-r--r--   0        0        0       98 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.30/mypy.ini
+--rw-r--r--   0        0        0     2330 2023-04-07 11:37:02.798033 pyprocessors-afp_sports-0.5.30/pyproject.toml
+--rw-r--r--   0        0        0      841 2023-04-07 12:34:26.870301 pyprocessors-afp_sports-0.5.30/results.xml
+--rw-r--r--   0        0        0   688021 2023-01-20 15:36:37.005212 pyprocessors-afp_sports-0.5.30/src/pyprocessors_afp_sports/IPTC-MediaTopic-NewsCodes.xlsx
+--rw-r--r--   0        0        0       60 2023-04-07 12:39:11.568804 pyprocessors-afp_sports-0.5.30/src/pyprocessors_afp_sports/__init__.py
+--rw-r--r--   0        0        0     5318 2023-04-07 12:27:42.144634 pyprocessors-afp_sports-0.5.30/src/pyprocessors_afp_sports/afp_sports.py
+--rw-r--r--   0        0        0        0 2023-01-20 15:36:37.006212 pyprocessors-afp_sports-0.5.30/tests/__init__.py
+--rw-r--r--   0        0        0    10390 2023-04-07 11:37:02.800033 pyprocessors-afp_sports-0.5.30/tests/data/SHERPA-1777-1.json
+--rw-r--r--   0        0        0     7364 2023-04-07 11:37:02.800033 pyprocessors-afp_sports-0.5.30/tests/data/SHERPA-1777-2.json
+--rw-r--r--   0        0        0     8835 2023-01-20 15:36:37.006212 pyprocessors-afp_sports-0.5.30/tests/data/afp_iptc_sports-document-http%3A%2F%2Fdoc.afp.com%2F9GJ826.json
+--rw-r--r--   0        0        0     1692 2023-01-20 16:06:02.888632 pyprocessors-afp_sports-0.5.30/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20200312%3A6b786eb8-58b1-4ddf-a69f-b20eded1cbda.json
+--rw-r--r--   0        0        0     2820 2023-01-20 15:36:37.006212 pyprocessors-afp_sports-0.5.30/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20210731%3A9cc40460-b457-464a-9081-70e9effb6c5d.json
+--rw-r--r--   0        0        0     2873 2023-01-20 15:36:37.006212 pyprocessors-afp_sports-0.5.30/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20210731%3A9f274403-ed03-4449-9131-fbd246a6b256.json
+--rw-r--r--   0        0        0     1448 2023-01-20 16:06:02.888632 pyprocessors-afp_sports-0.5.30/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20210802%3A8e94a2e1-3661-486c-b97a-e8d874a1c04c.json
+--rw-r--r--   0        0        0    19269 2023-04-07 12:39:08.490723 pyprocessors-afp_sports-0.5.30/tests/data/result_SHERPA-1777.json
+--rw-r--r--   0        0        0     2589 2023-04-07 11:37:02.801033 pyprocessors-afp_sports-0.5.30/tests/test_afp_sports.py
+--rw-r--r--   0        0        0      865 2023-01-20 15:36:37.007212 pyprocessors-afp_sports-0.5.30/tox.ini
+--rw-r--r--   0        0        0     1442 1970-01-01 00:00:00.000000 pyprocessors-afp_sports-0.5.30/setup.py
+--rw-r--r--   0        0        0     3510 1970-01-01 00:00:00.000000 pyprocessors-afp_sports-0.5.30/PKG-INFO
++-rw-r--r--   0        0        0     1731 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.8/.gitignore
++-rw-r--r--   0        0        0      119 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.8/AUTHORS.md
++-rw-r--r--   0        0        0      268 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.8/CHANGELOG.md
++-rw-r--r--   0        0        0      476 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.8/Dockerfile
++-rw-r--r--   0        0        0    10219 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.8/Jenkinsfile
++-rw-r--r--   0        0        0     1082 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.8/LICENSE
++-rw-r--r--   0        0        0     1595 2023-01-20 15:36:37.000212 pyprocessors-afp_sports-0.5.8/README.md
++-rw-r--r--   0        0        0      945 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.8/RELEASE.md
++-rw-r--r--   0        0        0     1559 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.8/bumpversion.py
++-rw-r--r--   0        0        0       62 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.8/docs/.gitignore
++-rw-r--r--   0        0        0      268 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.8/docs/CHANGELOG.md
++-rw-r--r--   0        0        0     1082 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.8/docs/LICENSE
++-rw-r--r--   0        0        0        0 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.8/docs/_static/.gitkeep
++-rw-r--r--   0        0        0        0 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.8/docs/_templates/.gitkeep
++-rw-r--r--   0        0        0     2889 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.8/docs/conf.py
++-rw-r--r--   0        0        0      144 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.8/docs/index.rst
++-rw-r--r--   0        0        0       98 2023-01-20 15:36:37.001212 pyprocessors-afp_sports-0.5.8/mypy.ini
++-rw-r--r--   0        0        0     2310 2023-01-20 15:36:37.002212 pyprocessors-afp_sports-0.5.8/pyproject.toml
++-rw-r--r--   0        0        0     5461 2023-01-20 17:02:00.663931 pyprocessors-afp_sports-0.5.8/results.xml
++-rw-r--r--   0        0        0   688021 2023-01-20 15:36:37.005212 pyprocessors-afp_sports-0.5.8/src/pyprocessors_afp_sports/IPTC-MediaTopic-NewsCodes.xlsx
++-rw-r--r--   0        0        0       59 2023-01-20 17:09:56.847008 pyprocessors-afp_sports-0.5.8/src/pyprocessors_afp_sports/__init__.py
++-rw-r--r--   0        0        0     4136 2023-01-20 16:17:56.638218 pyprocessors-afp_sports-0.5.8/src/pyprocessors_afp_sports/afp_sports.py
++-rw-r--r--   0        0        0        0 2023-01-20 15:36:37.006212 pyprocessors-afp_sports-0.5.8/tests/__init__.py
++-rw-r--r--   0        0        0     8835 2023-01-20 15:36:37.006212 pyprocessors-afp_sports-0.5.8/tests/data/afp_iptc_sports-document-http%3A%2F%2Fdoc.afp.com%2F9GJ826.json
++-rw-r--r--   0        0        0     1692 2023-01-20 16:06:02.888632 pyprocessors-afp_sports-0.5.8/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20200312%3A6b786eb8-58b1-4ddf-a69f-b20eded1cbda.json
++-rw-r--r--   0        0        0     2820 2023-01-20 15:36:37.006212 pyprocessors-afp_sports-0.5.8/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20210731%3A9cc40460-b457-464a-9081-70e9effb6c5d.json
++-rw-r--r--   0        0        0     2873 2023-01-20 15:36:37.006212 pyprocessors-afp_sports-0.5.8/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20210731%3A9f274403-ed03-4449-9131-fbd246a6b256.json
++-rw-r--r--   0        0        0     1448 2023-01-20 16:06:02.888632 pyprocessors-afp_sports-0.5.8/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20210802%3A8e94a2e1-3661-486c-b97a-e8d874a1c04c.json
++-rw-r--r--   0        0        0     1027 2023-01-20 15:50:32.131104 pyprocessors-afp_sports-0.5.8/tests/test_afp_sports.py
++-rw-r--r--   0        0        0      865 2023-01-20 15:36:37.007212 pyprocessors-afp_sports-0.5.8/tox.ini
++-rw-r--r--   0        0        0     1415 1970-01-01 00:00:00.000000 pyprocessors-afp_sports-0.5.8/setup.py
++-rw-r--r--   0        0        0     3463 1970-01-01 00:00:00.000000 pyprocessors-afp_sports-0.5.8/PKG-INFO
+```
+
+### Comparing `pyprocessors-afp_sports-0.5.30/.gitignore` & `pyprocessors-afp_sports-0.5.8/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/Jenkinsfile` & `pyprocessors-afp_sports-0.5.8/Jenkinsfile`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/LICENSE` & `pyprocessors-afp_sports-0.5.8/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/README.md` & `pyprocessors-afp_sports-0.5.8/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/RELEASE.md` & `pyprocessors-afp_sports-0.5.8/RELEASE.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/bumpversion.py` & `pyprocessors-afp_sports-0.5.8/bumpversion.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/docs/LICENSE` & `pyprocessors-afp_sports-0.5.8/docs/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/docs/conf.py` & `pyprocessors-afp_sports-0.5.8/docs/conf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/pyproject.toml` & `pyprocessors-afp_sports-0.5.8/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -39,15 +39,14 @@
+ [tool.flit.metadata.requires-extra]
+ test = [
+     "pytest",
+     "pytest-cov",
+     "pytest-flake8",
+     "pytest-mypy",
+     "pytest-black",
+-    "pytest_check",
+     "flake8==3.9.2",
+     "tox",
+     "dirty-equals"
+ ]
+ docs = [
+     "sphinx",
+     "sphinx-rtd-theme",
+```
+
+### Comparing `pyprocessors-afp_sports-0.5.30/src/pyprocessors_afp_sports/IPTC-MediaTopic-NewsCodes.xlsx` & `pyprocessors-afp_sports-0.5.8/src/pyprocessors_afp_sports/IPTC-MediaTopic-NewsCodes.xlsx`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/src/pyprocessors_afp_sports/afp_sports.py` & `pyprocessors-afp_sports-0.5.8/src/pyprocessors_afp_sports/afp_sports.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -2,128 +2,95 @@
+ from functools import lru_cache
+ from pathlib import Path
+ from typing import Type, cast, List
+ 
+ import pandas as pd
+ from log_with_context import add_logging_context, Logger
+ from pydantic import BaseModel, Field
+-from pymultirole_plugins.util import comma_separated_to_list
+ from pymultirole_plugins.v1.processor import ProcessorParameters, ProcessorBase
+ from pymultirole_plugins.v1.schema import Document, Category
+ 
+ logger = Logger("pymultirole")
+ 
+-DEFAULT_IGNORE_TOPICS = ",".join([
+-    "20001065",  # soccer
+-    "20001085",  # tennis
+-    "20001177",  # Olympic Games
+-    "20001123",  # world games
+-    "20000851",  # basketball
+-    "20000892",  # cycling
+-    '20001065',  # association football
+-    '20000960',  # horse racing
+-    '20000856',  # boxing
+-    '20001036',  # rugby union
+-])
+-
+ 
+ class AFPSportsParameters(ProcessorParameters):
+     as_altText: str = Field(
+         "fingerprint2",
+         description="""Name of the alternative text containing the fingerprint of the input document.""",
+     )
+-    ignore_topics: List[str] = Field(DEFAULT_IGNORE_TOPICS,
+-                                     description="Comma-separated list of mediatopics codes to ignore",
+-                                     extra="advanced",
+-                                     )
+ 
+ 
+ class AFPSportsProcessor(ProcessorBase):
+     """AFPSports processor ."""
+ 
+     def process(
+             self, documents: List[Document], parameters: ProcessorParameters
+     ) -> List[Document]:  # noqa: C901
+         params: AFPSportsParameters = cast(AFPSportsParameters, parameters)
+-        ignore_topics = comma_separated_to_list(params.ignore_topics)
+         topics = get_mediatopics()
+         for document in documents:
+             with add_logging_context(docid=document.identifier):
+                 if document.altTexts:
+                     document.categories = document.categories or []
+                     categories = {c.labelName: c for c in document.categories}
+                     sports = []
+-                    fingers = [
+-                        alt.text
+-                        for alt in document.altTexts
+-                        if alt.name == params.as_altText
+-                    ]
++                    fingers = [alt.text for alt in document.altTexts if alt.name == params.as_altText]
+                     if fingers and len(fingers) > 0:
+                         finger = fingers[0]
+-                        wikidatas = [t for t in finger.split() if t.startswith("Q")]
++                        wikidatas = [t for t in finger.split() if t.startswith('Q')]
+                         for qid in wikidatas:
+                             if qid in topics:
+-                                code = topics[qid].code
+-                                if code not in ignore_topics:
+-                                    sports.append(qid)
++                                sports.append(qid)
+                     if sports:
+                         counter = Counter(sports)
+                         total = sum(counter.values())
+                         for qid, count in counter.most_common():
+                             cname = topics[qid].path
+                             clabel = f"{cname.replace('_', '/')} ({topics[qid].label})"
+                             score = count / total
+-                            if (
+-                                    cname in categories
+-                            ):  # category already set by model, give it an higher score
++                            if cname in categories:  # category already set by model, give it an higher score
+                                 categories[cname].score += score
+                                 categories[cname].properties = categories[cname].properties or {}
+                             else:
+-                                categories[cname] = Category(
+-                                    labelName=cname,
+-                                    label=clabel,
+-                                    score=score,
+-                                    properties={},
+-                                )
++                                categories[cname] = Category(labelName=cname, label=clabel, score=score, properties={})
+                             categories[cname].properties["firedBy"] = qid
+                     document.categories = list(categories.values())
+         return documents
+ 
+     @classmethod
+     def get_model(cls) -> Type[BaseModel]:
+         return AFPSportsParameters
+ 
+ 
+-Mediatopic = namedtuple("Mediatopic", ["label", "code", "path"])
++Mediatopic = namedtuple('Mediatopic', ['label', 'code', 'path'])
+ 
+ 
+ @lru_cache(maxsize=None)
+-def get_mediatopics(roots=["15000000_20000822_", "15000000_20001108_"]):
++def get_mediatopics(roots=['15000000_20000822_', '15000000_20001108_']):
+     wikidata_prefix = "https://www.wikidata.org/entity/"
+     iptc = Path(__file__).parent / "IPTC-MediaTopic-NewsCodes.xlsx"
+     topics = {}
+     iptc_codes = pd.read_excel(iptc, header=1).fillna(value="")
+     levels = [None] * 6
+     wikidata = None
+     for index, row in iptc_codes.iterrows():
+-        topic_url = row["NewsCode-QCode (flat)"]
+-        topic_code = topic_url[len("medtop:"):]
+-        wiki_mapping = row["Wikidata mapping"]
++        topic_url = row['NewsCode-QCode (flat)']
++        topic_code = topic_url[len('medtop:'):]
++        wiki_mapping = row['Wikidata mapping']
+         if wiki_mapping and wiki_mapping.startswith(wikidata_prefix):
+             wikidata = wiki_mapping[len(wikidata_prefix):]
+         for lev in range(0, 6):
+             level = f"Level{lev + 1}/NewsCode"
+             level_url = row[level]
+             if level_url:
+-                level_code = level_url[len("medtop:"):]
++                level_code = level_url[len('medtop:'):]
+                 levels[lev] = level_code
+                 break
+-        path = "_".join(levels[0: lev + 1])
++        path = '_'.join(levels[0:lev + 1])
+         has_root = False
+         for root in roots:
+             if path.startswith(root):
+                 has_root = True
+         if has_root and wikidata:
+-            topics[wikidata] = Mediatopic(
+-                label=row["Name (en-GB)"], code=topic_code, path=path
+-            )
++            topics[wikidata] = Mediatopic(label=row['Name (en-GB)'], code=topic_code,
++                                          path=path)
+     return topics
+```
+
+### Comparing `pyprocessors-afp_sports-0.5.30/tests/data/afp_iptc_sports-document-http%3A%2F%2Fdoc.afp.com%2F9GJ826.json` & `pyprocessors-afp_sports-0.5.8/tests/data/afp_iptc_sports-document-http%3A%2F%2Fdoc.afp.com%2F9GJ826.json`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20200312%3A6b786eb8-58b1-4ddf-a69f-b20eded1cbda.json` & `pyprocessors-afp_sports-0.5.8/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20200312%3A6b786eb8-58b1-4ddf-a69f-b20eded1cbda.json`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20210731%3A9cc40460-b457-464a-9081-70e9effb6c5d.json` & `pyprocessors-afp_sports-0.5.8/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20210731%3A9cc40460-b457-464a-9081-70e9effb6c5d.json`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20210731%3A9f274403-ed03-4449-9131-fbd246a6b256.json` & `pyprocessors-afp_sports-0.5.8/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20210731%3A9f274403-ed03-4449-9131-fbd246a6b256.json`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20210802%3A8e94a2e1-3661-486c-b97a-e8d874a1c04c.json` & `pyprocessors-afp_sports-0.5.8/tests/data/afp_iptc_sports-document-urn%3Anewsml%3Aafp.com%3A20210802%3A8e94a2e1-3661-486c-b97a-e8d874a1c04c.json`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/tox.ini` & `pyprocessors-afp_sports-0.5.8/tox.ini`
+
+ * *Files identical despite different names*
+
+### Comparing `pyprocessors-afp_sports-0.5.30/setup.py` & `pyprocessors-afp_sports-0.5.8/setup.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -27,25 +27,24 @@
+           'sphinxcontrib.apidoc',
+           'jupyter_sphinx'],
+  'test': ['pytest',
+           'pytest-cov',
+           'pytest-flake8',
+           'pytest-mypy',
+           'pytest-black',
+-          'pytest_check',
+           'flake8==3.9.2',
+           'tox',
+           'dirty-equals']}
+ 
+ entry_points = \
+ {'pyprocessors.plugins': ['afp_sports = '
+                           'pyprocessors_afp_sports.afp_sports:AFPSportsProcessor']}
+ 
+ setup(name='pyprocessors-afp_sports',
+-      version='0.5.30',
++      version='0.5.8',
+       description='Sherpa Consolidation processor',
+       author='Olivier Terrier',
+       author_email='olivier.terrier@kairntech.com',
+       url='https://github.com/oterrier/pyprocessors_afp_sports/',
+       packages=packages,
+       package_data=package_data,
+       package_dir=package_dir,
+```
+
+### Comparing `pyprocessors-afp_sports-0.5.30/PKG-INFO` & `pyprocessors-afp_sports-0.5.8/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pyprocessors-afp_sports
+-Version: 0.5.30
++Version: 0.5.8
+ Summary: Sherpa Consolidation processor
+ Home-page: https://github.com/oterrier/pyprocessors_afp_sports/
+ Keywords: 
+ Author: Olivier Terrier
+ Author-email: olivier.terrier@kairntech.com
+ Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+@@ -33,15 +33,14 @@
+ Requires-Dist: sphinxcontrib.apidoc ; extra == "docs"
+ Requires-Dist: jupyter_sphinx ; extra == "docs"
+ Requires-Dist: pytest ; extra == "test"
+ Requires-Dist: pytest-cov ; extra == "test"
+ Requires-Dist: pytest-flake8 ; extra == "test"
+ Requires-Dist: pytest-mypy ; extra == "test"
+ Requires-Dist: pytest-black ; extra == "test"
+-Requires-Dist: pytest_check ; extra == "test"
+ Requires-Dist: flake8==3.9.2 ; extra == "test"
+ Requires-Dist: tox ; extra == "test"
+ Requires-Dist: dirty-equals ; extra == "test"
+ Provides-Extra: dev
+ Provides-Extra: docs
+ Provides-Extra: test
+```
+

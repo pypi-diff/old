@@ -1,0 +1,259 @@
+--- tmp/odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1-py3-none-any.whl.zip
++++ tmp/odoo14_addon_l10n_it_intrastat-14.0.1.3.0-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,38 +1,38 @@
+│ -Zip file size: 1909007 bytes, number of entries: 36
+│ --rw-r--r--  2.0 unx    11578 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/README.rst
+│ --rw-r--r--  2.0 unx       87 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/__init__.py
+│ --rw-r--r--  2.0 unx     1153 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/__manifest__.py
+│ --rw-r--r--  2.0 unx    15973 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/data/account.intrastat.custom.csv
+│ --rw-r--r--  2.0 unx     1560 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/data/account.intrastat.transaction.nature.b.csv
+│ --rw-r--r--  2.0 unx     1442 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/data/account.intrastat.transaction.nature.csv
+│ --rw-r--r--  2.0 unx      228 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/data/account.intrastat.transport.csv
+│ --rw-r--r--  2.0 unx  1912413 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/data/report.intrastat.code.csv
+│ --rw-r--r--  2.0 unx      926 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/demo/product_demo.xml
+│ --rw-r--r--  2.0 unx  3023708 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/i18n/es.po
+│ --rw-r--r--  2.0 unx  4524933 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/i18n/it.po
+│ --rw-r--r--  2.0 unx  3023008 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/i18n/l10n_it_intrastat.pot
+│ --rw-r--r--  2.0 unx     2776 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/migrations/12.0.1.0.0/pre-migrate.py
+│ --rw-r--r--  2.0 unx      626 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/migrations/13.0.1.0.0/post-migrate.py
+│ --rw-r--r--  2.0 unx      155 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/models/__init__.py
+│ --rw-r--r--  2.0 unx    26370 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/models/account.py
+│ --rw-r--r--  2.0 unx     3066 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/models/config.py
+│ --rw-r--r--  2.0 unx     3368 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/models/intrastat.py
+│ --rw-r--r--  2.0 unx     1692 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/models/product.py
+│ --rw-r--r--  2.0 unx     4922 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/readme/CONFIGURE.rst
+│ --rw-r--r--  2.0 unx      398 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/readme/CONTRIBUTORS.rst
+│ --rw-r--r--  2.0 unx      501 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/readme/DESCRIPTION.rst
+│ --rw-r--r--  2.0 unx     3144 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/readme/USAGE.rst
+│ --rw-r--r--  2.0 unx      848 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/security/ir.model.access.csv
+│ --rw-r--r--  2.0 unx     6821 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/static/description/icon.png
+│ --rw-r--r--  2.0 unx    22932 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/static/description/index.html
+│ --rw-r--r--  2.0 unx       95 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/tests/__init__.py
+│ --rw-r--r--  2.0 unx     3050 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/tests/test_intrastat.py
+│ --rw-r--r--  2.0 unx    12062 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/views/account.xml
+│ --rw-r--r--  2.0 unx     4327 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/views/config.xml
+│ --rw-r--r--  2.0 unx    10089 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/views/intrastat.xml
+│ --rw-r--r--  2.0 unx     2213 b- defN 22-Nov-08 04:26 odoo/addons/l10n_it_intrastat/views/product.xml
+│ --rw-r--r--  2.0 unx    12257 b- defN 22-Nov-08 04:27 odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 22-Nov-08 04:27 odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx        5 b- defN 22-Nov-08 04:27 odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx     3949 b- defN 22-Nov-08 04:27 odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/RECORD
+│ -36 files, 12642767 bytes uncompressed, 1902353 bytes compressed:  85.0%
+│ +Zip file size: 1909019 bytes, number of entries: 36
+│ +-rw-r--r--  2.0 unx    11578 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/README.rst
+│ +-rw-r--r--  2.0 unx       87 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/__init__.py
+│ +-rw-r--r--  2.0 unx     1153 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/__manifest__.py
+│ +-rw-r--r--  2.0 unx    15973 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/data/account.intrastat.custom.csv
+│ +-rw-r--r--  2.0 unx     1560 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/data/account.intrastat.transaction.nature.b.csv
+│ +-rw-r--r--  2.0 unx     1442 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/data/account.intrastat.transaction.nature.csv
+│ +-rw-r--r--  2.0 unx      228 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/data/account.intrastat.transport.csv
+│ +-rw-r--r--  2.0 unx  1912413 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/data/report.intrastat.code.csv
+│ +-rw-r--r--  2.0 unx      926 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/demo/product_demo.xml
+│ +-rw-r--r--  2.0 unx  3023708 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/i18n/es.po
+│ +-rw-r--r--  2.0 unx  4524933 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/i18n/it.po
+│ +-rw-r--r--  2.0 unx  3023192 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/i18n/l10n_it_intrastat.pot
+│ +-rw-r--r--  2.0 unx     2776 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/migrations/12.0.1.0.0/pre-migrate.py
+│ +-rw-r--r--  2.0 unx      626 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/migrations/13.0.1.0.0/post-migrate.py
+│ +-rw-r--r--  2.0 unx      155 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/models/__init__.py
+│ +-rw-r--r--  2.0 unx    26465 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/models/account.py
+│ +-rw-r--r--  2.0 unx     3066 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/models/config.py
+│ +-rw-r--r--  2.0 unx     3368 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/models/intrastat.py
+│ +-rw-r--r--  2.0 unx     1692 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/models/product.py
+│ +-rw-r--r--  2.0 unx     4922 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/readme/CONFIGURE.rst
+│ +-rw-r--r--  2.0 unx      398 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/readme/CONTRIBUTORS.rst
+│ +-rw-r--r--  2.0 unx      501 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/readme/DESCRIPTION.rst
+│ +-rw-r--r--  2.0 unx     3144 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/readme/USAGE.rst
+│ +-rw-r--r--  2.0 unx      848 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/security/ir.model.access.csv
+│ +-rw-r--r--  2.0 unx     6821 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/static/description/icon.png
+│ +-rw-r--r--  2.0 unx    22932 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/static/description/index.html
+│ +-rw-r--r--  2.0 unx       95 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/tests/__init__.py
+│ +-rw-r--r--  2.0 unx     3050 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/tests/test_intrastat.py
+│ +-rw-r--r--  2.0 unx    12122 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/views/account.xml
+│ +-rw-r--r--  2.0 unx     4327 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/views/config.xml
+│ +-rw-r--r--  2.0 unx    10089 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/views/intrastat.xml
+│ +-rw-r--r--  2.0 unx     2213 b- defN 23-Apr-07 12:46 odoo/addons/l10n_it_intrastat/views/product.xml
+│ +-rw-r--r--  2.0 unx    12252 b- defN 23-Apr-07 12:46 odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 12:46 odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 12:46 odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 unx     3929 b- defN 23-Apr-07 12:46 odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/RECORD
+│ +36 files, 12643081 bytes uncompressed, 1902405 bytes compressed:  85.0%
+├── zipnote {}
+│ @@ -90,20 +90,20 @@
+│  
+│  Filename: odoo/addons/l10n_it_intrastat/views/intrastat.xml
+│  Comment: 
+│  
+│  Filename: odoo/addons/l10n_it_intrastat/views/product.xml
+│  Comment: 
+│  
+│ -Filename: odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/METADATA
+│ +Filename: odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/WHEEL
+│ +Filename: odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/top_level.txt
+│ +Filename: odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/RECORD
+│ +Filename: odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── odoo/addons/l10n_it_intrastat/__manifest__.py
+│ @@ -1,14 +1,14 @@
+│  # Copyright 2019 Simone Rubino - Agile Business Group
+│  # Copyright 2015 Camilli Alessandro - www.openforce.it
+│  # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+│  
+│  {
+│      "name": "ITA - Intrastat",
+│ -    "version": "14.0.1.2.0",
+│ +    "version": "14.0.1.3.0",
+│      "category": "Account",
+│      "summary": "Riclassificazione merci e servizi per dichiarazioni Intrastat",
+│      "author": "Openforce, Link IT srl, Agile Business Group, "
+│      "Powerp network, "
+│      "Odoo Community Association (OCA)",
+│      "website": "https://github.com/OCA/l10n-italy",
+│      "license": "AGPL-3",
+├── odoo/addons/l10n_it_intrastat/i18n/l10n_it_intrastat.pot
+│ @@ -13678,14 +13678,19 @@
+│  #: model:ir.model.fields,field_description:l10n_it_intrastat.field_report_intrastat_code__display_name
+│  #: model:ir.model.fields,field_description:l10n_it_intrastat.field_res_company__display_name
+│  #: model:ir.model.fields,field_description:l10n_it_intrastat.field_res_country__display_name
+│  msgid "Display Name"
+│  msgstr ""
+│  
+│  #. module: l10n_it_intrastat
+│ +#: model:ir.model.fields,field_description:l10n_it_intrastat.field_account_invoice_intrastat__show_weight
+│ +msgid "Display weight in declaration"
+│ +msgstr ""
+│ +
+│ +#. module: l10n_it_intrastat
+│  #: model:report.intrastat.code,description:l10n_it_intrastat.intrastat_category_2014_90065310
+│  msgid "Disposable cameras for roll film of a width of 35 mm"
+│  msgstr ""
+│  
+│  #. module: l10n_it_intrastat
+│  #: model:report.intrastat.code,description:l10n_it_intrastat.intrastat_category_2014_28530010
+│  msgid "Distilled and conductivity water and water of similar purity"
+├── odoo/addons/l10n_it_intrastat/models/account.py
+│ @@ -96,15 +96,15 @@
+│      def _prepare_intrastat_line_payment(self, res):
+│          self.ensure_one()
+│          payment_method = False
+│          if (
+│              self.move_id.invoice_payment_term_id
+│              and self.move_id.invoice_payment_term_id.intrastat_code
+│          ):
+│ -            payment_method = self.move_id.payment_term_id.intrastat_code
+│ +            payment_method = self.move_id.invoice_payment_term_id.intrastat_code
+│          res.update({"payment_method": payment_method})
+│  
+│      def _prepare_intrastat_line_province_dest(self, company_id, res):
+│          self.ensure_one()
+│          province_destination_id = self.env["res.country.state"].browse()
+│          if self.move_id.is_sale_document():
+│              province_destination_id = self.move_id.partner_id.state_id
+│ @@ -579,14 +579,15 @@
+│          comodel_name="account.intrastat.transaction.nature", string="Transaction Nature"
+│      )
+│      transaction_nature_b_id = fields.Many2one(
+│          comodel_name="account.intrastat.transaction.nature.b",
+│          string="Transaction Nature B",
+│      )
+│      weight_kg = fields.Float(string="Net Mass (kg)")
+│ +    show_weight = fields.Boolean(string="Display weight in declaration", default=True)
+│      additional_units = fields.Float(string="Additional Units")
+│      additional_units_uom = fields.Char(
+│          string="Additional Unit of Measure",
+│          readonly=True,
+│          related="intrastat_code_id.additional_unit_uom_id.name",
+│      )
+│      statistic_amount_euro = fields.Float(
+├── odoo/addons/l10n_it_intrastat/views/account.xml
+│ ├── odoo/addons/l10n_it_intrastat/views/account.xml
+│ │ @@ -76,14 +76,15 @@
+│ │            </group>
+│ │            <group>
+│ │              <field name="invoice_type" invisible="1"/>
+│ │              <field name="transaction_nature_id"/>
+│ │              <field name="transaction_nature_b_id"/>
+│ │              <field name="triangulation" attrs="{'invisible': [('invoice_type', 'in', ['in_invoice', 'in_refund'])]}"/>
+│ │              <field name="weight_kg"/>
+│ │ +            <field name="show_weight"/>
+│ │              <field name="additional_units"/>
+│ │              <field name="additional_units_uom"/>
+│ │            </group>
+│ │            <newline/>
+│ │            <group name="intrastat_partner">
+│ │              <field name="country_partner_id"/>
+│ │            </group>
+│   --- odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/METADATA
+├── +++ odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/METADATA
+│┄ Files 0% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: odoo14-addon-l10n-it-intrastat
+│ -Version: 14.0.1.2.1.dev1
+│ +Version: 14.0.1.3.0
+│  Summary: Riclassificazione merci e servizi per dichiarazioni Intrastat
+│  Home-page: https://github.com/OCA/l10n-italy
+│  Author: Openforce, Link IT srl, Agile Business Group, Powerp network, Odoo Community Association (OCA)
+│  Author-email: support@odoo-community.org
+│  License: AGPL-3
+│  Platform: UNKNOWN
+│  Classifier: Programming Language :: Python
+│   --- odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/RECORD
+├── +++ odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/RECORD
+│┄ Files 11% similar despite different names
+│ @@ -1,36 +1,36 @@
+│  odoo/addons/l10n_it_intrastat/README.rst,sha256=GoaYX7bLkVDYKcjXqe0DFVNtcty2tbdaw3JR0_Mi3sg,11578
+│  odoo/addons/l10n_it_intrastat/__init__.py,sha256=eShEGRadAlxopoLqIQ4-N42FM7MWPSuBe0h_l1cXTPM,87
+│ -odoo/addons/l10n_it_intrastat/__manifest__.py,sha256=OYqv_Rg2z1vUwMmAElgPU7wY9gKCBXr50JzMhmO93S4,1153
+│ +odoo/addons/l10n_it_intrastat/__manifest__.py,sha256=0_B_IsBWzNlVPHte4uy7pKngp7wQadGJqfusFMGwpZg,1153
+│  odoo/addons/l10n_it_intrastat/data/account.intrastat.custom.csv,sha256=OXmiF7d8CtlXR-HF5rdgZWSLYFAKzuLKJFewFIDRXHw,15973
+│  odoo/addons/l10n_it_intrastat/data/account.intrastat.transaction.nature.b.csv,sha256=bmk4QytwETLIMeXGfydwa_SmnpisuMSgzh5p0nV-wIU,1560
+│  odoo/addons/l10n_it_intrastat/data/account.intrastat.transaction.nature.csv,sha256=QrEZW9y9RU5PAqmhtDBEfAZeHDueHyL38fGfruajfBI,1442
+│  odoo/addons/l10n_it_intrastat/data/account.intrastat.transport.csv,sha256=WxyLBbwS-neKje56FIvP_Ookj319o_kcmlSLSfnuCIY,228
+│  odoo/addons/l10n_it_intrastat/data/report.intrastat.code.csv,sha256=rtmnSIW--8l0NFvdhoDAJhntw0vTPiUkgMllXX4kiAQ,1912413
+│  odoo/addons/l10n_it_intrastat/demo/product_demo.xml,sha256=OpBFc4cSJJPpWf3-5xuK2SEimKeY4llN9sbUmBjyL-M,926
+│  odoo/addons/l10n_it_intrastat/i18n/es.po,sha256=RWMZj0nQQqSxwQXXUxEtGYUhlWGfHdWpiDSnSq-JBc4,3023708
+│  odoo/addons/l10n_it_intrastat/i18n/it.po,sha256=zMHKeQpGaAC4x4xefbjFvVZIN2z3T1P1V5kuov4m_CU,4524933
+│ -odoo/addons/l10n_it_intrastat/i18n/l10n_it_intrastat.pot,sha256=APKiTfkeJfKRUrqppCBlvTIIJJnWrLY3YYuF5YH9e64,3023008
+│ +odoo/addons/l10n_it_intrastat/i18n/l10n_it_intrastat.pot,sha256=qua0GnG-p9iLlM785S6Hd_DkU9au4Ho3dy5KFUSkijE,3023192
+│  odoo/addons/l10n_it_intrastat/migrations/12.0.1.0.0/pre-migrate.py,sha256=ZxeU6uF6cVCxUoJplV1gSMTOOcd5Ilpoazti0ZffL4w,2776
+│  odoo/addons/l10n_it_intrastat/migrations/13.0.1.0.0/post-migrate.py,sha256=Q7LmgLJNlYvzbfH18cUm2q-PYm0z2FQmQkLjTcx5hak,626
+│  odoo/addons/l10n_it_intrastat/models/__init__.py,sha256=cC96AbJ_i9Q4SAvDoK-33tQSWKyIhd6d8I038ADoaNo,155
+│ -odoo/addons/l10n_it_intrastat/models/account.py,sha256=ibN8FGpW9Q11ovvUSswX0kHLF3u5E59QIU9ANfqOQCQ,26370
+│ +odoo/addons/l10n_it_intrastat/models/account.py,sha256=JL7H5-IxRJD8la_i5EYkW7OrVBBqNAZPQl7xIEVGEqI,26465
+│  odoo/addons/l10n_it_intrastat/models/config.py,sha256=InNdyUI6_L0BGkMS6MLFB214xSZkrZNgdmyGDoDLn5Q,3066
+│  odoo/addons/l10n_it_intrastat/models/intrastat.py,sha256=4upvvyFX4SzLFVyezWtWTP3wKRdU2QYWErw8cBYVeao,3368
+│  odoo/addons/l10n_it_intrastat/models/product.py,sha256=Govyd1tKvkMgnDaEkjejUMRDJzI39juCJGVr8XgPcaI,1692
+│  odoo/addons/l10n_it_intrastat/readme/CONFIGURE.rst,sha256=Pm1nK2d0CEgdjHQ1gf16XXqjGn4tzKv53187kQdkGvM,4922
+│  odoo/addons/l10n_it_intrastat/readme/CONTRIBUTORS.rst,sha256=WlmythJhAO0sGaz8ijmEIy3p03N2NfqiQGHH9YztVu0,398
+│  odoo/addons/l10n_it_intrastat/readme/DESCRIPTION.rst,sha256=-NcFQyVkvXBGX6KamPaLl5gBlqOScaJqxE5eIe8g9yE,501
+│  odoo/addons/l10n_it_intrastat/readme/USAGE.rst,sha256=yOPvnl0iLdoDO-CinxDRPKP5_SW5mQpfJPr-AbrDskc,3144
+│  odoo/addons/l10n_it_intrastat/security/ir.model.access.csv,sha256=j7mfyQFE-gL8sGJ-0GDwqARJ7JHE-3IWby5xSJzbNi4,848
+│  odoo/addons/l10n_it_intrastat/static/description/icon.png,sha256=uU_Hteg0mzLtkUXZ5b5vO6k11RU4A9dd0rIhTlNOsmc,6821
+│  odoo/addons/l10n_it_intrastat/static/description/index.html,sha256=JWtCFH7aKWZe0-p070d1y2lqV3vpCB2qaoJ_IukMMsg,22932
+│  odoo/addons/l10n_it_intrastat/tests/__init__.py,sha256=Xtio8gnmjKdX_L23O1pBFKKmci5UX_N1o-__L9tV4Wo,95
+│  odoo/addons/l10n_it_intrastat/tests/test_intrastat.py,sha256=4ArdGtS3Wuw3qvqz4iu8HCIHpQs4o3FhK36Y95ZacPM,3050
+│ -odoo/addons/l10n_it_intrastat/views/account.xml,sha256=UDnw-LKR6gyG1bsMtK63EA5WwlNGktX6lHNSopzs_ms,12062
+│ +odoo/addons/l10n_it_intrastat/views/account.xml,sha256=nFwmnegOWEywVi_bbS5PGyaZwmB1vT1xKHHFmU1-zWc,12122
+│  odoo/addons/l10n_it_intrastat/views/config.xml,sha256=RJNJeQQlbkRLbWuNgGHEEGMT3USQ1DEFp7CC8yUm8iA,4327
+│  odoo/addons/l10n_it_intrastat/views/intrastat.xml,sha256=ovLLIisOYUeuS3VSU5ICvmB_7pshQZYn6o2MSNrQ8Ug,10089
+│  odoo/addons/l10n_it_intrastat/views/product.xml,sha256=J9iE4AxH-xdiom0gBYqo_3rCMQW7i_AMbXwcRQwYNrI,2213
+│ -odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/METADATA,sha256=5kVL6RL2UjjT5-9cjlq1kZEnsJZrRNXr_e1B4Li8Z8M,12257
+│ -odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+│ -odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+│ -odoo14_addon_l10n_it_intrastat-14.0.1.2.1.dev1.dist-info/RECORD,,
+│ +odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/METADATA,sha256=RbMmGElOgYf-0mtNfagq1f7ZV1zFN1S2bKV29VbSCG8,12252
+│ +odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+│ +odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+│ +odoo14_addon_l10n_it_intrastat-14.0.1.3.0.dist-info/RECORD,,

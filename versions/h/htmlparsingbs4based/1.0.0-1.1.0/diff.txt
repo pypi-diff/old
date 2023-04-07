@@ -1,0 +1,458 @@
+--- tmp/htmlparsingbs4based-1.0.0.tar.gz
++++ tmp/htmlparsingbs4based-1.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "htmlparsingbs4based-1.0.0.tar", last modified: Fri Apr  7 09:29:17 2023, max compression
+│ +gzip compressed data, was "htmlparsingbs4based-1.1.0.tar", last modified: Fri Apr  7 12:36:05 2023, max compression
+│   --- htmlparsingbs4based-1.0.0.tar
+├── +++ htmlparsingbs4based-1.1.0.tar
+│ ├── file list
+│ │ @@ -1,62 +1,62 @@
+│ │ -drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 09:29:17.818593 htmlparsingbs4based-1.0.0/
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1253 2023-04-07 09:29:17.818593 htmlparsingbs4based-1.0.0/PKG-INFO
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      857 2023-04-07 09:19:47.000000 htmlparsingbs4based-1.0.0/README.md
+│ │ -drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 09:29:17.810593 htmlparsingbs4based-1.0.0/htmlparsingbs4based/
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-03 15:22:50.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/__init__.py
+│ │ -drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 09:29:17.810593 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-03 15:23:03.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/__init__.py
+│ │ -drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 09:29:17.814593 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)    38536 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/__init__.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)       33 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/__main__.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     9592 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/cli.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     4026 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/config.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     4000 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/config_bp.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      441 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/elements.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)       74 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/typing.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     8319 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/utils.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)    10443 2023-04-06 07:51:01.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html_.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)    31861 2023-04-07 08:44:54.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html_parser_custombs4_script.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)    35132 2023-04-07 09:02:50.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html_parsing_custombs4.py
+│ │ -drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 09:29:17.814593 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     4360 2023-04-03 20:32:51.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/__init__.py
+│ │ -drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 09:29:17.814593 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     2283 2023-04-03 20:34:03.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/__init__.py
+│ │ -drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 09:29:17.814593 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     2003 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/__init__.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3970 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/html.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      986 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/surface.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1641 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/xml.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3654 2023-04-03 20:34:13.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/parser.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3769 2023-04-03 20:33:39.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/css_profiles.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)    13666 2023-04-03 20:35:03.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/html_engine.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1486 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/html_properties.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      281 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/metadata.py
+│ │ -drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 09:29:17.814593 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      280 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/__init__.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     2420 2023-04-03 20:34:28.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/attribute.py
+│ │ -drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 09:29:17.814593 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     6409 2023-04-03 20:35:21.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/__init__.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3029 2023-04-03 20:35:50.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/block.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3272 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/prefix.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3201 2023-04-03 20:33:21.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/config.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     4854 2023-04-03 20:34:43.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/css.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     6049 2023-04-03 20:33:53.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/html_element.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)    10122 2023-04-03 20:36:04.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/table.py
+│ │ -drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 09:29:17.818593 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/service/
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)       35 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/service/__init__.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1462 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/service/web.py
+│ │ -drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 09:29:17.818593 htmlparsingbs4based-1.0.0/htmlparsingbs4based/utils/
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-03 15:23:07.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/utils/__init__.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1715 2023-04-03 19:42:38.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/utils/elastic.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1290 2023-04-03 18:06:11.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/utils/helpers.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3103 2023-03-22 15:52:03.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based/utils/visualization.py
+│ │ -drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 09:29:17.810593 htmlparsingbs4based-1.0.0/htmlparsingbs4based.egg-info/
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1253 2023-04-07 09:29:17.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     2611 2023-04-07 09:29:17.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)        1 2023-04-07 09:29:17.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      100 2023-04-07 09:29:17.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      276 2023-04-07 09:29:17.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based.egg-info/requires.txt
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)       29 2023-04-07 09:29:17.000000 htmlparsingbs4based-1.0.0/htmlparsingbs4based.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      335 2023-04-03 19:46:02.000000 htmlparsingbs4based-1.0.0/settings.py
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)       38 2023-04-07 09:29:17.818593 htmlparsingbs4based-1.0.0/setup.cfg
+│ │ --rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      884 2023-04-07 09:04:37.000000 htmlparsingbs4based-1.0.0/setup.py
+│ │ +drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 12:36:05.237475 htmlparsingbs4based-1.1.0/
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1751 2023-04-07 12:36:05.237475 htmlparsingbs4based-1.1.0/PKG-INFO
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1355 2023-04-07 12:29:53.000000 htmlparsingbs4based-1.1.0/README.md
+│ │ +drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 12:36:05.233475 htmlparsingbs4based-1.1.0/htmlparsingbs4based/
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-03 15:22:50.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/__init__.py
+│ │ +drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 12:36:05.233475 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-03 15:23:03.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/__init__.py
+│ │ +drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 12:36:05.237475 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)    38536 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/__init__.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)       33 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/__main__.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     9592 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/cli.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     4026 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/config.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     4000 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/config_bp.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      441 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/elements.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)       74 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/typing.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     8319 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/utils.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)    10443 2023-04-06 07:51:01.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html_.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)    31861 2023-04-07 08:44:54.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html_parser_custombs4_script.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)    36041 2023-04-07 12:35:55.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html_parsing_custombs4.py
+│ │ +drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 12:36:05.237475 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     4360 2023-04-03 20:32:51.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/__init__.py
+│ │ +drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 12:36:05.237475 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     2283 2023-04-03 20:34:03.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/__init__.py
+│ │ +drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 12:36:05.237475 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     2003 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/__init__.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3970 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/html.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      986 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/surface.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1641 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/xml.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3654 2023-04-03 20:34:13.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/parser.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3769 2023-04-03 20:33:39.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/css_profiles.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)    13666 2023-04-03 20:35:03.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/html_engine.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1486 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/html_properties.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      281 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/metadata.py
+│ │ +drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 12:36:05.237475 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      280 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/__init__.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     2420 2023-04-03 20:34:28.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/attribute.py
+│ │ +drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 12:36:05.237475 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     6409 2023-04-03 20:35:21.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/__init__.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3029 2023-04-03 20:35:50.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/block.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3272 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/prefix.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3201 2023-04-03 20:33:21.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/config.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     4854 2023-04-03 20:34:43.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/css.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     6049 2023-04-03 20:33:53.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/html_element.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)    10122 2023-04-03 20:36:04.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/table.py
+│ │ +drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 12:36:05.237475 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/service/
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)       35 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/service/__init__.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1462 2023-02-11 21:06:06.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/service/web.py
+│ │ +drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 12:36:05.237475 htmlparsingbs4based-1.1.0/htmlparsingbs4based/utils/
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-03 15:23:07.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/utils/__init__.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1715 2023-04-03 19:42:38.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/utils/elastic.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1290 2023-04-03 18:06:11.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/utils/helpers.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     3103 2023-03-22 15:52:03.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based/utils/visualization.py
+│ │ +drwxrwxr-x   0 yaxiong   (1006) yaxiong   (1006)        0 2023-04-07 12:36:05.233475 htmlparsingbs4based-1.1.0/htmlparsingbs4based.egg-info/
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     1751 2023-04-07 12:36:05.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)     2611 2023-04-07 12:36:05.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)        1 2023-04-07 12:36:05.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)       93 2023-04-07 12:36:05.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based.egg-info/entry_points.txt
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      276 2023-04-07 12:36:05.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)       29 2023-04-07 12:36:05.000000 htmlparsingbs4based-1.1.0/htmlparsingbs4based.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      335 2023-04-03 19:46:02.000000 htmlparsingbs4based-1.1.0/settings.py
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)       38 2023-04-07 12:36:05.237475 htmlparsingbs4based-1.1.0/setup.cfg
+│ │ +-rw-rw-r--   0 yaxiong   (1006) yaxiong   (1006)      877 2023-04-07 12:27:02.000000 htmlparsingbs4based-1.1.0/setup.py
+│ │   --- htmlparsingbs4based-1.0.0/README.md
+│ ├── +++ htmlparsingbs4based-1.1.0/README.md
+│ │┄ Files 25% similar despite different names
+│ │ @@ -3,24 +3,33 @@
+│ │  extracts/parses information from source HTML.
+│ │  
+│ │  # construct a Pypi package
+│ │  
+│ │  * python3 setup.py sdist bdist_wheel
+│ │  * twine upload dist/*
+│ │  
+│ │ -# install package
+│ │ +# create CLI from dist (if you has .dist file)
+│ │  
+│ │ -* python3 -m pip install htmlparsingbs4based
+│ │ +* python3 -m pip install /home/yaxiong/html_parsing/dist/htmlparsingbs4based-1.1.0.tar.gz
+│ │  
+│ │ -# create CLI from dist
+│ │ +# install package and CLI
+│ │  
+│ │ -* python3 -m pip install /home/yaxiong/html_parsing/dist/htmlparsingbs4based-0.1.0.tar.gz
+│ │ +* pip install htmlparsingbs4based
+│ │ +* OR python3 -m pip install htmlparsingbs4based
+│ │ +
+│ │ +# run from script
+│ │ +
+│ │ +* from htmlparsingbs4based.html_parsing.html_parser_custombs4_script import parse_single_page
+│ │ +* parse_single_page(input_url='https://bryansfuel.on.ca/about/',  path_to_crawled_files='/home/yaxiong/data_crawled_websites/crawled_websites_first_batch', min_length=1,  prefix="")
+│ │  
+│ │  # run CLI (examples)
+│ │  
+│ │ -* mode1: eleasticsearch
+│ │ -* PARSE -i 'http://www.mineracamargo.com/MCA_Investors.html' -gpf elasticsearch -esusr readwrite -espw ''
+│ │ +* mode_1: eleasticsearch
+│ │ +* PARSE -gpf elasticsearch -i 'http://www.mineracamargo.com/MCA_Investors.html' -esusr readwrite -espw ''
+│ │ +
+│ │ +* mode_2: local
+│ │ +* PARSE -gpf local -i 'https://bryansfuel.on.ca/about/' -fo /home/yaxiong/data_crawled_websites/crawled_websites_first_batch
+│ │ +* PARSE -gpf local -i 'http://www.mineracamargo.com/MCA_Investors.html' -fo /home/yaxiong/data_crawled_websites/crawled_websites_first_batch
+│ │ +* PARSE -gpf local -i 'https://www.conpak.com/About-Conpak/' -fo /home/yaxiong/data_crawled_websites/crawled_websites_first_batch
+│ │  
+│ │ -* mode2: local
+│ │ -* PARSE -i 'https://bryansfuel.on.ca/about/' -f /home/yaxiong/data_crawled_websites/crawled_websites_first_batch
+│ │ -* PARSE -i 'http://www.mineracamargo.com/MCA_Investors.html' -f /home/yaxiong/data_crawled_websites/crawled_websites_first_batch
+│ │ -* PARSE -i 'https://www.conpak.com/About-Conpak/' -f /home/yaxiong/data_crawled_websites/crawled_websites_first_batch
+│ │ +* mode_3: html
+│ │ +* PARSE -gpf html -fi /home/yaxiong/html_parsing/html_example/parsed_html.json
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/__init__.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/cli.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/cli.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/config.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/config.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/config_bp.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/config_bp.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html2text_cp/utils.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html2text_cp/utils.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html_.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html_.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html_parser_custombs4_script.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html_parser_custombs4_script.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/html_parsing_custombs4.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/html_parsing_custombs4.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -8,28 +8,32 @@
+│ │  from tqdm import tqdm
+│ │  from urllib.parse import unquote
+│ │  from settings import ELASTIC_PRODUCT_INDEX
+│ │  import argparse
+│ │  
+│ │  parser = argparse.ArgumentParser(description='Arguments for HTML parser')
+│ │  parser.add_argument("-i", "--input_url", help="Input an url you want to parse", default="")
+│ │ -parser.add_argument("-gpf", "--get_pages_from", help="Option: 'local' or 'elasticsearch'", default="local")
+│ │ -parser.add_argument("-f", "--file_path", help="File path to the crawled html", default="")
+│ │ +parser.add_argument("-gpf", "--get_pages_from", help="Option: 'local' or 'elasticsearch' or 'html'", default="local")
+│ │ +parser.add_argument("-fi", "--file_path", help="File path to the crawled html (if -gpf is html)", default="")
+│ │ +parser.add_argument("-fo", "--folder_path", help="Folder path to the crawled html (if -gpf is local)", default="")
+│ │ +parser.add_argument("-dst", "--destination_path", help="File path for saving parsed docs", default=".")
+│ │  parser.add_argument("-esusr", "--elastic_user", help="User of elasticsearch", default="")
+│ │  parser.add_argument("-espw", "--elastic_password", help="Password of elasticsearch", default="")
+│ │  parser.add_argument("-v", "--visualization", help="Generate visulized labels file", default=False)
+│ │  parser.add_argument("-p", "--prefix", help="Define the prefix to the labels", default="")
+│ │  parser.add_argument("-m", "--min_length", help="Define the min number of words for each line", default=1, type=int)
+│ │  args = parser.parse_args()
+│ │  input_url = args.input_url
+│ │  get_pages_from = args.get_pages_from
+│ │  file_path = args.file_path
+│ │ +folder_path = args.folder_path
+│ │  elastic_user = args.elastic_user
+│ │  elastic_password = args.elastic_password
+│ │  visualization = args.visualization
+│ │ +dst_path = args.destination_path
+│ │  prefix = args.prefix
+│ │  min_length = args.min_length
+│ │  
+│ │  def content_str(content):
+│ │      content = (' ').join(list(content))
+│ │      content = re.sub('\n', ' ', content)
+│ │      content = re.sub('\t', ' ', content)
+│ │ @@ -559,25 +563,25 @@
+│ │          except:
+│ │              print(html_url)
+│ │  
+│ │      doc_dict = {'text': doc, 'labels': label_assemble, 'metadata': meta_assemble}
+│ │      return doc_dict
+│ │  
+│ │  
+│ │ -def parse_single_page():
+│ │ -    file_exist = False
+│ │ +def parse_html():
+│ │ +    html_doc = []
+│ │      if get_pages_from == 'local':
+│ │ -        itera = get_crawling_results(input_url, file_path)
+│ │ +        itera = get_crawling_results(input_url, folder_path)
+│ │          try:
+│ │              for url, page in itera:
+│ │                  if url: 
+│ │                      html_url = url
+│ │                      html_page = page
+│ │                  break # only get one page for each input
+│ │ -            file_exist = True
+│ │ +            html_doc.append({'url':html_url, 'content':html_page})
+│ │          except:
+│ │              pass
+│ │          
+│ │      elif get_pages_from == 'elasticsearch':
+│ │          try:
+│ │              ff = get_single_page_from_elastic(ELASTIC_PRODUCT_INDEX, input_url, elastic_user, elastic_password)
+│ │          except:
+│ │ @@ -588,39 +592,50 @@
+│ │              #print(pageuri)
+│ │              if pageuri == input_url:
+│ │                  try:
+│ │                      page = item['_source']['content']
+│ │                      html_page = page
+│ │                      html_url = input_url
+│ │                      print('INFO: get html from elastic - ', input_url)
+│ │ -                    file_exist = True
+│ │ +                    html_doc.append({'url':html_url, 'content':html_page})
+│ │                      break
+│ │                  except:
+│ │                      pass
+│ │      
+│ │ -    if file_exist:
+│ │ +    elif get_pages_from == 'html':
+│ │ +        with open(file_path) as f:
+│ │ +            for line in f:
+│ │ +                dict_x = json.loads(line)
+│ │ +                html_url = "" # place an empty url
+│ │ +                html_page = dict_x["html_content"]
+│ │ +                html_doc.append({'url':html_url, 'content':html_page})
+│ │ +
+│ │ +    for doc_id, doc in enumerate(html_doc):
+│ │ +        html_page = doc['content']
+│ │ +        html_url = doc['url']
+│ │          doc_dict = traverse_html_with_bs(html_page, html_url, min_length, prefix)
+│ │          text = doc_dict["text"]
+│ │          labels = doc_dict["labels"]
+│ │          
+│ │ -        my_file = open('parser_output.txt', 'w')
+│ │ +        my_file = open('{}/parser_output_{}.txt'.format(dst_path, doc_id), 'w')
+│ │          my_file.write(text)
+│ │          my_file.close()
+│ │ -        
+│ │ -        my_file2 = open('labels_output.txt', 'w')
+│ │ -        my_file2.write(str(labels))
+│ │ -        my_file2.close()
+│ │ +        if get_pages_from != 'html':
+│ │ +            my_file2 = open('{}/labels_output_{}.txt'.format(dst_path, doc_id), 'w')
+│ │ +            my_file2.write(str(labels))
+│ │ +            my_file2.close()
+│ │          meta_cont = doc_dict["metadata"]
+│ │          meta_conta = []
+│ │          for itema in meta_cont:
+│ │              meta_conta.append([itema[0], itema[1], itema[3]])
+│ │          if visualization:
+│ │              visual(text, doc_dict["labels"], "./v_example1.html")
+│ │              visual(text, meta_conta, "./v_example_m1.html")
+│ │ -    else:
+│ │ +    
+│ │ +    if html_doc == []:
+│ │          print('ERROR: cannot get html ', input_url)
+│ │  
+│ │  def generate_jl(file_path_webpage):
+│ │      with open(file_path_webpage) as f:
+│ │          lines = f.read().splitlines()
+│ │      my_dict = {}
+│ │      for i, line in enumerate(lines):
+│ │ @@ -629,15 +644,15 @@
+│ │          except:
+│ │              pass
+│ │      df = pd.DataFrame.from_dict(my_dict).T
+│ │      #df = df[:10]
+│ │      num = 1
+│ │      for index, row in tqdm(df.iterrows(), total=df.shape[0]):
+│ │          if get_pages_from == 'local':
+│ │ -            itera = get_crawling_results(row['data'], file_path)
+│ │ +            itera = get_crawling_results(row['data'], folder_path)
+│ │              try:
+│ │                  for url, page in itera:
+│ │                      if url: 
+│ │                          html_url = url
+│ │                          html_page = page
+│ │                      break # only get one page for each input
+│ │              except:
+│ │ @@ -696,10 +711,10 @@
+│ │      https://www.talaviation.com/News
+│ │      https://vincoconstruction.com/
+│ │      https://www.mineexcellence.com/
+│ │      https://www.felcaroroldan.com/ # order/level problem
+│ │  
+│ │      https://www.metex.it/it/azienda
+│ │      '''
+│ │ -    parse_single_page()
+│ │ +    parse_html()
+│ │      #generate_jl(file_path_webpage='/home/yaxiong/data_backupfiles/descriptionextraction_data/description_annotation_final_dontdelete.jl')
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/__init__.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/__init__.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/__init__.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/html.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/html.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/surface.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/surface.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/xml.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/output/xml.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/parser.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/annotation/parser.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/css_profiles.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/css_profiles.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/html_engine.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/html_engine.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/html_properties.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/html_properties.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/attribute.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/attribute.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/__init__.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/block.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/block.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/prefix.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/canvas/prefix.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/config.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/config.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/css.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/css.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/html_element.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/html_element.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/table.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/model/table.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/html_parsing/inscriptis_cp/service/web.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/html_parsing/inscriptis_cp/service/web.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/utils/elastic.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/utils/elastic.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/utils/helpers.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/utils/helpers.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based/utils/visualization.py
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based/utils/visualization.py
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/htmlparsingbs4based.egg-info/SOURCES.txt
+│ ├── +++ htmlparsingbs4based-1.1.0/htmlparsingbs4based.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- htmlparsingbs4based-1.0.0/setup.py
+│ ├── +++ htmlparsingbs4based-1.1.0/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  with open('/home/yaxiong/html_parsing/requirements.txt') as f:
+│ │      requirements = f.read().splitlines()
+│ │  
+│ │  setup(
+│ │      name='htmlparsingbs4based',
+│ │ -    version='1.0.0',
+│ │ +    version='1.1.0',
+│ │      author='Yaxiong Yuan',
+│ │      author_email='yaxiong.yuan@finquest.com',
+│ │      packages=find_packages(),
+│ │      py_modules=['settings'],
+│ │      url='https://finquest.com/',
+│ │      description='This package extracts/parses information from source HTML.',
+│ │      long_description=open('README.md', 'r').read(),
+│ │ @@ -19,10 +19,10 @@
+│ │      "Programming Language :: Python :: 3",
+│ │      "License :: OSI Approved :: MIT License",
+│ │      "Operating System :: OS Independent",
+│ │      ],
+│ │  
+│ │      entry_points={
+│ │          'console_scripts': [
+│ │ -            'PARSE = htmlparsingbs4based.html_parsing.html_parsing_custombs4:parse_single_page',
+│ │ +            'PARSE = htmlparsingbs4based.html_parsing.html_parsing_custombs4:parse_html',
+│ │          ]}
+│ │  )

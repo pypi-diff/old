@@ -1,0 +1,272 @@
+# Comparing `tmp/peaksjs_widget-0.1.0.dev0.tar.gz` & `tmp/peaksjs_widget-0.1.0.dev1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "peaksjs_widget-0.1.0.dev0.tar", last modified: Fri Apr  7 11:50:47 2023, max compression
++gzip compressed data, last modified: Sun Feb  2 00:00:00 2020, max compression
+```
+
+## Comparing `peaksjs_widget-0.1.0.dev0.tar` & `peaksjs_widget-0.1.0.dev1.tar`
+
+### file list
+
+```diff
+@@ -1,34 +1,74 @@
+-drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2023-04-07 11:50:47.547654 peaksjs_widget-0.1.0.dev0/
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     1498 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/LICENSE.txt
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)      477 2023-04-07 10:19:14.000000 peaksjs_widget-0.1.0.dev0/MANIFEST.in
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     5080 2023-04-07 11:50:47.547654 peaksjs_widget-0.1.0.dev0/PKG-INFO
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     2446 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/README.md
+-drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2023-04-07 11:50:47.543654 peaksjs_widget-0.1.0.dev0/css/
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)        1 2023-01-18 06:08:28.000000 peaksjs_widget-0.1.0.dev0/css/widget.css
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     3078 2023-01-18 05:48:47.000000 peaksjs_widget-0.1.0.dev0/package.json
+-drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2023-04-07 11:50:47.543654 peaksjs_widget-0.1.0.dev0/peaksjs_widget/
+-drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2023-04-07 11:50:47.543654 peaksjs_widget-0.1.0.dev0/peaksjs_widget/nbextension/
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)      418 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/peaksjs_widget/nbextension/extension.js
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)   285286 2023-04-07 11:49:53.000000 peaksjs_widget-0.1.0.dev0/peaksjs_widget/nbextension/index.js
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)  1019249 2023-04-07 11:49:53.000000 peaksjs_widget-0.1.0.dev0/peaksjs_widget/nbextension/index.js.map
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)       68 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/peaksjs_widget.json
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     2881 2023-01-18 05:53:00.000000 peaksjs_widget-0.1.0.dev0/pyproject.toml
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)       38 2023-04-07 11:50:47.547654 peaksjs_widget-0.1.0.dev0/setup.cfg
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)       92 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/setup.py
+-drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2023-04-07 11:50:47.547654 peaksjs_widget-0.1.0.dev0/src/
+-drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2023-04-07 11:50:47.547654 peaksjs_widget-0.1.0.dev0/src/__tests__/
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)      829 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/src/__tests__/index.spec.ts
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     2909 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/src/__tests__/utils.ts
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)      622 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/src/extension.ts
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)      145 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/src/index.ts
+-drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2023-04-07 11:50:47.547654 peaksjs_widget-0.1.0.dev0/src/peaksjs_widget.egg-info/
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     5080 2023-04-07 11:50:47.000000 peaksjs_widget-0.1.0.dev0/src/peaksjs_widget.egg-info/PKG-INFO
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)      586 2023-04-07 11:50:47.000000 peaksjs_widget-0.1.0.dev0/src/peaksjs_widget.egg-info/SOURCES.txt
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)        1 2023-04-07 11:50:47.000000 peaksjs_widget-0.1.0.dev0/src/peaksjs_widget.egg-info/dependency_links.txt
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)      195 2023-04-07 11:50:47.000000 peaksjs_widget-0.1.0.dev0/src/peaksjs_widget.egg-info/requires.txt
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)       10 2023-04-07 11:50:47.000000 peaksjs_widget-0.1.0.dev0/src/peaksjs_widget.egg-info/top_level.txt
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     1119 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/src/plugin.ts
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)      573 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/src/version.ts
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)    16927 2023-02-17 05:34:28.000000 peaksjs_widget-0.1.0.dev0/src/widget.ts
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)      553 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/tsconfig.json
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     2142 2023-01-18 05:47:07.000000 peaksjs_widget-0.1.0.dev0/webpack.config.js
++-rw-r--r--   0        0        0       36 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/.coveragerc
++-rw-r--r--   0        0        0       42 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/.eslintignore
++-rw-r--r--   0        0        0      807 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/.eslintrc.js
++-rw-r--r--   0        0        0      107 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/.npmignore
++-rw-r--r--   0        0        0       51 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/.prettierignore
++-rw-r--r--   0        0        0       27 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/.prettierrc
++-rw-r--r--   0        0        0      477 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/MANIFEST.in
++-rw-r--r--   0        0        0      177 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/babel.config.js
++-rw-r--r--   0        0        0      222 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/codecov.yml
++-rw-r--r--   0        0        0      189 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/install.json
++-rw-r--r--   0        0        0      495 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/jest.config.js
++-rw-r--r--   0        0        0  1130803 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/package-lock.json
++-rw-r--r--   0        0        0     3078 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/package.json
++-rw-r--r--   0        0        0       68 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget.json
++-rw-r--r--   0        0        0      131 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/pytest.ini
++-rw-r--r--   0        0        0      140 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/readthedocs.yml
++-rw-r--r--   0        0        0       92 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/setup.py
++-rw-r--r--   0        0        0       97 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/tsconfig.eslint.json
++-rw-r--r--   0        0        0      553 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/tsconfig.json
++-rw-r--r--   0        0        0     2142 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/webpack.config.js
++-rw-r--r--   0        0        0   322230 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/yarn.lock
++-rw-r--r--   0        0        0        1 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/css/widget.css
++-rw-r--r--   0        0        0      616 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/docs/Makefile
++-rw-r--r--   0        0        0      175 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/docs/environment.yml
++-rw-r--r--   0        0        0      786 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/docs/make.bat
++-rw-r--r--   0        0        0     6389 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/docs/source/conf.py
++-rw-r--r--   0        0        0      846 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/docs/source/develop-install.rst
++-rw-r--r--   0        0        0      676 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/docs/source/index.rst
++-rw-r--r--   0        0        0     1041 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/docs/source/installing.rst
++-rw-r--r--   0        0        0      109 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/docs/source/introduction.rst
++-rw-r--r--   0        0        0      120 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/docs/source/_static/helper.js
++-rw-r--r--   0        0        0      385 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/docs/source/examples/index.rst
++-rw-r--r--   0        0        0       53 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/docs/source/examples/introduction.nblink
++-rw-r--r--   0        0        0     1010 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/examples/introduction.ipynb
++-rw-r--r--   0        0        0     1831 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/__init__.py
++-rw-r--r--   0        0        0      251 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/_frontend.py
++-rw-r--r--   0        0        0      209 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/_version.py
++-rw-r--r--   0        0        0     5510 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/widget.py
++-rw-r--r--   0        0        0    19889 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/build_log.json
++-rw-r--r--   0        0        0     3194 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/package.json
++-rw-r--r--   0        0        0     1241 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/lib_index_js.aa9684cf55603a31fb28.js
++-rw-r--r--   0        0        0     1198 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/lib_index_js.aa9684cf55603a31fb28.js.map
++-rw-r--r--   0        0        0     2393 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/lib_plugin_js.9d45dd6d393c850b69ef.js
++-rw-r--r--   0        0        0     2540 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/lib_plugin_js.9d45dd6d393c850b69ef.js.map
++-rw-r--r--   0        0        0    32686 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/lib_widget_js.5353f7be27828093f671.js
++-rw-r--r--   0        0        0    34051 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/lib_widget_js.5353f7be27828093f671.js.map
++-rw-r--r--   0        0        0    28960 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/remoteEntry.176bb1cb4734f9f3b96d.js
++-rw-r--r--   0        0        0    27773 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/remoteEntry.176bb1cb4734f9f3b96d.js.map
++-rw-r--r--   0        0        0      118 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/style.js
++-rw-r--r--   0        0        0   257922 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/vendors-node_modules_konva_lib__CoreInternals_js-node_modules_konva_lib_shapes_Line_js-node_m-6fe63c.1477f4b629ede6e21f67.js
++-rw-r--r--   0        0        0   267708 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/vendors-node_modules_konva_lib__CoreInternals_js-node_modules_konva_lib_shapes_Line_js-node_m-6fe63c.1477f4b629ede6e21f67.js.map
++-rw-r--r--   0        0        0   195116 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/vendors-node_modules_konva_lib_index_js.7ae7e76cf0460a75bb3f.js
++-rw-r--r--   0        0        0   179918 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/vendors-node_modules_konva_lib_index_js.7ae7e76cf0460a75bb3f.js.map
++-rw-r--r--   0        0        0   229717 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/vendors-node_modules_peaks_js_dist_peaks_esm_js.2e16f156fa8f7dd1c574.js
++-rw-r--r--   0        0        0   279096 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/labextension/static/vendors-node_modules_peaks_js_dist_peaks_esm_js.2e16f156fa8f7dd1c574.js.map
++-rw-r--r--   0        0        0      418 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/nbextension/extension.js
++-rw-r--r--   0        0        0   285286 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/nbextension/index.js
++-rw-r--r--   0        0        0  1019249 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/nbextension/index.js.map
++-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/tests/__init__.py
++-rw-r--r--   0        0        0     1411 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/tests/conftest.py
++-rw-r--r--   0        0        0      278 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/tests/test_example.py
++-rw-r--r--   0        0        0      467 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/peaksjs_widget/tests/test_nbextension_path.py
++-rw-r--r--   0        0        0      622 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/src/extension.ts
++-rw-r--r--   0        0        0      145 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/src/index.ts
++-rw-r--r--   0        0        0     1119 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/src/plugin.ts
++-rw-r--r--   0        0        0      573 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/src/version.ts
++-rw-r--r--   0        0        0    16927 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/src/widget.ts
++-rw-r--r--   0        0        0      829 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/src/__tests__/index.spec.ts
++-rw-r--r--   0        0        0     2909 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/src/__tests__/utils.ts
++-rw-r--r--   0        0        0     1969 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/.gitignore
++-rw-r--r--   0        0        0     1498 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/LICENSE.txt
++-rw-r--r--   0        0        0     2446 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/README.md
++-rw-r--r--   0        0        0     2881 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/pyproject.toml
++-rw-r--r--   0        0        0     5635 2020-02-02 00:00:00.000000 peaksjs_widget-0.1.0.dev1/PKG-INFO
+```
+
+### Comparing `peaksjs_widget-0.1.0.dev0/LICENSE.txt` & `peaksjs_widget-0.1.0.dev1/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `peaksjs_widget-0.1.0.dev0/PKG-INFO` & `peaksjs_widget-0.1.0.dev1/PKG-INFO`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,11 +1,12 @@
+ Metadata-Version: 2.1
+ Name: peaksjs_widget
+-Version: 0.1.0.dev0
++Version: 0.1.0.dev1
+ Summary: ipywidget to interact with audio waveforms through peaks.js
++Project-URL: Homepage, https://github.com/ktonal/peaksjs-widget
+ Author-email: AntoineDaurat <ktonalberlin@gmail.com>
+ License: Copyright (c) 2023 AntoineDaurat
+         All rights reserved.
+         
+         Redistribution and use in source and binary forms, with or without
+         modification, are permitted provided that the following conditions are met:
+         
+@@ -26,33 +27,45 @@
+         DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+         FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+         DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+         SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+         CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+         OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+         OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-        
+-Project-URL: Homepage, https://github.com/ktonal/peaksjs-widget
++License-File: LICENSE.txt
+ Keywords: IPython,Jupyter,Widgets
+ Classifier: Framework :: Jupyter
+ Classifier: Intended Audience :: Developers
+ Classifier: Intended Audience :: Science/Research
+ Classifier: License :: OSI Approved :: BSD License
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
+ Requires-Python: >=3.7
+-Description-Content-Type: text/markdown
++Requires-Dist: ipywidgets>=7.0.0
++Requires-Dist: numpy
++Requires-Dist: pydub
+ Provides-Extra: docs
++Requires-Dist: jupyter-sphinx; extra == 'docs'
++Requires-Dist: nbsphinx; extra == 'docs'
++Requires-Dist: nbsphinx-link; extra == 'docs'
++Requires-Dist: pypandoc; extra == 'docs'
++Requires-Dist: pytest-check-links; extra == 'docs'
++Requires-Dist: recommonmark; extra == 'docs'
++Requires-Dist: sphinx-rtd-theme; extra == 'docs'
++Requires-Dist: sphinx>=1.5; extra == 'docs'
+ Provides-Extra: examples
+ Provides-Extra: test
+-License-File: LICENSE.txt
++Requires-Dist: nbval; extra == 'test'
++Requires-Dist: pytest-cov; extra == 'test'
++Requires-Dist: pytest>=6.0; extra == 'test'
++Description-Content-Type: text/markdown
+ 
+ 
+ # peaksjs-widget
+ 
+ [![Build Status](https://travis-ci.org/ktonal/peaksjs-widget.svg?branch=master)](https://travis-ci.org/ktonal/peaksjs_widget)
+ [![codecov](https://codecov.io/gh/ktonal/peaksjs-widget/branch/master/graph/badge.svg)](https://codecov.io/gh/ktonal/peaksjs-widget)
+```
+
+### Comparing `peaksjs_widget-0.1.0.dev0/README.md` & `peaksjs_widget-0.1.0.dev1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `peaksjs_widget-0.1.0.dev0/package.json` & `peaksjs_widget-0.1.0.dev1/package.json`
+
+ * *Files identical despite different names*
+
+### Comparing `peaksjs_widget-0.1.0.dev0/peaksjs_widget/nbextension/index.js` & `peaksjs_widget-0.1.0.dev1/peaksjs_widget/nbextension/index.js`
+
+ * *Files identical despite different names*
+
+### Comparing `peaksjs_widget-0.1.0.dev0/peaksjs_widget/nbextension/index.js.map` & `peaksjs_widget-0.1.0.dev1/peaksjs_widget/nbextension/index.js.map`
+
+ * *Files identical despite different names*
+
+### Comparing `peaksjs_widget-0.1.0.dev0/pyproject.toml` & `peaksjs_widget-0.1.0.dev1/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -32,15 +32,15 @@
+     "Programming Language :: Python :: 3.10",
+ ]
+ dependencies = [
+     "ipywidgets>=7.0.0",
+     "pydub",
+     "numpy",
+ ]
+-version = "0.1.0.dev0"
++version = "0.1.0.dev1"
+ 
+ [project.optional-dependencies]
+ docs = [
+     "jupyter_sphinx",
+     "nbsphinx",
+     "nbsphinx-link",
+     "pypandoc",
+```
+
+### Comparing `peaksjs_widget-0.1.0.dev0/src/__tests__/index.spec.ts` & `peaksjs_widget-0.1.0.dev1/src/__tests__/index.spec.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `peaksjs_widget-0.1.0.dev0/src/__tests__/utils.ts` & `peaksjs_widget-0.1.0.dev1/src/__tests__/utils.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `peaksjs_widget-0.1.0.dev0/src/extension.ts` & `peaksjs_widget-0.1.0.dev1/src/extension.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `peaksjs_widget-0.1.0.dev0/src/plugin.ts` & `peaksjs_widget-0.1.0.dev1/src/plugin.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `peaksjs_widget-0.1.0.dev0/src/version.ts` & `peaksjs_widget-0.1.0.dev1/src/version.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `peaksjs_widget-0.1.0.dev0/src/widget.ts` & `peaksjs_widget-0.1.0.dev1/src/widget.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `peaksjs_widget-0.1.0.dev0/tsconfig.json` & `peaksjs_widget-0.1.0.dev1/tsconfig.json`
+
+ * *Files identical despite different names*
+
+### Comparing `peaksjs_widget-0.1.0.dev0/webpack.config.js` & `peaksjs_widget-0.1.0.dev1/webpack.config.js`
+
+ * *Files identical despite different names*
+
