@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/manim_slides-4.9.1.tar.gz tmp/manim_slides-4.9.2.tar.gz --html versions/m/manim-slides/4.9.1-4.9.2/index.html --text versions/m/manim-slides/4.9.1-4.9.2/diff.txt --markdown versions/m/manim-slides/4.9.1-4.9.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.88 KB</span></div>
+  <div><span class="source">tmp/manim_slides-4.9.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/manim_slides-4.9.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">192 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;manim_slides-4.9.<del>1</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;manim_slides-4.9.<ins>2</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.64 KB</span></div>
+    <div><span class="source">manim_slides-4.9.1.tar</span> vs.</div>
+    <div id="manim_slides--.-.-.tar"><span class="source">manim_slides-4.9.2.tar</span>
+      <a class="anchor" href="#manim_slides--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.73 KB</span></div>
+      <div id="manim_slides--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 17 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1073<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>136241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/LICENSE.md</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1073<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>517869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/LICENSE.md</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7841<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>136241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7841<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>517869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>96<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>96<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>517869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2518<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/__main__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2518<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>517869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/__version__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>517869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/__version__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2206<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/commons.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2206<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>517869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/commons.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7388<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/config.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7388<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>517869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1429<del>5</del><span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/convert.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1429<ins>0</ins><span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>517869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/convert.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13193<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/data/revealjs_template.html</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13193<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>517869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/data/revealjs_template.html</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>70<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/defaults.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>70<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>517869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/defaults.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2116<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/manim.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2116<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>517869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/manim.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28546<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/present.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28546<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>517869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/present.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7451<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/resources.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7451<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>521869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/resources.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8305<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/slide.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8305<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>521869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/slide.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5733<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>140241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/manim_slides/wizard.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5733<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>521869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/manim_slides/wizard.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2526<span class="dp">·</span>2023-02-25<span class="dp">·</span><del>16</del>:<del>41</del>:<del>40</del>.<del>144241</del><span class="dp">·</span>manim_slides-4.9.<del>1</del>/pyproject.toml</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2526<span class="dp">·</span>2023-02-25<span class="dp">·</span><ins>23</ins>:<ins>18</ins>:<ins>15</ins>.<ins>521869</ins><span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9326<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>manim_slides-4.9.<del>1</del>/PKG-INFO</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9326<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>manim_slides-4.9.<ins>2</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/LICENSE.md</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--LICENSE.md"><span class="source">manim_slides-4.9.2/LICENSE.md</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--LICENSE.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/README.md</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--README.md"><span class="source">manim_slides-4.9.2/README.md</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/manim_slides/__main__.py</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-__main__.py"><span class="source">manim_slides-4.9.2/manim_slides/__main__.py</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-__main__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/manim_slides/commons.py</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-commons.py"><span class="source">manim_slides-4.9.2/manim_slides/commons.py</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-commons.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/manim_slides/config.py</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-config.py"><span class="source">manim_slides-4.9.2/manim_slides/config.py</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">697 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/manim_slides/convert.py</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-convert.py"><span class="source">manim_slides-4.9.2/manim_slides/convert.py</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-convert.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 329, 15 lines modified</td><td colspan="2">Offset 329, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">329 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os.makedirs(full_assets_dir,<span class="dp">·</span>exist_ok=True)</td><td class="diffline">329 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os.makedirs(full_assets_dir,<span class="dp">·</span>exist_ok=True)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">330 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>presentation_config<span class="dp">·</span>in<span class="dp">·</span>self.presentation_configs:</td><td class="diffline">330 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>presentation_config<span class="dp">·</span>in<span class="dp">·</span>self.presentation_configs:</td></tr>
+<tr class="diffunmodified"><td class="diffline">331 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>presentation_config.concat_animations().copy_to(full_assets_dir)</td><td class="diffline">331 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>presentation_config.concat_animations().copy_to(full_assets_dir)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">332 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(dest,<span class="dp">·</span>&quot;w&quot;)<span class="dp">·</span>as<span class="dp">·</span>f:</td><td class="diffline">332 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(dest,<span class="dp">·</span>&quot;w&quot;)<span class="dp">·</span>as<span class="dp">·</span>f:</td></tr>
+<tr class="diffchanged"><td class="diffline">333 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sections<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;.join(self.get_sections_iter(<del>full_</del>assets_dir))</td><td class="diffline">333 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sections<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;.join(self.get_sections_iter(assets_dir))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">334 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>revealjs_template<span class="dp">·</span>=<span class="dp">·</span>self.load_template()</td><td class="diffline">334 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>revealjs_template<span class="dp">·</span>=<span class="dp">·</span>self.load_template()</td></tr>
+<tr class="diffunmodified"><td class="diffline">335 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>content<span class="dp">·</span>=<span class="dp">·</span>revealjs_template.format(sections=sections,<span class="dp">·</span>**self.dict())</td><td class="diffline">335 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>content<span class="dp">·</span>=<span class="dp">·</span>revealjs_template.format(sections=sections,<span class="dp">·</span>**self.dict())</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">336 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.write(content)</td><td class="diffline">336 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.write(content)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/manim_slides/data/revealjs_template.html</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-data-revealjs_template.html"><span class="source">manim_slides-4.9.2/manim_slides/data/revealjs_template.html</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-data-revealjs_template.html">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/manim_slides/manim.py</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-manim.py"><span class="source">manim_slides-4.9.2/manim_slides/manim.py</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-manim.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/manim_slides/present.py</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-present.py"><span class="source">manim_slides-4.9.2/manim_slides/present.py</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-present.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/manim_slides/resources.py</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-resources.py"><span class="source">manim_slides-4.9.2/manim_slides/resources.py</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-resources.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/manim_slides/slide.py</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-slide.py"><span class="source">manim_slides-4.9.2/manim_slides/slide.py</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-slide.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/manim_slides/wizard.py</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-wizard.py"><span class="source">manim_slides-4.9.2/manim_slides/wizard.py</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--manim_slides-wizard.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">479 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/pyproject.toml</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--pyproject.toml"><span class="source">manim_slides-4.9.2/pyproject.toml</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 57, 15 lines modified</td><td colspan="2">Offset 57, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td><td class="diffline">57 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;manim-slides&quot;</td><td class="diffline">58 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;manim-slides&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">59 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{include<span class="dp">·</span>=<span class="dp">·</span>&quot;manim_slides&quot;}</td><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{include<span class="dp">·</span>=<span class="dp">·</span>&quot;manim_slides&quot;}</td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent">]</td><td class="diffline">61 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">62 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/jeertmans/manim-slides&quot;</td><td class="diffline">63 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/jeertmans/manim-slides&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">64 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;4.9.<del>1</del>&quot;</td><td class="diffline">64 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;4.9.<ins>2</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">65 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent">click<span class="dp">·</span>=<span class="dp">·</span>&quot;^8.1.3&quot;</td><td class="diffline">66 </td><td class="diffpresent">click<span class="dp">·</span>=<span class="dp">·</span>&quot;^8.1.3&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent">click-default-group<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.2.2&quot;</td><td class="diffline">67 </td><td class="diffpresent">click-default-group<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.2.2&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent">numpy<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.19&quot;</td><td class="diffline">68 </td><td class="diffpresent">numpy<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.19&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent">opencv-python<span class="dp">·</span>=<span class="dp">·</span>&quot;^4.6.0.66&quot;</td><td class="diffline">69 </td><td class="diffpresent">opencv-python<span class="dp">·</span>=<span class="dp">·</span>&quot;^4.6.0.66&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">70 </td><td class="diffpresent">pydantic<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.10.2&quot;</td><td class="diffline">70 </td><td class="diffpresent">pydantic<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.10.2&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">437 B</span></div>
+      <div><span class="source">manim_slides-4.9.1/PKG-INFO</span> vs.</div>
+      <div id="manim_slides--.-.-.tar---manim_slides--.-.--PKG-INFO"><span class="source">manim_slides-4.9.2/PKG-INFO</span>
+        <a class="anchor" href="#manim_slides--.-.-.tar---manim_slides--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>manim-slides</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>manim-slides</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>4.9.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>4.9.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Tool<span class="dp">·</span>for<span class="dp">·</span>live<span class="dp">·</span>presentations<span class="dp">·</span>using<span class="dp">·</span>manim</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Tool<span class="dp">·</span>for<span class="dp">·</span>live<span class="dp">·</span>presentations<span class="dp">·</span>using<span class="dp">·</span>manim</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/jeertmans/manim-slides</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/jeertmans/manim-slides</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>manim,slides,plugin,manimgl</td><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>manim,slides,plugin,manimgl</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>Jérome<span class="dp">·</span>Eertmans</td><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>Jérome<span class="dp">·</span>Eertmans</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>jeertmans@icloud.com</td><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>jeertmans@icloud.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8.1,&lt;3.12</td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8.1,&lt;3.12</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

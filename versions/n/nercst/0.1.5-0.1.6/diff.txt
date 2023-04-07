@@ -1,0 +1,146 @@
+--- tmp/nercst-0.1.5.tar.gz
++++ tmp/nercst-0.1.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "nercst-0.1.5.tar", max compression
+│ +gzip compressed data, was "nercst-0.1.6.tar", max compression
+│   --- nercst-0.1.5.tar
+├── +++ nercst-0.1.6.tar
+│ ├── file list
+│ │ @@ -1,20 +1,20 @@
+│ │ --rw-r--r--   0        0        0     1073 2023-03-29 12:19:26.539820 nercst-0.1.5/LICENSE
+│ │ --rwxr-xr-x   0        0        0      848 2023-03-29 12:19:26.539820 nercst-0.1.5/README.md
+│ │ --rwxr-xr-x   0        0        0      336 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/__init__.py
+│ │ --rw-r--r--   0        0        0      192 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/core/__init__.py
+│ │ --rw-r--r--   0        0        0     1121 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/core/baselinefitting.py
+│ │ --rw-r--r--   0        0        0     2012 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/core/chopper_wheel.py
+│ │ --rw-r--r--   0        0        0     1065 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/core/coords_converter.py
+│ │ --rw-r--r--   0        0        0     7322 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/core/io.py
+│ │ --rw-r--r--   0        0        0     2877 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/core/struct.py
+│ │ --rw-r--r--   0        0        0       32 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/onthefly/__init__.py
+│ │ --rw-r--r--   0        0        0     1749 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/onthefly/grid.py
+│ │ --rw-r--r--   0        0        0       71 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/rsky/__init__.py
+│ │ --rw-r--r--   0        0        0     2531 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/rsky/rsky.py
+│ │ --rw-r--r--   0        0        0     1845 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/rsky/rsky_plot.py
+│ │ --rw-r--r--   0        0        0       75 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/skydip/__init__.py
+│ │ --rw-r--r--   0        0        0     3184 2023-03-29 12:19:26.539820 nercst-0.1.5/nercst/skydip/skydip.py
+│ │ --rw-r--r--   0        0        0     1836 2023-03-29 12:19:26.543820 nercst-0.1.5/nercst/skydip/slydip_plot.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-29 12:19:26.543820 nercst-0.1.5/nercst/sunscan/__init__.py
+│ │ --rwxr-xr-x   0        0        0     1034 2023-03-29 12:19:26.543820 nercst-0.1.5/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2016 1970-01-01 00:00:00.000000 nercst-0.1.5/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1073 2023-04-07 08:48:49.954511 nercst-0.1.6/LICENSE
+│ │ +-rwxr-xr-x   0        0        0      848 2023-04-07 08:48:49.954511 nercst-0.1.6/README.md
+│ │ +-rwxr-xr-x   0        0        0      336 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/__init__.py
+│ │ +-rw-r--r--   0        0        0      192 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/core/__init__.py
+│ │ +-rw-r--r--   0        0        0     1121 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/core/baselinefitting.py
+│ │ +-rw-r--r--   0        0        0     2012 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/core/chopper_wheel.py
+│ │ +-rw-r--r--   0        0        0     1224 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/core/coords_converter.py
+│ │ +-rw-r--r--   0        0        0     7391 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/core/io.py
+│ │ +-rw-r--r--   0        0        0     2877 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/core/struct.py
+│ │ +-rw-r--r--   0        0        0       32 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/onthefly/__init__.py
+│ │ +-rw-r--r--   0        0        0     1749 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/onthefly/grid.py
+│ │ +-rw-r--r--   0        0        0       71 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/rsky/__init__.py
+│ │ +-rw-r--r--   0        0        0     2531 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/rsky/rsky.py
+│ │ +-rw-r--r--   0        0        0     1845 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/rsky/rsky_plot.py
+│ │ +-rw-r--r--   0        0        0       75 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/skydip/__init__.py
+│ │ +-rw-r--r--   0        0        0     3184 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/skydip/skydip.py
+│ │ +-rw-r--r--   0        0        0     1836 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/skydip/slydip_plot.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 08:48:49.954511 nercst-0.1.6/nercst/sunscan/__init__.py
+│ │ +-rwxr-xr-x   0        0        0     1034 2023-04-07 08:48:49.958510 nercst-0.1.6/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     2016 1970-01-01 00:00:00.000000 nercst-0.1.6/PKG-INFO
+│ │   --- nercst-0.1.5/LICENSE
+│ ├── +++ nercst-0.1.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- nercst-0.1.5/README.md
+│ ├── +++ nercst-0.1.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- nercst-0.1.5/nercst/core/baselinefitting.py
+│ ├── +++ nercst-0.1.6/nercst/core/baselinefitting.py
+│ │┄ Files identical despite different names
+│ │   --- nercst-0.1.5/nercst/core/chopper_wheel.py
+│ ├── +++ nercst-0.1.6/nercst/core/chopper_wheel.py
+│ │┄ Files identical despite different names
+│ │   --- nercst-0.1.5/nercst/core/coords_converter.py
+│ ├── +++ nercst-0.1.6/nercst/core/coords_converter.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -22,8 +22,11 @@
+│ │      ).transform_to(target_frame)
+│ │      if "fk5" in frame:
+│ │          array = array.assign_coords({"lon_cor": ("t", lon_lat.ra.value)})
+│ │          array = array.assign_coords({"lat_cor": ("t", lon_lat.dec.value)})
+│ │      if "Galactic" in frame:
+│ │          array = array.assign_coords({"lon_cor": ("t", lon_lat.lon.value)})
+│ │          array = array.assign_coords({"lat_cor": ("t", lon_lat.lat.value)})
+│ │ +    if "altaz" in frame:
+│ │ +        array = array.assign_coords({"lon_cor": ("t", lon.value)})
+│ │ +        array = array.assign_coords({"lat_cor": ("t", lat.value)})
+│ │      return array
+│ │   --- nercst-0.1.5/nercst/core/io.py
+│ ├── +++ nercst-0.1.6/nercst/core/io.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -159,17 +159,18 @@
+│ │      )
+│ │  
+│ │      loaded["t"] = data[data_tlabel]
+│ │      loaded["ch"] = pd.Index(np.arange(32768))
+│ │  
+│ │      pointing_parampath = Path(dbname + "/pointing_param.toml")
+│ │      obs_filepath = Path(glob(dbname + "/*.obs")[0])
+│ │ -    obs_filepath = Path(glob(dbname + "/config.toml")[0])
+│ │ +    config_filepath = Path(glob(dbname + "/config.toml")[0])
+│ │      loaded = loaded.assign_attrs(pointing_params_path=pointing_parampath)
+│ │      loaded = loaded.assign_attrs(obs_filepath=obs_filepath)
+│ │ +    loaded = loaded.assign_attrs(config_filepath=config_filepath)
+│ │  
+│ │      if pe_cor:
+│ │          frame = neclib.core.files.toml.read(obs_filepath)["coordinate"]["coord_sys"]
+│ │          return add_celestial_coords(loaded, frame, pointing_parampath)
+│ │      else:
+│ │          return loaded
+│ │   --- nercst-0.1.5/nercst/core/struct.py
+│ ├── +++ nercst-0.1.6/nercst/core/struct.py
+│ │┄ Files identical despite different names
+│ │   --- nercst-0.1.5/nercst/onthefly/grid.py
+│ ├── +++ nercst-0.1.6/nercst/onthefly/grid.py
+│ │┄ Files identical despite different names
+│ │   --- nercst-0.1.5/nercst/rsky/rsky.py
+│ ├── +++ nercst-0.1.6/nercst/rsky/rsky.py
+│ │┄ Files identical despite different names
+│ │   --- nercst-0.1.5/nercst/rsky/rsky_plot.py
+│ ├── +++ nercst-0.1.6/nercst/rsky/rsky_plot.py
+│ │┄ Files identical despite different names
+│ │   --- nercst-0.1.5/nercst/skydip/skydip.py
+│ ├── +++ nercst-0.1.6/nercst/skydip/skydip.py
+│ │┄ Files identical despite different names
+│ │   --- nercst-0.1.5/nercst/skydip/slydip_plot.py
+│ ├── +++ nercst-0.1.6/nercst/skydip/slydip_plot.py
+│ │┄ Files identical despite different names
+│ │   --- nercst-0.1.5/pyproject.toml
+│ ├── +++ nercst-0.1.6/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "nercst"
+│ │ -version = "0.1.5"
+│ │ +version = "0.1.6"
+│ │  description = "NEw reduction and calibration software for telescope "
+│ │  license = "MIT"
+│ │  readme = "README.md"
+│ │  authors = ["Rin Yamada <yamada@a.phys.nagoya-u.ac.jp>", "Demachi Fumika <f.demachi@a.phys.nagoya-u.ac.jp>"]
+│ │  homepage = "https://github.com/necst-telescope/NERCST"
+│ │  repository = "https://github.com/necst-telescope/NERCST"
+│ │   --- nercst-0.1.5/PKG-INFO
+│ ├── +++ nercst-0.1.6/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: nercst
+│ │ -Version: 0.1.5
+│ │ +Version: 0.1.6
+│ │  Summary: NEw reduction and calibration software for telescope 
+│ │  Home-page: https://github.com/necst-telescope/NERCST
+│ │  License: MIT
+│ │  Author: Rin Yamada
+│ │  Author-email: yamada@a.phys.nagoya-u.ac.jp
+│ │  Requires-Python: >=3.8,<3.11
+│ │  Classifier: License :: OSI Approved :: MIT License

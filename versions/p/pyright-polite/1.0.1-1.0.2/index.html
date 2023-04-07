@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/pyright_polite-1.0.1.tar.gz tmp/pyright_polite-1.0.2.tar.gz --html versions/p/pyright-polite/1.0.1-1.0.2/index.html --text versions/p/pyright-polite/1.0.1-1.0.2/diff.txt --markdown versions/p/pyright-polite/1.0.1-1.0.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">9.07 KB</span></div>
+  <div><span class="source">tmp/pyright_polite-1.0.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/pyright_polite-1.0.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">9.01 KB</span></div>
+    <div><span class="source">pyright_polite-1.0.1.tar</span> vs.</div>
+    <div id="pyright_polite--.-.-.tar"><span class="source">pyright_polite-1.0.2.tar</span>
+      <a class="anchor" href="#pyright_polite--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">4.9 KB</span></div>
+      <div id="pyright_polite--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#pyright_polite--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 27 lines modified</td><td colspan="2">Offset 1, 18 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>998<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/.justfile</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>998<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/.justfile</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1151<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/.pre-commit-config.yaml</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1151<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/.pre-commit-config.yaml</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>96<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/.pylintrc</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>96<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/.pylintrc</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>176</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/CHANGELOG.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>291</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/CHANGELOG.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/setup.cfg</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/setup.cfg</td></tr>
+<tr class="diffdeleted"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>119<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.1/.github/dependabot.yml</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3792<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.1/.github/workflows/ci.yml</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2189<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.1/.github/workflows/publish.yml</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>154<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/src/pyright_polite/__about__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>154<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/src/pyright_polite/__about__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>190<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/src/pyright_polite/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>190<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/src/pyright_polite/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8832<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/src/pyright_polite/cli.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8832<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/src/pyright_polite/cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>858<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/src/pyright_polite/main.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>858<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/src/pyright_polite/main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1525<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/src/pyright_polite/platform.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1525<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/src/pyright_polite/platform.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9766<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/src/pyright_polite/polite.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9766<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/src/pyright_polite/polite.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8914<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/src/pyright_polite/pyright.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8914<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/src/pyright_polite/pyright.py</td></tr>
+<tr class="diffdeleted"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22498<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.1/tests/conftest.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4106<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.1/tests/test_cli.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1360<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.1/tests/test_main.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5130<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.1/tests/test_polite.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2035<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.1/tests/test_processlookuperror.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1982<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.1/tests/test_traceback.py</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>3097</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/.gitignore</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>5146</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1074<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/LICENSE</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1074<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6026<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/README.md</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6026<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>245</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/hatch.toml</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>392</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/hatch.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<del>4</del>5<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/pyproject.toml</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<ins>8</ins>5<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7209<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<del>1</del>/PKG-INFO</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7209<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyright_polite-1.0.<ins>2</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">pyright_polite-1.0.1/.justfile</span> vs.</div>
+      <div id="pyright_polite--.-.-.tar---pyright_polite--.-.--.justfile"><span class="source">pyright_polite-1.0.2/.justfile</span>
+        <a class="anchor" href="#pyright_polite--.-.-.tar---pyright_polite--.-.--.justfile">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">pyright_polite-1.0.1/.pre-commit-config.yaml</span> vs.</div>
+      <div id="pyright_polite--.-.-.tar---pyright_polite--.-.--.pre-commit-config.yaml"><span class="source">pyright_polite-1.0.2/.pre-commit-config.yaml</span>
+        <a class="anchor" href="#pyright_polite--.-.-.tar---pyright_polite--.-.--.pre-commit-config.yaml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">pyright_polite-1.0.1/src/pyright_polite/cli.py</span> vs.</div>
+      <div id="pyright_polite--.-.-.tar---pyright_polite--.-.--src-pyright_polite-cli.py"><span class="source">pyright_polite-1.0.2/src/pyright_polite/cli.py</span>
+        <a class="anchor" href="#pyright_polite--.-.-.tar---pyright_polite--.-.--src-pyright_polite-cli.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">pyright_polite-1.0.1/src/pyright_polite/main.py</span> vs.</div>
+      <div id="pyright_polite--.-.-.tar---pyright_polite--.-.--src-pyright_polite-main.py"><span class="source">pyright_polite-1.0.2/src/pyright_polite/main.py</span>
+        <a class="anchor" href="#pyright_polite--.-.-.tar---pyright_polite--.-.--src-pyright_polite-main.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">pyright_polite-1.0.1/src/pyright_polite/platform.py</span> vs.</div>
+      <div id="pyright_polite--.-.-.tar---pyright_polite--.-.--src-pyright_polite-platform.py"><span class="source">pyright_polite-1.0.2/src/pyright_polite/platform.py</span>
+        <a class="anchor" href="#pyright_polite--.-.-.tar---pyright_polite--.-.--src-pyright_polite-platform.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">pyright_polite-1.0.1/src/pyright_polite/polite.py</span> vs.</div>
+      <div id="pyright_polite--.-.-.tar---pyright_polite--.-.--src-pyright_polite-polite.py"><span class="source">pyright_polite-1.0.2/src/pyright_polite/polite.py</span>
+        <a class="anchor" href="#pyright_polite--.-.-.tar---pyright_polite--.-.--src-pyright_polite-polite.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">pyright_polite-1.0.1/src/pyright_polite/pyright.py</span> vs.</div>
+      <div id="pyright_polite--.-.-.tar---pyright_polite--.-.--src-pyright_polite-pyright.py"><span class="source">pyright_polite-1.0.2/src/pyright_polite/pyright.py</span>
+        <a class="anchor" href="#pyright_polite--.-.-.tar---pyright_polite--.-.--src-pyright_polite-pyright.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">pyright_polite-1.0.1/LICENSE</span> vs.</div>
+      <div id="pyright_polite--.-.-.tar---pyright_polite--.-.--LICENSE"><span class="source">pyright_polite-1.0.2/LICENSE</span>
+        <a class="anchor" href="#pyright_polite--.-.-.tar---pyright_polite--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">999 B</span></div>
+      <div><span class="source">pyright_polite-1.0.1/README.md</span> vs.</div>
+      <div id="pyright_polite--.-.-.tar---pyright_polite--.-.--README.md"><span class="source">pyright_polite-1.0.2/README.md</span>
+        <a class="anchor" href="#pyright_polite--.-.-.tar---pyright_polite--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment multiline">Ordering differences only
+Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 55, 29 lines modified</td><td colspan="2">Offset 55, 29 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent">Searching<span class="dp">·</span>for<span class="dp">·</span>source<span class="dp">·</span>files</td><td class="diffline">55 </td><td class="diffpresent">Searching<span class="dp">·</span>for<span class="dp">·</span>source<span class="dp">·</span>files</td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent">Found<span class="dp">·</span>7<span class="dp">·</span>source<span class="dp">·</span>files</td><td class="diffline">56 </td><td class="diffpresent">Found<span class="dp">·</span>7<span class="dp">·</span>source<span class="dp">·</span>files</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent">pyright<span class="dp">·</span>1.1.300</td><td class="diffline">57 </td><td class="diffpresent">pyright<span class="dp">·</span>1.1.300</td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent">0<span class="dp">·</span>errors,<span class="dp">·</span>0<span class="dp">·</span>warnings,<span class="dp">·</span>0<span class="dp">·</span>informations</td><td class="diffline">58 </td><td class="diffpresent">0<span class="dp">·</span>errors,<span class="dp">·</span>0<span class="dp">·</span>warnings,<span class="dp">·</span>0<span class="dp">·</span>informations</td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent">Completed<span class="dp">·</span>in<span class="dp">·</span>1.006sec</td><td class="diffline">59 </td><td class="diffpresent">Completed<span class="dp">·</span>in<span class="dp">·</span>1.006sec</td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent">```</td><td class="diffline">60 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">61 </td><td class="diffpresent">Error<span class="dp">·</span>messages<span class="dp">·</span>are<span class="dp">·</span>still<span class="dp">·</span>shown<span class="dp">·</span>(eg,<span class="dp">·</span>if<span class="dp">·</span>your<span class="dp">·</span>config<span class="dp">·</span>file<span class="dp">·</span>is<span class="dp">·</span>invalid).</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent">Now<span class="dp">·</span>pyright<span class="dp">·</span>is<span class="dp">·</span>just<span class="dp">·</span>as<span class="dp">·</span>polite<span class="dp">·</span>as<span class="dp">·</span>your<span class="dp">·</span>other<span class="dp">·</span>tools:</td><td class="diffline">61 </td><td class="diffpresent">Now<span class="dp">·</span>pyright<span class="dp">·</span>is<span class="dp">·</span>just<span class="dp">·</span>as<span class="dp">·</span>polite<span class="dp">·</span>as<span class="dp">·</span>your<span class="dp">·</span>other<span class="dp">·</span>tools:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent">```console</td><td class="diffline">62 </td><td class="diffpresent">```console</td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent">$<span class="dp">·</span>hatch<span class="dp">·</span>run<span class="dp">·</span>lint</td><td class="diffline">63 </td><td class="diffpresent">$<span class="dp">·</span>hatch<span class="dp">·</span>run<span class="dp">·</span>lint</td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent">cmd<span class="dp">·</span>[1]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>ruff<span class="dp">·</span>check<span class="dp">·</span>.</td><td class="diffline">64 </td><td class="diffpresent">cmd<span class="dp">·</span>[1]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>ruff<span class="dp">·</span>check<span class="dp">·</span>.</td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent">cmd<span class="dp">·</span>[2]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>black<span class="dp">·</span>--quiet<span class="dp">·</span>--check<span class="dp">·</span>--diff<span class="dp">·</span>.</td><td class="diffline">65 </td><td class="diffpresent">cmd<span class="dp">·</span>[2]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>black<span class="dp">·</span>--quiet<span class="dp">·</span>--check<span class="dp">·</span>--diff<span class="dp">·</span>.</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent">cmd<span class="dp">·</span>[3]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>pyright-polite</td><td class="diffline">66 </td><td class="diffpresent">cmd<span class="dp">·</span>[3]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>pyright-polite</td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent">Found<span class="dp">·</span>8<span class="dp">·</span>source<span class="dp">·</span>files</td><td class="diffline">67 </td><td class="diffpresent">Found<span class="dp">·</span>8<span class="dp">·</span>source<span class="dp">·</span>files</td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent">0<span class="dp">·</span>errors,<span class="dp">·</span>0<span class="dp">·</span>warnings,<span class="dp">·</span>0<span class="dp">·</span>informations</td><td class="diffline">68 </td><td class="diffpresent">0<span class="dp">·</span>errors,<span class="dp">·</span>0<span class="dp">·</span>warnings,<span class="dp">·</span>0<span class="dp">·</span>informations</td></tr>
+<tr class="diffunmodified"><td class="diffline">70 </td><td class="diffpresent">cmd<span class="dp">·</span>[4]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>ssort<span class="dp">·</span>--check<span class="dp">·</span>--diff<span class="dp">·</span>.</td><td class="diffline">69 </td><td class="diffpresent">cmd<span class="dp">·</span>[4]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>ssort<span class="dp">·</span>--check<span class="dp">·</span>--diff<span class="dp">·</span>.</td></tr>
+<tr class="diffunmodified"><td class="diffline">71 </td><td class="diffpresent">8<span class="dp">·</span>files<span class="dp">·</span>would<span class="dp">·</span>be<span class="dp">·</span>left<span class="dp">·</span>unchanged</td><td class="diffline">70 </td><td class="diffpresent">8<span class="dp">·</span>files<span class="dp">·</span>would<span class="dp">·</span>be<span class="dp">·</span>left<span class="dp">·</span>unchanged</td></tr>
+<tr class="diffunmodified"><td class="diffline">72 </td><td class="diffpresent">```</td><td class="diffline">71 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">72 </td><td class="diffpresent">Error<span class="dp">·</span>messages<span class="dp">·</span>are<span class="dp">·</span>still<span class="dp">·</span>shown<span class="dp">·</span>(eg,<span class="dp">·</span>if<span class="dp">·</span>your<span class="dp">·</span>config<span class="dp">·</span>file<span class="dp">·</span>is<span class="dp">·</span>invalid).</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">73 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td><td class="diffline">73 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">74 </td><td class="diffpresent">You<span class="dp">·</span>need<span class="dp">·</span>`pyright`<span class="dp">·</span>installed<span class="dp">·</span>(ie,<span class="dp">·</span>available<span class="dp">·</span>somewhere<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>`PATH`).</td><td class="diffline">74 </td><td class="diffpresent">You<span class="dp">·</span>need<span class="dp">·</span>`pyright`<span class="dp">·</span>installed<span class="dp">·</span>(ie,<span class="dp">·</span>available<span class="dp">·</span>somewhere<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>`PATH`).</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent">See<span class="dp">·</span>pyright&#x27;s<span class="dp">·</span>installation<span class="dp">·</span>instructions<span class="dp">·</span>[here][installation].<span class="dp">·</span>Usually<span class="dp">·</span>people<span class="dp">·</span>install</td><td class="diffline">75 </td><td class="diffpresent">See<span class="dp">·</span>pyright&#x27;s<span class="dp">·</span>installation<span class="dp">·</span>instructions<span class="dp">·</span>[here][installation].<span class="dp">·</span>Usually<span class="dp">·</span>people<span class="dp">·</span>install</td></tr>
+<tr class="diffunmodified"><td class="diffline">76 </td><td class="diffpresent">either<span class="dp">·</span>the<span class="dp">·</span>[pyright<span class="dp">·</span>npm][pkg_npm]<span class="dp">·</span>or<span class="dp">·</span>the<span class="dp">·</span>[pyright<span class="dp">·</span>PyPI][pkg_pypi]<span class="dp">·</span>package.</td><td class="diffline">76 </td><td class="diffpresent">either<span class="dp">·</span>the<span class="dp">·</span>[pyright<span class="dp">·</span>npm][pkg_npm]<span class="dp">·</span>or<span class="dp">·</span>the<span class="dp">·</span>[pyright<span class="dp">·</span>PyPI][pkg_pypi]<span class="dp">·</span>package.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">703 B</span></div>
+      <div><span class="source">pyright_polite-1.0.1/pyproject.toml</span> vs.</div>
+      <div id="pyright_polite--.-.-.tar---pyright_polite--.-.--pyproject.toml"><span class="source">pyright_polite-1.0.2/pyproject.toml</span>
+        <a class="anchor" href="#pyright_polite--.-.-.tar---pyright_polite--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 3% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 86, 14 lines modified</td><td colspan="2">Offset 86, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">86 </td><td class="diffpresent">pydocstyle.convention<span class="dp">·</span>=<span class="dp">·</span>&quot;google&quot;</td><td class="diffline">86 </td><td class="diffpresent">pydocstyle.convention<span class="dp">·</span>=<span class="dp">·</span>&quot;google&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">87 </td><td class="diffpresent">select<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">87 </td><td class="diffpresent">select<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">88 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&quot;A&quot;,<span class="dp">·</span>&quot;ARG&quot;,<span class="dp">·</span>&quot;B&quot;,<span class="dp">·</span>&quot;BLE&quot;,<span class="dp">·</span>&quot;C&quot;,<span class="dp">·</span>&quot;C4&quot;,<span class="dp">·</span>&quot;C90&quot;,<span class="dp">·</span>&quot;COM&quot;,<span class="dp">·</span>&quot;D&quot;,<span class="dp">·</span>&quot;DTZ&quot;,<span class="dp">·</span>&quot;E&quot;,<span class="dp">·</span>&quot;EXE&quot;,<span class="dp">·</span>&quot;F&quot;,<span class="dp">·</span>&quot;FBT&quot;,</td><td class="diffline">88 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&quot;A&quot;,<span class="dp">·</span>&quot;ARG&quot;,<span class="dp">·</span>&quot;B&quot;,<span class="dp">·</span>&quot;BLE&quot;,<span class="dp">·</span>&quot;C&quot;,<span class="dp">·</span>&quot;C4&quot;,<span class="dp">·</span>&quot;C90&quot;,<span class="dp">·</span>&quot;COM&quot;,<span class="dp">·</span>&quot;D&quot;,<span class="dp">·</span>&quot;DTZ&quot;,<span class="dp">·</span>&quot;E&quot;,<span class="dp">·</span>&quot;EXE&quot;,<span class="dp">·</span>&quot;F&quot;,<span class="dp">·</span>&quot;FBT&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&quot;G&quot;,<span class="dp">·</span>&quot;I&quot;,<span class="dp">·</span>&quot;INP&quot;,<span class="dp">·</span>&quot;ISC&quot;,<span class="dp">·</span>&quot;N&quot;,<span class="dp">·</span>&quot;PIE&quot;,<span class="dp">·</span>&quot;PT&quot;,<span class="dp">·</span>&quot;PTH&quot;,<span class="dp">·</span>&quot;PYI&quot;,<span class="dp">·</span>&quot;RET&quot;,<span class="dp">·</span>&quot;RSE&quot;,<span class="dp">·</span>&quot;RUF&quot;,<span class="dp">·</span>&quot;S&quot;,</td><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&quot;G&quot;,<span class="dp">·</span>&quot;I&quot;,<span class="dp">·</span>&quot;INP&quot;,<span class="dp">·</span>&quot;ISC&quot;,<span class="dp">·</span>&quot;N&quot;,<span class="dp">·</span>&quot;PIE&quot;,<span class="dp">·</span>&quot;PT&quot;,<span class="dp">·</span>&quot;PTH&quot;,<span class="dp">·</span>&quot;PYI&quot;,<span class="dp">·</span>&quot;RET&quot;,<span class="dp">·</span>&quot;RSE&quot;,<span class="dp">·</span>&quot;RUF&quot;,<span class="dp">·</span>&quot;S&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">90 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&quot;SIM&quot;,<span class="dp">·</span>&quot;SLF&quot;,<span class="dp">·</span>&quot;T10&quot;,<span class="dp">·</span>&quot;T20&quot;,<span class="dp">·</span>&quot;TCH&quot;,<span class="dp">·</span>&quot;TRY&quot;,<span class="dp">·</span>&quot;W&quot;,<span class="dp">·</span>&quot;YTT&quot;</td><td class="diffline">90 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&quot;SIM&quot;,<span class="dp">·</span>&quot;SLF&quot;,<span class="dp">·</span>&quot;T10&quot;,<span class="dp">·</span>&quot;T20&quot;,<span class="dp">·</span>&quot;TCH&quot;,<span class="dp">·</span>&quot;TRY&quot;,<span class="dp">·</span>&quot;W&quot;,<span class="dp">·</span>&quot;YTT&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">91 </td><td class="diffpresent">]</td><td class="diffline">91 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">92 </td><td class="diffpresent">ignore<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;COM812&quot;,<span class="dp">·</span>&quot;TRY003&quot;<span class="dp">·</span>]</td><td class="diffline">92 </td><td class="diffpresent">ignore<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;COM812&quot;,<span class="dp">·</span>&quot;TRY003&quot;<span class="dp">·</span>]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">93 </td><td class="diffpresent">exclude<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;tests/test_integration/&quot;<span class="dp">·</span>]</td></tr>
+<tr class="diffunmodified"><td class="diffline">93 </td><td class="diffpresent">[tool.ruff.per-file-ignores]</td><td class="diffline">94 </td><td class="diffpresent">[tool.ruff.per-file-ignores]</td></tr>
+<tr class="diffunmodified"><td class="diffline">94 </td><td class="diffpresent">&quot;__init__.py&quot;<span class="dp">·</span>=<span class="dp">·</span>[&quot;F401&quot;]</td><td class="diffline">95 </td><td class="diffpresent">&quot;__init__.py&quot;<span class="dp">·</span>=<span class="dp">·</span>[&quot;F401&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">95 </td><td class="diffpresent">&quot;tests/conftest.py&quot;<span class="dp">·</span>=<span class="dp">·</span>[&quot;PT004&quot;]</td><td class="diffline">96 </td><td class="diffpresent">&quot;tests/conftest.py&quot;<span class="dp">·</span>=<span class="dp">·</span>[&quot;PT004&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">96 </td><td class="diffpresent">&quot;tests/*&quot;<span class="dp">·</span>=<span class="dp">·</span>[&quot;D&quot;,<span class="dp">·</span>&quot;E501&quot;,<span class="dp">·</span>&quot;FBT&quot;,<span class="dp">·</span>&quot;INP001&quot;,<span class="dp">·</span>&quot;RUF001&quot;,<span class="dp">·</span>&quot;RUF002&quot;,<span class="dp">·</span>&quot;RUF003&quot;,<span class="dp">·</span>&quot;S&quot;,<span class="dp">·</span>&quot;SIM117&quot;]</td><td class="diffline">97 </td><td class="diffpresent">&quot;tests/*&quot;<span class="dp">·</span>=<span class="dp">·</span>[&quot;D&quot;,<span class="dp">·</span>&quot;E501&quot;,<span class="dp">·</span>&quot;FBT&quot;,<span class="dp">·</span>&quot;INP001&quot;,<span class="dp">·</span>&quot;RUF001&quot;,<span class="dp">·</span>&quot;RUF002&quot;,<span class="dp">·</span>&quot;RUF003&quot;,<span class="dp">·</span>&quot;S&quot;,<span class="dp">·</span>&quot;SIM117&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">97 </td><td class="diffpresent">[tool.ruff.mccabe]</td><td class="diffline">98 </td><td class="diffpresent">[tool.ruff.mccabe]</td></tr>
+<tr class="diffunmodified"><td class="diffline">98 </td><td class="diffpresent">max-complexity<span class="dp">·</span>=<span class="dp">·</span>10</td><td class="diffline">99 </td><td class="diffpresent">max-complexity<span class="dp">·</span>=<span class="dp">·</span>10</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.42 KB</span></div>
+      <div><span class="source">pyright_polite-1.0.1/PKG-INFO</span> vs.</div>
+      <div id="pyright_polite--.-.-.tar---pyright_polite--.-.--PKG-INFO"><span class="source">pyright_polite-1.0.2/PKG-INFO</span>
+        <a class="anchor" href="#pyright_polite--.-.-.tar---pyright_polite--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pyright-polite</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pyright-polite</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>An<span class="dp">·</span>intelligent<span class="dp">·</span>cross-platform<span class="dp">·</span>wrapper<span class="dp">·</span>for<span class="dp">·</span>pyright<span class="dp">·</span>that<span class="dp">·</span>makes<span class="dp">·</span>it<span class="dp">·</span>less<span class="dp">·</span>noisy.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>An<span class="dp">·</span>intelligent<span class="dp">·</span>cross-platform<span class="dp">·</span>wrapper<span class="dp">·</span>for<span class="dp">·</span>pyright<span class="dp">·</span>that<span class="dp">·</span>makes<span class="dp">·</span>it<span class="dp">·</span>less<span class="dp">·</span>noisy.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/jamielinux/pyright-polite</td><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/jamielinux/pyright-polite</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Issues,<span class="dp">·</span>https://github.com/jamielinux/pyright-polite/issues</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Issues,<span class="dp">·</span>https://github.com/jamielinux/pyright-polite/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/jamielinux/pyright-polite</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/jamielinux/pyright-polite</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Jamie<span class="dp">·</span>Nguyen<span class="dp">·</span>&lt;j@jamielinux.com&gt;</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Jamie<span class="dp">·</span>Nguyen<span class="dp">·</span>&lt;j@jamielinux.com&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">License-Expression:<span class="dp">·</span>MIT</td><td class="diffline">9 </td><td class="diffpresent">License-Expression:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">10 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 82, 29 lines modified</td><td colspan="2">Offset 82, 29 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">82 </td><td class="diffpresent">Searching<span class="dp">·</span>for<span class="dp">·</span>source<span class="dp">·</span>files</td><td class="diffline">82 </td><td class="diffpresent">Searching<span class="dp">·</span>for<span class="dp">·</span>source<span class="dp">·</span>files</td></tr>
+<tr class="diffunmodified"><td class="diffline">83 </td><td class="diffpresent">Found<span class="dp">·</span>7<span class="dp">·</span>source<span class="dp">·</span>files</td><td class="diffline">83 </td><td class="diffpresent">Found<span class="dp">·</span>7<span class="dp">·</span>source<span class="dp">·</span>files</td></tr>
+<tr class="diffunmodified"><td class="diffline">84 </td><td class="diffpresent">pyright<span class="dp">·</span>1.1.300</td><td class="diffline">84 </td><td class="diffpresent">pyright<span class="dp">·</span>1.1.300</td></tr>
+<tr class="diffunmodified"><td class="diffline">85 </td><td class="diffpresent">0<span class="dp">·</span>errors,<span class="dp">·</span>0<span class="dp">·</span>warnings,<span class="dp">·</span>0<span class="dp">·</span>informations</td><td class="diffline">85 </td><td class="diffpresent">0<span class="dp">·</span>errors,<span class="dp">·</span>0<span class="dp">·</span>warnings,<span class="dp">·</span>0<span class="dp">·</span>informations</td></tr>
+<tr class="diffunmodified"><td class="diffline">86 </td><td class="diffpresent">Completed<span class="dp">·</span>in<span class="dp">·</span>1.006sec</td><td class="diffline">86 </td><td class="diffpresent">Completed<span class="dp">·</span>in<span class="dp">·</span>1.006sec</td></tr>
+<tr class="diffunmodified"><td class="diffline">87 </td><td class="diffpresent">```</td><td class="diffline">87 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">88 </td><td class="diffpresent">Error<span class="dp">·</span>messages<span class="dp">·</span>are<span class="dp">·</span>still<span class="dp">·</span>shown<span class="dp">·</span>(eg,<span class="dp">·</span>if<span class="dp">·</span>your<span class="dp">·</span>config<span class="dp">·</span>file<span class="dp">·</span>is<span class="dp">·</span>invalid).</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">89 </td><td class="diffpresent">Now<span class="dp">·</span>pyright<span class="dp">·</span>is<span class="dp">·</span>just<span class="dp">·</span>as<span class="dp">·</span>polite<span class="dp">·</span>as<span class="dp">·</span>your<span class="dp">·</span>other<span class="dp">·</span>tools:</td><td class="diffline">88 </td><td class="diffpresent">Now<span class="dp">·</span>pyright<span class="dp">·</span>is<span class="dp">·</span>just<span class="dp">·</span>as<span class="dp">·</span>polite<span class="dp">·</span>as<span class="dp">·</span>your<span class="dp">·</span>other<span class="dp">·</span>tools:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">90 </td><td class="diffpresent">```console</td><td class="diffline">89 </td><td class="diffpresent">```console</td></tr>
+<tr class="diffunmodified"><td class="diffline">91 </td><td class="diffpresent">$<span class="dp">·</span>hatch<span class="dp">·</span>run<span class="dp">·</span>lint</td><td class="diffline">90 </td><td class="diffpresent">$<span class="dp">·</span>hatch<span class="dp">·</span>run<span class="dp">·</span>lint</td></tr>
+<tr class="diffunmodified"><td class="diffline">92 </td><td class="diffpresent">cmd<span class="dp">·</span>[1]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>ruff<span class="dp">·</span>check<span class="dp">·</span>.</td><td class="diffline">91 </td><td class="diffpresent">cmd<span class="dp">·</span>[1]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>ruff<span class="dp">·</span>check<span class="dp">·</span>.</td></tr>
+<tr class="diffunmodified"><td class="diffline">93 </td><td class="diffpresent">cmd<span class="dp">·</span>[2]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>black<span class="dp">·</span>--quiet<span class="dp">·</span>--check<span class="dp">·</span>--diff<span class="dp">·</span>.</td><td class="diffline">92 </td><td class="diffpresent">cmd<span class="dp">·</span>[2]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>black<span class="dp">·</span>--quiet<span class="dp">·</span>--check<span class="dp">·</span>--diff<span class="dp">·</span>.</td></tr>
+<tr class="diffunmodified"><td class="diffline">94 </td><td class="diffpresent">cmd<span class="dp">·</span>[3]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>pyright-polite</td><td class="diffline">93 </td><td class="diffpresent">cmd<span class="dp">·</span>[3]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>pyright-polite</td></tr>
+<tr class="diffunmodified"><td class="diffline">95 </td><td class="diffpresent">Found<span class="dp">·</span>8<span class="dp">·</span>source<span class="dp">·</span>files</td><td class="diffline">94 </td><td class="diffpresent">Found<span class="dp">·</span>8<span class="dp">·</span>source<span class="dp">·</span>files</td></tr>
+<tr class="diffunmodified"><td class="diffline">96 </td><td class="diffpresent">0<span class="dp">·</span>errors,<span class="dp">·</span>0<span class="dp">·</span>warnings,<span class="dp">·</span>0<span class="dp">·</span>informations</td><td class="diffline">95 </td><td class="diffpresent">0<span class="dp">·</span>errors,<span class="dp">·</span>0<span class="dp">·</span>warnings,<span class="dp">·</span>0<span class="dp">·</span>informations</td></tr>
+<tr class="diffunmodified"><td class="diffline">97 </td><td class="diffpresent">cmd<span class="dp">·</span>[4]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>ssort<span class="dp">·</span>--check<span class="dp">·</span>--diff<span class="dp">·</span>.</td><td class="diffline">96 </td><td class="diffpresent">cmd<span class="dp">·</span>[4]<span class="dp">·</span>|<span class="dp">·</span>-<span class="dp">·</span>ssort<span class="dp">·</span>--check<span class="dp">·</span>--diff<span class="dp">·</span>.</td></tr>
+<tr class="diffunmodified"><td class="diffline">98 </td><td class="diffpresent">8<span class="dp">·</span>files<span class="dp">·</span>would<span class="dp">·</span>be<span class="dp">·</span>left<span class="dp">·</span>unchanged</td><td class="diffline">97 </td><td class="diffpresent">8<span class="dp">·</span>files<span class="dp">·</span>would<span class="dp">·</span>be<span class="dp">·</span>left<span class="dp">·</span>unchanged</td></tr>
+<tr class="diffunmodified"><td class="diffline">99 </td><td class="diffpresent">```</td><td class="diffline">98 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">99 </td><td class="diffpresent">Error<span class="dp">·</span>messages<span class="dp">·</span>are<span class="dp">·</span>still<span class="dp">·</span>shown<span class="dp">·</span>(eg,<span class="dp">·</span>if<span class="dp">·</span>your<span class="dp">·</span>config<span class="dp">·</span>file<span class="dp">·</span>is<span class="dp">·</span>invalid).</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">100 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td><td class="diffline">100 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">101 </td><td class="diffpresent">You<span class="dp">·</span>need<span class="dp">·</span>`pyright`<span class="dp">·</span>installed<span class="dp">·</span>(ie,<span class="dp">·</span>available<span class="dp">·</span>somewhere<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>`PATH`).</td><td class="diffline">101 </td><td class="diffpresent">You<span class="dp">·</span>need<span class="dp">·</span>`pyright`<span class="dp">·</span>installed<span class="dp">·</span>(ie,<span class="dp">·</span>available<span class="dp">·</span>somewhere<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>`PATH`).</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">102 </td><td class="diffpresent">See<span class="dp">·</span>pyright&#x27;s<span class="dp">·</span>installation<span class="dp">·</span>instructions<span class="dp">·</span>[here][installation].<span class="dp">·</span>Usually<span class="dp">·</span>people<span class="dp">·</span>install</td><td class="diffline">102 </td><td class="diffpresent">See<span class="dp">·</span>pyright&#x27;s<span class="dp">·</span>installation<span class="dp">·</span>instructions<span class="dp">·</span>[here][installation].<span class="dp">·</span>Usually<span class="dp">·</span>people<span class="dp">·</span>install</td></tr>
+<tr class="diffunmodified"><td class="diffline">103 </td><td class="diffpresent">either<span class="dp">·</span>the<span class="dp">·</span>[pyright<span class="dp">·</span>npm][pkg_npm]<span class="dp">·</span>or<span class="dp">·</span>the<span class="dp">·</span>[pyright<span class="dp">·</span>PyPI][pkg_pypi]<span class="dp">·</span>package.</td><td class="diffline">103 </td><td class="diffpresent">either<span class="dp">·</span>the<span class="dp">·</span>[pyright<span class="dp">·</span>npm][pkg_npm]<span class="dp">·</span>or<span class="dp">·</span>the<span class="dp">·</span>[pyright<span class="dp">·</span>PyPI][pkg_pypi]<span class="dp">·</span>package.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

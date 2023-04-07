@@ -1,0 +1,299 @@
+# Comparing `tmp/fastapialchemycollector-1.0.0.tar.gz` & `tmp/fastapialchemycollector-1.0.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fastapialchemycollector-1.0.0.tar", last modified: Sun Jan 15 16:35:52 2023, max compression
++gzip compressed data, was "fastapialchemycollector-1.0.1.tar", last modified: Fri Apr  7 08:44:51 2023, max compression
+```
+
+## Comparing `fastapialchemycollector-1.0.0.tar` & `fastapialchemycollector-1.0.1.tar`
+
+### file list
+
+```diff
+@@ -1,40 +1,40 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:35:52.832686 fastapialchemycollector-1.0.0/
+--rw-r--r--   0 runner    (1001) docker     (123)      100 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     4768 2023-01-15 16:35:52.832686 fastapialchemycollector-1.0.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     4338 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/README-public.md
+--rw-r--r--   0 runner    (1001) docker     (123)     6245 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:35:52.828686 fastapialchemycollector-1.0.0/common/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7663 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/alchemy_instrumentation.py
+--rw-r--r--   0 runner    (1001) docker     (123)      605 2023-01-15 16:35:47.000000 fastapialchemycollector-1.0.0/common/consts.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:35:52.828686 fastapialchemycollector-1.0.0/common/exporters/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/exporters/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3133 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/exporters/file_exporter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3212 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/exporters/remote_exporter.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:35:52.828686 fastapialchemycollector-1.0.0/common/instrumentations/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/instrumentations/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      254 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/instrumentations/consts.py
+--rw-r--r--   0 runner    (1001) docker     (123)      188 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/instrumentations/dummy.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1875 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/instrumentations/instrumentation_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)      101 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/plan_collect_type.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:35:52.832686 fastapialchemycollector-1.0.0/common/utils/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/utils/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      528 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/utils/chunk.py
+--rw-r--r--   0 runner    (1001) docker     (123)      621 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/utils/env_var.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6645 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/utils/log.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1462 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/utils/once.py
+--rw-r--r--   0 runner    (1001) docker     (123)      627 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/utils/singleton_class.py
+--rw-r--r--   0 runner    (1001) docker     (123)       22 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/common/version.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:35:52.832686 fastapialchemycollector-1.0.0/fastapialchemycollector/
+--rw-r--r--   0 runner    (1001) docker     (123)      103 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/fastapialchemycollector/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8897 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/fastapialchemycollector/instruments.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:35:52.832686 fastapialchemycollector-1.0.0/fastapialchemycollector.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     4768 2023-01-15 16:35:52.000000 fastapialchemycollector-1.0.0/fastapialchemycollector.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      919 2023-01-15 16:35:52.000000 fastapialchemycollector-1.0.0/fastapialchemycollector.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-15 16:35:52.000000 fastapialchemycollector-1.0.0/fastapialchemycollector.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      441 2023-01-15 16:35:52.000000 fastapialchemycollector-1.0.0/fastapialchemycollector.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       31 2023-01-15 16:35:52.000000 fastapialchemycollector-1.0.0/fastapialchemycollector.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      320 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/requirements-common.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      148 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/requirements.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      200 2023-01-15 16:35:52.832686 fastapialchemycollector-1.0.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1015 2023-01-15 16:35:38.000000 fastapialchemycollector-1.0.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:51.136950 fastapialchemycollector-1.0.1/
++-rw-r--r--   0 runner    (1001) docker     (123)      100 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     4768 2023-04-07 08:44:51.136950 fastapialchemycollector-1.0.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     4338 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/README-public.md
++-rw-r--r--   0 runner    (1001) docker     (123)     6245 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:51.136950 fastapialchemycollector-1.0.1/common/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7663 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/alchemy_instrumentation.py
++-rw-r--r--   0 runner    (1001) docker     (123)      605 2023-04-07 08:44:43.000000 fastapialchemycollector-1.0.1/common/consts.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:51.136950 fastapialchemycollector-1.0.1/common/exporters/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/exporters/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3133 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/exporters/file_exporter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3230 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/exporters/remote_exporter.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:51.136950 fastapialchemycollector-1.0.1/common/instrumentations/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/instrumentations/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      254 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/instrumentations/consts.py
++-rw-r--r--   0 runner    (1001) docker     (123)      188 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/instrumentations/dummy.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1928 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/instrumentations/instrumentation_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)      101 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/plan_collect_type.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:51.136950 fastapialchemycollector-1.0.1/common/utils/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/utils/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      528 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/utils/chunk.py
++-rw-r--r--   0 runner    (1001) docker     (123)      621 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/utils/env_var.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6645 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/utils/log.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1462 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/utils/once.py
++-rw-r--r--   0 runner    (1001) docker     (123)      627 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/utils/singleton_class.py
++-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/common/version.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:51.136950 fastapialchemycollector-1.0.1/fastapialchemycollector/
++-rw-r--r--   0 runner    (1001) docker     (123)      103 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/fastapialchemycollector/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8828 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/fastapialchemycollector/instruments.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:51.136950 fastapialchemycollector-1.0.1/fastapialchemycollector.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     4768 2023-04-07 08:44:51.000000 fastapialchemycollector-1.0.1/fastapialchemycollector.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      919 2023-04-07 08:44:51.000000 fastapialchemycollector-1.0.1/fastapialchemycollector.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 08:44:51.000000 fastapialchemycollector-1.0.1/fastapialchemycollector.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      441 2023-04-07 08:44:51.000000 fastapialchemycollector-1.0.1/fastapialchemycollector.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       31 2023-04-07 08:44:51.000000 fastapialchemycollector-1.0.1/fastapialchemycollector.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      320 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/requirements-common.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      148 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/requirements.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      200 2023-04-07 08:44:51.140950 fastapialchemycollector-1.0.1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1015 2023-04-07 08:44:33.000000 fastapialchemycollector-1.0.1/setup.py
+```
+
+### Comparing `fastapialchemycollector-1.0.0/PKG-INFO` & `fastapialchemycollector-1.0.1/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fastapialchemycollector
+-Version: 1.0.0
++Version: 1.0.1
+ Summary: Metis log collector for FastAPI and SQLAlchemy
+ Home-page: https://github.com/metis-data/metis-python-collectors
+ Author: Metis dev
+ Author-email: devops@metisdata.io
+ License: UNKNOWN
+ Project-URL: Bug Tracker, https://github.com/metis-data/metis-python-collectors/issues
+ Platform: UNKNOWN
+```
+
+### Comparing `fastapialchemycollector-1.0.0/README-public.md` & `fastapialchemycollector-1.0.1/README-public.md`
+
+ * *Files identical despite different names*
+
+### Comparing `fastapialchemycollector-1.0.0/README.md` & `fastapialchemycollector-1.0.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `fastapialchemycollector-1.0.0/common/alchemy_instrumentation.py` & `fastapialchemycollector-1.0.1/common/alchemy_instrumentation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastapialchemycollector-1.0.0/common/consts.py` & `fastapialchemycollector-1.0.1/common/consts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastapialchemycollector-1.0.0/common/exporters/file_exporter.py` & `fastapialchemycollector-1.0.1/common/exporters/file_exporter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastapialchemycollector-1.0.0/common/exporters/remote_exporter.py` & `fastapialchemycollector-1.0.1/common/exporters/remote_exporter.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -13,16 +13,16 @@
+ 
+ logger = logging.getLogger(__name__)
+ NUM_RETRIES = 3
+ 
+ 
+ class MetisRemoteExporter(SpanExporter):
+     @log
+-    def __init__(self, url, api_key, sentry_logger: Optional[sentry_sdk.Hub]):
+-        self.url = url
++    def __init__(self, exporter_url, api_key, sentry_logger: Optional[sentry_sdk.Hub]):
++        self.url = exporter_url
+         self.session = requests.Session()
+         self.session.headers.update(
+             {"x-api-key": api_key}
+         )
+         self.sentry_logger = sentry_logger
+ 
+     @log
+```
+
+### Comparing `fastapialchemycollector-1.0.0/common/instrumentations/instrumentation_config.py` & `fastapialchemycollector-1.0.1/common/instrumentations/instrumentation_config.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -28,27 +28,27 @@
+         os.environ['OTEL_PYTHON_DISABLE_INSTRUMENTATION'] = str(self.is_disabled)
+         os.environ['OTEL_SDK_DISABLED'] = str(self.is_disabled)
+ 
+         self._extract_from_env()
+ 
+     @staticmethod
+     def create(user_conf: dict):
+-        return InstrumentationEnvConfig(user_conf['service_name'],
+-                                        user_conf['service_version'],
+-                                        user_conf['exporter_url'],
+-                                        user_conf['api_key'])
++        return InstrumentationEnvConfig(service_name=user_conf['service_name'],
++                                        exporter_url=user_conf['exporter_url'],
++                                        api_key=user_conf['api_key'],
++                                        service_version=user_conf['service_version'])
+ 
+     def _extract_from_env(self):
+         service_name = os.getenv(METIS_SERVICE_NAME_ENV_VAR_STR)
+         if service_name:
+             self.service_name = service_name
+ 
+         service_version = os.getenv(METIS_SERVICE_VERSION_ENV_VAR_STR)
+         if service_version:
+-            self.service_name = service_version
++            self.service_version = service_version
+ 
+         api_key = os.getenv(METIS_API_KEY_ENV_VAR_STR)
+         if api_key:
+             self.api_key = api_key
+ 
+         exporter_url = os.getenv(METIS_EXPORTER_ENV_VAR_STR)
+         if exporter_url:
+```
+
+### Comparing `fastapialchemycollector-1.0.0/common/utils/chunk.py` & `fastapialchemycollector-1.0.1/common/utils/chunk.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastapialchemycollector-1.0.0/common/utils/env_var.py` & `fastapialchemycollector-1.0.1/common/utils/env_var.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastapialchemycollector-1.0.0/common/utils/log.py` & `fastapialchemycollector-1.0.1/common/utils/log.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastapialchemycollector-1.0.0/common/utils/once.py` & `fastapialchemycollector-1.0.1/common/utils/once.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastapialchemycollector-1.0.0/common/utils/singleton_class.py` & `fastapialchemycollector-1.0.1/common/utils/singleton_class.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fastapialchemycollector-1.0.0/fastapialchemycollector/instruments.py` & `fastapialchemycollector-1.0.1/fastapialchemycollector/instruments.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -194,19 +194,16 @@
+ 
+         if not is_set:
+             logger.warning("You've setup metis instrumentation already")
+ 
+     @log
+     def _set_exporters(self,
+                        api_key: Optional[str] = None,
+-                       exporter_url: Optional[str] = None):
+-        if bool(exporter_url) != bool(api_key):
+-            raise ValueError("Endpoint and api_key must be provided")
+-
+-        if exporter_url is not None:
++                       exporter_url: Optional[str] = "https://ingest.metisdata.io/"):
++        if api_key is not None and exporter_url is not None:
+             self._add_processor(BatchSpanProcessor(MetisRemoteExporter(exporter_url, api_key, self.sentry_logger)))
+ 
+         if strtobool(os.getenv("DEBUG", 'False')):
+             self._add_processor(BatchSpanProcessor(ConsoleSpanExporter()))
+ 
+     @log
+     def _add_processor(self, processor):
+```
+
+### Comparing `fastapialchemycollector-1.0.0/fastapialchemycollector.egg-info/PKG-INFO` & `fastapialchemycollector-1.0.1/fastapialchemycollector.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fastapialchemycollector
+-Version: 1.0.0
++Version: 1.0.1
+ Summary: Metis log collector for FastAPI and SQLAlchemy
+ Home-page: https://github.com/metis-data/metis-python-collectors
+ Author: Metis dev
+ Author-email: devops@metisdata.io
+ License: UNKNOWN
+ Project-URL: Bug Tracker, https://github.com/metis-data/metis-python-collectors/issues
+ Platform: UNKNOWN
+```
+
+### Comparing `fastapialchemycollector-1.0.0/fastapialchemycollector.egg-info/SOURCES.txt` & `fastapialchemycollector-1.0.1/fastapialchemycollector.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `fastapialchemycollector-1.0.0/setup.py` & `fastapialchemycollector-1.0.1/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+ from pip._internal.req import parse_requirements
+ from setuptools import setup, find_packages
+ 
+ this_directory = Path(__file__).parent
+ with open(this_directory / "README-public.md", encoding="utf8") as file_handle:
+     long_description = file_handle.read()
+ 
+-VERSION = "1.0.0"
++VERSION = "1.0.1"
+ 
+ # pylint: disable=no-value-for-parameter
+ setup(
+     name="fastapialchemycollector",
+     version=VERSION,
+     author="Metis dev",
+     author_email="devops@metisdata.io",
+```
+

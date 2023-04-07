@@ -1,0 +1,85 @@
+--- tmp/ExpdFtpService-0.4.0.tar.gz
++++ tmp/ExpdFtpService-0.5.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist\ExpdFtpService-0.4.0.tar", last modified: Wed Mar  8 10:47:40 2023, max compression
+│ +gzip compressed data, was "dist\ExpdFtpService-0.5.0.tar", last modified: Fri Apr  7 08:47:19 2023, max compression
+│   --- ExpdFtpService-0.4.0.tar
+├── +++ ExpdFtpService-0.5.0.tar
+│ ├── file list
+│ │ @@ -1,14 +1,14 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-08 10:47:40.000000 ExpdFtpService-0.4.0/
+│ │ --rw-rw-rw-   0        0        0      305 2023-03-08 10:47:40.000000 ExpdFtpService-0.4.0/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      619 2023-03-02 11:07:57.000000 ExpdFtpService-0.4.0/README.md
+│ │ --rw-rw-rw-   0        0        0      115 2023-03-08 10:47:40.000000 ExpdFtpService-0.4.0/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      441 2023-03-08 10:39:02.000000 ExpdFtpService-0.4.0/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-08 10:47:40.000000 ExpdFtpService-0.4.0/src/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-08 10:47:40.000000 ExpdFtpService-0.4.0/src/ExpdFtpService/
+│ │ --rw-rw-rw-   0        0        0     4533 2023-03-08 10:42:45.000000 ExpdFtpService-0.4.0/src/ExpdFtpService/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-08 10:47:40.000000 ExpdFtpService-0.4.0/src/ExpdFtpService.egg-info/
+│ │ --rw-rw-rw-   0        0        0      305 2023-03-08 10:47:40.000000 ExpdFtpService-0.4.0/src/ExpdFtpService.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      268 2023-03-08 10:47:40.000000 ExpdFtpService-0.4.0/src/ExpdFtpService.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-08 10:47:40.000000 ExpdFtpService-0.4.0/src/ExpdFtpService.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0        7 2023-03-08 10:47:40.000000 ExpdFtpService-0.4.0/src/ExpdFtpService.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       15 2023-03-08 10:47:40.000000 ExpdFtpService-0.4.0/src/ExpdFtpService.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:47:19.000000 ExpdFtpService-0.5.0/
+│ │ +-rw-rw-rw-   0        0        0      305 2023-04-07 08:47:19.000000 ExpdFtpService-0.5.0/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      619 2023-03-02 11:07:57.000000 ExpdFtpService-0.5.0/README.md
+│ │ +-rw-rw-rw-   0        0        0      115 2023-04-07 08:47:19.000000 ExpdFtpService-0.5.0/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      441 2023-04-07 08:12:41.000000 ExpdFtpService-0.5.0/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:47:19.000000 ExpdFtpService-0.5.0/src/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:47:19.000000 ExpdFtpService-0.5.0/src/ExpdFtpService/
+│ │ +-rw-rw-rw-   0        0        0     4573 2023-04-07 08:46:33.000000 ExpdFtpService-0.5.0/src/ExpdFtpService/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:47:19.000000 ExpdFtpService-0.5.0/src/ExpdFtpService.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      305 2023-04-07 08:47:19.000000 ExpdFtpService-0.5.0/src/ExpdFtpService.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      268 2023-04-07 08:47:19.000000 ExpdFtpService-0.5.0/src/ExpdFtpService.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 08:47:19.000000 ExpdFtpService-0.5.0/src/ExpdFtpService.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0        7 2023-04-07 08:47:19.000000 ExpdFtpService-0.5.0/src/ExpdFtpService.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       15 2023-04-07 08:47:19.000000 ExpdFtpService-0.5.0/src/ExpdFtpService.egg-info/top_level.txt
+│ │   --- ExpdFtpService-0.4.0/README.md
+│ ├── +++ ExpdFtpService-0.5.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- ExpdFtpService-0.4.0/src/ExpdFtpService/__init__.py
+│ ├── +++ ExpdFtpService-0.5.0/src/ExpdFtpService/__init__.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -11,14 +11,15 @@
+│ │          hostname (str): The hostname of the FTP server.
+│ │          username (str): The username to login to the FTP server.
+│ │          password (str): The password to login to the FTP server.
+│ │      """    
+│ │      def __init__(self, hostname, username, password):
+│ │          self.ftp = FTP()
+│ │          self.ftp.connect(host=hostname, port=21)
+│ │ +        self.ftp.sendcmd('OPTS UTF8 ON')
+│ │          self.ftp.set_pasv(True)
+│ │          self.ftp.login(user=username, passwd=password)
+│ │          # logger.debug(self.ftp.getwelcome())
+│ │  
+│ │  
+│ │  class ExpdDownloadFtpServerFile(ConnFtpServer):
+│ │      def __init__(self, hostname, username, password, destfolder, savefolder, fstartwith=None, filendwith=None):
+│ │ @@ -95,14 +96,13 @@
+│ │                  self.ftp.storbinary(f'STOR {path.basename(local_file)}', f)
+│ │                  logger.debug(f"{local_file} uploaded successfully")
+│ │          finally:
+│ │              self.ftp.quit()
+│ │      
+│ │  
+│ │  if __name__ == '__main__':
+│ │ -    pass
+│ │ -    # ExpdUploadFtpServerFile(
+│ │ -    #     hostname=hostname,
+│ │ -    #     username=username,
+│ │ -    #     password=password,
+│ │ -    #     destfolder=destfolder,
+│ │ -    # ).upload_file_to_server(r"D:\Solutions\edoc_upload_sourth_korea\server\data\GENRES\E13I0095652\2431295471_PIE_E433593539.pdf")
+│ │ +    ExpdUploadFtpServerFile(
+│ │ +        hostname="sha-comm02.sha.ei",
+│ │ +        username="xxx",
+│ │ +        password="xxx",
+│ │ +        destfolder="/ftp/GEO/testpath这话",
+│ │ +    ).upload_file_to_server(r"D:\Solutions\edoc_upload_sourth_korea\server\data\History\E13I2100055\R4382481_PIE_E433594030.pdf")
+│ │ ├── encoding
+│ │ │ @@ -1 +1 @@
+│ │ │ -us-ascii
+│ │ │ +utf-8

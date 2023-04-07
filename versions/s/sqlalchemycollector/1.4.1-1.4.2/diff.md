@@ -1,0 +1,315 @@
+# Comparing `tmp/sqlalchemycollector-1.4.1.tar.gz` & `tmp/sqlalchemycollector-1.4.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "sqlalchemycollector-1.4.1.tar", last modified: Sun Jan 15 16:39:59 2023, max compression
++gzip compressed data, was "sqlalchemycollector-1.4.2.tar", last modified: Fri Apr  7 08:44:56 2023, max compression
+```
+
+## Comparing `sqlalchemycollector-1.4.1.tar` & `sqlalchemycollector-1.4.2.tar`
+
+### file list
+
+```diff
+@@ -1,41 +1,41 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:39:59.337441 sqlalchemycollector-1.4.1/
+--rw-r--r--   0 runner    (1001) docker     (123)      100 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     4160 2023-01-15 16:39:59.337441 sqlalchemycollector-1.4.1/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     3761 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/README-public.md
+--rw-r--r--   0 runner    (1001) docker     (123)     6238 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)      310 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/README.rst
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:39:59.333441 sqlalchemycollector-1.4.1/common/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7663 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/alchemy_instrumentation.py
+--rw-r--r--   0 runner    (1001) docker     (123)      605 2023-01-15 16:39:53.000000 sqlalchemycollector-1.4.1/common/consts.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:39:59.333441 sqlalchemycollector-1.4.1/common/exporters/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/exporters/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3133 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/exporters/file_exporter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3212 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/exporters/remote_exporter.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:39:59.333441 sqlalchemycollector-1.4.1/common/instrumentations/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/instrumentations/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      254 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/instrumentations/consts.py
+--rw-r--r--   0 runner    (1001) docker     (123)      188 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/instrumentations/dummy.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1875 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/instrumentations/instrumentation_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)      101 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/plan_collect_type.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:39:59.337441 sqlalchemycollector-1.4.1/common/utils/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/utils/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      528 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/utils/chunk.py
+--rw-r--r--   0 runner    (1001) docker     (123)      621 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/utils/env_var.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6645 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/utils/log.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1462 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/utils/once.py
+--rw-r--r--   0 runner    (1001) docker     (123)      627 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/utils/singleton_class.py
+--rw-r--r--   0 runner    (1001) docker     (123)       22 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/common/version.py
+--rw-r--r--   0 runner    (1001) docker     (123)      320 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/requirements-common.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      120 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/requirements.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      196 2023-01-15 16:39:59.337441 sqlalchemycollector-1.4.1/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)      977 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:39:59.337441 sqlalchemycollector-1.4.1/sqlalchemycollector/
+--rw-r--r--   0 runner    (1001) docker     (123)      103 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/sqlalchemycollector/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8929 2023-01-15 16:39:45.000000 sqlalchemycollector-1.4.1/sqlalchemycollector/instruments.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-15 16:39:59.337441 sqlalchemycollector-1.4.1/sqlalchemycollector.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     4160 2023-01-15 16:39:59.000000 sqlalchemycollector-1.4.1/sqlalchemycollector.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      902 2023-01-15 16:39:59.000000 sqlalchemycollector-1.4.1/sqlalchemycollector.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-15 16:39:59.000000 sqlalchemycollector-1.4.1/sqlalchemycollector.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      413 2023-01-15 16:39:59.000000 sqlalchemycollector-1.4.1/sqlalchemycollector.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       27 2023-01-15 16:39:59.000000 sqlalchemycollector-1.4.1/sqlalchemycollector.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:56.392261 sqlalchemycollector-1.4.2/
++-rw-r--r--   0 runner    (1001) docker     (123)      100 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     4160 2023-04-07 08:44:56.392261 sqlalchemycollector-1.4.2/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     3761 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/README-public.md
++-rw-r--r--   0 runner    (1001) docker     (123)     6238 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)      310 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/README.rst
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:56.384261 sqlalchemycollector-1.4.2/common/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7663 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/alchemy_instrumentation.py
++-rw-r--r--   0 runner    (1001) docker     (123)      605 2023-04-07 08:44:47.000000 sqlalchemycollector-1.4.2/common/consts.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:56.384261 sqlalchemycollector-1.4.2/common/exporters/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/exporters/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3133 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/exporters/file_exporter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3230 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/exporters/remote_exporter.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:56.388261 sqlalchemycollector-1.4.2/common/instrumentations/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/instrumentations/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      254 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/instrumentations/consts.py
++-rw-r--r--   0 runner    (1001) docker     (123)      188 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/instrumentations/dummy.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1928 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/instrumentations/instrumentation_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)      101 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/plan_collect_type.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:56.388261 sqlalchemycollector-1.4.2/common/utils/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/utils/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      528 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/utils/chunk.py
++-rw-r--r--   0 runner    (1001) docker     (123)      621 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/utils/env_var.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6645 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/utils/log.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1462 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/utils/once.py
++-rw-r--r--   0 runner    (1001) docker     (123)      627 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/utils/singleton_class.py
++-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/common/version.py
++-rw-r--r--   0 runner    (1001) docker     (123)      320 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/requirements-common.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      120 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/requirements.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      196 2023-04-07 08:44:56.392261 sqlalchemycollector-1.4.2/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)      977 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:56.392261 sqlalchemycollector-1.4.2/sqlalchemycollector/
++-rw-r--r--   0 runner    (1001) docker     (123)      103 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/sqlalchemycollector/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8869 2023-04-07 08:44:33.000000 sqlalchemycollector-1.4.2/sqlalchemycollector/instruments.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 08:44:56.392261 sqlalchemycollector-1.4.2/sqlalchemycollector.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     4160 2023-04-07 08:44:56.000000 sqlalchemycollector-1.4.2/sqlalchemycollector.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      902 2023-04-07 08:44:56.000000 sqlalchemycollector-1.4.2/sqlalchemycollector.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 08:44:56.000000 sqlalchemycollector-1.4.2/sqlalchemycollector.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      413 2023-04-07 08:44:56.000000 sqlalchemycollector-1.4.2/sqlalchemycollector.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       27 2023-04-07 08:44:56.000000 sqlalchemycollector-1.4.2/sqlalchemycollector.egg-info/top_level.txt
+```
+
+### Comparing `sqlalchemycollector-1.4.1/PKG-INFO` & `sqlalchemycollector-1.4.2/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: sqlalchemycollector
+-Version: 1.4.1
++Version: 1.4.2
+ Summary: Metis log collector for Flask and SQLAlchemy
+ Home-page: https://github.com/metis-data/metis-python-collectors
+ Author: Metis dev
+ Author-email: devops@metisdata.io
+ License: UNKNOWN
+ Project-URL: Bug Tracker, https://github.com/metis-data/metis-python-collectors/issues
+ Platform: UNKNOWN
+```
+
+### Comparing `sqlalchemycollector-1.4.1/README-public.md` & `sqlalchemycollector-1.4.2/README-public.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlalchemycollector-1.4.1/README.md` & `sqlalchemycollector-1.4.2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlalchemycollector-1.4.1/common/alchemy_instrumentation.py` & `sqlalchemycollector-1.4.2/common/alchemy_instrumentation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlalchemycollector-1.4.1/common/consts.py` & `sqlalchemycollector-1.4.2/common/consts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlalchemycollector-1.4.1/common/exporters/file_exporter.py` & `sqlalchemycollector-1.4.2/common/exporters/file_exporter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlalchemycollector-1.4.1/common/exporters/remote_exporter.py` & `sqlalchemycollector-1.4.2/common/exporters/remote_exporter.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -13,16 +13,16 @@
+ 
+ logger = logging.getLogger(__name__)
+ NUM_RETRIES = 3
+ 
+ 
+ class MetisRemoteExporter(SpanExporter):
+     @log
+-    def __init__(self, url, api_key, sentry_logger: Optional[sentry_sdk.Hub]):
+-        self.url = url
++    def __init__(self, exporter_url, api_key, sentry_logger: Optional[sentry_sdk.Hub]):
++        self.url = exporter_url
+         self.session = requests.Session()
+         self.session.headers.update(
+             {"x-api-key": api_key}
+         )
+         self.sentry_logger = sentry_logger
+ 
+     @log
+```
+
+### Comparing `sqlalchemycollector-1.4.1/common/instrumentations/instrumentation_config.py` & `sqlalchemycollector-1.4.2/common/instrumentations/instrumentation_config.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -28,27 +28,27 @@
+         os.environ['OTEL_PYTHON_DISABLE_INSTRUMENTATION'] = str(self.is_disabled)
+         os.environ['OTEL_SDK_DISABLED'] = str(self.is_disabled)
+ 
+         self._extract_from_env()
+ 
+     @staticmethod
+     def create(user_conf: dict):
+-        return InstrumentationEnvConfig(user_conf['service_name'],
+-                                        user_conf['service_version'],
+-                                        user_conf['exporter_url'],
+-                                        user_conf['api_key'])
++        return InstrumentationEnvConfig(service_name=user_conf['service_name'],
++                                        exporter_url=user_conf['exporter_url'],
++                                        api_key=user_conf['api_key'],
++                                        service_version=user_conf['service_version'])
+ 
+     def _extract_from_env(self):
+         service_name = os.getenv(METIS_SERVICE_NAME_ENV_VAR_STR)
+         if service_name:
+             self.service_name = service_name
+ 
+         service_version = os.getenv(METIS_SERVICE_VERSION_ENV_VAR_STR)
+         if service_version:
+-            self.service_name = service_version
++            self.service_version = service_version
+ 
+         api_key = os.getenv(METIS_API_KEY_ENV_VAR_STR)
+         if api_key:
+             self.api_key = api_key
+ 
+         exporter_url = os.getenv(METIS_EXPORTER_ENV_VAR_STR)
+         if exporter_url:
+```
+
+### Comparing `sqlalchemycollector-1.4.1/common/utils/chunk.py` & `sqlalchemycollector-1.4.2/common/utils/chunk.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlalchemycollector-1.4.1/common/utils/env_var.py` & `sqlalchemycollector-1.4.2/common/utils/env_var.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlalchemycollector-1.4.1/common/utils/log.py` & `sqlalchemycollector-1.4.2/common/utils/log.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlalchemycollector-1.4.1/common/utils/once.py` & `sqlalchemycollector-1.4.2/common/utils/once.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlalchemycollector-1.4.1/common/utils/singleton_class.py` & `sqlalchemycollector-1.4.2/common/utils/singleton_class.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlalchemycollector-1.4.1/setup.py` & `sqlalchemycollector-1.4.2/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ from pathlib import Path
+ 
+ from pip._internal.req import parse_requirements
+ from setuptools import setup, find_packages
+ 
+-VERSION = "1.4.1"
++VERSION = "1.4.2"
+ this_directory = Path(__file__).parent
+ with open(this_directory / "README-public.md", encoding="utf8") as file_handle:
+     long_description = file_handle.read()
+ 
+ # pylint: disable=no-value-for-parameter
+ setup(
+     name="sqlalchemycollector",
+```
+
+### Comparing `sqlalchemycollector-1.4.1/sqlalchemycollector/instruments.py` & `sqlalchemycollector-1.4.2/sqlalchemycollector/instruments.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -97,16 +97,16 @@
+ @log
+ def _convert_items_to_metis_tags(tags_dict: Optional[Attributes]):
+     return {f'app.tag.{key.lower()}': val for key, val in tags_dict.items()}
+ 
+ 
+ @log
+ def setup(
+-        service_name: str,
+-        api_key: str,
++        service_name: Optional[str] = None,
++        api_key: Optional[str] = None,
+         service_version: Optional[str] = None,
+         resource_tags: Optional[Attributes] = None,
+         plan_collection_option: Optional[PlanCollectType] = PlanCollectType.ESTIMATED,
+         exporter_url: Optional[str] = "https://ingest.metisdata.io/",
+         report_errors: bool = True):
+     user_conf = {
+         'service_name': service_name,
+@@ -190,17 +190,15 @@
+         if not is_set:
+             logger.warning("You've setup metis instrumentation already")
+ 
+     @log
+     def _set_exporters(self,
+                        api_key: Optional[str] = None,
+                        exporter_url: Optional[str] = "https://ingest.metisdata.io/"):
+-        if bool(exporter_url) != bool(api_key):
+-            raise ValueError("Endpoint and api_key must be provided")
+-        if exporter_url is not None:
++        if api_key is not None and exporter_url is not None:
+             self._add_processor(BatchSpanProcessor(MetisRemoteExporter(exporter_url, api_key, self.sentry_logger)))
+ 
+         if strtobool(os.getenv("DEBUG", 'False')):
+             self._add_processor(BatchSpanProcessor(ConsoleSpanExporter()))
+ 
+     @log
+     def _add_processor(self, processor):
+```
+
+### Comparing `sqlalchemycollector-1.4.1/sqlalchemycollector.egg-info/PKG-INFO` & `sqlalchemycollector-1.4.2/sqlalchemycollector.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: sqlalchemycollector
+-Version: 1.4.1
++Version: 1.4.2
+ Summary: Metis log collector for Flask and SQLAlchemy
+ Home-page: https://github.com/metis-data/metis-python-collectors
+ Author: Metis dev
+ Author-email: devops@metisdata.io
+ License: UNKNOWN
+ Project-URL: Bug Tracker, https://github.com/metis-data/metis-python-collectors/issues
+ Platform: UNKNOWN
+```
+
+### Comparing `sqlalchemycollector-1.4.1/sqlalchemycollector.egg-info/SOURCES.txt` & `sqlalchemycollector-1.4.2/sqlalchemycollector.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
