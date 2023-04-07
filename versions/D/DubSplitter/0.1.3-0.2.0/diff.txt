@@ -1,0 +1,107 @@
+--- tmp/DubSplitter-0.1.3.tar.gz
++++ tmp/DubSplitter-0.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "DubSplitter-0.1.3.tar", last modified: Fri Apr  7 13:16:09 2023, max compression
+│ +gzip compressed data, was "DubSplitter-0.2.0.tar", last modified: Fri Apr  7 13:29:21 2023, max compression
+│   --- DubSplitter-0.1.3.tar
+├── +++ DubSplitter-0.2.0.tar
+│ ├── file list
+│ │ @@ -1,22 +1,22 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 13:16:09.145394 DubSplitter-0.1.3/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 13:16:09.030570 DubSplitter-0.1.3/DubSplitter.egg-info/
+│ │ --rw-rw-rw-   0        0        0     2866 2023-04-07 13:16:08.000000 DubSplitter-0.1.3/DubSplitter.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      502 2023-04-07 13:16:08.000000 DubSplitter-0.1.3/DubSplitter.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-07 13:16:08.000000 DubSplitter-0.1.3/DubSplitter.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       61 2023-04-07 13:16:08.000000 DubSplitter-0.1.3/DubSplitter.egg-info/entry_points.txt
+│ │ --rw-rw-rw-   0        0        0        2 2023-04-07 00:03:48.000000 DubSplitter-0.1.3/DubSplitter.egg-info/not-zip-safe
+│ │ --rw-rw-rw-   0        0        0       27 2023-04-07 13:16:08.000000 DubSplitter-0.1.3/DubSplitter.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       12 2023-04-07 13:16:08.000000 DubSplitter-0.1.3/DubSplitter.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0     2866 2023-04-07 13:16:09.144393 DubSplitter-0.1.3/PKG-INFO
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 13:16:09.031570 DubSplitter-0.1.3/dubSplitter/
+│ │ --rw-rw-rw-   0        0        0        0 2023-04-07 01:02:52.000000 DubSplitter-0.1.3/dubSplitter/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1586 2023-04-07 02:57:49.000000 DubSplitter-0.1.3/dubSplitter/constants.py
+│ │ --rw-rw-rw-   0        0        0     2793 2023-04-07 01:57:24.000000 DubSplitter-0.1.3/dubSplitter/dubSplitter.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 13:16:09.130391 DubSplitter-0.1.3/dubSplitter/functions/
+│ │ --rw-rw-rw-   0        0        0        0 2023-04-07 01:03:14.000000 DubSplitter-0.1.3/dubSplitter/functions/__init__.py
+│ │ --rw-rw-rw-   0        0        0      628 2023-04-07 01:33:33.000000 DubSplitter-0.1.3/dubSplitter/functions/path.py
+│ │ --rw-rw-rw-   0        0        0     1521 2023-04-07 01:22:53.000000 DubSplitter-0.1.3/dubSplitter/functions/slicer.py
+│ │ --rw-rw-rw-   0        0        0      399 2023-04-07 00:58:45.000000 DubSplitter-0.1.3/dubSplitter/functions/stringEx.py
+│ │ --rw-rw-rw-   0        0        0     2890 2023-04-07 01:23:08.000000 DubSplitter-0.1.3/dubSplitter/functions/voiceRecognition.py
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-07 13:16:09.145394 DubSplitter-0.1.3/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1280 2023-04-07 13:12:50.000000 DubSplitter-0.1.3/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:29:21.673735 DubSplitter-0.2.0/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:29:21.670736 DubSplitter-0.2.0/DubSplitter.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     3220 2023-04-07 13:29:21.000000 DubSplitter-0.2.0/DubSplitter.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      502 2023-04-07 13:29:21.000000 DubSplitter-0.2.0/DubSplitter.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 13:29:21.000000 DubSplitter-0.2.0/DubSplitter.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       61 2023-04-07 13:29:21.000000 DubSplitter-0.2.0/DubSplitter.egg-info/entry_points.txt
+│ │ +-rw-rw-rw-   0        0        0        2 2023-04-07 00:03:48.000000 DubSplitter-0.2.0/DubSplitter.egg-info/not-zip-safe
+│ │ +-rw-rw-rw-   0        0        0       27 2023-04-07 13:29:21.000000 DubSplitter-0.2.0/DubSplitter.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       12 2023-04-07 13:29:21.000000 DubSplitter-0.2.0/DubSplitter.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0     3220 2023-04-07 13:29:21.673735 DubSplitter-0.2.0/PKG-INFO
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:29:21.671735 DubSplitter-0.2.0/dubSplitter/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-04-07 01:02:52.000000 DubSplitter-0.2.0/dubSplitter/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1586 2023-04-07 02:57:49.000000 DubSplitter-0.2.0/dubSplitter/constants.py
+│ │ +-rw-rw-rw-   0        0        0     2855 2023-04-07 13:22:31.000000 DubSplitter-0.2.0/dubSplitter/dubSplitter.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:29:21.673735 DubSplitter-0.2.0/dubSplitter/functions/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-04-07 01:03:14.000000 DubSplitter-0.2.0/dubSplitter/functions/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      628 2023-04-07 01:33:33.000000 DubSplitter-0.2.0/dubSplitter/functions/path.py
+│ │ +-rw-rw-rw-   0        0        0     1521 2023-04-07 01:22:53.000000 DubSplitter-0.2.0/dubSplitter/functions/slicer.py
+│ │ +-rw-rw-rw-   0        0        0      399 2023-04-07 00:58:45.000000 DubSplitter-0.2.0/dubSplitter/functions/stringEx.py
+│ │ +-rw-rw-rw-   0        0        0     2890 2023-04-07 01:23:08.000000 DubSplitter-0.2.0/dubSplitter/functions/voiceRecognition.py
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 13:29:21.673735 DubSplitter-0.2.0/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1306 2023-04-07 13:18:37.000000 DubSplitter-0.2.0/setup.py
+│ │   --- DubSplitter-0.1.3/dubSplitter/constants.py
+│ ├── +++ DubSplitter-0.2.0/dubSplitter/constants.py
+│ │┄ Files identical despite different names
+│ │   --- DubSplitter-0.1.3/dubSplitter/dubSplitter.py
+│ ├── +++ DubSplitter-0.2.0/dubSplitter/dubSplitter.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,18 +1,21 @@
+│ │  import argparse
+│ │  
+│ │  from pydub import AudioSegment
+│ │  from sympy import false, true
+│ │  
+│ │  import dubSplitter.constants as consts
+│ │ -
+│ │  from .constants import update_path
+│ │  from .functions.slicer import do_slice
+│ │  from .functions.voiceRecognition import update_whisper_model, update_model_language
+│ │  
+│ │ +VERSION = '0.2.0'
+│ │ +
+│ │ +print('DubSplitter {}'.format(VERSION))
+│ │ +
+│ │  bFromPackage = true
+│ │  
+│ │  
+│ │  def update_runtime(runtime):
+│ │      global bFromPackage
+│ │      bFromPackage = runtime
+│ │   --- DubSplitter-0.1.3/dubSplitter/functions/path.py
+│ ├── +++ DubSplitter-0.2.0/dubSplitter/functions/path.py
+│ │┄ Files identical despite different names
+│ │   --- DubSplitter-0.1.3/dubSplitter/functions/slicer.py
+│ ├── +++ DubSplitter-0.2.0/dubSplitter/functions/slicer.py
+│ │┄ Files identical despite different names
+│ │   --- DubSplitter-0.1.3/dubSplitter/functions/voiceRecognition.py
+│ ├── +++ DubSplitter-0.2.0/dubSplitter/functions/voiceRecognition.py
+│ │┄ Files identical despite different names
+│ │   --- DubSplitter-0.1.3/setup.py
+│ ├── +++ DubSplitter-0.2.0/setup.py
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  from setuptools import find_packages
+│ │  from setuptools import setup
+│ │  
+│ │ -VERSION = '0.1.3'
+│ │ +from dubSplitter.dubSplitter import VERSION
+│ │  
+│ │  with open('ReadMe.md') as f:
+│ │      LONG_DESCRIPTION = f.read()
+│ │  
+│ │  setup(
+│ │      name='DubSplitter',
+│ │      version=VERSION,

@@ -1,0 +1,48 @@
+# Comparing `tmp/NextionEasy-0.6.tar.gz` & `tmp/NextionEasy-0.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "NextionEasy-0.6.tar", last modified: Fri Apr  7 13:24:37 2023, max compression
++gzip compressed data, was "NextionEasy-0.7.tar", last modified: Fri Apr  7 13:27:30 2023, max compression
+```
+
+## Comparing `NextionEasy-0.6.tar` & `NextionEasy-0.7.tar`
+
+### file list
+
+```diff
+@@ -1,13 +1,13 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 13:24:37.382050 NextionEasy-0.6/
+-drwxrwxrwx   0        0        0        0 2023-04-07 13:24:37.382050 NextionEasy-0.6/NextionEasy.egg-info/
+--rw-rw-rw-   0        0        0      277 2023-04-07 13:24:37.000000 NextionEasy-0.6/NextionEasy.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      246 2023-04-07 13:24:37.000000 NextionEasy-0.6/NextionEasy.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 13:24:37.000000 NextionEasy-0.6/NextionEasy.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        2 2023-04-07 13:24:37.000000 NextionEasy-0.6/NextionEasy.egg-info/not-zip-safe
+--rw-rw-rw-   0        0        0       13 2023-04-07 13:24:37.000000 NextionEasy-0.6/NextionEasy.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0      277 2023-04-07 13:24:37.382050 NextionEasy-0.6/PKG-INFO
+-drwxrwxrwx   0        0        0        0 2023-04-07 13:24:37.382050 NextionEasy-0.6/nextion_easy/
+--rw-rw-rw-   0        0        0       37 2023-04-07 13:23:58.000000 NextionEasy-0.6/nextion_easy/__init__.py
+--rw-rw-rw-   0        0        0     2718 2023-04-07 13:12:21.000000 NextionEasy-0.6/nextion_easy/nextion_easy.py
+--rw-rw-rw-   0        0        0       42 2023-04-07 13:24:37.392123 NextionEasy-0.6/setup.cfg
+--rw-rw-rw-   0        0        0      307 2023-04-07 13:24:20.000000 NextionEasy-0.6/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 13:27:30.502711 NextionEasy-0.7/
++drwxrwxrwx   0        0        0        0 2023-04-07 13:27:30.502711 NextionEasy-0.7/NextionEasy.egg-info/
++-rw-rw-rw-   0        0        0      277 2023-04-07 13:27:30.000000 NextionEasy-0.7/NextionEasy.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      246 2023-04-07 13:27:30.000000 NextionEasy-0.7/NextionEasy.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 13:27:30.000000 NextionEasy-0.7/NextionEasy.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        2 2023-04-07 13:24:37.000000 NextionEasy-0.7/NextionEasy.egg-info/not-zip-safe
++-rw-rw-rw-   0        0        0       13 2023-04-07 13:27:30.000000 NextionEasy-0.7/NextionEasy.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0      277 2023-04-07 13:27:30.502711 NextionEasy-0.7/PKG-INFO
++drwxrwxrwx   0        0        0        0 2023-04-07 13:27:30.502711 NextionEasy-0.7/nextion_easy/
++-rw-rw-rw-   0        0        0       38 2023-04-07 13:27:10.000000 NextionEasy-0.7/nextion_easy/__init__.py
++-rw-rw-rw-   0        0        0     2718 2023-04-07 13:12:21.000000 NextionEasy-0.7/nextion_easy/nextion_easy.py
++-rw-rw-rw-   0        0        0       42 2023-04-07 13:27:30.502711 NextionEasy-0.7/setup.cfg
++-rw-rw-rw-   0        0        0      307 2023-04-07 13:27:21.000000 NextionEasy-0.7/setup.py
+```
+
+### Comparing `NextionEasy-0.6/nextion_easy/nextion_easy.py` & `NextionEasy-0.7/nextion_easy/nextion_easy.py`
+
+ * *Files identical despite different names*
+

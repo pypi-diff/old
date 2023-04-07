@@ -1,0 +1,572 @@
+# Comparing `tmp/croniter-1.3.8.tar.gz` & `tmp/croniter-1.3.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "croniter-1.3.8.tar", last modified: Tue Nov 22 08:07:19 2022, max compression
++gzip compressed data, was "croniter-1.3.9.tar", last modified: Fri Apr  7 13:31:00 2023, max compression
+```
+
+## Comparing `croniter-1.3.8.tar` & `croniter-1.3.9.tar`
+
+### file list
+
+```diff
+@@ -1,31 +1,31 @@
+-drwxrwxr-x   0 kiorky    (1000) kiorky    (1000)        0 2022-11-22 08:07:19.349861 croniter-1.3.8/
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)    10665 2022-11-22 08:07:19.000000 croniter-1.3.8/CHANGELOG.rst
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)     1064 2022-11-22 08:07:19.000000 croniter-1.3.8/LICENSE
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      136 2022-11-22 08:07:19.000000 croniter-1.3.8/MANIFEST.in
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)    23032 2022-11-22 08:07:19.349861 croniter-1.3.8/PKG-INFO
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)    11054 2022-11-22 08:07:19.000000 croniter-1.3.8/README.rst
+-drwxrwxr-x   0 kiorky    (1000) kiorky    (1000)        0 2022-11-22 08:07:19.349861 croniter-1.3.8/requirements/
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)       21 2022-11-22 08:07:19.000000 croniter-1.3.8/requirements/base.txt
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)       44 2022-11-22 08:07:19.000000 croniter-1.3.8/requirements/release.txt
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      109 2022-11-22 08:07:19.000000 croniter-1.3.8/requirements/test.txt
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      324 2022-11-22 08:07:19.349861 croniter-1.3.8/setup.cfg
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)     2071 2022-11-22 08:07:19.000000 croniter-1.3.8/setup.py
+-drwxrwxr-x   0 kiorky    (1000) kiorky    (1000)        0 2022-11-22 08:07:19.349861 croniter-1.3.8/src/
+-drwxrwxr-x   0 kiorky    (1000) kiorky    (1000)        0 2022-11-22 08:07:19.349861 croniter-1.3.8/src/croniter/
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      380 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter/__init__.py
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)    35173 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter/croniter.py
+-drwxrwxr-x   0 kiorky    (1000) kiorky    (1000)        0 2022-11-22 08:07:19.349861 croniter-1.3.8/src/croniter/tests/
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)        0 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter/tests/__init__.py
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      282 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter/tests/base.py
+--rwxrwxr-x   0 kiorky    (1000) kiorky    (1000)    55865 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter/tests/test_croniter.py
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)     6646 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter/tests/test_croniter_hash.py
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)     1705 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter/tests/test_croniter_random.py
+--rwxrwxr-x   0 kiorky    (1000) kiorky    (1000)     6786 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter/tests/test_croniter_range.py
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)     5715 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter/tests/test_speed.py
+-drwxrwxr-x   0 kiorky    (1000) kiorky    (1000)        0 2022-11-22 08:07:19.349861 croniter-1.3.8/src/croniter.egg-info/
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)    23032 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter.egg-info/PKG-INFO
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      622 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter.egg-info/SOURCES.txt
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)        1 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter.egg-info/dependency_links.txt
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)       16 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter.egg-info/requires.txt
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)        9 2022-11-22 08:07:19.000000 croniter-1.3.8/src/croniter.egg-info/top_level.txt
+--rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      619 2022-11-22 08:07:19.000000 croniter-1.3.8/tox.ini
++drwxrwxr-x   0 kiorky    (1000) kiorky    (1000)        0 2023-04-07 13:31:00.101647 croniter-1.3.9/
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)    10777 2023-04-07 13:30:59.000000 croniter-1.3.9/CHANGELOG.rst
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)     1064 2023-04-07 13:30:59.000000 croniter-1.3.9/LICENSE
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      136 2023-04-07 13:30:59.000000 croniter-1.3.9/MANIFEST.in
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)    23181 2023-04-07 13:31:00.101647 croniter-1.3.9/PKG-INFO
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)    11091 2023-04-07 13:30:59.000000 croniter-1.3.9/README.rst
++drwxrwxr-x   0 kiorky    (1000) kiorky    (1000)        0 2023-04-07 13:31:00.101647 croniter-1.3.9/requirements/
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)       21 2023-04-07 13:30:59.000000 croniter-1.3.9/requirements/base.txt
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)       44 2023-04-07 13:30:59.000000 croniter-1.3.9/requirements/release.txt
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      109 2023-04-07 13:30:59.000000 croniter-1.3.9/requirements/test.txt
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      324 2023-04-07 13:31:00.105647 croniter-1.3.9/setup.cfg
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)     2071 2023-04-07 13:30:59.000000 croniter-1.3.9/setup.py
++drwxrwxr-x   0 kiorky    (1000) kiorky    (1000)        0 2023-04-07 13:31:00.101647 croniter-1.3.9/src/
++drwxrwxr-x   0 kiorky    (1000) kiorky    (1000)        0 2023-04-07 13:31:00.101647 croniter-1.3.9/src/croniter/
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      380 2023-04-07 13:30:59.000000 croniter-1.3.9/src/croniter/__init__.py
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)    35642 2023-04-07 13:30:59.000000 croniter-1.3.9/src/croniter/croniter.py
++drwxrwxr-x   0 kiorky    (1000) kiorky    (1000)        0 2023-04-07 13:31:00.101647 croniter-1.3.9/src/croniter/tests/
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)        0 2023-04-07 13:30:59.000000 croniter-1.3.9/src/croniter/tests/__init__.py
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      282 2023-04-07 13:30:59.000000 croniter-1.3.9/src/croniter/tests/base.py
++-rwxrwxr-x   0 kiorky    (1000) kiorky    (1000)    58834 2023-04-07 13:30:59.000000 croniter-1.3.9/src/croniter/tests/test_croniter.py
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)     6646 2023-04-07 13:30:59.000000 croniter-1.3.9/src/croniter/tests/test_croniter_hash.py
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)     1705 2023-04-07 13:30:59.000000 croniter-1.3.9/src/croniter/tests/test_croniter_random.py
++-rwxrwxr-x   0 kiorky    (1000) kiorky    (1000)     6786 2023-04-07 13:30:59.000000 croniter-1.3.9/src/croniter/tests/test_croniter_range.py
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)     5715 2023-04-07 13:30:59.000000 croniter-1.3.9/src/croniter/tests/test_speed.py
++drwxrwxr-x   0 kiorky    (1000) kiorky    (1000)        0 2023-04-07 13:31:00.101647 croniter-1.3.9/src/croniter.egg-info/
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)    23181 2023-04-07 13:31:00.000000 croniter-1.3.9/src/croniter.egg-info/PKG-INFO
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      622 2023-04-07 13:31:00.000000 croniter-1.3.9/src/croniter.egg-info/SOURCES.txt
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)        1 2023-04-07 13:31:00.000000 croniter-1.3.9/src/croniter.egg-info/dependency_links.txt
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)       16 2023-04-07 13:31:00.000000 croniter-1.3.9/src/croniter.egg-info/requires.txt
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)        9 2023-04-07 13:31:00.000000 croniter-1.3.9/src/croniter.egg-info/top_level.txt
++-rw-rw-r--   0 kiorky    (1000) kiorky    (1000)      619 2023-04-07 13:30:59.000000 croniter-1.3.9/tox.ini
+```
+
+### Comparing `croniter-1.3.8/CHANGELOG.rst` & `croniter-1.3.9/CHANGELOG.rst`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,16 @@
+ Changelog
+ ==============
+ 
++1.3.9 (2023-04-07)
++------------------
++
++- Fix DOW hash parsing [kiorky]
++- better error handling on py3 [kiorky]
++
+ 1.3.8 (2022-11-22)
+ ------------------
+ 
+ - Add Python 3.11 support and move docs files to main folder [rafsaf]
+ 
+ 
+ 1.3.7 (2022-09-06)
+```
+
+### Comparing `croniter-1.3.8/LICENSE` & `croniter-1.3.9/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `croniter-1.3.8/PKG-INFO` & `croniter-1.3.9/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: croniter
+-Version: 1.3.8
++Version: 1.3.9
+ Summary: croniter provides iteration for datetime object with cron like format
+ Home-page: http://github.com/kiorky/croniter
+ Author: Matsumoto Taichi, kiorky
+ Author-email: taichino@gmail.com, kiorky@cryptelium.net
+ License: MIT License
+ Keywords: datetime,iterator,cron
+ Platform: UNKNOWN
+@@ -44,18 +44,18 @@
+      / __| '__/ _ \| '_ \| | __/ _ \ '__|
+     | (__| | | (_) | | | | | ||  __/ |
+      \___|_|  \___/|_| |_|_|\__\___|_|
+ 
+ 
+ Website: https://github.com/kiorky/croniter
+ 
+-Travis badge
+-=============
+-.. image:: https://travis-ci.org/kiorky/croniter.svg?branch=master
+-    :target: https://travis-ci.org/kiorky/croniter
++Build Badge
++===========
++.. image:: https://github.com/kiorky/croniter/actions/workflows/cicd.yml/badge.svg
++    :target: https://github.com/kiorky/croniter/actions/workflows/cicd.yml
+ 
+ 
+ Usage
+ ============
+ 
+ A simple example::
+ 
+@@ -319,14 +319,20 @@
+     - Ryan Finnie (rfinnie)
+ 
+ 
+ 
+ Changelog
+ ==============
+ 
++1.3.9 (2023-04-07)
++------------------
++
++- Fix DOW hash parsing [kiorky]
++- better error handling on py3 [kiorky]
++
+ 1.3.8 (2022-11-22)
+ ------------------
+ 
+ - Add Python 3.11 support and move docs files to main folder [rafsaf]
+ 
+ 
+ 1.3.7 (2022-09-06)
+```
+
+### Comparing `croniter-1.3.8/README.rst` & `croniter-1.3.9/README.rst`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -13,18 +13,18 @@
+      / __| '__/ _ \| '_ \| | __/ _ \ '__|
+     | (__| | | (_) | | | | | ||  __/ |
+      \___|_|  \___/|_| |_|_|\__\___|_|
+ 
+ 
+ Website: https://github.com/kiorky/croniter
+ 
+-Travis badge
+-=============
+-.. image:: https://travis-ci.org/kiorky/croniter.svg?branch=master
+-    :target: https://travis-ci.org/kiorky/croniter
++Build Badge
++===========
++.. image:: https://github.com/kiorky/croniter/actions/workflows/cicd.yml/badge.svg
++    :target: https://github.com/kiorky/croniter/actions/workflows/cicd.yml
+ 
+ 
+ Usage
+ ============
+ 
+ A simple example::
+```
+
+### Comparing `croniter-1.3.8/setup.py` & `croniter-1.3.9/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -20,15 +20,15 @@
+         read('README.rst'),
+         read('CHANGELOG.rst'),
+     ]
+ )
+ 
+ setup(
+     name='croniter',
+-    version='1.3.8',
++    version='1.3.9',
+     py_modules=['croniter', ],
+     description=(
+         'croniter provides iteration for datetime '
+         'object with cron like format'
+     ),
+     long_description=long_description,
+     author="Matsumoto Taichi, kiorky",
+```
+
+### Comparing `croniter-1.3.8/src/croniter/croniter.py` & `croniter-1.3.9/src/croniter/croniter.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,12 +1,14 @@
+ #!/usr/bin/env python
+ # -*- coding: utf-8 -*-
+ 
+ from __future__ import absolute_import, print_function, division
+ 
++import traceback as _traceback
++import copy
+ import math
+ import re
+ import sys
+ import inspect
+ from time import time
+ import datetime
+ from dateutil.relativedelta import relativedelta
+@@ -17,18 +19,27 @@
+ 
+ try:
+     from collections import OrderedDict
+ except ImportError:
+     OrderedDict = dict  # py26 degraded mode, expanders order will not be immutable
+ 
+ 
++M_ALPHAS = {'jan': 1, 'feb': 2, 'mar': 3, 'apr': 4, 'may': 5, 'jun': 6,
++         'jul': 7, 'aug': 8, 'sep': 9, 'oct': 10, 'nov': 11, 'dec': 12}
++DOW_ALPHAS = {'sun': 0, 'mon': 1, 'tue': 2, 'wed': 3, 'thu': 4, 'fri': 5, 'sat': 6}
++ALPHAS = {}
++for i in M_ALPHAS, DOW_ALPHAS:
++    ALPHAS.update(i)
+ step_search_re = re.compile(r'^([^-]+)-([^-/]+)(/(\d+))?$')
+ only_int_re = re.compile(r'^\d+$')
++
++WEEKDAYS = '|'.join(DOW_ALPHAS.keys())
++MONTHS = '|'.join(M_ALPHAS.keys())
+ star_or_int_re = re.compile(r'^(\d+|\*)$')
+-special_weekday_re = re.compile(r'^(\w+)#(\d+)|l(\d+)$')
++special_dow_re = re.compile(rf'^(?P<pre>((?P<he>(({WEEKDAYS})(-({WEEKDAYS}))?)|(({MONTHS})(-({MONTHS}))?)|\w+)#)|l)(?P<last>\d+)$')
+ hash_expression_re = re.compile(
+     r'^(?P<hash_type>h|r)(\((?P<range_begin>\d+)-(?P<range_end>\d+)\))?(\/(?P<divisor>\d+))?$'
+ )
+ VALID_LEN_EXPRESSION = [5, 6]
+ 
+ 
+ def timedelta_to_seconds(td):
+@@ -102,18 +113,17 @@
+     )
+ 
+     ALPHACONV = (
+         {},  # 0: min
+         {},  # 1: hour
+         {"l": "l"},  # 2: dom
+         # 3: mon
+-        {'jan': 1, 'feb': 2, 'mar': 3, 'apr': 4, 'may': 5, 'jun': 6,
+-         'jul': 7, 'aug': 8, 'sep': 9, 'oct': 10, 'nov': 11, 'dec': 12},
++        copy.deepcopy(M_ALPHAS),
+         # 4: dow
+-        {'sun': 0, 'mon': 1, 'tue': 2, 'wed': 3, 'thu': 4, 'fri': 5, 'sat': 6},
++        copy.deepcopy(DOW_ALPHAS),
+         # command/user
+         {}
+     )
+ 
+     LOWMAP = (
+         {},
+         {},
+@@ -376,14 +386,15 @@
+             try:
+                 expanded[2].index('*')
+             except ValueError:
+                 days = DAYS[month - 1]
+                 if month == 2 and self.is_leap(year) is True:
+                     days += 1
+                 if 'l' in expanded[2] and days == d.day:
++                    import pdb;pdb.set_trace()  ## Breakpoint ##
+                     return False, d
+ 
+                 if is_prev:
+                     days_in_prev_month = DAYS[
+                         (month - 2) % self.MONTHS_IN_YEAR]
+                     diff_day = nearest_diff_method(
+                         d.day, expanded[2], days_in_prev_month)
+@@ -631,35 +642,34 @@
+                 expr = expander(cls).expand(efl, i, expr, hash_id=hash_id)
+ 
+             e_list = expr.split(',')
+             res = []
+ 
+             while len(e_list) > 0:
+                 e = e_list.pop()
++                nth = None
+ 
+                 if i == 4:
+-                    # Handle special case in the day-of-week expression
+-                    m = special_weekday_re.match(str(e))
+-                    if m:
+-                        orig_e = e
+-                        e, nth, last = m.groups()
+-                        if nth:
++                    # Handle special case in the dow expression: 2#3, l3
++                    special_dow_rem = special_dow_re.match(str(e))
++                    if special_dow_rem:
++                        g = special_dow_rem.groupdict()
++                        he, last = g.get('he', ''), g.get('last', '')
++                        if he:
++                            e = he
+                             try:
+-                                nth = int(nth)
++                                nth = int(last)
+                                 assert (nth >= 1 and nth <= 5)
+-                            except (ValueError, AssertionError):
++                            except (KeyError, ValueError, AssertionError):
+                                 raise CroniterBadCronError(
+                                     "[{0}] is not acceptable.  Invalid day_of_week "
+-                                    "value: '{1}'".format(expr_format, orig_e))
++                                    "value: '{1}'".format(expr_format, nth))
+                         elif last:
+-                            nth = "l"
+                             e = last
+-                        del last, orig_e
+-                    else:
+-                        nth = None
++                            nth = g['pre']  # 'l'
+ 
+                 # Before matching step_search_re, normalize "*" to "{min}-{max}".
+                 # Example: in the minute field, "*/5" normalizes to "0-59/5"
+                 t = re.sub(r'^\*(\/.+)$', r'%d-%d\1' % (
+                     cls.RANGES[i][0],
+                     cls.RANGES[i][1]),
+                     str(e))
+@@ -716,14 +726,15 @@
+                         raise CroniterBadCronError((
+                             "[{0}] is not acceptable,"
+                             "negative numbers not allowed"
+                         ).format(expr_format))
+                     if not star_or_int_re.search(t):
+                         t = cls._alphaconv(i, t, expressions)
+ 
++
+                     try:
+                         t = int(t)
+                     except ValueError:
+                         pass
+ 
+                     if t in cls.LOWMAP[i] and not (
+                         # do not support 0 as a month either for classical 5 fields cron
+@@ -772,21 +783,22 @@
+         return expanded, nth_weekday_of_month
+ 
+     @classmethod
+     def expand(cls, expr_format, hash_id=None):
+         """Shallow non Croniter ValueError inside a nice CroniterBadCronError"""
+         try:
+             return cls._expand(expr_format, hash_id=hash_id)
+-        except ValueError as exc:
++        except (ValueError,) as exc:
+             error_type, error_instance, traceback = sys.exc_info()
+             if isinstance(exc, CroniterError):
+                 raise
+             if int(sys.version[0]) >= 3:
++                trace = _traceback.format_exc()
+                 globs, locs = _get_caller_globals_and_locals()
+-                exec("raise CroniterBadCronError from  exc", globs, locs)
++                raise CroniterBadCronError(trace)
+             else:
+                 raise CroniterBadCronError("{0}".format(exc))
+ 
+     @classmethod
+     def is_valid(cls, expression, hash_id=None):
+         try:
+             cls.expand(expression, hash_id=hash_id)
+```
+
+### Comparing `croniter-1.3.8/src/croniter/tests/test_croniter.py` & `croniter-1.3.9/src/croniter/tests/test_croniter.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1469,10 +1469,76 @@
+         base = datetime(2010, 1, 23, 12, 18, tzinfo=tz)
+         itr = croniter('* * * * *')
+         itr.set_current(start_time=base)
+         n1 = itr.get_next()   # 19
+ 
+         self.assertEqual(n1, datetime_to_timestamp(base) + 60)
+ 
++    def test_issue_k34(self):
++        # invalid cron, but should throw appropriate exception
++        self.assertRaises(CroniterBadCronError, croniter, "4 0 L/2 2 0")
++
++    def test_issue_k33(self):
++        y = 2018
++        # At 11:30 PM, between day 1 and 7 of the month, Monday through Friday, only in January
++        ret = []
++        for i in range(10):
++            cron = croniter("30 23 1-7 JAN MON-FRI#1", datetime(y+i, 1, 1), ret_type=datetime)
++            for j in range(7):
++                d = cron.get_next()
++                if d.year == y + i:
++                    ret.append(d)
++        rets = [datetime(2018, 1, 1, 23, 30),
++                datetime(2018, 1, 2, 23, 30),
++                datetime(2018, 1, 3, 23, 30),
++                datetime(2018, 1, 4, 23, 30),
++                datetime(2018, 1, 5, 23, 30),
++                datetime(2019, 1, 1, 23, 30),
++                datetime(2019, 1, 2, 23, 30),
++                datetime(2019, 1, 3, 23, 30),
++                datetime(2019, 1, 4, 23, 30),
++                datetime(2019, 1, 7, 23, 30),
++                datetime(2020, 1, 1, 23, 30),
++                datetime(2020, 1, 2, 23, 30),
++                datetime(2020, 1, 3, 23, 30),
++                datetime(2020, 1, 6, 23, 30),
++                datetime(2020, 1, 7, 23, 30),
++                datetime(2021, 1, 1, 23, 30),
++                datetime(2021, 1, 4, 23, 30),
++                datetime(2021, 1, 5, 23, 30),
++                datetime(2021, 1, 6, 23, 30),
++                datetime(2021, 1, 7, 23, 30),
++                datetime(2022, 1, 3, 23, 30),
++                datetime(2022, 1, 4, 23, 30),
++                datetime(2022, 1, 5, 23, 30),
++                datetime(2022, 1, 6, 23, 30),
++                datetime(2022, 1, 7, 23, 30),
++                datetime(2023, 1, 2, 23, 30),
++                datetime(2023, 1, 3, 23, 30),
++                datetime(2023, 1, 4, 23, 30),
++                datetime(2023, 1, 5, 23, 30),
++                datetime(2023, 1, 6, 23, 30),
++                datetime(2024, 1, 1, 23, 30),
++                datetime(2024, 1, 2, 23, 30),
++                datetime(2024, 1, 3, 23, 30),
++                datetime(2024, 1, 4, 23, 30),
++                datetime(2024, 1, 5, 23, 30),
++                datetime(2025, 1, 1, 23, 30),
++                datetime(2025, 1, 2, 23, 30),
++                datetime(2025, 1, 3, 23, 30),
++                datetime(2025, 1, 6, 23, 30),
++                datetime(2025, 1, 7, 23, 30),
++                datetime(2026, 1, 1, 23, 30),
++                datetime(2026, 1, 2, 23, 30),
++                datetime(2026, 1, 5, 23, 30),
++                datetime(2026, 1, 6, 23, 30),
++                datetime(2026, 1, 7, 23, 30),
++                datetime(2027, 1, 1, 23, 30),
++                datetime(2027, 1, 4, 23, 30),
++                datetime(2027, 1, 5, 23, 30),
++                datetime(2027, 1, 6, 23, 30),
++                datetime(2027, 1, 7, 23, 30)]
++        self.assertEqual(ret, rets)
++        croniter.expand("30 6 1-7 MAY MON#1")
+ 
+ if __name__ == '__main__':
+     unittest.main()
+```
+
+### Comparing `croniter-1.3.8/src/croniter/tests/test_croniter_hash.py` & `croniter-1.3.9/src/croniter/tests/test_croniter_hash.py`
+
+ * *Files identical despite different names*
+
+### Comparing `croniter-1.3.8/src/croniter/tests/test_croniter_random.py` & `croniter-1.3.9/src/croniter/tests/test_croniter_random.py`
+
+ * *Files identical despite different names*
+
+### Comparing `croniter-1.3.8/src/croniter/tests/test_croniter_range.py` & `croniter-1.3.9/src/croniter/tests/test_croniter_range.py`
+
+ * *Files identical despite different names*
+
+### Comparing `croniter-1.3.8/src/croniter/tests/test_speed.py` & `croniter-1.3.9/src/croniter/tests/test_speed.py`
+
+ * *Files identical despite different names*
+
+### Comparing `croniter-1.3.8/src/croniter.egg-info/PKG-INFO` & `croniter-1.3.9/src/croniter.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: croniter
+-Version: 1.3.8
++Version: 1.3.9
+ Summary: croniter provides iteration for datetime object with cron like format
+ Home-page: http://github.com/kiorky/croniter
+ Author: Matsumoto Taichi, kiorky
+ Author-email: taichino@gmail.com, kiorky@cryptelium.net
+ License: MIT License
+ Keywords: datetime,iterator,cron
+ Platform: UNKNOWN
+@@ -44,18 +44,18 @@
+      / __| '__/ _ \| '_ \| | __/ _ \ '__|
+     | (__| | | (_) | | | | | ||  __/ |
+      \___|_|  \___/|_| |_|_|\__\___|_|
+ 
+ 
+ Website: https://github.com/kiorky/croniter
+ 
+-Travis badge
+-=============
+-.. image:: https://travis-ci.org/kiorky/croniter.svg?branch=master
+-    :target: https://travis-ci.org/kiorky/croniter
++Build Badge
++===========
++.. image:: https://github.com/kiorky/croniter/actions/workflows/cicd.yml/badge.svg
++    :target: https://github.com/kiorky/croniter/actions/workflows/cicd.yml
+ 
+ 
+ Usage
+ ============
+ 
+ A simple example::
+ 
+@@ -319,14 +319,20 @@
+     - Ryan Finnie (rfinnie)
+ 
+ 
+ 
+ Changelog
+ ==============
+ 
++1.3.9 (2023-04-07)
++------------------
++
++- Fix DOW hash parsing [kiorky]
++- better error handling on py3 [kiorky]
++
+ 1.3.8 (2022-11-22)
+ ------------------
+ 
+ - Add Python 3.11 support and move docs files to main folder [rafsaf]
+ 
+ 
+ 1.3.7 (2022-09-06)
+```
+
+### Comparing `croniter-1.3.8/src/croniter.egg-info/SOURCES.txt` & `croniter-1.3.9/src/croniter.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `croniter-1.3.8/tox.ini` & `croniter-1.3.9/tox.ini`
+
+ * *Files identical despite different names*
+

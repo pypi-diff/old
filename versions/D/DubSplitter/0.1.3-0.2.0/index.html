@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/DubSplitter-0.1.3.tar.gz tmp/DubSplitter-0.2.0.tar.gz --html versions/D/DubSplitter/0.1.3-0.2.0/index.html --text versions/D/DubSplitter/0.1.3-0.2.0/diff.txt --markdown versions/D/DubSplitter/0.1.3-0.2.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.84 KB</span></div>
+  <div><span class="source">tmp/DubSplitter-0.1.3.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/DubSplitter-0.2.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">272 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;DubSplitter-0.<del>1</del>.<del>3</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>13:<del>16</del>:<del>09</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;DubSplitter-0.<ins>2</ins>.<ins>0</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.52 KB</span></div>
+    <div><span class="source">DubSplitter-0.1.3.tar</span> vs.</div>
+    <div id="DubSplitter--.-.-.tar"><span class="source">DubSplitter-0.2.0.tar</span>
+      <a class="anchor" href="#DubSplitter--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">4.95 KB</span></div>
+      <div id="DubSplitter--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#DubSplitter--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 22 lines modified</td><td colspan="2">Offset 1, 22 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<del>16</del>:<del>09</del>.<del>145394</del><span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins>.<ins>673735</ins><span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<del>16</del>:<del>09</del>.<del>03</del>0<del>570</del><span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/DubSplitter.egg-info/</td><td class="diffline">2 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins>.<ins>67</ins>0<ins>736</ins><span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/DubSplitter.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>2866</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<del>16</del>:<del>08</del>.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/DubSplitter.egg-info/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>3220</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins>.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/DubSplitter.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>502<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<del>16</del>:<del>08</del>.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/DubSplitter.egg-info/SOURCES.txt</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>502<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins>.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/DubSplitter.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<del>16</del>:<del>08</del>.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/DubSplitter.egg-info/dependency_links.txt</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins>.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/DubSplitter.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>61<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<del>16</del>:<del>08</del>.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/DubSplitter.egg-info/entry_points.txt</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>61<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins>.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/DubSplitter.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<span class="dp">·</span>2023-04-07<span class="dp">·</span>00:03:48.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/DubSplitter.egg-info/not-zip-safe</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<span class="dp">·</span>2023-04-07<span class="dp">·</span>00:03:48.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/DubSplitter.egg-info/not-zip-safe</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<del>16</del>:<del>08</del>.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/DubSplitter.egg-info/requires.txt</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins>.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/DubSplitter.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<del>16</del>:<del>08</del>.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/DubSplitter.egg-info/top_level.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins>.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/DubSplitter.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>2866</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<del>16</del>:<del>09</del>.<del>1</del><del>44</del>3<del>9</del>3<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/PKG-INFO</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>3220</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins>.<ins>67</ins>3<ins>7</ins>3<ins>5</ins><span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<del>16</del>:<del>09</del>.<del>03</del>1<del>570</del><span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/dubSplitter/</td><td class="diffline">11 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins>.<ins>67</ins>1<ins>735</ins><span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/dubSplitter/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:02:52.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/dubSplitter/__init__.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:02:52.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/dubSplitter/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1586<span class="dp">·</span>2023-04-07<span class="dp">·</span>02:57:49.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/dubSplitter/constants.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1586<span class="dp">·</span>2023-04-07<span class="dp">·</span>02:57:49.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/dubSplitter/constants.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>793</del><span class="dp">·</span>2023-04-07<span class="dp">·</span><del>01</del>:<del>57</del>:<del>24</del>.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/dubSplitter/dubSplitter.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>855</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span><ins>13</ins>:<ins>22</ins>:<ins>31</ins>.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/dubSplitter/dubSplitter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<del>16</del>:<del>09</del>.<del>1</del>3<del>0</del>3<del>9</del><del>1</del><span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/dubSplitter/functions/</td><td class="diffline">15 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins>.<ins>6</ins><ins>7</ins>3<ins>7</ins>3<ins>5</ins><span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/dubSplitter/functions/</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:03:14.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/dubSplitter/functions/__init__.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:03:14.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/dubSplitter/functions/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>628<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:33:33.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/dubSplitter/functions/path.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>628<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:33:33.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/dubSplitter/functions/path.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1521<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:22:53.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/dubSplitter/functions/slicer.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1521<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:22:53.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/dubSplitter/functions/slicer.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>399<span class="dp">·</span>2023-04-07<span class="dp">·</span>00:58:45.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/dubSplitter/functions/stringEx.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>399<span class="dp">·</span>2023-04-07<span class="dp">·</span>00:58:45.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/dubSplitter/functions/stringEx.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2890<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:23:08.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/dubSplitter/functions/voiceRecognition.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2890<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:23:08.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/dubSplitter/functions/voiceRecognition.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<del>16</del>:<del>09</del>.<del>145394</del><span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/setup.cfg</td><td class="diffline">21 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-04-07<span class="dp">·</span>13:<ins>29</ins>:<ins>21</ins>.<ins>673735</ins><span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>280</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>13:1<del>2</del>:<del>50</del>.000000<span class="dp">·</span>DubSplitter-0.<del>1</del>.<del>3</del>/setup.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>306</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>13:1<ins>8</ins>:<ins>37</ins>.000000<span class="dp">·</span>DubSplitter-0.<ins>2</ins>.<ins>0</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">DubSplitter-0.1.3/dubSplitter/constants.py</span> vs.</div>
+      <div id="DubSplitter--.-.-.tar---DubSplitter--.-.--dubSplitter-constants.py"><span class="source">DubSplitter-0.2.0/dubSplitter/constants.py</span>
+        <a class="anchor" href="#DubSplitter--.-.-.tar---DubSplitter--.-.--dubSplitter-constants.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">631 B</span></div>
+      <div><span class="source">DubSplitter-0.1.3/dubSplitter/dubSplitter.py</span> vs.</div>
+      <div id="DubSplitter--.-.-.tar---DubSplitter--.-.--dubSplitter-dubSplitter.py"><span class="source">DubSplitter-0.2.0/dubSplitter/dubSplitter.py</span>
+        <a class="anchor" href="#DubSplitter--.-.-.tar---DubSplitter--.-.--dubSplitter-dubSplitter.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 3% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 18 lines modified</td><td colspan="2">Offset 1, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>argparse<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>argparse<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>pydub<span class="dp">·</span>import<span class="dp">·</span>AudioSegment<em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>pydub<span class="dp">·</span>import<span class="dp">·</span>AudioSegment<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>sympy<span class="dp">·</span>import<span class="dp">·</span>false,<span class="dp">·</span>true<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>sympy<span class="dp">·</span>import<span class="dp">·</span>false,<span class="dp">·</span>true<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">import<span class="dp">·</span>dubSplitter.constants<span class="dp">·</span>as<span class="dp">·</span>consts<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">import<span class="dp">·</span>dubSplitter.constants<span class="dp">·</span>as<span class="dp">·</span>consts<em>\xd</em></td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>.constants<span class="dp">·</span>import<span class="dp">·</span>update_path<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>.constants<span class="dp">·</span>import<span class="dp">·</span>update_path<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>.functions.slicer<span class="dp">·</span>import<span class="dp">·</span>do_slice<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>.functions.slicer<span class="dp">·</span>import<span class="dp">·</span>do_slice<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>.functions.voiceRecognition<span class="dp">·</span>import<span class="dp">·</span>update_whisper_model,<span class="dp">·</span>update_model_language<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>.functions.voiceRecognition<span class="dp">·</span>import<span class="dp">·</span>update_whisper_model,<span class="dp">·</span>update_model_language<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.2.0&#x27;<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">13 </td><td class="diffpresent">print(&#x27;DubSplitter<span class="dp">·</span>{}&#x27;.format(VERSION))<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">14 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">bFromPackage<span class="dp">·</span>=<span class="dp">·</span>true<em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent">bFromPackage<span class="dp">·</span>=<span class="dp">·</span>true<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">16 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">17 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">def<span class="dp">·</span>update_runtime(runtime):<em>\xd</em></td><td class="diffline">18 </td><td class="diffpresent">def<span class="dp">·</span>update_runtime(runtime):<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>global<span class="dp">·</span>bFromPackage<em>\xd</em></td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>global<span class="dp">·</span>bFromPackage<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>bFromPackage<span class="dp">·</span>=<span class="dp">·</span>runtime<em>\xd</em></td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>bFromPackage<span class="dp">·</span>=<span class="dp">·</span>runtime<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">21 </td><td class="diffpresent"><em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">DubSplitter-0.1.3/dubSplitter/functions/path.py</span> vs.</div>
+      <div id="DubSplitter--.-.-.tar---DubSplitter--.-.--dubSplitter-functions-path.py"><span class="source">DubSplitter-0.2.0/dubSplitter/functions/path.py</span>
+        <a class="anchor" href="#DubSplitter--.-.-.tar---DubSplitter--.-.--dubSplitter-functions-path.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">DubSplitter-0.1.3/dubSplitter/functions/slicer.py</span> vs.</div>
+      <div id="DubSplitter--.-.-.tar---DubSplitter--.-.--dubSplitter-functions-slicer.py"><span class="source">DubSplitter-0.2.0/dubSplitter/functions/slicer.py</span>
+        <a class="anchor" href="#DubSplitter--.-.-.tar---DubSplitter--.-.--dubSplitter-functions-slicer.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">DubSplitter-0.1.3/dubSplitter/functions/voiceRecognition.py</span> vs.</div>
+      <div id="DubSplitter--.-.-.tar---DubSplitter--.-.--dubSplitter-functions-voiceRecognition.py"><span class="source">DubSplitter-0.2.0/dubSplitter/functions/voiceRecognition.py</span>
+        <a class="anchor" href="#DubSplitter--.-.-.tar---DubSplitter--.-.--dubSplitter-functions-voiceRecognition.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">379 B</span></div>
+      <div><span class="source">DubSplitter-0.1.3/setup.py</span> vs.</div>
+      <div id="DubSplitter--.-.-.tar---DubSplitter--.-.--setup.py"><span class="source">DubSplitter-0.2.0/setup.py</span>
+        <a class="anchor" href="#DubSplitter--.-.-.tar---DubSplitter--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 19% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 11 lines modified</td><td colspan="2">Offset 1, 11 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>find_packages<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>find_packages<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent"><del>VER</del>S<del>ION</del><span class="dp">·</span><del>=</del><span class="dp">·</span><del>&#x27;0.1.3&#x27;</del><em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent"><ins>from<span class="dp">·</span>dubSplitter.</ins><ins>dub</ins>S<ins>plit</ins><ins>ter</ins><span class="dp">·</span><ins>impor</ins><ins>t</ins><span class="dp">·</span><ins>VERSION</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">with<span class="dp">·</span>open(&#x27;ReadMe.md&#x27;)<span class="dp">·</span>as<span class="dp">·</span>f:<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">with<span class="dp">·</span>open(&#x27;ReadMe.md&#x27;)<span class="dp">·</span>as<span class="dp">·</span>f:<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LONG_DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>f.read()<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LONG_DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>f.read()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">setup(<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">setup(<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;DubSplitter&#x27;,<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;DubSplitter&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=VERSION,<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=VERSION,<em>\xd</em></td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

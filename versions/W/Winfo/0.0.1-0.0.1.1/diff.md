@@ -1,0 +1,118 @@
+# Comparing `tmp/Winfo-0.0.1.tar.gz` & `tmp/Winfo-0.0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "Winfo-0.0.1.tar", last modified: Fri Apr  7 10:44:01 2023, max compression
++gzip compressed data, was "Winfo-0.0.1.1.tar", last modified: Fri Apr  7 13:24:35 2023, max compression
+```
+
+## Comparing `Winfo-0.0.1.tar` & `Winfo-0.0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,18 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 10:44:01.856681 Winfo-0.0.1/
+--rw-rw-rw-   0        0        0     1156 2023-04-07 10:35:15.000000 Winfo-0.0.1/LICENSE
+--rw-rw-rw-   0        0        0      559 2023-04-07 10:44:01.855682 Winfo-0.0.1/PKG-INFO
+--rw-rw-rw-   0        0        0     3803 2023-04-07 09:58:38.000000 Winfo-0.0.1/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-07 10:44:01.832386 Winfo-0.0.1/Winfo/
+--rw-rw-rw-   0        0        0     2515 2023-04-07 09:10:20.000000 Winfo-0.0.1/Winfo/__init__.py
+--rw-rw-rw-   0        0        0     1106 2023-04-07 09:19:27.000000 Winfo-0.0.1/Winfo/cpu.py
+--rw-rw-rw-   0        0        0      993 2023-04-07 09:26:01.000000 Winfo-0.0.1/Winfo/disk.py
+--rw-rw-rw-   0        0        0      259 2023-04-06 22:15:29.000000 Winfo-0.0.1/Winfo/gpu.py
+--rw-rw-rw-   0        0        0      951 2023-04-07 09:22:02.000000 Winfo-0.0.1/Winfo/memory.py
+--rw-rw-rw-   0        0        0     1122 2023-04-06 22:14:47.000000 Winfo-0.0.1/Winfo/software.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 10:44:01.853680 Winfo-0.0.1/Winfo.egg-info/
+--rw-rw-rw-   0        0        0      559 2023-04-07 10:44:01.000000 Winfo-0.0.1/Winfo.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      262 2023-04-07 10:44:01.000000 Winfo-0.0.1/Winfo.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 10:44:01.000000 Winfo-0.0.1/Winfo.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       11 2023-04-07 10:44:01.000000 Winfo-0.0.1/Winfo.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        6 2023-04-07 10:44:01.000000 Winfo-0.0.1/Winfo.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-07 10:44:01.856681 Winfo-0.0.1/setup.cfg
+--rw-rw-rw-   0        0        0      761 2023-04-07 10:43:31.000000 Winfo-0.0.1/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 13:24:35.823617 Winfo-0.0.1.1/
++-rw-rw-rw-   0        0        0     1156 2023-04-07 10:35:15.000000 Winfo-0.0.1.1/LICENSE
++-rw-rw-rw-   0        0        0     4296 2023-04-07 13:24:35.823617 Winfo-0.0.1.1/PKG-INFO
++-rw-rw-rw-   0        0        0     3803 2023-04-07 09:58:38.000000 Winfo-0.0.1.1/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 13:24:35.801742 Winfo-0.0.1.1/Winfo/
++-rw-rw-rw-   0        0        0     2515 2023-04-07 09:10:20.000000 Winfo-0.0.1.1/Winfo/__init__.py
++-rw-rw-rw-   0        0        0     1106 2023-04-07 09:19:27.000000 Winfo-0.0.1.1/Winfo/cpu.py
++-rw-rw-rw-   0        0        0      993 2023-04-07 09:26:01.000000 Winfo-0.0.1.1/Winfo/disk.py
++-rw-rw-rw-   0        0        0      259 2023-04-06 22:15:29.000000 Winfo-0.0.1.1/Winfo/gpu.py
++-rw-rw-rw-   0        0        0      951 2023-04-07 09:22:02.000000 Winfo-0.0.1.1/Winfo/memory.py
++-rw-rw-rw-   0        0        0     1122 2023-04-06 22:14:47.000000 Winfo-0.0.1.1/Winfo/software.py
++drwxrwxrwx   0        0        0        0 2023-04-07 13:24:35.820033 Winfo-0.0.1.1/Winfo.egg-info/
++-rw-rw-rw-   0        0        0     4296 2023-04-07 13:24:35.000000 Winfo-0.0.1.1/Winfo.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      234 2023-04-07 13:24:35.000000 Winfo-0.0.1.1/Winfo.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 13:24:35.000000 Winfo-0.0.1.1/Winfo.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        6 2023-04-07 13:24:35.000000 Winfo-0.0.1.1/Winfo.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 13:24:35.824614 Winfo-0.0.1.1/setup.cfg
++-rw-rw-rw-   0        0        0      728 2023-04-07 12:00:09.000000 Winfo-0.0.1.1/setup.py
+```
+
+### Comparing `Winfo-0.0.1/LICENSE` & `Winfo-0.0.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `Winfo-0.0.1/README.md` & `Winfo-0.0.1.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `Winfo-0.0.1/Winfo/__init__.py` & `Winfo-0.0.1.1/Winfo/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Winfo-0.0.1/Winfo/cpu.py` & `Winfo-0.0.1.1/Winfo/cpu.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Winfo-0.0.1/Winfo/disk.py` & `Winfo-0.0.1.1/Winfo/disk.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Winfo-0.0.1/Winfo/memory.py` & `Winfo-0.0.1.1/Winfo/memory.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Winfo-0.0.1/Winfo/software.py` & `Winfo-0.0.1.1/Winfo/software.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Winfo-0.0.1/setup.py` & `Winfo-0.0.1.1/setup.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,20 +1,22 @@
+ from setuptools import setup, find_packages
+ 
+-# Setting up
++with open("README.md", "r") as f:
++    readme = f.read()
++    f.close()
++    
+ setup(
+     name="Winfo",
+-    version="0.0.1",
++    version="0.0.1.1",
+     author="BLUEAMETHYST Studios",
+     author_email="simon.schoeneberg@t-online.de",
+     description="Get information about your windows system",
+-    long_description_content_type="text",
+-    long_description="Get information about your hardware and software, made for windows systems!",
++    long_description_content_type="text/markdown",
++    long_description=readme,
+     packages=find_packages(),
+-    install_requires=['subprocess'],
+     keywords=['python', 'windows', 'util', 'information', 'system'],
+     classifiers=[
+         "Development Status :: 1 - Planning",
+         "Intended Audience :: Developers",
+         "Programming Language :: Python :: 3",
+         "Operating System :: Microsoft :: Windows",
+     ]
+```
+

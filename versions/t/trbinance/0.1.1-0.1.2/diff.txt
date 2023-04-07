@@ -1,0 +1,140 @@
+--- tmp/trbinance-0.1.1.tar.gz
++++ tmp/trbinance-0.1.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "trbinance-0.1.1.tar", last modified: Fri Apr  7 12:15:22 2023, max compression
+│ +gzip compressed data, was "trbinance-0.1.2.tar", last modified: Fri Apr  7 13:22:10 2023, max compression
+│   --- trbinance-0.1.1.tar
+├── +++ trbinance-0.1.2.tar
+│ ├── file list
+│ │ @@ -1,15 +1,17 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 12:15:22.334435 trbinance-0.1.1/
+│ │ --rw-rw-rw-   0        0        0      191 2023-04-07 12:15:22.334435 trbinance-0.1.1/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      753 2023-04-06 10:03:07.000000 trbinance-0.1.1/README.md
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-07 12:15:22.335434 trbinance-0.1.1/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      369 2023-04-07 12:15:07.000000 trbinance-0.1.1/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 12:15:22.317436 trbinance-0.1.1/trbinance/
+│ │ --rw-rw-rw-   0        0        0       35 2023-04-06 08:57:35.000000 trbinance-0.1.1/trbinance/__init__.py
+│ │ --rw-rw-rw-   0        0        0    11565 2023-04-07 12:03:07.000000 trbinance-0.1.1/trbinance/client.py
+│ │ --rw-rw-rw-   0        0        0      761 2023-04-06 08:23:10.000000 trbinance-0.1.1/trbinance/defines.py
+│ │ --rw-rw-rw-   0        0        0     2915 2023-04-06 07:37:28.000000 trbinance-0.1.1/trbinance/helper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 12:15:22.332435 trbinance-0.1.1/trbinance.egg-info/
+│ │ --rw-rw-rw-   0        0        0      191 2023-04-07 12:15:22.000000 trbinance-0.1.1/trbinance.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      233 2023-04-07 12:15:22.000000 trbinance-0.1.1/trbinance.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-07 12:15:22.000000 trbinance-0.1.1/trbinance.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       10 2023-04-07 12:15:22.000000 trbinance-0.1.1/trbinance.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:22:10.445809 trbinance-0.1.2/
+│ │ +-rw-rw-rw-   0        0        0      191 2023-04-07 13:22:10.444809 trbinance-0.1.2/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      753 2023-04-06 10:03:07.000000 trbinance-0.1.2/README.md
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 13:22:10.445809 trbinance-0.1.2/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      369 2023-04-07 13:21:39.000000 trbinance-0.1.2/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:22:10.428807 trbinance-0.1.2/trbinance/
+│ │ +-rw-rw-rw-   0        0        0       83 2023-04-07 13:11:29.000000 trbinance-0.1.2/trbinance/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    11232 2023-04-07 13:16:21.000000 trbinance-0.1.2/trbinance/async_client.py
+│ │ +-rw-rw-rw-   0        0        0      664 2023-04-07 13:19:33.000000 trbinance-0.1.2/trbinance/baseclient.py
+│ │ +-rw-rw-rw-   0        0        0    10929 2023-04-07 13:19:40.000000 trbinance-0.1.2/trbinance/client.py
+│ │ +-rw-rw-rw-   0        0        0      761 2023-04-06 08:23:10.000000 trbinance-0.1.2/trbinance/defines.py
+│ │ +-rw-rw-rw-   0        0        0     2915 2023-04-06 07:37:28.000000 trbinance-0.1.2/trbinance/helper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:22:10.442807 trbinance-0.1.2/trbinance.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      191 2023-04-07 13:22:10.000000 trbinance-0.1.2/trbinance.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      283 2023-04-07 13:22:10.000000 trbinance-0.1.2/trbinance.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 13:22:10.000000 trbinance-0.1.2/trbinance.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       10 2023-04-07 13:22:10.000000 trbinance-0.1.2/trbinance.egg-info/top_level.txt
+│ │   --- trbinance-0.1.1/README.md
+│ ├── +++ trbinance-0.1.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- trbinance-0.1.1/trbinance/client.py
+│ ├── +++ trbinance-0.1.2/trbinance/client.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,32 +1,17 @@
+│ │  import requests
+│ │  import time
+│ │ -import hmac
+│ │ -import hashlib
+│ │  
+│ │  from .helper import convert_symbol_convention_from, convert_symbol_convention_to, convert_symboldata_format
+│ │ -
+│ │  from .defines import *
+│ │ +from .baseclient import BaseClient
+│ │  
+│ │ -class Client:
+│ │ -    id = 'trbinance'
+│ │ -    name = 'TrBinance'
+│ │ -
+│ │ -    def __init__(self, api_key="", secret_key=""):
+│ │ -        self.api_key = api_key
+│ │ -        self.secret_key = secret_key
+│ │ -        self.session = requests.Session()
+│ │ -        self.session.headers.update({'X-MBX-APIKEY': api_key})
+│ │ -        self.urls = {
+│ │ -            "base" : "https://www.trbinance.com/open/v1",
+│ │ -            "type1" : "https://api.binance.me/api"
+│ │ -        }
+│ │ -
+│ │ -        self.markets = None
+│ │ -        self.symbols = None
+│ │ +class Client(BaseClient):
+│ │ +    def __init__(self, *args, **kwargs):
+│ │ +        super().__init__(*args, **kwargs)
+│ │  
+│ │      def _request(self, method, endpoint, security_type, symbol_type=0, params=None):
+│ │          if symbol_type == 1:
+│ │              url = self.urls["type1"] + endpoint
+│ │          else:
+│ │              url = self.urls["base"] + endpoint
+│ │  
+│ │ @@ -41,31 +26,26 @@
+│ │                  response = session.get(url, params=params)
+│ │              elif method == 'POST':
+│ │                  response = session.post(url, data=params)
+│ │              else:
+│ │                  raise Exception('Invalid method')
+│ │  
+│ │          response.raise_for_status()
+│ │ -        
+│ │          return self._handle_response(response)
+│ │  
+│ │ -    def _generate_signature(self, params):
+│ │ -        query_string = '&'.join([f"{key}={value}" for key, value in params.items()])
+│ │ -        return hmac.new(self.secret_key.encode('utf-8'), query_string.encode('utf-8'), hashlib.sha256).hexdigest()
+│ │ -
+│ │      def _handle_response(self, raw_response):
+│ │          response = raw_response.json()
+│ │          if "code" in response:
+│ │              if response['code'] == 3219:
+│ │                  print("Already cancelled")
+│ │                  return {"data": []}
+│ │              elif response['code'] != 0:
+│ │                  raise Exception(f"Error {response['code']}: {response['msg']}")
+│ │          return response
+│ │ -
+│ │ +    
+│ │      def check_server_time(self):
+│ │          endpoint = '/common/time'
+│ │          response = self._request('GET', endpoint, 'public')
+│ │          data = {"timestamp": response["timestamp"]}
+│ │          return data
+│ │              
+│ │      def get_symbols(self):
+│ │ @@ -299,15 +279,14 @@
+│ │              'timestamp': int(time.time() * 1000),
+│ │              **kwargs
+│ │          }
+│ │          endpoint = "/deposits"
+│ │          resp = self._request("GET", endpoint, "private", symbol_type=0, params=params)
+│ │          return resp["data"]
+│ │  
+│ │ -
+│ │      def deposit_address(self, asset, network, **kwargs):
+│ │          params = {
+│ │              'asset': asset,
+│ │              'network': network,
+│ │              'timestamp': int(time.time() * 1000),
+│ │              **kwargs
+│ │          }
+│ │   --- trbinance-0.1.1/trbinance/defines.py
+│ ├── +++ trbinance-0.1.2/trbinance/defines.py
+│ │┄ Files identical despite different names
+│ │   --- trbinance-0.1.1/trbinance/helper.py
+│ ├── +++ trbinance-0.1.2/trbinance/helper.py
+│ │┄ Files identical despite different names
