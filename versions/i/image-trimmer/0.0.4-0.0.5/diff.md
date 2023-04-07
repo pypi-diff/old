@@ -1,0 +1,121 @@
+# Comparing `tmp/image-trimmer-0.0.4.tar.gz` & `tmp/image-trimmer-0.0.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "image-trimmer-0.0.4.tar", last modified: Fri Apr  7 09:45:41 2023, max compression
++gzip compressed data, was "image-trimmer-0.0.5.tar", last modified: Fri Apr  7 09:47:16 2023, max compression
+```
+
+## Comparing `image-trimmer-0.0.4.tar` & `image-trimmer-0.0.5.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 09:45:41.669365 image-trimmer-0.0.4/
+--rw-rw-rw-   0        0        0      851 2023-04-07 09:45:41.668864 image-trimmer-0.0.4/PKG-INFO
+-drwxrwxrwx   0        0        0        0 2023-04-07 09:45:41.653365 image-trimmer-0.0.4/image_trimmer/
+--rw-rw-rw-   0        0        0        0 2023-04-07 07:37:37.000000 image-trimmer-0.0.4/image_trimmer/__init__.py
+--rw-rw-rw-   0        0        0     3345 2023-04-07 09:29:04.000000 image-trimmer-0.0.4/image_trimmer/image_trimmer.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 09:45:41.667365 image-trimmer-0.0.4/image_trimmer.egg-info/
+--rw-rw-rw-   0        0        0      851 2023-04-07 09:45:41.000000 image-trimmer-0.0.4/image_trimmer.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      289 2023-04-07 09:45:41.000000 image-trimmer-0.0.4/image_trimmer.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 09:45:41.000000 image-trimmer-0.0.4/image_trimmer.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       53 2023-04-07 09:45:41.000000 image-trimmer-0.0.4/image_trimmer.egg-info/entry_points.txt
+--rw-rw-rw-   0        0        0       26 2023-04-07 09:45:41.000000 image-trimmer-0.0.4/image_trimmer.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       14 2023-04-07 09:45:41.000000 image-trimmer-0.0.4/image_trimmer.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-07 09:45:41.669865 image-trimmer-0.0.4/setup.cfg
+--rw-rw-rw-   0        0        0      800 2023-04-07 09:45:36.000000 image-trimmer-0.0.4/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:47:16.942438 image-trimmer-0.0.5/
++-rw-rw-rw-   0        0        0      851 2023-04-07 09:47:16.941938 image-trimmer-0.0.5/PKG-INFO
++drwxrwxrwx   0        0        0        0 2023-04-07 09:47:16.926438 image-trimmer-0.0.5/image_trimmer/
++-rw-rw-rw-   0        0        0        0 2023-04-07 07:37:37.000000 image-trimmer-0.0.5/image_trimmer/__init__.py
++-rw-rw-rw-   0        0        0     3345 2023-04-07 09:29:04.000000 image-trimmer-0.0.5/image_trimmer/image_trimmer.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:47:16.940939 image-trimmer-0.0.5/image_trimmer.egg-info/
++-rw-rw-rw-   0        0        0      851 2023-04-07 09:47:16.000000 image-trimmer-0.0.5/image_trimmer.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      289 2023-04-07 09:47:16.000000 image-trimmer-0.0.5/image_trimmer.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 09:47:16.000000 image-trimmer-0.0.5/image_trimmer.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       74 2023-04-07 09:47:16.000000 image-trimmer-0.0.5/image_trimmer.egg-info/entry_points.txt
++-rw-rw-rw-   0        0        0       26 2023-04-07 09:47:16.000000 image-trimmer-0.0.5/image_trimmer.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       14 2023-04-07 09:47:16.000000 image-trimmer-0.0.5/image_trimmer.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 09:47:16.942438 image-trimmer-0.0.5/setup.cfg
++-rw-rw-rw-   0        0        0      837 2023-04-07 09:47:15.000000 image-trimmer-0.0.5/setup.py
+```
+
+### Comparing `image-trimmer-0.0.4/PKG-INFO` & `image-trimmer-0.0.5/PKG-INFO`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: image-trimmer
+-Version: 0.0.4
++Version: 0.0.5
+ Summary: A tool to crop images and extract text using OCR
+ Home-page: https://github.com/jaytrairat/python-image-trimmer
+ Author: jaytrairat
+ Author-email: jaytrairat@outlook.com
+ Classifier: Programming Language :: Python :: 3
+ Description-Content-Type: text/markdown
+```
+
+### Comparing `image-trimmer-0.0.4/image_trimmer/image_trimmer.py` & `image-trimmer-0.0.5/image_trimmer/image_trimmer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `image-trimmer-0.0.4/image_trimmer.egg-info/PKG-INFO` & `image-trimmer-0.0.5/image_trimmer.egg-info/PKG-INFO`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: image-trimmer
+-Version: 0.0.4
++Version: 0.0.5
+ Summary: A tool to crop images and extract text using OCR
+ Home-page: https://github.com/jaytrairat/python-image-trimmer
+ Author: jaytrairat
+ Author-email: jaytrairat@outlook.com
+ Classifier: Programming Language :: Python :: 3
+ Description-Content-Type: text/markdown
+```
+
+### Comparing `image-trimmer-0.0.4/setup.py` & `image-trimmer-0.0.5/setup.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,23 +1,25 @@
+ from setuptools import setup, find_packages
+ 
+ with open("README.md", "r", encoding="utf-8") as readme_file:
+     readme = readme_file.read()
+ 
+ setup(
+     name="image-trimmer",
+-    version="0.0.4",
++    version="0.0.5",
+     packages=find_packages(),
+     include_package_data=True,
+     install_requires=[
+         "pytesseract",
+         "Pillow",
+         "pyyaml",
+     ],
+-    entry_points={"console_scripts": ["image-trimmer = image_trimmer:main"]},
++    entry_points={
++        "console_scripts": ["image-trimmer = image_trimmer.image_trimmer:crop_images"]
++    },
+     long_description=readme,
+     long_description_content_type="text/markdown",
+     url="https://github.com/jaytrairat/python-image-trimmer",
+     author="jaytrairat",
+     author_email="jaytrairat@outlook.com",
+     description="A tool to crop images and extract text using OCR",
+     classifiers=[
+```
+

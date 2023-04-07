@@ -1,0 +1,115 @@
+# Comparing `tmp/gmap-compiler-0.2.tar.gz` & `tmp/gmap-compiler-0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "gmap-compiler-0.2.tar", last modified: Fri Mar 31 17:10:49 2023, max compression
++gzip compressed data, was "gmap-compiler-0.3.tar", last modified: Fri Apr  7 09:38:02 2023, max compression
+```
+
+## Comparing `gmap-compiler-0.2.tar` & `gmap-compiler-0.3.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,18 @@
+-drwxr-xr-x   0 jimmy      (501) staff       (20)        0 2023-03-31 17:10:49.922997 gmap-compiler-0.2/
+--rw-r--r--   0 jimmy      (501) staff       (20)     1089 2023-03-30 02:05:47.000000 gmap-compiler-0.2/LICENSE
+--rw-r--r--   0 jimmy      (501) staff       (20)      331 2023-03-31 17:10:49.921912 gmap-compiler-0.2/PKG-INFO
+--rw-r--r--   0 jimmy      (501) staff       (20)      737 2023-03-31 17:05:37.000000 gmap-compiler-0.2/README.md
+-drwxr-xr-x   0 jimmy      (501) staff       (20)        0 2023-03-31 17:10:49.910968 gmap-compiler-0.2/gmap/
+--rw-r--r--   0 jimmy      (501) staff       (20)     1266 2023-03-31 17:03:59.000000 gmap-compiler-0.2/gmap/Hardware.py
+--rw-r--r--   0 jimmy      (501) staff       (20)      675 2023-03-31 11:33:18.000000 gmap-compiler-0.2/gmap/Hardware_Annealer.py
+--rw-r--r--   0 jimmy      (501) staff       (20)        2 2023-03-31 17:03:09.000000 gmap-compiler-0.2/gmap/__init__.py
+--rw-r--r--   0 jimmy      (501) staff       (20)     1962 2023-03-31 16:57:53.000000 gmap-compiler-0.2/gmap/mapping.py
+--rw-r--r--   0 jimmy      (501) staff       (20)     4809 2023-03-31 16:51:21.000000 gmap-compiler-0.2/gmap/matrix_generator.py
+--rw-r--r--   0 jimmy      (501) staff       (20)     2250 2023-03-31 16:18:58.000000 gmap-compiler-0.2/gmap/utils.py
+-drwxr-xr-x   0 jimmy      (501) staff       (20)        0 2023-03-31 17:10:49.920629 gmap-compiler-0.2/gmap_compiler.egg-info/
+--rw-r--r--   0 jimmy      (501) staff       (20)      331 2023-03-31 17:10:49.000000 gmap-compiler-0.2/gmap_compiler.egg-info/PKG-INFO
+--rw-r--r--   0 jimmy      (501) staff       (20)      325 2023-03-31 17:10:49.000000 gmap-compiler-0.2/gmap_compiler.egg-info/SOURCES.txt
+--rw-r--r--   0 jimmy      (501) staff       (20)        1 2023-03-31 17:10:49.000000 gmap-compiler-0.2/gmap_compiler.egg-info/dependency_links.txt
+--rw-r--r--   0 jimmy      (501) staff       (20)       38 2023-03-31 17:10:49.000000 gmap-compiler-0.2/gmap_compiler.egg-info/requires.txt
+--rw-r--r--   0 jimmy      (501) staff       (20)        5 2023-03-31 17:10:49.000000 gmap-compiler-0.2/gmap_compiler.egg-info/top_level.txt
+--rw-r--r--   0 jimmy      (501) staff       (20)       38 2023-03-31 17:10:49.923277 gmap-compiler-0.2/setup.cfg
+--rw-r--r--   0 jimmy      (501) staff       (20)      581 2023-03-31 17:10:45.000000 gmap-compiler-0.2/setup.py
++drwxr-xr-x   0 jimmy      (501) staff       (20)        0 2023-04-07 09:38:02.621274 gmap-compiler-0.3/
++-rw-r--r--   0 jimmy      (501) staff       (20)     1089 2023-03-30 02:05:47.000000 gmap-compiler-0.3/LICENSE
++-rw-r--r--   0 jimmy      (501) staff       (20)      331 2023-04-07 09:38:02.620539 gmap-compiler-0.3/PKG-INFO
++-rw-r--r--   0 jimmy      (501) staff       (20)     1441 2023-04-06 18:12:23.000000 gmap-compiler-0.3/README.md
++drwxr-xr-x   0 jimmy      (501) staff       (20)        0 2023-04-07 09:38:02.611229 gmap-compiler-0.3/gmap/
++-rw-r--r--   0 jimmy      (501) staff       (20)     4738 2023-04-06 17:55:27.000000 gmap-compiler-0.3/gmap/Hardware.py
++-rw-r--r--   0 jimmy      (501) staff       (20)        2 2023-03-31 17:03:09.000000 gmap-compiler-0.3/gmap/__init__.py
++-rw-r--r--   0 jimmy      (501) staff       (20)     2514 2023-04-06 14:08:17.000000 gmap-compiler-0.3/gmap/mapping.py
++-rw-r--r--   0 jimmy      (501) staff       (20)     4805 2023-04-06 14:46:51.000000 gmap-compiler-0.3/gmap/matrix_generator.py
++-rw-r--r--   0 jimmy      (501) staff       (20)     2250 2023-03-31 16:18:58.000000 gmap-compiler-0.3/gmap/utils.py
++drwxr-xr-x   0 jimmy      (501) staff       (20)        0 2023-04-07 09:38:02.619707 gmap-compiler-0.3/gmap_compiler.egg-info/
++-rw-r--r--   0 jimmy      (501) staff       (20)      331 2023-04-07 09:38:02.000000 gmap-compiler-0.3/gmap_compiler.egg-info/PKG-INFO
++-rw-r--r--   0 jimmy      (501) staff       (20)      316 2023-04-07 09:38:02.000000 gmap-compiler-0.3/gmap_compiler.egg-info/SOURCES.txt
++-rw-r--r--   0 jimmy      (501) staff       (20)        1 2023-04-07 09:38:02.000000 gmap-compiler-0.3/gmap_compiler.egg-info/dependency_links.txt
++-rw-r--r--   0 jimmy      (501) staff       (20)       48 2023-04-07 09:38:02.000000 gmap-compiler-0.3/gmap_compiler.egg-info/requires.txt
++-rw-r--r--   0 jimmy      (501) staff       (20)        5 2023-04-07 09:38:02.000000 gmap-compiler-0.3/gmap_compiler.egg-info/top_level.txt
++-rw-r--r--   0 jimmy      (501) staff       (20)       38 2023-04-07 09:38:02.621536 gmap-compiler-0.3/setup.cfg
++-rw-r--r--   0 jimmy      (501) staff       (20)      602 2023-04-07 09:37:16.000000 gmap-compiler-0.3/setup.py
+```
+
+### Comparing `gmap-compiler-0.2/LICENSE` & `gmap-compiler-0.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `gmap-compiler-0.2/gmap/matrix_generator.py` & `gmap-compiler-0.3/gmap/matrix_generator.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -12,15 +12,15 @@
+ 
+ 
+ # Create a Mask representing a network of N nodes with C communities
+ def create_communities(N, C):
+     A = np.zeros((N, N))
+     for i in range(C):
+         A[(N // C) * i:(N // C) * (i + 1), (N // C) * i:(N // C) * (i + 1)] = 1
+-    return A.astype(np.int64)
++    return A.astype(bool)
+ 
+ 
+ # Function that create a Small wolrd Watts Stoggart network.
+ def create_WS(N, k_avg, p_drop=0.3):
+     A = np.zeros((N, N))
+     G = nx.connected_watts_strogatz_graph(N, k_avg, p_drop)
+     A[:N, :N] = nx.to_numpy_array(G)  # [K:,K:]
+```
+
+### Comparing `gmap-compiler-0.2/gmap/utils.py` & `gmap-compiler-0.3/gmap/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gmap-compiler-0.2/setup.py` & `gmap-compiler-0.3/setup.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,19 +1,20 @@
+ from setuptools import setup, find_packages
+ 
+ setup(
+     name='gmap-compiler',
+-    version='0.2',
++    version='0.3',
+     packages=find_packages(),
+     install_requires=[
+         'numpy',
+         'matplotlib',
+         'networkx',
+         'numba',
+         'scipy',
++        'simanneal',
+     ],
+     author='Jimmy Weber',
+     author_email='jimmy.weber@ini.ethz.ch',
+     description='A versatile, easy-to-use and open-source compiler that can efficiently map any arbitrary connectivity matrix to various hardware architectures.',
+     url='https://github.com/EIS-Hub/GMap',
+ )
+```
+
