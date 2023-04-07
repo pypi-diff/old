@@ -1,0 +1,324 @@
+--- tmp/greas3-1.0.0b0-py3-none-any.whl.zip
++++ tmp/greas3-1.0.0b1-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,22 +1,22 @@
+│ -Zip file size: 13900 bytes, number of entries: 20
+│ --rw-r--r--  2.0 unx       13 b- defN 23-Apr-05 06:57 greas3/VERSION
+│ --rw-r--r--  2.0 unx     6254 b- defN 23-Apr-05 06:56 greas3/__init__.py
+│ --rw-r--r--  2.0 unx      413 b- defN 23-Apr-05 06:56 greas3/__main__.py
+│ --rw-r--r--  2.0 unx     2371 b- defN 23-Apr-05 06:56 greas3/check.py
+│ --rw-r--r--  2.0 unx       60 b- defN 23-Apr-05 06:56 greas3/logging.py
+│ --rw-r--r--  2.0 unx     2145 b- defN 23-Apr-05 06:56 greas3/operations.py
+│ --rw-r--r--  2.0 unx     1396 b- defN 23-Apr-05 06:56 greas3/put_operation.py
+│ --rw-r--r--  2.0 unx     3104 b- defN 23-Apr-05 06:56 greas3/put_operations.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 06:56 greas3/py.typed
+│ --rw-r--r--  2.0 unx       76 b- defN 23-Apr-05 06:56 greas3/cli/__init__.py
+│ --rw-r--r--  2.0 unx     1025 b- defN 23-Apr-05 06:56 greas3/cli/greas3_cli.py
+│ --rw-r--r--  2.0 unx     1085 b- defN 23-Apr-05 06:56 greas3/cli/greas3_task.py
+│ --rw-r--r--  2.0 unx      175 b- defN 23-Apr-05 06:56 greas3/cli/paths_args.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 06:56 greas3/cli/py.typed
+│ --rw-r--r--  2.0 unx     1073 b- defN 23-Apr-05 06:57 greas3-1.0.0b0.dist-info/LICENSE
+│ --rw-r--r--  2.0 unx     6866 b- defN 23-Apr-05 06:57 greas3-1.0.0b0.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Apr-05 06:57 greas3-1.0.0b0.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx       49 b- defN 23-Apr-05 06:57 greas3-1.0.0b0.dist-info/entry_points.txt
+│ --rw-r--r--  2.0 unx        7 b- defN 23-Apr-05 06:57 greas3-1.0.0b0.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx     1548 b- defN 23-Apr-05 06:57 greas3-1.0.0b0.dist-info/RECORD
+│ -20 files, 27752 bytes uncompressed, 11392 bytes compressed:  59.0%
+│ +Zip file size: 14039 bytes, number of entries: 20
+│ +-rw-r--r--  2.0 unx       13 b- defN 23-Apr-07 13:41 greas3/VERSION
+│ +-rw-r--r--  2.0 unx     6094 b- defN 23-Apr-07 13:41 greas3/__init__.py
+│ +-rw-r--r--  2.0 unx      413 b- defN 23-Apr-07 13:41 greas3/__main__.py
+│ +-rw-r--r--  2.0 unx     2822 b- defN 23-Apr-07 13:41 greas3/check.py
+│ +-rw-r--r--  2.0 unx       60 b- defN 23-Apr-07 13:41 greas3/logging.py
+│ +-rw-r--r--  2.0 unx     2145 b- defN 23-Apr-07 13:41 greas3/operations.py
+│ +-rw-r--r--  2.0 unx     1396 b- defN 23-Apr-07 13:41 greas3/put_operation.py
+│ +-rw-r--r--  2.0 unx     3104 b- defN 23-Apr-07 13:41 greas3/put_operations.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-07 13:41 greas3/py.typed
+│ +-rw-r--r--  2.0 unx       76 b- defN 23-Apr-07 13:41 greas3/cli/__init__.py
+│ +-rw-r--r--  2.0 unx     1162 b- defN 23-Apr-07 13:41 greas3/cli/greas3_cli.py
+│ +-rw-r--r--  2.0 unx     1064 b- defN 23-Apr-07 13:41 greas3/cli/greas3_task.py
+│ +-rw-r--r--  2.0 unx      253 b- defN 23-Apr-07 13:41 greas3/cli/paths_args.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-07 13:41 greas3/cli/py.typed
+│ +-rw-r--r--  2.0 unx     1073 b- defN 23-Apr-07 13:41 greas3-1.0.0b1.dist-info/LICENSE
+│ +-rw-r--r--  2.0 unx     6706 b- defN 23-Apr-07 13:41 greas3-1.0.0b1.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 13:41 greas3-1.0.0b1.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx       49 b- defN 23-Apr-07 13:41 greas3-1.0.0b1.dist-info/entry_points.txt
+│ +-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 13:41 greas3-1.0.0b1.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 unx     1548 b- defN 23-Apr-07 13:41 greas3-1.0.0b1.dist-info/RECORD
+│ +20 files, 28077 bytes uncompressed, 11531 bytes compressed:  58.9%
+├── zipnote {}
+│ @@ -36,26 +36,26 @@
+│  
+│  Filename: greas3/cli/paths_args.py
+│  Comment: 
+│  
+│  Filename: greas3/cli/py.typed
+│  Comment: 
+│  
+│ -Filename: greas3-1.0.0b0.dist-info/LICENSE
+│ +Filename: greas3-1.0.0b1.dist-info/LICENSE
+│  Comment: 
+│  
+│ -Filename: greas3-1.0.0b0.dist-info/METADATA
+│ +Filename: greas3-1.0.0b1.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: greas3-1.0.0b0.dist-info/WHEEL
+│ +Filename: greas3-1.0.0b1.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: greas3-1.0.0b0.dist-info/entry_points.txt
+│ +Filename: greas3-1.0.0b1.dist-info/entry_points.txt
+│  Comment: 
+│  
+│ -Filename: greas3-1.0.0b0.dist-info/top_level.txt
+│ +Filename: greas3-1.0.0b1.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: greas3-1.0.0b0.dist-info/RECORD
+│ +Filename: greas3-1.0.0b1.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── greas3/VERSION
+│ @@ -1 +1 @@
+│ -1.0.0-beta.0
+│ +1.0.0-beta.1
+├── greas3/__init__.py
+│ @@ -48,30 +48,24 @@
+│  
+│  ```shell
+│  $ greas3 ./party-time/ s3://circus/inbox/
+│  
+│  /home/cariad/party-time/   s3://circus/inbox/
+│  good-clowns/steve.jpg    = good-clowns/steve.jpg
+│  evil-clowns/jacob.jpg    = evil-clowns/jacob.jpg
+│ -```
+│ -
+│ -Pass `--dry-run` to view the enqueued uploads without performing them:
+│ -
+│ -```shell
+│ -$ greas3 ./party-time/ s3://circus/inbox/
+│ -
+│ -/home/cariad/party-time/   s3://circus/inbox/
+│ -good-clowns/steve.jpg    = good-clowns/steve.jpg
+│ -evil-clowns/jacob.jpg    = evil-clowns/jacob.jpg
+│  group-hug.jpg            > group-hug.jpg
+│  ```
+│  
+│  `=` indicates that a file hasn't changed and so won't be uploaded. `>` indicates
+│  the file will be uploaded.
+│  
+│ +Pass `--debug` to enable debug logging.
+│ +
+│ +Pass `--dry-run` to view the enqueued uploads without performing them.
+│ +
+│  ## Python usage
+│  
+│  The `put()` function accepts a path to a local file or directory and a
+│  destination [S3 URI](https://cariad.github.io/slash3/) to upload to.
+│  
+│  The function returns a list of `PutOperation`, each of which describes the
+│  source file, destination URI and flag to indicate if the files are the same;
+├── greas3/check.py
+│ @@ -60,17 +60,30 @@
+│                          repr(response),
+│                      )
+│                      raise
+│  
+│                  total_parts = parts.get("TotalPartsCount", 0)
+│                  next_marker = parts.get("NextPartNumberMarker", None)
+│  
+│ -                if next_marker is None or next_marker <= total_parts:
+│ +                logger.debug(
+│ +                    "Checking pagination: "
+│ +                    "TotalPartsCount=%s, NextPartNumberMarker=%s",
+│ +                    total_parts,
+│ +                    next_marker,
+│ +                )
+│ +
+│ +                if next_marker is None or next_marker == total_parts:
+│ +                    logger.debug("Finished paginating %s parts", total_parts)
+│                      return True
+│  
+│ +                logger.debug(
+│ +                    "Requesting next page: PartNumberMarker=%s",
+│ +                    next_marker,
+│ +                )
+│ +
+│                  response = s3.get_object_attributes(
+│                      Bucket=uri.bucket,
+│                      Key=uri.key.key,
+│                      ObjectAttributes=["ObjectParts"],
+│                      PartNumberMarker=next_marker,
+│                  )
+├── greas3/cli/greas3_cli.py
+│ @@ -22,14 +22,20 @@
+│  
+│          parser.add_argument(
+│              "destination",
+│              help='destination URI (e.g. "s3://circus/")',
+│          )
+│  
+│          parser.add_argument(
+│ +            "--debug",
+│ +            help="enable debug logging",
+│ +            action="store_true",
+│ +        )
+│ +
+│ +        parser.add_argument(
+│              "--dry-run",
+│              help="perform a dry-run",
+│              action="store_true",
+│          )
+│  
+│          return parser
+├── greas3/cli/greas3_task.py
+│ @@ -1,33 +1,33 @@
+│ +from logging import DEBUG
+│  from pathlib import Path
+│  
+│  from ansiscape import light
+│ -from boto3.session import Session
+│  from cline import CommandLineArguments, Task
+│  from slash3 import S3Uri
+│  
+│  from greas3.cli.paths_args import PathsArgs
+│  from greas3.logging import logger
+│  from greas3.operations import put
+│  
+│  
+│  class Greas3Task(Task[PathsArgs]):
+│      @classmethod
+│      def make_args(cls, args: CommandLineArguments) -> PathsArgs:
+│ -        dry_run = args.get_bool("dry_run", False)
+│ -        logger.debug("Creating PathsArgs with dry_run=%s", dry_run)
+│ -
+│          return PathsArgs(
+│ -            source=args.get_string("source"),
+│ +            debug=args.get_bool("debug", False),
+│              destination=args.get_string("destination"),
+│ -            dry_run=dry_run,
+│ -            session=Session(),
+│ +            dry_run=args.get_bool("dry_run", False),
+│ +            source=args.get_string("source"),
+│          )
+│  
+│      def invoke(self) -> int:
+│ +        if self.args.debug:
+│ +            logger.setLevel(DEBUG)
+│ +
+│          source = Path(self.args.source)
+│          destination = S3Uri(self.args.destination)
+│  
+│          if self.args.dry_run:
+│              logger.info(light("Performing a dry-run only."))
+│  
+│          put(
+├── greas3/cli/paths_args.py
+│ @@ -1,11 +1,14 @@
+│  from dataclasses import dataclass
+│ +from typing import Optional
+│  
+│  from boto3.session import Session
+│  
+│  
+│  @dataclass
+│  class PathsArgs:
+│ -    source: str
+│      destination: str
+│ -    dry_run: bool
+│ -    session: Session
+│ +    source: str
+│ +
+│ +    debug: bool = False
+│ +    dry_run: bool = False
+│ +    session: Optional[Session] = None
+│   --- greas3-1.0.0b0.dist-info/LICENSE
+├── +++ greas3-1.0.0b1.dist-info/LICENSE
+│┄ Files identical despite different names
+│   --- greas3-1.0.0b0.dist-info/METADATA
+├── +++ greas3-1.0.0b1.dist-info/METADATA
+│┄ Files 6% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: greas3
+│ -Version: 1.0.0b0
+│ +Version: 1.0.0b1
+│  Summary: Synchronises S3 buckets with local directories
+│  Home-page: https://github.com/cariad/greas3
+│  Author: Cariad Eccleston
+│  Author-email: cariad@cariad.earth
+│  License: MIT
+│  Classifier: Development Status :: 3 - Alpha
+│  Classifier: License :: OSI Approved :: MIT License
+│ @@ -68,29 +68,23 @@
+│  
+│  ```shell
+│  $ greas3 ./party-time/ s3://circus/inbox/
+│  
+│  /home/cariad/party-time/   s3://circus/inbox/
+│  good-clowns/steve.jpg    = good-clowns/steve.jpg
+│  evil-clowns/jacob.jpg    = evil-clowns/jacob.jpg
+│ -```
+│ -
+│ -Pass `--dry-run` to view the enqueued uploads without performing them:
+│ -
+│ -```shell
+│ -$ greas3 ./party-time/ s3://circus/inbox/
+│ -
+│ -/home/cariad/party-time/   s3://circus/inbox/
+│ -good-clowns/steve.jpg    = good-clowns/steve.jpg
+│ -evil-clowns/jacob.jpg    = evil-clowns/jacob.jpg
+│  group-hug.jpg            > group-hug.jpg
+│  ```
+│  
+│  `=` indicates that a file hasn't changed and so won't be uploaded. `>` indicates the file will be uploaded.
+│  
+│ +Pass `--debug` to enable debug logging.
+│ +
+│ +Pass `--dry-run` to view the enqueued uploads without performing them.
+│ +
+│  ## Python usage
+│  
+│  The `put()` function accepts a path to a local file or directory and a destination [S3 URI](https://cariad.github.io/slash3/) to upload to.
+│  
+│  The function returns a list of `PutOperation`, each of which describes the source file, destination URI and flag to indicate if the files are the same; in which case the upload will not be performed.
+│  
+│  To gather the operations without performing them, pass the `dry_run=True` flag.
+│   --- greas3-1.0.0b0.dist-info/RECORD
+├── +++ greas3-1.0.0b1.dist-info/RECORD
+│┄ Files 14% similar despite different names
+│ @@ -1,20 +1,20 @@
+│ -greas3/VERSION,sha256=C9yppd1l50xKEMcBGWZ1XRpVeIXk2PTUt3RfRv9S9DM,13
+│ -greas3/__init__.py,sha256=uShLo4ciGmUKhq_8sNp9dlLgXp2hbwxE5SWqvuMqYQI,6254
+│ +greas3/VERSION,sha256=VwOi-DDypuLOm-GeN8Uwnjm2Vm0HH2Qc8RxdwsHGMx0,13
+│ +greas3/__init__.py,sha256=58O0Mim1r9Vk7XSe5GHpZ37fBCUXXoo6sdoW5LOR2DY,6094
+│  greas3/__main__.py,sha256=Z2Yh50fBu8cvQBMiozY6LrrR5vzdMzPTAipJhLSpofQ,413
+│ -greas3/check.py,sha256=CzMbPTT7R2RDmiAqgz49g59UFZC5ck4d-ZfVNUe-RN4,2371
+│ +greas3/check.py,sha256=T0W1YXJTP0pVqSTnIIknheT2h5s-F5N74YllYzuG400,2822
+│  greas3/logging.py,sha256=ZsXFHsoJAPP-WXzPZezZ1EndwpJlQjwQKJD5OlWz6dA,60
+│  greas3/operations.py,sha256=DmT-9hrh-GCRxrX9ab9o_HWnBDIqRpUJwDoHPPsEns4,2145
+│  greas3/put_operation.py,sha256=EdyXBpLEP42jVyAwsS-Uq0VHGclMrWDePZ-30sNw74c,1396
+│  greas3/put_operations.py,sha256=b8p9dKZcYbQ8o2b-TbvkTcXSkvx8j4NkUj48WS5qb8M,3104
+│  greas3/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  greas3/cli/__init__.py,sha256=NHy9uiH-M_eB7EmWG2pkTq5DzmHboHh5MCNm9S1lzaU,76
+│ -greas3/cli/greas3_cli.py,sha256=xz8q5hllxDzVvc32ENeheiT01ZgtFR_SmWgQebSAMxc,1025
+│ -greas3/cli/greas3_task.py,sha256=G5hGClXmhczTTO1wx_x7WTA6pRJmdBS9Udp3TRxhJpM,1085
+│ -greas3/cli/paths_args.py,sha256=tECiFHpn8Wd_H4wasjEhRfrwP_dr-6Kcev555KbdM1o,175
+│ +greas3/cli/greas3_cli.py,sha256=dRjH_gLBYSq8k0AkS93HWeEF9shaCsJdDu6m758hbi0,1162
+│ +greas3/cli/greas3_task.py,sha256=GQZ9vUpPGyfUI2IjQjndu8W07dl0xtxqf6YnPCC0jSs,1064
+│ +greas3/cli/paths_args.py,sha256=pdgHuc_JjfbQhyxOd589ySMLpn3vDCh4_K7AMFehuKk,253
+│  greas3/cli/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -greas3-1.0.0b0.dist-info/LICENSE,sha256=jXz8xZq3cMjXXQ2Hb9sj6RNKFigwHmut-OnbWc-uHOU,1073
+│ -greas3-1.0.0b0.dist-info/METADATA,sha256=N9DsnOmwpqhcCRjoD1gJ9J0gbf4IsfayjHe6XXc2WY8,6866
+│ -greas3-1.0.0b0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+│ -greas3-1.0.0b0.dist-info/entry_points.txt,sha256=oQKw4xqHI_ubGEpn8Joau3YOTQoflmPR-jkp3f0cfjQ,49
+│ -greas3-1.0.0b0.dist-info/top_level.txt,sha256=j2Zv-B4Sgv9wE8HbMkYzz-1sHj1tLahBsj3-JbcVm2s,7
+│ -greas3-1.0.0b0.dist-info/RECORD,,
+│ +greas3-1.0.0b1.dist-info/LICENSE,sha256=jXz8xZq3cMjXXQ2Hb9sj6RNKFigwHmut-OnbWc-uHOU,1073
+│ +greas3-1.0.0b1.dist-info/METADATA,sha256=JfYGzLq2X8D2guPa3yA-xPkvBzXBNp4YjQCj4RqPRfE,6706
+│ +greas3-1.0.0b1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+│ +greas3-1.0.0b1.dist-info/entry_points.txt,sha256=oQKw4xqHI_ubGEpn8Joau3YOTQoflmPR-jkp3f0cfjQ,49
+│ +greas3-1.0.0b1.dist-info/top_level.txt,sha256=j2Zv-B4Sgv9wE8HbMkYzz-1sHj1tLahBsj3-JbcVm2s,7
+│ +greas3-1.0.0b1.dist-info/RECORD,,

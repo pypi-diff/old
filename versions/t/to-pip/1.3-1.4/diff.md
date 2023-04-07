@@ -1,0 +1,165 @@
+# Comparing `tmp/to-pip-1.3.tar.gz` & `tmp/to-pip-1.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "to-pip-1.3.tar", last modified: Fri Apr  7 12:24:41 2023, max compression
++gzip compressed data, was "to-pip-1.4.tar", last modified: Fri Apr  7 13:43:56 2023, max compression
+```
+
+## Comparing `to-pip-1.3.tar` & `to-pip-1.4.tar`
+
+### file list
+
+```diff
+@@ -1,12 +1,12 @@
+-drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 12:24:41.383052 to-pip-1.3/
+--rw-r--r--   0 chiubowen   (501) staff       (20)     2102 2023-04-07 12:24:41.382951 to-pip-1.3/PKG-INFO
+--rw-r--r--   0 chiubowen   (501) staff       (20)     1940 2023-04-07 12:24:41.000000 to-pip-1.3/README.md
+--rw-r--r--   0 chiubowen   (501) staff       (20)       38 2023-04-07 12:24:41.383088 to-pip-1.3/setup.cfg
+--rw-r--r--   0 chiubowen   (501) staff       (20)      486 2023-04-07 12:24:41.000000 to-pip-1.3/setup.py
+-drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 12:24:41.382824 to-pip-1.3/to_pip.egg-info/
+--rw-r--r--   0 chiubowen   (501) staff       (20)     2102 2023-04-07 12:24:41.000000 to-pip-1.3/to_pip.egg-info/PKG-INFO
+--rw-r--r--   0 chiubowen   (501) staff       (20)      181 2023-04-07 12:24:41.000000 to-pip-1.3/to_pip.egg-info/SOURCES.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)        1 2023-04-07 12:24:41.000000 to-pip-1.3/to_pip.egg-info/dependency_links.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)       40 2023-04-07 12:24:41.000000 to-pip-1.3/to_pip.egg-info/entry_points.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)        7 2023-04-07 12:24:41.000000 to-pip-1.3/to_pip.egg-info/top_level.txt
+--rwxr-xr-x   0 chiubowen   (501) staff       (20)     2988 2023-04-07 12:24:41.000000 to-pip-1.3/to_pip.py
++drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 13:43:56.014484 to-pip-1.4/
++-rw-r--r--   0 chiubowen   (501) staff       (20)     2065 2023-04-07 13:43:56.014371 to-pip-1.4/PKG-INFO
++-rw-r--r--   0 chiubowen   (501) staff       (20)     1903 2023-04-07 13:43:55.000000 to-pip-1.4/README.md
++-rw-r--r--   0 chiubowen   (501) staff       (20)       38 2023-04-07 13:43:56.014524 to-pip-1.4/setup.cfg
++-rw-r--r--   0 chiubowen   (501) staff       (20)      486 2023-04-07 13:43:55.000000 to-pip-1.4/setup.py
++drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 13:43:56.014242 to-pip-1.4/to_pip.egg-info/
++-rw-r--r--   0 chiubowen   (501) staff       (20)     2065 2023-04-07 13:43:56.000000 to-pip-1.4/to_pip.egg-info/PKG-INFO
++-rw-r--r--   0 chiubowen   (501) staff       (20)      181 2023-04-07 13:43:56.000000 to-pip-1.4/to_pip.egg-info/SOURCES.txt
++-rw-r--r--   0 chiubowen   (501) staff       (20)        1 2023-04-07 13:43:56.000000 to-pip-1.4/to_pip.egg-info/dependency_links.txt
++-rw-r--r--   0 chiubowen   (501) staff       (20)       40 2023-04-07 13:43:56.000000 to-pip-1.4/to_pip.egg-info/entry_points.txt
++-rw-r--r--   0 chiubowen   (501) staff       (20)        7 2023-04-07 13:43:56.000000 to-pip-1.4/to_pip.egg-info/top_level.txt
++-rwxr-xr-x   0 chiubowen   (501) staff       (20)     3103 2023-04-07 13:43:55.000000 to-pip-1.4/to_pip.py
+```
+
+### Comparing `to-pip-1.3/to_pip.py` & `to-pip-1.4/to_pip.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -4,67 +4,67 @@
+ import shutil
+ import sys
+ import tempfile
+ 
+ 
+ def usage():
+     print(
+-        f"Usage: {sys.argv[0]} -n <package_name> -v <package_version> [-u <pypi_username> -p <pypi_password>] <python_files>"
++        f"Usage: python -m to_pip -n <package_name> -v <package_version> [-u <pypi_username> -p <pypi_password>] <python_files>"
+     )
+     sys.exit(1)
+ 
+ 
+ def parse_args():
+     parser = argparse.ArgumentParser()
+-    parser.add_argument("-n", "--name", help="Package name", required=True)
+-    parser.add_argument("-v", "--version", help="Package version", required=True)
+-    parser.add_argument("-u", "--username", help="PyPI username", default="")
+-    parser.add_argument("-p", "--password", help="PyPI password", default="")
+-    parser.add_argument("files", nargs="*", help="Python files to include")
++    parser.add_argument("-n", "--package_name", help="Package name", required=True)
++    parser.add_argument("-v", "--package_version", help="Package version", required=True)
++    parser.add_argument("-u", "--pypi_username", help="PyPI username", default="")
++    parser.add_argument("-p", "--pypi_password", help="PyPI password", default="")
++    parser.add_argument("python_files", nargs="*", help="Python files to include")
+     return parser.parse_args()
+ 
+ 
+ def to_pip():
+     args = parse_args()
+ 
+-    if not args.files:
++    if not args.python_files:
+         usage()
+ 
+     tmp_dir = tempfile.mkdtemp()
+-    package_dir = os.path.join(tmp_dir, f"{args.name}-{args.version}")
++    package_dir = os.path.join(tmp_dir, f"{args.package_name}-{args.package_version}")
+     os.makedirs(package_dir)
+ 
+-    for file in args.files:
++    for file in args.python_files:
+         with open(file) as src, open(
+                 os.path.join(package_dir, os.path.basename(file)), "w"
+         ) as dest:
+             dest.write("#!/usr/bin/env python\n")
+             dest.write(src.read())
+         os.system(f"chmod +x {os.path.join(package_dir, os.path.basename(file))}")
+ 
+     if os.path.exists("requirements.txt"):
+         shutil.copy("requirements.txt", os.path.join(package_dir, "requirements.txt"))
+ 
+-    modules = ", ".join([f"'{os.path.basename(file).split('.')[0].replace('-', '_')}'" for file in args.files])
++    modules = ", ".join([f"'{os.path.basename(file).split('.')[0].replace('-', '_')}'" for file in args.python_files])
+     entry_points = ", ".join(
+         [
+             f"{os.path.basename(file).split('.')[0].replace('-', '_')} = {os.path.basename(file).split('.')[0].replace('-', '_')}:main"
+-            for file in args.files
++            for file in args.python_files
+         ]
+     )
+ 
+     setup_py = f"""
+ from setuptools import setup, find_packages
+ 
+ with open('requirements.txt') as f:
+     requirements = [line.strip() for line in f.readlines()]
+ 
+ setup(
+-    name="{args.name}",
+-    version="{args.version}",
++    name="{args.package_name}",
++    version="{args.package_version}",
+     packages=find_packages(),
+     py_modules=[{modules}],
+     install_requires=requirements,
+     entry_points={{
+         'console_scripts': [
+             '{entry_points}',
+         ],
+@@ -77,30 +77,30 @@
+         f.write(setup_py)
+ 
+     if os.path.exists("README.md"):
+         shutil.copy("README.md", os.path.join(package_dir, "README.md"))
+ 
+     os.system(f"cd {package_dir} && python setup.py sdist bdist_wheel")
+ 
+-    if args.username and args.password:
++    if args.pypi_username and args.pipy_password:
+         pypirc_content = f"""
+ [distutils]
+ index-servers =
+   pypi
+ 
+ [pypi]
+ repository: https://upload.pypi.org/legacy/
+-username: {args.username}
+-password: {args.password}
++username: {args.pipy_username}
++password: {args.pipy_password}
+ """
+         with open(os.path.expanduser("~/.pypirc"), "w") as f:
+             f.write(pypirc_content)
+ 
+     os.system(f"cd {package_dir} && twine upload dist/*")
+ 
+ 
+ def main():
+     to_pip()
+ 
+ 
+ if __name__ == "__main__":
+-    main()
++    main()
+```
+

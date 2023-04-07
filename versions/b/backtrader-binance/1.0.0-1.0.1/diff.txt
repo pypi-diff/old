@@ -1,0 +1,511 @@
+--- tmp/backtrader_binance-1.0.0.tar.gz
++++ tmp/backtrader_binance-1.0.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "backtrader_binance-1.0.0.tar", last modified: Fri Apr  7 13:22:09 2023, max compression
+│ +gzip compressed data, was "backtrader_binance-1.0.1.tar", last modified: Fri Apr  7 13:39:00 2023, max compression
+│   --- backtrader_binance-1.0.0.tar
+├── +++ backtrader_binance-1.0.1.tar
+│ ├── file list
+│ │ @@ -1,17 +1,17 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 13:22:09.664884 backtrader_binance-1.0.0/
+│ │ --rw-rw-rw-   0        0        0     1090 2023-04-07 12:36:18.000000 backtrader_binance-1.0.0/LICENSE
+│ │ --rw-rw-rw-   0        0        0    21744 2023-04-07 13:22:09.664884 backtrader_binance-1.0.0/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0    20526 2023-04-07 13:06:09.000000 backtrader_binance-1.0.0/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 13:22:09.659886 backtrader_binance-1.0.0/backtrader_binance/
+│ │ --rw-rw-rw-   0        0        0       40 2021-06-25 01:58:20.000000 backtrader_binance-1.0.0/backtrader_binance/__init__.py
+│ │ --rw-rw-rw-   0        0        0     6397 2023-04-05 12:42:51.000000 backtrader_binance-1.0.0/backtrader_binance/binance_broker.py
+│ │ --rw-rw-rw-   0        0        0     5048 2023-04-05 03:54:03.000000 backtrader_binance-1.0.0/backtrader_binance/binance_feed.py
+│ │ --rw-rw-rw-   0        0        0     6566 2023-04-06 06:34:54.000000 backtrader_binance-1.0.0/backtrader_binance/binance_store.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 13:22:09.663884 backtrader_binance-1.0.0/backtrader_binance.egg-info/
+│ │ --rw-rw-rw-   0        0        0    21744 2023-04-07 13:22:09.000000 backtrader_binance-1.0.0/backtrader_binance.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      384 2023-04-07 13:22:09.000000 backtrader_binance-1.0.0/backtrader_binance.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-07 13:22:09.000000 backtrader_binance-1.0.0/backtrader_binance.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       33 2023-04-07 13:22:09.000000 backtrader_binance-1.0.0/backtrader_binance.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       19 2023-04-07 13:22:09.000000 backtrader_binance-1.0.0/backtrader_binance.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-07 13:22:09.665885 backtrader_binance-1.0.0/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     2122 2023-04-07 13:21:44.000000 backtrader_binance-1.0.0/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:39:00.317732 backtrader_binance-1.0.1/
+│ │ +-rw-rw-rw-   0        0        0     1090 2023-04-07 12:36:18.000000 backtrader_binance-1.0.1/LICENSE
+│ │ +-rw-rw-rw-   0        0        0    21770 2023-04-07 13:39:00.317732 backtrader_binance-1.0.1/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0    20543 2023-04-07 13:37:25.000000 backtrader_binance-1.0.1/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:39:00.310732 backtrader_binance-1.0.1/backtrader_binance/
+│ │ +-rw-rw-rw-   0        0        0       40 2021-06-25 01:58:20.000000 backtrader_binance-1.0.1/backtrader_binance/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     6397 2023-04-05 12:42:51.000000 backtrader_binance-1.0.1/backtrader_binance/binance_broker.py
+│ │ +-rw-rw-rw-   0        0        0     5048 2023-04-05 03:54:03.000000 backtrader_binance-1.0.1/backtrader_binance/binance_feed.py
+│ │ +-rw-rw-rw-   0        0        0     6566 2023-04-06 06:34:54.000000 backtrader_binance-1.0.1/backtrader_binance/binance_store.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:39:00.316731 backtrader_binance-1.0.1/backtrader_binance.egg-info/
+│ │ +-rw-rw-rw-   0        0        0    21770 2023-04-07 13:39:00.000000 backtrader_binance-1.0.1/backtrader_binance.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      384 2023-04-07 13:39:00.000000 backtrader_binance-1.0.1/backtrader_binance.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 13:39:00.000000 backtrader_binance-1.0.1/backtrader_binance.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       33 2023-04-07 13:39:00.000000 backtrader_binance-1.0.1/backtrader_binance.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       19 2023-04-07 13:39:00.000000 backtrader_binance-1.0.1/backtrader_binance.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 13:39:00.318731 backtrader_binance-1.0.1/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     2163 2023-04-07 13:38:39.000000 backtrader_binance-1.0.1/setup.py
+│ │   --- backtrader_binance-1.0.0/LICENSE
+│ ├── +++ backtrader_binance-1.0.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- backtrader_binance-1.0.0/PKG-INFO
+│ ├── +++ backtrader_binance-1.0.1/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: backtrader_binance
+│ │ -Version: 1.0.0
+│ │ +Version: 1.0.1
+│ │  Summary: Binance API integration with Backtrader
+│ │  Home-page: https://github.com/WISEPLAT/backtrader_binance
+│ │  Author: wiseplat
+│ │  Author-email: oshpagin@gmail.com
+│ │  License: MIT License
+│ │  Project-URL: Documentation, https://github.com/WISEPLAT/backtrader_binance/blob/master/README.md
+│ │  Keywords: trading,development
+│ │ @@ -30,43 +30,47 @@
+│ │   - Launch trading systems for automatic trading on the exchange [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK) + [Backtrader](https://github.com/WISEPLAT/backtrader ) // Live trading
+│ │   - Download historical data for cryptocurrencies from the exchange [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK)
+│ │  
+│ │  For API connection we are using library [python-binance](https://github.com/sammchardy/python-binance).
+│ │  
+│ │  ## Installation
+│ │  1) The simplest way:
+│ │ -  
+│ │ -    
+│ │ -    git clone https://github.com/WISEPLAT/backtrader_binance
+│ │ -
+│ │ +```shell
+│ │ +pip install backtrader_binance
+│ │ +```
+│ │  or
+│ │ -
+│ │ -    # please run this command two times!
+│ │ -    pip install git+https://github.com/WISEPLAT/backtrader_binance.git
+│ │ +```shell
+│ │ +git clone https://github.com/WISEPLAT/backtrader_binance
+│ │ +```
+│ │ +or
+│ │ +```shell
+│ │ +pip install git+https://github.com/WISEPLAT/backtrader_binance.git
+│ │ +```
+│ │  
+│ │  2) Please use backtrader from my repository (as your can push your commits in it). Install it:
+│ │ -
+│ │ -
+│ │ -    pip install git+https://github.com/WISEPLAT/backtrader.git
+│ │ +```shell
+│ │ +pip install git+https://github.com/WISEPLAT/backtrader.git
+│ │ +```
+│ │  
+│ │  3) We have some dependencies, you need to install them: 
+│ │ -
+│ │ -
+│ │ -    pip install python-binance pandas matplotlib
+│ │ -
+│ │ +```shell
+│ │ +pip install python-binance pandas matplotlib
+│ │ +```
+│ │  
+│ │  ### Getting started
+│ │  To make it easier to figure out how everything works, many examples have been made in the folders **DataExamplesBinance** and **StrategyExamplesBinance**.
+│ │  
+│ │  Before running the example, you need to get your API key and Secret key, and put them in the file **ConfigBinance\Config.py:**
+│ │  
+│ │ -    # content of ConfigBinance\Config.py
+│ │ -    class Config:
+│ │ -        BINANCE_API_KEY = "YOUR_API_KEY"
+│ │ -        BINANCE_API_SECRET = "YOUR_SECRET_KEY"
+│ │ +```python
+│ │ +# content of ConfigBinance\Config.py 
+│ │ +class Config:
+│ │ +    BINANCE_API_KEY = "YOUR_API_KEY"
+│ │ +    BINANCE_API_SECRET = "YOUR_SECRET_KEY"
+│ │ +```
+│ │  
+│ │  #### How to get a Binance API token:
+│ │  1. Register your account on [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK )
+│ │  2. Go to the ["API Management"](https://www.binance.com/en/my/settings/api-management?ref=CPA_004RZBKQWK ) 
+│ │  3. Then click the "Create API" button and select "System Generated".
+│ │  4. In the "API Restrictions" section, enable "Enable Spot and Margin Trading".
+│ │  5. Copy and paste to the file **ConfigBinance\Config.py ** received **"API key"** and **"Secret key"**
+│ │ @@ -151,42 +155,47 @@
+│ │  - Загружать исторические данные по криптовалютам с биржи [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK )
+│ │  
+│ │  Для подключения к API мы используем библиотеку [python-binance](https://github.com/sammchardy/python-binance ).
+│ │  
+│ │  
+│ │  ## Установка
+│ │  1) Самый простой способ:
+│ │ -  
+│ │ -        
+│ │ -    git clone https://github.com/WISEPLAT/backtrader_binance
+│ │ -
+│ │ +```shell
+│ │ +pip install backtrader_binance
+│ │ +```
+│ │  или
+│ │ -
+│ │ -    # пожалуйста запустите эту команду два раза!
+│ │ -    pip install git+https://github.com/WISEPLAT/backtrader_binance.git
+│ │ +```shell
+│ │ +git clone https://github.com/WISEPLAT/backtrader_binance
+│ │ +```
+│ │ +или
+│ │ +```shell
+│ │ +pip install git+https://github.com/WISEPLAT/backtrader_binance.git
+│ │ +```
+│ │  
+│ │  2) Пожалуйста, используйте backtrader из моего репозитория (так как вы можете размещать в нем свои коммиты). Установите его:
+│ │ -
+│ │ -
+│ │ -    pip install git+https://github.com/WISEPLAT/backtrader.git
+│ │ +```shell
+│ │ +pip install git+https://github.com/WISEPLAT/backtrader.git
+│ │ +```
+│ │  
+│ │  3) У нас есть некоторые зависимости, вам нужно их установить:
+│ │ -
+│ │ -
+│ │ -    pip install python-binance pandas matplotlib
+│ │ +```shell
+│ │ +pip install python-binance pandas matplotlib
+│ │ +```
+│ │  
+│ │  ### Начало работы
+│ │  Чтобы было легче разобраться как всё работает, сделано множество примеров в папках **DataExamplesBinance_ru** и **StrategyExamplesBinance_ru**.
+│ │  
+│ │  Перед запуском примера, необходимо получить свой API ключ и Secret ключ, и прописать их в файле **ConfigBinance\Config.py:**
+│ │  
+│ │ -    # content of ConfigBinance\Config.py 
+│ │ -    class Config:
+│ │ -        BINANCE_API_KEY = "YOUR_API_KEY"
+│ │ -        BINANCE_API_SECRET = "YOUR_SECRET_KEY"
+│ │ +```python
+│ │ +# content of ConfigBinance\Config.py 
+│ │ +class Config:
+│ │ +    BINANCE_API_KEY = "YOUR_API_KEY"
+│ │ +    BINANCE_API_SECRET = "YOUR_SECRET_KEY"
+│ │ +```
+│ │  
+│ │  ####  Как получить токен Binance API:
+│ │  1. Зарегистрируйте свой аккаунт на [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK )
+│ │  2. Перейдите в раздел ["Управление API"](https://www.binance.com/en/my/settings/api-management?ref=CPA_004RZBKQWK )
+│ │  3. Затем нажмите кнопку "Создать API" и выберите "Сгенерированный системой".
+│ │  4. В разделе "Ограничения API" включите "Включить спотовую и маржинальную торговлю".
+│ │  5. Скопируйте и вставьте в файл **ConfigBinance\Config.py** полученные **"Ключ API"** и **"Секретный ключ"**
+│ │   --- backtrader_binance-1.0.0/README.md
+│ ├── +++ backtrader_binance-1.0.1/README.md
+│ │┄ Files 5% similar despite different names
+│ │ @@ -6,43 +6,47 @@
+│ │   - Launch trading systems for automatic trading on the exchange [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK) + [Backtrader](https://github.com/WISEPLAT/backtrader ) // Live trading
+│ │   - Download historical data for cryptocurrencies from the exchange [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK)
+│ │  
+│ │  For API connection we are using library [python-binance](https://github.com/sammchardy/python-binance).
+│ │  
+│ │  ## Installation
+│ │  1) The simplest way:
+│ │ -  
+│ │ -    
+│ │ -    git clone https://github.com/WISEPLAT/backtrader_binance
+│ │ -
+│ │ +```shell
+│ │ +pip install backtrader_binance
+│ │ +```
+│ │  or
+│ │ -
+│ │ -    # please run this command two times!
+│ │ -    pip install git+https://github.com/WISEPLAT/backtrader_binance.git
+│ │ +```shell
+│ │ +git clone https://github.com/WISEPLAT/backtrader_binance
+│ │ +```
+│ │ +or
+│ │ +```shell
+│ │ +pip install git+https://github.com/WISEPLAT/backtrader_binance.git
+│ │ +```
+│ │  
+│ │  2) Please use backtrader from my repository (as your can push your commits in it). Install it:
+│ │ -
+│ │ -
+│ │ -    pip install git+https://github.com/WISEPLAT/backtrader.git
+│ │ +```shell
+│ │ +pip install git+https://github.com/WISEPLAT/backtrader.git
+│ │ +```
+│ │  
+│ │  3) We have some dependencies, you need to install them: 
+│ │ -
+│ │ -
+│ │ -    pip install python-binance pandas matplotlib
+│ │ -
+│ │ +```shell
+│ │ +pip install python-binance pandas matplotlib
+│ │ +```
+│ │  
+│ │  ### Getting started
+│ │  To make it easier to figure out how everything works, many examples have been made in the folders **DataExamplesBinance** and **StrategyExamplesBinance**.
+│ │  
+│ │  Before running the example, you need to get your API key and Secret key, and put them in the file **ConfigBinance\Config.py:**
+│ │  
+│ │ -    # content of ConfigBinance\Config.py
+│ │ -    class Config:
+│ │ -        BINANCE_API_KEY = "YOUR_API_KEY"
+│ │ -        BINANCE_API_SECRET = "YOUR_SECRET_KEY"
+│ │ +```python
+│ │ +# content of ConfigBinance\Config.py 
+│ │ +class Config:
+│ │ +    BINANCE_API_KEY = "YOUR_API_KEY"
+│ │ +    BINANCE_API_SECRET = "YOUR_SECRET_KEY"
+│ │ +```
+│ │  
+│ │  #### How to get a Binance API token:
+│ │  1. Register your account on [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK )
+│ │  2. Go to the ["API Management"](https://www.binance.com/en/my/settings/api-management?ref=CPA_004RZBKQWK ) 
+│ │  3. Then click the "Create API" button and select "System Generated".
+│ │  4. In the "API Restrictions" section, enable "Enable Spot and Margin Trading".
+│ │  5. Copy and paste to the file **ConfigBinance\Config.py ** received **"API key"** and **"Secret key"**
+│ │ @@ -127,42 +131,47 @@
+│ │  - Загружать исторические данные по криптовалютам с биржи [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK )
+│ │  
+│ │  Для подключения к API мы используем библиотеку [python-binance](https://github.com/sammchardy/python-binance ).
+│ │  
+│ │  
+│ │  ## Установка
+│ │  1) Самый простой способ:
+│ │ -  
+│ │ -        
+│ │ -    git clone https://github.com/WISEPLAT/backtrader_binance
+│ │ -
+│ │ +```shell
+│ │ +pip install backtrader_binance
+│ │ +```
+│ │  или
+│ │ -
+│ │ -    # пожалуйста запустите эту команду два раза!
+│ │ -    pip install git+https://github.com/WISEPLAT/backtrader_binance.git
+│ │ +```shell
+│ │ +git clone https://github.com/WISEPLAT/backtrader_binance
+│ │ +```
+│ │ +или
+│ │ +```shell
+│ │ +pip install git+https://github.com/WISEPLAT/backtrader_binance.git
+│ │ +```
+│ │  
+│ │  2) Пожалуйста, используйте backtrader из моего репозитория (так как вы можете размещать в нем свои коммиты). Установите его:
+│ │ -
+│ │ -
+│ │ -    pip install git+https://github.com/WISEPLAT/backtrader.git
+│ │ +```shell
+│ │ +pip install git+https://github.com/WISEPLAT/backtrader.git
+│ │ +```
+│ │  
+│ │  3) У нас есть некоторые зависимости, вам нужно их установить:
+│ │ -
+│ │ -
+│ │ -    pip install python-binance pandas matplotlib
+│ │ +```shell
+│ │ +pip install python-binance pandas matplotlib
+│ │ +```
+│ │  
+│ │  ### Начало работы
+│ │  Чтобы было легче разобраться как всё работает, сделано множество примеров в папках **DataExamplesBinance_ru** и **StrategyExamplesBinance_ru**.
+│ │  
+│ │  Перед запуском примера, необходимо получить свой API ключ и Secret ключ, и прописать их в файле **ConfigBinance\Config.py:**
+│ │  
+│ │ -    # content of ConfigBinance\Config.py 
+│ │ -    class Config:
+│ │ -        BINANCE_API_KEY = "YOUR_API_KEY"
+│ │ -        BINANCE_API_SECRET = "YOUR_SECRET_KEY"
+│ │ +```python
+│ │ +# content of ConfigBinance\Config.py 
+│ │ +class Config:
+│ │ +    BINANCE_API_KEY = "YOUR_API_KEY"
+│ │ +    BINANCE_API_SECRET = "YOUR_SECRET_KEY"
+│ │ +```
+│ │  
+│ │  ####  Как получить токен Binance API:
+│ │  1. Зарегистрируйте свой аккаунт на [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK )
+│ │  2. Перейдите в раздел ["Управление API"](https://www.binance.com/en/my/settings/api-management?ref=CPA_004RZBKQWK )
+│ │  3. Затем нажмите кнопку "Создать API" и выберите "Сгенерированный системой".
+│ │  4. В разделе "Ограничения API" включите "Включить спотовую и маржинальную торговлю".
+│ │  5. Скопируйте и вставьте в файл **ConfigBinance\Config.py** полученные **"Ключ API"** и **"Секретный ключ"**
+│ │   --- backtrader_binance-1.0.0/backtrader_binance/binance_broker.py
+│ ├── +++ backtrader_binance-1.0.1/backtrader_binance/binance_broker.py
+│ │┄ Files identical despite different names
+│ │   --- backtrader_binance-1.0.0/backtrader_binance/binance_feed.py
+│ ├── +++ backtrader_binance-1.0.1/backtrader_binance/binance_feed.py
+│ │┄ Files identical despite different names
+│ │   --- backtrader_binance-1.0.0/backtrader_binance/binance_store.py
+│ ├── +++ backtrader_binance-1.0.1/backtrader_binance/binance_store.py
+│ │┄ Files identical despite different names
+│ │   --- backtrader_binance-1.0.0/backtrader_binance.egg-info/PKG-INFO
+│ ├── +++ backtrader_binance-1.0.1/backtrader_binance.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: backtrader-binance
+│ │ -Version: 1.0.0
+│ │ +Version: 1.0.1
+│ │  Summary: Binance API integration with Backtrader
+│ │  Home-page: https://github.com/WISEPLAT/backtrader_binance
+│ │  Author: wiseplat
+│ │  Author-email: oshpagin@gmail.com
+│ │  License: MIT License
+│ │  Project-URL: Documentation, https://github.com/WISEPLAT/backtrader_binance/blob/master/README.md
+│ │  Keywords: trading,development
+│ │ @@ -30,43 +30,47 @@
+│ │   - Launch trading systems for automatic trading on the exchange [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK) + [Backtrader](https://github.com/WISEPLAT/backtrader ) // Live trading
+│ │   - Download historical data for cryptocurrencies from the exchange [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK)
+│ │  
+│ │  For API connection we are using library [python-binance](https://github.com/sammchardy/python-binance).
+│ │  
+│ │  ## Installation
+│ │  1) The simplest way:
+│ │ -  
+│ │ -    
+│ │ -    git clone https://github.com/WISEPLAT/backtrader_binance
+│ │ -
+│ │ +```shell
+│ │ +pip install backtrader_binance
+│ │ +```
+│ │  or
+│ │ -
+│ │ -    # please run this command two times!
+│ │ -    pip install git+https://github.com/WISEPLAT/backtrader_binance.git
+│ │ +```shell
+│ │ +git clone https://github.com/WISEPLAT/backtrader_binance
+│ │ +```
+│ │ +or
+│ │ +```shell
+│ │ +pip install git+https://github.com/WISEPLAT/backtrader_binance.git
+│ │ +```
+│ │  
+│ │  2) Please use backtrader from my repository (as your can push your commits in it). Install it:
+│ │ -
+│ │ -
+│ │ -    pip install git+https://github.com/WISEPLAT/backtrader.git
+│ │ +```shell
+│ │ +pip install git+https://github.com/WISEPLAT/backtrader.git
+│ │ +```
+│ │  
+│ │  3) We have some dependencies, you need to install them: 
+│ │ -
+│ │ -
+│ │ -    pip install python-binance pandas matplotlib
+│ │ -
+│ │ +```shell
+│ │ +pip install python-binance pandas matplotlib
+│ │ +```
+│ │  
+│ │  ### Getting started
+│ │  To make it easier to figure out how everything works, many examples have been made in the folders **DataExamplesBinance** and **StrategyExamplesBinance**.
+│ │  
+│ │  Before running the example, you need to get your API key and Secret key, and put them in the file **ConfigBinance\Config.py:**
+│ │  
+│ │ -    # content of ConfigBinance\Config.py
+│ │ -    class Config:
+│ │ -        BINANCE_API_KEY = "YOUR_API_KEY"
+│ │ -        BINANCE_API_SECRET = "YOUR_SECRET_KEY"
+│ │ +```python
+│ │ +# content of ConfigBinance\Config.py 
+│ │ +class Config:
+│ │ +    BINANCE_API_KEY = "YOUR_API_KEY"
+│ │ +    BINANCE_API_SECRET = "YOUR_SECRET_KEY"
+│ │ +```
+│ │  
+│ │  #### How to get a Binance API token:
+│ │  1. Register your account on [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK )
+│ │  2. Go to the ["API Management"](https://www.binance.com/en/my/settings/api-management?ref=CPA_004RZBKQWK ) 
+│ │  3. Then click the "Create API" button and select "System Generated".
+│ │  4. In the "API Restrictions" section, enable "Enable Spot and Margin Trading".
+│ │  5. Copy and paste to the file **ConfigBinance\Config.py ** received **"API key"** and **"Secret key"**
+│ │ @@ -151,42 +155,47 @@
+│ │  - Загружать исторические данные по криптовалютам с биржи [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK )
+│ │  
+│ │  Для подключения к API мы используем библиотеку [python-binance](https://github.com/sammchardy/python-binance ).
+│ │  
+│ │  
+│ │  ## Установка
+│ │  1) Самый простой способ:
+│ │ -  
+│ │ -        
+│ │ -    git clone https://github.com/WISEPLAT/backtrader_binance
+│ │ -
+│ │ +```shell
+│ │ +pip install backtrader_binance
+│ │ +```
+│ │  или
+│ │ -
+│ │ -    # пожалуйста запустите эту команду два раза!
+│ │ -    pip install git+https://github.com/WISEPLAT/backtrader_binance.git
+│ │ +```shell
+│ │ +git clone https://github.com/WISEPLAT/backtrader_binance
+│ │ +```
+│ │ +или
+│ │ +```shell
+│ │ +pip install git+https://github.com/WISEPLAT/backtrader_binance.git
+│ │ +```
+│ │  
+│ │  2) Пожалуйста, используйте backtrader из моего репозитория (так как вы можете размещать в нем свои коммиты). Установите его:
+│ │ -
+│ │ -
+│ │ -    pip install git+https://github.com/WISEPLAT/backtrader.git
+│ │ +```shell
+│ │ +pip install git+https://github.com/WISEPLAT/backtrader.git
+│ │ +```
+│ │  
+│ │  3) У нас есть некоторые зависимости, вам нужно их установить:
+│ │ -
+│ │ -
+│ │ -    pip install python-binance pandas matplotlib
+│ │ +```shell
+│ │ +pip install python-binance pandas matplotlib
+│ │ +```
+│ │  
+│ │  ### Начало работы
+│ │  Чтобы было легче разобраться как всё работает, сделано множество примеров в папках **DataExamplesBinance_ru** и **StrategyExamplesBinance_ru**.
+│ │  
+│ │  Перед запуском примера, необходимо получить свой API ключ и Secret ключ, и прописать их в файле **ConfigBinance\Config.py:**
+│ │  
+│ │ -    # content of ConfigBinance\Config.py 
+│ │ -    class Config:
+│ │ -        BINANCE_API_KEY = "YOUR_API_KEY"
+│ │ -        BINANCE_API_SECRET = "YOUR_SECRET_KEY"
+│ │ +```python
+│ │ +# content of ConfigBinance\Config.py 
+│ │ +class Config:
+│ │ +    BINANCE_API_KEY = "YOUR_API_KEY"
+│ │ +    BINANCE_API_SECRET = "YOUR_SECRET_KEY"
+│ │ +```
+│ │  
+│ │  ####  Как получить токен Binance API:
+│ │  1. Зарегистрируйте свой аккаунт на [Binance](https://www.binance.com/?ref=CPA_004RZBKQWK )
+│ │  2. Перейдите в раздел ["Управление API"](https://www.binance.com/en/my/settings/api-management?ref=CPA_004RZBKQWK )
+│ │  3. Затем нажмите кнопку "Создать API" и выберите "Сгенерированный системой".
+│ │  4. В разделе "Ограничения API" включите "Включить спотовую и маржинальную торговлю".
+│ │  5. Скопируйте и вставьте в файл **ConfigBinance\Config.py** полученные **"Ключ API"** и **"Секретный ключ"**
+│ │   --- backtrader_binance-1.0.0/setup.py
+│ ├── +++ backtrader_binance-1.0.1/setup.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,23 +1,24 @@
+│ │  # pip install setuptools twine
+│ │  # python setup.py sdist bdist_wheel
+│ │  # twine upload --repository testpypi dist/*
+│ │  # 'backtrader @ git+https://github.com/WISEPLAT/backtrader.git' - was removed from install_requires, as it can't publish
+│ │ +# twine upload --repository pypi dist/*
+│ │  import os.path
+│ │  import codecs  # To use a consistent encoding
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  here = os.path.abspath(os.path.dirname(__file__))
+│ │  
+│ │  # Get the long description from the relevant file
+│ │  with codecs.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
+│ │      long_description = f.read()
+│ │  
+│ │  setup(name='backtrader_binance',
+│ │ -      version='1.0.0',
+│ │ +      version='1.0.1',
+│ │        author='wiseplat',
+│ │        author_email='oshpagin@gmail.com',
+│ │        license='MIT License',
+│ │        description='Binance API integration with Backtrader',
+│ │        long_description=long_description,
+│ │        long_description_content_type='text/markdown',
+│ │        url='https://github.com/WISEPLAT/backtrader_binance',
