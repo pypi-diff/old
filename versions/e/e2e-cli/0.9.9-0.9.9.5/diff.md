@@ -1,0 +1,499 @@
+# Comparing `tmp/e2e_cli-0.9.9.tar.gz` & `tmp/e2e_cli-0.9.9.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "e2e_cli-0.9.9.tar", last modified: Thu Apr  6 13:42:01 2023, max compression
++gzip compressed data, was "e2e_cli-0.9.9.5.tar", last modified: Fri Apr  7 08:39:32 2023, max compression
+```
+
+## Comparing `e2e_cli-0.9.9.tar` & `e2e_cli-0.9.9.5.tar`
+
+### file list
+
+```diff
+@@ -1,106 +1,106 @@
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9/LICENSE
+--rw-rw-r--   0 aman      (1000) aman      (1000)       31 2023-03-03 10:09:05.000000 e2e_cli-0.9.9/MANIFEST.in
+--rw-rw-r--   0 aman      (1000) aman      (1000)      227 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/PKG-INFO
+--rw-rw-r--   0 aman      (1000) aman      (1000)     6237 2023-03-03 09:45:02.000000 e2e_cli-0.9.9/README.md
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9/e2e_cli/__init__.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli/auto_scaling/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:32.000000 e2e_cli-0.9.9/e2e_cli/auto_scaling/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     3934 2023-04-06 09:40:06.000000 e2e_cli-0.9.9/e2e_cli/auto_scaling/auto_scaling.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     2000 2023-04-06 11:22:35.000000 e2e_cli-0.9.9/e2e_cli/auto_scaling/autoscaling_routing.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli/bucket_store/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9/e2e_cli/bucket_store/__init__.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli/bucket_store/bucket_actions/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-20 13:31:40.000000 e2e_cli-0.9.9/e2e_cli/bucket_store/bucket_actions/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     8271 2023-04-06 10:32:48.000000 e2e_cli-0.9.9/e2e_cli/bucket_store/bucket_actions/bucket_actions.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli/bucket_store/bucket_crud/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:41.000000 e2e_cli-0.9.9/e2e_cli/bucket_store/bucket_crud/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     3848 2023-04-06 10:15:21.000000 e2e_cli-0.9.9/e2e_cli/bucket_store/bucket_crud/bucket_storage.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     4485 2023-04-06 11:22:16.000000 e2e_cli-0.9.9/e2e_cli/bucket_store/bucket_routing.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli/cdn/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9/e2e_cli/cdn/__init__.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli/cdn/cdn_actions/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:23.000000 e2e_cli-0.9.9/e2e_cli/cdn/cdn_actions/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     3135 2023-04-06 11:06:02.000000 e2e_cli-0.9.9/e2e_cli/cdn/cdn_actions/cdn_action.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli/cdn/cdn_crud/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:19.000000 e2e_cli-0.9.9/e2e_cli/cdn/cdn_crud/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     3598 2023-04-06 10:59:59.000000 e2e_cli-0.9.9/e2e_cli/cdn/cdn_crud/cdn.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     3126 2023-04-06 11:22:26.000000 e2e_cli-0.9.9/e2e_cli/cdn/cdn_routing.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     6044 2023-04-06 09:55:18.000000 e2e_cli-0.9.9/e2e_cli/commands_routing.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli/config/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9/e2e_cli/config/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     6612 2023-04-06 09:09:02.000000 e2e_cli-0.9.9/e2e_cli/config/config.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     3081 2023-04-06 12:27:41.000000 e2e_cli-0.9.9/e2e_cli/config/config_routing.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)      372 2023-03-24 06:11:14.000000 e2e_cli-0.9.9/e2e_cli/config/config_service.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli/core/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9/e2e_cli/core/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     2192 2023-04-06 08:56:51.000000 e2e_cli-0.9.9/e2e_cli/core/alias_service.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)      494 2023-03-30 12:12:51.000000 e2e_cli-0.9.9/e2e_cli/core/constants.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     3639 2023-03-10 13:20:42.000000 e2e_cli-0.9.9/e2e_cli/core/error_logs_service.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     1797 2023-04-04 13:21:23.000000 e2e_cli-0.9.9/e2e_cli/core/help_messages.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     3263 2023-04-06 09:53:11.000000 e2e_cli-0.9.9/e2e_cli/core/helper_service.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)      657 2023-04-04 12:06:28.000000 e2e_cli-0.9.9/e2e_cli/core/py_manager.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)      455 2023-03-21 09:56:43.000000 e2e_cli-0.9.9/e2e_cli/core/request_service.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli/dbaas/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9/e2e_cli/dbaas/__init__.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli/dbaas/dbaas_actions/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:07.000000 e2e_cli-0.9.9/e2e_cli/dbaas/dbaas_actions/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     8272 2023-04-06 12:16:27.000000 e2e_cli-0.9.9/e2e_cli/dbaas/dbaas_actions/dbaas_action.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/dbaas/dbaas_crud/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:03.000000 e2e_cli-0.9.9/e2e_cli/dbaas/dbaas_crud/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     5221 2023-03-24 06:12:26.000000 e2e_cli-0.9.9/e2e_cli/dbaas/dbaas_crud/dbaas.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     8922 2023-03-24 06:22:28.000000 e2e_cli-0.9.9/e2e_cli/dbaas/dbaas_crud/dbaas_services.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     5036 2023-04-06 12:18:07.000000 e2e_cli-0.9.9/e2e_cli/dbaas/dbaas_routing.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/docs/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9/e2e_cli/docs/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     8402 2023-03-24 16:57:39.000000 e2e_cli-0.9.9/e2e_cli/docs/e2e_cli.1
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/image/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 14:00:12.000000 e2e_cli-0.9.9/e2e_cli/image/__init__.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/image/image_crud/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 10:56:29.000000 e2e_cli-0.9.9/e2e_cli/image/image_crud/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     3345 2023-04-06 12:57:23.000000 e2e_cli-0.9.9/e2e_cli/image/image_crud/image.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/image/image_listing/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 10:56:22.000000 e2e_cli-0.9.9/e2e_cli/image/image_listing/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     1365 2023-03-24 06:10:02.000000 e2e_cli-0.9.9/e2e_cli/image/image_listing/image_list.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     2674 2023-04-06 12:50:42.000000 e2e_cli-0.9.9/e2e_cli/image/image_routing.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/loadbalancer/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9/e2e_cli/loadbalancer/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     4406 2023-03-02 07:23:13.000000 e2e_cli-0.9.9/e2e_cli/loadbalancer/lb.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     1530 2023-04-06 13:10:48.000000 e2e_cli-0.9.9/e2e_cli/loadbalancer/lb_routing.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)    42484 2023-03-24 06:23:22.000000 e2e_cli-0.9.9/e2e_cli/loadbalancer/lb_services.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)    14058 2023-04-06 09:52:54.000000 e2e_cli-0.9.9/e2e_cli/main.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)      459 2023-03-31 06:51:42.000000 e2e_cli-0.9.9/e2e_cli/man_display.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/node/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9/e2e_cli/node/__init__.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/node/node_actions/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 08:09:56.000000 e2e_cli-0.9.9/e2e_cli/node/node_actions/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     8036 2023-04-04 12:12:13.000000 e2e_cli-0.9.9/e2e_cli/node/node_actions/node_action.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/node/node_crud/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 14:01:01.000000 e2e_cli-0.9.9/e2e_cli/node/node_crud/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     6414 2023-04-05 05:52:33.000000 e2e_cli-0.9.9/e2e_cli/node/node_crud/node.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     3666 2023-03-24 06:25:30.000000 e2e_cli-0.9.9/e2e_cli/node/node_crud/node_listing_service.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     5378 2023-04-04 12:11:05.000000 e2e_cli-0.9.9/e2e_cli/node/node_routing.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/volumes/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9/e2e_cli/volumes/__init__.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/volumes/volumes_actions/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 09:26:32.000000 e2e_cli-0.9.9/e2e_cli/volumes/volumes_actions/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     1839 2023-03-24 06:28:30.000000 e2e_cli-0.9.9/e2e_cli/volumes/volumes_actions/volumes_action.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/volumes/volumes_crud/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 09:26:32.000000 e2e_cli-0.9.9/e2e_cli/volumes/volumes_crud/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     3749 2023-04-06 13:35:14.000000 e2e_cli-0.9.9/e2e_cli/volumes/volumes_crud/volumes.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     2809 2023-04-06 13:17:35.000000 e2e_cli-0.9.9/e2e_cli/volumes/volumes_routing.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/e2e_cli/vpc/
+--rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:29:40.000000 e2e_cli-0.9.9/e2e_cli/vpc/__init__.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     3510 2023-04-06 13:38:49.000000 e2e_cli-0.9.9/e2e_cli/vpc/vpc.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)     2142 2023-04-06 13:34:46.000000 e2e_cli-0.9.9/e2e_cli/vpc/vpc_routing.py
+-drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-06 13:42:01.902504 e2e_cli-0.9.9/e2e_cli.egg-info/
+--rw-rw-r--   0 aman      (1000) aman      (1000)      227 2023-04-06 13:42:01.000000 e2e_cli-0.9.9/e2e_cli.egg-info/PKG-INFO
+--rw-rw-r--   0 aman      (1000) aman      (1000)     2450 2023-04-06 13:42:01.000000 e2e_cli-0.9.9/e2e_cli.egg-info/SOURCES.txt
+--rw-rw-r--   0 aman      (1000) aman      (1000)        1 2023-04-06 13:42:01.000000 e2e_cli-0.9.9/e2e_cli.egg-info/dependency_links.txt
+--rw-rw-r--   0 aman      (1000) aman      (1000)       57 2023-04-06 13:42:01.000000 e2e_cli-0.9.9/e2e_cli.egg-info/entry_points.txt
+--rw-rw-r--   0 aman      (1000) aman      (1000)       40 2023-04-06 13:42:01.000000 e2e_cli-0.9.9/e2e_cli.egg-info/requires.txt
+--rw-rw-r--   0 aman      (1000) aman      (1000)        8 2023-04-06 13:42:01.000000 e2e_cli-0.9.9/e2e_cli.egg-info/top_level.txt
+--rw-rw-r--   0 aman      (1000) aman      (1000)      432 2023-03-30 07:14:12.000000 e2e_cli-0.9.9/install_man.py
+--rw-rw-r--   0 aman      (1000) aman      (1000)       38 2023-04-06 13:42:01.906504 e2e_cli-0.9.9/setup.cfg
+--rw-rw-r--   0 aman      (1000) aman      (1000)      735 2023-04-06 13:41:47.000000 e2e_cli-0.9.9/setup.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/LICENSE
++-rw-rw-r--   0 aman      (1000) aman      (1000)       31 2023-03-03 10:09:05.000000 e2e_cli-0.9.9.5/MANIFEST.in
++-rw-rw-r--   0 aman      (1000) aman      (1000)      229 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/PKG-INFO
++-rw-rw-r--   0 aman      (1000) aman      (1000)     6237 2023-03-03 09:45:02.000000 e2e_cli-0.9.9.5/README.md
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.508890 e2e_cli-0.9.9.5/e2e_cli/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/__init__.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/auto_scaling/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:32.000000 e2e_cli-0.9.9.5/e2e_cli/auto_scaling/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     3934 2023-04-06 09:40:06.000000 e2e_cli-0.9.9.5/e2e_cli/auto_scaling/auto_scaling.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     2000 2023-04-06 11:22:35.000000 e2e_cli-0.9.9.5/e2e_cli/auto_scaling/autoscaling_routing.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/bucket_store/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/bucket_store/__init__.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_actions/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-20 13:31:40.000000 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_actions/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     8271 2023-04-06 10:32:48.000000 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_actions/bucket_actions.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_crud/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:41.000000 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_crud/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     3848 2023-04-06 10:15:21.000000 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_crud/bucket_storage.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     4485 2023-04-06 11:22:16.000000 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_routing.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/cdn/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/cdn/__init__.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_actions/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:23.000000 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_actions/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     3135 2023-04-06 11:06:02.000000 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_actions/cdn_action.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_crud/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:19.000000 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_crud/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     3598 2023-04-06 10:59:59.000000 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_crud/cdn.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     3126 2023-04-06 11:22:26.000000 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_routing.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     6044 2023-04-06 09:55:18.000000 e2e_cli-0.9.9.5/e2e_cli/commands_routing.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/config/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/config/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     6580 2023-04-07 06:58:38.000000 e2e_cli-0.9.9.5/e2e_cli/config/config.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     3108 2023-04-07 08:38:08.000000 e2e_cli-0.9.9.5/e2e_cli/config/config_routing.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)      372 2023-03-24 06:11:14.000000 e2e_cli-0.9.9.5/e2e_cli/config/config_service.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/core/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/core/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     2238 2023-04-07 07:00:53.000000 e2e_cli-0.9.9.5/e2e_cli/core/alias_service.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)      494 2023-03-30 12:12:51.000000 e2e_cli-0.9.9.5/e2e_cli/core/constants.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     3639 2023-03-10 13:20:42.000000 e2e_cli-0.9.9.5/e2e_cli/core/error_logs_service.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     1797 2023-04-04 13:21:23.000000 e2e_cli-0.9.9.5/e2e_cli/core/help_messages.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     3263 2023-04-06 09:53:11.000000 e2e_cli-0.9.9.5/e2e_cli/core/helper_service.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)      657 2023-04-04 12:06:28.000000 e2e_cli-0.9.9.5/e2e_cli/core/py_manager.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)      455 2023-03-21 09:56:43.000000 e2e_cli-0.9.9.5/e2e_cli/core/request_service.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/dbaas/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/__init__.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_actions/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:07.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_actions/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     8272 2023-04-06 12:16:27.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_actions/dbaas_action.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_crud/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:03.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_crud/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     5221 2023-03-24 06:12:26.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_crud/dbaas.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     8922 2023-03-24 06:22:28.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_crud/dbaas_services.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     5036 2023-04-06 12:18:07.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_routing.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/docs/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/docs/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     7166 2023-04-07 08:33:45.000000 e2e_cli-0.9.9.5/e2e_cli/docs/e2e_cli.1
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/image/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 14:00:12.000000 e2e_cli-0.9.9.5/e2e_cli/image/__init__.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/image/image_crud/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 10:56:29.000000 e2e_cli-0.9.9.5/e2e_cli/image/image_crud/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     3345 2023-04-06 12:57:23.000000 e2e_cli-0.9.9.5/e2e_cli/image/image_crud/image.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/image/image_listing/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 10:56:22.000000 e2e_cli-0.9.9.5/e2e_cli/image/image_listing/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     1365 2023-03-24 06:10:02.000000 e2e_cli-0.9.9.5/e2e_cli/image/image_listing/image_list.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     2674 2023-04-06 12:50:42.000000 e2e_cli-0.9.9.5/e2e_cli/image/image_routing.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/loadbalancer/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/loadbalancer/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     4406 2023-03-02 07:23:13.000000 e2e_cli-0.9.9.5/e2e_cli/loadbalancer/lb.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     1530 2023-04-06 13:10:48.000000 e2e_cli-0.9.9.5/e2e_cli/loadbalancer/lb_routing.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)    42484 2023-03-24 06:23:22.000000 e2e_cli-0.9.9.5/e2e_cli/loadbalancer/lb_services.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)    14058 2023-04-07 07:55:46.000000 e2e_cli-0.9.9.5/e2e_cli/main.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)      459 2023-03-31 06:51:42.000000 e2e_cli-0.9.9.5/e2e_cli/man_display.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/node/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/node/__init__.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/node/node_actions/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 08:09:56.000000 e2e_cli-0.9.9.5/e2e_cli/node/node_actions/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     8036 2023-04-04 12:12:13.000000 e2e_cli-0.9.9.5/e2e_cli/node/node_actions/node_action.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/node/node_crud/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 14:01:01.000000 e2e_cli-0.9.9.5/e2e_cli/node/node_crud/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     6414 2023-04-05 05:52:33.000000 e2e_cli-0.9.9.5/e2e_cli/node/node_crud/node.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     3666 2023-03-24 06:25:30.000000 e2e_cli-0.9.9.5/e2e_cli/node/node_crud/node_listing_service.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     5378 2023-04-04 12:11:05.000000 e2e_cli-0.9.9.5/e2e_cli/node/node_routing.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/e2e_cli/volumes/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/volumes/__init__.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_actions/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 09:26:32.000000 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_actions/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     1839 2023-03-24 06:28:30.000000 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_actions/volumes_action.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_crud/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 09:26:32.000000 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_crud/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     3749 2023-04-06 13:35:14.000000 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_crud/volumes.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     2809 2023-04-06 13:17:35.000000 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_routing.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/e2e_cli/vpc/
++-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:29:40.000000 e2e_cli-0.9.9.5/e2e_cli/vpc/__init__.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     3510 2023-04-06 13:38:49.000000 e2e_cli-0.9.9.5/e2e_cli/vpc/vpc.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)     2142 2023-04-06 13:34:46.000000 e2e_cli-0.9.9.5/e2e_cli/vpc/vpc_routing.py
++drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.508890 e2e_cli-0.9.9.5/e2e_cli.egg-info/
++-rw-rw-r--   0 aman      (1000) aman      (1000)      229 2023-04-07 08:39:32.000000 e2e_cli-0.9.9.5/e2e_cli.egg-info/PKG-INFO
++-rw-rw-r--   0 aman      (1000) aman      (1000)     2450 2023-04-07 08:39:32.000000 e2e_cli-0.9.9.5/e2e_cli.egg-info/SOURCES.txt
++-rw-rw-r--   0 aman      (1000) aman      (1000)        1 2023-04-07 08:39:32.000000 e2e_cli-0.9.9.5/e2e_cli.egg-info/dependency_links.txt
++-rw-rw-r--   0 aman      (1000) aman      (1000)       57 2023-04-07 08:39:32.000000 e2e_cli-0.9.9.5/e2e_cli.egg-info/entry_points.txt
++-rw-rw-r--   0 aman      (1000) aman      (1000)       40 2023-04-07 08:39:32.000000 e2e_cli-0.9.9.5/e2e_cli.egg-info/requires.txt
++-rw-rw-r--   0 aman      (1000) aman      (1000)        8 2023-04-07 08:39:32.000000 e2e_cli-0.9.9.5/e2e_cli.egg-info/top_level.txt
++-rw-rw-r--   0 aman      (1000) aman      (1000)      432 2023-03-30 07:14:12.000000 e2e_cli-0.9.9.5/install_man.py
++-rw-rw-r--   0 aman      (1000) aman      (1000)       38 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/setup.cfg
++-rw-rw-r--   0 aman      (1000) aman      (1000)      737 2023-04-07 08:39:20.000000 e2e_cli-0.9.9.5/setup.py
+```
+
+### Comparing `e2e_cli-0.9.9/README.md` & `e2e_cli-0.9.9.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/auto_scaling/auto_scaling.py` & `e2e_cli-0.9.9.5/e2e_cli/auto_scaling/auto_scaling.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/auto_scaling/autoscaling_routing.py` & `e2e_cli-0.9.9.5/e2e_cli/auto_scaling/autoscaling_routing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/bucket_store/bucket_actions/bucket_actions.py` & `e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_actions/bucket_actions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/bucket_store/bucket_crud/bucket_storage.py` & `e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_crud/bucket_storage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/bucket_store/bucket_routing.py` & `e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_routing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/cdn/cdn_actions/cdn_action.py` & `e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_actions/cdn_action.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/cdn/cdn_crud/cdn.py` & `e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_crud/cdn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/cdn/cdn_routing.py` & `e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_routing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/commands_routing.py` & `e2e_cli-0.9.9.5/e2e_cli/commands_routing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/config/config.py` & `e2e_cli-0.9.9.5/e2e_cli/config/config.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -101,22 +101,21 @@
+             Py_version_manager.py_print("You need to add your api access credentials using the add functionality ")
+             Py_version_manager.py_print("To know more please write 'e2e_cli alias -h' on your terminal")
+ 
+         elif file_exist_check_variable == 1:
+             with open(self.file, 'r+') as file_reference:
+                 file_contents_object = json.loads(file_reference.read())
+                 delete_output = file_contents_object.pop(self.kwargs["alias"], 'No key found')
+-                if delete_output == "No key found":
+-                    
++
++                if delete_output == "No key found" and x!=1:
+                     Py_version_manager.py_print("No such alias found. Please re-check and enter again")
+                 else:
+                     file_reference.seek(0)
+                     file_reference.write(json.dumps(file_contents_object))
+                     file_reference.truncate()
+-                    
+                     if(x!=1):
+                         Py_version_manager.py_print("Alias/name Successfully deleted")
+ 
+ 
+     def adding_config_file(self, path):
+         # for drag and drop
+         if(path[0]=="'" and path[-1]=="'"):
+```
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/config/config_routing.py` & `e2e_cli-0.9.9.5/e2e_cli/config/config_routing.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -26,38 +26,39 @@
+         elif self.arguments.args.alias_commands == 'add_file':
+                 path=Py_version_manager.py_input("input the file path : ")
+                 auth_config_object = AuthConfig()
+                 auth_config_object.adding_config_file(path)
+                 return
+             
+ 
+-        elif self.arguments.args.alias_commands == 'delete':            
++        elif self.arguments.args.alias_commands == 'delete':  
++            delete_alias=Py_version_manager.py_input("Input name of alias you want to delete : ")          
+             confirmation =Py_version_manager.py_input("are you sure you want to delete press y for yes, else any other key : ")
+             if(confirmation.lower()=='y'):
+-                auth_config_object = AuthConfig(alias=Py_version_manager.py_input("Input name of alias you want to add : "))
++                auth_config_object = AuthConfig(alias=delete_alias)
+                 try:
+                     auth_config_object.delete_from_config()
+                 except:
+                     pass  
+ 
+ 
+         elif self.arguments.args.alias_commands == 'view':
+                 for item in list(get_user_cred("all", 1)):
+                     Py_version_manager.py_print(item)
+             
+         
+         elif self.arguments.args.alias_commands == 'set':
+-                default_name=Py_version_manager.py_input("Enter name of the alias you want to set as default : ")   
+-                if(Py_version_manager.py_input("are you sure you want to proceed : ").lower()=="y"):
++                default_name=Py_version_manager.py_input("Enter name of the alias you want to set as default : ")
++                get_user_cred(default_name)  
++                if(Py_version_manager.py_input("are you sure you want to proceed (y/n): ").lower()=="y"):
+                     try:
++                        AuthConfig(alias="default").delete_from_config(x=1)
+                         auth_config_object = AuthConfig(alias="default",
+                                                         api_key=default_name,
+                                                         api_auth_token=default_name)
+-                        if(get_user_cred("default")):
+-                                AuthConfig(alias="default").delete_from_config(x=1)
+                         auth_config_object.set_default()
+                         Py_version_manager.py_print("Default alias set to ", default_name)
+                     except KeyboardInterrupt:
+                         Py_version_manager.py_print(" ")
+                         pass
+```
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/core/alias_service.py` & `e2e_cli-0.9.9.5/e2e_cli/core/alias_service.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -46,14 +46,15 @@
+     # try :
+     # Opening JSON file
+     f = open(file)
+     
+     # returns JSON object as a dictionary
+     data = json.load(f)
+ 
++    # view list of credentials incase of x==1
+     if(name=="all" and x==1):
+                 try:
+                     Py_version_manager.py_print("default --> ", data["default"])
+                 except:
+                     Py_version_manager.py_print("default --> ", "Not set")
+                 return data.keys()
+```
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/core/error_logs_service.py` & `e2e_cli-0.9.9.5/e2e_cli/core/error_logs_service.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/core/help_messages.py` & `e2e_cli-0.9.9.5/e2e_cli/core/help_messages.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/core/helper_service.py` & `e2e_cli-0.9.9.5/e2e_cli/core/helper_service.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/core/py_manager.py` & `e2e_cli-0.9.9.5/e2e_cli/core/py_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/dbaas/dbaas_actions/dbaas_action.py` & `e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_actions/dbaas_action.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/dbaas/dbaas_crud/dbaas.py` & `e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_crud/dbaas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/dbaas/dbaas_crud/dbaas_services.py` & `e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_crud/dbaas_services.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/dbaas/dbaas_routing.py` & `e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_routing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/image/image_crud/image.py` & `e2e_cli-0.9.9.5/e2e_cli/image/image_crud/image.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/image/image_listing/image_list.py` & `e2e_cli-0.9.9.5/e2e_cli/image/image_listing/image_list.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/image/image_routing.py` & `e2e_cli-0.9.9.5/e2e_cli/image/image_routing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/loadbalancer/lb.py` & `e2e_cli-0.9.9.5/e2e_cli/loadbalancer/lb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/loadbalancer/lb_routing.py` & `e2e_cli-0.9.9.5/e2e_cli/loadbalancer/lb_routing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/loadbalancer/lb_services.py` & `e2e_cli-0.9.9.5/e2e_cli/loadbalancer/lb_services.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/main.py` & `e2e_cli-0.9.9.5/e2e_cli/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/node/node_actions/node_action.py` & `e2e_cli-0.9.9.5/e2e_cli/node/node_actions/node_action.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/node/node_crud/node.py` & `e2e_cli-0.9.9.5/e2e_cli/node/node_crud/node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/node/node_crud/node_listing_service.py` & `e2e_cli-0.9.9.5/e2e_cli/node/node_crud/node_listing_service.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/node/node_routing.py` & `e2e_cli-0.9.9.5/e2e_cli/node/node_routing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/volumes/volumes_actions/volumes_action.py` & `e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_actions/volumes_action.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/volumes/volumes_crud/volumes.py` & `e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_crud/volumes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/volumes/volumes_routing.py` & `e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_routing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/vpc/vpc.py` & `e2e_cli-0.9.9.5/e2e_cli/vpc/vpc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli/vpc/vpc_routing.py` & `e2e_cli-0.9.9.5/e2e_cli/vpc/vpc_routing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/e2e_cli.egg-info/SOURCES.txt` & `e2e_cli-0.9.9.5/e2e_cli.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `e2e_cli-0.9.9/setup.py` & `e2e_cli-0.9.9.5/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+   from setuptools import setup, find_packages
+ except ImportError:
+   subprocess.call["pip","install","setuptools"]
+   from setuptools import setup, find_packages
+ 
+ setup(
+     name='e2e_cli',
+-    version='0.9.9',
++    version='0.9.9.5',
+     description="This a E2E CLI tool for myAccount",
+     author="Sajal&Aman@E2E_Networks_Ltd",
+     packages=find_packages(),
+     install_requires=['prettytable', 'requests', 'setuptools', 'chardet'],
+ 
+     include_package_data = True,
+     package_data = {
+```
+

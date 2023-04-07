@@ -1,0 +1,433 @@
+--- tmp/dbis-er-diagram-1.0.2.tar.gz
++++ tmp/dbis-er-diagram-1.0.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dbis-er-diagram-1.0.2.tar", last modified: Wed Apr  5 13:08:58 2023, max compression
+│ +gzip compressed data, was "dbis-er-diagram-1.0.3.tar", last modified: Fri Apr  7 08:38:50 2023, max compression
+│   --- dbis-er-diagram-1.0.2.tar
+├── +++ dbis-er-diagram-1.0.3.tar
+│ ├── file list
+│ │ @@ -1,27 +1,27 @@
+│ │ -drwxr-xr-x   0 tilmohr   (1000) tilmohr   (1000)        0 2023-04-05 13:08:58.375717 dbis-er-diagram-1.0.2/
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    11357 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/LICENSE
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    15713 2023-04-05 13:08:58.375717 dbis-er-diagram-1.0.2/PKG-INFO
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    15133 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/README.md
+│ │ -drwxr-xr-x   0 tilmohr   (1000) tilmohr   (1000)        0 2023-04-05 13:08:58.374717 dbis-er-diagram-1.0.2/dbis_er_diagram.egg-info/
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    15713 2023-04-05 13:08:58.000000 dbis-er-diagram-1.0.2/dbis_er_diagram.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)      529 2023-04-05 13:08:58.000000 dbis-er-diagram-1.0.2/dbis_er_diagram.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)        1 2023-04-05 13:08:58.000000 dbis-er-diagram-1.0.2/dbis_er_diagram.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)       48 2023-04-05 13:08:58.000000 dbis-er-diagram-1.0.2/dbis_er_diagram.egg-info/requires.txt
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)       10 2023-04-05 13:08:58.000000 dbis-er-diagram-1.0.2/dbis_er_diagram.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 tilmohr   (1000) tilmohr   (1000)        0 2023-04-05 13:08:58.374717 dbis-er-diagram-1.0.2/erdiagram/
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)      246 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/erdiagram/__init__.py
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     7697 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/erdiagram/drawing.py
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    38914 2023-04-05 13:08:19.000000 dbis-er-diagram-1.0.2/erdiagram/er.py
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    26732 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/erdiagram/grading.py
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     6591 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/erdiagram/merging.py
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)      306 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/erdiagram/node_type.py
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)      881 2023-04-05 13:08:19.000000 dbis-er-diagram-1.0.2/pyproject.toml
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)       38 2023-04-05 13:08:58.375717 dbis-er-diagram-1.0.2/setup.cfg
+│ │ -drwxr-xr-x   0 tilmohr   (1000) tilmohr   (1000)        0 2023-04-05 13:08:58.375717 dbis-er-diagram-1.0.2/tests/
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     5117 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/tests/test_adders.py
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     1728 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/tests/test_drawing.py
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    11855 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/tests/test_getters.py
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     1916 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/tests/test_grading_components.py
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     4896 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/tests/test_grading_diagrams.py
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     1148 2023-04-05 12:50:34.000000 dbis-er-diagram-1.0.2/tests/test_merging.py
+│ │ --rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     1035 2023-04-05 13:08:19.000000 dbis-er-diagram-1.0.2/tests/test_other_methods.py
+│ │ +drwxr-xr-x   0 tilmohr   (1000) tilmohr   (1000)        0 2023-04-07 08:38:50.861687 dbis-er-diagram-1.0.3/
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    11357 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/LICENSE
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    15713 2023-04-07 08:38:50.861687 dbis-er-diagram-1.0.3/PKG-INFO
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    15133 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/README.md
+│ │ +drwxr-xr-x   0 tilmohr   (1000) tilmohr   (1000)        0 2023-04-07 08:38:50.859687 dbis-er-diagram-1.0.3/dbis_er_diagram.egg-info/
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    15713 2023-04-07 08:38:50.000000 dbis-er-diagram-1.0.3/dbis_er_diagram.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)      529 2023-04-07 08:38:50.000000 dbis-er-diagram-1.0.3/dbis_er_diagram.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)        1 2023-04-07 08:38:50.000000 dbis-er-diagram-1.0.3/dbis_er_diagram.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)       48 2023-04-07 08:38:50.000000 dbis-er-diagram-1.0.3/dbis_er_diagram.egg-info/requires.txt
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)       10 2023-04-07 08:38:50.000000 dbis-er-diagram-1.0.3/dbis_er_diagram.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 tilmohr   (1000) tilmohr   (1000)        0 2023-04-07 08:38:50.860687 dbis-er-diagram-1.0.3/erdiagram/
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)      246 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/erdiagram/__init__.py
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     7697 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/erdiagram/drawing.py
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    38914 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/erdiagram/er.py
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    27610 2023-04-07 08:38:37.000000 dbis-er-diagram-1.0.3/erdiagram/grading.py
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     6591 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/erdiagram/merging.py
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)      306 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/erdiagram/node_type.py
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)      881 2023-04-07 08:38:37.000000 dbis-er-diagram-1.0.3/pyproject.toml
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)       38 2023-04-07 08:38:50.861687 dbis-er-diagram-1.0.3/setup.cfg
+│ │ +drwxr-xr-x   0 tilmohr   (1000) tilmohr   (1000)        0 2023-04-07 08:38:50.861687 dbis-er-diagram-1.0.3/tests/
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     5117 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/tests/test_adders.py
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     1728 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/tests/test_drawing.py
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)    11855 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/tests/test_getters.py
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     1916 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/tests/test_grading_components.py
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     5802 2023-04-07 08:38:37.000000 dbis-er-diagram-1.0.3/tests/test_grading_diagrams.py
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     1148 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/tests/test_merging.py
+│ │ +-rw-r--r--   0 tilmohr   (1000) tilmohr   (1000)     1035 2023-04-07 08:08:01.000000 dbis-er-diagram-1.0.3/tests/test_other_methods.py
+│ │   --- dbis-er-diagram-1.0.2/LICENSE
+│ ├── +++ dbis-er-diagram-1.0.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- dbis-er-diagram-1.0.2/PKG-INFO
+│ ├── +++ dbis-er-diagram-1.0.3/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dbis-er-diagram
+│ │ -Version: 1.0.2
+│ │ +Version: 1.0.3
+│ │  Summary: RWTH Aachen Computer Science i5/dbis assets for Lecture Datenbanken und Informationssysteme
+│ │  Author-email: Michal Slupczynski <slupczynski@dbis.rwth-aachen.de>, Beyza Akyüz <beyza.akyuez@rwth-aachen.de>, Til Mohr <til.mohr@rwth-aachen.de>
+│ │  Project-URL: Homepage, https://git.rwth-aachen.de/i5/teaching/dbis/dbis-er-diagram
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │  Requires-Python: >=3.10
+│ │  Description-Content-Type: text/markdown
+│ │   --- dbis-er-diagram-1.0.2/README.md
+│ ├── +++ dbis-er-diagram-1.0.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- dbis-er-diagram-1.0.2/dbis_er_diagram.egg-info/PKG-INFO
+│ ├── +++ dbis-er-diagram-1.0.3/dbis_er_diagram.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dbis-er-diagram
+│ │ -Version: 1.0.2
+│ │ +Version: 1.0.3
+│ │  Summary: RWTH Aachen Computer Science i5/dbis assets for Lecture Datenbanken und Informationssysteme
+│ │  Author-email: Michal Slupczynski <slupczynski@dbis.rwth-aachen.de>, Beyza Akyüz <beyza.akyuez@rwth-aachen.de>, Til Mohr <til.mohr@rwth-aachen.de>
+│ │  Project-URL: Homepage, https://git.rwth-aachen.de/i5/teaching/dbis/dbis-er-diagram
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │  Requires-Python: >=3.10
+│ │  Description-Content-Type: text/markdown
+│ │   --- dbis-er-diagram-1.0.2/dbis_er_diagram.egg-info/SOURCES.txt
+│ ├── +++ dbis-er-diagram-1.0.3/dbis_er_diagram.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- dbis-er-diagram-1.0.2/erdiagram/drawing.py
+│ ├── +++ dbis-er-diagram-1.0.3/erdiagram/drawing.py
+│ │┄ Files identical despite different names
+│ │   --- dbis-er-diagram-1.0.2/erdiagram/er.py
+│ ├── +++ dbis-er-diagram-1.0.3/erdiagram/er.py
+│ │┄ Files identical despite different names
+│ │   --- dbis-er-diagram-1.0.2/erdiagram/grading.py
+│ ├── +++ dbis-er-diagram-1.0.3/erdiagram/grading.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -11,15 +11,19 @@
+│ │  
+│ │  
+│ │  @typechecked
+│ │  def grade_submission(
+│ │      solution: erdiagram.ER,
+│ │      submission: erdiagram.ER,
+│ │      *,
+│ │ -    score_missing_node: float = 1,
+│ │ +    score_missing_entity: float = 1,
+│ │ +    score_missing_attribute: float = 1,
+│ │ +    score_missing_composed_attribute: float = 1,
+│ │ +    score_missing_relation: float = 1,
+│ │ +    score_missing_is_a: float = 1,
+│ │      score_missing_entity_property: float = 0.5,
+│ │      score_missing_attribute_property: float = 0.25,
+│ │      score_missing_composed_attribute_property: float = 0.125,
+│ │      score_missing_relation_property: float = 0.5,
+│ │      score_missing_is_a_property: float = 0.25,
+│ │      label_ratio_threshold: float = 0.8,
+│ │  ) -> tuple[float, str]:
+│ │ @@ -28,16 +32,24 @@
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      solution : erdiagram.ER
+│ │          The solution diagram.
+│ │      submission : erdiagram.ER
+│ │          The submission diagram.
+│ │ -    score_missing_node : float, optional
+│ │ -        The score to be deducted for each completely missing node, by default 1
+│ │ +    score_missing_entity : float, optional
+│ │ +        The score to be deducted for each missing entity, by default 1
+│ │ +    score_missing_attribute : float, optional
+│ │ +        The score to be deducted for each missing attribute, by default 1
+│ │ +    score_missing_composed_attribute : float, optional
+│ │ +        The score to be deducted for each missing composed attribute, by default 1
+│ │ +    score_missing_relation : float, optional
+│ │ +        The score to be deducted for each missing relation, by default 1
+│ │ +    score_missing_is_a : float, optional
+│ │ +        The score to be deducted for each missing is-a relation, by default 1
+│ │      score_missing_entity_property : float, optional
+│ │          The score to be deducted for each missing entity property, by default 0.5
+│ │      score_missing_attribute_property : float, optional
+│ │          The score to be deducted for each missing attribute property, by default 0.25
+│ │      score_missing_composed_attribute_property : float, optional
+│ │          The score to be deducted for each missing composed attribute property, by default 0.125
+│ │      score_missing_relation_property : float, optional
+│ │ @@ -50,15 +62,19 @@
+│ │      Returns
+│ │      -------
+│ │      tuple[float, str]
+│ │          The score and the grading log.
+│ │      """
+│ │      global scores
+│ │      scores = {
+│ │ -        "missing_node": score_missing_node,
+│ │ +        "missing_entity": score_missing_entity,
+│ │ +        "missing_attribute": score_missing_attribute,
+│ │ +        "missing_composed_attribute": score_missing_composed_attribute,
+│ │ +        "missing_relation": score_missing_relation,
+│ │ +        "missing_is_a": score_missing_is_a,
+│ │          "missing_entity_property": score_missing_entity_property,
+│ │          "missing_attribute_property": score_missing_attribute_property,
+│ │          "missing_composed_attribute_property": score_missing_composed_attribute_property,
+│ │          "missing_relation_property": score_missing_relation_property,
+│ │          "missing_is_a_property": score_missing_is_a_property,
+│ │      }
+│ │      global ratio_threshold
+│ │ @@ -183,16 +199,16 @@
+│ │          if len(graded_entity_pairs) > 0:  # entity found
+│ │              sub_score, sub_log = min(graded_entity_pairs, key=lambda pair: pair[0])
+│ │              score += sub_score
+│ │              log += sub_log
+│ │              continue
+│ │  
+│ │          # entity not found
+│ │ -        log += f"\t✗ Entity '{solution_label}' not found in submission. ({scores['missing_node']})\n"
+│ │ -        score += scores["missing_node"]
+│ │ +        log += f"\t✗ Entity '{solution_label}' not found in submission. ({scores['missing_entity']})\n"
+│ │ +        score += scores["missing_entity"]
+│ │  
+│ │      return score, log
+│ │  
+│ │  
+│ │  @typechecked
+│ │  def _grade_relation_pair(
+│ │      relation_pair: tuple[dict[str, Any], dict[str, Any]],
+│ │ @@ -368,15 +384,15 @@
+│ │          if len(graded_relation_pairs) > 0:  # relation found
+│ │              sub_score, sub_log = min(graded_relation_pairs, key=lambda pair: pair[0])
+│ │              score += sub_score
+│ │              log += sub_log
+│ │              continue
+│ │  
+│ │          # Score missing node
+│ │ -        s = scores["missing_node"] * (
+│ │ +        s = scores["missing_relation"] * (
+│ │              len(solution_relation["from_entities"])
+│ │              * len(solution_relation["to_entities"])
+│ │          )
+│ │          score += s
+│ │          # relation not found
+│ │          log += f"\t✗ Relation '{solution_label}' not found in submission. ({s})\n"
+│ │  
+│ │ @@ -431,15 +447,15 @@
+│ │                      for possible_submission_is_a in submission.get_is_as()
+│ │                  ],
+│ │              ),
+│ │              key=lambda pair: pair[1],
+│ │              default=None,
+│ │          )
+│ │          if submission_is_a is None:
+│ │ -            s = scores["missing_node"]
+│ │ +            s = scores["missing_is_a"]
+│ │              score += s
+│ │              log += f"\t✗ Is-a relation {solution_super_label} -> {solution_sub_labels} not found in submission. ({s})\n"
+│ │              continue
+│ │  
+│ │          log += f"\t✓ Is-a relation {solution_super_label} -> {solution_sub_labels} found in submission. (Matched against {submission.get_entity_by_id(submission_is_a[0]['superclass_id'])['label']} -> {[submission.get_entity_by_id(sub_id)['label'] for sub_id in submission_is_a[0]['subclass_ids']]} with a ratio of {submission_is_a[1]:.2f})\n"
+│ │  
+│ │          # check if the subclasses are the same
+│ │ @@ -568,15 +584,15 @@
+│ │                  )
+│ │              ),
+│ │              key=lambda pair: pair[1],
+│ │              default=None,
+│ │          )
+│ │  
+│ │          if submission_attribute is None:
+│ │ -            s = scores["missing_attribute_property"]
+│ │ +            s = scores["missing_attribute"]
+│ │              score += s
+│ │              log += f"\t✗ Attribute {solution_attribute_label} of {str(solution_parent_type).lower()} {solution_parent_label} not found in submission.({s})\n"
+│ │              continue
+│ │  
+│ │          log += f"\t✓ Attribute {solution_attribute_label} of {str(solution_parent_type).lower()} {solution_parent_label} found in submission. (Matched against submission attribute {submission_attribute[0]['label']} of {str(submission_attribute[0]['parent_type']).lower()} {submission.get_label_by_id(submission_attribute[0]['parent_id'])} with ratio {submission_attribute[1]:.2f})\n"
+│ │  
+│ │          # check if `is_pk`, `is_multiple`, and `is_weak` are the same
+│ │ @@ -601,15 +617,15 @@
+│ │              ]
+│ │          ]
+│ │          set_ratio = setratio(
+│ │              solution_composed_attribute_labels, submission_composed_attribute_labels
+│ │          )
+│ │          if set_ratio < ratio_threshold:
+│ │              s = (
+│ │ -                scores["missing_attribute_property"]
+│ │ +                scores["missing_composed_attribute"]
+│ │                  * len(solution_attribute["composed_of_attribute_ids"])
+│ │                  * set_ratio
+│ │              )
+│ │              score += s
+│ │              log += f"\t✗ The attribute {solution_attribute_label} of {str(solution_parent_type).lower()} {solution_parent_label} has a different composition. ({s})\n"
+│ │  
+│ │      return score, log
+│ │   --- dbis-er-diagram-1.0.2/erdiagram/merging.py
+│ ├── +++ dbis-er-diagram-1.0.3/erdiagram/merging.py
+│ │┄ Files identical despite different names
+│ │   --- dbis-er-diagram-1.0.2/pyproject.toml
+│ ├── +++ dbis-er-diagram-1.0.3/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [project]
+│ │  name = "dbis-er-diagram"
+│ │ -version = "1.0.2"
+│ │ +version = "1.0.3"
+│ │  description = "RWTH Aachen Computer Science i5/dbis assets for Lecture Datenbanken und Informationssysteme"
+│ │  authors = [
+│ │  	{ name = "Michal Slupczynski", email = "slupczynski@dbis.rwth-aachen.de" },
+│ │  	{ name = "Beyza Akyüz", email = "beyza.akyuez@rwth-aachen.de" },
+│ │  	{ name = "Til Mohr", email = "til.mohr@rwth-aachen.de" },
+│ │  ]
+│ │  readme = "README.md"
+│ │   --- dbis-er-diagram-1.0.2/tests/test_adders.py
+│ ├── +++ dbis-er-diagram-1.0.3/tests/test_adders.py
+│ │┄ Files identical despite different names
+│ │   --- dbis-er-diagram-1.0.2/tests/test_drawing.py
+│ ├── +++ dbis-er-diagram-1.0.3/tests/test_drawing.py
+│ │┄ Files identical despite different names
+│ │   --- dbis-er-diagram-1.0.2/tests/test_getters.py
+│ ├── +++ dbis-er-diagram-1.0.3/tests/test_getters.py
+│ │┄ Files identical despite different names
+│ │   --- dbis-er-diagram-1.0.2/tests/test_grading_components.py
+│ ├── +++ dbis-er-diagram-1.0.3/tests/test_grading_components.py
+│ │┄ Files identical despite different names
+│ │   --- dbis-er-diagram-1.0.2/tests/test_grading_diagrams.py
+│ ├── +++ dbis-er-diagram-1.0.3/tests/test_grading_diagrams.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -13,15 +13,19 @@
+│ │      submission = ER()
+│ │      submission.add_entity("Hersteller", is_weak=True)  # 0.5 Weak
+│ │      submission.add_attribute("Hersteller", "Name", is_pk=False)  # 0.25 PK
+│ │  
+│ │      score, log = grade_submission(
+│ │          solution,
+│ │          submission,
+│ │ -        score_missing_node=1,
+│ │ +        score_missing_entity=1,
+│ │ +        score_missing_attribute=0.25,
+│ │ +        score_missing_composed_attribute=0.25,
+│ │ +        score_missing_relation=1,
+│ │ +        score_missing_is_a=1,
+│ │          score_missing_entity_property=0.5,
+│ │          score_missing_attribute_property=0.25,
+│ │          score_missing_composed_attribute_property=0.25,
+│ │          score_missing_relation_property=0.5,
+│ │          score_missing_is_a_property=0.25,
+│ │      )
+│ │      assert score == 2
+│ │ @@ -37,15 +41,19 @@
+│ │  
+│ │      submission = ER()
+│ │      submission.add_entity("A")
+│ │  
+│ │      score, log = grade_submission(
+│ │          solution,
+│ │          submission,
+│ │ -        score_missing_node=1,
+│ │ +        score_missing_entity=1,
+│ │ +        score_missing_attribute=0.5,
+│ │ +        score_missing_composed_attribute=0.5,
+│ │ +        score_missing_relation=1,
+│ │ +        score_missing_is_a=1,
+│ │          score_missing_entity_property=0.5,
+│ │          score_missing_attribute_property=0.5,
+│ │          score_missing_composed_attribute_property=0.125,
+│ │          score_missing_relation_property=0.5,
+│ │          score_missing_is_a_property=0.25,
+│ │      )
+│ │      assert score == 2
+│ │ @@ -64,15 +72,19 @@
+│ │      submission = ER()
+│ │      submission.add_entity("E")
+│ │      submission.add_entity("F")
+│ │  
+│ │      score, log = grade_submission(
+│ │          solution,
+│ │          submission,
+│ │ -        score_missing_node=1,
+│ │ +        score_missing_entity=1,
+│ │ +        score_missing_attribute=0.25,
+│ │ +        score_missing_composed_attribute=0.25,
+│ │ +        score_missing_relation=1,
+│ │ +        score_missing_is_a=1,
+│ │          score_missing_entity_property=0.5,
+│ │          score_missing_attribute_property=0.25,
+│ │          score_missing_composed_attribute_property=0.25,
+│ │          score_missing_relation_property=0.5,
+│ │          score_missing_is_a_property=0.25,
+│ │      )
+│ │      assert score == 2
+│ │ @@ -95,15 +107,19 @@
+│ │      submission.add_entity("U")
+│ │      submission.add_entity("V")
+│ │      submission.add_entity("W")
+│ │  
+│ │      score, log = grade_submission(
+│ │          solution,
+│ │          submission,
+│ │ -        score_missing_node=1,
+│ │ +        score_missing_entity=1,
+│ │ +        score_missing_attribute=0.25,
+│ │ +        score_missing_composed_attribute=0.25,
+│ │ +        score_missing_relation=1,
+│ │ +        score_missing_is_a=1,
+│ │          score_missing_entity_property=0.5,
+│ │          score_missing_attribute_property=0.25,
+│ │          score_missing_composed_attribute_property=0.25,
+│ │          score_missing_relation_property=0.5,
+│ │          score_missing_is_a_property=0.25,
+│ │      )
+│ │      assert score == 3
+│ │ @@ -127,15 +143,19 @@
+│ │      submission = ER()
+│ │      submission.add_entity("I")
+│ │      submission.add_entity("J")
+│ │  
+│ │      score, log = grade_submission(
+│ │          solution,
+│ │          submission,
+│ │ -        score_missing_node=1,
+│ │ +        score_missing_entity=1,
+│ │ +        score_missing_attribute=0.25,
+│ │ +        score_missing_composed_attribute=0.25,
+│ │ +        score_missing_relation=1,
+│ │ +        score_missing_is_a=1,
+│ │          score_missing_entity_property=0.5,
+│ │          score_missing_attribute_property=0.25,
+│ │          score_missing_composed_attribute_property=0.25,
+│ │          score_missing_relation_property=0.5,
+│ │          score_missing_is_a_property=0.25,
+│ │      )
+│ │      assert score == 6
+│ │ @@ -150,15 +170,19 @@
+│ │  
+│ │      submission = ER()
+│ │      submission.add_entity("S")
+│ │  
+│ │      score, log = grade_submission(
+│ │          solution,
+│ │          submission,
+│ │ -        score_missing_node=0.5,
+│ │ +        score_missing_entity=0.5,
+│ │ +        score_missing_attribute=0.5,
+│ │ +        score_missing_composed_attribute=0.5,
+│ │ +        score_missing_relation=0.5,
+│ │ +        score_missing_is_a=0.5,
+│ │          score_missing_entity_property=0.5,
+│ │          score_missing_attribute_property=0.5,
+│ │          score_missing_composed_attribute_property=0.125,
+│ │          score_missing_relation_property=0.25,
+│ │          score_missing_is_a_property=0.25,
+│ │      )
+│ │      assert score == 4
+│ │   --- dbis-er-diagram-1.0.2/tests/test_merging.py
+│ ├── +++ dbis-er-diagram-1.0.3/tests/test_merging.py
+│ │┄ Files identical despite different names
+│ │   --- dbis-er-diagram-1.0.2/tests/test_other_methods.py
+│ ├── +++ dbis-er-diagram-1.0.3/tests/test_other_methods.py
+│ │┄ Files identical despite different names

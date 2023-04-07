@@ -1,0 +1,387 @@
+# Comparing `tmp/geovisio_cli-0.0.1.tar.gz` & `tmp/geovisio_cli-0.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "geovisio_cli-0.0.1.tar", last modified: Thu Mar 16 08:34:57 2023, max compression
++gzip compressed data, was "geovisio_cli-0.0.2.tar", last modified: Fri Apr  7 08:41:33 2023, max compression
+```
+
+## Comparing `geovisio_cli-0.0.1.tar` & `geovisio_cli-0.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,26 +1,30 @@
+--rw-r--r--   0        0        0       47 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/.gitignore
+--rw-r--r--   0        0        0     1811 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/.gitlab-ci.yml
+--rw-r--r--   0        0        0     1070 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/LICENSE
+--rw-r--r--   0        0        0      551 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/Makefile
+--rw-r--r--   0        0        0     3986 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/README.md
+--rw-r--r--   0        0        0     1521 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/USAGE.md
+--rw-r--r--   0        0        0       53 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/geovisio_cli/__init__.py
+--rw-r--r--   0        0        0     1572 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/geovisio_cli/auth.py
+--rw-r--r--   0        0        0       90 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/geovisio_cli/exception.py
+--rw-r--r--   0        0        0     1842 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/geovisio_cli/main.py
+--rw-r--r--   0        0        0      173 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/geovisio_cli/model.py
+--rw-r--r--   0        0        0     6716 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/geovisio_cli/sequence.py
+--rw-r--r--   0        0        0      896 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/pyproject.toml
+--rw-r--r--   0        0        0        0 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/tests/__init__.py
+--rw-r--r--   0        0        0      191 2023-03-16 08:34:40.772816 geovisio_cli-0.0.1/tests/conftest.py
+--rw-r--r--   0        0        0   523332 2023-03-16 08:34:40.775816 geovisio_cli-0.0.1/tests/fixtures/e1.jpg
+--rw-r--r--   0        0        0   483454 2023-03-16 08:34:40.777816 geovisio_cli-0.0.1/tests/fixtures/e2.jpg
+--rw-r--r--   0        0        0   529344 2023-03-16 08:34:40.780816 geovisio_cli-0.0.1/tests/fixtures/e3.jpg
+--rw-r--r--   0        0        0       16 2023-03-16 08:34:40.780816 geovisio_cli-0.0.1/tests/fixtures/invalid_pic.jpg
+--rw-r--r--   0        0        0       27 2023-03-16 08:34:40.780816 geovisio_cli-0.0.1/tests/fixtures/not_a_pic.md
+--rw-r--r--   0        0        0        0 2023-03-16 08:34:40.780816 geovisio_cli-0.0.1/tests/integration/__init__.py
+--rw-r--r--   0        0        0      865 2023-03-16 08:34:40.780816 geovisio_cli-0.0.1/tests/integration/conftest.py
+--rw-r--r--   0        0        0      671 2023-03-16 08:34:40.780816 geovisio_cli-0.0.1/tests/integration/docker-compose-geovisio.yml
+--rw-r--r--   0        0        0     3102 2023-03-16 08:34:40.780816 geovisio_cli-0.0.1/tests/integration/test_upload.py
+--rw-r--r--   0        0        0      441 2023-03-16 08:34:40.780816 geovisio_cli-0.0.1/tests/test_process.py
+--rw-r--r--   0        0        0     4845 1970-01-01 00:00:00.000000 geovisio_cli-0.0.1/PKG-INFO
++-rw-r--r--   0        0        0       47 2023-03-16 08:30:13.568567 geovisio_cli-0.0.2/.gitignore
++-rw-r--r--   0        0        0     1732 2023-03-16 08:40:11.895987 geovisio_cli-0.0.2/.gitlab-ci.yml
++-rw-r--r--   0        0        0      773 2023-04-07 08:22:05.974833 geovisio_cli-0.0.2/CHANGELOG.md
++-rw-r--r--   0        0        0     5468 2023-04-02 21:10:50.265060 geovisio_cli-0.0.2/CODE_OF_CONDUCT.md
++-rw-r--r--   0        0        0     1070 2023-03-10 13:13:14.819914 geovisio_cli-0.0.2/LICENSE
++-rw-r--r--   0        0        0      551 2023-03-14 15:06:36.234347 geovisio_cli-0.0.2/Makefile
++-rw-r--r--   0        0        0     4639 2023-04-07 08:20:10.192636 geovisio_cli-0.0.2/README.md
++-rw-r--r--   0        0        0     2181 2023-04-07 08:20:10.192636 geovisio_cli-0.0.2/USAGE.md
++-rw-r--r--   0        0        0       53 2023-04-07 08:20:45.913314 geovisio_cli-0.0.2/geovisio_cli/__init__.py
++-rw-r--r--   0        0        0     1572 2023-04-06 12:23:20.847931 geovisio_cli-0.0.2/geovisio_cli/auth.py
++-rw-r--r--   0        0        0       90 2023-03-10 13:13:14.819914 geovisio_cli-0.0.2/geovisio_cli/exception.py
++-rw-r--r--   0        0        0     3446 2023-04-07 08:20:10.192636 geovisio_cli-0.0.2/geovisio_cli/main.py
++-rw-r--r--   0        0        0      173 2023-03-14 15:06:36.234347 geovisio_cli-0.0.2/geovisio_cli/model.py
++-rw-r--r--   0        0        0    12827 2023-04-07 08:20:10.192636 geovisio_cli-0.0.2/geovisio_cli/sequence.py
++-rw-r--r--   0        0        0      896 2023-03-14 15:53:57.628418 geovisio_cli-0.0.2/pyproject.toml
++-rw-r--r--   0        0        0        0 2023-03-10 13:13:14.819914 geovisio_cli-0.0.2/tests/__init__.py
++-rw-r--r--   0        0        0      191 2023-03-10 13:13:14.819914 geovisio_cli-0.0.2/tests/conftest.py
++-rw-r--r--   0        0        0   523332 2023-03-10 13:13:14.823914 geovisio_cli-0.0.2/tests/fixtures/e1.jpg
++-rw-r--r--   0        0        0   483454 2023-03-10 13:13:14.827914 geovisio_cli-0.0.2/tests/fixtures/e2.jpg
++-rw-r--r--   0        0        0   529344 2023-03-10 13:13:14.827914 geovisio_cli-0.0.2/tests/fixtures/e3.jpg
++-rw-r--r--   0        0        0       16 2023-03-10 13:13:14.827914 geovisio_cli-0.0.2/tests/fixtures/invalid_pic.jpg
++-rw-r--r--   0        0        0       27 2023-03-10 13:13:14.827914 geovisio_cli-0.0.2/tests/fixtures/not_a_pic.md
++-rw-r--r--   0        0        0        0 2023-03-10 13:13:14.827914 geovisio_cli-0.0.2/tests/integration/__init__.py
++-rw-r--r--   0        0        0      865 2023-03-14 15:06:36.234347 geovisio_cli-0.0.2/tests/integration/conftest.py
++-rw-r--r--   0        0        0      671 2023-03-14 15:53:57.628418 geovisio_cli-0.0.2/tests/integration/docker-compose-geovisio.yml
++-rw-r--r--   0        0        0      319 2023-04-07 08:20:10.192636 geovisio_cli-0.0.2/tests/integration/test_status.py
++-rw-r--r--   0        0        0     3042 2023-04-07 08:20:10.192636 geovisio_cli-0.0.2/tests/integration/test_upload.py
++-rw-r--r--   0        0        0      528 2023-04-02 21:10:50.265060 geovisio_cli-0.0.2/tests/test_process.py
++-rw-r--r--   0        0        0      813 2023-04-02 21:10:50.265060 geovisio_cli-0.0.2/tests/test_sequence.py
++-rw-r--r--   0        0        0     5498 1970-01-01 00:00:00.000000 geovisio_cli-0.0.2/PKG-INFO
+```
+
+### Comparing `geovisio_cli-0.0.1/.gitlab-ci.yml` & `geovisio_cli-0.0.2/.gitlab-ci.yml`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -46,14 +46,10 @@
+ 
+ deploy_pypi:
+   stage: deploy
+   image: python:3.8-alpine
+   script:
+     - apk add --update --no-cache git
+     - pip install .[build]
+-    - ls
+-    - git status
+     - flit publish # use [flit](https://flit.pypa.io/) and FLIT_USERNAME/FLIT_PASSWORD env var
+   only:
+-    refs:
+-      - main
+-    #- tags temporarily release on merge
++    - tags
+```
+
+### Comparing `geovisio_cli-0.0.1/LICENSE` & `geovisio_cli-0.0.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `geovisio_cli-0.0.1/Makefile` & `geovisio_cli-0.0.2/Makefile`
+
+ * *Files identical despite different names*
+
+### Comparing `geovisio_cli-0.0.1/README.md` & `geovisio_cli-0.0.2/README.md`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -96,24 +96,42 @@
+ 
+ If you want to upload pictures from a `my_sequence` directory to a GeoVisio instance (running locally in this example), launch this command:
+ 
+ ```bash
+ geovisio upload --path ./my_sequence --api-url http://localhost:5000/
+ ```
+ 
++You can also add a `--wait` flag to wait for geovisio to process all the pictures.
++
+ #### Authentication
+ 
+ If the GeoVisio API requires a login for the upload, the user/password can either be set:
+ * with command-line arguments (`--user` / `--password`)
+ * with environment variables (`GEOVISIO_USER` / `GEOVISIO_PASSWORD`)
+ 
+ If no information is set but required by the GeoVisio instance, they will be asked interactively. This is the best way to enter the password so it will not be stored in the command-line history.
+ 
+ Note: the password is not stored, and sent directly to geovisio. If the future, this will be removed in favor of API keys when geovisio will support those.
+ 
++### Collection status
++
++Prints the status of a collection.
++
++```bash
++geovisio collection-status --id <some collection id> --api-url http://localhost:5000
++```
++
++You can alternatively give the location of the sequence (its full url) like:
++
++```bash
++geovisio collection-status --location http://localhost:5000/api/collections/dae288b2-9e8d-4896-af39-d35ce6bc9d4e
++```
++
++You can also add a `--wait` flag to wait for geovisio to process all the pictures.
++
+ ## Development
+ 
+ ### Tests
+ 
+ Tests are run using PyTest. By default, our tests use a [Docker Compose](https://docs.docker.com/compose/) environment (located in `./tests/integration/docker-compose-geovisio.yml`) to set-up a temporary GeoVisio API to run onto. If you have Docker Compose enabled and running on your machine, you can simply run this command to launch tests:
+ 
+ ```bash
+@@ -134,11 +152,17 @@
+ make docs
+ ```
+ 
+ ### Contributing
+ 
+ Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+ 
++Note that before opening a pull requests, you may want to check formatting and tests of your changes:
++
++```bash
++make ci
++```
++
+ 
+ ## License
+ 
+ Copyright (c) GeoVisio team 2022-2023, [released under MIT license](./LICENSE).
+```
+
+### Comparing `geovisio_cli-0.0.1/geovisio_cli/auth.py` & `geovisio_cli-0.0.2/geovisio_cli/auth.py`
+
+ * *Files identical despite different names*
+
+### Comparing `geovisio_cli-0.0.1/pyproject.toml` & `geovisio_cli-0.0.2/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `geovisio_cli-0.0.1/tests/fixtures/e1.jpg` & `geovisio_cli-0.0.2/tests/fixtures/e1.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `geovisio_cli-0.0.1/tests/fixtures/e2.jpg` & `geovisio_cli-0.0.2/tests/fixtures/e2.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `geovisio_cli-0.0.1/tests/fixtures/e3.jpg` & `geovisio_cli-0.0.2/tests/fixtures/e3.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `geovisio_cli-0.0.1/tests/integration/conftest.py` & `geovisio_cli-0.0.2/tests/integration/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `geovisio_cli-0.0.1/tests/integration/docker-compose-geovisio.yml` & `geovisio_cli-0.0.2/tests/integration/docker-compose-geovisio.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `geovisio_cli-0.0.1/tests/integration/test_upload.py` & `geovisio_cli-0.0.2/tests/integration/test_upload.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,60 +1,50 @@
+ import os
+ import pytest
+ from ..conftest import FIXTURE_DIR
+ from pathlib import Path
+ import requests
+ from geovisio_cli import sequence
+-import time
+-
+-
+-def poll_readyness(collection: str):
+-    """
+-    Wait for a collection to not be preparing.
+-    items wil either be 'ready' or 'broken'
+-    """
+-    waiting_time = 0.5
+-    nb_attempt = 300
+-    status = {}
+-    for _ in range(0, nb_attempt):
+-        status = sequence.get_collection_status(collection)
+-        if all(i["status"] != "preparing" for i in status["items"]):
+-            return status
+-        time.sleep(waiting_time)
+-    raise Exception(
+-        f"collection {str} is not ready after {nb_attempt*waiting_time}s: status {status}"
+-    )
++from datetime import timedelta
+ 
+ 
+ @pytest.mark.datafiles(
+     os.path.join(FIXTURE_DIR, "e1.jpg"),
+     os.path.join(FIXTURE_DIR, "e2.jpg"),
+     os.path.join(FIXTURE_DIR, "e3.jpg"),
+ )
+ def test_valid_upload(geovisio, datafiles):
+     collection = sequence.upload(path=Path(datafiles), geovisio=geovisio)
+ 
+     assert len(collection.uploaded_pictures) == 3
+     assert len(collection.errors) == 0
+ 
+-    status = poll_readyness(collection.location)
++    sequence.wait_for_sequence(collection.location, timeout=timedelta(minutes=1))
++    status = sequence.status(collection.location)
++    sequence_info = sequence.info(collection.location)
+     # 3 pictures should have been uploaded
+-    items = status["items"]
+-    assert len(items) == 3
++    assert len(status.pictures) == 3
+ 
+-    for i in items:
+-        assert i["status"] == "ready"
++    for i in status.pictures:
++        assert i.status == "ready"
+ 
+     # the collection should also have 3 items
+     collection = requests.get(f"{collection.location}/items")
+     collection.raise_for_status()
+ 
+     features = collection.json()["features"]
+     assert len(features) == 3
+ 
++    assert sequence_info.title == "test_valid_upload0"
++    assert sequence_info.interior_orientation == [
++        sequence.InteriorOrientation(
++            make="SONY", model="FDR-X1000V", field_of_view=None
++        )
++    ]
++
+ 
+ @pytest.mark.datafiles(
+     os.path.join(FIXTURE_DIR, "e1.jpg"),
+     os.path.join(FIXTURE_DIR, "e2.jpg"),
+     os.path.join(FIXTURE_DIR, "e3.jpg"),
+     os.path.join(FIXTURE_DIR, "invalid_pic.jpg"),
+ )
+@@ -62,18 +52,20 @@
+     collection = sequence.upload(path=Path(datafiles), geovisio=geovisio)
+ 
+     # Only 3 pictures should have been uploaded, 1 is in error
+     assert len(collection.uploaded_pictures) == 3
+     assert len(collection.errors) == 1
+ 
+     # But the collection status should have 3 items (and be valid)
+-    status = poll_readyness(collection.location)
+-    items = status["items"]
+-    assert len(items) == 3
+-    assert all([i["status"] == "ready" for i in items])
++    sequence.wait_for_sequence(collection.location, timeout=timedelta(minutes=1))
++    status = sequence.status(collection.location)
++    # 3 pictures should have been uploaded
++    assert len(status.pictures) == 3
++
++    assert all([i.status == "ready" for i in status.pictures])
+ 
+     # the collection should also have 3 items
+     collection = requests.get(f"{collection.location}/items")
+     collection.raise_for_status()
+     features = collection.json()["features"]
+     assert len(features) == 3
+```
+
+### Comparing `geovisio_cli-0.0.1/PKG-INFO` & `geovisio_cli-0.0.2/PKG-INFO`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: geovisio_cli
+-Version: 0.0.1
++Version: 0.0.2
+ Summary: Geovio client cli tool
+ Author-email: Antoine Desbordes <antoine.desbordes@gmail.com>
+ Description-Content-Type: text/markdown
+ Classifier: License :: OSI Approved :: MIT License
+ Requires-Dist: requests ~= 2.28.0
+ Requires-Dist: typer ~= 0.7.0
+ Requires-Dist: rich[all] ~= 13.3.0
+@@ -118,24 +118,42 @@
+ 
+ If you want to upload pictures from a `my_sequence` directory to a GeoVisio instance (running locally in this example), launch this command:
+ 
+ ```bash
+ geovisio upload --path ./my_sequence --api-url http://localhost:5000/
+ ```
+ 
++You can also add a `--wait` flag to wait for geovisio to process all the pictures.
++
+ #### Authentication
+ 
+ If the GeoVisio API requires a login for the upload, the user/password can either be set:
+ * with command-line arguments (`--user` / `--password`)
+ * with environment variables (`GEOVISIO_USER` / `GEOVISIO_PASSWORD`)
+ 
+ If no information is set but required by the GeoVisio instance, they will be asked interactively. This is the best way to enter the password so it will not be stored in the command-line history.
+ 
+ Note: the password is not stored, and sent directly to geovisio. If the future, this will be removed in favor of API keys when geovisio will support those.
+ 
++### Collection status
++
++Prints the status of a collection.
++
++```bash
++geovisio collection-status --id <some collection id> --api-url http://localhost:5000
++```
++
++You can alternatively give the location of the sequence (its full url) like:
++
++```bash
++geovisio collection-status --location http://localhost:5000/api/collections/dae288b2-9e8d-4896-af39-d35ce6bc9d4e
++```
++
++You can also add a `--wait` flag to wait for geovisio to process all the pictures.
++
+ ## Development
+ 
+ ### Tests
+ 
+ Tests are run using PyTest. By default, our tests use a [Docker Compose](https://docs.docker.com/compose/) environment (located in `./tests/integration/docker-compose-geovisio.yml`) to set-up a temporary GeoVisio API to run onto. If you have Docker Compose enabled and running on your machine, you can simply run this command to launch tests:
+ 
+ ```bash
+@@ -156,12 +174,18 @@
+ make docs
+ ```
+ 
+ ### Contributing
+ 
+ Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+ 
++Note that before opening a pull requests, you may want to check formatting and tests of your changes:
++
++```bash
++make ci
++```
++
+ 
+ ## License
+ 
+ Copyright (c) GeoVisio team 2022-2023, [released under MIT license](./LICENSE).
+```
+
