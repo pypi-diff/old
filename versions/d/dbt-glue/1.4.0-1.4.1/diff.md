@@ -1,0 +1,280 @@
+# Comparing `tmp/dbt-glue-1.4.0.tar.gz` & `tmp/dbt-glue-1.4.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dbt-glue-1.4.0.tar", last modified: Fri Apr  7 08:31:34 2023, max compression
++gzip compressed data, was "dbt-glue-1.4.1.tar", last modified: Fri Apr  7 09:06:35 2023, max compression
+```
+
+## Comparing `dbt-glue-1.4.0.tar` & `dbt-glue-1.4.1.tar`
+
+### file list
+
+```diff
+@@ -1,48 +1,48 @@
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.684668 dbt-glue-1.4.0/
+--rw-r--r--   0 menuetb    (504) staff       (20)    10142 2022-04-05 16:42:41.000000 dbt-glue-1.4.0/LICENSE
+--rw-r--r--   0 menuetb    (504) staff       (20)       67 2022-04-05 16:42:41.000000 dbt-glue-1.4.0/NOTICE
+--rw-r--r--   0 menuetb    (504) staff       (20)    43753 2023-04-07 08:31:34.683086 dbt-glue-1.4.0/PKG-INFO
+--rw-r--r--   0 menuetb    (504) staff       (20)    42903 2023-04-06 14:05:38.000000 dbt-glue-1.4.0/README.md
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.637272 dbt-glue-1.4.0/dbt/
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.636739 dbt-glue-1.4.0/dbt/adapters/
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.653197 dbt-glue-1.4.0/dbt/adapters/glue/
+--rw-r--r--   0 menuetb    (504) staff       (20)      394 2023-04-06 15:48:24.000000 dbt-glue-1.4.0/dbt/adapters/glue/__init__.py
+--rw-r--r--   0 menuetb    (504) staff       (20)       17 2023-04-06 14:07:03.000000 dbt-glue-1.4.0/dbt/adapters/glue/__version__.py
+--rw-r--r--   0 menuetb    (504) staff       (20)     3431 2023-04-06 15:50:22.000000 dbt-glue-1.4.0/dbt/adapters/glue/connections.py
+--rw-r--r--   0 menuetb    (504) staff       (20)     2590 2023-04-06 15:50:17.000000 dbt-glue-1.4.0/dbt/adapters/glue/credentials.py
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.657436 dbt-glue-1.4.0/dbt/adapters/glue/gluedbapi/
+--rw-r--r--   0 menuetb    (504) staff       (20)      140 2022-04-05 16:42:41.000000 dbt-glue-1.4.0/dbt/adapters/glue/gluedbapi/__init__.py
+--rw-r--r--   0 menuetb    (504) staff       (20)     1216 2022-07-11 06:48:28.000000 dbt-glue-1.4.0/dbt/adapters/glue/gluedbapi/commons.py
+--rw-r--r--   0 menuetb    (504) staff       (20)     8767 2023-04-06 14:25:36.000000 dbt-glue-1.4.0/dbt/adapters/glue/gluedbapi/connection.py
+--rw-r--r--   0 menuetb    (504) staff       (20)     8229 2023-04-06 15:56:20.000000 dbt-glue-1.4.0/dbt/adapters/glue/gluedbapi/cursor.py
+--rw-r--r--   0 menuetb    (504) staff       (20)    35933 2023-04-07 08:10:50.000000 dbt-glue-1.4.0/dbt/adapters/glue/impl.py
+--rw-r--r--   0 menuetb    (504) staff       (20)     1264 2023-04-07 07:53:59.000000 dbt-glue-1.4.0/dbt/adapters/glue/relation.py
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.637433 dbt-glue-1.4.0/dbt/include/
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.661321 dbt-glue-1.4.0/dbt/include/glue/
+--rw-r--r--   0 menuetb    (504) staff       (20)       51 2022-04-05 16:42:41.000000 dbt-glue-1.4.0/dbt/include/glue/__init__.py
+--rw-r--r--   0 menuetb    (504) staff       (20)       72 2022-07-11 06:48:28.000000 dbt-glue-1.4.0/dbt/include/glue/dbt_project.yml
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.664059 dbt-glue-1.4.0/dbt/include/glue/macros/
+--rw-r--r--   0 menuetb    (504) staff       (20)     5352 2023-01-17 10:30:07.000000 dbt-glue-1.4.0/dbt/include/glue/macros/adapters.sql
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.666901 dbt-glue-1.4.0/dbt/include/glue/macros/generic_test_sql/
+--rw-r--r--   0 menuetb    (504) staff       (20)      494 2022-07-11 06:48:28.000000 dbt-glue-1.4.0/dbt/include/glue/macros/generic_test_sql/accepted_values.sql
+--rw-r--r--   0 menuetb    (504) staff       (20)      370 2022-07-11 06:48:28.000000 dbt-glue-1.4.0/dbt/include/glue/macros/generic_test_sql/relationships.sql
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.670213 dbt-glue-1.4.0/dbt/include/glue/macros/materializations/
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.672385 dbt-glue-1.4.0/dbt/include/glue/macros/materializations/incremental/
+--rw-r--r--   0 menuetb    (504) staff       (20)     4348 2023-01-18 17:12:34.000000 dbt-glue-1.4.0/dbt/include/glue/macros/materializations/incremental/incremental.sql
+--rw-r--r--   0 menuetb    (504) staff       (20)     1689 2022-10-07 12:46:47.000000 dbt-glue-1.4.0/dbt/include/glue/macros/materializations/incremental/strategies.sql
+--rw-r--r--   0 menuetb    (504) staff       (20)     1436 2023-01-06 16:44:08.000000 dbt-glue-1.4.0/dbt/include/glue/macros/materializations/seed.sql
+--rw-r--r--   0 menuetb    (504) staff       (20)    10358 2023-01-18 17:12:34.000000 dbt-glue-1.4.0/dbt/include/glue/macros/materializations/snapshot.sql
+--rw-r--r--   0 menuetb    (504) staff       (20)      112 2022-07-11 06:48:28.000000 dbt-glue-1.4.0/dbt/include/glue/macros/materializations/view.sql
+--rw-r--r--   0 menuetb    (504) staff       (20)      592 2022-10-21 07:23:23.000000 dbt-glue-1.4.0/dbt/include/glue/sample_profiles.yml
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.639593 dbt-glue-1.4.0/dbt/include/glue/tests/
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.673470 dbt-glue-1.4.0/dbt/include/glue/tests/generic/
+--rw-r--r--   0 menuetb    (504) staff       (20)      290 2022-07-11 06:48:28.000000 dbt-glue-1.4.0/dbt/include/glue/tests/generic/builtin.sql
+-drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 08:31:34.681885 dbt-glue-1.4.0/dbt_glue.egg-info/
+--rw-r--r--   0 menuetb    (504) staff       (20)    43753 2023-04-07 08:31:34.000000 dbt-glue-1.4.0/dbt_glue.egg-info/PKG-INFO
+--rw-r--r--   0 menuetb    (504) staff       (20)     1157 2023-04-07 08:31:34.000000 dbt-glue-1.4.0/dbt_glue.egg-info/SOURCES.txt
+--rw-r--r--   0 menuetb    (504) staff       (20)        1 2023-04-07 08:31:34.000000 dbt-glue-1.4.0/dbt_glue.egg-info/dependency_links.txt
+--rw-r--r--   0 menuetb    (504) staff       (20)        1 2022-05-12 16:43:26.000000 dbt-glue-1.4.0/dbt_glue.egg-info/not-zip-safe
+--rw-r--r--   0 menuetb    (504) staff       (20)       46 2023-04-07 08:31:34.000000 dbt-glue-1.4.0/dbt_glue.egg-info/requires.txt
+--rw-r--r--   0 menuetb    (504) staff       (20)        4 2023-04-07 08:31:34.000000 dbt-glue-1.4.0/dbt_glue.egg-info/top_level.txt
+--rw-r--r--   0 menuetb    (504) staff       (20)       38 2023-04-07 08:31:34.684891 dbt-glue-1.4.0/setup.cfg
+--rw-r--r--   0 menuetb    (504) staff       (20)     2822 2023-04-06 14:09:13.000000 dbt-glue-1.4.0/setup.py
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.185955 dbt-glue-1.4.1/
++-rw-r--r--   0 menuetb    (504) staff       (20)    10142 2022-04-05 16:42:41.000000 dbt-glue-1.4.1/LICENSE
++-rw-r--r--   0 menuetb    (504) staff       (20)       67 2022-04-05 16:42:41.000000 dbt-glue-1.4.1/NOTICE
++-rw-r--r--   0 menuetb    (504) staff       (20)    43804 2023-04-07 09:06:35.183330 dbt-glue-1.4.1/PKG-INFO
++-rw-r--r--   0 menuetb    (504) staff       (20)    42903 2023-04-06 14:05:38.000000 dbt-glue-1.4.1/README.md
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.132606 dbt-glue-1.4.1/dbt/
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.131892 dbt-glue-1.4.1/dbt/adapters/
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.147822 dbt-glue-1.4.1/dbt/adapters/glue/
++-rw-r--r--   0 menuetb    (504) staff       (20)      394 2023-04-06 15:48:24.000000 dbt-glue-1.4.1/dbt/adapters/glue/__init__.py
++-rw-r--r--   0 menuetb    (504) staff       (20)       17 2023-04-07 09:05:13.000000 dbt-glue-1.4.1/dbt/adapters/glue/__version__.py
++-rw-r--r--   0 menuetb    (504) staff       (20)     3431 2023-04-06 15:50:22.000000 dbt-glue-1.4.1/dbt/adapters/glue/connections.py
++-rw-r--r--   0 menuetb    (504) staff       (20)     2590 2023-04-06 15:50:17.000000 dbt-glue-1.4.1/dbt/adapters/glue/credentials.py
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.154261 dbt-glue-1.4.1/dbt/adapters/glue/gluedbapi/
++-rw-r--r--   0 menuetb    (504) staff       (20)      140 2022-04-05 16:42:41.000000 dbt-glue-1.4.1/dbt/adapters/glue/gluedbapi/__init__.py
++-rw-r--r--   0 menuetb    (504) staff       (20)     1216 2022-07-11 06:48:28.000000 dbt-glue-1.4.1/dbt/adapters/glue/gluedbapi/commons.py
++-rw-r--r--   0 menuetb    (504) staff       (20)     8767 2023-04-06 14:25:36.000000 dbt-glue-1.4.1/dbt/adapters/glue/gluedbapi/connection.py
++-rw-r--r--   0 menuetb    (504) staff       (20)     8229 2023-04-06 15:56:20.000000 dbt-glue-1.4.1/dbt/adapters/glue/gluedbapi/cursor.py
++-rw-r--r--   0 menuetb    (504) staff       (20)    35933 2023-04-07 08:10:50.000000 dbt-glue-1.4.1/dbt/adapters/glue/impl.py
++-rw-r--r--   0 menuetb    (504) staff       (20)     1264 2023-04-07 07:53:59.000000 dbt-glue-1.4.1/dbt/adapters/glue/relation.py
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.132813 dbt-glue-1.4.1/dbt/include/
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.158657 dbt-glue-1.4.1/dbt/include/glue/
++-rw-r--r--   0 menuetb    (504) staff       (20)       51 2022-04-05 16:42:41.000000 dbt-glue-1.4.1/dbt/include/glue/__init__.py
++-rw-r--r--   0 menuetb    (504) staff       (20)       72 2022-07-11 06:48:28.000000 dbt-glue-1.4.1/dbt/include/glue/dbt_project.yml
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.160416 dbt-glue-1.4.1/dbt/include/glue/macros/
++-rw-r--r--   0 menuetb    (504) staff       (20)     5352 2023-01-17 10:30:07.000000 dbt-glue-1.4.1/dbt/include/glue/macros/adapters.sql
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.162635 dbt-glue-1.4.1/dbt/include/glue/macros/generic_test_sql/
++-rw-r--r--   0 menuetb    (504) staff       (20)      494 2022-07-11 06:48:28.000000 dbt-glue-1.4.1/dbt/include/glue/macros/generic_test_sql/accepted_values.sql
++-rw-r--r--   0 menuetb    (504) staff       (20)      370 2022-07-11 06:48:28.000000 dbt-glue-1.4.1/dbt/include/glue/macros/generic_test_sql/relationships.sql
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.166221 dbt-glue-1.4.1/dbt/include/glue/macros/materializations/
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.169022 dbt-glue-1.4.1/dbt/include/glue/macros/materializations/incremental/
++-rw-r--r--   0 menuetb    (504) staff       (20)     4348 2023-01-18 17:12:34.000000 dbt-glue-1.4.1/dbt/include/glue/macros/materializations/incremental/incremental.sql
++-rw-r--r--   0 menuetb    (504) staff       (20)     1689 2022-10-07 12:46:47.000000 dbt-glue-1.4.1/dbt/include/glue/macros/materializations/incremental/strategies.sql
++-rw-r--r--   0 menuetb    (504) staff       (20)     1436 2023-01-06 16:44:08.000000 dbt-glue-1.4.1/dbt/include/glue/macros/materializations/seed.sql
++-rw-r--r--   0 menuetb    (504) staff       (20)    10358 2023-01-18 17:12:34.000000 dbt-glue-1.4.1/dbt/include/glue/macros/materializations/snapshot.sql
++-rw-r--r--   0 menuetb    (504) staff       (20)      112 2022-07-11 06:48:28.000000 dbt-glue-1.4.1/dbt/include/glue/macros/materializations/view.sql
++-rw-r--r--   0 menuetb    (504) staff       (20)      592 2022-10-21 07:23:23.000000 dbt-glue-1.4.1/dbt/include/glue/sample_profiles.yml
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.136295 dbt-glue-1.4.1/dbt/include/glue/tests/
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.171087 dbt-glue-1.4.1/dbt/include/glue/tests/generic/
++-rw-r--r--   0 menuetb    (504) staff       (20)      290 2022-07-11 06:48:28.000000 dbt-glue-1.4.1/dbt/include/glue/tests/generic/builtin.sql
++drwxr-xr-x   0 menuetb    (504) staff       (20)        0 2023-04-07 09:06:35.180634 dbt-glue-1.4.1/dbt_glue.egg-info/
++-rw-r--r--   0 menuetb    (504) staff       (20)    43804 2023-04-07 09:06:35.000000 dbt-glue-1.4.1/dbt_glue.egg-info/PKG-INFO
++-rw-r--r--   0 menuetb    (504) staff       (20)     1157 2023-04-07 09:06:35.000000 dbt-glue-1.4.1/dbt_glue.egg-info/SOURCES.txt
++-rw-r--r--   0 menuetb    (504) staff       (20)        1 2023-04-07 09:06:35.000000 dbt-glue-1.4.1/dbt_glue.egg-info/dependency_links.txt
++-rw-r--r--   0 menuetb    (504) staff       (20)        1 2022-05-12 16:43:26.000000 dbt-glue-1.4.1/dbt_glue.egg-info/not-zip-safe
++-rw-r--r--   0 menuetb    (504) staff       (20)       46 2023-04-07 09:06:35.000000 dbt-glue-1.4.1/dbt_glue.egg-info/requires.txt
++-rw-r--r--   0 menuetb    (504) staff       (20)        4 2023-04-07 09:06:35.000000 dbt-glue-1.4.1/dbt_glue.egg-info/top_level.txt
++-rw-r--r--   0 menuetb    (504) staff       (20)       38 2023-04-07 09:06:35.186519 dbt-glue-1.4.1/setup.cfg
++-rw-r--r--   0 menuetb    (504) staff       (20)     2872 2023-04-07 09:04:41.000000 dbt-glue-1.4.1/setup.py
+```
+
+### Comparing `dbt-glue-1.4.0/LICENSE` & `dbt-glue-1.4.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/PKG-INFO` & `dbt-glue-1.4.1/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,23 +1,24 @@
+ Metadata-Version: 2.1
+ Name: dbt-glue
+-Version: 1.4.0
++Version: 1.4.1
+ Summary: dbt (data build tool) adapter for Aws Glue
+ Home-page: https://github.com/aws-samples/dbt-glue
+ Author: moshirm,menuetb,mamallem,segnina
+ Author-email: moshirm@amazon.fr, menuetb@amazon.fr, mamallem@amazon.fr, segnina@amazon.fr 
+ Classifier: Development Status :: 4 - Beta
+ Classifier: License :: OSI Approved :: Apache Software License
+ Classifier: Operating System :: Microsoft :: Windows
+ Classifier: Operating System :: MacOS :: MacOS X
+ Classifier: Operating System :: POSIX :: Linux
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Requires-Python: >=3.7
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ License-File: NOTICE
+ 
+ <p align="center">
+   <img src="/etc/dbt-logo-full.svg" alt="dbt logo" width="500"/>
+```
+
+### Comparing `dbt-glue-1.4.0/README.md` & `dbt-glue-1.4.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/adapters/glue/connections.py` & `dbt-glue-1.4.1/dbt/adapters/glue/connections.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/adapters/glue/credentials.py` & `dbt-glue-1.4.1/dbt/adapters/glue/credentials.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/adapters/glue/gluedbapi/commons.py` & `dbt-glue-1.4.1/dbt/adapters/glue/gluedbapi/commons.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/adapters/glue/gluedbapi/connection.py` & `dbt-glue-1.4.1/dbt/adapters/glue/gluedbapi/connection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/adapters/glue/gluedbapi/cursor.py` & `dbt-glue-1.4.1/dbt/adapters/glue/gluedbapi/cursor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/adapters/glue/impl.py` & `dbt-glue-1.4.1/dbt/adapters/glue/impl.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/adapters/glue/relation.py` & `dbt-glue-1.4.1/dbt/adapters/glue/relation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/include/glue/macros/adapters.sql` & `dbt-glue-1.4.1/dbt/include/glue/macros/adapters.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/include/glue/macros/materializations/incremental/incremental.sql` & `dbt-glue-1.4.1/dbt/include/glue/macros/materializations/incremental/incremental.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/include/glue/macros/materializations/incremental/strategies.sql` & `dbt-glue-1.4.1/dbt/include/glue/macros/materializations/incremental/strategies.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/include/glue/macros/materializations/seed.sql` & `dbt-glue-1.4.1/dbt/include/glue/macros/materializations/seed.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/include/glue/macros/materializations/snapshot.sql` & `dbt-glue-1.4.1/dbt/include/glue/macros/materializations/snapshot.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt/include/glue/sample_profiles.yml` & `dbt-glue-1.4.1/dbt/include/glue/sample_profiles.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/dbt_glue.egg-info/PKG-INFO` & `dbt-glue-1.4.1/dbt_glue.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,23 +1,24 @@
+ Metadata-Version: 2.1
+ Name: dbt-glue
+-Version: 1.4.0
++Version: 1.4.1
+ Summary: dbt (data build tool) adapter for Aws Glue
+ Home-page: https://github.com/aws-samples/dbt-glue
+ Author: moshirm,menuetb,mamallem,segnina
+ Author-email: moshirm@amazon.fr, menuetb@amazon.fr, mamallem@amazon.fr, segnina@amazon.fr 
+ Classifier: Development Status :: 4 - Beta
+ Classifier: License :: OSI Approved :: Apache Software License
+ Classifier: Operating System :: Microsoft :: Windows
+ Classifier: Operating System :: MacOS :: MacOS X
+ Classifier: Operating System :: POSIX :: Linux
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Requires-Python: >=3.7
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ License-File: NOTICE
+ 
+ <p align="center">
+   <img src="/etc/dbt-logo-full.svg" alt="dbt logo" width="500"/>
+```
+
+### Comparing `dbt-glue-1.4.0/dbt_glue.egg-info/SOURCES.txt` & `dbt-glue-1.4.1/dbt_glue.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `dbt-glue-1.4.0/setup.py` & `dbt-glue-1.4.1/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -34,15 +34,15 @@
+             return line.split(delim)[1]
+     else:
+         raise RuntimeError("Unable to find version string.")
+ 
+ 
+ package_name = "dbt-glue"
+ package_version = get_version("dbt/adapters/glue/__version__.py")
+-dbt_version = "1.4.5"
++dbt_version = "1.4.1"
+ description = """dbt (data build tool) adapter for Aws Glue"""
+ long_description = read('README.md')
+ setup(
+     name=package_name,
+     version=package_version,
+     description=description,
+     long_description=long_description,
+@@ -79,10 +79,11 @@
+         'Operating System :: MacOS :: MacOS X',
+         'Operating System :: POSIX :: Linux',
+ 
+         'Programming Language :: Python :: 3.7',
+         'Programming Language :: Python :: 3.8',
+         'Programming Language :: Python :: 3.9',
+         'Programming Language :: Python :: 3.10',
++        'Programming Language :: Python :: 3.11',
+     ],
+     python_requires=">=3.7",
+ )
+```
+

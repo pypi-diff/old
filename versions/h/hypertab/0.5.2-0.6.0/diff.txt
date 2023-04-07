@@ -1,0 +1,333 @@
+--- tmp/hypertab-0.5.2.tar.gz
++++ tmp/hypertab-0.6.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "hypertab-0.5.2.tar", last modified: Fri Mar 31 10:11:34 2023, max compression
+│ +gzip compressed data, was "hypertab-0.6.0.tar", last modified: Fri Apr  7 09:15:09 2023, max compression
+│   --- hypertab-0.5.2.tar
+├── +++ hypertab-0.6.0.tar
+│ ├── file list
+│ │ @@ -1,23 +1,23 @@
+│ │ -drwxr-xr-x   0 wwydmanski (1668001616) binf     (1668001603)        0 2023-03-31 10:11:34.345588 hypertab-0.5.2/
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)       24 2023-03-29 09:11:16.000000 hypertab-0.5.2/MANIFEST.in
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     2509 2023-03-31 10:11:34.345588 hypertab-0.5.2/PKG-INFO
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     2233 2023-03-29 09:11:16.000000 hypertab-0.5.2/README.md
+│ │ -drwxr-xr-x   0 wwydmanski (1668001616) binf     (1668001603)        0 2023-03-31 10:11:34.341588 hypertab-0.5.2/hypertab/
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)      245 2023-03-29 09:11:18.000000 hypertab-0.5.2/hypertab/__init__.py
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     9220 2023-03-31 10:10:40.000000 hypertab-0.5.2/hypertab/hypernetwork.py
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     3610 2023-03-29 09:22:38.000000 hypertab-0.5.2/hypertab/hypertab.py
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     4503 2023-03-29 09:11:18.000000 hypertab-0.5.2/hypertab/interfaces.py
+│ │ -drwxr-xr-x   0 wwydmanski (1668001616) binf     (1668001603)        0 2023-03-31 10:11:34.345588 hypertab-0.5.2/hypertab/mask_design/
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)        0 2023-03-29 09:11:18.000000 hypertab-0.5.2/hypertab/mask_design/__init__.py
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     5329 2023-03-29 09:11:18.000000 hypertab-0.5.2/hypertab/mask_design/feature_selection.py
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     3545 2023-03-31 10:10:01.000000 hypertab-0.5.2/hypertab/modules.py
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     7689 2023-03-31 09:55:39.000000 hypertab-0.5.2/hypertab/training_utils.py
+│ │ -drwxr-xr-x   0 wwydmanski (1668001616) binf     (1668001603)        0 2023-03-31 10:11:34.341588 hypertab-0.5.2/hypertab.egg-info/
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     2509 2023-03-31 10:11:34.000000 hypertab-0.5.2/hypertab.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)      428 2023-03-31 10:11:34.000000 hypertab-0.5.2/hypertab.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)        1 2023-03-31 10:11:34.000000 hypertab-0.5.2/hypertab.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)      107 2023-03-31 10:11:34.000000 hypertab-0.5.2/hypertab.egg-info/requires.txt
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)        9 2023-03-31 10:11:34.000000 hypertab-0.5.2/hypertab.egg-info/top_level.txt
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)      107 2023-03-29 09:11:16.000000 hypertab-0.5.2/requirements.txt
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)      107 2023-03-31 10:11:34.385587 hypertab-0.5.2/setup.cfg
+│ │ --rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)      635 2023-03-31 10:10:55.000000 hypertab-0.5.2/setup.py
+│ │ +drwxr-xr-x   0 wwydmanski (1668001616) binf     (1668001603)        0 2023-04-07 09:15:09.696295 hypertab-0.6.0/
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)       24 2023-03-29 09:11:16.000000 hypertab-0.6.0/MANIFEST.in
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     2509 2023-04-07 09:15:09.696295 hypertab-0.6.0/PKG-INFO
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     2233 2023-03-29 09:11:16.000000 hypertab-0.6.0/README.md
+│ │ +drwxr-xr-x   0 wwydmanski (1668001616) binf     (1668001603)        0 2023-04-07 09:15:09.664296 hypertab-0.6.0/hypertab/
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)      245 2023-03-29 09:11:18.000000 hypertab-0.6.0/hypertab/__init__.py
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     8956 2023-04-04 14:13:50.000000 hypertab-0.6.0/hypertab/hypernetwork.py
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     3610 2023-04-04 07:56:41.000000 hypertab-0.6.0/hypertab/hypertab.py
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     4503 2023-03-29 09:11:18.000000 hypertab-0.6.0/hypertab/interfaces.py
+│ │ +drwxr-xr-x   0 wwydmanski (1668001616) binf     (1668001603)        0 2023-04-07 09:15:09.684296 hypertab-0.6.0/hypertab/mask_design/
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)        0 2023-03-29 09:11:18.000000 hypertab-0.6.0/hypertab/mask_design/__init__.py
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     5329 2023-03-29 09:11:18.000000 hypertab-0.6.0/hypertab/mask_design/feature_selection.py
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     3335 2023-04-04 14:12:30.000000 hypertab-0.6.0/hypertab/modules.py
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     7659 2023-04-04 14:12:57.000000 hypertab-0.6.0/hypertab/training_utils.py
+│ │ +drwxr-xr-x   0 wwydmanski (1668001616) binf     (1668001603)        0 2023-04-07 09:15:09.680296 hypertab-0.6.0/hypertab.egg-info/
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)     2509 2023-04-07 09:15:08.000000 hypertab-0.6.0/hypertab.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)      428 2023-04-07 09:15:08.000000 hypertab-0.6.0/hypertab.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)        1 2023-04-07 09:15:08.000000 hypertab-0.6.0/hypertab.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)      107 2023-04-07 09:15:08.000000 hypertab-0.6.0/hypertab.egg-info/requires.txt
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)        9 2023-04-07 09:15:08.000000 hypertab-0.6.0/hypertab.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)      107 2023-03-29 09:11:16.000000 hypertab-0.6.0/requirements.txt
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)      107 2023-04-07 09:15:09.696295 hypertab-0.6.0/setup.cfg
+│ │ +-rw-r--r--   0 wwydmanski (1668001616) binf     (1668001603)      635 2023-04-04 08:17:05.000000 hypertab-0.6.0/setup.py
+│ │   --- hypertab-0.5.2/PKG-INFO
+│ ├── +++ hypertab-0.6.0/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: hypertab
+│ │ -Version: 0.5.2
+│ │ +Version: 0.6.0
+│ │  Summary: HyperTab: hypernetwork for small tabular datasets
+│ │  Home-page: https://github.com/wwydmanski/hypertab
+│ │  Author: Witold Wydmański
+│ │  Author-email: wwydmanski@gmail.com
+│ │  License: MIT
+│ │  Description-Content-Type: text/markdown
+│ │   --- hypertab-0.5.2/README.md
+│ ├── +++ hypertab-0.6.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- hypertab-0.5.2/hypertab/hypernetwork.py
+│ ├── +++ hypertab-0.6.0/hypertab/hypernetwork.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,32 +1,20 @@
+│ │  
+│ │  import torch
+│ │  import numpy as np
+│ │ -from .modules import InsertableNet, MultiInsertableNet
+│ │ +from .modules import InsertableNet, craft_layers, batch_forward_layers
+│ │  import enum
+│ │  import torch.nn.functional as F
+│ │  from sklearn.decomposition import PCA
+│ │  from line_profiler import LineProfiler
+│ │  
+│ │  torch.set_default_dtype(torch.float32)
+│ │  
+│ │ -from decorator import decorator
+│ │  import time
+│ │  
+│ │ -@decorator
+│ │ -def profile_each_line(func, *args, **kwargs):
+│ │ -    profiler = LineProfiler()
+│ │ -    profiler.add_function(func)
+│ │ -    try:
+│ │ -        res = func(*args, **kwargs)
+│ │ -    finally:
+│ │ -        profiler.print_stats()
+│ │ -
+│ │ -    return res
+│ │ -
+│ │  class TrainingModes(enum.Enum):
+│ │      SLOW_STEP = "slow-step"
+│ │      CARTHESIAN = "carth"
+│ │  
+│ │  class Hypernetwork(torch.nn.Module):
+│ │      def __init__(
+│ │          self,
+│ │ @@ -112,45 +100,39 @@
+│ │          else:
+│ │              self.device = arg
+│ │          super().to(arg)
+│ │          self.test_mask = self._create_mask(self.test_nodes)
+│ │          self.model = self.model.to(arg)
+│ │          return self
+│ │  
+│ │ -    # @profile_each_line
+│ │      def _slow_step_training(self, data, mask):
+│ │          weights = self.craft_network(mask)
+│ │          mask = mask.to(torch.bool)
+│ │  
+│ │          masked_data = torch.stack([data[:, mask[i]] for i in range(len(mask))])
+│ │  
+│ │          res = torch.zeros((len(mask), len(data), self.target_outsize)).to(self.device)
+│ │  
+│ │ -        nn = MultiInsertableNet(
+│ │ -            weights,
+│ │ -            self.target_architecture,
+│ │ -            len(mask)
+│ │ -        )
+│ │ -        res = nn(masked_data)
+│ │ +        layers = craft_layers(weights, self.target_architecture, len(mask))
+│ │ +        res = batch_forward_layers(layers, masked_data)
+│ │          return res
+│ │  
+│ │      def _ensemble_inference(self, data, mask):
+│ │          if mask is None:
+│ │              mask = self.test_mask
+│ │ -            nets = self._get_test_nets()
+│ │ +            weights = self.craft_network(self.test_mask)
+│ │          else:
+│ │ -            nets = self.__craft_nets(mask)
+│ │ +            weights = self.craft_network(mask)
+│ │          mask = mask.to(torch.bool)
+│ │ +        masked_data = torch.stack([data[:, mask[i]] for i in range(len(mask))])
+│ │ +
+│ │ +        layers = craft_layers(weights, self.target_architecture, len(mask))
+│ │ +        res = batch_forward_layers(layers, masked_data)
+│ │ +        res = res.mean(dim=0)
+│ │  
+│ │ -        res = torch.zeros((len(data), self.target_outsize)).to(self.device)
+│ │ -        for i in range(len(mask)):
+│ │ -            nn = nets[i]
+│ │ -            masked_data = data[:, mask[i]]
+│ │ -            res += nn(masked_data)
+│ │ -        res /= len(mask)
+│ │          return res
+│ │  
+│ │      def _get_test_nets(self):
+│ │          if self._retrained:
+│ │              nets = self.__craft_nets(self.test_mask)
+│ │              self._test_nets = nets
+│ │              self._retrained = False
+│ │   --- hypertab-0.5.2/hypertab/hypertab.py
+│ ├── +++ hypertab-0.6.0/hypertab/hypertab.py
+│ │┄ Files identical despite different names
+│ │   --- hypertab-0.5.2/hypertab/interfaces.py
+│ ├── +++ hypertab-0.6.0/hypertab/interfaces.py
+│ │┄ Files identical despite different names
+│ │   --- hypertab-0.5.2/hypertab/mask_design/feature_selection.py
+│ ├── +++ hypertab-0.6.0/hypertab/mask_design/feature_selection.py
+│ │┄ Files identical despite different names
+│ │   --- hypertab-0.5.2/hypertab/modules.py
+│ ├── +++ hypertab-0.6.0/hypertab/modules.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,12 +1,7 @@
+│ │ -from dotenv import load_dotenv
+│ │ -load_dotenv()
+│ │ -
+│ │ -import os
+│ │ -
+│ │  import torch
+│ │  import numpy as np
+│ │  import torch.nn.functional as F
+│ │  
+│ │  torch.set_default_dtype(torch.float32)
+│ │  
+│ │  
+│ │ @@ -69,41 +64,41 @@
+│ │          out = data
+│ │          for layer in self.layers[:-1]:
+│ │              out = F.linear(out, layer[0], layer[1])
+│ │              out = F.relu(out)
+│ │  
+│ │          return F.linear(out, self.layers[-1][0], self.layers[-1][1])
+│ │      
+│ │ -class MultiInsertableNet(torch.nn.Module):
+│ │ -    def __init__(self, weights, shape=[(784, 10), (10, 10)], num_nets=1):
+│ │ -        super().__init__()
+│ │ -        self.layers = []
+│ │ -        self._offset = 0
+│ │ +def craft_layers(weights, shape=[(784, 10), (10, 10)], num_nets=1):
+│ │ +    layers = []
+│ │ +    _offset = 0
+│ │ +    
+│ │ +    for layer in shape:
+│ │ +        _w_size = layer[0]*layer[1]
+│ │ +        _b_size = layer[1]
+│ │          
+│ │ -        for layer in shape:
+│ │ -            _w_size = layer[0]*layer[1]
+│ │ -            _b_size = layer[1]
+│ │ -            
+│ │ -            _l = (weights[:, self._offset:self._offset+_w_size].reshape((num_nets, layer[1], layer[0])),
+│ │ -                  weights[:, self._offset+_w_size:self._offset+_w_size+_b_size])
+│ │ -            self._offset += _w_size+_b_size
+│ │ +        _l = (weights[:, _offset:_offset+_w_size].reshape((num_nets, layer[1], layer[0])),
+│ │ +                weights[:, _offset+_w_size:_offset+_w_size+_b_size])
+│ │ +        _offset += _w_size+_b_size
+│ │  
+│ │ -            self.layers.append(_l)
+│ │ +        layers.append(_l)
+│ │ +
+│ │ +    return layers
+│ │      
+│ │ -    def forward(self, data):
+│ │ -        out = data
+│ │ -        for layer in self.layers[:-1]:
+│ │ -            out = torch.einsum('mti,mbi->mbt', layer[0], out)
+│ │ -            out = out + layer[1].unsqueeze(1)
+│ │ +def batch_forward_layers(layers, data):
+│ │ +    out = data
+│ │ +    for layer in layers[:-1]:
+│ │ +        out = torch.bmm(layer[0], out.transpose(1, 2)).transpose(1, 2)
+│ │  
+│ │ -            out = F.relu(out)
+│ │ -            
+│ │ -        out = torch.einsum('mti,mbi->mbt', self.layers[-1][0], out)
+│ │ -        out = out + self.layers[-1][1].unsqueeze(1)
+│ │ -        return out
+│ │ +        out = out + layer[1].unsqueeze(1)
+│ │ +        out = F.relu(out)
+│ │ +        
+│ │ +    out = torch.bmm(layers[-1][0], out.transpose(1, 2)).transpose(1, 2)
+│ │ +    out = out + layers[-1][1].unsqueeze(1)
+│ │ +    return out
+│ │      
+│ │  class MaskedNetwork(SimpleNetwork):
+│ │      def __init__(self, input_size, mask_size, layers=[10]):
+│ │          super().__init__(mask_size, layers=layers)
+│ │          template = np.zeros(input_size)
+│ │          mask = np.random.choice(len(template), mask_size, False)
+│ │          template[mask] = 1
+│ │   --- hypertab-0.5.2/hypertab/training_utils.py
+│ ├── +++ hypertab-0.6.0/hypertab/training_utils.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,24 +1,21 @@
+│ │ -from dotenv import load_dotenv
+│ │ -
+│ │ -import os
+│ │ -
+│ │  import torch
+│ │  import torchvision.transforms as transforms
+│ │  import torchvision.datasets as datasets
+│ │  import numpy as np
+│ │  import torch.utils.data as data_utils
+│ │  from sklearn.metrics import roc_auc_score, f1_score, precision_score, recall_score, balanced_accuracy_score
+│ │  from .hypernetwork import TrainingModes
+│ │  
+│ │  from joblib.externals.loky.backend.context import get_context
+│ │  
+│ │  torch.set_default_dtype(torch.float32)
+│ │  
+│ │  from tqdm import trange
+│ │ +import time
+│ │  
+│ │  def get_dataset(size=60000, masked=False, mask_no=200, mask_size=700, shared_mask=False, batch_size=32, test_batch_size=32):
+│ │      mods = [transforms.ToTensor(), 
+│ │          transforms.Normalize((0.1307,), (0.3081,)),    #mean and std of MNIST
+│ │          transforms.Lambda(lambda x: torch.flatten(x))]
+│ │      mods = transforms.Compose(mods)
+│ │      
+│ │ @@ -143,14 +140,15 @@
+│ │                      y_pred.extend(outputs.tolist())
+│ │  
+│ │                  elif hypernet.mode == TrainingModes.CARTHESIAN:
+│ │                      masks = hypernet.test_mask
+│ │                      optimizer.zero_grad()
+│ │  
+│ │                      outputs = hypernet._slow_step_training(inputs, masks)
+│ │ +
+│ │                      loss = 0
+│ │                      preds = []
+│ │                      outputs = torch.permute(outputs, (1, 2, 0))
+│ │                      labels = labels[:, None].tile((1, len(masks)))
+│ │                      loss = criterion(outputs, labels)
+│ │                      preds = outputs.tolist()
+│ │   --- hypertab-0.5.2/hypertab.egg-info/PKG-INFO
+│ ├── +++ hypertab-0.6.0/hypertab.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: hypertab
+│ │ -Version: 0.5.2
+│ │ +Version: 0.6.0
+│ │  Summary: HyperTab: hypernetwork for small tabular datasets
+│ │  Home-page: https://github.com/wwydmanski/hypertab
+│ │  Author: Witold Wydmański
+│ │  Author-email: wwydmanski@gmail.com
+│ │  License: MIT
+│ │  Description-Content-Type: text/markdown
+│ │   --- hypertab-0.5.2/setup.py
+│ ├── +++ hypertab-0.6.0/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -7,15 +7,15 @@
+│ │  with open("README.md", "r") as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │  setup(
+│ │      name="hypertab",
+│ │      author="Witold Wydmański",
+│ │      author_email="wwydmanski@gmail.com",
+│ │ -    version="0.5.2",
+│ │ +    version="0.6.0",
+│ │      description="HyperTab: hypernetwork for small tabular datasets",
+│ │      long_description=long_description,
+│ │      long_description_content_type='text/markdown',
+│ │      license="MIT",
+│ │      packages=find_packages(include=['hypertab', 'hypertab.*']),
+│ │      install_requires=required,
+│ │      url="https://github.com/wwydmanski/hypertab"

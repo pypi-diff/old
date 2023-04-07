@@ -1,0 +1,564 @@
+# Comparing `tmp/tornado-analytics-1.1.1.tar.gz` & `tmp/tornado-analytics-1.1.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "tornado-analytics-1.1.1.tar", last modified: Mon Apr  3 20:16:09 2023, max compression
++gzip compressed data, was "tornado-analytics-1.1.2.tar", last modified: Fri Apr  7 09:13:28 2023, max compression
+```
+
+## Comparing `tornado-analytics-1.1.1.tar` & `tornado-analytics-1.1.2.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,17 @@
+-drwxrwxrwx   0        0        0        0 2023-04-03 20:16:09.392795 tornado-analytics-1.1.1/
+--rw-rw-rw-   0        0        0     1086 2022-12-06 23:56:29.000000 tornado-analytics-1.1.1/LICENSE
+--rw-rw-rw-   0        0        0     6676 2023-04-03 20:16:09.390788 tornado-analytics-1.1.1/PKG-INFO
+--rw-rw-rw-   0        0        0     4765 2023-04-03 19:55:49.000000 tornado-analytics-1.1.1/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-03 20:16:09.349795 tornado-analytics-1.1.1/api_analytics/
+--rw-rw-rw-   0        0        0        0 2022-12-06 23:56:29.000000 tornado-analytics-1.1.1/api_analytics/__init__.py
+--rw-rw-rw-   0        0        0      901 2023-04-03 20:01:43.000000 tornado-analytics-1.1.1/api_analytics/core.py
+--rw-rw-rw-   0        0        0     1029 2023-04-03 19:32:20.000000 tornado-analytics-1.1.1/api_analytics/tornado.py
+--rw-rw-rw-   0        0        0      796 2023-04-03 20:15:39.000000 tornado-analytics-1.1.1/pyproject.toml
+--rw-rw-rw-   0        0        0       42 2023-04-03 20:16:09.392795 tornado-analytics-1.1.1/setup.cfg
+--rw-rw-rw-   0        0        0      622 2023-04-03 20:15:41.000000 tornado-analytics-1.1.1/setup.py
+-drwxrwxrwx   0        0        0        0 2023-04-03 20:16:09.388790 tornado-analytics-1.1.1/tornado_analytics.egg-info/
+--rw-rw-rw-   0        0        0     6676 2023-04-03 20:16:09.000000 tornado-analytics-1.1.1/tornado_analytics.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      318 2023-04-03 20:16:09.000000 tornado-analytics-1.1.1/tornado_analytics.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-03 20:16:09.000000 tornado-analytics-1.1.1/tornado_analytics.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       52 2023-04-03 20:16:09.000000 tornado-analytics-1.1.1/tornado_analytics.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       14 2023-04-03 20:16:09.000000 tornado-analytics-1.1.1/tornado_analytics.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-07 09:13:28.622589 tornado-analytics-1.1.2/
++-rw-rw-rw-   0        0        0     1086 2023-04-07 09:07:38.000000 tornado-analytics-1.1.2/LICENSE
++-rw-rw-rw-   0        0        0     6590 2023-04-07 09:13:28.620593 tornado-analytics-1.1.2/PKG-INFO
++-rw-rw-rw-   0        0        0     4679 2023-04-07 09:13:06.000000 tornado-analytics-1.1.2/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 09:13:28.570593 tornado-analytics-1.1.2/api_analytics/
++-rw-rw-rw-   0        0        0        0 2022-12-06 23:56:29.000000 tornado-analytics-1.1.2/api_analytics/__init__.py
++-rw-rw-rw-   0        0        0      913 2023-04-07 08:45:35.000000 tornado-analytics-1.1.2/api_analytics/core.py
++-rw-rw-rw-   0        0        0     1029 2023-04-03 19:32:20.000000 tornado-analytics-1.1.2/api_analytics/tornado.py
++-rw-rw-rw-   0        0        0      796 2023-04-07 09:07:43.000000 tornado-analytics-1.1.2/pyproject.toml
++-rw-rw-rw-   0        0        0       42 2023-04-07 09:13:28.622589 tornado-analytics-1.1.2/setup.cfg
++-rw-rw-rw-   0        0        0      622 2023-04-07 09:07:53.000000 tornado-analytics-1.1.2/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:13:28.616594 tornado-analytics-1.1.2/tornado_analytics.egg-info/
++-rw-rw-rw-   0        0        0     6590 2023-04-07 09:13:28.000000 tornado-analytics-1.1.2/tornado_analytics.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      318 2023-04-07 09:13:28.000000 tornado-analytics-1.1.2/tornado_analytics.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 09:13:28.000000 tornado-analytics-1.1.2/tornado_analytics.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       52 2023-04-07 09:13:28.000000 tornado-analytics-1.1.2/tornado_analytics.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       14 2023-04-07 09:13:28.000000 tornado-analytics-1.1.2/tornado_analytics.egg-info/top_level.txt
+```
+
+### Comparing `tornado-analytics-1.1.1/LICENSE` & `tornado-analytics-1.1.2/LICENSE`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ MIT License
+ 
+-Copyright (c) 2022 Tom Draper
++Copyright (c) 2023 Tom Draper
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+```
+
+### Comparing `tornado-analytics-1.1.1/PKG-INFO` & `tornado-analytics-1.1.2/PKG-INFO`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,17 +1,17 @@
+ Metadata-Version: 2.1
+ Name: tornado-analytics
+-Version: 1.1.1
++Version: 1.1.2
+ Summary: Monitoring and analytics for Tornado applications.
+ Home-page: https://github.com/tom-draper/api-analytics
+ Author: Tom Draper
+ Author-email: Tom Draper <tomjdraper1@gmail.com>
+ License: MIT License
+         
+-        Copyright (c) 2022 Tom Draper
++        Copyright (c) 2023 Tom Draper
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+@@ -39,27 +39,27 @@
+ 
+ # Tornado Analytics
+ 
+ A lightweight API analytics solution, complete with a dashboard.
+ 
+ ## Getting Started
+ 
+-### 1. Generate a new API key
++### 1. Generate an API key
+ 
+-Head to https://my-api-analytics.vercel.app/generate to generate your unique API key with a single click. This key is used to monitor your specific API, so keep it secret! It's also required in order to view your APIs analytics dashboard.
++Head to https://apianalytics.dev/generate to generate your unique API key with a single click. This key is used to monitor your specific API and should be stored privately. It's also required in order to view your API analytics dashboard.
+ 
+ ### 2. Add middleware to your API
+ 
+-Add our lightweight middleware to your API. Almost all processing is handled by our servers so there should be virtually no impact on your APIs performance.
++Add our lightweight middleware to your API. Almost all processing is handled by our servers so there is minimal impact on the performance of your API.
+ 
+ ```bash
+ pip install tornado-analytics
+ ```
+ 
+-Modify your handler to inherit from `Analytics`. Create a `__init__()` method on your handler, passing along the application and response along with your unique API key.
++Modify your handler to inherit from `Analytics`. Create a `__init__()` method, passing along the application and response along with your unique API key.
+ 
+ ```py
+ import asyncio
+ from tornado.web import Application
+ 
+ from api_analytics.tornado import Analytics
+ 
+@@ -90,54 +90,55 @@
+ 1. Through visualizations and statistics on our dashboard
+ 2. Accessed directly via our data API
+ 
+ You can use the same API key across multiple APIs, but all your data will appear in the same dashboard. We recommend generating a new API key for each additional API server you want analytics for.
+ 
+ #### Dashboard
+ 
+-Head to https://my-api-analytics.vercel.app/dashboard and paste in your API key to access your dashboard.
++Head to https://apianalytics.dev/dashboard and paste in your API key to access your dashboard.
+ 
+-Demo: https://my-api-analytics.vercel.app/dashboard/demo
++Demo: https://apianalytics.dev/dashboard/demo
+ 
+ ![Dashboard](https://user-images.githubusercontent.com/41476809/211800529-a84a0aa3-70c9-47d4-aa0d-7f9bbd3bc9b5.png)
+ 
+ #### Data API
+ 
+-Logged data for all requests can be accessed via our REST API. Simply send a GET request to `https://api-analytics-server.vercel.app/api/data` with your API key set as `X-AUTH-TOKEN` in headers.
++Logged data for all requests can be accessed via our REST API. Simply send a GET request to `https://apianalytics-server.com/api/data` with your API key set as `X-AUTH-TOKEN` in headers.
+ 
+ ##### Python
+ 
+ ```py
+ import requests
+ 
+ headers = {
+  "X-AUTH-TOKEN": <API-KEY>
+ }
+ 
+-response = requests.get("https://api-analytics-server.vercel.app/api/data", headers=headers)
++response = requests.get("https://apianalytics-server.com/api/data", headers=headers)
+ print(response.json())
+ ```
++
+ ##### Node.js
+ 
+ ```js
+-fetch("https://api-analytics-server.vercel.app/api/data", {
++fetch("https://apianalytics-server.com/api/data", {
+   headers: { "X-AUTH-TOKEN": <API-KEY> },
+ })
+   .then((response) => {
+     return response.json();
+   })
+   .then((data) => {
+     console.log(data);
+   });
+ ```
+ 
+ ##### cURL
+ 
+ ```bash
+-curl --header "X-AUTH-TOKEN: <API-KEY>" https://api-analytics-server.vercel.app/api/data
++curl --header "X-AUTH-TOKEN: <API-KEY>" https://apianalytics-server.com/api/data
+ ```
+ 
+ ## Monitoring (coming soon)
+ 
+ Opt-in active API monitoring is coming soon. Our servers will regularly ping your API endpoints to monitor uptime and response time. Optional email alerts to notify you when your endpoints are down can be subscribed to.
+ 
+ ![Monitoring](https://user-images.githubusercontent.com/41476809/208298759-f937b668-2d86-43a2-b615-6b7f0b2bc20c.png)
+@@ -158,15 +159,15 @@
+  - API hostname
+  - API framework (FastAPI, Flask, Express etc.)
+ 
+ Data collected is only ever used to populate your analytics dashboard. All data stored is anonymous, with the API key the only link between you and your logged request data. Should you lose your API key, you will have no method to access your API analytics.
+ 
+ ### Delete Data
+ 
+-At any time, you can delete all stored data associated with your API key by going to https://my-api-analytics.vercel.app/delete and entering your API key.
++At any time, you can delete all stored data associated with your API key by going to https://apianalytics.dev/delete and entering your API key.
+ 
+ API keys and their associated API request data are scheduled be deleted after 1 year of inactivity.
+ 
+ ## Development
+ 
+ This project is still in the early stages of development and bugs are to be expected.
+ 
+@@ -175,7 +176,8 @@
+ Contributions, issues and feature requests are welcome.
+ 
+ - Fork it (https://github.com/tom-draper/api-analytics)
+ - Create your feature branch (`git checkout -b my-new-feature`)
+ - Commit your changes (`git commit -am 'Add some feature'`)
+ - Push to the branch (`git push origin my-new-feature`)
+ - Create a new Pull Request
++
+```
+
+### Comparing `tornado-analytics-1.1.1/README.md` & `tornado-analytics-1.1.2/README.md`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,26 +1,26 @@
+ # Tornado Analytics
+ 
+ A lightweight API analytics solution, complete with a dashboard.
+ 
+ ## Getting Started
+ 
+-### 1. Generate a new API key
++### 1. Generate an API key
+ 
+-Head to https://my-api-analytics.vercel.app/generate to generate your unique API key with a single click. This key is used to monitor your specific API, so keep it secret! It's also required in order to view your APIs analytics dashboard.
++Head to https://apianalytics.dev/generate to generate your unique API key with a single click. This key is used to monitor your specific API and should be stored privately. It's also required in order to view your API analytics dashboard.
+ 
+ ### 2. Add middleware to your API
+ 
+-Add our lightweight middleware to your API. Almost all processing is handled by our servers so there should be virtually no impact on your APIs performance.
++Add our lightweight middleware to your API. Almost all processing is handled by our servers so there is minimal impact on the performance of your API.
+ 
+ ```bash
+ pip install tornado-analytics
+ ```
+ 
+-Modify your handler to inherit from `Analytics`. Create a `__init__()` method on your handler, passing along the application and response along with your unique API key.
++Modify your handler to inherit from `Analytics`. Create a `__init__()` method, passing along the application and response along with your unique API key.
+ 
+ ```py
+ import asyncio
+ from tornado.web import Application
+ 
+ from api_analytics.tornado import Analytics
+ 
+@@ -51,54 +51,55 @@
+ 1. Through visualizations and statistics on our dashboard
+ 2. Accessed directly via our data API
+ 
+ You can use the same API key across multiple APIs, but all your data will appear in the same dashboard. We recommend generating a new API key for each additional API server you want analytics for.
+ 
+ #### Dashboard
+ 
+-Head to https://my-api-analytics.vercel.app/dashboard and paste in your API key to access your dashboard.
++Head to https://apianalytics.dev/dashboard and paste in your API key to access your dashboard.
+ 
+-Demo: https://my-api-analytics.vercel.app/dashboard/demo
++Demo: https://apianalytics.dev/dashboard/demo
+ 
+ ![Dashboard](https://user-images.githubusercontent.com/41476809/211800529-a84a0aa3-70c9-47d4-aa0d-7f9bbd3bc9b5.png)
+ 
+ #### Data API
+ 
+-Logged data for all requests can be accessed via our REST API. Simply send a GET request to `https://api-analytics-server.vercel.app/api/data` with your API key set as `X-AUTH-TOKEN` in headers.
++Logged data for all requests can be accessed via our REST API. Simply send a GET request to `https://apianalytics-server.com/api/data` with your API key set as `X-AUTH-TOKEN` in headers.
+ 
+ ##### Python
+ 
+ ```py
+ import requests
+ 
+ headers = {
+  "X-AUTH-TOKEN": <API-KEY>
+ }
+ 
+-response = requests.get("https://api-analytics-server.vercel.app/api/data", headers=headers)
++response = requests.get("https://apianalytics-server.com/api/data", headers=headers)
+ print(response.json())
+ ```
++
+ ##### Node.js
+ 
+ ```js
+-fetch("https://api-analytics-server.vercel.app/api/data", {
++fetch("https://apianalytics-server.com/api/data", {
+   headers: { "X-AUTH-TOKEN": <API-KEY> },
+ })
+   .then((response) => {
+     return response.json();
+   })
+   .then((data) => {
+     console.log(data);
+   });
+ ```
+ 
+ ##### cURL
+ 
+ ```bash
+-curl --header "X-AUTH-TOKEN: <API-KEY>" https://api-analytics-server.vercel.app/api/data
++curl --header "X-AUTH-TOKEN: <API-KEY>" https://apianalytics-server.com/api/data
+ ```
+ 
+ ## Monitoring (coming soon)
+ 
+ Opt-in active API monitoring is coming soon. Our servers will regularly ping your API endpoints to monitor uptime and response time. Optional email alerts to notify you when your endpoints are down can be subscribed to.
+ 
+ ![Monitoring](https://user-images.githubusercontent.com/41476809/208298759-f937b668-2d86-43a2-b615-6b7f0b2bc20c.png)
+@@ -119,15 +120,15 @@
+  - API hostname
+  - API framework (FastAPI, Flask, Express etc.)
+ 
+ Data collected is only ever used to populate your analytics dashboard. All data stored is anonymous, with the API key the only link between you and your logged request data. Should you lose your API key, you will have no method to access your API analytics.
+ 
+ ### Delete Data
+ 
+-At any time, you can delete all stored data associated with your API key by going to https://my-api-analytics.vercel.app/delete and entering your API key.
++At any time, you can delete all stored data associated with your API key by going to https://apianalytics.dev/delete and entering your API key.
+ 
+ API keys and their associated API request data are scheduled be deleted after 1 year of inactivity.
+ 
+ ## Development
+ 
+ This project is still in the early stages of development and bugs are to be expected.
+ 
+@@ -136,7 +137,8 @@
+ Contributions, issues and feature requests are welcome.
+ 
+ - Fork it (https://github.com/tom-draper/api-analytics)
+ - Create your feature branch (`git checkout -b my-new-feature`)
+ - Commit your changes (`git commit -am 'Add some feature'`)
+ - Push to the branch (`git push origin my-new-feature`)
+ - Create a new Pull Request
++
+```
+
+### Comparing `tornado-analytics-1.1.1/api_analytics/core.py` & `tornado-analytics-1.1.2/api_analytics/core.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+ 
+ 
+ _requests = []
+ _last_posted = datetime.now()
+ 
+ 
+ def _post_requests(api_key: str, requests_data: list[dict], framework: str):
+-    requests.post('https://213.168.248.206/api/log-request',
++    requests.post('https://www.apianalytics-server.com/api/log-request',
+                   json={
+                       'api_key': api_key,
+                       'requests': requests_data,
+                       'framework': framework
+                   }, timeout=5)
+```
+
+### Comparing `tornado-analytics-1.1.1/api_analytics/tornado.py` & `tornado-analytics-1.1.2/api_analytics/tornado.py`
+
+ * *Files identical despite different names*
+
+### Comparing `tornado-analytics-1.1.1/pyproject.toml` & `tornado-analytics-1.1.2/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -15,15 +15,15 @@
+ dependencies = ["tornado", "requests"]
+ description = "Monitoring and analytics for Tornado applications."
+ keywords = ["analytics", "api", "dashboard", "tornado", "middleware"]
+ license = {file = "LICENSE"}
+ name = "tornado-analytics"
+ readme = "README.md"
+ requires-python = ">=3.7"
+-version = "1.1.1"
++version = "1.1.2"
+ 
+ [project.optional-dependencies]
+ build = ["build", "twine"]
+ dev = ["pytest"]
+ 
+ [project.urls]
+ repository = "https://github.com/tom-draper/api-analytics"
+```
+
+### Comparing `tornado-analytics-1.1.1/setup.py` & `tornado-analytics-1.1.2/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ from setuptools import setup
+ 
+ long_description = open("README.md").read()
+ 
+ setup(
+     name="tornado-analytics",
+-    version="1.1.1",
++    version="1.1.2",
+     author="Tom Draper",
+     author_email="tomjdraper1@gmail.com",
+     license="MIT",
+     description="Monitoring and analytics for Tornado applications.",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/tom-draper/api-analytics",
+```
+
+### Comparing `tornado-analytics-1.1.1/tornado_analytics.egg-info/PKG-INFO` & `tornado-analytics-1.1.2/tornado_analytics.egg-info/PKG-INFO`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,17 +1,17 @@
+ Metadata-Version: 2.1
+ Name: tornado-analytics
+-Version: 1.1.1
++Version: 1.1.2
+ Summary: Monitoring and analytics for Tornado applications.
+ Home-page: https://github.com/tom-draper/api-analytics
+ Author: Tom Draper
+ Author-email: Tom Draper <tomjdraper1@gmail.com>
+ License: MIT License
+         
+-        Copyright (c) 2022 Tom Draper
++        Copyright (c) 2023 Tom Draper
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+@@ -39,27 +39,27 @@
+ 
+ # Tornado Analytics
+ 
+ A lightweight API analytics solution, complete with a dashboard.
+ 
+ ## Getting Started
+ 
+-### 1. Generate a new API key
++### 1. Generate an API key
+ 
+-Head to https://my-api-analytics.vercel.app/generate to generate your unique API key with a single click. This key is used to monitor your specific API, so keep it secret! It's also required in order to view your APIs analytics dashboard.
++Head to https://apianalytics.dev/generate to generate your unique API key with a single click. This key is used to monitor your specific API and should be stored privately. It's also required in order to view your API analytics dashboard.
+ 
+ ### 2. Add middleware to your API
+ 
+-Add our lightweight middleware to your API. Almost all processing is handled by our servers so there should be virtually no impact on your APIs performance.
++Add our lightweight middleware to your API. Almost all processing is handled by our servers so there is minimal impact on the performance of your API.
+ 
+ ```bash
+ pip install tornado-analytics
+ ```
+ 
+-Modify your handler to inherit from `Analytics`. Create a `__init__()` method on your handler, passing along the application and response along with your unique API key.
++Modify your handler to inherit from `Analytics`. Create a `__init__()` method, passing along the application and response along with your unique API key.
+ 
+ ```py
+ import asyncio
+ from tornado.web import Application
+ 
+ from api_analytics.tornado import Analytics
+ 
+@@ -90,54 +90,55 @@
+ 1. Through visualizations and statistics on our dashboard
+ 2. Accessed directly via our data API
+ 
+ You can use the same API key across multiple APIs, but all your data will appear in the same dashboard. We recommend generating a new API key for each additional API server you want analytics for.
+ 
+ #### Dashboard
+ 
+-Head to https://my-api-analytics.vercel.app/dashboard and paste in your API key to access your dashboard.
++Head to https://apianalytics.dev/dashboard and paste in your API key to access your dashboard.
+ 
+-Demo: https://my-api-analytics.vercel.app/dashboard/demo
++Demo: https://apianalytics.dev/dashboard/demo
+ 
+ ![Dashboard](https://user-images.githubusercontent.com/41476809/211800529-a84a0aa3-70c9-47d4-aa0d-7f9bbd3bc9b5.png)
+ 
+ #### Data API
+ 
+-Logged data for all requests can be accessed via our REST API. Simply send a GET request to `https://api-analytics-server.vercel.app/api/data` with your API key set as `X-AUTH-TOKEN` in headers.
++Logged data for all requests can be accessed via our REST API. Simply send a GET request to `https://apianalytics-server.com/api/data` with your API key set as `X-AUTH-TOKEN` in headers.
+ 
+ ##### Python
+ 
+ ```py
+ import requests
+ 
+ headers = {
+  "X-AUTH-TOKEN": <API-KEY>
+ }
+ 
+-response = requests.get("https://api-analytics-server.vercel.app/api/data", headers=headers)
++response = requests.get("https://apianalytics-server.com/api/data", headers=headers)
+ print(response.json())
+ ```
++
+ ##### Node.js
+ 
+ ```js
+-fetch("https://api-analytics-server.vercel.app/api/data", {
++fetch("https://apianalytics-server.com/api/data", {
+   headers: { "X-AUTH-TOKEN": <API-KEY> },
+ })
+   .then((response) => {
+     return response.json();
+   })
+   .then((data) => {
+     console.log(data);
+   });
+ ```
+ 
+ ##### cURL
+ 
+ ```bash
+-curl --header "X-AUTH-TOKEN: <API-KEY>" https://api-analytics-server.vercel.app/api/data
++curl --header "X-AUTH-TOKEN: <API-KEY>" https://apianalytics-server.com/api/data
+ ```
+ 
+ ## Monitoring (coming soon)
+ 
+ Opt-in active API monitoring is coming soon. Our servers will regularly ping your API endpoints to monitor uptime and response time. Optional email alerts to notify you when your endpoints are down can be subscribed to.
+ 
+ ![Monitoring](https://user-images.githubusercontent.com/41476809/208298759-f937b668-2d86-43a2-b615-6b7f0b2bc20c.png)
+@@ -158,15 +159,15 @@
+  - API hostname
+  - API framework (FastAPI, Flask, Express etc.)
+ 
+ Data collected is only ever used to populate your analytics dashboard. All data stored is anonymous, with the API key the only link between you and your logged request data. Should you lose your API key, you will have no method to access your API analytics.
+ 
+ ### Delete Data
+ 
+-At any time, you can delete all stored data associated with your API key by going to https://my-api-analytics.vercel.app/delete and entering your API key.
++At any time, you can delete all stored data associated with your API key by going to https://apianalytics.dev/delete and entering your API key.
+ 
+ API keys and their associated API request data are scheduled be deleted after 1 year of inactivity.
+ 
+ ## Development
+ 
+ This project is still in the early stages of development and bugs are to be expected.
+ 
+@@ -175,7 +176,8 @@
+ Contributions, issues and feature requests are welcome.
+ 
+ - Fork it (https://github.com/tom-draper/api-analytics)
+ - Create your feature branch (`git checkout -b my-new-feature`)
+ - Commit your changes (`git commit -am 'Add some feature'`)
+ - Push to the branch (`git push origin my-new-feature`)
+ - Create a new Pull Request
++
+```
+

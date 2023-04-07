@@ -1,0 +1,273 @@
+--- tmp/TrackerGG-2.1.1.tar.gz
++++ tmp/TrackerGG-2.1.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "TrackerGG-2.1.1.tar", last modified: Wed Apr  5 07:12:04 2023, max compression
+│ +gzip compressed data, was "TrackerGG-2.1.3.tar", last modified: Fri Apr  7 09:04:17 2023, max compression
+│   --- TrackerGG-2.1.1.tar
+├── +++ TrackerGG-2.1.3.tar
+│ ├── file list
+│ │ @@ -1,23 +1,23 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 07:12:04.723416 TrackerGG-2.1.1/
+│ │ --rw-rw-rw-   0        0        0     1085 2023-03-28 13:34:09.000000 TrackerGG-2.1.1/LICENSE
+│ │ --rw-rw-rw-   0        0        0     1425 2023-04-05 07:12:04.719396 TrackerGG-2.1.1/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1042 2023-04-05 02:22:42.000000 TrackerGG-2.1.1/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 07:12:04.621797 TrackerGG-2.1.1/TrackerGG/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 07:12:04.719396 TrackerGG-2.1.1/TrackerGG/Models/
+│ │ --rw-rw-rw-   0        0        0      621 2023-04-04 05:52:53.000000 TrackerGG-2.1.1/TrackerGG/Models/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3907 2023-04-05 06:57:58.000000 TrackerGG-2.1.1/TrackerGG/Models/csgo.py
+│ │ --rw-rw-rw-   0        0        0     1477 2023-03-28 12:55:38.000000 TrackerGG-2.1.1/TrackerGG/Models/platform.py
+│ │ --rw-rw-rw-   0        0        0     1399 2023-04-03 04:45:05.000000 TrackerGG-2.1.1/TrackerGG/Models/segment.py
+│ │ --rw-rw-rw-   0        0        0     2059 2023-03-28 23:34:08.000000 TrackerGG-2.1.1/TrackerGG/Models/user.py
+│ │ --rw-rw-rw-   0        0        0      802 2023-04-04 13:02:49.000000 TrackerGG-2.1.1/TrackerGG/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2385 2023-04-05 02:41:26.000000 TrackerGG-2.1.1/TrackerGG/client.py
+│ │ --rw-rw-rw-   0        0        0     3808 2023-04-04 12:55:17.000000 TrackerGG-2.1.1/TrackerGG/httpclient.py
+│ │ --rw-rw-rw-   0        0        0      833 2023-04-04 13:15:48.000000 TrackerGG-2.1.1/TrackerGG/utils.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 07:12:04.666693 TrackerGG-2.1.1/TrackerGG.egg-info/
+│ │ --rw-rw-rw-   0        0        0     1425 2023-04-05 07:12:04.000000 TrackerGG-2.1.1/TrackerGG.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      411 2023-04-05 07:12:04.000000 TrackerGG-2.1.1/TrackerGG.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-05 07:12:04.000000 TrackerGG-2.1.1/TrackerGG.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       17 2023-04-05 07:12:04.000000 TrackerGG-2.1.1/TrackerGG.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       10 2023-04-05 07:12:04.000000 TrackerGG-2.1.1/TrackerGG.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-05 07:12:04.723416 TrackerGG-2.1.1/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      655 2023-04-05 07:04:33.000000 TrackerGG-2.1.1/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 09:04:17.591719 TrackerGG-2.1.3/
+│ │ +-rw-rw-rw-   0        0        0     1085 2023-03-28 13:34:09.000000 TrackerGG-2.1.3/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     1425 2023-04-07 09:04:17.591719 TrackerGG-2.1.3/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     1042 2023-04-05 02:22:42.000000 TrackerGG-2.1.3/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 09:04:17.567718 TrackerGG-2.1.3/TrackerGG/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 09:04:17.591719 TrackerGG-2.1.3/TrackerGG/Models/
+│ │ +-rw-rw-rw-   0        0        0      621 2023-04-04 05:52:53.000000 TrackerGG-2.1.3/TrackerGG/Models/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3911 2023-04-05 07:44:54.000000 TrackerGG-2.1.3/TrackerGG/Models/csgo.py
+│ │ +-rw-rw-rw-   0        0        0     1477 2023-03-28 12:55:38.000000 TrackerGG-2.1.3/TrackerGG/Models/platform.py
+│ │ +-rw-rw-rw-   0        0        0     1399 2023-04-03 04:45:05.000000 TrackerGG-2.1.3/TrackerGG/Models/segment.py
+│ │ +-rw-rw-rw-   0        0        0     2059 2023-03-28 23:34:08.000000 TrackerGG-2.1.3/TrackerGG/Models/user.py
+│ │ +-rw-rw-rw-   0        0        0      802 2023-04-04 13:02:49.000000 TrackerGG-2.1.3/TrackerGG/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2479 2023-04-07 08:50:04.000000 TrackerGG-2.1.3/TrackerGG/client.py
+│ │ +-rw-rw-rw-   0        0        0     3531 2023-04-07 08:57:00.000000 TrackerGG-2.1.3/TrackerGG/httpclient.py
+│ │ +-rw-rw-rw-   0        0        0      833 2023-04-04 13:15:48.000000 TrackerGG-2.1.3/TrackerGG/utils.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 09:04:17.583719 TrackerGG-2.1.3/TrackerGG.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     1425 2023-04-07 09:04:17.000000 TrackerGG-2.1.3/TrackerGG.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      411 2023-04-07 09:04:17.000000 TrackerGG-2.1.3/TrackerGG.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 09:04:17.000000 TrackerGG-2.1.3/TrackerGG.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       17 2023-04-07 09:04:17.000000 TrackerGG-2.1.3/TrackerGG.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       10 2023-04-07 09:04:17.000000 TrackerGG-2.1.3/TrackerGG.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 09:04:17.591719 TrackerGG-2.1.3/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      655 2023-04-07 09:03:28.000000 TrackerGG-2.1.3/setup.py
+│ │   --- TrackerGG-2.1.1/LICENSE
+│ ├── +++ TrackerGG-2.1.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- TrackerGG-2.1.1/PKG-INFO
+│ ├── +++ TrackerGG-2.1.3/PKG-INFO
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: TrackerGG
+│ │ -Version: 2.1.1
+│ │ +Version: 2.1.3
+│ │  Summary: TrackerGG API Wrapper Library
+│ │  Home-page: https://github.com/dev-ruby/TrackerGG
+│ │  Author: DevRuby
+│ │  Author-email: hiveruby@gmail.com
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Requires-Python: >=3.3
+│ │   --- TrackerGG-2.1.1/README.md
+│ ├── +++ TrackerGG-2.1.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- TrackerGG-2.1.1/TrackerGG/Models/__init__.py
+│ ├── +++ TrackerGG-2.1.3/TrackerGG/Models/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- TrackerGG-2.1.1/TrackerGG/Models/csgo.py
+│ ├── +++ TrackerGG-2.1.3/TrackerGG/Models/csgo.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -64,22 +64,24 @@
+│ │      def __init__(self, data: Dict[str, Union[str, dict]]):
+│ │          self.type: str = data["type"]
+│ │          self.attributes: dict = data["attributes"]
+│ │          self.metadata: dict = data["metadata"]
+│ │          self.expiry_date: str = data["expiryDate"]
+│ │          self.stats: CSGOMapStats = CSGOMapStats(data["stats"])
+│ │  
+│ │ +
+│ │  class CSGOSegment:
+│ │      def __init__(self, data: Dict[str, Union[str, dict]]):
+│ │          self.type: str = data["type"]
+│ │          self.attributes: dict = data["attributes"]
+│ │          self.metadata: dict = data["metadata"]
+│ │          self.expiry_date: str = data["expiryDate"]
+│ │          self.stats: CSGOStats = CSGOStats(data["stats"])
+│ │  
+│ │ +
+│ │  class CSGOProfile:
+│ │      def __init__(self, data: Dict[str, Any]):
+│ │          segments = []
+│ │          for seg in data["segments"]:
+│ │              segments.append(CSGOSegment(seg))
+│ │  
+│ │          self.platform_info: PlatformInfo = PlatformInfo(data["platformInfo"])
+│ │   --- TrackerGG-2.1.1/TrackerGG/Models/platform.py
+│ ├── +++ TrackerGG-2.1.3/TrackerGG/Models/platform.py
+│ │┄ Files identical despite different names
+│ │   --- TrackerGG-2.1.1/TrackerGG/Models/segment.py
+│ ├── +++ TrackerGG-2.1.3/TrackerGG/Models/segment.py
+│ │┄ Files identical despite different names
+│ │   --- TrackerGG-2.1.1/TrackerGG/Models/user.py
+│ ├── +++ TrackerGG-2.1.3/TrackerGG/Models/user.py
+│ │┄ Files identical despite different names
+│ │   --- TrackerGG-2.1.1/TrackerGG/__init__.py
+│ ├── +++ TrackerGG-2.1.3/TrackerGG/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- TrackerGG-2.1.1/TrackerGG/client.py
+│ ├── +++ TrackerGG-2.1.3/TrackerGG/client.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -45,29 +45,33 @@
+│ │          super().__init__(api_key)
+│ │  
+│ │      async def get_profile(self, identifier: str) -> CSGOProfile:
+│ │          response: ResponseData = await self.http_client.request(
+│ │              Route(RequestMethod.GET, f"/csgo/standard/profile/steam/{identifier}")
+│ │          )
+│ │  
+│ │ -        assert response.status == 200, "HTTP Response Status Code is not 200"
+│ │ +        assert response.status == 200, (
+│ │ +                "HTTP Response Status Code is not 200\nStatus Code : %d" % response.status
+│ │ +        )
+│ │  
+│ │          json_data: dict = json.loads(response.response_data)
+│ │  
+│ │          return CSGOProfile(json_data["data"])
+│ │  
+│ │      async def get_map_segment(self, identifier: str) -> List[CSGOMapSegment]:
+│ │          response: ResponseData = await self.http_client.request(
+│ │              Route(
+│ │                  RequestMethod.GET,
+│ │                  f"/csgo/standard/profile/steam/{identifier}/segments/map",
+│ │              )
+│ │          )
+│ │  
+│ │ -        assert response.status == 200, "HTTP Response Status Code is not 200\nStatus Code : %d"%response.status
+│ │ +        assert response.status == 200, (
+│ │ +            "HTTP Response Status Code is not 200\nStatus Code : %d" % response.status
+│ │ +        )
+│ │  
+│ │          json_data: dict = json.loads(response.response_data)
+│ │  
+│ │          segments = []
+│ │  
+│ │          for segment in json_data["data"]:
+│ │              segments.append(CSGOMapSegment(segment))
+│ │   --- TrackerGG-2.1.1/TrackerGG/httpclient.py
+│ ├── +++ TrackerGG-2.1.3/TrackerGG/httpclient.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -78,50 +78,46 @@
+│ │              cls._instance = super().__new__(cls)
+│ │          return cls._instance
+│ │  
+│ │      def __init__(self, loop: asyncio.AbstractEventLoop, api_key: str) -> None:
+│ │          self.loop: asyncio.AbstractEventLoop = loop
+│ │          self.session: aiohttp.ClientSession = MISSING
+│ │          self.api_key: str = api_key
+│ │ +        self.lock: asyncio.Lock = asyncio.Lock()
+│ │  
+│ │          atexit.register(self.close)
+│ │  
+│ │      async def request(
+│ │          self, route: Route, headers: Optional[Dict[str, str]] = None
+│ │      ) -> ResponseData:
+│ │ -        if headers:
+│ │ -            headers["User-Agent"] = self.USER_AGENT
+│ │ -            headers["Accept"] = "application/json"
+│ │ -            headers["Accept-Encoding"] = "gzip"
+│ │ -            headers["TRN-Api-Key"] = self.api_key
+│ │ -            headers["Host"] = "public-api.tracker.gg"
+│ │ -            headers["Connection"] = "keep-alive"
+│ │ -            headers["TE"] = "trailers"
+│ │ -            headers["Upgrade-Insecure-Requests"] = "1"
+│ │ -        else:
+│ │ -            headers = {
+│ │ -                "User-Agent": self.USER_AGENT,
+│ │ -                "Accept": "application/json",
+│ │ -                "Accept-Encoding": "gzip",
+│ │ -                "TRN-Api-Key": self.api_key,
+│ │ -                "Host": "public-api.tracker.gg",
+│ │ -                "Connection": "keep-alive",
+│ │ -                "TE": "trailers",
+│ │ -                "Upgrade-Insecure-Requests": "1",
+│ │ -            }
+│ │ +        if not headers:
+│ │ +            headers = {}
+│ │ +        default_header = {
+│ │ +            "User-Agent": self.USER_AGENT,
+│ │ +            "Accept": "application/json",
+│ │ +            "Accept-Encoding": "gzip",
+│ │ +            "TRN-Api-Key": self.api_key,
+│ │ +            "Host": "public-api.tracker.gg",
+│ │ +            "Connection": "keep-alive",
+│ │ +            "TE": "trailers",
+│ │ +            "Upgrade-Insecure-Requests": "1",
+│ │ +        }
+│ │ +
+│ │ +        headers.update(default_header)
+│ │  
+│ │          if self.session == MISSING:
+│ │              self.session = aiohttp.ClientSession()
+│ │  
+│ │ -        async with self.session.request(
+│ │ -            method=route.method.name, url=route.url, headers=headers
+│ │ -        ) as response:
+│ │ -            status: int = response.status
+│ │ -            text: str = await response.text(encoding="utf-8")
+│ │ -            return ResponseData(text, status)
+│ │ +        async with self.lock:
+│ │ +            async with self.session.request(
+│ │ +                method=route.method.name, url=route.url, headers=headers
+│ │ +            ) as response:
+│ │ +                status: int = response.status
+│ │ +                text: str = await response.text(encoding="utf-8")
+│ │ +                return ResponseData(text, status)
+│ │  
+│ │      def close(self) -> None:
+│ │          try:
+│ │              if not self.session.closed:
+│ │                  asyncio.run(self.session.close())
+│ │          except AttributeError:
+│ │              pass
+│ │   --- TrackerGG-2.1.1/TrackerGG/utils.py
+│ ├── +++ TrackerGG-2.1.3/TrackerGG/utils.py
+│ │┄ Files identical despite different names
+│ │   --- TrackerGG-2.1.1/TrackerGG.egg-info/PKG-INFO
+│ ├── +++ TrackerGG-2.1.3/TrackerGG.egg-info/PKG-INFO
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: TrackerGG
+│ │ -Version: 2.1.1
+│ │ +Version: 2.1.3
+│ │  Summary: TrackerGG API Wrapper Library
+│ │  Home-page: https://github.com/dev-ruby/TrackerGG
+│ │  Author: DevRuby
+│ │  Author-email: hiveruby@gmail.com
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Requires-Python: >=3.3
+│ │   --- TrackerGG-2.1.1/setup.py
+│ ├── +++ TrackerGG-2.1.3/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import setuptools
+│ │  
+│ │  with open("README.md", "r") as fs:
+│ │      long_description = fs.read()
+│ │  
+│ │  setuptools.setup(
+│ │      name="TrackerGG",
+│ │ -    version="2.1.1",
+│ │ +    version="2.1.3",
+│ │      author="DevRuby",
+│ │      author_email="hiveruby@gmail.com",
+│ │      description="TrackerGG API Wrapper Library",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/dev-ruby/TrackerGG",
+│ │      packages=setuptools.find_packages(),
