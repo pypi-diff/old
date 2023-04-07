@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.3-py3-none-any.whl.zip tmp/odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.4-py3-none-any.whl.zip --html versions/o/odoo-addon-purchase-receipt-expectation-from-partner/15.0.1.0.0.3-15.0.1.0.0.4/index.html --text versions/o/odoo-addon-purchase-receipt-expectation-from-partner/15.0.1.0.0.3-15.0.1.0.0.4/diff.txt --markdown versions/o/odoo-addon-purchase-receipt-expectation-from-partner/15.0.1.0.0.3-15.0.1.0.0.4/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">11.4 KB</span></div>
+  <div><span class="source">tmp/odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.3-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.4-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">5.48 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 22 lines modified</td><td colspan="2">Offset 1, 22 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>2499<del>2</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>20</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>2499<ins>4</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>20</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3337<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/README.rst</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3337<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>117<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>117<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>677<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/__manifest__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>677<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/__manifest__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<del>01</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/i18n/fr.po</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<ins>16</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/i18n/fr.po</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1062<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/i18n/purchase_receipt_expectation_from_partner.pot</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1062<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/i18n/purchase_receipt_expectation_from_partner.pot</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>151<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/models/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>151<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/models/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>389<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/models/purchase_order.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>389<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/models/purchase_order.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>456<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/models/res_partner.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>456<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/models/res_partner.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/readme/CONTRIBUTORS.rst</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/readme/CONTRIBUTORS.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>190<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/readme/DESCRIPTION.rst</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>190<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/readme/DESCRIPTION.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>324<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/readme/USAGE.rst</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>324<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/readme/USAGE.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9455<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/static/description/icon.png</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9455<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/static/description/icon.png</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12901<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/static/description/index.html</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12901<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/static/description/index.html</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>157<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/tests/__init__.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>157<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1799<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/tests/test_purchase_receipt_expectation_from_partner.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1799<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/tests/test_purchase_receipt_expectation_from_partner.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>507<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/views/res_partner.xml</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>507<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>45</ins><span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/views/res_partner.xml</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4002<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<del>3</del>.dist-info/METADATA</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4002<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>47</ins><span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<ins>4</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<del>3</del>.dist-info/WHEEL</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>47</ins><span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<ins>4</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<del>3</del>.dist-info/top_level.txt</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>47</ins><span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<ins>4</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2640<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>0<del>9</del>:<del>24</del><span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<del>3</del>.dist-info/RECORD</td><td class="diffline">21 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2640<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>0<ins>6</ins>:<ins>47</ins><span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<ins>4</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">20<span class="dp">·</span>files,<span class="dp">·</span>395<del>15</del><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>2031<del>2</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>48.6%</td><td class="diffline">22 </td><td class="diffpresent">20<span class="dp">·</span>files,<span class="dp">·</span>395<ins>30</ins><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>2031<ins>4</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>48.6%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.09 KB</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 42, 20 lines modified</td><td colspan="2">Offset 42, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/tests/test_purchase_receipt_expectation_from_partner.py</td><td class="diffline">42 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/tests/test_purchase_receipt_expectation_from_partner.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">43 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/views/res_partner.xml</td><td class="diffline">44 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/purchase_receipt_expectation_from_partner/views/res_partner.xml</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">45 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<del>3</del>.dist-info/METADATA</td><td class="diffline">46 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<ins>4</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">47 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<del>3</del>.dist-info/WHEEL</td><td class="diffline">48 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<ins>4</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">49 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<del>3</del>.dist-info/top_level.txt</td><td class="diffline">50 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<ins>4</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">51 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<del>3</del>.dist-info/RECORD</td><td class="diffline">52 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<ins>4</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">53 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">54 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">641 B</span></div>
+    <div id="odoo-addons-purchase_receipt_expectation_from_partner-i--n-fr.po"><span class="source">odoo/addons/purchase_receipt_expectation_from_partner/i18n/fr.po</span>
+      <a class="anchor" href="#odoo-addons-purchase_receipt_expectation_from_partner-i--n-fr.po">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 6, 14 lines modified</td><td colspan="2">Offset 6, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td><td class="diffline">6 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">&quot;Project-Id-Version:<span class="dp">·</span>Odoo<span class="dp">·</span>Server<span class="dp">·</span>15.0+e\n&quot;</td><td class="diffline">7 </td><td class="diffpresent">&quot;Project-Id-Version:<span class="dp">·</span>Odoo<span class="dp">·</span>Server<span class="dp">·</span>15.0+e\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">&quot;Report-Msgid-Bugs-To:<span class="dp">·</span>\n&quot;</td><td class="diffline">8 </td><td class="diffpresent">&quot;Report-Msgid-Bugs-To:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">&quot;POT-Creation-Date:<span class="dp">·</span>2022-02-10<span class="dp">·</span>15:41+0000\n&quot;</td><td class="diffline">9 </td><td class="diffpresent">&quot;POT-Creation-Date:<span class="dp">·</span>2022-02-10<span class="dp">·</span>15:41+0000\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">&quot;PO-Revision-Date:<span class="dp">·</span>2022-02-10<span class="dp">·</span>15:41+0000\n&quot;</td><td class="diffline">10 </td><td class="diffpresent">&quot;PO-Revision-Date:<span class="dp">·</span>2022-02-10<span class="dp">·</span>15:41+0000\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">&quot;Last-Translator:<span class="dp">·</span>\n&quot;</td><td class="diffline">11 </td><td class="diffpresent">&quot;Last-Translator:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">&quot;Language-Team:<span class="dp">·</span>\n&quot;</td><td class="diffline">12 </td><td class="diffpresent">&quot;Language-Team:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">13 </td><td class="diffpresent">&quot;Language:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td><td class="diffline">14 </td><td class="diffpresent">&quot;MIME-Version:<span class="dp">·</span>1.0\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td><td class="diffline">15 </td><td class="diffpresent">&quot;Content-Type:<span class="dp">·</span>text/plain;<span class="dp">·</span>charset=UTF-8\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td><td class="diffline">16 </td><td class="diffpresent">&quot;Content-Transfer-Encoding:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>\n&quot;</td><td class="diffline">17 </td><td class="diffpresent">&quot;Plural-Forms:<span class="dp">·</span>\n&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>purchase_receipt_expectation_from_partner</td><td class="diffline">18 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>purchase_receipt_expectation_from_partner</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:purchase_receipt_expectation_from_partner.model_res_partner</td><td class="diffline">19 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model,name:purchase_receipt_expectation_from_partner.model_res_partner</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">639 B</span></div>
+    <div><span class="source">odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.3.dist-info/METADATA</span> vs.</div>
+    <div id="odoo_addon_purchase_receipt_expectation_from_partner---.-.-.-.-.-.dist-info-METADATA"><span class="source">odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.4.dist-info/METADATA</span>
+      <a class="anchor" href="#odoo_addon_purchase_receipt_expectation_from_partner---.-.-.-.-.-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 0% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>odoo-addon-purchase-receipt-expectation-from-partner</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>odoo-addon-purchase-receipt-expectation-from-partner</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>15.0.1.0.0.<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>15.0.1.0.0.<ins>4</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Purchase<span class="dp">·</span>Receipt<span class="dp">·</span>Expectation<span class="dp">·</span>From<span class="dp">·</span>Partner</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Purchase<span class="dp">·</span>Receipt<span class="dp">·</span>Expectation<span class="dp">·</span>From<span class="dp">·</span>Partner</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OCA/purchase-workflow</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OCA/purchase-workflow</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Camptocamp<span class="dp">·</span>SA,<span class="dp">·</span>Odoo<span class="dp">·</span>Community<span class="dp">·</span>Association<span class="dp">·</span>(OCA)</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Camptocamp<span class="dp">·</span>SA,<span class="dp">·</span>Odoo<span class="dp">·</span>Community<span class="dp">·</span>Association<span class="dp">·</span>(OCA)</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>support@odoo-community.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>support@odoo-community.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>AGPL-3</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>AGPL-3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">3.43 KB</span></div>
+    <div><span class="source">odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.3.dist-info/RECORD</span> vs.</div>
+    <div id="odoo_addon_purchase_receipt_expectation_from_partner---.-.-.-.-.-.dist-info-RECORD"><span class="source">odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.4.dist-info/RECORD</span>
+      <a class="anchor" href="#odoo_addon_purchase_receipt_expectation_from_partner---.-.-.-.-.-.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 9% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/README.rst,sha256=xlvQZ4BdXtGAOUoTxCtGjrmVzZdwM3ghlmwxkIz1Zig,3337</td><td class="diffline">1 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/README.rst,sha256=xlvQZ4BdXtGAOUoTxCtGjrmVzZdwM3ghlmwxkIz1Zig,3337</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/__init__.py,sha256=MQ_oFQRAL26SDOPEHU8Z3LssM8EuoHM1g-mMfuEMfJw,117</td><td class="diffline">2 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/__init__.py,sha256=MQ_oFQRAL26SDOPEHU8Z3LssM8EuoHM1g-mMfuEMfJw,117</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/__manifest__.py,sha256=APZg6Xw9qxzDyiEhXiYiFr1J4-yDFKiW9Tu0OidorF0,677</td><td class="diffline">3 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/__manifest__.py,sha256=APZg6Xw9qxzDyiEhXiYiFr1J4-yDFKiW9Tu0OidorF0,677</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/i18n/fr.po,sha256=<del>edx68Oq4cOni62y</del>e<del>hr</del>Q<del>x</del><del>xKL1DQ4nsYfV</del>-<del>MDB-NHVATs</del>,12<del>01</del></td><td class="diffline">4 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/i18n/fr.po,sha256=<ins>X</ins><ins>D6WvWLrz1rMXtmb</ins>e<ins>RB</ins>Q<ins>Ub3FaHfgiVNU</ins>-<ins>OWQY6Xk6yM</ins>,12<ins>16</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/i18n/purchase_receipt_expectation_from_partner.pot,sha256=FoHTIlKnp3kuuO4iSBR5GP2uxEwroHGONx8wrLftv1A,1062</td><td class="diffline">5 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/i18n/purchase_receipt_expectation_from_partner.pot,sha256=FoHTIlKnp3kuuO4iSBR5GP2uxEwroHGONx8wrLftv1A,1062</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/models/__init__.py,sha256=5ZWLQlt5ZGewKFsRUeqfPC_juesmLWLeMEsHLACmUBk,151</td><td class="diffline">6 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/models/__init__.py,sha256=5ZWLQlt5ZGewKFsRUeqfPC_juesmLWLeMEsHLACmUBk,151</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/models/purchase_order.py,sha256=WdXr1a6Gj3p2sIK9QlaFLBaJWykUtrCg7OkwZzArYRA,389</td><td class="diffline">7 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/models/purchase_order.py,sha256=WdXr1a6Gj3p2sIK9QlaFLBaJWykUtrCg7OkwZzArYRA,389</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/models/res_partner.py,sha256=8D3vFJbHRn27JG_6I8mCBn1qslT14-ebe5b0psJB8WY,456</td><td class="diffline">8 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/models/res_partner.py,sha256=8D3vFJbHRn27JG_6I8mCBn1qslT14-ebe5b0psJB8WY,456</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/readme/CONTRIBUTORS.rst,sha256=lqdwfBnMcpVC6E9kE8zZcvhS2xg-SVmN_uy67a1PSIc,53</td><td class="diffline">9 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/readme/CONTRIBUTORS.rst,sha256=lqdwfBnMcpVC6E9kE8zZcvhS2xg-SVmN_uy67a1PSIc,53</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/readme/DESCRIPTION.rst,sha256=PazD_W-quDV2mX4zCRpe6UB1kPg3DjElBBOnkfOWZrc,190</td><td class="diffline">10 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/readme/DESCRIPTION.rst,sha256=PazD_W-quDV2mX4zCRpe6UB1kPg3DjElBBOnkfOWZrc,190</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/readme/USAGE.rst,sha256=4CQ3f6_T9Vu1ywiw1wTl8VI_3aMx_rnRyQgbgY65D4I,324</td><td class="diffline">11 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/readme/USAGE.rst,sha256=4CQ3f6_T9Vu1ywiw1wTl8VI_3aMx_rnRyQgbgY65D4I,324</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455</td><td class="diffline">12 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/static/description/index.html,sha256=gHMi7ud1tEa3pJ4bAtRhxl4EmAmAEXMUjifQhqZ0WkQ,12901</td><td class="diffline">13 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/static/description/index.html,sha256=gHMi7ud1tEa3pJ4bAtRhxl4EmAmAEXMUjifQhqZ0WkQ,12901</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/tests/__init__.py,sha256=6sh-4v9UMKazNh8VljAfQNd3CoAhkrLmiCLRHRnbglo,157</td><td class="diffline">14 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/tests/__init__.py,sha256=6sh-4v9UMKazNh8VljAfQNd3CoAhkrLmiCLRHRnbglo,157</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/tests/test_purchase_receipt_expectation_from_partner.py,sha256=TbecRbB3eWoBewHHsTF9aZ4qZOkdHk-oRREM9E07TZg,1799</td><td class="diffline">15 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/tests/test_purchase_receipt_expectation_from_partner.py,sha256=TbecRbB3eWoBewHHsTF9aZ4qZOkdHk-oRREM9E07TZg,1799</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/views/res_partner.xml,sha256=PTLX50NaoKJGPY9dL61WlTtm0a594xzbDAzpVnVRkiA,507</td><td class="diffline">16 </td><td class="diffpresent">odoo/addons/purchase_receipt_expectation_from_partner/views/res_partner.xml,sha256=PTLX50NaoKJGPY9dL61WlTtm0a594xzbDAzpVnVRkiA,507</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<del>3</del>.dist-info/METADATA,sha256=<del>ze8cxIoeKF</del>D<del>eW1USHIHVIwSniZ7_FbyeBXVg9_DtQK8</del>,4002</td><td class="diffline">17 </td><td class="diffpresent">odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<ins>4</ins>.dist-info/METADATA,sha256=<ins>hnZrbkQBVT</ins>D<ins>DztCapvsjF--CRaDVdaj6e0bZiYO7_oY</ins>,4002</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<del>3</del>.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92</td><td class="diffline">18 </td><td class="diffpresent">odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<ins>4</ins>.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<del>3</del>.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5</td><td class="diffline">19 </td><td class="diffpresent">odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<ins>4</ins>.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<del>3</del>.dist-info/RECORD,,</td><td class="diffline">20 </td><td class="diffpresent">odoo_addon_purchase_receipt_expectation_from_partner-15.0.1.0.0.<ins>4</ins>.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
