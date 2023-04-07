@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/XZGUtil-2.3.0.tar.gz tmp/XZGUtil-2.3.1.tar.gz --html versions/X/XZGUtil/2.3.0-2.3.1/index.html --text versions/X/XZGUtil/2.3.0-2.3.1/diff.txt --markdown versions/X/XZGUtil/2.3.0-2.3.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.58 KB</span></div>
+  <div><span class="source">tmp/XZGUtil-2.3.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/XZGUtil-2.3.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">274 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist\XZGUtil-2.3.<del>0</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Mon</del><span class="dp">·</span><del>Ma</del>r<span class="dp">·</span><del>20</del><span class="dp">·</span>0<del>9</del>:<del>02</del>:<del>48</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist\XZGUtil-2.3.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Fri</ins><span class="dp">·</span><ins>Ap</ins>r<span class="dp">·</span><ins><span class="dp">·</span>7</ins><span class="dp">·</span>0<ins>1</ins>:<ins>39</ins>:<ins>16</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.27 KB</span></div>
+    <div><span class="source">XZGUtil-2.3.0.tar</span> vs.</div>
+    <div id="XZGUtil--.-.-.tar"><span class="source">XZGUtil-2.3.1.tar</span>
+      <a class="anchor" href="#XZGUtil--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.2 KB</span></div>
+      <div id="XZGUtil--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 25 lines modified</td><td colspan="2">Offset 1, 26 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-<del>20</del><span class="dp">·</span>0<del>9</del>:<del>02</del>:<del>48</del>.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span>0<ins>1</ins>:<ins>39</ins>:<ins>16</ins>.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>608<span class="dp">·</span>2023-0<del>3</del>-<del>20</del><span class="dp">·</span>0<del>9</del>:<del>02</del>:<del>48</del>.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>608<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span>0<ins>1</ins>:<ins>39</ins>:<ins>16</ins>.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2021-05-31<span class="dp">·</span>01:49:13.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/README.rst</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2021-05-31<span class="dp">·</span>01:49:13.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-<del>20</del><span class="dp">·</span>0<del>9</del>:<del>02</del>:<del>48</del>.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/</td><td class="diffline">4 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span>0<ins>1</ins>:<ins>39</ins>:<ins>16</ins>.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>77396<span class="dp">·</span>2023-03-20<span class="dp">·</span>09:02:08.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/DBHelper.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>77396<span class="dp">·</span>2023-03-20<span class="dp">·</span>09:02:08.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/DBHelper.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1612<span class="dp">·</span>2023-02-15<span class="dp">·</span>10:08:17.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/SYCMCryptUtil.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1612<span class="dp">·</span>2023-02-15<span class="dp">·</span>10:08:17.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/SYCMCryptUtil.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>704<span class="dp">·</span>2023-03-10<span class="dp">·</span>08:44:13.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>704<span class="dp">·</span>2023-03-10<span class="dp">·</span>08:44:13.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4214<span class="dp">·</span>2023-02-15<span class="dp">·</span>07:41:00.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/dealFile.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4214<span class="dp">·</span>2023-02-15<span class="dp">·</span>07:41:00.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/dealFile.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4893<span class="dp">·</span>2022-11-10<span class="dp">·</span>03:22:03.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/downFile.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4893<span class="dp">·</span>2022-11-10<span class="dp">·</span>03:22:03.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/downFile.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>513760<span class="dp">·</span>2023-04-04<span class="dp">·</span>03:01:05.000000<span class="dp">·</span>XZGUtil-2.3.1/XZGUtil/dyXB.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37619<span class="dp">·</span>2022-09-21<span class="dp">·</span>03:07:37.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/encAndDec.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37619<span class="dp">·</span>2022-09-21<span class="dp">·</span>03:07:37.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/encAndDec.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2469<span class="dp">·</span>2022-01-12<span class="dp">·</span>08:39:02.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/logger.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2469<span class="dp">·</span>2022-01-12<span class="dp">·</span>08:39:02.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/logger.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1439<span class="dp">·</span>2022-11-25<span class="dp">·</span>10:54:18.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/messageUtil.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1439<span class="dp">·</span>2022-11-25<span class="dp">·</span>10:54:18.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/messageUtil.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3579<span class="dp">·</span>2023-02-14<span class="dp">·</span>09:09:37.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/raspberryScan.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3579<span class="dp">·</span>2023-02-14<span class="dp">·</span>09:09:37.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/raspberryScan.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1181<span class="dp">·</span>2021-06-02<span class="dp">·</span>10:25:57.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/re_xzg.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1181<span class="dp">·</span>2021-06-02<span class="dp">·</span>10:25:57.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/re_xzg.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14033<span class="dp">·</span>2022-11-25<span class="dp">·</span>10:50:05.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/timeUtil.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14033<span class="dp">·</span>2022-11-25<span class="dp">·</span>10:50:05.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/timeUtil.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>858<span class="dp">·</span>2023-03-10<span class="dp">·</span>09:00:37.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/timer.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>858<span class="dp">·</span>2023-03-10<span class="dp">·</span>09:00:37.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/timer.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>31<del>40</del><span class="dp">·</span>202<del>2</del>-<del>11</del>-0<del>8</del><span class="dp">·</span><del>10</del>:<del>27</del>:4<del>6</del>.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil/updateSpider.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>31<ins>72</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-0<ins>7</ins><span class="dp">·</span><ins>01</ins>:<ins>38</ins>:4<ins>8</ins>.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil/updateSpider.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-<del>20</del><span class="dp">·</span>0<del>9</del>:<del>02</del>:<del>48</del>.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil.egg-info/</td><td class="diffline">19 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span>0<ins>1</ins>:<ins>39</ins>:<ins>16</ins>.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>608<span class="dp">·</span>2023-0<del>3</del>-<del>20</del><span class="dp">·</span>0<del>9</del>:<del>02</del>:<del>47</del>.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil.egg-info/PKG-INFO</td><td class="diffline">20 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>608<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span>0<ins>1</ins>:<ins>39</ins>:<ins>15</ins>.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<del>44</del><span class="dp">·</span>2023-0<del>3</del>-<del>20</del><span class="dp">·</span>0<del>9</del>:<del>02</del>:<del>47</del>.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil.egg-info/SOURCES.txt</td><td class="diffline">21 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<ins>60</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span>0<ins>1</ins>:<ins>39</ins>:<ins>15</ins>.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<del>3</del>-<del>20</del><span class="dp">·</span>0<del>9</del>:<del>02</del>:<del>47</del>.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil.egg-info/dependency_links.txt</td><td class="diffline">22 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span>0<ins>1</ins>:<ins>39</ins>:<ins>15</ins>.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>34<span class="dp">·</span>2023-0<del>3</del>-<del>20</del><span class="dp">·</span>0<del>9</del>:<del>02</del>:<del>47</del>.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil.egg-info/requires.txt</td><td class="diffline">23 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>34<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span>0<ins>1</ins>:<ins>39</ins>:<ins>15</ins>.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-0<del>3</del>-<del>20</del><span class="dp">·</span>0<del>9</del>:<del>02</del>:<del>47</del>.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/XZGUtil.egg-info/top_level.txt</td><td class="diffline">24 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span>0<ins>1</ins>:<ins>39</ins>:<ins>15</ins>.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/XZGUtil.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-0<del>3</del>-<del>20</del><span class="dp">·</span>0<del>9</del>:<del>02</del>:<del>48</del>.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/setup.cfg</td><td class="diffline">25 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span>0<ins>1</ins>:<ins>39</ins>:<ins>16</ins>.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1109<span class="dp">·</span>2023-0<del>3</del>-<del>20</del><span class="dp">·</span>0<del>9</del>:<del>02</del>:<del>44</del>.000000<span class="dp">·</span>XZGUtil-2.3.<del>0</del>/setup.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1109<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span>0<ins>1</ins>:<ins>29</ins>:<ins>22</ins>.000000<span class="dp">·</span>XZGUtil-2.3.<ins>1</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">330 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/PKG-INFO</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--PKG-INFO"><span class="source">XZGUtil-2.3.1/PKG-INFO</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.1<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.1<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>XZGUtil<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>XZGUtil<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.3.<del>0</del><em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.3.<ins>1</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>xzgutil<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>xzgutil<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>xu-zhiguo<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>xu-zhiguo<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>x_zg163@163.com<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>x_zg163@163.com<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>BSD<span class="dp">·</span>License<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>BSD<span class="dp">·</span>License<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>xzgutil<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>xzgutil<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>all<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>all<em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/DBHelper.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-DBHelper.py"><span class="source">XZGUtil-2.3.1/XZGUtil/DBHelper.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-DBHelper.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/SYCMCryptUtil.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-SYCMCryptUtil.py"><span class="source">XZGUtil-2.3.1/XZGUtil/SYCMCryptUtil.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-SYCMCryptUtil.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/__init__.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-__init__.py"><span class="source">XZGUtil-2.3.1/XZGUtil/__init__.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/dealFile.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-dealFile.py"><span class="source">XZGUtil-2.3.1/XZGUtil/dealFile.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-dealFile.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/downFile.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-downFile.py"><span class="source">XZGUtil-2.3.1/XZGUtil/downFile.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-downFile.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/encAndDec.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-encAndDec.py"><span class="source">XZGUtil-2.3.1/XZGUtil/encAndDec.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-encAndDec.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/logger.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-logger.py"><span class="source">XZGUtil-2.3.1/XZGUtil/logger.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-logger.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/messageUtil.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-messageUtil.py"><span class="source">XZGUtil-2.3.1/XZGUtil/messageUtil.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-messageUtil.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/raspberryScan.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-raspberryScan.py"><span class="source">XZGUtil-2.3.1/XZGUtil/raspberryScan.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-raspberryScan.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/re_xzg.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-re_xzg.py"><span class="source">XZGUtil-2.3.1/XZGUtil/re_xzg.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-re_xzg.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/timeUtil.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-timeUtil.py"><span class="source">XZGUtil-2.3.1/XZGUtil/timeUtil.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-timeUtil.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/timer.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-timer.py"><span class="source">XZGUtil-2.3.1/XZGUtil/timer.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-timer.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">545 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil/updateSpider.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-updateSpider.py"><span class="source">XZGUtil-2.3.1/XZGUtil/updateSpider.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil-updateSpider.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 4% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 5, 15 lines modified</td><td colspan="2">Offset 5, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">#<span class="dp">·</span>@File<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:<span class="dp">·</span>updateSpider.py<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">#<span class="dp">·</span>@File<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>:<span class="dp">·</span>updateSpider.py<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">#<span class="dp">·</span>@Software:<span class="dp">·</span>PyCharm<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">#<span class="dp">·</span>@Software:<span class="dp">·</span>PyCharm<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">&quot;&quot;&quot;<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">&quot;&quot;&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">爬虫更新时间记录<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">爬虫更新时间记录<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">&quot;&quot;&quot;<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">&quot;&quot;&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">import<span class="dp">·</span>datetime<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">import<span class="dp">·</span>datetime<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">import<span class="dp">·</span>os<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent">import<span class="dp">·</span>os<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">import<span class="dp">·</span>configparser<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>这个用于读取文件，写入文件会将中文注释删除<em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent"><ins>from<span class="dp">·</span>backports<span class="dp">·</span></ins>import<ins><span class="dp">·</span>configparser2<span class="dp">·</span>as</ins><span class="dp">·</span>configparser<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>这个用于读取文件，写入文件会将中文注释删除<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">from<span class="dp">·</span>XZGUtil.logger<span class="dp">·</span>import<span class="dp">·</span>conlog<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent">from<span class="dp">·</span>XZGUtil.logger<span class="dp">·</span>import<span class="dp">·</span>conlog<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">from<span class="dp">·</span>XZGUtil.timeUtil<span class="dp">·</span>import<span class="dp">·</span>get_now_date,<span class="dp">·</span>getdate<em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent">from<span class="dp">·</span>XZGUtil.timeUtil<span class="dp">·</span>import<span class="dp">·</span>get_now_date,<span class="dp">·</span>getdate<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">proDir<span class="dp">·</span>=<span class="dp">·</span>os.path.split(os.path.realpath(__file__))[0]<em>\xd</em></td><td class="diffline">16 </td><td class="diffpresent">proDir<span class="dp">·</span>=<span class="dp">·</span>os.path.split(os.path.realpath(__file__))[0]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">17 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">18 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">class<span class="dp">·</span>upconfig(object):<em>\xd</em></td><td class="diffline">19 </td><td class="diffpresent">class<span class="dp">·</span>upconfig(object):<em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">364 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/XZGUtil.egg-info/PKG-INFO</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil.egg-info-PKG-INFO"><span class="source">XZGUtil-2.3.1/XZGUtil.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--XZGUtil.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.1<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.1<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>XZGUtil<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>XZGUtil<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.3.<del>0</del><em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.3.<ins>1</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>xzgutil<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>xzgutil<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>xu-zhiguo<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>xu-zhiguo<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>x_zg163@163.com<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>x_zg163@163.com<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>BSD<span class="dp">·</span>License<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>BSD<span class="dp">·</span>License<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>xzgutil<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>xzgutil<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>all<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>all<em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">597 B</span></div>
+      <div><span class="source">XZGUtil-2.3.0/setup.py</span> vs.</div>
+      <div id="XZGUtil--.-.-.tar---XZGUtil--.-.--setup.py"><span class="source">XZGUtil-2.3.1/setup.py</span>
+        <a class="anchor" href="#XZGUtil--.-.-.tar---XZGUtil--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 7, 15 lines modified</td><td colspan="2">Offset 7, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>distutils.core<span class="dp">·</span>import<span class="dp">·</span>setup<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>distutils.core<span class="dp">·</span>import<span class="dp">·</span>setup<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>find_packages<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>find_packages<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">with<span class="dp">·</span>open(&quot;README.rst&quot;,<span class="dp">·</span>&quot;r&quot;)<span class="dp">·</span>as<span class="dp">·</span>f:<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">with<span class="dp">·</span>open(&quot;README.rst&quot;,<span class="dp">·</span>&quot;r&quot;)<span class="dp">·</span>as<span class="dp">·</span>f:<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>f.read()<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>f.read()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">setup(name=&#x27;XZGUtil&#x27;,<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>包名<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent">setup(name=&#x27;XZGUtil&#x27;,<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>包名<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;2.3.<del>0</del>&#x27;,<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>版本号<em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;2.3.<ins>1</ins>&#x27;,<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>版本号<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;xzgutil&#x27;,<em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;xzgutil&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=&#x27;xzgutil&#x27;,<em>\xd</em></td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=&#x27;xzgutil&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;xu-zhiguo&#x27;,<em>\xd</em></td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;xu-zhiguo&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;x_zg163@163.com&#x27;,<em>\xd</em></td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;x_zg163@163.com&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;&#x27;,<em>\xd</em></td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[&#x27;postcard&#x27;,<span class="dp">·</span>&#x27;retrying&#x27;,<span class="dp">·</span>&#x27;python-dateutil&#x27;],<em>\xd</em></td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[&#x27;postcard&#x27;,<span class="dp">·</span>&#x27;retrying&#x27;,<span class="dp">·</span>&#x27;python-dateutil&#x27;],<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;BSD<span class="dp">·</span>License&#x27;,<em>\xd</em></td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;BSD<span class="dp">·</span>License&#x27;,<em>\xd</em></td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

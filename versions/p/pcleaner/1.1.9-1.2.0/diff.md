@@ -1,0 +1,669 @@
+# Comparing `tmp/pcleaner-1.1.9.tar.gz` & `tmp/pcleaner-1.2.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pcleaner-1.1.9.tar", last modified: Thu Mar  2 19:49:28 2023, max compression
++gzip compressed data, was "pcleaner-1.2.0.tar", last modified: Fri Apr  7 01:32:47 2023, max compression
+```
+
+## Comparing `pcleaner-1.1.9.tar` & `pcleaner-1.2.0.tar`
+
+### file list
+
+```diff
+@@ -1,50 +1,50 @@
+-drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-03-02 19:49:28.667707 pcleaner-1.1.9/
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    35129 2023-01-07 18:56:55.000000 pcleaner-1.1.9/LICENSE
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    11477 2023-03-02 19:49:28.667707 pcleaner-1.1.9/PKG-INFO
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    10852 2023-01-27 01:19:06.000000 pcleaner-1.1.9/README.md
+-drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-03-02 19:49:28.661040 pcleaner-1.1.9/pcleaner/
+--rw-r--r--   0 corbin    (1000) corbin    (1001)       47 2023-03-02 19:49:19.000000 pcleaner-1.1.9/pcleaner/__init__.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    16762 2023-01-25 21:46:28.000000 pcleaner-1.1.9/pcleaner/analytics.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     6540 2023-01-09 16:12:07.000000 pcleaner-1.1.9/pcleaner/cleaner.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     5672 2023-01-23 03:12:00.000000 pcleaner-1.1.9/pcleaner/cli_utils.py
+-drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-03-02 19:49:28.664373 pcleaner-1.1.9/pcleaner/comic_text_detector/
+--rw-r--r--   0 corbin    (1000) corbin    (1001)        0 2023-01-07 23:23:00.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/__init__.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    10114 2023-01-07 23:20:26.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/basemodel.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     8492 2023-01-07 23:33:40.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/inference.py
+-drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-03-02 19:49:28.664373 pcleaner-1.1.9/pcleaner/comic_text_detector/models/
+--rw-r--r--   0 corbin    (1000) corbin    (1001)        0 2022-12-24 01:25:46.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/models/__init__.py
+-drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-03-02 19:49:28.664373 pcleaner-1.1.9/pcleaner/comic_text_detector/models/yolov5/
+--rw-r--r--   0 corbin    (1000) corbin    (1001)        0 2022-12-24 01:25:46.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/models/yolov5/__init__.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    10685 2023-01-07 23:24:30.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/models/yolov5/common.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    14770 2023-01-07 23:38:16.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/models/yolov5/yolo.py
+-drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-03-02 19:49:28.667707 pcleaner-1.1.9/pcleaner/comic_text_detector/utils/
+--rw-r--r--   0 corbin    (1000) corbin    (1001)        0 2023-01-07 23:23:32.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/utils/__init__.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    27905 2023-01-07 23:20:26.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/utils/db_utils.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     2136 2023-01-07 23:25:33.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/utils/export.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     2582 2023-01-07 23:25:33.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/utils/general.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     7012 2023-01-07 23:20:26.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/utils/imgproc_utils.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     1869 2023-01-07 23:20:26.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/utils/io_utils.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     7283 2023-01-07 23:26:33.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/utils/loss.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    20873 2023-01-07 23:27:00.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/utils/textblock.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    13486 2023-01-07 23:27:26.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/utils/textmask.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     3181 2023-01-07 23:28:17.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/utils/weight_init.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    10727 2023-01-07 23:28:28.000000 pcleaner-1.1.9/pcleaner/comic_text_detector/utils/yolov5_utils.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    31792 2023-01-25 19:32:34.000000 pcleaner-1.1.9/pcleaner/config.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     4555 2023-01-19 19:33:44.000000 pcleaner-1.1.9/pcleaner/ctd_interface.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     3459 2023-01-09 16:11:05.000000 pcleaner-1.1.9/pcleaner/denoiser.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    19760 2023-01-09 00:57:18.000000 pcleaner-1.1.9/pcleaner/image_ops.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    21009 2023-01-25 22:30:34.000000 pcleaner-1.1.9/pcleaner/main.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     4717 2023-01-08 14:40:11.000000 pcleaner-1.1.9/pcleaner/model_downloader.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     7564 2023-01-24 18:59:04.000000 pcleaner-1.1.9/pcleaner/pre_processor.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     7546 2023-01-23 03:12:00.000000 pcleaner-1.1.9/pcleaner/profile_cli.py
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    12595 2023-01-09 16:03:20.000000 pcleaner-1.1.9/pcleaner/structures.py
+-drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-03-02 19:49:28.664373 pcleaner-1.1.9/pcleaner.egg-info/
+--rw-r--r--   0 corbin    (1000) corbin    (1001)    11477 2023-03-02 19:49:28.000000 pcleaner-1.1.9/pcleaner.egg-info/PKG-INFO
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     1392 2023-03-02 19:49:28.000000 pcleaner-1.1.9/pcleaner.egg-info/SOURCES.txt
+--rw-r--r--   0 corbin    (1000) corbin    (1001)        1 2023-03-02 19:49:28.000000 pcleaner-1.1.9/pcleaner.egg-info/dependency_links.txt
+--rw-r--r--   0 corbin    (1000) corbin    (1001)       48 2023-03-02 19:49:28.000000 pcleaner-1.1.9/pcleaner.egg-info/entry_points.txt
+--rw-r--r--   0 corbin    (1000) corbin    (1001)      171 2023-03-02 19:49:28.000000 pcleaner-1.1.9/pcleaner.egg-info/requires.txt
+--rw-r--r--   0 corbin    (1000) corbin    (1001)        9 2023-03-02 19:49:28.000000 pcleaner-1.1.9/pcleaner.egg-info/top_level.txt
+--rw-r--r--   0 corbin    (1000) corbin    (1001)      122 2023-01-23 03:12:00.000000 pcleaner-1.1.9/pyproject.toml
+--rw-r--r--   0 corbin    (1000) corbin    (1001)     1039 2023-03-02 19:49:28.667707 pcleaner-1.1.9/setup.cfg
+--rw-r--r--   0 corbin    (1000) corbin    (1001)       38 2023-01-07 18:56:55.000000 pcleaner-1.1.9/setup.py
++drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-04-07 01:32:47.795906 pcleaner-1.2.0/
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    35129 2023-03-13 00:41:01.000000 pcleaner-1.2.0/LICENSE
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    11477 2023-04-07 01:32:47.795906 pcleaner-1.2.0/PKG-INFO
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    10852 2023-03-25 19:50:27.000000 pcleaner-1.2.0/README.md
++drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-04-07 01:32:47.789240 pcleaner-1.2.0/pcleaner/
++-rw-r--r--   0 corbin    (1000) corbin    (1001)       47 2023-04-07 01:24:10.000000 pcleaner-1.2.0/pcleaner/__init__.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    16762 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/analytics.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     7146 2023-04-07 01:22:24.000000 pcleaner-1.2.0/pcleaner/cleaner.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     5672 2023-03-25 19:50:27.000000 pcleaner-1.2.0/pcleaner/cli_utils.py
++drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-04-07 01:32:47.789240 pcleaner-1.2.0/pcleaner/comic_text_detector/
++-rw-r--r--   0 corbin    (1000) corbin    (1001)        0 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/__init__.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    10114 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/basemodel.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     8492 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/inference.py
++drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-04-07 01:32:47.789240 pcleaner-1.2.0/pcleaner/comic_text_detector/models/
++-rw-r--r--   0 corbin    (1000) corbin    (1001)        0 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/models/__init__.py
++drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-04-07 01:32:47.792573 pcleaner-1.2.0/pcleaner/comic_text_detector/models/yolov5/
++-rw-r--r--   0 corbin    (1000) corbin    (1001)        0 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/models/yolov5/__init__.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    10685 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/models/yolov5/common.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    14770 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/models/yolov5/yolo.py
++drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-04-07 01:32:47.795906 pcleaner-1.2.0/pcleaner/comic_text_detector/utils/
++-rw-r--r--   0 corbin    (1000) corbin    (1001)        0 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/utils/__init__.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    27905 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/utils/db_utils.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     2136 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/utils/export.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     2582 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/utils/general.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     7012 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/utils/imgproc_utils.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     1869 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/utils/io_utils.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     7283 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/utils/loss.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    20873 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/utils/textblock.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    13486 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/utils/textmask.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     3181 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/utils/weight_init.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    10727 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/comic_text_detector/utils/yolov5_utils.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    31792 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/config.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     4555 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/ctd_interface.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     3843 2023-04-07 01:18:40.000000 pcleaner-1.2.0/pcleaner/denoiser.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    20356 2023-04-07 01:05:12.000000 pcleaner-1.2.0/pcleaner/image_ops.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    21516 2023-04-07 01:11:39.000000 pcleaner-1.2.0/pcleaner/main.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     4717 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/model_downloader.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     7564 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/pre_processor.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     7546 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pcleaner/profile_cli.py
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    12839 2023-04-07 01:22:44.000000 pcleaner-1.2.0/pcleaner/structures.py
++drwxr-xr-x   0 corbin    (1000) corbin    (1001)        0 2023-04-07 01:32:47.789240 pcleaner-1.2.0/pcleaner.egg-info/
++-rw-r--r--   0 corbin    (1000) corbin    (1001)    11477 2023-04-07 01:32:47.000000 pcleaner-1.2.0/pcleaner.egg-info/PKG-INFO
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     1392 2023-04-07 01:32:47.000000 pcleaner-1.2.0/pcleaner.egg-info/SOURCES.txt
++-rw-r--r--   0 corbin    (1000) corbin    (1001)        1 2023-04-07 01:32:47.000000 pcleaner-1.2.0/pcleaner.egg-info/dependency_links.txt
++-rw-r--r--   0 corbin    (1000) corbin    (1001)       48 2023-04-07 01:32:47.000000 pcleaner-1.2.0/pcleaner.egg-info/entry_points.txt
++-rw-r--r--   0 corbin    (1000) corbin    (1001)      171 2023-04-07 01:32:47.000000 pcleaner-1.2.0/pcleaner.egg-info/requires.txt
++-rw-r--r--   0 corbin    (1000) corbin    (1001)        9 2023-04-07 01:32:47.000000 pcleaner-1.2.0/pcleaner.egg-info/top_level.txt
++-rw-r--r--   0 corbin    (1000) corbin    (1001)      122 2023-03-13 00:41:01.000000 pcleaner-1.2.0/pyproject.toml
++-rw-r--r--   0 corbin    (1000) corbin    (1001)     1039 2023-04-07 01:32:47.795906 pcleaner-1.2.0/setup.cfg
++-rw-r--r--   0 corbin    (1000) corbin    (1001)       38 2023-03-13 00:41:01.000000 pcleaner-1.2.0/setup.py
+```
+
+### Comparing `pcleaner-1.1.9/LICENSE` & `pcleaner-1.2.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/PKG-INFO` & `pcleaner-1.2.0/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pcleaner
+-Version: 1.1.9
++Version: 1.2.0
+ Summary: An AI-powered tool to clean manga panels.
+ Home-page: https://github.com/VoxelCubes/PanelCleaner
+ Keywords: image processing,cleaning,text removal,manga,ai,machine learning
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+ Classifier: Operating System :: POSIX :: Linux
+ Classifier: Operating System :: Microsoft :: Windows
+```
+
+### Comparing `pcleaner-1.1.9/README.md` & `pcleaner-1.2.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/analytics.py` & `pcleaner-1.2.0/pcleaner/analytics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/cleaner.py` & `pcleaner-1.2.0/pcleaner/cleaner.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -93,14 +93,15 @@
+ 
+     # Save the combined mask. This will be used for denoising.
+     combined_mask_path = cache_out_path.with_stem(cache_out_path.stem + "_combined_mask")
+     combined_mask.save(combined_mask_path)
+     cleaned_image_path = cache_out_path.with_stem(cache_out_path.stem + "_cleaned")
+     base_image.save(cleaned_image_path)
+     save_denoising_data(
++        Path(page_data.original_path),
+         original_img_path_as_png,
+         cleaned_image_path,
+         combined_mask_path,
+         cache_out_path,
+         mask_fitments,
+     )
+ 
+@@ -129,39 +130,51 @@
+             base_image.save(final_cleaned_out_path)
+ 
+         if not c_data.save_only_cleaned:
+             # Save the final image.
+             logger.debug(f"Saving final mask to {final_mask_out_path}")
+             combined_mask.save(final_mask_out_path)
+ 
++        if c_data.extract_text:
++            # Extract the text layer from the image.
++            logger.debug(f"Extracting text from {final_cleaned_out_path}")
++            # Reload the image, since it was modified.
++            base_image = Image.open(page_data.image_path)
++            text_img = ops.extract_text(base_image, combined_mask)
++            text_out_path = final_out_path.with_name(final_out_path.stem + "_text.png")
++            text_img.save(text_out_path)
++
++
+     return analytics
+ 
+ 
+ def save_denoising_data(
+-    original_img_path: Path,
++    original_path: Path,
++    target_path: Path,
+     cleaned_path: Path,
+     mask_path: Path,
+     cache_path: Path,
+     mask_fitments: list[st.MaskFittingResults],
+ ):
+     """
+     Save the data needed for denoising.
+ 
+     Gather the following to construct a MaskData struct:
+     - original_path: Path
+     - cleaned_path: Path
+     - mask_path: Path
+     - boxes_with_deviation: list[tuple[tuple[int, int, int, int], float]]
+ 
+-    :param original_img_path: The path to the original image.
++    :param original_path: The path to the original image.
++    :param target_path: The path to the original image with png suffix.
+     :param cleaned_path: The path to the cleaned image.
+     :param mask_path: The path to the combined mask.
+     :param cache_path: The path to the cache directory.
+     :param mask_fitments: The mask fitments.
+     """
+ 
+     # Gather the data needed for denoising.
+     boxes_with_deviation = [m.noise_mask_data for m in mask_fitments]
+ 
+     # Save the data.
+-    mask_data = st.MaskData(original_img_path, cleaned_path, mask_path, boxes_with_deviation)
++    mask_data = st.MaskData(original_path, target_path, cleaned_path, mask_path, boxes_with_deviation)
+     mask_data.write_json(cache_path.with_name(cache_path.stem + "_mask_data.json"))
+```
+
+### Comparing `pcleaner-1.1.9/pcleaner/cli_utils.py` & `pcleaner-1.2.0/pcleaner/cli_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/basemodel.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/basemodel.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/inference.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/inference.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/models/yolov5/common.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/models/yolov5/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/models/yolov5/yolo.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/models/yolov5/yolo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/utils/db_utils.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/utils/db_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/utils/export.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/utils/export.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/utils/general.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/utils/general.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/utils/imgproc_utils.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/utils/imgproc_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/utils/io_utils.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/utils/io_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/utils/loss.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/utils/loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/utils/textblock.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/utils/textblock.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/utils/textmask.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/utils/textmask.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/utils/weight_init.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/utils/weight_init.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/comic_text_detector/utils/yolov5_utils.py` & `pcleaner-1.2.0/pcleaner/comic_text_detector/utils/yolov5_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/config.py` & `pcleaner-1.2.0/pcleaner/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/ctd_interface.py` & `pcleaner-1.2.0/pcleaner/ctd_interface.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/denoiser.py` & `pcleaner-1.2.0/pcleaner/denoiser.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -33,25 +33,25 @@
+     ]
+ 
+     combined_noise_mask = ops.combine_noise_masks(cleaned_image.size, noise_masks_with_coords)
+     cleaned_image.paste(combined_noise_mask, (0, 0), combined_noise_mask)
+ 
+     # Debug save.
+     if d_data.show_masks:
+-        cache_out_path = d_data.cache_dir / (mask_data.original_path.stem + "_noise_mask.png")
++        cache_out_path = d_data.cache_dir / (mask_data.target_path.stem + "_noise_mask.png")
+         combined_noise_mask.save(cache_out_path)
+ 
+     # Settle on the final output path for the cleaned image.
+     if d_data.output_dir.is_absolute():
+-        final_out_path = d_data.output_dir / mask_data.original_path.name
++        final_out_path = d_data.output_dir / mask_data.target_path.name
+     else:
+         # Take the original image path, and place the image in a subdirectory.
+         # This is for when multiple directories were passed in.
+         final_out_path = (
+-            mask_data.original_path.parent / d_data.output_dir / mask_data.original_path.name
++                mask_data.target_path.parent / d_data.output_dir / mask_data.target_path.name
+         )
+ 
+     final_out_path.parent.mkdir(parents=True, exist_ok=True)
+     final_cleaned_out_path = final_out_path.with_name(final_out_path.stem + "_clean.png")
+     final_mask_out_path = final_out_path.with_name(final_out_path.stem + "_mask.png")
+     final_mask_denoised_out_path = final_out_path.with_name(
+         final_out_path.stem + "_denoised_mask.png"
+@@ -75,9 +75,17 @@
+             combined_noise_mask.save(final_mask_denoised_out_path)
+         else:
+             # Combine both the mask and the denoised mask into one image.
+             combined_noise_mask.paste(mask_image, (0, 0), mask_image)
+             logger.debug(f"Saving final mask to {final_mask_out_path}")
+             combined_noise_mask.save(final_mask_out_path)
+ 
++    if d_data.extract_text:
++        # Extract the text layer from the image.
++        logger.debug(f"Extracting text from {mask_data.original_path}")
++        base_image = Image.open(mask_data.original_path)
++        text_img = ops.extract_text(base_image, mask_image)
++        text_out_path = final_out_path.with_name(final_out_path.stem + "_text.png")
++        text_img.save(text_out_path)
++
+     # Package the analytics. We're only interested in the std deviations.
+     return st.DenoiseAnalytic(tuple(deviation for _, deviation in mask_data.boxes_with_deviation))
+```
+
+### Comparing `pcleaner-1.1.9/pcleaner/image_ops.py` & `pcleaner-1.2.0/pcleaner/image_ops.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -521,7 +521,24 @@
+         denoiser_conf.search_window_size,
+     )
+ 
+     # Add alpha channels.
+     denoised_image_cutout.putalpha(mask_faded)
+ 
+     return denoised_image_cutout, box[:2]
++
++
++def extract_text(base_image: Image, mask: Image) -> Image:
++    """
++    Extract the text from the base image using the combined mask.
++    This essentially deletes everything but the text from the image,
++    the inverse of the mask.
++
++    :param base_image: The base image.
++    :param mask: The mask of the text. Mode: "1"
++    :return: The image with only the text.
++    """
++    # Create a blank canvas.
++    text_image = Image.new("RGBA", base_image.size, (0, 0, 0, 0))
++    # Paste the base image onto the canvas using the mask.
++    text_image.paste(base_image, (0, 0), mask)
++    return text_image
+```
+
+### Comparing `pcleaner-1.1.9/pcleaner/main.py` & `pcleaner-1.2.0/pcleaner/main.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,13 +1,14 @@
+ """Panel Cleaner
+ 
+ Usage:
+-    pcleaner clean [<image_path> ...] [--output_dir=<output_dir>] [--profile=<profile>] [--keep-cache]
+-        [--save-only-mask | --save-only-cleaned] [--cache-masks] [--separate-noise-mask] [--hide-analytics]
+-        [--skip-text-detection] [--skip-pre-processing] [--skip-cleaning] [--skip-denoising] [--debug]
++    pcleaner clean [<image_path> ...] [--output_dir=<output_dir>] [--profile=<profile>]
++        [--save-only-mask | --save-only-cleaned] [--cache-masks] [--separate-noise-mask]
++        [--hide-analytics] [--extract-text] [--skip-text-detection] [--skip-pre-processing]
++        [--skip-cleaning] [--skip-denoising] [--keep-cache] [--debug]
+     pcleaner profile (list | new <profile_name> [<profile_path>] | add <profile_name> <profile_path> |
+         open <profile_name> | delete <profile_name> | set-default <profile_name> | repair <profile_name> |
+         purge-missing) [--debug]
+     pcleaner ocr [<image_path> ...] [--output-path=<output_path>] [--debug]
+     pcleaner config (show | open)
+     pcleaner cache clear (all | models | cleaner)
+     pcleaner load model [--cuda | --cpu | --both] [--force]
+@@ -50,14 +51,16 @@
+     -p <profile> --profile=<profile>  The profile to use. Specify either the name of a saved profile
+                                     or a path to a profile file. If a default profile is set, you can still use
+                                     the builtin default by using the name "none" or "builtin".
+     -k --keep-cache                 Keep the cache files from the previous run.
+                                     These are normally deleted in the text detection step.
+     -m --save-only-mask             Save only the mask image. This is the overlay to clean the original image.
+     -c --save-only-cleaned          Save only the cleaned image. This is the original image with the mask applied.
++    -e --extract-text               Extract the text bubbles from the original image. Essentially deleting everything
++                                    except the text. The cleaning or denoising step must be run for this to work.
+     -n --separate-noise-mask        Save the noise mask separately from the main mask.
+     -T --skip-text-detection        Do not run the text detection AI model. This is step 1/4.
+     -P --skip-pre-processing        Do not run data pre-processing. This is step 2/4.
+     -C --skip-cleaning              Do not run the cleaning process. This is step 3/4.
+     -D --skip-denoising             Do not run the denoising process. This an optional step 4/4.
+     -s --cache-masks                Save the masks used to clean the image in the cache directory.
+     -a --hide-analytics             Hide the analytics. These are the statistics about the
+@@ -117,14 +120,15 @@
+ import pcleaner.pre_processor as pp
+ import pcleaner.analytics as an
+ import pcleaner.structures as st
+ import pcleaner.profile_cli as pc
+ import pcleaner.denoiser as dn
+ import pcleaner.model_downloader as md
+ 
++# TODO mask data and beyond isn't clobber protexted.
+ 
+ def main():
+ 
+     args = magic_docopt(__doc__, version=f"Panel Cleaner {__version__}")
+     # Loglevel is info by default.
+     if args.debug:
+         loglevel(DEBUG)
+@@ -196,14 +200,15 @@
+             config=config,
+             skip_text_detection=args.skip_text_detection,
+             skip_pre_processing=args.skip_pre_processing,
+             skip_cleaning=args.skip_cleaning,
+             skip_denoising=args.skip_denoising,
+             save_only_mask=args.save_only_mask,
+             save_only_cleaned=args.save_only_cleaned,
++            extract_text=args.extract_text,
+             cache_masks=args.cache_masks,
+             separate_noise_mask=args.separate_noise_mask,
+             hide_analytics=args.hide_analytics,
+             keep_cache=args.keep_cache,
+             debug=args.debug,
+         )
+         # end timer.
+@@ -217,14 +222,15 @@
+     config: cfg.Config,
+     skip_text_detection: bool,
+     skip_pre_processing: bool,
+     skip_cleaning: bool,
+     skip_denoising: bool,
+     save_only_mask: bool,
+     save_only_cleaned: bool,
++    extract_text: bool,
+     cache_masks: bool,
+     separate_noise_mask: bool,
+     hide_analytics: bool,
+     keep_cache: bool,
+     debug: bool,
+ ):
+     """
+@@ -235,14 +241,15 @@
+     :param config: The config to use.
+     :param skip_text_detection: Whether to skip the text detection step.
+     :param skip_pre_processing: Whether to skip the pre-processing step.
+     :param skip_cleaning: Whether to skip the cleaning step.
+     :param skip_denoising: Whether to skip the denoising step.
+     :param save_only_mask: Whether to save only the mask.
+     :param save_only_cleaned: Whether to save only the cleaned image.
++    :param extract_text: Whether to extract the text from the image.
+     :param cache_masks: Whether to save the masks used to clean the image in the cache directory.
+     :param separate_noise_mask: Whether to save the noise mask separately.
+     :param hide_analytics: Whether to hide the analytics.
+     :param keep_cache: Whether to keep the cache directory for the text detection step.
+     :param debug: Whether to show debug information.
+     """
+     profile = config.current_profile
+@@ -318,14 +325,15 @@
+             st.CleanerData(
+                 json_file,
+                 cleaner_output_dir,
+                 cache_dir,
+                 profile.cleaner,
+                 save_only_mask,
+                 save_only_cleaned,
++                extract_text,
+                 cache_masks,
+                 debug,
+             )
+             for json_file in json_files
+         ]
+ 
+         cleaner_analytics_raw = []
+@@ -346,14 +354,15 @@
+             st.DenoiserData(
+                 json_file,
+                 output_dir,
+                 cache_dir,
+                 profile.denoiser,
+                 save_only_mask,
+                 save_only_cleaned,
++                extract_text,
+                 separate_noise_mask,
+                 cache_masks,
+                 debug,
+             )
+             for json_file in json_files
+         ]
+```
+
+### Comparing `pcleaner-1.1.9/pcleaner/model_downloader.py` & `pcleaner-1.2.0/pcleaner/model_downloader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/pre_processor.py` & `pcleaner-1.2.0/pcleaner/pre_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/profile_cli.py` & `pcleaner-1.2.0/pcleaner/profile_cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/pcleaner/structures.py` & `pcleaner-1.2.0/pcleaner/structures.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -265,41 +265,45 @@
+     This is a simple struct to hold the inputs for the cleaner.
+     The data is a tuple of:
+     - The json file path.
+     - The image output directory. When none, output to the cache dir for denoising to continue.
+     - The image cache directory.
+     - The save only mask flag.
+     - The save only cleaned flag.
++    - The extract text flag.
+     - The show masks flag. (when true, save intermediate masks to the cache directory)
+     - The debug flag.
+     """
+ 
+     json_path: Path
+     output_dir: Path | None
+     cache_dir: Path
+     cleaner_config: cfg.CleanerConfig
+     save_only_mask: bool
+     save_only_cleaned: bool
++    extract_text: bool
+     show_masks: bool
+     debug: bool
+ 
+ 
+ @dataclass
+ class MaskData:
+     """
+     This is a simple struct to hold all the extra information needed to perform the
+     denoising process.
+ 
+     - The original image path.
++    - The target image path.
+     - The cleaned image path.
+     - The mask image path.
+     - The box coordinates with their respective standard deviation for the masks.
+     """
+ 
+     original_path: Path
++    target_path: Path
+     cleaned_path: Path
+     mask_path: Path
+     boxes_with_deviation: list[tuple[tuple[int, int, int, int], float]]
+ 
+     @classmethod
+     def from_json(cls, json_str: str) -> "MaskData":
+         """
+@@ -307,28 +311,30 @@
+ 
+         :param json_str: The json string.
+         :return: The MaskData object.
+         """
+         data = json.loads(json_str)
+         return cls(
+             Path(data["original_path"]),
++            Path(data["target_path"]),
+             Path(data["cleaned_path"]),
+             Path(data["mask_path"]),
+             data["boxes_with_deviation"],
+         )
+ 
+     def write_json(self, json_path: Path):
+         """
+         Write the MaskData object to a json file.
+ 
+         :param json_path: The path to write the json file to.
+         """
+         # Convert the Path objects to strings.
+         data = {
+             "original_path": str(self.original_path),
++            "target_path": str(self.target_path),
+             "cleaned_path": str(self.cleaned_path),
+             "mask_path": str(self.mask_path),
+             "boxes_with_deviation": self.boxes_with_deviation,
+         }
+         with open(json_path, "w") as f:
+             json.dump(data, f, indent=4)
+ 
+@@ -340,25 +346,27 @@
+     The data is a tuple of:
+     - The json file path.
+     - The image output directory.
+     - The image cache directory.
+     - The denoiser config.
+     - The save only mask flag.
+     - The save only cleaned flag.
++    - The extract text flag.
+     - The separate noise mask flag.
+     - The show masks flag. (when true, save intermediate masks to the cache directory)
+     - The debug flag.
+     """
+ 
+     json_path: Path
+     output_dir: Path
+     cache_dir: Path
+     denoiser_config: cfg.DenoiserConfig
+     save_only_mask: bool
+     save_only_cleaned: bool
++    extract_text: bool
+     separate_noise_masks: bool
+     show_masks: bool
+     debug: bool
+ 
+ 
+ @dataclass
+ class DenoiseAnalytic:
+```
+
+### Comparing `pcleaner-1.1.9/pcleaner.egg-info/PKG-INFO` & `pcleaner-1.2.0/pcleaner.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pcleaner
+-Version: 1.1.9
++Version: 1.2.0
+ Summary: An AI-powered tool to clean manga panels.
+ Home-page: https://github.com/VoxelCubes/PanelCleaner
+ Keywords: image processing,cleaning,text removal,manga,ai,machine learning
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+ Classifier: Operating System :: POSIX :: Linux
+ Classifier: Operating System :: Microsoft :: Windows
+```
+
+### Comparing `pcleaner-1.1.9/pcleaner.egg-info/SOURCES.txt` & `pcleaner-1.2.0/pcleaner.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `pcleaner-1.1.9/setup.cfg` & `pcleaner-1.2.0/setup.cfg`
+
+ * *Files identical despite different names*
+

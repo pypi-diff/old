@@ -1,0 +1,256 @@
+--- tmp/ronbun-0.6.1.tar.gz
++++ tmp/ronbun-0.7.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "ronbun-0.6.1.tar", last modified: Mon Mar 20 23:24:26 2023, max compression
+│ +gzip compressed data, was "ronbun-0.7.0.tar", last modified: Fri Apr  7 01:44:09 2023, max compression
+│   --- ronbun-0.6.1.tar
+├── +++ ronbun-0.7.0.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 23:24:26.445325 ronbun-0.6.1/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1071 2023-03-20 23:24:12.000000 ronbun-0.6.1/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      599 2023-03-20 23:24:26.445325 ronbun-0.6.1/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       82 2023-03-20 23:24:12.000000 ronbun-0.6.1/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 23:24:26.445325 ronbun-0.6.1/ronbun/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       22 2023-03-20 23:24:12.000000 ronbun-0.6.1/ronbun/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8472 2023-03-20 23:24:12.000000 ronbun-0.6.1/ronbun/readme.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 23:24:26.445325 ronbun-0.6.1/ronbun.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      599 2023-03-20 23:24:26.000000 ronbun-0.6.1/ronbun.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      244 2023-03-20 23:24:26.000000 ronbun-0.6.1/ronbun.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-20 23:24:26.000000 ronbun-0.6.1/ronbun.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       46 2023-03-20 23:24:26.000000 ronbun-0.6.1/ronbun.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       24 2023-03-20 23:24:26.000000 ronbun-0.6.1/ronbun.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        7 2023-03-20 23:24:26.000000 ronbun-0.6.1/ronbun.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-20 23:24:26.445325 ronbun-0.6.1/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      908 2023-03-20 23:24:12.000000 ronbun-0.6.1/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:44:09.243989 ronbun-0.7.0/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1071 2023-04-07 01:43:59.000000 ronbun-0.7.0/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      599 2023-04-07 01:44:09.239989 ronbun-0.7.0/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       82 2023-04-07 01:43:59.000000 ronbun-0.7.0/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:44:09.239989 ronbun-0.7.0/ronbun/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-07 01:43:59.000000 ronbun-0.7.0/ronbun/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8551 2023-04-07 01:43:59.000000 ronbun-0.7.0/ronbun/readme.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:44:09.239989 ronbun-0.7.0/ronbun.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      599 2023-04-07 01:44:09.000000 ronbun-0.7.0/ronbun.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      244 2023-04-07 01:44:09.000000 ronbun-0.7.0/ronbun.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 01:44:09.000000 ronbun-0.7.0/ronbun.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       46 2023-04-07 01:44:09.000000 ronbun-0.7.0/ronbun.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       27 2023-04-07 01:44:09.000000 ronbun-0.7.0/ronbun.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        7 2023-04-07 01:44:09.000000 ronbun-0.7.0/ronbun.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 01:44:09.243989 ronbun-0.7.0/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      911 2023-04-07 01:43:59.000000 ronbun-0.7.0/setup.py
+│ │   --- ronbun-0.6.1/LICENSE
+│ ├── +++ ronbun-0.7.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- ronbun-0.6.1/PKG-INFO
+│ ├── +++ ronbun-0.7.0/PKG-INFO
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ronbun
+│ │ -Version: 0.6.1
+│ │ +Version: 0.7.0
+│ │  Summary: The Sample Programs README Automation Tool
+│ │  Home-page: https://github.com/TheRenegadeCoder/sample-programs-readmes
+│ │  Author: The Renegade Coder
+│ │  Author-email: jeremy.grifski@therenegadecoder.com
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │   --- ronbun-0.6.1/ronbun/readme.py
+│ ├── +++ ronbun-0.7.0/ronbun/readme.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  import argparse
+│ │  import logging
+│ │  import ssl
+│ │  
+│ │ -from snakemd import Document, InlineText, MDList, Paragraph
+│ │ +from snakemd import Document, Inline, MDList, Paragraph
+│ │  from subete import LanguageCollection, Repo, Project
+│ │  
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  issue_url_template_base = "https://github.com/TheRenegadeCoder/sample-programs/issues/new"
+│ │ @@ -19,15 +19,15 @@
+│ │      numeric_level = getattr(logging, args[1].upper(), None)
+│ │      if not isinstance(numeric_level, int):
+│ │          raise ValueError(f'Invalid log level: {args[1]}')
+│ │      logging.basicConfig(level=numeric_level)
+│ │      repo = Repo(sample_programs_repo_dir=args[0])
+│ │      readme_catalog = ReadMeCatalog(repo)
+│ │      for language, page in readme_catalog.pages.items():
+│ │ -        page.output_page(f"{args[0]}/archive/{language[0]}/{language}")
+│ │ +        page.dump("README", dir=f"{args[0]}/archive/{language[0]}/{language}")
+│ │  
+│ │  
+│ │  def _get_args() -> tuple:
+│ │      """
+│ │      A helper function which gets the log level from 
+│ │      the command line. Set as warning from default. 
+│ │      :return: the log level provided by the user
+│ │ @@ -45,16 +45,16 @@
+│ │      )
+│ │      options = parser.parse_args()
+│ │      return options.path, options.log
+│ │  
+│ │  
+│ │  def _get_intro_text(language: LanguageCollection) -> Paragraph:
+│ │      paragraph = Paragraph([f"Welcome to Sample Programs in {language}! "])
+│ │ -    text = InlineText("here.", url=language.lang_docs_url())
+│ │ -    if text.verify_url():
+│ │ +    text = Inline("here.", link=language.lang_docs_url())
+│ │ +    if language.has_docs:
+│ │          paragraph.add(f"To find documentation related to the {language} code in this repo, look ")
+│ │          paragraph.add(text)
+│ │      return paragraph
+│ │  
+│ │  
+│ │  def _generate_program_list(language: LanguageCollection) -> list:
+│ │      """
+│ │ @@ -123,62 +123,63 @@
+│ │  
+│ │      def _build_readme(self, language: LanguageCollection) -> None:
+│ │          """
+│ │          Creates a README page from a language collection.
+│ │          :param language: a programming language collection (e.g., Python)
+│ │          :return: None
+│ │          """
+│ │ -        page = Document("README")
+│ │ +        page = Document()
+│ │  
+│ │          # Introduction
+│ │ -        page.add_header(f"Sample Programs in {language}")
+│ │ -        page.add_element(_get_intro_text(language))
+│ │ +        page.add_heading(f"Sample Programs in {language}")
+│ │ +        page.add_block(_get_intro_text(language))
+│ │  
+│ │          # Sample Programs Section
+│ │          program_list = _generate_program_list(language)
+│ │ -        page.add_header(_generate_program_list_header(
+│ │ +        page.add_heading(_generate_program_list_header(
+│ │              language.total_programs(),
+│ │              self.repo.total_approved_projects()),
+│ │              level=2
+│ │          )
+│ │          page.add_paragraph(
+│ │              f"""
+│ │              In this section, we feature a list of completed and missing programs in {language}. See above for the
+│ │              current amount of completed programs in {language}. If you see a program that is missing and would like to 
+│ │              add it, please submit an issue, so we can assign it to you. 
+│ │              """.strip()
+│ │          )
+│ │  
+│ │          # Completed Programs List
+│ │ -        page.add_header("Completed Programs", level=3)
+│ │ +        page.add_heading("Completed Programs", level=3)
+│ │          page.add_paragraph(
+│ │              f"""
+│ │              Below, you'll find a list of completed code snippets in {language}. Code snippets preceded by :warning: 
+│ │              link to a GitHub issue query featuring a possible article request issue. If an article request issue 
+│ │              doesn't exist, we encourage you to create one. Meanwhile, code snippets preceded by :white_check_mark: 
+│ │              link to an existing article which provides further documentation. To see the list of approved projects, 
+│ │              check out the official Sample Programs projects list. 
+│ │              """.strip()
+│ │          ).insert_link("Sample Programs project list", "https://sampleprograms.io/projects/")
+│ │ -        page.add_element(MDList(program_list))
+│ │ +        page.add_block(MDList(program_list))
+│ │  
+│ │          # Missing Programs List
+│ │ -        missing_programs_list = _generate_missing_program_list(language, language.missing_programs())
+│ │ -        page.add_header("Missing Programs", level=3)
+│ │ -        page.add_paragraph(
+│ │ -            f"""
+│ │ -            The following list contains all of the approved programs that are not currently implemented in {language}.
+│ │ -            Click on the name of the project to easily open an issue in GitHub. Alternatively, click requirements
+│ │ -            to check out the description of the project. 
+│ │ -            """.strip()
+│ │ -        )
+│ │ -        page.add_element(MDList(missing_programs_list))
+│ │ +        if language.missing_programs_count() > 0:
+│ │ +            missing_programs_list = _generate_missing_program_list(language, language.missing_programs())
+│ │ +            page.add_heading("Missing Programs", level=3)
+│ │ +            page.add_paragraph(
+│ │ +                f"""
+│ │ +                The following list contains all of the approved programs that are not currently implemented in {language}.
+│ │ +                Click on the name of the project to easily open an issue in GitHub. Alternatively, click requirements
+│ │ +                to check out the description of the project. 
+│ │ +                """.strip()
+│ │ +            )
+│ │ +            page.add_block(MDList(missing_programs_list))
+│ │  
+│ │          # Testing
+│ │ -        page.add_header("Testing", level=2)
+│ │ +        page.add_heading("Testing", level=2)
+│ │          test_data = language.testinfo()
+│ │          if not test_data:
+│ │              page.add_paragraph(
+│ │                  """
+│ │                  This language currently does not feature testing. If you'd like to help in the efforts to test all of 
+│ │                  the code in this repo, consider creating a testinfo.yml file with the following information:
+│ │                  """
+│ │ @@ -191,15 +192,15 @@
+│ │              page.add_unordered_list([
+│ │                  f"Docker Image: {test_data['container']['image']}",
+│ │                  f"Docker Tag: {test_data['container']['tag']}"
+│ │              ])
+│ │          glotter = page.add_paragraph("See the Glotter2 project for more information on how to create a testinfo file.")
+│ │          glotter.insert_link("Glotter2 project", "https://github.com/rzuckerm/glotter2")
+│ │          page.add_horizontal_rule()
+│ │ -        page.add_element(_generate_credit())
+│ │ +        page.add_block(_generate_credit())
+│ │  
+│ │          self.pages[language.pathlike_name()] = page
+│ │  
+│ │      def _build_readmes(self) -> None:
+│ │          """
+│ │          Generates all READMEs for the repo.
+│ │          :return: None
+│ │   --- ronbun-0.6.1/ronbun.egg-info/PKG-INFO
+│ ├── +++ ronbun-0.7.0/ronbun.egg-info/PKG-INFO
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ronbun
+│ │ -Version: 0.6.1
+│ │ +Version: 0.7.0
+│ │  Summary: The Sample Programs README Automation Tool
+│ │  Home-page: https://github.com/TheRenegadeCoder/sample-programs-readmes
+│ │  Author: The Renegade Coder
+│ │  Author-email: jeremy.grifski@therenegadecoder.com
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │   --- ronbun-0.6.1/setup.py
+│ ├── +++ ronbun-0.7.0/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,24 +1,24 @@
+│ │  import setuptools
+│ │  
+│ │  with open("README.md", "r") as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │  setuptools.setup(
+│ │      name="ronbun",
+│ │ -    version="0.6.1",
+│ │ +    version="0.7.0",
+│ │      author="The Renegade Coder",
+│ │      author_email="jeremy.grifski@therenegadecoder.com",
+│ │      description="The Sample Programs README Automation Tool",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/TheRenegadeCoder/sample-programs-readmes",
+│ │      packages=setuptools.find_packages(),
+│ │      install_requires=[
+│ │ -        "SnakeMD>=0",
+│ │ +        "SnakeMD>=0.15",
+│ │          "subete>=0.11"
+│ │      ],
+│ │      entry_points={
+│ │          "console_scripts": [
+│ │              'ronbun = ronbun.readme:main'
+│ │          ],
+│ │      },
