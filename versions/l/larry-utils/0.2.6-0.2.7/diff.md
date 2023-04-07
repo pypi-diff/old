@@ -1,0 +1,112 @@
+# Comparing `tmp/larry_utils-0.2.6.tar.gz` & `tmp/larry_utils-0.2.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "larry_utils-0.2.6.tar", last modified: Fri Feb 24 07:17:09 2023, max compression
++gzip compressed data, was "larry_utils-0.2.7.tar", last modified: Fri Apr  7 02:57:16 2023, max compression
+```
+
+## Comparing `larry_utils-0.2.6.tar` & `larry_utils-0.2.7.tar`
+
+### file list
+
+```diff
+@@ -1,13 +1,13 @@
+-drwxr-xr-x   0 root         (0) staff       (20)        0 2023-02-24 07:17:09.195631 larry_utils-0.2.6/
+--rw-r--r--   0 root         (0) staff       (20)      162 2023-02-24 07:17:09.195493 larry_utils-0.2.6/PKG-INFO
+-drwxr-xr-x   0 root         (0) staff       (20)        0 2023-02-24 07:17:09.194636 larry_utils-0.2.6/larry_utils/
+--rw-r--r--   0 root         (0) staff       (20)     3573 2023-02-24 07:16:50.000000 larry_utils-0.2.6/larry_utils/__init__.py
+--rw-r--r--   0 root         (0) staff       (20)      530 2023-02-21 04:24:25.000000 larry_utils-0.2.6/larry_utils/create.py
+-drwxr-xr-x   0 root         (0) staff       (20)        0 2023-02-24 07:17:09.195300 larry_utils-0.2.6/larry_utils.egg-info/
+--rw-r--r--   0 root         (0) staff       (20)      162 2023-02-24 07:17:09.000000 larry_utils-0.2.6/larry_utils.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) staff       (20)      228 2023-02-24 07:17:09.000000 larry_utils-0.2.6/larry_utils.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) staff       (20)        1 2023-02-24 07:17:09.000000 larry_utils-0.2.6/larry_utils.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) staff       (20)        1 2023-02-24 07:17:08.000000 larry_utils-0.2.6/larry_utils.egg-info/not-zip-safe
+--rw-r--r--   0 root         (0) staff       (20)       12 2023-02-24 07:17:09.000000 larry_utils-0.2.6/larry_utils.egg-info/top_level.txt
+--rw-r--r--   0 root         (0) staff       (20)       38 2023-02-24 07:17:09.195684 larry_utils-0.2.6/setup.cfg
+--rw-r--r--   0 root         (0) staff       (20)      369 2023-02-24 07:17:04.000000 larry_utils-0.2.6/setup.py
++drwxr-xr-x   0 root         (0) staff       (20)        0 2023-04-07 02:57:16.116927 larry_utils-0.2.7/
++-rw-r--r--   0 root         (0) staff       (20)      162 2023-04-07 02:57:16.116799 larry_utils-0.2.7/PKG-INFO
++drwxr-xr-x   0 root         (0) staff       (20)        0 2023-04-07 02:57:16.116001 larry_utils-0.2.7/larry_utils/
++-rw-r--r--   0 root         (0) staff       (20)     4118 2023-04-07 02:56:46.000000 larry_utils-0.2.7/larry_utils/__init__.py
++-rw-r--r--   0 root         (0) staff       (20)      530 2023-02-21 04:24:25.000000 larry_utils-0.2.7/larry_utils/create.py
++drwxr-xr-x   0 root         (0) staff       (20)        0 2023-04-07 02:57:16.116625 larry_utils-0.2.7/larry_utils.egg-info/
++-rw-r--r--   0 root         (0) staff       (20)      162 2023-04-07 02:57:16.000000 larry_utils-0.2.7/larry_utils.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) staff       (20)      228 2023-04-07 02:57:16.000000 larry_utils-0.2.7/larry_utils.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) staff       (20)        1 2023-04-07 02:57:16.000000 larry_utils-0.2.7/larry_utils.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) staff       (20)        1 2023-04-07 02:57:15.000000 larry_utils-0.2.7/larry_utils.egg-info/not-zip-safe
++-rw-r--r--   0 root         (0) staff       (20)       12 2023-04-07 02:57:16.000000 larry_utils-0.2.7/larry_utils.egg-info/top_level.txt
++-rw-r--r--   0 root         (0) staff       (20)       38 2023-04-07 02:57:16.116978 larry_utils-0.2.7/setup.cfg
++-rw-r--r--   0 root         (0) staff       (20)      369 2023-04-07 02:57:14.000000 larry_utils-0.2.7/setup.py
+```
+
+### Comparing `larry_utils-0.2.6/larry_utils/__init__.py` & `larry_utils-0.2.7/larry_utils/__init__.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -71,14 +71,36 @@
+         with open(savename, 'wb') as f:
+             f.write(x)
+         return True
+     except Exception as e:
+         print(e)
+         return False
+ 
++def extrat_tags(line, tags):
++    res = []
++    for t in tags:
++        if t in line:
++            res.append(t)
++    res = sorted(res, key=lambda x: -len(x))
++    new = []
++    for i in res:
++        find = False
++        for j in new:
++            if i in j:
++                find = True 
++                break
++        if not find:
++            new.append(i)
++    if len(new):
++        idx = [line.index(_) for _ in new]
++        new = list(zip(new, idx))
++        new = sorted(new, key=lambda x: -x[1])
++        new = [i[0] for i in new] 
++    return new
++
+ 
+ def read_json(file_path):
+     d = open(file_path).read().split('\n')
+     res = []
+     for line in d:
+         try:
+             res.append(json.loads(line))
+@@ -113,17 +135,17 @@
+             if abs(ratio - distance) < Bdistance:
+                 Bmatch = match
+                 Bdistance = abs(ratio - distance)
+     return Bmatch
+ 
+ 
+ import os
+-d = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'map.pkl')
++ddd = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'map.pkl')
+ 
+-en2ch = pickle.loads(open(d, 'rb').read())
++en2ch = pickle.loads(open(ddd, 'rb').read())
+ def translate_tag(tag):
+     if tag in en2ch:
+         return en2ch[tag]
+     elif tag.replace('_', ' ') in en2ch:
+         return en2ch[tag.replace('_', ' ')]
+     elif tag.replace(' ', '_') in en2ch:
+         return en2ch[tag.replace(' ', '_')]
+```
+
+### Comparing `larry_utils-0.2.6/larry_utils/create.py` & `larry_utils-0.2.7/larry_utils/create.py`
+
+ * *Files identical despite different names*
+

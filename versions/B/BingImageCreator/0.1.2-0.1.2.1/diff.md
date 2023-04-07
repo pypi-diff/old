@@ -1,0 +1,239 @@
+# Comparing `tmp/BingImageCreator-0.1.2.tar.gz` & `tmp/BingImageCreator-0.1.2.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "BingImageCreator-0.1.2.tar", last modified: Thu Apr  6 12:27:04 2023, max compression
++gzip compressed data, was "BingImageCreator-0.1.2.1.tar", last modified: Fri Apr  7 02:57:24 2023, max compression
+```
+
+## Comparing `BingImageCreator-0.1.2.tar` & `BingImageCreator-0.1.2.1.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:27:04.993106 BingImageCreator-0.1.2/
+--rw-r--r--   0 runner    (1001) docker     (123)     1211 2023-04-06 12:26:38.000000 BingImageCreator-0.1.2/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     1981 2023-04-06 12:27:04.993106 BingImageCreator-0.1.2/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1142 2023-04-06 12:26:38.000000 BingImageCreator-0.1.2/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 12:27:04.993106 BingImageCreator-0.1.2/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1198 2023-04-06 12:26:38.000000 BingImageCreator-0.1.2/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:27:04.993106 BingImageCreator-0.1.2/src/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:27:04.993106 BingImageCreator-0.1.2/src/BingImageCreator.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     1981 2023-04-06 12:27:04.000000 BingImageCreator-0.1.2/src/BingImageCreator.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      269 2023-04-06 12:27:04.000000 BingImageCreator-0.1.2/src/BingImageCreator.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 12:27:04.000000 BingImageCreator-0.1.2/src/BingImageCreator.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       15 2023-04-06 12:27:04.000000 BingImageCreator-0.1.2/src/BingImageCreator.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       17 2023-04-06 12:27:04.000000 BingImageCreator-0.1.2/src/BingImageCreator.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)    13883 2023-04-06 12:26:38.000000 BingImageCreator-0.1.2/src/BingImageCreator.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:57:24.208852 BingImageCreator-0.1.2.1/
++-rw-r--r--   0 runner    (1001) docker     (123)     1211 2023-04-07 02:57:03.000000 BingImageCreator-0.1.2.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     1983 2023-04-07 02:57:24.208852 BingImageCreator-0.1.2.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1142 2023-04-07 02:57:03.000000 BingImageCreator-0.1.2.1/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 02:57:24.208852 BingImageCreator-0.1.2.1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1200 2023-04-07 02:57:03.000000 BingImageCreator-0.1.2.1/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:57:24.208852 BingImageCreator-0.1.2.1/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:57:24.208852 BingImageCreator-0.1.2.1/src/BingImageCreator.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     1983 2023-04-07 02:57:24.000000 BingImageCreator-0.1.2.1/src/BingImageCreator.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      269 2023-04-07 02:57:24.000000 BingImageCreator-0.1.2.1/src/BingImageCreator.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 02:57:24.000000 BingImageCreator-0.1.2.1/src/BingImageCreator.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       15 2023-04-07 02:57:24.000000 BingImageCreator-0.1.2.1/src/BingImageCreator.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       17 2023-04-07 02:57:24.000000 BingImageCreator-0.1.2.1/src/BingImageCreator.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)    14038 2023-04-07 02:57:03.000000 BingImageCreator-0.1.2.1/src/BingImageCreator.py
+```
+
+### Comparing `BingImageCreator-0.1.2/LICENSE` & `BingImageCreator-0.1.2.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `BingImageCreator-0.1.2/PKG-INFO` & `BingImageCreator-0.1.2.1/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: BingImageCreator
+-Version: 0.1.2
++Version: 0.1.2.1
+ Summary: High quality image generation by Microsoft. Reverse engineered API.
+ Home-page: https://github.com/acheong08/BingImageCreator
+ Author: Antonio Cheong
+ Author-email: acheong@student.dalat.org
+ License: GNU General Public License v2.0
+ Project-URL: Bug Report, https://github.com/acheong08/BingImageCreator/issues/new
+ Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+```
+
+### Comparing `BingImageCreator-0.1.2/README.md` & `BingImageCreator-0.1.2.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `BingImageCreator-0.1.2/setup.py` & `BingImageCreator-0.1.2.1/setup.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ from setuptools import find_packages
+ from setuptools import setup
+ 
+ setup(
+     name="BingImageCreator",
+-    version="0.1.2",
++    version="0.1.2.1",
+     license="GNU General Public License v2.0",
+     author="Antonio Cheong",
+     author_email="acheong@student.dalat.org",
+     description="High quality image generation by Microsoft. Reverse engineered API.",
+     packages=find_packages("src"),
+     package_dir={"": "src"},
+     url="https://github.com/acheong08/BingImageCreator",
+```
+
+### Comparing `BingImageCreator-0.1.2/src/BingImageCreator.egg-info/PKG-INFO` & `BingImageCreator-0.1.2.1/src/BingImageCreator.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: BingImageCreator
+-Version: 0.1.2
++Version: 0.1.2.1
+ Summary: High quality image generation by Microsoft. Reverse engineered API.
+ Home-page: https://github.com/acheong08/BingImageCreator
+ Author: Antonio Cheong
+ Author-email: acheong@student.dalat.org
+ License: GNU General Public License v2.0
+ Project-URL: Bug Report, https://github.com/acheong08/BingImageCreator/issues/new
+ Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+```
+
+### Comparing `BingImageCreator-0.1.2/src/BingImageCreator.py` & `BingImageCreator-0.1.2.1/src/BingImageCreator.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,19 +1,21 @@
+ import argparse
+ import asyncio
++from functools import partial
+ import contextlib
+ import json
+ import os
+ import random
+ import sys
+ import time
+ import aiohttp
+ import pkg_resources
+ import regex
+ import requests
++from typing import Union
+ 
+ BING_URL = "https://www.bing.com"
+ # Generate random IP between range 13.104.0.0/14
+ FORWARDED_IP = (
+     f"13.{random.randint(104, 107)}.{random.randint(0, 255)}.{random.randint(0, 255)}"
+ )
+ HEADERS = {
+@@ -39,30 +41,37 @@
+ error_no_images = "No images"
+ #
+ sending_message = "Sending request..."
+ wait_message = "Waiting for results..."
+ download_message = "\nDownloading images..."
+ 
+ 
++def debug(debug_file, text_var):
++    """helper function for debug"""
++    with open(f"{debug_file}", "a") as f:
++        f.write(str(text_var))
++
++
+ class ImageGen:
+     """
+     Image generation by Microsoft Bing
+     Parameters:3
+         auth_cookie: str
+     """
+ 
+     def __init__(
+-        self, auth_cookie: str, debug, debug_file: bool, quiet: bool = False
++        self, auth_cookie: str, debug_file: Union[str, None] = None, quiet: bool = False
+     ) -> None:
+         self.session: requests.Session = requests.Session()
+         self.session.headers = HEADERS
+         self.session.cookies.set("_U", auth_cookie)
+         self.quiet = quiet
+         self.debug_file = debug_file
+-        self.debug = debug
++        if self.debug_file:
++            self.debug = partial(debug, self.debug_file)
+ 
+     def get_images(self, prompt: str) -> list:
+         """
+         Fetches image links from Bing
+         Parameters:
+             prompt: str
+         """
+@@ -102,15 +111,15 @@
+         redirect_url = response.headers["Location"].replace("&nfy=1", "")
+         request_id = redirect_url.split("id=")[-1]
+         self.session.get(f"{BING_URL}{redirect_url}")
+         # https://www.bing.com/images/create/async/results/{ID}?q={PROMPT}
+         polling_url = f"{BING_URL}/images/create/async/results/{request_id}?q={url_encoded_prompt}"
+         # Poll for results
+         if self.debug_file:
+-            self.debug()
++            self.debug("Polling and waiting for result")
+         if not self.quiet:
+             print("Waiting for results...")
+         start_wait = time.time()
+         while True:
+             if int(time.time() - start_wait) > 200:
+                 if self.debug_file:
+                     self.debug(f"ERROR: {error_timeout}")
+@@ -339,18 +348,14 @@
+         "--version",
+         action="store_true",
+         help="Print the version number",
+     )
+ 
+     args = parser.parse_args()
+ 
+-    def debugfile(text_var):
+-        with open(f"{args.debug_file}", "a") as f:
+-            f.write(str(text_var))
+-
+     if args.version:
+         print(pkg_resources.get_distribution("BingImageCreator").version)
+         sys.exit()
+ 
+     # Load auth cookie
+     with contextlib.suppress(Exception):
+         with open(args.cookie_file, encoding="utf-8") as file:
+@@ -359,19 +364,17 @@
+                 if cookie.get("name") == "_U":
+                     args.U = cookie.get("value")
+                     break
+ 
+     if args.U is None and args.cookie_file is None:
+         raise Exception("Could not find auth cookie")
+ 
+-    debug = debugfile
+-
+     if not args.asyncio:
+         # Create image generator
+-        image_generator = ImageGen(args.U, debug, args.debug_file, args.quiet)
++        image_generator = ImageGen(args.U, args.debug_file, args.quiet)
+         image_generator.save_images(
+             image_generator.get_images(args.prompt),
+             output_dir=args.output_dir,
+         )
+     else:
+         asyncio.run(async_image_gen(args))
+```
+

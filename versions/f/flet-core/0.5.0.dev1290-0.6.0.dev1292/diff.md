@@ -1,0 +1,802 @@
+# Comparing `tmp/flet_core-0.5.0.dev1290.tar.gz` & `tmp/flet_core-0.6.0.dev1292.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "flet_core-0.5.0.dev1290.tar", max compression
++gzip compressed data, was "flet_core-0.6.0.dev1292.tar", max compression
+```
+
+## Comparing `flet_core-0.5.0.dev1290.tar` & `flet_core-0.6.0.dev1292.tar`
+
+### file list
+
+```diff
+@@ -1,112 +1,112 @@
+--rw-r--r--   0        0        0      189 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/README.md
+--rw-r--r--   0        0        0      723 2023-04-06 18:34:43.375257 flet_core-0.5.0.dev1290/pyproject.toml
+--rw-r--r--   0        0        0     6035 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/__init__.py
+--rw-r--r--   0        0        0     6774 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/alert_dialog.py
+--rw-r--r--   0        0        0      407 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/alignment.py
+--rw-r--r--   0        0        0     7226 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/animated_switcher.py
+--rw-r--r--   0        0        0     2806 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/animation.py
+--rw-r--r--   0        0        0     5403 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/app_bar.py
+--rw-r--r--   0        0        0     7301 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/audio.py
+--rw-r--r--   0        0        0     5446 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/banner.py
+--rw-r--r--   0        0        0     1079 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/border.py
+--rw-r--r--   0        0        0      930 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/border_radius.py
+--rw-r--r--   0        0        0     2826 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/bottom_sheet.py
+--rw-r--r--   0        0        0     2202 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/buttons.py
+--rw-r--r--   0        0        0     3036 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/callable_control.py
+--rw-r--r--   0        0        0     5639 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/card.py
+--rw-r--r--   0        0        0     9855 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/bar_chart.py
+--rw-r--r--   0        0        0     2061 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/bar_chart_group.py
+--rw-r--r--   0        0        0     6837 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/bar_chart_rod.py
+--rw-r--r--   0        0        0     1949 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/bar_chart_rod_stack_item.py
+--rw-r--r--   0        0        0     2924 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/chart_axis.py
+--rw-r--r--   0        0        0     1293 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/chart_axis_label.py
+--rw-r--r--   0        0        0      338 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/chart_grid_lines.py
+--rw-r--r--   0        0        0      286 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/chart_point_line.py
+--rw-r--r--   0        0        0     1006 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/chart_point_shape.py
+--rw-r--r--   0        0        0    11228 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/line_chart.py
+--rw-r--r--   0        0        0     8258 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/line_chart_data.py
+--rw-r--r--   0        0        0     5496 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/line_chart_data_point.py
+--rw-r--r--   0        0        0     5888 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/pie_chart.py
+--rw-r--r--   0        0        0     3824 2023-04-06 18:33:50.283924 flet_core-0.5.0.dev1290/src/flet_core/charts/pie_chart_section.py
+--rw-r--r--   0        0        0     7122 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/checkbox.py
+--rw-r--r--   0        0        0     6739 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/circle_avatar.py
+--rw-r--r--   0        0        0     3085 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/client_storage.py
+--rw-r--r--   0        0        0     1002 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/clipboard.py
+--rw-r--r--   0        0        0    10627 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/colors.py
+--rw-r--r--   0        0        0     7305 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/column.py
+--rw-r--r--   0        0        0     1132 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/connection.py
+--rw-r--r--   0        0        0     6848 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/constrained_control.py
+--rw-r--r--   0        0        0    13650 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/container.py
+--rw-r--r--   0        0        0    14144 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/control.py
+--rw-r--r--   0        0        0      260 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/control_event.py
+--rw-r--r--   0        0        0    20221 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/datatable.py
+--rw-r--r--   0        0        0     2263 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/divider.py
+--rw-r--r--   0        0        0     6270 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/drag_target.py
+--rw-r--r--   0        0        0     6063 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/draggable.py
+--rw-r--r--   0        0        0     9121 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/dropdown.py
+--rw-r--r--   0        0        0     8066 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/elevated_button.py
+--rw-r--r--   0        0        0     2166 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/embed_json_encoder.py
+--rw-r--r--   0        0        0      166 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/event.py
+--rw-r--r--   0        0        0     1839 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/event_handler.py
+--rw-r--r--   0        0        0     9777 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/file_picker.py
+--rw-r--r--   0        0        0     2505 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/filled_button.py
+--rw-r--r--   0        0        0     2639 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/filled_tonal_button.py
+--rw-r--r--   0        0        0     2542 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/flet_app.py
+--rw-r--r--   0        0        0     6556 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/floating_action_button.py
+--rw-r--r--   0        0        0    13925 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/form_field_control.py
+--rw-r--r--   0        0        0    27963 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/gesture_detector.py
+--rw-r--r--   0        0        0     1531 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/gradients.py
+--rw-r--r--   0        0        0     6301 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/grid_view.py
+--rw-r--r--   0        0        0     2134 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/haptic_feedback.py
+--rw-r--r--   0        0        0     3375 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/icon.py
+--rw-r--r--   0        0        0     7700 2023-04-06 18:33:50.287924 flet_core-0.5.0.dev1290/src/flet_core/icon_button.py
+--rw-r--r--   0        0        0   362652 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/icons.py
+--rw-r--r--   0        0        0     6530 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/image.py
+--rw-r--r--   0        0        0     7805 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/list_tile.py
+--rw-r--r--   0        0        0     6206 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/list_view.py
+--rw-r--r--   0        0        0     8668 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/local_connection.py
+--rw-r--r--   0        0        0      583 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/margin.py
+--rw-r--r--   0        0        0     5165 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/markdown.py
+--rw-r--r--   0        0        0     5125 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/matplotlib_chart.py
+--rw-r--r--   0        0        0     8322 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/navigation_bar.py
+--rw-r--r--   0        0        0    11986 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/navigation_rail.py
+--rw-r--r--   0        0        0     6751 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/outlined_button.py
+--rw-r--r--   0        0        0      587 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/padding.py
+--rw-r--r--   0        0        0    51921 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/page.py
+--rw-r--r--   0        0        0     4355 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/plotly_chart.py
+--rw-r--r--   0        0        0     6756 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/popup_menu_button.py
+--rw-r--r--   0        0        0     4237 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/progress_bar.py
+--rw-r--r--   0        0        0     4435 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/progress_ring.py
+--rw-r--r--   0        0        0     4100 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/protocol.py
+--rw-r--r--   0        0        0     3470 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/querystring.py
+--rw-r--r--   0        0        0     5731 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/radio.py
+--rw-r--r--   0        0        0     2389 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/radio_group.py
+--rw-r--r--   0        0        0      291 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/ref.py
+--rw-r--r--   0        0        0     6354 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/responsive_row.py
+--rw-r--r--   0        0        0     7289 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/row.py
+--rw-r--r--   0        0        0     1637 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/semantics.py
+--rw-r--r--   0        0        0      576 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/session_storage.py
+--rw-r--r--   0        0        0     5318 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/shader_mask.py
+--rw-r--r--   0        0        0      572 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/shadow.py
+--rw-r--r--   0        0        0     2919 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/shake_detector.py
+--rw-r--r--   0        0        0     7326 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/slider.py
+--rw-r--r--   0        0        0     3675 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/snack_bar.py
+--rw-r--r--   0        0        0     4833 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/stack.py
+--rw-r--r--   0        0        0     8092 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/switch.py
+--rw-r--r--   0        0        0     6776 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/tabs.py
+--rw-r--r--   0        0        0      632 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/template_route.py
+--rw-r--r--   0        0        0    10042 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/text.py
+--rw-r--r--   0        0        0     6724 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/text_button.py
+--rw-r--r--   0        0        0      594 2023-04-06 18:33:50.291924 flet_core-0.5.0.dev1290/src/flet_core/text_style.py
+--rw-r--r--   0        0        0    15388 2023-04-06 18:33:50.295924 flet_core-0.5.0.dev1290/src/flet_core/textfield.py
+--rw-r--r--   0        0        0     1482 2023-04-06 18:33:50.295924 flet_core-0.5.0.dev1290/src/flet_core/theme.py
+--rw-r--r--   0        0        0     8345 2023-04-06 18:33:50.295924 flet_core-0.5.0.dev1290/src/flet_core/tooltip.py
+--rw-r--r--   0        0        0      544 2023-04-06 18:33:50.295924 flet_core-0.5.0.dev1290/src/flet_core/transform.py
+--rw-r--r--   0        0        0     2753 2023-04-06 18:33:50.295924 flet_core-0.5.0.dev1290/src/flet_core/transparent_pointer.py
+--rw-r--r--   0        0        0     5134 2023-04-06 18:33:50.295924 flet_core-0.5.0.dev1290/src/flet_core/types.py
+--rw-r--r--   0        0        0      684 2023-04-06 18:33:50.295924 flet_core-0.5.0.dev1290/src/flet_core/user_control.py
+--rw-r--r--   0        0        0      409 2023-04-06 18:33:50.295924 flet_core-0.5.0.dev1290/src/flet_core/utils.py
+--rw-r--r--   0        0        0     2337 2023-04-06 18:33:50.295924 flet_core-0.5.0.dev1290/src/flet_core/vertical_divider.py
+--rw-r--r--   0        0        0     6225 2023-04-06 18:33:50.295924 flet_core-0.5.0.dev1290/src/flet_core/view.py
+--rw-r--r--   0        0        0     4049 2023-04-06 18:33:50.295924 flet_core-0.5.0.dev1290/src/flet_core/window_drag_area.py
+--rw-r--r--   0        0        0     1052 1970-01-01 00:00:00.000000 flet_core-0.5.0.dev1290/PKG-INFO
++-rw-r--r--   0        0        0      189 2023-04-07 02:54:02.906048 flet_core-0.6.0.dev1292/README.md
++-rw-r--r--   0        0        0      723 2023-04-07 02:54:38.985398 flet_core-0.6.0.dev1292/pyproject.toml
++-rw-r--r--   0        0        0     6035 2023-04-07 02:54:02.906048 flet_core-0.6.0.dev1292/src/flet_core/__init__.py
++-rw-r--r--   0        0        0     6774 2023-04-07 02:54:02.906048 flet_core-0.6.0.dev1292/src/flet_core/alert_dialog.py
++-rw-r--r--   0        0        0      407 2023-04-07 02:54:02.906048 flet_core-0.6.0.dev1292/src/flet_core/alignment.py
++-rw-r--r--   0        0        0     7226 2023-04-07 02:54:02.906048 flet_core-0.6.0.dev1292/src/flet_core/animated_switcher.py
++-rw-r--r--   0        0        0     2806 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/animation.py
++-rw-r--r--   0        0        0     5403 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/app_bar.py
++-rw-r--r--   0        0        0     7301 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/audio.py
++-rw-r--r--   0        0        0     5446 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/banner.py
++-rw-r--r--   0        0        0     1079 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/border.py
++-rw-r--r--   0        0        0      930 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/border_radius.py
++-rw-r--r--   0        0        0     2826 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/bottom_sheet.py
++-rw-r--r--   0        0        0     2202 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/buttons.py
++-rw-r--r--   0        0        0     3036 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/callable_control.py
++-rw-r--r--   0        0        0     5639 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/card.py
++-rw-r--r--   0        0        0     9855 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/bar_chart.py
++-rw-r--r--   0        0        0     2061 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/bar_chart_group.py
++-rw-r--r--   0        0        0     6837 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/bar_chart_rod.py
++-rw-r--r--   0        0        0     1949 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/bar_chart_rod_stack_item.py
++-rw-r--r--   0        0        0     2924 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/chart_axis.py
++-rw-r--r--   0        0        0     1293 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/chart_axis_label.py
++-rw-r--r--   0        0        0      338 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/chart_grid_lines.py
++-rw-r--r--   0        0        0      286 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/chart_point_line.py
++-rw-r--r--   0        0        0     1006 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/chart_point_shape.py
++-rw-r--r--   0        0        0    11228 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/line_chart.py
++-rw-r--r--   0        0        0     8258 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/line_chart_data.py
++-rw-r--r--   0        0        0     5496 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/line_chart_data_point.py
++-rw-r--r--   0        0        0     5888 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/pie_chart.py
++-rw-r--r--   0        0        0     3824 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/charts/pie_chart_section.py
++-rw-r--r--   0        0        0     7122 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/checkbox.py
++-rw-r--r--   0        0        0     6739 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/circle_avatar.py
++-rw-r--r--   0        0        0     3085 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/client_storage.py
++-rw-r--r--   0        0        0     1002 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/clipboard.py
++-rw-r--r--   0        0        0    10627 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/colors.py
++-rw-r--r--   0        0        0     7305 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/column.py
++-rw-r--r--   0        0        0     1132 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/connection.py
++-rw-r--r--   0        0        0     6848 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/constrained_control.py
++-rw-r--r--   0        0        0    13650 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/container.py
++-rw-r--r--   0        0        0    14155 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/control.py
++-rw-r--r--   0        0        0      260 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/control_event.py
++-rw-r--r--   0        0        0    20221 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/datatable.py
++-rw-r--r--   0        0        0     2263 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/divider.py
++-rw-r--r--   0        0        0     6270 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/drag_target.py
++-rw-r--r--   0        0        0     6063 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/draggable.py
++-rw-r--r--   0        0        0     9121 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/dropdown.py
++-rw-r--r--   0        0        0     8066 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/elevated_button.py
++-rw-r--r--   0        0        0     2166 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/embed_json_encoder.py
++-rw-r--r--   0        0        0      166 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/event.py
++-rw-r--r--   0        0        0     1839 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/event_handler.py
++-rw-r--r--   0        0        0     9777 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/file_picker.py
++-rw-r--r--   0        0        0     2505 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/filled_button.py
++-rw-r--r--   0        0        0     2639 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/filled_tonal_button.py
++-rw-r--r--   0        0        0     2542 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/flet_app.py
++-rw-r--r--   0        0        0     6556 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/floating_action_button.py
++-rw-r--r--   0        0        0    13925 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/form_field_control.py
++-rw-r--r--   0        0        0    27963 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/gesture_detector.py
++-rw-r--r--   0        0        0     1531 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/gradients.py
++-rw-r--r--   0        0        0     6301 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/grid_view.py
++-rw-r--r--   0        0        0     2134 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/haptic_feedback.py
++-rw-r--r--   0        0        0     3375 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/icon.py
++-rw-r--r--   0        0        0     7700 2023-04-07 02:54:02.910048 flet_core-0.6.0.dev1292/src/flet_core/icon_button.py
++-rw-r--r--   0        0        0   362652 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/icons.py
++-rw-r--r--   0        0        0     6530 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/image.py
++-rw-r--r--   0        0        0     7805 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/list_tile.py
++-rw-r--r--   0        0        0     6206 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/list_view.py
++-rw-r--r--   0        0        0     8668 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/local_connection.py
++-rw-r--r--   0        0        0      583 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/margin.py
++-rw-r--r--   0        0        0     5165 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/markdown.py
++-rw-r--r--   0        0        0     5125 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/matplotlib_chart.py
++-rw-r--r--   0        0        0     8322 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/navigation_bar.py
++-rw-r--r--   0        0        0    11986 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/navigation_rail.py
++-rw-r--r--   0        0        0     6751 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/outlined_button.py
++-rw-r--r--   0        0        0      587 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/padding.py
++-rw-r--r--   0        0        0    52093 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/page.py
++-rw-r--r--   0        0        0     4355 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/plotly_chart.py
++-rw-r--r--   0        0        0     6756 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/popup_menu_button.py
++-rw-r--r--   0        0        0     4237 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/progress_bar.py
++-rw-r--r--   0        0        0     4435 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/progress_ring.py
++-rw-r--r--   0        0        0     4100 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/protocol.py
++-rw-r--r--   0        0        0     3470 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/querystring.py
++-rw-r--r--   0        0        0     5731 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/radio.py
++-rw-r--r--   0        0        0     2389 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/radio_group.py
++-rw-r--r--   0        0        0      291 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/ref.py
++-rw-r--r--   0        0        0     6354 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/responsive_row.py
++-rw-r--r--   0        0        0     7289 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/row.py
++-rw-r--r--   0        0        0     1637 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/semantics.py
++-rw-r--r--   0        0        0      576 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/session_storage.py
++-rw-r--r--   0        0        0     5318 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/shader_mask.py
++-rw-r--r--   0        0        0      572 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/shadow.py
++-rw-r--r--   0        0        0     2919 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/shake_detector.py
++-rw-r--r--   0        0        0     7326 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/slider.py
++-rw-r--r--   0        0        0     3675 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/snack_bar.py
++-rw-r--r--   0        0        0     4833 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/stack.py
++-rw-r--r--   0        0        0     8092 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/switch.py
++-rw-r--r--   0        0        0     6776 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/tabs.py
++-rw-r--r--   0        0        0      632 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/template_route.py
++-rw-r--r--   0        0        0    10042 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/text.py
++-rw-r--r--   0        0        0     6724 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/text_button.py
++-rw-r--r--   0        0        0      594 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/text_style.py
++-rw-r--r--   0        0        0    15388 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/textfield.py
++-rw-r--r--   0        0        0     1482 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/theme.py
++-rw-r--r--   0        0        0     8345 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/tooltip.py
++-rw-r--r--   0        0        0      544 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/transform.py
++-rw-r--r--   0        0        0     2753 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/transparent_pointer.py
++-rw-r--r--   0        0        0     5134 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/types.py
++-rw-r--r--   0        0        0      684 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/user_control.py
++-rw-r--r--   0        0        0      409 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/utils.py
++-rw-r--r--   0        0        0     2337 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/vertical_divider.py
++-rw-r--r--   0        0        0     6225 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/view.py
++-rw-r--r--   0        0        0     4049 2023-04-07 02:54:02.914048 flet_core-0.6.0.dev1292/src/flet_core/window_drag_area.py
++-rw-r--r--   0        0        0     1052 1970-01-01 00:00:00.000000 flet_core-0.6.0.dev1292/PKG-INFO
+```
+
+### Comparing `flet_core-0.5.0.dev1290/pyproject.toml` & `flet_core-0.6.0.dev1292/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "flet-core"
+-version = "0.5.0.dev1290"
++version = "0.6.0.dev1292"
+ description = "Flet core library"
+ authors = ["Appveyor Systems Inc. <hello@flet.dev>"]
+ license = "Apache-2.0"
+ readme = "README.md"
+ 
+ packages = [
+     { include = "flet_core", from = "src" },
+```
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/__init__.py` & `flet_core-0.6.0.dev1292/src/flet_core/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/alert_dialog.py` & `flet_core-0.6.0.dev1292/src/flet_core/alert_dialog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/animated_switcher.py` & `flet_core-0.6.0.dev1292/src/flet_core/animated_switcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/animation.py` & `flet_core-0.6.0.dev1292/src/flet_core/animation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/app_bar.py` & `flet_core-0.6.0.dev1292/src/flet_core/app_bar.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/audio.py` & `flet_core-0.6.0.dev1292/src/flet_core/audio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/banner.py` & `flet_core-0.6.0.dev1292/src/flet_core/banner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/border.py` & `flet_core-0.6.0.dev1292/src/flet_core/border.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/border_radius.py` & `flet_core-0.6.0.dev1292/src/flet_core/border_radius.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/bottom_sheet.py` & `flet_core-0.6.0.dev1292/src/flet_core/bottom_sheet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/buttons.py` & `flet_core-0.6.0.dev1292/src/flet_core/buttons.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/callable_control.py` & `flet_core-0.6.0.dev1292/src/flet_core/callable_control.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/card.py` & `flet_core-0.6.0.dev1292/src/flet_core/card.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/charts/bar_chart.py` & `flet_core-0.6.0.dev1292/src/flet_core/charts/bar_chart.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/charts/bar_chart_group.py` & `flet_core-0.6.0.dev1292/src/flet_core/charts/bar_chart_group.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/charts/bar_chart_rod.py` & `flet_core-0.6.0.dev1292/src/flet_core/charts/bar_chart_rod.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/charts/bar_chart_rod_stack_item.py` & `flet_core-0.6.0.dev1292/src/flet_core/charts/bar_chart_rod_stack_item.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/charts/chart_axis.py` & `flet_core-0.6.0.dev1292/src/flet_core/charts/chart_axis.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/charts/chart_axis_label.py` & `flet_core-0.6.0.dev1292/src/flet_core/charts/chart_axis_label.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/charts/chart_point_shape.py` & `flet_core-0.6.0.dev1292/src/flet_core/charts/chart_point_shape.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/charts/line_chart.py` & `flet_core-0.6.0.dev1292/src/flet_core/charts/line_chart.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/charts/line_chart_data.py` & `flet_core-0.6.0.dev1292/src/flet_core/charts/line_chart_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/charts/line_chart_data_point.py` & `flet_core-0.6.0.dev1292/src/flet_core/charts/line_chart_data_point.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/charts/pie_chart.py` & `flet_core-0.6.0.dev1292/src/flet_core/charts/pie_chart.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/charts/pie_chart_section.py` & `flet_core-0.6.0.dev1292/src/flet_core/charts/pie_chart_section.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/checkbox.py` & `flet_core-0.6.0.dev1292/src/flet_core/checkbox.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/circle_avatar.py` & `flet_core-0.6.0.dev1292/src/flet_core/circle_avatar.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/client_storage.py` & `flet_core-0.6.0.dev1292/src/flet_core/client_storage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/clipboard.py` & `flet_core-0.6.0.dev1292/src/flet_core/clipboard.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/colors.py` & `flet_core-0.6.0.dev1292/src/flet_core/colors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/column.py` & `flet_core-0.6.0.dev1292/src/flet_core/column.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/connection.py` & `flet_core-0.6.0.dev1292/src/flet_core/connection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/constrained_control.py` & `flet_core-0.6.0.dev1292/src/flet_core/constrained_control.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/container.py` & `flet_core-0.6.0.dev1292/src/flet_core/container.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/control.py` & `flet_core-0.6.0.dev1292/src/flet_core/control.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -388,16 +388,14 @@
+ 
+         for child in control._get_children():
+             removed_controls.extend(self._remove_control_recursively(index, child))
+ 
+         if control.__uid in index:
+             del index[control.__uid]
+             removed_controls.append(control)
+-            control.page = None
+-            control.__event_handlers.clear()
+ 
+         return removed_controls
+ 
+     # private methods
+     def _build_add_commands(self, indent=0, index=None, added_controls=None):
+ 
+         self._build()
+@@ -464,7 +462,11 @@
+         elif not update and id is not None:
+             command.attrs["id"] = id
+         elif update and len(command.attrs) > 0:
+             assert self.__uid is not None
+             command.values.append(self.__uid)
+ 
+         return command
++
++    def _dispose(self):
++        self.page = None
++        self.__event_handlers.clear()
+```
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/datatable.py` & `flet_core-0.6.0.dev1292/src/flet_core/datatable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/divider.py` & `flet_core-0.6.0.dev1292/src/flet_core/divider.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/drag_target.py` & `flet_core-0.6.0.dev1292/src/flet_core/drag_target.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/draggable.py` & `flet_core-0.6.0.dev1292/src/flet_core/draggable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/dropdown.py` & `flet_core-0.6.0.dev1292/src/flet_core/dropdown.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/elevated_button.py` & `flet_core-0.6.0.dev1292/src/flet_core/elevated_button.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/embed_json_encoder.py` & `flet_core-0.6.0.dev1292/src/flet_core/embed_json_encoder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/event_handler.py` & `flet_core-0.6.0.dev1292/src/flet_core/event_handler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/file_picker.py` & `flet_core-0.6.0.dev1292/src/flet_core/file_picker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/filled_button.py` & `flet_core-0.6.0.dev1292/src/flet_core/filled_button.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/filled_tonal_button.py` & `flet_core-0.6.0.dev1292/src/flet_core/filled_tonal_button.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/flet_app.py` & `flet_core-0.6.0.dev1292/src/flet_core/flet_app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/floating_action_button.py` & `flet_core-0.6.0.dev1292/src/flet_core/floating_action_button.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/form_field_control.py` & `flet_core-0.6.0.dev1292/src/flet_core/form_field_control.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/gesture_detector.py` & `flet_core-0.6.0.dev1292/src/flet_core/gesture_detector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/gradients.py` & `flet_core-0.6.0.dev1292/src/flet_core/gradients.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/grid_view.py` & `flet_core-0.6.0.dev1292/src/flet_core/grid_view.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/haptic_feedback.py` & `flet_core-0.6.0.dev1292/src/flet_core/haptic_feedback.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/icon.py` & `flet_core-0.6.0.dev1292/src/flet_core/icon.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/icon_button.py` & `flet_core-0.6.0.dev1292/src/flet_core/icon_button.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/icons.py` & `flet_core-0.6.0.dev1292/src/flet_core/icons.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/image.py` & `flet_core-0.6.0.dev1292/src/flet_core/image.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/list_tile.py` & `flet_core-0.6.0.dev1292/src/flet_core/list_tile.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/list_view.py` & `flet_core-0.6.0.dev1292/src/flet_core/list_view.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/local_connection.py` & `flet_core-0.6.0.dev1292/src/flet_core/local_connection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/margin.py` & `flet_core-0.6.0.dev1292/src/flet_core/margin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/markdown.py` & `flet_core-0.6.0.dev1292/src/flet_core/markdown.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/matplotlib_chart.py` & `flet_core-0.6.0.dev1292/src/flet_core/matplotlib_chart.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/navigation_bar.py` & `flet_core-0.6.0.dev1292/src/flet_core/navigation_bar.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/navigation_rail.py` & `flet_core-0.6.0.dev1292/src/flet_core/navigation_rail.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/outlined_button.py` & `flet_core-0.6.0.dev1292/src/flet_core/outlined_button.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/padding.py` & `flet_core-0.6.0.dev1292/src/flet_core/padding.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/page.py` & `flet_core-0.6.0.dev1292/src/flet_core/page.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -342,48 +342,52 @@
+             for child in control._get_children():
+                 removed_controls.extend(
+                     self._remove_control_recursively(self.index, child)
+                 )
+             self._send_command("clean", [control.uid])
+             for c in removed_controls:
+                 c.will_unmount()
++                c._dispose()
+ 
+     async def _clean_async(self, control: Control):
+         async with self.__async_lock:
+             control._previous_children.clear()
+             assert control.uid is not None
+             removed_controls = []
+             for child in control._get_children():
+                 removed_controls.extend(
+                     self._remove_control_recursively(self.index, child)
+                 )
+             await self._send_command_async("clean", [control.uid])
+             for c in removed_controls:
+                 await c.will_unmount_async()
++                c._dispose()
+ 
+     def _close(self):
+-        removed_controls = self.__close_internal()
++        removed_controls = self._remove_control_recursively(self.index, self)
+         for c in removed_controls:
+             c.will_unmount()
++            c._dispose()
++        self.__close_internal()
+ 
+     async def _close_async(self):
+-        removed_controls = self.__close_internal()
++        removed_controls = self._remove_control_recursively(self.index, self)
+         for c in removed_controls:
+             await c.will_unmount_async()
++            c._dispose()
++        self.__close_internal()
+ 
+     def __close_internal(self):
+-        removed_controls = self._remove_control_recursively(self.index, self)
+         self._controls.clear()
+         self._previous_children.clear()
+         self.__on_route_change = None
+         self.__on_view_pop = None
+         self.__client_storage = None
+         self.__session_storage = None
+         self.__query = None
+-        return removed_controls
+ 
+     def __update(self, *controls) -> Tuple[List[Control], List[Control]]:
+         commands, added_controls, removed_controls = self.__prepare_update(*controls)
+         self.__validate_controls_page(added_controls)
+         results = self.__conn.send_commands(self._session_id, commands).results
+         self.__update_control_ids(added_controls, results)
+         return added_controls, removed_controls
+@@ -432,20 +436,22 @@
+                     self._index[id] = added_controls[n]
+ 
+                     n += 1
+ 
+     def __handle_mount_unmount(self, added_controls, removed_controls):
+         for ctrl in removed_controls:
+             ctrl.will_unmount()
++            ctrl._dispose()
+         for ctrl in added_controls:
+             ctrl.did_mount()
+ 
+     async def __handle_mount_unmount_async(self, added_controls, removed_controls):
+         for ctrl in removed_controls:
+             await ctrl.will_unmount_async()
++            ctrl._dispose()
+         for ctrl in added_controls:
+             await ctrl.did_mount_async()
+ 
+     def error(self, message=""):
+         with self.__lock:
+             self._send_command("error", [message])
+```
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/plotly_chart.py` & `flet_core-0.6.0.dev1292/src/flet_core/plotly_chart.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/popup_menu_button.py` & `flet_core-0.6.0.dev1292/src/flet_core/popup_menu_button.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/progress_bar.py` & `flet_core-0.6.0.dev1292/src/flet_core/progress_bar.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/progress_ring.py` & `flet_core-0.6.0.dev1292/src/flet_core/progress_ring.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/protocol.py` & `flet_core-0.6.0.dev1292/src/flet_core/protocol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/querystring.py` & `flet_core-0.6.0.dev1292/src/flet_core/querystring.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/radio.py` & `flet_core-0.6.0.dev1292/src/flet_core/radio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/radio_group.py` & `flet_core-0.6.0.dev1292/src/flet_core/radio_group.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/responsive_row.py` & `flet_core-0.6.0.dev1292/src/flet_core/responsive_row.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/row.py` & `flet_core-0.6.0.dev1292/src/flet_core/row.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/semantics.py` & `flet_core-0.6.0.dev1292/src/flet_core/semantics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/session_storage.py` & `flet_core-0.6.0.dev1292/src/flet_core/session_storage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/shader_mask.py` & `flet_core-0.6.0.dev1292/src/flet_core/shader_mask.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/shadow.py` & `flet_core-0.6.0.dev1292/src/flet_core/shadow.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/shake_detector.py` & `flet_core-0.6.0.dev1292/src/flet_core/shake_detector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/slider.py` & `flet_core-0.6.0.dev1292/src/flet_core/slider.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/snack_bar.py` & `flet_core-0.6.0.dev1292/src/flet_core/snack_bar.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/stack.py` & `flet_core-0.6.0.dev1292/src/flet_core/stack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/switch.py` & `flet_core-0.6.0.dev1292/src/flet_core/switch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/tabs.py` & `flet_core-0.6.0.dev1292/src/flet_core/tabs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/template_route.py` & `flet_core-0.6.0.dev1292/src/flet_core/template_route.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/text.py` & `flet_core-0.6.0.dev1292/src/flet_core/text.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/text_button.py` & `flet_core-0.6.0.dev1292/src/flet_core/text_button.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/text_style.py` & `flet_core-0.6.0.dev1292/src/flet_core/text_style.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/textfield.py` & `flet_core-0.6.0.dev1292/src/flet_core/textfield.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/theme.py` & `flet_core-0.6.0.dev1292/src/flet_core/theme.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/tooltip.py` & `flet_core-0.6.0.dev1292/src/flet_core/tooltip.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/transform.py` & `flet_core-0.6.0.dev1292/src/flet_core/transform.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/transparent_pointer.py` & `flet_core-0.6.0.dev1292/src/flet_core/transparent_pointer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/types.py` & `flet_core-0.6.0.dev1292/src/flet_core/types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/user_control.py` & `flet_core-0.6.0.dev1292/src/flet_core/user_control.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/vertical_divider.py` & `flet_core-0.6.0.dev1292/src/flet_core/vertical_divider.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/view.py` & `flet_core-0.6.0.dev1292/src/flet_core/view.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/src/flet_core/window_drag_area.py` & `flet_core-0.6.0.dev1292/src/flet_core/window_drag_area.py`
+
+ * *Files identical despite different names*
+
+### Comparing `flet_core-0.5.0.dev1290/PKG-INFO` & `flet_core-0.6.0.dev1292/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: flet-core
+-Version: 0.5.0.dev1290
++Version: 0.6.0.dev1292
+ Summary: Flet core library
+ License: Apache-2.0
+ Author: Appveyor Systems Inc.
+ Author-email: hello@flet.dev
+ Requires-Python: >=3.7,<4.0
+ Classifier: License :: OSI Approved :: Apache Software License
+ Classifier: Programming Language :: Python :: 3
+```
+

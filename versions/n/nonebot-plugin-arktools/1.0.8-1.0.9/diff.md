@@ -1,0 +1,1451 @@
+# Comparing `tmp/nonebot_plugin_arktools-1.0.8.tar.gz` & `tmp/nonebot_plugin_arktools-1.0.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "nonebot_plugin_arktools-1.0.8.tar", last modified: Thu Feb 16 10:11:25 2023, max compression
++gzip compressed data, was "nonebot_plugin_arktools-1.0.9.tar", last modified: Sun Feb 19 08:58:57 2023, max compression
+```
+
+## Comparing `nonebot_plugin_arktools-1.0.8.tar` & `nonebot_plugin_arktools-1.0.9.tar`
+
+### file list
+
+```diff
+@@ -1,64 +1,65 @@
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.612182 nonebot_plugin_arktools-1.0.8/
+--rw-rw-rw-   0        0        0     1067 2022-07-09 04:15:32.000000 nonebot_plugin_arktools-1.0.8/LICENSE
+--rw-rw-rw-   0        0        0    12534 2023-02-16 10:11:25.611205 nonebot_plugin_arktools-1.0.8/PKG-INFO
+--rw-rw-rw-   0        0        0    11967 2023-02-16 10:09:32.000000 nonebot_plugin_arktools-1.0.8/README.md
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.527220 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/
+--rw-rw-rw-   0        0        0       20 2023-02-10 14:33:50.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.538937 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/
+--rw-rw-rw-   0        0        0      405 2023-02-13 18:24:52.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.546750 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/configs/
+--rw-rw-rw-   0        0        0       84 2023-02-13 04:27:56.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/configs/__init__.py
+--rw-rw-rw-   0        0        0      256 2023-02-16 09:34:23.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/configs/ocr_config.py
+--rw-rw-rw-   0        0        0      816 2023-02-13 18:22:43.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/configs/path_config.py
+--rw-rw-rw-   0        0        0      305 2023-02-13 04:27:56.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/configs/proxy_config.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.550656 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/core/
+--rw-rw-rw-   0        0        0       51 2023-02-11 06:02:39.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/core/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.557492 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/core/database/
+--rw-rw-rw-   0        0        0       58 2023-02-11 20:30:55.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/core/database/__init__.py
+--rw-rw-rw-   0        0        0     9610 2023-02-11 20:30:55.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/core/database/game_sqlite.py
+--rw-rw-rw-   0        0        0     1085 2023-02-13 18:36:26.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/core/database/plugin_sqlite.py
+--rw-rw-rw-   0        0        0    49493 2023-02-15 03:08:17.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/core/models_v3.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.560422 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/exceptions/
+--rw-rw-rw-   0        0        0      694 2022-09-18 13:14:12.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/exceptions/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.564328 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/game_guess_operator/
+--rw-rw-rw-   0        0        0     6131 2023-02-12 15:07:16.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/game_guess_operator/__init__.py
+--rw-rw-rw-   0        0        0     7061 2023-02-11 19:03:22.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/game_guess_operator/data_source.py
+--rw-rw-rw-   0        0        0     1241 2023-02-13 18:31:34.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/help.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.569212 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/misc_monster_siren/
+--rw-rw-rw-   0        0        0     1081 2023-02-12 15:07:16.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/misc_monster_siren/__init__.py
+--rw-rw-rw-   0        0        0     1383 2023-02-11 19:09:55.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/misc_monster_siren/data_source.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.570188 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/misc_operator_birthday/
+--rw-rw-rw-   0        0        0     2771 2023-02-16 10:07:49.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/misc_operator_birthday/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.574096 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_announce_push/
+--rw-rw-rw-   0        0        0     6663 2023-02-14 06:46:17.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_announce_push/__init__.py
+--rw-rw-rw-   0        0        0     1574 2023-02-14 12:59:44.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_announce_push/data_source.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.578002 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_open_recruitment/
+--rw-rw-rw-   0        0        0     3848 2023-02-16 10:07:49.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_open_recruitment/__init__.py
+--rw-rw-rw-   0        0        0    11408 2023-02-16 09:49:30.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_open_recruitment/data_source.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.582884 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_operator_info/
+--rw-rw-rw-   0        0        0     1817 2023-02-16 10:07:49.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_operator_info/__init__.py
+--rw-rw-rw-   0        0        0    19768 2023-02-11 06:35:28.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_operator_info/data_source.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.585813 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_sanity_notify/
+--rw-rw-rw-   0        0        0     4408 2023-02-12 17:50:56.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_sanity_notify/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.596556 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/utils/
+--rw-rw-rw-   0        0        0     1844 2023-02-16 10:02:12.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/utils/__init__.py
+--rw-rw-rw-   0        0        0     9502 2023-02-16 09:43:44.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/utils/database.py
+--rw-rw-rw-   0        0        0     5954 2023-02-12 16:00:06.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/utils/general.py
+--rw-rw-rw-   0        0        0     1859 2023-02-10 17:40:27.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/utils/image.py
+--rw-rw-rw-   0        0        0    11877 2023-02-16 10:02:12.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/utils/update.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.608275 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/test/
+--rw-rw-rw-   0        0        0        0 2023-02-11 05:40:06.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/test/__init__.py
+--rw-rw-rw-   0        0        0        0 2023-02-11 05:39:33.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/test/test_database_utils.py
+--rw-rw-rw-   0        0        0        0 2023-02-11 05:39:51.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/test/test_models_v3.py
+--rw-rw-rw-   0        0        0      613 2023-02-12 15:46:38.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/test/test_open_recruitment.py
+--rw-rw-rw-   0        0        0        0 2023-02-11 05:39:26.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/test/test_operator_info.py
+--rw-rw-rw-   0        0        0        0 2023-02-11 05:39:44.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/test/test_update_utils.py
+--rw-rw-rw-   0        0        0     2251 2023-02-11 05:58:04.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/test/utils.py
+-drwxrwxrwx   0        0        0        0 2023-02-16 10:11:25.536008 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools.egg-info/
+--rw-rw-rw-   0        0        0    12534 2023-02-16 10:11:25.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0     2177 2023-02-16 10:11:25.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-02-16 10:11:25.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0      232 2023-02-16 10:11:25.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       24 2023-02-16 10:11:25.000000 nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-02-16 10:11:25.613159 nonebot_plugin_arktools-1.0.8/setup.cfg
+--rw-rw-rw-   0        0        0     1256 2023-02-16 09:33:57.000000 nonebot_plugin_arktools-1.0.8/setup.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.779281 nonebot_plugin_arktools-1.0.9/
++-rw-rw-rw-   0        0        0     1067 2022-07-09 04:15:32.000000 nonebot_plugin_arktools-1.0.9/LICENSE
++-rw-rw-rw-   0        0        0    13712 2023-02-19 08:58:57.778305 nonebot_plugin_arktools-1.0.9/PKG-INFO
++-rw-rw-rw-   0        0        0    13145 2023-02-19 08:55:44.000000 nonebot_plugin_arktools-1.0.9/README.md
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.713849 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/
++-rw-rw-rw-   0        0        0       20 2023-02-10 14:33:50.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/__init__.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.723616 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/
++-rw-rw-rw-   0        0        0      405 2023-02-13 18:24:52.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/__init__.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.732405 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/configs/
++-rw-rw-rw-   0        0        0      117 2023-02-19 08:07:12.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/configs/__init__.py
++-rw-rw-rw-   0        0        0      279 2023-02-19 08:07:12.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/configs/ocr_config.py
++-rw-rw-rw-   0        0        0      884 2023-02-19 08:07:12.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/configs/path_config.py
++-rw-rw-rw-   0        0        0      325 2023-02-19 08:07:12.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/configs/proxy_config.py
++-rw-rw-rw-   0        0        0      505 2023-02-19 08:19:59.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/configs/scheduler_config.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.735335 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/core/
++-rw-rw-rw-   0        0        0       51 2023-02-11 06:02:39.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/core/__init__.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.740218 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/core/database/
++-rw-rw-rw-   0        0        0       58 2023-02-11 20:30:55.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/core/database/__init__.py
++-rw-rw-rw-   0        0        0     9610 2023-02-11 20:30:55.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/core/database/game_sqlite.py
++-rw-rw-rw-   0        0        0     1085 2023-02-13 18:36:26.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/core/database/plugin_sqlite.py
++-rw-rw-rw-   0        0        0    49491 2023-02-19 08:07:12.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/core/models_v3.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.741194 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/exceptions/
++-rw-rw-rw-   0        0        0      694 2022-09-18 13:14:12.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/exceptions/__init__.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.745101 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/game_guess_operator/
++-rw-rw-rw-   0        0        0     6131 2023-02-12 15:07:16.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/game_guess_operator/__init__.py
++-rw-rw-rw-   0        0        0     7086 2023-02-19 08:54:05.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/game_guess_operator/data_source.py
++-rw-rw-rw-   0        0        0     1241 2023-02-13 18:31:34.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/help.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.748031 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/misc_monster_siren/
++-rw-rw-rw-   0        0        0     1081 2023-02-12 15:07:16.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/misc_monster_siren/__init__.py
++-rw-rw-rw-   0        0        0     1383 2023-02-11 19:09:55.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/misc_monster_siren/data_source.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.749007 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/misc_operator_birthday/
++-rw-rw-rw-   0        0        0     2771 2023-02-16 10:07:49.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/misc_operator_birthday/__init__.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.750960 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_announce_push/
++-rw-rw-rw-   0        0        0     6874 2023-02-19 08:37:55.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_announce_push/__init__.py
++-rw-rw-rw-   0        0        0     1284 2023-02-19 08:07:12.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_announce_push/data_source.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.753890 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_open_recruitment/
++-rw-rw-rw-   0        0        0     3848 2023-02-16 10:07:49.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_open_recruitment/__init__.py
++-rw-rw-rw-   0        0        0    11408 2023-02-16 09:49:30.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_open_recruitment/data_source.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.756820 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_operator_info/
++-rw-rw-rw-   0        0        0     1817 2023-02-16 10:07:49.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_operator_info/__init__.py
++-rw-rw-rw-   0        0        0    19768 2023-02-11 06:35:28.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_operator_info/data_source.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.758773 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_sanity_notify/
++-rw-rw-rw-   0        0        0     4980 2023-02-19 08:07:12.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_sanity_notify/__init__.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.766587 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/utils/
++-rw-rw-rw-   0        0        0     2152 2023-02-19 08:34:28.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/utils/__init__.py
++-rw-rw-rw-   0        0        0     9845 2023-02-19 08:37:55.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/utils/database.py
++-rw-rw-rw-   0        0        0     5954 2023-02-12 16:00:06.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/utils/general.py
++-rw-rw-rw-   0        0        0     1859 2023-02-10 17:40:27.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/utils/image.py
++-rw-rw-rw-   0        0        0    12552 2023-02-19 08:34:28.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/utils/update.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.776352 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/test/
++-rw-rw-rw-   0        0        0        0 2023-02-11 05:40:06.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/test/__init__.py
++-rw-rw-rw-   0        0        0        0 2023-02-11 05:39:33.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/test/test_database_utils.py
++-rw-rw-rw-   0        0        0        0 2023-02-11 05:39:51.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/test/test_models_v3.py
++-rw-rw-rw-   0        0        0      613 2023-02-12 15:46:38.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/test/test_open_recruitment.py
++-rw-rw-rw-   0        0        0        0 2023-02-11 05:39:26.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/test/test_operator_info.py
++-rw-rw-rw-   0        0        0        0 2023-02-11 05:39:44.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/test/test_update_utils.py
++-rw-rw-rw-   0        0        0     2251 2023-02-11 05:58:04.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/test/utils.py
++drwxrwxrwx   0        0        0        0 2023-02-19 08:58:57.720685 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools.egg-info/
++-rw-rw-rw-   0        0        0    13712 2023-02-19 08:58:57.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0     2233 2023-02-19 08:58:57.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-02-19 08:58:57.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0      232 2023-02-19 08:58:57.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       24 2023-02-19 08:58:57.000000 nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-02-19 08:58:57.779281 nonebot_plugin_arktools-1.0.9/setup.cfg
++-rw-rw-rw-   0        0        0     1256 2023-02-19 08:07:12.000000 nonebot_plugin_arktools-1.0.9/setup.py
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/LICENSE` & `nonebot_plugin_arktools-1.0.9/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/PKG-INFO` & `nonebot_plugin_arktools-1.0.9/README.md`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,23 +1,7 @@
+-Metadata-Version: 2.1
+-Name: nonebot_plugin_arktools
+-Version: 1.0.8
+-Summary: 基于 OneBot 适配器的 NoneBot2 明日方舟小工具箱插件
+-Home-page: https://github.com/NumberSir/nonebot_plugin_arktools
+-Author: Number_Sir
+-Author-email: Number_Sir@126.com
+-Keywords: pip,nonebot2,nonebot,nonebot_plugin
+-Platform: any
+-Classifier: Programming Language :: Python :: 3
+-Classifier: License :: OSI Approved :: MIT License
+-Classifier: Operating System :: OS Independent
+-Requires-Python: >=3.8
+-Description-Content-Type: text/markdown
+-License-File: LICENSE
+-
+ <p align="center">
+   <a href="https://v2.nonebot.dev/"><img src="https://v2.nonebot.dev/logo.png" width="200" height="200" alt="nonebot"></a>
+ </p>
+ 
+ <div align="center">
+   
+ # Nonebot_Plugin_ArkTools
+@@ -96,23 +80,32 @@
+ ## .env.env 配置项
+ 
+ ```ini
+ # 具体见 https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/app/list
+ arknights_baidu_api_key="xxx"    # 【必填】百度 OCR API KEY
+ arknights_baidu_secret_key="xxx"   # 【必填】百度 OCR SECRET KEY
+ 
+-github_raw="xxx"   # 默认为 https://raw.githubusercontent.com，如有镜像源可以替换
+-github_site="xxx"  # 默认为 https://github.com，如有镜像源可以替换
++github_raw="https://raw.githubusercontent.com"   # 默认为 https://raw.githubusercontent.com，如有镜像源可以替换
++github_site="https://github.com"  # 默认为 https://github.com，如有镜像源可以替换
++
++announce_push_switch=False  # 是否自动推送舟舟最新公告，默认为 False; True 为开启自动检测
++announce_push_interval=1  # 自动推送最新公告的检测间隔，上述开关开启时有效，默认为 1 分钟
++
++sanity_notify_switch=False  # 是否自动检测理智提醒，默认为 False; True 为开启自动检测
++sanity_notify_interval=10  # 自动检测理智提醒的检测间隔，上述开关开启时有效，默认为 10 分钟
+ ...
+ ```
+ 各配置项的含义如上。
++<div align="left">
++  <img src="https://user-images.githubusercontent.com/52584526/219335891-37933d79-1b52-4452-8959-04861087f4e8.png" width="700" />
++</div>
+ 
+ ## 指令
+ <details>
+-<summary>详细指令</summary>
++<summary>点击展开</summary>
+ 
+ ### 详细指令
+ 使用以下指令触发，需加上指令前缀
+ ```text
+ 格式：
+ 指令 => 含义
+ [] 代表参数
+@@ -161,15 +154,15 @@
+ 删除方舟推送群 / DELGROUP   => 删除自动推送的群号
+ 查看方舟推送群 / GETGROUP   => 查看自动推送的群号
+ ```
+ </details>
+ 
+ # 图片示例
+ <details>
+-<summary>图片们</summary>
++<summary>点击展开</summary>
+ 
+ ## 图片们
+ <div align="left">
+   <img src="https://user-images.githubusercontent.com/52584526/218328291-2324ea20-74c4-4182-81ed-4b74950c3ef9.png" width="500" />
+ </div>
+ 
+ <div align="left">
+@@ -215,14 +208,23 @@
+  - __[Kengxxiao](https://github.com/Kengxxiao)__ 的 __[《明日方舟》游戏数据库](https://github.com/Kengxxiao/ArknightsGameData)__
+  - __[Aceship](https://github.com/Aceship)__ 的 __[Arknight-Images](https://github.com/Aceship/Arknight-Images)__
+  - __[AmiyaBot](https://github.com/AmiyaBot)__ 的 __[Amiya-bot](https://github.com/AmiyaBot/Amiya-Bot)__
+  - __[Strelizia02](https://github.com/Strelizia02)__ 的 __[AngelinaBot](https://github.com/Strelizia02/AngelinaBot)__
+ 
+ 
+ # 更新日志
++<details>
++<summary>点击展开</summary>
++
++> 2023-02-19 v1.0.9
++> - 添加定时任务配置项
++> - 修复定时任务导致其它处理器阻塞的问题 [@issue/30](https://github.com/NumberSir/nonebot_plugin_arktools/issues/30) [@zx-issue/9](https://github.com/NumberSir/zhenxun_arktools/issues/9)
++> - 修复猜干员无法判断重复猜的问题 [@zx-issue/10](https://github.com/NumberSir/zhenxun_arktools/issues/10)
++> - 修复猜干员结果图不按顺序绘制的问题
++>
+ > 2023-02-16 v1.0.8
+ > - 移除 `nb plugin install` 安装命令，无法识别最新版本号 [@issue/28](https://github.com/NumberSir/nonebot_plugin_arktools/issues/28)
+ > - 修改百度 OCR 配置项名称 [@issue/29](https://github.com/NumberSir/nonebot_plugin_arktools/issues/29)
+ > - 修复资源下载与数据库初始化顺序不一致的问题
+ > - 补充更多错误提示信息
+ > 
+ > 2023-02-15 v1.0.7
+@@ -293,7 +295,9 @@
+ > - 修复了使用 nb plugin install 命令安装后无法正常工作的问题 [@issue/1](https://github.com/NumberSir/nonebot_plugin_arktools/issues/1)
+ > 
+ > 2022-05-26 v0.2.0
+ > - 添加了查询最新活动信息的功能
+ >
+ > 2022-05-24 v0.1.0
+ > - 添加了查询今日开放资源关卡的功能
++
++</details>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,15 +1,7 @@
+-Metadata-Version: 2.1 Name: nonebot_plugin_arktools Version: 1.0.8 Summary:
+-åºäº OneBot ééå¨ç NoneBot2 ææ¥æ¹èå°å·¥å·ç®±æä»¶ Home-page:
+-https://github.com/NumberSir/nonebot_plugin_arktools Author: Number_Sir Author-
+-email: Number_Sir@126.com Keywords: pip,nonebot2,nonebot,nonebot_plugin
+-Platform: any Classifier: Programming Language :: Python :: 3 Classifier:
+-License :: OSI Approved :: MIT License Classifier: Operating System :: OS
+-Independent Requires-Python: >=3.8 Description-Content-Type: text/markdown
+-License-File: LICENSE
+                                    [nonebot]
+  # Nonebot_Plugin_ArkTools _â¨ åºäº OneBot ééå¨ç [NoneBot2](https://
+              v2.nonebot.dev/) ææ¥æ¹èå°å·¥å·ç®±æä»¶ â¨_
+ [![OSCS Status](https://www.oscs1024.com/platform/badge/NumberSir/
+ nonebot_plugin_arktools.svg?size=small)](https://www.oscs1024.com/project/
+ NumberSir/nonebot_plugin_arktools?ref=badge_small)
+ æ¬äººpythonå°èæ°ï¼æä»¶æä¸å®ååå¯ä»¥æ¹è¿ä¹å¤æ¬¢è¿åä½å¤æpråissue
+@@ -49,18 +41,28 @@
+ zh.otf â âââ guess_character â â âââ correct.png â â
+ âââ down.png â â âââ up.png â â âââ vague.png â â
+ âââ wrong.png â âââ ... âââ src âââ test âââ
+ ... ... ``` ## .env.env éç½®é¡¹ ```ini # å·ä½è§ https://
+ console.bce.baidu.com/ai/?fromai=1#/ai/ocr/app/list
+ arknights_baidu_api_key="xxx" # ãå¿å¡«ãç¾åº¦ OCR API KEY
+ arknights_baidu_secret_key="xxx" # ãå¿å¡«ãç¾åº¦ OCR SECRET KEY
+-github_raw="xxx" # é»è®¤ä¸º https://
+-raw.githubusercontent.comï¼å¦æéåæºå¯ä»¥æ¿æ¢ github_site="xxx" #
+-é»è®¤ä¸º https://github.comï¼å¦æéåæºå¯ä»¥æ¿æ¢ ... ```
+-åéç½®é¡¹çå«ä¹å¦ä¸ã ## æä»¤  è¯¦ç»æä»¤ ### è¯¦ç»æä»¤
++github_raw="https://raw.githubusercontent.com" # é»è®¤ä¸º https://
++raw.githubusercontent.comï¼å¦æéåæºå¯ä»¥æ¿æ¢ github_site="https://
++github.com" # é»è®¤ä¸º https://github.comï¼å¦æéåæºå¯ä»¥æ¿æ¢
++announce_push_switch=False # æ¯å¦èªå¨æ¨éèèææ°å¬åï¼é»è®¤ä¸º
++False; True ä¸ºå¼å¯èªå¨æ£æµ announce_push_interval=1 #
++èªå¨æ¨éææ°å¬åçæ£æµé´éï¼ä¸è¿°å¼å³å¼å¯æ¶ææï¼é»è®¤ä¸º
++1 åé sanity_notify_switch=False #
++æ¯å¦èªå¨æ£æµçæºæéï¼é»è®¤ä¸º False; True ä¸ºå¼å¯èªå¨æ£æµ
++sanity_notify_interval=10 #
++èªå¨æ£æµçæºæéçæ£æµé´éï¼ä¸è¿°å¼å³å¼å¯æ¶ææï¼é»è®¤ä¸º
++10 åé ... ``` åéç½®é¡¹çå«ä¹å¦ä¸ã
++[https://user-images.githubusercontent.com/52584526/219335891-37933d79-1b52-
++4452-8959-04861087f4e8.png]
++## æä»¤  ç¹å»å±å¼ ### è¯¦ç»æä»¤
+ ä½¿ç¨ä»¥ä¸æä»¤è§¦åï¼éå ä¸æä»¤åç¼ ```text æ ¼å¼ï¼ æä»¤ =>
+ å«ä¹ [] ä»£è¡¨åæ° xxx/yyy ä»£è¡¨ xxx æ yyy ``` æé¡¹ ```text
+ æ¹èå¸®å© / arkhelp => æ¥çæä»¤åè¡¨ æ´æ°æ¹èç´ æ =>
+ æå¨æ´æ°æ¸¸ææ°æ®(json)ä¸å¾ç æ´æ°æ¹èæ°æ®åº =>
+ æå¨æ´æ°æ°æ®åº ``` çå¹²å ```text çå¹²å => å¼å§æ°æ¸¸æ #
+ [å¹²åå] => çå¹²åï¼å¦ï¼#è¾éæ³æ æç¤º =>
+ æ¥çç­æ¡å¹²åçä¿¡æ¯ ç»æ => ç»æå½åå±æ¸¸æ ``` ä»æ¥å¹²å
+@@ -74,15 +76,15 @@
+ => é»è®¤è®°å½åçæºä¸º0ï¼åæ»¡å°135æ¶æé" çæºæé
+ [å½åçæº] [åæ»¡çæº] =>
+ åä¸ï¼ä¸è¿æå¨æå®å½åçæºä¸åæ»¡çæº" çæºæ¥ç =>
+ æ¥çè·ç¦»çæºåæ»¡è¿æå¤ä¹ï¼ä»¥åå½æçæºä¸ºå¤å°" ```
+ å¬åæ¨é ```text æ·»å æ¹èæ¨éç¾¤ / ADDGROUP =>
+ æ·»å èªå¨æ¨éçç¾¤å· å é¤æ¹èæ¨éç¾¤ / DELGROUP =>
+ å é¤èªå¨æ¨éçç¾¤å· æ¥çæ¹èæ¨éç¾¤ / GETGROUP =>
+-æ¥çèªå¨æ¨éçç¾¤å· ```  # å¾çç¤ºä¾  å¾çä»¬ ## å¾çä»¬
++æ¥çèªå¨æ¨éçç¾¤å· ```  # å¾çç¤ºä¾  ç¹å»å±å¼ ## å¾çä»¬
+ [https://user-images.githubusercontent.com/52584526/218328291-2324ea20-74c4-
+ 4182-81ed-4b74950c3ef9.png]
+ [https://user-images.githubusercontent.com/52584526/218328307-f71e08ff-2370-
+ 4fb9-8898-c76f7e06a168.png]
+ [https://user-images.githubusercontent.com/52584526/218328316-9259d9e6-6c2f-
+ 40e9-87bd-cee68da240e2.png]
+ [https://user-images.githubusercontent.com/52584526/218328320-9ee76c53-dcf2-
+@@ -103,19 +105,25 @@
+ [ææ¥æ¹èå¸¸ç¨ç´ æåº](https://github.com/yuanyan3060/Arknights-Bot-
+ Resource)__ - __[Kengxxiao](https://github.com/Kengxxiao)__ ç __
+ [ãææ¥æ¹èãæ¸¸ææ°æ®åº](https://github.com/Kengxxiao/
+ ArknightsGameData)__ - __[Aceship](https://github.com/Aceship)__ ç __
+ [Arknight-Images](https://github.com/Aceship/Arknight-Images)__ - __[AmiyaBot]
+ (https://github.com/AmiyaBot)__ ç __[Amiya-bot](https://github.com/AmiyaBot/
+ Amiya-Bot)__ - __[Strelizia02](https://github.com/Strelizia02)__ ç __
+-[AngelinaBot](https://github.com/Strelizia02/AngelinaBot)__ # æ´æ°æ¥å¿ >
+-2023-02-16 v1.0.8 > - ç§»é¤ `nb plugin install`
+-å®è£å½ä»¤ï¼æ æ³è¯å«ææ°çæ¬å· [@issue/28](https://github.com/
+-NumberSir/nonebot_plugin_arktools/issues/28) > - ä¿®æ¹ç¾åº¦ OCR
+-éç½®é¡¹åç§° [@issue/29](https://github.com/NumberSir/
++[AngelinaBot](https://github.com/Strelizia02/AngelinaBot)__ # æ´æ°æ¥å¿
++ç¹å»å±å¼ > 2023-02-19 v1.0.9 > - æ·»å å®æ¶ä»»å¡éç½®é¡¹ > -
++ä¿®å¤å®æ¶ä»»å¡å¯¼è´å¶å®å¤çå¨é»å¡çé®é¢ [@issue/30](https://
++github.com/NumberSir/nonebot_plugin_arktools/issues/30) [@zx-issue/9](https://
++github.com/NumberSir/zhenxun_arktools/issues/9) > -
++ä¿®å¤çå¹²åæ æ³å¤æ­éå¤ççé®é¢ [@zx-issue/10](https://
++github.com/NumberSir/zhenxun_arktools/issues/10) > -
++ä¿®å¤çå¹²åç»æå¾ä¸æé¡ºåºç»å¶çé®é¢ > > 2023-02-16 v1.0.8 > -
++ç§»é¤ `nb plugin install` å®è£å½ä»¤ï¼æ æ³è¯å«ææ°çæ¬å· [@issue/
++28](https://github.com/NumberSir/nonebot_plugin_arktools/issues/28) > -
++ä¿®æ¹ç¾åº¦ OCR éç½®é¡¹åç§° [@issue/29](https://github.com/NumberSir/
+ nonebot_plugin_arktools/issues/29) > -
+ ä¿®å¤èµæºä¸è½½ä¸æ°æ®åºåå§åé¡ºåºä¸ä¸è´çé®é¢ > -
+ è¡¥åæ´å¤éè¯¯æç¤ºä¿¡æ¯ > > 2023-02-15 v1.0.7 > -
+ æ·»å èªå¨æ¨éææ°å¬ååè½ [@issue/10](https://github.com/NumberSir/
+ nonebot_plugin_arktools/issues/10) > -
+ ä¿®å¤ææ°å¾åèµæºè½åçæ¬çé®é¢ > - ä¿®å¤å¯å¨ nonebot
+ æ¶ä¸æ£æ¥ç´ æææ°çæ¬çé®é¢ > > 2023-02-13 v1.0.6 > -
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/README.md` & `nonebot_plugin_arktools-1.0.9/PKG-INFO`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,7 +1,23 @@
++Metadata-Version: 2.1
++Name: nonebot_plugin_arktools
++Version: 1.0.9
++Summary: 基于 OneBot 适配器的 NoneBot2 明日方舟小工具箱插件
++Home-page: https://github.com/NumberSir/nonebot_plugin_arktools
++Author: Number_Sir
++Author-email: Number_Sir@126.com
++Keywords: pip,nonebot2,nonebot,nonebot_plugin
++Platform: any
++Classifier: Programming Language :: Python :: 3
++Classifier: License :: OSI Approved :: MIT License
++Classifier: Operating System :: OS Independent
++Requires-Python: >=3.8
++Description-Content-Type: text/markdown
++License-File: LICENSE
++
+ <p align="center">
+   <a href="https://v2.nonebot.dev/"><img src="https://v2.nonebot.dev/logo.png" width="200" height="200" alt="nonebot"></a>
+ </p>
+ 
+ <div align="center">
+   
+ # Nonebot_Plugin_ArkTools
+@@ -80,23 +96,32 @@
+ ## .env.env 配置项
+ 
+ ```ini
+ # 具体见 https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/app/list
+ arknights_baidu_api_key="xxx"    # 【必填】百度 OCR API KEY
+ arknights_baidu_secret_key="xxx"   # 【必填】百度 OCR SECRET KEY
+ 
+-github_raw="xxx"   # 默认为 https://raw.githubusercontent.com，如有镜像源可以替换
+-github_site="xxx"  # 默认为 https://github.com，如有镜像源可以替换
++github_raw="https://raw.githubusercontent.com"   # 默认为 https://raw.githubusercontent.com，如有镜像源可以替换
++github_site="https://github.com"  # 默认为 https://github.com，如有镜像源可以替换
++
++announce_push_switch=False  # 是否自动推送舟舟最新公告，默认为 False; True 为开启自动检测
++announce_push_interval=1  # 自动推送最新公告的检测间隔，上述开关开启时有效，默认为 1 分钟
++
++sanity_notify_switch=False  # 是否自动检测理智提醒，默认为 False; True 为开启自动检测
++sanity_notify_interval=10  # 自动检测理智提醒的检测间隔，上述开关开启时有效，默认为 10 分钟
+ ...
+ ```
+ 各配置项的含义如上。
++<div align="left">
++  <img src="https://user-images.githubusercontent.com/52584526/219335891-37933d79-1b52-4452-8959-04861087f4e8.png" width="700" />
++</div>
+ 
+ ## 指令
+ <details>
+-<summary>详细指令</summary>
++<summary>点击展开</summary>
+ 
+ ### 详细指令
+ 使用以下指令触发，需加上指令前缀
+ ```text
+ 格式：
+ 指令 => 含义
+ [] 代表参数
+@@ -145,15 +170,15 @@
+ 删除方舟推送群 / DELGROUP   => 删除自动推送的群号
+ 查看方舟推送群 / GETGROUP   => 查看自动推送的群号
+ ```
+ </details>
+ 
+ # 图片示例
+ <details>
+-<summary>图片们</summary>
++<summary>点击展开</summary>
+ 
+ ## 图片们
+ <div align="left">
+   <img src="https://user-images.githubusercontent.com/52584526/218328291-2324ea20-74c4-4182-81ed-4b74950c3ef9.png" width="500" />
+ </div>
+ 
+ <div align="left">
+@@ -199,14 +224,23 @@
+  - __[Kengxxiao](https://github.com/Kengxxiao)__ 的 __[《明日方舟》游戏数据库](https://github.com/Kengxxiao/ArknightsGameData)__
+  - __[Aceship](https://github.com/Aceship)__ 的 __[Arknight-Images](https://github.com/Aceship/Arknight-Images)__
+  - __[AmiyaBot](https://github.com/AmiyaBot)__ 的 __[Amiya-bot](https://github.com/AmiyaBot/Amiya-Bot)__
+  - __[Strelizia02](https://github.com/Strelizia02)__ 的 __[AngelinaBot](https://github.com/Strelizia02/AngelinaBot)__
+ 
+ 
+ # 更新日志
++<details>
++<summary>点击展开</summary>
++
++> 2023-02-19 v1.0.9
++> - 添加定时任务配置项
++> - 修复定时任务导致其它处理器阻塞的问题 [@issue/30](https://github.com/NumberSir/nonebot_plugin_arktools/issues/30) [@zx-issue/9](https://github.com/NumberSir/zhenxun_arktools/issues/9)
++> - 修复猜干员无法判断重复猜的问题 [@zx-issue/10](https://github.com/NumberSir/zhenxun_arktools/issues/10)
++> - 修复猜干员结果图不按顺序绘制的问题
++>
+ > 2023-02-16 v1.0.8
+ > - 移除 `nb plugin install` 安装命令，无法识别最新版本号 [@issue/28](https://github.com/NumberSir/nonebot_plugin_arktools/issues/28)
+ > - 修改百度 OCR 配置项名称 [@issue/29](https://github.com/NumberSir/nonebot_plugin_arktools/issues/29)
+ > - 修复资源下载与数据库初始化顺序不一致的问题
+ > - 补充更多错误提示信息
+ > 
+ > 2023-02-15 v1.0.7
+@@ -277,7 +311,9 @@
+ > - 修复了使用 nb plugin install 命令安装后无法正常工作的问题 [@issue/1](https://github.com/NumberSir/nonebot_plugin_arktools/issues/1)
+ > 
+ > 2022-05-26 v0.2.0
+ > - 添加了查询最新活动信息的功能
+ >
+ > 2022-05-24 v0.1.0
+ > - 添加了查询今日开放资源关卡的功能
++
++</details>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,7 +1,15 @@
++Metadata-Version: 2.1 Name: nonebot_plugin_arktools Version: 1.0.9 Summary:
++åºäº OneBot ééå¨ç NoneBot2 ææ¥æ¹èå°å·¥å·ç®±æä»¶ Home-page:
++https://github.com/NumberSir/nonebot_plugin_arktools Author: Number_Sir Author-
++email: Number_Sir@126.com Keywords: pip,nonebot2,nonebot,nonebot_plugin
++Platform: any Classifier: Programming Language :: Python :: 3 Classifier:
++License :: OSI Approved :: MIT License Classifier: Operating System :: OS
++Independent Requires-Python: >=3.8 Description-Content-Type: text/markdown
++License-File: LICENSE
+                                    [nonebot]
+  # Nonebot_Plugin_ArkTools _â¨ åºäº OneBot ééå¨ç [NoneBot2](https://
+              v2.nonebot.dev/) ææ¥æ¹èå°å·¥å·ç®±æä»¶ â¨_
+ [![OSCS Status](https://www.oscs1024.com/platform/badge/NumberSir/
+ nonebot_plugin_arktools.svg?size=small)](https://www.oscs1024.com/project/
+ NumberSir/nonebot_plugin_arktools?ref=badge_small)
+ æ¬äººpythonå°èæ°ï¼æä»¶æä¸å®ååå¯ä»¥æ¹è¿ä¹å¤æ¬¢è¿åä½å¤æpråissue
+@@ -41,18 +49,28 @@
+ zh.otf â âââ guess_character â â âââ correct.png â â
+ âââ down.png â â âââ up.png â â âââ vague.png â â
+ âââ wrong.png â âââ ... âââ src âââ test âââ
+ ... ... ``` ## .env.env éç½®é¡¹ ```ini # å·ä½è§ https://
+ console.bce.baidu.com/ai/?fromai=1#/ai/ocr/app/list
+ arknights_baidu_api_key="xxx" # ãå¿å¡«ãç¾åº¦ OCR API KEY
+ arknights_baidu_secret_key="xxx" # ãå¿å¡«ãç¾åº¦ OCR SECRET KEY
+-github_raw="xxx" # é»è®¤ä¸º https://
+-raw.githubusercontent.comï¼å¦æéåæºå¯ä»¥æ¿æ¢ github_site="xxx" #
+-é»è®¤ä¸º https://github.comï¼å¦æéåæºå¯ä»¥æ¿æ¢ ... ```
+-åéç½®é¡¹çå«ä¹å¦ä¸ã ## æä»¤  è¯¦ç»æä»¤ ### è¯¦ç»æä»¤
++github_raw="https://raw.githubusercontent.com" # é»è®¤ä¸º https://
++raw.githubusercontent.comï¼å¦æéåæºå¯ä»¥æ¿æ¢ github_site="https://
++github.com" # é»è®¤ä¸º https://github.comï¼å¦æéåæºå¯ä»¥æ¿æ¢
++announce_push_switch=False # æ¯å¦èªå¨æ¨éèèææ°å¬åï¼é»è®¤ä¸º
++False; True ä¸ºå¼å¯èªå¨æ£æµ announce_push_interval=1 #
++èªå¨æ¨éææ°å¬åçæ£æµé´éï¼ä¸è¿°å¼å³å¼å¯æ¶ææï¼é»è®¤ä¸º
++1 åé sanity_notify_switch=False #
++æ¯å¦èªå¨æ£æµçæºæéï¼é»è®¤ä¸º False; True ä¸ºå¼å¯èªå¨æ£æµ
++sanity_notify_interval=10 #
++èªå¨æ£æµçæºæéçæ£æµé´éï¼ä¸è¿°å¼å³å¼å¯æ¶ææï¼é»è®¤ä¸º
++10 åé ... ``` åéç½®é¡¹çå«ä¹å¦ä¸ã
++[https://user-images.githubusercontent.com/52584526/219335891-37933d79-1b52-
++4452-8959-04861087f4e8.png]
++## æä»¤  ç¹å»å±å¼ ### è¯¦ç»æä»¤
+ ä½¿ç¨ä»¥ä¸æä»¤è§¦åï¼éå ä¸æä»¤åç¼ ```text æ ¼å¼ï¼ æä»¤ =>
+ å«ä¹ [] ä»£è¡¨åæ° xxx/yyy ä»£è¡¨ xxx æ yyy ``` æé¡¹ ```text
+ æ¹èå¸®å© / arkhelp => æ¥çæä»¤åè¡¨ æ´æ°æ¹èç´ æ =>
+ æå¨æ´æ°æ¸¸ææ°æ®(json)ä¸å¾ç æ´æ°æ¹èæ°æ®åº =>
+ æå¨æ´æ°æ°æ®åº ``` çå¹²å ```text çå¹²å => å¼å§æ°æ¸¸æ #
+ [å¹²åå] => çå¹²åï¼å¦ï¼#è¾éæ³æ æç¤º =>
+ æ¥çç­æ¡å¹²åçä¿¡æ¯ ç»æ => ç»æå½åå±æ¸¸æ ``` ä»æ¥å¹²å
+@@ -66,15 +84,15 @@
+ => é»è®¤è®°å½åçæºä¸º0ï¼åæ»¡å°135æ¶æé" çæºæé
+ [å½åçæº] [åæ»¡çæº] =>
+ åä¸ï¼ä¸è¿æå¨æå®å½åçæºä¸åæ»¡çæº" çæºæ¥ç =>
+ æ¥çè·ç¦»çæºåæ»¡è¿æå¤ä¹ï¼ä»¥åå½æçæºä¸ºå¤å°" ```
+ å¬åæ¨é ```text æ·»å æ¹èæ¨éç¾¤ / ADDGROUP =>
+ æ·»å èªå¨æ¨éçç¾¤å· å é¤æ¹èæ¨éç¾¤ / DELGROUP =>
+ å é¤èªå¨æ¨éçç¾¤å· æ¥çæ¹èæ¨éç¾¤ / GETGROUP =>
+-æ¥çèªå¨æ¨éçç¾¤å· ```  # å¾çç¤ºä¾  å¾çä»¬ ## å¾çä»¬
++æ¥çèªå¨æ¨éçç¾¤å· ```  # å¾çç¤ºä¾  ç¹å»å±å¼ ## å¾çä»¬
+ [https://user-images.githubusercontent.com/52584526/218328291-2324ea20-74c4-
+ 4182-81ed-4b74950c3ef9.png]
+ [https://user-images.githubusercontent.com/52584526/218328307-f71e08ff-2370-
+ 4fb9-8898-c76f7e06a168.png]
+ [https://user-images.githubusercontent.com/52584526/218328316-9259d9e6-6c2f-
+ 40e9-87bd-cee68da240e2.png]
+ [https://user-images.githubusercontent.com/52584526/218328320-9ee76c53-dcf2-
+@@ -95,19 +113,25 @@
+ [ææ¥æ¹èå¸¸ç¨ç´ æåº](https://github.com/yuanyan3060/Arknights-Bot-
+ Resource)__ - __[Kengxxiao](https://github.com/Kengxxiao)__ ç __
+ [ãææ¥æ¹èãæ¸¸ææ°æ®åº](https://github.com/Kengxxiao/
+ ArknightsGameData)__ - __[Aceship](https://github.com/Aceship)__ ç __
+ [Arknight-Images](https://github.com/Aceship/Arknight-Images)__ - __[AmiyaBot]
+ (https://github.com/AmiyaBot)__ ç __[Amiya-bot](https://github.com/AmiyaBot/
+ Amiya-Bot)__ - __[Strelizia02](https://github.com/Strelizia02)__ ç __
+-[AngelinaBot](https://github.com/Strelizia02/AngelinaBot)__ # æ´æ°æ¥å¿ >
+-2023-02-16 v1.0.8 > - ç§»é¤ `nb plugin install`
+-å®è£å½ä»¤ï¼æ æ³è¯å«ææ°çæ¬å· [@issue/28](https://github.com/
+-NumberSir/nonebot_plugin_arktools/issues/28) > - ä¿®æ¹ç¾åº¦ OCR
+-éç½®é¡¹åç§° [@issue/29](https://github.com/NumberSir/
++[AngelinaBot](https://github.com/Strelizia02/AngelinaBot)__ # æ´æ°æ¥å¿
++ç¹å»å±å¼ > 2023-02-19 v1.0.9 > - æ·»å å®æ¶ä»»å¡éç½®é¡¹ > -
++ä¿®å¤å®æ¶ä»»å¡å¯¼è´å¶å®å¤çå¨é»å¡çé®é¢ [@issue/30](https://
++github.com/NumberSir/nonebot_plugin_arktools/issues/30) [@zx-issue/9](https://
++github.com/NumberSir/zhenxun_arktools/issues/9) > -
++ä¿®å¤çå¹²åæ æ³å¤æ­éå¤ççé®é¢ [@zx-issue/10](https://
++github.com/NumberSir/zhenxun_arktools/issues/10) > -
++ä¿®å¤çå¹²åç»æå¾ä¸æé¡ºåºç»å¶çé®é¢ > > 2023-02-16 v1.0.8 > -
++ç§»é¤ `nb plugin install` å®è£å½ä»¤ï¼æ æ³è¯å«ææ°çæ¬å· [@issue/
++28](https://github.com/NumberSir/nonebot_plugin_arktools/issues/28) > -
++ä¿®æ¹ç¾åº¦ OCR éç½®é¡¹åç§° [@issue/29](https://github.com/NumberSir/
+ nonebot_plugin_arktools/issues/29) > -
+ ä¿®å¤èµæºä¸è½½ä¸æ°æ®åºåå§åé¡ºåºä¸ä¸è´çé®é¢ > -
+ è¡¥åæ´å¤éè¯¯æç¤ºä¿¡æ¯ > > 2023-02-15 v1.0.7 > -
+ æ·»å èªå¨æ¨éææ°å¬ååè½ [@issue/10](https://github.com/NumberSir/
+ nonebot_plugin_arktools/issues/10) > -
+ ä¿®å¤ææ°å¾åèµæºè½åçæ¬çé®é¢ > - ä¿®å¤å¯å¨ nonebot
+ æ¶ä¸æ£æ¥ç´ æææ°çæ¬çé®é¢ > > 2023-02-13 v1.0.6 > -
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/configs/path_config.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/configs/path_config.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,14 +1,16 @@
++"""路径设置"""
+ from pydantic import BaseModel, Extra
+ from pathlib import Path
+ 
+ SRC_PATH = Path(__file__).absolute().parent.parent
+ 
+ 
+ class PathConfig(BaseModel, extra=Extra.ignore):
++    """游戏资源 & 数据库路径设置"""
+     arknights_data_path: Path = SRC_PATH.parent / "data"
+     arknights_font_path: Path = arknights_data_path / "fonts"
+     arknights_gamedata_path: Path = arknights_data_path / "arknights" / "gamedata"
+     arknights_gameimage_path: Path = arknights_data_path / "arknights" / "gameimage"
+     arknights_update_config_path: Path = arknights_data_path / "update"
+     arknights_update_cache_path: Path = arknights_data_path / "update" / "cache"
+```
+
+#### encoding
+
+```diff
+@@ -1 +1 @@
+-us-ascii
++utf-8
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/core/database/game_sqlite.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/core/database/game_sqlite.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/core/database/plugin_sqlite.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/core/database/plugin_sqlite.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/core/models_v3.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/core/models_v3.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -445,15 +445,14 @@
+         elif self.rarity == 5:
+             tags.append("高级资深干员")
+         return tags
+ 
+     # 猜干员小游戏用
+ 
+ 
+-
+ class Attributes:
+     """面板"""
+     def __init__(self, cht: Character = None, data: Dict[str, Any] = None):
+         self._data = data
+         self._character = cht
+ 
+     def __str__(self):
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/exceptions/__init__.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/exceptions/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/game_guess_operator/__init__.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/game_guess_operator/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/game_guess_operator/data_source.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/game_guess_operator/data_source.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -32,15 +32,15 @@
+     ILLEGAL = 3  # 不是干员
+ 
+ 
+ class GuessCharacter:
+     def __init__(self, cht: "Character"):
+         self._answer: "Character" = cht  # 目标
+         self._times: int = 8  # 能猜的次数
+-        self._guessed: Set["Character"] = set()  # 猜过的
++        self._guessed: List["Character"] = []  # 猜过的
+ 
+         self._block_size = (40, 40)  # 表情块尺寸
+         self._block_padding = (10, 10)  # 表情块之间间距
+         self._padding = (20, 20)  # 边界间距
+         self._font_size = 32  # 字体大小
+         self._font = ImageFont.truetype((pcfg.arknights_font_path / "Arknights-zh.otf").__str__(), self._font_size)
+         self._bg_color = (255, 255, 255)  # 背景颜色
+@@ -51,17 +51,17 @@
+         self._up_face = Image.open(GUESS_IMG_PATH / "up.png", "r").convert("RGBA")  # 低于目标星级
+         self._down_face = Image.open(GUESS_IMG_PATH / "down.png", "r").convert("RGBA")  # 高于目标星级
+ 
+     async def guess(self, cht: Character) -> GuessResult:
+         """每次猜完"""
+         if not await self.is_character_legal(cht.name):
+             return GuessResult.ILLEGAL
+-        if cht in self._guessed:
++        if cht.name in {_.name for _ in self._guessed}:
+             return GuessResult.DUPLICATE
+-        self._guessed.add(cht)
++        self._guessed.append(cht)
+ 
+         if cht.name == self._answer.name:
+             return GuessResult.WIN
+         if len(self._guessed) == self._times:
+             return GuessResult.LOSE
+ 
+     async def draw_bar(self, cht: Character) -> Image:
+@@ -171,15 +171,15 @@
+ 
+     @property
+     def times(self) -> int:
+         """最多猜几次"""
+         return self._times
+ 
+     @property
+-    def guessed(self) -> Set["Character"]:
++    def guessed(self) -> List["Character"]:
+         """猜过的干员"""
+         return self._guessed
+ 
+ 
+ __all__ = [
+     "get_all_characters",
+     "get_random_character",
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/help.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/help.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/misc_monster_siren/__init__.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/misc_monster_siren/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/misc_monster_siren/data_source.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/misc_monster_siren/data_source.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/misc_operator_birthday/__init__.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/misc_operator_birthday/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_announce_push/__init__.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_announce_push/__init__.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,64 +1,61 @@
+ """游戏公告推送"""
+-from io import BytesIO
+ from pathlib import Path
+ 
+ from aiofiles import open as aopen
+-from nonebot import logger, get_bot, on_command
++from nonebot import logger, get_bot, on_command, get_driver
+ from nonebot.adapters.onebot.v11 import Bot, MessageSegment, Message
+ from nonebot.exception import ActionFailed
+ from nonebot.params import CommandArg
+ from nonebot.plugin import PluginMetadata
+ from nonebot_plugin_apscheduler import scheduler
+ from nonebot_plugin_htmlrender import html_to_pic
+ 
+ from .data_source import get_news
++from ..configs.scheduler_config import SchedulerConfig
+ from ..core.database import RSSNewsModel
+ 
++scfg = SchedulerConfig.parse_obj(get_driver().config.dict())
++
+ latest_news = on_command("方舟最新公告")
+ add_group = on_command("添加方舟推送群", aliases={"ADDGROUP"})
+ del_group = on_command("删除方舟推送群", aliases={"DELGROUP"})
+ get_group = on_command("查看方舟推送群", aliases={"GETGROUP"})
+ 
+ 
+ @latest_news.handle()
+ async def _():
+     news = await RSSNewsModel.all().order_by("time").first()
+-    if not news:
+-        await latest_news.finish("数据库里尚未有任何公告哦！", at_sender=True)
+     await latest_news.send("获取最新公告中 ...")
++    if not news:
++        try:
++            news_list = await get_news()
++        except:
++            logger.error("获取最新公告出错")
++        else:
++            news = news_list[0]
++
+     image = await html_to_pic(
+         html=news.content
+     )
+     try:
+         await latest_news.finish(
+             Message(
+                 MessageSegment.image(image)
+-                + f"发布时间: {news.time.__str__()[:-6]}"
++                + "舟舟发布了一条新公告"
++                  f"\n发布时间: {news.time.__str__()[:10]}"
+                   f"\n{news.link}"
+             )
+         )
+     except ActionFailed as e:
+         await latest_news.finish(
+             "公告截图失败..."
+-            f"\n发布时间: {news.time.__str__()[:-6]}"
++            f"\n发布时间: {news.time.__str__()[:10]}"
+             f"\n{news.link}"
+         )
+-    # text2image(
+-    #     f"[color=red]{new.title}[/color]"
+-    #     f"\n{new.content}"
+-    #     f"\n{new.time.__str__()[:-7]}",
+-    #     max_width=1024
+-    # ).save(output, "png")
+-    # await latest_news.finish(
+-    #     Message(
+-    #         MessageSegment.image(output)
+-    #         + new.link
+-    #     )
+-    # )
+ 
+ 
+ @add_group.handle()
+ async def _(arg: Message = CommandArg()):
+     args = arg.extract_plain_text().strip().split()
+     if not args or not all((_.isnumeric() for _ in args)):
+         await add_group.finish()
+@@ -111,70 +108,60 @@
+         "当前自动推送最新公告的群聊: "
+         f"\n{', '.join(groups.split())}"
+     )
+ 
+ 
+ @scheduler.scheduled_job(
+     "interval",
+-    minutes=1,
++    minutes=scfg.announce_push_interval,
+ )
+ async def _():
+-    logger.info("checking rss news...")
+-    try:
+-        bot: Bot = get_bot()
+-    except ValueError:
+-        return
+-
+-    try:
+-        news_list = await get_news()
+-    except:  # TODO
+-        logger.error("获取最新公告出错")
+-        return
+-
+-    if not news_list:
+-        return
+-
+-    if not (Path(__file__).parent / "groups.txt").exists():
+-        async with aopen(Path(__file__).parent / "groups.txt", "w") as fp:
++    if scfg.announce_push_switch:
++        logger.info("checking rss news...")
++        try:
++            bot: Bot = get_bot()
++        except ValueError:
+             pass
+-    async with aopen(Path(__file__).parent / "groups.txt", "r") as fp:
+-        groups = (await fp.read()).split()
+-    if not groups:
+-        return
+ 
+-    for news in news_list:
+-        for group in groups:
+-            output = BytesIO()
+-            # text2image(
+-            #     f"[color=red]{new.title}[/color]"
+-            #     f"\n{new.content}"
+-            #     f"\n{new.time.__str__()[:-7]}",
+-            #     max_width=1024
+-            # ).save(output, "png")
+-            image = await html_to_pic(
+-                html=news.content
+-            )
+-            try:
+-                await bot.send_group_msg(
+-                    group_id=int(group),
+-                    message=Message(
+-                        MessageSegment.image(image)
+-                        + f"发布时间: {news.time.__str__()[:-6]}"
+-                          f"\n{news.link}"
+-                    )
+-                )
+-            except ActionFailed as e:
+-                await bot.send_group_msg(
+-                    group_id=int(group),
+-                    message=Message(
+-                        "公告截图失败..."
+-                        f"\n发布时间: {news.time.__str__()[:-6]}"
+-                        f"\n{news.link}"
+-                    )
+-                )
++        try:
++            news_list = await get_news()
++        except:  # TODO
++            logger.error("获取最新公告出错")
++        else:
++            if news_list:
++                if not (Path(__file__).parent / "groups.txt").exists():
++                    async with aopen(Path(__file__).parent / "groups.txt", "w") as fp:
++                        pass
++                async with aopen(Path(__file__).parent / "groups.txt", "r") as fp:
++                    groups = (await fp.read()).split()
++                if groups:
++                    for news in news_list:
++                        for group in groups:
++                            image = await html_to_pic(
++                                html=news.content
++                            )
++                            try:
++                                await bot.send_group_msg(
++                                    group_id=int(group),
++                                    message=Message(
++                                        MessageSegment.image(image)
++                                        + "舟舟发布了一条新公告"
++                                          f"\n发布时间: {news.time.__str__()[:10]}"
++                                          f"\n{news.link}"
++                                    )
++                                )
++                            except ActionFailed as e:
++                                await bot.send_group_msg(
++                                    group_id=int(group),
++                                    message=Message(
++                                        "公告截图失败..."
++                                        f"\n发布时间: {news.time.__str__()[:10]}"
++                                        f"\n{news.link}"
++                                    )
++                                )
+ 
+ 
+ __plugin_meta__ = PluginMetadata(
+     name="公告推送",
+     description="获取并推送最新的方舟公告/新闻",
+     usage=(
+         "命令:"
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_open_recruitment/__init__.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_open_recruitment/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_open_recruitment/data_source.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_open_recruitment/data_source.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_operator_info/__init__.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_operator_info/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_operator_info/data_source.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_operator_info/data_source.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/tool_sanity_notify/__init__.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/tool_sanity_notify/__init__.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,16 +1,21 @@
+ """理智恢复提醒"""
+-from nonebot import on_command, get_bot, logger
+-from nonebot.plugin import PluginMetadata
+-from nonebot.params import CommandArg
+-from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message, Bot, MessageSegment
+-from ..core.database import UserSanityModel
+ from datetime import datetime
++
++import tortoise.exceptions
++from nonebot import on_command, get_bot, logger, get_driver
++from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message, Bot, MessageSegment
++from nonebot.params import CommandArg
++from nonebot.plugin import PluginMetadata
+ from nonebot_plugin_apscheduler import scheduler
+ 
++from ..configs.scheduler_config import SchedulerConfig
++from ..core.database import UserSanityModel
++
++scfg = SchedulerConfig.parse_obj(get_driver().config.dict())
+ 
+ add_notify = on_command("理智提醒", aliases={"ADDSAN"})
+ check_notify = on_command("理智查看", aliases={"CHECKSAN"})
+ 
+ 
+ @add_notify.handle()
+ async def _(event: GroupMessageEvent, args: Message = CommandArg()):
+@@ -42,18 +47,20 @@
+             )
+         else:
+             await UserSanityModel.filter(gid=gid, uid=uid).update(
+                 record_san=record_san, notify_san=notify_san,
+                 record_time=now, notify_time=notify_time, status=1
+             )
+     else:
+-        await add_notify.finish("小笨蛋，命令的格式是：“理智提醒 [当前理智] [回满理智]” 或 “理智提醒” 哦！", at_sender=True)
++        await add_notify.finish("小笨蛋，命令的格式是：“理智提醒 [当前理智] [回满理智]” 或 “理智提醒” 哦！",
++                                at_sender=True)
+ 
+     await add_notify.finish(f"记录成功！将在 {notify_time.__str__()[:-7]} 提醒博士哦！", at_sender=True)
+ 
++
+ @check_notify.handle()
+ async def _(event: GroupMessageEvent):
+     uid = event.user_id
+     gid = event.group_id
+ 
+     data = await UserSanityModel.filter(gid=gid, uid=uid, status=1).first()
+     if not data:
+@@ -72,34 +79,37 @@
+     now_san: int = data["record_san"] + recoverd_san
+ 
+     await check_notify.finish(f"距离理智恢复完毕还有 {remain_time.__str__()[:-7]}，当前理智：{now_san}(+{recoverd_san})")
+ 
+ 
+ @scheduler.scheduled_job(
+     "interval",
+-    minutes=1,
++    minutes=scfg.sanity_notify_interval,
+ )
+ async def _():
+-    logger.debug("checking sanity...")
+-    try:
+-        bot: Bot = get_bot()
+-    except ValueError:
+-        return
+-
+-    now = datetime.now()
+-    data = await UserSanityModel.filter(notify_time__lt=now, status=1).all()
+-    if not data:
+-        return
+-
+-    for model in data:
+-        await bot.send_group_msg(
+-            group_id=model.gid,
+-            message=Message(MessageSegment.at(model.uid) + f"你的理智已经恢复到{model.notify_san}了哦！")
+-        )
+-        await UserSanityModel.filter(gid=model.gid, uid=model.uid).update(status=0)
++    if scfg.sanity_notify_switch:
++        logger.debug("checking sanity...")
++        try:
++            bot: Bot = get_bot()
++        except ValueError:
++            pass
++        else:
++            now = datetime.now()
++            try:
++                data = await UserSanityModel.filter(notify_time__lt=now, status=1).all()
++            except tortoise.exceptions.BaseORMException:
++                logger.error("检查理智提醒失败，数据库未初始化")
++            else:
++                if data:
++                    for model in data:
++                        await bot.send_group_msg(
++                            group_id=model.gid,
++                            message=Message(MessageSegment.at(model.uid) + f"你的理智已经恢复到{model.notify_san}了哦！")
++                        )
++                        await UserSanityModel.filter(gid=model.gid, uid=model.uid).update(status=0)
+ 
+ 
+ __plugin_meta__ = PluginMetadata(
+     name="理智提醒",
+     description="在理智回满时@用户提醒",
+     usage=(
+         "命令:"
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/utils/__init__.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/utils/__init__.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -17,17 +17,18 @@
+ async def _():
+     await update_game_resource.send("开始更新游戏素材，视网络情况需5分钟左右……")
+     try:
+         async with httpx.AsyncClient() as client:
+             await ArknightsGameData(client).download_files()
+             await ArknightsDB.init_data()
+             await ArknightsGameImage(client).download_files()
+-    except (httpx.ConnectError, httpx.RemoteProtocolError) as e:
+-        logger.error("下载方舟游戏素材出错，请修改代理或重试")
+-        await update_game_resource.finish("下载方舟游戏素材出错，请修改代理或重试")
++    except (httpx.ConnectError, httpx.RemoteProtocolError, httpx.TimeoutException) as e:
++        logger.error("下载方舟游戏素材请求出错或连接超时，请修改代理、重试或手动下载：")
++        logger.error("https://github.com/NumberSir/nonebot_plugin_arktools#%E5%90%AF%E5%8A%A8%E6%B3%A8%E6%84%8F")
++        await update_game_resource.finish("下载方舟游戏素材请求出错或连接超时，请修改代理、重试或手动下载：\nhttps://github.com/NumberSir/nonebot_plugin_arktools#%E5%90%AF%E5%8A%A8%E6%B3%A8%E6%84%8F")
+     else:
+         await update_game_resource.finish("游戏素材更新完成！")
+ 
+ 
+ @init_db.handle()
+ async def _():
+     await update_game_resource.send("开始更新游戏数据库，视磁盘读写性能需1分钟左右……")
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/utils/database.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/utils/database.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+ """数据库相关"""
++import tortoise.exceptions
+ from tortoise import Tortoise
+ from aiofiles import open as aopen
+ import json
+ import asyncio
+ import re
+ from aiofiles import os as aos
+ from nonebot import get_driver, logger
+@@ -242,15 +243,18 @@
+ @driver.on_bot_connect  # 不能 on_startup, 要先下资源再初始化数据库
+ async def _init_db():
+     try:
+         await ArknightsDB.init_db()
+     except FileNotFoundError as e:
+         logger.error("初始化数据库失败：所需的数据文件未找到，请手动下载:")
+         logger.error("https://github.com/NumberSir/nonebot_plugin_arktools#%E5%90%AF%E5%8A%A8%E6%B3%A8%E6%84%8F")
+-
++        logger.warning("***** ARKNIGHTS-SQLITE DATA INITIATING FAILED")
++    except tortoise.exceptions.BaseORMException as e:
++        logger.error("初始化数据库失败：请检查是否与其它使用 Tortoise-ORM 的插件初始化冲突")
++        logger.warning("***** ARKNIGHTS-SQLITE CONNECTING FAILED")
+ 
+ @driver.on_bot_disconnect
+ async def _close_db():
+     await ArknightsDB.close_connection()
+ 
+ 
+ __all__ = [
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/utils/general.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/utils/general.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/utils/image.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/utils/image.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/src/utils/update.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/src/utils/update.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -241,30 +241,35 @@
+ 
+ 
+ @driver.on_startup
+ async def _init_game_files():
+     async with httpx.AsyncClient(timeout=100) as client:
+         try:
+             await download_extra_files(client)
+-        except (httpx.ConnectError, httpx.RemoteProtocolError) as e:
+-            logger.error("下载方舟额外素材出错，请修改代理或重试")
++        except (httpx.ConnectError, httpx.RemoteProtocolError, httpx.TimeoutException) as e:
++            logger.error("下载方舟额外素材请求出错或连接超时，请修改代理、重试或手动下载：")
++            logger.error("https://github.com/NumberSir/nonebot_plugin_arktools#%E5%90%AF%E5%8A%A8%E6%B3%A8%E6%84%8F")
+ 
+         logger.info("检查方舟游戏素材版本中 ...")
++        is_latest = False
+         try:
+             if not await ArknightsGameData(client).is_update_needed():
+                 logger.info("方舟游戏素材当前为最新！")
+-                return
+-        except (httpx.ConnectError, httpx.RemoteProtocolError) as e:
+-            logger.error("检查方舟素材版本出错，请修改代理或重试")
+-
+-        try:
+-            await ArknightsGameData(client).download_files()
+-            await ArknightsGameImage(client).download_files()
+-        except (httpx.ConnectError, httpx.RemoteProtocolError) as e:
+-            logger.error("下载方舟素材出错，请修改代理或重试")
++                is_latest = True
++        except (httpx.ConnectError, httpx.RemoteProtocolError, httpx.TimeoutException) as e:
++            logger.error("检查方舟素材版本请求出错或连接超时，请修改代理、重试或手动下载：")
++            logger.error("https://github.com/NumberSir/nonebot_plugin_arktools#%E5%90%AF%E5%8A%A8%E6%B3%A8%E6%84%8F")
++        else:
++            if not is_latest:
++                try:
++                    await ArknightsGameData(client).download_files()
++                    await ArknightsGameImage(client).download_files()
++                except (httpx.ConnectError, httpx.RemoteProtocolError, httpx.TimeoutException) as e:
++                    logger.error("下载方舟素材请求出错或连接超时，请修改代理、重试或手动下载：")
++                    logger.error("https://github.com/NumberSir/nonebot_plugin_arktools#%E5%90%AF%E5%8A%A8%E6%B3%A8%E6%84%8F")
+ 
+ 
+ __all__ = [
+     "ArknightsGameImage",
+     "ArknightsGameData",
+     "_init_game_files"
+ ]
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/test/test_open_recruitment.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/test/test_open_recruitment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools/test/utils.py` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools/test/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools.egg-info/PKG-INFO` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools.egg-info/PKG-INFO`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: nonebot-plugin-arktools
+-Version: 1.0.8
++Version: 1.0.9
+ Summary: 基于 OneBot 适配器的 NoneBot2 明日方舟小工具箱插件
+ Home-page: https://github.com/NumberSir/nonebot_plugin_arktools
+ Author: Number_Sir
+ Author-email: Number_Sir@126.com
+ Keywords: pip,nonebot2,nonebot,nonebot_plugin
+ Platform: any
+ Classifier: Programming Language :: Python :: 3
+@@ -96,23 +96,32 @@
+ ## .env.env 配置项
+ 
+ ```ini
+ # 具体见 https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/app/list
+ arknights_baidu_api_key="xxx"    # 【必填】百度 OCR API KEY
+ arknights_baidu_secret_key="xxx"   # 【必填】百度 OCR SECRET KEY
+ 
+-github_raw="xxx"   # 默认为 https://raw.githubusercontent.com，如有镜像源可以替换
+-github_site="xxx"  # 默认为 https://github.com，如有镜像源可以替换
++github_raw="https://raw.githubusercontent.com"   # 默认为 https://raw.githubusercontent.com，如有镜像源可以替换
++github_site="https://github.com"  # 默认为 https://github.com，如有镜像源可以替换
++
++announce_push_switch=False  # 是否自动推送舟舟最新公告，默认为 False; True 为开启自动检测
++announce_push_interval=1  # 自动推送最新公告的检测间隔，上述开关开启时有效，默认为 1 分钟
++
++sanity_notify_switch=False  # 是否自动检测理智提醒，默认为 False; True 为开启自动检测
++sanity_notify_interval=10  # 自动检测理智提醒的检测间隔，上述开关开启时有效，默认为 10 分钟
+ ...
+ ```
+ 各配置项的含义如上。
++<div align="left">
++  <img src="https://user-images.githubusercontent.com/52584526/219335891-37933d79-1b52-4452-8959-04861087f4e8.png" width="700" />
++</div>
+ 
+ ## 指令
+ <details>
+-<summary>详细指令</summary>
++<summary>点击展开</summary>
+ 
+ ### 详细指令
+ 使用以下指令触发，需加上指令前缀
+ ```text
+ 格式：
+ 指令 => 含义
+ [] 代表参数
+@@ -161,15 +170,15 @@
+ 删除方舟推送群 / DELGROUP   => 删除自动推送的群号
+ 查看方舟推送群 / GETGROUP   => 查看自动推送的群号
+ ```
+ </details>
+ 
+ # 图片示例
+ <details>
+-<summary>图片们</summary>
++<summary>点击展开</summary>
+ 
+ ## 图片们
+ <div align="left">
+   <img src="https://user-images.githubusercontent.com/52584526/218328291-2324ea20-74c4-4182-81ed-4b74950c3ef9.png" width="500" />
+ </div>
+ 
+ <div align="left">
+@@ -215,14 +224,23 @@
+  - __[Kengxxiao](https://github.com/Kengxxiao)__ 的 __[《明日方舟》游戏数据库](https://github.com/Kengxxiao/ArknightsGameData)__
+  - __[Aceship](https://github.com/Aceship)__ 的 __[Arknight-Images](https://github.com/Aceship/Arknight-Images)__
+  - __[AmiyaBot](https://github.com/AmiyaBot)__ 的 __[Amiya-bot](https://github.com/AmiyaBot/Amiya-Bot)__
+  - __[Strelizia02](https://github.com/Strelizia02)__ 的 __[AngelinaBot](https://github.com/Strelizia02/AngelinaBot)__
+ 
+ 
+ # 更新日志
++<details>
++<summary>点击展开</summary>
++
++> 2023-02-19 v1.0.9
++> - 添加定时任务配置项
++> - 修复定时任务导致其它处理器阻塞的问题 [@issue/30](https://github.com/NumberSir/nonebot_plugin_arktools/issues/30) [@zx-issue/9](https://github.com/NumberSir/zhenxun_arktools/issues/9)
++> - 修复猜干员无法判断重复猜的问题 [@zx-issue/10](https://github.com/NumberSir/zhenxun_arktools/issues/10)
++> - 修复猜干员结果图不按顺序绘制的问题
++>
+ > 2023-02-16 v1.0.8
+ > - 移除 `nb plugin install` 安装命令，无法识别最新版本号 [@issue/28](https://github.com/NumberSir/nonebot_plugin_arktools/issues/28)
+ > - 修改百度 OCR 配置项名称 [@issue/29](https://github.com/NumberSir/nonebot_plugin_arktools/issues/29)
+ > - 修复资源下载与数据库初始化顺序不一致的问题
+ > - 补充更多错误提示信息
+ > 
+ > 2023-02-15 v1.0.7
+@@ -293,7 +311,9 @@
+ > - 修复了使用 nb plugin install 命令安装后无法正常工作的问题 [@issue/1](https://github.com/NumberSir/nonebot_plugin_arktools/issues/1)
+ > 
+ > 2022-05-26 v0.2.0
+ > - 添加了查询最新活动信息的功能
+ >
+ > 2022-05-24 v0.1.0
+ > - 添加了查询今日开放资源关卡的功能
++
++</details>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: nonebot-plugin-arktools Version: 1.0.8 Summary:
++Metadata-Version: 2.1 Name: nonebot-plugin-arktools Version: 1.0.9 Summary:
+ åºäº OneBot ééå¨ç NoneBot2 ææ¥æ¹èå°å·¥å·ç®±æä»¶ Home-page:
+ https://github.com/NumberSir/nonebot_plugin_arktools Author: Number_Sir Author-
+ email: Number_Sir@126.com Keywords: pip,nonebot2,nonebot,nonebot_plugin
+ Platform: any Classifier: Programming Language :: Python :: 3 Classifier:
+ License :: OSI Approved :: MIT License Classifier: Operating System :: OS
+ Independent Requires-Python: >=3.8 Description-Content-Type: text/markdown
+ License-File: LICENSE
+@@ -49,18 +49,28 @@
+ zh.otf â âââ guess_character â â âââ correct.png â â
+ âââ down.png â â âââ up.png â â âââ vague.png â â
+ âââ wrong.png â âââ ... âââ src âââ test âââ
+ ... ... ``` ## .env.env éç½®é¡¹ ```ini # å·ä½è§ https://
+ console.bce.baidu.com/ai/?fromai=1#/ai/ocr/app/list
+ arknights_baidu_api_key="xxx" # ãå¿å¡«ãç¾åº¦ OCR API KEY
+ arknights_baidu_secret_key="xxx" # ãå¿å¡«ãç¾åº¦ OCR SECRET KEY
+-github_raw="xxx" # é»è®¤ä¸º https://
+-raw.githubusercontent.comï¼å¦æéåæºå¯ä»¥æ¿æ¢ github_site="xxx" #
+-é»è®¤ä¸º https://github.comï¼å¦æéåæºå¯ä»¥æ¿æ¢ ... ```
+-åéç½®é¡¹çå«ä¹å¦ä¸ã ## æä»¤  è¯¦ç»æä»¤ ### è¯¦ç»æä»¤
++github_raw="https://raw.githubusercontent.com" # é»è®¤ä¸º https://
++raw.githubusercontent.comï¼å¦æéåæºå¯ä»¥æ¿æ¢ github_site="https://
++github.com" # é»è®¤ä¸º https://github.comï¼å¦æéåæºå¯ä»¥æ¿æ¢
++announce_push_switch=False # æ¯å¦èªå¨æ¨éèèææ°å¬åï¼é»è®¤ä¸º
++False; True ä¸ºå¼å¯èªå¨æ£æµ announce_push_interval=1 #
++èªå¨æ¨éææ°å¬åçæ£æµé´éï¼ä¸è¿°å¼å³å¼å¯æ¶ææï¼é»è®¤ä¸º
++1 åé sanity_notify_switch=False #
++æ¯å¦èªå¨æ£æµçæºæéï¼é»è®¤ä¸º False; True ä¸ºå¼å¯èªå¨æ£æµ
++sanity_notify_interval=10 #
++èªå¨æ£æµçæºæéçæ£æµé´éï¼ä¸è¿°å¼å³å¼å¯æ¶ææï¼é»è®¤ä¸º
++10 åé ... ``` åéç½®é¡¹çå«ä¹å¦ä¸ã
++[https://user-images.githubusercontent.com/52584526/219335891-37933d79-1b52-
++4452-8959-04861087f4e8.png]
++## æä»¤  ç¹å»å±å¼ ### è¯¦ç»æä»¤
+ ä½¿ç¨ä»¥ä¸æä»¤è§¦åï¼éå ä¸æä»¤åç¼ ```text æ ¼å¼ï¼ æä»¤ =>
+ å«ä¹ [] ä»£è¡¨åæ° xxx/yyy ä»£è¡¨ xxx æ yyy ``` æé¡¹ ```text
+ æ¹èå¸®å© / arkhelp => æ¥çæä»¤åè¡¨ æ´æ°æ¹èç´ æ =>
+ æå¨æ´æ°æ¸¸ææ°æ®(json)ä¸å¾ç æ´æ°æ¹èæ°æ®åº =>
+ æå¨æ´æ°æ°æ®åº ``` çå¹²å ```text çå¹²å => å¼å§æ°æ¸¸æ #
+ [å¹²åå] => çå¹²åï¼å¦ï¼#è¾éæ³æ æç¤º =>
+ æ¥çç­æ¡å¹²åçä¿¡æ¯ ç»æ => ç»æå½åå±æ¸¸æ ``` ä»æ¥å¹²å
+@@ -74,15 +84,15 @@
+ => é»è®¤è®°å½åçæºä¸º0ï¼åæ»¡å°135æ¶æé" çæºæé
+ [å½åçæº] [åæ»¡çæº] =>
+ åä¸ï¼ä¸è¿æå¨æå®å½åçæºä¸åæ»¡çæº" çæºæ¥ç =>
+ æ¥çè·ç¦»çæºåæ»¡è¿æå¤ä¹ï¼ä»¥åå½æçæºä¸ºå¤å°" ```
+ å¬åæ¨é ```text æ·»å æ¹èæ¨éç¾¤ / ADDGROUP =>
+ æ·»å èªå¨æ¨éçç¾¤å· å é¤æ¹èæ¨éç¾¤ / DELGROUP =>
+ å é¤èªå¨æ¨éçç¾¤å· æ¥çæ¹èæ¨éç¾¤ / GETGROUP =>
+-æ¥çèªå¨æ¨éçç¾¤å· ```  # å¾çç¤ºä¾  å¾çä»¬ ## å¾çä»¬
++æ¥çèªå¨æ¨éçç¾¤å· ```  # å¾çç¤ºä¾  ç¹å»å±å¼ ## å¾çä»¬
+ [https://user-images.githubusercontent.com/52584526/218328291-2324ea20-74c4-
+ 4182-81ed-4b74950c3ef9.png]
+ [https://user-images.githubusercontent.com/52584526/218328307-f71e08ff-2370-
+ 4fb9-8898-c76f7e06a168.png]
+ [https://user-images.githubusercontent.com/52584526/218328316-9259d9e6-6c2f-
+ 40e9-87bd-cee68da240e2.png]
+ [https://user-images.githubusercontent.com/52584526/218328320-9ee76c53-dcf2-
+@@ -103,19 +113,25 @@
+ [ææ¥æ¹èå¸¸ç¨ç´ æåº](https://github.com/yuanyan3060/Arknights-Bot-
+ Resource)__ - __[Kengxxiao](https://github.com/Kengxxiao)__ ç __
+ [ãææ¥æ¹èãæ¸¸ææ°æ®åº](https://github.com/Kengxxiao/
+ ArknightsGameData)__ - __[Aceship](https://github.com/Aceship)__ ç __
+ [Arknight-Images](https://github.com/Aceship/Arknight-Images)__ - __[AmiyaBot]
+ (https://github.com/AmiyaBot)__ ç __[Amiya-bot](https://github.com/AmiyaBot/
+ Amiya-Bot)__ - __[Strelizia02](https://github.com/Strelizia02)__ ç __
+-[AngelinaBot](https://github.com/Strelizia02/AngelinaBot)__ # æ´æ°æ¥å¿ >
+-2023-02-16 v1.0.8 > - ç§»é¤ `nb plugin install`
+-å®è£å½ä»¤ï¼æ æ³è¯å«ææ°çæ¬å· [@issue/28](https://github.com/
+-NumberSir/nonebot_plugin_arktools/issues/28) > - ä¿®æ¹ç¾åº¦ OCR
+-éç½®é¡¹åç§° [@issue/29](https://github.com/NumberSir/
++[AngelinaBot](https://github.com/Strelizia02/AngelinaBot)__ # æ´æ°æ¥å¿
++ç¹å»å±å¼ > 2023-02-19 v1.0.9 > - æ·»å å®æ¶ä»»å¡éç½®é¡¹ > -
++ä¿®å¤å®æ¶ä»»å¡å¯¼è´å¶å®å¤çå¨é»å¡çé®é¢ [@issue/30](https://
++github.com/NumberSir/nonebot_plugin_arktools/issues/30) [@zx-issue/9](https://
++github.com/NumberSir/zhenxun_arktools/issues/9) > -
++ä¿®å¤çå¹²åæ æ³å¤æ­éå¤ççé®é¢ [@zx-issue/10](https://
++github.com/NumberSir/zhenxun_arktools/issues/10) > -
++ä¿®å¤çå¹²åç»æå¾ä¸æé¡ºåºç»å¶çé®é¢ > > 2023-02-16 v1.0.8 > -
++ç§»é¤ `nb plugin install` å®è£å½ä»¤ï¼æ æ³è¯å«ææ°çæ¬å· [@issue/
++28](https://github.com/NumberSir/nonebot_plugin_arktools/issues/28) > -
++ä¿®æ¹ç¾åº¦ OCR éç½®é¡¹åç§° [@issue/29](https://github.com/NumberSir/
+ nonebot_plugin_arktools/issues/29) > -
+ ä¿®å¤èµæºä¸è½½ä¸æ°æ®åºåå§åé¡ºåºä¸ä¸è´çé®é¢ > -
+ è¡¥åæ´å¤éè¯¯æç¤ºä¿¡æ¯ > > 2023-02-15 v1.0.7 > -
+ æ·»å èªå¨æ¨éææ°å¬ååè½ [@issue/10](https://github.com/NumberSir/
+ nonebot_plugin_arktools/issues/10) > -
+ ä¿®å¤ææ°å¾åèµæºè½åçæ¬çé®é¢ > - ä¿®å¤å¯å¨ nonebot
+ æ¶ä¸æ£æ¥ç´ æææ°çæ¬çé®é¢ > > 2023-02-13 v1.0.6 > -
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/nonebot_plugin_arktools.egg-info/SOURCES.txt` & `nonebot_plugin_arktools-1.0.9/nonebot_plugin_arktools.egg-info/SOURCES.txt`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -9,14 +9,15 @@
+ nonebot_plugin_arktools.egg-info/top_level.txt
+ nonebot_plugin_arktools/src/__init__.py
+ nonebot_plugin_arktools/src/help.py
+ nonebot_plugin_arktools/src/configs/__init__.py
+ nonebot_plugin_arktools/src/configs/ocr_config.py
+ nonebot_plugin_arktools/src/configs/path_config.py
+ nonebot_plugin_arktools/src/configs/proxy_config.py
++nonebot_plugin_arktools/src/configs/scheduler_config.py
+ nonebot_plugin_arktools/src/core/__init__.py
+ nonebot_plugin_arktools/src/core/models_v3.py
+ nonebot_plugin_arktools/src/core/database/__init__.py
+ nonebot_plugin_arktools/src/core/database/game_sqlite.py
+ nonebot_plugin_arktools/src/core/database/plugin_sqlite.py
+ nonebot_plugin_arktools/src/exceptions/__init__.py
+ nonebot_plugin_arktools/src/game_guess_operator/__init__.py
+```
+
+### Comparing `nonebot_plugin_arktools-1.0.8/setup.py` & `nonebot_plugin_arktools-1.0.9/setup.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+ 
+ with open("README.md", "r", encoding='utf-8') as f:
+     long_description = f.read()
+ 
+ 
+ setuptools.setup(
+     name="nonebot_plugin_arktools",
+-    version="1.0.8",
++    version="1.0.9",
+     author="Number_Sir",
+     author_email="Number_Sir@126.com",
+     keywords=["pip", "nonebot2", "nonebot", "nonebot_plugin"],
+     description="""基于 OneBot 适配器的 NoneBot2 明日方舟小工具箱插件""",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/NumberSir/nonebot_plugin_arktools",
+```
+

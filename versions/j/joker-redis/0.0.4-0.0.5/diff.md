@@ -1,0 +1,148 @@
+# Comparing `tmp/joker-redis-0.0.4.tar.gz` & `tmp/joker-redis-0.0.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "joker-redis-0.0.4.tar", last modified: Tue Apr 19 14:05:32 2022, max compression
++gzip compressed data, was "joker-redis-0.0.5.tar", last modified: Fri Apr  7 03:00:48 2023, max compression
+```
+
+## Comparing `joker-redis-0.0.4.tar` & `joker-redis-0.0.5.tar`
+
+### file list
+
+```diff
+@@ -1,22 +1,22 @@
+-drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2022-04-19 14:05:32.390627 joker-redis-0.0.4/
+--rw-r--r--   0 Hailong    (502) staff       (20)       94 2021-11-26 13:28:54.000000 joker-redis-0.0.4/MANIFEST.in
+--rw-r--r--   0 Hailong    (502) staff       (20)      783 2022-04-19 14:05:32.390210 joker-redis-0.0.4/PKG-INFO
+--rw-r--r--   0 Hailong    (502) staff       (20)       46 2021-12-02 12:31:51.000000 joker-redis-0.0.4/README.md
+-drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2022-04-19 14:05:32.381360 joker-redis-0.0.4/joker/
+-drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2022-04-19 14:05:32.386317 joker-redis-0.0.4/joker/redis/
+--rw-r--r--   0 Hailong    (502) staff       (20)      196 2022-04-19 14:03:16.000000 joker-redis-0.0.4/joker/redis/__init__.py
+--rw-r--r--   0 Hailong    (502) staff       (20)      123 2021-12-08 11:52:54.000000 joker-redis-0.0.4/joker/redis/error.py
+--rw-r--r--   0 Hailong    (502) staff       (20)     1424 2021-11-26 14:27:25.000000 joker-redis-0.0.4/joker/redis/extended.py
+--rw-r--r--   0 Hailong    (502) staff       (20)     2614 2022-01-21 13:54:46.000000 joker-redis-0.0.4/joker/redis/loggers.py
+--rw-r--r--   0 Hailong    (502) staff       (20)     3757 2021-11-26 13:42:39.000000 joker-redis-0.0.4/joker/redis/notification.py
+-drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2022-04-19 14:05:32.389666 joker-redis-0.0.4/joker_redis.egg-info/
+--rw-r--r--   0 Hailong    (502) staff       (20)      783 2022-04-19 14:05:31.000000 joker-redis-0.0.4/joker_redis.egg-info/PKG-INFO
+--rw-r--r--   0 Hailong    (502) staff       (20)      419 2022-04-19 14:05:32.000000 joker-redis-0.0.4/joker_redis.egg-info/SOURCES.txt
+--rw-r--r--   0 Hailong    (502) staff       (20)        1 2022-04-19 14:05:31.000000 joker-redis-0.0.4/joker_redis.egg-info/dependency_links.txt
+--rw-r--r--   0 Hailong    (502) staff       (20)        6 2022-04-19 14:05:31.000000 joker-redis-0.0.4/joker_redis.egg-info/namespace_packages.txt
+--rw-r--r--   0 Hailong    (502) staff       (20)        1 2021-12-08 02:57:05.000000 joker-redis-0.0.4/joker_redis.egg-info/not-zip-safe
+--rw-r--r--   0 Hailong    (502) staff       (20)       99 2022-04-19 14:05:31.000000 joker-redis-0.0.4/joker_redis.egg-info/requires.txt
+--rw-r--r--   0 Hailong    (502) staff       (20)        6 2022-04-19 14:05:31.000000 joker-redis-0.0.4/joker_redis.egg-info/top_level.txt
+--rw-r--r--   0 Hailong    (502) staff       (20)       98 2022-04-19 14:02:28.000000 joker-redis-0.0.4/requirements.txt
+--rw-r--r--   0 Hailong    (502) staff       (20)       38 2022-04-19 14:05:32.390752 joker-redis-0.0.4/setup.cfg
+--rw-r--r--   0 Hailong    (502) staff       (20)     2332 2021-12-02 13:44:44.000000 joker-redis-0.0.4/setup.py
++drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2023-04-07 03:00:48.755189 joker-redis-0.0.5/
++-rw-r--r--   0 Hailong    (502) staff       (20)       94 2021-11-26 13:28:54.000000 joker-redis-0.0.5/MANIFEST.in
++-rw-r--r--   0 Hailong    (502) staff       (20)      763 2023-04-07 03:00:48.754807 joker-redis-0.0.5/PKG-INFO
++-rw-r--r--   0 Hailong    (502) staff       (20)       46 2021-12-02 12:31:51.000000 joker-redis-0.0.5/README.md
++drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2023-04-07 03:00:48.749455 joker-redis-0.0.5/joker/
++drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2023-04-07 03:00:48.751742 joker-redis-0.0.5/joker/redis/
++-rw-r--r--   0 Hailong    (502) staff       (20)      196 2023-04-07 02:55:21.000000 joker-redis-0.0.5/joker/redis/__init__.py
++-rw-r--r--   0 Hailong    (502) staff       (20)      123 2021-12-08 11:52:54.000000 joker-redis-0.0.5/joker/redis/error.py
++-rw-r--r--   0 Hailong    (502) staff       (20)     1424 2021-11-26 14:27:25.000000 joker-redis-0.0.5/joker/redis/extended.py
++-rw-r--r--   0 Hailong    (502) staff       (20)     2614 2022-01-21 13:54:46.000000 joker-redis-0.0.5/joker/redis/loggers.py
++-rw-r--r--   0 Hailong    (502) staff       (20)     3757 2021-11-26 13:42:39.000000 joker-redis-0.0.5/joker/redis/notification.py
++drwxr-xr-x   0 Hailong    (502) staff       (20)        0 2023-04-07 03:00:48.754256 joker-redis-0.0.5/joker_redis.egg-info/
++-rw-r--r--   0 Hailong    (502) staff       (20)      763 2023-04-07 03:00:48.000000 joker-redis-0.0.5/joker_redis.egg-info/PKG-INFO
++-rw-r--r--   0 Hailong    (502) staff       (20)      419 2023-04-07 03:00:48.000000 joker-redis-0.0.5/joker_redis.egg-info/SOURCES.txt
++-rw-r--r--   0 Hailong    (502) staff       (20)        1 2023-04-07 03:00:48.000000 joker-redis-0.0.5/joker_redis.egg-info/dependency_links.txt
++-rw-r--r--   0 Hailong    (502) staff       (20)        6 2023-04-07 03:00:48.000000 joker-redis-0.0.5/joker_redis.egg-info/namespace_packages.txt
++-rw-r--r--   0 Hailong    (502) staff       (20)        1 2021-12-08 02:57:05.000000 joker-redis-0.0.5/joker_redis.egg-info/not-zip-safe
++-rw-r--r--   0 Hailong    (502) staff       (20)       99 2023-04-07 03:00:48.000000 joker-redis-0.0.5/joker_redis.egg-info/requires.txt
++-rw-r--r--   0 Hailong    (502) staff       (20)        6 2023-04-07 03:00:48.000000 joker-redis-0.0.5/joker_redis.egg-info/top_level.txt
++-rw-r--r--   0 Hailong    (502) staff       (20)       98 2023-04-07 02:53:40.000000 joker-redis-0.0.5/requirements.txt
++-rw-r--r--   0 Hailong    (502) staff       (20)       38 2023-04-07 03:00:48.755305 joker-redis-0.0.5/setup.cfg
++-rw-r--r--   0 Hailong    (502) staff       (20)     2332 2021-12-02 13:44:44.000000 joker-redis-0.0.5/setup.py
+```
+
+### Comparing `joker-redis-0.0.4/PKG-INFO` & `joker-redis-0.0.5/PKG-INFO`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,16 +1,15 @@
+ Metadata-Version: 2.1
+ Name: joker-redis
+-Version: 0.0.4
++Version: 0.0.5
+ Summary: redis based utilities
+ Home-page: https://github.com/frozflame/joker-redis
+ Author: frozflame
+ Author-email: frozflame@outlook.com
+ License: GNU General Public License (GPL)
+-Platform: UNKNOWN
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.4
+ Classifier: Programming Language :: Python :: 3.5
+ Classifier: Programming Language :: Python :: 3.6
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+@@ -18,9 +17,7 @@
+ Classifier: Programming Language :: Python :: 3.10
+ Description-Content-Type: text/markdown
+ 
+ joker-redis
+ ==========
+ 
+ redis-based utilities
+-
+-
+```
+
+### Comparing `joker-redis-0.0.4/joker/redis/extended.py` & `joker-redis-0.0.5/joker/redis/extended.py`
+
+ * *Files identical despite different names*
+
+### Comparing `joker-redis-0.0.4/joker/redis/loggers.py` & `joker-redis-0.0.5/joker/redis/loggers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `joker-redis-0.0.4/joker/redis/notification.py` & `joker-redis-0.0.5/joker/redis/notification.py`
+
+ * *Files identical despite different names*
+
+### Comparing `joker-redis-0.0.4/joker_redis.egg-info/PKG-INFO` & `joker-redis-0.0.5/joker_redis.egg-info/PKG-INFO`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,16 +1,15 @@
+ Metadata-Version: 2.1
+ Name: joker-redis
+-Version: 0.0.4
++Version: 0.0.5
+ Summary: redis based utilities
+ Home-page: https://github.com/frozflame/joker-redis
+ Author: frozflame
+ Author-email: frozflame@outlook.com
+ License: GNU General Public License (GPL)
+-Platform: UNKNOWN
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.4
+ Classifier: Programming Language :: Python :: 3.5
+ Classifier: Programming Language :: Python :: 3.6
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+@@ -18,9 +17,7 @@
+ Classifier: Programming Language :: Python :: 3.10
+ Description-Content-Type: text/markdown
+ 
+ joker-redis
+ ==========
+ 
+ redis-based utilities
+-
+-
+```
+
+### Comparing `joker-redis-0.0.4/setup.py` & `joker-redis-0.0.5/setup.py`
+
+ * *Files identical despite different names*
+

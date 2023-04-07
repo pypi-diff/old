@@ -1,0 +1,156 @@
+# Comparing `tmp/poe_api-0.2.7-py3-none-any.whl.zip` & `tmp/poe_api-0.2.8-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,9 +1,9 @@
+-Zip file size: 32943 bytes, number of entries: 38
+--rw-r--r--  2.0 unx    11665 b- defN 23-Apr-06 06:03 poe.py
++Zip file size: 32946 bytes, number of entries: 38
++-rw-r--r--  2.0 unx    11697 b- defN 23-Apr-07 02:47 poe.py
+ -rw-r--r--  2.0 unx     1093 b- defN 23-Mar-26 23:41 poe_graphql/AddHumanMessageMutation.graphql
+ -rw-r--r--  2.0 unx      373 b- defN 23-Mar-26 23:41 poe_graphql/AddMessageBreakMutation.graphql
+ -rw-r--r--  2.0 unx      180 b- defN 23-Mar-26 23:41 poe_graphql/AutoSubscriptionMutation.graphql
+ -rw-r--r--  2.0 unx       97 b- defN 23-Mar-26 23:41 poe_graphql/BioFragment.graphql
+ -rw-r--r--  2.0 unx       73 b- defN 23-Mar-26 23:41 poe_graphql/ChatAddedSubscription.graphql
+ -rw-r--r--  2.0 unx      100 b- defN 23-Mar-26 23:41 poe_graphql/ChatFragment.graphql
+ -rw-r--r--  2.0 unx     6971 b- defN 23-Apr-06 05:55 poe_graphql/ChatListPaginationQuery.graphql
+@@ -28,13 +28,13 @@
+ -rw-r--r--  2.0 unx      147 b- defN 23-Mar-26 23:41 poe_graphql/SummarizeQuotePostQuery.graphql
+ -rw-r--r--  2.0 unx      180 b- defN 23-Mar-26 23:41 poe_graphql/SummarizeSharePostQuery.graphql
+ -rw-r--r--  2.0 unx      368 b- defN 23-Mar-26 23:41 poe_graphql/UserSnippetFragment.graphql
+ -rw-r--r--  2.0 unx      400 b- defN 23-Mar-26 23:41 poe_graphql/ViewerInfoQuery.graphql
+ -rw-r--r--  2.0 unx     1038 b- defN 23-Mar-26 23:41 poe_graphql/ViewerStateFragment.graphql
+ -rw-r--r--  2.0 unx      657 b- defN 23-Mar-26 23:41 poe_graphql/ViewerStateUpdatedSubscription.graphql
+ -rw-r--r--  2.0 unx        0 b- defN 23-Mar-26 23:41 poe_graphql/__init__.py
+--rw-r--r--  2.0 unx    35149 b- defN 23-Apr-06 06:04 poe_api-0.2.7.dist-info/LICENSE
+--rw-r--r--  2.0 unx     8991 b- defN 23-Apr-06 06:04 poe_api-0.2.7.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 06:04 poe_api-0.2.7.dist-info/WHEEL
+--rw-r--r--  2.0 unx       16 b- defN 23-Apr-06 06:04 poe_api-0.2.7.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     3567 b- defN 23-Apr-06 06:04 poe_api-0.2.7.dist-info/RECORD
+-38 files, 77174 bytes uncompressed, 27053 bytes compressed:  64.9%
++-rw-r--r--  2.0 unx    35149 b- defN 23-Apr-07 02:51 poe_api-0.2.8.dist-info/LICENSE
++-rw-r--r--  2.0 unx     8991 b- defN 23-Apr-07 02:51 poe_api-0.2.8.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 02:51 poe_api-0.2.8.dist-info/WHEEL
++-rw-r--r--  2.0 unx       16 b- defN 23-Apr-07 02:51 poe_api-0.2.8.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     3567 b- defN 23-Apr-07 02:51 poe_api-0.2.8.dist-info/RECORD
++38 files, 77206 bytes uncompressed, 27056 bytes compressed:  65.0%
+```
+
+## zipnote {}
+
+```diff
+@@ -93,23 +93,23 @@
+ 
+ Filename: poe_graphql/ViewerStateUpdatedSubscription.graphql
+ Comment: 
+ 
+ Filename: poe_graphql/__init__.py
+ Comment: 
+ 
+-Filename: poe_api-0.2.7.dist-info/LICENSE
++Filename: poe_api-0.2.8.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: poe_api-0.2.7.dist-info/METADATA
++Filename: poe_api-0.2.8.dist-info/METADATA
+ Comment: 
+ 
+-Filename: poe_api-0.2.7.dist-info/WHEEL
++Filename: poe_api-0.2.8.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: poe_api-0.2.7.dist-info/top_level.txt
++Filename: poe_api-0.2.8.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: poe_api-0.2.7.dist-info/RECORD
++Filename: poe_api-0.2.8.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## poe.py
+
+```diff
+@@ -199,17 +199,17 @@
+     if self.ws:
+       self.ws.close()
+     self.ws_connected = False
+   
+   def on_ws_connect(self, ws):
+     self.ws_connected = True
+   
+-  def on_ws_close(self, ws, close_status_code):
++  def on_ws_close(self, ws, close_status_code, close_message):
+     self.ws_connected = False
+-    logger.warn(f"Websocket closed with status {close_status_code}")
++    logger.warn(f"Websocket closed with status {close_status_code}: {close_message}")
+   
+   def on_ws_error(self, ws, error):
+     self.disconnect_ws()
+     self.connect_ws()
+ 
+   def on_message(self, ws, msg):
+     try:
+```
+
+## Comparing `poe_api-0.2.7.dist-info/LICENSE` & `poe_api-0.2.8.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `poe_api-0.2.7.dist-info/METADATA` & `poe_api-0.2.8.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: poe-api
+-Version: 0.2.7
++Version: 0.2.8
+ Summary: A reverse engineered API wrapper for Quora's Poe
+ Home-page: https://github.com/ading2210/poe-api
+ Author: ading2210
+ License: GPLv3
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+```
+
+## Comparing `poe_api-0.2.7.dist-info/RECORD` & `poe_api-0.2.8.dist-info/RECORD`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-poe.py,sha256=RllaTNWcTLjIGM3e_FWL3zoTGniAVM2dLuQiWAkh8hA,11665
++poe.py,sha256=JjV071I5d5bCUW61z5XYqDVmJ6rTltW_GBVAghnfUEI,11697
+ poe_graphql/AddHumanMessageMutation.graphql,sha256=Va4SoysKE2qPlJfbwoKp6mNv0vs5hnVR20g8hPvAxdY,1093
+ poe_graphql/AddMessageBreakMutation.graphql,sha256=0XrqSAgAkG5vCFwBALRpoAgUDSFM9XUB5wBy5Iou9c8,373
+ poe_graphql/AutoSubscriptionMutation.graphql,sha256=3i8EnqwUrjOcJ2Hxly-lKhwPBJdbpO99POiM_K6jVD4,180
+ poe_graphql/BioFragment.graphql,sha256=3ZdXaPtuHK38bG10WFH6bvpebcyrTLu5fs-ddtfLjf0,97
+ poe_graphql/ChatAddedSubscription.graphql,sha256=NFLZJAwi0V2WQea1oelyRUrtNrwOE58NOeX8ChzVE10,73
+ poe_graphql/ChatFragment.graphql,sha256=NFVSvT3NdYlEquue3yTHPu9ezCIgx6k1OXJZo2ytIzU,100
+ poe_graphql/ChatListPaginationQuery.graphql,sha256=-jtpUwcHsF8nEXQcxLe9gFycYuKRVDBjGNFiH-nPL98,6971
+@@ -27,12 +27,12 @@
+ poe_graphql/SummarizeQuotePostQuery.graphql,sha256=V4PQ1XkEDCsVR3z7h4SLsonZsWG7RptFd6JPwlGwOvE,147
+ poe_graphql/SummarizeSharePostQuery.graphql,sha256=iCN8oiUUp2jfsiBxmsTA7k3_60E0MNwA5gnNrhnYpJc,180
+ poe_graphql/UserSnippetFragment.graphql,sha256=Eg8rK7XM6-HqVJkpEBY0bJaYqF-FdDdWdg-Jj3VTnF0,368
+ poe_graphql/ViewerInfoQuery.graphql,sha256=Xtn-VGGiknKgrW81s7YfIJwhmilobrSqiCObpoJdYfw,400
+ poe_graphql/ViewerStateFragment.graphql,sha256=aicUJncsRpPBh_L2xqDv0aHcUIPIsDrDFPfDs3jcFoU,1038
+ poe_graphql/ViewerStateUpdatedSubscription.graphql,sha256=1dPs0WuOLl4ybZXm4bUF60eVc94O10EkKOtqnQYODic,657
+ poe_graphql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+-poe_api-0.2.7.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+-poe_api-0.2.7.dist-info/METADATA,sha256=nVZNa2g5Pqu8eiEasYqGThlMmqbp5OprRiF8MWE_E20,8991
+-poe_api-0.2.7.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+-poe_api-0.2.7.dist-info/top_level.txt,sha256=7Sk_jA5I5n3fNZ1671pcBau4TWZLe6UXCEnCD5NhGGI,16
+-poe_api-0.2.7.dist-info/RECORD,,
++poe_api-0.2.8.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
++poe_api-0.2.8.dist-info/METADATA,sha256=Gq_OLMGtvQrQ48EjgOvf9l8PViAZFZAVuFp_QFtFkOg,8991
++poe_api-0.2.8.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
++poe_api-0.2.8.dist-info/top_level.txt,sha256=7Sk_jA5I5n3fNZ1671pcBau4TWZLe6UXCEnCD5NhGGI,16
++poe_api-0.2.8.dist-info/RECORD,,
+```
+
