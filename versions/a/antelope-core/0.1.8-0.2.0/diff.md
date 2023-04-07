@@ -1,0 +1,9247 @@
+# Comparing `tmp/antelope_core-0.1.8.tar.gz` & `tmp/antelope_core-0.2.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "antelope_core-0.1.8.tar", last modified: Fri Apr  8 19:14:35 2022, max compression
++gzip compressed data, was "antelope_core-0.2.0.tar", last modified: Fri Apr  7 05:30:44 2023, max compression
+```
+
+## Comparing `antelope_core-0.1.8.tar` & `antelope_core-0.2.0.tar`
+
+### file list
+
+```diff
+@@ -1,174 +1,185 @@
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.056317 antelope_core-0.1.8/
+--rw-r--r--   0 b          (500) b          (506)     1520 2020-09-25 22:29:55.000000 antelope_core-0.1.8/LICENSE
+--rw-r--r--   0 b          (500) b          (506)      335 2021-10-30 03:39:36.000000 antelope_core-0.1.8/MANIFEST.in
+--rw-r--r--   0 b          (500) b          (506)    16389 2022-04-08 19:14:35.056317 antelope_core-0.1.8/PKG-INFO
+--rw-r--r--   0 b          (500) b          (506)    13589 2022-04-08 17:28:12.000000 antelope_core-0.1.8/README.md
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.962982 antelope_core-0.1.8/antelope_core/
+--rw-r--r--   0 b          (500) b          (506)     2892 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/__init__.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.969648 antelope_core-0.1.8/antelope_core/archives/
+--rw-r--r--   0 b          (500) b          (506)     4427 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/archives/__init__.py
+--rw-r--r--   0 b          (500) b          (506)     2364 2021-09-21 18:51:48.000000 antelope_core-0.1.8/antelope_core/archives/archive_index.py
+--rw-r--r--   0 b          (500) b          (506)    19486 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/archives/basic_archive.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.969648 antelope_core-0.1.8/antelope_core/archives/data/
+--rw-r--r--   0 b          (500) b          (506)    27067 2022-04-08 17:32:09.000000 antelope_core-0.1.8/antelope_core/archives/data/elcd_reference_quantities.json
+--rw-r--r--   0 b          (500) b          (506)    27629 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/archives/entity_store.py
+--rw-r--r--   0 b          (500) b          (506)     6294 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/archives/lc_archive.py
+--rw-r--r--   0 b          (500) b          (506)     5551 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/archives/quantity_manager.py
+--rw-r--r--   0 b          (500) b          (506)    39821 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/archives/term_manager.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.979649 antelope_core-0.1.8/antelope_core/archives/tests/
+--rw-r--r--   0 b          (500) b          (506)       54 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/archives/tests/__init__.py
+--rw-r--r--   0 b          (500) b          (506)     8577 2020-03-30 08:22:53.000000 antelope_core-0.1.8/antelope_core/archives/tests/test_base.py
+--rw-r--r--   0 b          (500) b          (506)     3557 2021-09-21 18:51:48.000000 antelope_core-0.1.8/antelope_core/archives/tests/test_basic_archive.py
+--rw-r--r--   0 b          (500) b          (506)     1793 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/archives/tests/test_entity_store.py
+--rw-r--r--   0 b          (500) b          (506)     4143 2019-04-05 22:10:51.000000 antelope_core-0.1.8/antelope_core/archives/tests/test_json.json
+--rw-r--r--   0 b          (500) b          (506)     2287 2021-10-30 03:39:36.000000 antelope_core-0.1.8/antelope_core/archives/tests/test_qdb.py
+--rw-r--r--   0 b          (500) b          (506)     2908 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/archives/tests/test_quantity_manager.py
+--rw-r--r--   0 b          (500) b          (506)     3011 2021-09-21 18:51:48.000000 antelope_core-0.1.8/antelope_core/archives/tests/test_term_manager.py
+--rw-r--r--   0 b          (500) b          (506)     2170 2020-04-03 08:54:47.000000 antelope_core-0.1.8/antelope_core/autorange.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.982982 antelope_core-0.1.8/antelope_core/catalog/
+--rw-r--r--   0 b          (500) b          (506)       70 2021-09-21 18:51:48.000000 antelope_core-0.1.8/antelope_core/catalog/__init__.py
+--rw-r--r--   0 b          (500) b          (506)    14976 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/catalog/catalog.py
+--rw-r--r--   0 b          (500) b          (506)      628 2020-11-05 08:47:12.000000 antelope_core-0.1.8/antelope_core/catalog/catalog_root.py
+--rw-r--r--   0 b          (500) b          (506)     6107 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/catalog/configurator.py
+--rw-r--r--   0 b          (500) b          (506)    13550 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/catalog/lc_catalog.py
+--rw-r--r--   0 b          (500) b          (506)     7179 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/catalog/lc_resolver.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.989649 antelope_core-0.1.8/antelope_core/catalog/tests/
+--rw-r--r--   0 b          (500) b          (506)        0 2018-07-26 08:24:01.000000 antelope_core-0.1.8/antelope_core/catalog/tests/__init__.py
+--rw-r--r--   0 b          (500) b          (506)     5068 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/catalog/tests/test_catalogs.py
+--rw-r--r--   0 b          (500) b          (506)     2305 2020-09-30 00:02:52.000000 antelope_core-0.1.8/antelope_core/catalog/tests/test_process_ref.py
+--rw-r--r--   0 b          (500) b          (506)     1427 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/catalog/tests/test_quantity_refs.py
+--rw-r--r--   0 b          (500) b          (506)     8497 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/catalog_query.py
+--rw-r--r--   0 b          (500) b          (506)    10670 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/characterizations.py
+--rw-r--r--   0 b          (500) b          (506)    14571 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/contexts.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.992982 antelope_core-0.1.8/antelope_core/data_sources/
+--rw-r--r--   0 b          (500) b          (506)        0 2018-10-26 21:44:35.000000 antelope_core-0.1.8/antelope_core/data_sources/__init__.py
+--rw-r--r--   0 b          (500) b          (506)     3869 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/data_sources/data_source.py
+--rw-r--r--   0 b          (500) b          (506)     7481 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/data_sources/ecoinvent.py
+--rw-r--r--   0 b          (500) b          (506)     1741 2022-04-08 18:49:42.000000 antelope_core-0.1.8/antelope_core/data_sources/ecoinvent_lcia.py
+--rw-r--r--   0 b          (500) b          (506)     1300 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/data_sources/gwp_ipcc_2007.py
+--rw-r--r--   0 b          (500) b          (506)     4614 2020-11-05 09:30:15.000000 antelope_core-0.1.8/antelope_core/data_sources/local.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.996316 antelope_core-0.1.8/antelope_core/data_sources/tests/
+--rw-r--r--   0 b          (500) b          (506)        0 2018-10-26 21:44:35.000000 antelope_core-0.1.8/antelope_core/data_sources/tests/__init__.py
+--rw-r--r--   0 b          (500) b          (506)     4164 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/data_sources/tests/test_aa_local.py
+--rw-r--r--   0 b          (500) b          (506)     1544 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/data_sources/tests/test_ecoinvent.py
+--rw-r--r--   0 b          (500) b          (506)     7319 2021-07-08 16:41:41.000000 antelope_core-0.1.8/antelope_core/data_sources/tests/test_ecoinvent_lci.py
+--rw-r--r--   0 b          (500) b          (506)      821 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/data_sources/tests/test_ipcc2007.py
+--rw-r--r--   0 b          (500) b          (506)     6192 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/data_sources/tests/test_uslci.py
+--rw-r--r--   0 b          (500) b          (506)     2435 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/data_sources/traci.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.999649 antelope_core-0.1.8/antelope_core/data_sources/uslci/
+--rw-r--r--   0 b          (500) b          (506)       31 2020-12-29 09:58:58.000000 antelope_core-0.1.8/antelope_core/data_sources/uslci/__init__.py
+--rw-r--r--   0 b          (500) b          (506)     6165 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/data_sources/uslci/uslci.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.009649 antelope_core-0.1.8/antelope_core/entities/
+--rw-r--r--   0 b          (500) b          (506)      169 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/entities/__init__.py
+--rw-r--r--   0 b          (500) b          (506)    11039 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/entities/entities.py
+--rw-r--r--   0 b          (500) b          (506)     4179 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/entities/flows.py
+--rw-r--r--   0 b          (500) b          (506)    24897 2021-09-21 18:51:48.000000 antelope_core-0.1.8/antelope_core/entities/processes.py
+--rw-r--r--   0 b          (500) b          (506)     7287 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/entities/quantities.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.012983 antelope_core-0.1.8/antelope_core/entities/tests/
+--rw-r--r--   0 b          (500) b          (506)       62 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/entities/tests/__init__.py
+--rw-r--r--   0 b          (500) b          (506)     1065 2021-01-07 23:11:04.000000 antelope_core-0.1.8/antelope_core/entities/tests/base_testclass.py
+--rw-r--r--   0 b          (500) b          (506)    99142 2019-03-19 20:06:35.000000 antelope_core-0.1.8/antelope_core/entities/tests/test_archive.json
+--rw-r--r--   0 b          (500) b          (506)     1019 2020-03-30 08:22:53.000000 antelope_core-0.1.8/antelope_core/entities/tests/test_entities.py
+--rw-r--r--   0 b          (500) b          (506)      850 2020-12-29 09:58:58.000000 antelope_core-0.1.8/antelope_core/entities/tests/test_entity_refs.py
+--rw-r--r--   0 b          (500) b          (506)      291 2020-03-30 08:22:53.000000 antelope_core-0.1.8/antelope_core/entities/tests/test_flows.py
+--rw-r--r--   0 b          (500) b          (506)     1538 2020-03-30 08:22:53.000000 antelope_core-0.1.8/antelope_core/entities/tests/test_processes.py
+--rw-r--r--   0 b          (500) b          (506)     1565 2020-09-29 22:38:38.000000 antelope_core-0.1.8/antelope_core/entities/tests/test_quantities.py
+--rw-r--r--   0 b          (500) b          (506)    17858 2021-10-30 03:39:36.000000 antelope_core-0.1.8/antelope_core/entities/xlsx_editor.py
+--rw-r--r--   0 b          (500) b          (506)    21958 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/exchanges.py
+--rw-r--r--   0 b          (500) b          (506)     1137 2021-09-21 18:51:48.000000 antelope_core-0.1.8/antelope_core/from_json.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.016316 antelope_core-0.1.8/antelope_core/implementations/
+--rw-r--r--   0 b          (500) b          (506)      333 2021-09-21 18:51:48.000000 antelope_core-0.1.8/antelope_core/implementations/__init__.py
+--rw-r--r--   0 b          (500) b          (506)     7364 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/implementations/background.py
+--rw-r--r--   0 b          (500) b          (506)     4770 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/implementations/basic.py
+--rw-r--r--   0 b          (500) b          (506)     9856 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/implementations/configure.py
+--rw-r--r--   0 b          (500) b          (506)     2727 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/implementations/exchange.py
+--rw-r--r--   0 b          (500) b          (506)     5940 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/implementations/index.py
+--rw-r--r--   0 b          (500) b          (506)    31702 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/implementations/quantity.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.019650 antelope_core-0.1.8/antelope_core/implementations/tests/
+--rw-r--r--   0 b          (500) b          (506)        0 2018-09-13 20:45:30.000000 antelope_core-0.1.8/antelope_core/implementations/tests/__init__.py
+--rw-r--r--   0 b          (500) b          (506)     2056 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/implementations/tests/test_quantity.py
+--rw-r--r--   0 b          (500) b          (506)    16183 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/lc_resource.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.019650 antelope_core-0.1.8/antelope_core/lcia_engine/
+--rw-r--r--   0 b          (500) b          (506)     5206 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/lcia_engine/__init__.py
+--rw-r--r--   0 b          (500) b          (506)     8094 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/lcia_engine/clookup.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.022983 antelope_core-0.1.8/antelope_core/lcia_engine/data/
+--rw-r--r--   0 b          (500) b          (506)     7360 2021-09-21 18:51:48.000000 antelope_core-0.1.8/antelope_core/lcia_engine/data/contexts.json
+--rw-r--r--   0 b          (500) b          (506)   383481 2020-03-30 08:22:53.000000 antelope_core-0.1.8/antelope_core/lcia_engine/data/flowables.json
+--rw-r--r--   0 b          (500) b          (506)    30980 2021-01-07 00:24:41.000000 antelope_core-0.1.8/antelope_core/lcia_engine/data/ipcc_2007_gwp.json
+--rw-r--r--   0 b          (500) b          (506)    19045 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/lcia_engine/lcia_engine.py
+--rw-r--r--   0 b          (500) b          (506)      851 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/lcia_engine/quelled_cf.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.026316 antelope_core-0.1.8/antelope_core/lcia_engine/tests/
+--rw-r--r--   0 b          (500) b          (506)        0 2020-03-30 08:22:53.000000 antelope_core-0.1.8/antelope_core/lcia_engine/tests/__init__.py
+--rw-r--r--   0 b          (500) b          (506)     2559 2020-03-30 08:22:53.000000 antelope_core-0.1.8/antelope_core/lcia_engine/tests/test_clookup.py
+--rw-r--r--   0 b          (500) b          (506)      924 2020-09-29 22:38:38.000000 antelope_core-0.1.8/antelope_core/lcia_engine/tests/test_ipcc.py
+--rw-r--r--   0 b          (500) b          (506)     2981 2021-10-30 03:39:36.000000 antelope_core-0.1.8/antelope_core/lcia_engine/tests/test_lcia_engine.py
+--rw-r--r--   0 b          (500) b          (506)    33420 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/lcia_results.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.029650 antelope_core-0.1.8/antelope_core/providers/
+--rw-r--r--   0 b          (500) b          (506)     4570 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/providers/__init__.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.032983 antelope_core-0.1.8/antelope_core/providers/data/
+--rw-r--r--   0 b          (500) b          (506)       57 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/providers/data/__init__.py
+--rw-r--r--   0 b          (500) b          (506)    39336 2018-07-26 08:24:01.000000 antelope_core-0.1.8/antelope_core/providers/data/list_of_methods_and_indicators_ecoinvent_v3.2.xlsx
+--rw-r--r--   0 b          (500) b          (506)    95429 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/providers/data/traci_2_1_2014_dec_10_0_test.xlsx
+--rw-r--r--   0 b          (500) b          (506)     9552 2022-04-08 18:55:42.000000 antelope_core-0.1.8/antelope_core/providers/ecoinvent_lcia.py
+--rw-r--r--   0 b          (500) b          (506)    11083 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/providers/ecospold.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.039650 antelope_core-0.1.8/antelope_core/providers/ecospold2/
+--rw-r--r--   0 b          (500) b          (506)       41 2018-07-26 08:24:01.000000 antelope_core-0.1.8/antelope_core/providers/ecospold2/__init__.py
+--rw-r--r--   0 b          (500) b          (506)    24617 2021-07-08 16:43:32.000000 antelope_core-0.1.8/antelope_core/providers/ecospold2/ecospold2.py
+--rw-r--r--   0 b          (500) b          (506)      564 2020-10-18 05:43:46.000000 antelope_core-0.1.8/antelope_core/providers/ecospold2/ecospold2_index.py
+--rw-r--r--   0 b          (500) b          (506)     2134 2020-03-30 08:22:53.000000 antelope_core-0.1.8/antelope_core/providers/ecospold2/master_data.py
+--rw-r--r--   0 b          (500) b          (506)    10913 2021-10-30 03:39:36.000000 antelope_core-0.1.8/antelope_core/providers/file_store.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.042983 antelope_core-0.1.8/antelope_core/providers/ilcd/
+--rw-r--r--   0 b          (500) b          (506)       78 2018-07-26 08:24:01.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/__init__.py
+--rw-r--r--   0 b          (500) b          (506)    17683 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/ilcd.py
+--rw-r--r--   0 b          (500) b          (506)     2314 2018-07-26 08:24:01.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/ilcd_flowables.py
+--rw-r--r--   0 b          (500) b          (506)     5808 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/ilcd_lcia.py
+--rw-r--r--   0 b          (500) b          (506)      314 2020-09-29 23:36:41.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/index.py
+--rw-r--r--   0 b          (500) b          (506)     3177 2021-09-21 18:51:48.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/quantity.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.042983 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/
+--rw-r--r--   0 b          (500) b          (506)        0 2021-01-07 00:24:41.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/__init__.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.956315 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.956315 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.956315 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.046317 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/
+--rw-r--r--   0 b          (500) b          (506)     2712 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-11da-a746-0800200b9a66.xml
+--rw-r--r--   0 b          (500) b          (506)     2738 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-11da-a746-0800200c9a66.xml
+--rw-r--r--   0 b          (500) b          (506)     2734 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-13da-a746-0800200c9a66.xml
+--rw-r--r--   0 b          (500) b          (506)     2716 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-22da-a746-0800200c9a66.xml
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.046317 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flows/
+--rw-r--r--   0 b          (500) b          (506)     5078 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flows/f579de8c-8897-4bdb-9a0a-b36f8b13282e.xml
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.049650 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/
+--rw-r--r--   0 b          (500) b          (506)     2503 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/1ff9a08c-6fc1-4509-8bcd-a5404c598755.xml
+--rw-r--r--   0 b          (500) b          (506)     3551 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/ad38d542-3fe9-439d-9b95-2f5f7752acaf.xml
+--rw-r--r--   0 b          (500) b          (506)     3344 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/cd950537-0a98-4044-9ba7-9f9a68d0a504.xml
+--rw-r--r--   0 b          (500) b          (506)     4443 2019-02-15 00:01:58.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/de5104d8-3de0-4218-a29d-b7123ce9ca3c.xml
+--rw-r--r--   0 b          (500) b          (506)      932 2021-01-07 00:24:41.000000 antelope_core-0.1.8/antelope_core/providers/ilcd/tests/test_ilcd.py
+--rw-r--r--   0 b          (500) b          (506)    20439 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/providers/openlca_jsonld.py
+--rw-r--r--   0 b          (500) b          (506)      729 2021-10-30 03:39:36.000000 antelope_core-0.1.8/antelope_core/providers/parse_math.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.049650 antelope_core-0.1.8/antelope_core/providers/tests/
+--rw-r--r--   0 b          (500) b          (506)        0 2018-07-26 08:24:01.000000 antelope_core-0.1.8/antelope_core/providers/tests/__init__.py
+--rw-r--r--   0 b          (500) b          (506)      569 2020-09-29 23:35:54.000000 antelope_core-0.1.8/antelope_core/providers/tests/test_ecospold.py
+--rw-r--r--   0 b          (500) b          (506)     4110 2018-07-26 08:24:01.000000 antelope_core-0.1.8/antelope_core/providers/tests/test_xml_widgets.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.052984 antelope_core-0.1.8/antelope_core/providers/traci/
+--rw-r--r--   0 b          (500) b          (506)       50 2018-07-26 08:24:01.000000 antelope_core-0.1.8/antelope_core/providers/traci/__init__.py
+--rw-r--r--   0 b          (500) b          (506)      653 2020-09-29 23:35:54.000000 antelope_core-0.1.8/antelope_core/providers/traci/index.py
+--rw-r--r--   0 b          (500) b          (506)     3441 2019-01-17 18:55:10.000000 antelope_core-0.1.8/antelope_core/providers/traci/q_info.py
+--rw-r--r--   0 b          (500) b          (506)     2076 2020-09-29 23:35:54.000000 antelope_core-0.1.8/antelope_core/providers/traci/quantity.py
+--rw-r--r--   0 b          (500) b          (506)     1648 2020-03-30 08:22:53.000000 antelope_core-0.1.8/antelope_core/providers/traci/test_traci.py
+--rw-r--r--   0 b          (500) b          (506)     6687 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/providers/traci/traci_2_1_spreadsheet.py
+--rw-r--r--   0 b          (500) b          (506)     3188 2021-09-21 18:51:48.000000 antelope_core-0.1.8/antelope_core/providers/xl_dict.py
+--rw-r--r--   0 b          (500) b          (506)     1676 2020-03-30 08:22:53.000000 antelope_core-0.1.8/antelope_core/providers/xml_widgets.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:35.056317 antelope_core-0.1.8/antelope_core/tests/
+--rw-r--r--   0 b          (500) b          (506)        0 2018-07-26 08:24:01.000000 antelope_core-0.1.8/antelope_core/tests/__init__.py
+--rw-r--r--   0 b          (500) b          (506)      972 2020-09-29 22:38:38.000000 antelope_core-0.1.8/antelope_core/tests/test_autorange.py
+--rw-r--r--   0 b          (500) b          (506)    12168 2022-04-08 17:28:12.000000 antelope_core-0.1.8/antelope_core/tests/test_contexts.py
+--rw-r--r--   0 b          (500) b          (506)     5637 2020-12-29 09:58:58.000000 antelope_core-0.1.8/antelope_core/tests/test_exchanges.py
+--rw-r--r--   0 b          (500) b          (506)      500 2020-12-29 09:58:58.000000 antelope_core-0.1.8/antelope_core/tests/test_lcia_results.py
+--rw-r--r--   0 b          (500) b          (506)     1162 2020-09-30 00:02:12.000000 antelope_core-0.1.8/antelope_core/tests/test_resources.py
+-drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 19:14:34.966315 antelope_core-0.1.8/antelope_core.egg-info/
+--rw-r--r--   0 b          (500) b          (506)    16389 2022-04-08 19:14:34.000000 antelope_core-0.1.8/antelope_core.egg-info/PKG-INFO
+--rw-r--r--   0 b          (500) b          (506)     6335 2022-04-08 19:14:34.000000 antelope_core-0.1.8/antelope_core.egg-info/SOURCES.txt
+--rw-r--r--   0 b          (500) b          (506)        1 2022-04-08 19:14:34.000000 antelope_core-0.1.8/antelope_core.egg-info/dependency_links.txt
+--rw-r--r--   0 b          (500) b          (506)      153 2022-04-08 19:14:34.000000 antelope_core-0.1.8/antelope_core.egg-info/requires.txt
+--rw-r--r--   0 b          (500) b          (506)       14 2022-04-08 19:14:34.000000 antelope_core-0.1.8/antelope_core.egg-info/top_level.txt
+--rw-r--r--   0 b          (500) b          (506)       38 2022-04-08 19:14:35.056317 antelope_core-0.1.8/setup.cfg
+--rw-r--r--   0 b          (500) b          (506)     3085 2022-04-08 19:14:33.000000 antelope_core-0.1.8/setup.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.113020 antelope_core-0.2.0/
++-rw-r--r--   0 b          (500) b          (506)     1520 2020-09-25 22:29:55.000000 antelope_core-0.2.0/LICENSE
++-rw-r--r--   0 b          (500) b          (506)      335 2021-10-30 03:39:36.000000 antelope_core-0.2.0/MANIFEST.in
++-rw-r--r--   0 b          (500) b          (506)    14232 2023-04-07 05:30:44.113020 antelope_core-0.2.0/PKG-INFO
++-rw-r--r--   0 b          (500) b          (506)    13586 2022-04-09 17:53:42.000000 antelope_core-0.2.0/README.md
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.106353 antelope_core-0.2.0/antelope_core/
++-rw-r--r--   0 b          (500) b          (506)     3177 2022-09-10 06:13:58.000000 antelope_core-0.2.0/antelope_core/__init__.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.106353 antelope_core-0.2.0/antelope_core/archives/
++-rw-r--r--   0 b          (500) b          (506)     4518 2022-12-31 00:11:14.000000 antelope_core-0.2.0/antelope_core/archives/__init__.py
++-rw-r--r--   0 b          (500) b          (506)     2364 2021-09-21 18:51:48.000000 antelope_core-0.2.0/antelope_core/archives/archive_index.py
++-rw-r--r--   0 b          (500) b          (506)    19334 2022-12-31 00:11:14.000000 antelope_core-0.2.0/antelope_core/archives/basic_archive.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.106353 antelope_core-0.2.0/antelope_core/archives/data/
++-rw-r--r--   0 b          (500) b          (506)    27863 2023-02-01 20:12:07.000000 antelope_core-0.2.0/antelope_core/archives/data/elcd_reference_quantities.json
++-rw-r--r--   0 b          (500) b          (506)    28771 2023-02-05 06:57:15.000000 antelope_core-0.2.0/antelope_core/archives/entity_store.py
++-rw-r--r--   0 b          (500) b          (506)     6288 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/archives/lc_archive.py
++-rw-r--r--   0 b          (500) b          (506)     5741 2022-12-31 00:11:14.000000 antelope_core-0.2.0/antelope_core/archives/quantity_manager.py
++-rw-r--r--   0 b          (500) b          (506)    42836 2023-04-05 08:32:36.000000 antelope_core-0.2.0/antelope_core/archives/term_manager.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.106353 antelope_core-0.2.0/antelope_core/archives/tests/
++-rw-r--r--   0 b          (500) b          (506)       54 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/archives/tests/__init__.py
++-rw-r--r--   0 b          (500) b          (506)     8577 2020-03-30 08:22:53.000000 antelope_core-0.2.0/antelope_core/archives/tests/test_base.py
++-rw-r--r--   0 b          (500) b          (506)     3557 2021-09-21 18:51:48.000000 antelope_core-0.2.0/antelope_core/archives/tests/test_basic_archive.py
++-rw-r--r--   0 b          (500) b          (506)     1802 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/archives/tests/test_entity_store.py
++-rw-r--r--   0 b          (500) b          (506)     4143 2019-04-05 22:10:51.000000 antelope_core-0.2.0/antelope_core/archives/tests/test_json.json
++-rw-r--r--   0 b          (500) b          (506)     2287 2021-10-30 03:39:36.000000 antelope_core-0.2.0/antelope_core/archives/tests/test_qdb.py
++-rw-r--r--   0 b          (500) b          (506)     3044 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/archives/tests/test_quantity_manager.py
++-rw-r--r--   0 b          (500) b          (506)     2286 2023-01-12 08:08:59.000000 antelope_core-0.2.0/antelope_core/archives/tests/test_quantity_relation.py
++-rw-r--r--   0 b          (500) b          (506)     3013 2023-01-30 19:03:06.000000 antelope_core-0.2.0/antelope_core/archives/tests/test_term_manager.py
++-rw-r--r--   0 b          (500) b          (506)     4545 2023-03-30 22:16:32.000000 antelope_core-0.2.0/antelope_core/auth.py
++-rw-r--r--   0 b          (500) b          (506)     2170 2020-04-03 08:54:47.000000 antelope_core-0.2.0/antelope_core/autorange.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.106353 antelope_core-0.2.0/antelope_core/catalog/
++-rw-r--r--   0 b          (500) b          (506)       70 2021-09-21 18:51:48.000000 antelope_core-0.2.0/antelope_core/catalog/__init__.py
++-rw-r--r--   0 b          (500) b          (506)    18441 2023-01-29 07:23:50.000000 antelope_core-0.2.0/antelope_core/catalog/catalog.py
++-rw-r--r--   0 b          (500) b          (506)      628 2020-11-05 08:47:12.000000 antelope_core-0.2.0/antelope_core/catalog/catalog_root.py
++-rw-r--r--   0 b          (500) b          (506)     6104 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/catalog/configurator.py
++-rw-r--r--   0 b          (500) b          (506)    18476 2023-02-02 08:06:37.000000 antelope_core-0.2.0/antelope_core/catalog/lc_catalog.py
++-rw-r--r--   0 b          (500) b          (506)     8782 2023-01-12 00:22:51.000000 antelope_core-0.2.0/antelope_core/catalog/lc_resolver.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.106353 antelope_core-0.2.0/antelope_core/catalog/tests/
++-rw-r--r--   0 b          (500) b          (506)        0 2018-07-26 08:24:01.000000 antelope_core-0.2.0/antelope_core/catalog/tests/__init__.py
++-rw-r--r--   0 b          (500) b          (506)     5139 2022-12-31 00:11:14.000000 antelope_core-0.2.0/antelope_core/catalog/tests/test_catalogs.py
++-rw-r--r--   0 b          (500) b          (506)     2316 2022-12-31 00:11:14.000000 antelope_core-0.2.0/antelope_core/catalog/tests/test_process_ref.py
++-rw-r--r--   0 b          (500) b          (506)     1624 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/catalog/tests/test_quantity_refs.py
++-rw-r--r--   0 b          (500) b          (506)    12623 2023-02-03 00:08:39.000000 antelope_core-0.2.0/antelope_core/catalog_query.py
++-rw-r--r--   0 b          (500) b          (506)    10710 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/characterizations.py
++-rw-r--r--   0 b          (500) b          (506)    15445 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/contexts.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.106353 antelope_core-0.2.0/antelope_core/data_sources/
++-rw-r--r--   0 b          (500) b          (506)        0 2018-10-26 21:44:35.000000 antelope_core-0.2.0/antelope_core/data_sources/__init__.py
++-rw-r--r--   0 b          (500) b          (506)     3851 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/data_sources/data_source.py
++-rw-r--r--   0 b          (500) b          (506)     7497 2022-08-22 21:21:17.000000 antelope_core-0.2.0/antelope_core/data_sources/ecoinvent.py
++-rw-r--r--   0 b          (500) b          (506)     1741 2022-08-22 21:21:17.000000 antelope_core-0.2.0/antelope_core/data_sources/ecoinvent_lcia.py
++-rw-r--r--   0 b          (500) b          (506)     1303 2022-08-22 21:21:17.000000 antelope_core-0.2.0/antelope_core/data_sources/gwp_ipcc_2007.py
++-rw-r--r--   0 b          (500) b          (506)     4614 2020-11-05 09:30:15.000000 antelope_core-0.2.0/antelope_core/data_sources/local.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.109687 antelope_core-0.2.0/antelope_core/data_sources/tests/
++-rw-r--r--   0 b          (500) b          (506)        0 2018-10-26 21:44:35.000000 antelope_core-0.2.0/antelope_core/data_sources/tests/__init__.py
++-rw-r--r--   0 b          (500) b          (506)     4152 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/data_sources/tests/test_aa_local.py
++-rw-r--r--   0 b          (500) b          (506)     1541 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/data_sources/tests/test_ecoinvent.py
++-rw-r--r--   0 b          (500) b          (506)     7319 2021-07-08 16:41:41.000000 antelope_core-0.2.0/antelope_core/data_sources/tests/test_ecoinvent_lci.py
++-rw-r--r--   0 b          (500) b          (506)      815 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/data_sources/tests/test_ipcc2007.py
++-rw-r--r--   0 b          (500) b          (506)     7263 2023-04-05 08:53:20.000000 antelope_core-0.2.0/antelope_core/data_sources/tests/test_uslci.py
++-rw-r--r--   0 b          (500) b          (506)     2438 2022-08-22 21:21:17.000000 antelope_core-0.2.0/antelope_core/data_sources/traci.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.109687 antelope_core-0.2.0/antelope_core/data_sources/uslci/
++-rw-r--r--   0 b          (500) b          (506)       31 2020-12-29 09:58:58.000000 antelope_core-0.2.0/antelope_core/data_sources/uslci/__init__.py
++-rw-r--r--   0 b          (500) b          (506)     6168 2022-08-22 21:21:17.000000 antelope_core-0.2.0/antelope_core/data_sources/uslci/uslci.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.109687 antelope_core-0.2.0/antelope_core/entities/
++-rw-r--r--   0 b          (500) b          (506)      181 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/entities/__init__.py
++-rw-r--r--   0 b          (500) b          (506)    11169 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/entities/entities.py
++-rw-r--r--   0 b          (500) b          (506)     4408 2023-03-29 00:53:52.000000 antelope_core-0.2.0/antelope_core/entities/flows.py
++-rw-r--r--   0 b          (500) b          (506)    24934 2023-02-24 05:55:04.000000 antelope_core-0.2.0/antelope_core/entities/processes.py
++-rw-r--r--   0 b          (500) b          (506)     7804 2023-02-06 19:33:10.000000 antelope_core-0.2.0/antelope_core/entities/quantities.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.109687 antelope_core-0.2.0/antelope_core/entities/tests/
++-rw-r--r--   0 b          (500) b          (506)       62 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/entities/tests/__init__.py
++-rw-r--r--   0 b          (500) b          (506)     1065 2021-01-07 23:11:04.000000 antelope_core-0.2.0/antelope_core/entities/tests/base_testclass.py
++-rw-r--r--   0 b          (500) b          (506)    99142 2019-03-19 20:06:35.000000 antelope_core-0.2.0/antelope_core/entities/tests/test_archive.json
++-rw-r--r--   0 b          (500) b          (506)     1019 2020-03-30 08:22:53.000000 antelope_core-0.2.0/antelope_core/entities/tests/test_entities.py
++-rw-r--r--   0 b          (500) b          (506)      850 2020-12-29 09:58:58.000000 antelope_core-0.2.0/antelope_core/entities/tests/test_entity_refs.py
++-rw-r--r--   0 b          (500) b          (506)      291 2020-03-30 08:22:53.000000 antelope_core-0.2.0/antelope_core/entities/tests/test_flows.py
++-rw-r--r--   0 b          (500) b          (506)     1538 2020-03-30 08:22:53.000000 antelope_core-0.2.0/antelope_core/entities/tests/test_processes.py
++-rw-r--r--   0 b          (500) b          (506)     1565 2020-09-29 22:38:38.000000 antelope_core-0.2.0/antelope_core/entities/tests/test_quantities.py
++-rw-r--r--   0 b          (500) b          (506)    18234 2022-06-13 20:26:37.000000 antelope_core-0.2.0/antelope_core/entities/xlsx_editor.py
++-rw-r--r--   0 b          (500) b          (506)    22640 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/exchanges.py
++-rw-r--r--   0 b          (500) b          (506)     6756 2023-01-11 07:42:19.000000 antelope_core-0.2.0/antelope_core/file_accessor.py
++-rw-r--r--   0 b          (500) b          (506)     1137 2021-09-21 18:51:48.000000 antelope_core-0.2.0/antelope_core/from_json.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.109687 antelope_core-0.2.0/antelope_core/implementations/
++-rw-r--r--   0 b          (500) b          (506)      333 2021-09-21 18:51:48.000000 antelope_core-0.2.0/antelope_core/implementations/__init__.py
++-rw-r--r--   0 b          (500) b          (506)     7347 2023-04-05 07:40:09.000000 antelope_core-0.2.0/antelope_core/implementations/background.py
++-rw-r--r--   0 b          (500) b          (506)     5772 2023-03-30 22:45:32.000000 antelope_core-0.2.0/antelope_core/implementations/basic.py
++-rw-r--r--   0 b          (500) b          (506)     9856 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/implementations/configure.py
++-rw-r--r--   0 b          (500) b          (506)     2812 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/implementations/exchange.py
++-rw-r--r--   0 b          (500) b          (506)     6064 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/implementations/index.py
++-rw-r--r--   0 b          (500) b          (506)    32779 2023-03-29 00:46:54.000000 antelope_core-0.2.0/antelope_core/implementations/quantity.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.109687 antelope_core-0.2.0/antelope_core/implementations/tests/
++-rw-r--r--   0 b          (500) b          (506)        0 2018-09-13 20:45:30.000000 antelope_core-0.2.0/antelope_core/implementations/tests/__init__.py
++-rw-r--r--   0 b          (500) b          (506)     2056 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/implementations/tests/test_quantity.py
++-rw-r--r--   0 b          (500) b          (506)    16474 2022-12-31 00:11:14.000000 antelope_core-0.2.0/antelope_core/lc_resource.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.109687 antelope_core-0.2.0/antelope_core/lcia_engine/
++-rw-r--r--   0 b          (500) b          (506)     5632 2023-02-02 21:42:48.000000 antelope_core-0.2.0/antelope_core/lcia_engine/__init__.py
++-rw-r--r--   0 b          (500) b          (506)     8163 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/lcia_engine/clookup.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.109687 antelope_core-0.2.0/antelope_core/lcia_engine/data/
++-rw-r--r--   0 b          (500) b          (506)     8420 2022-08-27 07:18:09.000000 antelope_core-0.2.0/antelope_core/lcia_engine/data/contexts.json
++-rw-r--r--   0 b          (500) b          (506)   383481 2020-03-30 08:22:53.000000 antelope_core-0.2.0/antelope_core/lcia_engine/data/flowables.json
++-rw-r--r--   0 b          (500) b          (506)    30980 2021-01-07 00:24:41.000000 antelope_core-0.2.0/antelope_core/lcia_engine/data/ipcc_2007_gwp.json
++-rw-r--r--   0 b          (500) b          (506)    18298 2023-04-05 08:32:36.000000 antelope_core-0.2.0/antelope_core/lcia_engine/lcia_engine.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.109687 antelope_core-0.2.0/antelope_core/lcia_engine/tests/
++-rw-r--r--   0 b          (500) b          (506)        0 2020-03-30 08:22:53.000000 antelope_core-0.2.0/antelope_core/lcia_engine/tests/__init__.py
++-rw-r--r--   0 b          (500) b          (506)     1513 2023-03-29 01:25:13.000000 antelope_core-0.2.0/antelope_core/lcia_engine/tests/test_biogenic_co2.py
++-rw-r--r--   0 b          (500) b          (506)     2559 2020-03-30 08:22:53.000000 antelope_core-0.2.0/antelope_core/lcia_engine/tests/test_clookup.py
++-rw-r--r--   0 b          (500) b          (506)      924 2020-09-29 22:38:38.000000 antelope_core-0.2.0/antelope_core/lcia_engine/tests/test_ipcc.py
++-rw-r--r--   0 b          (500) b          (506)     2981 2021-10-30 03:39:36.000000 antelope_core-0.2.0/antelope_core/lcia_engine/tests/test_lcia_engine.py
++-rw-r--r--   0 b          (500) b          (506)    41768 2023-04-04 03:19:24.000000 antelope_core-0.2.0/antelope_core/lcia_results.py
++-rw-r--r--   0 b          (500) b          (506)    16203 2023-04-05 07:40:09.000000 antelope_core-0.2.0/antelope_core/models.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.109687 antelope_core-0.2.0/antelope_core/providers/
++-rw-r--r--   0 b          (500) b          (506)     4617 2022-11-07 09:16:47.000000 antelope_core-0.2.0/antelope_core/providers/__init__.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.109687 antelope_core-0.2.0/antelope_core/providers/data/
++-rw-r--r--   0 b          (500) b          (506)       57 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/providers/data/__init__.py
++-rw-r--r--   0 b          (500) b          (506)    39336 2018-07-26 08:24:01.000000 antelope_core-0.2.0/antelope_core/providers/data/list_of_methods_and_indicators_ecoinvent_v3.2.xlsx
++-rw-r--r--   0 b          (500) b          (506)    95429 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/providers/data/traci_2_1_2014_dec_10_0_test.xlsx
++-rw-r--r--   0 b          (500) b          (506)     9551 2022-08-01 22:59:24.000000 antelope_core-0.2.0/antelope_core/providers/ecoinvent_lcia.py
++-rw-r--r--   0 b          (500) b          (506)    11083 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/providers/ecospold.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.113020 antelope_core-0.2.0/antelope_core/providers/ecospold2/
++-rw-r--r--   0 b          (500) b          (506)       41 2018-07-26 08:24:01.000000 antelope_core-0.2.0/antelope_core/providers/ecospold2/__init__.py
++-rw-r--r--   0 b          (500) b          (506)    24560 2022-08-23 23:02:58.000000 antelope_core-0.2.0/antelope_core/providers/ecospold2/ecospold2.py
++-rw-r--r--   0 b          (500) b          (506)      564 2020-10-18 05:43:46.000000 antelope_core-0.2.0/antelope_core/providers/ecospold2/ecospold2_index.py
++-rw-r--r--   0 b          (500) b          (506)     2134 2020-03-30 08:22:53.000000 antelope_core-0.2.0/antelope_core/providers/ecospold2/master_data.py
++-rw-r--r--   0 b          (500) b          (506)    10917 2023-02-02 16:59:51.000000 antelope_core-0.2.0/antelope_core/providers/file_store.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.113020 antelope_core-0.2.0/antelope_core/providers/ilcd/
++-rw-r--r--   0 b          (500) b          (506)       78 2018-07-26 08:24:01.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/__init__.py
++-rw-r--r--   0 b          (500) b          (506)    17683 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/ilcd.py
++-rw-r--r--   0 b          (500) b          (506)     2314 2018-07-26 08:24:01.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/ilcd_flowables.py
++-rw-r--r--   0 b          (500) b          (506)     5806 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/ilcd_lcia.py
++-rw-r--r--   0 b          (500) b          (506)      314 2020-09-29 23:36:41.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/index.py
++-rw-r--r--   0 b          (500) b          (506)     3177 2021-09-21 18:51:48.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/quantity.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.113020 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/
++-rw-r--r--   0 b          (500) b          (506)        0 2021-01-07 00:24:41.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/__init__.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.106353 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.106353 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.106353 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.113020 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/
++-rw-r--r--   0 b          (500) b          (506)     2712 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-11da-a746-0800200b9a66.xml
++-rw-r--r--   0 b          (500) b          (506)     2738 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-11da-a746-0800200c9a66.xml
++-rw-r--r--   0 b          (500) b          (506)     2734 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-13da-a746-0800200c9a66.xml
++-rw-r--r--   0 b          (500) b          (506)     2716 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-22da-a746-0800200c9a66.xml
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.113020 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flows/
++-rw-r--r--   0 b          (500) b          (506)     5078 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flows/f579de8c-8897-4bdb-9a0a-b36f8b13282e.xml
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.113020 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/
++-rw-r--r--   0 b          (500) b          (506)     2503 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/1ff9a08c-6fc1-4509-8bcd-a5404c598755.xml
++-rw-r--r--   0 b          (500) b          (506)     3551 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/ad38d542-3fe9-439d-9b95-2f5f7752acaf.xml
++-rw-r--r--   0 b          (500) b          (506)     3344 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/cd950537-0a98-4044-9ba7-9f9a68d0a504.xml
++-rw-r--r--   0 b          (500) b          (506)     4443 2019-02-15 00:01:58.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/de5104d8-3de0-4218-a29d-b7123ce9ca3c.xml
++-rw-r--r--   0 b          (500) b          (506)      932 2021-01-07 00:24:41.000000 antelope_core-0.2.0/antelope_core/providers/ilcd/tests/test_ilcd.py
++-rw-r--r--   0 b          (500) b          (506)    21764 2023-02-24 05:50:36.000000 antelope_core-0.2.0/antelope_core/providers/openlca_jsonld.py
++-rw-r--r--   0 b          (500) b          (506)      729 2021-10-30 03:39:36.000000 antelope_core-0.2.0/antelope_core/providers/parse_math.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.113020 antelope_core-0.2.0/antelope_core/providers/tests/
++-rw-r--r--   0 b          (500) b          (506)        0 2018-07-26 08:24:01.000000 antelope_core-0.2.0/antelope_core/providers/tests/__init__.py
++-rw-r--r--   0 b          (500) b          (506)      569 2020-09-29 23:35:54.000000 antelope_core-0.2.0/antelope_core/providers/tests/test_ecospold.py
++-rw-r--r--   0 b          (500) b          (506)     4110 2018-07-26 08:24:01.000000 antelope_core-0.2.0/antelope_core/providers/tests/test_xml_widgets.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.113020 antelope_core-0.2.0/antelope_core/providers/traci/
++-rw-r--r--   0 b          (500) b          (506)       50 2018-07-26 08:24:01.000000 antelope_core-0.2.0/antelope_core/providers/traci/__init__.py
++-rw-r--r--   0 b          (500) b          (506)      653 2020-09-29 23:35:54.000000 antelope_core-0.2.0/antelope_core/providers/traci/index.py
++-rw-r--r--   0 b          (500) b          (506)     3441 2019-01-17 18:55:10.000000 antelope_core-0.2.0/antelope_core/providers/traci/q_info.py
++-rw-r--r--   0 b          (500) b          (506)     2076 2020-09-29 23:35:54.000000 antelope_core-0.2.0/antelope_core/providers/traci/quantity.py
++-rw-r--r--   0 b          (500) b          (506)     1648 2020-03-30 08:22:53.000000 antelope_core-0.2.0/antelope_core/providers/traci/test_traci.py
++-rw-r--r--   0 b          (500) b          (506)     6687 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/providers/traci/traci_2_1_spreadsheet.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.113020 antelope_core-0.2.0/antelope_core/providers/xdb_client/
++-rw-r--r--   0 b          (500) b          (506)       33 2022-11-14 22:48:38.000000 antelope_core-0.2.0/antelope_core/providers/xdb_client/__init__.py
++-rw-r--r--   0 b          (500) b          (506)    13740 2023-04-06 23:18:11.000000 antelope_core-0.2.0/antelope_core/providers/xdb_client/implementation.py
++-rw-r--r--   0 b          (500) b          (506)     3693 2023-04-06 23:16:32.000000 antelope_core-0.2.0/antelope_core/providers/xdb_client/requester.py
++-rw-r--r--   0 b          (500) b          (506)     5391 2023-02-01 00:30:59.000000 antelope_core-0.2.0/antelope_core/providers/xdb_client/rest_client.py
++-rw-r--r--   0 b          (500) b          (506)     5787 2022-12-31 00:11:14.000000 antelope_core-0.2.0/antelope_core/providers/xdb_client/xdb_client.py
++-rw-r--r--   0 b          (500) b          (506)     2917 2022-12-31 00:11:14.000000 antelope_core-0.2.0/antelope_core/providers/xdb_client/xdb_entities.py
++-rw-r--r--   0 b          (500) b          (506)     2316 2022-08-01 23:00:27.000000 antelope_core-0.2.0/antelope_core/providers/xl_dict.py
++-rw-r--r--   0 b          (500) b          (506)     1676 2020-03-30 08:22:53.000000 antelope_core-0.2.0/antelope_core/providers/xml_widgets.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.113020 antelope_core-0.2.0/antelope_core/tests/
++-rw-r--r--   0 b          (500) b          (506)        0 2018-07-26 08:24:01.000000 antelope_core-0.2.0/antelope_core/tests/__init__.py
++-rw-r--r--   0 b          (500) b          (506)      972 2020-09-29 22:38:38.000000 antelope_core-0.2.0/antelope_core/tests/test_autorange.py
++-rw-r--r--   0 b          (500) b          (506)    12509 2022-04-09 17:53:42.000000 antelope_core-0.2.0/antelope_core/tests/test_contexts.py
++-rw-r--r--   0 b          (500) b          (506)     5637 2020-12-29 09:58:58.000000 antelope_core-0.2.0/antelope_core/tests/test_exchanges.py
++-rw-r--r--   0 b          (500) b          (506)      500 2020-12-29 09:58:58.000000 antelope_core-0.2.0/antelope_core/tests/test_lcia_results.py
++-rw-r--r--   0 b          (500) b          (506)     1162 2020-09-30 00:02:12.000000 antelope_core-0.2.0/antelope_core/tests/test_resources.py
++drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-07 05:30:44.106353 antelope_core-0.2.0/antelope_core.egg-info/
++-rw-r--r--   0 b          (500) b          (506)    14232 2023-04-07 05:30:44.000000 antelope_core-0.2.0/antelope_core.egg-info/PKG-INFO
++-rw-r--r--   0 b          (500) b          (506)     6778 2023-04-07 05:30:44.000000 antelope_core-0.2.0/antelope_core.egg-info/SOURCES.txt
++-rw-r--r--   0 b          (500) b          (506)        1 2023-04-07 05:30:44.000000 antelope_core-0.2.0/antelope_core.egg-info/dependency_links.txt
++-rw-r--r--   0 b          (500) b          (506)      169 2023-04-07 05:30:44.000000 antelope_core-0.2.0/antelope_core.egg-info/requires.txt
++-rw-r--r--   0 b          (500) b          (506)       14 2023-04-07 05:30:44.000000 antelope_core-0.2.0/antelope_core.egg-info/top_level.txt
++-rw-r--r--   0 b          (500) b          (506)       38 2023-04-07 05:30:44.113020 antelope_core-0.2.0/setup.cfg
++-rw-r--r--   0 b          (500) b          (506)     3362 2023-04-07 05:28:35.000000 antelope_core-0.2.0/setup.py
+```
+
+### Comparing `antelope_core-0.1.8/LICENSE` & `antelope_core-0.2.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/PKG-INFO` & `antelope_core-0.2.0/PKG-INFO`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,287 +1,286 @@
+ Metadata-Version: 2.1
+ Name: antelope_core
+-Version: 0.1.8
+-Summary: UNKNOWN
++Version: 0.2.0
+ Home-page: https://github.com/AntelopeLCA/core
+ Author: Brandon Kuczenski
+ Author-email: bkuczenski@ucsb.edu
+ License: BSD 3-Clause
+-Description: ![](https://travis-ci.com/AntelopeLCA/core.svg?branch=master&status=passed) ![](https://coveralls.io/repos/github/AntelopeLCA/core/badge.svg?branch=master)
+-        
+-        # core
+-        Antelope Catalog - reference implementation.
+-        
+-        This repository provides code that enables access to different forms of life cycle 
+-        inventory and impact assessment data, ideally from both local and remote sources.  It
+-        allows you to view and index data sources, inspect their contents, and perform 
+-        exchange relation queries, quantity relation queries, and LCIA computations.
+-        
+-        At present, the Antelope Catalog relies on local LCA data on your machine, just like other
+-        LCA software.  However, the plan is to remove this requirement by off-loading 
+-        computing requirements to the cloud.   
+-        
+-        ## Additional Packages
+-        
+-        The software for constructing and inverting background matrices, which requires 
+-        [SciPy](https://www.scipy.org), is in a separate repository called 
+-        [antelope_background](https://github.com/AntelopeLCA/background).  The idea is that 
+-        these computations can be performed remotely, allowing lightweight clients to run
+-        without scientific computing software (other than python).  However, at the moment 
+-        this is not yet available.
+-        
+-        The [antelope_foreground](https://github.com/AntelopeLCA/foreground) package allows
+-        users to construct and compute product models that use a mixture of data sources.
+-        
+-        Please visit and install these packages to access and test these functions. 
+-        
+-        ## Quick Start
+-        
+-        ### 1. Configure a local catalog
+-        
+-        `antelope_core` is on PyPI-- note the optional dependency if you want to access datasets 
+-        in XML formats (ILCD, EcoSpoldV1, EcoSpoldV2): 
+-        
+-            user@host$ pip install antelope_core[XML]
+-            
+-        Antelope stores its content in a `catalog` --- for automated unit testing, this should be
+-        specified in an environment variable:
+-        
+-            user@host$ export ANTELOPE_CATALOG_ROOT=/path/to/where/you/want/catalog
+-            
+-        Once that's done, the catalog can be "seeded" with a core set of free tools by running the
+-        local configuration unit test.  This is a bit tricky because unit tests are not usually
+-        designed to be run on distributed code, so it requires a bit of a hack to specify the 
+-        location of the installed package (note that if you are using a virtual environment, your
+-        site-packages directory is inside that virtual environment):
+-        
+-            user@host$ python -m unittest discover -s /path/to/your/site-packages -p test_aa_local.py 
+-        
+-        That will install: two different USLCI implementations (both somewhat stale), and the TRACI 2.1
+-        LCIA methodology.
+-        
+-        ### 2. Start Running
+-        
+-        You are now ready to perform LCIA calculations:
+-        
+-            user@host$ python3
+-            >>> from antelope_core import LcCatalog
+-            >>> from antelope import enum  # a simple "enumerate-and-show items" for interactive use
+-            
+-        If you have defined your catalog root in your environment, you can import it:
+-        
+-            >>> from antelope_core.catalog.catalog_root import CATALOG_ROOT
+-            >>> cat = LcCatalog(CATALOG_ROOT) 
+-            Loading JSON data from /path/to/your/catalog/reference-quantities.json:
+-            local.qdb: /path/to/your/catalog/reference-quantities.json
+-            local.qdb: /data/GitHub/lca-tools/lcatools/qdb/data/elcd_reference_quantities.json
+-            25 new quantity entities added (25 total)
+-            6 new flow entities added (6 total)
+-        
+-        Else, you can make it anything you want
+-        
+-            >>> cat = LcCatalog('/path/to/anywhere') 
+-            Loading JSON data from /path/to/anywhere/reference-quantities.json:
+-            local.qdb: /path/to/anywhere/reference-quantities.json
+-            local.qdb: /data/GitHub/lca-tools/lcatools/qdb/data/elcd_reference_quantities.json
+-            25 new quantity entities added (25 total)
+-            6 new flow entities added (6 total)
+-            
+-        You then interact with the catalog by making queries to specific data sources:
+-        
+-            >>> cat.show_interfaces()  # output shown after running `test_aa_local`
+-            lcia.ipcc.2007.traci21 [basic, index, quantity]
+-            local.lcia.traci.2.1 [basic, index, quantity]
+-            local.qdb [basic, index, quantity]
+-            local.uslci.ecospold [basic, exchange, quantity]
+-            local.uslci.olca [basic, exchange, quantity]
+-             
+-            >>> lcias = enum(cat.query('local.lcia.traci.2.1').lcia_methods())
+-            local.lcia.traci.2.1: /data/LCI/TRACI/traci_2_1_2014_dec_10_0.xlsx
+-            Loading workbook /data/LCI/TRACI/traci_2_1_2014_dec_10_0.xlsx
+-            Applying stored configuration
+-            Applying context hint local.lcia.traci.2.1:air => to air
+-            Applying context hint local.lcia.traci.2.1:water => to water
+-            Applying configuration to Traci21Factors with 11 entities at /data/LCI/TRACI/traci_2_1_2014_dec_10_0.xlsx
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Acidification Air
+-             [00] [local.lcia.traci.2.1] Acidification Air [kg SO2 eq] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Ecotoxicity, freshwater
+-             [01] [local.lcia.traci.2.1] Ecotoxicity, freshwater [CTUeco] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Eutrophication Air
+-             [02] [local.lcia.traci.2.1] Eutrophication Air [kg N eq] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Eutrophication Water
+-             [03] [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Global Warming Air
+-             [04] [local.lcia.traci.2.1] Global Warming Air [kg CO2 eq] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Human Health Particulates Air
+-             [05] [local.lcia.traci.2.1] Human Health Particulates Air [PM2.5 eq] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Human health toxicity, cancer
+-             [06] [local.lcia.traci.2.1] Human health toxicity, cancer [CTUcancer] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Human health toxicity, non-cancer
+-             [07] [local.lcia.traci.2.1] Human health toxicity, non-cancer [CTUnoncancer] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Ozone Depletion Air
+-             [08] [local.lcia.traci.2.1] Ozone Depletion Air [kg CFC-11 eq] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Smog Air
+-             [09] [local.lcia.traci.2.1] Smog Air [kg O3 eq] [LCIA]
+-             
+-            >>> lcias[3].show()
+-            QuantityRef catalog reference (Eutrophication Water)
+-            origin: local.lcia.traci.2.1
+-            UUID: f07dbefc-a5a0-3380-92fb-4c5c8a82fabb
+-               Name: Eutrophication Water
+-            Comment: 
+-            ==Local Fields==
+-                       Indicator: kg N eq
+-                      local_Name: Eutrophication Water
+-                   local_Comment: 
+-            local_UnitConversion: {'kg N eq': 1.0}
+-                    local_Method: TRACI 2.1
+-                  local_Category: Eutrophication Water
+-                 local_Indicator: kg N eq
+-                 
+-            >>> _=enum(lcias[3].factors())
+-            Imported 14 factors for [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA]
+-             [00]   7.29 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphorus: water (Eutrophication Water [kg N eq] [LCIA])
+-             [01]   3.19 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphorus pentoxide: water (Eutrophication Water [kg N eq] [LCIA])
+-             [02]   2.38 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphate: water (Eutrophication Water [kg N eq] [LCIA])
+-             [03]   2.31 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphoric acid: water (Eutrophication Water [kg N eq] [LCIA])
+-             [04]  0.986 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrogen: water (Eutrophication Water [kg N eq] [LCIA])
+-             [05]  0.779 [GLO] [kg N eq / kg] local.lcia.traci.2.1/ammonium: water (Eutrophication Water [kg N eq] [LCIA])
+-             [06]  0.779 [GLO] [kg N eq / kg] local.lcia.traci.2.1/ammonia: water (Eutrophication Water [kg N eq] [LCIA])
+-             [07]  0.451 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitric oxide: water (Eutrophication Water [kg N eq] [LCIA])
+-             [08]  0.291 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrogen dioxide: water (Eutrophication Water [kg N eq] [LCIA])
+-             [09]  0.291 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrogen oxides: water (Eutrophication Water [kg N eq] [LCIA])
+-             [10]  0.237 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrate: water (Eutrophication Water [kg N eq] [LCIA])
+-             [11]  0.227 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitric acid: water (Eutrophication Water [kg N eq] [LCIA])
+-             [12]   0.05 [GLO] [kg N eq / kg] local.lcia.traci.2.1/biological oxygen demand: water (Eutrophication Water [kg N eq] [LCIA])
+-             [13]   0.05 [GLO] [kg N eq / kg] local.lcia.traci.2.1/chemical oxygen demand: water (Eutrophication Water [kg N eq] [LCIA])
+-             
+-            >>>
+-        
+-        Specific objects, whose IDs are known, can be retrieved by ID: 
+-             
+-            >>> p = cat.query('local.uslci.olca').get('ba5df01a-626b-35b8-859f-f1df42dd54a0')
+-            ...
+-             
+-            >>> p.show()
+-            ProcessRef catalog reference (ba5df01a-626b-35b8-859f-f1df42dd54a0)
+-            origin: local.uslci.olca
+-            UUID: ba5df01a-626b-35b8-859f-f1df42dd54a0
+-               Name: Polyethylene, low density, resin, at plant, CTR
+-            Comment: 
+-            ==Local Fields==
+-               SpatialScope: RNA
+-              TemporalScope: {'begin': '2002-01-01-05:00', 'end': '2003-01-01-05:00'}
+-            Classifications: ['Chemical Manufacturing', 'All Other Basic Organic Chemical Manufacturing']
+-        
+-            >>> rxs = enum(p.references())
+-             [00] [ Polyethylene, low density, resin, at plant, CTR [RNA] ]*==>  1 (kg) Polyethylene, low density, resin, at plant, CTR 
+-             [01] [ Polyethylene, low density, resin, at plant, CTR [RNA] ]*==>  0.429 (MJ) Recovered energy, for Polyethylene, low density, resin, at plant, CTR
+-             
+-            >>> 
+-        
+-        LCIA can be computed for process inventories (note, however, that without `antelope_background` it is not
+-        possible to compute LCI results.  In this case the cradle-to-resin dataset is already an LCI). Again, 
+-        to do that, please visit / install [antelope_background](https://github.com/AntelopeLCA/background).
+-        
+-            >>> res = lcias[3].do_lcia(p.inventory(rxs[0]))
+-            ...
+-            
+-            >>> res.show_details()
+-            [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA] kg N eq
+-            ------------------------------------------------------------
+-        
+-            [local.uslci.olca] Polyethylene, low density, resin, at plant, CTR [RNA]:
+-               1.14e-05 =       0.05  x   0.000228 [GLO] local.lcia.traci.2.1/chemical oxygen demand, water, unspecified
+-               5.89e-06 =      0.779  x   7.55e-06 [GLO] local.lcia.traci.2.1/ammonia, water, unspecified
+-               2.85e-06 =       0.05  x    5.7e-05 [GLO] local.lcia.traci.2.1/biological oxygen demand, water, unspecified
+-               7.29e-07 =       7.29  x      1e-07 [GLO] local.lcia.traci.2.1/phosphorus, water, unspecified
+-               7.62e-08 =      0.986  x   7.73e-08 [GLO] local.lcia.traci.2.1/nitrogen, water, unspecified
+-               2.42e-08 =      0.779  x    3.1e-08 [GLO] local.lcia.traci.2.1/ammonium, water, unspecified
+-               2.1e-05 [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA]
+-               
+-            >>>
+-        
+-        Search requires an index to be created:
+-            
+-            >>> q = cat.query('local.uslci.olca')
+-            >>> _=enum(q.processes(Name='polyethylene')
+-            ---------------------------------------------------------------------------
+-            IndexRequired                             Traceback (most recent call last)
+-            ...
+-            IndexRequired: itype index required for attribute processes | ()
+-        
+-            >>> cat.index_ref(q.origin)
+-            ...
+-            'local.uslci.olca.index.20210205'
+-            
+-            >>> _=enum(q.processes(Name='polyethylene')
+-             [00] [local.uslci.olca] Polyethylene, low density, resin, at plant [RNA]
+-             [01] [local.uslci.olca] Polyethylene, linear low density, resin, at plant [RNA]
+-             [02] [local.uslci.olca] Polyethylene terephthalate, resin, at plant [RNA]
+-             [03] [local.uslci.olca] Polyethylene, linear low density, resin, at plant, CTR [RNA]
+-             [04] [local.uslci.olca] Polyethylene, low density, resin, at plant, CTR [RNA]
+-             [05] [local.uslci.olca] Polyethylene, high density, resin, at plant, CTR [RNA]
+-             [06] [local.uslci.olca] Polyethylene, high density, resin, at plant  [RNA]
+-             [07] [local.uslci.olca] Polyethylene terephthalate, resin, at plant, CTR [RNA]
+-             
+-            >>>
+-            
+-        ### Installing Ecoinvent
+-        If you have an ecoinvent license, you can install it in your catalog by first downloading 
+-        the 7z files that contain the EcoSpold datasets and storing them on your system.
+-        
+-        You will need to create a folder for ecoinvent, and then create a subfolder for each version 
+-        (say, '3.7.1'), and put the 7z files in that.
+-        
+-            user@host$ mkdir -p /path/to/Ecoinvent/3.7.1
+-        
+-        The 7z files unfortunately need to be extracted before they can be loaded.  After you are done
+-        you should have something that looks like this:
+-        
+-            user@host$ ls /path/to/Ecoinvent/3.7.1
+-            'ecoinvent 3.7.1_cutoff_ecoSpold02'  'ecoinvent 3.7.1_cutoff_ecoSpold02.7z'
+-            user@host$ 
+-            
+-        After that, you can setup ecoinvent in your catalog from within python:
+-        
+-            >>> from antelope_core.data_sources.ecoinvent import EcoinventConfig
+-            >>> ec = EcoinventConfig('/path/to/Ecoinvent')
+-            >>> _=enum(ec.references)
+-             [00] local.ecoinvent.3.7.1.cutoff
+-             
+-            >>> ec.register_all_resources(cat)
+-            >>> 
+-            
+-        Again, you will need to index the resources before being able to search through them- this takes 
+-        several minutes. This is why we are working on a remote solution for this problem.
+-        
+-        Warning: if you want to do Ecoinvent LCI as well, you will need 
+-        [antelope_background](https://github.com/AntelopeLCA/background) -- please
+-        visit that page.
+-        
+-        # Contributing
+-        
+-        Fork, open an issue, whatever.
+-        
+-Platform: UNKNOWN
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Science/Research
+ Classifier: License :: OSI Approved :: BSD License
+ Classifier: Natural Language :: English
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Topic :: Scientific/Engineering
+ Requires-Python: >=3.6
+ Description-Content-Type: text/markdown
+ Provides-Extra: XML
+ Provides-Extra: write_to_excel
++License-File: LICENSE
++
++![](https://travis-ci.com/AntelopeLCA/core.svg?branch=master&status=passed) ![](https://coveralls.io/repos/github/AntelopeLCA/core/badge.svg?branch=master)
++
++# core
++Antelope Catalog - reference implementation.
++
++This repository provides code that enables access to different forms of life cycle 
++inventory and impact assessment data, ideally from both local and remote sources.  It
++allows you to view and index data sources, inspect their contents, and perform 
++exchange relation queries, quantity relation queries, and LCIA computations.
++
++At present, the Antelope Catalog relies on local LCA data on your machine, just like other
++LCA software.  However, the plan is to remove this requirement by off-loading 
++computing requirements to the cloud.   
++
++## Additional Packages
++
++The software for constructing and inverting background matrices, which requires 
++[SciPy](https://www.scipy.org), is in a separate repository called 
++[antelope_background](https://github.com/AntelopeLCA/background).  The idea is that 
++these computations can be performed remotely, allowing lightweight clients to run
++without scientific computing software (other than python).  However, at the moment 
++this is not yet available.
++
++The [antelope_foreground](https://github.com/AntelopeLCA/foreground) package allows
++users to construct and compute product models that use a mixture of data sources.
++
++Please visit and install these packages to access and test these functions. 
++
++## Quick Start
++
++### 1. Configure a local catalog
++
++`antelope_core` is on PyPI-- note the optional dependency if you want to access datasets 
++in XML formats (ILCD, EcoSpoldV1, EcoSpoldV2): 
++
++    user@host$ pip install antelope_core[XML]
++    
++Antelope stores its content in a `catalog` --- for automated unit testing, this should be
++specified in an environment variable:
++
++    user@host$ export ANTELOPE_CATALOG_ROOT=/path/to/where/you/want/catalog
++    
++Once that's done, the catalog can be "seeded" with a core set of free tools by running the
++local configuration unit test.  This is a bit tricky because unit tests are not usually
++designed to be run on distributed code, so it requires a bit of a hack to specify the 
++location of the installed package (note that if you are using a virtual environment, your
++site-packages directory is inside that virtual environment):
++
++    user@host$ python -m unittest discover -s /path/to/your/site-packages -p test_aa_local.py 
++
++That will install: two different USLCI implementations (both somewhat stale), and the TRACI 2.1
++LCIA methodology.
++
++### 2. Start Running
++
++You are now ready to perform LCIA calculations:
++
++    user@host$ python3
++    >>> from antelope_core import LcCatalog
++    >>> from antelope import enum  # a simple "enumerate-and-show items" for interactive use
++    
++If you have defined your catalog root in your environment, you can import it:
++
++    >>> from antelope_core.catalog.catalog_root import CATALOG_ROOT
++    >>> cat = LcCatalog(CATALOG_ROOT) 
++    Loading JSON data from /path/to/your/catalog/reference-quantities.json:
++    local.qdb: /path/to/your/catalog/reference-quantities.json
++    local.qdb: /data/GitHub/lca-tools/lcatools/qdb/data/elcd_reference_quantities.json
++    25 new quantity entities added (25 total)
++    6 new flow entities added (6 total)
++
++Else, you can make it anything you want
++
++    >>> cat = LcCatalog('/path/to/anywhere') 
++    Loading JSON data from /path/to/anywhere/reference-quantities.json:
++    local.qdb: /path/to/anywhere/reference-quantities.json
++    local.qdb: /data/GitHub/lca-tools/lcatools/qdb/data/elcd_reference_quantities.json
++    25 new quantity entities added (25 total)
++    6 new flow entities added (6 total)
++    
++You then interact with the catalog by making queries to specific data sources:
++
++    >>> cat.show_interfaces()  # output shown after running `test_aa_local`
++    lcia.ipcc.2007.traci21 [basic, index, quantity]
++    local.lcia.traci.2.1 [basic, index, quantity]
++    local.qdb [basic, index, quantity]
++    local.uslci.ecospold [basic, exchange, quantity]
++    local.uslci.olca [basic, exchange, quantity]
++     
++    >>> lcias = enum(cat.query('local.lcia.traci.2.1').lcia_methods())
++    local.lcia.traci.2.1: /data/LCI/TRACI/traci_2_1_2014_dec_10_0.xlsx
++    Loading workbook /data/LCI/TRACI/traci_2_1_2014_dec_10_0.xlsx
++    Applying stored configuration
++    Applying context hint local.lcia.traci.2.1:air => to air
++    Applying context hint local.lcia.traci.2.1:water => to water
++    Applying configuration to Traci21Factors with 11 entities at /data/LCI/TRACI/traci_2_1_2014_dec_10_0.xlsx
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Acidification Air
++     [00] [local.lcia.traci.2.1] Acidification Air [kg SO2 eq] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Ecotoxicity, freshwater
++     [01] [local.lcia.traci.2.1] Ecotoxicity, freshwater [CTUeco] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Eutrophication Air
++     [02] [local.lcia.traci.2.1] Eutrophication Air [kg N eq] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Eutrophication Water
++     [03] [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Global Warming Air
++     [04] [local.lcia.traci.2.1] Global Warming Air [kg CO2 eq] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Human Health Particulates Air
++     [05] [local.lcia.traci.2.1] Human Health Particulates Air [PM2.5 eq] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Human health toxicity, cancer
++     [06] [local.lcia.traci.2.1] Human health toxicity, cancer [CTUcancer] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Human health toxicity, non-cancer
++     [07] [local.lcia.traci.2.1] Human health toxicity, non-cancer [CTUnoncancer] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Ozone Depletion Air
++     [08] [local.lcia.traci.2.1] Ozone Depletion Air [kg CFC-11 eq] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Smog Air
++     [09] [local.lcia.traci.2.1] Smog Air [kg O3 eq] [LCIA]
++     
++    >>> lcias[3].show()
++    QuantityRef catalog reference (Eutrophication Water)
++    origin: local.lcia.traci.2.1
++    UUID: f07dbefc-a5a0-3380-92fb-4c5c8a82fabb
++       Name: Eutrophication Water
++    Comment: 
++    ==Local Fields==
++               Indicator: kg N eq
++              local_Name: Eutrophication Water
++           local_Comment: 
++    local_UnitConversion: {'kg N eq': 1.0}
++            local_Method: TRACI 2.1
++          local_Category: Eutrophication Water
++         local_Indicator: kg N eq
++         
++    >>> _=enum(lcias[3].factors())
++    Imported 14 factors for [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA]
++     [00]   7.29 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphorus: water (Eutrophication Water [kg N eq] [LCIA])
++     [01]   3.19 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphorus pentoxide: water (Eutrophication Water [kg N eq] [LCIA])
++     [02]   2.38 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphate: water (Eutrophication Water [kg N eq] [LCIA])
++     [03]   2.31 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphoric acid: water (Eutrophication Water [kg N eq] [LCIA])
++     [04]  0.986 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrogen: water (Eutrophication Water [kg N eq] [LCIA])
++     [05]  0.779 [GLO] [kg N eq / kg] local.lcia.traci.2.1/ammonium: water (Eutrophication Water [kg N eq] [LCIA])
++     [06]  0.779 [GLO] [kg N eq / kg] local.lcia.traci.2.1/ammonia: water (Eutrophication Water [kg N eq] [LCIA])
++     [07]  0.451 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitric oxide: water (Eutrophication Water [kg N eq] [LCIA])
++     [08]  0.291 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrogen dioxide: water (Eutrophication Water [kg N eq] [LCIA])
++     [09]  0.291 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrogen oxides: water (Eutrophication Water [kg N eq] [LCIA])
++     [10]  0.237 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrate: water (Eutrophication Water [kg N eq] [LCIA])
++     [11]  0.227 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitric acid: water (Eutrophication Water [kg N eq] [LCIA])
++     [12]   0.05 [GLO] [kg N eq / kg] local.lcia.traci.2.1/biological oxygen demand: water (Eutrophication Water [kg N eq] [LCIA])
++     [13]   0.05 [GLO] [kg N eq / kg] local.lcia.traci.2.1/chemical oxygen demand: water (Eutrophication Water [kg N eq] [LCIA])
++     
++    >>>
++
++Specific objects, whose IDs are known, can be retrieved by ID: 
++     
++    >>> p = cat.query('local.uslci.olca').get('ba5df01a-626b-35b8-859f-f1df42dd54a0')
++    ...
++     
++    >>> p.show()
++    ProcessRef catalog reference (ba5df01a-626b-35b8-859f-f1df42dd54a0)
++    origin: local.uslci.olca
++    UUID: ba5df01a-626b-35b8-859f-f1df42dd54a0
++       Name: Polyethylene, low density, resin, at plant, CTR
++    Comment: 
++    ==Local Fields==
++       SpatialScope: RNA
++      TemporalScope: {'begin': '2002-01-01-05:00', 'end': '2003-01-01-05:00'}
++    Classifications: ['Chemical Manufacturing', 'All Other Basic Organic Chemical Manufacturing']
++
++    >>> rxs = enum(p.references())
++     [00] [ Polyethylene, low density, resin, at plant, CTR [RNA] ]*==>  1 (kg) Polyethylene, low density, resin, at plant, CTR 
++     [01] [ Polyethylene, low density, resin, at plant, CTR [RNA] ]*==>  0.429 (MJ) Recovered energy, for Polyethylene, low density, resin, at plant, CTR
++     
++    >>> 
++
++LCIA can be computed for process inventories (note, however, that without `antelope_background` it is not
++possible to compute LCI results.  In this case the cradle-to-resin dataset is already an LCI). Again, 
++to do that, please visit / install [antelope_background](https://github.com/AntelopeLCA/background).
++
++    >>> res = lcias[3].do_lcia(p.inventory(rxs[0]))
++    ...
++    
++    >>> res.show_details()
++    [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA] kg N eq
++    ------------------------------------------------------------
++
++    [local.uslci.olca] Polyethylene, low density, resin, at plant, CTR [RNA]:
++       1.14e-05 =       0.05  x   0.000228 [GLO] local.lcia.traci.2.1/chemical oxygen demand, water, unspecified
++       5.89e-06 =      0.779  x   7.55e-06 [GLO] local.lcia.traci.2.1/ammonia, water, unspecified
++       2.85e-06 =       0.05  x    5.7e-05 [GLO] local.lcia.traci.2.1/biological oxygen demand, water, unspecified
++       7.29e-07 =       7.29  x      1e-07 [GLO] local.lcia.traci.2.1/phosphorus, water, unspecified
++       7.62e-08 =      0.986  x   7.73e-08 [GLO] local.lcia.traci.2.1/nitrogen, water, unspecified
++       2.42e-08 =      0.779  x    3.1e-08 [GLO] local.lcia.traci.2.1/ammonium, water, unspecified
++       2.1e-05 [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA]
++       
++    >>>
++
++Search requires an index to be created:
++    
++    >>> q = cat.query('local.uslci.olca')
++    >>> _=enum(q.processes(Name='polyethylene')
++    ---------------------------------------------------------------------------
++    IndexRequired                             Traceback (most recent call last)
++    ...
++    IndexRequired: itype index required for attribute processes | ()
++
++    >>> cat.index_ref(q.origin)
++    ...
++    'local.uslci.olca.index.20210205'
++    
++    >>> _=enum(q.processes(Name='polyethylene')
++     [00] [local.uslci.olca] Polyethylene, low density, resin, at plant [RNA]
++     [01] [local.uslci.olca] Polyethylene, linear low density, resin, at plant [RNA]
++     [02] [local.uslci.olca] Polyethylene terephthalate, resin, at plant [RNA]
++     [03] [local.uslci.olca] Polyethylene, linear low density, resin, at plant, CTR [RNA]
++     [04] [local.uslci.olca] Polyethylene, low density, resin, at plant, CTR [RNA]
++     [05] [local.uslci.olca] Polyethylene, high density, resin, at plant, CTR [RNA]
++     [06] [local.uslci.olca] Polyethylene, high density, resin, at plant  [RNA]
++     [07] [local.uslci.olca] Polyethylene terephthalate, resin, at plant, CTR [RNA]
++     
++    >>>
++    
++### Installing Ecoinvent
++If you have an ecoinvent license, you can install it in your catalog by first downloading 
++the 7z files that contain the EcoSpold datasets and storing them on your system.
++
++You will need to create a folder for ecoinvent, and then create a subfolder for each version 
++(say, '3.7.1'), and put the 7z files in that.
++
++    user@host$ mkdir -p /path/to/Ecoinvent/3.7.1
++
++The 7z files unfortunately need to be extracted before they can be loaded.  After you are done
++you should have something that looks like this:
++
++    user@host$ ls /path/to/Ecoinvent/3.7.1
++    'ecoinvent 3.7.1_cutoff_ecoSpold02'  'ecoinvent 3.7.1_cutoff_ecoSpold02.7z'
++    user@host$ 
++    
++After that, you can setup ecoinvent in your catalog from within python:
++
++    >>> from antelope_core.data_sources.ecoinvent import EcoinventConfig
++    >>> ec = EcoinventConfig('/path/to/Ecoinvent')
++    >>> _=enum(ec.origins)
++     [00] local.ecoinvent.3.7.1.cutoff
++     
++    >>> ec.register_all_resources(cat)
++    >>> 
++    
++Again, you will need to index the resources before being able to search through them- this takes 
++several minutes. This is why we are working on a remote solution for this problem.
++
++Warning: if you want to do Ecoinvent LCI as well, you will need 
++[antelope_background](https://github.com/AntelopeLCA/background) -- please
++visit that page.
++
++# Contributing
++
++Fork, open an issue, whatever.
+```
+
+### Comparing `antelope_core-0.1.8/README.md` & `antelope_core-0.2.0/README.md`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -244,15 +244,15 @@
+     'ecoinvent 3.7.1_cutoff_ecoSpold02'  'ecoinvent 3.7.1_cutoff_ecoSpold02.7z'
+     user@host$ 
+     
+ After that, you can setup ecoinvent in your catalog from within python:
+ 
+     >>> from antelope_core.data_sources.ecoinvent import EcoinventConfig
+     >>> ec = EcoinventConfig('/path/to/Ecoinvent')
+-    >>> _=enum(ec.references)
++    >>> _=enum(ec.origins)
+      [00] local.ecoinvent.3.7.1.cutoff
+      
+     >>> ec.register_all_resources(cat)
+     >>> 
+     
+ Again, you will need to index the resources before being able to search through them- this takes 
+ several minutes. This is why we are working on a remote solution for this problem.
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/__init__.py` & `antelope_core-0.2.0/antelope_core/__init__.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -13,28 +13,37 @@
+ 
+ import importlib
+ 
+ from .from_json import from_json, to_json
+ from .archives import archive_factory, ArchiveError
+ 
+ FOUND_PROVIDERS = LowerDict()
++
++
+ def _find_providers():
+     for ant in [__name__] + antelope_herd:
+-        try:
+-            importlib.import_module('.', package=ant)
+-        except ModuleNotFoundError:
+-            continue
+-        p = importlib.import_module('.providers', package=ant)
+-        try:
+-            provs = getattr(p, 'PROVIDERS')
+-        except AttributeError:
++        found = []
++
++        def _add_found_providers(_found, _the):
++            try:
++                _pkg = importlib.import_module(_the, package=ant)
++            except ModuleNotFoundError:
++                return
++            if hasattr(_pkg, 'PROVIDERS'):
++                provs = getattr(_pkg, 'PROVIDERS')
++                for ds_type in provs:
++                    FOUND_PROVIDERS[ds_type] = _pkg
++                    _found.append(ds_type)
++
++        for look in ('.', '.providers'):
++            _add_found_providers(found, look)
++
++        if len(found) == 0:
+             print('No PROVIDERS found in %s' % ant)
+             continue
+-        for ds_type in provs:
+-            FOUND_PROVIDERS[ds_type] = p
+ 
+     print('Found Antelope providers:' )
+     for k, v in FOUND_PROVIDERS.items():
+         print('%s:%s' % (v.__name__, k))
+ 
+ 
+ def herd_factory(ds_type):
+@@ -78,10 +87,11 @@
+             print('No providers found in %s' % mod.__name__)
+             provs = []
+     for ds_type in provs:
+         print('Adding %s:%s' % (mod.__name__, ds_type))
+         FOUND_PROVIDERS[ds_type] = mod
+ 
+ 
+-from .catalog import LcCatalog
++from .catalog import StaticCatalog, LcCatalog
+ from .lc_resource import LcResource
++from .file_accessor import FileAccessor, ResourceLoader
+ from .data_sources.local import make_config
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/__init__.py` & `antelope_core-0.2.0/antelope_core/archives/__init__.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -21,15 +21,15 @@
+     """
+     @classmethod
+     def new(cls, ref='local.qdb'):
+         """
+         Create a Quantity database containing the ILCD reference quantities.  Specify a ref if desired.
+         :param ref: ['local.qdb']
+         """
+-        return cls.from_file(REF_QTYS, ref=ref)
++        return cls.from_file(REF_QTYS, ref=ref, static=True)
+ 
+     def _fetch(self, entity, **kwargs):
+         return self.__getitem__(entity)
+ 
+     def _load_all(self, **kwargs):
+         self.load_from_dict(from_json(self.source))
+ 
+@@ -88,14 +88,17 @@
+     else:
+         cls = factory(ds_type)
+         a = cls(source, **kwargs)
+     return a
+ 
+ 
+ class CheckTerms(object):
++    """
++    A utility for reviewing the integrity of exchanges in an archive
++    """
+     def __init__(self, query):
+         self._check = defaultdict(list)
+         self._p = 0
+         self._rx = 0
+         self._x = 0
+ 
+         for p in query.processes():
+@@ -106,15 +109,15 @@
+                     self._x += 1
+                     if x.type == 'node':
+                         try:
+                             query.get(x.termination).reference(x.flow)
+                             self._check['terminated'].append(x)
+                         except NoExchangeFound:
+                             self._check['missing'].append(x)
+-                    elif x.type == 'elementary':
++                    elif x.is_elementary:
+                         self._check['elementary'].append(x)
+                     elif x.type == 'context':
+                         tg = list(query.targets(x.flow))
+                         if len(tg) == 0:
+                             self._check['cutoff'].append(x)
+                         elif len(tg) > 1:
+                             self._check['ambiguous'].append(x)
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/archive_index.py` & `antelope_core-0.2.0/antelope_core/archives/archive_index.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/basic_archive.py` & `antelope_core-0.2.0/antelope_core/archives/basic_archive.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -59,14 +59,15 @@
+ 
+     """
+     _entity_types = BASIC_ENTITY_TYPES
+ 
+     _drop_fields = defaultdict(list)  # dict mapping entity type to fields that should be omitted from serialization
+ 
+     _skip_msg = set()
++    _query = None
+ 
+     @classmethod
+     def from_file(cls, filename, ref=None, **init_args):
+         """
+         BasicArchive factory from minimal dictionary.  Must include at least one of 'dataSource' or 'dataReference'
+         fields and 0 or more flows or quantities; but note that any flow present must have its reference
+         quantities included. The method is inherited by LcArchives which permit processes as well; any process must
+@@ -103,49 +104,56 @@
+         if ns_uuid is None:
+             ns_uuid = init_args.pop('ns_uuid', None)
+         kwargs.update(init_args)
+ 
+         old_ref = j.pop('dataReference', ref)
+         existing_ref = kwargs.pop('dataReference', old_ref)  # this will be the latest of init[dataRef], [dataRef], ref
+ 
+-        source = j.pop('dataSource')
++        if filename is None:
++            source = j.pop('dataSource')
++        else:
++            source = filename
+         ar = cls(source, ref=existing_ref, ns_uuid=ns_uuid, static=True, **kwargs)
+         if ref != ar.ref:
+             ar.set_origin(ref)
+ 
+         ar.load_from_dict(j, jsonfile=filename)
+ 
+         return ar
+ 
+     def __init__(self, *args, contexts=None, flowables=None, term_manager=None, **kwargs):
+         super(BasicArchive, self).__init__(*args, **kwargs)
+         self._tm = term_manager or TermManager(contexts=contexts, flowables=flowables)
++        self._set_query()
++
++    def _set_query(self):
++        self._query = BasicQuery(self)
+ 
+     @property
+     def query(self):
+-        return BasicQuery(self)
++        return self._query
+ 
+     @property
+     def tm(self):
+         return self._tm
+ 
++    '''
+     def _check_key_unused(self, key):
+         """
+         If the key is unused, return the UUID. Else raise EntityExists
+         :param key:
+         :return:
+         """
+         u = self._ref_to_uuid(key)
+         try:
+             e = self._get_entity(u)
+         except KeyError:
+             return u
+         raise EntityExists(str(e))
+ 
+-    '''
+     def new_quantity(self, name, ref_unit, **kwargs):
+         u = self._check_key_unused(name)
+         q = LcQuantity(u, ref_unit=LcUnit(ref_unit), Name=name, origin=self.ref, external_ref=name, **kwargs)
+         self.add(q)
+         return q
+ 
+     def new_flow(self, name, ref_qty, CasNumber='', **kwargs):
+@@ -174,17 +182,14 @@
+         if self.tm.is_context(entity.external_ref):
+             raise ContextCollision('Entity external_ref %s is already known as a context identifier' %
+                                    entity.external_ref)
+         super(BasicArchive, self)._ensure_valid_refs(entity)
+ 
+     def add(self, entity):
+         self._add(entity, entity.external_ref)
+-        if hasattr(entity, 'uuid') and entity.uuid is not None:  # BasicArchives: allow UUID to retrieve entity as well, if defined
+-            self._entities[entity.uuid] = entity
+-
+         self._add_to_tm(entity)
+ 
+     def _add_to_tm(self, entity, merge_strategy=None):
+         if entity.entity_type == 'quantity':
+             self.tm.add_quantity(entity)
+             if entity.is_entity and not entity.configured:  # not ref
+                 try:
+@@ -251,27 +256,30 @@
+         return quantity
+ 
+     def _flow_from_json(self, entity_j, ext_ref):
+         chars = entity_j.pop('characterizations', [])
+         if 'referenceQuantity' in entity_j:
+             rq = entity_j.pop('referenceQuantity')
+         else:
+-            rq = next(c['quantity'] for c in chars if 'isReference' in c and c['isReference'] is True)
++            try:
++                rq = next(c['quantity'] for c in chars if 'isReference' in c and c['isReference'] is True)
++            except StopIteration:
++                rq = None
+         if rq is None:
+-            print('Warning: no reference quantity for flow %s' % ext_ref)
+             ref_q = None
+         else:
+             try:
+                 ref_q = self.tm.get_canonical(rq)
+             except EntityNotFound:
+-                ref_q = self._get_entity(rq)
++                print('canonical reference quantity %s not found!' % rq)
++                ref_q = None
+         return LcFlow(ext_ref, referenceQuantity=ref_q, **entity_j)
+ 
+     def _add_char(self, flow, q, v):
+-        self.tm.add_characterization(flow.link, flow.reference_entity, q, v, context=flow.context,
++        self.tm.add_characterization(flow.name, flow.reference_entity, q, v, context=flow.context,
+                                      origin=flow.origin)
+ 
+     def _add_chars(self, flow, chars):
+         for c in chars:
+             if 'isReference' in c:
+                 if c['isReference'] is True:
+                     continue
+@@ -426,36 +434,33 @@
+             if isinstance(v, str):
+                 v = [v]
+             for vv in v:
+                 keep = keep and bool(re.search(vv, _recurse_expand_subtag(entity[k]),
+                                                flags=(re.IGNORECASE|re.MULTILINE)))
+         return keep
+ 
+-    def search(self, etype=None, upstream=False, **kwargs):
++    def search(self, etype=None, **kwargs):
+         """
+         Find entities by search term, either full or partial uuid or entity property like 'Name', 'CasNumber',
+         or so on.
+         :param etype: optional first argument is entity type
+-        :param upstream: (False) if upstream archive exists, search there too
+         :param kwargs: regex search through entities' properties as named in the kw arguments
+         :return: result set
+         """
+         if etype is None:
+             if 'entity_type' in kwargs.keys():
+                 etype = kwargs.pop('entity_type')
+         if etype is not None:
+             for ent in self.entities_by_type(etype):
+                 if self._narrow_search(ent, **kwargs):
+                     yield ent
+         else:
+             for ent in self._entities.values():
+                 if self._narrow_search(ent, **kwargs):
+                     yield ent
+-        if upstream and self._upstream is not None:
+-            self._upstream.search(etype, upstream=upstream, **kwargs)
+ 
+     def _serialize_quantities(self, domesticate=False):
+         return sorted([q.serialize(domesticate=domesticate, drop_fields=self._drop_fields['quantity'])
+                        for q in self.entities_by_type('quantity')],
+                       key=lambda x: x['externalId'])
+ 
+     def serialize(self, characterizations=False, values=False, domesticate=False):
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/data/elcd_reference_quantities.json` & `antelope_core-0.2.0/antelope_core/archives/data/elcd_reference_quantities.json`
+
+ * *Files 2% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9984748827010732%*
+
+ * *Differences: {"'quantities'": "{0: {'UnitConversion': {'item': 1.0, 'Items': 1.0, 'items': 1.0, 'Count': 1.0, "*
+
+ * *                 "'count': 1.0}, 'synonyms': {insert: [(1, 'Count'), (2, 'Items')]}}, 2: "*
+
+ * *                 "{'UnitConversion': {'KJ': 1000.0}}, 4: {'UnitConversion': {'lb': "*
+
+ * *                 "2.2046226218487757}}, 5: {'UnitConversion': {'lb': 2.2046226218487757}}, 6: "*
+
+ * *                 "{'UnitConversion': {'lb': 2.2046226218487757}}, 7: {'UnitConversion': {'KJ': "*
+
+ * *                 "3600.0}}, 8: {'InverseUnit […]*
+
+```diff
+@@ -188,24 +188,31 @@
+         "ns_uuid": "77833297-6780-49bf-a61a-0cb707dce700"
+     },
+     "quantities": [
+         {
+             "Comment": "Reference Flow Property Data Set of the International Reference Life Cycle Data System (ILCD).",
+             "Name": "Number of items",
+             "UnitConversion": {
++                "Count": 1.0,
+                 "Dozen(s)": 0.08333333333333333,
+-                "Item(s)": 1.0
++                "Item(s)": 1.0,
++                "Items": 1.0,
++                "count": 1.0,
++                "item": 1.0,
++                "items": 1.0
+             },
+             "entityId": "01846770-4cfe-4a25-8ad9-919d8d378345",
+             "entityType": "quantity",
+             "externalId": "01846770-4cfe-4a25-8ad9-919d8d378345",
+             "origin": "elcd.3.2",
+             "referenceUnit": "Item(s)",
+             "synonyms": [
+-                "flowproperties/01846770-4cfe-4a25-8ad9-919d8d378345"
++                "flowproperties/01846770-4cfe-4a25-8ad9-919d8d378345",
++                "Count",
++                "Items"
+             ]
+         },
+         {
+             "Comment": "This is NOT an ILCD reference flow property.",
+             "Name": "Vehicle transport",
+             "UnitConversion": {
+                 "Items*km": 1.0,
+@@ -230,14 +237,15 @@
+         {
+             "Comment": "",
+             "Indicator": "Cumulative Energy Demand (MJ) (gross calorific value) (renewable and non renewable)",
+             "Name": "Energy renewable and non renewable (gross calorific value)",
+             "UnitConversion": {
+                 "GJ": 0.001,
+                 "J": 1000000.0,
++                "KJ": 1000.0,
+                 "MJ": 1.0,
+                 "MWh": 0.0002777777777777778,
+                 "TCE": 3.412084237535657e-05,
+                 "TOE": 2.3884589662749594e-05,
+                 "btu": 947.8169879134379,
+                 "kWh": 0.2777777777777778,
+                 "kcal": 238.85160149998808
+@@ -272,14 +280,15 @@
+             "Comment": "Reference Flow Property Data Set of the International Reference Life Cycle Data System (ILCD).",
+             "Name": "Recycled content (mass)",
+             "UnitConversion": {
+                 "Mg": 0.001,
+                 "g": 1000.0,
+                 "kg": 1.0,
+                 "kt": 1e-06,
++                "lb": 2.2046226218487757,
+                 "lb av": 2.2046226218487757,
+                 "long tn": 0.0009842065276110606,
+                 "mg": 1000000.0,
+                 "ng": 1000000000000.0,
+                 "oz av": 35.27396194958041,
+                 "oz t": 32.15074656862798,
+                 "pg": 1000000000000000.0,
+@@ -300,14 +309,15 @@
+             "Comment": "Reference Flow Property Data Set of the International Reference Life Cycle Data System (ILCD).",
+             "Name": "Carbon content (biogenic)",
+             "UnitConversion": {
+                 "Mg": 0.001,
+                 "g": 1000.0,
+                 "kg": 1.0,
+                 "kt": 1e-06,
++                "lb": 2.2046226218487757,
+                 "lb av": 2.2046226218487757,
+                 "long tn": 0.0009842065276110606,
+                 "mg": 1000000.0,
+                 "ng": 1000000000000.0,
+                 "oz av": 35.27396194958041,
+                 "oz t": 32.15074656862798,
+                 "pg": 1000000000000000.0,
+@@ -328,14 +338,15 @@
+             "Comment": "Reference Flow Property Data Set of the International Reference Life Cycle Data System (ILCD).",
+             "Name": "Carbon content (fossil)",
+             "UnitConversion": {
+                 "Mg": 0.001,
+                 "g": 1000.0,
+                 "kg": 1.0,
+                 "kt": 1e-06,
++                "lb": 2.2046226218487757,
+                 "lb av": 2.2046226218487757,
+                 "long tn": 0.0009842065276110606,
+                 "mg": 1000000.0,
+                 "ng": 1000000000000.0,
+                 "oz av": 35.27396194958041,
+                 "oz t": 32.15074656862798,
+                 "pg": 1000000000000000.0,
+@@ -358,27 +369,27 @@
+             "Synonyms": [
+                 "kWh",
+                 "EcoSpold Quantity kWh",
+                 "Electricity"
+             ],
+             "UnitConversion": {
+                 "GWh": 1e-06,
++                "KJ": 3600.0,
+                 "MJ": 3.6,
+                 "MWh": 0.001
+             },
+             "entityId": "77ae64fa-7e74-4252-9c3b-889c1cd20bfc",
+             "entityType": "quantity",
+             "externalId": "77ae64fa-7e74-4252-9c3b-889c1cd20bfc",
+             "origin": "local.ecoinvent.3.2.cutoff",
+             "referenceUnit": "kWh"
+         },
+         {
+             "Comment": "",
+-            "Name": "Exergy",
+-            "UnitConversion": {
++            "InverseUnitConversion": {
+                 "Btu": 0.0010550971744497668,
+                 "GJ": 1000.0,
+                 "GWh": 3599971.200230398,
+                 "J": 1e-06,
+                 "MJ": 1.0,
+                 "MMBtu": 1055.0,
+                 "MWh": 3599.971200230398,
+@@ -391,14 +402,15 @@
+                 "cal": 4.186728072011723e-06,
+                 "eV": 1.6022046335758002e-25,
+                 "erg": 1e-13,
+                 "kJ": 0.001,
+                 "kWh": 3.5999712002303976,
+                 "kpm": 9.806805923310778e-06
+             },
++            "Name": "Exergy",
+             "entityId": "79920f3d-77b3-4f12-8a8f-47accf832eca",
+             "entityType": "quantity",
+             "externalId": "79920f3d-77b3-4f12-8a8f-47accf832eca",
+             "origin": "elcd.3.2",
+             "referenceUnit": "MJ",
+             "synonyms": [
+                 "flowproperties/79920f3d-77b3-4f12-8a8f-47accf832eca"
+@@ -408,14 +420,15 @@
+             "Comment": "Reference Flow Property Data Set of the International Reference Life Cycle Data System (ILCD).",
+             "Name": "Water content (mass)",
+             "UnitConversion": {
+                 "Mg": 0.001,
+                 "g": 1000.0,
+                 "kg": 1.0,
+                 "kt": 1e-06,
++                "lb": 2.2046226218487757,
+                 "lb av": 2.2046226218487757,
+                 "long tn": 0.0009842065276110606,
+                 "mg": 1000000.0,
+                 "ng": 1000000000000.0,
+                 "oz av": 35.27396194958041,
+                 "oz t": 32.15074656862798,
+                 "pg": 1000000000000000.0,
+@@ -439,19 +452,23 @@
+                 "Freight",
+                 "tkm",
+                 "t*km",
+                 "flowproperties/838aaa20-0117-11db-92e3-0800200c9a66"
+             ],
+             "UnitConversion": {
+                 "kg*km": 1000.0,
++                "kgkm": 1000.0,
+                 "lb*mi": 1369.889285547942,
+                 "lb*nmi": 1190.4010818365032,
++                "metric ton*km": 1.0,
+                 "t*km": 1.0,
+                 "t*mi": 0.621371192237334,
+-                "t*nmi": 0.5399568034557235
++                "t*nmi": 0.5399568034557235,
++                "tkm": 1.0,
++                "tmi": 0.621371192237334
+             },
+             "entityId": "838aaa20-0117-11db-92e3-0800200c9a66",
+             "entityType": "quantity",
+             "externalId": "838aaa20-0117-11db-92e3-0800200c9a66",
+             "origin": "elcd.3.2",
+             "referenceUnit": "t*km"
+         },
+@@ -478,16 +495,15 @@
+             "synonyms": [
+                 "flowproperties/838aaa23-0117-11db-92e3-0800200c9a66"
+             ]
+         },
+         {
+             "Comment": "",
+             "Indicator": "Cumulative energy demand (MJ) (net calorific value) (renewable)",
+-            "Name": "Energy from renewable raw materials (net cal. value)",
+-            "UnitConversion": {
++            "InverseUnitConversion": {
+                 "Btu": 0.0010550971744497668,
+                 "GJ": 1000.0,
+                 "GWh": 3599971.200230398,
+                 "J": 1e-06,
+                 "MJ": 1.0,
+                 "MMBtu": 1055.0,
+                 "MWh": 3599.971200230398,
+@@ -500,14 +516,15 @@
+                 "cal": 4.186728072011723e-06,
+                 "eV": 1.6022046335758002e-25,
+                 "erg": 1e-13,
+                 "kJ": 0.001,
+                 "kWh": 3.5999712002303976,
+                 "kpm": 9.806805923310778e-06
+             },
++            "Name": "Energy from renewable raw materials (net cal. value)",
+             "entityId": "8695e049-7a18-4b83-b3bd-035747039652",
+             "entityType": "quantity",
+             "externalId": "8695e049-7a18-4b83-b3bd-035747039652",
+             "origin": "elcd.3.2",
+             "referenceUnit": "MJ",
+             "synonyms": [
+                 "flowproperties/8695e049-7a18-4b83-b3bd-035747039652"
+@@ -519,14 +536,15 @@
+             "UnitConversion": {
+                 "Mg": 0.001,
+                 "Tonne": 0.001,
+                 "Tonnes": 0.001,
+                 "g": 1000.0,
+                 "kg": 1.0,
+                 "kt": 1e-06,
++                "lb": 2.2046226218487757,
+                 "lb av": 2.2046226218487757,
+                 "long tn": 0.0009842065276110606,
+                 "mg": 1000000.0,
+                 "ng": 1000000000000.0,
+                 "oz av": 35.27396194958041,
+                 "oz t": 32.15074656862798,
+                 "pg": 1000000000000000.0,
+@@ -547,14 +565,15 @@
+         },
+         {
+             "Comment": "Reference Flow Property Data Set of the International Reference Life Cycle Data System (ILCD).",
+             "Name": "Net calorific value",
+             "UnitConversion": {
+                 "GJ": 0.001,
+                 "J": 1000000.0,
++                "KJ": 1000.0,
+                 "MJ": 1.0,
+                 "MWh": 0.0002777777777777778,
+                 "TCE": 3.412084237535657e-05,
+                 "TOE": 2.3884589662749594e-05,
+                 "btu": 947.8169879134379,
+                 "kWh": 0.2777777777777778,
+                 "kcal": 238.85160149998808
+@@ -568,30 +587,34 @@
+                 "flowproperties/93a60a56-a3c8-11da-a746-0800200c9a66"
+             ]
+         },
+         {
+             "Comment": "Reference Flow Property Data Set of the International Reference Life Cycle Data System (ILCD).",
+             "Name": "Normal Volume",
+             "UnitConversion": {
++                "L": 1000.0,
+                 "US fl oz": 33814.022701842994,
+                 "bbl": 6.289810770432105,
+                 "bl (Imp)": 6.110256897196883,
+                 "bl (US beer)": 8.521683850642152,
+                 "bl (US dry)": 8.648409373989104,
+                 "bl (US fl)": 8.38641436057614,
+                 "bsh (Imp)": 27.496156037385973,
+                 "bsh (US)": 28.377593255889252,
+                 "cu ft": 35.31466672148859,
+                 "fl oz (Imp)": 35195.07972785404,
++                "gal": 264.1720372841846,
+                 "gal (Imp)": 219.96924829908778,
+                 "gal (US dry)": 227.02074606721396,
+                 "gal (US fl)": 264.1720523581484,
+                 "gal (US liq)": 264.1720372841846,
+                 "l": 1000.0,
++                "liter": 1000.0,
+                 "m3": 1.0,
++                "mL": 1000000.0,
+                 "ml": 1000000.0,
+                 "pt (Imp)": 1759.7539863927022,
+                 "pt (US dry)": 1816.1659685377117,
+                 "pt (US fl)": 2113.376418865187,
+                 "ul": 1000000000.0
+             },
+             "entityId": "93a60a56-a3c8-13da-a746-0800200c9a66",
+@@ -605,14 +628,15 @@
+         },
+         {
+             "Comment": "Reference Flow Property Data Set of the International Reference Life Cycle Data System (ILCD).",
+             "Name": "Gross calorific value",
+             "UnitConversion": {
+                 "GJ": 0.001,
+                 "J": 1000000.0,
++                "KJ": 1000.0,
+                 "MJ": 1.0,
+                 "MWh": 0.0002777777777777778,
+                 "TCE": 3.412084237535657e-05,
+                 "TOE": 2.3884589662749594e-05,
+                 "btu": 947.8169879134379,
+                 "kWh": 0.2777777777777778,
+                 "kcal": 238.85160149998808
+@@ -671,30 +695,34 @@
+                 "flowproperties/93a60a56-a3c8-21da-a746-0800200c9a66"
+             ]
+         },
+         {
+             "Comment": "Reference Flow Property Data Set of the International Reference Life Cycle Data System (ILCD).",
+             "Name": "Volume",
+             "UnitConversion": {
++                "L": 1000.0,
+                 "US fl oz": 33814.022701842994,
+                 "bbl": 6.289810770432105,
+                 "bl (Imp)": 6.110256897196883,
+                 "bl (US beer)": 8.521683850642152,
+                 "bl (US dry)": 8.648409373989104,
+                 "bl (US fl)": 8.38641436057614,
+                 "bsh (Imp)": 27.496156037385973,
+                 "bsh (US)": 28.377593255889252,
+                 "cu ft": 35.31466672148859,
+                 "fl oz (Imp)": 35195.07972785404,
++                "gal": 264.1720372841846,
+                 "gal (Imp)": 219.96924829908778,
+                 "gal (US dry)": 227.02074606721396,
+                 "gal (US fl)": 264.1720523581484,
+                 "gal (US liq)": 264.1720372841846,
+                 "l": 1000.0,
++                "liter": 1000.0,
+                 "m3": 1.0,
++                "mL": 1000000.0,
+                 "ml": 1000000.0,
+                 "pt (Imp)": 1759.7539863927022,
+                 "pt (US dry)": 1816.1659685377117,
+                 "pt (US fl)": 2113.376418865187,
+                 "ul": 1000000000.0
+             },
+             "entityId": "93a60a56-a3c8-22da-a746-0800200c9a66",
+@@ -709,14 +737,15 @@
+         {
+             "Comment": "",
+             "Indicator": "Cumulative Energy Demand (MJ) (net calorific value) (renewable and non renewable)",
+             "Name": "Energy renewable and non renewable (net calorific value)",
+             "UnitConversion": {
+                 "GJ": 0.001,
+                 "J": 1000000.0,
++                "KJ": 1000.0,
+                 "MJ": 1.0,
+                 "MWh": 0.0002777777777777778,
+                 "TCE": 3.412084237535657e-05,
+                 "TOE": 2.3884589662749594e-05,
+                 "btu": 947.8169879134379,
+                 "kWh": 0.2777777777777778,
+                 "kcal": 238.85160149998808
+@@ -772,14 +801,15 @@
+             "Comment": "Reference Flow Property Data Set of the International Reference Life Cycle Data System (ILCD).",
+             "Name": "Hydrogen content (mass)",
+             "UnitConversion": {
+                 "Mg": 0.001,
+                 "g": 1000.0,
+                 "kg": 1.0,
+                 "kt": 1e-06,
++                "lb": 2.2046226218487757,
+                 "lb av": 2.2046226218487757,
+                 "long tn": 0.0009842065276110606,
+                 "mg": 1000000.0,
+                 "ng": 1000000000000.0,
+                 "oz av": 35.27396194958041,
+                 "oz t": 32.15074656862798,
+                 "pg": 1000000000000000.0,
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/entity_store.py` & `antelope_core-0.2.0/antelope_core/archives/entity_store.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -65,22 +65,90 @@
+     pass
+ 
+ 
+ class EntityExists(Exception):
+     pass
+ 
+ 
++class UuidNotValid(Exception):
++    pass
++
++
+ class InvalidSemanticReference(Exception):
+     pass
+ 
+ 
+ class ReferenceCreationError(Exception):
+     pass
+ 
+ 
++'''
++class EntityStoreInterface:
++
++    _descendant = False
++    _loaded = False
++
++    @property
++    def source(self):
++        raise NotImplemented
++
++    @property
++    def ref(self):
++        raise NotImplemented
++
++    def set_origin(self, origin):
++        raise NotImplemented
++
++    def _add_name(self, origin, source, rewrite=False):
++        raise NotImplemented
++
++
++    # mapping key to entity
++    @property
++    def _entities(self):
++        raise NotImplemented
++
++    def __getitem__(self, item):
++        raise NotImplementedError
++
++    def _ref_to_uuid(self, ref):
++        raise NotImplemented
++
++    def _ref_to_nsuuid(self, ref):
++        raise NotImplemented
++
++    def _ensure_valid_refs(self, entity):
++        raise NotImplementedError
++
++    def _add(self, entity, key):
++        raise NotImplemented
++
++    def entities_by_type(self, entity_type):
++        raise NotImplemented
++
++    def count_by_type(self, entity_type):
++        raise NotImplemented
++
++    def retrieve_or_fetch_entity(self, key):
++        raise NotImplemented
++
++    def check_counter(self, entity_type=None):
++        raise NotImplemented
++
++    def serialize(self):
++        raise NotImplemented
++
++    def write_to_file(self, file, gzip=True):
++        raise NotImplemented
++
++    def _print(self, *args):
++        raise NotImplemented
++'''
++
++
+ class EntityStore(object):
+     _entity_types = ()  # must be overridden
+     '''
+     _ns_uuid_required: specifies whether the archive must be supplied an ns_uuid (generally, archives that are
+     expected to generate persistent, deterministic IDs must have an externally specified ns_uuid)
+      If False: random ns_uuid generated if none is supplied
+      If True: ns_uuid must be supplied as an argument, will raise exception if missing
+@@ -125,15 +193,15 @@
+ 
+     def get_uuid(self, key):
+         """
+         Deprecated.
+         :param key:
+         :return:
+         """
+-        return self._ref_to_uuid(key)
++        return self[key].uuid
+ 
+     def _set_ns_uuid(self, ns_uuid):
+         print('%s: Setting NSUUID (%s) %s' % (self.ref, self._ns_uuid_required, ns_uuid))
+         if self._ns_uuid_required is None:
+             if ns_uuid is not None:
+                 print('Ignoring ns_uuid specification')
+             return None
+@@ -144,24 +212,25 @@
+                 elif self._ns_uuid_required is False:
+                     return uuid.uuid4()
+             else:
+                 if isinstance(ns_uuid, uuid.UUID):
+                     return ns_uuid
+                 return uuid.UUID(ns_uuid)
+ 
+-    def __init__(self, source, ref=None, quiet=True, upstream=None, static=False, dataReference=None, ns_uuid=None,
++    def __init__(self, source, ref=None, quiet=True, static=False, dataReference=None, ns_uuid=None,
+                  no_validate=None,
+                  **kwargs):
+         """
+         An EntityStore is a provenance structure for a collection of entities.  Ostensibly, an EntityStore has a single
+         source from which entities are collected.  The source is a resolvable URI that indicates a data resource from
+         which data describing the entities can be extracted.  The exact manner of extracting data from resources is
+         subclass-dependent.
+ 
+-        Internally, all entities are stored with UUID keys.  If the external references do not contain UUIDs, it is
++        The desired key is specified during the call to _add(entity, key).  Internally, if the entity has a 'uuid'
++        attribute and it is set (validity not checked), then the uuid is .  If the external references do not contain UUIDs, it is
+         recommended to derive a UUID3 using an archive-specific, stable namespace ID.  The class-level
+         _ns_uuid_required attribute governs this option:
+          - if True, an ns_uuid argument must be provided when the class is instantiated.  This is consistent with a
+            use case in which it is desirable to have predictable, fixed UUIDs (i.e. to interface with a data system
+            that requires stable UUIDs)
+ 
+          - if False, a random ns_uuid is generated, and used to create a UUID anytime an entity is given a non-UUID
+@@ -188,31 +257,30 @@
+         a stable reference known as an 'external_ref', as 'origin/external_ref'.  The first slash is the delimiter
+         between origin and reference. Examples:
+ 
+         elcd.3.2/processes/00043bd2-4563-4d73-8df8-b84b5d8902fc
+         uslci.ecospold/Acetic acid, at plant
+ 
+         Note that the inclusion of embedded whitespace, commas, and other characters indicate that these semantic
+-        references are not proper URIs.
++        origins are not proper URIs.
+ 
+         It is hoped that the user community will help develop and maintain a consistent and easily interpreted
+-        namespace for semantic references.  If this is done, it should be possible to identify any published entity
++        namespace for semantic origins.  If this is done, it should be possible to identify any published entity
+         with a concise reference.
+ 
+         When an entity is first added to an archive, it is assigned that archive's *reference* as its origin, following
+         the expectation that data about the same reference from different sources is the same data.
+ 
+         When an entity with a different origin is added to an archive, it is good practice to add a mapping from that
+         origin to its source in the receiving archive's "catalog_names" dictionary.  However, since the entity itself
+         does not know its archive's source, this cannot be done automatically.
+ 
+         :param source: physical data source-- where the information is being drawn from
+         :param ref: optional semantic reference for the data source. gets added to catalog_names.
+         :param quiet:
+-        :param upstream:
+         :param static: [False] whether archive is expected to be unchanging.
+         :param dataReference: alternative to ref
+         :param ns_uuid: required to store entities by common name.  Used to generate uuid3 from string inputs.
+         :param no_validate: if True, skip validation on entity add
+         :param kwargs: any other information that should be serialized with the archive
+         """
+ 
+@@ -227,35 +295,31 @@
+ 
+         self._quiet = quiet  # whether to print out a message every time a new entity is added / deleted / modified
+ 
+         self._serialize_dict = kwargs  # this gets added to
+ 
+         self._counter = defaultdict(int)
+         self._ents_by_type = defaultdict(set)
+-        self._upstream = None
+         self._no_validate = no_validate
+ 
+         self._loaded = False
+         self._static = static
+         self._descendant = False
+ 
+-        if upstream is not None:
+-            self.set_upstream(upstream)
+-
+-        self._catalog_names = defaultdict(set)  # this is a place to map semantic references to data sources
++        self._catalog_names = defaultdict(set)  # this is a place to map semantic origins to data sources
+         self._add_name(ref, source)
+         self._serialize_dict['dataReference'] = ref
+ 
+         self._ns_uuid = self._set_ns_uuid(ns_uuid)
+         if self._ns_uuid is not None:
+             self._serialize_dict['ns_uuid'] = str(self._ns_uuid)
+ 
+     def _add_name(self, ref, source, rewrite=False):
+         """
+-        A source is not allowed to provide multiple semantic references
++        A source is not allowed to provide multiple semantic origins
+         a ref must match the regexp ([A-Za-z0-9_]+(\.[A-Za-z0-9_])*)
+         :param ref:
+         :param source:
+         :param rewrite: [False] if True, if SourceAlreadyKnown, re-assign the source to the new ref. This may result
+         in the archive's ref changing, and should only be used when an authoritative source-ref pair is supplied
+         (e.g. a JSON file that was loaded into the archive)
+         :return:
+@@ -320,27 +384,20 @@
+ 
+     @property
+     def names(self):
+         """
+         Return a mapping of data source to semantic reference, based on the catalog_names property.  This is used by
+         a catalog interface to convert entity origins from physical to semantic.
+ 
+-        If a single data source has multiple semantic references, only the most-downstream one will be kept.  If there
+-        are multiple semantic references for the same data source in the same archive, one will be kept at random.
++        If a single data source has multiple semantic origins, only the most-downstream one will be kept.  If there
++        are multiple semantic origins for the same data source in the same archive, one will be kept at random.
+         This should be avoided and I should probably test for it when setting catalog_names.
+         :return:
+         """
+-        if self._upstream is None:
+-            names = dict()
+-        else:
+-            names = self._upstream.names
+-
+-        for k, s in self._catalog_names.items():
+-            for v in s:
+-                names[v] = k
++        names = {v: k for k, s in self._catalog_names.items() for v in s}
+         return names
+ 
+     def get_sources(self, name):
+         s = self._catalog_names[name]
+         if len(s) == 0:
+             for k, ss in self._catalog_names.items():
+                 if k.startswith(name):
+@@ -430,21 +487,21 @@
+         return self._source
+     '''
+ 
+     def entities(self):
+         for v in self._entities.values():
+             yield v
+ 
++    '''
+     def set_upstream(self, upstream):
+         assert isinstance(upstream, EntityStore)
+         if upstream.source != self.source:
+             self._serialize_dict['upstreamReference'] = upstream.ref
+         self._upstream = upstream
+ 
+-    '''
+     def truncate_upstream(self):
+         """
+         BROKEN! / deprecated
+         removes upstream reference and rewrites entity uuids to match current index. note: deprecates the upstream
+         upstream_
+         :return:
+         """
+@@ -459,29 +516,27 @@
+     def _print(self, *args):
+         if self._quiet is False:
+             print(*args)
+ 
+     def __str__(self):
+         count = sum(len(v) for v in self._ents_by_type.values())
+         s = '%s with %d entities at %s' % (self.__class__.__name__, count, self.source)
+-        if self._upstream is not None:
+-            s += ' [upstream %s]' % self._upstream.__class__.__name__
+         return s
+ 
++    '''
+     def _get_entity(self, key):
+         """
+         the fundamental method- retrieve an entity from LOCAL collection by key, nominally a UUID string.
+ 
+         If the string is not found, raises KeyError.
+         :param key: a uuid
+         :return: the LcEntity or None
+         """
+-        if key in self._entities:
+-            return self._entities[key]
+-        raise KeyError(key)
++        return self._entities[key]
++    '''
+ 
+     def __contains__(self, item):
+         return item in self._entities
+ 
+     def __getitem__(self, item):
+         """
+         CLient-facing entity retrieval.  item is a key that can be converted to a valid UUID from self._ref_to_key()--
+@@ -492,89 +547,96 @@
+         Returns None if nothing is found
+ 
+         :param item:
+         :return:
+         """
+         if item is None:
+             return None
+-        if self._upstream is not None:
+-            e = self._upstream[item]
+-            if e is not None:
+-                return e
+         try:
+             if isinstance(item, int) and self._ns_uuid is not None:
+-                return self._get_entity(self._ref_to_nsuuid(item))
+-            return self._get_entity(self._ref_to_key(item))
++                return self._entities[self._ref_to_nsuuid(item)]
++            return self._entities[self._ref_to_key(item)]
+         except KeyError:
+             return None
+ 
+     def _ensure_valid_refs(self, entity):
+         """
+         Hook to validate the incoming entity's references-- namely, to set its uuid
+         :param entity:
+         :return:
+         """
+-        if hasattr(entity, 'uuid') and entity.uuid is None:
+-            uu = self._ref_to_uuid(entity.external_ref)
+-            if uu is not None:
+-                entity.uuid = uu
++        if hasattr(entity, 'uuid'):
++            if entity.uuid is None:
++                uu = self._ref_to_uuid(entity.external_ref)
++                if uu is not None:
++                    entity.uuid = uu
++            else:
++                if to_uuid(entity.uuid) != entity.uuid:
++                    raise UuidNotValid(entity, entity.uuid)
++            if entity.uuid in self._entities:
++                print('Warning: UUID %s already exists' % entity.uuid)
+ 
+     def _add(self, entity, key, quiet=False):
+-        self._ensure_valid_refs(entity)
+-
+         if key is None:
+             raise ValueError('Key not allowed to be None')
+         if key in self._entities:
+             raise EntityExists('Entity already exists: %s' % key)
+ 
++        self._ensure_valid_refs(entity)
++
+         if entity.entity_type not in self._entity_types:
+             raise TypeError('Entity type %s not valid!' % entity.entity_type)
+ 
+         if entity.is_entity and not self._no_validate:
+             if not entity.validate():
+                 raise ValueError('Entity fails validation: %s' % repr(entity))
+ 
+         if not (self._quiet or quiet):
+             print('Adding %s entity with %s: %s' % (entity.entity_type, key, entity['Name']))
+         if entity.origin is None:
+             # TODO: uncomment / enforce this
+             # assert self._ref_to_key(entity.external_ref) == key, 'entity uuid must match origin repository key!'
+             entity.origin = self.ref
++
++        ## ADD TO ENTITIES DB
+         self._entities[key] = entity
++
++        if hasattr(entity, 'uuid'):
++            if entity.uuid is not None and entity.uuid not in self._entities:
++                self._entities[entity.uuid] = entity
++
+         if self._ns_uuid is not None:  # ensure UUID3s work even if custom UUIDs are specified
+             nsuuid = self._ref_to_uuid(entity.external_ref)
+             if nsuuid is not None and nsuuid not in self._entities:
+                 self._entities[nsuuid] = entity
++
+         self._counter[entity.entity_type] += 1
+         self._ents_by_type[entity.entity_type].add(key)  # it's not ok to change an entity's type
+ 
+     def check_counter(self, entity_type=None):
+         if entity_type is None:
+             [self.check_counter(entity_type=k) for k in self._entity_types]
+         else:
+-            print('%d new %s entities added (%d total)' % (self._counter[entity_type], entity_type,
+-                                                           self.count_by_type(entity_type)))
++            print('%d total %s entities added (%d new)' % (self.count_by_type(entity_type), entity_type,
++                                                           self._counter[entity_type]))
+             self._counter[entity_type] = 0
+ 
+-    def find_partial_id(self, uid, upstream=False, startswith=True):
++    def find_partial_id(self, uid, startswith=True):
+         """
+         :param uid: is a fragmentary (or complete) uuid string.
+-        :param upstream: [False] whether to look upstream if it exists
+         :param startswith: [True] use .startswith instead of full regex
+         :return: result set
+         """
+         if startswith:
+             def test(x, y):
+                 return y.startswith(x)
+         else:
+             def test(x, y):
+                 return bool(re.search(x, y))
+         result_set = [v for k, v in self._entities.items() if test(uid, k)]
+-        if upstream and self._upstream is not None:
+-            result_set += self._upstream.find_partial_id(uid, upstream=upstream, startswith=startswith)
+         return result_set
+ 
+     def _fetch(self, entity, **kwargs):
+         """
+         Dummy function to fetch from archive. MUST be overridden.
+         Can't fetch from upstream.
+         :param entity:
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/lc_archive.py` & `antelope_core-0.2.0/antelope_core/archives/lc_archive.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -19,17 +19,16 @@
+     A class meant for storing and managing LCA data collections.  Adds processes as a supported entity type (contrast
+     with LcForeground which adds fragments).
+ 
+     To support processes, adds inventory, background, and configure interfaces.
+     """
+     _entity_types = LC_ENTITY_TYPES
+ 
+-    @property
+-    def query(self):
+-        return LcQuery(self)
++    def _set_query(self):
++        self._query = LcQuery(self)
+ 
+     def make_interface(self, iface):
+         if iface == 'inventory' or iface == 'exchange':
+             return ExchangeImplementation(self)
+         elif iface == 'background':
+             return BackgroundImplementation(self)
+         elif iface == 'configure':
+@@ -80,25 +79,25 @@
+             else:
+                 nonrefs.append(i)
+         # first add reference exchanges
+         for i in refs:
+             x = exchs[i]
+             # eventually move this to an exchange classmethod - which is why I'm repeating myself for now
+             v = None
+-            f = self._get_entity(x['flow'])
++            f = self._entities[x['flow']]
+             d = x['direction']
+             if 'value' in x:
+                 v = x['value']
+             ref_x[x['flow']] = process.add_exchange(f, d, value=v)
+             process.set_reference(f, d)
+         # then add ordinary [allocated] exchanges
+         for i in nonrefs:
+             x = exchs[i]
+             # is_ref = False
+-            f = self._get_entity(x['flow'])
++            f = self._entities[x['flow']]
+             d = x['direction']
+             if 'termination' in x:
+                 t = x['termination']
+                 cx = self.tm[t]
+                 if cx is not None:
+                     t = cx
+             else:
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/quantity_manager.py` & `antelope_core-0.2.0/antelope_core/archives/quantity_manager.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+ from synonym_dict import SynonymDict, SynonymSet
++from antelope import convert
+ 
+ 
+ class QuantityUnitMismatch(Exception):
+     pass
+ 
+ 
+ class QuantityAlreadySet(Exception):
+@@ -16,30 +17,48 @@
+ class QuantitySynonyms(SynonymSet):
+     """
+     QuantitySynonyms are string terms that all refer to the same quantity of measure. They must all have the same
+     unit, because they are used to define the unit of measure of flowables.  To repeat: quantity instances that have
+     the same dimensionality but different units (e.g. kWh and MJ) are NOT SYNONYMS but distinct quantities. The
+     LciaEngine should be able to handle conversions between these kinds of quantities.
+     """
++
++    def _check_incoming_unit(self, quantity):
++        unit = quantity.unit
++        if unit is None:
++            return
++        if not isinstance(unit, str):
++            raise AttributeError(quantity, 'unit-str')
++        if self._unit is None:
++            if unit is not None:
++                self._unit = unit
++            return
++        if unit == self.unit:
++            return
++        if self._quantity is not None:
++            try:
++                cv = convert(self._quantity, from_unit=unit, to=self.unit)
++                if cv == 1.0:
++                    return
++            except KeyError:
++                pass
++        raise QuantityUnitMismatch('incoming %s (set %s)' % (unit, self.unit))
++
+     @classmethod
+     def new(cls, quantity):
+-        return cls(*quantity.quantity_terms(), quantity=quantity)
++        return cls(quantity.name, quantity=quantity)
+ 
+     def _validate_quantity(self, quantity):
+         if not hasattr(quantity, 'entity_type'):
+             raise AttributeError(quantity)
+         if quantity.entity_type != 'quantity':
+             raise TypeError(quantity)
+         if not hasattr(quantity, 'unit'):
+             raise AttributeError(quantity, 'unit')
+-        if quantity.unit is not None:  # allow unit=None quantities to merge with existing quantities
+-            if not isinstance(quantity.unit, str):
+-                raise AttributeError(quantity, 'unit-str')
+-            if self.unit is not None and quantity.unit != self.unit:
+-                raise QuantityUnitMismatch('incoming %s (set %s)' % (quantity.unit, self.unit))
++        self._check_incoming_unit(quantity)
+         return True
+ 
+     def __init__(self, *args, quantity=None, unit=None, **kwargs):
+         self._quantity = None
+         super(QuantitySynonyms, self).__init__(*args, **kwargs)
+         self._unit = unit
+         if quantity is not None:
+@@ -70,19 +89,15 @@
+         """
+         for k in other.terms:
+             self._quantity.add_synonym(k)
+ 
+     def add_child(self, other, force=False):
+         if not isinstance(other, QuantitySynonyms):
+             raise TypeError('Child set is not a Quantity synonym set (%s)' % type(other))
+-        if other.unit is not None:
+-            if self.unit is None:
+-                self._unit = other.unit
+-            elif other.unit != self.unit:
+-                raise QuantityUnitMismatch('incoming %s (canonical %s)' % (other.unit, self._quantity.unit))
++        self._check_incoming_unit(other)
+         if self._quantity is None:
+             self.quantity = other.quantity
+         elif self._quantity.is_entity:
+             self._save_synonyms(other)
+         super(QuantitySynonyms, self).add_child(other, force=force)
+ 
+     @property
+@@ -129,15 +144,15 @@
+         :return:
+         """
+         new_q = QuantitySynonyms.new(quantity)
+         try:
+             self.add_or_update_entry(new_q, merge=True, create_child=True)
+         except QuantityUnitMismatch:
+             # want to print a warning
+-            # if we get QuantityUnitMismatch, then that means we didn't get a MergeError
++            # if we get QuantityUnitMismatch, then that means we didn't get a MergeError-i.e. there is only one match
+             me = self.match_entry(*new_q.terms)
+             print('!! Warning: new quantity %s [%s] has unit conflict with existing quantity %s [%s] ' % (new_q,
+                                                                                                           new_q.unit,
+                                                                                                           me, me.unit))
+             pe = self.add_or_update_entry(new_q, merge=False, prune=True)
+             print('   Added pruned quantity %s [%s]' % (pe.name, pe.unit))
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/term_manager.py` & `antelope_core-0.2.0/antelope_core/archives/term_manager.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -11,35 +11,77 @@
+ collects two kinds of mapping information: mapping string terms to flowables and contexts; and mapping (quantity,
+ flowable, context) tuples to [regionalized] characterization objects.
+ 
+ LciaEngine is designed to handle information from multiple origins to operate as a qdb in a catalog context.  The
+ subclass adds canonical lists of flowables and contexts that would be redundant if loaded into individual archives,
+ introduces "smart" hierarchical context lookup (CLookup), and adds the ability to quell biogenic CO2 emissions.
+ Someday, it might make sense to expose it as a massive, central graph db.
++
++INTERFACE
++---------
++The TermManager is assumed to implement the following interface:
++Required for external operability:
++ - is_lcia_engine: [bool] whether the term manager performs flow and context matching
++ - is_context(obj): [bool] whether the supplied object maps to a known Context;;; hmm, this was implemented twice
++ - __getitem__(obj): retrieve a context or None **note: this is because archives all return None for failed __getitem__,
++    which I know is bad but I haven't been moved to change it yet)
++ - get_canonical(qty): return the best-fit quantity, or raise EntityNotFou
++ - synonyms()  # currently required by BasicImplementation
++
++Required by the default implementation:
++Post data:
++ - add_quantity()
++ - add_context()
++ - add_flow()
++ - add_characterization()
++ - add_from_json()
++
++retrieve data:
++ - serialize()
++ - flows_for_flowable()
++ - factors_for_flowable()
++ - factors_for_quantity()
++ - get_flowable()
++ - flowables()
++ - quantities()
++ - contexts()
++
++
++
+ """
+ from collections import namedtuple
+ 
+-from synonym_dict import SynonymDict, InconsistentLineage
++from synonym_dict import SynonymDict
++from synonym_dict.compartments import InconsistentLineage
+ 
+ from antelope import EntityNotFound
+-from ..contexts import ContextManager, Context, NullContext
++from ..contexts import ContextManager, NullContext
+ from .quantity_manager import QuantityManager
+ 
+ from ..characterizations import Characterization, DuplicateCharacterizationError
+ 
+ 
+ DuplicateCharacterization = namedtuple('DuplicateCharacterization', ('qq_link', 'fb', 'cx_list', 'origin', 'flowable', 'location'))
+ 
+ 
+ class FactorCollision(Exception):
+     pass
+ 
+ 
++''' # cannot figure out what this is supposed to guard against
+ class QuantityConflict(Exception):
+     pass
++'''
++
++
++class FlowableConflict(Exception):
++    """
++    A list of synonyms indicates two or more flowables
++    """
++    pass
+ 
+ 
+ class NoFQEntry(Exception):
+     """
+     This exception has the specific meaning that there is no lookup for the named flow-quantity pair
+     """
+     pass
+@@ -93,14 +135,16 @@
+      _q_dict: a 3-level nested dictionary:
+          defaultdict: quantity uuid -> defaultdict: flowable -> CLookup: context-> {CFs}
+        - first level defaultdict maps quantity uuid to second level
+          - second level defaultdict maps flowable canonical name to CLookup / subclass
+            - third level CLookup maps context to a set of CFs
+      _fq_map: reverse-maps flowable canonical name to a set of quantities that characterize it
+     """
++    is_lcia_engine = False
++
+     def __init__(self, contexts=None, flowables=None, quantities=None, merge_strategy='graft', quiet=True):
+         """
+         :param contexts: optional filename to initialize CompartmentManager
+         :param flowables: optional filename to initialize FlowablesDict
+         :param merge_strategy: (can also be specified at add_flow())
+ 
+            'graft': - on conflict, follow incoming flow's link or name; add new terms to the existing flowable and
+@@ -168,29 +212,33 @@
+     def add_terms(self, term_type, *terms, **kwargs):
+         d = {'context': self._cm.new_entry,
+              'flow': self._create_flowable,
+              'flowable': self._create_flowable,
+              'quantity': self._qm.new_entry}[term_type]
+         d(*terms, **kwargs)
+ 
++    ''' # OOPS
+     @staticmethod
+     def is_context(cx):
+         return isinstance(cx, Context)
++    '''
+ 
+     @property
+     def quiet(self):
+         return self._quiet
+ 
+     def add_quantity(self, quantity):
+         if quantity.entity_type != 'quantity':
+             raise TypeError('Must be quantity type')
+         try:
+             ex = self._qm[quantity.link]
++            ''' # can't understand what this was supposed to guard against-- and the test that used it was removed so
+             if not ex is quantity:
+                 raise QuantityConflict('Incoming %s does not match existing\n%s' % (ex, quantity))
++            '''
+         except KeyError:
+             self._qm.add_quantity(quantity)
+         return self._canonical_q(quantity)
+ 
+     '''
+     Info Storage
+     def set_context(self, context_manager):
+@@ -271,15 +319,15 @@
+         :return:
+         """
+         if not hasattr(flow, 'context'):
+             return NullContext
+         try:
+             _c = self._cm[flow.get_context()]
+         except (KeyError, InconsistentLineage):
+-            _c = self._add_compartments(flow.context)
++            _c = self._add_compartments(tuple(flow.context))
+         _c.add_origin(flow.origin)
+         return _c
+ 
+     def _create_flowable(self, name, *syns, prune=False):
+         fb = self._fm.new_entry(name, *syns, prune=prune).object
+         if fb in self._fq_map:
+             self._print('Adding terms to existing flowable %s' % fb)
+@@ -291,60 +339,62 @@
+                 raise
+             self._fq_map[fb] = set()
+         return fb
+ 
+     def _merge_terms(self, dominant, *syns):
+         """
+         Two parts to this: merge the entries in the flowables manager; update local reverse mappings:
+-         _q_dict
+-         _fq_map (nonconflicting)
+-         _flow_map (nonconflicting)
++         _q_dict [maps canonical quantities to a map of canonical flowables to CLookups]
++         _fq_map (nonconflicting) maps flowable to quantities characterized by that flowable
++         _flow_map (nonconflicting) maps flowable to flows having that flowable
+         Before we can do either, we need to check for collisions
+         This just brute forces it which must be ungodly slow, and btw it also hasn't been tested
+-        :param dominant:
+-        :param syns:
++
++        the second two are nonconflicting- we just union the sets when we merge the flowables. The first one will
++        raise a conflict if the two flowables are characterized differently by any one quantity
++        :param dominant: MUST BE [canonical] flowables (already stored in _fm)
++        :param syns: MUST BE [canonical] flowables (already stored in _fm)
+         :return:
+         """
+         fq_conflicts = []
+         for f_dict in self._q_dict.values():
+             try:
+                 combo = f_dict[dominant]
+             except KeyError:
+                 combo = self._cl_typ()
+             for syn in syns:
+                 if syn not in f_dict:
+                     continue
+                 cl = f_dict[syn]
+-                for k in cl.keys():
++                for k in cl.keys():  # of course, we have to check all contexts
+                     if k in combo:
+                         cand = (combo[k], cl[k])
+                         if cand[0].value == cand[1].value:
+                             continue
+                         fq_conflicts.append(cand)  # but it's really only a conflict if the cf values differ
+ 
+         if len(fq_conflicts) > 0:
+             print('%d Merge conflicts encountered' % len(fq_conflicts))
+-            return fq_conflicts
++            raise FactorCollision(fq_conflicts)
+ 
+-        for f_dict in self._q_dict.values():
+-            try:
+-                combo = f_dict[dominant]
+-            except KeyError:
+-                combo = self._cl_typ()
++        for qq, f_dict in self._q_dict.items():
++            # once we are sure there are no conflicts, we perform the actual merge
+             for syn in syns:
+                 if syn not in f_dict:
+                     continue
+-                combo.update(f_dict[syn])
+-            f_dict[dominant] = combo
++                cl = f_dict[syn]
++                for cx in cl.keys():
++                    for cf in cl[cx]:
++                        self._qassign(qq, dominant, cf, context=cx)
+ 
+         if dominant not in self._fq_map:
+             self._fq_map[dominant] = set()
+         for syn in syns:
+-            self._fq_map[dominant] += self._fq_map.pop(syn, set())
+-            self._flow_map[dominant] += self._flow_map.pop(syn, set())
++            self._fq_map[dominant] |= self._fq_map.pop(syn, set())
++            self._flow_map[dominant] |= self._flow_map.pop(syn, set())
+ 
+         for syn in syns:
+             self._fm.merge(dominant, syn)
+         return dominant
+ 
+     @staticmethod
+     def _flow_terms(flow):
+@@ -353,49 +403,62 @@
+         CAS numbers, because they don't have the capacity to store multiple CFs.  So we will save the full synonym
+         list for the LciaEngine.
+         :param flow:
+         :return:
+         """
+         return flow.name, flow.link
+ 
++    @staticmethod
++    def _check_fb_map(fb_map):
++        """
++        This function was created because we want to be able to manage the list of flowables to merge with
++        :param fb_map:
++        :return:
++        """
++        pass
++
+     def flows_for_flowable(self, fb):
+         if fb in self._flow_map:
+             for f in self._flow_map[fb]:
+                 yield f
+ 
+     def _add_to_existing_flowable(self, fb, new_terms):
+         for term in new_terms:
+             self._fm.add_synonym(str(fb), term)
+ 
+-    def _add_flow_terms(self, flow, merge_strategy=None):
++    def add_flow_terms(self, flow, merge_strategy=None):
+         """
+         This process takes in an inbound FlowInterface instance, identifies the flowable(s) that match its terms, and
+         adds new terms to the existing or new flowable.  May update a flow's name in case of conflict.
+         :param flow:
+         :param merge_strategy:
+         :return:
+         """
+         merge_strategy = merge_strategy or self._merge_strategy
+         fb_map = defaultdict(list)  # list instead of set because sequence matters
+         for syn in self._flow_terms(flow):  # we rely on SynonymSet.terms yielding flow.name first
+             # make a list of all the existing flowables that match the incoming flow
+             fb_map[self._fm.get(syn)].append(syn)
++        self._check_fb_map(fb_map)  # allow subclasses to curate fb_map
++
+         new_terms = fb_map.pop(None, [])
+ 
+         if len(fb_map) == 0:  # all new terms
+             if len(new_terms) == 0:
+                 raise AttributeError('Flow appears to have no terms: %s' % flow)
+-            fb = self._create_flowable(flow.name)
++            fb = self._create_flowable(flow.name, *new_terms)
++            new_terms = []  # these have all been added
+ 
+         elif merge_strategy in ('prune', 'distinct'):
+             # fb = self._add_distinct_terms(flow, new_terms)
+-            try:
+-                fb = self._create_flowable(new_terms.pop(0), prune=True)  # new_terms cannot be 0
+-            except IndexError:
++            if len(new_terms) == 0:
+                 fb = self._fm.get(flow.link)  # um, I guess if there are no new terms...
++            else:
++                fb = self._create_flowable(*new_terms, prune=True)  # new_terms cannot be 0
++                new_terms = []  # these have all been added or pruned
+ 
+         elif len(fb_map) == 1:  # one existing match- graft onto that
+             fb = list(fb_map.keys())[0]
+ 
+         else:  # > 2 matches-- invoke merge strategy
+             if merge_strategy == 'graft':
+                 """
+@@ -417,16 +480,14 @@
+                 else:
+                     fb = self._fm[flow.link]
+ 
+             elif merge_strategy == 'merge':
+                 # this is trivial but has never been tested, I mean even once
+                 self._print('Merging')
+                 fb = self._merge_terms(*fb_map.keys())
+-                if isinstance(fb, list):
+-                    raise FactorCollision(fb)
+             else:
+                 raise ValueError('merge strategy %s' % self._merge_strategy)
+ 
+         self._add_to_existing_flowable(fb, new_terms)
+ 
+         # validate that the flow's name looks up proper flowable
+         if self._fm[flow.name] is not fb:
+@@ -463,15 +524,15 @@
+                 except EntityNotFound:
+                     raise ValueError('unrecognized quantity spec %s ' % flow.reference_entity)
+             else:
+                 self.add_quantity(flow.reference_entity)  # ensure exists
+         cx = self._check_context(flow)
+         if cx is NullContext:
+             merge_strategy = 'distinct'  # keep distinct terms for null-context flows
+-        return self._add_flow_terms(flow, merge_strategy=merge_strategy)
++        return self.add_flow_terms(flow, merge_strategy=merge_strategy)
+ 
+     def add_characterization(self, flowable, ref_quantity, query_quantity, value, context=None, origin=None,
+                              location=None, overwrite=False):
+         """
+         Replacement for flow-based add_characterization.  THE ONLY place to create Characterization objects.
+         Add them to all flowables that match the supplied flow.
+         :param flowable: if not known to the flowables dict, added as a new flowable
+@@ -540,15 +601,16 @@
+                     try:
+                         factor = value / cf.value
+                     except TypeError:  # dict = fail
+                         factor = value
+ 
+                 # this recurses to add a cf between our flow's ref quantity and the ref quantity of the already-seen cf
+                 try:
+-                    self.add_characterization(fb, rq, cf.ref_quantity, factor, context=cx, origin=origin, location=location)
++                    self.add_characterization(fb, rq, cf.ref_quantity, factor, context=cx, origin=origin,
++                                              location=location, overwrite=overwrite)
+                 except DuplicateCharacterizationError as e:
+                     print((qq.link, fb, cx.as_list(), origin, flowable, location))
+                     print('recursing to %s %s' % (cf.ref_quantity.name, cf.ref_quantity.uuid))
+                     print('ignoring duplicate characterization %s' % e)
+                 return cf
+             # update entry in the lookup tree
+             elif isinstance(value, dict):
+@@ -596,20 +658,23 @@
+         override here
+         :param quantity: a quantity entity or descriptor
+         :return: a canonical quantity or raise KeyError
+         """
+         try:
+             return self._qm[quantity]
+         except KeyError:
++            if isinstance(quantity, str):
++                raise
+             if hasattr(quantity, 'link'):
+                 try:
+                     return self._qm[quantity.link]
+                 except KeyError:
+-                    return self._qm.find_matching_quantity(quantity)
+-            return self._qm[str(quantity)]
++                    if hasattr(quantity, 'quantity_terms'):
++                        return self._qm.find_matching_quantity(quantity)  # or else KeyError
++            return self._qm[str(quantity)]  # or else KeyError
+ 
+     def _canonical_q_ref(self, quantity):
+         return self._canonical_q(quantity).external_ref
+ 
+     def _qlookup(self, qq, fb):
+         """
+         Returns a mapping from context to CF
+@@ -730,31 +795,40 @@
+                 yield k
+         else:
+             qq = self._canonical_q(quantity)
+             for f in self._qaccess(qq).keys():
+                 for k in self.factors_for_flowable(f, quantity=qq, context=context, **kwargs):
+                     yield k
+ 
+-    def get_flowable(self, term):
++    def get_flowable(self, term, strict=True):
+         """
+         Input is a Flow or str
+         :param term:
++        :param strict: [True] if the input corresponds to more than one flowable and strict is True, raise FlowableConflict
+         :return:
+         """
+         if hasattr(term, 'synonyms'):
+             terms = list(term.synonyms)
+         elif hasattr(term, 'name'):
+             terms = [term.name]
+         else:
+             terms = [str(term)]
++        result_set = set()
+         for t in terms:
+             try:
+-                return self._fm[t]
++                result_set.add(self._fm[t])
+             except KeyError:
+                 continue
++        if len(result_set) == 1:
++            return result_set.pop()
++        elif len(result_set) > 1:
++            if strict:
++                raise FlowableConflict(result_set)
++            else:
++                return result_set.pop()
+         raise KeyError(term)
+ 
+     def flowables(self, search=None, origin=None, quantity=None):
+         """
+         :param origin: used in subclass
+         :param search:
+         :param quantity:
+@@ -829,23 +903,23 @@
+             if search is None:
+                 yield cx
+             else:
+                 if cx.contains_string(search):
+                     yield cx
+ 
+     def quantities(self, search=None, origin=None):
+-        for q in self._qm.objects:
++        for q in self._qm.entries:
+             if origin is not None:
+-                if not q.origin.startswith(origin):
++                if not q.object.origin.startswith(origin):
+                     continue
+             if search is None:
+-                yield q
++                yield q.object
+             else:
+-                if q.contains_string(search):
+-                    yield q
++                if q.contains_string(search, ignore_case=True):
++                    yield q.object
+ 
+     '''
+     De/Serialization
+     
+     Strategy here is that term manager serializations should be totally self-contained and also minimal. 
+     
+     Well, not totally self-contained, since quantities themselves are not going to be messed with.
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/tests/test_base.py` & `antelope_core-0.2.0/antelope_core/archives/tests/test_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/tests/test_basic_archive.py` & `antelope_core-0.2.0/antelope_core/archives/tests/test_basic_archive.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/tests/test_entity_store.py` & `antelope_core-0.2.0/antelope_core/archives/tests/test_entity_store.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -40,14 +40,14 @@
+         self.assertEqual(nsuuid, '21d34f33-b0af-3d82-9bef-3cf03e0db9dc')
+         q = LcQuantity(q_j['externalId'], referenceUnit=unit, Name=q_j['Name'], entity_uuid=q_j['entityId'])
+         self.assertNotEqual(q.uuid, nsuuid)
+         self.assertTrue(q.validate())
+         self.assertNotIn(nsuuid, ar)
+         self.assertNotIn(q.uuid, ar)
+         ar._add(q, q.external_ref)
+-        self.assertNotIn(q.uuid, ar)  # this is only done in BasicArchives
++        self.assertIn(q.uuid, ar)  # this was previously only done in BasicArchives
+         self.assertIn(nsuuid, ar)
+ 
+ 
+ 
+ if __name__ == '__main__':
+     unittest.main()
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/tests/test_json.json` & `antelope_core-0.2.0/antelope_core/archives/tests/test_json.json`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/tests/test_qdb.py` & `antelope_core-0.2.0/antelope_core/archives/tests/test_qdb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/tests/test_quantity_manager.py` & `antelope_core-0.2.0/antelope_core/archives/tests/test_quantity_manager.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -43,14 +43,17 @@
+ 
+     def test_conflicting_unit(self):
+         dummy_q = _dummy_q()
+         qsyn = QuantitySynonyms.new(dummy_q)
+         qsynx = QuantitySynonyms.new(dummy_x)
+         with self.assertRaises(QuantityUnitMismatch):
+             qsyn.add_child(qsynx)
++        dummy_q['UnitConversion'][qsynx.unit] = 1.0
++        qsyn.add_child(qsynx)
++        self.assertIn(dummy_x.uuid, list(qsyn.terms))
+ 
+     def test_serialize(self):
+         pass
+ 
+     def test_deserialize(self):
+         pass
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/archives/tests/test_term_manager.py` & `antelope_core-0.2.0/antelope_core/archives/tests/test_term_manager.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-from ..term_manager import TermManager, QuantityConflict
++from ..term_manager import TermManager  # QuantityConflict
+ from ...entities import LcQuantity, LcFlow
+ from ...contexts import Context
+ import unittest
+ 
+ 
+ rq = LcQuantity.new('mass', 'kg', origin='test')
+ qq = LcQuantity.new('volume', 'm3', origin='test')
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/autorange.py` & `antelope_core-0.2.0/antelope_core/autorange.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/catalog/catalog.py` & `antelope_core-0.2.0/antelope_core/catalog/catalog.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -2,17 +2,16 @@
+ The LcCatalog provides a semantic interface to a collection of (local and remote) read-only LcArchives, which provide
+ access to physical data.
+ 
+ It is made up of the following components:
+ 
+   * built on an LciaEngine
+   + local, persistent storage of resources, indexes, cache data + etc
+-  + A resolver, which translates semantic references into resources.  Input: semantic ref. output: CatalogInterface.
++  + A resolver, which translates semantic origins into resources.  Input: semantic ref. output: CatalogInterface.
+   + an interface generator, which creates archive accessors on demand based on resource information from the resolver
+-  x An internal cache of entities retrieved, by full reference-- this has been cut
+ 
+ From the catalog_ref file, the catalog should meet the following spec:
+           Automatic - entity information
+            catalog.query(origin) - returns a query interface
+            catalog.lookup(origin, external_ref) - returns the origin of the lowest-priority resource resolving the ref
+            catalog.fetch(origin, external_ref) - return a reference to the object that can be queried + handled
+ 
+@@ -20,21 +19,21 @@
+            see lcatools.interfaces.*
+ 
+ """
+ 
+ import os
+ # import re
+ import hashlib
+-# from collections import defaultdict
++from collections import defaultdict
+ 
+-from ..archives import InterfaceError
++from ..archives import InterfaceError, EntityExists
+ from ..lcia_engine import LciaDb
+ 
+ 
+-from antelope import CatalogRef, UnknownOrigin  # , EntityNotFound
++from antelope import CatalogRef, UnknownOrigin, InvalidQuery  # , EntityNotFound
+ from ..catalog_query import CatalogQuery, INTERFACE_TYPES, zap_inventory
+ from .lc_resolver import LcCatalogResolver
+ from ..lc_resource import LcResource
+ # from lcatools.flowdb.compartments import REFERENCE_INT  # reference intermediate flows
+ 
+ 
+ class DuplicateEntries(Exception):
+@@ -139,24 +138,24 @@
+     def _flowables(self):
+         return os.path.join(self._rootdir, 'local-flowables.json')
+ 
+     def _localize_source(self, source):
+         if source is None:
+             return None
+         if source.startswith(self._rootdir):
+-            #return re.sub('^%s' % self._rootdir, '$CAT_ROOT', source)
++            # return re.sub('^%s' % self._rootdir, '$CAT_ROOT', source)
+             # Should work on both mac and windows
+             return os.path.join('$CAT_ROOT', os.path.relpath(source, self._rootdir))
+         return source
+ 
+     def abs_path(self, rel_path):
+         if os.path.isabs(rel_path):
+             return rel_path
+         elif rel_path.startswith('$CAT_ROOT'):
+-            #return re.sub('^\$CAT_ROOT', self.root, rel_path)
++            # return re.sub('^\$CAT_ROOT', self.root, rel_path)
+             # Should work on both mac and windows
+             return os.path.abspath(os.path.join(self.root, os.path.relpath(rel_path, '$CAT_ROOT')))
+         return os.path.abspath(os.path.join(self.root, rel_path))
+ 
+     @property
+     def root(self):
+         return self._rootdir
+@@ -176,27 +175,43 @@
+         self._resolver = LcCatalogResolver(self.resource_dir)
+ 
+         """
+         _archives := source -> archive
+         _names :=  ref:interface -> source
+         _nicknames := nickname -> source
+         """
+-        self._nicknames = dict()  # keep a collection of shorthands for sources
++        self._nicknames = dict()  # keep a collection of shorthands for origins
+ 
+         self._queries = dict()  # keep a collection of CatalogQuery instances for each origin
++        self._bad_origins = defaultdict(set)
+ 
+         '''
+         LCIA: 
+         '''
+         qdb = LciaDb.new(source=self._reference_qtys, contexts=self._contexts, flowables=self._flowables,
+                          strict_clookup=strict_clookup, **kwargs)
+         self._qdb = qdb
+-        res = LcResource.from_archive(qdb, interfaces=('index', 'quantity'), store=False)
++        res = LcResource.from_archive(qdb, interfaces=('basic', 'index', 'quantity'), store=False)
+         self._resolver.add_resource(res, store=False)
+ 
++    def get_canonical(self, arg):
++        return self.lcia_engine.get_canonical(arg)
++
++    def synonyms(self, arg):
++        return self.lcia_engine.synonyms(arg)
++
++    @property
++    def bad_origins(self):
++        for o in self._bad_origins.keys():
++            yield o
++
++    def bad_refs(self, origin):
++        for y in self._bad_origins[origin]:
++            yield y
++
+     '''
+     The thing that distinguishes a catalog from an archive is its centralized handling of quantities via the qdb
+     '''
+     @property
+     def qdb(self):
+         """
+         Provides query access to the quantity database. Should be like cat.query('local.qdb'), except that
+@@ -205,65 +220,84 @@
+         """
+         return self._qdb.query
+ 
+     @property
+     def lcia_engine(self):
+         return self._qdb.tm
+ 
+-    def register_quantity_ref(self, q_ref):
+-        print('registering %s' % q_ref.link)
+-        self._qdb.add(q_ref)
++    def register_entity_ref(self, q_ref):
++        if q_ref.is_entity:
++            raise TypeError('Supplied argument is an entity')
++        try:
++            self._qdb.add(q_ref)
++            # print('registered %s' % q_ref.link)
++        except EntityExists:
++            pass
++
++    def get_qdb_entity(self, origin, external_ref, entity_type='flow'):
++        if origin is None or external_ref is None:
++            raise ValueError('%s/%s not valid' % (origin, external_ref))
++        link = '/'.join([origin, external_ref])
++        ent = self._qdb[link]
++        if ent is None:
++            raise KeyError(link)
++        if ent.entity_type != entity_type:
++            raise TypeError(ent)
++        return ent
+ 
+     @property
+     def sources(self):
+         for k in self._resolver.sources:
+             yield k
+ 
+     @property
+-    def references(self):
+-        for ref, ints in self._resolver.references:
++    def origins(self):
++        for ref, ints in self._resolver.origins:
+             yield ref
+ 
+     @property
+     def interfaces(self):
+-        for ref, ints in self._resolver.references:
++        for ref, ints in self._resolver.origins:
+             for i in ints:
+                 yield ':'.join([ref, i])
+ 
+     def show_interfaces(self):
+-        for ref, ints in sorted(self._resolver.references):
++        for ref, ints in sorted(self._resolver.origins):
+             print('%s [%s]' % (ref, ', '.join(ints)))
+ 
+     '''
+     Nicknames
++    
++    These are vestigial from the very earliest days of the catalog-- at the time we thought it made sense to assign 
++    a nickname to a specific SOURCE but in practice, the only thing we have ever wanted to do was assign a nickname
++    to an ORIGIN. so we are going to make that official.
+     '''
+     @property
+     def names(self):
+         """
+         List known references.
+         :return:
+         """
+-        for k, ifaces in self._resolver.references:
++        for k, ifaces in self._resolver.origins:
+             for iface in ifaces:
+                 yield ':'.join([k, iface])
+-        for k in self._nicknames.keys():
+-            yield k
+ 
+-    def add_nickname(self, source, nickname):
++    def add_nickname(self, nickname, origin, interface=None):
+         """
+-        quickly refer to a specific data source already present in the archive
+-        :param source:
+-        :param nickname:
++        alternate names for origins (optional interface) in the catalog
++        :param nickname: short name to be used
++        :param origin: origin to refer to
++        :param interface: [None] interface to specify
+         :return:
+         """
+-        if self._resolver.known_source(source):
+-            self._nicknames[nickname] = source
+-        else:
+-            raise KeyError('Source %s not found' % source)
+-
++        try:
++            next(self._resolver.resolve(origin, interfaces=interface))
++        except UnknownOrigin:
++            raise KeyError('Origin %s not found' % origin)
++        self._nicknames[nickname] = (origin, interface)
+ 
+     def has_resource(self, res):
+         return self._resolver.has_resource(res)
+ 
+     '''
+     Retrieve resources
+     '''
+@@ -281,15 +315,17 @@
+         :param name: nickname or origin
+         :param iface:
+         :param source:
+         :param strict:
+         :return:
+         """
+         if name in self._nicknames:
+-            return self._resolver.get_resource(source=self._nicknames[name], strict=strict)
++            # return self._resolver.get_resource(source=self._nicknames[name], strict=strict)
++            name, nick_i = self._nicknames[name]
++            iface = iface or nick_i
+         iface = zap_inventory(iface, warn=True)  # warn when requesting the wrong interface
+         return self._resolver.get_resource(ref=name, iface=iface, source=source, strict=strict)
+ 
+     def get_archive(self, ref, interface=None, strict=False):
+         interface = zap_inventory(interface, warn=True)
+         if interface in INTERFACE_TYPES:
+             rc = self.get_resource(ref, iface=interface, strict=strict)
+@@ -299,17 +335,49 @@
+         return rc.archive
+ 
+     '''
+     Main data accessor
+     '''
+     def _sorted_resources(self, origin, interfaces, strict):
+         for res in sorted(self._resolver.resolve(origin, interfaces, strict=strict),
+-                          key=lambda x: (not (x.is_loaded and x.static), x.priority, x.reference != origin)):
++                          key=lambda x: (x.priority, len(x.origin))):  #
++            '''
++            sort key was formerly: (not (x.is_loaded and x.static), x.priority, x.origin != origin)):
++            What were we thinking overriding priority with whether a static resource was loaded?
++            
++            ans: bad logic. The bad logic was: if we already have the (static JSON) index loaded, we should just use
++            it because it's easier / possibly more reliable (?) than accessing the exchange interface.
++            
++            But this is properly managed by data owners with priorities. Any source-specific optimizations are 
++            just that.  
++            '''
+             yield res
+ 
++    def resources(self, origin=None, loaded=None):
++        """
++        Generate a list of resources known to the resolver.  Optionally filter by origin prefix and
++        by whether the resource has been loaded.
++        :param origin:
++        :param loaded: True | False | [None]
++        :return:
++        """
++        def _match_loaded(_res):
++            ldd = bool(_res.archive is not None)
++            if loaded is None:
++                return True
++            if ldd is loaded:
++                return True
++            return False
++        for res in self._resolver.resources:
++            if origin:
++                if not res.origin.startswith(origin):
++                    continue
++            if _match_loaded(res):
++                yield res
++
+     def gen_interfaces(self, origin, itype=None, strict=False):
+         """
+         Generator of interfaces by spec
+ 
+         :param origin:
+         :param itype: single interface or iterable of interfaces
+         :param strict: passed to resolver
+@@ -330,32 +398,58 @@
+         if 'quantity' in itype:
+             yield self._qdb  # fallback to our own quantity db for Quantity Interface requests
+             '''
+ 
+     """
+     public functions -- should these operate directly on a catalog ref instead? I think so but let's see about usage
+     """
+-    def query(self, origin, strict=False, refresh=False, **kwargs):
++    _query_type = CatalogQuery
++
++    def known_origin(self, origin, strict=False):
++        try:
++            self._resolver.resolve(origin, strict=strict)
++        except UnknownOrigin:
++            return False
++        return True
++
++    def query(self, origin, strict=False, refresh=False, cache=True, **kwargs):
+         """
+         Returns a query using the first interface to match the origin.
+         :param origin:
+         :param strict: [False] whether the resolver should match the origin exactly, as opposed to returning more highly
+          specified matches.  e.g. with strict=False, a request for 'local.traci' could be satisfied by 'local.traci.2.1'
+          whereas if strict=True, only a resource matching 'local.traci' exactly will be returned
+         :param refresh: [False] by default, the catalog stores a CatalogQuery instance for every requested origin.  With
+          refresh=True, any prior instance will be replaced with a fresh one.
++        :param cache: [True] whether to retain the query
+         :param kwargs:
+         :return:
+         """
++        if origin in self._nicknames:
++            origin, _ = self._nicknames[origin]
+ 
+-        next(self._resolver.resolve(origin, strict=strict))
+-
+-        if refresh or (origin not in self._queries):
+-            self._queries[origin] = CatalogQuery(origin, catalog=self, **kwargs)
+-        return self._queries[origin]
++        try:
++            next(self._resolver.resolve(origin, strict=strict))
++        except StopIteration:
++            raise UnknownOrigin(origin, strict)
++
++        if refresh:
++            self._queries.pop(origin, None)
++
++        if cache and origin in self._queries:
++            return self._queries[origin]
++
++        query = self._query_type(origin, catalog=self, **kwargs)
++        if query.validate():
++            pass
++        else:
++            raise InvalidQuery(origin)
++        if cache:
++            self._queries[origin] = query
++        return query
+ 
+     def lookup(self, catalog_ref, keep_properties=False):
+         """
+         Attempts to return a valid grounded reference matching the one supplied.
+         :param catalog_ref:
+         :param keep_properties: [False] if True, apply incoming ref's properties to grounded ref, probably with a
+         prefix or something.
+@@ -380,33 +474,35 @@
+         for i in self.gen_interfaces(origin):
+             if i.lookup(external_ref):
+                 return i.origin
+         for i in self.gen_interfaces('.'.join(['foreground', origin])):
+             if i.lookup(external_ref):
+                 return i.origin
+         raise EntityNotFound('%s/%s' % (origin, external_ref))
+-
+-    def fetch(self, origin, external_ref=None):
+-        if external_ref is None:
+-            origin, external_ref = origin.split('/', maxsplit=1)
+-        org = self.lookup(origin, external_ref)
+-        return self.query(org).get(external_ref)
+     '''
+ 
++    def fetch(self, link):
++        origin, external_ref = link.split('/', maxsplit=1)
++        return self.query(origin).get(external_ref)
++
+     def catalog_ref(self, origin, external_ref, entity_type=None, **kwargs):
+         """
+         TODO: make foreground-generated CatalogRefs lazy-loading. This mainly requires removing the expectation of a
+         locally-defined reference entity, and properly implementing and using a reference-retrieval process in the
+         basic interface.
+         :param origin:
+         :param external_ref:
+         :param entity_type:
+         :return:
+         """
+         try:
+             q = self.query(origin)
+         except UnknownOrigin:
+-            return CatalogRef(origin, external_ref, entity_type=entity_type, **kwargs)
++
++            ref = CatalogRef(origin, external_ref, entity_type=entity_type, **kwargs)
++            print('Ungrounded catalog ref %s' % ref.link)
++            self._bad_origins[origin].add(ref)
++            return ref
+         return q.get(external_ref)
+         # except EntityNotFound:  why would we catch this?
+         #     return CatalogRef.from_query(external_ref, q, entity_type=entity_type, **kwargs)
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/catalog/catalog_root.py` & `antelope_core-0.2.0/antelope_core/catalog/catalog_root.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/catalog/configurator.py` & `antelope_core-0.2.0/antelope_core/catalog/configurator.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -122,15 +122,15 @@
+     def write_to_catalog(self, assign_ref=None, catalog_root=None):
+         if catalog_root is None:
+             if self.catalog_root is None:
+                 raise ValueError('Catalog root must be specified')
+             catalog_root = self.catalog_root
+         resource_root = os.path.join(catalog_root, 'resources')
+         if assign_ref is None:
+-            assign_ref = self._resource.reference
++            assign_ref = self._resource.origin
+         self._resource.write_to_file(resource_root, assign_ref, apply_config=self._config)
+ 
+     def check_contexts(self):
+         """
+         Compares contexts known to the resource with contexts known to the captive LCIA engine.  Prints matching
+         contexts. Returns a list of non-matching contexts.
+         :return:
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/catalog/lc_catalog.py` & `antelope_core-0.2.0/antelope_core/catalog/lc_catalog.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,31 +1,55 @@
+-from antelope import IndexRequired
++import tempfile
++
++from antelope.xdb_tokens import ResourceSpec
++
+ from .catalog import StaticCatalog
+ from ..archives import REF_QTYS, archive_from_json
+-from ..lc_resource import LcResource, download_file
++from ..lc_resource import LcResource
+ from ..lcia_engine import DEFAULT_CONTEXTS, DEFAULT_FLOWABLES
++from ..providers.xdb_client.rest_client import RestClient
++
++import requests
++from requests.exceptions import HTTPError
+ 
+ from shutil import copy2, rmtree
+ import os
++import json
++import hashlib
++import getpass
++
++# TEST_ROOT = os.path.join(os.path.dirname(__file__), 'cat-test')  # volatile, inspectable
++
++
++def download_file(url, local_file, md5sum=None):
++    r = requests.get(url, stream=True)
++    md5check = hashlib.md5()
++    with open(local_file, 'wb') as f:
++        for chunk in r.iter_content(chunk_size=1024):
++            if chunk:  # filter out keep-alive new chunks
++                f.write(chunk)
++                md5check.update(chunk)
++                # f.flush() commented by recommendation from J.F.Sebastian
++    if md5sum is not None:
++        assert md5check.hexdigest() == md5sum, 'MD5 checksum does not match'
+ 
+-TEST_ROOT = os.path.join(os.path.dirname(__file__), 'cat-test')  # volatile, inspectable
+ 
+ class LcCatalog(StaticCatalog):
+     """
+     A catalog that supports adding and manipulating resources during runtime
+     """
+     def download_file(self, url=None, md5sum=None, force=False, localize=True):
+         """
+         Download a file from a remote location into the catalog and return its local path.  Optionally validate the
+         download with an MD5 digest.
+         :param url:
+         :param md5sum:
+         :param force:
+         :param localize: whether to return the filename relative to the catalog root
+-        :return:
++        :return: the full path to the downloaded file 
+         """
+         local_file = os.path.join(self._download_dir, self._source_hash_file(url))
+         if os.path.exists(local_file):
+             if force:
+                 print('File exists.. re-downloading.')
+             else:
+                 print('File already downloaded.  Force=True to re-download.')
+@@ -43,20 +67,27 @@
+ 
+         if localize:
+             return self._localize_source(local_file)
+         return local_file
+ 
+     @classmethod
+     def make_tester(cls, **kwargs):
+-        rmtree(TEST_ROOT, ignore_errors=True)
+-        return cls(TEST_ROOT, **kwargs)
++        """
++        Sets a flag that tells the rootdir to be deleted when the catalog is garbage collected
++        :param kwargs:
++        :return:
++        """
++        tmp = tempfile.mkdtemp()
++        return cls(tmp, _test=True, **kwargs)
+ 
++    """
+     @classmethod
+     def load_tester(cls):
+         return cls(TEST_ROOT)
++    """
+ 
+     @property
+     def _dirs(self):
+         for x in (self._cache_dir, self._index_dir, self.resource_dir, self.archive_dir, self._download_dir):
+             yield x
+ 
+     def _make_rootdir(self):
+@@ -65,24 +96,44 @@
+         if not os.path.exists(self._contexts):
+             copy2(DEFAULT_CONTEXTS, self._contexts)
+         if not os.path.exists(self._flowables):
+             copy2(DEFAULT_FLOWABLES, self._flowables)
+         if not os.path.exists(self._reference_qtys):
+             copy2(REF_QTYS, self._reference_qtys)
+ 
+-    def __init__(self, rootdir, **kwargs):
++    def __init__(self, rootdir, _test=False, **kwargs):
+         self._rootdir = os.path.abspath(rootdir)
+         self._make_rootdir()  # this will be a git clone / fork;; clones reference quantities
++        self._test = _test
++        self._blackbook_client = None
+         super(LcCatalog, self).__init__(self._rootdir, **kwargs)
+ 
++    def __del__(self):
++        """
++        This is unreliable- temp directories tend to accumulate
++        :return:
++        """
++        if self._blackbook_client:
++            self._blackbook_client.close()
++        if self._test:
++            # print('tryna delete %s' % self.root)
++            rmtree(self.root, ignore_errors=True)
++
+     def save_local_changes(self):
+         self._qdb.write_to_file(self._reference_qtys, characterizations=True, values=True)
+         self.lcia_engine.save_flowables(self._flowables)
+         self.lcia_engine.save_contexts(self._contexts)
+ 
++    def restore_contexts(self, really=False):
++        if really:
++            print('Overwriting local contexts')
++            copy2(DEFAULT_CONTEXTS, self._contexts)
++        else:
++            print('pass really=True if you really want to overwrite local contexts')
++
+     def restore_qdb(self, really=False):
+         if really:
+             copy2(REF_QTYS, self._reference_qtys)
+             print('Reference quantities restored. Please re-initialize the catalog.')
+ 
+     '''
+     Create + Add data resources
+@@ -151,14 +202,100 @@
+         :param store: [True] if False, don't save the record - use it for this session only
+         :param kwargs:
+         :return:
+         """
+         res = LcResource.from_archive(archive, interfaces, source=self._localize_source(archive.source), **kwargs)
+         self._resolver.add_resource(res, store=store)
+ 
++    def blackbook_authenticate(self, blackbook_url, username=None, password=None, token=None):
++        """
++        Opens an authenticated session with the designated blackbook server.  Credentials can either be provided to the
++        method as arguments, or if omitted, they can be obtained through a form.  If a token is provided, it is
++        used in lieu of a password workflow
++        :param blackbook_url:
++        :param username:
++        :param password:
++        :param token:
++        :return:
++        """
++        if self._blackbook_client:
++            self._blackbook_client.close()
++        if token is None:
++            client = RestClient(blackbook_url, auth_route='auth/token')
++            if username is None:
++                username = input('Enter username to access blackbook server at %s: ' % blackbook_url)
++            if password is None:
++                password = getpass.getpass('Enter password to access blackbook server at %s: ' % blackbook_url)
++            try:
++                client.authenticate(username, password)
++            except HTTPError:
++                client.close()
++                raise
++        else:
++            client = RestClient(blackbook_url, token=token, auth_route='auth/token')
++        self._blackbook_client = client
++
++    def get_blackbook_resources(self, origin):
++        """
++        Use a blackbook server to obtain resources for a given origin.
++        :param origin:
++        :return:
++        """
++        res = list(self.resources(origin))
++        if len(res) > 0:
++            return self.refresh_xdb_tokens(origin)
++        else:
++            resource_dict = self._blackbook_client.get_one(dict, 'origins', origin, 'resource')
++            return self._finish_get_blackbook_resources(resource_dict)
++
++    def get_blackbook_resources_by_client(self, bb_client, username, origin):
++        """
++        this uses the local maintenance client rather than the REST client
++        :param bb_client:
++        :param username:
++        :param origin:
++        :return:
++        """
++        resource_dict = bb_client.retrieve_resource(username, origin)
++        return self._finish_get_blackbook_resources(resource_dict)
++
++    def _finish_get_blackbook_resources(self, resource_dict):
++
++        rtn = []
++
++        for recv_origin, res_list in resource_dict.items():
++            # self._resolver.delete_origin(recv_origin)
++            for res in res_list:
++                if isinstance(res, ResourceSpec):
++                    r = LcResource(**res.dict())
++                else:
++                    r = LcResource(**res)
++
++                self.add_resource(r)
++                rtn.append(r)
++        return rtn
++
++    def refresh_xdb_tokens(self, origin):
++        """
++        requires an active blackbook client (try blackbook_authenticate() if it has expired)
++        :param origin:
++        :return:
++        """
++        tok = self._blackbook_client.get_one(str, 'origins', origin, 'token')
++        rtn = []
++        for res in self._resolver.resources:
++            if res.origin == origin:  # and hasattr(res.archive, 'r'):
++                if res.archive is None:
++                    res.init_args['token'] = tok
++                    res.check(self)
++                if hasattr(res.archive, 'r'):
++                    res.archive.r.set_token(tok)
++                rtn.append(res)
++        return rtn
++
+     '''
+     Manage resources locally
+      - index
+      - cache
+      - static archive (performs load_all())
+     '''
+ 
+@@ -186,15 +323,15 @@
+         inx_local = self._localize_source(inx_file)
+ 
+         if os.path.exists(inx_file):
+             if not force:
+                 print('Not overwriting existing index. force=True to override.')
+                 try:
+                     ex_res = next(r for r in self._resolver.resources_with_source(inx_local))
+-                    return ex_res.reference
++                    return ex_res.origin
+                 except StopIteration:
+                     # index file exists, but no matching resource
+                     inx = archive_from_json(inx_file)
+                     self.new_resource(inx.ref, inx_local, 'json', priority=priority, store=stored,
+                                       interfaces='index', _internal=True, static=True, preload_archive=inx,
+                                       config=cfg)
+ 
+@@ -202,16 +339,16 @@
+ 
+             print('Re-indexing %s' % source)
+             # TODO: need to delete the old index resource!!
+             stale_res = list(self._resolver.resources_with_source(inx_local))
+             for stale in stale_res:
+                 # this should be postponed to after creation of new, but that fails in case of naming collision (bc YYYYMMDD)
+                 # so golly gee we just delete-first.
+-                print('deleting %s' % stale.reference)
+-                self._resolver.delete_resource(stale)
++                print('deleting %s' % stale.origin)
++                self.delete_resource(stale)
+ 
+         the_index = res.make_index(inx_file, force=force)
+         self.new_resource(the_index.ref, inx_local, 'json', priority=priority, store=stored, interfaces='index',
+                           _internal=True, static=True, preload_archive=the_index, config=cfg)
+ 
+         return the_index.ref
+ 
+@@ -228,20 +365,22 @@
+         :param interface: [None]
+         :param source: find_single_source input
+         :param priority: [60] priority setting for the new index
+         :param force: [False] if True, overwrite existing index
+         :param strict: [True] whether to be strict
+         :return:
+         """
+-        try:
+-            ix = next(self.gen_interfaces(origin, itype='index', strict=False))
+-            return ix.origin
+-        except StopIteration:
+-            source = self._find_single_source(origin, interface, source=source, strict=strict)
+-            return self._index_source(source, priority, force=force)
++        if not force:
++            try:
++                ix = next(self.gen_interfaces(origin, itype='index', strict=False))
++                return ix.origin
++            except StopIteration:
++                pass
++        source = self._find_single_source(origin, interface, source=source, strict=strict)
++        return self._index_source(source, priority, force=force)
+ 
+     def cache_ref(self, origin, interface=None, source=None, static=False):
+         source = self._find_single_source(origin, interface, source=source)
+         self.create_source_cache(source, static=static)
+ 
+     def create_source_cache(self, source, static=False):
+         """
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/catalog/lc_resolver.py` & `antelope_core-0.2.0/antelope_core/catalog/lc_resolver.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -8,35 +8,46 @@
+ 
+ class ResourceNotFound(Exception):
+     pass
+ 
+ 
+ class LcCatalogResolver(object):
+     """
+-    The resolver maintains a collection of resources, and translates semantic references into physical archives.
++    The resolver maintains a collection of resources, and translates semantic origins into physical archives.
+     The Catalog supplies a request and a level requirement
+      It also acts as a factory for those resources, so when a request is provided, it is answered with a live archive.
+ 
+-     Then the Catalog turns that into a static archive and keeps a list of it. The catalog also keeps a separate
++    Then the Catalog turns that into a static archive and keeps a list of it. The catalog also keeps a separate
+      list of foreground foregrounds (which are not static; which contain fragments). These can be converted into static
+      archives by turning the fragments into processes.
+ 
+-
++    This file could probably be re-thought, especially in the era of resources delivered via web.  For now, we will
++     monkeypatch.
+     """
+     def __init__(self, resource_dir):
+         self._resource_dir = resource_dir
+         if not os.path.exists(resource_dir):
+             os.makedirs(resource_dir)
+         self._resources = defaultdict(list)
+         self.index_resources()
+ 
++    def delete_origin(self, origin):
++        """
++        remove all resources for a given origin.
++
++        :param origin:
++        :return:
++        """
++        if self._resources.pop(origin, None):
++            self._write_or_delete_resource_file(origin, [])
++
+     @property
+-    def references(self):
++    def origins(self):
+         """
+-        Generates pairs: reference, list of supported interfaces
++        Generates pairs: origin, list of supported interfaces
+         :return:
+         """
+         for k, v in self._resources.items():
+             ints = set()
+             for r in v:
+                 for t in r.interfaces:
+                     ints.add(t)
+@@ -47,61 +58,73 @@
+         seen = set()
+         for k, v in self._resources.items():
+             for res in v:
+                 if res.source not in seen:
+                     seen.add(res.source)
+                     yield res.source
+ 
+-    def _update_semantic_ref(self, ref):
+-        path = os.path.join(self._resource_dir, ref)
++    @property
++    def resources(self):
++        for v in self._resources.values():
++            for res in v:
++                yield res
++
++    def _update_semantic_ref(self, org):
++        path = os.path.join(self._resource_dir, org)
+         try:
+-            resources = LcResource.from_json(path)
++            resources = LcResource.from_file(path)
+         except json.JSONDecodeError:
+             print('Skipping Invalid resource file %s' % path)
+             # os.remove(path)
+             return
+-        self._resources[ref] = resources
++        self._resources[org] = resources
+ 
+     def index_resources(self):
+-        for res in os.listdir(self._resource_dir):
+-            self._update_semantic_ref(res)
++        for org in os.listdir(self._resource_dir):
++            self._update_semantic_ref(org)
+ 
+     def add_resource(self, resource, store=True):
+         """
+         Add a resource to the resolver's list.  By default, save the resource permanently as a file in resources dir.
+         :param resource:
+         :param store: [True] if False, add the resource to memory only
+         :return:
+         """
+         if resource.exists(self._resource_dir) or self.has_resource(resource):
+             # do nothing
+             print('Resource already exists')
+             return
+-        if store:
++        if store and os.path.exists(self._resource_dir):
+             resource.write_to_file(self._resource_dir)
+-        self._resources[resource.reference].append(resource)
++        self._resources[resource.origin].append(resource)
+ 
+     def has_resource(self, resource):
+         s = resource.serialize()
+-        return any(k.matches(s) for k in self._resources[resource.reference])
++        return any(k.matches(s) for k in self._resources[resource.origin])
+ 
+     def new_resource(self, ref, source, ds_type, store=True, **kwargs):
+         new_res = LcResource(ref, source, ds_type, **kwargs)
+-        self.add_resource(new_res, store=store)
+-        return new_res
++        try:
++            s = new_res.serialize()
++            old_res = next(k for k in self._resources[ref] if k.matches(s))
++            print('Returning existing resource')
++            return old_res
++        except StopIteration:
++            self.add_resource(new_res, store=store)
++            return new_res
+ 
+     def delete_resource(self, resource):
+-        ref = resource.reference
+-        res = self._resources[ref]
++        org = resource.origin
++        res = self._resources[org]
+         if resource not in res:
+-            raise ResourceNotFound('(ref: %s)' % ref)
++            raise ResourceNotFound('(ref: %s)' % org)
+         res.remove(resource)
+-        self._write_or_delete_resource_file(ref, res)
++        self._write_or_delete_resource_file(org, res)
+         if len(res) == 0:
+-            self._resources.pop(ref)
++            self._resources.pop(org)
+ 
+     def known_source(self, source):
+         try:
+             next(self.resources_with_source(source))
+         except StopIteration:
+             return False
+         return True
+@@ -113,34 +136,43 @@
+                     yield r
+ 
+     def is_permanent(self, resource):
+         return resource.exists(self._resource_dir)
+ 
+     def resolve(self, req, interfaces=None, strict=False):
+         """
+-        Fuzzy resolver returns all references that match the request and have equal or greater specificity.
++        Fuzzy resolver returns all resources that match the request and have equal or greater specificity.
+         'uslci.clean' will match queries for 'uslci' but not for 'uslci.original' or 'uslci.clean.allocated'.
+         However, 'uslci.clean.allocated' will match a query for 'uslci.clean'
+         :param req:
+         :param interfaces: could be a single interface specification or a list
+         :param strict: [False] if true, only yields interface for which req matches ref
+         :return:
+         """
++        if req is None:
++            return
+         terms = req.split('.')
+         origin_found = False
+         for ref, res_list in self._resources.items():
+             if strict:
+                 if ref != req:
+                     continue
+             if ref.split('.')[:len(terms)] == terms:
+                 origin_found = True
+                 for res in res_list:
+                     if res.satisfies(interfaces):
+                         yield res
+         if not origin_found:
++            # resolver should just ignore 'local' prefix if it can't find a local match
++            if (not strict) and terms[0] == 'local':
++                nl = '.'.join(terms[1:])
++                for i in self.resolve(nl, interfaces=interfaces):
++                    origin_found = True
++                    yield i
++        if not origin_found:
+             raise UnknownOrigin(req)
+ 
+     def get_resource(self, ref=None, iface=None, source=None, strict=True, include_internal=True):
+         """
+         The purpose of this function is to allow a user to retrieve a resource by providing enough information to
+         identify it uniquely.  If strict is True (default), then parameters are matched exactly and more than one
+         match raises an exception. If strict is False, then origins are matched approximately and the first
+@@ -167,14 +199,24 @@
+                 raise ValueError('Ambiguous matches for supplied parameters\nref: %s iface: %s source: %s' %
+                                  (ref, iface, source))
+         elif len(matches) == 0:
+             raise ResourceNotFound('ref:%s iface:%s source=%s' % (ref, iface, source))
+         return matches[0]
+ 
+     def _write_or_delete_resource_file(self, ref, resources):
++        """
++        Writes the resource file into the resource_dir containing only the resources that are both
++        (1) provided to the method and (2) already present in the resource_dir.  The purpose of this is to allow
++        deletion of single resources for a particular origin.
++        :param ref:
++        :param resources:
++        :return:
++        """
++        if not os.path.exists(self._resource_dir):
++            return
+         j = [k.serialize() for k in resources if k.exists(self._resource_dir)]
+         if len(j) == 0:
+             os.remove(os.path.join(self._resource_dir, ref))
+             return
+         with open(os.path.join(self._resource_dir, ref), 'w') as fp:
+             json.dump({ref: j}, fp)
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/catalog/tests/test_catalogs.py` & `antelope_core-0.2.0/antelope_core/catalog/tests/test_catalogs.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -46,15 +46,15 @@
+     def setUpClass(cls):
+         cls._cat = LcCatalog.make_tester()
+         cls._cat.add_resource(uslci_fg)
+         cls._cat.add_resource(uslci_bg)
+         cls._cat.add_resource(test_resource)
+ 
+     def test_resolver_index(self):
+-        self.assertSetEqual({r for r in self._cat.references}, {'local.qdb', 'test.uslci', 'test.uslci.allocated',
++        self.assertSetEqual({r for r in self._cat.origins}, {'local.qdb', 'test.uslci', 'test.uslci.allocated',
+                                                                 'test.basic'})
+     @unittest.skip  # this doesn't work at all-- priority (and resolver generally) still need to be tested
+     def test_priority(self):
+         # TODO!
+         q = CatalogQuery('test.uslci', catalog=self._cat)
+         p = q.get('Acetic acid, at plant')
+         self.assertEqual(p.origin, 'test.uslci')
+@@ -74,45 +74,45 @@
+         pass
+ 
+     def test_add_delete_resource_1(self):
+         """
+         This adds a resource
+         :return:
+         """
+-        r = self._cat.new_resource('test.my.dummy', '/dev/null', 'LcArchive')
+-        self.assertIn('basic', r.interfaces)
+-        self.assertIn('test.my.dummy', self._cat.references)
+-        self.assertNotIn('test.my.doofus', self._cat.references)
++        r = self._cat.new_resource('test.my.dummy', '/dev/null', 'LcArchive', interfaces='basic')
++        self.assertIn('basic', r.interfaces)  # we used to switch this on by default for all impls, but now we don't
++        self.assertIn('test.my.dummy', self._cat.origins)
++        self.assertNotIn('test.my.doofus', self._cat.origins)
+ 
+     def test_add_delete_resource_2(self):
+         """
+         This deletes the resource
+         :return:
+         """
+         r = self._cat.get_resource('test.my.dummy')
+         self.assertEqual(r.source, '/dev/null')
+         self._cat.delete_resource(r)
+-        self.assertNotIn('test.my.dummy', self._cat.references)
+-        self.assertFalse(os.path.exists(os.path.join(self._cat.resource_dir, r.reference)))
++        self.assertNotIn('test.my.dummy', self._cat.origins)
++        self.assertFalse(os.path.exists(os.path.join(self._cat.resource_dir, r.origin)))
+ 
+     def test_has_resource(self):
+         """
+         If a resource matches one that exists, has_resource should return True
+         :return:
+         """
+         self.assertTrue(self._cat.has_resource(uslci_fg_dup))
+         self.assertFalse(self._cat.has_resource(uslci_fg_bad))
+ 
+     def test_local_resource(self):
+         """
+         Tests the procedure of generating and deleting internal resources
+         :return:
+         """
+-        inx = self._cat.index_ref(test_resource.reference)
+-        self.assertIn(inx, self._cat.references)  # index ref is known
++        inx = self._cat.index_ref(test_resource.origin)
++        self.assertIn(inx, self._cat.origins)  # index ref is known
+         res = self._cat.get_resource(inx)
+         self.assertTrue(self._cat.has_resource(res))  # index resource is present
+         self.assertTrue(res.source.startswith('$CAT_ROOT'))  # index resource has relative source path
+         abs_path = self._cat.abs_path(res.source)
+         self.assertTrue(os.path.isabs(abs_path))
+         self.assertEqual(self._cat._localize_source(abs_path), res.source)  # abs_path and localize_source are inverse
+         self.assertEqual(self._cat._index_file(test_resource.source), abs_path)  # abs_path is true index path
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/catalog/tests/test_process_ref.py` & `antelope_core-0.2.0/antelope_core/catalog/tests/test_process_ref.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -10,15 +10,15 @@
+ blast_furnace = '00420798-e9d1-4de9-8745-09bd85f31db8'
+ blast_furnace_gas = 'b254bbdf-fb2b-4878-aec9-2a7820f3f32e'
+ 
+ alt_archive_path = os.path.join(os.path.dirname(__file__), 'blast_furnace_test.json.gz')
+ ar = LcArchive.from_file(alt_archive_path)
+ test_ref = ar.ref
+ 
+-cat.add_existing_archive(ar, interfaces='inventory', store=False)
++cat.add_existing_archive(ar, interfaces=('basic', 'inventory'), store=False)
+ 
+ 
+ class ProcessRefTest(unittest.TestCase):
+     """
+     Things to test:
+      * default_rx is properly set for processes with one reference exchange
+      * default_rx is not set for processes with zero or more than one ref ex
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/catalog/tests/test_quantity_refs.py` & `antelope_core-0.2.0/antelope_core/catalog/tests/test_quantity_refs.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -5,35 +5,40 @@
+ 
+ from .. import LcCatalog
+ from ...data_sources.local import make_config
+ 
+ 
+ cat = LcCatalog.make_tester()
+ cfg = make_config('ipcc2007')
+-ref = next(cfg.references)
++org = next(cfg.origins)
+ 
+ 
+ def setUpModule():
+-    if ref not in cat.references:
+-        cat.add_resource(next(cfg.make_resources(ref)))
++    if org not in cat.origins:
++        cat.add_resource(next(cfg.make_resources(org)))
+ 
+ 
+ class QuantityRefTest(unittest.TestCase):
+     @classmethod
+     def setUpClass(cls):
+-        cls.gwp = next(cat.query(ref).lcia_methods(Name='Global Warming'))  # canonical
+-        cls.gwp_ref = cat._qdb[cls.gwp.external_ref]  # original ref
++        cls.gwp = next(cat.query(org).lcia_methods(Name='Global Warming'))  # canonical
++        cls.gwp_ref = cat._qdb[cls.gwp.external_ref]  # original ref (locally stored)
+         cls.gwp_true = cat.get_archive(cls.gwp_ref.origin).get(cls.gwp_ref.external_ref)  # authentic entity
+ 
+     def test_origins(self):
+-        self.assertEqual(self.gwp.origin, ref)
+-        self.assertEqual(self.gwp_ref.origin, ref)
+-        res = cat.get_resource(ref)
++        self.assertEqual(self.gwp.origin, org)
++        self.assertEqual(self.gwp_ref.origin, org)
++        self.assertEqual(self.gwp._query.origin, 'local.qdb')
++        res = cat.get_resource(org)
+         self.assertEqual(self.gwp_true.origin, res.archive.names[res.source])
+ 
++    def test_identity(self):
++        self.assertTrue(self.gwp_true.is_entity)
++        self.assertFalse(self.gwp.is_entity)
++
+     def test_factors(self):
+         self.assertEqual(len([k for k in self.gwp.factors()]), 91)
+         self.assertEqual(len([k for k in self.gwp_ref.factors()]), 91)
+         self.assertEqual(len([k for k in self.gwp_true.factors()]), 91)
+ 
+     def test_properties(self):
+         self.assertTrue(self.gwp.has_property('indicator'))
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/catalog_query.py` & `antelope_core-0.2.0/antelope_core/catalog_query.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -4,17 +4,18 @@
+ 
+ from antelope import (IndexInterface, BackgroundInterface, ExchangeInterface, QuantityInterface, EntityNotFound, UnknownOrigin)
+ #                      ForegroundInterface,
+ #                      IndexRequired, PropertyExists,
+ #                      )
+ from antelope.refs.exchange_ref import RxRef
+ 
+-INTERFACE_TYPES = {'basic', 'index', 'exchange', 'background', 'quantity', 'foreground'}
++INTERFACE_TYPES = ('basic', 'index', 'exchange', 'background', 'quantity', 'foreground')
+ READONLY_INTERFACE_TYPES = {'basic', 'index', 'exchange', 'background', 'quantity'}
+ 
++
+ def zap_inventory(interface, warn=False):
+     if interface == 'inventory':
+         if warn:
+             print('# # # # # # # # # **** Warning: use exchange over inventory ***** # # # # # # # # #')
+             raise AttributeError
+         return 'exchange'
+     return interface
+@@ -28,15 +29,15 @@
+     pass
+ 
+ 
+ class BadInterfaceSpec(Exception):
+     pass
+ 
+ 
+-class CatalogQuery(IndexInterface, BackgroundInterface, ExchangeInterface, QuantityInterface): # , ForegroundInterface):
++class CatalogQuery(IndexInterface, BackgroundInterface, ExchangeInterface, QuantityInterface):  # , ForegroundInterface):
+     """
+     A CatalogQuery is a class that performs any supported query against a supplied catalog.
+     Supported queries are defined in the lcatools.interfaces, which are all abstract.
+     Implementations also subclass the abstract classes.
+ 
+     This reduces code duplication (all the catalog needs to do is provide interfaces) and ensures consistent signatures.
+ 
+@@ -56,41 +57,53 @@
+         self._dbg = True
+ 
+     def off_debug(self):
+         self._dbg = False
+ 
+     def _debug(self, *args):
+         if self._dbg:
+-            print(*args)
++            print(self.__class__.__name__, *args)
+ 
+     def __init__(self, origin, catalog=None, debug=False):
+         self._origin = origin
+         self._catalog = catalog
+         self._dbg = debug
+ 
+-        self._entity_cache = dict()
+         self._iface_cache = dict()
+ 
++    def __str__(self):
++        if self._catalog:
++            root = 'catalog_root=%s' % self._catalog.root
++        else:
++            root = 'no catalog'
++        if self._dbg:
++            root += ', DEBUG ON'
++        return '%s(%s, %s)' % (self.__class__.__name__, self._origin, root)
++
++    def __repr__(self):
++        return self.__str__()
++
+     @property
+     def origin(self):
+         return self._origin
+ 
+     @property
+     def _tm(self):
+         return self._catalog.lcia_engine
+ 
++    '''
+     def is_elementary(self, context):
+         """
+         Stopgap used to expose access to a catalog's Qdb; in the future, flows will no longer exist and is_elementary
+         will be a trivial function of an exchange asking whether its termination is a context or not.
+         :param context:
+         :return: bool
+         """
+         return self._tm[context.fullname].elementary
+-
++    '''
+ 
+     def cascade(self, origin):
+         """
+         Generate a new query for the specified origin.
+         Enables the query to follow the origins of foreign objects found locally.
+         :param origin:
+         :return:
+@@ -98,117 +111,167 @@
+         return self._grounded_query(origin)
+ 
+     def _grounded_query(self, origin):
+         if origin is None or origin == self._origin:
+             return self
+         return self._catalog.query(origin)
+ 
++    '''
+     def __str__(self):
+         return '%s for %s (catalog: %s)' % (self.__class__.__name__, self.origin, self._catalog.root)
++    '''
++    def _setup_background(self, bi):
++        self._debug('Setting up background interface')
++        try:
++            bi.setup_bm(self)
++        except AttributeError:
++            raise BackgroundSetup('Failed to configure background')
+ 
+     def _iface(self, itype, strict=False):
+         self._debug('Origin: %s' % self.origin)
+         if self._catalog is None:
+             raise NoCatalog
+         if itype in self._iface_cache:
+             self._debug('Returning cached iface')
+             yield self._iface_cache[itype]
+         for i in self._catalog.gen_interfaces(self._origin, itype, strict=strict):
+             if itype == 'background':  # all our background implementations must provide setup_bm(query)
+-                self._debug('Setting up background interface')
+-                try:
+-                    i.setup_bm(self)
+-                except AttributeError:
+-                    raise BackgroundSetup('Failed to configure background')
++                self._setup_background(i)
+ 
+             self._debug('yielding %s' % i)
+             self._iface_cache[itype] = i  # only cache the most recent iface
+             yield i
+ 
+     def _perform_query(self, itype, attrname, exc, *args, strict=False, **kwargs):
+         if itype is None:
+             raise BadInterfaceSpec(itype, attrname)  # itype = 'basic'  # fetch, get properties, uuid, reference
+ 
+         self._debug('Performing %s query, iface %s' % (attrname, itype))
++        message = 'itype %s required for attribute %s' % (itype, attrname)
+         try:
+             for iface in self._iface(itype, strict=strict):
+                 try:
+                     self._debug('Attempting %s query on iface %s' % (attrname, iface))
+                     result = getattr(iface, attrname)(*args, **kwargs)
++                    message = '(%s) %s' % (itype, attrname)  # implementation found
+                 except exc:  # allow nonimplementations to pass silently
+                     continue
+-                if result is not None:  #successful query must return something
++                if result is not None:  # successful query must return something
+                     return result
+         except NotImplementedError:
+             pass
+ 
+-        raise exc('itype %s required for attribute %s | %s' % (itype, attrname, args))
++        raise exc('%s: %s | %s' % (self.origin, message, args))
+ 
+     def resolve(self, itype=INTERFACE_TYPES, strict=False):
+         """
+         Secure access to all known resources but do not answer any query
+         :param itype: default: all interfaces
+         :param strict: [False]
+         :return:
+         """
+         for k in self._iface(itype, strict=strict):
+             yield k
+ 
+     def get(self, eid, **kwargs):
+         """
+         Retrieve entity by external Id. This will take any interface and should keep trying until it finds a match.
++        It first matches canonical entities, because that is the point of canonical entities.
+         :param eid: an external Id
+         :return:
+         """
+-        if eid not in self._entity_cache:
+-            entity = self._perform_query('basic', 'get', EntityNotFound, eid,
+-                                         **kwargs)
+-            self._entity_cache[eid] = self.make_ref(entity)
+-        return self._entity_cache[eid]
++        try:
++            return self._tm.get_canonical(eid)
++        except EntityNotFound:
++            entity = self._perform_query('basic', 'get', EntityNotFound, eid, **kwargs)
++            return self.make_ref(entity)
+ 
+     def get_reference(self, external_ref):
+-        k = (external_ref, True)
+-        if k not in self._entity_cache:
+-            ref = self._perform_query('basic', 'get_reference', EntityNotFound, external_ref)
+-            # quantity: unit
+-            # flow: quantity
+-            # process: list
+-            # fragment: fragment
+-            #[context: context]
+-            if ref is None:
+-                deref = None
+-            elif isinstance(ref, list):
+-                deref = [RxRef(self.make_ref(x.process), self.make_ref(x.flow), x.direction, x.comment) for x in ref]
+-            elif ref.entity_type == 'unit':
+-                deref = ref.unitstring
+-            else:
+-                deref = self.make_ref(ref)
+-            self._entity_cache[k] = deref
+-        return self._entity_cache[k]
++        ref = self._perform_query('basic', 'get_reference', EntityNotFound, external_ref)
++        # quantity: unit
++        # flow: quantity
++        # process: list
++        # fragment: fragment
++        # [context: context]
++        if ref is None:
++            deref = None
++        elif isinstance(ref, list):
++            deref = [RxRef(self.make_ref(x.process), self.make_ref(x.flow), x.direction, x.comment) for x in ref]
++        elif isinstance(ref, str):
++            deref = ref
++        elif ref.entity_type == 'unit':
++            deref = ref.unitstring
++        else:
++            deref = self.make_ref(ref)
++        return deref
+ 
+     '''
+     LCIA Support
+     get_canonical(quantity)
+     catch get_canonical calls to return the query from the local Qdb; fetch if absent and load its characterizations
+     (using super ==> _perform_query)
+     '''
++    def get_context(self, term, **kwargs):
++        cx = super(CatalogQuery, self).get_context(term, **kwargs)
++        return self._tm[cx]
++
+     def get_canonical(self, quantity, **kwargs):
+         try:
+             # print('Gone canonical')
+             q_can = self._tm.get_canonical(quantity)
+         except EntityNotFound:
+             if hasattr(quantity, 'entity_type') and quantity.entity_type == 'quantity':
+                 print('Missing canonical quantity-- adding to LciaDb')
+-                self._catalog.register_quantity_ref(quantity)
+-                q_can = self._tm.get_canonical(quantity)
++                self._catalog.register_entity_ref(quantity)
++                return self._tm.get_canonical(quantity)
+                 # print('Retrieving canonical %s' % q_can)
+             else:
+                 raise
+         return q_can
+ 
++    def characterize(self, flowable, ref_quantity, query_quantity, value, context=None, location='GLO', **kwargs):
++        """
++        This is an Xdb innovation: we do not need or want an implementation-specific characterize routine-- just like
++        with make_ref, the point of the catalog query is to localize all characterizations to the LciaEngine.
++
++        We simply duplicate the characterize() code from the core QuantityImplementation
++        :param flowable:
++        :param ref_quantity:
++        :param query_quantity:
++        :param value:
++        :param context:
++        :param location:
++        :param kwargs:
++        :return:
++        """
++        rq = self.get_canonical(ref_quantity)
++        qq = self.get_canonical(query_quantity)
++        origin = kwargs.pop('origin', self.origin)
++        print('@@@ going characterization-commando')
++        return self._tm.add_characterization(flowable, rq, qq, value, context=context, location=location,
++                                             origin=origin, **kwargs)
++
++    def clear_seen_characterizations(self, quantity):
++        """
++        An ugly hack to deal with the absolutely terrible way we are working around our slow-ass Qdb implementation
++        the proper solution is for qdb lookup to be local,  fast and correct, so as to not require caching at all.
++        :param quantity:
++        :return:
++        """
++        for i in self._iface_cache.values():
++            if i._archive:
++                for f in i._archive.entities_by_type('flow'):
++                    k = [cf for cf in f._chars_seen.keys() if cf[0] is quantity]
++                    for cf in k:
++                        f.pop_char(*cf)
++                    if f._query_ref:
++                        k = [cf for cf in f._query_ref._chars_seen.keys() if cf[0] is quantity]
++                        for cf in k:
++                            f._query_ref.pop_char(*cf)
++
+     def make_ref(self, entity):
+         if isinstance(entity, list):
+             return [self.make_ref(k) for k in entity]
+         if entity.entity_type == 'fragment':
+             # TODO: create a new ForegroundQuery to eliminate the need for this hack
+             return entity  # don't make references for fragments just now
+         if entity is None:
+@@ -217,10 +280,36 @@
+             try:
+                 e_ref = entity.make_ref(self._grounded_query(entity.origin))
+             except UnknownOrigin:
+                 e_ref = entity.make_ref(self)
+         else:
+             e_ref = entity  # already a ref
+         if entity.entity_type == 'quantity':
++            ''' # astonishingly, we don't want this - register but not return
+             # print('Going canonical')
+-            return self.get_canonical(e_ref)
+-        return e_ref
++            # astonishing because it's not true. 
++            Well. not exactly true.
++            
++            CatalogQueries should return canonical quantities. that is the point of the catalog.  The reason we didn't
++            want this was because we were using the catalog to access origin-specific data to re-serve it.  On the
++            server side, we thought we would want to keep track of all this- for veracity of the data, for provenance,
++            etc.  But in point of fact, there is NO CIRCUMSTANCE under which a user benefits from having 
++            origin-specific  versions of "mass" or "area".
++            
++            True, the data won't match the source.  but we will still RECOGNIZE the source because we will register the 
++            quantity terms with the term manager.  Which we WEREN"T doing before.
++            
++            A corollary of this is that CatalogQuery.get() should get_canonical FIRST
++            '''
++            try:
++                return self._tm.get_canonical(entity.link)
++            except EntityNotFound:
++                try:
++                    _ = self._tm.get_canonical(entity)
++                except EntityNotFound:
++                    self._catalog.register_entity_ref(e_ref)
++                    return self._tm.get_canonical(entity)
++                # print('@@@ Canonical quantity missing link-- adding direct to qm')  # I predict this never occurs
++                # in fact, it occurred several times immediately
++                return self._tm.add_quantity(entity)  # this will be identical to _ unless there is a unit conflict
++        else:
++            return e_ref
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/characterizations.py` & `antelope_core-0.2.0/antelope_core/characterizations.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -167,15 +167,15 @@
+                 found_locale = 'GLO'
+                 # today is not the day to write a location best-match finder
+         return found_locale
+ 
+     def query(self, locale):
+         found = self._lookup(locale)  # with the addition of LocaleMismatch, we should do away with this
+         if found is None:
+-            raise LocaleMismatch(list(self._locations.keys()))
++            raise LocaleMismatch(locale, list(self._locations.keys()))
+         return QRResult(self.flowable, self.ref_quantity, self.quantity, self.context, found,
+                         self.origin, self._locations[found])
+ 
+     def __getitem__(self, item):
+         if item == 'quantity':  # f%&(@*$ marshmallow hack
+             return self.quantity
+         if item == 'flow':  # ibid.
+@@ -214,35 +214,36 @@
+         self[location] = value
+ 
+     '''
+     def scale(self, factor):
+         for k, v in self._locations.items():
+             self._locations[k] = v * factor
+     '''
+-
++    @property
+     def locations(self):
+-        return self._locations.keys()
++        for k in self._locations.keys():
++            yield k
+ 
+     def list_locations(self):
+-        return '; '.join([k for k in self.locations()])
++        return '; '.join([k for k in self.locations])
+ 
+     def __hash__(self):
+         return hash((self.flowable, self.ref_quantity.external_ref, self.quantity.external_ref, self.context))
+ 
+     def __eq__(self, other):
+         """
+         Returns true if all of other's location-specific values equal self's values for the same location
+         :param other:
+         :return:
+         """
+         if other is None:
+             return False
+         if ((self.flowable == other.flowable) &
+                 (self.quantity == other.quantity)):
+-            if all(self[l] == other[l] for l in other.locations()):
++            if all(self[l] == other[l] for l in other.locations):
+                 return True
+         return False
+ 
+     def __str__(self):
+         if self.is_null:
+             return '%s has %s %s' % (self.flowable, self.quantity, self.quantity.reference_entity)
+         scs = []
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/contexts.py` & `antelope_core-0.2.0/antelope_core/contexts.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -33,15 +33,15 @@
+    all contexts, as long as a more applicable characterization is not found.
+  - on the query side, NullContext indicates that a context was specified but no match was found.  Queries with
+    NullContext should not match any existing characterizations (except NullContext itself).
+ 
+ The NullContext should be returned by the context manager
+ """
+ 
+-from synonym_dict import Compartment, CompartmentManager, NonSpecificCompartment
++from synonym_dict import Compartment, CompartmentManager, NonSpecificCompartment, TermExists
+ from synonym_dict.compartments.compartment import InvalidSubCompartment
+ from antelope import valid_sense
+ 
+ ELEMENTARY = {'elementary flows', 'resource', 'emission', 'resources', 'emissions'}
+ 
+ PROTECTED = ('air', 'water', 'ground')
+ 
+@@ -67,14 +67,21 @@
+ class FrozenElementary(Exception):
+     """
+     top-level elementary contexts may not be assigned non-elementary parents
+     """
+     pass
+ 
+ 
++class ImmutableContextName(Exception):
++    """
++    A context's hash comes from its name and thus the name may not be changed.
++    """
++    pass
++
++
+ def _dir_mod(arg, sense):
+     if arg.lower() in PROTECTED:
+         if sense is None:
+             raise ProtectedTerm(arg)
+         mod = {'Source': 'from ', 'Sink': 'to '}[sense]
+         arg = '%s%s' % (mod, arg)
+     return arg
+@@ -92,14 +99,37 @@
+     If a context has a parent, it inherits the sense of the parent- specifying the opposite sense will raise
+     an error.
+     """
+     _first_origin = None
+     entity_type = 'context'
+     _elem = None
+ 
++    def set_name(self, name):
++        raise ImmutableContextName('May not change canonical name for contexts')
++
++    def __iter__(self):
++        for k in self.as_list():
++            yield k
++
++    def __hash__(self):
++        return hash(self._id)  # don't mess with the hash
++
++    def __eq__(self, other):
++        if isinstance(other, str):
++            return self.name == other
++        try:
++            return tuple(self) == tuple(other)
++        except TypeError:
++            return False
++
++    def __len__(self):
++        if self.parent is None:
++            return 1
++        return self.parent.__len__() + 1
++
+     @property
+     def origin(self):
+         return self._first_origin
+ 
+     @staticmethod
+     def validate():
+         """
+@@ -254,15 +284,19 @@
+         :param canonical: recognized synonym for canonical context that should match the foreign one
+         :return:
+         """
+         c = self[canonical]
+         if c is None:
+             raise ValueError('Unrecognized canonical context %s' % c)
+         syn = '%s:%s' % (origin, term)
+-        self.add_synonym(c, syn)
++        try:
++            self.add_synonym(c, syn)
++        except TermExists:
++            self.del_term(syn)
++            self.add_synonym(c, syn)
+ 
+     def new_entry(self, *args, parent=None, **kwargs):
+         args = tuple(filter(None, args))
+         if parent is not None:
+             if not isinstance(parent, Compartment):
+                 parent = self._d[parent]
+             if parent.sense is not None:
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/data_sources/data_source.py` & `antelope_core-0.2.0/antelope_core/data_sources/data_source.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -34,29 +34,29 @@
+             if info.init_args is not None:
+                 kwargs.update(info.init_args)
+         if ds_type is None:
+             ds_type = self._ds_type
+         return LcResource(ref, source, ds_type, **kwargs)
+ 
+     def register_all_resources(self, cat):
+-        for ref in self.references:
++        for ref in self.origins:
+             for res in self.make_resources(ref):
+                 cat.add_resource(res)
+ 
+     @property
+-    def references(self):
++    def origins(self):
+         """
+-        Generates a list of semantic references the DataSource knows how to instantiate
++        Generates a list of semantic origins the DataSource knows how to instantiate
+         :return:
+         """
+         raise NotImplementedError
+ 
+     def interfaces(self, ref):
+         """
+-        Generates a list of interfaces known for the given reference. the reference must be in the list of references.
++        Generates a list of interfaces known for the given reference. the reference must be in the list of origins.
+         :param ref:
+         :return:
+         """
+         raise NotImplementedError
+ 
+     def make_resources(self, ref):
+         """
+@@ -107,21 +107,21 @@
+     def factory(self, *args, **kwargs):
+         raise NotImplementedError
+ 
+     def __init__(self, data_root, **kwargs):
+         super(DataCollection, self).__init__(data_root, **kwargs)
+         self._sources = dict()
+         for b in self.factory(data_root, **kwargs):
+-            for r in b.references:
++            for r in b.origins:
+                 if r in self._sources:
+                     raise KeyError('Duplicate reference %s' % r)
+                 self._sources[r] = b
+ 
+     @property
+-    def references(self):
++    def origins(self):
+         for s in self._sources.keys():
+             yield s
+ 
+     def interfaces(self, ref):
+         b = self._sources[ref]
+         for i in b.interfaces(ref):
+             yield i
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/data_sources/ecoinvent.py` & `antelope_core-0.2.0/antelope_core/data_sources/ecoinvent.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -32,41 +32,41 @@
+     _ds_type = 'EcospoldV1Archive'
+ 
+     def __init__(self, data_root, version, **kwargs):
+         super(Ecoinvent2Base, self).__init__(data_root=data_root, **kwargs)
+         self._version = version
+ 
+     @property
+-    def references(self):
++    def origins(self):
+         """
+-        Generates a list of semantic references the DataSource knows how to instantiate
++        Generates a list of semantic origins the DataSource knows how to instantiate
+         :return:
+         """
+         yield 'local.ecoinvent.%s' % self._version
+ 
+     def interfaces(self, ref):
+         """
+-        Generates a list of interfaces known for the given reference. the reference must be in the list of references.
++        Generates a list of interfaces known for the given reference. the reference must be in the list of origins.
+         :param ref:
+         :return:
+         """
+-        for k in ('exchange', 'quantity'):
++        for k in ('basic', 'exchange', 'quantity'):
+             yield k
+ 
+     @property
+     def source(self):
+         return os.path.join(self.root, self._version, 'datasets')
+ 
+     def make_resources(self, ref):
+         """
+         Generates an exhaustive sequence of LcResource objects for a given reference.
+         :param ref:
+         :return:
+         """
+-        ref = next(self.references)
++        ref = next(self.origins)
+         yield self._make_resource(ref, self.source, interfaces=tuple(self.interfaces(ref)), config=E_CFG)
+ 
+ 
+ class Ecoinvent3Base(DataSource):
+ 
+     _ds_type = 'EcospoldV2Archive'
+ 
+@@ -83,21 +83,22 @@
+ 
+     @property
+     def _inv_ref(self):
+         if self.inv_source is not None:
+             yield 'local.ecoinvent.%s.%s' % (self._version, self._model)
+ 
+     @property
+-    def references(self):
++    def origins(self):
+         for x in self._lci_ref:
+             yield x
+         for x in self._inv_ref:
+             yield x
+ 
+     def interfaces(self, ref):
++        yield 'basic'
+         yield 'exchange'
+ 
+     def make_resources(self, ref):
+         if ref in self._lci_ref:
+             yield self._make_resource(ref, self.lci_source, interfaces='exchange', prefix='datasets', config=E_CFG)
+         elif ref in self._inv_ref:
+             if self._model == 'undefined':
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/data_sources/ecoinvent_lcia.py` & `antelope_core-0.2.0/antelope_core/data_sources/ecoinvent_lcia.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -15,36 +15,36 @@
+ E_CFG = {'hints': [  # cover elementary contexts that need directional hints
+     ['context', 'air', 'to air'],
+     ['context', 'water', 'to water']
+ ]}
+ 
+ 
+ class EcoinventLciaConfig(DataSource):
+-    _ifaces = ('index', 'quantity')
++    _ifaces = ('basic', 'index', 'quantity')
+     _ds_type = 'EcoinventLcia'
+ 
+     def __init__(self, data_root, version, **kwargs):
+         self._version = str(version)
+         try:
+             self._sourcefile = EI_LCIA_SPREADSHEETS[self._version]
+         except KeyError:
+             self._sourcefile = None
+         super(EcoinventLciaConfig, self).__init__(data_root, **kwargs)
+ 
+     @property
+-    def references(self):
++    def origins(self):
+         if self._sourcefile is not None:
+             if os.path.exists(os.path.join(self._root, self._sourcefile)):
+                 yield '.'.join(['local', 'lcia', 'ecoinvent', self._version])
+ 
+     def interfaces(self, ref):
+         for k in self._ifaces:
+             yield k
+ 
+     def make_resources(self, ref):
+-        if ref not in self.references:
++        if ref not in self.origins:
+             raise ValueError('Unknown reference %s' % ref)
+         if self._sourcefile is None:
+-            raise AttributeError('This exception should never occur')  # because self.references screens self._info
++            raise AttributeError('This exception should never occur')  # because self.origins screens self._info
+         source = os.path.join(self._root, self._sourcefile)
+         yield self._make_resource(ref, source=source, interfaces=self._ifaces, version=self._version, static=True,
+                                   config=E_CFG)
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/data_sources/gwp_ipcc_2007.py` & `antelope_core-0.2.0/antelope_core/data_sources/gwp_ipcc_2007.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -10,26 +10,26 @@
+                              {'hints': [['context', 'air', 'to air']]}, {})
+ 
+ 
+ class GwpIpcc2007(DataSource):
+     _ds_type = 'json'
+ 
+     @property
+-    def references(self):
++    def origins(self):
+         """
+         There's a precedence issue here, becaue the class MUST yield the same reference name as what's encoded in
+         the JSON file, but it is wasteful to load the JSON file just to learn the canonical ref.  The "proper" way to
+         do this is to [better] manage the workflow by which the JSON file is created (i.e. in antelope_utilities)
+         and then use the same ref for both paths.
+ 
+         heh- I hint at this challenge in the definite source by naming it AUTHORIZED_REF
+         :return:
+         """
+         yield IPCC_2007_TRACI_REF
+ 
+     def interfaces(self, ref=IPCC_2007_TRACI_REF):
+-        for i in ('index', 'quantity'):
++        for i in ('basic', 'index', 'quantity'):
+             yield i
+ 
+     def make_resources(self, ref=IPCC_2007_TRACI_REF):
+-        if ref in self.references:
++        if ref in self.origins:
+             yield self._make_resource(ref, info=gwp_ipcc_2007, interfaces=self.interfaces(), static=True)
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/data_sources/local.py` & `antelope_core-0.2.0/antelope_core/data_sources/local.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/data_sources/tests/test_aa_local.py` & `antelope_core-0.2.0/antelope_core/data_sources/tests/test_aa_local.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -56,54 +56,54 @@
+         :return:
+         """
+         self.assertTrue(os.path.isdir(CATALOG_ROOT))
+         self.assertTrue(os.path.isdir(resource_dir))
+         self.assertTrue(os.path.exists(os.path.join(CATALOG_ROOT, 'reference-quantities.json')))
+ 
+     def _check_reference(self, ref):
+-        return ref in self._cat.references
++        return ref in self._cat.origins
+ 
+     def _check_interface(self, ref, iface):
+         return ':'.join([ref, iface]) in self._cat.interfaces
+ 
+     def test_a_make_resources(self):
+         """
+         Installs the resources from the config specifications, but only if the resources do not already exist.
+         Something that's needed here is a way to update resources if the DataSource subclasses change-- presently the
+         only way to do that is to delete the resources (and also any derived source files like indexes or backgrounds)
+         This should simply run without errors, resulting in the creation of any missing resources
+         :return:
+         """
+         # k is resource signifier, s is DataSource subclass
+         for k, s in self._configs.items():
+-            for ref in s.references:
++            for ref in s.origins:
+                 if not self._check_reference(ref):
+                     for res in s.make_resources(ref):
+                         self._cat.add_resource(res)
+ 
+     def test_b_number_of_resources(self):
+         """
+         This function checks that the number of resources created is correct
+         :return:
+         """
+         # k is resource signifier, s is DataSource subclass
+         for k, s in self._configs.items():
+-            for ref in s.references:
++            for ref in s.origins:
+                 nres = len([i for i in s.make_resources(ref)])
+                 with open(os.path.join(resource_dir, ref), 'r') as fp:
+                     xres = len(json.load(fp)[ref])
+                 self.assertEqual(nres, xres, ref)
+ 
+     def test_c_instantiate_ifaces(self):
+         """
+         This confirms that each interface specified can be created
+         :return:
+         """
+         for k, s in self._configs.items():
+-            for ref in s.references:
++            for ref in s.origins:
+                 for iface in s.interfaces(ref):
+                     iface = zap_inventory(iface, warn=False)
+                     res = self._cat.get_resource(ref, iface, strict=True)
+                     print(res)
+                     res.check(self._cat)
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/data_sources/tests/test_ecoinvent.py` & `antelope_core-0.2.0/antelope_core/data_sources/tests/test_ecoinvent.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -23,15 +23,15 @@
+ @unittest.skipIf(~_run_ecoinvent, 'Ecoinvent test skipped')
+ class EcoinventDataSourceTest(unittest.TestCase):
+     @classmethod
+     def setUpClass(cls):
+         ar = []
+         for ref in test_refs.keys():
+             res = next(cfg.make_resources(ref))
+-            if ref not in cat.references:
++            if ref not in cat.origins:
+                 cat.add_resource(res)
+             res.check(cat)
+             res.archive.load_flows()
+             ar.append(res.archive)
+         cls.ea = tuple(ar)
+ 
+     def test_nproc(self):
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/data_sources/tests/test_ecoinvent_lci.py` & `antelope_core-0.2.0/antelope_core/data_sources/tests/test_ecoinvent_lci.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/data_sources/tests/test_ipcc2007.py` & `antelope_core-0.2.0/antelope_core/data_sources/tests/test_ipcc2007.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -5,24 +5,24 @@
+ 
+ 
+ _run_test = check_enabled('ipcc2007')
+ 
+ 
+ if _run_test:
+     cfg = make_config('ipcc2007')
+-    ref = next(cfg.references)
++    org = next(cfg.origins)
+ 
+ 
+ class GwpIpcc2007Test(unittest.TestCase):
+     @classmethod
+     def setUpClass(cls):
+-        cls.query = cat.query(ref)
++        cls.query = cat.query(org)
+ 
+     def test_resources_exist(self):
+-        self.assertIn(ref, cat.references)
++        self.assertIn(org, cat.origins)
+ 
+     def test_num_entities(self):
+         self.assertEqual(self.query.count('quantity'), 2)
+         self.assertEqual(self.query.count('flow'), 0)
+ 
+     def test_gwp(self):
+         gwp = next(self.query.lcia_methods())
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/data_sources/tests/test_uslci.py` & `antelope_core-0.2.0/antelope_core/data_sources/tests/test_uslci.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -40,14 +40,16 @@
+ 
+         """
+         _atype = None
+         _initial_count = (0, 0, 0)
+         _bg_len = None
+         _ex_len = None
+         _test_case_lcia = 0.0
++        _test_case_observed_flow = None
++        _test_case_lcia_observed = 0.0
+ 
+         _petro_name = 'Petroleum refining, at refinery [RNA]'
+ 
+         _petro_rx_values = set()
+ 
+ 
+         @property
+@@ -59,25 +61,25 @@
+             return '.'.join([self.reference, 'index'])
+ 
+         @property
+         def query(self):
+             return cat.query(self.reference)
+ 
+         def test_00_resources_exist(self):
+-            self.assertIn(self.reference, cat.references)
++            self.assertIn(self.reference, cat.origins)
+ 
+         def test_01_initial_count(self):
+             ar = cat.get_archive(self.reference, strict=True)
+             for i, k in enumerate(etypes):
+                 self.assertEqual(ar.count_by_type(k), self._initial_count[i])
+ 
+         def test_10_index(self):
+             inx_ref = cat.index_ref(self.reference, force=True)
+             self.assertTrue(inx_ref.startswith(self.inx_reference))
+-            self.assertIn(inx_ref, cat.references)
++            self.assertIn(inx_ref, cat.origins)
+ 
+         def _get_petro(self):
+             return next(self.query.processes(Name='petroleum refining, at refinery'))
+ 
+         def _preferred(self):
+             yield self._get_petro()
+ 
+@@ -96,24 +98,28 @@
+             p = next(self.query.processes(Name='Seedlings, at greenhouse, US PNW'))
+             return p.reference()
+ 
+         def _get_fg_test_case_lci(self):
+             rx = self._get_fg_test_case_rx()
+             return [x for x in self.query.lci(rx.process.external_ref, rx.flow.external_ref)]
+ 
++        def _get_fg_test_case_observed(self):
++            rx = self._get_fg_test_case_rx()
++            return rx.process.exchange_values(self._test_case_observed_flow)
++
+         def test_21_exchange_relation(self):
+             rx = self._get_fg_test_case_rx()
+             k = next(self.query.flows(Name='CUTOFF Potassium fertilizer, production mix, at plant'))
+             v = self.query.exchange_relation(rx.process.external_ref, rx.flow.external_ref, k.external_ref, 'Input')
+             self.assertEqual(v, 0.000175)
+ 
+         def test_22_petro_allocation(self):
+             p = self._get_petro()
+             self.assertEqual(len(p.reference_entity), len(self._petro_rx_values))
+-            rx_vals = set(round(next(p.exchange_values(rx.flow)).value, 6) for rx in p.references())
++            rx_vals = set(round(p.reference_value(rx.flow), 6) for rx in p.references())
+             self.assertSetEqual(rx_vals, self._petro_rx_values)
+ 
+         @unittest.skipIf(lci is False, "no background")
+         def test_30_bg_gen(self):
+             preferred = list((rx.flow.external_ref, p.external_ref) for p in self._preferred() for rx in p.references())
+             self.assertTrue(self.query.check_bg(reset=True, prefer=preferred))
+ 
+@@ -132,22 +138,39 @@
+         @unittest.skipIf(lci is False, "no background")
+         def test_40_lcia_fg(self):
+             if gwp:
+                 lci = self._get_fg_test_case_lci()
+                 res = gwp.do_lcia(lci)
+                 self.assertAlmostEqual(res.total(), self._test_case_lcia)
+ 
++        @unittest.skipIf(lci is False, "no background")
++        def test_41_lcia_bg(self):
++            if gwp:
++                rx = self._get_fg_test_case_rx()
++                res = rx.process.bg_lcia(gwp)
++                self.assertAlmostEqual(res.total(), self._test_case_lcia)
++
++        @unittest.skipIf(lci is False, "no background")
++        def test_42_lcia_bg_observed(self):
++            if gwp:
++                rx = self._get_fg_test_case_rx()
++                obs = self._get_fg_test_case_observed()
++                res = rx.process.bg_lcia(gwp, observed=obs)
++                self.assertAlmostEqual(res.total(), self._test_case_lcia_observed)
++
+ 
+ class UsLciEcospoldTest(UsLciTestContainer.UsLciTestBase):
+ 
+     _atype = 'ecospold'
+     _initial_count = (5, 97, 5)
+     _bg_len = 38
+     _ex_len = 3285
+     _test_case_lcia = 0.0415466  # more robust bc of ocean freight??
++    _test_case_observed_flow = '5233'
++    _test_case_lcia_observed = 0.0247817
+ 
+     _petro_rx_values = {0.037175, 0.049083, 0.051454, 0.051826, 0.059594, 0.061169, 0.112458, 0.252345, 0.570087}
+ 
+     def test_get_by_id(self):
+         f = self.query.get(2176)  # this flow was loaded via the config mechanism
+         pvs = [k.value for k in f.profile()]
+         self.assertGreaterEqual(len(pvs), 1)
+@@ -157,14 +180,16 @@
+ class UsLciOlcaTest(UsLciTestContainer.UsLciTestBase):
+ 
+     _atype = 'olca'
+     _initial_count = (8, 71, 3)  # 4 physical quantities + 4 alloc quantities
+     _bg_len = 36
+     _ex_len = 3680  # a "Diesel, at refinery" flow was incorrectly duplicated to exterior
+     _test_case_lcia = .04110577
++    _test_case_observed_flow = 'bc38e349-1ccf-3855-a615-a4f581ab875b'
++    _test_case_lcia_observed = 0.02476284
+ 
+     # volume unit is m3 in olca, versus l in ecospold
+     _petro_rx_values = {4.9e-05, 5.2e-05, 0.000112, 0.000252, 0.00057, 0.037175, 0.051454, 0.059594, 0.061169}
+ 
+     def _preferred(self):
+         yield self._get_petro()
+         yield self.query.get('cdc143eb-fff8-3618-85cd-bce83d96390f')  # veneer, at veneer mill, preferred for wood fuel
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/data_sources/traci.py` & `antelope_core-0.2.0/antelope_core/data_sources/traci.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -19,23 +19,23 @@
+     ['context', 'water', 'to water']
+ ]}
+ 
+ 
+ class TraciConfig(DataSource):
+ 
+     _prefix = 'local.lcia.traci'
+-    _ifaces = ('index', 'quantity')
++    _ifaces = ('basic', 'index', 'quantity')
+ 
+     @property
+-    def references(self):
++    def origins(self):
+         for k in TRACI_VERSIONS.keys():
+             yield '.'.join([self._prefix, k])
+ 
+     def interfaces(self, ref):
+-        if ref in self.references:
++        if ref in self.origins:
+             for k in self._ifaces:
+                 yield k
+ 
+     def _trim_origin(self, origin):
+         gen = (_part for _part in origin.split('.'))
+         for z in self._prefix.split('.'):
+             if z != next(gen):
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/data_sources/uslci/uslci.py` & `antelope_core-0.2.0/antelope_core/data_sources/uslci/uslci.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -160,27 +160,27 @@
+                                  'ns_uuid': '96386cae-b651-47ca-8fcd-d3a1aebd6034'
+                              })}
+ 
+ 
+ class UsLciConfig(DataSource):
+ 
+     prefix = 'local.uslci'
+-    _ifaces = ('exchange', 'quantity')
++    _ifaces = ('basic', 'exchange', 'quantity')
+ 
+     def _ref(self, fmt):
+         return '.'.join([self.prefix, fmt])
+ 
+     @property
+-    def references(self):
++    def origins(self):
+         for f in VALID_FORMATS:
+             yield self._ref(f)
+ 
+     def interfaces(self, ref):
+         for k in self._ifaces:
+             yield k
+ 
+     def make_resources(self, ref):
+-        if ref not in self.references:
++        if ref not in self.origins:
+             raise ValueError('Unknown reference %s' % ref)
+         fmt = ref.split('.')[-1]
+         info = INFO[fmt]
+         yield self._make_resource(ref, info=info, interfaces=self._ifaces)
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/entities/entities.py` & `antelope_core-0.2.0/antelope_core/entities/entities.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -228,29 +228,32 @@
+         if domesticate or self._origin is None:
+             j.pop('origin')
+         for k, v in self._d.items():
+             if k in drop_fields:
+                 continue
+             if v is None:
+                 continue
++            elif isinstance(v, tuple):
++                j[k] = list(v)
+             elif isinstance(v, list):
+                 j[k] = v
+             elif isinstance(v, set):
+                 j[k] = sorted(list(v))
+             elif isinstance(v, Number):
+                 j[k] = v
+             elif isinstance(v, bool):
+                 j[k] = v
+-            elif isinstance(v, LcEntity):
++            elif isinstance(v, BaseEntity):
+                 j[k] = {"origin": v.origin,
+                         "externalId": v.external_ref,
+                         "entity_type": v.entity_type}
+             elif isinstance(v, dict):
+                 j[k] = v
+             else:
++                # this is a .. robust if dangerous default
+                 j[k] = str(v)
+         return j
+ 
+     def __getitem__(self, item):
+         if item.lower() == self._ref_field.lower():
+             return self.reference_entity
+         elif item == 'EntityType':
+@@ -286,15 +289,15 @@
+             #     print('Merging entities with differing origin: \nnew: %s\nexisting: %s'% (other.origin, self.origin))
+             for k in other.properties():
+                 if k not in self._d.keys():
+                     print('Merge: Adding key %s: %s' % (k, other[k]))
+                     self[k] = other[k]
+ 
+     def show(self):
+-        print('%s Entity (ref %s)' % (self.entity_type.title(), self.external_ref))
++        print('%s Entity (ref %s)' % (self.__class__.__name__, self.external_ref))
+         print('origin: %s' % self.origin)
+         if self.entity_type == 'process':
+             for i in self.reference_entity:
+                 print('reference: %s' % i)
+         else:
+             print('reference: %s' % self.reference_entity)
+         fix = ['Name', 'Comment']
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/entities/flows.py` & `antelope_core-0.2.0/antelope_core/entities/flows.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -46,39 +46,42 @@
+         super(LcFlow, self).__setitem__(key, value)
+ 
+     @LcEntity.origin.setter
+     def origin(self, value):  # pycharm lint is documented bug: https://youtrack.jetbrains.com/issue/PY-12803
+         LcEntity.origin.fset(self, value)
+         self._flowable.add_term(self.link)
+ 
+-    def __init__(self, external_ref, **kwargs):
++    def __init__(self, external_ref, is_co2=None, **kwargs):
++        if is_co2:
++            self.is_co2 = True
+         super(LcFlow, self).__init__('flow', external_ref, **kwargs)
+ 
+         for k in self._new_fields:
+             if k not in self._d:
+                 self._d[k] = ''
+-        self._chars_seen = dict()
++
++        if self.reference_entity is None:
++            print('Warning: no reference quantity for flow %s' % external_ref)
+ 
+     def make_ref(self, query):
+         if self._query_ref is None:
+             d = dict()
+             for k in self.signature_fields():
+                 if k == self._ref_field:
+                     continue
+                 if k in self._d:
+                     d[k] = self._d[k]
+             self._query_ref = CatalogRef.from_query(self.external_ref, query, self.entity_type,
+                                                     uuid=self.uuid, **d)
+             self._query_ref.context = self.context
+             for k, v in self._chars_seen.items():
+-                self._query_ref.see_char(*k, v)
++                self._query_ref._chars_seen[k] = v  # this is hacky obv
+ 
+         return self._query_ref
+ 
+-
+     def __str__(self):
+         cas = self.get('CasNumber')
+         if cas is None:
+             cas = ''
+         if len(cas) > 0:
+             cas = ' (CAS ' + cas + ')'
+         context = '[%s]' % ';'.join(self.context)
+@@ -101,17 +104,20 @@
+         if quantity.entity_type == 'quantity':
+             return quantity.cf(self, **kwargs)
+         elif quantity.entity_type == 'flow':
+             return quantity.reference_entity.cf(self, **kwargs)
+         else:
+             raise TypeError('Invalid argument %s' % quantity)
+ 
++    '''
++    This is now done in Flow interface
+     def see_char(self, qq, cx, loc, qrr):
+         self._chars_seen[qq, cx, loc] = qrr
+         if self._query_ref is not None:
+             self._query_ref.see_char(qq, cx, loc, qrr)
+ 
+     def chk_char(self, qq, cx, loc):
+         return self._chars_seen[qq, cx, loc]
+ 
+     def pop_char(self, qq, cx, loc):
+         return self._chars_seen.pop((qq, cx, loc), None)
++    '''
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/entities/processes.py` & `antelope_core-0.2.0/antelope_core/entities/processes.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -548,17 +548,17 @@
+         :return:
+         """
+         dirn = check_direction(dirn)
+         if (flow.external_ref, dirn) in self._reference_entity:
+             raise AlreadyAReference((flow, dirn))
+         _x = hash((self.external_ref, flow.external_ref, dirn, termination))
+         if _x in self._exchanges:
+-            if value is None or value == 0:
+-                return None
+             e = self._exchanges[_x]
++            if value is None or value == 0:
++                return e  # the client code *never* expects None
+             if reference is None:
+                 if isinstance(value, dict):
+                     e.update(value)
+                 else:
+                     try:
+                         e.value = value  # this will catch already-set errors
+                     except DuplicateExchangeError:
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/entities/quantities.py` & `antelope_core-0.2.0/antelope_core/entities/quantities.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -107,14 +107,20 @@
+ 
+ 
+     """
+     Quantity Interface Methods
+     Quantity entities use the quantity interface provided by the parent archive; this emulates the operation of 
+     quantity refs, which have access to the catalog.
+     """
++    def has_lcia_engine(self):
++        return self._qi.is_lcia_engine()
++
++    def canonical(self):
++        return self._qi.get_canonical(self)
++
+     def cf(self, flow, locale='GLO', **kwargs):
+         """
+         The semantics here may be confusing, but cf is flow-centered. It converts reports the amount in self that
+         corresponds to a unit of the flow's reference quantity.
+         :param flow:
+         :param locale:
+         :param kwargs:
+@@ -141,14 +147,17 @@
+ 
+     def do_lcia(self, inventory, **kwargs):
+         return self._qi.do_lcia(self, inventory, **kwargs)
+ 
+     def convert(self, from_unit=None, to=None):
+         return convert(self, from_unit, to)
+ 
++    def quantity_relation(self, flowable, ref_quantity, context, locale='GLO', **kwargs):
++        return self._qi.quantity_relation(flowable, ref_quantity, self, context, locale=locale, **kwargs)
++
+     """
+     Interior utility functions
+     These are not exactly exposed by the quantity interface and maybe should be retired
+     """
+ 
+     def _print_ref_field(self):
+         return self.reference_entity.unitstring
+@@ -218,12 +227,16 @@
+         return '%s' % self._unitstring if self._external_ref is None else self._external_ref
+ 
+     @property
+     def unitstring(self):
+         return self._unitstring
+ 
+     def __str__(self):
+-        return '[%s]' % self._unitstring
++        return self._unitstring
++        # return '[%s]' % self._unitstring  ## good god man, why?
+ 
+     def reset_unitstring(self, ustring):
+         self._external_ref = ustring
+         self._unitstring = ustring
++
++
++MetaQuantityUnit = LcUnit("0")  # singleton unit for non-quantities (i.e. LCIA Methodologies) that contain quantities
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/entities/tests/base_testclass.py` & `antelope_core-0.2.0/antelope_core/entities/tests/base_testclass.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/entities/tests/test_archive.json` & `antelope_core-0.2.0/antelope_core/entities/tests/test_archive.json`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/entities/tests/test_entities.py` & `antelope_core-0.2.0/antelope_core/entities/tests/test_entities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/entities/tests/test_entity_refs.py` & `antelope_core-0.2.0/antelope_core/entities/tests/test_entity_refs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/entities/tests/test_processes.py` & `antelope_core-0.2.0/antelope_core/entities/tests/test_processes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/entities/tests/test_quantities.py` & `antelope_core-0.2.0/antelope_core/entities/tests/test_quantities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/entities/xlsx_editor.py` & `antelope_core-0.2.0/antelope_core/entities/xlsx_editor.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -245,19 +245,24 @@
+     def _process_flow_properties(self):
+         fp, headers = self._sheet_accessor('flowproperties')
+         if fp is None:
+             return
+ 
+         for row in range(1, fp.nrows):
+             rowdata = {headers[i]: self._grab_value(k) for i, k in enumerate(fp.row(row)[:len(headers)])}
++            if len(rowdata) == 0:
++                continue
+             try:
+                 flow = self.get_flow(rowdata['flow'])
+             except EntityNotFound:
+                 self._print('Skipping unknown flow %s' % rowdata['flow'])
+                 continue
++            if flow is None:
++                self._print('Skipping unknown flow %s' % rowdata['flow'])
++                continue
+             rq_spec = rowdata.pop('ref_quantity', None)
+             if rq_spec is not None:
+                 try:
+                     rq = self.qi.get_canonical(rq_spec)
+                 except EntityNotFound:
+                     print('%s Skipping record with invalid ref quantity %s' % (rowdata['flow'], rq_spec))
+                     continue
+@@ -293,38 +298,39 @@
+                 continue
+ 
+             refunit = rowdata.pop('ref_unit', None)
+             if refunit is not None:
+                 try:
+                     value *= convert(rq, to=refunit)
+                 except KeyError as e:
+-                    print(e.args)
++                    print('flowproperties|row: %d ref unit %s' % (row+1, e.args))
+                     continue
+ 
+             unit = rowdata.pop('unit', None)
+             if unit is not None:
+                 try:
+                     value *= convert(qq, from_unit=unit)
+                 except KeyError as e:
+-                    print(e.args)
++                    print('flowproperties|row: %d: target unit %s' % (row+1, e.args))
+                     continue
+ 
+             if self._merge == 'overwrite':
+                 flow.characterize(qq, value=value, context=cx, overwrite=True, origin=self.origin, location=loc)
+                 self._print('Characterizing %s: %g %s / %s' % (flow, value, qq.unit, rq.unit))
+             else:
+                 try:
+                     flow.characterize(qq, value=value, context=cx)
+                     self._print('Characterizing %s: %g %s / %s' % (flow, value, qq.unit, rq.unit))
+                 except DuplicateCharacterizationError:
+                     self._print('Deferring to existing CF')
+                     continue
+ 
+     _vn = {'flow': 'flows',
+-           'quantity': 'quantities'}
++           'quantity': 'quantities',
++           'flows': '_flows'}
+ 
+     def _sheet_accessor(self, sheetname):
+         """
+         Returns a 2-tuple of sheet, headers
+         'sheet' must be an "xlrd.Sheet-like" object that implements the following very simple API:
+          sheet.nrows - returns number of rows
+          sheet.row(n) - returns the contents of the nth row in a list of "cell-like" objects
+@@ -354,14 +360,16 @@
+ 
+         sh, headers = self._sheet_accessor(etype)
+         if sh is None:
+             return
+ 
+         for row in range(1, sh.nrows):
+             rowdata = {headers[i]: self._grab_value(k) for i, k in enumerate(sh.row(row))}
++            if len(rowdata) == 0:
++                continue
+             ent = self.ar[rowdata['external_ref']]
+             if etype == 'quantity' and ent is None:
+                 try:
+                     ent = self.qi.get_canonical(rowdata['external_ref'])
+                     self.ar.add_entity_and_children(ent)  # this ignores EntityExists
+                 except EntityNotFound:
+                     ent = None
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/exchanges.py` & `antelope_core-0.2.0/antelope_core/exchanges.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -146,24 +146,32 @@
+         return self._direction
+ 
+     @property
+     def termination(self):
+         return self._termination
+ 
+     @property
++    def term_ref(self):
++        if isinstance(self._termination, Context):
++            return tuple(self._termination)
++        else:
++            return self._termination
++
++
++    @property
+     def key(self):
+         return self._hash
+ 
+     @property
+     def lkey(self):
+         """
+-        Long key, for testing equality-- more robust than a hash
++        Long key, for testing equality with exchange refs whose terminations may be tuples
+         :return:
+         """
+-        return self.flow.external_ref, self._direction, self._termination  # self._hash_tuple
++        return self.flow.external_ref, self._direction, self.term_ref  # self._hash_tuple
+ 
+     def is_allocated(self, reference):
+         """
+         Stub for compatibility
+         :param reference:
+         :return:
+         """
+@@ -199,24 +207,29 @@
+ 
+     @property
+     def type(self):
+         if self.is_reference:
+             return 'reference'
+         elif self.termination is not None:
+             if isinstance(self.termination, Context):
+-                if self.termination.elementary:
+-                    return 'elementary'
+                 return 'context'
+             elif self.termination == self.process.external_ref:
+                 return 'self'
+             else:
+                 return 'node'
+         return 'cutoff'
+ 
+     @property
++    def is_elementary(self):
++        if isinstance(self.termination, Context):
++            return self.termination.elementary
++        else:
++            return False
++
++    @property
+     def term_ref(self):
+         if self.termination is None:
+             return None
+         if isinstance(self.termination, Context):
+             return self.termination.name
+         return self.termination
+ 
+@@ -228,22 +241,24 @@
+          '   ' - cutoff
+          '(=)' - elementary context
+          '(-)' - other context
+          '(o)' - terminated to self
+          '(#)' - terminated to other node
+         :return:
+         """
+-        tmark = {
++        if self.is_elementary:
++            tmark = '(=)'
++        else:
++            tmark = {
+             'reference': '{*} ',
+             'cutoff': '    ',
+             'self': '(o) ',
+-            'elementary': '(=) ',
+             'context': '(-) ',
+             'node': '(#) '
+-        }[self.type]
++            }[self.type]
+         return tmark + str(self.flow)
+ 
+     def __str__(self):
+         return '%s has %s: %s %s' % (self.process, self.direction, self._tflow, self.unit)
+ 
+     def f_view(self):
+         return '%s of %s' % (self.direction, self.process)
+@@ -363,14 +378,25 @@
+         :return:
+         """
+         if self._value is not None:
+             raise DuplicateExchangeError('Unallocated exchange value already set to %g (new: %g)' % (self._value,
+                                                                                                      exch_val))
+         self._value = exch_val
+ 
++    @property
++    def values(self):
++        """
++        Some Good Question here about what to use for the key part- can't go wrong with str
++        :return:
++        """
++        rtn = {k.flow.external_ref: v for k, v in self._value_dict.items()}
++        if self._value is not None:
++            rtn[None] = self._value
++        return rtn
++
+     def is_allocated(self, key):
+         """
+         Report whether the exchange is allocated with respect to a given reference.
+         :param key: an exchange
+         :return:
+         """
+         if len(self._value_dict) > 0:
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/from_json.py` & `antelope_core-0.2.0/antelope_core/from_json.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/implementations/background.py` & `antelope_core-0.2.0/antelope_core/implementations/background.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -76,37 +76,38 @@
+                 if search_skip(p, search):
+                     continue
+                 yield rx  # ProductFlow(self._archive.ref, rx.flow, rx.direction, p, None) don't need this
+ 
+     def exterior_flows(self, direction=None, search=None, **kwargs):
+         """
+         Exterior flows are all flows that do not have interior terminations (i.e. not found in the index targets)
+-        Since contexts are still in limbo, we need a default directionality (or some way to establish directionality
+-        for compartments..) but for now let's just use default 'output' for all exterior flows
++        Elementary contexts have a sense, but intermediate contexts do not [necessarily]- so we need some way to
++        determine their directionality.  This whole implementation is just a stand-in anyway- the important thing
++        is that this is handled correctly in tarjan
+         :param direction:
+         :param search:
+         :param kwargs:
+         :return:
+         """
+         self.check_bg()
+         for f in self._index.flows():
+             if search_skip(f, search):
+                 continue
+             try:
+                 next(self._index.targets(f.external_ref, direction=direction))
+             except StopIteration:
+                 cx = self._index.get_context(f.context)
+-                dir = comp_dir(cx.sense)
++                dirn = comp_dir(cx.sense)  # this is already w.r.t. interior
+                 '''
+                 if self.is_elementary(f):
+                     yield ExteriorFlow(self._archive.ref, f, 'Output', f['Compartment'])
+                 else:
+                     yield ExteriorFlow(self._archive.ref, f, 'Output', None)
+                 '''
+-                yield ExteriorFlow(self._archive.ref, f, dir, cx)
++                yield ExteriorFlow(self._archive.ref, f, dirn, cx)
+ 
+     def consumers(self, process, ref_flow=None, **kwargs):
+         """
+         Not supported for trivial backgrounds
+         :param process:
+         :param ref_flow:
+         :param kwargs:
+@@ -190,19 +191,17 @@
+     def lci(self, process, ref_flow=None, **kwargs):
+         self.check_bg()
+         ref_flow = self._ensure_ref_flow(ref_flow)
+         p = self._archive.retrieve_or_fetch_entity(process)
+         for x in p.inventory(ref_flow=ref_flow):
+             yield x
+ 
+-    def sys_lci(self, node, demand, **kwargs):
+-        raise NotImplementedError
+-
+-    def bg_lcia(self, process, query_qty, ref_flow=None, **kwargs):
+-        p = self._archive.retrieve_or_fetch_entity(process)
+-        lci = self.lci(p, ref_flow=ref_flow)
+-        res = query_qty.do_lcia(lci, locale=p['SpatialScope'], **kwargs)
++    def sys_lci(self, demand, **kwargs):
+         """
+-        if self.privacy > 0:
+-            return res.aggregate('*', entity_id=p.link)
++        For LCI, we simply yield process direct exchanges as LCI.
++        For sys_lci, we should just do the same. yield the supplied demand as a degenerate LCI.
++        :param demand:
++        :param kwargs:
++        :return:
+         """
+-        return res
++        for y in demand:
++            yield y
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/implementations/basic.py` & `antelope_core-0.2.0/antelope_core/implementations/basic.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-from antelope import EntityNotFound, NoAccessToEntity
++from antelope import EntityNotFound, NoAccessToEntity, NullEntity
+ 
+ 
+ class BasicImplementation(object):
+     def __init__(self, archive, **kwargs):
+         """
+         Provides common features for an interface implementation: namely, an archive and a privacy setting. Also
+         provides access to certain common methods of the archive.  This should be the base class for interface-specific
+@@ -15,14 +15,20 @@
+          - get_uuid() - deprecated - only present for compatibility reasons
+          - __getitem__ - retrieve already-loaded entity
+          - retrieve_or_fetch_entity() - _fetch abstract method must be implemented
+ 
+         All of these requirements are met by the standard ArchiveImplementation, with the exception of the _fetch
+         abstract method.
+ 
++        Since a recent change that removed the 'basic' interface as a default for all resources, this must be
++        explicitly assigned to at least one resource in order for a query to be valid.  The basic interface should
++        be assigned to the resource that meets the following requirements:
++         - most comprehensive source of information about entity properties (e.g. documentary pseudo-interface)
++         - easiest to load (e.g. a non-static)
++
+         :param archive: an LcArchive
+         :param privacy: No longer used. Privacy is enforced at the server and not the resource (where it was phony
+         from the beginning)
+         """
+         self._archive = archive
+ 
+     def validate(self):
+@@ -47,15 +53,15 @@
+             eref = external_ref
+             external_ref = eref.external_ref
+         else:
+             eref = None
+         entity = self.get(external_ref)
+         # if entity:
+         if not entity.is_entity:
+-            raise NoAccessToEntity(entity.link)
++            raise NoAccessToEntity(self.origin, entity.link)
+         return entity
+ 
+     def get_item(self, external_ref, item):
+         """
+         In this, we accept either an external_ref or an entity reference itself.  If the latter, we dereference via
+         the archive to an actual entity, which we then ask for the item.  If the dereference and the reference are the
+         same, throws an error.
+@@ -72,14 +78,16 @@
+     def get_reference(self, key):
+         entity = self._dereference_entity(key)
+         if entity is None:
+             return None
+         if entity.entity_type == 'process':
+             # need to get actual references with exchange values-- not the reference_entity
+             return [x for x in entity.references()]
++        if entity.reference_entity is None:
++            return NullEntity(self.origin)
+         return entity.reference_entity
+ 
+     def get_uuid(self, external_ref):
+         u = self._archive.get_uuid(external_ref)
+         if u is None:
+             return False
+         return u
+@@ -87,15 +95,15 @@
+     def _fetch(self, external_ref, **kwargs):
+         if external_ref is None:
+             return None
+         if self._archive.static:
+             return self._archive[external_ref]
+         try:
+             return self._archive.retrieve_or_fetch_entity(external_ref, **kwargs)
+-        except NotImplementedError:
++        except (KeyError, NotImplementedError, IndexError):
+             return None
+ 
+     '''
+     def lookup(self, external_ref, **kwargs):
+         if self._fetch(external_ref, **kwargs) is not None:
+             return True
+         return False
+@@ -103,14 +111,16 @@
+ 
+     def get(self, external_ref, **kwargs):
+         """
+         :param external_ref: may also be link, as long as requested origin is equal or lesser in specificity
+         :param kwargs:
+         :return: entity or None
+         """
++        if external_ref is None:
++            raise EntityNotFound(None)
+         e = self._fetch(external_ref, **kwargs)
+         if e is not None:
+             return e
+         if isinstance(external_ref, int):  # we got away with this before by falling back on NSUUIDs
+             external_ref = str(external_ref)
+         e = self._fetch(external_ref, **kwargs)
+         if e is not None:
+@@ -118,14 +128,26 @@
+         er_s = external_ref.split('/')
+         if self.origin.startswith(er_s[0]):
+             e = self._fetch('/'.join(er_s[1:]), **kwargs)
+             if e is not None:
+                 return e
+         raise EntityNotFound(external_ref)
+ 
++    def is_lcia_engine(self, **kwargs):
++        """
++        suggests expansion to a graph-based TM
++        :param kwargs:
++        :return:
++        """
++        if hasattr(self._archive, 'tm'):
++            return self._archive.tm.is_lcia_engine
++        return False
++
+     def synonyms(self, item, **kwargs):
+-        return self._archive.tm.synonyms(item)
++        if hasattr(self._archive, 'tm'):
++            return self._archive.tm.synonyms(item)
++        # yield from ()
+ 
+     def properties(self, external_ref, **kwargs):
+         e = self._dereference_entity(external_ref)
+         for i in e.properties():
+             yield i
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/implementations/configure.py` & `antelope_core-0.2.0/antelope_core/implementations/configure.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -118,15 +118,15 @@
+         :param overwrite:
+         :param kwargs:
+         :return:
+         """
+         print('Characterizing flow %s by %s: %g' % (flow_ref, quantity_ref, value))
+         flow = self._archive.retrieve_or_fetch_entity(flow_ref)
+         qty = self._archive.retrieve_or_fetch_entity(quantity_ref)
+-        self._archive.tm.add_characterization(flow.link, flow.reference_entity, qty, value, context=flow.context,
++        self._archive.tm.add_characterization(flow.name, flow.reference_entity, qty, value, context=flow.context,
+                                               location=location,
+                                               origin=self.origin, overwrite=overwrite)
+ 
+ 
+ class LcConfigureImplementation(ConfigureImplementation):
+ 
+     _config_options = ('set_reference', 'unset_reference', 'characterize_flow', 'allocate_by_quantity')
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/implementations/exchange.py` & `antelope_core-0.2.0/antelope_core/implementations/exchange.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,17 +3,17 @@
+ 
+ 
+ class ExchangeImplementation(BasicImplementation, ExchangeInterface):
+     """
+     This provides access to detailed exchange values and computes the exchange relation.
+     Creates no additional requirements on the archive.
+     """
+-    def exchanges(self, process, **kwargs):
++    def exchanges(self, process, flow=None, direction=None, **kwargs):
+         p = self._archive.retrieve_or_fetch_entity(process)
+-        for x in p.exchanges():
++        for x in p.exchanges(flow=flow, direction=direction):
+             yield x
+ 
+     def exchange_values(self, process, flow, direction=None, termination=None, reference=None, **kwargs):
+         if reference is True:
+             for x in self.get_reference(process):
+                 if x.flow.external_ref == flow:
+                     yield x
+@@ -54,16 +54,18 @@
+         :param termination:
+         :return:
+         """
+         p = self._archive.retrieve_or_fetch_entity(process)
+         norm = p.reference(ref_flow)
+         if termination is None:
+             xs = [x for x in p.exchange_values(flow=exch_flow, direction=direction)]
++            '''
+             if len(xs) == 1:
+                 return xs[0][norm]
+             elif len(xs) == 0:
+                 return 0.0
+             else:
+-                return sum(x[norm] for x in xs)
++            '''
++            return sum(x[norm] for x in xs)
+         else:
+             x = p.get_exchange(hash((p.external_ref, exch_flow, direction, termination)))
+             return x[norm]
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/implementations/index.py` & `antelope_core-0.2.0/antelope_core/implementations/index.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -58,22 +58,27 @@
+         for p in self._archive.search('process', **kwargs):
+             yield p
+ 
+     def flows(self, **kwargs):
+         for f in self._archive.search('flow', **kwargs):
+             yield f
+ 
+-    def quantities(self, **kwargs):
++    def quantities(self, unit=None, **kwargs):
+         for q in self._archive.search('quantity', **kwargs):
++            if unit is not None:
++                if q.unit != unit:
++                    continue
+             yield q
+ 
++    '''
+     def lcia_methods(self, **kwargs):
+         for q in self._archive.search('quantity', **kwargs):
+             if q.is_lcia_method:
+                 yield q
++    '''
+ 
+     def targets(self, flow_ref, direction=None, **kwargs):
+         """
+         Generate processes in the archive that terminate a given exchange i.e. - have the same flow and a complementary
+         direction.  If refs_only is specified, only report processes that terminate the exchange with a reference
+         exchange.
+         :param flow_ref: flow, exchange, or flow's external key
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/implementations/quantity.py` & `antelope_core-0.2.0/antelope_core/implementations/quantity.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,41 +1,49 @@
+ """
+ Each archive now has a TermManager which interprets query arguments as synonyms for canonical flows and contexts.  This
+ can also be upgraded to an LciaEngine, which extends the synonymization strategy to quantities as well
+ """
+ from antelope import (QuantityInterface, NoFactorsFound, ConversionReferenceMismatch, EntityNotFound, FlowInterface,
+-                      convert, NoUnitConversionTable, QuantityRequired)
++                      convert, NoUnitConversionTable, QuantityRequired, RefQuantityRequired)
++
++from antelope.flows.flow import QuelledCO2
+ 
+ from .basic import BasicImplementation
+ from ..characterizations import QRResult, LocaleMismatch
+ from ..contexts import NullContext
+ from ..lcia_results import LciaResult
++from ..entities.quantities import new_quantity
++from ..entities.flows import new_flow
+ 
+ 
+-class RefQuantityRequired(Exception):
++class UnknownRefQuantity(Exception):
+     pass
+ 
+ 
+ class QuantityConversion(object):
+     """
+     A stack of Quantity Relation results that are composed sequentially in order to render a flow-quantity conversion.
+     The first QRR added should report the query quantity (numerator) in terms of some reference quantity (denominator);
+     then each subsequent QRR should include the prior ref quantity as the query quantity.
+ 
+-    The QuantityConversion has a subset of the interface of a QRResult (flowable, ref, query, context, value), leaving
+-    out locale and origin for the time being since they could vary across factors.
++    QuantityConversion implements the interface of a QRResult (flowable, ref, query, context, value, locale, origin),
++    'context' is a cache of the [canonical] context used as query input; 'locale' is a '/' join of all
++    found geographies; 'flowable' 'query' and 'origin' take from the first QR Result; 'ref' takes the last; value is
++    computed as the product of all contained QRResults.
+ 
+     For instance, a Quantity conversion from moles of CH4 to GWP 100 might include first the GWP conversion and then
+     the mol conversion:
+     QuantityConversion(QRResult('methane', 'kg', 'kg CO2eq', 'emissions to air', 'GLO', 'ipcc.2007', 25.0),
+                        QRResult('methane', 'mol', 'kg', None, 'GLO', 'local.qdb', 0.016))
+     giving the resulting value of 0.4.
+ 
+     The QuantityConversion needs information to be fully defined: the query quantity and the query context, both of
+     which should be canonical.  The canonical context is especially needed to test directionality for LCIA.
++
++    For the context initially submitted, consult the exchange.
+     """
+     @classmethod
+     def null(cls, flowable, rq, qq, context, locale, origin):
+         qrr = QRResult(flowable, rq, qq, context or NullContext, locale, origin, 0.0)
+         return cls(qrr)
+ 
+     @classmethod
+@@ -55,14 +63,19 @@
+     def __eq__(self, other):
+         try:
+             return (self.flowable == other.flowable and self.query == other.query and self.context == other.context
+                     and self.locale == other.locale and self.value == other.value)
+         except AttributeError:
+             return False
+ 
++    def __bool__(self):
++        if self.value != 0.0:
++            return True
++        return False
++
+     def invert(self):
+         inv_qrr = type(self)(query=self.ref)
+         for res in self._results[::-1]:
+             inv_qrr.add_inverted_result(res)
+         return inv_qrr
+ 
+     def flatten(self, origin=None):
+@@ -217,14 +230,63 @@
+     def value(self):
+         return None
+ 
+     def __repr__(self):
+         return '%s(%s; %s %s =X=> %s)' % (self.__class__.__name__, self.flowable, self.context, self._qrr.ref, self._ref)
+ 
+ 
++def do_lcia(quantity, inventory, locale=None, group=None, dist=2, **kwargs):
++    """
++    Successively implement the quantity relation over an iterable of exchanges.
++
++    man, WHAT is the qdb DOING with all those LOC? (ans: seemingly a lot)
++
++    :param quantity:
++    :param inventory: An iterable of exchange-like entries, having flow, direction, value, termination.  Currently
++      also uses process.external_ref for hashing purposes, but that could conceivably be abandoned.
++    :param locale: ['GLO']
++    :param group: How to group scores.  Should be a lambda that operates on inventory items. Default x -> x.process
++    :param dist: [2] controls how strictly to interpret exchange context.
++      0 - exact context matches only;
++      1 - match child contexts (code default)
++      2 - match parent contexts [this default]
++      3 - match any ancestor context, including NullContext
++    :param kwargs:
++    :return:
++    """
++    res = LciaResult(quantity)
++    if group is None:
++        group = lambda _x: _x.process
++    for x in inventory:
++        xt = x.type
++        if xt == 'reference':  # in ('cutoff', 'reference'):
++            res.add_cutoff(x)
++            continue
++        elif xt == 'self':
++            continue
++        qrr = x.flow.lookup_cf(quantity, x.termination, locale, dist=dist, **kwargs)
++        if isinstance(qrr, QuantityConversion):
++            if qrr.value == 0:
++                res.add_zero(x)
++            else:
++                res.add_score(group(x), x, qrr)
++        elif isinstance(qrr, QuantityConversionError):
++            res.add_error(x, qrr)
++        elif isinstance(qrr, QuelledCO2):
++            res.add_zero(x)
++        elif qrr is None:
++            res.add_cutoff(x)
++        else:
++            raise TypeError('Unknown qrr type %s' % qrr)
++    e = len(list(res.errors()))
++    if e:
++        print('%s: %d CF errors encountered' % (quantity, e))
++    return res
++
++
+ class NoConversion(Exception):
+     pass
+ 
+ 
+ def try_convert(flowable, rq, qq, context, locale):
+ 
+     if hasattr(qq, 'is_lcia_method') and qq.is_lcia_method:
+@@ -244,14 +306,46 @@
+             return QRResult(flowable, rq, qq, context or NullContext, locale, rq.origin, fac)
+         except (KeyError, NoUnitConversionTable):
+             pass
+     raise NoConversion
+ 
+ 
+ class QuantityImplementation(BasicImplementation, QuantityInterface):
++
++    def new_quantity(self, name, ref_unit=None, **kwargs):
++        """
++
++        :param name:
++        :param ref_unit:
++        :param kwargs:
++        :return:
++        """
++        q = new_quantity(name, ref_unit, **kwargs)
++        self._archive.add(q)
++        return q
++
++    def new_flow(self, name, ref_quantity=None, **kwargs):
++        """
++
++        :param name:
++        :param ref_quantity: defaults to "Number of items"
++        :param context: [None] pending context refactor
++        :param kwargs:
++        :return:
++        """
++        if ref_quantity is None:
++            ref_quantity = 'Number of items'
++        try:
++            ref_q = self.get_canonical(ref_quantity)
++        except EntityNotFound:
++            raise UnknownRefQuantity(ref_quantity)
++        f = new_flow(name, ref_q, **kwargs)
++        self._archive.add_entity_and_children(f)
++        return self.get(f.link)
++
+     """
+     Uses the archive's term manager to index cfs, by way of the canonical quantities
+     """
+     def quantities(self, **kwargs):
+         for q_e in self._archive.search('quantity', **kwargs):
+             yield q_e
+ 
+@@ -265,22 +359,25 @@
+             return self._archive.tm.get_canonical(quantity)
+         except EntityNotFound:
+             if isinstance(quantity, str):
+                 q = self._archive.retrieve_or_fetch_entity(quantity)
+                 if q is None:
+                     raise
+                 return self._archive.tm.get_canonical(q.external_ref)
+-#            elif hasattr(quantity, 'entity_type') and quantity.entity_type == 'quantity':
+-#                self._archive.add_entity_and_children(quantity)
+-#                return self._archive.tm.get_canonical(quantity)
++            elif hasattr(quantity, 'entity_type') and quantity.entity_type == 'quantity':
++                # this is reimplementing CatalogQuery.get_canonical() -> catalog.register_entity_ref()
++                if quantity.is_entity:
++                    raise TypeError('Supplied argument is an entity')
++                self._archive.add(quantity)
++                return self._archive.tm.get_canonical(quantity)
+             else:
+                 raise
+ 
+     def factors(self, quantity, flowable=None, context=None, dist=0):
+-        q = self.get_canonical(quantity)
++        q = self.get_canonical(quantity)  # get_canonical AUDIT
+         for cf in self._archive.tm.factors_for_quantity(q, flowable=flowable, context=context, dist=dist):
+             yield cf
+ 
+     def characterize(self, flowable, ref_quantity, query_quantity, value, context=None, location='GLO', origin=None,
+                      **kwargs):
+         """
+         We gotta be able to do this
+@@ -396,16 +493,16 @@
+                     for loc in locales:
+                         res = QuantityConversion(query=qq, context=cx)
+                         qr_geog.append(self._ref_qty_conversion(rq, fb, cx, res, loc))
+ 
+                 return qr_results, qr_geog, qr_mismatch
+ 
+         for cf in self._archive.tm.factors_for_flowable(fb, quantity=qq, context=cx, **kwargs):
++            res = QuantityConversion(cf.query(locale), query=qq, context=cx)
+             try:
+-                res = QuantityConversion(cf.query(locale), query=qq, context=cx)
+                 qr_results.append(self._ref_qty_conversion(rq, fb, cx, res, locale))
+             except ConversionReferenceMismatch:
+                 qr_mismatch.append(QuantityConversionError(res, rq))
+             except LocaleMismatch as e:
+                 locales = e.args[0]
+                 for loc in locales:
+                     qr_geog.append(self._ref_qty_conversion(rq, fb, cx, res, loc))
+@@ -589,15 +686,15 @@
+             if len(mismatch) > 0:
+                 '''
+                 for k in mismatch:
+                     print('Conversion failure: Flowable: %s\nfrom: %s %s\nto: %s %s' % (fb, k.fail, k.fail.link,
+                                                                                         rq, rq.link))
+                 '''
+ 
+-                raise ConversionReferenceMismatch
++                raise ConversionReferenceMismatch(mismatch[0])
+ 
+             else:
+                 raise AssertionError('Something went wrong')
+         return result
+ 
+     def cf(self, flow, quantity, ref_quantity=None, context=None, locale='GLO', **kwargs):
+         """
+@@ -662,102 +759,41 @@
+         if region is not None:
+             try:
+                 ix = next(i for i, k in enumerate(q.get('normSets', [])) if k == region)
+             except StopIteration:
+                 pass
+         return n[ix]
+ 
+-    def _lookup_x(self, x, q, locale, refresh=False, **kwargs):
+-        cx = self._archive.tm[x.termination]
+-        if refresh:  # destroy prior matches, even if no new one is found (only overwrite would not truly "refresh")
+-            x.flow.pop_char(q, cx, locale)
+-        else:
+-            try:  # look for a cached result
+-                return x.flow.chk_char(q, cx, locale)
+-            except KeyError:
+-                pass
+-        try:
+-            ref_q = self.get_canonical(x.flow.reference_entity)
+-        except EntityNotFound:
+-            ref_q = self._archive.tm.add_quantity(x.flow.reference_entity)
+-        try:
+-            qr, mis = self._quantity_relation(x.flow.name, ref_q, q, cx, locale=locale,
+-                                              **kwargs)
+-            if qr is None and len(mis) > 0:
+-                qrr = mis[0]
+-                if q.is_lcia_method:
+-                    print('Conversion error %s' % x)
+-                    if len(mis) > 1:
+-                        print('omitting mismatches:')
+-                        for k in mis[1:]:
+-                            print(k)
+-            else:
+-                qrr = qr
+-        except NoFactorsFound:
+-            qrr = None
+-
+-        ## if not x.flow.is_entity:  # why don't we cache conversions on actual flows? because cfs might change??
+-        x.flow.see_char(q, cx, locale, qrr)
+-        return qrr
+-
+     def do_lcia(self, quantity, inventory, locale='GLO', group=None, dist=2, **kwargs):
+         """
+-        Successively implement the quantity relation over an iterable of exchanges.
++        This is *almost* static. Could be moved into interface, except that it requires LciaResult (which is core).
+ 
+-        man, WHAT is the qdb DOING with all those LOC? (ans: seemingly a lot)
++        Successively implement the quantity relation over an iterable of exchanges.
+ 
+         :param quantity:
+         :param inventory: An iterable of exchange-like entries, having flow, direction, value, termination.  Currently
+           also uses process.external_ref for hashing purposes, but that could conceivably be abandoned.
+         :param locale: ['GLO']
+         :param group: How to group scores.  Should be a lambda that operates on inventory items. Default x -> x.process
+         :param dist: [2] controls how strictly to interpret exchange context.
+           0 - exact context matches only;
+           1 - match child contexts (code default)
+           2 - match parent contexts [this default]
+           3 - match any ancestor context, including Null
+-         exchange context; 3 - match any ancestor of exch
+         :param kwargs:
+         :return:
+         """
+         q = self.get_canonical(quantity)
+-        res = LciaResult(q)
+-        if group is None:
+-            group = lambda _x: _x.process
+-        for x in inventory:
+-            xt = x.type
+-            if xt in ('cutoff', 'reference'):
+-                res.add_cutoff(x)
+-                continue
+-            elif xt == 'self':
+-                continue
+-            qrr = self._lookup_x(x, q, locale, dist=dist, **kwargs)
+-            if isinstance(qrr, QuantityConversion):
+-                if qrr.value == 0:
+-                    res.add_zero(x)
+-                else:
+-                    res.add_score(group(x), x, qrr)
+-            elif isinstance(qrr, QuantityConversionError):
+-                res.add_error(x, qrr)
+-            elif qrr is None:
+-                res.add_cutoff(x)
+-            else:
+-                raise TypeError('Unknown qrr type %s' % qrr)
+-        return res
++        return do_lcia(q, inventory, locale=locale, group=group, dist=dist, **kwargs)
+ 
+     def lcia(self, process, ref_flow, quantity_ref, **kwargs):
+         """
+         Implementation of foreground LCIA -- moved from LcCatalog
+         :param process:
+         :param ref_flow:
+         :param quantity_ref:
+         :param kwargs:
+         :return:
+         """
+         p = self._archive.retrieve_or_fetch_entity(process)
+-        return quantity_ref.do_lcia(p.inventory(ref_flow=ref_flow),
+-                                    locale=p['SpatialScope'])
+-
+-    def fragment_lcia(self, fragment, quantity_ref, scenario=None, refresh=False, **kwargs):
+-        frag = self._archive.retrieve_or_fetch_entity(fragment)
+-        return frag.top().fragment_lcia(quantity_ref, scenario=scenario, refresh=refresh, **kwargs)
+-
++        return do_lcia(quantity_ref, p.inventory(ref_flow=ref_flow),
++                       locale=p['SpatialScope'])
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/implementations/tests/test_quantity.py` & `antelope_core-0.2.0/antelope_core/implementations/tests/test_quantity.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -36,17 +36,17 @@
+         cf = list(self.gwp.factors())
+         self.assertEqual(len(cf), 91)
+ 
+     def test_q_relation(self):
+         self.assertEqual(self.gwp.cf('carbon dioxide', ref_quantity=mass, context='air'), 1.0)
+         self.assertEqual(self.gwp.cf('nitrous oxide', ref_quantity=mass, context='air'), 298.0)
+         self.assertEqual(self.gwp.cf('10024-97-2', ref_quantity=mass, context='air'), 298.0)
+-        self.assertEqual(self.gwp.quantity_relation(mass, 'carbon dioxide', 'water').value, 0.0)
++        self.assertEqual(self.gwp.quantity_relation('carbon dioxide', mass, 'water').value, 0.0)
+         # this will only work with an LciaEngine
+         ilcd_vol = self.I[volu_uuid]
+         ar.add(ilcd_vol)  ## no longer done automatically in get_canonical
+         with self.assertRaises(ConversionReferenceMismatch):
+-            self.gwp.quantity_relation(ilcd_vol, 'carbon tetrachloride', 'air')
++            self.gwp.quantity_relation('carbon tetrachloride', ilcd_vol, 'air')
+ 
+ 
+ if __name__ == '__main__':
+     unittest.main()
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/lc_resource.py` & `antelope_core-0.2.0/antelope_core/lc_resource.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,12 +1,10 @@
+ import json
+ import os
+ from collections import defaultdict
+-import requests
+-import hashlib
+ 
+ from antelope import UnknownOrigin
+ 
+ from .archives import InterfaceError, index_archive, update_archive, create_archive
+ 
+ # from .foreground import LcForeground
+ from .catalog_query import INTERFACE_TYPES, NoCatalog, zap_inventory
+@@ -17,27 +15,14 @@
+ class ResourceInvalid(Exception):
+     """
+     resource points to an invalid filename
+     """
+     pass
+ 
+ 
+-def download_file(url, local_file, md5sum=None):
+-    r = requests.get(url, stream=True)
+-    md5check = hashlib.md5()
+-    with open(local_file, 'wb') as f:
+-        for chunk in r.iter_content(chunk_size=1024):
+-            if chunk:  # filter out keep-alive new chunks
+-                f.write(chunk)
+-                md5check.update(chunk)
+-                # f.flush() commented by recommendation from J.F.Sebastian
+-    if md5sum is not None:
+-        assert md5check.hexdigest() == md5sum, 'MD5 checksum does not match'
+-
+-
+ class LcResource(object):
+     """
+     This is a record that links a semantic reference to a physical data source, and specifies the capabilities
+     (and someday, access limitations) of the data source.
+ 
+     The LcResource serializes to a json file with the following format:
+     { ref: [ { "dataSource": source, "dataSourceType": ds_type, .... }, ... ] }
+@@ -57,42 +42,45 @@
+ 
+     @classmethod
+     def from_dict(cls, ref, d):
+         """
+         Returns a single LcResource loaded from a dict.  only required field is 'dataSourceType'.
+         other fields are passed to the constructor and either interpreted directly or added as supplemental args
+ 
+-        If 'dataSource' is not present
++        If 'dataSource' is not present, one had better hope that url is present in the dict to download the source
+         :param ref:
+         :param d:
+         :return:
+         """
+         source = d.pop('dataSource', None)
+         ds_type = d.pop('dataSourceType')
+ 
+-        # patch to deal with changing Background extension handling
++        # patch to deal with changing Background extension handling-- this is WACKO
+         filetype = d.pop('filetype', None)
+         if filetype is not None:
+             if not source.endswith(filetype):
+                 source += filetype
+ 
+         return cls(ref, source, ds_type, **d)
+ 
+     @classmethod
+-    def from_json(cls, file):
++    def from_file(cls, file):
+         """
+         generates LcResources contained in the named file, sorted by increasing priority.  The filename and
+         the reference must be the same.
+         :param file:
+         :return: an ordered list of resources
+         """
+         ref = os.path.basename(file)
+         with open(file, 'r') as fp:
+             j = json.load(fp)
++        return cls.from_json(j, ref)
+ 
++    @classmethod
++    def from_json(cls, j, ref):
+         return sorted([cls.from_dict(ref, d) for d in j[ref]], key=lambda x: x.priority)
+ 
+     def _instantiate(self, catalog=None):
+         """
+         Instantiate the archive described by the current resource.  Several steps:
+          - download file if applicable
+          - rename relative path to absolute path
+@@ -125,54 +113,52 @@
+             src = self.source
+ 
+         kwargs = {**self.init_args}
+ 
+         if 'foreground' in self.interfaces:
+             kwargs['catalog'] = catalog
+ 
+-        if 0: # self.ds_type.lower() in ('foreground', 'lcforeground'):
+-            pass
+-            # self._archive = LcForeground(src, catalog=catalog, ref=self.reference, **kwargs)
+-        else:
+-            if self.ds_type.lower() == 'ecoinventlcia':
+-                # this is a GIANT HACK
+-                # we need to bring along a local ecoinvent archive to lookup flow reference qtys
+-                ei_ref = '.'.join(['local', 'ecoinvent', kwargs['version']])
+-                try:
+-                    res = catalog.get_resource(ei_ref, iface='exchange', strict=False)
+-                    res.check(catalog)
+-                    if hasattr(res.archive, 'load_flows'):
+-                        res.archive.load_flows()
+-                    kwargs['ei_archive'] = res.archive
+-                except UnknownOrigin:
+-                    pass
+-
++        if self.ds_type.lower() == 'ecoinventlcia':
++            # this is a GIANT HACK
++            # we need to bring along a local ecoinvent archive to lookup flow reference qtys-
++            # Partial solution to the hack: reference entity is QUERYABLE from a basic query which the catalog
++            # can provide- still need to specify
++            ei_ref = '.'.join(['local', 'ecoinvent', kwargs['version']])
+             try:
+-                self._archive = create_archive(src, self.ds_type, ref=self.reference,
+-                                               factory=herd_factory, **kwargs)
+-            except FileNotFoundError as e:
+-                raise ResourceInvalid('%s: %s' % (self.reference, e.filename))
++                res = catalog.get_resource(ei_ref, iface='exchange', strict=False)
++                res.check(catalog)
++                if hasattr(res.archive, 'load_flows'):
++                    res.archive.load_flows()
++                kwargs['ei_archive'] = res.archive
++            except UnknownOrigin:
++                pass
++
++        try:
++            self._archive = create_archive(src, self.ds_type, factory=herd_factory,
++                                           ref=self.origin, **kwargs)
++        except FileNotFoundError as e:
++            raise ResourceInvalid('%s: %s' % (self.origin, e.filename))
++
+         if catalog is not None and os.path.exists(catalog.cache_file(self.source)):
+             update_archive(self._archive, catalog.cache_file(self.source))
+         self._static |= self._archive.static
+         if self.static and self.ds_type.lower() != 'json':
+-            self._archive.load_all()  # static json archives are by convention saved in complete form
+-
++            self._archive.load_all()  # static json archives are loaded on open- load_all() would be redundant
+ 
+     @property
+     def is_loaded(self):
+-        return self._archive is not None
++        return self._archive is not None  # and self._archive._loaded ??
+ 
+     def remove_archive(self):
+         self._archive = None
+ 
+     def check(self, catalog):
+         if self._archive is None:
+             # TODO: try/catch exceptions or return false
+-            # print('QQQQQQQQQQQQQQQQQQ %s QQQQQQQQQQQQQQQQQQ' % self.reference)
++            print('QQQQQQQQQQQQQQQQQQ %s QQQQQQQQQQQQQQQQQQ' % self.origin)
+             self._instantiate(catalog)
+             self.apply_config(catalog)  # can't remember why I set this to happen recurrently- but it's no good
+         return True
+ 
+     def save(self, catalog):
+         self.write_to_file(catalog.resource_dir)
+ 
+@@ -210,53 +196,58 @@
+         if iface in INTERFACE_TYPES:
+             self._interfaces.add(iface)
+ 
+     def _normalize_interfaces(self, interfaces):
+         """
+         Ensures that:
+          - interfaces spec can be string or list
+-         - 'basic' appears
++         X 'basic' appears -- we don't want a basic interface on every resource
+         :param interfaces:
+         :return:
+         """
+-        self.add_interface('basic')
++        # self.add_interface('basic')
+         if interfaces is None:
+             return
+         if isinstance(interfaces, str):
+             self.add_interface(interfaces)
+         else:
+             for k in interfaces:
+                 self.add_interface(k)
+ 
+-    def __init__(self, reference, source, ds_type, interfaces=None, privacy=0, priority=50, static=False,
+-                 preload_archive=None, **kwargs):
++    def __init__(self, origin, source, ds_type, interfaces=None, privacy=0, priority=50, static=False,
++                 preload_archive=None, config=None, **kwargs):
+         """
+ 
+-        :param reference: semantic reference
++        :param origin: semantic reference to data origin
+         :param source: physical data source; 'None' allowed if 'downloadLink' argument provided
+         :param ds_type: data source type
+-        :param interfaces: list which can include 'entity', 'foreground', or 'background'. Default 'foreground'
++       :param interfaces: list which can include 'entity', 'foreground', or 'background'. Default 'foreground'
+         :param privacy: Ignored / No longer used.
+         :param priority: [50] priority level.. numeric (nominally 0-100), lowest priority resource is loaded first
+         :param static: [False] if True, load_all() after initializing
+         :param preload_archive: [None] use to assign an existing archive
+         :param kwargs: additional keyword arguments to constructor. Some interesting ones:
+           download: a dict containing 'url' and optional 'md5sum' fields
+           prefix: often used when accessing zipped archives
++          token: a jwt used for authenticating to xdb
++          'options': popped with values used as kwargs (per ResourceSpec)
+ 
+ 
+         """
+         '''
+         if not os.path.exists(source):
+             raise EnvironmentError('%s not found' % source)
+         '''
+ 
+         self._archive = preload_archive
+ 
+-        self._ref = reference
++        options = kwargs.pop('options', dict())
++        kwargs.update(options)
++
++        self._org = origin
+         if source is None:
+             if 'download' not in kwargs:
+                 raise KeyError('Resource must be initialized with either source or download')
+         self._source = source
+         self._type = ds_type
+         self._static = static
+ 
+@@ -267,15 +258,14 @@
+ 
+         self._priority = int(priority)
+ 
+         self._internal = kwargs.pop('_internal', False)
+ 
+         self._config = defaultdict(set)
+ 
+-        config = kwargs.pop('config', None)
+         if config:
+             for k, v in config.items():
+                 for q in v:
+                     self._add_config(k, *q)
+ 
+         self._args = kwargs
+ 
+@@ -287,41 +277,41 @@
+             flags.append('static')
+         if self._archive is not None:
+             flags.append('loaded ')
+         if len(self._config) > 0:
+             flags.append('%d cfg' % len(self._config))
+         fgs = ' '.join(flags)
+ 
+-        return 'LcResource(%s, dataSource=%s:%s, %s [%d]%s)' % (self.reference, self.source, self.ds_type,
++        return 'LcResource(%s, dataSource=%s:%s, %s [%d]%s)' % (self.origin, self.source, self.ds_type,
+                                                                 [k for k in self.interfaces], self.priority, fgs)
+ 
+     def exists(self, path):
+-        filename = os.path.join(path, self.reference)
++        filename = os.path.join(path, self.origin)
+         if os.path.exists(filename):
+             try:
+                 with open(filename, 'r') as fp:
+                     j = json.load(fp)
+             except json.JSONDecodeError:
+                 return False
+ 
+-            if any([self.matches(k) for k in j[self.reference]]):
++            if any([self.matches(k) for k in j[self.origin]]):
+                 return True
+         return False
+ 
+     @property
+     def archive(self):
+         return self._archive
+ 
+     @property
+     def is_saved(self):
+         return self._issaved
+ 
+     @property
+-    def reference(self):
+-        return self._ref
++    def origin(self):
++        return self._org
+ 
+     @property
+     def source(self):
+         return self._source
+ 
+     @property
+     def ds_type(self):
+@@ -366,20 +356,31 @@
+ 
+     def satisfies(self, ifaces):
+         if ifaces is None:
+             return True
+         if isinstance(ifaces, str):
+             ifaces = [ifaces]
+         for i in ifaces:
+-            if i == 'basic':
+-                return True
++            # if i == 'basic':
++            #     return True
+             if i in self._interfaces:
+                 return True
+         return False
+ 
++    def add_hint(self, hint_type, term, matches, catalog=None):
++        if hint_type in ('context', 'flowable', 'quantity'):
++            self._add_config('hints', hint_type, term, matches)
++            if catalog:
++                catalog.lcia_engine.apply_hints(self._archive.catalog_names, [(hint_type, term, matches)])
++                self.save(catalog)
++            else:
++                print('Hint is neither saved nor applied')
++        else:
++            raise TypeError('Invalid hint type %s' % hint_type)
++
+     def _add_config(self, config, *args):
+         """
+         does no validation
+         :param config:
+         :param args:
+         :return:
+         """
+@@ -433,15 +434,15 @@
+         already present in the file, replace it with the current resource.  otherwise append.
+         :param path: directory to store the resource file.
+         :param assign_ref: assign this ref instead of the resource's current ref
+         :param apply_config: overwrites configuration with supplied dict
+         :return:
+         """
+         if assign_ref is None:
+-            assign_ref = self.reference
++            assign_ref = self.origin
+         if apply_config is not None:
+             self.config = apply_config  # tests configuration before storing it
+         if not os.path.isdir(path):
+             if os.path.exists(path):
+                 raise ValueError('Please provide a directory path')
+             os.makedirs(path)
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/lcia_engine/__init__.py` & `antelope_core-0.2.0/antelope_core/lcia_engine/__init__.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -24,27 +24,29 @@
+         :param q:
+         :param v:
+         :return:
+         """
+         self.tm.add_characterization(flow.link, flow.reference_entity, q, v, context=flow.context,
+                                      origin=self.ref)
+ 
++    '''
+     def _ref_to_key(self, key):
+         """
+         LciaDb uses links as keys so as to store different-sourced versions of the same quantity. But we also want
+         to find local entities by external ref- so if they come up empty we try prepending local origin.
+         of course that won't work basically ever, since none of the canonical quantities have local origin.
+         so this may require some tuning.
+         :param key:
+         :return:
+         """
+         key = super(LciaDb, self)._ref_to_key(key)
+         if key is None:
+             key = super(LciaDb, self)._ref_to_key('%s/%s' % (self.ref, key))
+         return key
++    '''
+ 
+     def __getitem__(self, item):
+         """
+         Note: this user-friendliness check adds 20% to the execution time of getitem-- so avoid it if possible
+         (use _get_entity directly -- especially now that upstream is now deprecated)
+         (note that _get_entity does not get contexts)
+ 
+@@ -57,50 +59,50 @@
+ 
+     def _ensure_valid_refs(self, entity):
+         if entity.origin is None:
+             entity.origin = self.ref
+             # raise AttributeError('Origin not set! %s' % entity)
+         super(LciaDb, self)._ensure_valid_refs(entity)
+ 
+-    '''
+     def add(self, entity):
+         """
+-        Add entity to archive.  If entity is a quantity ref, add a masquerade to the lcia engine
++        Add entity to archive, by link instead of external ref. If the entity has a uuid and uuid does not already
++        exist, add it.  If the UUID does already exist, warn.
+         :param entity:
+         :return:
+         """
+-        try:
+-            self._add(entity, entity.link)
+-        except EntityExists:
+-            # merge incoming entity's properties with existing entity
+-            current = self[entity.link]
+-            current.merge(entity)
+-            return
+-
+-        if entity.uuid is not None:
+-            self._entities[entity.uuid] = entity
+-
++        self._add(entity, entity.link)
+         self._add_to_tm(entity)
+-    '''
+ 
+     def _add_to_tm(self, entity, merge_strategy=None):
+         if entity.entity_type == 'quantity':
+             if entity.is_lcia_method:
+                 ind = entity['Indicator']
+             else:
+                 ind = None
+             if entity.is_entity and not entity.configured:  # local db is authentic source - do not masquerade
+                 # print('LciaDb: Adding real entity %s' % entity.link)
+                 q_masq = QuantityRef(entity.external_ref, self.query, entity.reference_entity,
+-                                     Name=entity['Name'], Indicator=ind)
++                                     Name=entity['Name'], Indicator=ind)  # WHY am I not using entity.make_ref() ??
+                 entity.set_qi(self.make_interface('quantity'))
+-            else:  # ref -- masquerade
+-                # print('LciaDb: Adding qty ref %s' % entity)
+-                q_masq = QuantityRef(entity.external_ref, self.query, entity.reference_entity, masquerade=entity.origin,
+-                                     Name=entity['Name'], Indicator=ind)
++            else:
++                if entity.has_lcia_engine():  # ready to go
++                    """
++                    These quantities will not be managed by the local LciaDb-- neither will access the other's value.
++                    It seems like we may still want to override whether a particular quantity gets masqueraded
++                    it's easy enough to do by giving the entity a property, but that is obviously sloppy. TBD.
++                    """
++                    self.tm.add_quantity(entity)
++                    return
++
++                else: # ref -- masquerade
++                    # print('LciaDb: Adding qty ref %s' % entity)
++                    q_masq = QuantityRef(entity.external_ref, self.query, entity.reference_entity,
++                                         masquerade=entity.origin,
++                                         Name=entity['Name'], Indicator=ind)
+ 
+             for k in entity.properties():  # local only for ref
+                 q_masq[k] = entity[k]
+ 
+             # print('LciaDb: Adding masquerade %s' % q_masq)
+             self.tm.add_quantity(q_masq)
+             assert self.tm.get_canonical(q_masq) is q_masq, 'impostor:%s\noriginal:%s' % (self.tm.get_canonical(q_masq),
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/lcia_engine/clookup.py` & `antelope_core-0.2.0/antelope_core/lcia_engine/clookup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -59,14 +59,17 @@
+             item = NullContext
+         if not isinstance(item, Context):
+             raise TypeError('Supplied CLookup key is not a Context: %s (%s)' % (item, type(item)))
+         if item in self._dict:
+             return self._dict[item]
+         return set()
+ 
++    def __contains__(self, item):
++        return item in self._dict
++
+     def _check_qty(self, cf):
+         if self._q is None:
+             self._q = cf.quantity
+         else:
+             if cf.quantity != self._q:
+                 raise QuantityMismatch('Inbound: %s\nCurrent: %s' % (cf.quantity, self._q))
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/lcia_engine/data/contexts.json` & `antelope_core-0.2.0/antelope_core/lcia_engine/data/contexts.json`
+
+ * *Files 14% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9806975869475869%*
+
+ * *Differences: {"'Compartments'": "{1: {'synonyms': {insert: [(6, 'Group PAH to air'), (13, 'Pesticides to "*
+
+ * *                   "air')]}}, 12: {'synonyms': {insert: [(2, 'Inorganic emissions to agricultural "*
+
+ * *                   "soil'), (3, 'Organic emissions to agricultural soil')]}}, 13: {'synonyms': "*
+
+ * *                   "{insert: [(3, 'Inorganic emissions to industrial soil'), (4, 'Organic "*
+
+ * *                   "emissions to industrial soil'), (6, 'Pesticides to industrial soil')]}}, 16: "*
+
+ * *                   "{'synonyms […]*
+
+```diff
+@@ -13,20 +13,22 @@
+             "synonyms": [
+                 "Air",
+                 "Emissions to air",
+                 "Emissions to air, unspecified",
+                 "Emission to air",
+                 "Emission to air, unspecified",
+                 "Group NMVOC to air",
++                "Group PAH to air",
+                 "Halogenated organic emissions to air",
+                 "Heavy metals to air",
+                 "Inorganic emissions to air",
+                 "Organic emissions to air (group VOC)",
+                 "Other emissions to air",
+                 "Particles to air",
++                "Pesticides to air",
+                 "Radioactive emissions to air"
+             ]
+         },
+         {
+             "name": "Emissions to air, unspecified (long-term)",
+             "parent": "to air",
+             "synonyms": [
+@@ -105,27 +107,32 @@
+         },
+         {
+             "name": "to agricultural soil",
+             "parent": "to ground",
+             "synonyms": [
+                 "Emissions to agricultural soil",
+                 "Heavy metals to agricultural soil",
++                "Inorganic emissions to agricultural soil",
++                "Organic emissions to agricultural soil",
+                 "Other emissions to agricultural soil",
+                 "Pesticides to agricultural soil",
+                 "agricultural"
+             ]
+         },
+         {
+             "name": "to industrial soil",
+             "parent": "to ground",
+             "synonyms": [
+                 "Emissions to industrial soil",
+                 "Emissions to non-agricultural soil",
+                 "Heavy metals to industrial soil",
++                "Inorganic emissions to industrial soil",
++                "Organic emissions to industrial soil",
+                 "Other emissions to industrial soil",
++                "Pesticides to industrial soil",
+                 "industrial"
+             ]
+         },
+         {
+             "name": "to water",
+             "parent": "Emissions",
+             "synonyms": [
+@@ -145,19 +152,22 @@
+         },
+         {
+             "name": "fresh water",
+             "parent": "to water",
+             "synonyms": [
+                 "Analytical measures to fresh water",
+                 "Emissions to fresh water",
++                "Halogenated organic emissions to fresh water",
+                 "Heavy metals to fresh water",
++                "Hydrocarbons to fresh water",
+                 "Inorganic emissions to fresh water",
+                 "Organic emissions to fresh water",
+                 "Other emissions to fresh water",
+                 "Particles to fresh water",
++                "Pesticides to fresh water",
+                 "Radioactive emissions to fresh water",
+                 "freshwater",
+                 "to fresh water"
+             ]
+         },
+         {
+             "name": "ecoinvent long-term to fresh water",
+@@ -207,30 +217,40 @@
+         {
+             "name": "ocean",
+             "parent": "to water",
+             "synonyms": [
+                 "Emissions to sea water",
+                 "Heavy metals to sea water",
+                 "Other emissions to sea water",
++                "Analytical measures to sea water",
++                "Halogenated organic emissions to sea water",
++                "Hydrocarbons to sea water",
++                "Inorganic emissions to sea water",
++                "Organic emissions to sea water",
++                "Particles to sea water",
++                "Pesticides to sea water",
++                "Radioactive emissions to sea water",
+                 "sea water"
+             ]
+         },
+         {
+             "name": "Resources",
+             "sense": "Source",
+             "synonyms": [
+                 "natural resource",
+                 "renewable",
+                 "resource",
++                "Non renewable elements",
+                 "Non renewable energy resources",
+                 "Non renewable resources",
+                 "Renewable energy resources",
+                 "Renewable resources",
+                 "Energy resources",
+-                "Material resources"
++                "Material resources",
++                "Minerals"
+             ]
+         },
+         {
+             "name": "Land use",
+             "parent": "Resources",
+             "synonyms": [
+                 "land"
+@@ -264,14 +284,15 @@
+             "synonyms": []
+         },
+         {
+             "name": "Resources from biosphere",
+             "parent": "Resources",
+             "synonyms": [
+                 "Renewable energy resources from biosphere",
++                "Biomass fuels",
+                 "biotic"
+             ]
+         },
+         {
+             "name": "from air",
+             "parent": "Resources",
+             "synonyms": [
+@@ -283,27 +304,37 @@
+             ]
+         },
+         {
+             "name": "from ground",
+             "parent": "Resources",
+             "synonyms": [
+                 "Non-renewable element resources from ground",
+-                "Non-renewable energy resources from ground",
+                 "Non-renewable material resources from ground",
+                 "Renewable energy resources from ground",
+                 "Renewable material resources from ground",
+                 "Resources from ground",
+-                "Natural gas (resource)",
+-                "Crude oil (resource)",
+                 "Uranium (resource)",
+-                "fossil-",
+                 "in ground"
+             ]
+         },
+         {
++            "name": "fossil",
++            "parent": "from ground",
++            "synonyms": [
++                "Fossil fuels",
++                "fossil-",
++                "Non-renewable energy resources from ground",
++                "Crude oil (resource)",
++                "Hard coal (resource)",
++                "Lignite (resource)",
++                "Natural gas (resource)",
++                "Peat (resource)"
++            ]
++        },
++        {
+             "name": "from water",
+             "parent": "Resources",
+             "synonyms": [
+                 "Non-renewable element resources from water",
+                 "Non-renewable material resources from water",
+                 "Renewable energy resources from water",
+                 "Renewable material resources from water",
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/lcia_engine/data/flowables.json` & `antelope_core-0.2.0/antelope_core/lcia_engine/data/flowables.json`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/lcia_engine/data/ipcc_2007_gwp.json` & `antelope_core-0.2.0/antelope_core/lcia_engine/data/ipcc_2007_gwp.json`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/lcia_engine/lcia_engine.py` & `antelope_core-0.2.0/antelope_core/lcia_engine/lcia_engine.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,36 +1,36 @@
+ from collections import defaultdict
+-import re
+ import os
+ 
+ from ..archives.term_manager import TermManager, NoFQEntry
+ from ..contexts import Context, NullContext
+-from .quelled_cf import QuelledCF
+ from .clookup import CLookup, SCLookup
+ 
++from antelope.flows.flow import flowname_is_biogenic
++
+ from synonym_dict import TermExists, FlowablesDict
+ # from synonym_dict.example_compartments.compartment_manager import InconsistentLineage  # this is not needed
+ 
+ 
+ '''
+ Switchable biogenic CO2:
+ 
+ * Biogenic CO2 is CO2, so the flowable used to store CFs is 124-38-9 always
+ * Because flowable is looked up within the quantity implementation, we can assign a synonym to the flow itself, and 
+   watch for it
+ * Then the switch determines whether or not to quell the CF returned to the user, without changing the database
+ '''
+-biogenic = re.compile('(biotic|biogenic|non-fossil|in air)', flags=re.IGNORECASE)
+ 
+ 
+ DEFAULT_CONTEXTS = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data', 'contexts.json'))
+-NUM_DEFAULT_CONTEXTS = 36  # added river, long-term
++NUM_DEFAULT_CONTEXTS = 37  # added fossil
+ 
+ DEFAULT_FLOWABLES = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data', 'flowables.json'))
+ 
++
+ class QuantityMasqueradeError(Exception):
+     pass
+ 
+ 
+ class LciaEngine(TermManager):
+     """
+     This adds several abilities:
+@@ -40,15 +40,15 @@
+      * lookup CFs based on context hierarchy
+        - dist = 0: only exact matchh
+        - dist = 1: match or subcompartments
+        - dist = 2: match, subcompartments, or parent
+        - dist = 3: .. or any parent up to NullContext
+      * quell biogenic CO2 in quantity relation lookups
+     """
+-    _quell_biogenic = None
++    is_lcia_engine = True
+ 
+     def _configure_flowables(self, flowables):
+         """
+         Setup local flowables database with flows that require special handling. Also loads the flowables file.
+ 
+         When overriding this function, place the super() call between pre-load and post-load activities.
+         :return:
+@@ -56,36 +56,29 @@
+         if flowables is None:
+             flowables = DEFAULT_FLOWABLES
+ 
+         # FlowablesDict-- mainly to upsample CAS numbers for matching
+         self._fm = FlowablesDict()
+ 
+         self._fm.new_entry('carbon dioxide', '124-38-9')
+-        self._fm.new_entry('Water', '7732-18-5')
+-        # we store the child object and use it to signify biogenic CO2 to optionally quell
+-        # this strategy depends on the ability to set a query flow's name-- i.e. FlowInterface
+-        self._bio_co2 = self._fm.new_entry('carbon dioxide (biotic)', '124-38-9', create_child=True)
++        self._water = self._fm.new_entry('Water', '7732-18-5')
+ 
+         # now load + merge from file
+         self._fm.load(flowables)
+ 
+-        # now add all known "biotic" synonyms for CO2 to the biotic child
+-        for k in self._fm.synonyms('124-38-9'):
+-            if bool(biogenic.search(k)):
+-                self._bio_co2.add_term(k)
+         self._fq_map = {fb: set() for fb in self._fm.objects}
+ 
+     def __init__(self, contexts=None, flowables=None, quantities=None,
+-                 quell_biogenic_co2=False,
++                 quell_biogenic_co2=None,
+                  strict_clookup=True,
+                  **kwargs):
+         """
+ 
+         :param quantities:
+-        :param quell_biogenic_co2:
++        :param quell_biogenic_co2: DEPRECATED
+         :param contexts:
+         :param flowables:
+         :param strict_clookup: [True] whether to prohibit multiple CFs for each quantity / flowable / context tuple
+         :param kwargs: from TermManager: quiet, merge_strategy
+         """
+         if contexts is None:
+             contexts = DEFAULT_CONTEXTS
+@@ -98,26 +91,29 @@
+         self._cl_typ = {True: SCLookup,
+                         False: CLookup}[strict_clookup]  #
+         # another reverse mapping
+         self._origins = set()
+         self._fb_by_origin = defaultdict(set)  # maps origin to flowables having that origin
+         self._fb_by_origin[None] = set(str(k) for k in self._fm.objects)
+ 
+-        # difficult problem, this
+-        self.quell_biogenic_co2 = quell_biogenic_co2
++        if quell_biogenic_co2 is not None:
++            print('WARNING: quell_biogenic_co2 LciaEngine argument is DEPRECATED - it is now kwarg to lcia()')
+ 
+         self._factors_for_later = defaultdict(bool)
+ 
+-    @property
+-    def quell_biogenic_co2(self):
+-        return self._quell_biogenic
+-
+-    @quell_biogenic_co2.setter
+-    def quell_biogenic_co2(self, value):
+-        self._quell_biogenic = bool(value)
++    def get_canonical(self, quantity):
++        """
++        We override this because here we are using canonical quantities and 'kg' is not a canonical quantity, but it
++        always means mass
++        :param quantity:
++        :return:
++        """
++        if quantity == 'kg':  # for THIS UNIT ONLY
++            quantity = 'mass'
++        return super(LciaEngine, self).get_canonical(quantity)
+ 
+     def save_for_later(self, quantity):
+         qc = self.get_canonical(quantity)
+         if qc is quantity:
+             raise QuantityMasqueradeError(quantity)
+         self._factors_for_later[qc] = quantity
+ 
+@@ -161,15 +157,21 @@
+                     print('Applying context hint %s:%s => %s' % (org, term, canonical))
+                     self._cm.add_context_hint(org, term, canonical)
+             elif hint_type == 'quantity':
+                 print('Applying quantity hint %s -> %s' % (term, canonical))
+                 try:
+                     self._qm.add_synonym(canonical, term)
+                 except TermExists:
+-                    assert self._qm[canonical] is self._qm[term]
++                    c = self._qm[canonical]
++                    t = self._qm[term]
++                    if c is not t:
++                        print('!X!X!X!X!X!X!X! conflict when applying hint %s->%s' % (term, canonical))
++                        print('                canonical: %s = ' % c.quantity.link)
++                        print('                extisting: %s = ' % t.quantity.link)
++                    # assert self._qm[canonical] is self._qm[term]
+             elif hint_type == 'flowable':
+                 print('Applying flowable hint %s -> %s' % (term, canonical))
+                 try:
+                     self._fm.add_synonym(canonical, term)
+                 except TermExists:
+                     assert self._fm[canonical] == self._fm[term]
+             else:
+@@ -200,44 +202,54 @@
+         CAS numbers, because they don't have the capacity to store multiple CFs.  So we will save the full synonym
+         list for the LciaEngine.
+         :param flow:
+         :return:
+         """
+         return flow.synonyms
+ 
++    def _check_fb_map(self, fb_map):
++        """
++        flowable match curation:
++         - We don't want to merge any incoming terms with "water" because it makes flow-based water footprinting
++            impossible
++        :param fb_map: the dict being used to manage
++        :return:
++        """
++        if len(fb_map) > 1:
++            fb_map.pop(self._water, None)
++
+     def _add_to_existing_flowable(self, fb, new_terms):
+         """
+         Harvest biogenic co2 synonyms (not worth correcting for other biogenic substances??)
+         :param fb:
+         :param new_terms:
+         :return:
+         """
+-        biog = ('124-38-9' in fb)
+         for term in new_terms:
+             self._fm.add_synonym(fb, term)
+-            if biog and bool(biogenic.search(term)):
+-                self._bio_co2.add_term(term)  # ensure that bio term is a biogenic synonym
+ 
+-    def _add_flow_terms(self, flow, merge_strategy=None):
++    def add_flow_terms(self, flow, merge_strategy=None):
+         """
+         Subclass handles two problems: tracking flowables by origin and biogenic CO2.
+ 
+         Should probably test this shit
+ 
+         Under our scheme, it is a requirement that the flowables list used to initialize the LciaEngine is curated.
+ 
+         biogenic: if ANY of the flow's terms match the biogenic regex AND the flow is CO2, set its name
+         :param flow:
++        :param merge_strategy:
+         :return:
+         """
+-        fb = super(LciaEngine, self)._add_flow_terms(flow, merge_strategy=merge_strategy)
++        fb = super(LciaEngine, self).add_flow_terms(flow, merge_strategy=merge_strategy)
+         self._fb_by_origin[flow.origin].add(str(fb))
+         if '124-38-9' in fb:
++            flow.is_co2 = True
+             try:
+-                bio = next(t for t in flow.synonyms if bool(biogenic.search(t)))
++                bio = next(t for t in flow.synonyms if flowname_is_biogenic(t))
+             except StopIteration:
+                 # no biogenic terms
+                 return fb
+             flow.name = bio  # ensure that flow's name shows up with that term
+             self._fb_by_origin[flow.origin].add(bio)
+         return fb
+ 
+@@ -395,16 +407,35 @@
+             context = self.add_subcontext(context, 'flow', new_cf.flowable)
+         '''
+ 
+         super(LciaEngine, self)._qassign(qq, fb, new_cf, context)
+         self._origins.add(new_cf.origin)
+ 
+     def merge_flowables(self, dominant, *syns):
++        """
++        Combine together a list of synonyms under a dominant term.  If the synonyms are existing flowables, they are
++        merged with the dominant term; otherwise, they are added as synonyms.
++        :param dominant: must be known to the flowables database
++        :param syns: 0 or more terms or flowables
++        :return:
++        """
++        dom_fb = self.get_flowable(dominant)
++        to_merge = []
+         for syn in syns:
+-            self._fm.merge(dominant, syn)
++            try:
++                c = self.get_flowable(syn)
++                if c is dom_fb:
++                    continue
++                to_merge.append(c)
++            except KeyError:
++                self.add_synonym(dom_fb, syn)
++        if to_merge:
++            return self._merge_terms(dom_fb, *to_merge)
++        else:
++            return dom_fb
+ 
+     def save_flowables(self, filename=None):
+         self._fm.save(filename)
+ 
+     def save_contexts(self, filename=None):
+         self._cm.save(filename)
+ 
+@@ -426,36 +457,14 @@
+ 
+         for k in _iter:
+             if new:
+                 if k in self._fb_by_origin[None]:
+                     continue
+             yield k
+ 
+-    @staticmethod
+-    def is_biogenic(term):
+-        return bool(biogenic.search(term))
+-
+-    def _quell_co2(self, flowable, context):
+-        """
+-        We assume that all biogenic CO2 flows will be detected via add_flow, and will have their names set to something
+-        known to our _bio_co2 Flowable. So: If we are quelling, and if the flowable (string) is synonym to _bio_co2,
+-        we ask if it is a resource from air, or if it is any emission.
+-        :param flowable: orig, not looked-up in _fm
+-        :param context: from CF
+-        :return: bool
+-        """
+-        if self._quell_biogenic is False:
+-            return False
+-        if flowable in self._bio_co2:
+-            if context.is_subcompartment(self._cm['from air']):
+-                return True
+-            if context.is_subcompartment(self._cm['Emissions']):
+-                return True
+-        return False
+-
+     def _factors_for_flowable(self, fb, qq, cx, **kwargs):
+         """
+         detach lookup for cleanness. canonical everything
+         :param fb:
+         :param qq:
+         :param cx:
+         :param kwargs: used in subclasses
+@@ -469,45 +478,18 @@
+         if cx is None:
+             for v in cl.cfs():
+                 yield v
+         else:
+             for v in cl.find(cx, **kwargs):
+                 yield v
+ 
+-    def factors_for_flowable(self, flowable, quantity=None, context=None, **kwargs):
+-        """
+-        Here we deal with water contexts specified as flowables by creating children- this is generalizeable (vs for CO2)
+-        :param flowable:
+-        :param quantity:
+-        :param context:
+-        :param kwargs:
+-        :return:
+-        """
+-        try:
+-            fb = self._fm[flowable]
+-        except KeyError:
+-            return
+-        '''  # this does not do anything helpful
+-        if fb == self._fm['Water']:
+-            try:
+-                context = self._cm['flow-%s' % flowable]
+-            except KeyError:
+-                pass
+-        '''
+-        for k in super(LciaEngine, self).factors_for_flowable(flowable, quantity=quantity, context=context, **kwargs):
+-            if self._quell_co2(flowable, context):
+-                yield QuelledCF.from_cf(k, flowable=self._bio_co2)
+-            else:
+-                yield k
+-
+     def factors_for_quantity(self, quantity, flowable=None, context=None, **kwargs):
+         self._check_factors(self._canonical_q(quantity))
+         return super(LciaEngine, self).factors_for_quantity(quantity, flowable=flowable, context=context, **kwargs)
+ 
+-
+     def _serialize_qdict(self, origin, quantity, values=False):
+         _ql = self._qaccess(quantity)
+         d = {}
+         for fb, cl in _ql.items():
+             _od = cl.serialize_for_origin(origin, values=values)
+             if len(_od) > 0:
+                 d[str(fb)] = _od
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/lcia_engine/tests/test_clookup.py` & `antelope_core-0.2.0/antelope_core/lcia_engine/tests/test_clookup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/lcia_engine/tests/test_ipcc.py` & `antelope_core-0.2.0/antelope_core/lcia_engine/tests/test_ipcc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/lcia_engine/tests/test_lcia_engine.py` & `antelope_core-0.2.0/antelope_core/lcia_engine/tests/test_lcia_engine.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/lcia_results.py` & `antelope_core-0.2.0/antelope_core/lcia_results.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,17 +1,19 @@
+ """
+ This object replaces the LciaResult types spelled out in Antelope-- instead, it serializes to an LCIA result directly.
+ 
+ """
+-from antelope import comp_dir
++from antelope import comp_dir  # , CatalogRef, ExchangeRef
+ from .exchanges import ExchangeValue, DissipationExchange
+ from .autorange import AutoRange
+ from numbers import Number
+ from math import isclose
+ from collections import defaultdict
++
++#from .models import DetailedLciaResult as DetailedLciaResultModel
+ # from lcatools.interfaces import to_uuid
+ 
+ 
+ class InconsistentQuantity(Exception):
+     pass
+ 
+ 
+@@ -129,17 +131,22 @@
+                 self.context == other.context)
+ 
+     def __str__(self):
+         if self._dirn_adjust == -1:
+             dirn_mod = '*'
+         else:
+             dirn_mod = ' '
++
++        if self._qr.value is None:
++            cf = '(CF error)'
++        else:
++            cf = number(self._qr.value * self._lc.autorange)
+         return '%s%s = %-s  x %-s [%s] %s, %s' % (dirn_mod,
+                                                   number(self.result * self._lc.autorange),
+-                                                  number(self._qr.value * self._lc.autorange),
++                                                  cf,
+                                                   number(self.value),
+                                                   self._qr.locale,
+                                                   self.flowable,
+                                                   self.context)
+ 
+     def serialize(self, detailed=False):
+         flowname = self.flow.name
+@@ -154,14 +161,16 @@
+             'locale': self._qr.locale
+         }
+ 
+ 
+ class SummaryLciaResult(object):
+     """
+     like a DetailedLciaResult except omitting the exchange and factor information.  This makes them totally static.
++    The unit_score can itself _be_ an LciaResult, making the datatype recursive.
++    This has __add__ functionality, for merging repeated instances of the same fragment during traversal
+     """
+     def __init__(self, lc_result, entity, node_weight, unit_score):
+         """
+         :param lc_result: who "owns" you. scale report by their scale.
+         entity_id must either have get_uuid() or be hashable
+         :param entity: a hashable identifier
+         :param node_weight: stand-in for exchange value
+@@ -224,17 +233,32 @@
+     def unit_score(self):
+         if self.static:
+             return self._static_value
+         else:
+             return self._internal_result.total()
+ 
+     @property
++    def internal_result(self):
++        if self.static:
++            return self._static_value
++        else:
++            return self._internal_result
++
++    @property
+     def cumulative_result(self):
+         return self.node_weight * self.unit_score
+ 
++    @property
++    def result(self):
++        """
++        must workalike with both AggregateLciaScores and DetailedLciaResults
++        :return:
++        """
++        return self.cumulative_result
++
+     def components(self):
+         if self.static:
+             yield self
+         else:
+             for x in self._internal_result.components():
+                 yield x
+ 
+@@ -243,15 +267,15 @@
+ 
+     def __eq__(self, other):
+         if not isinstance(other, SummaryLciaResult):
+             return False
+         return self.entity == other.entity
+ 
+     def __str__(self):
+-        return '%s = %-s x %-s | %s' % (number(self.cumulative_result * self._lc.autorange), number(self.node_weight),
++        return 'S%s = %-s x %-s | %s' % (number(self.cumulative_result * self._lc.autorange), number(self.node_weight),
+                                         number(self.unit_score * self._lc.autorange),
+                                         self.entity)
+ 
+     def show(self):
+         if self.static:
+             print('%s' % self)
+         else:
+@@ -360,14 +384,27 @@
+         if detailed:
+             if not self.static:
+                 f = self.flatten()  # will yield a list of aggregate lcia scores with one component each
+                 j['details'] = [d.serialize() for p in f.components() for d in p.details()]
+         return j
+ 
+ 
++class SummaryLciaMissing(SummaryLciaResult):
++    @property
++    def name(self):
++        return 'Missing %s' % self.entity
++
++    is_null = False
++
++    def __str__(self):
++        return '%s = %-s x (MISSING)  | %s' % (
++            number(self.cumulative_result * self._lc.autorange), number(self.node_weight),
++            self.entity)
++
++
+ class AggregateLciaScore(object):
+     """
+     contains an entityId which should be either a process or a fragment (fragment stages show up as fragments??)
+     The Aggregate score is constructed either from individual LCIA Details (exchange value x characterization factor)
+     or from summary results
+     """
+     static = True
+@@ -444,15 +481,15 @@
+         for d in sorted(self.LciaDetails, key=key, reverse=True):
+             if d.result != 0 or show_all:
+                 print('%s' % d)
+         # print('=' * 60)
+         # print('             Total score: %g ' % self.cumulative_result)
+ 
+     def __str__(self):
+-        return '%s  %s' % (number(self.cumulative_result * self._lc.autorange), self.entity)
++        return 'A%s  %s' % (number(self.cumulative_result * self._lc.autorange), self.entity)
+ 
+     def serialize(self, detailed=False):
+         j = {
+             'result': self.cumulative_result,
+             'component': self.name
+         }
+         if hasattr(self.entity, 'external_ref'):
+@@ -461,26 +498,32 @@
+         if detailed:
+             if self.static:
+                 j['details'] = []
+             j['details'] = [p.serialize(detailed=False) for p in self.LciaDetails]
+         return j
+ 
+ 
+-
+ def show_lcia(lcia_results):
+     """
+     Takes in a dict of uuids to lcia results, and summarizes them in a neat table
+     :param lcia_results:
+     :return:
+     """
+     print('LCIA Results\n%s' % ('-' * 60))
+     for r in lcia_results.values():
+         print('%10.5g %s' % (r.total(), r.quantity))
+ 
+ 
++class MixedComponents(Exception):
++    """
++    We are now suddenly deciding that an LciaResult may not contain a mixture of AggregateLciaScores and SummaryLciaScores
++    """
++    pass
++
++
+ class LciaResult(object):
+     """
+     An LCIA result object contains a collection of LCIA results for a related set of entities, called components.  Each
+      component is an AggregateLciaScore, which itself is a collection of either detailed LCIA results or summary scores.
+ 
+     Each component which is a FragmentFlow represents a specific traversal scenario and is thus static.
+ 
+@@ -504,14 +547,18 @@
+         self._zeros = []
+ 
+         self._private = private
+         self._autorange = None
+         self._failed = []
+ 
+     @property
++    def has_summaries(self):
++        return any(isinstance(c, SummaryLciaResult) for c in self._LciaScores.values())
++
++    @property
+     def is_null(self):
+         for i in self._LciaScores.values():
+             if not i.is_null:
+                 return False
+         return True
+ 
+     def set_autorange(self, value=True):
+@@ -523,15 +570,15 @@
+          * the results of contrib_new()
+         No other outputs are affected.
+         :param value:
+         :return:
+         """
+         assert isinstance(value, bool), 'cannot set autorange to %s of type %s' % (value, type(value))
+         if value:
+-            self._autorange = AutoRange(self.range())
++            self._autorange = AutoRange(self.span)
+         else:
+             self._autorange = None
+ 
+     def unset_autorange(self):
+         self.set_autorange(False)
+ 
+     @property
+@@ -603,31 +650,32 @@
+         """
+         agg_result = LciaResult(self.quantity, scenario=self.scenario, private=self._private, scale=self._scale)
+         if key == '*':
+             if entity_id is None:
+                 entity_id = 'aggregated result'
+             agg_result.add_summary(entity_id, entity_id, 1.0, self.total())
+         else:
+-            for v in self._LciaScores.values():
+-                keystring = 'other'
++            for k, v in self._LciaScores.items():
++                keystring = k
+                 try:
+                     keystring = key(v.entity)
+                 finally:
+                     # use keystring AS entity
+                     agg_result.add_summary(keystring, keystring, 1.0, v.cumulative_result)
+         return agg_result
+ 
+     def show_agg(self, **kwargs):
+         self.aggregate(**kwargs).show_components()  # deliberately don't return anything- or should return grouped?
+ 
+     def flatten(self, _apply_scale=1.0):
+         """
+         Return a new LciaResult in which all groupings have been replaced by a set of AggregatedLciaScores, one
+          per elementary flow.
+-        Performs some inline testing via equality assertions, but this still deserves unit testing
++        Performs some inline testing via equality assertions, but this still *really needs* unit testing, especially
++        around matters of internal scale versus applied scale
+         :param: _apply_scale: [1.0] apply a node weighting to the components
+         :return:
+         """
+         flat = LciaResult(self.quantity, scenario=self.scenario, private=self._private, scale=1.0)
+         recurse = []  # store flattened summary scores to handle later
+         totals = defaultdict(list)
+         for k, c in self._LciaScores.items():
+@@ -644,29 +692,29 @@
+             for k in r.keys():
+                 c = r[k]
+                 if isinstance(c, SummaryLciaResult):
+                     # guaranteed to be static since r is a flattened LciaResult
+                     if not c.static:
+                         raise InconsistentSummaries(c)
+                     try:
+-                        flat.add_summary(k, c.entity, c.node_weight * _apply_scale, c.unit_score)
++                        flat.add_summary(k, c.entity, c.node_weight * _apply_scale, c.unit_score)  # TODO: apply internal scale??
+                     except InconsistentScores:
+                         print('for key %s' % k)
+                         raise
+                 else:
+                     for d in c.details():
+                         totals[d.factor, d.exchange.direction, d.exchange.termination].append(d.exchange)
+ 
+         for k, l in totals.items():
+             factor, dirn, term = k
+             for x in l:
+                 name = '; '.join([x.flow.name, str(term or factor.context)])
+                 flat.add_component(name)
+                 exch = ExchangeValue(x.process, x.flow, dirn,
+-                                     value=x.value * _apply_scale,
++                                     value=x.value * _apply_scale * self.scale,
+                                      termination=term)
+                 flat.add_score(name, exch, factor)
+ 
+         scaled_total = self.total() * _apply_scale
+         if not isclose(scaled_total, flat.total(), rel_tol=1e-10):  # this is in lieu of testing, obviously
+             print(' LciaResult: %10.4g' % scaled_total)
+             print('Flat result: %10.4g' % flat.total())
+@@ -678,18 +726,32 @@
+     @property
+     def is_private(self):
+         return self._private
+ 
+     def total(self):
+         return sum([i.cumulative_result for i in self._LciaScores.values()])
+ 
+-    def range(self):
++    @property
++    def span(self):
+         return sum([abs(i.cumulative_result) for i in self._LciaScores.values()])
+ 
++    def range(self):
++        _pos = _neg = 0.0
++        for v in self._LciaScores.values():
++            val = v.cumulative_result
++            if val > 0:
++                _pos += val
++            elif val < 0:
++                _neg += val
++        return _neg, _pos
++
+     def add_component(self, key, entity=None):
++        if any(isinstance(c, SummaryLciaResult) for c in self._LciaScores.values()):
++            self.show_components()
++            raise MixedComponents
+         if entity is None:
+             entity = key
+         if key not in self._LciaScores.keys():
+             self._LciaScores[key] = AggregateLciaScore(self, entity)
+ 
+     def add_score(self, key, exchange, qrresult):
+         if qrresult.query != self.quantity:
+@@ -697,14 +759,18 @@
+                                                                                          qrresult.query,
+                                                                                          self.quantity))
+         if key not in self._LciaScores.keys():
+             self.add_component(key)
+         self._LciaScores[key].add_detailed_result(exchange, qrresult)
+ 
+     def add_summary(self, key, entity, node_weight, unit_score):
++        if any(isinstance(c, AggregateLciaScore) for c in self._LciaScores.values()):
++            self.show_components()
++            raise MixedComponents
++        summary = SummaryLciaResult(self, entity, node_weight, unit_score)
+         if key in self._LciaScores.keys():
+             # raise DuplicateResult('Key %s is already present' % key)
+             '''
+             tgt = self._LciaScores[key]
+             if isinstance(unit_score, LciaResult):
+                 uss = unit_score.total()
+             else:
+@@ -712,19 +778,29 @@
+             print('Key %s [%s] (%10.4g x %10.4g) adding %s (%10.4g x %10.4g)' % (key,
+                                                                                  tgt.entity,
+                                                                                  tgt.node_weight, tgt.unit_score,
+                                                                                  entity,
+                                                                                  node_weight, uss))
+             '''
+             try:
+-                self._LciaScores[key] += SummaryLciaResult(self, entity, node_weight, unit_score)
++                self._LciaScores[key] += summary
++            except TypeError:  # AggregateLciaScore doesn't know how to add-- summary takes over
++                summary += self._LciaScores[key]
++                self._LciaScores[key] = summary
+             except InconsistentSummaries:
+-                self._failed.append(SummaryLciaResult(self, entity, node_weight, unit_score))
++                self._failed.append(summary)
++        else:
++            self._LciaScores[key] = summary
++
++    def add_missing(self, key, missing, node_weight):
++        summary = SummaryLciaMissing(self, missing, node_weight, 0.0)
++        if key in self._LciaScores.keys():
++            self._LciaScores[key] += summary
+         else:
+-            self._LciaScores[key] = SummaryLciaResult(self, entity, node_weight, unit_score)
++            self._LciaScores[key] = summary
+ 
+     @property
+     def failed_summaries(self):
+         """
+         A list of Summary results that failed to be added to an existing summary. This is mainly diagnostic and should
+         be removed soon.
+         Note the difiference from self.errors(), which is meant to store input exchanges that could not be converted
+@@ -795,21 +871,29 @@
+         if self._scale != 1.0:
+             print('%10.4gx %s' % (self._scale, 'scale'))
+ 
+     def show(self):
+         self._header()
+         print('%s' % self)
+ 
+-    def show_components(self):
++    def show_components(self, percent=False):
+         self._header()
+         if not self._private:
+             for v in sorted(self._LciaScores.values(), key=lambda x: x.cumulative_result, reverse=True):
+-                print('%s' % v)
++                if percent:
++                    pct = (v.cumulative_result / self.total()) * 100
++                    pfx = '%5.2f %% ' % pct
++                else:
++                    pfx = ''
++                print('%s%s' % (pfx, v))
+             print('==========')
+-        print('%s' % self)
++        if percent:
++            print('%5.2f %% %s' % (100, self))
++        else:
++            print('%s' % self)
+ 
+     def show_details(self, key=None, **kwargs):
+         """
+         Sorting by parts is not ideal but it will have to do.
+         :param key:
+         :param kwargs:
+         :return:
+@@ -845,15 +929,117 @@
+                 else:
+                     s._LciaScores['_%s' % k] = v
+             else:
+                 s._LciaScores[k] = v
+         return s
+ 
+     def __str__(self):
+-        return '%s %s' % (number(self.total()), self.quantity)
++        err = ''
++        if len(self._errors) > 0:
++            err = '\n[%d Flow Conversion Errors]' % len(self._errors)
++        return '%s %s%s' % (number(self.total()), self.quantity, err)
++
++    def terminal_nodes(self, key=lambda x: x.link):
++        aggs, scores = self._terminal_nodes()
++        l = LciaResult(self.quantity, scenario=self.scenario)  #, private=self._private, scale=self._scale)  # not sure about these
++        for ent, agg in aggs.items():
++            if hasattr(ent, 'entity_type'):
++                k = key(ent)
++                if ent.entity_type == 'fragment':
++                    if isinstance(agg, SummaryLciaResult):
++                        l.add_summary(k, ent, scores[ent], agg.cumulative_result)
++                    else:  # direct foreground emission: aggregate to parent
++                        # TODO: come up with a way for fragment entities to appear like LciaSummary (node weight x score)
++                        parent = ent.reference_entity or ent
++                        k = key(parent)
++                        l.add_component(k, entity=parent)
++                        for d in agg.details():
++                            x = ExchangeValue(d.exchange.process, d.exchange.flow, d.exchange.direction,
++                                              value=d.value * scores[ent], termination=d.exchange.termination)
++                            l.add_score(k, x, d.factor)
++                elif ent.entity_type == 'process':
++                    l.add_summary(k, ent, scores[ent], agg.cumulative_result)
++                else:
++                    raise TypeError(ent)
++            else:
++                k = str(ent)
++                l.add_summary(k, ent, scores[ent], agg.cumulative_result)
++
++        return l
++
++    def _terminal_nodes(self, weight=1.0):
++        """
++        Recursive function to flatten out an LCIA result by node rather than flow
++        returns a mapping of entity to (score and accumulated node weight)
++        aggregated scores return themselves, summary scores accumulate node weight by entity
++        :param weight:
++        :return: mapping of node to component, mapping of node to accumulated weight
++        "node" can be either an entity (process or fragment) or a string
++        """
++        '''
++        Further explanation:
++         we are dis-aggregating our own internal score and re-aggregating it by terminal nodes.  aggs is a dictionary
++         that maps the terminal node to the component, and scores maps the terminal node to the cumulative *weight* of 
++         the terminal node.  Why we called it 'scores' is unclear.
++         Procedure: we go through our components and for each:
++          - If it is an AggregateLciaScore (i.e. a true LCIA computation), then it becomes a terminal node
++          - If it is a static Summary, then we can't disaggregate and it also becomes a terminal node
++          - If it is a dynamic summary, we recurse on it, and we take its terminal nodes and parse them out.
++        For this to work, each terminal node must have the same unit score. If we find non-matching scores for the 
++        same terminal node, we raise an error.
++        Now we are seeing those errors and I don't know why.
++        UPDATE: it is because two different fragments use the same process, but one is derived from an lci() and the 
++        other is from a sys_lci() with a subtracted flow.  So naturally their scores are different.. No easy way to
++        deal with that....
++        '''
++        aggs = dict()
++        scores = defaultdict(float)
++        for c in self.components():
++            if isinstance(c, AggregateLciaScore):
++                # base case
++                if c.entity in aggs:
++                    if aggs[c.entity].cumulative_result != c.cumulative_result:
++                        raise KeyError(c)
++                else:
++                    aggs[c.entity] = c
++                scores[c.entity] += weight
++            else:  # Summary
++                rec_weight = weight * c.node_weight
++                if c.static:
++                    if c.entity in aggs:
++                        if aggs[c.entity].cumulative_result != c.cumulative_result:
++                            raise KeyError(c)
++                    else:
++                        aggs[c.entity] = c
++                    scores[c.entity] += rec_weight
++                else:
++                    rec_aggs, rec_scores = c._internal_result._terminal_nodes(weight=rec_weight)
++                    for k, v in rec_aggs.items():
++                        if v.cumulative_result == 0:
++                            continue
++                        if k in aggs:
++                            if aggs[k].cumulative_result != v.cumulative_result:
++                                # hunt for a distinct name to give a node with this score
++                                idx = ord('A')
++                                name = str(k)
++                                while name in aggs:
++                                    if aggs[name].cumulative_result == v.cumulative_result:
++                                        break  # found one
++                                    name = '.'.join([str(k), chr(idx)])
++                                    idx += 1
++
++                                    if idx > ord('Z'):
++                                        raise InconsistentScores(c, k)  # something is wrong if we get to this point (?)
++
++                                k = name
++                                aggs[k] = v
++                        else:
++                            aggs[k] = v
++                        scores[k] += rec_scores[k]
++        return aggs, scores
+ 
+     # charts
+     def contrib_query(self, stages=None):
+         """
+         returns a list of scores
+         :param stages: [None] a list of stages to query, or None to return all components.
+          Specify '*' to return a 1-item list containing just the total.
+@@ -890,15 +1076,15 @@
+         :return: a 2-tuple: results, balance where results is a list having the same length as the number of arguments,
+          and balance is a float reporting the remainder.  sum(results, balance) == self.total().  If '*' is specified as
+          one of the queries, balance will always be 0.
+         """
+         if autorange is not None:
+             self.set_autorange(autorange)
+         elif self._autorange is not None:
+-                self.set_autorange()
++            self.set_autorange()
+ 
+         bal_idx = None
+         results = []
+         for i, query in enumerate(args):
+             if query == '*':
+                 bal_idx = i  # save for later
+                 results.append(0.0)
+@@ -913,8 +1099,8 @@
+         if bal_idx is not None:
+             results[bal_idx] = balance
+             return results, 0.0
+         else:
+             return results, balance
+ 
+     def serialize_components(self, detailed=False):
+-        return [c.serialize(detailed=detailed) for c in self.components()]
++        return [c.serialize(detailed=detailed) for c in sorted(self.components(), key=lambda x: x.result, reverse=True)]
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/__init__.py` & `antelope_core-0.2.0/antelope_core/providers/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -16,16 +16,17 @@
+     _prov = ['IlcdArchive', 'IlcdLcia', 'EcospoldV2Archive', 'EcospoldV1Archive']
+ except ImportError:
+     _prov = []
+ 
+ from .ecoinvent_lcia import EcoinventLcia
+ from .openlca_jsonld import OpenLcaJsonLdArchive
+ from .traci import Traci21Factors
++from .xdb_client import XdbClient
+ 
+-PROVIDERS = _prov + ['EcoinventLcia', 'OpenLcaJsonLdArchive', 'Traci21Factors']
++PROVIDERS = _prov + ['EcoinventLcia', 'OpenLcaJsonLdArchive', 'Traci21Factors', 'XdbClient']
+ 
+ ''' # this has all been folded into archive.__init__
+ class ArchiveError(Exception):
+     pass
+ 
+ 
+ def create_archive(source, ds_type, catalog=None, **kwargs):
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/data/list_of_methods_and_indicators_ecoinvent_v3.2.xlsx` & `antelope_core-0.2.0/antelope_core/providers/data/list_of_methods_and_indicators_ecoinvent_v3.2.xlsx`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/data/traci_2_1_2014_dec_10_0_test.xlsx` & `antelope_core-0.2.0/antelope_core/providers/data/traci_2_1_2014_dec_10_0_test.xlsx`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ecoinvent_lcia.py` & `antelope_core-0.2.0/antelope_core/providers/ecoinvent_lcia.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -13,15 +13,15 @@
+ 
+ from ..archives import BasicArchive
+ # from lcatools.literate_float import LiterateFloat
+ 
+ from ..entities import LcQuantity
+ 
+ import os
+-from xls_tools import open_xl
++from xlstools import open_xl
+ import time
+ 
+ EI_LCIA_VERSION = '3.1'
+ EI_LCIA_NSUUID = '46802ca5-8b25-398c-af10-2376adaa4623'  # use the same value for all implementations so they lookup
+ 
+ Ecoinvent_Indicators = os.path.join(os.path.dirname(__file__), 'data',
+                                     'list_of_methods_and_indicators_ecoinvent_v3.2.xlsx')
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ecospold.py` & `antelope_core-0.2.0/antelope_core/providers/ecospold.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -168,15 +168,15 @@
+ 
+         if exch.get("unit") != f.unit:
+             local_q = self._create_quantity(exch.get("unit"))
+             if local_q.cf(f) == 0.0:
+                 if not apply_conversion(local_q, f):
+                     print('Flow %s needs characterization for unit %s' % (f, local_q))
+                     val = parse_math(input('Enter conversion factor 1 %s = x %s' % (f.unit, local_q)))
+-                    self.tm.add_characterization(f.link, f.reference_entity, local_q, val, context=f.context,
++                    self.tm.add_characterization(f.name, f.reference_entity, local_q, val, context=f.context,
+                                                  origin=self.ref)
+         return f
+ 
+     def _extract_exchanges(self, o):
+         rf = set()  # reference flows
+         flowlist = []
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ecospold2/ecospold2.py` & `antelope_core-0.2.0/antelope_core/providers/ecospold2/ecospold2.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,13 +1,11 @@
+ """
+ Import ecospold2 files
+ """
+ 
+-from __future__ import print_function, unicode_literals
+-
+ from collections import namedtuple
+ from time import time
+ 
+ from lxml import objectify
+ from lxml.etree import XMLSyntaxError
+ 
+ from ...characterizations import QRResult
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ecospold2/ecospold2_index.py` & `antelope_core-0.2.0/antelope_core/providers/ecospold2/ecospold2_index.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ecospold2/master_data.py` & `antelope_core-0.2.0/antelope_core/providers/ecospold2/master_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/file_store.py` & `antelope_core-0.2.0/antelope_core/providers/file_store.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -19,15 +19,15 @@
+ try:
+     from urllib.request import urlopen
+     from urllib.parse import urljoin
+ except ImportError:
+     from urlparse import urljoin
+     from urllib2 import urlopen
+ 
+-_ext = re.compile('\.([^.]+)$')
++_ext = re.compile('\.([^./\\\]+)$')
+ protocol = re.compile('^(\w+)://')
+ 
+ 
+ def get_ext(fname):
+     if bool(_ext.search(fname)):
+         return _ext.search(fname).groups()[0].lower()
+     else:
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/ilcd.py` & `antelope_core-0.2.0/antelope_core/providers/ilcd/ilcd.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -383,15 +383,15 @@
+         else:
+             f = LcFlow(ext_ref, Name=n, CasNumber=cas, Comment=c, ReferenceQuantity=ref_qty, Class=cat)
+ 
+         self.add(f)
+ 
+         for qty, val in chars:
+             try:
+-                self.tm.add_characterization(f.link, f.reference_entity, qty, val, context=f.context)
++                self.tm.add_characterization(f.name, f.reference_entity, qty, val, context=f.context)
+             except DuplicateCharacterizationError:
+                 print('Duplicate Characterization in entity %s\n %s = %g' % (u, qty, val))
+                 # let it go
+ 
+         return f
+ 
+     def _create_process_entity(self, o, ns):
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/ilcd_flowables.py` & `antelope_core-0.2.0/antelope_core/providers/ilcd/ilcd_flowables.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/ilcd_lcia.py` & `antelope_core-0.2.0/antelope_core/providers/ilcd/ilcd_lcia.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -104,15 +104,15 @@
+         if cx.sense is None:
+             cx.sense = {'Input': 'Source', 'Output': 'Sink'}[f_dir]
+         else:
+             if comp_dir(cx.sense) != f_dir:
+                 print('flow %s: context %s sense %s conflicts with direction %s; negating factor' % (f_uuid, cx,
+                                                                                                      cx.sense, f_dir))
+                 cf *= -1
+-        return self.tm.add_characterization(flow.link, flow.reference_entity, lcia, cf, context=flow.context, location=loc)
++        return self.tm.add_characterization(flow.name, flow.reference_entity, lcia, cf, context=flow.context, location=loc)
+ 
+     def load_lcia_method(self, u, version=None, load_all_flows=False):
+         """
+ 
+         :param u:
+         :param version:
+         :param load_all_flows: [False] If False, load CFs only for already-loaded flows. If True, load all flows
+@@ -128,15 +128,15 @@
+                 self._load_factor(ns, factor, lcia, load_all_flows=load_all_flows)
+         return lcia
+ 
+     def load_lcia(self, **kwargs):
+         for f in self.list_objects('LCIAMethod'):
+             u = uuid_regex.search(f).groups()[0]
+             try:
+-                self._get_entity(u)
++                self._entities[u]
+             except KeyError:
+                 self.load_lcia_method(u, **kwargs)
+ 
+     def generate_factors(self, quantity):
+         o = self._get_objectified_entity(self._path_from_ref(quantity))
+         ns = find_ns(o.nsmap, 'LCIAMethod')
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/quantity.py` & `antelope_core-0.2.0/antelope_core/providers/ilcd/quantity.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-11da-a746-0800200b9a66.xml` & `antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-11da-a746-0800200b9a66.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-11da-a746-0800200c9a66.xml` & `antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-11da-a746-0800200c9a66.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-13da-a746-0800200c9a66.xml` & `antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-13da-a746-0800200c9a66.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-22da-a746-0800200c9a66.xml` & `antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flowproperties/93a60a56-a3c8-22da-a746-0800200c9a66.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flows/f579de8c-8897-4bdb-9a0a-b36f8b13282e.xml` & `antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/flows/f579de8c-8897-4bdb-9a0a-b36f8b13282e.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/1ff9a08c-6fc1-4509-8bcd-a5404c598755.xml` & `antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/1ff9a08c-6fc1-4509-8bcd-a5404c598755.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/ad38d542-3fe9-439d-9b95-2f5f7752acaf.xml` & `antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/ad38d542-3fe9-439d-9b95-2f5f7752acaf.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/cd950537-0a98-4044-9ba7-9f9a68d0a504.xml` & `antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/cd950537-0a98-4044-9ba7-9f9a68d0a504.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/de5104d8-3de0-4218-a29d-b7123ce9ca3c.xml` & `antelope_core-0.2.0/antelope_core/providers/ilcd/tests/data/ilcd_test/ILCD/unitgroups/de5104d8-3de0-4218-a29d-b7123ce9ca3c.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/ilcd/tests/test_ilcd.py` & `antelope_core-0.2.0/antelope_core/providers/ilcd/tests/test_ilcd.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/openlca_jsonld.py` & `antelope_core-0.2.0/antelope_core/providers/openlca_jsonld.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -4,28 +4,28 @@
+ 
+ from collections import defaultdict
+ 
+ # from antelope import MultipleReferences
+ 
+ from ..exchanges import AmbiguousReferenceError
+ 
+-from ..entities import *
++from ..entities import LcQuantity, LcFlow, LcProcess, LcUnit, MetaQuantityUnit
+ from ..entities.processes import NoExchangeFound
+ from ..archives import LcArchive
+ from .file_store import FileStore
+ from .parse_math import parse_math
+ 
+ 
+-geog_tail = re.compile('\\b[A-Z]+[o-]?[A-Z]*$')  # capture, e.g. 'ZA', 'GLO', 'RoW', 'US-CA' but not 'PET-g'
++geog_tail = re.compile(',\\s([A-Z]+[o-]?[A-Z]*)$')  # capture, e.g. 'ZA', 'GLO', 'RoW', 'US-CA' but not 'PET-g'
+ 
+ def pull_geog(flowname):
+     raise NotImplementedError
+     '''
+     try:
+-        return geog_tail.search(flowname).group()
++        return geog_tail.search(flowname).group(1)
+     except AttributeError:
+         return None
+     '''
+ 
+ 
+ valid_types = {'processes', 'flows', 'flow_properties'}
+ 
+@@ -47,14 +47,23 @@
+     """
+     def _cat_as_list(self, cat_id):
+         cat = self._cat_index[cat_id]
+         if 'category' in cat:
+             return self._cat_as_list(cat['category']['@id']) + [cat['name']]
+         return [cat['name']]
+ 
++    def _get_location(self, loc_id):
++        if loc_id in self._type_index:
++            if self._type_index[loc_id] == 'locations':
++                return self._create_object('locations', loc_id)
++            else:
++                raise TypeError('%s is a %s, not a location' % (loc_id, self._type_index[loc_id]))
++        else:
++            raise KeyError('%s not in index' % loc_id)
++
+     def _gen_index(self):
+         self._print('Generating index')
+         self._type_index = dict()
+         self._lm_index = dict()
+         # these are cheap- but we should really not need more than 3
+         self._cat_index = dict()  # maps olca id to olca category object
+         self._cat_lookup = dict()  # maps tuple of category-as-list to olca id
+@@ -89,14 +98,15 @@
+         super(OpenLcaJsonLdArchive, self).__init__(source, **kwargs)
+ 
+         self._drop_fields['process'].extend(['processDocumentation'])
+ 
+         self._archive = FileStore(source, internal_prefix=prefix)
+ 
+         self._type_index = None
++        self._unit_dict = dict()
+         if not skip_index:
+             self._gen_index()
+ 
+     def _check_id(self, _id):
+         return self[_id] is not None
+ 
+     def _create_object(self, typ, key):
+@@ -113,16 +123,16 @@
+         """
+ 
+         :param typ:
+         :param key:
+         :return: clean json, name, list of category IDs
+         """
+         j = self._create_object(typ, key)
+-        j.pop('@context')
+-        j.pop('@id')
++        j.pop('@context', None)
++        j.pop('@id', None)
+         name = j.pop('name')
+ 
+         if 'category' in j:
+             c_j = j.pop('category')
+             cat = self._get_category_list(c_j['@id'])
+         else:
+             cat = []
+@@ -165,14 +175,19 @@
+             return LcUnit(unit_id), None
+         unitconv = dict()
+         unit = None
+ 
+         for conv in u_j['units']:
+             is_ref = conv.pop('referenceUnit', False)
+             name = conv.pop('name')
++            if conv['@id'] in self._unit_dict:
++                if self._unit_dict[conv['@id']] != name:
++                    raise ValueError('Unit ID collision! %s: %s X %s' % (conv['@id'], self._unit_dict[conv['@id']], name))
++            else:
++                self._unit_dict[conv['@id']] = name
+             cf_i = conv.pop('conversionFactor')
+             unitconv[name] = 1.0 / cf_i
+ 
+             if is_ref:
+                 assert cf_i == 1, 'non-unit reference unit found! %s' % unit_id
+                 unit = LcUnit(name)
+ 
+@@ -233,32 +248,35 @@
+                 ref_q = q
+             else:
+                 if q not in qs:
+                     qs.append(q)
+                     facs.append(fac)
+         if ref_q is None:
+             raise OpenLcaException('No reference flow property found: %s' % f_id)
++        if not comp:
++            print('Warning: Flow %s with Null context' % f_id)
++
+         f = LcFlow(f_id, Name=name, Compartment=comp, CasNumber=cas, ReferenceQuantity=ref_q, **f_j)  # context gets set by _catch_context()
+ 
+         self.add(f)  # context gets matched inside tm.add_flow().  NONSPECIFIC entries are automatically prepended with parent name in CompartmentManager.new_entry()
+ 
+         for i, q in enumerate(qs):
+-            self.tm.add_characterization(f.link, ref_q, q, facs[i], context=f.context, location=loc)
++            self.tm.add_characterization(f.name, ref_q, q, facs[i], context=f.context, location=loc)
+ 
+         return f
+ 
+     def _add_exchange(self, p, ex):
+         flow = self.retrieve_or_fetch_entity(ex['flow']['@id'], typ='flows')
+         value = ex['amount']
+         dirn = 'Input' if ex['input'] else 'Output'
+ 
+         fp = self.retrieve_or_fetch_entity(ex['flowProperty']['@id'], typ='flow_properties')
+ 
+         try:
+-            v_unit = ex['unit']['name']
++            v_unit = self._unit_dict[ex['unit']['@id']]
+         except KeyError:
+             print('%s: %d No unit! using default %s' % (p.external_ref, ex['internalId'], fp.unit))
+             v_unit = fp.unit
+ 
+         if v_unit != fp.unit:
+             oldval = value
+             value *= fp.convert(from_unit=v_unit)
+@@ -278,15 +296,15 @@
+                 value /= fp.cf(flow)
+ 
+         is_ref = ex.pop('quantitativeReference', False)
+         if is_ref:
+             term = None
+         else:
+             cx = self.tm[flow.context]
+-            if cx.elementary:
++            if cx is not None and cx.elementary:
+                 term = cx
+             else:
+                 if 'defaultProvider' in ex:
+                     term = ex['defaultProvider']['@id']
+                 else:
+                     term = cx
+ 
+@@ -304,20 +322,20 @@
+         try:
+             ft = rf['flowType']
+             if ft == 'ELEMENTARY_FLOW':
+                 print('%s: Skipping allocation factor for elementary flow %s' % (p.external_ref, rf.external_ref))
+                 raise _NotAnRx
+         except KeyError:
+             ft = 'PRODUCT_FLOW'  # more common ??
+-        dr = {'PRODUCT_FLOW': 'Output',
+-              'WASTE_FLOW': 'Input'}[ft]
+         try:
+             rx = p.reference(rf)
+         except NoExchangeFound:
+             # implicit trickery with schema: reference flows MUST be outputs for products, inputs for wastes
++            dr = {'PRODUCT_FLOW': 'Output',
++                  'WASTE_FLOW': 'Input'}[ft]
+             rx_cands = list(_x for _x in p.exchange_values(rf, direction=dr) if _x.type in ('context', 'cutoff'))
+             if len(rx_cands) == 0:
+                 print('%s: Unable to find allocatable exchange for %s' % (p.external_ref, rf.external_ref))
+                 raise _NotAnRx
+             elif len(rx_cands) > 1:
+                 raise AmbiguousReferenceError('%s: Multiple flows with ID %s' % (p.external_ref, rf.external_ref))
+             else:
+@@ -349,14 +367,16 @@
+         _causal_msg = True
+         stored_alloc = []
+         for af in alloc:
+             try:
+                 rx = self._get_rx(p, af['product']['@id'])
+             except _NotAnRx:
+                 continue
++            if rx.value == 0:
++                continue  # can't allocate to a non-flow
+             if af['allocationType'] == 'CAUSAL_ALLOCATION':
+                 if af['value'] == 0:
+                     # Keep 0-allocation factors for non-causal
+                     continue
+ 
+                 if dm != 'CAUSAL_ALLOCATION':
+                     if _causal_msg:
+@@ -398,15 +418,20 @@
+ 
+     def _create_process(self, p_id):
+         q = self[p_id]
+         if q is not None:
+             return q
+ 
+         p_j, name, cls = self._clean_object('processes', p_id)
+-        ss = p_j.pop('location', {'name': 'GLO'})['name']
++        loc = p_j.pop('location', {'name': 'GLO'})
++        try:
++            ss = loc['name']
++        except KeyError:
++            ss = self._get_location(loc['@id'])['name']
++
+         stt = dict()
+         for key, tgt in (('validFrom', 'begin'), ('validUntil', 'end')):
+             try:
+                 stt[tgt] = p_j['processDocumentation'][key]
+             except KeyError:
+                 pass
+ 
+@@ -414,15 +439,14 @@
+ 
+         if 'allocationFactors' in p_j:
+             # process later-- do we keep or remove them???
+             alloc = p_j.pop('allocationFactors')
+         else:
+             alloc = None
+ 
+-
+         p = LcProcess(p_id, Name=name, Classifications=cls, SpatialScope=ss, TemporalScope=stt, **p_j)
+ 
+         self.add(p)
+ 
+         for ex in exch:
+             self._add_exchange(p, ex)
+ 
+@@ -459,41 +483,48 @@
+                     pass
+             '''
+ 
+             ref_qty = self._create_quantity(factor['flowProperty']['@id'])
+             assert flow.reference_entity == ref_qty
+             # value = factor['value']
+ 
+-            self.tm.add_characterization(flow.link, ref_qty, q, factor['value'], context=flow.context, location=loc,
++            self.tm.add_characterization(flow.name, ref_qty, q, factor['value'], context=flow.context, location=loc,
+                                          origin=self.ref)
+-
+         return q
+ 
+     def _create_lcia_category(self, c_id):
+         """
+         In this case, the client has requested a specific lcia quantity, a.k.a. LCIA category.  This is tricky because
+         we don't know which method the category is part of. So we modify our indexing process to track this.
+         :param c_id:
+         :return:
+         """
+         if c_id in self._lm_index:
+-            try:
+-                q = next(t for t in self._create_lcia_method(self._lm_index[c_id], c_id) if t.uuid == c_id)
+-            except StopIteration:
++            self._create_lcia_method(self._lm_index[c_id])
++            q = self[c_id]
++            if q is None:
+                 raise OpenLcaException('Specified LCIA category does not match the one found')
+             return q
+         raise KeyError('Specified key is not an LCIA Category: %s' % c_id)
+ 
+-    def _create_lcia_method(self, m_id, *categories):
++    def _create_lcia_method(self, m_id):
+         """
+         Note: in OLCA archives, an "LCIA Method" is really a methodology with a collection of category indicators, which
+         is what we colloquially call "methods". So every method includes zero or more distinct quantities.
++
++        We create an LciaMethod "meta-quantity" which is NOT an lcia_method in antelope parlance (because it doesn't
++        have an indicator) but which does contain pointers to its constituent lcia-methods (which are actually lcia
++        categories, in OpenLCA parlance)
+         :param m_id:
+         :return:
+         """
++        lm = self[m_id]
++        if lm is not None:
++            return lm
++
+         m_obj, method, cats = self._clean_object('lcia_methods', m_id)
+         m_desc = m_obj.pop('description', None)
+ 
+         sets = []
+         norms = defaultdict(list)
+         weights = defaultdict(list)
+ 
+@@ -504,27 +535,25 @@
+                 for fac in norm_j['factors']:
+                     norms[fac['impactCategory']['@id']].append(fac.get('normalisationFactor', None))
+                     weights[fac['impactCategory']['@id']].append(fac.get('weightingFactor', None))
+ 
+         qs = []
+ 
+         for imp in m_obj.pop('impactCategories', []):
+-            if len(categories) > 0:
+-                # if the user specifies certain categories to load, then skip the ones that aren't specified
+-                if imp['@id'] not in categories:
+-                    continue
+             q = self._create_lcia_quantity(imp, method, MethodDescription=m_desc)
+             norm = norms[q.external_ref]
+             if len(norm) > 0:
+                 q['normalisationFactors'] = norm
+                 q['normSets'] = sets
+                 q['weightingFactors'] = weights[q.external_ref]
+-            qs.append(q)
++            qs.append(q.external_ref)
++
++        m = LcQuantity(m_id, Name=method, ReferenceUnit=MetaQuantityUnit, Method=method, Description=m_desc, ImpactCategories=qs)
++        self.add(m)
+ 
+-        return qs
+ 
+     def _fetch(self, key, typ=None, **kwargs):
+         if typ is None:
+             if self._type_index is None:
+                 self._gen_index()
+             typ = self._type_index[key]
+         try:
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/parse_math.py` & `antelope_core-0.2.0/antelope_core/providers/parse_math.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/tests/test_ecospold.py` & `antelope_core-0.2.0/antelope_core/providers/tests/test_ecospold.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/tests/test_xml_widgets.py` & `antelope_core-0.2.0/antelope_core/providers/tests/test_xml_widgets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/traci/index.py` & `antelope_core-0.2.0/antelope_core/providers/traci/index.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/traci/q_info.py` & `antelope_core-0.2.0/antelope_core/providers/traci/q_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/traci/quantity.py` & `antelope_core-0.2.0/antelope_core/providers/traci/quantity.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/traci/test_traci.py` & `antelope_core-0.2.0/antelope_core/providers/traci/test_traci.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/traci/traci_2_1_spreadsheet.py` & `antelope_core-0.2.0/antelope_core/providers/traci/traci_2_1_spreadsheet.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -163,15 +163,15 @@
+     made the job difficult by electing not to make the archive static.  Trade 2 sec of load time every use for ~2
+     hours of dev time. Pays off only if I load TRACI factors >3600 times.
+     """
+ 
+     def _char_from_flow_compartment_method(self, flow, cm, q, cf):
+         cx = self.tm.add_context(cm, origin=self.ref)
+         try:
+-            self.tm.add_characterization(flow.link, flow.reference_entity, q, cf, context=cx)
++            self.tm.add_characterization(flow.name, flow.reference_entity, q, cf, context=cx)
+         except DuplicateCharacterizationError:
+             pass
+ 
+     def add_method_and_compartment(self, method=None, compartment=None):
+         for col, val in q_info.items():
+             q = self.check_methods(col)
+             if method is None or q is method:
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/xl_dict.py` & `antelope_core-0.2.0/antelope_core/providers/xl_dict.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,21 +1,14 @@
+-try:
+-    import xlrd
+-except ImportError:
+-    xlrd = False
+-
+-try:
+-    import openpyxl
+-except ImportError:
+-    openpyxl = False
++from xlstools import open_xl
+ 
+ 
+ class XlDict(object):
+     """
+-    wrapper class for xlrd that exposes a simple pandas-like interface to access tabular spreadsheet data with iterrows.
++    wrapper class for xlrd-like API that exposes a simple pandas-like interface to access tabular spreadsheet
++    data with iterrows.
+     """
+     @classmethod
+     def from_sheetname(cls, workbook, sheetname, **kwargs):
+         return cls(workbook.sheet_by_name(sheetname), **kwargs)
+ 
+     def __init__(self, sheet, nulls=None):
+         """
+@@ -78,39 +71,10 @@
+         units = set()
+         unitname = 'unit' if internal else 'unitName'
+         for index, row in self.iterrows():
+             units.add(row[unitname])
+         return units
+ 
+ 
+-class XlsxDict(XlDict):
+-    """
+-    Compatibility adapter to use openpyxl spreadsheets instead
+-
+-    """
+-    @classmethod
+-    def from_sheetname(cls, workbook, sheetname, **kwargs):
+-        return cls(workbook[sheetname], **kwargs)
+-
+-    def _row_gen(self):
+-        return self._sheet.iter_rows()
+-
+-
+ def xl_dict(file, sheetname, **kwargs):
+-    f = []
+-    if xlrd:
+-        try:
+-            wb = xlrd.open_workbook(file)
+-            return XlDict.from_sheetname(wb, sheetname, **kwargs)
+-        except AttributeError:
+-            f.append('xlrd')
+-    if openpyxl:
+-        try:
+-            wb = openpyxl.load_workbook(file)
+-            return XlsxDict.from_sheetname(wb, sheetname, **kwargs)
+-        except TypeError:
+-            f.append('openpyxl')
+-    if len(f) == 0:
+-        raise ImportError('Unable to import any excel file readers')
+-    else:
+-        raise TypeError('%s failed to open file' % ', '.join(f))
+-
++    wb = open_xl(file)
++    return XlDict.from_sheetname(wb, sheetname, **kwargs)
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/providers/xml_widgets.py` & `antelope_core-0.2.0/antelope_core/providers/xml_widgets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/tests/test_autorange.py` & `antelope_core-0.2.0/antelope_core/tests/test_autorange.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/tests/test_contexts.py` & `antelope_core-0.2.0/antelope_core/tests/test_contexts.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ import unittest
+ from synonym_dict.compartments.test_compartments import CompartmentContainer
+-from ..contexts import Context, ContextManager, InconsistentSense, ProtectedTerm
++from ..contexts import Context, ContextManager, InconsistentSense, ImmutableContextName, ProtectedTerm
+ from antelope.interfaces.iindex import InvalidSense
+ from ..lcia_engine.lcia_engine import DEFAULT_CONTEXTS, NUM_DEFAULT_CONTEXTS
+ 
+ 
+ class ContextTest(CompartmentContainer.CompartmentTest):
+     def test_sense(self):
+         c = Context('emissions to air', sense='sink')
+@@ -30,14 +30,24 @@
+         self.assertListEqual([str(k) for k in c.self_and_subcompartments], ['emissions', 'emissions to air',
+                                                                             'emissions to rural air',
+                                                                             'emissions to urban air'])
+         self.assertEqual(e.sense, 'Sink')
+ 
+ 
+ class ContextManagerTest(CompartmentContainer.CompartmentManagerTest):
++    def test_pruned_set_name_closure(self):
++        with self.assertRaises(ImmutableContextName):
++            super(ContextManagerTest, self).test_pruned_set_name_closure()
++
++    def test_remove_child(self):
++        self.skipTest('cannot rename contexts')
++
++    def test_no_lingering_subcompartments(self):
++        pass
++
+     def _test_class(self, ignore_case=True):
+         if ignore_case is False:
+             self.skipTest('skipping case sensitive test')
+         else:
+             return ContextManager()
+ 
+     def setUp(self):
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core/tests/test_exchanges.py` & `antelope_core-0.2.0/antelope_core/tests/test_exchanges.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core/tests/test_resources.py` & `antelope_core-0.2.0/antelope_core/tests/test_resources.py`
+
+ * *Files identical despite different names*
+
+### Comparing `antelope_core-0.1.8/antelope_core.egg-info/PKG-INFO` & `antelope_core-0.2.0/antelope_core.egg-info/PKG-INFO`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,287 +1,286 @@
+ Metadata-Version: 2.1
+ Name: antelope-core
+-Version: 0.1.8
+-Summary: UNKNOWN
++Version: 0.2.0
+ Home-page: https://github.com/AntelopeLCA/core
+ Author: Brandon Kuczenski
+ Author-email: bkuczenski@ucsb.edu
+ License: BSD 3-Clause
+-Description: ![](https://travis-ci.com/AntelopeLCA/core.svg?branch=master&status=passed) ![](https://coveralls.io/repos/github/AntelopeLCA/core/badge.svg?branch=master)
+-        
+-        # core
+-        Antelope Catalog - reference implementation.
+-        
+-        This repository provides code that enables access to different forms of life cycle 
+-        inventory and impact assessment data, ideally from both local and remote sources.  It
+-        allows you to view and index data sources, inspect their contents, and perform 
+-        exchange relation queries, quantity relation queries, and LCIA computations.
+-        
+-        At present, the Antelope Catalog relies on local LCA data on your machine, just like other
+-        LCA software.  However, the plan is to remove this requirement by off-loading 
+-        computing requirements to the cloud.   
+-        
+-        ## Additional Packages
+-        
+-        The software for constructing and inverting background matrices, which requires 
+-        [SciPy](https://www.scipy.org), is in a separate repository called 
+-        [antelope_background](https://github.com/AntelopeLCA/background).  The idea is that 
+-        these computations can be performed remotely, allowing lightweight clients to run
+-        without scientific computing software (other than python).  However, at the moment 
+-        this is not yet available.
+-        
+-        The [antelope_foreground](https://github.com/AntelopeLCA/foreground) package allows
+-        users to construct and compute product models that use a mixture of data sources.
+-        
+-        Please visit and install these packages to access and test these functions. 
+-        
+-        ## Quick Start
+-        
+-        ### 1. Configure a local catalog
+-        
+-        `antelope_core` is on PyPI-- note the optional dependency if you want to access datasets 
+-        in XML formats (ILCD, EcoSpoldV1, EcoSpoldV2): 
+-        
+-            user@host$ pip install antelope_core[XML]
+-            
+-        Antelope stores its content in a `catalog` --- for automated unit testing, this should be
+-        specified in an environment variable:
+-        
+-            user@host$ export ANTELOPE_CATALOG_ROOT=/path/to/where/you/want/catalog
+-            
+-        Once that's done, the catalog can be "seeded" with a core set of free tools by running the
+-        local configuration unit test.  This is a bit tricky because unit tests are not usually
+-        designed to be run on distributed code, so it requires a bit of a hack to specify the 
+-        location of the installed package (note that if you are using a virtual environment, your
+-        site-packages directory is inside that virtual environment):
+-        
+-            user@host$ python -m unittest discover -s /path/to/your/site-packages -p test_aa_local.py 
+-        
+-        That will install: two different USLCI implementations (both somewhat stale), and the TRACI 2.1
+-        LCIA methodology.
+-        
+-        ### 2. Start Running
+-        
+-        You are now ready to perform LCIA calculations:
+-        
+-            user@host$ python3
+-            >>> from antelope_core import LcCatalog
+-            >>> from antelope import enum  # a simple "enumerate-and-show items" for interactive use
+-            
+-        If you have defined your catalog root in your environment, you can import it:
+-        
+-            >>> from antelope_core.catalog.catalog_root import CATALOG_ROOT
+-            >>> cat = LcCatalog(CATALOG_ROOT) 
+-            Loading JSON data from /path/to/your/catalog/reference-quantities.json:
+-            local.qdb: /path/to/your/catalog/reference-quantities.json
+-            local.qdb: /data/GitHub/lca-tools/lcatools/qdb/data/elcd_reference_quantities.json
+-            25 new quantity entities added (25 total)
+-            6 new flow entities added (6 total)
+-        
+-        Else, you can make it anything you want
+-        
+-            >>> cat = LcCatalog('/path/to/anywhere') 
+-            Loading JSON data from /path/to/anywhere/reference-quantities.json:
+-            local.qdb: /path/to/anywhere/reference-quantities.json
+-            local.qdb: /data/GitHub/lca-tools/lcatools/qdb/data/elcd_reference_quantities.json
+-            25 new quantity entities added (25 total)
+-            6 new flow entities added (6 total)
+-            
+-        You then interact with the catalog by making queries to specific data sources:
+-        
+-            >>> cat.show_interfaces()  # output shown after running `test_aa_local`
+-            lcia.ipcc.2007.traci21 [basic, index, quantity]
+-            local.lcia.traci.2.1 [basic, index, quantity]
+-            local.qdb [basic, index, quantity]
+-            local.uslci.ecospold [basic, exchange, quantity]
+-            local.uslci.olca [basic, exchange, quantity]
+-             
+-            >>> lcias = enum(cat.query('local.lcia.traci.2.1').lcia_methods())
+-            local.lcia.traci.2.1: /data/LCI/TRACI/traci_2_1_2014_dec_10_0.xlsx
+-            Loading workbook /data/LCI/TRACI/traci_2_1_2014_dec_10_0.xlsx
+-            Applying stored configuration
+-            Applying context hint local.lcia.traci.2.1:air => to air
+-            Applying context hint local.lcia.traci.2.1:water => to water
+-            Applying configuration to Traci21Factors with 11 entities at /data/LCI/TRACI/traci_2_1_2014_dec_10_0.xlsx
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Acidification Air
+-             [00] [local.lcia.traci.2.1] Acidification Air [kg SO2 eq] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Ecotoxicity, freshwater
+-             [01] [local.lcia.traci.2.1] Ecotoxicity, freshwater [CTUeco] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Eutrophication Air
+-             [02] [local.lcia.traci.2.1] Eutrophication Air [kg N eq] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Eutrophication Water
+-             [03] [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Global Warming Air
+-             [04] [local.lcia.traci.2.1] Global Warming Air [kg CO2 eq] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Human Health Particulates Air
+-             [05] [local.lcia.traci.2.1] Human Health Particulates Air [PM2.5 eq] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Human health toxicity, cancer
+-             [06] [local.lcia.traci.2.1] Human health toxicity, cancer [CTUcancer] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Human health toxicity, non-cancer
+-             [07] [local.lcia.traci.2.1] Human health toxicity, non-cancer [CTUnoncancer] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Ozone Depletion Air
+-             [08] [local.lcia.traci.2.1] Ozone Depletion Air [kg CFC-11 eq] [LCIA]
+-            Missing canonical quantity-- adding to LciaDb
+-            registering local.lcia.traci.2.1/Smog Air
+-             [09] [local.lcia.traci.2.1] Smog Air [kg O3 eq] [LCIA]
+-             
+-            >>> lcias[3].show()
+-            QuantityRef catalog reference (Eutrophication Water)
+-            origin: local.lcia.traci.2.1
+-            UUID: f07dbefc-a5a0-3380-92fb-4c5c8a82fabb
+-               Name: Eutrophication Water
+-            Comment: 
+-            ==Local Fields==
+-                       Indicator: kg N eq
+-                      local_Name: Eutrophication Water
+-                   local_Comment: 
+-            local_UnitConversion: {'kg N eq': 1.0}
+-                    local_Method: TRACI 2.1
+-                  local_Category: Eutrophication Water
+-                 local_Indicator: kg N eq
+-                 
+-            >>> _=enum(lcias[3].factors())
+-            Imported 14 factors for [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA]
+-             [00]   7.29 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphorus: water (Eutrophication Water [kg N eq] [LCIA])
+-             [01]   3.19 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphorus pentoxide: water (Eutrophication Water [kg N eq] [LCIA])
+-             [02]   2.38 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphate: water (Eutrophication Water [kg N eq] [LCIA])
+-             [03]   2.31 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphoric acid: water (Eutrophication Water [kg N eq] [LCIA])
+-             [04]  0.986 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrogen: water (Eutrophication Water [kg N eq] [LCIA])
+-             [05]  0.779 [GLO] [kg N eq / kg] local.lcia.traci.2.1/ammonium: water (Eutrophication Water [kg N eq] [LCIA])
+-             [06]  0.779 [GLO] [kg N eq / kg] local.lcia.traci.2.1/ammonia: water (Eutrophication Water [kg N eq] [LCIA])
+-             [07]  0.451 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitric oxide: water (Eutrophication Water [kg N eq] [LCIA])
+-             [08]  0.291 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrogen dioxide: water (Eutrophication Water [kg N eq] [LCIA])
+-             [09]  0.291 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrogen oxides: water (Eutrophication Water [kg N eq] [LCIA])
+-             [10]  0.237 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrate: water (Eutrophication Water [kg N eq] [LCIA])
+-             [11]  0.227 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitric acid: water (Eutrophication Water [kg N eq] [LCIA])
+-             [12]   0.05 [GLO] [kg N eq / kg] local.lcia.traci.2.1/biological oxygen demand: water (Eutrophication Water [kg N eq] [LCIA])
+-             [13]   0.05 [GLO] [kg N eq / kg] local.lcia.traci.2.1/chemical oxygen demand: water (Eutrophication Water [kg N eq] [LCIA])
+-             
+-            >>>
+-        
+-        Specific objects, whose IDs are known, can be retrieved by ID: 
+-             
+-            >>> p = cat.query('local.uslci.olca').get('ba5df01a-626b-35b8-859f-f1df42dd54a0')
+-            ...
+-             
+-            >>> p.show()
+-            ProcessRef catalog reference (ba5df01a-626b-35b8-859f-f1df42dd54a0)
+-            origin: local.uslci.olca
+-            UUID: ba5df01a-626b-35b8-859f-f1df42dd54a0
+-               Name: Polyethylene, low density, resin, at plant, CTR
+-            Comment: 
+-            ==Local Fields==
+-               SpatialScope: RNA
+-              TemporalScope: {'begin': '2002-01-01-05:00', 'end': '2003-01-01-05:00'}
+-            Classifications: ['Chemical Manufacturing', 'All Other Basic Organic Chemical Manufacturing']
+-        
+-            >>> rxs = enum(p.references())
+-             [00] [ Polyethylene, low density, resin, at plant, CTR [RNA] ]*==>  1 (kg) Polyethylene, low density, resin, at plant, CTR 
+-             [01] [ Polyethylene, low density, resin, at plant, CTR [RNA] ]*==>  0.429 (MJ) Recovered energy, for Polyethylene, low density, resin, at plant, CTR
+-             
+-            >>> 
+-        
+-        LCIA can be computed for process inventories (note, however, that without `antelope_background` it is not
+-        possible to compute LCI results.  In this case the cradle-to-resin dataset is already an LCI). Again, 
+-        to do that, please visit / install [antelope_background](https://github.com/AntelopeLCA/background).
+-        
+-            >>> res = lcias[3].do_lcia(p.inventory(rxs[0]))
+-            ...
+-            
+-            >>> res.show_details()
+-            [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA] kg N eq
+-            ------------------------------------------------------------
+-        
+-            [local.uslci.olca] Polyethylene, low density, resin, at plant, CTR [RNA]:
+-               1.14e-05 =       0.05  x   0.000228 [GLO] local.lcia.traci.2.1/chemical oxygen demand, water, unspecified
+-               5.89e-06 =      0.779  x   7.55e-06 [GLO] local.lcia.traci.2.1/ammonia, water, unspecified
+-               2.85e-06 =       0.05  x    5.7e-05 [GLO] local.lcia.traci.2.1/biological oxygen demand, water, unspecified
+-               7.29e-07 =       7.29  x      1e-07 [GLO] local.lcia.traci.2.1/phosphorus, water, unspecified
+-               7.62e-08 =      0.986  x   7.73e-08 [GLO] local.lcia.traci.2.1/nitrogen, water, unspecified
+-               2.42e-08 =      0.779  x    3.1e-08 [GLO] local.lcia.traci.2.1/ammonium, water, unspecified
+-               2.1e-05 [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA]
+-               
+-            >>>
+-        
+-        Search requires an index to be created:
+-            
+-            >>> q = cat.query('local.uslci.olca')
+-            >>> _=enum(q.processes(Name='polyethylene')
+-            ---------------------------------------------------------------------------
+-            IndexRequired                             Traceback (most recent call last)
+-            ...
+-            IndexRequired: itype index required for attribute processes | ()
+-        
+-            >>> cat.index_ref(q.origin)
+-            ...
+-            'local.uslci.olca.index.20210205'
+-            
+-            >>> _=enum(q.processes(Name='polyethylene')
+-             [00] [local.uslci.olca] Polyethylene, low density, resin, at plant [RNA]
+-             [01] [local.uslci.olca] Polyethylene, linear low density, resin, at plant [RNA]
+-             [02] [local.uslci.olca] Polyethylene terephthalate, resin, at plant [RNA]
+-             [03] [local.uslci.olca] Polyethylene, linear low density, resin, at plant, CTR [RNA]
+-             [04] [local.uslci.olca] Polyethylene, low density, resin, at plant, CTR [RNA]
+-             [05] [local.uslci.olca] Polyethylene, high density, resin, at plant, CTR [RNA]
+-             [06] [local.uslci.olca] Polyethylene, high density, resin, at plant  [RNA]
+-             [07] [local.uslci.olca] Polyethylene terephthalate, resin, at plant, CTR [RNA]
+-             
+-            >>>
+-            
+-        ### Installing Ecoinvent
+-        If you have an ecoinvent license, you can install it in your catalog by first downloading 
+-        the 7z files that contain the EcoSpold datasets and storing them on your system.
+-        
+-        You will need to create a folder for ecoinvent, and then create a subfolder for each version 
+-        (say, '3.7.1'), and put the 7z files in that.
+-        
+-            user@host$ mkdir -p /path/to/Ecoinvent/3.7.1
+-        
+-        The 7z files unfortunately need to be extracted before they can be loaded.  After you are done
+-        you should have something that looks like this:
+-        
+-            user@host$ ls /path/to/Ecoinvent/3.7.1
+-            'ecoinvent 3.7.1_cutoff_ecoSpold02'  'ecoinvent 3.7.1_cutoff_ecoSpold02.7z'
+-            user@host$ 
+-            
+-        After that, you can setup ecoinvent in your catalog from within python:
+-        
+-            >>> from antelope_core.data_sources.ecoinvent import EcoinventConfig
+-            >>> ec = EcoinventConfig('/path/to/Ecoinvent')
+-            >>> _=enum(ec.references)
+-             [00] local.ecoinvent.3.7.1.cutoff
+-             
+-            >>> ec.register_all_resources(cat)
+-            >>> 
+-            
+-        Again, you will need to index the resources before being able to search through them- this takes 
+-        several minutes. This is why we are working on a remote solution for this problem.
+-        
+-        Warning: if you want to do Ecoinvent LCI as well, you will need 
+-        [antelope_background](https://github.com/AntelopeLCA/background) -- please
+-        visit that page.
+-        
+-        # Contributing
+-        
+-        Fork, open an issue, whatever.
+-        
+-Platform: UNKNOWN
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Science/Research
+ Classifier: License :: OSI Approved :: BSD License
+ Classifier: Natural Language :: English
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Topic :: Scientific/Engineering
+ Requires-Python: >=3.6
+ Description-Content-Type: text/markdown
+ Provides-Extra: XML
+ Provides-Extra: write_to_excel
++License-File: LICENSE
++
++![](https://travis-ci.com/AntelopeLCA/core.svg?branch=master&status=passed) ![](https://coveralls.io/repos/github/AntelopeLCA/core/badge.svg?branch=master)
++
++# core
++Antelope Catalog - reference implementation.
++
++This repository provides code that enables access to different forms of life cycle 
++inventory and impact assessment data, ideally from both local and remote sources.  It
++allows you to view and index data sources, inspect their contents, and perform 
++exchange relation queries, quantity relation queries, and LCIA computations.
++
++At present, the Antelope Catalog relies on local LCA data on your machine, just like other
++LCA software.  However, the plan is to remove this requirement by off-loading 
++computing requirements to the cloud.   
++
++## Additional Packages
++
++The software for constructing and inverting background matrices, which requires 
++[SciPy](https://www.scipy.org), is in a separate repository called 
++[antelope_background](https://github.com/AntelopeLCA/background).  The idea is that 
++these computations can be performed remotely, allowing lightweight clients to run
++without scientific computing software (other than python).  However, at the moment 
++this is not yet available.
++
++The [antelope_foreground](https://github.com/AntelopeLCA/foreground) package allows
++users to construct and compute product models that use a mixture of data sources.
++
++Please visit and install these packages to access and test these functions. 
++
++## Quick Start
++
++### 1. Configure a local catalog
++
++`antelope_core` is on PyPI-- note the optional dependency if you want to access datasets 
++in XML formats (ILCD, EcoSpoldV1, EcoSpoldV2): 
++
++    user@host$ pip install antelope_core[XML]
++    
++Antelope stores its content in a `catalog` --- for automated unit testing, this should be
++specified in an environment variable:
++
++    user@host$ export ANTELOPE_CATALOG_ROOT=/path/to/where/you/want/catalog
++    
++Once that's done, the catalog can be "seeded" with a core set of free tools by running the
++local configuration unit test.  This is a bit tricky because unit tests are not usually
++designed to be run on distributed code, so it requires a bit of a hack to specify the 
++location of the installed package (note that if you are using a virtual environment, your
++site-packages directory is inside that virtual environment):
++
++    user@host$ python -m unittest discover -s /path/to/your/site-packages -p test_aa_local.py 
++
++That will install: two different USLCI implementations (both somewhat stale), and the TRACI 2.1
++LCIA methodology.
++
++### 2. Start Running
++
++You are now ready to perform LCIA calculations:
++
++    user@host$ python3
++    >>> from antelope_core import LcCatalog
++    >>> from antelope import enum  # a simple "enumerate-and-show items" for interactive use
++    
++If you have defined your catalog root in your environment, you can import it:
++
++    >>> from antelope_core.catalog.catalog_root import CATALOG_ROOT
++    >>> cat = LcCatalog(CATALOG_ROOT) 
++    Loading JSON data from /path/to/your/catalog/reference-quantities.json:
++    local.qdb: /path/to/your/catalog/reference-quantities.json
++    local.qdb: /data/GitHub/lca-tools/lcatools/qdb/data/elcd_reference_quantities.json
++    25 new quantity entities added (25 total)
++    6 new flow entities added (6 total)
++
++Else, you can make it anything you want
++
++    >>> cat = LcCatalog('/path/to/anywhere') 
++    Loading JSON data from /path/to/anywhere/reference-quantities.json:
++    local.qdb: /path/to/anywhere/reference-quantities.json
++    local.qdb: /data/GitHub/lca-tools/lcatools/qdb/data/elcd_reference_quantities.json
++    25 new quantity entities added (25 total)
++    6 new flow entities added (6 total)
++    
++You then interact with the catalog by making queries to specific data sources:
++
++    >>> cat.show_interfaces()  # output shown after running `test_aa_local`
++    lcia.ipcc.2007.traci21 [basic, index, quantity]
++    local.lcia.traci.2.1 [basic, index, quantity]
++    local.qdb [basic, index, quantity]
++    local.uslci.ecospold [basic, exchange, quantity]
++    local.uslci.olca [basic, exchange, quantity]
++     
++    >>> lcias = enum(cat.query('local.lcia.traci.2.1').lcia_methods())
++    local.lcia.traci.2.1: /data/LCI/TRACI/traci_2_1_2014_dec_10_0.xlsx
++    Loading workbook /data/LCI/TRACI/traci_2_1_2014_dec_10_0.xlsx
++    Applying stored configuration
++    Applying context hint local.lcia.traci.2.1:air => to air
++    Applying context hint local.lcia.traci.2.1:water => to water
++    Applying configuration to Traci21Factors with 11 entities at /data/LCI/TRACI/traci_2_1_2014_dec_10_0.xlsx
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Acidification Air
++     [00] [local.lcia.traci.2.1] Acidification Air [kg SO2 eq] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Ecotoxicity, freshwater
++     [01] [local.lcia.traci.2.1] Ecotoxicity, freshwater [CTUeco] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Eutrophication Air
++     [02] [local.lcia.traci.2.1] Eutrophication Air [kg N eq] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Eutrophication Water
++     [03] [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Global Warming Air
++     [04] [local.lcia.traci.2.1] Global Warming Air [kg CO2 eq] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Human Health Particulates Air
++     [05] [local.lcia.traci.2.1] Human Health Particulates Air [PM2.5 eq] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Human health toxicity, cancer
++     [06] [local.lcia.traci.2.1] Human health toxicity, cancer [CTUcancer] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Human health toxicity, non-cancer
++     [07] [local.lcia.traci.2.1] Human health toxicity, non-cancer [CTUnoncancer] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Ozone Depletion Air
++     [08] [local.lcia.traci.2.1] Ozone Depletion Air [kg CFC-11 eq] [LCIA]
++    Missing canonical quantity-- adding to LciaDb
++    registering local.lcia.traci.2.1/Smog Air
++     [09] [local.lcia.traci.2.1] Smog Air [kg O3 eq] [LCIA]
++     
++    >>> lcias[3].show()
++    QuantityRef catalog reference (Eutrophication Water)
++    origin: local.lcia.traci.2.1
++    UUID: f07dbefc-a5a0-3380-92fb-4c5c8a82fabb
++       Name: Eutrophication Water
++    Comment: 
++    ==Local Fields==
++               Indicator: kg N eq
++              local_Name: Eutrophication Water
++           local_Comment: 
++    local_UnitConversion: {'kg N eq': 1.0}
++            local_Method: TRACI 2.1
++          local_Category: Eutrophication Water
++         local_Indicator: kg N eq
++         
++    >>> _=enum(lcias[3].factors())
++    Imported 14 factors for [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA]
++     [00]   7.29 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphorus: water (Eutrophication Water [kg N eq] [LCIA])
++     [01]   3.19 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphorus pentoxide: water (Eutrophication Water [kg N eq] [LCIA])
++     [02]   2.38 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphate: water (Eutrophication Water [kg N eq] [LCIA])
++     [03]   2.31 [GLO] [kg N eq / kg] local.lcia.traci.2.1/phosphoric acid: water (Eutrophication Water [kg N eq] [LCIA])
++     [04]  0.986 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrogen: water (Eutrophication Water [kg N eq] [LCIA])
++     [05]  0.779 [GLO] [kg N eq / kg] local.lcia.traci.2.1/ammonium: water (Eutrophication Water [kg N eq] [LCIA])
++     [06]  0.779 [GLO] [kg N eq / kg] local.lcia.traci.2.1/ammonia: water (Eutrophication Water [kg N eq] [LCIA])
++     [07]  0.451 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitric oxide: water (Eutrophication Water [kg N eq] [LCIA])
++     [08]  0.291 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrogen dioxide: water (Eutrophication Water [kg N eq] [LCIA])
++     [09]  0.291 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrogen oxides: water (Eutrophication Water [kg N eq] [LCIA])
++     [10]  0.237 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitrate: water (Eutrophication Water [kg N eq] [LCIA])
++     [11]  0.227 [GLO] [kg N eq / kg] local.lcia.traci.2.1/nitric acid: water (Eutrophication Water [kg N eq] [LCIA])
++     [12]   0.05 [GLO] [kg N eq / kg] local.lcia.traci.2.1/biological oxygen demand: water (Eutrophication Water [kg N eq] [LCIA])
++     [13]   0.05 [GLO] [kg N eq / kg] local.lcia.traci.2.1/chemical oxygen demand: water (Eutrophication Water [kg N eq] [LCIA])
++     
++    >>>
++
++Specific objects, whose IDs are known, can be retrieved by ID: 
++     
++    >>> p = cat.query('local.uslci.olca').get('ba5df01a-626b-35b8-859f-f1df42dd54a0')
++    ...
++     
++    >>> p.show()
++    ProcessRef catalog reference (ba5df01a-626b-35b8-859f-f1df42dd54a0)
++    origin: local.uslci.olca
++    UUID: ba5df01a-626b-35b8-859f-f1df42dd54a0
++       Name: Polyethylene, low density, resin, at plant, CTR
++    Comment: 
++    ==Local Fields==
++       SpatialScope: RNA
++      TemporalScope: {'begin': '2002-01-01-05:00', 'end': '2003-01-01-05:00'}
++    Classifications: ['Chemical Manufacturing', 'All Other Basic Organic Chemical Manufacturing']
++
++    >>> rxs = enum(p.references())
++     [00] [ Polyethylene, low density, resin, at plant, CTR [RNA] ]*==>  1 (kg) Polyethylene, low density, resin, at plant, CTR 
++     [01] [ Polyethylene, low density, resin, at plant, CTR [RNA] ]*==>  0.429 (MJ) Recovered energy, for Polyethylene, low density, resin, at plant, CTR
++     
++    >>> 
++
++LCIA can be computed for process inventories (note, however, that without `antelope_background` it is not
++possible to compute LCI results.  In this case the cradle-to-resin dataset is already an LCI). Again, 
++to do that, please visit / install [antelope_background](https://github.com/AntelopeLCA/background).
++
++    >>> res = lcias[3].do_lcia(p.inventory(rxs[0]))
++    ...
++    
++    >>> res.show_details()
++    [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA] kg N eq
++    ------------------------------------------------------------
++
++    [local.uslci.olca] Polyethylene, low density, resin, at plant, CTR [RNA]:
++       1.14e-05 =       0.05  x   0.000228 [GLO] local.lcia.traci.2.1/chemical oxygen demand, water, unspecified
++       5.89e-06 =      0.779  x   7.55e-06 [GLO] local.lcia.traci.2.1/ammonia, water, unspecified
++       2.85e-06 =       0.05  x    5.7e-05 [GLO] local.lcia.traci.2.1/biological oxygen demand, water, unspecified
++       7.29e-07 =       7.29  x      1e-07 [GLO] local.lcia.traci.2.1/phosphorus, water, unspecified
++       7.62e-08 =      0.986  x   7.73e-08 [GLO] local.lcia.traci.2.1/nitrogen, water, unspecified
++       2.42e-08 =      0.779  x    3.1e-08 [GLO] local.lcia.traci.2.1/ammonium, water, unspecified
++       2.1e-05 [local.lcia.traci.2.1] Eutrophication Water [kg N eq] [LCIA]
++       
++    >>>
++
++Search requires an index to be created:
++    
++    >>> q = cat.query('local.uslci.olca')
++    >>> _=enum(q.processes(Name='polyethylene')
++    ---------------------------------------------------------------------------
++    IndexRequired                             Traceback (most recent call last)
++    ...
++    IndexRequired: itype index required for attribute processes | ()
++
++    >>> cat.index_ref(q.origin)
++    ...
++    'local.uslci.olca.index.20210205'
++    
++    >>> _=enum(q.processes(Name='polyethylene')
++     [00] [local.uslci.olca] Polyethylene, low density, resin, at plant [RNA]
++     [01] [local.uslci.olca] Polyethylene, linear low density, resin, at plant [RNA]
++     [02] [local.uslci.olca] Polyethylene terephthalate, resin, at plant [RNA]
++     [03] [local.uslci.olca] Polyethylene, linear low density, resin, at plant, CTR [RNA]
++     [04] [local.uslci.olca] Polyethylene, low density, resin, at plant, CTR [RNA]
++     [05] [local.uslci.olca] Polyethylene, high density, resin, at plant, CTR [RNA]
++     [06] [local.uslci.olca] Polyethylene, high density, resin, at plant  [RNA]
++     [07] [local.uslci.olca] Polyethylene terephthalate, resin, at plant, CTR [RNA]
++     
++    >>>
++    
++### Installing Ecoinvent
++If you have an ecoinvent license, you can install it in your catalog by first downloading 
++the 7z files that contain the EcoSpold datasets and storing them on your system.
++
++You will need to create a folder for ecoinvent, and then create a subfolder for each version 
++(say, '3.7.1'), and put the 7z files in that.
++
++    user@host$ mkdir -p /path/to/Ecoinvent/3.7.1
++
++The 7z files unfortunately need to be extracted before they can be loaded.  After you are done
++you should have something that looks like this:
++
++    user@host$ ls /path/to/Ecoinvent/3.7.1
++    'ecoinvent 3.7.1_cutoff_ecoSpold02'  'ecoinvent 3.7.1_cutoff_ecoSpold02.7z'
++    user@host$ 
++    
++After that, you can setup ecoinvent in your catalog from within python:
++
++    >>> from antelope_core.data_sources.ecoinvent import EcoinventConfig
++    >>> ec = EcoinventConfig('/path/to/Ecoinvent')
++    >>> _=enum(ec.origins)
++     [00] local.ecoinvent.3.7.1.cutoff
++     
++    >>> ec.register_all_resources(cat)
++    >>> 
++    
++Again, you will need to index the resources before being able to search through them- this takes 
++several minutes. This is why we are working on a remote solution for this problem.
++
++Warning: if you want to do Ecoinvent LCI as well, you will need 
++[antelope_background](https://github.com/AntelopeLCA/background) -- please
++visit that page.
++
++# Contributing
++
++Fork, open an issue, whatever.
+```
+
+### Comparing `antelope_core-0.1.8/antelope_core.egg-info/SOURCES.txt` & `antelope_core-0.2.0/antelope_core.egg-info/SOURCES.txt`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,20 +1,23 @@
+ LICENSE
+ MANIFEST.in
+ README.md
+ setup.py
+ antelope_core/__init__.py
++antelope_core/auth.py
+ antelope_core/autorange.py
+ antelope_core/catalog_query.py
+ antelope_core/characterizations.py
+ antelope_core/contexts.py
+ antelope_core/exchanges.py
++antelope_core/file_accessor.py
+ antelope_core/from_json.py
+ antelope_core/lc_resource.py
+ antelope_core/lcia_results.py
++antelope_core/models.py
+ antelope_core.egg-info/PKG-INFO
+ antelope_core.egg-info/SOURCES.txt
+ antelope_core.egg-info/dependency_links.txt
+ antelope_core.egg-info/requires.txt
+ antelope_core.egg-info/top_level.txt
+ antelope_core/archives/__init__.py
+ antelope_core/archives/archive_index.py
+@@ -27,14 +30,15 @@
+ antelope_core/archives/tests/__init__.py
+ antelope_core/archives/tests/test_base.py
+ antelope_core/archives/tests/test_basic_archive.py
+ antelope_core/archives/tests/test_entity_store.py
+ antelope_core/archives/tests/test_json.json
+ antelope_core/archives/tests/test_qdb.py
+ antelope_core/archives/tests/test_quantity_manager.py
++antelope_core/archives/tests/test_quantity_relation.py
+ antelope_core/archives/tests/test_term_manager.py
+ antelope_core/catalog/__init__.py
+ antelope_core/catalog/catalog.py
+ antelope_core/catalog/catalog_root.py
+ antelope_core/catalog/configurator.py
+ antelope_core/catalog/lc_catalog.py
+ antelope_core/catalog/lc_resolver.py
+@@ -79,19 +83,19 @@
+ antelope_core/implementations/index.py
+ antelope_core/implementations/quantity.py
+ antelope_core/implementations/tests/__init__.py
+ antelope_core/implementations/tests/test_quantity.py
+ antelope_core/lcia_engine/__init__.py
+ antelope_core/lcia_engine/clookup.py
+ antelope_core/lcia_engine/lcia_engine.py
+-antelope_core/lcia_engine/quelled_cf.py
+ antelope_core/lcia_engine/data/contexts.json
+ antelope_core/lcia_engine/data/flowables.json
+ antelope_core/lcia_engine/data/ipcc_2007_gwp.json
+ antelope_core/lcia_engine/tests/__init__.py
++antelope_core/lcia_engine/tests/test_biogenic_co2.py
+ antelope_core/lcia_engine/tests/test_clookup.py
+ antelope_core/lcia_engine/tests/test_ipcc.py
+ antelope_core/lcia_engine/tests/test_lcia_engine.py
+ antelope_core/providers/__init__.py
+ antelope_core/providers/ecoinvent_lcia.py
+ antelope_core/providers/ecospold.py
+ antelope_core/providers/file_store.py
+@@ -128,13 +132,19 @@
+ antelope_core/providers/tests/test_xml_widgets.py
+ antelope_core/providers/traci/__init__.py
+ antelope_core/providers/traci/index.py
+ antelope_core/providers/traci/q_info.py
+ antelope_core/providers/traci/quantity.py
+ antelope_core/providers/traci/test_traci.py
+ antelope_core/providers/traci/traci_2_1_spreadsheet.py
++antelope_core/providers/xdb_client/__init__.py
++antelope_core/providers/xdb_client/implementation.py
++antelope_core/providers/xdb_client/requester.py
++antelope_core/providers/xdb_client/rest_client.py
++antelope_core/providers/xdb_client/xdb_client.py
++antelope_core/providers/xdb_client/xdb_entities.py
+ antelope_core/tests/__init__.py
+ antelope_core/tests/test_autorange.py
+ antelope_core/tests/test_contexts.py
+ antelope_core/tests/test_exchanges.py
+ antelope_core/tests/test_lcia_results.py
+ antelope_core/tests/test_resources.py
+```
+
+### Comparing `antelope_core-0.1.8/setup.py` & `antelope_core-0.2.0/setup.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,22 +1,28 @@
+ from setuptools import setup, find_packages
+ 
+-VERSION = '0.1.8'
++VERSION = '0.2.0'
+ 
+ requires = [
+     "synonym_dict>=0.2.0",
+-    "antelope_interface>=0.1.7",
++    "antelope_interface>=0.2.0",
+     "xlstools>=0.1.0",
+     "python-magic>=0.4.18",
+-    "requests>=2.25"
++    "requests>=2.25",
++    "pydantic>=1.8.2"
+ ]
+ 
+ # optional: pylzma
+ """
+ Version History
++0.2.0   2023-04-07 - "release" virtualize branch. 
++                   - Add pydantic models for everything
++                   - add an XDB client implementation for remote operation
++                   - job-related changes to entity handling throughout
++
+ 0.1.8   2022-04-08 - PyPI release to roll up a few small changes:
+  * upgrade ecoinvent_lcia to use xlstools; port 3.8
+  - pull out parse_math
+  - windows path mgmt
+  - background trivial impl needs to access entities and not refs
+  - LciaResults can sum together if at least one has a unit node weight
+  - cleanup reference quantities; finally add node activity as canonical quantity
+```
+

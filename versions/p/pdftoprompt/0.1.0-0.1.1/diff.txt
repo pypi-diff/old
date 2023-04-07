@@ -1,0 +1,38 @@
+--- tmp/pdftoprompt-0.1.0.tar.gz
++++ tmp/pdftoprompt-0.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pdftoprompt-0.1.0.tar", max compression
+│ +gzip compressed data, was "pdftoprompt-0.1.1.tar", max compression
+│   --- pdftoprompt-0.1.0.tar
+├── +++ pdftoprompt-0.1.1.tar
+│ ├── file list
+│ │ @@ -1,5 +1,5 @@
+│ │ --rw-r--r--   0        0        0      134 2023-04-05 19:47:45.239910 pdftoprompt-0.1.0/pdftoprompt/__init__.py
+│ │ --rw-r--r--   0        0        0     4541 2023-04-07 04:38:13.220689 pdftoprompt-0.1.0/pdftoprompt/compressor.py
+│ │ --rw-r--r--   0        0        0      603 2023-04-07 05:06:07.952662 pdftoprompt-0.1.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2764 2023-04-07 05:16:59.597248 pdftoprompt-0.1.0/README.md
+│ │ --rw-r--r--   0        0        0     3431 1970-01-01 00:00:00.000000 pdftoprompt-0.1.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0      134 2023-04-05 19:47:45.239910 pdftoprompt-0.1.1/pdftoprompt/__init__.py
+│ │ +-rw-r--r--   0        0        0     4541 2023-04-07 04:38:13.220689 pdftoprompt-0.1.1/pdftoprompt/compressor.py
+│ │ +-rw-r--r--   0        0        0      603 2023-04-07 05:25:58.755383 pdftoprompt-0.1.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     7591 2023-04-07 05:25:25.420610 pdftoprompt-0.1.1/README.md
+│ │ +-rw-r--r--   0        0        0     8253 1970-01-01 00:00:00.000000 pdftoprompt-0.1.1/PKG-INFO
+│ │   --- pdftoprompt-0.1.0/pdftoprompt/compressor.py
+│ ├── +++ pdftoprompt-0.1.1/pdftoprompt/compressor.py
+│ │┄ Files identical despite different names
+│ │   --- pdftoprompt-0.1.0/pyproject.toml
+│ ├── +++ pdftoprompt-0.1.1/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "pdftoprompt"
+│ │ -version = "0.1.0"
+│ │ +version = "0.1.1"
+│ │  description = "Python library to abbreviate a PDF file to GPT 8k prompt length"
+│ │  authors = ["Christopher Carroll Smith <chriscarrollsmith@gmail.com>"]
+│ │  readme = "README.md"
+│ │  packages = [{include = "pdftoprompt"}]
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = "^3.9"
