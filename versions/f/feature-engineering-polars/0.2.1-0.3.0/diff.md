@@ -1,0 +1,97 @@
+# Comparing `tmp/feature_engineering_polars-0.2.1.tar.gz` & `tmp/feature_engineering_polars-0.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "feature_engineering_polars-0.2.1.tar", max compression
++gzip compressed data, was "feature_engineering_polars-0.3.0.tar", max compression
+```
+
+## Comparing `feature_engineering_polars-0.2.1.tar` & `feature_engineering_polars-0.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,10 +1,10 @@
+--rw-r--r--   0        0        0     1070 2023-04-02 18:09:07.204493 feature_engineering_polars-0.2.1/LICENSE
+--rw-r--r--   0        0        0     1902 2023-04-02 18:09:07.204493 feature_engineering_polars-0.2.1/README.md
+--rw-r--r--   0        0        0        0 2023-04-02 18:09:07.204493 feature_engineering_polars-0.2.1/fe_polars/__init__.py
+--rw-r--r--   0        0        0        0 2023-04-02 18:09:07.204493 feature_engineering_polars-0.2.1/fe_polars/encoding/__init__.py
+--rw-r--r--   0        0        0     2066 2023-04-02 18:09:07.204493 feature_engineering_polars-0.2.1/fe_polars/encoding/one_hot_encoding.py
+--rw-r--r--   0        0        0     4735 2023-04-02 18:09:07.204493 feature_engineering_polars-0.2.1/fe_polars/encoding/target_encoding.py
+--rw-r--r--   0        0        0        0 2023-04-02 18:09:07.204493 feature_engineering_polars-0.2.1/fe_polars/imputing/__init__.py
+--rw-r--r--   0        0        0     5147 2023-04-02 18:09:07.204493 feature_engineering_polars-0.2.1/fe_polars/imputing/base_imputing.py
+--rw-r--r--   0        0        0     1270 2023-04-02 18:09:07.204493 feature_engineering_polars-0.2.1/pyproject.toml
+--rw-r--r--   0        0        0     2553 1970-01-01 00:00:00.000000 feature_engineering_polars-0.2.1/PKG-INFO
++-rw-r--r--   0        0        0     1070 2023-04-07 14:19:42.972205 feature_engineering_polars-0.3.0/LICENSE
++-rw-r--r--   0        0        0     1902 2023-04-07 14:19:42.972205 feature_engineering_polars-0.3.0/README.md
++-rw-r--r--   0        0        0        0 2023-04-07 14:19:42.972205 feature_engineering_polars-0.3.0/fe_polars/__init__.py
++-rw-r--r--   0        0        0      133 2023-04-07 14:19:42.972205 feature_engineering_polars-0.3.0/fe_polars/encoding/__init__.py
++-rw-r--r--   0        0        0     2066 2023-04-07 14:19:42.972205 feature_engineering_polars-0.3.0/fe_polars/encoding/one_hot_encoding.py
++-rw-r--r--   0        0        0     4735 2023-04-07 14:19:42.972205 feature_engineering_polars-0.3.0/fe_polars/encoding/target_encoding.py
++-rw-r--r--   0        0        0       58 2023-04-07 14:19:42.972205 feature_engineering_polars-0.3.0/fe_polars/imputing/__init__.py
++-rw-r--r--   0        0        0     6761 2023-04-07 14:19:42.972205 feature_engineering_polars-0.3.0/fe_polars/imputing/base_imputing.py
++-rw-r--r--   0        0        0     1270 2023-04-07 14:19:42.972205 feature_engineering_polars-0.3.0/pyproject.toml
++-rw-r--r--   0        0        0     2553 1970-01-01 00:00:00.000000 feature_engineering_polars-0.3.0/PKG-INFO
+```
+
+### Comparing `feature_engineering_polars-0.2.1/LICENSE` & `feature_engineering_polars-0.3.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `feature_engineering_polars-0.2.1/README.md` & `feature_engineering_polars-0.3.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `feature_engineering_polars-0.2.1/fe_polars/encoding/one_hot_encoding.py` & `feature_engineering_polars-0.3.0/fe_polars/encoding/one_hot_encoding.py`
+
+ * *Files identical despite different names*
+
+### Comparing `feature_engineering_polars-0.2.1/fe_polars/encoding/target_encoding.py` & `feature_engineering_polars-0.3.0/fe_polars/encoding/target_encoding.py`
+
+ * *Files identical despite different names*
+
+### Comparing `feature_engineering_polars-0.2.1/pyproject.toml` & `feature_engineering_polars-0.3.0/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -36,15 +36,15 @@
+ ]
+ 
+ [tool.ruff.pydocstyle]
+ convention = "google"
+ 
+ [tool.poetry]
+ name = "feature-engineering-polars"
+-version = "0.2.1"
++version = "0.3.0"
+ description = "Feature engineering done with Polars"
+ authors = ["Jordan Delbar <jordandelbar@gmail.com>"]
+ license = "MIT License"
+ readme = "README.md"
+ packages = [{ include = "fe_polars" }]
+ 
+ [tool.poetry.dependencies]
+```
+
+### Comparing `feature_engineering_polars-0.2.1/PKG-INFO` & `feature_engineering_polars-0.3.0/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: feature-engineering-polars
+-Version: 0.2.1
++Version: 0.3.0
+ Summary: Feature engineering done with Polars
+ License: MIT
+ Author: Jordan Delbar
+ Author-email: jordandelbar@gmail.com
+ Requires-Python: >=3.7,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+```
+

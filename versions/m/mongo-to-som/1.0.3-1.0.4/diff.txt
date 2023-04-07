@@ -1,0 +1,137 @@
+--- tmp/mongo_to_som-1.0.3.tar.gz
++++ tmp/mongo_to_som-1.0.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "mongo_to_som-1.0.3.tar", last modified: Fri Apr  7 14:09:28 2023, max compression
+│ +gzip compressed data, was "mongo_to_som-1.0.4.tar", last modified: Fri Apr  7 14:26:40 2023, max compression
+│   --- mongo_to_som-1.0.3.tar
+├── +++ mongo_to_som-1.0.4.tar
+│ ├── file list
+│ │ @@ -1,14 +1,14 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 14:09:28.145651 mongo_to_som-1.0.3/
+│ │ --rw-rw-rw-   0        0        0     1195 2023-04-07 14:09:28.145651 mongo_to_som-1.0.3/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      395 2023-04-07 12:24:07.000000 mongo_to_som-1.0.3/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 14:09:28.139650 mongo_to_som-1.0.3/mongo_to_som/
+│ │ --rw-rw-rw-   0        0        0       49 2023-04-07 14:06:43.000000 mongo_to_som-1.0.3/mongo_to_som/__init__.py
+│ │ --rw-rw-rw-   0        0        0     7405 2023-04-07 12:10:25.000000 mongo_to_som-1.0.3/mongo_to_som/mongotosom.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 14:09:28.144651 mongo_to_som-1.0.3/mongo_to_som.egg-info/
+│ │ --rw-rw-rw-   0        0        0     1195 2023-04-07 14:09:28.000000 mongo_to_som-1.0.3/mongo_to_som.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      249 2023-04-07 14:09:28.000000 mongo_to_som-1.0.3/mongo_to_som.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-07 14:09:28.000000 mongo_to_som-1.0.3/mongo_to_som.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       51 2023-04-07 14:09:28.000000 mongo_to_som-1.0.3/mongo_to_som.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       13 2023-04-07 14:09:28.000000 mongo_to_som-1.0.3/mongo_to_som.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-07 14:09:28.145651 mongo_to_som-1.0.3/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1479 2023-04-07 14:08:50.000000 mongo_to_som-1.0.3/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:26:40.466751 mongo_to_som-1.0.4/
+│ │ +-rw-rw-rw-   0        0        0     1143 2023-04-07 14:26:40.465750 mongo_to_som-1.0.4/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      395 2023-04-07 12:24:07.000000 mongo_to_som-1.0.4/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:26:40.064751 mongo_to_som-1.0.4/mongo_to_som/
+│ │ +-rw-rw-rw-   0        0        0       49 2023-04-07 14:06:43.000000 mongo_to_som-1.0.4/mongo_to_som/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     7405 2023-04-07 12:10:25.000000 mongo_to_som-1.0.4/mongo_to_som/mongotosom.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:26:40.463749 mongo_to_som-1.0.4/mongo_to_som.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     1143 2023-04-07 14:26:39.000000 mongo_to_som-1.0.4/mongo_to_som.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      249 2023-04-07 14:26:39.000000 mongo_to_som-1.0.4/mongo_to_som.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 14:26:39.000000 mongo_to_som-1.0.4/mongo_to_som.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       51 2023-04-07 14:26:39.000000 mongo_to_som-1.0.4/mongo_to_som.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       13 2023-04-07 14:26:39.000000 mongo_to_som-1.0.4/mongo_to_som.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 14:26:40.466751 mongo_to_som-1.0.4/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1428 2023-04-07 14:26:04.000000 mongo_to_som-1.0.4/setup.py
+│ │   --- mongo_to_som-1.0.3/PKG-INFO
+│ ├── +++ mongo_to_som-1.0.4/PKG-INFO
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,25 +1,24 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mongo_to_som
+│ │ -Version: 1.0.3
+│ │ +Version: 1.0.4
+│ │  Summary: Library to create Self-Organizing Map from MongoDB collection
+│ │  Home-page: UNKNOWN
+│ │  Author: Tomáš Peregrín
+│ │  Author-email: djtoso@gmail.com
+│ │  License: MIT
+│ │  Platform: UNKNOWN
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │ -Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Operating System :: OS Independent
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  # Mongo to Som
+│ │  A small library to analyze data from MongoDB with Self Organizing Map
+│ │  
+│ │  ### Installation
+│ │   --- mongo_to_som-1.0.3/mongo_to_som/mongotosom.py
+│ ├── +++ mongo_to_som-1.0.4/mongo_to_som/mongotosom.py
+│ │┄ Files identical despite different names
+│ │   --- mongo_to_som-1.0.3/mongo_to_som.egg-info/PKG-INFO
+│ ├── +++ mongo_to_som-1.0.4/mongo_to_som.egg-info/PKG-INFO
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,25 +1,24 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mongo-to-som
+│ │ -Version: 1.0.3
+│ │ +Version: 1.0.4
+│ │  Summary: Library to create Self-Organizing Map from MongoDB collection
+│ │  Home-page: UNKNOWN
+│ │  Author: Tomáš Peregrín
+│ │  Author-email: djtoso@gmail.com
+│ │  License: MIT
+│ │  Platform: UNKNOWN
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │ -Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Operating System :: OS Independent
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  # Mongo to Som
+│ │  A small library to analyze data from MongoDB with Self Organizing Map
+│ │  
+│ │  ### Installation
+│ │   --- mongo_to_som-1.0.3/setup.py
+│ ├── +++ mongo_to_som-1.0.4/setup.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -9,15 +9,15 @@
+│ │  with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
+│ │      long_description = f.read()
+│ │  
+│ │  setup(
+│ │      name="mongo_to_som",
+│ │      packages=["mongo_to_som"],
+│ │      include_package_data=True,
+│ │ -    version='1.0.3',
+│ │ +    version='1.0.4',
+│ │      description='Library to create Self-Organizing Map from MongoDB collection',
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      author='Tomáš Peregrín',
+│ │      author_email="djtoso@gmail.com",
+│ │      license='MIT',
+│ │      classifiers=[
+│ │ @@ -25,15 +25,14 @@
+│ │          "License :: OSI Approved :: MIT License",
+│ │          "Programming Language :: Python",
+│ │          "Programming Language :: Python :: 3",
+│ │          "Programming Language :: Python :: 3.6",
+│ │          "Programming Language :: Python :: 3.7",
+│ │          "Programming Language :: Python :: 3.8",
+│ │          "Programming Language :: Python :: 3.9",
+│ │ -        "Programming Language :: Python :: 3.10",
+│ │          "Operating System :: OS Independent"
+│ │      ],
+│ │      install_requires=[
+│ │          'pandas',
+│ │          'scikit-learn',
+│ │          'pymongo',
+│ │          'numpy',

@@ -1,0 +1,249 @@
+# Comparing `tmp/pandas_dq-1.5.tar.gz` & `tmp/pandas_dq-1.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pandas_dq-1.5.tar", last modified: Fri Apr  7 13:52:26 2023, max compression
++gzip compressed data, was "pandas_dq-1.6.tar", last modified: Fri Apr  7 14:23:55 2023, max compression
+```
+
+## Comparing `pandas_dq-1.5.tar` & `pandas_dq-1.6.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,15 @@
+-drwxrwxrwx   0 ram       (1000) ram       (1000)        0 2023-04-07 13:52:26.514515 pandas_dq-1.5/
+--rwxrwxrwx   0 ram       (1000) ram       (1000)    11357 2023-04-02 23:27:15.000000 pandas_dq-1.5/LICENSE
+--rwxrwxrwx   0 ram       (1000) ram       (1000)      610 2022-04-07 23:06:53.000000 pandas_dq-1.5/MANIFEST.in
+--rwxrwxrwx   0 ram       (1000) ram       (1000)     9758 2023-04-07 13:52:26.498888 pandas_dq-1.5/PKG-INFO
+--rwxrwxrwx   0 ram       (1000) ram       (1000)     8087 2023-04-07 13:15:32.000000 pandas_dq-1.5/README.md
+-drwxrwxrwx   0 ram       (1000) ram       (1000)        0 2023-04-07 13:52:26.483265 pandas_dq-1.5/pandas_dq.egg-info/
+--rwxrwxrwx   0 ram       (1000) ram       (1000)     9758 2023-04-07 13:52:25.000000 pandas_dq-1.5/pandas_dq.egg-info/PKG-INFO
+--rwxrwxrwx   0 ram       (1000) ram       (1000)      232 2023-04-07 13:52:26.000000 pandas_dq-1.5/pandas_dq.egg-info/SOURCES.txt
+--rwxrwxrwx   0 ram       (1000) ram       (1000)        1 2023-04-07 13:52:25.000000 pandas_dq-1.5/pandas_dq.egg-info/dependency_links.txt
+--rwxrwxrwx   0 ram       (1000) ram       (1000)       49 2023-04-07 13:52:25.000000 pandas_dq-1.5/pandas_dq.egg-info/requires.txt
+--rwxrwxrwx   0 ram       (1000) ram       (1000)       10 2023-04-07 13:52:25.000000 pandas_dq-1.5/pandas_dq.egg-info/top_level.txt
+--rwxrwxrwx   0 ram       (1000) ram       (1000)    39889 2023-04-07 13:46:26.000000 pandas_dq-1.5/pandas_dq.py
+--rwxrwxrwx   0 ram       (1000) ram       (1000)       52 2023-04-07 12:15:09.000000 pandas_dq-1.5/requirements.txt
+--rwxrwxrwx   0 ram       (1000) ram       (1000)       38 2023-04-07 13:52:26.514515 pandas_dq-1.5/setup.cfg
+--rwxrwxrwx   0 ram       (1000) ram       (1000)      883 2023-04-07 12:14:57.000000 pandas_dq-1.5/setup.py
++drwxrwxrwx   0 ram       (1000) ram       (1000)        0 2023-04-07 14:23:55.323599 pandas_dq-1.6/
++-rwxrwxrwx   0 ram       (1000) ram       (1000)    11357 2023-04-02 23:27:15.000000 pandas_dq-1.6/LICENSE
++-rwxrwxrwx   0 ram       (1000) ram       (1000)      610 2022-04-07 23:06:53.000000 pandas_dq-1.6/MANIFEST.in
++-rwxrwxrwx   0 ram       (1000) ram       (1000)     9758 2023-04-07 14:23:55.323599 pandas_dq-1.6/PKG-INFO
++-rwxrwxrwx   0 ram       (1000) ram       (1000)     8087 2023-04-07 13:15:32.000000 pandas_dq-1.6/README.md
++drwxrwxrwx   0 ram       (1000) ram       (1000)        0 2023-04-07 14:23:55.307973 pandas_dq-1.6/pandas_dq.egg-info/
++-rwxrwxrwx   0 ram       (1000) ram       (1000)     9758 2023-04-07 14:23:54.000000 pandas_dq-1.6/pandas_dq.egg-info/PKG-INFO
++-rwxrwxrwx   0 ram       (1000) ram       (1000)      232 2023-04-07 14:23:54.000000 pandas_dq-1.6/pandas_dq.egg-info/SOURCES.txt
++-rwxrwxrwx   0 ram       (1000) ram       (1000)        1 2023-04-07 14:23:54.000000 pandas_dq-1.6/pandas_dq.egg-info/dependency_links.txt
++-rwxrwxrwx   0 ram       (1000) ram       (1000)       49 2023-04-07 14:23:54.000000 pandas_dq-1.6/pandas_dq.egg-info/requires.txt
++-rwxrwxrwx   0 ram       (1000) ram       (1000)       10 2023-04-07 14:23:54.000000 pandas_dq-1.6/pandas_dq.egg-info/top_level.txt
++-rwxrwxrwx   0 ram       (1000) ram       (1000)    40289 2023-04-07 14:20:58.000000 pandas_dq-1.6/pandas_dq.py
++-rwxrwxrwx   0 ram       (1000) ram       (1000)       52 2023-04-07 12:15:09.000000 pandas_dq-1.6/requirements.txt
++-rwxrwxrwx   0 ram       (1000) ram       (1000)       38 2023-04-07 14:23:55.323599 pandas_dq-1.6/setup.cfg
++-rwxrwxrwx   0 ram       (1000) ram       (1000)      883 2023-04-07 14:13:10.000000 pandas_dq-1.6/setup.py
+```
+
+### Comparing `pandas_dq-1.5/LICENSE` & `pandas_dq-1.6/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pandas_dq-1.5/MANIFEST.in` & `pandas_dq-1.6/MANIFEST.in`
+
+ * *Files identical despite different names*
+
+### Comparing `pandas_dq-1.5/PKG-INFO` & `pandas_dq-1.6/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pandas_dq
+-Version: 1.5
++Version: 1.6
+ Summary: Clean your data using a scikit-learn transformer in a single line of code
+ Home-page: https://github.com/AutoViML/pandas_dq
+ Author: Ram Seshadri
+ License: Apache License 2.0
+ Description: # pandas_dq
+         Analyze and clean your data in a single line of code with a Scikit-Learn compatible Transformer.
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: pandas_dq Version: 1.5 Summary: Clean your data
++Metadata-Version: 2.1 Name: pandas_dq Version: 1.6 Summary: Clean your data
+ using a scikit-learn transformer in a single line of code Home-page: https://
+ github.com/AutoViML/pandas_dq Author: Ram Seshadri License: Apache License 2.0
+ Description: # pandas_dq Analyze and clean your data in a single line of code
+ with a Scikit-Learn compatible Transformer. # Table of Contents
+     * What_is_pandas_dq
+     * How_to_use_pandas_dq
+     * How_to_install_pandas_dq
+```
+
+### Comparing `pandas_dq-1.5/README.md` & `pandas_dq-1.6/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pandas_dq-1.5/pandas_dq.egg-info/PKG-INFO` & `pandas_dq-1.6/pandas_dq.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pandas-dq
+-Version: 1.5
++Version: 1.6
+ Summary: Clean your data using a scikit-learn transformer in a single line of code
+ Home-page: https://github.com/AutoViML/pandas_dq
+ Author: Ram Seshadri
+ License: Apache License 2.0
+ Description: # pandas_dq
+         Analyze and clean your data in a single line of code with a Scikit-Learn compatible Transformer.
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: pandas-dq Version: 1.5 Summary: Clean your data
++Metadata-Version: 2.1 Name: pandas-dq Version: 1.6 Summary: Clean your data
+ using a scikit-learn transformer in a single line of code Home-page: https://
+ github.com/AutoViML/pandas_dq Author: Ram Seshadri License: Apache License 2.0
+ Description: # pandas_dq Analyze and clean your data in a single line of code
+ with a Scikit-Learn compatible Transformer. # Table of Contents
+     * What_is_pandas_dq
+     * How_to_use_pandas_dq
+     * How_to_install_pandas_dq
+```
+
+### Comparing `pandas_dq-1.5/pandas_dq.py` & `pandas_dq-1.6/pandas_dq.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -106,42 +106,54 @@
+     dq_df1[new_col] = ""
+ 
+     # Create an empty dataframe to store the data quality issues
+     data_types = pd.DataFrame(
+         df.dtypes,
+         columns=['Data Type']
+     )
++
+     missing_values = df.isnull().sum()
+     missing_cols = missing_values[missing_values > 0].index.tolist()
++    number_cols = df.select_dtypes(include=["integer", "float"]).columns.tolist() # Get numerical columns
++    float_cols = df.select_dtypes(include=[ "float"]).columns.tolist() # Get float columns
++
+     missing_data = pd.DataFrame(
+         missing_values,
+         columns=['Missing Values']
+     )
+     unique_values = pd.DataFrame(
+         columns=['Unique Values']
+     )
+     for row in list(df.columns.values):
+-        unique_values.loc[row] = [df[row].nunique()]
++        if row in float_cols:
++            unique_values.loc[row] = ["NA"]
++        else:
++            unique_values.loc[row] = [df[row].nunique()]
+         
+     maximum_values = pd.DataFrame(
+         columns=['Maximum Value']
+     )
+     minimum_values = pd.DataFrame(
+         columns=['Minimum Value']
+     )
+     for row in list(df.columns.values):
+         if row not in missing_cols:
+             maximum_values.loc[row] = [df[row].max()]
++        elif row in number_cols:
++            maximum_values.loc[row] = [df[row].max()]
+     for row in list(df.columns.values):
+         if row not in missing_cols:
+             minimum_values.loc[row] = [df[row].min()]
++        elif row in number_cols:
++            minimum_values.loc[row] = [df[row].min()]
+ 
+-    ### now generate the data quality report 
++    ### now generate the data quality starter dataframe
+     dq_df2 = data_types.join(missing_data).join(unique_values).join(minimum_values).join(maximum_values)
+ 
++    ### set up additional columns    
+     dq_df2["first_comma"] = ""
+     dq_df2[new_col] = f""
+     
+     # Detect missing values and suggests to impute them with mean, median, mode, or a constant value123
+     #missing_values = df.isnull().sum()
+     #missing_cols = missing_values[missing_values > 0].index.tolist()
+     if len(missing_cols) > 0:
+@@ -258,15 +270,15 @@
+                 outlier_cols.append(col)
+                 if first_time:
+                     new_string = f"There are {len(num_cols)} numerical columns, some with outliers. Remove them or use robust statistics."
+                     dq_df1.loc[bad_col,new_col] += dq_df1.loc[bad_col,'first_comma'] + new_string
+                     dq_df1.loc[bad_col,'first_comma'] = ', '
+                     first_time =False
+                 ### check if there are outlier columns and print them ##
+-                new_string = f"has {len(outliers)} outliers greater than upper bound or lower than lower bound: {min(outliers.values)}. Cap them or remove them."
++                new_string = f"has {len(outliers)} outliers greater than upper bound ({upper_bound}) or lower than lower bound: {lower_bound}. Cap them or remove them."
+                 dq_df2.loc[col,new_col] += dq_df2.loc[col,'first_comma'] + new_string
+                 dq_df2.loc[col,'first_comma'] = ', '
+         if len(outlier_cols) < 1:
+             new_string =  f"There are no numeric columns with outliers in this dataset"
+             dq_df1.loc[good_col,new_col] += dq_df1.loc[good_col,'first_comma'] + new_string
+             dq_df1.loc[good_col,'first_comma'] = ', '
+                 
+@@ -733,14 +745,12 @@
+         transformed_X = self.transform_skewed(rare_X)
+                 
+         # Return the transformed DataFrame
+         return transformed_X
+ 
+ ############################################################################################
+ module_type = 'Running' if  __name__ == "__main__" else 'Imported'
+-version_number =  '1.5'
+-print(f"""{module_type} pandas_dq ({version_number}). Use fit and transform using:
+-from pandas_dq import find_dq, Fix_DQ
+-fdq = Fix_DQ(quantile=0.75, cat_fill_value="missing", num_fill_value=9999, 
+-                 rare_threshold=0.05, correlation_threshold=0.8)
++version_number =  '1.6'
++print(f"""{module_type} pandas_dq ({version_number}). Always upgrade to get latest version.
++from pandas_dq import dq_report, Fix_DQ
+ """)
+ #################################################################################
+```
+
+### Comparing `pandas_dq-1.5/setup.py` & `pandas_dq-1.6/setup.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import setuptools
+ 
+ with open("README.md", "r", encoding="utf-8") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name="pandas_dq",
+-    version="1.5",
++    version="1.6",
+     author="Ram Seshadri",
+     # author_email="author@example.com",
+     description="Clean your data using a scikit-learn transformer in a single line of code",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     license='Apache License 2.0',
+     url="https://github.com/AutoViML/pandas_dq",
+```
+

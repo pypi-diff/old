@@ -1,0 +1,1123 @@
+# Comparing `tmp/anatools-3.0.2.tar.gz` & `tmp/anatools-3.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "anatools-3.0.2.tar", last modified: Mon Mar  6 20:18:47 2023, max compression
++gzip compressed data, was "anatools-3.1.0.tar", last modified: Fri Apr  7 14:28:10 2023, max compression
+```
+
+## Comparing `anatools-3.0.2.tar` & `anatools-3.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,100 +1,101 @@
+-drwxrwxrwx   0 root         (0) root         (0)        0 2023-03-06 20:18:47.301080 anatools-3.0.2/
+--rw-rw-rw-   0 root         (0) root         (0)     1072 2023-03-06 20:18:29.000000 anatools-3.0.2/LICENSE
+--rw-rw-rw-   0 root         (0) root         (0)       25 2023-03-06 20:18:29.000000 anatools-3.0.2/MANIFEST.in
+--rw-rw-rw-   0 root         (0) root         (0)     6975 2023-03-06 20:18:47.301080 anatools-3.0.2/PKG-INFO
+--rw-rw-rw-   0 root         (0) root         (0)     6585 2023-03-06 20:18:29.000000 anatools-3.0.2/README.md
+-drwxrwxrwx   0 root         (0) root         (0)        0 2023-03-06 20:18:47.285080 anatools-3.0.2/anatools/
+--rw-rw-rw-   0 root         (0) root         (0)      953 2023-03-06 20:18:33.000000 anatools-3.0.2/anatools/__init__.py
+-drwxrwxrwx   0 root         (0) root         (0)        0 2023-03-06 20:18:47.285080 anatools-3.0.2/anatools/anaclient/
+--rw-rw-rw-   0 root         (0) root         (0)       50 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     9301 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/anaclient.py
+--rw-rw-rw-   0 root         (0) root         (0)     3516 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/analytics.py
+--rw-rw-rw-   0 root         (0) root         (0)    10180 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/annotations.py
+-drwxrwxrwx   0 root         (0) root         (0)        0 2023-03-06 20:18:47.289080 anatools-3.0.2/anatools/anaclient/api/
+--rw-rw-rw-   0 root         (0) root         (0)       39 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     2910 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/analytics.py
+--rw-rw-rw-   0 root         (0) root         (0)     8904 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/annotations.py
+--rw-rw-rw-   0 root         (0) root         (0)     2943 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/api.py
+--rw-rw-rw-   0 root         (0) root         (0)    10389 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/channels.py
+--rw-rw-rw-   0 root         (0) root         (0)     8002 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/datasets.py
+--rw-rw-rw-   0 root         (0) root         (0)     9604 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/gan.py
+--rw-rw-rw-   0 root         (0) root         (0)     4206 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/graphs.py
+--rw-rw-rw-   0 root         (0) root         (0)     1224 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/handlers.py
+--rw-rw-rw-   0 root         (0) root         (0)     5334 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/limits.py
+--rw-rw-rw-   0 root         (0) root         (0)     3974 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/members.py
+--rw-rw-rw-   0 root         (0) root         (0)     1375 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/organizations.py
+--rw-rw-rw-   0 root         (0) root         (0)     2488 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/umap.py
+--rw-rw-rw-   0 root         (0) root         (0)     8814 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/volumes.py
+--rw-rw-rw-   0 root         (0) root         (0)     3202 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/api/workspaces.py
+--rw-rw-rw-   0 root         (0) root         (0)    18408 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/channels.py
+--rw-rw-rw-   0 root         (0) root         (0)     9355 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/datasets.py
+--rw-rw-rw-   0 root         (0) root         (0)     8756 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/gan.py
+--rw-rw-rw-   0 root         (0) root         (0)     6300 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/graphs.py
+--rw-rw-rw-   0 root         (0) root         (0)     9386 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/organizations.py
+--rw-rw-rw-   0 root         (0) root         (0)     1936 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/umap.py
+--rw-rw-rw-   0 root         (0) root         (0)    17619 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/volumes.py
+--rw-rw-rw-   0 root         (0) root         (0)     9168 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/anaclient/workspaces.py
+-drwxrwxrwx   0 root         (0) root         (0)        0 2023-03-06 20:18:47.293080 anatools-3.0.2/anatools/annotations/
+--rw-rw-rw-   0 root         (0) root         (0)       63 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/annotations/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     7460 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/annotations/annotations.py
+--rw-rw-rw-   0 root         (0) root         (0)     3701 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/annotations/convert_coco.py
+--rw-rw-rw-   0 root         (0) root         (0)     7173 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/annotations/convert_kitti.py
+--rw-rw-rw-   0 root         (0) root         (0)     3381 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/annotations/convert_pascal.py
+--rw-rw-rw-   0 root         (0) root         (0)     4641 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/annotations/convert_sagemaker.py
+--rw-rw-rw-   0 root         (0) root         (0)     2727 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/annotations/convert_yolo.py
+--rw-rw-rw-   0 root         (0) root         (0)     7548 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/annotations/draw.py
+-drwxrwxrwx   0 root         (0) root         (0)        0 2023-03-06 20:18:47.293080 anatools-3.0.2/anatools/bin/
+--rw-rw-rw-   0 root         (0) root         (0)     4523 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/bin/ana
+--rw-rw-rw-   0 root         (0) root         (0)     9659 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/bin/anadeploy
+--rw-rw-rw-   0 root         (0) root         (0)     7692 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/bin/anamount
+--rw-rw-rw-   0 root         (0) root         (0)     4524 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/bin/anautils
+-drwxrwxrwx   0 root         (0) root         (0)        0 2023-03-06 20:18:47.297080 anatools-3.0.2/anatools/lib/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     6974 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/ana_object.py
+--rw-rw-rw-   0 root         (0) root         (0)     7114 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/bbox.py
+--rw-rw-rw-   0 root         (0) root         (0)     2149 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/blender_main.py
+--rw-rw-rw-   0 root         (0) root         (0)     4923 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/camera_checks.py
+--rw-rw-rw-   0 root         (0) root         (0)    14524 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/channel.py
+--rw-rw-rw-   0 root         (0) root         (0)     1777 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/context.py
+--rw-rw-rw-   0 root         (0) root         (0)     3057 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/file_handlers.py
+--rw-rw-rw-   0 root         (0) root         (0)     9556 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/generator.py
+--rw-rw-rw-   0 root         (0) root         (0)     5727 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/interp.py
+--rw-rw-rw-   0 root         (0) root         (0)     2244 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/load.py
+--rw-rw-rw-   0 root         (0) root         (0)    10556 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/node.py
+--rw-rw-rw-   0 root         (0) root         (0)     1430 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/object_utils.py
+--rw-rw-rw-   0 root         (0) root         (0)     1702 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/package_utils.py
+--rw-rw-rw-   0 root         (0) root         (0)      209 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/print.py
+--rw-rw-rw-   0 root         (0) root         (0)     1918 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/python_main.py
+--rw-rw-rw-   0 root         (0) root         (0)     3200 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/rigged_object.py
+--rw-rw-rw-   0 root         (0) root         (0)     8111 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/scene.py
+--rw-rw-rw-   0 root         (0) root         (0)     3757 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/lib/search_utils.py
+-drwxrwxrwx   0 root         (0) root         (0)        0 2023-03-06 20:18:47.301080 anatools-3.0.2/anatools/nodes/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     1115 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/constants.py
+--rw-rw-rw-   0 root         (0) root         (0)     1228 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/constants.yml
+--rw-rw-rw-   0 root         (0) root         (0)     2635 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/generators.py
+--rw-rw-rw-   0 root         (0) root         (0)     2183 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/generators.yml
+--rw-rw-rw-   0 root         (0) root         (0)     1592 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/logic.py
+--rw-rw-rw-   0 root         (0) root         (0)     1567 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/logic.yml
+--rw-rw-rw-   0 root         (0) root         (0)     5222 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/random_generator.py
+--rw-rw-rw-   0 root         (0) root         (0)     8429 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/random_generator.yml
+--rw-rw-rw-   0 root         (0) root         (0)     1321 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/sweep_arange.py
+--rw-rw-rw-   0 root         (0) root         (0)     1509 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/sweep_arange.yml
+--rw-rw-rw-   0 root         (0) root         (0)     1306 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/sweep_linspace.py
+--rw-rw-rw-   0 root         (0) root         (0)     1549 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/sweep_linspace.yml
+--rw-rw-rw-   0 root         (0) root         (0)     1224 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/vectors.py
+--rw-rw-rw-   0 root         (0) root         (0)     1922 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/vectors.yml
+--rw-rw-rw-   0 root         (0) root         (0)      559 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/volume_file.py
+--rw-rw-rw-   0 root         (0) root         (0)      862 2023-03-06 20:18:29.000000 anatools-3.0.2/anatools/nodes/volume_file.yml
+-drwxrwxrwx   0 root         (0) root         (0)        0 2023-03-06 20:18:47.285080 anatools-3.0.2/anatools.egg-info/
+--rw-rw-rw-   0 root         (0) root         (0)     6975 2023-03-06 20:18:47.000000 anatools-3.0.2/anatools.egg-info/PKG-INFO
+--rw-rw-rw-   0 root         (0) root         (0)     2530 2023-03-06 20:18:47.000000 anatools-3.0.2/anatools.egg-info/SOURCES.txt
+--rw-rw-rw-   0 root         (0) root         (0)        1 2023-03-06 20:18:47.000000 anatools-3.0.2/anatools.egg-info/dependency_links.txt
+--rw-rw-rw-   0 root         (0) root         (0)       36 2023-03-06 20:18:47.000000 anatools-3.0.2/anatools.egg-info/requires.txt
+--rw-rw-rw-   0 root         (0) root         (0)        9 2023-03-06 20:18:47.000000 anatools-3.0.2/anatools.egg-info/top_level.txt
+--rw-rw-rw-   0 root         (0) root         (0)      103 2023-03-06 20:18:29.000000 anatools-3.0.2/pyproject.toml
+--rw-rw-rw-   0 root         (0) root         (0)       35 2023-03-06 20:18:29.000000 anatools-3.0.2/requirements.txt
+--rw-rw-rw-   0 root         (0) root         (0)       38 2023-03-06 20:18:47.301080 anatools-3.0.2/setup.cfg
+--rw-rw-rw-   0 root         (0) root         (0)     1110 2023-03-06 20:18:29.000000 anatools-3.0.2/setup.py
+-drwxrwxrwx   0 root         (0) root         (0)        0 2023-03-06 20:18:47.301080 anatools-3.0.2/tests/
+--rw-rw-rw-   0 root         (0) root         (0)      782 2023-03-06 20:18:30.000000 anatools-3.0.2/tests/test_bbox.py
++drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 14:28:10.392023 anatools-3.1.0/
++-rw-rw-rw-   0 root         (0) root         (0)     1072 2023-04-07 14:27:54.000000 anatools-3.1.0/LICENSE
++-rw-rw-rw-   0 root         (0) root         (0)       25 2023-04-07 14:27:54.000000 anatools-3.1.0/MANIFEST.in
++-rw-rw-rw-   0 root         (0) root         (0)     6975 2023-04-07 14:28:10.392023 anatools-3.1.0/PKG-INFO
++-rw-rw-rw-   0 root         (0) root         (0)     6585 2023-04-07 14:27:54.000000 anatools-3.1.0/README.md
++drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 14:28:10.380023 anatools-3.1.0/anatools/
++-rw-rw-rw-   0 root         (0) root         (0)      953 2023-04-07 14:27:57.000000 anatools-3.1.0/anatools/__init__.py
++drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 14:28:10.384024 anatools-3.1.0/anatools/anaclient/
++-rw-rw-rw-   0 root         (0) root         (0)       50 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)    11167 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/anaclient.py
++-rw-rw-rw-   0 root         (0) root         (0)     3581 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/analytics.py
++-rw-rw-rw-   0 root         (0) root         (0)    11005 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/annotations.py
++drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 14:28:10.384024 anatools-3.1.0/anatools/anaclient/api/
++-rw-rw-rw-   0 root         (0) root         (0)       39 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     2910 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/analytics.py
++-rw-rw-rw-   0 root         (0) root         (0)     9403 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/annotations.py
++-rw-rw-rw-   0 root         (0) root         (0)     4454 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/api.py
++-rw-rw-rw-   0 root         (0) root         (0)    10389 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/channels.py
++-rw-rw-rw-   0 root         (0) root         (0)     8002 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/datasets.py
++-rw-rw-rw-   0 root         (0) root         (0)    10116 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/gan.py
++-rw-rw-rw-   0 root         (0) root         (0)     4206 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/graphs.py
++-rw-rw-rw-   0 root         (0) root         (0)     1224 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/handlers.py
++-rw-rw-rw-   0 root         (0) root         (0)     5334 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/limits.py
++-rw-rw-rw-   0 root         (0) root         (0)     3974 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/members.py
++-rw-rw-rw-   0 root         (0) root         (0)     1375 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/organizations.py
++-rw-rw-rw-   0 root         (0) root         (0)     2488 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/umap.py
++-rw-rw-rw-   0 root         (0) root         (0)     8958 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/volumes.py
++-rw-rw-rw-   0 root         (0) root         (0)     3202 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/api/workspaces.py
++-rw-rw-rw-   0 root         (0) root         (0)    18408 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/channels.py
++-rw-rw-rw-   0 root         (0) root         (0)     9145 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/datasets.py
++-rw-rw-rw-   0 root         (0) root         (0)     9573 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/gan.py
++-rw-rw-rw-   0 root         (0) root         (0)     6300 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/graphs.py
++-rw-rw-rw-   0 root         (0) root         (0)     9386 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/organizations.py
++-rw-rw-rw-   0 root         (0) root         (0)     1936 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/umap.py
++-rw-rw-rw-   0 root         (0) root         (0)    17861 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/volumes.py
++-rw-rw-rw-   0 root         (0) root         (0)     9168 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/anaclient/workspaces.py
++drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 14:28:10.388023 anatools-3.1.0/anatools/annotations/
++-rw-rw-rw-   0 root         (0) root         (0)       63 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/annotations/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     7460 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/annotations/annotations.py
++-rw-rw-rw-   0 root         (0) root         (0)     3701 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/annotations/convert_coco.py
++-rw-rw-rw-   0 root         (0) root         (0)     7173 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/annotations/convert_kitti.py
++-rw-rw-rw-   0 root         (0) root         (0)     3381 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/annotations/convert_pascal.py
++-rw-rw-rw-   0 root         (0) root         (0)     4641 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/annotations/convert_sagemaker.py
++-rw-rw-rw-   0 root         (0) root         (0)     2727 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/annotations/convert_yolo.py
++-rw-rw-rw-   0 root         (0) root         (0)     7548 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/annotations/draw.py
++drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 14:28:10.388023 anatools-3.1.0/anatools/bin/
++-rw-rw-rw-   0 root         (0) root         (0)     4523 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/bin/ana
++-rw-rw-rw-   0 root         (0) root         (0)     9659 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/bin/anadeploy
++-rw-rw-rw-   0 root         (0) root         (0)     7692 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/bin/anamount
++-rw-rw-rw-   0 root         (0) root         (0)     4524 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/bin/anautils
++drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 14:28:10.388023 anatools-3.1.0/anatools/lib/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     6974 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/ana_object.py
++-rw-rw-rw-   0 root         (0) root         (0)     7114 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/bbox.py
++-rw-rw-rw-   0 root         (0) root         (0)     2149 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/blender_main.py
++-rw-rw-rw-   0 root         (0) root         (0)     4923 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/camera_checks.py
++-rw-rw-rw-   0 root         (0) root         (0)    14524 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/channel.py
++-rw-rw-rw-   0 root         (0) root         (0)     1777 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/context.py
++-rw-rw-rw-   0 root         (0) root         (0)      505 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/download.py
++-rw-rw-rw-   0 root         (0) root         (0)     3057 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/file_handlers.py
++-rw-rw-rw-   0 root         (0) root         (0)     9556 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/generator.py
++-rw-rw-rw-   0 root         (0) root         (0)     5727 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/interp.py
++-rw-rw-rw-   0 root         (0) root         (0)     2244 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/load.py
++-rw-rw-rw-   0 root         (0) root         (0)    10556 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/node.py
++-rw-rw-rw-   0 root         (0) root         (0)     1430 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/object_utils.py
++-rw-rw-rw-   0 root         (0) root         (0)     1702 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/package_utils.py
++-rw-rw-rw-   0 root         (0) root         (0)      209 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/print.py
++-rw-rw-rw-   0 root         (0) root         (0)     1918 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/python_main.py
++-rw-rw-rw-   0 root         (0) root         (0)     3200 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/rigged_object.py
++-rw-rw-rw-   0 root         (0) root         (0)     8111 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/scene.py
++-rw-rw-rw-   0 root         (0) root         (0)     3757 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/lib/search_utils.py
++drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 14:28:10.392023 anatools-3.1.0/anatools/nodes/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     1115 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/constants.py
++-rw-rw-rw-   0 root         (0) root         (0)     1228 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/constants.yml
++-rw-rw-rw-   0 root         (0) root         (0)     2635 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/generators.py
++-rw-rw-rw-   0 root         (0) root         (0)     2183 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/generators.yml
++-rw-rw-rw-   0 root         (0) root         (0)     1592 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/logic.py
++-rw-rw-rw-   0 root         (0) root         (0)     1567 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/logic.yml
++-rw-rw-rw-   0 root         (0) root         (0)     5381 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/random_generator.py
++-rw-rw-rw-   0 root         (0) root         (0)     8429 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/random_generator.yml
++-rw-rw-rw-   0 root         (0) root         (0)     1321 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/sweep_arange.py
++-rw-rw-rw-   0 root         (0) root         (0)     1509 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/sweep_arange.yml
++-rw-rw-rw-   0 root         (0) root         (0)     1306 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/sweep_linspace.py
++-rw-rw-rw-   0 root         (0) root         (0)     1549 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/sweep_linspace.yml
++-rw-rw-rw-   0 root         (0) root         (0)     1224 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/vectors.py
++-rw-rw-rw-   0 root         (0) root         (0)     1922 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/vectors.yml
++-rw-rw-rw-   0 root         (0) root         (0)      559 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/volume_file.py
++-rw-rw-rw-   0 root         (0) root         (0)      862 2023-04-07 14:27:54.000000 anatools-3.1.0/anatools/nodes/volume_file.yml
++drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 14:28:10.380023 anatools-3.1.0/anatools.egg-info/
++-rw-rw-rw-   0 root         (0) root         (0)     6975 2023-04-07 14:28:10.000000 anatools-3.1.0/anatools.egg-info/PKG-INFO
++-rw-rw-rw-   0 root         (0) root         (0)     2555 2023-04-07 14:28:10.000000 anatools-3.1.0/anatools.egg-info/SOURCES.txt
++-rw-rw-rw-   0 root         (0) root         (0)        1 2023-04-07 14:28:10.000000 anatools-3.1.0/anatools.egg-info/dependency_links.txt
++-rw-rw-rw-   0 root         (0) root         (0)       36 2023-04-07 14:28:10.000000 anatools-3.1.0/anatools.egg-info/requires.txt
++-rw-rw-rw-   0 root         (0) root         (0)        9 2023-04-07 14:28:10.000000 anatools-3.1.0/anatools.egg-info/top_level.txt
++-rw-rw-rw-   0 root         (0) root         (0)      103 2023-04-07 14:27:54.000000 anatools-3.1.0/pyproject.toml
++-rw-rw-rw-   0 root         (0) root         (0)       35 2023-04-07 14:27:54.000000 anatools-3.1.0/requirements.txt
++-rw-rw-rw-   0 root         (0) root         (0)       38 2023-04-07 14:28:10.392023 anatools-3.1.0/setup.cfg
++-rw-rw-rw-   0 root         (0) root         (0)     1110 2023-04-07 14:27:54.000000 anatools-3.1.0/setup.py
++drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 14:28:10.392023 anatools-3.1.0/tests/
++-rw-rw-rw-   0 root         (0) root         (0)      782 2023-04-07 14:27:54.000000 anatools-3.1.0/tests/test_bbox.py
+```
+
+### Comparing `anatools-3.0.2/LICENSE` & `anatools-3.1.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/PKG-INFO` & `anatools-3.1.0/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: anatools
+-Version: 3.0.2
++Version: 3.1.0
+ Summary: Tools for development with the Rendered.ai Platform.
+ Home-page: https://rendered.ai
+ Author: Rendered AI, Inc
+ Author-email: support@rendered.ai
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Requires-Python: >=3.6
+```
+
+### Comparing `anatools-3.0.2/README.md` & `anatools-3.1.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/__init__.py` & `anatools-3.1.0/anatools/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -12,8 +12,8 @@
+         https://support.rendered.ai/gc/Introduction-to-Rendered.ai.1577812005.html
+ 
+ """
+ 
+ from .anaclient.anaclient import client
+ from .annotations.annotations import annotations
+ 
+-__version__ = '3.0.2'
++__version__ = '3.1.0'
+```
+
+### Comparing `anatools-3.0.2/anatools/anaclient/anaclient.py` & `anatools-3.1.0/anatools/anaclient/anaclient.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -23,33 +23,42 @@
+ class client:
+ 
+     def __init__(self, workspaceId=None, environment='prod', email=None, password=None, local=False, interactive=True, verbose=None):
+         import getpass
+         import time
+         import os
+         from anatools.anaclient.api import api
++        from anatools.lib.print import print_color
+         self.verbose = verbose
+         self.interactive = interactive
+         if environment not in ['dev','test','prod','infra']:  print("Invalid environment argument, must be 'infra', 'dev', 'test' or 'prod'."); return
+         if local:
+             os.environ['NO_PROXY'] = '127.0.0.1'
+             self.__url = 'http://127.0.0.1:3000'
+             if interactive: print("Local is set to",self.__url)
+         else: self.__url = envs[environment]['api']
+         self.__password = password
+         self.__logout = True
++        self.__notificationId = None
+         self.email = email
+         self.user = None
+         self.organizations = {}
+         self.workspaces ={}
+         self.channels = {}
+         self.volumes = {}
+         self.organization = None
+ 
+         self.ana_api = api(self.__url, None, self.verbose)
++
++        # fetch system notification
++        notification = self.ana_api.getSystemNotifications()
++        if notification:
++            self.__notificationId = notification['notificationId']
++            print_color(notification['message'], 'ffff00')
++
+         if not self.email:
+             print(f'Enter your credentials for the {envs[environment]["name"]}.') 
+             self.email = input('Email: ')
+         if not self.__password:
+             failcount = 1
+             while self.user is None:
+                 self.__password = getpass.getpass()
+@@ -105,17 +114,22 @@
+             print(f'The current organization is: {self.organization}')
+             print(f'The current workspace is: {self.workspace}')
+ 
+ 
+     def refresh_token(self):
+         import time
+         from anatools.anaclient.api import api
++        from anatools.lib.print import print_color
+         if int(time.time()) > int(self.user['expires']):
+             self.user = self.ana_api.login(self.email, self.__password)
+             self.ana_api = api(self.__url, {'uid': self.user['uid'], 'idtoken': self.user['idtoken']}, self.verbose)
++            notification = self.ana_api.getSystemNotifications()
++            if notification and notification['notificationId'] != self.__notificationId:
++                self.__notificationId = notification['notificationId']
++                print_color(notification['message'], 'ffff00')
+ 
+ 
+     def check_logout(self):
+         if self.__logout: print('You are currently logged out, login to access the Rendered.ai Platform.'); return True
+         self.refresh_token()
+         return False
+ 
+@@ -144,18 +158,45 @@
+             Used for development to indicate pointing to local API.
+         verbose: str
+             Flag to turn on verbose logging. Use 'debug' to view log output.
+         
+         """
+         self.__init__(workspaceId, environment, email, password, local, interactive, verbose)
+ 
++
++    def get_system_status(self, serviceId=None, display=True):
++        """Fetches the system status, if no serviceId is provided it will fetch all services. 
++        
++        Parameters
++        ----------
++        serviceId: str
++            The identifier of the service to fetch the status of.
++        display: bool
++            Boolean for either displaying the status or returning as a dict.
++        """
++        from anatools.lib.print import print_color
++        services = self.ana_api.getSystemStatus(serviceId)
++        if services and display:
++            spacing = max([len(service['serviceName']) for service in services])+4
++            print('Service Name'.ljust(spacing, ' ')+'Status')
++            for service in services:
++                print(service['serviceName'].ljust(spacing, ' '), end='')
++                if service['status'] == 'Operational': print_color('Operational', '00ff00')
++                elif service['status'] == 'Degraded': print_color('Degraded', 'ffff00')
++                elif service['status'] == 'Down': print_color('Down', 'ff0000')
++                else: print('?')
++            return
++        return services
++
++
++
+     
+     from .organizations import get_organization, set_organization, get_organizations, edit_organization, get_organization_members, get_organization_invites, add_organization_member, edit_organization_member, remove_organization_member, remove_organization_invitation ,get_organization_limits, set_organization_limit, get_organization_usage
+     from .workspaces    import get_workspace, set_workspace, get_workspaces, create_workspace, edit_workspace, delete_workspace, get_workspace_guests, get_workspace_invites, add_workspace_guest, remove_workspace_guest, remove_workspace_invitation, get_workspace_limits, set_workspace_limit
+     from .graphs        import get_staged_graphs, create_staged_graph, edit_staged_graph, delete_staged_graph, download_staged_graph, get_default_graph, set_default_graph
+     from .datasets      import get_datasets, create_dataset, edit_dataset, delete_dataset, download_dataset, cancel_dataset, upload_dataset, get_dataset_runs, get_dataset_log
+     from .channels      import get_channels, get_managed_channels, create_managed_channel, edit_managed_channel, delete_managed_channel, add_channel_access, remove_channel_access, build_managed_channel, deploy_managed_channel, get_deployment_status, get_channel_documentation, upload_channel_documentation
+     from .volumes       import get_volumes, get_managed_volumes, create_managed_volume, edit_managed_volume, delete_managed_volume, add_volume_access, remove_volume_access, get_volume_data, download_volume_data, upload_volume_data, delete_volume_data, mount_volumes
+     from .analytics     import get_analytics, get_analytics_types, create_analytics, delete_analytics
+-    from .annotations   import get_annotations, get_annotation_formats, get_annotation_maps, create_annotation, download_annotation, delete_annotation , get_managed_maps, create_managed_map, edit_managed_map, delete_managed_map, add_map_organization, remove_map_organization
+-    from .gan           import get_gan_models, get_gan_dataset, create_gan_dataset, delete_gan_dataset, create_managed_gan, delete_gan_model, get_managed_gans, edit_managed_gan, delete_managed_gan, add_gan_organization, remove_gan_organization
++    from .annotations   import get_annotations, get_annotation_formats, get_annotation_maps, create_annotation, download_annotation, delete_annotation , get_managed_maps, create_managed_map, edit_managed_map, delete_managed_map, add_map_organization, remove_map_organization, download_managed_map
++    from .gan           import get_gan_models, get_gan_dataset, create_gan_dataset, delete_gan_dataset, create_managed_gan, delete_gan_model, get_managed_gans, edit_managed_gan, delete_managed_gan, add_gan_organization, remove_gan_organization, download_managed_gan
+     from .umap          import get_umap, create_umap, delete_umap
+```
+
+### Comparing `anatools-3.0.2/anatools/anaclient/analytics.py` & `anatools-3.1.0/anatools/anaclient/analytics.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -11,36 +11,36 @@
+         The analytics types available on the Platform.
+     """
+     if self.check_logout(): return
+     return self.ana_api.getAnalyticsTypes()
+ 
+ 
+ def get_analytics(self, analyticsId, workspaceId=None):
+-    """Retrieve information about analytics jobs. Images will get downloaded to current working directory if available. 
++    """Retrieve information about a specific analytics job. If an analytics job is of type `objectMetrics` or `meanBrightness`, then images will get downloaded to current working directory. 
+     
+     Parameters
+     ----------
+     analyticsId : str
+-        Job ID for an analytics job. 
++        Analytics Job ID.
+     workspaceId: str
+         Workspace ID where the analytics exist. If none is provided, the current workspace will get used. 
+     
+     Returns
+     -------
+     list[dict]
+         Analytics job information.
+     """
+     import os, json, requests
+     if self.check_logout(): return
+     if analyticsId is None: raise ValueError("AnalyticsId must be provided.")
+     if workspaceId is None: workspaceId = self.workspace
+-    result = self.ana_api.getAnalytics(workspaceId=workspaceId, analyticsId=analyticsId)
++    result = self.ana_api.getAnalytics(workspaceId=workspaceId, analyticsId=analyticsId)[0]
+     analytics_result = json.dumps(result)
+     presigned_urls = [str for str in analytics_result.split("\\\"") if str.startswith("https")]
+-
++    
+     for i in range(len(presigned_urls)):
+         filename = presigned_urls[i].split("/")[-1].split("?")[0]
+         print(f"\r[{i+1} / {len(presigned_urls)}]  Downloading {filename}...", end="", flush=True)
+         
+         with requests.get(presigned_urls[i], allow_redirects=True) as response:
+             with open(filename, "wb") as outfile:
+                 outfile.write(response.content)
+```
+
+### Comparing `anatools-3.0.2/anatools/anaclient/annotations.py` & `anatools-3.1.0/anatools/anaclient/annotations.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,12 +1,14 @@
+ """
+ Annotations Functions
+ """
+ import os
+ import requests
++from anatools.lib.download import download_file
++
+ 
+ def get_annotation_formats(self):
+     """Retrieves the annotation formats supported by the Platform.
+     
+     Returns
+     -------
+     str
+@@ -299,8 +301,32 @@
+     -------
+     bool
+        Status
+     """
+     if self.check_logout(): return
+     if organizationId is None: raise Exception('OrganizationId must be specified.')
+     if mapId is None: raise Exception('MapId must be specified.')
+-    return self.ana_api.removeMapOrganization(mapId=mapId, organizationId=organizationId)
++    return self.ana_api.removeMapOrganization(mapId=mapId, organizationId=organizationId)
++
++def download_managed_map(self, mapId, localDir=None):
++    """Download the managed annotation map file from your organization.
++    
++    Parameters
++    ----------
++    mapId : str
++       MapId to download.
++    localDir : str
++        Path for where to download the managed annotation map. If none is provided, current working directory will be used.
++    
++    Returns
++    -------
++    str
++        The name of the managed map file that got downloaded.
++    """
++    if self.check_logout(): return
++    if mapId is None: raise Exception('mapId must be specified.')
++    if localDir is None: localDir = os.getcwd()
++
++    url = self.ana_api.downloadManagedMap(mapId=mapId)
++    fname = url.split('?')[0].split('/')[-1]
++    return download_file(url=url, fname=fname, localDir=localDir) 
++
+```
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/analytics.py` & `anatools-3.1.0/anatools/anaclient/api/analytics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/annotations.py` & `anatools-3.1.0/anatools/anaclient/api/annotations.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -87,14 +87,30 @@
+                         updatedAt
+                         updatedBy
+                     }
+                 }"""})
+     return self.errorhandler(response, "getManagedMaps")
+ 
+ 
++def downloadManagedMap(self, mapId):
++    response = self.session.post(
++        url = self.url, 
++        headers = self.headers, 
++        json = {
++            "operationName": "downloadManagedMap",
++            "variables": {
++                "mapId": mapId
++            },
++            "query": """mutation 
++                downloadManagedMap($mapId: String!) {
++                    downloadManagedMap(mapId: $mapId) 
++                }"""})
++    return self.errorhandler(response, "downloadManagedMap")
++
++
+ def createAnnotation(self, workspaceId, datasetId, format, map):
+     response = self.session.post(
+         url = self.url, 
+         headers = self.headers, 
+         json = {
+             "operationName": "createAnnotation",
+             "variables": {
+```
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/channels.py` & `anatools-3.1.0/anatools/anaclient/api/channels.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/datasets.py` & `anatools-3.1.0/anatools/anaclient/api/datasets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/gan.py` & `anatools-3.1.0/anatools/anaclient/api/gan.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -255,8 +255,24 @@
+                 "organizationId": organizationId,
+                 "modelId": modelId
+             },
+             "query": """mutation 
+                 removeGANOrganization($organizationId: String!, $modelId: String!) {
+                     removeGANOrganization(organizationId: $organizationId, modelId: $modelId)
+                 }"""})
+-    return self.errorhandler(response, "removeGANOrganization")
++    return self.errorhandler(response, "removeGANOrganization")
++
++
++def downloadManagedGAN(self, modelId):
++    response = self.session.post(
++        url = self.url, 
++        headers = self.headers, 
++        json = {
++            "operationName": "downloadManagedGAN",
++            "variables": {
++                "modelId": modelId
++            },
++            "query": """mutation 
++                downloadManagedGAN($modelId: String!) {
++                    downloadManagedGAN(modelId: $modelId) 
++                }"""})
++    return self.errorhandler(response, "downloadManagedGAN")
+```
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/graphs.py` & `anatools-3.1.0/anatools/anaclient/api/graphs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/handlers.py` & `anatools-3.1.0/anatools/anaclient/api/handlers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/limits.py` & `anatools-3.1.0/anatools/anaclient/api/limits.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/members.py` & `anatools-3.1.0/anatools/anaclient/api/members.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/organizations.py` & `anatools-3.1.0/anatools/anaclient/api/organizations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/umap.py` & `anatools-3.1.0/anatools/anaclient/api/umap.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/volumes.py` & `anatools-3.1.0/anatools/anaclient/api/volumes.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -46,14 +46,15 @@
+                         name
+                         description
+                         createdAt
+                         updatedAt
+                         organizations {
+                             organizationId
+                             name
++                            permission
+                         }
+                     }
+                 }"""})
+     return self.errorhandler(response, "getManagedVolumes")
+ 
+ 
+ def getVolumeData(self, volumeId, keys=[], dir=None, offset=None, limit=None):
+@@ -119,28 +120,29 @@
+             "query": """mutation 
+                 deleteManagedVolume($volumeId: String!) {
+                     deleteManagedVolume(volumeId: $volumeId)
+                 }"""})
+     return self.errorhandler(response, "deleteManagedVolume")
+ 
+ 
+-def editManagedVolume(self, volumeId, name=None, description=None):
++def editManagedVolume(self, volumeId, name=None, description=None, permission=None):
+     response = self.session.post(
+         url = self.url, 
+         headers = self.headers, 
+         json = {
+             "operationName": "editManagedVolume",
+             "variables": {
+                 "volumeId": volumeId,
+                 "name": name,
+-                "description": description
++                "description": description,
++                "permission": permission
+             },
+             "query": """mutation 
+-                editManagedVolume($volumeId: String!, $name: String, $description: String) {
+-                    editManagedVolume(volumeId: $volumeId, name: $name, description: $description)
++                editManagedVolume($volumeId: String!, $name: String, $description: String, $permission: String) {
++                    editManagedVolume(volumeId: $volumeId, name: $name, description: $description, permission: $permission)
+                 }"""})
+     return self.errorhandler(response, "editManagedVolume")
+ 
+ 
+ def addVolumeOrganization(self, volumeId, organizationId, permission):
+     response = self.session.post(
+         url = self.url,
+```
+
+### Comparing `anatools-3.0.2/anatools/anaclient/api/workspaces.py` & `anatools-3.1.0/anatools/anaclient/api/workspaces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/channels.py` & `anatools-3.1.0/anatools/anaclient/channels.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/datasets.py` & `anatools-3.1.0/anatools/anaclient/datasets.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,12 +1,13 @@
+ """
+ Dataset Functions
+ """
+ 
+ from multiprocessing.sharedctypes import Value
++from anatools.lib.download import download_file
+ 
+ 
+ def get_datasets(self, datasetId=None, name=None, email=None, workspaceId=None):
+     """Queries the workspace datasets based off provided parameters. Checks on datasetId, name, owner in this respective order within the specified workspace.
+     If only workspace ID is provided, this will return all the datasets in a workspace. 
+     
+     Parameters
+@@ -117,33 +118,28 @@
+     
+     Parameters
+     ----------
+     datasetId : str
+         Dataset ID of dataset to download.
+     workspaceId : str
+         Workspace ID that the dataset is in. If none is provided, the default workspace will get used. 
+-    
++    localDir : str
++        Path for where to download the dataset. If none is provided, current working directory will be used.
++        
+     Returns
+     -------
+     str
+         Success or failure message about dataset download.
+     """
+-    import requests, os
+     if self.check_logout(): return
+     if datasetId is None: datasetId
+-    if workspaceId is None: workspaceId = self.workspace
+-    if localDir is None: localDir = os.getcwd()
+-    elif not os.path.exists(localDir): raise Exception(f"Could not find directory {localDir}.")
++    if workspaceId is None: workspaceId = self.workspace    
+     url = self.ana_api.downloadDataset(workspaceId=workspaceId, datasetId=datasetId)        
+     fname = url.split('?')[0].split('/')[-1]
+-    with requests.get(url, stream=True) as downloadresponse:
+-        downloadresponse.raise_for_status()
+-        with open(os.path.join(localDir,fname), 'wb') as f:
+-            for chunk in downloadresponse.iter_content(chunk_size=8192): f.write(chunk)
+-    return os.path.join(localDir,fname)
++    return download_file(url=url, fname=fname, localDir=localDir) 
+ 
+ 
+ def cancel_dataset(self, datasetId, workspaceId=None):
+     """Stop a running job.
+     
+     Parameters
+     ----------
+```
+
+### Comparing `anatools-3.0.2/anatools/anaclient/gan.py` & `anatools-3.1.0/anatools/anaclient/gan.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,12 +1,13 @@
+ """
+ GAN Functions
+ """
+ import os
+ import requests
++from anatools.lib.download import download_file
+ 
+ def get_gan_models(self, organizationId=None, workspaceId=None, modelId=None):
+     """Retrieve information about GAN models
+     
+     Parameters
+     ----------
+     organizationId : str
+@@ -272,8 +273,32 @@
+     -------
+     bool
+        Status
+     """
+     if self.check_logout(): return
+     if organizationId is None: raise Exception('OrganizationId must be specified.')
+     if modelId is None: raise Exception('ModelId must be specified.')
+-    return self.ana_api.removeGANOrganization(modelId=modelId, organizationId=organizationId)
++    return self.ana_api.removeGANOrganization(modelId=modelId, organizationId=organizationId)
++
++
++def download_managed_gan(self, modelId, localDir=None):
++    """Download the managed gan model file from your organization.
++    
++    Parameters
++    ----------
++    modelId : str
++       ModelId to download.
++    localDir : str
++        Path for where to download the gan model. If none is provided, current working directory will be used.
++    
++    Returns
++    -------
++    str
++        The name of the managed gan model that got downloaded.
++    """
++    if self.check_logout(): return
++    if modelId is None: raise Exception('modelId must be specified.')
++    if localDir is None: localDir = os.getcwd()
++
++    url = self.ana_api.downloadManagedGAN(modelId=modelId)
++    fname = url.split('?')[0].split('/')[-1]
++    return download_file(url=url, fname=fname, localDir=localDir)
+```
+
+### Comparing `anatools-3.0.2/anatools/anaclient/graphs.py` & `anatools-3.1.0/anatools/anaclient/graphs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/organizations.py` & `anatools-3.1.0/anatools/anaclient/organizations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/umap.py` & `anatools-3.1.0/anatools/anaclient/umap.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/anaclient/volumes.py` & `anatools-3.1.0/anatools/anaclient/volumes.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -42,15 +42,15 @@
+     """
+     if self.check_logout(): return
+     if organizationId is None: organizationId = self.organization
+     return self.ana_api.getManagedVolumes(organizationId=organizationId, volumeId=volumeId)
+ 
+ 
+ def create_managed_volume(self, name, description=None, organizationId=None):
+-    """Creates a new volume with the specified name in the organization.
++    """Creates a new volume with the specified name in the organization and write permission.
+     
+     Parameters
+     ----------
+     name : str
+         The name of the new volume. Note: this name needs to be unique per organization.
+     description : str
+         Description of the volume
+@@ -83,53 +83,55 @@
+         Status
+     """
+     if self.check_logout(): return
+     if volumeId is None: raise Exception('VolumeId must be specified.')
+     return self.ana_api.deleteManagedVolume(volumeId=volumeId)
+ 
+ 
+-def edit_managed_volume(self, volumeId, name=None, description=None):
+-    """Edits the name of a volume.
++def edit_managed_volume(self, volumeId, name=None, description=None, permission=None):
++    """Edits the volume in your current organization.
+     
+     Parameters
+     ----------
+     volumeId: str
+         The volumeId that will be updated.
+     name : str
+         The new name of the new volume. Note: this name needs to be unique per organization.
+     description : str
+         Description of the volume
++    permission : str
++        Permission to set for the volume. Choose from: read, write, or view.
+     
+     Returns
+     -------
+     str
+-        Status
++        Status True or False
+     """
+     if self.check_logout(): return
+     if volumeId is None: raise Exception('VolumeId must be specified.')
+     if name is None and description is None: raise Exception("Either name or description must be specified.")
+-    return self.ana_api.editManagedVolume(volumeId=volumeId, name=name, description=description)
++    return self.ana_api.editManagedVolume(volumeId=volumeId, name=name, description=description, permission=permission)
+ 
+ 
+ def add_volume_access(self, volumeId, organizationId, permission=None):
+-    """Add access to a volume for an organization.
++    """Grant access for current organization's managed volume to another organization.
+     
+     Parameters
+     ----------
+     volumeId : str
+         VolumeId to add access for.
+     organizationId : str
+         Organization ID to add access
+     permission: str
+         Permission level to grant to organization. Choose from: read, write, or view.
+     
+     Returns
+     -------
+     str
+-        Status
++        Status True or False
+     """
+     if self.check_logout(): return
+     if permission is None: raise Exception("You must specify permission as either read, write, or view.")
+     if organizationId is None: raise Exception('OrganizationId must be specified.')
+     if volumeId is None: raise Exception('VolumeId must be specified.')
+     return self.ana_api.addVolumeOrganization(volumeId=volumeId, organizationId=organizationId, permission=permission)
+```
+
+### Comparing `anatools-3.0.2/anatools/anaclient/workspaces.py` & `anatools-3.1.0/anatools/anaclient/workspaces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/annotations/annotations.py` & `anatools-3.1.0/anatools/annotations/annotations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/annotations/convert_coco.py` & `anatools-3.1.0/anatools/annotations/convert_coco.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/annotations/convert_kitti.py` & `anatools-3.1.0/anatools/annotations/convert_kitti.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/annotations/convert_pascal.py` & `anatools-3.1.0/anatools/annotations/convert_pascal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/annotations/convert_sagemaker.py` & `anatools-3.1.0/anatools/annotations/convert_sagemaker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/annotations/convert_yolo.py` & `anatools-3.1.0/anatools/annotations/convert_yolo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/annotations/draw.py` & `anatools-3.1.0/anatools/annotations/draw.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/bin/ana` & `anatools-3.1.0/anatools/bin/ana`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/bin/anadeploy` & `anatools-3.1.0/anatools/bin/anadeploy`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/bin/anamount` & `anatools-3.1.0/anatools/bin/anamount`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/bin/anautils` & `anatools-3.1.0/anatools/bin/anautils`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/ana_object.py` & `anatools-3.1.0/anatools/lib/ana_object.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/bbox.py` & `anatools-3.1.0/anatools/lib/bbox.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/blender_main.py` & `anatools-3.1.0/anatools/lib/blender_main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/camera_checks.py` & `anatools-3.1.0/anatools/lib/camera_checks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/channel.py` & `anatools-3.1.0/anatools/lib/channel.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/context.py` & `anatools-3.1.0/anatools/lib/context.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/file_handlers.py` & `anatools-3.1.0/anatools/lib/file_handlers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/generator.py` & `anatools-3.1.0/anatools/lib/generator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/interp.py` & `anatools-3.1.0/anatools/lib/interp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/load.py` & `anatools-3.1.0/anatools/lib/load.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/node.py` & `anatools-3.1.0/anatools/lib/node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/object_utils.py` & `anatools-3.1.0/anatools/lib/object_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/package_utils.py` & `anatools-3.1.0/anatools/lib/package_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/python_main.py` & `anatools-3.1.0/anatools/lib/python_main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/rigged_object.py` & `anatools-3.1.0/anatools/lib/rigged_object.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/scene.py` & `anatools-3.1.0/anatools/lib/scene.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/lib/search_utils.py` & `anatools-3.1.0/anatools/lib/search_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/constants.py` & `anatools-3.1.0/anatools/nodes/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/constants.yml` & `anatools-3.1.0/anatools/nodes/constants.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/generators.py` & `anatools-3.1.0/anatools/nodes/generators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/generators.yml` & `anatools-3.1.0/anatools/nodes/generators.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/logic.py` & `anatools-3.1.0/anatools/nodes/logic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/logic.yml` & `anatools-3.1.0/anatools/nodes/logic.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/random_generator.py` & `anatools-3.1.0/anatools/nodes/random_generator.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -152,13 +152,16 @@
+ 
+ 
+ class RandomChoice(Node):
+ 
+     def exec(self):
+         logger.info("Executing {}".format(self.name))
+         # parse inputs
+-        choice_list = list(self.inputs["List_of_Choices"][0])
++        if isinstance(self.inputs["List_of_Choices"][0], str):
++            choice_list = ast.literal_eval(self.inputs["List_of_Choices"][0])
++        else:
++            choice_list = list(self.inputs["List_of_Choices"][0])
+         number = int(self.inputs["Number_of_Choices"][0])
+         unique = str(self.inputs["Unique_Choices"][0])
+         if unique is "True":    choices = ctx.random.choice(choice_list, number, replace=False) 
+         else:                   choices = ctx.random.choice(choice_list, number, replace=True) 
+         return {"Choices": choices}
+```
+
+### Comparing `anatools-3.0.2/anatools/nodes/random_generator.yml` & `anatools-3.1.0/anatools/nodes/random_generator.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/sweep_arange.py` & `anatools-3.1.0/anatools/nodes/sweep_arange.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/sweep_arange.yml` & `anatools-3.1.0/anatools/nodes/sweep_arange.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/sweep_linspace.py` & `anatools-3.1.0/anatools/nodes/sweep_linspace.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/sweep_linspace.yml` & `anatools-3.1.0/anatools/nodes/sweep_linspace.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/vectors.py` & `anatools-3.1.0/anatools/nodes/vectors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/vectors.yml` & `anatools-3.1.0/anatools/nodes/vectors.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/volume_file.py` & `anatools-3.1.0/anatools/nodes/volume_file.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools/nodes/volume_file.yml` & `anatools-3.1.0/anatools/nodes/volume_file.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/anatools.egg-info/PKG-INFO` & `anatools-3.1.0/anatools.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: anatools
+-Version: 3.0.2
++Version: 3.1.0
+ Summary: Tools for development with the Rendered.ai Platform.
+ Home-page: https://rendered.ai
+ Author: Rendered AI, Inc
+ Author-email: support@rendered.ai
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Requires-Python: >=3.6
+```
+
+### Comparing `anatools-3.0.2/anatools.egg-info/SOURCES.txt` & `anatools-3.1.0/anatools.egg-info/SOURCES.txt`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -52,14 +52,15 @@
+ anatools/lib/__init__.py
+ anatools/lib/ana_object.py
+ anatools/lib/bbox.py
+ anatools/lib/blender_main.py
+ anatools/lib/camera_checks.py
+ anatools/lib/channel.py
+ anatools/lib/context.py
++anatools/lib/download.py
+ anatools/lib/file_handlers.py
+ anatools/lib/generator.py
+ anatools/lib/interp.py
+ anatools/lib/load.py
+ anatools/lib/node.py
+ anatools/lib/object_utils.py
+ anatools/lib/package_utils.py
+```
+
+### Comparing `anatools-3.0.2/setup.py` & `anatools-3.1.0/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `anatools-3.0.2/tests/test_bbox.py` & `anatools-3.1.0/tests/test_bbox.py`
+
+ * *Files identical despite different names*
+

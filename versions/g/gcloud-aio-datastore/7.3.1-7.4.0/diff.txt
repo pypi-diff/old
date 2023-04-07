@@ -1,0 +1,292 @@
+--- tmp/gcloud_aio_datastore-7.3.1.tar.gz
++++ tmp/gcloud_aio_datastore-7.4.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "gcloud_aio_datastore-7.3.1.tar", max compression
+│ +gzip compressed data, was "gcloud_aio_datastore-7.4.0.tar", max compression
+│   --- gcloud_aio_datastore-7.3.1.tar
+├── +++ gcloud_aio_datastore-7.4.0.tar
+│ ├── file list
+│ │ @@ -1,23 +1,24 @@
+│ │ --rw-r--r--   0        0        0     1063 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/LICENSE
+│ │ --rw-r--r--   0        0        0     1312 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/README.rst
+│ │ --rw-r--r--   0        0        0      212 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/__init__.py
+│ │ --rw-r--r--   0        0        0      212 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/__init__.py
+│ │ --rw-r--r--   0        0        0     8097 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/__init__.py
+│ │ --rw-r--r--   0        0        0     1063 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/array.py
+│ │ --rw-r--r--   0        0        0     2005 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/constants.py
+│ │ --rw-r--r--   0        0        0    15778 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/datastore.py
+│ │ --rw-r--r--   0        0        0     1020 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/datastore_operation.py
+│ │ --rw-r--r--   0        0        0     2616 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/entity.py
+│ │ --rw-r--r--   0        0        0     3628 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/filter.py
+│ │ --rw-r--r--   0        0        0     2411 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/key.py
+│ │ --rw-r--r--   0        0        0      843 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/lat_lng.py
+│ │ --rw-r--r--   0        0        0     1552 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/mutation.py
+│ │ --rw-r--r--   0        0        0      700 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/projection.py
+│ │ --rw-r--r--   0        0        0     1078 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/property_order.py
+│ │ --rw-r--r--   0        0        0        0 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/py.typed
+│ │ --rw-r--r--   0        0        0     9449 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/query.py
+│ │ --rw-r--r--   0        0        0     4089 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/value.py
+│ │ --rw-r--r--   0        0        0        0 2023-04-05 17:14:12.947733 gcloud_aio_datastore-7.3.1/gcloud/aio/py.typed
+│ │ --rw-r--r--   0        0        0        0 2023-04-05 17:14:12.951733 gcloud_aio_datastore-7.3.1/gcloud/py.typed
+│ │ --rw-r--r--   0        0        0     1344 2023-04-05 17:14:12.951733 gcloud_aio_datastore-7.3.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2298 1970-01-01 00:00:00.000000 gcloud_aio_datastore-7.3.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1063 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/LICENSE
+│ │ +-rw-r--r--   0        0        0     1312 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/README.rst
+│ │ +-rw-r--r--   0        0        0      212 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/__init__.py
+│ │ +-rw-r--r--   0        0        0      212 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/__init__.py
+│ │ +-rw-r--r--   0        0        0     8353 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/__init__.py
+│ │ +-rw-r--r--   0        0        0     1063 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/array.py
+│ │ +-rw-r--r--   0        0        0     2005 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/constants.py
+│ │ +-rw-r--r--   0        0        0    16831 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/datastore.py
+│ │ +-rw-r--r--   0        0        0     1020 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/datastore_operation.py
+│ │ +-rw-r--r--   0        0        0     2616 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/entity.py
+│ │ +-rw-r--r--   0        0        0     3628 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/filter.py
+│ │ +-rw-r--r--   0        0        0     2411 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/key.py
+│ │ +-rw-r--r--   0        0        0      843 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/lat_lng.py
+│ │ +-rw-r--r--   0        0        0     1552 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/mutation.py
+│ │ +-rw-r--r--   0        0        0      700 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/projection.py
+│ │ +-rw-r--r--   0        0        0     1078 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/property_order.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/py.typed
+│ │ +-rw-r--r--   0        0        0     9449 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/query.py
+│ │ +-rw-r--r--   0        0        0     1001 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/transaction_options.py
+│ │ +-rw-r--r--   0        0        0     4089 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/value.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/aio/py.typed
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/gcloud/py.typed
+│ │ +-rw-r--r--   0        0        0     1344 2023-04-07 14:28:56.253093 gcloud_aio_datastore-7.4.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     2298 1970-01-01 00:00:00.000000 gcloud_aio_datastore-7.4.0/PKG-INFO
+│ │   --- gcloud_aio_datastore-7.3.1/LICENSE
+│ ├── +++ gcloud_aio_datastore-7.4.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/README.rst
+│ ├── +++ gcloud_aio_datastore-7.4.0/README.rst
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/__init__.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/__init__.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -196,14 +196,17 @@
+│ │  from gcloud.aio.datastore.filter import PropertyFilter
+│ │  from gcloud.aio.datastore.key import Key
+│ │  from gcloud.aio.datastore.key import PathElement
+│ │  from gcloud.aio.datastore.lat_lng import LatLng
+│ │  from gcloud.aio.datastore.mutation import MutationResult
+│ │  from gcloud.aio.datastore.projection import Projection
+│ │  from gcloud.aio.datastore.property_order import PropertyOrder
+│ │ +from gcloud.aio.datastore.transaction_options import ReadOnly
+│ │ +from gcloud.aio.datastore.transaction_options import ReadWrite
+│ │ +from gcloud.aio.datastore.transaction_options import TransactionOptions
+│ │  from gcloud.aio.datastore.query import GQLCursor
+│ │  from gcloud.aio.datastore.query import GQLQuery
+│ │  from gcloud.aio.datastore.query import Query
+│ │  from gcloud.aio.datastore.query import QueryResultBatch
+│ │  from gcloud.aio.datastore.value import Value
+│ │  
+│ │  
+│ │ @@ -228,12 +231,15 @@
+│ │      'PathElement',
+│ │      'Projection',
+│ │      'PropertyFilter',
+│ │      'PropertyFilterOperator',
+│ │      'PropertyOrder',
+│ │      'Query',
+│ │      'QueryResultBatch',
+│ │ +    'ReadOnly',
+│ │ +    'ReadWrite',
+│ │      'ResultType',
+│ │      'SCOPES',
+│ │ +    'TransactionOptions',
+│ │      'Value',
+│ │      '__version__',
+│ │  ]
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/array.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/array.py
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/constants.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/constants.py
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/datastore.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/datastore.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -18,14 +18,15 @@
+│ │  from gcloud.aio.datastore.constants import Operation
+│ │  from gcloud.aio.datastore.datastore_operation import DatastoreOperation
+│ │  from gcloud.aio.datastore.entity import EntityResult
+│ │  from gcloud.aio.datastore.key import Key
+│ │  from gcloud.aio.datastore.mutation import MutationResult
+│ │  from gcloud.aio.datastore.query import BaseQuery
+│ │  from gcloud.aio.datastore.query import QueryResultBatch
+│ │ +from gcloud.aio.datastore.transaction_options import TransactionOptions
+│ │  from gcloud.aio.datastore.value import Value
+│ │  
+│ │  # Selectively load libraries based on the package
+│ │  if BUILD_GCLOUD_REST:
+│ │      from requests import Session
+│ │  else:
+│ │      from aiohttp import ClientSession as Session  # type: ignore[assignment]
+│ │ @@ -35,14 +36,16 @@
+│ │  SCOPES = [
+│ │      'https://www.googleapis.com/auth/cloud-platform',
+│ │      'https://www.googleapis.com/auth/datastore',
+│ │  ]
+│ │  
+│ │  log = logging.getLogger(__name__)
+│ │  
+│ │ +LookUpResult = Dict[str, Union[str, List[Union[EntityResult, Key]]]]
+│ │ +
+│ │  
+│ │  def init_api_root(api_root: Optional[str]) -> Tuple[bool, str]:
+│ │      if api_root:
+│ │          return True, api_root
+│ │  
+│ │      host = os.environ.get('DATASTORE_EMULATOR_HOST')
+│ │      if host:
+│ │ @@ -288,58 +291,81 @@
+│ │          resp = await s.get(url, headers=headers, timeout=timeout)
+│ │          data: Dict[str, Any] = await resp.json()
+│ │  
+│ │          return self.datastore_operation_kind.from_repr(data)
+│ │  
+│ │      # https://cloud.google.com/datastore/docs/reference/data/rest/v1/projects/lookup
+│ │      async def lookup(
+│ │ -            self, keys: List[Key], transaction: Optional[str] = None,
+│ │ +            self, keys: List[Key],
+│ │ +            transaction: Optional[str] = None,
+│ │ +            newTransaction: Optional[TransactionOptions] = None,
+│ │              consistency: Consistency = Consistency.STRONG,
+│ │              session: Optional[Session] = None, timeout: int = 10,
+│ │ -    ) -> Dict[str, List[Union[EntityResult, Key]]]:
+│ │ +    ) -> LookUpResult:
+│ │          project = await self.project()
+│ │          url = f'{self._api_root}/projects/{project}:lookup'
+│ │  
+│ │ -        if transaction:
+│ │ -            options = {'transaction': transaction}
+│ │ -        else:
+│ │ -            options = {'readConsistency': consistency.value}
+│ │ +        read_options = self._build_read_options(
+│ │ +            consistency, newTransaction, transaction)
+│ │ +
+│ │          payload = json.dumps({
+│ │              'keys': [k.to_repr() for k in keys],
+│ │ -            'readOptions': options,
+│ │ +            'readOptions': read_options,
+│ │          }).encode('utf-8')
+│ │  
+│ │          headers = await self.headers()
+│ │          headers.update({
+│ │              'Content-Length': str(len(payload)),
+│ │              'Content-Type': 'application/json',
+│ │          })
+│ │  
+│ │          s = AioSession(session) if session else self.session
+│ │          resp = await s.post(
+│ │              url, data=payload, headers=headers,
+│ │              timeout=timeout,
+│ │          )
+│ │  
+│ │ -        data: Dict[str, List[Any]] = await resp.json()
+│ │ +        data: Dict[str, Any] = await resp.json()
+│ │  
+│ │ -        return {
+│ │ +        return self._build_lookup_result(data)
+│ │ +
+│ │ +    def _build_lookup_result(self, data: Dict[str, Any]) -> LookUpResult:
+│ │ +        result: LookUpResult = {
+│ │              'found': [
+│ │                  self.entity_result_kind.from_repr(e)
+│ │                  for e in data.get('found', [])
+│ │              ],
+│ │              'missing': [
+│ │                  self.entity_result_kind.from_repr(e)
+│ │                  for e in data.get('missing', [])
+│ │              ],
+│ │              'deferred': [
+│ │                  self.key_kind.from_repr(k)
+│ │                  for k in data.get('deferred', [])
+│ │              ],
+│ │          }
+│ │ +        if 'transaction' in data:
+│ │ +            new_transaction: str = data['transaction']
+│ │ +            result['transaction'] = new_transaction
+│ │ +        return result
+│ │ +
+│ │ +    def _build_read_options(self,
+│ │ +                            consistency: Consistency,
+│ │ +                            newTransaction: Optional[TransactionOptions],
+│ │ +                            transaction: Optional[str]) -> Dict[str, Any]:
+│ │ +        # TODO: expose ReadOptions directly to users
+│ │ +        # See
+│ │ +        # https://cloud.google.com/datastore/docs/reference/data/rest/v1/ReadOptions
+│ │ +        if transaction:
+│ │ +            return {'transaction': transaction}
+│ │ +
+│ │ +        if newTransaction:
+│ │ +            return {'newTransaction': newTransaction.to_repr()}
+│ │ +
+│ │ +        return {'readConsistency': consistency.value}
+│ │  
+│ │      # https://cloud.google.com/datastore/docs/reference/data/rest/v1/projects/reserveIds
+│ │      async def reserveIds(
+│ │          self, keys: List[Key], database_id: str = '',
+│ │          session: Optional[Session] = None,
+│ │          timeout: int = 10,
+│ │      ) -> None:
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/datastore_operation.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/datastore_operation.py
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/entity.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/entity.py
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/filter.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/filter.py
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/key.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/key.py
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/lat_lng.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/lat_lng.py
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/mutation.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/mutation.py
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/projection.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/projection.py
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/property_order.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/property_order.py
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/query.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/query.py
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/gcloud/aio/datastore/value.py
+│ ├── +++ gcloud_aio_datastore-7.4.0/gcloud/aio/datastore/value.py
+│ │┄ Files identical despite different names
+│ │   --- gcloud_aio_datastore-7.3.1/pyproject.toml
+│ ├── +++ gcloud_aio_datastore-7.4.0/pyproject.toml
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "gcloud-aio-datastore"
+│ │ -version = "7.3.1"
+│ │ +version = "7.4.0"
+│ │  description = "Python Client for Google Cloud Datastore"
+│ │  readme = "README.rst"
+│ │  
+│ │  repository = "https://github.com/talkiq/gcloud-aio"
+│ │  authors = ["Vi Engineering <voiceai-eng@dialpad.com>"]
+│ │  license = "MIT"
+│ │   --- gcloud_aio_datastore-7.3.1/PKG-INFO
+│ ├── +++ gcloud_aio_datastore-7.4.0/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gcloud-aio-datastore
+│ │ -Version: 7.3.1
+│ │ +Version: 7.4.0
+│ │  Summary: Python Client for Google Cloud Datastore
+│ │  Home-page: https://github.com/talkiq/gcloud-aio
+│ │  License: MIT
+│ │  Author: Vi Engineering
+│ │  Author-email: voiceai-eng@dialpad.com
+│ │  Requires-Python: >=3.7,<4.0
+│ │  Classifier: Development Status :: 5 - Production/Stable

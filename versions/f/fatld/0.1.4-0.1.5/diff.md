@@ -1,0 +1,295 @@
+# Comparing `tmp/fatld-0.1.4.tar.gz` & `tmp/fatld-0.1.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fatld-0.1.4.tar", max compression
++gzip compressed data, was "fatld-0.1.5.tar", max compression
+```
+
+## Comparing `fatld-0.1.4.tar` & `fatld-0.1.5.tar`
+
+### file list
+
+```diff
+@@ -1,8 +1,8 @@
+--rwxr-xr-x   0        0        0     3239 2023-03-10 20:43:01.274937 fatld-0.1.4/README.md
+--rwxr-xr-x   0        0        0      147 2023-03-10 14:52:46.609143 fatld-0.1.4/fatld/__init__.py
+--rwxr-xr-x   0        0        0    32069 2023-04-04 13:15:09.649280 fatld-0.1.4/fatld/design.py
+--rwxr-xr-x   0        0        0     6794 2023-03-10 14:53:29.404853 fatld-0.1.4/fatld/main.py
+--rwxr-xr-x   0        0        0     8448 2023-03-10 14:53:29.419886 fatld-0.1.4/fatld/relation.py
+--rwxr-xr-x   0        0        0     1040 2023-04-04 13:16:50.444620 fatld-0.1.4/pyproject.toml
+--rw-r--r--   0        0        0     4027 1970-01-01 00:00:00.000000 fatld-0.1.4/setup.py
+--rw-r--r--   0        0        0     4131 1970-01-01 00:00:00.000000 fatld-0.1.4/PKG-INFO
++-rwxr-xr-x   0        0        0     3239 2023-03-10 20:43:01.274937 fatld-0.1.5/README.md
++-rwxr-xr-x   0        0        0      147 2023-03-10 14:52:46.609143 fatld-0.1.5/fatld/__init__.py
++-rwxr-xr-x   0        0        0    32820 2023-04-07 14:18:24.270482 fatld-0.1.5/fatld/design.py
++-rwxr-xr-x   0        0        0     6794 2023-03-10 14:53:29.404853 fatld-0.1.5/fatld/main.py
++-rwxr-xr-x   0        0        0     8448 2023-03-10 14:53:29.419886 fatld-0.1.5/fatld/relation.py
++-rwxr-xr-x   0        0        0     1040 2023-04-07 14:24:08.747177 fatld-0.1.5/pyproject.toml
++-rw-r--r--   0        0        0     4027 1970-01-01 00:00:00.000000 fatld-0.1.5/setup.py
++-rw-r--r--   0        0        0     4131 1970-01-01 00:00:00.000000 fatld-0.1.5/PKG-INFO
+```
+
+### Comparing `fatld-0.1.4/README.md` & `fatld-0.1.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `fatld-0.1.4/fatld/design.py` & `fatld-0.1.5/fatld/design.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,11 @@
+ from __future__ import annotations
+ import warnings
+ from itertools import chain, combinations, product, permutations
++from math import comb
+ 
+ import numpy as np
+ import oapackage as oa  # type: ignore
+ import pandas as pd  # type: ignore
+ 
+ from .main import basic_factor_matrix, custom_design, twlp
+ from .relation import Relation, num2gen, gen2num
+@@ -700,33 +701,25 @@
+         raise ValueError(
+             "There must be one permutation per four-level factor, only %i given"
+             % len(permutation_list)
+         )
+ 
+     # Isolate four-level and two-level part of the design
+     fl_matrix = design_matrix[:, :m]
+-    tl_matrix = 2 * design_matrix[:, m:] - 1
++    tl_matrix = design_matrix[:, m:]
+ 
+     # Build all interactions between all two-level factors
+-    tl_interaction_list = []
+-    tl_interaction_length = []
+     if max_length is None:
+         max_n_value = n
+     else:
+         max_n_value = max_length - 1
+-    for i in range(max_n_value):
+-        for c in combinations(range(n), i + 1):
+-            single_interaction_vector = np.prod(tl_matrix[:, c], axis=1)[
+-                :, None
+-            ]  # noqa: E201
+-            tl_interaction_list.append(single_interaction_vector)
+-            tl_interaction_length.append(i + 1)
+-    tl_interaction_matrix = np.hstack(
+-        tl_interaction_list
+-    )  # Matrix of all ME and 2- to n-factor interactions
++    tfi_model_matrix = build_tfi_model_matrix(n=n, max_length=max_n_value)
++    tl_interaction_matrix = np.matmul(tl_matrix, tfi_model_matrix) % 2
++    tl_interaction_matrix = (2 * tl_interaction_matrix) - 1
++    tl_interaction_length = np.sum(tfi_model_matrix, axis=0).tolist()
+ 
+     # Unfold the four-level factors into L, Q, C matrices
+     fl_contrast_list = []
+     for x in range(m):
+         permutation = permutation_list[x]
+         mix_contrast_matrix = scaled_contrast_matrix[permutation, :]
+         single_fl_contrast_matrix = np.zeros((N, 3))
+@@ -736,15 +729,14 @@
+             ] = mix_contrast_matrix[  # noqa: E201
+                 i, :
+             ]
+         fl_contrast_list.append(single_fl_contrast_matrix)
+     fl_contrast_matrix = np.hstack(fl_contrast_list)
+ 
+     # Initialize the length and type vectors
+-    fl_contrast_type = [1 for _ in range(3 * m)]
+     fl_contrast_length = [i + 1 for _ in range(m) for i in range(3)]
+ 
+     # No interaction can be created
+     if m == 1:
+         fl_full_contrast_matrix = fl_contrast_matrix
+     # Main effects for the two four-level factors and the 3^2 interactions between the
+     # 6 terms.
+@@ -753,15 +745,14 @@
+         for p in product(range(3), repeat=2):
+             new_p = [x + (3 * i) for i, x in enumerate(p)]
+             single_fl_contrast_interaction_vector = np.prod(
+                 fl_contrast_matrix[:, new_p], axis=1
+             )[:, None]
+             fl_contrast_interaction_list.append(single_fl_contrast_interaction_vector)
+             fl_contrast_length.append(sum(p) + 2)
+-            fl_contrast_type.append(2)
+         fl_contrast_interaction_matrix = np.hstack(fl_contrast_interaction_list)
+         fl_full_contrast_matrix = np.concatenate(
+             (fl_contrast_matrix, fl_contrast_interaction_matrix), axis=1
+         )
+     # Three different terms:
+     # - Main effects for the 3 four-level factors (3*3=9 terms)
+     # - Interactions between 2 of the 3 four-level factors (3 ways of creating 9 terms)
+@@ -775,54 +766,87 @@
+                 single_fl_contrast_interaction_vector = np.prod(
+                     fl_contrast_matrix[:, new_p], axis=1
+                 )[:, None]
+                 fl_contrast_interaction_list.append(
+                     single_fl_contrast_interaction_vector
+                 )
+                 fl_contrast_length.append(sum(p) + 2)
+-                fl_contrast_type.append(2)
+ 
+         # Interactions between 3 four-level factors
+         for p in product(range(3), repeat=3):
+             # p is a tuple with two numbers corresponding with the polynomial contrasts
+             # chosen for the product
+             new_p = [3 * i + x for i, x in enumerate(p)]
+             single_fl_contrast_interaction_vector = np.prod(
+                 fl_contrast_matrix[:, new_p], axis=1
+             )[:, None]
+             fl_contrast_interaction_list.append(single_fl_contrast_interaction_vector)
+             fl_contrast_length.append(sum(p) + 3)
+-            fl_contrast_type.append(3)
+         fl_contrast_interaction_matrix = np.hstack(fl_contrast_interaction_list)
+         fl_full_contrast_matrix = np.concatenate(
+             (fl_contrast_matrix, fl_contrast_interaction_matrix), axis=1
+         )
+     else:
+         raise ValueError("Unknown m value")
+ 
+     # Build word length vector
+     word_length = (
+         np.array(fl_contrast_length)[:, None].T
+         + np.array(tl_interaction_length)[:, None]  # noqa: W503
+     )
+ 
+-    # # Build word type vector
+-    # word_type = (
+-    #     np.array(fl_contrast_type)[:, None].T
+-    #     + np.array(tl_interaction_length)[:, None]  # noqa: W503
+-    # )
+-
+     # Compute squared correlations
+     correlation = (tl_interaction_matrix.T @ fl_full_contrast_matrix) / N
+     correlation_sq = np.round(correlation**2, 2)
+ 
+     # Compute Beta values
+     if max_length is None:
+         max_Aq_length = int(np.amax(word_length)) + 1
+     else:
+         max_Aq_length = max_length + 1
+-    # correlation_sq[word_type == 2] = 0
+     a_vector = []
+     for length in range(3, max_Aq_length):
+         a_value = np.round(np.sum(correlation_sq[word_length == length]), 2)
+         a_vector.append(a_value)
+     return a_vector
++
++
++def nbr_interactions(n: int, max_length: int) -> int:
++    """
++    Compute the total number of interactions between i factors among n, where i
++    ranges between 1 and max_length.
++    """
++    val = 0
++    for i in range(max_length):
++        val += comb(n, (i + 1))
++    return val
++
++
++def build_tfi_model_matrix(n: int, max_length: int) -> np.ndarray:
++    """
++    Build the model matrix to compute all interactions between i factors among n
++    with i ranging from 1 to n.
++    In this model matrix, a 1 represents an active factor in the interaction, while
++    a 0 zero represents an inactive factor.
++
++    Parameters
++    ----------
++    n : int
++        Number of two-level factors
++    max_length : int
++        Maximum number of factors to consider in the interactions.
++        For example, for a two-factor interaction, max_length should be equal to 2.
++
++    Returns
++    -------
++    np.ndarray
++        Model matrix of size n-by-s, where s is the total number of interactions.
++    """
++    # Initialize matrix
++    tfi_model_matrix = np.zeros((n, nbr_interactions(n, max_length)), dtype=int)
++    # Ones represent an active factor in the interaction
++    index = 0
++    for i in range(max_length):
++        for c in combinations(range(n), i + 1):
++            tfi_model_matrix[c, index] = 1
++            index += 1
++    return tfi_model_matrix
+```
+
+### Comparing `fatld-0.1.4/fatld/main.py` & `fatld-0.1.5/fatld/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fatld-0.1.4/fatld/relation.py` & `fatld-0.1.5/fatld/relation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fatld-0.1.4/pyproject.toml` & `fatld-0.1.5/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "fatld"
+-version = "0.1.4"
++version = "0.1.5"
+ description = "Generate and characterize designs with four-and-two-level (FATL) factors"
+ authors = ["Alexandre Bohyn <alexandre.bohyn@kuleuven.be>"]
+ readme = "README.md"
+ license = "MIT"
+ homepage = "https://abohyndoe.github.io/fatld/"
+ repository = "https://github.com/ABohynDOE/fatld"
+ keywords = ["design", "doe"]
+```
+
+### Comparing `fatld-0.1.4/setup.py` & `fatld-0.1.5/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -11,15 +11,15 @@
+ ['matplotlib>=3.6.3,<4.0.0',
+  'numpy>=1.24.2,<2.0.0',
+  'oapackage>=2.7.6,<3.0.0',
+  'pandas>=1.5.3,<2.0.0']
+ 
+ setup_kwargs = {
+     'name': 'fatld',
+-    'version': '0.1.4',
++    'version': '0.1.5',
+     'description': 'Generate and characterize designs with four-and-two-level (FATL) factors',
+     'long_description': '# Four And Two Level Designs\n\n[![PyPI version](https://badge.fury.io/py/fatld.svg)](https://badge.fury.io/py/fatld)\n[![CI](https://github.com/ABohynDOE/fatld/actions/workflows/CI.yml/badge.svg)](https://github.com/ABohynDOE/fatld/actions/workflows/CI.yml)\n\nThe `fatld` package contains functionality to generate and characterize designs with four-and-two-level (FATL) factors.\nDesign characteristics include word length pattern, defining relation, and number of clear interactions.\nFor more information about the package see the documentation at [https://abohyndoe.github.io/fatld/](https://abohyndoe.github.io/fatld/).\nA large collection of FATL designs can be explored interactively using a web app at [https://abohyndoe.shinyapps.io/fatldesign-selection-tool/](https://abohyndoe.shinyapps.io/fatldesign-selection-tool/).\n\n## Usage\n\nThe package can be used from Python:\n\n```python\n>>> import fatld\n>>> D = fatld.Design(runsize=32, m=1, cols=[21, 27, 29])\n>>> D.wlp()\n[1, 3, 3, 0, 0]\n>>> D.defining_relation()\n[\'A1cef\', \'A3deg\', \'A1cdeh\']\n>>> print("There are %s 2-2 interactions totally clear from any main effect or other interaction." % D.clear(\'2-2\', \'all\'))\nThere are 6 2-2 interactions totally clear from any main effect or other interaction.\n>>> print("The design contains %s four-level factors and %s two-level factors" % (D.m, D.n))\nThe design contains 1 four-level factors and 6 two-level factors\n```\n\nFor more examples see the documentation.\n\n## Installation\n\nThe Python interface to the package is available on pypi. Installation can be done using the following command:\n\n```bash\npip install fatld\n```\n\n## Development\n\nAll development is done in a virtual environment based on `poetry`, activate it using:\n\n```shell\npoetry shell\n```\n\n### Code style\n\n* Try to follow the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide. A usefull tool for automated formatting is [black](https://pypi.python.org/pypi/black). We do allow lines upto 120 characters.\n* Document functions using the [Numpy docstring](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy) convention\n\n* Linting is based on `ruff`, configuration is found in the [pyproject.toml](pyproject.toml) file.\n\n* Tests are ran using `pytest` and a coverage report can be generated using `coverage` inside the virtual environment:\n\n    ```shell\n    coverage run -m pytest tests\n    coverage report -m\n    ```\n\n### Submitting code\n\nIf you would like to contribute, please submit a pull request. (See the [Github Hello World](https://guides.github.com/activities/hello-world/) example, if you are new to Github).\n\nBy contributing to the repository you state you own the copyright to those contributions and agree to include your contributions as part of this project under the BSD license.\n\n### Bugs reports and feature requests\n\nTo submit a bug report or feature request use the [Github issue tracker](https://github.com/ABohynDOE/fatld/issues).\nSearch for existing and closed issues first. If your problem or idea is not yet addressed, please open a new issue.\n\n### Contact\n\nFor further information please contact alexandre dot bohyn at kuleuven dot be\n',
+     'author': 'Alexandre Bohyn',
+     'author_email': 'alexandre.bohyn@kuleuven.be',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'https://abohyndoe.github.io/fatld/',
+```
+
+### Comparing `fatld-0.1.4/PKG-INFO` & `fatld-0.1.5/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fatld
+-Version: 0.1.4
++Version: 0.1.5
+ Summary: Generate and characterize designs with four-and-two-level (FATL) factors
+ Home-page: https://abohyndoe.github.io/fatld/
+ License: MIT
+ Keywords: design,doe
+ Author: Alexandre Bohyn
+ Author-email: alexandre.bohyn@kuleuven.be
+ Requires-Python: >=3.8,<4.0
+```
+

@@ -1,0 +1,150 @@
+# Comparing `tmp/kumo-browser-0.0.1.tar.gz` & `tmp/kumo-browser-0.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "kumo-browser-0.0.1.tar", last modified: Fri Apr  7 14:07:45 2023, max compression
++gzip compressed data, was "kumo-browser-0.0.2.tar", last modified: Fri Apr  7 14:26:18 2023, max compression
+```
+
+## Comparing `kumo-browser-0.0.1.tar` & `kumo-browser-0.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+-drwxr-xr-x   0 kostajevtic   (501) staff       (20)        0 2023-04-07 14:07:45.902019 kumo-browser-0.0.1/
+--rw-r--r--   0 kostajevtic   (501) staff       (20)     1059 2023-04-07 13:58:21.000000 kumo-browser-0.0.1/LICENCE.txt
+--rw-r--r--   0 kostajevtic   (501) staff       (20)        0 2023-04-07 13:56:35.000000 kumo-browser-0.0.1/MANIFEST.in
+--rw-r--r--   0 kostajevtic   (501) staff       (20)      756 2023-04-07 14:07:45.901724 kumo-browser-0.0.1/PKG-INFO
+--rw-r--r--   0 kostajevtic   (501) staff       (20)      128 2023-04-07 13:54:48.000000 kumo-browser-0.0.1/README.txt
+-drwxr-xr-x   0 kostajevtic   (501) staff       (20)        0 2023-04-07 14:07:45.900390 kumo-browser-0.0.1/kumo_browser.egg-info/
+--rw-r--r--   0 kostajevtic   (501) staff       (20)      756 2023-04-07 14:07:45.000000 kumo-browser-0.0.1/kumo_browser.egg-info/PKG-INFO
+--rw-r--r--   0 kostajevtic   (501) staff       (20)      216 2023-04-07 14:07:45.000000 kumo-browser-0.0.1/kumo_browser.egg-info/SOURCES.txt
+--rw-r--r--   0 kostajevtic   (501) staff       (20)        1 2023-04-07 14:07:45.000000 kumo-browser-0.0.1/kumo_browser.egg-info/dependency_links.txt
+--rw-r--r--   0 kostajevtic   (501) staff       (20)       17 2023-04-07 14:07:45.000000 kumo-browser-0.0.1/kumo_browser.egg-info/top_level.txt
+-drwxr-xr-x   0 kostajevtic   (501) staff       (20)        0 2023-04-07 14:07:45.900852 kumo-browser-0.0.1/kumobasicbrowser/
+--rw-r--r--   0 kostajevtic   (501) staff       (20)    11559 2023-04-07 13:51:11.000000 kumo-browser-0.0.1/kumobasicbrowser/__init__.py
+--rw-r--r--   0 kostajevtic   (501) staff       (20)       38 2023-04-07 14:07:45.902110 kumo-browser-0.0.1/setup.cfg
+--rw-r--r--   0 kostajevtic   (501) staff       (20)      764 2023-04-07 14:02:11.000000 kumo-browser-0.0.1/setup.py
++drwxr-xr-x   0 kostajevtic   (501) staff       (20)        0 2023-04-07 14:26:18.432827 kumo-browser-0.0.2/
++-rw-r--r--   0 kostajevtic   (501) staff       (20)     1059 2023-04-07 13:58:21.000000 kumo-browser-0.0.2/LICENCE.txt
++-rw-r--r--   0 kostajevtic   (501) staff       (20)        0 2023-04-07 13:56:35.000000 kumo-browser-0.0.2/MANIFEST.in
++-rw-r--r--   0 kostajevtic   (501) staff       (20)      677 2023-04-07 14:26:18.432558 kumo-browser-0.0.2/PKG-INFO
++-rw-r--r--   0 kostajevtic   (501) staff       (20)      128 2023-04-07 13:54:48.000000 kumo-browser-0.0.2/README.txt
++drwxr-xr-x   0 kostajevtic   (501) staff       (20)        0 2023-04-07 14:26:18.431544 kumo-browser-0.0.2/kumo_browser.egg-info/
++-rw-r--r--   0 kostajevtic   (501) staff       (20)      677 2023-04-07 14:26:18.000000 kumo-browser-0.0.2/kumo_browser.egg-info/PKG-INFO
++-rw-r--r--   0 kostajevtic   (501) staff       (20)      216 2023-04-07 14:26:18.000000 kumo-browser-0.0.2/kumo_browser.egg-info/SOURCES.txt
++-rw-r--r--   0 kostajevtic   (501) staff       (20)        1 2023-04-07 14:26:18.000000 kumo-browser-0.0.2/kumo_browser.egg-info/dependency_links.txt
++-rw-r--r--   0 kostajevtic   (501) staff       (20)       17 2023-04-07 14:26:18.000000 kumo-browser-0.0.2/kumo_browser.egg-info/top_level.txt
++drwxr-xr-x   0 kostajevtic   (501) staff       (20)        0 2023-04-07 14:26:18.431856 kumo-browser-0.0.2/kumobasicbrowser/
++-rw-r--r--   0 kostajevtic   (501) staff       (20)    11559 2023-04-07 13:51:11.000000 kumo-browser-0.0.2/kumobasicbrowser/__init__.py
++-rw-r--r--   0 kostajevtic   (501) staff       (20)       38 2023-04-07 14:26:18.432919 kumo-browser-0.0.2/setup.cfg
++-rw-r--r--   0 kostajevtic   (501) staff       (20)      725 2023-04-07 14:26:16.000000 kumo-browser-0.0.2/setup.py
+```
+
+### Comparing `kumo-browser-0.0.1/LICENCE.txt` & `kumo-browser-0.0.2/LICENCE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `kumo-browser-0.0.1/PKG-INFO` & `kumo-browser-0.0.2/PKG-INFO`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,24 +1,17 @@
+ Metadata-Version: 2.1
+ Name: kumo-browser
+-Version: 0.0.1
++Version: 0.0.2
+ Summary: A Browser library which returns content of the web page from various different webpages
+ Home-page: 
+ Author: Kosta Jevtic
+ Author-email: kosta.jevtic@jobcloud.ch
+ License: MIT
+ Keywords: browser
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: Intended Audience :: Education
+ Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+ License-File: LICENCE.txt
+ 
+ This is simple library which creates Browser which returns different types of the content based on the structure of the web page
+-
+-Change Log
+-==========
+-
+-0.0.1 (07/04/2023)
+--------------------
+-- First Release
+```
+
+### Comparing `kumo-browser-0.0.1/kumo_browser.egg-info/PKG-INFO` & `kumo-browser-0.0.2/kumo_browser.egg-info/PKG-INFO`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,24 +1,17 @@
+ Metadata-Version: 2.1
+ Name: kumo-browser
+-Version: 0.0.1
++Version: 0.0.2
+ Summary: A Browser library which returns content of the web page from various different webpages
+ Home-page: 
+ Author: Kosta Jevtic
+ Author-email: kosta.jevtic@jobcloud.ch
+ License: MIT
+ Keywords: browser
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: Intended Audience :: Education
+ Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+ License-File: LICENCE.txt
+ 
+ This is simple library which creates Browser which returns different types of the content based on the structure of the web page
+-
+-Change Log
+-==========
+-
+-0.0.1 (07/04/2023)
+--------------------
+-- First Release
+```
+
+### Comparing `kumo-browser-0.0.1/kumobasicbrowser/__init__.py` & `kumo-browser-0.0.2/kumobasicbrowser/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `kumo-browser-0.0.1/setup.py` & `kumo-browser-0.0.2/setup.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -6,19 +6,19 @@
+     'Operating System :: Microsoft :: Windows :: Windows 10',
+     'License :: OSI Approved :: MIT License',
+     'Programming Language :: Python :: 3'
+ ]
+ 
+ setup(
+     name='kumo-browser',
+-    version='0.0.1',
++    version='0.0.2',
+     description='A Browser library which returns content of the web page from various different webpages',
+-    long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
++    long_description=open('README.txt').read(),
+     url='',
+     author='Kosta Jevtic',
+     author_email='kosta.jevtic@jobcloud.ch',
+     license='MIT',
+     classifiers=classifiers,
+     keywords='browser',
+     packages=find_packages(),
+     install_requires=['']
+-)
++)
+```
+
