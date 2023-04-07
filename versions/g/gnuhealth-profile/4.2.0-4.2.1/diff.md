@@ -1,0 +1,150 @@
+# Comparing `tmp/gnuhealth_profile-4.2.0.tar.gz` & `tmp/gnuhealth_profile-4.2.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "gnuhealth_profile-4.2.0.tar", last modified: Sat Feb 11 21:57:30 2023, max compression
++gzip compressed data, was "gnuhealth_profile-4.2.1.tar", last modified: Fri Apr  7 10:19:32 2023, max compression
+```
+
+## Comparing `gnuhealth_profile-4.2.0.tar` & `gnuhealth_profile-4.2.1.tar`
+
+### file list
+
+```diff
+@@ -1,31 +1,31 @@
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:30.365722 gnuhealth_profile-4.2.0/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    35147 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.0/COPYING
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       54 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.0/MANIFEST.in
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     5715 2023-02-11 21:57:30.365556 gnuhealth_profile-4.2.0/PKG-INFO
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     4826 2023-01-18 16:33:08.000000 gnuhealth_profile-4.2.0/README.rst
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      786 2023-01-18 16:33:08.000000 gnuhealth_profile-4.2.0/__init__.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:30.364192 gnuhealth_profile-4.2.0/doc/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      713 2023-01-18 16:33:08.000000 gnuhealth_profile-4.2.0/doc/index.rst
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:30.365292 gnuhealth_profile-4.2.0/gnuhealth_profile.egg-info/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     5715 2023-02-11 21:57:30.000000 gnuhealth_profile-4.2.0/gnuhealth_profile.egg-info/PKG-INFO
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      663 2023-02-11 21:57:30.000000 gnuhealth_profile-4.2.0/gnuhealth_profile.egg-info/SOURCES.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:57:30.000000 gnuhealth_profile-4.2.0/gnuhealth_profile.egg-info/dependency_links.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       66 2023-02-11 21:57:30.000000 gnuhealth_profile-4.2.0/gnuhealth_profile.egg-info/entry_points.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:57:30.000000 gnuhealth_profile-4.2.0/gnuhealth_profile.egg-info/not-zip-safe
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      250 2023-02-11 21:57:30.000000 gnuhealth_profile-4.2.0/gnuhealth_profile.egg-info/requires.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        8 2023-02-11 21:57:30.000000 gnuhealth_profile-4.2.0/gnuhealth_profile.egg-info/top_level.txt
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:30.364697 gnuhealth_profile-4.2.0/locale/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       63 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.0/locale/ar.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       63 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.0/locale/de.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       63 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.0/locale/es.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       63 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.0/locale/fr.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       63 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.0/locale/it_IT.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       63 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.0/locale/ja_JP.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       63 2023-01-18 16:33:08.000000 gnuhealth_profile-4.2.0/locale/lo.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      517 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.0/locale/zh_CN.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       38 2023-02-11 21:57:30.365771 gnuhealth_profile-4.2.0/setup.cfg
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     3531 2023-01-18 16:33:08.000000 gnuhealth_profile-4.2.0/setup.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:30.364830 gnuhealth_profile-4.2.0/tests/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      233 2023-01-18 16:33:08.000000 gnuhealth_profile-4.2.0/tests/__init__.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      596 2023-01-18 16:33:08.000000 gnuhealth_profile-4.2.0/tests/test_health_profile.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      222 2023-02-11 12:44:33.000000 gnuhealth_profile-4.2.0/tryton.cfg
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:32.403725 gnuhealth_profile-4.2.1/
++-rw-r--r--   0 lfm       (1001) wheel        (0)    35147 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.1/COPYING
++-rw-r--r--   0 lfm       (1001) wheel        (0)       54 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.1/MANIFEST.in
++-rw-r--r--   0 lfm       (1001) wheel        (0)     5715 2023-04-07 10:19:32.403579 gnuhealth_profile-4.2.1/PKG-INFO
++-rw-r--r--   0 lfm       (1001) wheel        (0)     4826 2023-04-07 09:17:52.000000 gnuhealth_profile-4.2.1/README.rst
++-rw-r--r--   0 lfm       (1001) wheel        (0)      786 2023-04-07 09:17:52.000000 gnuhealth_profile-4.2.1/__init__.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:32.402265 gnuhealth_profile-4.2.1/doc/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      713 2023-04-07 09:17:52.000000 gnuhealth_profile-4.2.1/doc/index.rst
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:32.403325 gnuhealth_profile-4.2.1/gnuhealth_profile.egg-info/
++-rw-r--r--   0 lfm       (1001) wheel        (0)     5715 2023-04-07 10:19:32.000000 gnuhealth_profile-4.2.1/gnuhealth_profile.egg-info/PKG-INFO
++-rw-r--r--   0 lfm       (1001) wheel        (0)      663 2023-04-07 10:19:32.000000 gnuhealth_profile-4.2.1/gnuhealth_profile.egg-info/SOURCES.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:19:32.000000 gnuhealth_profile-4.2.1/gnuhealth_profile.egg-info/dependency_links.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)       66 2023-04-07 10:19:32.000000 gnuhealth_profile-4.2.1/gnuhealth_profile.egg-info/entry_points.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:19:32.000000 gnuhealth_profile-4.2.1/gnuhealth_profile.egg-info/not-zip-safe
++-rw-r--r--   0 lfm       (1001) wheel        (0)      250 2023-04-07 10:19:32.000000 gnuhealth_profile-4.2.1/gnuhealth_profile.egg-info/requires.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        8 2023-04-07 10:19:32.000000 gnuhealth_profile-4.2.1/gnuhealth_profile.egg-info/top_level.txt
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:32.402755 gnuhealth_profile-4.2.1/locale/
++-rw-r--r--   0 lfm       (1001) wheel        (0)       63 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.1/locale/ar.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)       63 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.1/locale/de.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)       63 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.1/locale/es.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)       63 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.1/locale/fr.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)       63 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.1/locale/it_IT.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)       63 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.1/locale/ja_JP.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)       63 2023-04-07 09:17:52.000000 gnuhealth_profile-4.2.1/locale/lo.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)      517 2022-11-28 22:17:48.000000 gnuhealth_profile-4.2.1/locale/zh_CN.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)       38 2023-04-07 10:19:32.403759 gnuhealth_profile-4.2.1/setup.cfg
++-rw-r--r--   0 lfm       (1001) wheel        (0)     3531 2023-04-07 09:17:52.000000 gnuhealth_profile-4.2.1/setup.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:32.402889 gnuhealth_profile-4.2.1/tests/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      233 2023-04-07 09:17:52.000000 gnuhealth_profile-4.2.1/tests/__init__.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)      596 2023-04-07 09:17:52.000000 gnuhealth_profile-4.2.1/tests/test_health_profile.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)      222 2023-04-07 09:37:21.000000 gnuhealth_profile-4.2.1/tryton.cfg
+```
+
+### Comparing `gnuhealth_profile-4.2.0/COPYING` & `gnuhealth_profile-4.2.1/COPYING`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_profile-4.2.0/PKG-INFO` & `gnuhealth_profile-4.2.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gnuhealth_profile
+-Version: 4.2.0
++Version: 4.2.1
+ Summary: GNU Health profile with common packages
+ Home-page: https://www.gnuhealth.org
+ Download-URL: http://ftp.gnu.org/gnu/health/
+ Author: GNU Solidario
+ Author-email: health@gnusolidario.org
+ License: GPL-3
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `gnuhealth_profile-4.2.0/README.rst` & `gnuhealth_profile-4.2.1/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_profile-4.2.0/__init__.py` & `gnuhealth_profile-4.2.1/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_profile-4.2.0/doc/index.rst` & `gnuhealth_profile-4.2.1/doc/index.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_profile-4.2.0/gnuhealth_profile.egg-info/PKG-INFO` & `gnuhealth_profile-4.2.1/gnuhealth_profile.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gnuhealth-profile
+-Version: 4.2.0
++Version: 4.2.1
+ Summary: GNU Health profile with common packages
+ Home-page: https://www.gnuhealth.org
+ Download-URL: http://ftp.gnu.org/gnu/health/
+ Author: GNU Solidario
+ Author-email: health@gnusolidario.org
+ License: GPL-3
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `gnuhealth_profile-4.2.0/gnuhealth_profile.egg-info/SOURCES.txt` & `gnuhealth_profile-4.2.1/gnuhealth_profile.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_profile-4.2.0/locale/zh_CN.po` & `gnuhealth_profile-4.2.1/locale/zh_CN.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_profile-4.2.0/setup.py` & `gnuhealth_profile-4.2.1/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_profile-4.2.0/tests/test_health_profile.py` & `gnuhealth_profile-4.2.1/tests/test_health_profile.py`
+
+ * *Files identical despite different names*
+

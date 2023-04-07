@@ -1,0 +1,396 @@
+# Comparing `tmp/steampunk_spotter-1.2.4a1-py3-none-any.whl.zip` & `tmp/steampunk_spotter-1.2.4a2-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,25 +1,24 @@
+-Zip file size: 47296 bytes, number of entries: 23
+--rw-r--r--  2.0 unx        0 b- defN 23-Apr-07 07:56 spotter/__init__.py
++Zip file size: 45253 bytes, number of entries: 22
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-07 10:15 spotter/__init__.py
+ -rw-r--r--  2.0 unx    15218 b- defN 23-Apr-05 16:13 spotter/api.py
+--rw-r--r--  2.0 unx     4986 b- defN 23-Apr-07 06:33 spotter/cli.py
++-rw-r--r--  2.0 unx     4694 b- defN 23-Apr-07 09:48 spotter/cli.py
+ -rw-r--r--  2.0 unx    18318 b- defN 23-Mar-20 10:48 spotter/environment.py
+ -rw-r--r--  2.0 unx    24670 b- defN 23-Apr-07 06:33 spotter/parsing.py
+ -rw-r--r--  2.0 unx     6839 b- defN 23-Mar-30 14:43 spotter/rewriting.py
+ -rw-r--r--  2.0 unx     5558 b- defN 23-Apr-07 06:33 spotter/storage.py
+ -rw-r--r--  2.0 unx     2752 b- defN 23-Mar-20 10:29 spotter/utils.py
+--rw-r--r--  2.0 unx        0 b- defN 23-Apr-07 07:56 spotter/commands/__init__.py
+--rw-r--r--  2.0 unx     4691 b- defN 23-Apr-05 13:05 spotter/commands/include_policies.py
++-rw-r--r--  2.0 unx       94 b- defN 23-Apr-07 09:48 spotter/commands/__init__.py
+ -rw-r--r--  2.0 unx     2347 b- defN 23-Apr-05 12:42 spotter/commands/login.py
+ -rw-r--r--  2.0 unx     1141 b- defN 23-Mar-13 12:10 spotter/commands/register.py
+--rw-r--r--  2.0 unx    38561 b- defN 23-Apr-05 13:05 spotter/commands/scan.py
++-rw-r--r--  2.0 unx    38545 b- defN 23-Apr-07 09:48 spotter/commands/scan.py
+ -rw-r--r--  2.0 unx     3620 b- defN 23-Mar-30 14:43 spotter/commands/suggest.py
+ -rw-r--r--  2.0 unx       60 b- defN 23-Mar-14 07:59 spotter/reporting/__init__.py
+ -rw-r--r--  2.0 unx     3459 b- defN 23-Mar-14 07:59 spotter/reporting/report.py
+--rw-rw-rw-  2.0 unx    11358 b- defN 23-Apr-07 07:56 steampunk_spotter-1.2.4a1.dist-info/LICENSE
+--rw-r--r--  2.0 unx    20890 b- defN 23-Apr-07 07:56 steampunk_spotter-1.2.4a1.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 07:56 steampunk_spotter-1.2.4a1.dist-info/WHEEL
+--rw-r--r--  2.0 unx       45 b- defN 23-Apr-07 07:56 steampunk_spotter-1.2.4a1.dist-info/entry_points.txt
+--rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 07:56 steampunk_spotter-1.2.4a1.dist-info/top_level.txt
+--rw-r--r--  2.0 unx        1 b- defN 23-Apr-07 07:56 steampunk_spotter-1.2.4a1.dist-info/zip-safe
+--rw-rw-r--  2.0 unx     1925 b- defN 23-Apr-07 07:56 steampunk_spotter-1.2.4a1.dist-info/RECORD
+-23 files, 166539 bytes uncompressed, 44166 bytes compressed:  73.5%
++-rw-rw-rw-  2.0 unx    11358 b- defN 23-Apr-07 10:16 steampunk_spotter-1.2.4a2.dist-info/LICENSE
++-rw-r--r--  2.0 unx    19427 b- defN 23-Apr-07 10:16 steampunk_spotter-1.2.4a2.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 10:16 steampunk_spotter-1.2.4a2.dist-info/WHEEL
++-rw-r--r--  2.0 unx       45 b- defN 23-Apr-07 10:16 steampunk_spotter-1.2.4a2.dist-info/entry_points.txt
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 10:16 steampunk_spotter-1.2.4a2.dist-info/top_level.txt
++-rw-r--r--  2.0 unx        1 b- defN 23-Apr-07 10:16 steampunk_spotter-1.2.4a2.dist-info/zip-safe
++-rw-rw-r--  2.0 unx     1833 b- defN 23-Apr-07 10:16 steampunk_spotter-1.2.4a2.dist-info/RECORD
++22 files, 160079 bytes uncompressed, 42271 bytes compressed:  73.6%
+```
+
+## zipnote {}
+
+```diff
+@@ -21,17 +21,14 @@
+ 
+ Filename: spotter/utils.py
+ Comment: 
+ 
+ Filename: spotter/commands/__init__.py
+ Comment: 
+ 
+-Filename: spotter/commands/include_policies.py
+-Comment: 
+-
+ Filename: spotter/commands/login.py
+ Comment: 
+ 
+ Filename: spotter/commands/register.py
+ Comment: 
+ 
+ Filename: spotter/commands/scan.py
+@@ -42,29 +39,29 @@
+ 
+ Filename: spotter/reporting/__init__.py
+ Comment: 
+ 
+ Filename: spotter/reporting/report.py
+ Comment: 
+ 
+-Filename: steampunk_spotter-1.2.4a1.dist-info/LICENSE
++Filename: steampunk_spotter-1.2.4a2.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: steampunk_spotter-1.2.4a1.dist-info/METADATA
++Filename: steampunk_spotter-1.2.4a2.dist-info/METADATA
+ Comment: 
+ 
+-Filename: steampunk_spotter-1.2.4a1.dist-info/WHEEL
++Filename: steampunk_spotter-1.2.4a2.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: steampunk_spotter-1.2.4a1.dist-info/entry_points.txt
++Filename: steampunk_spotter-1.2.4a2.dist-info/entry_points.txt
+ Comment: 
+ 
+-Filename: steampunk_spotter-1.2.4a1.dist-info/top_level.txt
++Filename: steampunk_spotter-1.2.4a2.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: steampunk_spotter-1.2.4a1.dist-info/zip-safe
++Filename: steampunk_spotter-1.2.4a2.dist-info/zip-safe
+ Comment: 
+ 
+-Filename: steampunk_spotter-1.2.4a1.dist-info/RECORD
++Filename: steampunk_spotter-1.2.4a2.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## spotter/cli.py
+
+```diff
+@@ -1,18 +1,19 @@
+ """Provide main CLI parser."""
+ 
+ import argparse
++import inspect
+ import sys
+ from pathlib import Path
+ from typing import Dict, Union, Sequence, Optional, Any, NoReturn
+ 
+ import colorama
+ 
++from spotter import commands
+ from spotter.api import ApiClient
+-from spotter.commands import login, register, scan, suggest, include_policies
+ from spotter.storage import Storage
+ from spotter.utils import get_current_cli_version, validate_url
+ 
+ 
+ class ArgParser(argparse.ArgumentParser):
+     """An argument parser that displays help on error."""
+ 
+@@ -37,15 +38,15 @@
+ def create_parser() -> ArgParser:
+     """
+     Create argument parser for CLI.
+ 
+     :return: Parser as argparse.ArgumentParser object
+     """
+     parser = ArgParser(
+-        description="Steampunk Spotter - Ansible Playbook Scanning Tool",
++        description="Steampunk Spotter - a quality scanner for Ansible Playbooks",
+         formatter_class=argparse.RawDescriptionHelpFormatter,
+         epilog="additional information:\n"
+                "  You will need Steampunk Spotter account to be able to use the CLI.\n"
+                "  Create one with spotter register command or at https://spotter.steampunk.si/.\n\n"
+                "  To log in to Steampunk Spotter, you should provide your API token or username and password:\n"
+                "    - using spotter login command;\n"
+                "    - via --api-token/-t optional argument;\n"
+@@ -80,22 +81,16 @@
+     )
+     parser.add_argument(
+         "--no-colors", action="store_true", help="Disable output colors"
+     )
+ 
+     subparsers = parser.add_subparsers()
+     subparsers_metavar = ""
+-    cmds = [
+-        (register.__name__.rsplit(".", maxsplit=1)[-1], register),
+-        (login.__name__.rsplit(".", maxsplit=1)[-1], login),
+-        (scan.__name__.rsplit(".", maxsplit=1)[-1], scan),
+-        (suggest.__name__.rsplit(".", maxsplit=1)[-1], suggest),
+-        (include_policies.__name__.rsplit(".", maxsplit=1)[-1], include_policies)
+-    ]
+-    for command_name, module in cmds:
++    cmds = inspect.getmembers(commands, inspect.ismodule)
++    for command_name, module in sorted(cmds, key=lambda x: x[0]):
+         # FIXME: Remove this if we decide that suggest command can be used standalone
+         if command_name != "suggest":
+             subparsers_metavar += f"{command_name},"
+         module.add_parser(subparsers)
+ 
+     subparsers.metavar = f"{{{subparsers_metavar.rstrip(',')}}}"
+     return parser
+```
+
+## spotter/commands/__init__.py
+
+```diff
+@@ -0,0 +1,6 @@
++00000000: 6672 6f6d 2073 706f 7474 6572 2e63 6f6d  from spotter.com
++00000010: 6d61 6e64 7320 696d 706f 7274 2028 2020  mands import (  
++00000020: 2320 6e6f 7161 3a20 4634 3031 0a20 2020  # noqa: F401.   
++00000030: 206c 6f67 696e 2c0a 2020 2020 7265 6769   login,.    regi
++00000040: 7374 6572 2c0a 2020 2020 7363 616e 2c0a  ster,.    scan,.
++00000050: 2020 2020 7375 6767 6573 740a 290a           suggest.).
+```
+
+## spotter/commands/scan.py
+
+```diff
+@@ -273,15 +273,15 @@
+         :param disable_docs_url: Disable outputting URL to documentation
+         :return: Formatted output for check result
+         """
+         # or: we can have results that relate to Environment - no file and position
+         metadata = self.metadata or ItemMetadata(file_name="", line=0, column=0)
+         result_level = self.level.name.strip().upper()
+         file_location = f"{metadata.file_name}:{metadata.line}:{metadata.column}"
+-        out_prefix = f"{file_location}: {result_level}: [{self.catalog_info.event_code}]"
++        out_prefix = f"{file_location}: [{self.catalog_info.event_code}]"
+         out_message = self.message.strip()
+         if not disable_colors:
+             if result_level == DisplayLevel.ERROR.name:
+                 out_prefix = Fore.RED + out_prefix + Fore.RESET
+                 out_message = re.sub(r"'([^']*)'", Style.BRIGHT + Fore.RED + r"\1" + Fore.RESET + Style.NORMAL,
+                                      out_message)
+             elif result_level == DisplayLevel.WARNING.name:
+```
+
+## Comparing `steampunk_spotter-1.2.4a1.dist-info/LICENSE` & `steampunk_spotter-1.2.4a2.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `steampunk_spotter-1.2.4a1.dist-info/METADATA` & `steampunk_spotter-1.2.4a2.dist-info/METADATA`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ Metadata-Version: 2.1
+ Name: steampunk-spotter
+-Version: 1.2.4a1
+-Summary: Ansible Playbook Scanning Tool
++Version: 1.2.4a2
++Summary: Quality scanner for Ansible Playbooks
+ Home-page: https://spotter.steampunk.si/
+ Author: XLAB d.o.o.
+ Author-email: pypi@xlab.si
+ Project-URL: Source Code, https://gitlab.com/xlab-steampunk/steampunk-spotter-client/spotter-cli
+ Project-URL: Bug Tracker, https://gitlab.com/xlab-steampunk/steampunk-spotter-client/spotter-cli/-/issues
+ Project-URL: Documentation, https://gitlab.com/xlab-steampunk/steampunk-spotter-client/spotter-cli
+ Keywords: ansible,automation,spotter,scanner,quality,playbook,steampunk
+@@ -52,34 +52,32 @@
+     - [Scanning](#scanning)
+         - [Ansible content](#ansible-content)
+         - [Selecting the target project](#selecting-the-target-project)
+         - [Including values](#including-values)
+         - [Including metadata](#including-metadata)
+         - [Automated application of suggestions to your code](#automated-application-of-suggestions-to-your-code)
+         - [Suppressing check result levels](#suppressing-check-result-levels)
+-        - [Applying profiles](#applying-profiles)
+         - [Exporting and importing scan payload](#exporting-and-importing-scan-payload)
+         - [Scan configuration](#scan-configuration)
+         - [Formatting scan result](#formatting-scan-result)
+         - [Omitting documentation URLs from the output](#omitting-documentation-urls-from-the-output)
+-        - [Including custom policies](#including-custom-policies)
+     - [Setting storage folder](#setting-storage-folder)
+     - [Disabling colorized output](#disabling-colorized-output)
+     - [Setting API endpoint](#setting-api-endpoint)
+     - [CI/CD integrations](#cicd-integrations)
+         - [GitLab](#gitlab)
+         - [GitHub](#github)
+         - [Others](#others)
+ - [Development](#development)
+     - [Running from source](#running-from-source)
+     - [Building Docker image](#building-docker-image)
+ - [Acknowledgement](#acknowledgement)
+ 
+ ## Introduction
+-[Steampunk Spotter] provides an Ansible Playbook Scanning Tool that analyzes
++[Steampunk Spotter] provides an Assisted Automation Writing tool that analyzes
+ and offers recommendations for your Ansible Playbooks.
+ 
+ The Steampunk Spotter CLI enables the use from the console with the ability
+ to scan Ansible content such as playbooks, roles, collections, or task files.
+ 
+ ## Installation
+ `steampunk-spotter` requires Python 3 and is available as a
+@@ -287,15 +285,15 @@
+ $ spotter scan --include-values playbook.yaml
+ ```
+ 
+ #### Including metadata
+ By default, CLI collects and uses metadata (file names, line and column
+ numbers, YAML markers) from Ansible content just for displaying the scan
+ output, which means that no data about your Ansible content structure is sent
+-to the backend server.
++to the backend server. 
+ For enriched user experience in the app and to get additional tips for
+ improvements, you can use `--include-metadata` optional argument to send the
+ metadata.
+ 
+ ```shell
+ $ spotter scan --include-metadata playbook.yaml
+ ```
+@@ -314,38 +312,14 @@
+ levels.
+ For example, to show only errors (suppress warnings and hints):
+ 
+ ```shell
+ $ spotter scan --display-level error playbook.yaml 
+ ```
+ 
+-#### Applying scan profiles
+-When we run scans, we might have a particular goal in mind.
+-For example, in one project we might be interested in upgrading our Ansible
+-environment to a newer version of Ansible.
+-In another one, we want to improve the playbooks for the Ansible version that
+-we are currently in.
+-This means that some check results that Steampunk Spotter produces may be
+-relevant in one of the projects, but not in the other one.
+-
+-Using the `--profile` optional argument, we can specify a scan profile that
+-contains a selected set of checks to be used for scanning. Spotter currently
+-supports the following profiles:
+-
+-* `default` - this profile is suitable for day-to-day testing and improving
+-  Ansible playbooks.
+-* `full` - displays the full range of check results, which would be useful for
+-  the Ansible playbook updating to work at a newer version of Ansible.
+-
+-For example, to run all checks (apply `full` profile):
+-
+-```shell
+-$ spotter scan --profile full playbook.yaml 
+-```
+-
+ #### Exporting and importing scan payload
+ To see what data is collected from your Ansible content and sent to the
+ backend server, you can use the optional `--export-payload` argument.
+ 
+ ```shell
+ $ spotter scan --export-payload payload.json playbook.yaml 
+ Scan data saved to payload.json.
+@@ -413,29 +387,14 @@
+ To omit these documentation URLs from all the output, use `--no-docs-url`
+ optional argument.
+ 
+ ```console
+ $ spotter scan --no-docs-url playbook.yaml
+ ```
+ 
+-#### Including custom policies
+-It is possible to create and include custom policies written in Rego Language
+-for Open Policy Agent (OPA).
+-Use `include-policies` command to include a folder with custom OPA policies
+-
+-```shell
+-$ spotter include-policies policies/
+-```
+-
+-After that run a scan to see check results you included.
+-
+-```shell
+-$ spotter scan playbook.yaml
+-```
+-
+ ### Setting storage folder
+ The CLI uses local storage for caching access tokens for the Steampunk
+ Spotter API.
+ The default location is `~/.config/steampunk-spotter`, but if you want to
+ change it you can use `--storage-path` optional argument.
+ 
+ ```console
+```
+
+## Comparing `steampunk_spotter-1.2.4a1.dist-info/RECORD` & `steampunk_spotter-1.2.4a2.dist-info/RECORD`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,23 +1,22 @@
+ spotter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ spotter/api.py,sha256=kkX9XnlGGqMoUYmK5HluMCzEu80doU1KjiNKdZE0UmE,15218
+-spotter/cli.py,sha256=wf-_Iao_YXH0j6q9KxpOtEc-M7rYKMRKLxAVCsusUWE,4986
++spotter/cli.py,sha256=EVSTfhSxG95iEE2xOApiytWWlOvCL1wYzxo3eirEUL0,4694
+ spotter/environment.py,sha256=V8UehBSiH0pZThbYCpj7RYigoRDM8O201HhrMopYK14,18318
+ spotter/parsing.py,sha256=2NnjOyQ8Khh19zc_ll7C7Gi5gw9Q5u8SK6F1UtxjFwg,24670
+ spotter/rewriting.py,sha256=iIPHH50hN442Kah-NpE0oqkS1fbWSMzC0tM45oI_YxA,6839
+ spotter/storage.py,sha256=IXUSXLz56BOABXVjehc887xOiCuIBGWZbD6DWLiDX9Y,5558
+ spotter/utils.py,sha256=n6xPBZAHwhemTtFYivo0WFHxK01ir77SsrnooW6B75w,2752
+-spotter/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+-spotter/commands/include_policies.py,sha256=a55VRFHtXTm2-19rz5vmBR4hYsssjv-bAxyRofE_RGA,4691
++spotter/commands/__init__.py,sha256=CTut8qwGGmGz5sfcH_hXJL49UkFOhwlZa6fULxylp5U,94
+ spotter/commands/login.py,sha256=lOEU1IPLdSWxFLxnTsRbhCrxkTNdadwcintmLDn7b4g,2347
+ spotter/commands/register.py,sha256=BstH64-72XM-1-xAZgrn__b55qpLAFnajF8UfrOmxU8,1141
+-spotter/commands/scan.py,sha256=3gmSIUtgFaYwmz0yBlVS2rjrVzK73K0guHSm1wwIsbc,38561
++spotter/commands/scan.py,sha256=8bVr7aplA5_Z-oWfvw9nbNyouVoggqMkaTp6Q6N49zE,38545
+ spotter/commands/suggest.py,sha256=WAt60BGyxfMZOaWgpdprijzViyUE9DLhx9GaPs-6zWM,3620
+ spotter/reporting/__init__.py,sha256=Mddj7lJk3d9SeIpItBD_NNURRF4vtyMahTomdOFAEDw,60
+ spotter/reporting/report.py,sha256=LXBXWhXvWa39l-UvLq0-5ts0dK_uCRCfayvUGm0g5kQ,3459
+-steampunk_spotter-1.2.4a1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+-steampunk_spotter-1.2.4a1.dist-info/METADATA,sha256=ZP_xYkMOw1q0LlqWsUu2z5tsHdz-_EAXmEfbl4Jzv64,20890
+-steampunk_spotter-1.2.4a1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+-steampunk_spotter-1.2.4a1.dist-info/entry_points.txt,sha256=_94aMdgSgx7FY17kO5nvQ5NaEqYQM1oetU0Iwq2NK6c,45
+-steampunk_spotter-1.2.4a1.dist-info/top_level.txt,sha256=3FpgMM0g2fECUU_GuaBTKGXYeWTG5uDxJXqqRD3YTck,8
+-steampunk_spotter-1.2.4a1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+-steampunk_spotter-1.2.4a1.dist-info/RECORD,,
++steampunk_spotter-1.2.4a2.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
++steampunk_spotter-1.2.4a2.dist-info/METADATA,sha256=8gcWC-cNb-bPkCmoX_ZmXjoU4tKTad0at9eL9W77sNs,19427
++steampunk_spotter-1.2.4a2.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
++steampunk_spotter-1.2.4a2.dist-info/entry_points.txt,sha256=_94aMdgSgx7FY17kO5nvQ5NaEqYQM1oetU0Iwq2NK6c,45
++steampunk_spotter-1.2.4a2.dist-info/top_level.txt,sha256=3FpgMM0g2fECUU_GuaBTKGXYeWTG5uDxJXqqRD3YTck,8
++steampunk_spotter-1.2.4a2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
++steampunk_spotter-1.2.4a2.dist-info/RECORD,,
+```
+

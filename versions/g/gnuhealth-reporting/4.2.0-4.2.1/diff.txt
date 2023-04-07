@@ -1,0 +1,378 @@
+--- tmp/gnuhealth_reporting-4.2.0.tar.gz
++++ tmp/gnuhealth_reporting-4.2.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "gnuhealth_reporting-4.2.0.tar", last modified: Sat Feb 11 21:57:38 2023, max compression
+│ +gzip compressed data, was "gnuhealth_reporting-4.2.1.tar", last modified: Fri Apr  7 10:19:38 2023, max compression
+│   --- gnuhealth_reporting-4.2.0.tar
+├── +++ gnuhealth_reporting-4.2.1.tar
+│ ├── file list
+│ │ @@ -1,64 +1,64 @@
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:38.452561 gnuhealth_reporting-4.2.0/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    35147 2022-11-28 22:17:48.000000 gnuhealth_reporting-4.2.0/COPYING
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       41 2022-11-28 22:17:48.000000 gnuhealth_reporting-4.2.0/MANIFEST.in
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     5710 2023-02-11 21:57:38.452195 gnuhealth_reporting-4.2.0/PKG-INFO
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     4826 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/README.rst
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     1928 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/__init__.py
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:38.446238 gnuhealth_reporting-4.2.0/doc/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      309 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/doc/index.rst
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:38.450994 gnuhealth_reporting-4.2.0/gnuhealth_reporting.egg-info/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     5710 2023-02-11 21:57:38.000000 gnuhealth_reporting-4.2.0/gnuhealth_reporting.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     2244 2023-02-11 21:57:38.000000 gnuhealth_reporting-4.2.0/gnuhealth_reporting.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:57:38.000000 gnuhealth_reporting-4.2.0/gnuhealth_reporting.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       70 2023-02-11 21:57:38.000000 gnuhealth_reporting-4.2.0/gnuhealth_reporting.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:57:38.000000 gnuhealth_reporting-4.2.0/gnuhealth_reporting.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       17 2023-02-11 21:57:38.000000 gnuhealth_reporting-4.2.0/gnuhealth_reporting.egg-info/requires.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)        8 2023-02-11 21:57:38.000000 gnuhealth_reporting-4.2.0/gnuhealth_reporting.egg-info/top_level.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      984 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/health_reporting_report.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     6104 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/health_reporting_view.xml
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:38.446931 gnuhealth_reporting-4.2.0/locale/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     8396 2023-02-11 12:36:12.000000 gnuhealth_reporting-4.2.0/locale/ar.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     7811 2022-11-28 22:17:48.000000 gnuhealth_reporting-4.2.0/locale/de.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     8510 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/locale/el.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     7874 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/locale/es.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     7815 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/locale/fr.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     7818 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/locale/it_IT.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    12299 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/locale/ja_JP.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     6510 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/locale/lo.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     7308 2022-11-28 22:17:48.000000 gnuhealth_reporting-4.2.0/locale/pt_BR.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    15291 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/locale/zh_CN.po
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:38.448418 gnuhealth_reporting-4.2.0/report/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      282 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/report/__init__.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)   716081 2022-11-28 22:17:48.000000 gnuhealth_reporting-4.2.0/report/epidemics_report.fodt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    17407 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/report/epidemics_report.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)   818870 2022-11-28 22:17:48.000000 gnuhealth_reporting-4.2.0/report/summary_report.fodt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     9997 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/report/summary_report.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       38 2023-02-11 21:57:38.452639 gnuhealth_reporting-4.2.0/setup.cfg
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     3685 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/setup.py
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:38.448580 gnuhealth_reporting-4.2.0/tests/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      236 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/tests/__init__.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      604 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/tests/test_health_reporting.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      241 2023-02-11 12:44:33.000000 gnuhealth_reporting-4.2.0/tryton.cfg
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:38.449407 gnuhealth_reporting-4.2.0/view/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      713 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/view/epidemics_report_open_start_form.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      337 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/view/evaluations_doctor_graph.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      323 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/view/evaluations_doctor_tree.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      412 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/view/evaluations_open_start_form.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      337 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/view/evaluations_sector_graph.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      323 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/view/evaluations_sector_tree.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      340 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/view/evaluations_specialty_graph.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      326 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/view/evaluations_specialty_tree.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      787 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/view/summary_report_open_start_form.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      333 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/view/top_diseases_graph.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      477 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/view/top_diseases_open_start_form.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      312 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/view/top_diseases_tree.xml
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:38.450029 gnuhealth_reporting-4.2.0/wizard/
+│ │ --rwxr-xr-x   0 lfm       (1001) lfm       (1001)      413 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/wizard/__init__.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     1326 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/wizard/epidemics_report_wizard.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     1019 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/wizard/evaluations.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     1303 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/wizard/summary_report_wizard.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     1021 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/wizard/top_diseases.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     2042 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/wizard/wizard_epidemics_report.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     7016 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/wizard/wizard_evaluations.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     2035 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/wizard/wizard_summary_report.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     3870 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.0/wizard/wizard_top_diseases.py
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:38.441453 gnuhealth_reporting-4.2.1/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    35147 2022-11-28 22:17:48.000000 gnuhealth_reporting-4.2.1/COPYING
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       41 2022-11-28 22:17:48.000000 gnuhealth_reporting-4.2.1/MANIFEST.in
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     5710 2023-04-07 10:19:38.441294 gnuhealth_reporting-4.2.1/PKG-INFO
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     4826 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/README.rst
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     1928 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/__init__.py
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:38.436785 gnuhealth_reporting-4.2.1/doc/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      309 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/doc/index.rst
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:38.440696 gnuhealth_reporting-4.2.1/gnuhealth_reporting.egg-info/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     5710 2023-04-07 10:19:38.000000 gnuhealth_reporting-4.2.1/gnuhealth_reporting.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     2244 2023-04-07 10:19:38.000000 gnuhealth_reporting-4.2.1/gnuhealth_reporting.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:19:38.000000 gnuhealth_reporting-4.2.1/gnuhealth_reporting.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       70 2023-04-07 10:19:38.000000 gnuhealth_reporting-4.2.1/gnuhealth_reporting.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:19:38.000000 gnuhealth_reporting-4.2.1/gnuhealth_reporting.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       17 2023-04-07 10:19:38.000000 gnuhealth_reporting-4.2.1/gnuhealth_reporting.egg-info/requires.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)        8 2023-04-07 10:19:38.000000 gnuhealth_reporting-4.2.1/gnuhealth_reporting.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      984 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/health_reporting_report.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     6104 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/health_reporting_view.xml
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:38.437437 gnuhealth_reporting-4.2.1/locale/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     8396 2023-02-11 12:36:12.000000 gnuhealth_reporting-4.2.1/locale/ar.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     7811 2022-11-28 22:17:48.000000 gnuhealth_reporting-4.2.1/locale/de.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     8510 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/locale/el.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     7874 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/locale/es.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     7815 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/locale/fr.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     7818 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/locale/it_IT.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    12299 2023-01-18 16:33:08.000000 gnuhealth_reporting-4.2.1/locale/ja_JP.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     6510 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/locale/lo.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     7308 2022-11-28 22:17:48.000000 gnuhealth_reporting-4.2.1/locale/pt_BR.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    15291 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/locale/zh_CN.po
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:38.438519 gnuhealth_reporting-4.2.1/report/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      282 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/report/__init__.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)   716081 2022-11-28 22:17:48.000000 gnuhealth_reporting-4.2.1/report/epidemics_report.fodt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    17407 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/report/epidemics_report.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)   818870 2022-11-28 22:17:48.000000 gnuhealth_reporting-4.2.1/report/summary_report.fodt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     9997 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/report/summary_report.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       38 2023-04-07 10:19:38.441491 gnuhealth_reporting-4.2.1/setup.cfg
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     3685 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/setup.py
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:38.438667 gnuhealth_reporting-4.2.1/tests/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      236 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/tests/__init__.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      604 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/tests/test_health_reporting.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      241 2023-04-07 09:37:21.000000 gnuhealth_reporting-4.2.1/tryton.cfg
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:38.439446 gnuhealth_reporting-4.2.1/view/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      713 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/view/epidemics_report_open_start_form.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      337 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/view/evaluations_doctor_graph.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      323 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/view/evaluations_doctor_tree.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      412 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/view/evaluations_open_start_form.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      337 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/view/evaluations_sector_graph.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      323 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/view/evaluations_sector_tree.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      340 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/view/evaluations_specialty_graph.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      326 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/view/evaluations_specialty_tree.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      787 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/view/summary_report_open_start_form.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      333 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/view/top_diseases_graph.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      477 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/view/top_diseases_open_start_form.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      312 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/view/top_diseases_tree.xml
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:38.440025 gnuhealth_reporting-4.2.1/wizard/
+│ │ +-rwxr-xr-x   0 lfm       (1001) wheel        (0)      413 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/wizard/__init__.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     1326 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/wizard/epidemics_report_wizard.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     1019 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/wizard/evaluations.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     1303 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/wizard/summary_report_wizard.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     1021 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/wizard/top_diseases.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     2042 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/wizard/wizard_epidemics_report.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     6995 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/wizard/wizard_evaluations.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     2035 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/wizard/wizard_summary_report.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     3870 2023-04-07 09:17:52.000000 gnuhealth_reporting-4.2.1/wizard/wizard_top_diseases.py
+│ │   --- gnuhealth_reporting-4.2.0/COPYING
+│ ├── +++ gnuhealth_reporting-4.2.1/COPYING
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/PKG-INFO
+│ ├── +++ gnuhealth_reporting-4.2.1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gnuhealth_reporting
+│ │ -Version: 4.2.0
+│ │ +Version: 4.2.1
+│ │  Summary: GNU Health package for reporting
+│ │  Home-page: https://www.gnuhealth.org
+│ │  Download-URL: http://ftp.gnu.org/gnu/health/
+│ │  Author: GNU Solidario
+│ │  Author-email: health@gnusolidario.org
+│ │  License: GPL-3
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │   --- gnuhealth_reporting-4.2.0/README.rst
+│ ├── +++ gnuhealth_reporting-4.2.1/README.rst
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/__init__.py
+│ ├── +++ gnuhealth_reporting-4.2.1/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/gnuhealth_reporting.egg-info/PKG-INFO
+│ ├── +++ gnuhealth_reporting-4.2.1/gnuhealth_reporting.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gnuhealth-reporting
+│ │ -Version: 4.2.0
+│ │ +Version: 4.2.1
+│ │  Summary: GNU Health package for reporting
+│ │  Home-page: https://www.gnuhealth.org
+│ │  Download-URL: http://ftp.gnu.org/gnu/health/
+│ │  Author: GNU Solidario
+│ │  Author-email: health@gnusolidario.org
+│ │  License: GPL-3
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │   --- gnuhealth_reporting-4.2.0/gnuhealth_reporting.egg-info/SOURCES.txt
+│ ├── +++ gnuhealth_reporting-4.2.1/gnuhealth_reporting.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/health_reporting_report.xml
+│ ├── +++ gnuhealth_reporting-4.2.1/health_reporting_report.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/health_reporting_view.xml
+│ ├── +++ gnuhealth_reporting-4.2.1/health_reporting_view.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/locale/ar.po
+│ ├── +++ gnuhealth_reporting-4.2.1/locale/ar.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/locale/de.po
+│ ├── +++ gnuhealth_reporting-4.2.1/locale/de.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/locale/el.po
+│ ├── +++ gnuhealth_reporting-4.2.1/locale/el.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/locale/es.po
+│ ├── +++ gnuhealth_reporting-4.2.1/locale/es.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/locale/fr.po
+│ ├── +++ gnuhealth_reporting-4.2.1/locale/fr.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/locale/it_IT.po
+│ ├── +++ gnuhealth_reporting-4.2.1/locale/it_IT.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/locale/ja_JP.po
+│ ├── +++ gnuhealth_reporting-4.2.1/locale/ja_JP.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/locale/lo.po
+│ ├── +++ gnuhealth_reporting-4.2.1/locale/lo.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/locale/pt_BR.po
+│ ├── +++ gnuhealth_reporting-4.2.1/locale/pt_BR.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/locale/zh_CN.po
+│ ├── +++ gnuhealth_reporting-4.2.1/locale/zh_CN.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/report/epidemics_report.fodt
+│ ├── +++ gnuhealth_reporting-4.2.1/report/epidemics_report.fodt
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/report/epidemics_report.py
+│ ├── +++ gnuhealth_reporting-4.2.1/report/epidemics_report.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/report/summary_report.fodt
+│ ├── +++ gnuhealth_reporting-4.2.1/report/summary_report.fodt
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/report/summary_report.py
+│ ├── +++ gnuhealth_reporting-4.2.1/report/summary_report.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/setup.py
+│ ├── +++ gnuhealth_reporting-4.2.1/setup.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/tests/test_health_reporting.py
+│ ├── +++ gnuhealth_reporting-4.2.1/tests/test_health_reporting.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/view/epidemics_report_open_start_form.xml
+│ ├── +++ gnuhealth_reporting-4.2.1/view/epidemics_report_open_start_form.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/view/summary_report_open_start_form.xml
+│ ├── +++ gnuhealth_reporting-4.2.1/view/summary_report_open_start_form.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/wizard/epidemics_report_wizard.xml
+│ ├── +++ gnuhealth_reporting-4.2.1/wizard/epidemics_report_wizard.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/wizard/evaluations.xml
+│ ├── +++ gnuhealth_reporting-4.2.1/wizard/evaluations.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/wizard/summary_report_wizard.xml
+│ ├── +++ gnuhealth_reporting-4.2.1/wizard/summary_report_wizard.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/wizard/top_diseases.xml
+│ ├── +++ gnuhealth_reporting-4.2.1/wizard/top_diseases.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/wizard/wizard_epidemics_report.py
+│ ├── +++ gnuhealth_reporting-4.2.1/wizard/wizard_epidemics_report.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/wizard/wizard_evaluations.py
+│ ├── +++ gnuhealth_reporting-4.2.1/wizard/wizard_evaluations.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  # SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
+│ │  # SPDX-FileCopyrightText: 2011-2014 Sebastian Marro <smarro@thymbra.com>
+│ │  # SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
+│ │  #
+│ │  # SPDX-License-Identifier: GPL-3.0-or-later
+│ │  
+│ │ -from sql import Literal, Join
+│ │ +from sql import Literal, Join, Null
+│ │  from sql.aggregate import Max, Count
+│ │  from trytond.model import ModelView, ModelSQL, fields
+│ │  from trytond.wizard import Wizard, StateView, StateAction, StateTransition, \
+│ │      Button
+│ │  from trytond.pyson import PYSONEncoder
+│ │  from trytond.pool import Pool
+│ │  from trytond.transaction import Transaction
+│ │ @@ -89,52 +89,55 @@
+│ │  
+│ │      @staticmethod
+│ │      def table_query():
+│ │          pool = Pool()
+│ │          Evaluation = pool.get('gnuhealth.patient.evaluation')
+│ │          evaluation = Evaluation.__table__()
+│ │          where = Literal(True)
+│ │ -        if Transaction().context.get('start_date'):
+│ │ -            where &= evaluation.evaluation_start >= \
+│ │ -                Transaction().context['start_date']
+│ │ -        if Transaction().context.get('end_date'):
+│ │ -            where &= evaluation.evaluation_start <= \
+│ │ -                Transaction().context['end_date']
+│ │ +        period_start = Transaction().context['start_date']
+│ │ +        period_end = Transaction().context['end_date']
+│ │ +        if period_start:
+│ │ +            where &= evaluation.evaluation_start >= period_start
+│ │ +        if period_end:
+│ │ +            where &= evaluation.evaluation_start <= period_end
+│ │  
+│ │ -        return evaluation.select(
+│ │ +        sql_statement = evaluation.select(
+│ │              evaluation.healthprof.as_('id'),
+│ │              Max(evaluation.create_uid).as_('create_uid'),
+│ │              Max(evaluation.create_date).as_('create_date'),
+│ │              Max(evaluation.write_uid).as_('write_uid'),
+│ │              Max(evaluation.write_date).as_('write_date'),
+│ │              evaluation.healthprof.as_('doctor'),
+│ │              Count(evaluation.id).as_('evaluations'),
+│ │              where=where,
+│ │              group_by=evaluation.healthprof)
+│ │  
+│ │ +        return sql_statement
+│ │ +
+│ │  
+│ │  class EvaluationsSpecialty(ModelSQL, ModelView):
+│ │      'Evaluations per Specialty'
+│ │      __name__ = 'gnuhealth.evaluations_specialty'
+│ │  
+│ │      specialty = fields.Many2One('gnuhealth.specialty', 'Specialty')
+│ │      evaluations = fields.Integer('Evaluations')
+│ │  
+│ │      @staticmethod
+│ │      def table_query():
+│ │          pool = Pool()
+│ │          Evaluation = pool.get('gnuhealth.patient.evaluation')
+│ │          evaluation = Evaluation.__table__()
+│ │ -        where = evaluation.specialty is not None
+│ │ -        if Transaction().context.get('start_date'):
+│ │ -            where &= evaluation.evaluation_start >= \
+│ │ -                Transaction().context['start_date']
+│ │ -        if Transaction().context.get('end_date'):
+│ │ -            where &= evaluation.evaluation_start <= \
+│ │ -                Transaction().context['end_date']
+│ │ +        where = (evaluation.specialty != Null)
+│ │ +        period_start = Transaction().context['start_date']
+│ │ +        period_end = Transaction().context['end_date']
+│ │ +
+│ │ +        if period_start:
+│ │ +            where &= evaluation.evaluation_start >= period_start
+│ │ +        if period_end:
+│ │ +            where &= evaluation.evaluation_start <= period_end
+│ │  
+│ │          return evaluation.select(
+│ │              evaluation.specialty.as_('id'),
+│ │              Max(evaluation.create_uid).as_('create_uid'),
+│ │              Max(evaluation.create_date).as_('create_date'),
+│ │              Max(evaluation.write_uid).as_('write_uid'),
+│ │              Max(evaluation.write_date).as_('write_date'),
+│ │ @@ -164,20 +167,21 @@
+│ │          join2 = Join(join1, party)
+│ │          join2.condition = join2.right.id == join1.right.name
+│ │          join3 = Join(join2, du)
+│ │          join3.condition = join3.right.id == join2.right.du
+│ │          join4 = Join(join3, sector)
+│ │          join4.condition = join4.right.id == join3.right.operational_sector
+│ │          where = Literal(True)
+│ │ -        if Transaction().context.get('start_date'):
+│ │ -            where &= evaluation.evaluation_start >= \
+│ │ -                Transaction().context['start_date']
+│ │ -        if Transaction().context.get('end_date'):
+│ │ -            where &= evaluation.evaluation_start <= \
+│ │ -                Transaction().context['end_date']
+│ │ +        period_start = Transaction().context['start_date']
+│ │ +        period_end = Transaction().context['end_date']
+│ │ +
+│ │ +        if period_start:
+│ │ +            where &= evaluation.evaluation_start >= period_start
+│ │ +        if period_end:
+│ │ +            where &= evaluation.evaluation_start <= period_end
+│ │  
+│ │          return join4.select(
+│ │              join4.right.id,
+│ │              Max(evaluation.create_uid).as_('create_uid'),
+│ │              Max(evaluation.create_date).as_('create_date'),
+│ │              Max(evaluation.write_uid).as_('write_uid'),
+│ │              Max(evaluation.write_date).as_('write_date'),
+│ │   --- gnuhealth_reporting-4.2.0/wizard/wizard_summary_report.py
+│ ├── +++ gnuhealth_reporting-4.2.1/wizard/wizard_summary_report.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_reporting-4.2.0/wizard/wizard_top_diseases.py
+│ ├── +++ gnuhealth_reporting-4.2.1/wizard/wizard_top_diseases.py
+│ │┄ Files identical despite different names

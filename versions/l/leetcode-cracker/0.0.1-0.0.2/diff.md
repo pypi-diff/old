@@ -1,0 +1,99 @@
+# Comparing `tmp/leetcode_cracker-0.0.1.tar.gz` & `tmp/leetcode_cracker-0.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "leetcode_cracker-0.0.1.tar", last modified: Fri Apr  7 00:00:12 2023, max compression
++gzip compressed data, was "leetcode_cracker-0.0.2.tar", last modified: Fri Apr  7 10:02:28 2023, max compression
+```
+
+## Comparing `leetcode_cracker-0.0.1.tar` & `leetcode_cracker-0.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,16 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:00:12.788548 leetcode_cracker-0.0.1/
+--rw-rw-rw-   0        0        0     1091 2023-04-06 22:21:06.000000 leetcode_cracker-0.0.1/LICENSE
+--rw-rw-rw-   0        0        0     1702 2023-04-07 00:00:12.788548 leetcode_cracker-0.0.1/PKG-INFO
+--rw-rw-rw-   0        0        0     1225 2023-04-06 22:32:41.000000 leetcode_cracker-0.0.1/README.md
+--rw-rw-rw-   0        0        0      658 2023-04-06 23:36:59.000000 leetcode_cracker-0.0.1/pyproject.toml
+--rw-rw-rw-   0        0        0       42 2023-04-07 00:00:12.788548 leetcode_cracker-0.0.1/setup.cfg
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:00:12.755865 leetcode_cracker-0.0.1/src/
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:00:12.772051 leetcode_cracker-0.0.1/src/leetcode_cracker/
+--rw-rw-rw-   0        0        0       21 2023-04-06 23:33:22.000000 leetcode_cracker-0.0.1/src/leetcode_cracker/__init__.py
+--rw-rw-rw-   0        0        0       37 2023-04-06 22:21:06.000000 leetcode_cracker-0.0.1/src/leetcode_cracker/utils.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:00:12.781044 leetcode_cracker-0.0.1/src/leetcode_cracker.egg-info/
+--rw-rw-rw-   0        0        0     1702 2023-04-07 00:00:12.000000 leetcode_cracker-0.0.1/src/leetcode_cracker.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      271 2023-04-07 00:00:12.000000 leetcode_cracker-0.0.1/src/leetcode_cracker.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 00:00:12.000000 leetcode_cracker-0.0.1/src/leetcode_cracker.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       17 2023-04-07 00:00:12.000000 leetcode_cracker-0.0.1/src/leetcode_cracker.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-07 10:02:28.658671 leetcode_cracker-0.0.2/
++-rw-rw-rw-   0        0        0     1091 2023-04-06 22:21:06.000000 leetcode_cracker-0.0.2/LICENSE
++-rw-rw-rw-   0        0        0     1702 2023-04-07 10:02:28.657431 leetcode_cracker-0.0.2/PKG-INFO
++-rw-rw-rw-   0        0        0     1225 2023-04-06 22:32:41.000000 leetcode_cracker-0.0.2/README.md
++-rw-rw-rw-   0        0        0      658 2023-04-06 23:36:59.000000 leetcode_cracker-0.0.2/pyproject.toml
++-rw-rw-rw-   0        0        0       42 2023-04-07 10:02:28.659668 leetcode_cracker-0.0.2/setup.cfg
++drwxrwxrwx   0        0        0        0 2023-04-07 10:02:28.619460 leetcode_cracker-0.0.2/src/
++drwxrwxrwx   0        0        0        0 2023-04-07 10:02:28.640933 leetcode_cracker-0.0.2/src/leetcode_cracker/
++-rw-rw-rw-   0        0        0       21 2023-04-07 10:01:07.000000 leetcode_cracker-0.0.2/src/leetcode_cracker/__init__.py
++-rw-rw-rw-   0        0        0      677 2023-04-07 07:19:57.000000 leetcode_cracker-0.0.2/src/leetcode_cracker/question_392.py
++-rw-rw-rw-   0        0        0       37 2023-04-06 22:21:06.000000 leetcode_cracker-0.0.2/src/leetcode_cracker/utils.py
++drwxrwxrwx   0        0        0        0 2023-04-07 10:02:28.655933 leetcode_cracker-0.0.2/src/leetcode_cracker.egg-info/
++-rw-rw-rw-   0        0        0     1702 2023-04-07 10:02:28.000000 leetcode_cracker-0.0.2/src/leetcode_cracker.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      308 2023-04-07 10:02:28.000000 leetcode_cracker-0.0.2/src/leetcode_cracker.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 10:02:28.000000 leetcode_cracker-0.0.2/src/leetcode_cracker.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       17 2023-04-07 10:02:28.000000 leetcode_cracker-0.0.2/src/leetcode_cracker.egg-info/top_level.txt
+```
+
+### Comparing `leetcode_cracker-0.0.1/LICENSE` & `leetcode_cracker-0.0.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `leetcode_cracker-0.0.1/PKG-INFO` & `leetcode_cracker-0.0.2/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: leetcode_cracker
+-Version: 0.0.1
++Version: 0.0.2
+ Summary: package to assist in solving Leetcode Problems
+ Author-email: Albert <albertyqyao@gmail.com>
+ Project-URL: Homepage, https://github.com/AlbertY123/leetcode-cracker
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+ Requires-Python: >=3.10
+```
+
+### Comparing `leetcode_cracker-0.0.1/README.md` & `leetcode_cracker-0.0.2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `leetcode_cracker-0.0.1/pyproject.toml` & `leetcode_cracker-0.0.2/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `leetcode_cracker-0.0.1/src/leetcode_cracker.egg-info/PKG-INFO` & `leetcode_cracker-0.0.2/src/leetcode_cracker.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: leetcode-cracker
+-Version: 0.0.1
++Version: 0.0.2
+ Summary: package to assist in solving Leetcode Problems
+ Author-email: Albert <albertyqyao@gmail.com>
+ Project-URL: Homepage, https://github.com/AlbertY123/leetcode-cracker
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+ Requires-Python: >=3.10
+```
+

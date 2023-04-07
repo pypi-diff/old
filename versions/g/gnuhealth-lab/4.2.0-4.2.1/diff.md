@@ -1,0 +1,1382 @@
+# Comparing `tmp/gnuhealth_lab-4.2.0.tar.gz` & `tmp/gnuhealth_lab-4.2.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "gnuhealth_lab-4.2.0.tar", last modified: Sat Feb 11 21:56:50 2023, max compression
++gzip compressed data, was "gnuhealth_lab-4.2.1.tar", last modified: Fri Apr  7 10:18:51 2023, max compression
+```
+
+## Comparing `gnuhealth_lab-4.2.0.tar` & `gnuhealth_lab-4.2.1.tar`
+
+### file list
+
+```diff
+@@ -1,73 +1,73 @@
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:50.528914 gnuhealth_lab-4.2.0/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    35147 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.0/COPYING
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       54 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.0/MANIFEST.in
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      918 2023-02-11 21:56:50.528594 gnuhealth_lab-4.2.0/PKG-INFO
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     4826 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/README.rst
+--rwxr-xr-x   0 lfm       (1001) lfm       (1001)     1583 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/__init__.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:50.523716 gnuhealth_lab-4.2.0/data/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      615 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/data/gnuhealth_commands.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1243 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/data/health_lab_sequences.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    63972 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/data/lab_test_data.xml
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:50.526604 gnuhealth_lab-4.2.0/data/messages/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      597 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/data/messages/messages.xml
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:50.523810 gnuhealth_lab-4.2.0/doc/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      312 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/doc/index.rst
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      430 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/exceptions.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:50.527084 gnuhealth_lab-4.2.0/gnuhealth_lab.egg-info/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      918 2023-02-11 21:56:50.000000 gnuhealth_lab-4.2.0/gnuhealth_lab.egg-info/PKG-INFO
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     2535 2023-02-11 21:56:50.000000 gnuhealth_lab-4.2.0/gnuhealth_lab.egg-info/SOURCES.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:56:50.000000 gnuhealth_lab-4.2.0/gnuhealth_lab.egg-info/dependency_links.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       58 2023-02-11 21:56:50.000000 gnuhealth_lab-4.2.0/gnuhealth_lab.egg-info/entry_points.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:56:50.000000 gnuhealth_lab-4.2.0/gnuhealth_lab.egg-info/not-zip-safe
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       17 2023-02-11 21:56:50.000000 gnuhealth_lab-4.2.0/gnuhealth_lab.egg-info/requires.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        8 2023-02-11 21:56:50.000000 gnuhealth_lab-4.2.0/gnuhealth_lab.egg-info/top_level.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    11865 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/health_lab.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      961 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/health_lab_report.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     9885 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/health_lab_view.xml
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:50.523943 gnuhealth_lab-4.2.0/icons/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     5225 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.0/icons/execute_icon.svg
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     5820 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.0/icons/lab_icon.svg
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:50.524810 gnuhealth_lab-4.2.0/locale/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    30659 2023-02-11 12:36:12.000000 gnuhealth_lab-4.2.0/locale/ar.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    27168 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.0/locale/de.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    32702 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.0/locale/el.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    28821 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/locale/es.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    28389 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/locale/fr.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    28487 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/locale/it_IT.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    18493 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.0/locale/ja_JP.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    34812 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/locale/ka.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    24417 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/locale/lo.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    27431 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.0/locale/pt_BR.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    31377 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/locale/zh_CN.po
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:50.524908 gnuhealth_lab-4.2.0/report/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    92837 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/report/labtest_report.fodt
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:50.525027 gnuhealth_lab-4.2.0/security/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    13722 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/security/access_rights.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     3115 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/sequences.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       38 2023-02-11 21:56:50.528982 gnuhealth_lab-4.2.0/setup.cfg
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     3717 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/setup.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:50.525170 gnuhealth_lab-4.2.0/tests/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      230 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/tests/__init__.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      580 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/tests/test_health_lab.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      253 2023-02-11 12:44:33.000000 gnuhealth_lab-4.2.0/tryton.cfg
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:50.526273 gnuhealth_lab-4.2.0/view/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1653 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/gnuhealth_lab.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1045 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/gnuhealth_lab_test.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      703 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/gnuhealth_lab_test_request_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      587 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/gnuhealth_lab_test_request_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      353 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/gnuhealth_lab_test_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      498 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/gnuhealth_lab_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      335 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/gnuhealth_lab_unit_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      307 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/gnuhealth_lab_unit_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      583 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/gnuhealth_patient_health_condition_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      381 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/gnuhealth_patient_health_condition_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      428 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/lab_make_test.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      607 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/patient_lab_test_request_start_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      819 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/test_critearea_form_lab.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      698 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/test_critearea_form_test_type.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      630 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/test_critearea_tree_lab.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      478 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/view/test_critearea_tree_test_type.xml
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:50.526474 gnuhealth_lab-4.2.0/wizard/
+--rwxr-xr-x   0 lfm       (1001) lfm       (1001)      233 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/wizard/__init__.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     2120 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/wizard/create_lab_test.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     5774 2023-01-18 16:33:08.000000 gnuhealth_lab-4.2.0/wizard/wizard_create_lab_test.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:51.430397 gnuhealth_lab-4.2.1/
++-rw-r--r--   0 lfm       (1001) wheel        (0)    35147 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.1/COPYING
++-rw-r--r--   0 lfm       (1001) wheel        (0)       54 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.1/MANIFEST.in
++-rw-r--r--   0 lfm       (1001) wheel        (0)      918 2023-04-07 10:18:51.430245 gnuhealth_lab-4.2.1/PKG-INFO
++-rw-r--r--   0 lfm       (1001) wheel        (0)     4826 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/README.rst
++-rwxr-xr-x   0 lfm       (1001) wheel        (0)     1583 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/__init__.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:51.426122 gnuhealth_lab-4.2.1/data/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      615 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/data/gnuhealth_commands.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1243 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/data/health_lab_sequences.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)    63972 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/data/lab_test_data.xml
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:51.428860 gnuhealth_lab-4.2.1/data/messages/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      597 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/data/messages/messages.xml
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:51.426215 gnuhealth_lab-4.2.1/doc/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      312 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/doc/index.rst
++-rw-r--r--   0 lfm       (1001) wheel        (0)      430 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/exceptions.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:51.429563 gnuhealth_lab-4.2.1/gnuhealth_lab.egg-info/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      918 2023-04-07 10:18:51.000000 gnuhealth_lab-4.2.1/gnuhealth_lab.egg-info/PKG-INFO
++-rw-r--r--   0 lfm       (1001) wheel        (0)     2535 2023-04-07 10:18:51.000000 gnuhealth_lab-4.2.1/gnuhealth_lab.egg-info/SOURCES.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:18:51.000000 gnuhealth_lab-4.2.1/gnuhealth_lab.egg-info/dependency_links.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)       58 2023-04-07 10:18:51.000000 gnuhealth_lab-4.2.1/gnuhealth_lab.egg-info/entry_points.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:18:51.000000 gnuhealth_lab-4.2.1/gnuhealth_lab.egg-info/not-zip-safe
++-rw-r--r--   0 lfm       (1001) wheel        (0)       17 2023-04-07 10:18:51.000000 gnuhealth_lab-4.2.1/gnuhealth_lab.egg-info/requires.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        8 2023-04-07 10:18:51.000000 gnuhealth_lab-4.2.1/gnuhealth_lab.egg-info/top_level.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)    11865 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/health_lab.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)      961 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/health_lab_report.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)     9885 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/health_lab_view.xml
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:51.426346 gnuhealth_lab-4.2.1/icons/
++-rw-r--r--   0 lfm       (1001) wheel        (0)     5225 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.1/icons/execute_icon.svg
++-rw-r--r--   0 lfm       (1001) wheel        (0)     5820 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.1/icons/lab_icon.svg
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:51.427170 gnuhealth_lab-4.2.1/locale/
++-rw-r--r--   0 lfm       (1001) wheel        (0)    30659 2023-02-11 12:36:12.000000 gnuhealth_lab-4.2.1/locale/ar.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    27168 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.1/locale/de.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    32702 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.1/locale/el.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    28821 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/locale/es.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    28389 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/locale/fr.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    28487 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/locale/it_IT.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    18493 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.1/locale/ja_JP.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    34812 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/locale/ka.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    24417 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/locale/lo.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    27431 2022-11-28 22:17:48.000000 gnuhealth_lab-4.2.1/locale/pt_BR.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    31377 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/locale/zh_CN.po
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:51.427245 gnuhealth_lab-4.2.1/report/
++-rw-r--r--   0 lfm       (1001) wheel        (0)    93179 2023-04-07 09:20:43.000000 gnuhealth_lab-4.2.1/report/labtest_report.fodt
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:51.427352 gnuhealth_lab-4.2.1/security/
++-rw-r--r--   0 lfm       (1001) wheel        (0)    13722 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/security/access_rights.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)     3115 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/sequences.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)       38 2023-04-07 10:18:51.430472 gnuhealth_lab-4.2.1/setup.cfg
++-rw-r--r--   0 lfm       (1001) wheel        (0)     3717 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/setup.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:51.427488 gnuhealth_lab-4.2.1/tests/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      230 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/tests/__init__.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)      580 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/tests/test_health_lab.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)      253 2023-04-07 09:37:21.000000 gnuhealth_lab-4.2.1/tryton.cfg
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:51.428519 gnuhealth_lab-4.2.1/view/
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1653 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/gnuhealth_lab.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1045 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/gnuhealth_lab_test.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      703 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/gnuhealth_lab_test_request_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      587 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/gnuhealth_lab_test_request_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      353 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/gnuhealth_lab_test_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      498 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/gnuhealth_lab_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      335 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/gnuhealth_lab_unit_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      307 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/gnuhealth_lab_unit_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      583 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/gnuhealth_patient_health_condition_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      381 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/gnuhealth_patient_health_condition_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      428 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/lab_make_test.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      607 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/patient_lab_test_request_start_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      819 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/test_critearea_form_lab.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      698 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/test_critearea_form_test_type.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      630 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/test_critearea_tree_lab.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      478 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/view/test_critearea_tree_test_type.xml
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:51.428720 gnuhealth_lab-4.2.1/wizard/
++-rwxr-xr-x   0 lfm       (1001) wheel        (0)      233 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/wizard/__init__.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)     2120 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/wizard/create_lab_test.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)     5774 2023-04-07 09:17:52.000000 gnuhealth_lab-4.2.1/wizard/wizard_create_lab_test.py
+```
+
+### Comparing `gnuhealth_lab-4.2.0/COPYING` & `gnuhealth_lab-4.2.1/COPYING`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/PKG-INFO` & `gnuhealth_lab-4.2.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gnuhealth_lab
+-Version: 4.2.0
++Version: 4.2.1
+ Summary: Occhiolino LIMS: The GNU Health Laboratory Information Management System
+ Home-page: https://www.gnuhealth.org/
+ Download-URL: http://ftp.gnu.org/gnu/health/
+ Author: GNU Solidario
+ Author-email: health@gnusolidario.org
+ License: GPL-3
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `gnuhealth_lab-4.2.0/README.rst` & `gnuhealth_lab-4.2.1/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/__init__.py` & `gnuhealth_lab-4.2.1/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/data/gnuhealth_commands.xml` & `gnuhealth_lab-4.2.1/data/gnuhealth_commands.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/data/health_lab_sequences.xml` & `gnuhealth_lab-4.2.1/data/health_lab_sequences.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/data/lab_test_data.xml` & `gnuhealth_lab-4.2.1/data/lab_test_data.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/data/messages/messages.xml` & `gnuhealth_lab-4.2.1/data/messages/messages.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/gnuhealth_lab.egg-info/PKG-INFO` & `gnuhealth_lab-4.2.1/gnuhealth_lab.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gnuhealth-lab
+-Version: 4.2.0
++Version: 4.2.1
+ Summary: Occhiolino LIMS: The GNU Health Laboratory Information Management System
+ Home-page: https://www.gnuhealth.org/
+ Download-URL: http://ftp.gnu.org/gnu/health/
+ Author: GNU Solidario
+ Author-email: health@gnusolidario.org
+ License: GPL-3
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `gnuhealth_lab-4.2.0/gnuhealth_lab.egg-info/SOURCES.txt` & `gnuhealth_lab-4.2.1/gnuhealth_lab.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/health_lab.py` & `gnuhealth_lab-4.2.1/health_lab.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/health_lab_report.xml` & `gnuhealth_lab-4.2.1/health_lab_report.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/health_lab_view.xml` & `gnuhealth_lab-4.2.1/health_lab_view.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/icons/execute_icon.svg` & `gnuhealth_lab-4.2.1/icons/execute_icon.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/icons/lab_icon.svg` & `gnuhealth_lab-4.2.1/icons/lab_icon.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/locale/ar.po` & `gnuhealth_lab-4.2.1/locale/ar.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/locale/de.po` & `gnuhealth_lab-4.2.1/locale/de.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/locale/el.po` & `gnuhealth_lab-4.2.1/locale/el.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/locale/es.po` & `gnuhealth_lab-4.2.1/locale/es.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/locale/fr.po` & `gnuhealth_lab-4.2.1/locale/fr.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/locale/it_IT.po` & `gnuhealth_lab-4.2.1/locale/it_IT.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/locale/ja_JP.po` & `gnuhealth_lab-4.2.1/locale/ja_JP.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/locale/ka.po` & `gnuhealth_lab-4.2.1/locale/ka.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/locale/lo.po` & `gnuhealth_lab-4.2.1/locale/lo.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/locale/pt_BR.po` & `gnuhealth_lab-4.2.1/locale/pt_BR.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/locale/zh_CN.po` & `gnuhealth_lab-4.2.1/locale/zh_CN.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/report/labtest_report.fodt` & `gnuhealth_lab-4.2.1/report/labtest_report.fodt`
+
+ * *Files 2% similar despite different names*
+
+#### Comparing `gnuhealth_lab-4.2.0/report/labtest_report.fodt` & `gnuhealth_lab-4.2.1/report/labtest_report.fodt`
+
+```diff
+@@ -1,150 +1,156 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<office:document xmlns:officeooo="http://openoffice.org/2009/office" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rpt="http://openoffice.org/2005/report" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:xforms="http://www.w3.org/2002/xforms" office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.text">
++<office:document xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.text">
+   <office:meta>
+-    <meta:generator>LibreOffice/7.2.6.2$Linux_X86_64 LibreOffice_project/20$Build-2</meta:generator>
++    <meta:generator>LibreOffice/7.4.4.2$FreeBSD_X86_64 LibreOffice_project/40$Build-2</meta:generator>
+     <meta:creation-date>2009-11-21T22:44:03</meta:creation-date>
+-    <dc:date>2022-05-09T09:03:07.343413971</dc:date>
+-    <meta:editing-cycles>231</meta:editing-cycles>
+-    <meta:editing-duration>P1DT10H59M44S</meta:editing-duration>
+-    <meta:document-statistic meta:table-count="7" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="64" meta:word-count="89" meta:character-count="921" meta:non-whitespace-character-count="895"/>
++    <dc:date>2023-04-06T19:08:02.677342599</dc:date>
++    <meta:editing-cycles>232</meta:editing-cycles>
++    <meta:editing-duration>P1DT11H45S</meta:editing-duration>
++    <meta:document-statistic meta:table-count="7" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="59" meta:word-count="82" meta:character-count="854" meta:non-whitespace-character-count="830"/>
+     <meta:user-defined meta:name="Info 1">http://localhost:8069</meta:user-defined>
+     <meta:user-defined meta:name="Info 2">admin</meta:user-defined>
+     <meta:user-defined meta:name="Info 3">820</meta:user-defined>
+     <meta:user-defined meta:name="Info 4">medical.patient</meta:user-defined>
+   </office:meta>
+   <office:settings>
+     <config:config-item-set config:name="ooo:view-settings">
+-      <config:config-item config:name="ViewAreaTop" config:type="long">13804</config:config-item>
++      <config:config-item config:name="ViewAreaTop" config:type="long">0</config:config-item>
+       <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
+-      <config:config-item config:name="ViewAreaWidth" config:type="long">29540</config:config-item>
+-      <config:config-item config:name="ViewAreaHeight" config:type="long">15139</config:config-item>
++      <config:config-item config:name="ViewAreaWidth" config:type="long">38858</config:config-item>
++      <config:config-item config:name="ViewAreaHeight" config:type="long">11984</config:config-item>
+       <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
+       <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
+       <config:config-item-map-indexed config:name="Views">
+         <config:config-item-map-entry>
+           <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
+-          <config:config-item config:name="ViewLeft" config:type="long">6973</config:config-item>
+-          <config:config-item config:name="ViewTop" config:type="long">20964</config:config-item>
++          <config:config-item config:name="ViewLeft" config:type="long">25569</config:config-item>
++          <config:config-item config:name="ViewTop" config:type="long">4217</config:config-item>
+           <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
+-          <config:config-item config:name="VisibleTop" config:type="long">13804</config:config-item>
+-          <config:config-item config:name="VisibleRight" config:type="long">29538</config:config-item>
+-          <config:config-item config:name="VisibleBottom" config:type="long">28942</config:config-item>
++          <config:config-item config:name="VisibleTop" config:type="long">0</config:config-item>
++          <config:config-item config:name="VisibleRight" config:type="long">38857</config:config-item>
++          <config:config-item config:name="VisibleBottom" config:type="long">11982</config:config-item>
+           <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
+           <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
+           <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
+           <config:config-item config:name="ZoomFactor" config:type="short">140</config:config-item>
+           <config:config-item config:name="IsSelectedFrame" config:type="boolean">false</config:config-item>
+           <config:config-item config:name="KeepRatio" config:type="boolean">false</config:config-item>
++          <config:config-item config:name="HideWhitespace" config:type="boolean">false</config:config-item>
+           <config:config-item config:name="AnchoredTextOverflowLegacy" config:type="boolean">false</config:config-item>
+         </config:config-item-map-entry>
+       </config:config-item-map-indexed>
+     </config:config-item-set>
+     <config:config-item-set config:name="ooo:configuration-settings">
+-      <config:config-item config:name="PrintProspect" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="PrintReversed" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="PrintSingleJobs" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="PrintTables" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="PrintControls" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="PrintPageBackground" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="PrintDrawings" config:type="boolean">true</config:config-item>
+       <config:config-item config:name="PrintBlackFonts" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrintReversed" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="PrintAnnotationMode" config:type="short">0</config:config-item>
++      <config:config-item config:name="PrintGraphics" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="PrintTables" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="WordLikeWrapForAsCharFlys" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="NoNumberingShowFollowBy" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrintProspect" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrintHiddenText" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrintRightPages" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="PrintFaxName" config:type="string"/>
++      <config:config-item config:name="TabsRelativeToIndent" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="RedlineProtectionKey" config:type="base64Binary"/>
+       <config:config-item config:name="PrintTextPlaceholder" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="ProtectFields" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrintControls" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="SaveThumbnail" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="EmbedFonts" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="AutoFirstLineIndentDisregardLineSpace" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="Rsid" config:type="int">3417975</config:config-item>
++      <config:config-item config:name="GutterAtTop" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="AddFrameOffsets" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="FrameAutowidthWithMorePara" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="MathBaselineAlignment" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="ProtectBookmarks" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="IgnoreTabsAndBlanksForLineCalculation" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="ContinuousEndnotes" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="FieldAutoUpdate" config:type="boolean">true</config:config-item>
+       <config:config-item config:name="EmptyDbFieldHidesPara" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="DisableOffPagePositioning" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="SubtractFlysAnchoredAtFlys" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="PropLineSpacingShrinksFirstLine" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="ApplyParagraphMarkFormatToNumbering" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="GutterAtTop" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="TreatSingleColumnBreakAsPageBreak" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="EmbedSystemFonts" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="EmbedComplexScriptFonts" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="AddParaTableSpacing" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="TabOverSpacing" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrintEmptyPages" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="AddParaLineSpacingToTableCells" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="TabOverMargin" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="EmbedAsianScriptFonts" config:type="boolean">true</config:config-item>
+       <config:config-item config:name="EmbedLatinScriptFonts" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="DisableOffPagePositioning" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="EmbedOnlyUsedFonts" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="ContinuousEndnotes" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="EmbedFonts" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="ImagePreferredDPI" config:type="int">0</config:config-item>
++      <config:config-item config:name="MsWordCompMinLineHeightByFly" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="SurroundTextWrapSmall" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="BackgroundParaOverDrawings" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="ClippedPictures" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="FloattableNomargins" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="UnbreakableNumberings" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="EmbedSystemFonts" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="TabOverflow" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="SmallCapsPercentage66" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="CollapseEmptyCellPara" config:type="boolean">true</config:config-item>
+       <config:config-item config:name="HeaderSpacingBelowLastPara" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="AllowPrintJobCancel" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="UseOldPrinterMetrics" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="TabOverMargin" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="TabsRelativeToIndent" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="UseOldNumbering" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="InvertBorderSpacing" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="PrintPaperFromSetup" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="RsidRoot" config:type="int">1002569</config:config-item>
++      <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
++      <config:config-item config:name="CurrentDatabaseCommand" config:type="string"/>
++      <config:config-item config:name="AlignTabStopPosition" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="ClipAsCharacterAnchoredWriterFlyFrames" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="DoNotCaptureDrawObjsOnPage" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="SaveGlobalDocumentLinks" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="CurrentDatabaseCommandType" config:type="int">0</config:config-item>
++      <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="DoNotResetParaAttrsForNumFont" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="StylesNoDefault" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="LinkUpdateMode" config:type="short">1</config:config-item>
+-      <config:config-item config:name="AddParaSpacingToTableCells" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="FrameAutowidthWithMorePara" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="CurrentDatabaseCommand" config:type="string"/>
+-      <config:config-item config:name="PrinterIndependentLayout" config:type="string">high-resolution</config:config-item>
+-      <config:config-item config:name="ApplyUserData" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="PrintFaxName" config:type="string"/>
++      <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PropLineSpacingShrinksFirstLine" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrintDrawings" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="PrintSingleJobs" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="ConsiderTextWrapOnObjPos" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="TabAtLeftIndentForParagraphsInList" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="ProtectFields" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="UnxForceZeroExtLeading" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="CurrentDatabaseDataSource" config:type="string"/>
+-      <config:config-item config:name="ClipAsCharacterAnchoredWriterFlyFrames" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="SaveThumbnail" config:type="boolean">true</config:config-item>
+       <config:config-item config:name="UseFormerTextWrapping" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="AddExternalLeading" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="AddParaTableSpacing" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="StylesNoDefault" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
+-      <config:config-item config:name="AddParaTableSpacingAtStart" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="Rsid" config:type="int">3364643</config:config-item>
++      <config:config-item config:name="PrintPaperFromSetup" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
+       <config:config-item config:name="EmbeddedDatabaseName" config:type="string"/>
+-      <config:config-item config:name="FieldAutoUpdate" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="AlignTabStopPosition" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
+-      <config:config-item config:name="PrinterName" config:type="string"/>
+-      <config:config-item config:name="SaveGlobalDocumentLinks" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="PrinterPaperFromSetup" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="ProtectForm" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="UseFormerLineSpacing" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="AddParaLineSpacingToTableCells" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="UseFormerObjectPositioning" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="PrintGraphics" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="SurroundTextWrapSmall" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="ConsiderTextWrapOnObjPos" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="MsWordCompTrailingBlanks" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="TabAtLeftIndentForParagraphsInList" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="PrintRightPages" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="TabOverSpacing" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="IgnoreFirstLineIndentInNumbering" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="RedlineProtectionKey" config:type="base64Binary"/>
+-      <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="PrintProspectRTL" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="PrintEmptyPages" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="DoNotResetParaAttrsForNumFont" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="AddFrameOffsets" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="IgnoreTabsAndBlanksForLineCalculation" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="DoNotCaptureDrawObjsOnPage" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="AllowPrintJobCancel" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="SubtractFlysAnchoredAtFlys" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="AddParaSpacingToTableCells" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="AddExternalLeading" config:type="boolean">true</config:config-item>
+       <config:config-item config:name="AddVerticalFrameOffsets" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="UnxForceZeroExtLeading" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="TreatSingleColumnBreakAsPageBreak" config:type="boolean">false</config:config-item>
+       <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="MsWordCompTrailingBlanks" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrinterPaperFromSetup" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="IgnoreFirstLineIndentInNumbering" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrintPageBackground" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrinterName" config:type="string"/>
++      <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrinterIndependentLayout" config:type="string">high-resolution</config:config-item>
+       <config:config-item config:name="TableRowKeep" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="RsidRoot" config:type="int">1002569</config:config-item>
+-      <config:config-item config:name="PrintHiddenText" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="ProtectForm" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="MsWordCompMinLineHeightByFly" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="BackgroundParaOverDrawings" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="FootnoteInColumnToPageEnd" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="EmbedComplexScriptFonts" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="UseOldPrinterMetrics" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="InvertBorderSpacing" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="PrintProspectRTL" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="ApplyUserData" config:type="boolean">true</config:config-item>
++      <config:config-item config:name="AddParaTableSpacingAtStart" config:type="boolean">true</config:config-item>
+       <config:config-item config:name="SaveVersionOnClose" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="MathBaselineAlignment" config:type="boolean">false</config:config-item>
+-      <config:config-item config:name="SmallCapsPercentage66" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="CollapseEmptyCellPara" config:type="boolean">true</config:config-item>
+-      <config:config-item config:name="TabOverflow" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
++      <config:config-item config:name="UseOldNumbering" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="UseFormerObjectPositioning" config:type="boolean">false</config:config-item>
++      <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
+     </config:config-item-set>
+   </office:settings>
+   <office:scripts>
+     <office:script script:language="ooo:Basic">
+       <ooo:libraries xmlns:ooo="http://openoffice.org/2004/office" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <ooo:library-embedded ooo:name="Standard"/>
+       </ooo:libraries>
+@@ -154,54 +160,54 @@
+     <style:font-face style:name="Andale Sans UI" svg:font-family="'Andale Sans UI'" style:font-family-generic="system" style:font-pitch="variable"/>
+     <style:font-face style:name="Arial" svg:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable"/>
+     <style:font-face style:name="Arial Unicode MS" svg:font-family="'Arial Unicode MS'" style:font-family-generic="system" style:font-pitch="variable"/>
+     <style:font-face style:name="Cantarell" svg:font-family="Cantarell" style:font-pitch="variable"/>
+     <style:font-face style:name="DejaVu Sans Mono" svg:font-family="'DejaVu Sans Mono'" style:font-family-generic="modern" style:font-pitch="fixed"/>
+     <style:font-face style:name="FreeSans" svg:font-family="FreeSans" style:font-family-generic="swiss" style:font-pitch="variable"/>
+     <style:font-face style:name="StarSymbol" svg:font-family="StarSymbol"/>
+-    <style:font-face style:name="Tahoma" svg:font-family="Tahoma" style:font-family-generic="system" style:font-pitch="variable"/>
+-    <style:font-face style:name="Tahoma1" svg:font-family="Tahoma"/>
++    <style:font-face style:name="Tahoma" svg:font-family="Tahoma"/>
++    <style:font-face style:name="Tahoma1" svg:font-family="Tahoma" style:font-family-generic="system" style:font-pitch="variable"/>
+     <style:font-face style:name="Thorndale AMT" svg:font-family="'Thorndale AMT'" style:font-family-generic="roman" style:font-pitch="variable"/>
+   </office:font-face-decls>
+   <office:styles>
+     <style:default-style style:family="graphic">
+       <style:graphic-properties svg:stroke-color="#000000" draw:fill-color="#99ccff" fo:wrap-option="no-wrap" draw:shadow-offset-x="0.1181in" draw:shadow-offset-y="0.1181in" draw:start-line-spacing-horizontal="0.1114in" draw:start-line-spacing-vertical="0.1114in" draw:end-line-spacing-horizontal="0.1114in" draw:end-line-spacing-vertical="0.1114in" style:flow-with-text="false"/>
+-      <style:paragraph-properties style:text-autospace="ideograph-alpha" style:line-break="strict" style:writing-mode="lr-tb" style:font-independent-line-spacing="false">
++      <style:paragraph-properties style:text-autospace="ideograph-alpha" style:line-break="strict" style:font-independent-line-spacing="false">
+         <style:tab-stops/>
+       </style:paragraph-properties>
+-      <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="Thorndale AMT" fo:font-size="12pt" fo:language="en" fo:country="US" style:letter-kerning="true" style:font-name-asian="Andale Sans UI" style:font-size-asian="10.5pt" style:language-asian="zxx" style:country-asian="none" style:font-name-complex="Andale Sans UI" style:font-size-complex="12pt" style:language-complex="zxx" style:country-complex="none"/>
++      <style:text-properties style:use-window-font-color="true" loext:opacity="0%" loext:color-lum-mod="100%" loext:color-lum-off="0%" style:font-name="Thorndale AMT" fo:font-size="12pt" fo:language="en" fo:country="US" style:letter-kerning="true" style:font-name-asian="Andale Sans UI" style:font-size-asian="10.5pt" style:language-asian="zxx" style:country-asian="none" style:font-name-complex="Andale Sans UI" style:font-size-complex="12pt" style:language-complex="zxx" style:country-complex="none"/>
+     </style:default-style>
+     <style:default-style style:family="paragraph">
+       <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:tab-stop-distance="0.4925in" style:writing-mode="lr-tb"/>
+-      <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="Thorndale AMT" fo:font-size="12pt" fo:language="en" fo:country="US" style:letter-kerning="true" style:font-name-asian="Andale Sans UI" style:font-size-asian="10.5pt" style:language-asian="zxx" style:country-asian="none" style:font-name-complex="Andale Sans UI" style:font-size-complex="12pt" style:language-complex="zxx" style:country-complex="none" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
++      <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="Thorndale AMT" fo:font-size="12pt" fo:language="en" fo:country="US" style:letter-kerning="true" style:font-name-asian="Andale Sans UI" style:font-size-asian="10.5pt" style:language-asian="zxx" style:country-asian="none" style:font-name-complex="Andale Sans UI" style:font-size-complex="12pt" style:language-complex="zxx" style:country-complex="none" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false" loext:hyphenation-no-last-word="false" loext:hyphenation-word-char-count="5" loext:hyphenation-zone="no-limit"/>
+     </style:default-style>
+     <style:default-style style:family="table">
+       <style:table-properties table:border-model="collapsing"/>
+     </style:default-style>
+     <style:default-style style:family="table-row">
+       <style:table-row-properties fo:keep-together="auto"/>
+     </style:default-style>
+     <style:style style:name="Standard" style:family="paragraph" style:class="text"/>
+     <style:style style:name="Heading" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Text_20_body" style:class="text">
+       <style:paragraph-properties fo:margin-top="0.1665in" fo:margin-bottom="0.0835in" style:contextual-spacing="false" fo:keep-with-next="always"/>
+-      <style:text-properties style:font-name="Arial" fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="14pt" style:font-name-asian="Arial Unicode MS" style:font-family-asian="'Arial Unicode MS'" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="14pt" style:font-name-complex="Tahoma" style:font-family-complex="Tahoma" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="14pt"/>
++      <style:text-properties style:font-name="Arial" fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="14pt" style:font-name-asian="Arial Unicode MS" style:font-family-asian="'Arial Unicode MS'" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="14pt" style:font-name-complex="Tahoma1" style:font-family-complex="Tahoma" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="14pt"/>
+     </style:style>
+     <style:style style:name="Text_20_body" style:display-name="Text body" style:family="paragraph" style:parent-style-name="Standard" style:class="text">
+       <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0.0835in" style:contextual-spacing="false"/>
+     </style:style>
+     <style:style style:name="List" style:family="paragraph" style:parent-style-name="Text_20_body" style:class="list">
+-      <style:text-properties style:font-name-complex="Tahoma1" style:font-family-complex="Tahoma"/>
++      <style:text-properties style:font-name-complex="Tahoma" style:font-family-complex="Tahoma"/>
+     </style:style>
+     <style:style style:name="Caption" style:family="paragraph" style:parent-style-name="Standard" style:class="extra">
+       <style:paragraph-properties fo:margin-top="0.0835in" fo:margin-bottom="0.0835in" style:contextual-spacing="false" text:number-lines="false" text:line-number="0"/>
+-      <style:text-properties fo:font-size="12pt" fo:font-style="italic" style:font-size-asian="12pt" style:font-style-asian="italic" style:font-name-complex="Tahoma1" style:font-family-complex="Tahoma" style:font-size-complex="12pt" style:font-style-complex="italic"/>
++      <style:text-properties fo:font-size="12pt" fo:font-style="italic" style:font-size-asian="12pt" style:font-style-asian="italic" style:font-name-complex="Tahoma" style:font-family-complex="Tahoma" style:font-size-complex="12pt" style:font-style-complex="italic"/>
+     </style:style>
+     <style:style style:name="Index" style:family="paragraph" style:parent-style-name="Standard" style:class="index">
+       <style:paragraph-properties text:number-lines="false" text:line-number="0"/>
+-      <style:text-properties style:font-name-complex="Tahoma1" style:font-family-complex="Tahoma"/>
++      <style:text-properties style:font-name-complex="Tahoma" style:font-family-complex="Tahoma"/>
+     </style:style>
+     <style:style style:name="Table_20_Contents" style:display-name="Table Contents" style:family="paragraph" style:parent-style-name="Standard" style:class="extra">
+       <style:paragraph-properties text:number-lines="false" text:line-number="0"/>
+     </style:style>
+     <style:style style:name="Table_20_Heading" style:display-name="Table Heading" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:class="extra">
+       <style:paragraph-properties fo:text-align="center" style:justify-single-word="false" text:number-lines="false" text:line-number="0"/>
+       <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+@@ -362,15 +368,14 @@
+     </style:style>
+     <style:style style:name="Table2.F" style:family="table-column">
+       <style:table-column-properties style:column-width="1.0847in" style:rel-column-width="10265*"/>
+     </style:style>
+     <style:style style:name="Table2.A1" style:family="table-cell">
+       <style:table-cell-properties fo:padding="0.0382in" fo:border="none"/>
+     </style:style>
+-    <style:style style:name="Table2.2" style:family="table-row"/>
+     <style:style style:name="Tabla4" style:family="table">
+       <style:table-properties style:width="6.9271in" fo:margin-left="0in" fo:margin-right="-0.0021in" table:align="margins"/>
+     </style:style>
+     <style:style style:name="Tabla4.A" style:family="table-column">
+       <style:table-column-properties style:column-width="0.7174in" style:rel-column-width="6786*"/>
+     </style:style>
+     <style:style style:name="Tabla4.B" style:family="table-column">
+@@ -384,15 +389,14 @@
+     </style:style>
+     <style:style style:name="Tabla4.E" style:family="table-column">
+       <style:table-column-properties style:column-width="0.625in" style:rel-column-width="5912*"/>
+     </style:style>
+     <style:style style:name="Tabla4.F" style:family="table-column">
+       <style:table-column-properties style:column-width="1.0854in" style:rel-column-width="10266*"/>
+     </style:style>
+-    <style:style style:name="Tabla4.1" style:family="table-row"/>
+     <style:style style:name="Tabla4.A1" style:family="table-cell">
+       <style:table-cell-properties fo:padding="0.0382in" fo:border="none"/>
+     </style:style>
+     <style:style style:name="Tabla8" style:family="table">
+       <style:table-properties style:width="6.9271in" fo:margin-left="0in" fo:margin-right="-0.0021in" table:align="margins"/>
+     </style:style>
+     <style:style style:name="Tabla8.A" style:family="table-column">
+@@ -496,15 +500,14 @@
+     </style:style>
+     <style:style style:name="Tabla2.1" style:family="table-row">
+       <style:table-row-properties style:min-row-height="0.2528in"/>
+     </style:style>
+     <style:style style:name="Tabla2.A1" style:family="table-cell">
+       <style:table-cell-properties fo:padding="0.0382in" fo:border="none"/>
+     </style:style>
+-    <style:style style:name="Tabla2.2" style:family="table-row"/>
+     <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Standard">
+       <style:text-properties style:font-name="Cantarell" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+     <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Standard">
+       <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="Cantarell" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+@@ -631,177 +634,181 @@
+       <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+       <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="10pt" officeooo:paragraph-rsid="00250669" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+     <style:style style:name="P34" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+       <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P35" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P35" style:family="paragraph" style:parent-style-name="Standard">
++      <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
++      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="normal" officeooo:rsid="00b2781d" officeooo:paragraph-rsid="001ad730" style:font-size-asian="9pt" style:font-weight-asian="normal" style:font-size-complex="9pt" style:font-weight-complex="normal"/>
++    </style:style>
++    <style:style style:name="P36" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
++      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
++    </style:style>
++    <style:style style:name="P37" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
++      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" officeooo:paragraph-rsid="00250669" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
++    </style:style>
++    <style:style style:name="P38" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++      <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
++      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
++    </style:style>
++    <style:style style:name="P39" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
++      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="bold" style:font-size-asian="9pt" style:font-weight-asian="bold" style:font-size-complex="9pt" style:font-weight-complex="bold"/>
++    </style:style>
++    <style:style style:name="P40" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
++      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="bold" officeooo:paragraph-rsid="00250669" style:font-size-asian="9pt" style:font-weight-asian="bold" style:font-size-complex="9pt" style:font-weight-complex="bold"/>
++    </style:style>
++    <style:style style:name="P41" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++      <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
++      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="bold" style:font-size-asian="9pt" style:font-weight-asian="bold" style:font-size-complex="9pt" style:font-weight-complex="bold"/>
++    </style:style>
++    <style:style style:name="P42" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+       <style:text-properties fo:color="#ff0000" loext:opacity="100%" style:font-name="Cantarell" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P36" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P43" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+       <style:text-properties fo:color="#ff0000" loext:opacity="100%" style:font-name="Cantarell" fo:font-size="10pt" officeooo:paragraph-rsid="00250669" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P37" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P44" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+       <style:text-properties fo:color="#ff0000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P38" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P45" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+       <style:text-properties fo:color="#ff0000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="10pt" officeooo:paragraph-rsid="00250669" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P39" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P46" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
++      <style:text-properties fo:color="#ff0000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
++    </style:style>
++    <style:style style:name="P47" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
++      <style:text-properties fo:color="#ff0000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" officeooo:paragraph-rsid="00250669" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
++    </style:style>
++    <style:style style:name="P48" style:family="paragraph" style:parent-style-name="Standard">
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P40" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P49" style:family="paragraph" style:parent-style-name="Standard">
+       <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" officeooo:paragraph-rsid="00144819" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P41" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P50" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P42" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P51" style:family="paragraph" style:parent-style-name="Standard">
+       <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P43" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P52" style:family="paragraph" style:parent-style-name="Standard">
+       <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" officeooo:paragraph-rsid="001ad730" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P44" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P53" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P45" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P54" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" officeooo:paragraph-rsid="001d3b0c" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P46" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P55" style:family="paragraph" style:parent-style-name="Standard">
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" officeooo:paragraph-rsid="0014aa8b" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P47" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P56" style:family="paragraph" style:parent-style-name="Standard">
+       <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" officeooo:rsid="00166302" officeooo:paragraph-rsid="00166302" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P48" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P57" style:family="paragraph" style:parent-style-name="Standard">
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" officeooo:rsid="00166302" officeooo:paragraph-rsid="00166302" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P49" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P58" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P50" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P59" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" officeooo:paragraph-rsid="00161016" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P51" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P60" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+     </style:style>
+-    <style:style style:name="P52" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P61" style:family="paragraph" style:parent-style-name="Standard">
++      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
++      <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
++    </style:style>
++    <style:style style:name="P62" style:family="paragraph" style:parent-style-name="Standard">
+       <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" fo:font-weight="bold" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
+     </style:style>
+-    <style:style style:name="P53" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P63" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" fo:font-weight="bold" officeooo:paragraph-rsid="002ba0f2" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
+     </style:style>
+-    <style:style style:name="P54" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P64" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" fo:font-weight="bold" officeooo:rsid="00144819" officeooo:paragraph-rsid="00144819" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
+     </style:style>
+-    <style:style style:name="P55" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P65" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" fo:font-weight="bold" officeooo:rsid="002ba0f2" officeooo:paragraph-rsid="002ba0f2" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
+     </style:style>
+-    <style:style style:name="P56" style:family="paragraph" style:parent-style-name="Standard">
+-      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+-      <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+-    </style:style>
+-    <style:style style:name="P57" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P66" style:family="paragraph" style:parent-style-name="Standard">
+       <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" officeooo:rsid="00166302" officeooo:paragraph-rsid="00166302" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+     </style:style>
+-    <style:style style:name="P58" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P67" style:family="paragraph" style:parent-style-name="Standard">
+       <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" officeooo:rsid="00166302" officeooo:paragraph-rsid="00166302" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+     </style:style>
+-    <style:style style:name="P59" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P68" style:family="paragraph" style:parent-style-name="Standard">
+       <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+     </style:style>
+-    <style:style style:name="P60" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P69" style:family="paragraph" style:parent-style-name="Standard">
+       <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" officeooo:paragraph-rsid="001ad730" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+     </style:style>
+-    <style:style style:name="P61" style:family="paragraph" style:parent-style-name="Standard">
++    <style:style style:name="P70" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++      <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+     </style:style>
+-    <style:style style:name="P62" style:family="paragraph" style:parent-style-name="Standard">
+-      <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+-      <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="bold" officeooo:paragraph-rsid="00144819" style:font-size-asian="9pt" style:font-weight-asian="bold" style:font-size-complex="9pt" style:font-weight-complex="bold"/>
+-    </style:style>
+-    <style:style style:name="P63" style:family="paragraph" style:parent-style-name="Standard">
+-      <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+-      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="normal" officeooo:rsid="00b2781d" officeooo:paragraph-rsid="001ad730" style:font-size-asian="9pt" style:font-weight-asian="normal" style:font-size-complex="9pt" style:font-weight-complex="normal"/>
++    <style:style style:name="P71" style:family="paragraph" style:parent-style-name="Standard">
++      <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+     </style:style>
+-    <style:style style:name="P64" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P72" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+     </style:style>
+-    <style:style style:name="P65" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P73" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+       <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+     </style:style>
+-    <style:style style:name="P66" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+-      <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+-    </style:style>
+-    <style:style style:name="P67" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+-      <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
++    <style:style style:name="P74" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+     </style:style>
+-    <style:style style:name="P68" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P75" style:family="paragraph" style:parent-style-name="Standard">
+       <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+-      <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="bold" officeooo:rsid="00144819" officeooo:paragraph-rsid="00144819" style:font-size-asian="9pt" style:font-weight-asian="bold" style:font-size-complex="9pt" style:font-weight-complex="bold"/>
+-    </style:style>
+-    <style:style style:name="P69" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+-      <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+-      <style:text-properties style:font-name="FreeSans" fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+-    </style:style>
+-    <style:style style:name="P70" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+-      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+-      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+-    </style:style>
+-    <style:style style:name="P71" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+-      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+-      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" officeooo:paragraph-rsid="00250669" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
++      <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="bold" officeooo:paragraph-rsid="00144819" style:font-size-asian="9pt" style:font-weight-asian="bold" style:font-size-complex="9pt" style:font-weight-complex="bold"/>
+     </style:style>
+-    <style:style style:name="P72" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P76" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+       <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+-      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+-    </style:style>
+-    <style:style style:name="P73" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+-      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+-      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="bold" style:font-size-asian="9pt" style:font-weight-asian="bold" style:font-size-complex="9pt" style:font-weight-complex="bold"/>
+-    </style:style>
+-    <style:style style:name="P74" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+-      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+-      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="bold" officeooo:paragraph-rsid="00250669" style:font-size-asian="9pt" style:font-weight-asian="bold" style:font-size-complex="9pt" style:font-weight-complex="bold"/>
++      <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="bold" officeooo:rsid="00144819" officeooo:paragraph-rsid="00144819" style:font-size-asian="9pt" style:font-weight-asian="bold" style:font-size-complex="9pt" style:font-weight-complex="bold"/>
+     </style:style>
+-    <style:style style:name="P75" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++    <style:style style:name="P77" style:family="paragraph" style:parent-style-name="Standard">
+       <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+-      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="bold" style:font-size-asian="9pt" style:font-weight-asian="bold" style:font-size-complex="9pt" style:font-weight-complex="bold"/>
++      <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" fo:font-weight="normal" officeooo:rsid="00b2781d" officeooo:paragraph-rsid="00342777" style:font-size-asian="9pt" style:font-weight-asian="normal" style:font-size-complex="9pt" style:font-weight-complex="normal"/>
+     </style:style>
+-    <style:style style:name="P76" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+-      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+-      <style:text-properties fo:color="#ff0000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+-    </style:style>
+-    <style:style style:name="P77" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+-      <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+-      <style:text-properties fo:color="#ff0000" loext:opacity="100%" style:font-name="FreeSans" fo:font-size="9pt" officeooo:paragraph-rsid="00250669" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
++    <style:style style:name="P78" style:family="paragraph" style:parent-style-name="Table_20_Contents">
++      <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
++      <style:text-properties style:font-name="FreeSans" fo:font-size="9pt" officeooo:rsid="00342777" officeooo:paragraph-rsid="00342777" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+     </style:style>
+     <style:style style:name="T1" style:family="text">
+       <style:text-properties officeooo:rsid="000fb348"/>
+     </style:style>
+     <style:style style:name="T2" style:family="text">
+       <style:text-properties officeooo:rsid="001f060d"/>
+     </style:style>
+@@ -842,324 +849,313 @@
+       <text:sequence-decls>
+         <text:sequence-decl text:display-outline-level="0" text:name="Illustration"/>
+         <text:sequence-decl text:display-outline-level="0" text:name="Table"/>
+         <text:sequence-decl text:display-outline-level="0" text:name="Text"/>
+         <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
+         <text:sequence-decl text:display-outline-level="0" text:name="Figure"/>
+       </text:sequence-decls>
+-      <text:p text:style-name="P39">
++      <text:p text:style-name="P48">
+         <text:placeholder text:placeholder-type="text">&lt;for each=&quot;test in records&quot;&gt;</text:placeholder>
+       </text:p>
+       <table:table table:name="Table3" table:style-name="Table3">
+         <table:table-column table:style-name="Table3.A"/>
+-        <table:table-row table:style-name="TableLine93972426356656">
++        <table:table-row>
+           <table:table-cell table:style-name="Table3.A1" office:value-type="string">
+             <text:p text:style-name="P27">LABORATORY REPORT</text:p>
+           </table:table-cell>
+         </table:table-row>
+       </table:table>
+       <table:table table:name="Table2" table:style-name="Table2">
+         <table:table-column table:style-name="Table2.A"/>
+         <table:table-column table:style-name="Table2.B"/>
+         <table:table-column table:style-name="Table2.C"/>
+         <table:table-column table:style-name="Table2.D"/>
+         <table:table-column table:style-name="Table2.E"/>
+         <table:table-column table:style-name="Table2.F"/>
+-        <table:table-row table:style-name="TableLine93972426388736">
++        <table:table-row>
+           <table:table-cell table:style-name="Table2.A1" office:value-type="string">
+-            <text:p text:style-name="P68">Name</text:p>
++            <text:p text:style-name="P76">Name</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Table2.A1" table:number-columns-spanned="2" office:value-type="string">
+-            <text:p text:style-name="P62">
++            <text:p text:style-name="P75">
+               <text:placeholder text:placeholder-type="text">&lt;test.patient.rec_name&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+           <table:covered-table-cell/>
+           <table:table-cell table:style-name="Table2.A1" office:value-type="string">
+-            <text:p text:style-name="P60">
++            <text:p text:style-name="P69">
+               <text:span text:style-name="T1">PU</text:span>
+               ID
+             </text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Table2.A1" table:number-columns-spanned="2" office:value-type="string">
+-            <text:p text:style-name="P61">
++            <text:p text:style-name="P71">
+               <text:placeholder text:placeholder-type="text">&lt;test.patient.puid or ''&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+           <table:covered-table-cell/>
+         </table:table-row>
+-        <table:table-row table:style-name="Table2.2">
++        <table:table-row>
+           <table:table-cell table:style-name="Table2.A1" office:value-type="string">
+-            <text:p text:style-name="P65">Date</text:p>
++            <text:p text:style-name="P73">Date</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Table2.A1" office:value-type="string">
+-            <text:p text:style-name="P66">
++            <text:p text:style-name="P74">
+               <text:placeholder text:placeholder-type="text">&lt;test.date_analysis&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Table2.A1" office:value-type="string">
+-            <text:p text:style-name="P67">Age</text:p>
++            <text:p text:style-name="P70">Age</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Table2.A1" office:value-type="string">
+-            <text:p text:style-name="P63">
++            <text:p text:style-name="P35">
+               <text:placeholder text:placeholder-type="text">&lt;test.patient.age&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Table2.A1" office:value-type="string">
+-            <text:p text:style-name="P67">Sex</text:p>
++            <text:p text:style-name="P78">Gender</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Table2.A1" office:value-type="string">
+-            <text:p text:style-name="P66">
+-              <text:placeholder text:placeholder-type="text">&lt;if test=&quot;test.patient.gender=='f'&quot;&gt;</text:placeholder>
+-            </text:p>
+-            <text:p text:style-name="P66">Female</text:p>
+-            <text:p text:style-name="P66">
+-              <text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder>
+-            </text:p>
+-            <text:p text:style-name="P66">
+-              <text:placeholder text:placeholder-type="text">&lt;if test=&quot;test.patient.gender=='m'&quot;&gt;</text:placeholder>
+-            </text:p>
+-            <text:p text:style-name="P66">Male</text:p>
+-            <text:p text:style-name="P66">
+-              <text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder>
++            <text:p text:style-name="P77">
++              <text:placeholder text:placeholder-type="text">&lt;test.patient.name.gender_str&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+         </table:table-row>
+       </table:table>
+-      <text:p text:style-name="P49">
++      <text:p text:style-name="P58">
+         <text:placeholder text:placeholder-type="text">&lt;if test=&quot;test.requestor&quot;&gt;</text:placeholder>
+       </text:p>
+       <table:table table:name="Tabla4" table:style-name="Tabla4">
+         <table:table-column table:style-name="Tabla4.A"/>
+         <table:table-column table:style-name="Tabla4.B"/>
+         <table:table-column table:style-name="Tabla4.C"/>
+         <table:table-column table:style-name="Tabla4.D"/>
+         <table:table-column table:style-name="Tabla4.E"/>
+         <table:table-column table:style-name="Tabla4.F"/>
+-        <table:table-row table:style-name="Tabla4.1">
++        <table:table-row>
+           <table:table-cell table:style-name="Tabla4.A1" office:value-type="string">
+-            <text:p text:style-name="P41">
++            <text:p text:style-name="P50">
+               Doctor
+               <text:span text:style-name="T5">:</text:span>
+             </text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla4.A1" office:value-type="string">
+-            <text:p text:style-name="P50">
++            <text:p text:style-name="P59">
+               <text:placeholder text:placeholder-type="text">&lt;test.requestor.name.rec_name&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla4.A1" office:value-type="string">
+-            <text:p text:style-name="P44"/>
++            <text:p text:style-name="P53"/>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla4.A1" office:value-type="string">
+-            <text:p text:style-name="P41"/>
++            <text:p text:style-name="P50"/>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla4.A1" office:value-type="string">
+-            <text:p text:style-name="P44"/>
++            <text:p text:style-name="P53"/>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla4.A1" office:value-type="string">
+-            <text:p text:style-name="P45">
++            <text:p text:style-name="P54">
+               <text:span text:style-name="T3">Order #</text:span>
+               <text:span text:style-name="T2"/>
+               <text:placeholder text:placeholder-type="text">&lt;test.request_order or ''&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+         </table:table-row>
+       </table:table>
+-      <text:p text:style-name="P49">
++      <text:p text:style-name="P58">
+         <text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder>
+       </text:p>
+       <table:table table:name="Tabla8" table:style-name="Tabla8">
+         <table:table-column table:style-name="Tabla8.A"/>
+         <table:table-column table:style-name="Tabla8.B"/>
+         <table:table-column table:style-name="Tabla8.C"/>
+         <table:table-column table:style-name="Tabla8.D"/>
+         <table:table-column table:style-name="Tabla8.E"/>
+         <table:table-column table:style-name="Tabla8.F"/>
+         <table:table-column table:style-name="Tabla8.G"/>
+         <table:table-row table:style-name="Tabla8.1">
+           <table:table-cell table:style-name="Tabla8.A1" table:number-columns-spanned="7" office:value-type="string">
+-            <text:p text:style-name="P53">
++            <text:p text:style-name="P63">
+               <text:placeholder text:placeholder-type="text">&lt;test.test.name&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+           <table:covered-table-cell/>
+           <table:covered-table-cell/>
+           <table:covered-table-cell/>
+           <table:covered-table-cell/>
+           <table:covered-table-cell/>
+           <table:covered-table-cell/>
+         </table:table-row>
+         <table:table-row table:style-name="Tabla8.2">
+           <table:table-cell table:style-name="Tabla8.A2" office:value-type="string">
+-            <text:p text:style-name="P55">Warn</text:p>
++            <text:p text:style-name="P65">Warn</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla8.B2" office:value-type="string">
+-            <text:p text:style-name="P55">Analyte</text:p>
++            <text:p text:style-name="P65">Analyte</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla8.C2" office:value-type="string">
+-            <text:p text:style-name="P55">Value</text:p>
++            <text:p text:style-name="P65">Value</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla8.D2" office:value-type="string">
+-            <text:p text:style-name="P55">Reference</text:p>
++            <text:p text:style-name="P65">Reference</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla8.E2" office:value-type="string">
+-            <text:p text:style-name="P55">Unit</text:p>
++            <text:p text:style-name="P65">Unit</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla8.F2" office:value-type="string">
+-            <text:p text:style-name="P55">Results</text:p>
++            <text:p text:style-name="P65">Results</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla8.G2" office:value-type="string">
+-            <text:p text:style-name="P55">Remarks</text:p>
++            <text:p text:style-name="P65">Remarks</text:p>
+           </table:table-cell>
+         </table:table-row>
+       </table:table>
+-      <text:p text:style-name="P41">
++      <text:p text:style-name="P50">
+         <text:placeholder text:placeholder-type="text">&lt;for each=&quot;case in test.critearea&quot;&gt;</text:placeholder>
+       </text:p>
+-      <text:p text:style-name="P41">
++      <text:p text:style-name="P50">
+         <text:placeholder text:placeholder-type="text">&lt;if test=&quot;case.excluded==0&quot;&gt;</text:placeholder>
+       </text:p>
+       <table:table table:name="Tabla5" table:style-name="Tabla5">
+         <table:table-column table:style-name="Tabla5.A"/>
+         <table:table-column table:style-name="Tabla5.B"/>
+         <table:table-column table:style-name="Tabla5.C"/>
+         <table:table-column table:style-name="Tabla5.D"/>
+         <table:table-column table:style-name="Tabla5.E"/>
+         <table:table-column table:style-name="Tabla5.F"/>
+         <table:table-column table:style-name="Tabla5.G"/>
+-        <table:table-row table:style-name="TableLine93972426482672">
++        <table:table-row>
+           <table:table-cell table:style-name="Tabla5.A1" office:value-type="string">
+-            <text:p text:style-name="P71">
++            <text:p text:style-name="P37">
+               <text:placeholder text:placeholder-type="text">&lt;if test=&quot;case.warning&quot;&gt;</text:placeholder>
+             </text:p>
+-            <text:p text:style-name="P74">*</text:p>
+-            <text:p text:style-name="P77">
++            <text:p text:style-name="P40">*</text:p>
++            <text:p text:style-name="P47">
+               <text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla5.A1" office:value-type="string">
+-            <text:p text:style-name="P70">
++            <text:p text:style-name="P36">
+               <text:placeholder text:placeholder-type="text">&lt;if test=&quot;case.warning&quot;&gt;</text:placeholder>
+             </text:p>
+-            <text:p text:style-name="P75">
++            <text:p text:style-name="P41">
+               <text:placeholder text:placeholder-type="text">&lt;case.name&gt;</text:placeholder>
+             </text:p>
+-            <text:p text:style-name="P76">
++            <text:p text:style-name="P46">
+               <text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder>
+             </text:p>
+-            <text:p text:style-name="P70">
++            <text:p text:style-name="P36">
+               <text:placeholder text:placeholder-type="text">&lt;if test=&quot;case.warning==0&quot;&gt;</text:placeholder>
+             </text:p>
+-            <text:p text:style-name="P72">
++            <text:p text:style-name="P38">
+               <text:placeholder text:placeholder-type="text">&lt;case.name&gt;</text:placeholder>
+             </text:p>
+-            <text:p text:style-name="P76">
++            <text:p text:style-name="P46">
+               <text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla5.A1" office:value-type="string">
+-            <text:p text:style-name="P70">
++            <text:p text:style-name="P36">
+               <text:placeholder text:placeholder-type="text">&lt;if test=&quot;case.warning&quot;&gt;</text:placeholder>
+             </text:p>
+-            <text:p text:style-name="P73">
++            <text:p text:style-name="P39">
+               <text:placeholder text:placeholder-type="text">&lt;case.result&gt;</text:placeholder>
+             </text:p>
+-            <text:p text:style-name="P76">
++            <text:p text:style-name="P46">
+               <text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder>
+             </text:p>
+-            <text:p text:style-name="P70">
++            <text:p text:style-name="P36">
+               <text:placeholder text:placeholder-type="text">&lt;if test=&quot;case.warning==0&quot;&gt;</text:placeholder>
+             </text:p>
+-            <text:p text:style-name="P70">
++            <text:p text:style-name="P36">
+               <text:placeholder text:placeholder-type="text">&lt;case.result&gt;</text:placeholder>
+             </text:p>
+-            <text:p text:style-name="P76">
++            <text:p text:style-name="P46">
+               <text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla5.A1" office:value-type="string">
+-            <text:p text:style-name="P64">
++            <text:p text:style-name="P72">
+               <text:placeholder text:placeholder-type="text">&lt;case.normal_range&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla5.A1" office:value-type="string">
+-            <text:p text:style-name="P64">
++            <text:p text:style-name="P72">
+               <text:placeholder text:placeholder-type="text">&lt;case.units and case.units.name&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla5.A1" office:value-type="string">
+-            <text:p text:style-name="P64">
++            <text:p text:style-name="P72">
+               <text:placeholder text:placeholder-type="text">&lt;case.result_text&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla5.A1" office:value-type="string">
+-            <text:p text:style-name="P64">
++            <text:p text:style-name="P72">
+               <text:placeholder text:placeholder-type="text">&lt;case.remarks&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+         </table:table-row>
+       </table:table>
+-      <text:p text:style-name="P41">
++      <text:p text:style-name="P50">
+         <text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder>
+       </text:p>
+-      <text:p text:style-name="P41">
++      <text:p text:style-name="P50">
+         <text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder>
+       </text:p>
+-      <text:p text:style-name="P49">
++      <text:p text:style-name="P58">
+         <text:placeholder text:placeholder-type="text">&lt;if test=&quot;test.pathologist&quot;&gt;</text:placeholder>
+       </text:p>
+       <table:table table:name="Tabla1" table:style-name="Tabla1">
+         <table:table-column table:style-name="Tabla1.A"/>
+         <table:table-column table:style-name="Tabla1.B"/>
+-        <table:table-row table:style-name="TableLine93972426531056">
++        <table:table-row>
+           <table:table-cell table:style-name="Tabla1.A1" office:value-type="string">
+-            <text:p text:style-name="P42">Pathologist</text:p>
++            <text:p text:style-name="P51">Pathologist</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla1.A1" office:value-type="string">
+-            <text:p text:style-name="P46">
++            <text:p text:style-name="P55">
+               <text:placeholder text:placeholder-type="text">&lt;test.pathologist.name.rec_name&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+         </table:table-row>
+       </table:table>
+-      <text:p text:style-name="P49">
++      <text:p text:style-name="P58">
+         <text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder>
+       </text:p>
+       <table:table table:name="Tabla2" table:style-name="Tabla2">
+         <table:table-column table:style-name="Tabla2.A"/>
+         <table:table-column table:style-name="Tabla2.B"/>
+         <table:table-row table:style-name="Tabla2.1">
+           <table:table-cell table:style-name="Tabla2.A1" office:value-type="string">
+-            <text:p text:style-name="P57">Diagnosis</text:p>
++            <text:p text:style-name="P66">Diagnosis</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla2.A1" office:value-type="string">
+-            <text:p text:style-name="P58">
++            <text:p text:style-name="P67">
+               <text:placeholder text:placeholder-type="text">&lt;test.diagnosis&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+         </table:table-row>
+-        <table:table-row table:style-name="Tabla2.2">
++        <table:table-row>
+           <table:table-cell table:style-name="Tabla2.A1" office:value-type="string">
+-            <text:p text:style-name="P57">Results</text:p>
++            <text:p text:style-name="P66">Results</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla2.A1" office:value-type="string">
+-            <text:p text:style-name="P58">
++            <text:p text:style-name="P67">
+               <text:placeholder text:placeholder-type="text">&lt;test.results&gt;</text:placeholder>
+             </text:p>
+           </table:table-cell>
+         </table:table-row>
+-        <table:table-row table:style-name="Tabla2.2">
++        <table:table-row>
+           <table:table-cell table:style-name="Tabla2.A1" office:value-type="string">
+-            <text:p text:style-name="P59">Signature</text:p>
++            <text:p text:style-name="P68">Signature</text:p>
+           </table:table-cell>
+           <table:table-cell table:style-name="Tabla2.A1" office:value-type="string">
+-            <text:p text:style-name="P61">____________________________</text:p>
++            <text:p text:style-name="P71">____________________________</text:p>
+           </table:table-cell>
+         </table:table-row>
+       </table:table>
+-      <text:p text:style-name="P39">
++      <text:p text:style-name="P48">
+         <text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder>
+       </text:p>
+     </office:text>
+   </office:body>
+ </office:document>
+```
+
+### Comparing `gnuhealth_lab-4.2.0/security/access_rights.xml` & `gnuhealth_lab-4.2.1/security/access_rights.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/sequences.py` & `gnuhealth_lab-4.2.1/sequences.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/setup.py` & `gnuhealth_lab-4.2.1/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/tests/test_health_lab.py` & `gnuhealth_lab-4.2.1/tests/test_health_lab.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/view/gnuhealth_lab.xml` & `gnuhealth_lab-4.2.1/view/gnuhealth_lab.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/view/gnuhealth_lab_test.xml` & `gnuhealth_lab-4.2.1/view/gnuhealth_lab_test.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/view/gnuhealth_lab_test_request_form.xml` & `gnuhealth_lab-4.2.1/view/gnuhealth_lab_test_request_form.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/view/gnuhealth_lab_test_request_tree.xml` & `gnuhealth_lab-4.2.1/view/gnuhealth_lab_test_request_tree.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/view/gnuhealth_patient_health_condition_form.xml` & `gnuhealth_lab-4.2.1/view/gnuhealth_patient_health_condition_form.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/view/patient_lab_test_request_start_form.xml` & `gnuhealth_lab-4.2.1/view/patient_lab_test_request_start_form.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/view/test_critearea_form_lab.xml` & `gnuhealth_lab-4.2.1/view/test_critearea_form_lab.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/view/test_critearea_form_test_type.xml` & `gnuhealth_lab-4.2.1/view/test_critearea_form_test_type.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/view/test_critearea_tree_lab.xml` & `gnuhealth_lab-4.2.1/view/test_critearea_tree_lab.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/wizard/create_lab_test.xml` & `gnuhealth_lab-4.2.1/wizard/create_lab_test.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_lab-4.2.0/wizard/wizard_create_lab_test.py` & `gnuhealth_lab-4.2.1/wizard/wizard_create_lab_test.py`
+
+ * *Files identical despite different names*
+

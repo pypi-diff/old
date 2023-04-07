@@ -1,0 +1,146 @@
+# Comparing `tmp/gnuhealth_icd11-4.2.0.tar.gz` & `tmp/gnuhealth_icd11-4.2.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "gnuhealth_icd11-4.2.0.tar", last modified: Sat Feb 11 21:56:14 2023, max compression
++gzip compressed data, was "gnuhealth_icd11-4.2.1.tar", last modified: Fri Apr  7 10:18:15 2023, max compression
+```
+
+## Comparing `gnuhealth_icd11-4.2.0.tar` & `gnuhealth_icd11-4.2.1.tar`
+
+### file list
+
+```diff
+@@ -1,27 +1,27 @@
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:14.936687 gnuhealth_icd11-4.2.0/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    35147 2022-11-28 22:17:48.000000 gnuhealth_icd11-4.2.0/COPYING
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       54 2022-11-28 22:17:48.000000 gnuhealth_icd11-4.2.0/MANIFEST.in
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     5725 2023-02-11 21:56:14.936525 gnuhealth_icd11-4.2.0/PKG-INFO
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     4826 2023-01-18 16:33:08.000000 gnuhealth_icd11-4.2.0/README.rst
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      781 2023-01-18 16:33:08.000000 gnuhealth_icd11-4.2.0/__init__.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:14.922874 gnuhealth_icd11-4.2.0/data/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     4707 2023-01-18 16:33:08.000000 gnuhealth_icd11-4.2.0/data/categories.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001) 11733127 2023-01-18 16:33:08.000000 gnuhealth_icd11-4.2.0/data/diseases.xml
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:14.934074 gnuhealth_icd11-4.2.0/doc/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      389 2023-01-18 16:33:08.000000 gnuhealth_icd11-4.2.0/doc/index.rst
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:14.936357 gnuhealth_icd11-4.2.0/gnuhealth_icd11.egg-info/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     5725 2023-02-11 21:56:14.000000 gnuhealth_icd11-4.2.0/gnuhealth_icd11.egg-info/PKG-INFO
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      519 2023-02-11 21:56:14.000000 gnuhealth_icd11-4.2.0/gnuhealth_icd11.egg-info/SOURCES.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:56:14.000000 gnuhealth_icd11-4.2.0/gnuhealth_icd11.egg-info/dependency_links.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       62 2023-02-11 21:56:14.000000 gnuhealth_icd11-4.2.0/gnuhealth_icd11.egg-info/entry_points.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:56:14.000000 gnuhealth_icd11-4.2.0/gnuhealth_icd11.egg-info/not-zip-safe
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       34 2023-02-11 21:56:14.000000 gnuhealth_icd11-4.2.0/gnuhealth_icd11.egg-info/requires.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        8 2023-02-11 21:56:14.000000 gnuhealth_icd11-4.2.0/gnuhealth_icd11.egg-info/top_level.txt
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:14.934171 gnuhealth_icd11-4.2.0/locale/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)  3430660 2023-01-18 16:33:08.000000 gnuhealth_icd11-4.2.0/locale/zh_CN.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       38 2023-02-11 21:56:14.936728 gnuhealth_icd11-4.2.0/setup.cfg
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     3630 2023-01-18 16:33:08.000000 gnuhealth_icd11-4.2.0/setup.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:14.935760 gnuhealth_icd11-4.2.0/tests/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      232 2023-01-18 16:33:08.000000 gnuhealth_icd11-4.2.0/tests/__init__.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      589 2023-01-18 16:33:08.000000 gnuhealth_icd11-4.2.0/tests/test_health_icd11.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       94 2023-02-11 12:44:33.000000 gnuhealth_icd11-4.2.0/tryton.cfg
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:15.882697 gnuhealth_icd11-4.2.1/
++-rw-r--r--   0 lfm       (1001) wheel        (0)    35147 2022-11-28 22:17:48.000000 gnuhealth_icd11-4.2.1/COPYING
++-rw-r--r--   0 lfm       (1001) wheel        (0)       54 2022-11-28 22:17:48.000000 gnuhealth_icd11-4.2.1/MANIFEST.in
++-rw-r--r--   0 lfm       (1001) wheel        (0)     5725 2023-04-07 10:18:15.882544 gnuhealth_icd11-4.2.1/PKG-INFO
++-rw-r--r--   0 lfm       (1001) wheel        (0)     4826 2023-04-07 09:17:52.000000 gnuhealth_icd11-4.2.1/README.rst
++-rw-r--r--   0 lfm       (1001) wheel        (0)      781 2023-04-07 09:17:52.000000 gnuhealth_icd11-4.2.1/__init__.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:15.874944 gnuhealth_icd11-4.2.1/data/
++-rw-r--r--   0 lfm       (1001) wheel        (0)     4707 2023-04-07 09:17:52.000000 gnuhealth_icd11-4.2.1/data/categories.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0) 11733127 2023-04-07 09:17:52.000000 gnuhealth_icd11-4.2.1/data/diseases.xml
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:15.880170 gnuhealth_icd11-4.2.1/doc/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      389 2023-04-07 09:17:52.000000 gnuhealth_icd11-4.2.1/doc/index.rst
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:15.882365 gnuhealth_icd11-4.2.1/gnuhealth_icd11.egg-info/
++-rw-r--r--   0 lfm       (1001) wheel        (0)     5725 2023-04-07 10:18:15.000000 gnuhealth_icd11-4.2.1/gnuhealth_icd11.egg-info/PKG-INFO
++-rw-r--r--   0 lfm       (1001) wheel        (0)      519 2023-04-07 10:18:15.000000 gnuhealth_icd11-4.2.1/gnuhealth_icd11.egg-info/SOURCES.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:18:15.000000 gnuhealth_icd11-4.2.1/gnuhealth_icd11.egg-info/dependency_links.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)       62 2023-04-07 10:18:15.000000 gnuhealth_icd11-4.2.1/gnuhealth_icd11.egg-info/entry_points.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:18:15.000000 gnuhealth_icd11-4.2.1/gnuhealth_icd11.egg-info/not-zip-safe
++-rw-r--r--   0 lfm       (1001) wheel        (0)       34 2023-04-07 10:18:15.000000 gnuhealth_icd11-4.2.1/gnuhealth_icd11.egg-info/requires.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        8 2023-04-07 10:18:15.000000 gnuhealth_icd11-4.2.1/gnuhealth_icd11.egg-info/top_level.txt
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:15.880249 gnuhealth_icd11-4.2.1/locale/
++-rw-r--r--   0 lfm       (1001) wheel        (0)  3430660 2023-04-07 09:17:52.000000 gnuhealth_icd11-4.2.1/locale/zh_CN.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)       38 2023-04-07 10:18:15.882736 gnuhealth_icd11-4.2.1/setup.cfg
++-rw-r--r--   0 lfm       (1001) wheel        (0)     3630 2023-04-07 09:17:52.000000 gnuhealth_icd11-4.2.1/setup.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:15.881825 gnuhealth_icd11-4.2.1/tests/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      232 2023-04-07 09:17:52.000000 gnuhealth_icd11-4.2.1/tests/__init__.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)      589 2023-04-07 09:17:52.000000 gnuhealth_icd11-4.2.1/tests/test_health_icd11.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)       94 2023-04-07 09:37:21.000000 gnuhealth_icd11-4.2.1/tryton.cfg
+```
+
+### Comparing `gnuhealth_icd11-4.2.0/COPYING` & `gnuhealth_icd11-4.2.1/COPYING`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_icd11-4.2.0/PKG-INFO` & `gnuhealth_icd11-4.2.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gnuhealth_icd11
+-Version: 4.2.0
++Version: 4.2.1
+ Summary: GNU Health WHO ICD11 Package
+ Home-page: https://www.gnuhealth.org
+ Download-URL: http://ftp.gnu.org/gnu/health/
+ Author: GNU Solidario
+ Author-email: health@gnusolidario.org
+ License: GPL-3
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `gnuhealth_icd11-4.2.0/README.rst` & `gnuhealth_icd11-4.2.1/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_icd11-4.2.0/__init__.py` & `gnuhealth_icd11-4.2.1/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_icd11-4.2.0/data/categories.xml` & `gnuhealth_icd11-4.2.1/data/categories.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_icd11-4.2.0/data/diseases.xml` & `gnuhealth_icd11-4.2.1/data/diseases.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_icd11-4.2.0/gnuhealth_icd11.egg-info/PKG-INFO` & `gnuhealth_icd11-4.2.1/gnuhealth_icd11.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gnuhealth-icd11
+-Version: 4.2.0
++Version: 4.2.1
+ Summary: GNU Health WHO ICD11 Package
+ Home-page: https://www.gnuhealth.org
+ Download-URL: http://ftp.gnu.org/gnu/health/
+ Author: GNU Solidario
+ Author-email: health@gnusolidario.org
+ License: GPL-3
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `gnuhealth_icd11-4.2.0/gnuhealth_icd11.egg-info/SOURCES.txt` & `gnuhealth_icd11-4.2.1/gnuhealth_icd11.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_icd11-4.2.0/locale/zh_CN.po` & `gnuhealth_icd11-4.2.1/locale/zh_CN.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_icd11-4.2.0/setup.py` & `gnuhealth_icd11-4.2.1/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_icd11-4.2.0/tests/test_health_icd11.py` & `gnuhealth_icd11-4.2.1/tests/test_health_icd11.py`
+
+ * *Files identical despite different names*
+

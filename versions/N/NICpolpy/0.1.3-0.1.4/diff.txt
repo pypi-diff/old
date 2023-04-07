@@ -1,0 +1,663 @@
+--- tmp/NICpolpy-0.1.3.tar.gz
++++ tmp/NICpolpy-0.1.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "NICpolpy-0.1.3.tar", last modified: Fri Oct 14 07:59:18 2022, max compression
+│ +gzip compressed data, was "NICpolpy-0.1.4.tar", last modified: Fri Apr  7 10:19:56 2023, max compression
+│   --- NICpolpy-0.1.3.tar
+├── +++ NICpolpy-0.1.4.tar
+│ ├── file list
+│ │ @@ -1,65 +1,65 @@
+│ │ -drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2022-10-14 07:59:18.439298 NICpolpy-0.1.3/
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     1238 2022-07-25 04:56:05.000000 NICpolpy-0.1.3/.gitignore
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     1464 2022-10-13 08:50:15.000000 NICpolpy-0.1.3/LICENSE
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)      158 2022-10-14 06:39:22.000000 NICpolpy-0.1.3/MANIFEST.in
+│ │ -drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2022-10-14 07:59:18.433312 NICpolpy-0.1.3/NICpolpy.egg-info/
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     8248 2022-10-14 07:59:18.000000 NICpolpy-0.1.3/NICpolpy.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     2017 2022-10-14 07:59:18.000000 NICpolpy-0.1.3/NICpolpy.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)        1 2022-10-14 07:59:18.000000 NICpolpy-0.1.3/NICpolpy.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)        1 2022-10-14 06:44:44.000000 NICpolpy-0.1.3/NICpolpy.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)      122 2022-10-14 07:59:18.000000 NICpolpy-0.1.3/NICpolpy.egg-info/requires.txt
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)        9 2022-10-14 07:59:18.000000 NICpolpy-0.1.3/NICpolpy.egg-info/top_level.txt
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     8248 2022-10-14 07:59:18.439442 NICpolpy-0.1.3/PKG-INFO
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     5456 2022-10-14 07:55:21.000000 NICpolpy-0.1.3/README.md
+│ │ -drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2022-10-14 07:59:18.433992 NICpolpy-0.1.3/nicpolpy/
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    41451 2022-10-13 05:45:35.000000 NICpolpy-0.1.3/nicpolpy/NICPolReduc.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)      244 2022-02-10 17:30:23.000000 NICpolpy-0.1.3/nicpolpy/__init__.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     4106 2022-10-13 06:29:07.000000 NICpolpy-0.1.3/nicpolpy/phot.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    42797 2022-10-13 05:46:57.000000 NICpolpy-0.1.3/nicpolpy/prepare.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    16617 2022-10-13 06:28:49.000000 NICpolpy-0.1.3/nicpolpy/preproc.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    46490 2022-10-13 05:46:12.000000 NICpolpy-0.1.3/nicpolpy/util.py
+│ │ -drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2022-10-14 07:59:18.435238 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)      671 2022-01-12 04:41:50.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/__init__.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    10718 2021-11-08 08:12:28.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/airmass.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     2178 2022-03-20 08:34:23.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/astroim.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    22496 2020-11-06 05:49:48.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/astrometry.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    40193 2022-03-20 08:55:54.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/combutil.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    34775 2022-03-20 08:23:59.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/filemgmt.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    10102 2022-06-12 07:51:40.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/fitting.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)   117008 2022-07-15 13:58:09.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/hduutil.py
+│ │ -drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2022-10-14 07:59:18.436383 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)      347 2022-03-20 08:55:33.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/__init__.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    16404 2022-01-25 07:31:36.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/docstrings.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    12943 2022-02-27 14:29:44.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imarith.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    40787 2022-05-11 12:04:38.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imcombine.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     5638 2022-02-27 14:31:47.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imcopy.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)      865 2022-02-27 14:54:23.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imsmooth.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    16154 2022-01-05 06:16:21.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/util_comb.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     9950 2020-11-13 02:08:13.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/util_lmedian.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    15064 2022-01-05 06:16:19.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/util_reject.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    48138 2022-05-18 13:43:21.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/misc.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    71737 2022-09-25 09:26:09.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/preproc.py
+│ │ -drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2022-10-14 07:59:18.436617 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/tests/
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)        0 2021-05-21 01:18:27.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/tests/__init__.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)      663 2021-05-21 07:58:54.000000 NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/tests/test_misc.py
+│ │ -drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2022-10-14 07:59:18.438043 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)      211 2022-10-14 06:26:37.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/__init__.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    37138 2022-07-12 05:31:28.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/aperture.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    13683 2022-07-07 04:43:13.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/apphot.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     5900 2022-06-09 12:31:35.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/background.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    34050 2022-07-15 05:38:34.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/center.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     3710 2022-07-07 04:43:11.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/daopsf.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     3147 2020-01-23 08:48:25.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/growth.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    31643 2022-07-18 05:29:40.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/polarimetry.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    48206 2022-10-14 07:48:11.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/queryutil.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    22802 2022-06-11 09:21:12.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/seputil.py
+│ │ -drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2022-10-14 07:59:18.438357 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/tests/
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)      335 2022-06-09 11:56:23.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/tests/__init__.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)        0 2022-06-09 12:10:21.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/tests/test_apphot.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)      796 2022-06-09 12:31:38.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/tests/test_background.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)    15703 2022-07-07 04:43:08.000000 NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/util.py
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)       86 2022-10-14 06:37:14.000000 NICpolpy-0.1.3/pyproject.toml
+│ │ -drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2022-10-14 07:59:18.438488 NICpolpy-0.1.3/readme_images/
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)   985898 2020-01-09 09:23:17.000000 NICpolpy-0.1.3/readme_images/ap_selection.png
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)     1580 2022-10-14 07:59:18.439882 NICpolpy-0.1.3/setup.cfg
+│ │ --rw-r--r--   0 ysbach     (501) staff       (20)       69 2022-10-14 06:36:27.000000 NICpolpy-0.1.3/setup.py
+│ │ +drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2023-04-07 10:19:56.932954 NICpolpy-0.1.4/
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)     1238 2022-07-25 04:56:05.000000 NICpolpy-0.1.4/.gitignore
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)     1464 2022-10-13 08:50:15.000000 NICpolpy-0.1.4/LICENSE
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)      158 2022-10-14 06:39:22.000000 NICpolpy-0.1.4/MANIFEST.in
+│ │ +drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2023-04-07 10:19:56.913369 NICpolpy-0.1.4/NICpolpy.egg-info/
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    11164 2023-04-07 10:19:56.000000 NICpolpy-0.1.4/NICpolpy.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)     2017 2023-04-07 10:19:56.000000 NICpolpy-0.1.4/NICpolpy.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)        1 2023-04-07 10:19:56.000000 NICpolpy-0.1.4/NICpolpy.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)        1 2023-04-07 10:19:56.000000 NICpolpy-0.1.4/NICpolpy.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)      122 2023-04-07 10:19:56.000000 NICpolpy-0.1.4/NICpolpy.egg-info/requires.txt
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)        9 2023-04-07 10:19:56.000000 NICpolpy-0.1.4/NICpolpy.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    11164 2023-04-07 10:19:56.933079 NICpolpy-0.1.4/PKG-INFO
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)     8372 2023-03-31 10:33:12.000000 NICpolpy-0.1.4/README.md
+│ │ +drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2023-04-07 10:19:56.915877 NICpolpy-0.1.4/nicpolpy/
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    41451 2022-10-13 05:45:35.000000 NICpolpy-0.1.4/nicpolpy/NICPolReduc.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)      244 2022-02-10 17:30:23.000000 NICpolpy-0.1.4/nicpolpy/__init__.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)     4106 2022-10-13 06:29:07.000000 NICpolpy-0.1.4/nicpolpy/phot.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    42797 2022-10-13 05:46:57.000000 NICpolpy-0.1.4/nicpolpy/prepare.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    16617 2022-10-13 06:28:49.000000 NICpolpy-0.1.4/nicpolpy/preproc.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    46490 2022-10-13 05:46:12.000000 NICpolpy-0.1.4/nicpolpy/util.py
+│ │ +drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2023-04-07 10:19:56.921555 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)      671 2022-01-12 04:41:50.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/__init__.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    10718 2021-11-08 08:12:28.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/airmass.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)     2178 2022-03-20 08:34:23.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/astroim.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    22496 2020-11-06 05:49:48.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/astrometry.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    40193 2022-03-20 08:55:54.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/combutil.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    34775 2022-03-20 08:23:59.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/filemgmt.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    10102 2022-06-12 07:51:40.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/fitting.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)   117008 2022-07-15 13:58:09.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/hduutil.py
+│ │ +drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2023-04-07 10:19:56.925399 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)      347 2022-03-20 08:55:33.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/__init__.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    16404 2022-01-25 07:31:36.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/docstrings.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    12943 2022-02-27 14:29:44.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imarith.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    40787 2022-05-11 12:04:38.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imcombine.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)     5638 2022-02-27 14:31:47.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imcopy.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)      865 2022-02-27 14:54:23.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imsmooth.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    16154 2022-01-05 06:16:21.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/util_comb.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)     9950 2020-11-13 02:08:13.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/util_lmedian.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    15064 2022-01-05 06:16:19.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/util_reject.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    48138 2022-05-18 13:43:21.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/misc.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    71737 2022-09-25 09:26:09.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/preproc.py
+│ │ +drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2023-04-07 10:19:56.925884 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/tests/
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)        0 2021-05-21 01:18:27.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/tests/__init__.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)      663 2021-05-21 07:58:54.000000 NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/tests/test_misc.py
+│ │ +drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2023-04-07 10:19:56.930721 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)      211 2022-10-14 06:26:37.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/__init__.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    11282 2023-03-12 14:35:47.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/aperture.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    13683 2022-07-07 04:43:13.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/apphot.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)     5900 2022-06-09 12:31:35.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/background.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    34050 2022-07-15 05:38:34.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/center.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)     3710 2022-07-07 04:43:11.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/daopsf.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)     3147 2020-01-23 08:48:25.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/growth.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    31643 2022-07-18 05:29:40.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/polarimetry.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    48206 2022-10-14 07:48:11.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/queryutil.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    22802 2022-06-11 09:21:12.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/seputil.py
+│ │ +drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2023-04-07 10:19:56.931425 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/tests/
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)      335 2022-06-09 11:56:23.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/tests/__init__.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)        0 2022-06-09 12:10:21.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/tests/test_apphot.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)      796 2022-06-09 12:31:38.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/tests/test_background.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)    15703 2022-07-07 04:43:08.000000 NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/util.py
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)       86 2022-10-14 06:37:14.000000 NICpolpy-0.1.4/pyproject.toml
+│ │ +drwxr-xr-x   0 ysbach     (501) staff       (20)        0 2023-04-07 10:19:56.931800 NICpolpy-0.1.4/readme_images/
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)   985898 2020-01-09 09:23:17.000000 NICpolpy-0.1.4/readme_images/ap_selection.png
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)     1580 2023-04-07 10:19:56.933757 NICpolpy-0.1.4/setup.cfg
+│ │ +-rw-r--r--   0 ysbach     (501) staff       (20)       69 2022-10-14 06:36:27.000000 NICpolpy-0.1.4/setup.py
+│ │   --- NICpolpy-0.1.3/.gitignore
+│ ├── +++ NICpolpy-0.1.4/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/LICENSE
+│ ├── +++ NICpolpy-0.1.4/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/NICpolpy.egg-info/PKG-INFO
+│ ├── +++ NICpolpy-0.1.4/NICpolpy.egg-info/PKG-INFO
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: NICpolpy
+│ │ -Version: 0.1.3
+│ │ +Version: 0.1.4
+│ │  Summary: Nishi-Harima Astronomical Observatory (NHAO) Near-Infrared Camera (NIC) polarimetry pipeline.
+│ │  Home-page: https://github.com/ysBach/NICpolpy
+│ │  Author: Yoonsoo P. Bach
+│ │  Author-email: ysbach93@gmail.com,
+│ │  License: BSD 3-clause
+│ │  Project-URL: Source, https://github.com/ysBach/NICpolpy
+│ │  Project-URL: Tracker, https://github.com/ysBach/NICpolpy/issues
+│ │ @@ -25,23 +25,80 @@
+│ │  Classifier: Topic :: Scientific/Engineering :: Astronomy
+│ │  Classifier: Topic :: Scientific/Engineering :: Image Processing
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown; charset=UTF-8
+│ │  License-File: LICENSE
+│ │  
+│ │  # NICpolpy
+│ │ +
+│ │ +[![DOI](https://zenodo.org/badge/219398338.svg)](https://zenodo.org/badge/latestdoi/219398338)
+│ │ +
+│ │   (ysbach93@gmail.com)
+│ │  
+│ │ -Nishi-Harima Astronomical Observatory (NHAO)'s Near-Infrared Camera (NIC) Polarimetric mode data reduction pipeline (image preprocessing, excluding photometry at the moment). Under-development by Yoonsoo P. Bach at Seoul National University, South Korea, since late 2019.
+│ │ +ℹ️ For the most recent documentation, please always refer to [GitHub](https://github.com/ysBach/NICpolpy).
+│ │ +
+│ │ +## What is this?
+│ │ +NHAO (Nishi-Harima Astronomical Observatory) has NIC (Near-Infrared Camera). On top of imaging mode, NIC has a three-filter (JHKs) simultaneous dual-beam polarimetric mode. This package is for the polarimetric mode data reduction pipeline (image preprocessing, excluding photometry at the moment). Under-development by @ysBach since late 2019...
+│ │ +
+│ │ +## TL;DR
+│ │ +1. On terminal: ``$ pip install NICpolpy``
+│ │ +1. Download flat/mask from the [SM repo](https://github.com/ysBach/nicpolpy_sag22sm).
+│ │  
+│ │ +Then refer to:
+│ │ +* Practical usage example: [SM repo/example](https://github.com/ysBach/nicpolpy_sag22sm/tree/main/example).
+│ │ +* Theoretical/implementation details: [Bach Y. P. et al. (2022) SAG](http://www.nhao.jp/research/starsandgalaxies/05.html#2022J-4).
+│ │  
+│ │ -## 0. Installation
+│ │ -To use this package, you need to have the pre-made master flat and initial mask frames. They are downloadable at [this repository](https://github.com/ysBach/nicpolpy_sag22sm). There, you can also find the example usage of ``NICpolpy``.
+│ │ +## Citation ✅
+│ │ +Please consider one or both of the following citation(s) (BibTeX):
+│ │ +
+│ │ +1. ``NICpolpy`` Zenodo (when you just want to mention which package was used).
+│ │ +```
+│ │ +@software{nicpolpy_v013,
+│ │ +  author       = {Yoonsoo P. Bach},
+│ │ +  title        = {ysBach/NICpolpy: NICpolpy v0.1.3},
+│ │ +  month        = dec,
+│ │ +  year         = 2022,
+│ │ +  publisher    = {Zenodo},
+│ │ +  version      = {publish},
+│ │ +  doi          = {10.5281/zenodo.7391454},
+│ │ +  url          = {https://doi.org/10.5281/zenodo.7391454}
+│ │ +}
+│ │ +```
+│ │ +2. The implementation details document ([SAG official website](http://www.nhao.jp/research/starsandgalaxies/05.html#2022J-4), peer-reviewed, non-SCI)
+│ │ +```
+│ │ +@ARTICLE{2022_SAG_NICpolpy,
+│ │ +       author = {{Bach}, Yoonsoo P. and {Ishiguro}, Masateru and {Takahashi}, Jun and {Geem}, Jooyeon},
+│ │ +        title = "{Data Reduction Process and Pipeline for the NIC Polarimetry Mode in Python, NICpolpy}",
+│ │ +      journal = {Stars and Galaxies (arXiv:2212.14167)},
+│ │ +     keywords = {methods: data analysis, methods: observational, techniques: image processing, techniques: polarimetric},
+│ │ +         year = 2022,
+│ │ +        month = dec,
+│ │ +       volume = {5},
+│ │ +          eid = {4},
+│ │ +        pages = {4},
+│ │ +archivePrefix = {arXiv},
+│ │ +       eprint = {2212.14167},
+│ │ + primaryClass = {astro-ph.IM},
+│ │ +       adsurl = {https://ui.adsabs.harvard.edu/abs/2022arXiv221214167B},
+│ │ +}
+│ │ +```
+│ │  
+│ │ -You will need Python **3.7+** (recommended: **3.8+**, [Anaconda 3](https://www.anaconda.com/distribution/#download-section)). You also need the following packages:
+│ │ +-----
+│ │ +-----
+│ │ +**DETAILS**:
+│ │ +
+│ │ +-----
+│ │ +-----
+│ │ +
+│ │ +## 1. Installation
+│ │ +To use this package, you need to have the pre-made master flat and initial mask frames. They are downloadable at the [SM repo](https://github.com/ysBach/nicpolpy_sag22sm). There, you can also find the example usage of ``NICpolpy``.
+│ │ +
+│ │ +Requirements:
+│ │ +* Python **3.7+** (recommended: **3.10**)
+│ │ +  * You may use [Anaconda 3](https://www.anaconda.com/distribution/#download-section).
+│ │  * numpy
+│ │  * scipy
+│ │  * bottleneck
+│ │  * astroscrappy
+│ │  * sep
+│ │  * astroquery
+│ │  * tqdm
+│ │ @@ -59,65 +116,70 @@
+│ │  # On terminal
+│ │  conda install -c astropy astropy astroquery photutils ccdproc astroscrappy
+│ │  conda install -c openastronomy sep
+│ │  conda install -c conda-forge fitsio  # Windows may fail - please just ignore.
+│ │  pip install nicpolpy
+│ │  ```
+│ │  
+│ │ -## 1. Descriptions
+│ │ -
+│ │ -
+│ │ -For detailed descriptions about image reduction steps, please refer to BachYP et al. (2022) SAG (Stars And Galaxies), in prep (you may freely contact via email above). Below are simple summary of that publication.
+│ │ +## 2. Descriptions
+│ │ +For detailed descriptions about image reduction steps, please refer to [Bach Y. P. et al. (2022) SAG](http://www.nhao.jp/research/starsandgalaxies/05.html#2022J-4). Below are simple summary of that publication.
+│ │  
+│ │ -### 1-1. A Short Summary of Data Reduction Steps
+│ │ +### 1-1. A Short Note
+│ │  Few things special for NHAO NIC polarimetric mode:
+│ │ -
+│ │ -1. **MASK**s are assumed to be present prior to any data reduction.
+│ │ -2. **FLAT**s are assumed to be present prior to any data reduction. FLATs are not taken every night. It is taken only rarely, so the majority of this package is assuming you already have the master flats for each FILTER.
+│ │ -3. **DARK**s are not taken every night. Sometimes it's missing, but sometimes you have DARK frames. Thus, the code has a flexibility for the user to combine nightly DARK.
+│ │ -4. Unfortunately, dark current on hot pixels often do not follow linear law (pixel value is not proportional to EXPTIME). Therefore, it is best to simply mask such pixels and interpolate the pixel value based on nearby ones, rather than relying on DARK frames.
+│ │ -5. As NIC has NIR sensor, temperature is critical to hot pixels. Thus a difficulty is that the locations/severity of such "bad" pixels may vary not only over time, but also on the efficiency of the cooling system. Although it's rare, the system *can* suffer from cooling problem, and therefore, the MASK frames must be differ on such nights (this can even be seen from visual inspection).
+│ │ -
+│ │ -The data nomenclature (``lv`` means "level"):
+│ │ -1. ``lv0``: The very raw data (32-bit int, not 16-bit; so wasting double the storage, unfortunately..).
+│ │ +1. **MASK** means the default bad-pixel map.
+│ │ +  * Assumed to be **present prior to any data reduction**.
+│ │ +2. **FLAT** means the master flat field image (normalized to 1)
+│ │ +  * Assumed to be **present prior to any data reduction**.
+│ │ +  * FLATs are not taken every night. It is taken only rarely, so the majority of this package is assuming you already have the master flats for each FILTER.
+│ │ +3. **DARK**s means the *nightly* dark frames.
+│ │ +  * Dark frames are not taken every night. It's often missing. Thus, the code has a flexibility for the user to combine nightly dark frames, use dark of different nights (by providing relative paths), or completely ignore dark subtraction process.
+│ │ +4. Unfortunately, dark current often do not follow linear law (pixel value is not proportional to EXPTIME). Therefore, it is best to simply mask hot dark pixels and interpolate the pixel value based on nearby ones at the last stage, rather than relying on DARK frames.
+│ │ +5. As dark current changes abruptly over the temperature, a difficulty is that the locations/severity of such "bad" pixels may vary not only over time, but also on the efficiency of the cooling system. Although it's rare, the system *can* suffer from cooling problem, and therefore, the MASK frames must be differ on such nights (this can even be seen from visual inspection). Sometimes the pixels should be masked are permanently changed.
+│ │ +
+│ │ +* ``mdark``, ``mflat``, ``mfrin`` : master dark, flat, fringe
+│ │ +* ``ifrin`` : the initial fringes (LV3, i.e., after dark/flat corrections). The master fringe is the combination of the ifrin frames.
+│ │ +* ``imask``, ``dmask``, ``mmask`` : initial input mask (given a priori), dark mask (based on nightly dark frames), master mask (made by combining imask and nightly dark, if exists)
+│ │ +
+│ │ +### 1-2. A Short Summary of Data Reduction Steps
+│ │ +(``lv`` means "level")
+│ │ +1. ``lv0``: The original, very raw data (32-bit int, not 16-bit; so wasting double the storage, unfortunately..).
+│ │  2. ``lv1``: After vertical pattern subtraction (32-bit int)
+│ │  3. ``lv2``: Fourier pattern removal. (32-bit float)
+│ │     - ``lv2`` is *the* **"raw" data**, if it were not for those artificial patterns.
+│ │     - Thus, now the remaining reduction processes are similar to usual observations.
+│ │  4. ``lv3``: DARK/FLAT correction and FIXPIX using MASK frames. The nominal "preprocessed" image (32-bit float).
+│ │ +   - FIXPIX means the interpolation of pixels indicated by MASK. The name originates from IRAF.PROTO.FIXPIX task.
+│ │  5. ``lv4``: After CR rejection and FRINGE subtraction, (32-bit float).
+│ │ -    - Rarely, CR rejection corrupts the image severely by detecting too many cosmic rays (see CRNPIX in the header).
+│ │ +    - Rarely, CR rejection corrupts the image severely by detecting too many cosmic rays (see CRNPIX in the header). If such thing happens, you may want to either turn off CR rejection, or manually find the best parameters for the CR rejection.
+│ │      - The sky in IR (JHK bands) can change rather quickly, so that the fringe subtraction may only increase the artifact. Also, fringe subtraction has only marginal effect in the final Stokes' parameter (BachYP+2022, in prep). Thus, we recommend skip the fringe subtraction.
+│ │  
+│ │ -<details><summary><u>A note (click)<\u></summary>
+│ │ +<details><summary><u>An idea (click)</u></summary>
+│ │  <p>
+│ │  
+│ │  Below is just an idea, not actually implemented:
+│ │  - In the vertical pattern subtraction by median value along the column, the output may contain integer + 0.5 pixel value. Meanwhile, NIC has saturation at well below 10k ADU, and therefore, the range of ``-32,768`` to ``32,767`` is more than enough to store all meaningful data. Combining these two information, `NICpolpy` **multiplies 2** to the vertical-pattern-subtracted images, and store it as `int16` to save storage by half for this intermediate data. Just in case, by default, any pixel larger than 15000 (`maxval`) or smaller than -15000 (`minval`) will be replaced by -32768 (`blankval` or ``"BLANK"`` in FITS header).
+│ │  
+│ │  
+│ │  </p>
+│ │  </details>
+│ │  
+│ │ -### 1-2. A Short Summary of the Output Files/Directories
+│ │ +### 1-3. A Short Summary of the Output Files/Directories
+│ │  After reduction, you may freely remove LV1 and 2 data to save your storage. They are intermediate data produced just in case. A size of single FITS frame is
+│ │  - ``lv0``: 4.2 MB
+│ │  - ``lv1``: 4.2 MB
+│ │  - ``lv2``: 4.2 MB
+│ │  - ``lv3``: 280 kB * 2 = 560 kB (o-/e-ray splitted)
+│ │  - ``lv4``: 280 kB * 2 = 560 kB (o-/e-ray splitted)
+│ │  - ``logs/``: 12.8 MB (MFLAT) + 3.3 MB (IMASK) + [~ 15 MB/DARK_EXPTIME] + [~3.3 MB/DARKMASK] + something more...
+│ │  In total, the log directory (by default ``__logs/``) will be likely \~ 50 MB. For 10-set observation at NIC, i.e., 40 frames per filter = 120 FITS frames, will have LV0 \~ LV1 \~ LV2 \~ 0.5 GB, LV3 \~ LV4 \~ 0.1 GB thus in total, <\~ 2 GB.
+│ │  
+│ │ -Names:
+│ │ -* mdark, mflat, mfrin : master dark, flat, fringe
+│ │ -* ifrin : the initial fringes (LV3, i.e., after dark/flat corrections). The master fringe is the combination of the ifrin frames.
+│ │ -* imask, dmask, mmask : initial input mask (given a priori), dark mask (based on nightly dark frames), master mask (made by combining imask and nightly dark, if exists)
+│ │ -
+│ │  
+│ │ +# TODO
+│ │ +* Refactor ``ysfitsutilpy`` and ``ysphotutilpy``
+│ │ +  * Currently, ``NICpolpy`` contains a snapshot of ``ysfitsutilpy`` and ``ysphotutilpy``, which is an undesirable way (especially because of the other package dependency). If there is a critical need for significantly updating NICpolpy in the future, I may re-implement these.
+│ │  Copyright 2019-2022 Yoonsoo P. Bach
+│ │  
+│ │  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+│ │  
+│ │  1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+│ │  
+│ │  2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+│ │ ├── encoding
+│ │ │ @@ -1 +1 @@
+│ │ │ -us-ascii
+│ │ │ +utf-8
+│ │   --- NICpolpy-0.1.3/NICpolpy.egg-info/SOURCES.txt
+│ ├── +++ NICpolpy-0.1.4/NICpolpy.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/PKG-INFO
+│ ├── +++ NICpolpy-0.1.4/PKG-INFO
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: NICpolpy
+│ │ -Version: 0.1.3
+│ │ +Version: 0.1.4
+│ │  Summary: Nishi-Harima Astronomical Observatory (NHAO) Near-Infrared Camera (NIC) polarimetry pipeline.
+│ │  Home-page: https://github.com/ysBach/NICpolpy
+│ │  Author: Yoonsoo P. Bach
+│ │  Author-email: ysbach93@gmail.com,
+│ │  License: BSD 3-clause
+│ │  Project-URL: Source, https://github.com/ysBach/NICpolpy
+│ │  Project-URL: Tracker, https://github.com/ysBach/NICpolpy/issues
+│ │ @@ -25,23 +25,80 @@
+│ │  Classifier: Topic :: Scientific/Engineering :: Astronomy
+│ │  Classifier: Topic :: Scientific/Engineering :: Image Processing
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown; charset=UTF-8
+│ │  License-File: LICENSE
+│ │  
+│ │  # NICpolpy
+│ │ +
+│ │ +[![DOI](https://zenodo.org/badge/219398338.svg)](https://zenodo.org/badge/latestdoi/219398338)
+│ │ +
+│ │   (ysbach93@gmail.com)
+│ │  
+│ │ -Nishi-Harima Astronomical Observatory (NHAO)'s Near-Infrared Camera (NIC) Polarimetric mode data reduction pipeline (image preprocessing, excluding photometry at the moment). Under-development by Yoonsoo P. Bach at Seoul National University, South Korea, since late 2019.
+│ │ +ℹ️ For the most recent documentation, please always refer to [GitHub](https://github.com/ysBach/NICpolpy).
+│ │ +
+│ │ +## What is this?
+│ │ +NHAO (Nishi-Harima Astronomical Observatory) has NIC (Near-Infrared Camera). On top of imaging mode, NIC has a three-filter (JHKs) simultaneous dual-beam polarimetric mode. This package is for the polarimetric mode data reduction pipeline (image preprocessing, excluding photometry at the moment). Under-development by @ysBach since late 2019...
+│ │ +
+│ │ +## TL;DR
+│ │ +1. On terminal: ``$ pip install NICpolpy``
+│ │ +1. Download flat/mask from the [SM repo](https://github.com/ysBach/nicpolpy_sag22sm).
+│ │  
+│ │ +Then refer to:
+│ │ +* Practical usage example: [SM repo/example](https://github.com/ysBach/nicpolpy_sag22sm/tree/main/example).
+│ │ +* Theoretical/implementation details: [Bach Y. P. et al. (2022) SAG](http://www.nhao.jp/research/starsandgalaxies/05.html#2022J-4).
+│ │  
+│ │ -## 0. Installation
+│ │ -To use this package, you need to have the pre-made master flat and initial mask frames. They are downloadable at [this repository](https://github.com/ysBach/nicpolpy_sag22sm). There, you can also find the example usage of ``NICpolpy``.
+│ │ +## Citation ✅
+│ │ +Please consider one or both of the following citation(s) (BibTeX):
+│ │ +
+│ │ +1. ``NICpolpy`` Zenodo (when you just want to mention which package was used).
+│ │ +```
+│ │ +@software{nicpolpy_v013,
+│ │ +  author       = {Yoonsoo P. Bach},
+│ │ +  title        = {ysBach/NICpolpy: NICpolpy v0.1.3},
+│ │ +  month        = dec,
+│ │ +  year         = 2022,
+│ │ +  publisher    = {Zenodo},
+│ │ +  version      = {publish},
+│ │ +  doi          = {10.5281/zenodo.7391454},
+│ │ +  url          = {https://doi.org/10.5281/zenodo.7391454}
+│ │ +}
+│ │ +```
+│ │ +2. The implementation details document ([SAG official website](http://www.nhao.jp/research/starsandgalaxies/05.html#2022J-4), peer-reviewed, non-SCI)
+│ │ +```
+│ │ +@ARTICLE{2022_SAG_NICpolpy,
+│ │ +       author = {{Bach}, Yoonsoo P. and {Ishiguro}, Masateru and {Takahashi}, Jun and {Geem}, Jooyeon},
+│ │ +        title = "{Data Reduction Process and Pipeline for the NIC Polarimetry Mode in Python, NICpolpy}",
+│ │ +      journal = {Stars and Galaxies (arXiv:2212.14167)},
+│ │ +     keywords = {methods: data analysis, methods: observational, techniques: image processing, techniques: polarimetric},
+│ │ +         year = 2022,
+│ │ +        month = dec,
+│ │ +       volume = {5},
+│ │ +          eid = {4},
+│ │ +        pages = {4},
+│ │ +archivePrefix = {arXiv},
+│ │ +       eprint = {2212.14167},
+│ │ + primaryClass = {astro-ph.IM},
+│ │ +       adsurl = {https://ui.adsabs.harvard.edu/abs/2022arXiv221214167B},
+│ │ +}
+│ │ +```
+│ │  
+│ │ -You will need Python **3.7+** (recommended: **3.8+**, [Anaconda 3](https://www.anaconda.com/distribution/#download-section)). You also need the following packages:
+│ │ +-----
+│ │ +-----
+│ │ +**DETAILS**:
+│ │ +
+│ │ +-----
+│ │ +-----
+│ │ +
+│ │ +## 1. Installation
+│ │ +To use this package, you need to have the pre-made master flat and initial mask frames. They are downloadable at the [SM repo](https://github.com/ysBach/nicpolpy_sag22sm). There, you can also find the example usage of ``NICpolpy``.
+│ │ +
+│ │ +Requirements:
+│ │ +* Python **3.7+** (recommended: **3.10**)
+│ │ +  * You may use [Anaconda 3](https://www.anaconda.com/distribution/#download-section).
+│ │  * numpy
+│ │  * scipy
+│ │  * bottleneck
+│ │  * astroscrappy
+│ │  * sep
+│ │  * astroquery
+│ │  * tqdm
+│ │ @@ -59,65 +116,70 @@
+│ │  # On terminal
+│ │  conda install -c astropy astropy astroquery photutils ccdproc astroscrappy
+│ │  conda install -c openastronomy sep
+│ │  conda install -c conda-forge fitsio  # Windows may fail - please just ignore.
+│ │  pip install nicpolpy
+│ │  ```
+│ │  
+│ │ -## 1. Descriptions
+│ │ -
+│ │ -
+│ │ -For detailed descriptions about image reduction steps, please refer to BachYP et al. (2022) SAG (Stars And Galaxies), in prep (you may freely contact via email above). Below are simple summary of that publication.
+│ │ +## 2. Descriptions
+│ │ +For detailed descriptions about image reduction steps, please refer to [Bach Y. P. et al. (2022) SAG](http://www.nhao.jp/research/starsandgalaxies/05.html#2022J-4). Below are simple summary of that publication.
+│ │  
+│ │ -### 1-1. A Short Summary of Data Reduction Steps
+│ │ +### 1-1. A Short Note
+│ │  Few things special for NHAO NIC polarimetric mode:
+│ │ -
+│ │ -1. **MASK**s are assumed to be present prior to any data reduction.
+│ │ -2. **FLAT**s are assumed to be present prior to any data reduction. FLATs are not taken every night. It is taken only rarely, so the majority of this package is assuming you already have the master flats for each FILTER.
+│ │ -3. **DARK**s are not taken every night. Sometimes it's missing, but sometimes you have DARK frames. Thus, the code has a flexibility for the user to combine nightly DARK.
+│ │ -4. Unfortunately, dark current on hot pixels often do not follow linear law (pixel value is not proportional to EXPTIME). Therefore, it is best to simply mask such pixels and interpolate the pixel value based on nearby ones, rather than relying on DARK frames.
+│ │ -5. As NIC has NIR sensor, temperature is critical to hot pixels. Thus a difficulty is that the locations/severity of such "bad" pixels may vary not only over time, but also on the efficiency of the cooling system. Although it's rare, the system *can* suffer from cooling problem, and therefore, the MASK frames must be differ on such nights (this can even be seen from visual inspection).
+│ │ -
+│ │ -The data nomenclature (``lv`` means "level"):
+│ │ -1. ``lv0``: The very raw data (32-bit int, not 16-bit; so wasting double the storage, unfortunately..).
+│ │ +1. **MASK** means the default bad-pixel map.
+│ │ +  * Assumed to be **present prior to any data reduction**.
+│ │ +2. **FLAT** means the master flat field image (normalized to 1)
+│ │ +  * Assumed to be **present prior to any data reduction**.
+│ │ +  * FLATs are not taken every night. It is taken only rarely, so the majority of this package is assuming you already have the master flats for each FILTER.
+│ │ +3. **DARK**s means the *nightly* dark frames.
+│ │ +  * Dark frames are not taken every night. It's often missing. Thus, the code has a flexibility for the user to combine nightly dark frames, use dark of different nights (by providing relative paths), or completely ignore dark subtraction process.
+│ │ +4. Unfortunately, dark current often do not follow linear law (pixel value is not proportional to EXPTIME). Therefore, it is best to simply mask hot dark pixels and interpolate the pixel value based on nearby ones at the last stage, rather than relying on DARK frames.
+│ │ +5. As dark current changes abruptly over the temperature, a difficulty is that the locations/severity of such "bad" pixels may vary not only over time, but also on the efficiency of the cooling system. Although it's rare, the system *can* suffer from cooling problem, and therefore, the MASK frames must be differ on such nights (this can even be seen from visual inspection). Sometimes the pixels should be masked are permanently changed.
+│ │ +
+│ │ +* ``mdark``, ``mflat``, ``mfrin`` : master dark, flat, fringe
+│ │ +* ``ifrin`` : the initial fringes (LV3, i.e., after dark/flat corrections). The master fringe is the combination of the ifrin frames.
+│ │ +* ``imask``, ``dmask``, ``mmask`` : initial input mask (given a priori), dark mask (based on nightly dark frames), master mask (made by combining imask and nightly dark, if exists)
+│ │ +
+│ │ +### 1-2. A Short Summary of Data Reduction Steps
+│ │ +(``lv`` means "level")
+│ │ +1. ``lv0``: The original, very raw data (32-bit int, not 16-bit; so wasting double the storage, unfortunately..).
+│ │  2. ``lv1``: After vertical pattern subtraction (32-bit int)
+│ │  3. ``lv2``: Fourier pattern removal. (32-bit float)
+│ │     - ``lv2`` is *the* **"raw" data**, if it were not for those artificial patterns.
+│ │     - Thus, now the remaining reduction processes are similar to usual observations.
+│ │  4. ``lv3``: DARK/FLAT correction and FIXPIX using MASK frames. The nominal "preprocessed" image (32-bit float).
+│ │ +   - FIXPIX means the interpolation of pixels indicated by MASK. The name originates from IRAF.PROTO.FIXPIX task.
+│ │  5. ``lv4``: After CR rejection and FRINGE subtraction, (32-bit float).
+│ │ -    - Rarely, CR rejection corrupts the image severely by detecting too many cosmic rays (see CRNPIX in the header).
+│ │ +    - Rarely, CR rejection corrupts the image severely by detecting too many cosmic rays (see CRNPIX in the header). If such thing happens, you may want to either turn off CR rejection, or manually find the best parameters for the CR rejection.
+│ │      - The sky in IR (JHK bands) can change rather quickly, so that the fringe subtraction may only increase the artifact. Also, fringe subtraction has only marginal effect in the final Stokes' parameter (BachYP+2022, in prep). Thus, we recommend skip the fringe subtraction.
+│ │  
+│ │ -<details><summary><u>A note (click)<\u></summary>
+│ │ +<details><summary><u>An idea (click)</u></summary>
+│ │  <p>
+│ │  
+│ │  Below is just an idea, not actually implemented:
+│ │  - In the vertical pattern subtraction by median value along the column, the output may contain integer + 0.5 pixel value. Meanwhile, NIC has saturation at well below 10k ADU, and therefore, the range of ``-32,768`` to ``32,767`` is more than enough to store all meaningful data. Combining these two information, `NICpolpy` **multiplies 2** to the vertical-pattern-subtracted images, and store it as `int16` to save storage by half for this intermediate data. Just in case, by default, any pixel larger than 15000 (`maxval`) or smaller than -15000 (`minval`) will be replaced by -32768 (`blankval` or ``"BLANK"`` in FITS header).
+│ │  
+│ │  
+│ │  </p>
+│ │  </details>
+│ │  
+│ │ -### 1-2. A Short Summary of the Output Files/Directories
+│ │ +### 1-3. A Short Summary of the Output Files/Directories
+│ │  After reduction, you may freely remove LV1 and 2 data to save your storage. They are intermediate data produced just in case. A size of single FITS frame is
+│ │  - ``lv0``: 4.2 MB
+│ │  - ``lv1``: 4.2 MB
+│ │  - ``lv2``: 4.2 MB
+│ │  - ``lv3``: 280 kB * 2 = 560 kB (o-/e-ray splitted)
+│ │  - ``lv4``: 280 kB * 2 = 560 kB (o-/e-ray splitted)
+│ │  - ``logs/``: 12.8 MB (MFLAT) + 3.3 MB (IMASK) + [~ 15 MB/DARK_EXPTIME] + [~3.3 MB/DARKMASK] + something more...
+│ │  In total, the log directory (by default ``__logs/``) will be likely \~ 50 MB. For 10-set observation at NIC, i.e., 40 frames per filter = 120 FITS frames, will have LV0 \~ LV1 \~ LV2 \~ 0.5 GB, LV3 \~ LV4 \~ 0.1 GB thus in total, <\~ 2 GB.
+│ │  
+│ │ -Names:
+│ │ -* mdark, mflat, mfrin : master dark, flat, fringe
+│ │ -* ifrin : the initial fringes (LV3, i.e., after dark/flat corrections). The master fringe is the combination of the ifrin frames.
+│ │ -* imask, dmask, mmask : initial input mask (given a priori), dark mask (based on nightly dark frames), master mask (made by combining imask and nightly dark, if exists)
+│ │ -
+│ │  
+│ │ +# TODO
+│ │ +* Refactor ``ysfitsutilpy`` and ``ysphotutilpy``
+│ │ +  * Currently, ``NICpolpy`` contains a snapshot of ``ysfitsutilpy`` and ``ysphotutilpy``, which is an undesirable way (especially because of the other package dependency). If there is a critical need for significantly updating NICpolpy in the future, I may re-implement these.
+│ │  Copyright 2019-2022 Yoonsoo P. Bach
+│ │  
+│ │  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+│ │  
+│ │  1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+│ │  
+│ │  2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+│ │ ├── encoding
+│ │ │ @@ -1 +1 @@
+│ │ │ -us-ascii
+│ │ │ +utf-8
+│ │   --- NICpolpy-0.1.3/nicpolpy/NICPolReduc.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/NICPolReduc.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/phot.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/phot.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/prepare.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/prepare.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/preproc.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/preproc.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/util.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/util.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/__init__.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/airmass.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/airmass.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/astroim.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/astroim.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/astrometry.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/astrometry.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/combutil.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/combutil.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/filemgmt.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/filemgmt.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/fitting.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/fitting.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/hduutil.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/hduutil.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/docstrings.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/docstrings.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imarith.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imarith.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imcombine.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imcombine.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imcopy.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imcopy.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imsmooth.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/imsmooth.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/util_comb.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/util_comb.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/util_lmedian.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/util_lmedian.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/imutil/util_reject.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/imutil/util_reject.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/misc.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/misc.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/preproc.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/preproc.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysfitsutilpy4nicpolpy/tests/test_misc.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysfitsutilpy4nicpolpy/tests/test_misc.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/apphot.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/apphot.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/background.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/background.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/center.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/center.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/daopsf.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/daopsf.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/growth.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/growth.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/polarimetry.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/polarimetry.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/queryutil.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/queryutil.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/seputil.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/seputil.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/tests/test_background.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/tests/test_background.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/nicpolpy/ysphotutilpy4nicpolpy/util.py
+│ ├── +++ NICpolpy-0.1.4/nicpolpy/ysphotutilpy4nicpolpy/util.py
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/readme_images/ap_selection.png
+│ ├── +++ NICpolpy-0.1.4/readme_images/ap_selection.png
+│ │┄ Files identical despite different names
+│ │   --- NICpolpy-0.1.3/setup.cfg
+│ ├── +++ NICpolpy-0.1.4/setup.cfg
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [metadata]
+│ │  name = NICpolpy
+│ │ -version = 0.1.3
+│ │ +version = 0.1.4
+│ │  description = Nishi-Harima Astronomical Observatory (NHAO) Near-Infrared Camera (NIC) polarimetry pipeline.
+│ │  long_description = file: README.md, LICENSE
+│ │  long_description_content_type = text/markdown; charset=UTF-8
+│ │  url = https://github.com/ysBach/NICpolpy
+│ │  author = Yoonsoo P. Bach
+│ │  author_email = ysbach93@gmail.com,
+│ │  license = BSD 3-clause

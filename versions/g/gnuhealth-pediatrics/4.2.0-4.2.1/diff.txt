@@ -1,0 +1,226 @@
+--- tmp/gnuhealth_pediatrics-4.2.0.tar.gz
++++ tmp/gnuhealth_pediatrics-4.2.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "gnuhealth_pediatrics-4.2.0.tar", last modified: Sat Feb 11 21:57:19 2023, max compression
+│ +gzip compressed data, was "gnuhealth_pediatrics-4.2.1.tar", last modified: Fri Apr  7 10:19:22 2023, max compression
+│   --- gnuhealth_pediatrics-4.2.0.tar
+├── +++ gnuhealth_pediatrics-4.2.1.tar
+│ ├── file list
+│ │ @@ -1,51 +1,51 @@
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:19.562787 gnuhealth_pediatrics-4.2.0/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    35147 2022-11-28 22:17:48.000000 gnuhealth_pediatrics-4.2.0/COPYING
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       54 2022-11-28 22:17:48.000000 gnuhealth_pediatrics-4.2.0/MANIFEST.in
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     5708 2023-02-11 21:57:19.562641 gnuhealth_pediatrics-4.2.0/PKG-INFO
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     4826 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/README.rst
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     1167 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/__init__.py
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:19.559836 gnuhealth_pediatrics-4.2.0/data/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      625 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/data/gnuhealth_commands.xml
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:19.559916 gnuhealth_pediatrics-4.2.0/doc/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      562 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/doc/index.rst
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:19.562157 gnuhealth_pediatrics-4.2.0/gnuhealth_pediatrics.egg-info/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     5708 2023-02-11 21:57:19.000000 gnuhealth_pediatrics-4.2.0/gnuhealth_pediatrics.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     1588 2023-02-11 21:57:19.000000 gnuhealth_pediatrics-4.2.0/gnuhealth_pediatrics.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:57:19.000000 gnuhealth_pediatrics-4.2.0/gnuhealth_pediatrics.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       72 2023-02-11 21:57:19.000000 gnuhealth_pediatrics-4.2.0/gnuhealth_pediatrics.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:57:19.000000 gnuhealth_pediatrics-4.2.0/gnuhealth_pediatrics.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       17 2023-02-11 21:57:19.000000 gnuhealth_pediatrics-4.2.0/gnuhealth_pediatrics.egg-info/requires.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)        8 2023-02-11 21:57:19.000000 gnuhealth_pediatrics-4.2.0/gnuhealth_pediatrics.egg-info/top_level.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    25239 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/health_pediatrics.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      925 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/health_pediatrics_report.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     5923 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/health_pediatrics_view.xml
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:19.559984 gnuhealth_pediatrics-4.2.0/icons/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     4939 2022-11-28 22:17:48.000000 gnuhealth_pediatrics-4.2.0/icons/baby_boy_sitting.svg
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:19.560894 gnuhealth_pediatrics-4.2.0/locale/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    36173 2023-02-11 12:36:12.000000 gnuhealth_pediatrics-4.2.0/locale/ar.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    31883 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/locale/de.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    36002 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/locale/el.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    32158 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/locale/es.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    32518 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/locale/fr.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    31865 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/locale/it_IT.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    31407 2022-11-28 22:17:48.000000 gnuhealth_pediatrics-4.2.0/locale/ja_JP.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    28078 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/locale/lo.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    32046 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/locale/pt_BR.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    27973 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/locale/zh_CN.po
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:19.560983 gnuhealth_pediatrics-4.2.0/report/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    43483 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/report/newborn_card.fodt
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:19.561073 gnuhealth_pediatrics-4.2.0/security/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     7761 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/security/access_rights.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       38 2023-02-11 21:57:19.562825 gnuhealth_pediatrics-4.2.0/setup.cfg
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     3655 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/setup.py
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:19.561211 gnuhealth_pediatrics-4.2.0/tests/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      237 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/tests/__init__.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      608 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/tests/test_health_pediatrics.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      175 2023-02-11 12:44:33.000000 gnuhealth_pediatrics-4.2.0/tryton.cfg
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:57:19.561650 gnuhealth_pediatrics-4.2.0/view/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      869 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/view/gnuhealth_neonatal_apgar.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      566 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/view/gnuhealth_neonatal_apgar_tree.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     6598 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/view/gnuhealth_newborn.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      511 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/view/gnuhealth_newborn_tree.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     4098 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/view/gnuhealth_pediatric_symptoms_checklist.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      344 2023-01-18 16:33:08.000000 gnuhealth_pediatrics-4.2.0/view/gnuhealth_pediatric_symptoms_checklist_tree.xml
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:22.115683 gnuhealth_pediatrics-4.2.1/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    35147 2022-11-28 22:17:48.000000 gnuhealth_pediatrics-4.2.1/COPYING
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       54 2022-11-28 22:17:48.000000 gnuhealth_pediatrics-4.2.1/MANIFEST.in
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     5708 2023-04-07 10:19:22.115538 gnuhealth_pediatrics-4.2.1/PKG-INFO
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     4826 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/README.rst
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     1167 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/__init__.py
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:22.112836 gnuhealth_pediatrics-4.2.1/data/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      625 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/data/gnuhealth_commands.xml
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:22.112905 gnuhealth_pediatrics-4.2.1/doc/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      562 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/doc/index.rst
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:22.115052 gnuhealth_pediatrics-4.2.1/gnuhealth_pediatrics.egg-info/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     5708 2023-04-07 10:19:22.000000 gnuhealth_pediatrics-4.2.1/gnuhealth_pediatrics.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     1588 2023-04-07 10:19:22.000000 gnuhealth_pediatrics-4.2.1/gnuhealth_pediatrics.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:19:22.000000 gnuhealth_pediatrics-4.2.1/gnuhealth_pediatrics.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       72 2023-04-07 10:19:22.000000 gnuhealth_pediatrics-4.2.1/gnuhealth_pediatrics.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:19:22.000000 gnuhealth_pediatrics-4.2.1/gnuhealth_pediatrics.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       17 2023-04-07 10:19:22.000000 gnuhealth_pediatrics-4.2.1/gnuhealth_pediatrics.egg-info/requires.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)        8 2023-04-07 10:19:22.000000 gnuhealth_pediatrics-4.2.1/gnuhealth_pediatrics.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    25239 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/health_pediatrics.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      925 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/health_pediatrics_report.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     5923 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/health_pediatrics_view.xml
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:22.112972 gnuhealth_pediatrics-4.2.1/icons/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     4939 2022-11-28 22:17:48.000000 gnuhealth_pediatrics-4.2.1/icons/baby_boy_sitting.svg
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:22.113815 gnuhealth_pediatrics-4.2.1/locale/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    36173 2023-02-11 12:36:12.000000 gnuhealth_pediatrics-4.2.1/locale/ar.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    31883 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/locale/de.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    36002 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/locale/el.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    32158 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/locale/es.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    32518 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/locale/fr.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    31865 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/locale/it_IT.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    31407 2022-11-28 22:17:48.000000 gnuhealth_pediatrics-4.2.1/locale/ja_JP.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    28078 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/locale/lo.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    32046 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/locale/pt_BR.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    27973 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/locale/zh_CN.po
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:22.113902 gnuhealth_pediatrics-4.2.1/report/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    43483 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/report/newborn_card.fodt
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:22.113987 gnuhealth_pediatrics-4.2.1/security/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     7761 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/security/access_rights.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       38 2023-04-07 10:19:22.115721 gnuhealth_pediatrics-4.2.1/setup.cfg
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     3655 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/setup.py
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:22.114134 gnuhealth_pediatrics-4.2.1/tests/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      237 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/tests/__init__.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      608 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/tests/test_health_pediatrics.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      175 2023-04-07 09:37:21.000000 gnuhealth_pediatrics-4.2.1/tryton.cfg
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:19:22.114546 gnuhealth_pediatrics-4.2.1/view/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      869 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/view/gnuhealth_neonatal_apgar.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      566 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/view/gnuhealth_neonatal_apgar_tree.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     6598 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/view/gnuhealth_newborn.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      511 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/view/gnuhealth_newborn_tree.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     4098 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/view/gnuhealth_pediatric_symptoms_checklist.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      344 2023-04-07 09:17:52.000000 gnuhealth_pediatrics-4.2.1/view/gnuhealth_pediatric_symptoms_checklist_tree.xml
+│ │   --- gnuhealth_pediatrics-4.2.0/COPYING
+│ ├── +++ gnuhealth_pediatrics-4.2.1/COPYING
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/PKG-INFO
+│ ├── +++ gnuhealth_pediatrics-4.2.1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gnuhealth_pediatrics
+│ │ -Version: 4.2.0
+│ │ +Version: 4.2.1
+│ │  Summary: GNU Health pediatrics package
+│ │  Home-page: https://www.gnuhealth.org
+│ │  Download-URL: http://ftp.gnu.org/gnu/health/
+│ │  Author: GNU Solidario
+│ │  Author-email: health@gnusolidario.org
+│ │  License: GPL-3
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │   --- gnuhealth_pediatrics-4.2.0/README.rst
+│ ├── +++ gnuhealth_pediatrics-4.2.1/README.rst
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/__init__.py
+│ ├── +++ gnuhealth_pediatrics-4.2.1/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/data/gnuhealth_commands.xml
+│ ├── +++ gnuhealth_pediatrics-4.2.1/data/gnuhealth_commands.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/doc/index.rst
+│ ├── +++ gnuhealth_pediatrics-4.2.1/doc/index.rst
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/gnuhealth_pediatrics.egg-info/PKG-INFO
+│ ├── +++ gnuhealth_pediatrics-4.2.1/gnuhealth_pediatrics.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gnuhealth-pediatrics
+│ │ -Version: 4.2.0
+│ │ +Version: 4.2.1
+│ │  Summary: GNU Health pediatrics package
+│ │  Home-page: https://www.gnuhealth.org
+│ │  Download-URL: http://ftp.gnu.org/gnu/health/
+│ │  Author: GNU Solidario
+│ │  Author-email: health@gnusolidario.org
+│ │  License: GPL-3
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │   --- gnuhealth_pediatrics-4.2.0/gnuhealth_pediatrics.egg-info/SOURCES.txt
+│ ├── +++ gnuhealth_pediatrics-4.2.1/gnuhealth_pediatrics.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/health_pediatrics.py
+│ ├── +++ gnuhealth_pediatrics-4.2.1/health_pediatrics.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/health_pediatrics_report.xml
+│ ├── +++ gnuhealth_pediatrics-4.2.1/health_pediatrics_report.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/health_pediatrics_view.xml
+│ ├── +++ gnuhealth_pediatrics-4.2.1/health_pediatrics_view.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/icons/baby_boy_sitting.svg
+│ ├── +++ gnuhealth_pediatrics-4.2.1/icons/baby_boy_sitting.svg
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/locale/ar.po
+│ ├── +++ gnuhealth_pediatrics-4.2.1/locale/ar.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/locale/de.po
+│ ├── +++ gnuhealth_pediatrics-4.2.1/locale/de.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/locale/el.po
+│ ├── +++ gnuhealth_pediatrics-4.2.1/locale/el.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/locale/es.po
+│ ├── +++ gnuhealth_pediatrics-4.2.1/locale/es.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/locale/fr.po
+│ ├── +++ gnuhealth_pediatrics-4.2.1/locale/fr.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/locale/it_IT.po
+│ ├── +++ gnuhealth_pediatrics-4.2.1/locale/it_IT.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/locale/ja_JP.po
+│ ├── +++ gnuhealth_pediatrics-4.2.1/locale/ja_JP.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/locale/lo.po
+│ ├── +++ gnuhealth_pediatrics-4.2.1/locale/lo.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/locale/pt_BR.po
+│ ├── +++ gnuhealth_pediatrics-4.2.1/locale/pt_BR.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/locale/zh_CN.po
+│ ├── +++ gnuhealth_pediatrics-4.2.1/locale/zh_CN.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/report/newborn_card.fodt
+│ ├── +++ gnuhealth_pediatrics-4.2.1/report/newborn_card.fodt
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/security/access_rights.xml
+│ ├── +++ gnuhealth_pediatrics-4.2.1/security/access_rights.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/setup.py
+│ ├── +++ gnuhealth_pediatrics-4.2.1/setup.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/tests/test_health_pediatrics.py
+│ ├── +++ gnuhealth_pediatrics-4.2.1/tests/test_health_pediatrics.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/view/gnuhealth_neonatal_apgar.xml
+│ ├── +++ gnuhealth_pediatrics-4.2.1/view/gnuhealth_neonatal_apgar.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/view/gnuhealth_neonatal_apgar_tree.xml
+│ ├── +++ gnuhealth_pediatrics-4.2.1/view/gnuhealth_neonatal_apgar_tree.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/view/gnuhealth_newborn.xml
+│ ├── +++ gnuhealth_pediatrics-4.2.1/view/gnuhealth_newborn.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_pediatrics-4.2.0/view/gnuhealth_pediatric_symptoms_checklist.xml
+│ ├── +++ gnuhealth_pediatrics-4.2.1/view/gnuhealth_pediatric_symptoms_checklist.xml
+│ │┄ Files identical despite different names

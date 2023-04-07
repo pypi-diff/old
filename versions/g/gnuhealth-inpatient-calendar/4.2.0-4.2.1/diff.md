@@ -1,0 +1,204 @@
+# Comparing `tmp/gnuhealth_inpatient_calendar-4.2.0.tar.gz` & `tmp/gnuhealth_inpatient_calendar-4.2.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "gnuhealth_inpatient_calendar-4.2.0.tar", last modified: Sat Feb 11 21:56:40 2023, max compression
++gzip compressed data, was "gnuhealth_inpatient_calendar-4.2.1.tar", last modified: Fri Apr  7 10:18:41 2023, max compression
+```
+
+## Comparing `gnuhealth_inpatient_calendar-4.2.0.tar` & `gnuhealth_inpatient_calendar-4.2.1.tar`
+
+### file list
+
+```diff
+@@ -1,38 +1,38 @@
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:40.532381 gnuhealth_inpatient_calendar-4.2.0/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    35147 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.0/COPYING
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       54 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.0/MANIFEST.in
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     5748 2023-02-11 21:56:40.532240 gnuhealth_inpatient_calendar-4.2.0/PKG-INFO
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     4826 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/README.rst
+--rwxr-xr-x   0 lfm       (1001) lfm       (1001)     1131 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/__init__.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:40.530439 gnuhealth_inpatient_calendar-4.2.0/doc/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      391 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/doc/index.rst
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:40.531883 gnuhealth_inpatient_calendar-4.2.0/gnuhealth_inpatient_calendar.egg-info/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     5748 2023-02-11 21:56:40.000000 gnuhealth_inpatient_calendar-4.2.0/gnuhealth_inpatient_calendar.egg-info/PKG-INFO
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1104 2023-02-11 21:56:40.000000 gnuhealth_inpatient_calendar-4.2.0/gnuhealth_inpatient_calendar.egg-info/SOURCES.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:56:40.000000 gnuhealth_inpatient_calendar-4.2.0/gnuhealth_inpatient_calendar.egg-info/dependency_links.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       88 2023-02-11 21:56:40.000000 gnuhealth_inpatient_calendar-4.2.0/gnuhealth_inpatient_calendar.egg-info/entry_points.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:56:40.000000 gnuhealth_inpatient_calendar-4.2.0/gnuhealth_inpatient_calendar.egg-info/not-zip-safe
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       53 2023-02-11 21:56:40.000000 gnuhealth_inpatient_calendar-4.2.0/gnuhealth_inpatient_calendar.egg-info/requires.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        8 2023-02-11 21:56:40.000000 gnuhealth_inpatient_calendar-4.2.0/gnuhealth_inpatient_calendar.egg-info/top_level.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     4321 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/health_inpatient_calendar.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1058 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/health_inpatient_calendar_view.xml
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:40.531127 gnuhealth_inpatient_calendar-4.2.0/locale/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      870 2023-02-11 12:36:12.000000 gnuhealth_inpatient_calendar-4.2.0/locale/ar.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      694 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.0/locale/de.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      759 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.0/locale/el.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      743 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.0/locale/es.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      720 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.0/locale/fr.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      709 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/locale/it_IT.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      852 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.0/locale/ja_JP.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      318 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/locale/lo.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      732 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.0/locale/pt_BR.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      357 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/locale/zh_CN.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       38 2023-02-11 21:56:40.532419 gnuhealth_inpatient_calendar-4.2.0/setup.cfg
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     3638 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/setup.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:40.531263 gnuhealth_inpatient_calendar-4.2.0/tests/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      837 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/tests/__init__.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1230 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/tests/test_health_inpatient_calendar.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      117 2023-02-11 12:44:33.000000 gnuhealth_inpatient_calendar-4.2.0/tryton.cfg
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:40.531399 gnuhealth_inpatient_calendar-4.2.0/view/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      366 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/view/gnuhealth_calendar_hospital_bed.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      552 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.0/view/gnuhealth_calendar_inpatient_registration.xml
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:41.808323 gnuhealth_inpatient_calendar-4.2.1/
++-rw-r--r--   0 lfm       (1001) wheel        (0)    35147 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.1/COPYING
++-rw-r--r--   0 lfm       (1001) wheel        (0)       54 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.1/MANIFEST.in
++-rw-r--r--   0 lfm       (1001) wheel        (0)     5748 2023-04-07 10:18:41.808180 gnuhealth_inpatient_calendar-4.2.1/PKG-INFO
++-rw-r--r--   0 lfm       (1001) wheel        (0)     4826 2023-04-07 09:17:52.000000 gnuhealth_inpatient_calendar-4.2.1/README.rst
++-rwxr-xr-x   0 lfm       (1001) wheel        (0)     1131 2023-04-07 09:17:52.000000 gnuhealth_inpatient_calendar-4.2.1/__init__.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:41.806316 gnuhealth_inpatient_calendar-4.2.1/doc/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      391 2023-04-07 09:17:52.000000 gnuhealth_inpatient_calendar-4.2.1/doc/index.rst
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:41.807824 gnuhealth_inpatient_calendar-4.2.1/gnuhealth_inpatient_calendar.egg-info/
++-rw-r--r--   0 lfm       (1001) wheel        (0)     5748 2023-04-07 10:18:41.000000 gnuhealth_inpatient_calendar-4.2.1/gnuhealth_inpatient_calendar.egg-info/PKG-INFO
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1104 2023-04-07 10:18:41.000000 gnuhealth_inpatient_calendar-4.2.1/gnuhealth_inpatient_calendar.egg-info/SOURCES.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:18:41.000000 gnuhealth_inpatient_calendar-4.2.1/gnuhealth_inpatient_calendar.egg-info/dependency_links.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)       88 2023-04-07 10:18:41.000000 gnuhealth_inpatient_calendar-4.2.1/gnuhealth_inpatient_calendar.egg-info/entry_points.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:18:41.000000 gnuhealth_inpatient_calendar-4.2.1/gnuhealth_inpatient_calendar.egg-info/not-zip-safe
++-rw-r--r--   0 lfm       (1001) wheel        (0)       53 2023-04-07 10:18:41.000000 gnuhealth_inpatient_calendar-4.2.1/gnuhealth_inpatient_calendar.egg-info/requires.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        8 2023-04-07 10:18:41.000000 gnuhealth_inpatient_calendar-4.2.1/gnuhealth_inpatient_calendar.egg-info/top_level.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)     4321 2023-04-07 09:17:52.000000 gnuhealth_inpatient_calendar-4.2.1/health_inpatient_calendar.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1058 2023-04-07 09:17:52.000000 gnuhealth_inpatient_calendar-4.2.1/health_inpatient_calendar_view.xml
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:41.807026 gnuhealth_inpatient_calendar-4.2.1/locale/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      870 2023-02-11 12:36:12.000000 gnuhealth_inpatient_calendar-4.2.1/locale/ar.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)      694 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.1/locale/de.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)      759 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.1/locale/el.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)      743 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.1/locale/es.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)      720 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.1/locale/fr.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)      709 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.1/locale/it_IT.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)      852 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.1/locale/ja_JP.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)      318 2023-04-07 09:17:52.000000 gnuhealth_inpatient_calendar-4.2.1/locale/lo.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)      732 2022-11-28 22:17:48.000000 gnuhealth_inpatient_calendar-4.2.1/locale/pt_BR.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)      357 2023-01-18 16:33:08.000000 gnuhealth_inpatient_calendar-4.2.1/locale/zh_CN.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)       38 2023-04-07 10:18:41.808359 gnuhealth_inpatient_calendar-4.2.1/setup.cfg
++-rw-r--r--   0 lfm       (1001) wheel        (0)     3638 2023-04-07 09:17:52.000000 gnuhealth_inpatient_calendar-4.2.1/setup.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:41.807180 gnuhealth_inpatient_calendar-4.2.1/tests/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      837 2023-04-07 09:17:52.000000 gnuhealth_inpatient_calendar-4.2.1/tests/__init__.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1230 2023-04-07 09:17:52.000000 gnuhealth_inpatient_calendar-4.2.1/tests/test_health_inpatient_calendar.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)      117 2023-04-07 09:37:21.000000 gnuhealth_inpatient_calendar-4.2.1/tryton.cfg
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:41.807329 gnuhealth_inpatient_calendar-4.2.1/view/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      366 2023-04-07 09:17:52.000000 gnuhealth_inpatient_calendar-4.2.1/view/gnuhealth_calendar_hospital_bed.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      552 2023-04-07 09:17:52.000000 gnuhealth_inpatient_calendar-4.2.1/view/gnuhealth_calendar_inpatient_registration.xml
+```
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/COPYING` & `gnuhealth_inpatient_calendar-4.2.1/COPYING`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/PKG-INFO` & `gnuhealth_inpatient_calendar-4.2.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gnuhealth_inpatient_calendar
+-Version: 4.2.0
++Version: 4.2.1
+ Summary: GNU Health package for hospitalization calendar functionality
+ Home-page: https://www.gnuhealth.org
+ Download-URL: http://ftp.gnu.org/gnu/health/
+ Author: GNU Solidario
+ Author-email: health@gnusolidario.org
+ License: GPL-3
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/README.rst` & `gnuhealth_inpatient_calendar-4.2.1/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/__init__.py` & `gnuhealth_inpatient_calendar-4.2.1/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/gnuhealth_inpatient_calendar.egg-info/PKG-INFO` & `gnuhealth_inpatient_calendar-4.2.1/gnuhealth_inpatient_calendar.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gnuhealth-inpatient-calendar
+-Version: 4.2.0
++Version: 4.2.1
+ Summary: GNU Health package for hospitalization calendar functionality
+ Home-page: https://www.gnuhealth.org
+ Download-URL: http://ftp.gnu.org/gnu/health/
+ Author: GNU Solidario
+ Author-email: health@gnusolidario.org
+ License: GPL-3
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/gnuhealth_inpatient_calendar.egg-info/SOURCES.txt` & `gnuhealth_inpatient_calendar-4.2.1/gnuhealth_inpatient_calendar.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/health_inpatient_calendar.py` & `gnuhealth_inpatient_calendar-4.2.1/health_inpatient_calendar.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/health_inpatient_calendar_view.xml` & `gnuhealth_inpatient_calendar-4.2.1/health_inpatient_calendar_view.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/locale/ar.po` & `gnuhealth_inpatient_calendar-4.2.1/locale/ar.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/locale/de.po` & `gnuhealth_inpatient_calendar-4.2.1/locale/de.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/locale/el.po` & `gnuhealth_inpatient_calendar-4.2.1/locale/el.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/locale/es.po` & `gnuhealth_inpatient_calendar-4.2.1/locale/es.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/locale/fr.po` & `gnuhealth_inpatient_calendar-4.2.1/locale/fr.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/locale/it_IT.po` & `gnuhealth_inpatient_calendar-4.2.1/locale/it_IT.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/locale/ja_JP.po` & `gnuhealth_inpatient_calendar-4.2.1/locale/ja_JP.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/locale/pt_BR.po` & `gnuhealth_inpatient_calendar-4.2.1/locale/pt_BR.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/setup.py` & `gnuhealth_inpatient_calendar-4.2.1/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/tests/__init__.py` & `gnuhealth_inpatient_calendar-4.2.1/tests/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/tests/test_health_inpatient_calendar.py` & `gnuhealth_inpatient_calendar-4.2.1/tests/test_health_inpatient_calendar.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_inpatient_calendar-4.2.0/view/gnuhealth_calendar_inpatient_registration.xml` & `gnuhealth_inpatient_calendar-4.2.1/view/gnuhealth_calendar_inpatient_registration.xml`
+
+ * *Files identical despite different names*
+

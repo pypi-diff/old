@@ -1,0 +1,348 @@
+# Comparing `tmp/gnuhealth_caldav-4.2.0.tar.gz` & `tmp/gnuhealth_caldav-4.2.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "gnuhealth_caldav-4.2.0.tar", last modified: Sat Feb 11 21:55:03 2023, max compression
++gzip compressed data, was "gnuhealth_caldav-4.2.1.tar", last modified: Fri Apr  7 10:17:07 2023, max compression
+```
+
+## Comparing `gnuhealth_caldav-4.2.0.tar` & `gnuhealth_caldav-4.2.1.tar`
+
+### file list
+
+```diff
+@@ -1,70 +1,70 @@
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:55:03.490521 gnuhealth_caldav-4.2.0/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1237 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/Changelog
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      140 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/MANIFEST.in
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     5827 2023-02-11 21:55:03.490274 gnuhealth_caldav-4.2.0/PKG-INFO
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     4826 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/README.rst
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1287 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/__init__.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    10720 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/caldav.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     7843 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/calendar.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    73393 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/calendar_.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:55:03.484568 gnuhealth_caldav-4.2.0/data/
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:55:03.485730 gnuhealth_caldav-4.2.0/data/messages/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     2306 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/data/messages/messages.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      969 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/exceptions.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:55:03.489206 gnuhealth_caldav-4.2.0/gnuhealth_caldav.egg-info/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     5827 2023-02-11 21:55:03.000000 gnuhealth_caldav-4.2.0/gnuhealth_caldav.egg-info/PKG-INFO
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1974 2023-02-11 21:55:03.000000 gnuhealth_caldav-4.2.0/gnuhealth_caldav.egg-info/SOURCES.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:55:03.000000 gnuhealth_caldav-4.2.0/gnuhealth_caldav.egg-info/dependency_links.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       64 2023-02-11 21:55:03.000000 gnuhealth_caldav-4.2.0/gnuhealth_caldav.egg-info/entry_points.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:55:03.000000 gnuhealth_caldav-4.2.0/gnuhealth_caldav.egg-info/not-zip-safe
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       83 2023-02-11 21:55:03.000000 gnuhealth_caldav-4.2.0/gnuhealth_caldav.egg-info/requires.txt
+--rw-r--r--   0 lfm       (1001) lfm       (1001)        8 2023-02-11 21:55:03.000000 gnuhealth_caldav-4.2.0/gnuhealth_caldav.egg-info/top_level.txt
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:55:03.487108 gnuhealth_caldav-4.2.0/locale/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    24917 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/bg.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    26285 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/ca.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    21364 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/cs.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    26485 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/locale/de.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    26392 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/es.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    26454 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/locale/fr.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    24113 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/hu_HU.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    25303 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/locale/it_IT.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    21429 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/ja_JP.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    25057 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/lo.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    21364 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/lt.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    22946 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/nl.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    22095 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/pl.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    25868 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/pt_BR.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    30385 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/ru.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    24967 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.0/locale/sl.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    16996 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/locale/zh_CN.po
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1108 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/res.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:55:03.487177 gnuhealth_caldav-4.2.0/security/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     7667 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/security/access_rights.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)       38 2023-02-11 21:55:03.490574 gnuhealth_caldav-4.2.0/setup.cfg
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     3272 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/setup.py
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:55:03.487403 gnuhealth_caldav-4.2.0/tests/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      320 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/tests/__init__.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     6599 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/tests/scenario_health_caldav.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      630 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/tests/test_health_caldav.py
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      142 2023-02-11 12:44:33.000000 gnuhealth_caldav-4.2.0/tryton.cfg
+-drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:55:03.488722 gnuhealth_caldav-4.2.0/view/
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      475 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/attendee_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      384 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/attendee_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      798 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/calendar_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      356 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/calendar_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      355 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/category_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      330 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/category_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1958 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/event_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      619 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/event_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      680 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/event_tree_occurence.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      477 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/exdate_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      456 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/exdate_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1365 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/exrule_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      356 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/exrule_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      355 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/location_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      330 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/location_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      477 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/rdate_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      456 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/rdate_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)     1365 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/rrule_form.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)      356 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/view/rrule_tree.xml
+--rw-r--r--   0 lfm       (1001) lfm       (1001)    31428 2023-01-18 16:33:07.000000 gnuhealth_caldav-4.2.0/webdav.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:17:07.716724 gnuhealth_caldav-4.2.1/
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1237 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/Changelog
++-rw-r--r--   0 lfm       (1001) wheel        (0)      140 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/MANIFEST.in
++-rw-r--r--   0 lfm       (1001) wheel        (0)     5827 2023-04-07 10:17:07.716589 gnuhealth_caldav-4.2.1/PKG-INFO
++-rw-r--r--   0 lfm       (1001) wheel        (0)     4826 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/README.rst
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1287 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/__init__.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)    10720 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/caldav.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)     7843 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/calendar.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)    73393 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/calendar_.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:17:07.711449 gnuhealth_caldav-4.2.1/data/
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:17:07.712589 gnuhealth_caldav-4.2.1/data/messages/
++-rw-r--r--   0 lfm       (1001) wheel        (0)     2306 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/data/messages/messages.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      969 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/exceptions.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:17:07.715808 gnuhealth_caldav-4.2.1/gnuhealth_caldav.egg-info/
++-rw-r--r--   0 lfm       (1001) wheel        (0)     5827 2023-04-07 10:17:07.000000 gnuhealth_caldav-4.2.1/gnuhealth_caldav.egg-info/PKG-INFO
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1974 2023-04-07 10:17:07.000000 gnuhealth_caldav-4.2.1/gnuhealth_caldav.egg-info/SOURCES.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:17:07.000000 gnuhealth_caldav-4.2.1/gnuhealth_caldav.egg-info/dependency_links.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)       64 2023-04-07 10:17:07.000000 gnuhealth_caldav-4.2.1/gnuhealth_caldav.egg-info/entry_points.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:17:07.000000 gnuhealth_caldav-4.2.1/gnuhealth_caldav.egg-info/not-zip-safe
++-rw-r--r--   0 lfm       (1001) wheel        (0)       83 2023-04-07 10:17:07.000000 gnuhealth_caldav-4.2.1/gnuhealth_caldav.egg-info/requires.txt
++-rw-r--r--   0 lfm       (1001) wheel        (0)        8 2023-04-07 10:17:07.000000 gnuhealth_caldav-4.2.1/gnuhealth_caldav.egg-info/top_level.txt
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:17:07.713854 gnuhealth_caldav-4.2.1/locale/
++-rw-r--r--   0 lfm       (1001) wheel        (0)    24917 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/bg.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    26285 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/ca.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    21364 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/cs.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    26485 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/locale/de.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    26392 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/es.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    26454 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/locale/fr.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    24113 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/hu_HU.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    25303 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/locale/it_IT.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    21429 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/ja_JP.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    25057 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/lo.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    21364 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/lt.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    22946 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/nl.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    22095 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/pl.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    25868 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/pt_BR.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    30385 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/ru.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    24967 2022-11-28 22:17:47.000000 gnuhealth_caldav-4.2.1/locale/sl.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)    16996 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/locale/zh_CN.po
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1108 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/res.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:17:07.713945 gnuhealth_caldav-4.2.1/security/
++-rw-r--r--   0 lfm       (1001) wheel        (0)     7667 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/security/access_rights.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)       38 2023-04-07 10:17:07.716758 gnuhealth_caldav-4.2.1/setup.cfg
++-rw-r--r--   0 lfm       (1001) wheel        (0)     3272 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/setup.py
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:17:07.714157 gnuhealth_caldav-4.2.1/tests/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      320 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/tests/__init__.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)     6599 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/tests/scenario_health_caldav.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)      630 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/tests/test_health_caldav.py
++-rw-r--r--   0 lfm       (1001) wheel        (0)      142 2023-04-07 09:37:21.000000 gnuhealth_caldav-4.2.1/tryton.cfg
++drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:17:07.715363 gnuhealth_caldav-4.2.1/view/
++-rw-r--r--   0 lfm       (1001) wheel        (0)      475 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/attendee_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      384 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/attendee_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      798 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/calendar_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      356 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/calendar_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      355 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/category_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      330 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/category_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1958 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/event_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      619 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/event_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      680 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/event_tree_occurence.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      477 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/exdate_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      456 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/exdate_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1365 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/exrule_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      356 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/exrule_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      355 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/location_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      330 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/location_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      477 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/rdate_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      456 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/rdate_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)     1365 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/rrule_form.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)      356 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/view/rrule_tree.xml
++-rw-r--r--   0 lfm       (1001) wheel        (0)    31428 2023-04-07 09:17:52.000000 gnuhealth_caldav-4.2.1/webdav.py
+```
+
+### Comparing `gnuhealth_caldav-4.2.0/Changelog` & `gnuhealth_caldav-4.2.1/Changelog`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/PKG-INFO` & `gnuhealth_caldav-4.2.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gnuhealth_caldav
+-Version: 4.2.0
++Version: 4.2.1
+ Summary: CalDAV package for GNU Health and Python3
+ Home-page: https://www.gnuhealth.org
+ Download-URL: http://ftp.gnu.org/gnu/health/
+ Author: GNU Solidario
+ Author-email: health@gnusolidario.org
+ License: GPL-3
+ Keywords: GNUHealth calendar caldav
+```
+
+### Comparing `gnuhealth_caldav-4.2.0/README.rst` & `gnuhealth_caldav-4.2.1/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/__init__.py` & `gnuhealth_caldav-4.2.1/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/caldav.py` & `gnuhealth_caldav-4.2.1/caldav.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/calendar.xml` & `gnuhealth_caldav-4.2.1/calendar.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/calendar_.py` & `gnuhealth_caldav-4.2.1/calendar_.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/data/messages/messages.xml` & `gnuhealth_caldav-4.2.1/data/messages/messages.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/exceptions.py` & `gnuhealth_caldav-4.2.1/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/gnuhealth_caldav.egg-info/PKG-INFO` & `gnuhealth_caldav-4.2.1/gnuhealth_caldav.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: gnuhealth-caldav
+-Version: 4.2.0
++Version: 4.2.1
+ Summary: CalDAV package for GNU Health and Python3
+ Home-page: https://www.gnuhealth.org
+ Download-URL: http://ftp.gnu.org/gnu/health/
+ Author: GNU Solidario
+ Author-email: health@gnusolidario.org
+ License: GPL-3
+ Keywords: GNUHealth calendar caldav
+```
+
+### Comparing `gnuhealth_caldav-4.2.0/gnuhealth_caldav.egg-info/SOURCES.txt` & `gnuhealth_caldav-4.2.1/gnuhealth_caldav.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/bg.po` & `gnuhealth_caldav-4.2.1/locale/bg.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/ca.po` & `gnuhealth_caldav-4.2.1/locale/ca.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/cs.po` & `gnuhealth_caldav-4.2.1/locale/cs.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/de.po` & `gnuhealth_caldav-4.2.1/locale/de.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/es.po` & `gnuhealth_caldav-4.2.1/locale/es.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/fr.po` & `gnuhealth_caldav-4.2.1/locale/fr.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/hu_HU.po` & `gnuhealth_caldav-4.2.1/locale/hu_HU.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/it_IT.po` & `gnuhealth_caldav-4.2.1/locale/it_IT.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/ja_JP.po` & `gnuhealth_caldav-4.2.1/locale/ja_JP.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/lo.po` & `gnuhealth_caldav-4.2.1/locale/lo.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/lt.po` & `gnuhealth_caldav-4.2.1/locale/lt.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/nl.po` & `gnuhealth_caldav-4.2.1/locale/nl.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/pl.po` & `gnuhealth_caldav-4.2.1/locale/pl.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/pt_BR.po` & `gnuhealth_caldav-4.2.1/locale/pt_BR.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/ru.po` & `gnuhealth_caldav-4.2.1/locale/ru.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/sl.po` & `gnuhealth_caldav-4.2.1/locale/sl.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/locale/zh_CN.po` & `gnuhealth_caldav-4.2.1/locale/zh_CN.po`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/res.py` & `gnuhealth_caldav-4.2.1/res.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/security/access_rights.xml` & `gnuhealth_caldav-4.2.1/security/access_rights.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/setup.py` & `gnuhealth_caldav-4.2.1/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/tests/scenario_health_caldav.py` & `gnuhealth_caldav-4.2.1/tests/scenario_health_caldav.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/tests/test_health_caldav.py` & `gnuhealth_caldav-4.2.1/tests/test_health_caldav.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/view/calendar_form.xml` & `gnuhealth_caldav-4.2.1/view/calendar_form.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/view/event_form.xml` & `gnuhealth_caldav-4.2.1/view/event_form.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/view/event_tree.xml` & `gnuhealth_caldav-4.2.1/view/event_tree.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/view/event_tree_occurence.xml` & `gnuhealth_caldav-4.2.1/view/event_tree_occurence.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/view/exrule_form.xml` & `gnuhealth_caldav-4.2.1/view/exrule_form.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/view/rrule_form.xml` & `gnuhealth_caldav-4.2.1/view/rrule_form.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `gnuhealth_caldav-4.2.0/webdav.py` & `gnuhealth_caldav-4.2.1/webdav.py`
+
+ * *Files identical despite different names*
+

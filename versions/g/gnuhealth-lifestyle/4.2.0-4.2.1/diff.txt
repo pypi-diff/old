@@ -1,0 +1,227 @@
+--- tmp/gnuhealth_lifestyle-4.2.0.tar.gz
++++ tmp/gnuhealth_lifestyle-4.2.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "gnuhealth_lifestyle-4.2.0.tar", last modified: Sat Feb 11 21:56:53 2023, max compression
+│ +gzip compressed data, was "gnuhealth_lifestyle-4.2.1.tar", last modified: Fri Apr  7 10:18:54 2023, max compression
+│   --- gnuhealth_lifestyle-4.2.0.tar
+├── +++ gnuhealth_lifestyle-4.2.1.tar
+│ ├── file list
+│ │ @@ -1,53 +1,53 @@
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:53.671615 gnuhealth_lifestyle-4.2.0/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    35147 2022-11-28 22:17:48.000000 gnuhealth_lifestyle-4.2.0/COPYING
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       54 2022-11-28 22:17:48.000000 gnuhealth_lifestyle-4.2.0/MANIFEST.in
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     5728 2023-02-11 21:56:53.671470 gnuhealth_lifestyle-4.2.0/PKG-INFO
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     4826 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/README.rst
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     1188 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/__init__.py
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:53.668448 gnuhealth_lifestyle-4.2.0/data/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     3262 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/data/diets_beliefs.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    44522 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/data/recreational_drugs.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     1615 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/data/vegetarian_types.xml
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:53.668516 gnuhealth_lifestyle-4.2.0/doc/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      571 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/doc/index.rst
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:53.670924 gnuhealth_lifestyle-4.2.0/gnuhealth_lifestyle.egg-info/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     5728 2023-02-11 21:56:53.000000 gnuhealth_lifestyle-4.2.0/gnuhealth_lifestyle.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     1879 2023-02-11 21:56:53.000000 gnuhealth_lifestyle-4.2.0/gnuhealth_lifestyle.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:56:53.000000 gnuhealth_lifestyle-4.2.0/gnuhealth_lifestyle.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       70 2023-02-11 21:56:53.000000 gnuhealth_lifestyle-4.2.0/gnuhealth_lifestyle.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:56:53.000000 gnuhealth_lifestyle-4.2.0/gnuhealth_lifestyle.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       17 2023-02-11 21:56:53.000000 gnuhealth_lifestyle-4.2.0/gnuhealth_lifestyle.egg-info/requires.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)        8 2023-02-11 21:56:53.000000 gnuhealth_lifestyle-4.2.0/gnuhealth_lifestyle.egg-info/top_level.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    17229 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/health_lifestyle.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     6050 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/health_lifestyle_view.xml
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:53.669391 gnuhealth_lifestyle-4.2.0/locale/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    46236 2023-02-11 12:36:12.000000 gnuhealth_lifestyle-4.2.0/locale/ar.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    42137 2022-11-28 22:17:48.000000 gnuhealth_lifestyle-4.2.0/locale/de.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    47868 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/locale/el.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    38362 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/locale/es.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    42625 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/locale/fr.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    39467 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/locale/it_IT.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    36115 2022-11-28 22:17:48.000000 gnuhealth_lifestyle-4.2.0/locale/ja_JP.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    30599 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/locale/lo.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    39253 2022-11-28 22:17:48.000000 gnuhealth_lifestyle-4.2.0/locale/pt_BR.po
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    36582 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/locale/zh_CN.po
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:53.669479 gnuhealth_lifestyle-4.2.0/security/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    27273 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/security/access_rights.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       38 2023-02-11 21:56:53.671657 gnuhealth_lifestyle-4.2.0/setup.cfg
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     3617 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/setup.py
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:53.669623 gnuhealth_lifestyle-4.2.0/tests/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      236 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/tests/__init__.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      604 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/tests/test_health_lifestyle.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      198 2023-02-11 12:44:33.000000 gnuhealth_lifestyle-4.2.0/tryton.cfg
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:53.670384 gnuhealth_lifestyle-4.2.0/view/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      503 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/view/gnuhealth_diet_belief_form.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      352 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/view/gnuhealth_diet_belief_tree.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     2660 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/view/gnuhealth_drugs_recreational.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      422 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/view/gnuhealth_drugs_recreational_tree.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     8866 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/view/gnuhealth_patient.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      585 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/view/gnuhealth_patient_cage.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      529 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/view/gnuhealth_patient_cage_tree.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      367 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/view/gnuhealth_recreational_drugs.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      312 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/view/gnuhealth_recreational_drugs_tree.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      400 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/view/gnuhealth_vegetarian_types_form.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      356 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.0/view/gnuhealth_vegetarian_types_tree.xml
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:54.615364 gnuhealth_lifestyle-4.2.1/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    35147 2022-11-28 22:17:48.000000 gnuhealth_lifestyle-4.2.1/COPYING
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       54 2022-11-28 22:17:48.000000 gnuhealth_lifestyle-4.2.1/MANIFEST.in
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     5728 2023-04-07 10:18:54.615230 gnuhealth_lifestyle-4.2.1/PKG-INFO
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     4826 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/README.rst
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     1188 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/__init__.py
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:54.612425 gnuhealth_lifestyle-4.2.1/data/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     3262 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/data/diets_beliefs.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    44522 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/data/recreational_drugs.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     1615 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/data/vegetarian_types.xml
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:54.612494 gnuhealth_lifestyle-4.2.1/doc/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      571 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/doc/index.rst
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:54.614737 gnuhealth_lifestyle-4.2.1/gnuhealth_lifestyle.egg-info/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     5728 2023-04-07 10:18:54.000000 gnuhealth_lifestyle-4.2.1/gnuhealth_lifestyle.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     1879 2023-04-07 10:18:54.000000 gnuhealth_lifestyle-4.2.1/gnuhealth_lifestyle.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:18:54.000000 gnuhealth_lifestyle-4.2.1/gnuhealth_lifestyle.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       70 2023-04-07 10:18:54.000000 gnuhealth_lifestyle-4.2.1/gnuhealth_lifestyle.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:18:54.000000 gnuhealth_lifestyle-4.2.1/gnuhealth_lifestyle.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       17 2023-04-07 10:18:54.000000 gnuhealth_lifestyle-4.2.1/gnuhealth_lifestyle.egg-info/requires.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)        8 2023-04-07 10:18:54.000000 gnuhealth_lifestyle-4.2.1/gnuhealth_lifestyle.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    17229 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/health_lifestyle.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     6050 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/health_lifestyle_view.xml
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:54.613316 gnuhealth_lifestyle-4.2.1/locale/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    46236 2023-02-11 12:36:12.000000 gnuhealth_lifestyle-4.2.1/locale/ar.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    42137 2022-11-28 22:17:48.000000 gnuhealth_lifestyle-4.2.1/locale/de.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    47868 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/locale/el.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    38362 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/locale/es.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    42625 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/locale/fr.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    39467 2023-01-18 16:33:08.000000 gnuhealth_lifestyle-4.2.1/locale/it_IT.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    36115 2022-11-28 22:17:48.000000 gnuhealth_lifestyle-4.2.1/locale/ja_JP.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    30599 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/locale/lo.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    39253 2022-11-28 22:17:48.000000 gnuhealth_lifestyle-4.2.1/locale/pt_BR.po
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    36582 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/locale/zh_CN.po
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:54.613399 gnuhealth_lifestyle-4.2.1/security/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    27273 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/security/access_rights.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       38 2023-04-07 10:18:54.615399 gnuhealth_lifestyle-4.2.1/setup.cfg
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     3617 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/setup.py
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:54.613534 gnuhealth_lifestyle-4.2.1/tests/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      236 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/tests/__init__.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      604 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/tests/test_health_lifestyle.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      198 2023-04-07 09:37:21.000000 gnuhealth_lifestyle-4.2.1/tryton.cfg
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:54.614235 gnuhealth_lifestyle-4.2.1/view/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      503 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/view/gnuhealth_diet_belief_form.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      352 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/view/gnuhealth_diet_belief_tree.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     2660 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/view/gnuhealth_drugs_recreational.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      422 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/view/gnuhealth_drugs_recreational_tree.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     8866 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/view/gnuhealth_patient.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      585 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/view/gnuhealth_patient_cage.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      529 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/view/gnuhealth_patient_cage_tree.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      367 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/view/gnuhealth_recreational_drugs.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      312 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/view/gnuhealth_recreational_drugs_tree.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      400 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/view/gnuhealth_vegetarian_types_form.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      356 2023-04-07 09:17:52.000000 gnuhealth_lifestyle-4.2.1/view/gnuhealth_vegetarian_types_tree.xml
+│ │   --- gnuhealth_lifestyle-4.2.0/COPYING
+│ ├── +++ gnuhealth_lifestyle-4.2.1/COPYING
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/PKG-INFO
+│ ├── +++ gnuhealth_lifestyle-4.2.1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gnuhealth_lifestyle
+│ │ -Version: 4.2.0
+│ │ +Version: 4.2.1
+│ │  Summary: GNU Health package for person lifestyle assessment
+│ │  Home-page: https://www.gnuhealth.org
+│ │  Download-URL: http://ftp.gnu.org/gnu/health/
+│ │  Author: GNU Solidario
+│ │  Author-email: health@gnusolidario.org
+│ │  License: GPL-3
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │   --- gnuhealth_lifestyle-4.2.0/README.rst
+│ ├── +++ gnuhealth_lifestyle-4.2.1/README.rst
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/__init__.py
+│ ├── +++ gnuhealth_lifestyle-4.2.1/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/data/diets_beliefs.xml
+│ ├── +++ gnuhealth_lifestyle-4.2.1/data/diets_beliefs.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/data/recreational_drugs.xml
+│ ├── +++ gnuhealth_lifestyle-4.2.1/data/recreational_drugs.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/data/vegetarian_types.xml
+│ ├── +++ gnuhealth_lifestyle-4.2.1/data/vegetarian_types.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/doc/index.rst
+│ ├── +++ gnuhealth_lifestyle-4.2.1/doc/index.rst
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/gnuhealth_lifestyle.egg-info/PKG-INFO
+│ ├── +++ gnuhealth_lifestyle-4.2.1/gnuhealth_lifestyle.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gnuhealth-lifestyle
+│ │ -Version: 4.2.0
+│ │ +Version: 4.2.1
+│ │  Summary: GNU Health package for person lifestyle assessment
+│ │  Home-page: https://www.gnuhealth.org
+│ │  Download-URL: http://ftp.gnu.org/gnu/health/
+│ │  Author: GNU Solidario
+│ │  Author-email: health@gnusolidario.org
+│ │  License: GPL-3
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │   --- gnuhealth_lifestyle-4.2.0/gnuhealth_lifestyle.egg-info/SOURCES.txt
+│ ├── +++ gnuhealth_lifestyle-4.2.1/gnuhealth_lifestyle.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/health_lifestyle.py
+│ ├── +++ gnuhealth_lifestyle-4.2.1/health_lifestyle.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/health_lifestyle_view.xml
+│ ├── +++ gnuhealth_lifestyle-4.2.1/health_lifestyle_view.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/locale/ar.po
+│ ├── +++ gnuhealth_lifestyle-4.2.1/locale/ar.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/locale/de.po
+│ ├── +++ gnuhealth_lifestyle-4.2.1/locale/de.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/locale/el.po
+│ ├── +++ gnuhealth_lifestyle-4.2.1/locale/el.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/locale/es.po
+│ ├── +++ gnuhealth_lifestyle-4.2.1/locale/es.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/locale/fr.po
+│ ├── +++ gnuhealth_lifestyle-4.2.1/locale/fr.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/locale/it_IT.po
+│ ├── +++ gnuhealth_lifestyle-4.2.1/locale/it_IT.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/locale/ja_JP.po
+│ ├── +++ gnuhealth_lifestyle-4.2.1/locale/ja_JP.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/locale/lo.po
+│ ├── +++ gnuhealth_lifestyle-4.2.1/locale/lo.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/locale/pt_BR.po
+│ ├── +++ gnuhealth_lifestyle-4.2.1/locale/pt_BR.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/locale/zh_CN.po
+│ ├── +++ gnuhealth_lifestyle-4.2.1/locale/zh_CN.po
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/security/access_rights.xml
+│ ├── +++ gnuhealth_lifestyle-4.2.1/security/access_rights.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/setup.py
+│ ├── +++ gnuhealth_lifestyle-4.2.1/setup.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/tests/test_health_lifestyle.py
+│ ├── +++ gnuhealth_lifestyle-4.2.1/tests/test_health_lifestyle.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/view/gnuhealth_drugs_recreational.xml
+│ ├── +++ gnuhealth_lifestyle-4.2.1/view/gnuhealth_drugs_recreational.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/view/gnuhealth_patient.xml
+│ ├── +++ gnuhealth_lifestyle-4.2.1/view/gnuhealth_patient.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/view/gnuhealth_patient_cage.xml
+│ ├── +++ gnuhealth_lifestyle-4.2.1/view/gnuhealth_patient_cage.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_lifestyle-4.2.0/view/gnuhealth_patient_cage_tree.xml
+│ ├── +++ gnuhealth_lifestyle-4.2.1/view/gnuhealth_patient_cage_tree.xml
+│ │┄ Files identical despite different names

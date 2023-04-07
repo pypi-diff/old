@@ -1,0 +1,127 @@
+--- tmp/gnuhealth_icd10pcs-4.2.0.tar.gz
++++ tmp/gnuhealth_icd10pcs-4.2.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "gnuhealth_icd10pcs-4.2.0.tar", last modified: Sat Feb 11 21:56:09 2023, max compression
+│ +gzip compressed data, was "gnuhealth_icd10pcs-4.2.1.tar", last modified: Fri Apr  7 10:18:10 2023, max compression
+│   --- gnuhealth_icd10pcs-4.2.0.tar
+├── +++ gnuhealth_icd10pcs-4.2.1.tar
+│ ├── file list
+│ │ @@ -1,27 +1,27 @@
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:09.778645 gnuhealth_icd10pcs-4.2.0/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)    35147 2022-11-28 22:17:47.000000 gnuhealth_icd10pcs-4.2.0/COPYING
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       54 2022-11-28 22:17:48.000000 gnuhealth_icd10pcs-4.2.0/MANIFEST.in
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     5731 2023-02-11 21:56:09.778482 gnuhealth_icd10pcs-4.2.0/PKG-INFO
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     4826 2023-01-18 16:33:08.000000 gnuhealth_icd10pcs-4.2.0/README.rst
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      786 2023-01-18 16:33:08.000000 gnuhealth_icd10pcs-4.2.0/__init__.py
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:09.775632 gnuhealth_icd10pcs-4.2.0/data/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)  5102915 2023-01-18 16:33:08.000000 gnuhealth_icd10pcs-4.2.0/data/icd_10_pcs_2009_part1.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)  5102219 2023-01-18 16:33:08.000000 gnuhealth_icd10pcs-4.2.0/data/icd_10_pcs_2009_part2.xml
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)  4556139 2023-01-18 16:33:08.000000 gnuhealth_icd10pcs-4.2.0/data/icd_10_pcs_2009_part3.xml
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:09.777627 gnuhealth_icd10pcs-4.2.0/doc/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     1221 2023-01-18 16:33:08.000000 gnuhealth_icd10pcs-4.2.0/doc/index.rst
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:09.778340 gnuhealth_icd10pcs-4.2.0/gnuhealth_icd10pcs.egg-info/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     5731 2023-02-11 21:56:09.000000 gnuhealth_icd10pcs-4.2.0/gnuhealth_icd10pcs.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      642 2023-02-11 21:56:09.000000 gnuhealth_icd10pcs-4.2.0/gnuhealth_icd10pcs.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:56:09.000000 gnuhealth_icd10pcs-4.2.0/gnuhealth_icd10pcs.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       68 2023-02-11 21:56:09.000000 gnuhealth_icd10pcs-4.2.0/gnuhealth_icd10pcs.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)        1 2023-02-11 21:56:09.000000 gnuhealth_icd10pcs-4.2.0/gnuhealth_icd10pcs.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       17 2023-02-11 21:56:09.000000 gnuhealth_icd10pcs-4.2.0/gnuhealth_icd10pcs.egg-info/requires.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)        8 2023-02-11 21:56:09.000000 gnuhealth_icd10pcs-4.2.0/gnuhealth_icd10pcs.egg-info/top_level.txt
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      787 2023-01-18 16:33:08.000000 gnuhealth_icd10pcs-4.2.0/health_icd10pcs.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)       38 2023-02-11 21:56:09.778716 gnuhealth_icd10pcs-4.2.0/setup.cfg
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)     3614 2023-01-18 16:33:08.000000 gnuhealth_icd10pcs-4.2.0/setup.py
+│ │ -drwxr-xr-x   0 lfm       (1001) lfm       (1001)        0 2023-02-11 21:56:09.777779 gnuhealth_icd10pcs-4.2.0/tests/
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      235 2023-01-18 16:33:08.000000 gnuhealth_icd10pcs-4.2.0/tests/__init__.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      600 2023-01-18 16:33:08.000000 gnuhealth_icd10pcs-4.2.0/tests/test_health_icd10pcs.py
+│ │ --rw-r--r--   0 lfm       (1001) lfm       (1001)      153 2023-02-11 12:44:33.000000 gnuhealth_icd10pcs-4.2.0/tryton.cfg
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:10.685409 gnuhealth_icd10pcs-4.2.1/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)    35147 2022-11-28 22:17:47.000000 gnuhealth_icd10pcs-4.2.1/COPYING
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       54 2022-11-28 22:17:48.000000 gnuhealth_icd10pcs-4.2.1/MANIFEST.in
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     5731 2023-04-07 10:18:10.684984 gnuhealth_icd10pcs-4.2.1/PKG-INFO
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     4826 2023-04-07 09:17:52.000000 gnuhealth_icd10pcs-4.2.1/README.rst
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      786 2023-04-07 09:17:52.000000 gnuhealth_icd10pcs-4.2.1/__init__.py
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:10.667186 gnuhealth_icd10pcs-4.2.1/data/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)  5102915 2023-04-07 09:17:52.000000 gnuhealth_icd10pcs-4.2.1/data/icd_10_pcs_2009_part1.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)  5102219 2023-04-07 09:17:52.000000 gnuhealth_icd10pcs-4.2.1/data/icd_10_pcs_2009_part2.xml
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)  4556139 2023-04-07 09:17:52.000000 gnuhealth_icd10pcs-4.2.1/data/icd_10_pcs_2009_part3.xml
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:10.682207 gnuhealth_icd10pcs-4.2.1/doc/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     1221 2023-04-07 09:17:52.000000 gnuhealth_icd10pcs-4.2.1/doc/index.rst
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:10.684563 gnuhealth_icd10pcs-4.2.1/gnuhealth_icd10pcs.egg-info/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     5731 2023-04-07 10:18:10.000000 gnuhealth_icd10pcs-4.2.1/gnuhealth_icd10pcs.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      642 2023-04-07 10:18:10.000000 gnuhealth_icd10pcs-4.2.1/gnuhealth_icd10pcs.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:18:10.000000 gnuhealth_icd10pcs-4.2.1/gnuhealth_icd10pcs.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       68 2023-04-07 10:18:10.000000 gnuhealth_icd10pcs-4.2.1/gnuhealth_icd10pcs.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)        1 2023-04-07 10:18:10.000000 gnuhealth_icd10pcs-4.2.1/gnuhealth_icd10pcs.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       17 2023-04-07 10:18:10.000000 gnuhealth_icd10pcs-4.2.1/gnuhealth_icd10pcs.egg-info/requires.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)        8 2023-04-07 10:18:10.000000 gnuhealth_icd10pcs-4.2.1/gnuhealth_icd10pcs.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      787 2023-04-07 09:17:52.000000 gnuhealth_icd10pcs-4.2.1/health_icd10pcs.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)       38 2023-04-07 10:18:10.685523 gnuhealth_icd10pcs-4.2.1/setup.cfg
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)     3614 2023-04-07 09:17:52.000000 gnuhealth_icd10pcs-4.2.1/setup.py
+│ │ +drwxr-xr-x   0 lfm       (1001) wheel        (0)        0 2023-04-07 10:18:10.682715 gnuhealth_icd10pcs-4.2.1/tests/
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      235 2023-04-07 09:17:52.000000 gnuhealth_icd10pcs-4.2.1/tests/__init__.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      600 2023-04-07 09:17:52.000000 gnuhealth_icd10pcs-4.2.1/tests/test_health_icd10pcs.py
+│ │ +-rw-r--r--   0 lfm       (1001) wheel        (0)      153 2023-04-07 09:37:21.000000 gnuhealth_icd10pcs-4.2.1/tryton.cfg
+│ │   --- gnuhealth_icd10pcs-4.2.0/COPYING
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/COPYING
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_icd10pcs-4.2.0/PKG-INFO
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gnuhealth_icd10pcs
+│ │ -Version: 4.2.0
+│ │ +Version: 4.2.1
+│ │  Summary: GNU Health ICD10-PCS package. Procedures Coding System
+│ │  Home-page: https://www.gnuhealth.org
+│ │  Download-URL: http://ftp.gnu.org/gnu/health/
+│ │  Author: GNU Solidario
+│ │  Author-email: health@gnusolidario.org
+│ │  License: GPL-3
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │   --- gnuhealth_icd10pcs-4.2.0/README.rst
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/README.rst
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_icd10pcs-4.2.0/__init__.py
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_icd10pcs-4.2.0/data/icd_10_pcs_2009_part1.xml
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/data/icd_10_pcs_2009_part1.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_icd10pcs-4.2.0/data/icd_10_pcs_2009_part2.xml
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/data/icd_10_pcs_2009_part2.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_icd10pcs-4.2.0/data/icd_10_pcs_2009_part3.xml
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/data/icd_10_pcs_2009_part3.xml
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_icd10pcs-4.2.0/doc/index.rst
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/doc/index.rst
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_icd10pcs-4.2.0/gnuhealth_icd10pcs.egg-info/PKG-INFO
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/gnuhealth_icd10pcs.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gnuhealth-icd10pcs
+│ │ -Version: 4.2.0
+│ │ +Version: 4.2.1
+│ │  Summary: GNU Health ICD10-PCS package. Procedures Coding System
+│ │  Home-page: https://www.gnuhealth.org
+│ │  Download-URL: http://ftp.gnu.org/gnu/health/
+│ │  Author: GNU Solidario
+│ │  Author-email: health@gnusolidario.org
+│ │  License: GPL-3
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │   --- gnuhealth_icd10pcs-4.2.0/gnuhealth_icd10pcs.egg-info/SOURCES.txt
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/gnuhealth_icd10pcs.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_icd10pcs-4.2.0/health_icd10pcs.py
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/health_icd10pcs.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_icd10pcs-4.2.0/setup.py
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/setup.py
+│ │┄ Files identical despite different names
+│ │   --- gnuhealth_icd10pcs-4.2.0/tests/test_health_icd10pcs.py
+│ ├── +++ gnuhealth_icd10pcs-4.2.1/tests/test_health_icd10pcs.py
+│ │┄ Files identical despite different names
