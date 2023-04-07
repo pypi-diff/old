@@ -1,0 +1,317 @@
+--- tmp/utilfunction-0.1.0.tar.gz
++++ tmp/utilfunction-0.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "utilfunction-0.1.0.tar", last modified: Fri Apr  7 11:43:38 2023, max compression
+│ +gzip compressed data, was "utilfunction-0.1.1.tar", last modified: Fri Apr  7 11:45:42 2023, max compression
+│   --- utilfunction-0.1.0.tar
+├── +++ utilfunction-0.1.1.tar
+│ ├── file list
+│ │ @@ -1,14 +1,14 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 11:43:38.480465 utilfunction-0.1.0/
+│ │ --rw-rw-rw-   0        0        0    11357 2023-04-07 11:02:26.000000 utilfunction-0.1.0/LICENSE
+│ │ --rw-rw-rw-   0        0        0     3067 2023-04-07 11:43:38.479462 utilfunction-0.1.0/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     2149 2023-04-07 11:41:39.000000 utilfunction-0.1.0/README.md
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-07 11:43:38.480465 utilfunction-0.1.0/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1600 2023-04-07 11:43:21.000000 utilfunction-0.1.0/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 11:43:38.475010 utilfunction-0.1.0/utilfunction.egg-info/
+│ │ --rw-rw-rw-   0        0        0     3067 2023-04-07 11:43:38.000000 utilfunction-0.1.0/utilfunction.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      225 2023-04-07 11:43:38.000000 utilfunction-0.1.0/utilfunction.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-07 11:43:38.000000 utilfunction-0.1.0/utilfunction.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       14 2023-04-07 11:43:38.000000 utilfunction-0.1.0/utilfunction.egg-info/top_level.txt
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 11:43:38.478460 utilfunction-0.1.0/utilfunctions/
+│ │ --rw-rw-rw-   0        0        0      774 2023-04-07 11:41:44.000000 utilfunction-0.1.0/utilfunctions/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1182 2023-04-07 11:32:27.000000 utilfunction-0.1.0/utilfunctions/path_finder.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 11:45:42.117612 utilfunction-0.1.1/
+│ │ +-rw-rw-rw-   0        0        0    11357 2023-04-07 11:02:26.000000 utilfunction-0.1.1/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     3056 2023-04-07 11:45:42.116601 utilfunction-0.1.1/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     2140 2023-04-07 11:45:07.000000 utilfunction-0.1.1/README.md
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 11:45:42.118608 utilfunction-0.1.1/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1597 2023-04-07 11:45:16.000000 utilfunction-0.1.1/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 11:45:42.099497 utilfunction-0.1.1/utilfunction/
+│ │ +-rw-rw-rw-   0        0        0      773 2023-04-07 11:44:55.000000 utilfunction-0.1.1/utilfunction/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1182 2023-04-07 11:44:57.000000 utilfunction-0.1.1/utilfunction/path_finder.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 11:45:42.114470 utilfunction-0.1.1/utilfunction.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     3056 2023-04-07 11:45:42.000000 utilfunction-0.1.1/utilfunction.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      223 2023-04-07 11:45:42.000000 utilfunction-0.1.1/utilfunction.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 11:45:42.000000 utilfunction-0.1.1/utilfunction.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       13 2023-04-07 11:45:42.000000 utilfunction-0.1.1/utilfunction.egg-info/top_level.txt
+│ │   --- utilfunction-0.1.0/LICENSE
+│ ├── +++ utilfunction-0.1.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- utilfunction-0.1.0/PKG-INFO
+│ ├── +++ utilfunction-0.1.1/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: utilfunction
+│ │ -Version: 0.1.0
+│ │ -Summary: The Python package utilfunctions wraps and distributes useful functions in an easy-to-use way.
+│ │ -Home-page: https://github.com/DSDanielPark/utilfunctions
+│ │ +Version: 0.1.1
+│ │ +Summary: The Python package utilfunction wraps and distributes useful functions in an easy-to-use way.
+│ │ +Home-page: https://github.com/DSDanielPark/utilfunction
+│ │  Author: parkminwoo
+│ │  Author-email: parkminwoo1991@gmail.com
+│ │  Keywords: Utils,Utility,Preprocessing,Analysis
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Natural Language :: English
+│ │  Classifier: Programming Language :: Python
+│ │ @@ -16,51 +16,51 @@
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: Implementation :: CPython
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # util-functions
+│ │ -![Util-Func](https://img.shields.io/badge/pypi-utilfunctions-blue)
+│ │ -![Pypi Version](https://img.shields.io/pypi/v/utilfunctions.svg)
+│ │ +![Util-Func](https://img.shields.io/badge/pypi-utilfunction-blue)
+│ │ +![Pypi Version](https://img.shields.io/pypi/v/utilfunction.svg)
+│ │  [![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v2.0%20adopted-black.svg)](code_of_conduct.md)
+│ │  [![Python Version](https://img.shields.io/badge/python-3.6%2C3.7%2C3.8-black.svg)](code_of_conduct.md)
+│ │  ![Code convention](https://img.shields.io/badge/code%20convention-pep8-black)
+│ │  
+│ │ -The Python package utilfunctions wraps and distributes useful functions in an easy-to-use way. We have collected functions that are simpler in function than many distributed Python packages or whose category is ambiguous.
+│ │ +The Python package utilfunction wraps and distributes useful functions in an easy-to-use way. We have collected functions that are simpler in function than many distributed Python packages or whose category is ambiguous.
+│ │  
+│ │  <br>
+│ │  
+│ │  # Installation
+│ │  ```
+│ │ -pip install utilfunctions
+│ │ +pip install utilfunction
+│ │  ```
+│ │  
+│ │  <br>
+│ │  
+│ │  # Features
+│ │  `path_finder.py`: Find the path of a file or folder. 
+│ │  ```python
+│ │ -from utilfunctions import find_path
+│ │ +from utilfunction import find_path
+│ │  
+│ │  nii_file_list = find_path('./home', 'file', 'mask.nii.gz')
+│ │  ```
+│ │  
+│ │  <br>
+│ │  
+│ │  # How to Contribute
+│ │  Please create a pull request for any function that is useful and simple to reuse. Create a function, and write a tutorial with the same name as the function in the doc folder. Any snippet that you are comfortable with and use often will do. However, some contents may be revised and adjusted later for convenience.
+│ │  
+│ │ -1. Create a Python file containing functions in [`utilfunctions folder`](https://github.com/DSDanielPark/utilfunctions/tree/main/utifunc). You must include formatting and doc strings in your function.
+│ │ -2. Write brief explanations and examples in the [`doc folder`](https://github.com/DSDanielPark/utilfunctions/tree/main/doc)
+│ │ +1. Create a Python file containing functions in [`utilfunction folder`](https://github.com/DSDanielPark/utilfunction/tree/main/utifunc). You must include formatting and doc strings in your function.
+│ │ +2. Write brief explanations and examples in the [`doc folder`](https://github.com/DSDanielPark/utilfunction/tree/main/doc)
+│ │  3. Write a one-line code example in README.md
+│ │  5. Make a Pull Request
+│ │  <br>
+│ │  
+│ │ -Please refer to the `find_path` function in [`path_finder.py`](https://github.com/DSDanielPark/utilfunctions/blob/main/utifunc/path_finder.py).
+│ │ +Please refer to the `find_path` function in [`path_finder.py`](https://github.com/DSDanielPark/utilfunction/blob/main/utifunc/path_finder.py).
+│ │  
+│ │  <br>
+│ │  
+│ │  # Notice
+│ │  - This repo goes through a simple QA process, there are no major refactoring plans, and it's not a planned project, so it's in alpha.
+│ │  - If there is a reference, please list it at the top of each Python file.
+│ │  - Coverage of Python versions is subject to change. However, the code formatting is changed to black during the QA process.
+│ │   --- utilfunction-0.1.0/README.md
+│ ├── +++ utilfunction-0.1.1/README.md
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,45 +1,45 @@
+│ │  # util-functions
+│ │ -![Util-Func](https://img.shields.io/badge/pypi-utilfunctions-blue)
+│ │ -![Pypi Version](https://img.shields.io/pypi/v/utilfunctions.svg)
+│ │ +![Util-Func](https://img.shields.io/badge/pypi-utilfunction-blue)
+│ │ +![Pypi Version](https://img.shields.io/pypi/v/utilfunction.svg)
+│ │  [![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v2.0%20adopted-black.svg)](code_of_conduct.md)
+│ │  [![Python Version](https://img.shields.io/badge/python-3.6%2C3.7%2C3.8-black.svg)](code_of_conduct.md)
+│ │  ![Code convention](https://img.shields.io/badge/code%20convention-pep8-black)
+│ │  
+│ │ -The Python package utilfunctions wraps and distributes useful functions in an easy-to-use way. We have collected functions that are simpler in function than many distributed Python packages or whose category is ambiguous.
+│ │ +The Python package utilfunction wraps and distributes useful functions in an easy-to-use way. We have collected functions that are simpler in function than many distributed Python packages or whose category is ambiguous.
+│ │  
+│ │  <br>
+│ │  
+│ │  # Installation
+│ │  ```
+│ │ -pip install utilfunctions
+│ │ +pip install utilfunction
+│ │  ```
+│ │  
+│ │  <br>
+│ │  
+│ │  # Features
+│ │  `path_finder.py`: Find the path of a file or folder. 
+│ │  ```python
+│ │ -from utilfunctions import find_path
+│ │ +from utilfunction import find_path
+│ │  
+│ │  nii_file_list = find_path('./home', 'file', 'mask.nii.gz')
+│ │  ```
+│ │  
+│ │  <br>
+│ │  
+│ │  # How to Contribute
+│ │  Please create a pull request for any function that is useful and simple to reuse. Create a function, and write a tutorial with the same name as the function in the doc folder. Any snippet that you are comfortable with and use often will do. However, some contents may be revised and adjusted later for convenience.
+│ │  
+│ │ -1. Create a Python file containing functions in [`utilfunctions folder`](https://github.com/DSDanielPark/utilfunctions/tree/main/utifunc). You must include formatting and doc strings in your function.
+│ │ -2. Write brief explanations and examples in the [`doc folder`](https://github.com/DSDanielPark/utilfunctions/tree/main/doc)
+│ │ +1. Create a Python file containing functions in [`utilfunction folder`](https://github.com/DSDanielPark/utilfunction/tree/main/utifunc). You must include formatting and doc strings in your function.
+│ │ +2. Write brief explanations and examples in the [`doc folder`](https://github.com/DSDanielPark/utilfunction/tree/main/doc)
+│ │  3. Write a one-line code example in README.md
+│ │  5. Make a Pull Request
+│ │  <br>
+│ │  
+│ │ -Please refer to the `find_path` function in [`path_finder.py`](https://github.com/DSDanielPark/utilfunctions/blob/main/utifunc/path_finder.py).
+│ │ +Please refer to the `find_path` function in [`path_finder.py`](https://github.com/DSDanielPark/utilfunction/blob/main/utifunc/path_finder.py).
+│ │  
+│ │  <br>
+│ │  
+│ │  # Notice
+│ │  - This repo goes through a simple QA process, there are no major refactoring plans, and it's not a planned project, so it's in alpha.
+│ │  - If there is a reference, please list it at the top of each Python file.
+│ │  - Coverage of Python versions is subject to change. However, the code formatting is changed to black during the QA process.
+│ │   --- utilfunction-0.1.0/setup.py
+│ ├── +++ utilfunction-0.1.1/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import re
+│ │  
+│ │  from setuptools import find_packages
+│ │  from setuptools import setup
+│ │  
+│ │  
+│ │  def get_version():
+│ │ -    filename = "utilfunctions/__init__.py"
+│ │ +    filename = "utilfunction/__init__.py"
+│ │      with open(filename) as f:
+│ │          match = re.search(r"""^__version__ = ['"]([^'"]*)['"]""", f.read(), re.M)
+│ │      if not match:
+│ │          raise RuntimeError("{} doesn't contain __version__".format(filename))
+│ │      version = match.groups()[0]
+│ │      return version
+│ │  
+│ │ @@ -21,21 +21,21 @@
+│ │  
+│ │  
+│ │  version = get_version()
+│ │  
+│ │  
+│ │  setup(
+│ │      name="utilfunction",
+│ │ -    version="0.1.0",
+│ │ +    version="0.1.1",
+│ │      author="parkminwoo",
+│ │      author_email="parkminwoo1991@gmail.com",
+│ │ -    description="The Python package utilfunctions wraps and distributes useful functions in an easy-to-use way.",
+│ │ +    description="The Python package utilfunction wraps and distributes useful functions in an easy-to-use way.",
+│ │      long_description=get_long_description(),
+│ │      long_description_content_type="text/markdown",
+│ │ -    url="https://github.com/DSDanielPark/utilfunctions",
+│ │ +    url="https://github.com/DSDanielPark/utilfunction",
+│ │      packages=find_packages(),
+│ │      python_requires=">=3.6",
+│ │      install_requires=[],
+│ │      keywords="Utils, Utility, Preprocessing, Analysis",
+│ │      classifiers=[
+│ │          "Development Status :: 3 - Alpha",
+│ │          "Intended Audience :: Developers",
+│ │   --- utilfunction-0.1.0/utilfunction.egg-info/PKG-INFO
+│ ├── +++ utilfunction-0.1.1/utilfunction.egg-info/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: utilfunction
+│ │ -Version: 0.1.0
+│ │ -Summary: The Python package utilfunctions wraps and distributes useful functions in an easy-to-use way.
+│ │ -Home-page: https://github.com/DSDanielPark/utilfunctions
+│ │ +Version: 0.1.1
+│ │ +Summary: The Python package utilfunction wraps and distributes useful functions in an easy-to-use way.
+│ │ +Home-page: https://github.com/DSDanielPark/utilfunction
+│ │  Author: parkminwoo
+│ │  Author-email: parkminwoo1991@gmail.com
+│ │  Keywords: Utils,Utility,Preprocessing,Analysis
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Natural Language :: English
+│ │  Classifier: Programming Language :: Python
+│ │ @@ -16,51 +16,51 @@
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: Implementation :: CPython
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # util-functions
+│ │ -![Util-Func](https://img.shields.io/badge/pypi-utilfunctions-blue)
+│ │ -![Pypi Version](https://img.shields.io/pypi/v/utilfunctions.svg)
+│ │ +![Util-Func](https://img.shields.io/badge/pypi-utilfunction-blue)
+│ │ +![Pypi Version](https://img.shields.io/pypi/v/utilfunction.svg)
+│ │  [![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v2.0%20adopted-black.svg)](code_of_conduct.md)
+│ │  [![Python Version](https://img.shields.io/badge/python-3.6%2C3.7%2C3.8-black.svg)](code_of_conduct.md)
+│ │  ![Code convention](https://img.shields.io/badge/code%20convention-pep8-black)
+│ │  
+│ │ -The Python package utilfunctions wraps and distributes useful functions in an easy-to-use way. We have collected functions that are simpler in function than many distributed Python packages or whose category is ambiguous.
+│ │ +The Python package utilfunction wraps and distributes useful functions in an easy-to-use way. We have collected functions that are simpler in function than many distributed Python packages or whose category is ambiguous.
+│ │  
+│ │  <br>
+│ │  
+│ │  # Installation
+│ │  ```
+│ │ -pip install utilfunctions
+│ │ +pip install utilfunction
+│ │  ```
+│ │  
+│ │  <br>
+│ │  
+│ │  # Features
+│ │  `path_finder.py`: Find the path of a file or folder. 
+│ │  ```python
+│ │ -from utilfunctions import find_path
+│ │ +from utilfunction import find_path
+│ │  
+│ │  nii_file_list = find_path('./home', 'file', 'mask.nii.gz')
+│ │  ```
+│ │  
+│ │  <br>
+│ │  
+│ │  # How to Contribute
+│ │  Please create a pull request for any function that is useful and simple to reuse. Create a function, and write a tutorial with the same name as the function in the doc folder. Any snippet that you are comfortable with and use often will do. However, some contents may be revised and adjusted later for convenience.
+│ │  
+│ │ -1. Create a Python file containing functions in [`utilfunctions folder`](https://github.com/DSDanielPark/utilfunctions/tree/main/utifunc). You must include formatting and doc strings in your function.
+│ │ -2. Write brief explanations and examples in the [`doc folder`](https://github.com/DSDanielPark/utilfunctions/tree/main/doc)
+│ │ +1. Create a Python file containing functions in [`utilfunction folder`](https://github.com/DSDanielPark/utilfunction/tree/main/utifunc). You must include formatting and doc strings in your function.
+│ │ +2. Write brief explanations and examples in the [`doc folder`](https://github.com/DSDanielPark/utilfunction/tree/main/doc)
+│ │  3. Write a one-line code example in README.md
+│ │  5. Make a Pull Request
+│ │  <br>
+│ │  
+│ │ -Please refer to the `find_path` function in [`path_finder.py`](https://github.com/DSDanielPark/utilfunctions/blob/main/utifunc/path_finder.py).
+│ │ +Please refer to the `find_path` function in [`path_finder.py`](https://github.com/DSDanielPark/utilfunction/blob/main/utifunc/path_finder.py).
+│ │  
+│ │  <br>
+│ │  
+│ │  # Notice
+│ │  - This repo goes through a simple QA process, there are no major refactoring plans, and it's not a planned project, so it's in alpha.
+│ │  - If there is a reference, please list it at the top of each Python file.
+│ │  - Coverage of Python versions is subject to change. However, the code formatting is changed to black during the QA process.
+│ │   --- utilfunction-0.1.0/utilfunctions/__init__.py
+│ ├── +++ utilfunction-0.1.1/utilfunction/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -from utilfunctions.path_finder import find_path
+│ │ +from utilfunction.path_finder import find_path
+│ │  
+│ │  
+│ │  # coding=utf-8
+│ │  # Copyright 2023 parkminwoo Authors.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │   --- utilfunction-0.1.0/utilfunctions/path_finder.py
+│ ├── +++ utilfunction-0.1.1/utilfunction/path_finder.py
+│ │┄ Files identical despite different names

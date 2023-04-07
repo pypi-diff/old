@@ -1,0 +1,608 @@
+--- tmp/pymodaq_plugins_andor-0.1.0.tar.gz
++++ tmp/pymodaq_plugins_andor-0.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pymodaq_plugins_andor-0.1.0.tar", last modified: Wed Nov 10 20:45:31 2021, max compression
+│ +gzip compressed data, was "pymodaq_plugins_andor-0.1.1.tar", last modified: Fri Apr  7 11:51:17 2023, max compression
+│   --- pymodaq_plugins_andor-0.1.0.tar
+├── +++ pymodaq_plugins_andor-0.1.1.tar
+│ ├── file list
+│ │ @@ -1,47 +1,47 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.872358 pymodaq_plugins_andor-0.1.0/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1108 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       44 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2086 2021-11-10 20:45:31.872358 pymodaq_plugins_andor-0.1.0/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1172 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/README.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       38 2021-11-10 20:45:31.872358 pymodaq_plugins_andor-0.1.0/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1650 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.864357 pymodaq_plugins_andor-0.1.0/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.868358 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        5 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/VERSION
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      138 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.868358 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_move_plugins/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      483 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_move_plugins/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    11546 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_move_plugins/daq_move_Shamrock.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.868358 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        3 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.868358 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_0D/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      487 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_0D/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.872358 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_1D/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      487 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_1D/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     7237 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_1D/daq_1Dviewer_ShamrockCCD.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    10521 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_1D/daq_1Dviewer_ShamrockSCMOS.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.872358 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_2D/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      488 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_2D/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    27067 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_2D/daq_2Dviewer_AndorCCD.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    33080 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_2D/daq_2Dviewer_AndorSCMOS.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.872358 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_ND/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      487 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_ND/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.872358 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.872358 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk2/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk2/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    31075 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk2/sdk2.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.872358 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk3/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      787 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk3/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     8933 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk3/api.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     9713 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk3/sdk3.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     5180 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk3/sdk3cam.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2958 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk3/testNeo.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     8779 2021-11-10 20:45:20.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/shamrock_sdk.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2021-11-10 20:45:31.868358 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2086 2021-11-10 20:45:31.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1678 2021-11-10 20:45:31.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        1 2021-11-10 20:45:31.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       49 2021-11-10 20:45:31.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        5 2021-11-10 20:45:31.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       22 2021-11-10 20:45:31.000000 pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:17.002741 pymodaq_plugins_andor-0.1.1/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1108 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       44 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2057 2023-04-07 11:51:17.002741 pymodaq_plugins_andor-0.1.1/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1166 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/README.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 11:51:17.002741 pymodaq_plugins_andor-0.1.1/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1650 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:16.994741 pymodaq_plugins_andor-0.1.1/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:16.998741 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/VERSION
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      138 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:16.998741 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_move_plugins/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      483 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_move_plugins/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11558 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_move_plugins/daq_move_Shamrock.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:16.998741 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        3 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:16.998741 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_0D/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      487 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_0D/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:16.998741 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_1D/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      487 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_1D/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7237 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_1D/daq_1Dviewer_ShamrockCCD.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10521 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_1D/daq_1Dviewer_ShamrockSCMOS.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:16.998741 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_2D/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      488 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_2D/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    27147 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_2D/daq_2Dviewer_AndorCCD.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    33177 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_2D/daq_2Dviewer_AndorSCMOS.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:16.998741 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_ND/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      487 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_ND/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:16.998741 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:16.998741 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk2/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    31075 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk2/sdk2.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:17.002741 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk3/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      787 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk3/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8933 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk3/api.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9713 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk3/sdk3.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5180 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk3/sdk3cam.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2958 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk3/testNeo.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8779 2023-04-07 11:51:08.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/shamrock_sdk.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 11:51:16.998741 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2057 2023-04-07 11:51:16.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1678 2023-04-07 11:51:16.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 11:51:16.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       48 2023-04-07 11:51:16.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-07 11:51:16.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-07 11:51:16.000000 pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor.egg-info/top_level.txt
+│ │   --- pymodaq_plugins_andor-0.1.0/LICENSE
+│ ├── +++ pymodaq_plugins_andor-0.1.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- pymodaq_plugins_andor-0.1.0/PKG-INFO
+│ ├── +++ pymodaq_plugins_andor-0.1.1/PKG-INFO
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,16 +1,15 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pymodaq_plugins_andor
+│ │ -Version: 0.1.0
+│ │ +Version: 0.1.1
+│ │  Summary: Set of PyMoDAQ plugins for Andor Camera (CCD camera using SDK2, SCMOS cameras using SDK3...)
+│ │ -Home-page: https://github.com/CEMES-CNRS/pymodaq_plugins_andor
+│ │ +Home-page: https://github.com/PyMoDAQ/pymodaq_plugins_andor
+│ │  Author: Sébastien Weber
+│ │  Author-email: sebastien.weber@cemes.fr
+│ │  License: MIT
+│ │ -Platform: UNKNOWN
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Environment :: Other Environment
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+│ │  Classifier: Topic :: Scientific/Engineering :: Visualization
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │ @@ -26,16 +25,16 @@
+│ │     :target: https://pypi.org/project/pymodaq_plugins_andor/
+│ │     :alt: Latest Version
+│ │  
+│ │  .. image:: https://readthedocs.org/projects/pymodaq/badge/?version=latest
+│ │     :target: https://pymodaq.readthedocs.io/en/stable/?badge=latest
+│ │     :alt: Documentation Status
+│ │  
+│ │ -.. image:: https://github.com/CEMES-CNRS/pymodaq_plugins_andor/workflows/Upload%20Python%20Package/badge.svg
+│ │ -    :target: https://github.com/CEMES-CNRS/pymodaq_plugins_andor
+│ │ +.. image:: https://github.com/PyMoDAQ/pymodaq_plugins_andor/workflows/Upload%20Python%20Package/badge.svg
+│ │ +    :target: https://github.com/PyMoDAQ/pymodaq_plugins_andor
+│ │  
+│ │  Set of PyMoDAQ plugins for Andor Camera (CCD camera using SDK2, SCMOS cameras using SDK3...)
+│ │  
+│ │  
+│ │  Authors
+│ │  =======
+│ │  
+│ │ @@ -58,9 +57,7 @@
+│ │  
+│ │  Viewer2D
+│ │  ++++++++
+│ │  
+│ │  * **AndorCCD**: Andor CCD camera using the SDK2
+│ │  * **AndorSCMOS**: Andor CCD camera using the SDK3
+│ │  
+│ │ -
+│ │ -
+│ │   --- pymodaq_plugins_andor-0.1.0/README.rst
+│ ├── +++ pymodaq_plugins_andor-0.1.1/README.rst
+│ │┄ Files 3% similar despite different names
+│ │ @@ -5,16 +5,16 @@
+│ │     :target: https://pypi.org/project/pymodaq_plugins_andor/
+│ │     :alt: Latest Version
+│ │  
+│ │  .. image:: https://readthedocs.org/projects/pymodaq/badge/?version=latest
+│ │     :target: https://pymodaq.readthedocs.io/en/stable/?badge=latest
+│ │     :alt: Documentation Status
+│ │  
+│ │ -.. image:: https://github.com/CEMES-CNRS/pymodaq_plugins_andor/workflows/Upload%20Python%20Package/badge.svg
+│ │ -    :target: https://github.com/CEMES-CNRS/pymodaq_plugins_andor
+│ │ +.. image:: https://github.com/PyMoDAQ/pymodaq_plugins_andor/workflows/Upload%20Python%20Package/badge.svg
+│ │ +    :target: https://github.com/PyMoDAQ/pymodaq_plugins_andor
+│ │  
+│ │  Set of PyMoDAQ plugins for Andor Camera (CCD camera using SDK2, SCMOS cameras using SDK3...)
+│ │  
+│ │  
+│ │  Authors
+│ │  =======
+│ │   --- pymodaq_plugins_andor-0.1.0/setup.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/setup.py
+│ │┄ Files identical despite different names
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_move_plugins/daq_move_Shamrock.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_move_plugins/daq_move_Shamrock.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  import sys
+│ │  import numpy as np
+│ │  import ctypes
+│ │  from ctypes.util import find_library
+│ │  import platform
+│ │  from easydict import EasyDict as edict
+│ │ -from pymodaq.daq_move.utility_classes import DAQ_Move_base, comon_parameters
+│ │ +from pymodaq.control_modules.move_utility_classes import DAQ_Move_base, comon_parameters
+│ │  from pymodaq.daq_utils.daq_utils import ThreadCommand
+│ │  from ..hardware import shamrock_sdk
+│ │  from pathlib import Path
+│ │  
+│ │  libpath = shamrock_sdk.dllpath
+│ │  
+│ │  
+│ │ @@ -38,16 +38,16 @@
+│ │                      'visible': False},
+│ │                  {'title': 'Go to zero order:', 'name': 'zero_order', 'type': 'bool'},
+│ │              ]},
+│ │          {'title': 'MultiAxes:', 'name': 'multiaxes', 'type': 'group', 'visible': is_multiaxes, 'children': [
+│ │              {'title': 'is Multiaxes:', 'name': 'ismultiaxes', 'type': 'bool', 'value': is_multiaxes,
+│ │                  'default': False},
+│ │              {'title': 'Status:', 'name': 'multi_status', 'type': 'list', 'value': 'Master',
+│ │ -                'values': ['Master', 'Slave']},
+│ │ -            {'title': 'Axis:', 'name': 'axis', 'type': 'list', 'values': stage_names},
+│ │ +                'limits': ['Master', 'Slave']},
+│ │ +            {'title': 'Axis:', 'name': 'axis', 'type': 'list', 'limits': stage_names},
+│ │  
+│ │          ]}] + \
+│ │          comon_parameters
+│ │  
+│ │      def __init__(self, parent=None, params_state=None):
+│ │          super().__init__(parent, params_state)  # initialize base class with common attributes and methods
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_1D/daq_1Dviewer_ShamrockCCD.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_1D/daq_1Dviewer_ShamrockCCD.py
+│ │┄ Files identical despite different names
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_1D/daq_1Dviewer_ShamrockSCMOS.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_1D/daq_1Dviewer_ShamrockSCMOS.py
+│ │┄ Files identical despite different names
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_2D/daq_2Dviewer_AndorCCD.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_2D/daq_2Dviewer_AndorCCD.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,22 +1,21 @@
+│ │  import numpy as np
+│ │  from enum import IntEnum
+│ │  import ctypes
+│ │  from ctypes.util import find_library
+│ │  import platform
+│ │  from qtpy import QtWidgets, QtCore
+│ │  from easydict import EasyDict as edict
+│ │ -from pymodaq.daq_viewer.utility_classes import DAQ_Viewer_base
+│ │ +from pymodaq.control_modules.viewer_utility_classes import DAQ_Viewer_base, comon_parameters, main
+│ │  
+│ │  from pymodaq.daq_utils.daq_utils import ThreadCommand, DataFromPlugins, Axis, find_dict_in_list_from_key_val
+│ │ -from pymodaq.daq_viewer.utility_classes import comon_parameters
+│ │  from pymodaq.daq_utils.parameter.utils import iter_children
+│ │  
+│ │  
+│ │ -from ...hardware.andor_sdk2 import sdk2
+│ │ +from pymodaq_plugins_andor.hardware.andor_sdk2 import sdk2
+│ │  libpath = sdk2.dllpath
+│ │  camera_list = sdk2.AndorSDK.GetCamerasInfo()
+│ │  
+│ │  
+│ │  class Andor_Camera_ReadOut(IntEnum):
+│ │      """
+│ │          Enum class of readout modes.
+│ │ @@ -77,17 +76,17 @@
+│ │      callback_signal = QtCore.Signal()
+│ │      hardware_averaging = True #will use the accumulate acquisition mode if averaging is neccessary
+│ │      params = comon_parameters+[
+│ │          {'title': 'Dll library:', 'name': 'andor_lib', 'type': 'browsepath', 'value': str(libpath)},
+│ │          
+│ │          {'title': 'Camera Settings:', 'name': 'camera_settings', 'type': 'group', 'expanded': True, 'children': [
+│ │              {'title': 'Camera Models:', 'name': 'camera_model', 'type': 'list',
+│ │ -                'values': [f"{cam['model']}-{cam['serial']}" for cam in camera_list]},
+│ │ +                'limits': [f"{cam['model']}-{cam['serial']}" for cam in camera_list]},
+│ │  
+│ │ -            {'title': 'Readout Modes:', 'name': 'readout', 'type': 'list', 'values': Andor_Camera_ReadOut.names()[0:-1],
+│ │ +            {'title': 'Readout Modes:', 'name': 'readout', 'type': 'list', 'limits': Andor_Camera_ReadOut.names()[0:-1],
+│ │                                              'value': 'FullVertBinning'},
+│ │              {'title': 'Readout Settings:', 'name': 'readout_settings', 'type': 'group', 'children':[
+│ │  
+│ │                  {'title': 'single Track Settings:', 'name': 'st_settings', 'type': 'group', 'visible': False, 'children':[
+│ │                      {'title': 'Center pixel:', 'name': 'st_center', 'type': 'int', 'value': 1 , 'default':1, 'min':1},
+│ │                      {'title': 'Height:', 'name': 'st_height', 'type': 'int', 'value': 1 , 'default':1, 'min':1},
+│ │                  ]},    
+│ │ @@ -111,16 +110,16 @@
+│ │              
+│ │              {'title': 'Image size:', 'name': 'image_size', 'type': 'group', 'children':[
+│ │                  {'title': 'Nx:', 'name': 'Nx', 'type': 'int', 'value': 0, 'default':0 , 'readonly': True},
+│ │                  {'title': 'Ny:', 'name': 'Ny', 'type': 'int', 'value': 0 , 'default':0 , 'readonly': True},
+│ │                  ]},
+│ │              
+│ │              {'title': 'Shutter Settings:', 'name': 'shutter', 'type': 'group', 'children':[
+│ │ -                {'title': 'Open Shutter on:', 'name': 'shutter_type', 'type': 'list', 'value': 'high', 'values': ['low', 'high']},
+│ │ -                {'title': 'Shutter mode:', 'name': 'shutter_mode', 'type': 'list', 'value': 'Auto', 'values': ['Auto', 'Always Opened', 'Always Closed', ]},
+│ │ +                {'title': 'Open Shutter on:', 'name': 'shutter_type', 'type': 'list', 'value': 'high', 'limits': ['low', 'high']},
+│ │ +                {'title': 'Shutter mode:', 'name': 'shutter_mode', 'type': 'list', 'value': 'Auto', 'limits': ['Auto', 'Always Opened', 'Always Closed', ]},
+│ │                  {'title': 'Closing time (ms):', 'name': 'shutter_closing_time', 'type': 'int', 'value': 0, 'tip': 'millisecs it takes to close'},
+│ │                  {'title': 'Opening time (ms):', 'name': 'shutter_opening_time', 'type': 'int', 'value': 10, 'tip': 'millisecs it takes to open'},
+│ │                  ]},
+│ │              {'title': 'Temperature Settings:', 'name': 'temperature_settings', 'type': 'group', 'children': [
+│ │                  {'title': 'Set Point:', 'name': 'set_point', 'type': 'float', 'value': -60, 'default': -60},
+│ │                  {'title': 'Current value:', 'name': 'current_value', 'type': 'float', 'value': 0, 'default': 0,
+│ │                   'readonly': True},
+│ │ @@ -141,14 +140,16 @@
+│ │          self.CCDSIZEX, self.CCDSIZEY = (None, None)
+│ │          self.data_pointer = None
+│ │          self.camera_done = False
+│ │          self.acquirred_image = None
+│ │          self.callback_thread = None
+│ │          self.Naverage = None
+│ │          self.data_shape = None  # 'Data2D' if sizey != 1 else 'Data1D'
+│ │ +        self.timer = QtCore.QTimer()
+│ │ +        self.timer.timeout.connect(self.updated_timer)
+│ │  
+│ │      def commit_settings(self, param):
+│ │          """
+│ │              | Activate parameters changes on the hardware from parameter's name.
+│ │              |
+│ │  
+│ │              =============== ================================    =========================
+│ │ @@ -200,15 +201,15 @@
+│ │          try:
+│ │              self.ind_grabbed += 1
+│ │              sizey = self.settings.child('camera_settings', 'image_size', 'Ny').value()
+│ │              sizex = self.settings.child('camera_settings', 'image_size', 'Nx').value()
+│ │              self.camera_controller.GetAcquiredDataNumpy(self.data_pointer, sizex * sizey)
+│ │              self.data_grabed_signal.emit([DataFromPlugins(name='Camera',
+│ │                                                            data=[np.squeeze(
+│ │ -                                                              self.data.reshape((sizey, sizex)).astype(np.float))],
+│ │ +                                                              self.data.reshape((sizey, sizex)).astype(float))],
+│ │                                                            dim=self.data_shape)])
+│ │              QtWidgets.QApplication.processEvents()  # here to be sure the timeevents are executed even if in continuous grab mode
+│ │  
+│ │          except Exception as e:
+│ │              self.emit_status(ThreadCommand('Update_Status', [str(e), 'log']))
+│ │  
+│ │  
+│ │ @@ -403,15 +404,15 @@
+│ │          self.camera_controller.SetTemperature(
+│ │              self.settings.child('camera_settings', 'temperature_settings', 'set_point').value())
+│ │          locked_status, temp = self.camera_controller.GetTemperature()
+│ │          self.settings.child('camera_settings', 'temperature_settings', 'current_value').setValue(temp)
+│ │          self.settings.child('camera_settings', 'temperature_settings', 'locked').setValue(
+│ │              locked_status == 'DRV_TEMP_STABILIZED')
+│ │          # set timer to update temperature info from controller
+│ │ -        self.timer = self.startTimer(2000)  # Timer event fired every 2s
+│ │ +        self.timer.start(2000)
+│ │  
+│ │          callback = AndorCallback(self.camera_controller.WaitForAcquisition)
+│ │          self.callback_thread = QtCore.QThread()
+│ │          callback.moveToThread(self.callback_thread)
+│ │          callback.data_sig.connect(self.emit_data)  # when the wait for acquisition returns (with data taken), emit_data will be fired
+│ │  
+│ │          self.callback_signal.connect(callback.wait_for_acquisition)
+│ │ @@ -424,15 +425,15 @@
+│ │                                          self.settings.child('camera_settings', 'shutter', 'shutter_type').value())
+│ │          mode = self.settings.child('camera_settings', 'shutter', 'shutter_mode').opts['limits'].index(
+│ │                                          self.settings.child('camera_settings', 'shutter', 'shutter_mode').value())
+│ │  
+│ │          self.camera_controller.SetShutter(typ, mode, self.settings.child('camera_settings', 'shutter', 'shutter_closing_time').value(),
+│ │                                            self.settings.child('camera_settings', 'shutter', 'shutter_opening_time').value())
+│ │  
+│ │ -    def timerEvent(self, event):
+│ │ +    def updated_timer(self):
+│ │          """
+│ │  
+│ │          """
+│ │          locked_status, temp = self.camera_controller.GetTemperature()
+│ │          self.settings.child('camera_settings', 'temperature_settings', 'current_value').setValue(temp)
+│ │          self.settings.child('camera_settings', 'temperature_settings', 'locked').setValue(
+│ │              locked_status == 'DRV_TEMP_STABILIZED')
+│ │ @@ -461,15 +462,15 @@
+│ │              -------
+│ │              1D numpy array
+│ │                  Contains a vector of integer corresponding to the horizontal camera pixels.
+│ │          """
+│ │          if self.camera_controller is not None:
+│ │              # if self.control_type == "camera":
+│ │              Nx = self.settings.child('camera_settings', 'image_size', 'Nx').value()
+│ │ -            self.x_axis = Axis(data=np.linspace(0, Nx - 1, Nx, dtype=np.int), label='Pixels')
+│ │ +            self.x_axis = Axis(data=np.linspace(0, Nx - 1, Nx, dtype=int), label='Pixels')
+│ │  
+│ │              self.emit_x_axis()
+│ │          else:
+│ │              raise(Exception('controller not defined'))
+│ │          return self.x_axis
+│ │  
+│ │      def get_yaxis(self):
+│ │ @@ -480,36 +481,36 @@
+│ │              -------
+│ │              1D numpy array
+│ │                  Contains a vector of integer corresponding to the vertical camera pixels.
+│ │          """
+│ │          if self.camera_controller is not None:
+│ │  
+│ │              Ny = self.settings.child('camera_settings', 'image_size', 'Ny').value()
+│ │ -            self.y_axis = Axis(data=np.linspace(0, Ny - 1, Ny, dtype=np.int), label='Pixels')
+│ │ +            self.y_axis = Axis(data=np.linspace(0, Ny - 1, Ny, dtype=int), label='Pixels')
+│ │              self.emit_y_axis()
+│ │          else:
+│ │              raise (Exception('Camera not defined'))
+│ │          return self.y_axis
+│ │  
+│ │      def prepare_data(self):
+│ │          sizex = self.settings.child('camera_settings', 'image_size', 'Nx').value()
+│ │          sizey = self.settings.child('camera_settings', 'image_size', 'Ny').value()
+│ │  
+│ │          # %%%%%% Initialize data: self.data for the memory to store new data and self.data_average to store the average data
+│ │          image_size = sizex * sizey
+│ │ -        self.data = np.zeros((image_size,), dtype=np.long)
+│ │ +        self.data = np.zeros((image_size,), dtype=int)
+│ │          self.data_pointer = self.data.ctypes.data_as(ctypes.c_void_p)
+│ │  
+│ │          data_shape = 'Data2D' if sizey != 1 else 'Data1D'
+│ │          if data_shape != self.data_shape:
+│ │              self.data_shape = data_shape
+│ │              # init the viewers
+│ │              self.data_grabed_signal_temp.emit([DataFromPlugins(name='Camera ',
+│ │                                                                 data=[np.squeeze(
+│ │ -                                                                   self.data.reshape((sizey, sizex)).astype(np.float))],
+│ │ +                                                                   self.data.reshape((sizey, sizex)).astype(float))],
+│ │                                                                 dim=self.data_shape)])
+│ │  
+│ │      def grab_data(self, Naverage=1, **kwargs):
+│ │          """
+│ │              Start new acquisition in two steps :
+│ │                  * Initialize data: self.data for the memory to store new data and self.data_average to store the average data
+│ │                  * Start acquisition with the given exposure in ms, in "1d" or "2d" mode
+│ │ @@ -572,7 +573,11 @@
+│ │          self.wait_fn = wait_fn
+│ │  
+│ │      def wait_for_acquisition(self):
+│ │          err = self.wait_fn()
+│ │  
+│ │          if err != 'DRV_NO_NEW_DATA':  # will be returned if the main thread called CancelWait
+│ │              self.data_sig.emit()
+│ │ +
+│ │ +
+│ │ +if __name__ == '__main__':
+│ │ +    main(__file__, init=True)
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_2D/daq_2Dviewer_AndorSCMOS.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/daq_viewer_plugins/plugins_2D/daq_2Dviewer_AndorSCMOS.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,29 +1,32 @@
+│ │  import numpy as np
+│ │  from qtpy import QtWidgets, QtCore
+│ │  from easydict import EasyDict as edict
+│ │ -from pymodaq.daq_viewer.utility_classes import DAQ_Viewer_base
+│ │ +from pymodaq.control_modules.viewer_utility_classes import DAQ_Viewer_base
+│ │  
+│ │  from pymodaq.daq_utils.daq_utils import ThreadCommand, DataFromPlugins, Axis, set_logger, get_module_name, zeros_aligned
+│ │ -from pymodaq.daq_viewer.utility_classes import comon_parameters
+│ │ +from pymodaq.control_modules.viewer_utility_classes import comon_parameters
+│ │  
+│ │  from pymodaq.daq_utils.parameter.utils import iter_children
+│ │  import platform
+│ │  import sys
+│ │  arch, plat = platform.architecture()
+│ │  from time import perf_counter
+│ │  logger = set_logger(get_module_name(__file__))
+│ │  libpath = '/'
+│ │  
+│ │  if plat.startswith('Windows'):
+│ │      libpath = 'C:\\Program Files\\Andor SDK3\\win32'
+│ │      if libpath not in sys.path:
+│ │          sys.path.append(libpath)
+│ │  
+│ │ -from ...hardware.andor_sdk3 import api, sdk3cam
+│ │ +try:
+│ │ +    from pymodaq_plugins_andor.hardware.andor_sdk3 import api, sdk3cam
+│ │ +except OSError as e:
+│ │ +    logger.exception(e)
+│ │  
+│ │  try:
+│ │      models, names, serial_numbers = api.getCameraInfos()
+│ │      camera_list = [f'{models[ind]} {serial_numbers[ind]}' for ind in range(len(models))]
+│ │  except Exception as e:
+│ │      logger.exception(f'Impossible to communicate with camera, try to set another library path than {libpath}')
+│ │      camera_list = []
+│ │ @@ -48,56 +51,56 @@
+│ │  
+│ │      hardware_averaging = True  # will use the accumulate acquisition mode if averaging is neccessary
+│ │      live_mode_available = True
+│ │      params = comon_parameters + [
+│ │          {'title': 'Dll library:', 'name': 'andor_lib', 'type': 'browsepath', 'value': libpath},
+│ │  
+│ │          {'title': 'Camera Settings:', 'name': 'camera_settings', 'type': 'group', 'children': [
+│ │ -            {'title': 'Camera Models:', 'name': 'camera_model', 'type': 'list', 'values': camera_list},
+│ │ +            {'title': 'Camera Models:', 'name': 'camera_model', 'type': 'list', 'limits': camera_list},
+│ │              {'title': 'Exposure (ms):', 'name': 'exposure', 'type': 'float', 'value': 0.01, 'default': 0.01, 'min': 0},
+│ │              {'title': 'Frame Rate (Hz):', 'name': 'frame_rate', 'type': 'float', 'value': 0., 'readonly': True},
+│ │              {'title': 'Number of buffer:', 'name': 'buffer_number', 'type': 'int', 'value': 10, 'min': 1},
+│ │              {'title': '', 'name': 'reset_buffers', 'type': 'bool_push', 'value': False, 'label': 'Reset Buffers'},
+│ │  
+│ │              {'title': 'Sensor size:', 'name': 'image_size', 'type': 'group', 'children': [
+│ │                  {'title': 'Nx:', 'name': 'Nx', 'type': 'int', 'value': 0, 'default': 0, 'readonly': True},
+│ │                  {'title': 'Ny:', 'name': 'Ny', 'type': 'int', 'value': 0, 'default': 0, 'readonly': True},
+│ │                  ]},
+│ │ -            {'title': 'Encoding:', 'name': 'encoding', 'type': 'list', 'values': []},
+│ │ +            {'title': 'Encoding:', 'name': 'encoding', 'type': 'list', 'limits': []},
+│ │              {'title': 'Image Area:', 'name': 'image_settings', 'type': 'group', 'children': [
+│ │ -                {'title': 'Binning:', 'name': 'binning', 'type': 'list', 'values': []},
+│ │ +                {'title': 'Binning:', 'name': 'binning', 'type': 'list', 'limits': []},
+│ │                  {'title': 'Binning along x:', 'name': 'bin_x', 'type': 'int', 'value': 1, 'default': 1, 'min': 1},
+│ │                  {'title': 'Binning along y:', 'name': 'bin_y', 'type': 'int', 'value': 1, 'default': 1, 'min': 1},
+│ │                  {'title': 'Left:', 'name': 'im_left', 'type': 'int', 'value': 1, 'default': 1, 'min': 1},
+│ │                  {'title': 'Top:', 'name': 'im_top', 'type': 'int', 'value': 1024, 'default': 1024, 'min': 1},
+│ │                  {'title': 'Width (in binned pxls):', 'name': 'im_width', 'type': 'int', 'value': 1024, 'min': 1},
+│ │                  {'title': 'Height (in binned pxls):', 'name': 'im_height', 'type': 'int', 'value': 256, 'min': 1, },
+│ │                  {'title': 'Set Size Max:', 'name': 'max_size', 'type': 'bool_push', 'value': False,
+│ │                   'label': 'Max'},
+│ │                  {'title': 'Readout time (ms):', 'name': 'readout_time', 'type': 'float', 'value': 0., 'readonly': True},
+│ │                  ]},
+│ │  
+│ │              {'title': 'Trigger Settings:', 'name': 'trigger', 'type': 'group', 'children': [
+│ │ -                {'title': 'Mode:', 'name': 'trigger_mode', 'type': 'list', 'values': []},
+│ │ +                {'title': 'Mode:', 'name': 'trigger_mode', 'type': 'list', 'limits': []},
+│ │                  {'title': 'Software Trigger:', 'name': 'soft_trigger', 'type': 'bool_push', 'value': False,
+│ │                   'label': 'Fire'},
+│ │                  {'title': 'External Trigger delay (ms):', 'name': 'ext_trigger_delay', 'type': 'float', 'value': 0.},
+│ │              ]},
+│ │  
+│ │              {'title': 'Shutter Settings:', 'name': 'shutter', 'type': 'group', 'children': [
+│ │ -                {'title': 'Mode:', 'name': 'shutter_mode', 'type': 'list', 'values': []},
+│ │ -                {'title': 'External Trigger is:', 'name': 'shutter_on_ext_trigger', 'type': 'list', 'values': []},
+│ │ +                {'title': 'Mode:', 'name': 'shutter_mode', 'type': 'list', 'limits': []},
+│ │ +                {'title': 'External Trigger is:', 'name': 'shutter_on_ext_trigger', 'type': 'list', 'limits': []},
+│ │                  ]},
+│ │  
+│ │  
+│ │              {'title': 'Temperature Settings:', 'name': 'temperature_settings', 'type': 'group', 'children': [
+│ │                  {'title': 'Enable Cooling:', 'name': 'enable_cooling', 'type': 'bool', 'value': True},
+│ │ -                {'title': 'Set Point:', 'name': 'set_point', 'type': 'list', 'values': []},
+│ │ +                {'title': 'Set Point:', 'name': 'set_point', 'type': 'list', 'limits': []},
+│ │                  {'title': 'Current value:', 'name': 'current_value', 'type': 'float', 'value': 20, 'readonly': True},
+│ │ -                {'title': 'Status:', 'name': 'status', 'type': 'list', 'values': [], 'readonly': True},
+│ │ +                {'title': 'Status:', 'name': 'status', 'type': 'list', 'limits': [], 'readonly': True},
+│ │                  ]},
+│ │              ]},
+│ │          ]
+│ │  
+│ │      def __init__(self, parent=None, params_state=None):
+│ │  
+│ │          super().__init__(parent, params_state)  # initialize base class with commom attributes and methods
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk2/sdk2.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk2/sdk2.py
+│ │┄ Files identical despite different names
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk3/__init__.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk3/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk3/api.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk3/api.py
+│ │┄ Files identical despite different names
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk3/sdk3.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk3/sdk3.py
+│ │┄ Files identical despite different names
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk3/sdk3cam.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk3/sdk3cam.py
+│ │┄ Files identical despite different names
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/andor_sdk3/testNeo.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/andor_sdk3/testNeo.py
+│ │┄ Files identical despite different names
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor/hardware/shamrock_sdk.py
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor/hardware/shamrock_sdk.py
+│ │┄ Files identical despite different names
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor.egg-info/PKG-INFO
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor.egg-info/PKG-INFO
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,16 +1,15 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pymodaq-plugins-andor
+│ │ -Version: 0.1.0
+│ │ +Version: 0.1.1
+│ │  Summary: Set of PyMoDAQ plugins for Andor Camera (CCD camera using SDK2, SCMOS cameras using SDK3...)
+│ │ -Home-page: https://github.com/CEMES-CNRS/pymodaq_plugins_andor
+│ │ +Home-page: https://github.com/PyMoDAQ/pymodaq_plugins_andor
+│ │  Author: Sébastien Weber
+│ │  Author-email: sebastien.weber@cemes.fr
+│ │  License: MIT
+│ │ -Platform: UNKNOWN
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Environment :: Other Environment
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+│ │  Classifier: Topic :: Scientific/Engineering :: Visualization
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │ @@ -26,16 +25,16 @@
+│ │     :target: https://pypi.org/project/pymodaq_plugins_andor/
+│ │     :alt: Latest Version
+│ │  
+│ │  .. image:: https://readthedocs.org/projects/pymodaq/badge/?version=latest
+│ │     :target: https://pymodaq.readthedocs.io/en/stable/?badge=latest
+│ │     :alt: Documentation Status
+│ │  
+│ │ -.. image:: https://github.com/CEMES-CNRS/pymodaq_plugins_andor/workflows/Upload%20Python%20Package/badge.svg
+│ │ -    :target: https://github.com/CEMES-CNRS/pymodaq_plugins_andor
+│ │ +.. image:: https://github.com/PyMoDAQ/pymodaq_plugins_andor/workflows/Upload%20Python%20Package/badge.svg
+│ │ +    :target: https://github.com/PyMoDAQ/pymodaq_plugins_andor
+│ │  
+│ │  Set of PyMoDAQ plugins for Andor Camera (CCD camera using SDK2, SCMOS cameras using SDK3...)
+│ │  
+│ │  
+│ │  Authors
+│ │  =======
+│ │  
+│ │ @@ -58,9 +57,7 @@
+│ │  
+│ │  Viewer2D
+│ │  ++++++++
+│ │  
+│ │  * **AndorCCD**: Andor CCD camera using the SDK2
+│ │  * **AndorSCMOS**: Andor CCD camera using the SDK3
+│ │  
+│ │ -
+│ │ -
+│ │   --- pymodaq_plugins_andor-0.1.0/src/pymodaq_plugins_andor.egg-info/SOURCES.txt
+│ ├── +++ pymodaq_plugins_andor-0.1.1/src/pymodaq_plugins_andor.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
