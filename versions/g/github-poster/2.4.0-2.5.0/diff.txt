@@ -1,0 +1,445 @@
+--- tmp/github_poster-2.4.0.tar.gz
++++ tmp/github_poster-2.5.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "github_poster-2.4.0.tar", last modified: Fri Mar 31 14:51:25 2023, max compression
+│ +gzip compressed data, was "github_poster-2.5.0.tar", last modified: Fri Apr  7 14:03:51 2023, max compression
+│   --- github_poster-2.4.0.tar
+├── +++ github_poster-2.5.0.tar
+│ ├── file list
+│ │ @@ -1,74 +1,75 @@
+│ │ -drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-03-31 14:51:25.196916 github_poster-2.4.0/
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1063 2022-03-17 02:50:19.000000 github_poster-2.4.0/LICENSE
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)      439 2023-03-31 14:51:25.196645 github_poster-2.4.0/PKG-INFO
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)    23625 2023-03-31 14:51:05.000000 github_poster-2.4.0/README.md
+│ │ -drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-03-31 14:51:25.159942 github_poster-2.4.0/github_poster/
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)        0 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/__init__.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)       74 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/__main__.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     6361 2023-03-23 07:14:27.000000 github_poster-2.4.0/github_poster/circluar_drawer.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     6547 2023-03-23 07:14:27.000000 github_poster-2.4.0/github_poster/cli.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1108 2023-03-31 14:51:05.000000 github_poster-2.4.0/github_poster/config.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     9710 2023-03-23 04:29:50.000000 github_poster-2.4.0/github_poster/drawer.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)      261 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/err.py
+│ │ -drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-03-31 14:51:25.172664 github_poster-2.4.0/github_poster/html_parser/
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)      206 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/html_parser/__init__.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1143 2023-01-09 06:11:32.000000 github_poster-2.4.0/github_poster/html_parser/github_parser.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)      256 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/html_parser/gitlab_parser.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     2005 2022-07-12 13:26:45.000000 github_poster-2.4.0/github_poster/html_parser/jike_parse.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)      257 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/html_parser/kindle_parser.py
+│ │ -drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-03-31 14:51:25.191553 github_poster-2.4.0/github_poster/loader/
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     3369 2023-03-31 14:51:05.000000 github_poster-2.4.0/github_poster/loader/__init__.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     5187 2023-03-31 14:51:05.000000 github_poster-2.4.0/github_poster/loader/apple_health_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     7132 2023-03-23 07:14:27.000000 github_poster-2.4.0/github_poster/loader/base_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     4148 2022-11-24 13:04:14.000000 github_poster-2.4.0/github_poster/loader/bbdc_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     3296 2022-10-08 00:21:43.000000 github_poster-2.4.0/github_poster/loader/bilibili_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     3287 2022-11-24 13:04:14.000000 github_poster-2.4.0/github_poster/loader/cichang_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     6322 2023-03-23 04:29:50.000000 github_poster-2.4.0/github_poster/loader/config.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1960 2022-07-12 13:26:45.000000 github_poster-2.4.0/github_poster/loader/covid_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1559 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/dota2_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     2660 2023-01-09 10:28:31.000000 github_poster-2.4.0/github_poster/loader/duolingo_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     2494 2022-11-24 13:04:14.000000 github_poster-2.4.0/github_poster/loader/forest_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     2826 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/from_github_issue_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     2795 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/garmin_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1547 2022-11-24 14:02:11.000000 github_poster-2.4.0/github_poster/loader/github_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     3407 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/gitlab_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     3166 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/gpx_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     7133 2022-11-24 13:04:14.000000 github_poster-2.4.0/github_poster/loader/jike_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1095 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/json_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1678 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/kindle_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     2595 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/leetcode_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1393 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/multiple_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     3095 2023-03-23 07:14:27.000000 github_poster-2.4.0/github_poster/loader/notion_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     3763 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/nrc_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     3321 2022-04-13 04:14:41.000000 github_poster-2.4.0/github_poster/loader/ns_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     3437 2023-03-23 04:29:50.000000 github_poster-2.4.0/github_poster/loader/openlanguage_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1637 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/shanbay_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     3141 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/strava_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)      965 2023-03-23 07:14:27.000000 github_poster-2.4.0/github_poster/loader/summary_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     5285 2023-03-31 14:51:00.000000 github_poster-2.4.0/github_poster/loader/todoist_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1828 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/twitter_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1807 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/wakatime_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     2134 2022-11-24 13:15:31.000000 github_poster-2.4.0/github_poster/loader/weread_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1640 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/loader/youtube_loader.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     3849 2022-11-24 13:04:14.000000 github_poster-2.4.0/github_poster/poster.py
+│ │ -drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-03-31 14:51:25.195222 github_poster-2.4.0/github_poster/skyline/
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)       74 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/skyline/__init__.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)      185 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/skyline/config.py
+│ │ -drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-03-31 14:51:25.195658 github_poster-2.4.0/github_poster/skyline/font/
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)        0 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/skyline/font/__init__.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     4008 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/skyline/skyline.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1674 2022-03-17 02:50:20.000000 github_poster-2.4.0/github_poster/structures.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     2211 2023-01-09 14:20:16.000000 github_poster-2.4.0/github_poster/utils.py
+│ │ -drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-03-31 14:51:25.170797 github_poster-2.4.0/github_poster.egg-info/
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)      439 2023-03-31 14:51:25.000000 github_poster-2.4.0/github_poster.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     2166 2023-03-31 14:51:25.000000 github_poster-2.4.0/github_poster.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)        1 2023-03-31 14:51:25.000000 github_poster-2.4.0/github_poster.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)       57 2023-03-31 14:51:25.000000 github_poster-2.4.0/github_poster.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)      243 2023-03-31 14:51:25.000000 github_poster-2.4.0/github_poster.egg-info/requires.txt
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)       20 2023-03-31 14:51:25.000000 github_poster-2.4.0/github_poster.egg-info/top_level.txt
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)       31 2022-03-17 02:50:20.000000 github_poster-2.4.0/pyproject.toml
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)       38 2023-03-31 14:51:25.196984 github_poster-2.4.0/setup.cfg
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)     1028 2023-03-31 14:51:14.000000 github_poster-2.4.0/setup.py
+│ │ -drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-03-31 14:51:25.196281 github_poster-2.4.0/tests/
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)        0 2022-03-17 02:50:20.000000 github_poster-2.4.0/tests/__init__.py
+│ │ --rw-r--r--   0 hyi        (502) staff       (20)      732 2022-03-17 02:50:20.000000 github_poster-2.4.0/tests/test_poster_utils.py
+│ │ +drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-04-07 14:03:51.405170 github_poster-2.5.0/
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1063 2022-03-17 02:50:19.000000 github_poster-2.5.0/LICENSE
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)      439 2023-04-07 14:03:51.404900 github_poster-2.5.0/PKG-INFO
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)    24111 2023-04-07 14:00:22.000000 github_poster-2.5.0/README.md
+│ │ +drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-04-07 14:03:51.339227 github_poster-2.5.0/github_poster/
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)        0 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/__init__.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)       74 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/__main__.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     6361 2023-03-23 07:14:27.000000 github_poster-2.5.0/github_poster/circluar_drawer.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     6547 2023-03-23 07:14:27.000000 github_poster-2.5.0/github_poster/cli.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1134 2023-04-07 14:03:10.000000 github_poster-2.5.0/github_poster/config.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     9710 2023-03-23 04:29:50.000000 github_poster-2.5.0/github_poster/drawer.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)      261 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/err.py
+│ │ +drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-04-07 14:03:51.355601 github_poster-2.5.0/github_poster/html_parser/
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)      206 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/html_parser/__init__.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1143 2023-01-09 06:11:32.000000 github_poster-2.5.0/github_poster/html_parser/github_parser.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)      256 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/html_parser/gitlab_parser.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     2005 2022-07-12 13:26:45.000000 github_poster-2.5.0/github_poster/html_parser/jike_parse.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)      257 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/html_parser/kindle_parser.py
+│ │ +drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-04-07 14:03:51.400518 github_poster-2.5.0/github_poster/loader/
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     3482 2023-04-07 14:01:44.000000 github_poster-2.5.0/github_poster/loader/__init__.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     5187 2023-03-31 14:51:05.000000 github_poster-2.5.0/github_poster/loader/apple_health_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     7132 2023-03-23 07:14:27.000000 github_poster-2.5.0/github_poster/loader/base_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     4148 2022-11-24 13:04:14.000000 github_poster-2.5.0/github_poster/loader/bbdc_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     3296 2022-10-08 00:21:43.000000 github_poster-2.5.0/github_poster/loader/bilibili_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1864 2023-04-07 14:02:07.000000 github_poster-2.5.0/github_poster/loader/chatgpt_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     3287 2022-11-24 13:04:14.000000 github_poster-2.5.0/github_poster/loader/cichang_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     6322 2023-03-23 04:29:50.000000 github_poster-2.5.0/github_poster/loader/config.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1960 2022-07-12 13:26:45.000000 github_poster-2.5.0/github_poster/loader/covid_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1559 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/dota2_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     2660 2023-01-09 10:28:31.000000 github_poster-2.5.0/github_poster/loader/duolingo_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     2494 2022-11-24 13:04:14.000000 github_poster-2.5.0/github_poster/loader/forest_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     2826 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/from_github_issue_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     2795 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/garmin_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1547 2022-11-24 14:02:11.000000 github_poster-2.5.0/github_poster/loader/github_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     3407 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/gitlab_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     3166 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/gpx_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     7133 2022-11-24 13:04:14.000000 github_poster-2.5.0/github_poster/loader/jike_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1095 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/json_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1678 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/kindle_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     2595 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/leetcode_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1393 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/multiple_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     3095 2023-03-23 07:14:27.000000 github_poster-2.5.0/github_poster/loader/notion_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     3763 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/nrc_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     3321 2022-04-13 04:14:41.000000 github_poster-2.5.0/github_poster/loader/ns_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     3437 2023-03-23 04:29:50.000000 github_poster-2.5.0/github_poster/loader/openlanguage_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1637 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/shanbay_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     3141 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/strava_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)      965 2023-03-23 07:14:27.000000 github_poster-2.5.0/github_poster/loader/summary_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     5285 2023-03-31 14:51:00.000000 github_poster-2.5.0/github_poster/loader/todoist_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1828 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/twitter_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1807 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/wakatime_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     2134 2022-11-24 13:15:31.000000 github_poster-2.5.0/github_poster/loader/weread_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1640 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/loader/youtube_loader.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     3849 2022-11-24 13:04:14.000000 github_poster-2.5.0/github_poster/poster.py
+│ │ +drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-04-07 14:03:51.402300 github_poster-2.5.0/github_poster/skyline/
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)       74 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/skyline/__init__.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)      185 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/skyline/config.py
+│ │ +drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-04-07 14:03:51.402886 github_poster-2.5.0/github_poster/skyline/font/
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)        0 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/skyline/font/__init__.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     4008 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/skyline/skyline.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1674 2022-03-17 02:50:20.000000 github_poster-2.5.0/github_poster/structures.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     2211 2023-01-09 14:20:16.000000 github_poster-2.5.0/github_poster/utils.py
+│ │ +drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-04-07 14:03:51.352577 github_poster-2.5.0/github_poster.egg-info/
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)      439 2023-04-07 14:03:51.000000 github_poster-2.5.0/github_poster.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     2205 2023-04-07 14:03:51.000000 github_poster-2.5.0/github_poster.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)        1 2023-04-07 14:03:51.000000 github_poster-2.5.0/github_poster.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)       57 2023-04-07 14:03:51.000000 github_poster-2.5.0/github_poster.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)      243 2023-04-07 14:03:51.000000 github_poster-2.5.0/github_poster.egg-info/requires.txt
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)       20 2023-04-07 14:03:51.000000 github_poster-2.5.0/github_poster.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)       31 2022-03-17 02:50:20.000000 github_poster-2.5.0/pyproject.toml
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)       38 2023-04-07 14:03:51.405240 github_poster-2.5.0/setup.cfg
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)     1028 2023-04-07 14:03:37.000000 github_poster-2.5.0/setup.py
+│ │ +drwxr-xr-x   0 hyi        (502) staff       (20)        0 2023-04-07 14:03:51.404450 github_poster-2.5.0/tests/
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)        0 2022-03-17 02:50:20.000000 github_poster-2.5.0/tests/__init__.py
+│ │ +-rw-r--r--   0 hyi        (502) staff       (20)      732 2022-03-17 02:50:20.000000 github_poster-2.5.0/tests/test_poster_utils.py
+│ │   --- github_poster-2.4.0/LICENSE
+│ ├── +++ github_poster-2.5.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/README.md
+│ ├── +++ github_poster-2.5.0/README.md
+│ │┄ Files 1% similar despite different names
+│ │ @@ -47,14 +47,15 @@
+│ │  - **[即刻](#即刻)**
+│ │  - **[微信读书](#微信读书)**
+│ │  - **[总结](#Summary)**
+│ │  - **[Covid](#Covid)**
+│ │  - **[Todoist](#Todoist)**
+│ │  - **[开言英语](#开言英语)**
+│ │  - **[Apple Health](#AppleHealth)**
+│ │ +- **[ChatGPT](#ChatGPT)**
+│ │  
+│ │  ## 下载
+│ │  
+│ │  ```
+│ │  git clone https://github.com/yihong0618/GitHubPoster.git
+│ │  ```
+│ │  ## pip 安装
+│ │ @@ -658,14 +659,29 @@
+│ │  python3 -m github_poster apple_health --apple_health_mode backfill --year 2015-2021 --apple_health_record_type <move, exercise, stand> --me "your name"
+│ │  or
+│ │  github_poster apple_health --apple_health_mode backfill --year 2015-2021 --apple_health_record_type <move, exercise, stand> --me "your name"
+│ │  ```
+│ │  
+│ │  </details>
+│ │  
+│ │ +### ChatGPT
+│ │ +
+│ │ +<details>
+│ │ +<summary>Make your <code>YouChatGPTTube </code> GitHub poster</summary>
+│ │ +<br>
+│ │ +
+│ │ +利用这个项目下载 ChatGPT 的[历史下载](https://github.com/abacaj/chatgpt-backup)下载 `ChatGPT` 的历史数据， 拷贝到 `IN-FOLDER` 然后运行(重命名为 chatgpt-history.json)
+│ │ +
+│ │ +```
+│ │ +python3 -m github_poster chatgpt 
+│ │ +or
+│ │ +github_poster chatgpt --me yihong0618
+│ │ +```
+│ │ +</details>
+│ │ +
+│ │  # 参与项目
+│ │  
+│ │  - 任何 Issues PR 均欢迎。
+│ │  - 可以提交新的 loader
+│ │  - 如何编写新的loader by `ruter` [如何为 GithubPoster 添加 loader](https://umm.js.org/p/c88bf4c7/)
+│ │  
+│ │  提交PR前:
+│ │ @@ -707,12 +723,14 @@
+│ │  - @[shaonianche](https://github.com/shaonianche) Dota2 loader
+│ │  - @[umm233](https://github.com/umm233) Jike loader
+│ │  - @[ruter](https://github.com/ruter) Notion loader
+│ │  - @[frostming](https://github.com/frostming) `CI` refator and some Actions code
+│ │  - @[j178](https://github.com/j178) refator the import logic
+│ │  - @[iamshaynez](https://github.com/iamshaynez) todolist loader
+│ │  - @[guaguaguaxia](https://github.com/guaguaguaxia) OpenLanguage loader
+│ │ +- @[rip-tyang](https://github.com/rip-tyang) AppleHealth loader
+│ │ +
+│ │  # 赞赏
+│ │  
+│ │  谢谢就够了
+│ │  
+│ │  Just enjoy it
+│ │   --- github_poster-2.4.0/github_poster/circluar_drawer.py
+│ ├── +++ github_poster-2.5.0/github_poster/circluar_drawer.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/cli.py
+│ ├── +++ github_poster-2.5.0/github_poster/cli.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/config.py
+│ ├── +++ github_poster-2.5.0/github_poster/config.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -44,8 +44,9 @@
+│ │      "forest": "Forest",
+│ │      "jike": "Jike",
+│ │      "bbdc": "BBDC",
+│ │      "weread": "WeRead",
+│ │      "covid": "COVID-19",
+│ │      "todoist": "Todoist",
+│ │      "apple": "AppleHealth",
+│ │ +    "chatgpt": "ChatGPT",
+│ │  }
+│ │   --- github_poster-2.4.0/github_poster/drawer.py
+│ ├── +++ github_poster-2.5.0/github_poster/drawer.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/html_parser/github_parser.py
+│ ├── +++ github_poster-2.5.0/github_poster/html_parser/github_parser.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/html_parser/jike_parse.py
+│ ├── +++ github_poster-2.5.0/github_poster/html_parser/jike_parse.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/__init__.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/__init__.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,10 +1,11 @@
+│ │  from github_poster.loader.apple_health_loader import AppleHealthLoader
+│ │  from github_poster.loader.bbdc_loader import BBDCLoader
+│ │  from github_poster.loader.bilibili_loader import BilibiliLoader
+│ │ +from github_poster.loader.chatgpt_loader import ChatGPTLoader
+│ │  from github_poster.loader.cichang_loader import CiChangLoader
+│ │  from github_poster.loader.covid_loader import CovidLoader
+│ │  from github_poster.loader.dota2_loader import Dota2Loader
+│ │  from github_poster.loader.duolingo_loader import DuolingoLoader
+│ │  from github_poster.loader.forest_loader import ForestLoader
+│ │  from github_poster.loader.from_github_issue_loader import GitHubIssuesLoader
+│ │  from github_poster.loader.garmin_loader import GarminLoader
+│ │ @@ -56,14 +57,15 @@
+│ │      "json": JsonLoader,
+│ │      "jike": JikeLoader,
+│ │      "summary": SummaryLoader,
+│ │      "weread": WereadLoader,
+│ │      "covid": CovidLoader,
+│ │      "todoist": TodoistLoader,
+│ │      "openlanguage": OpenLanguageLoader,
+│ │ +    "chatgpt": ChatGPTLoader,
+│ │  }
+│ │  
+│ │  __all__ = (
+│ │      "AppleHealthLoader",
+│ │      "BilibiliLoader",
+│ │      "CiChangLoader",
+│ │      "Dota2Loader",
+│ │ @@ -90,8 +92,9 @@
+│ │      "JikeLoader",
+│ │      "SummaryLoader",
+│ │      "BBDCLoader",
+│ │      "WereadLoader",
+│ │      "CovidLoader",
+│ │      "TodoistLoader",
+│ │      "OpenLanguageLoader",
+│ │ +    "ChatGPTLoader",
+│ │  )
+│ │   --- github_poster-2.4.0/github_poster/loader/apple_health_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/apple_health_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/base_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/base_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/bbdc_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/bbdc_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/bilibili_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/bilibili_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/cichang_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/cichang_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/config.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/config.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/covid_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/covid_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/dota2_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/dota2_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/duolingo_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/duolingo_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/forest_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/forest_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/from_github_issue_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/from_github_issue_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/garmin_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/garmin_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/github_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/github_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/gitlab_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/gitlab_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/gpx_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/gpx_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/jike_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/jike_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/json_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/json_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/kindle_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/kindle_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/leetcode_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/leetcode_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/multiple_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/multiple_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/notion_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/notion_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/nrc_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/nrc_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/ns_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/ns_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/openlanguage_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/openlanguage_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/shanbay_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/shanbay_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/strava_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/strava_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/summary_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/summary_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/todoist_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/todoist_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/twitter_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/twitter_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/wakatime_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/wakatime_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/weread_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/weread_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/loader/youtube_loader.py
+│ ├── +++ github_poster-2.5.0/github_poster/loader/youtube_loader.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/poster.py
+│ ├── +++ github_poster-2.5.0/github_poster/poster.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/skyline/skyline.py
+│ ├── +++ github_poster-2.5.0/github_poster/skyline/skyline.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/structures.py
+│ ├── +++ github_poster-2.5.0/github_poster/structures.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster/utils.py
+│ ├── +++ github_poster-2.5.0/github_poster/utils.py
+│ │┄ Files identical despite different names
+│ │   --- github_poster-2.4.0/github_poster.egg-info/SOURCES.txt
+│ ├── +++ github_poster-2.5.0/github_poster.egg-info/SOURCES.txt
+│ │┄ Files 2% similar despite different names
+│ │ @@ -24,14 +24,15 @@
+│ │  github_poster/html_parser/jike_parse.py
+│ │  github_poster/html_parser/kindle_parser.py
+│ │  github_poster/loader/__init__.py
+│ │  github_poster/loader/apple_health_loader.py
+│ │  github_poster/loader/base_loader.py
+│ │  github_poster/loader/bbdc_loader.py
+│ │  github_poster/loader/bilibili_loader.py
+│ │ +github_poster/loader/chatgpt_loader.py
+│ │  github_poster/loader/cichang_loader.py
+│ │  github_poster/loader/config.py
+│ │  github_poster/loader/covid_loader.py
+│ │  github_poster/loader/dota2_loader.py
+│ │  github_poster/loader/duolingo_loader.py
+│ │  github_poster/loader/forest_loader.py
+│ │  github_poster/loader/from_github_issue_loader.py
+│ │   --- github_poster-2.4.0/setup.py
+│ ├── +++ github_poster-2.5.0/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -2,15 +2,15 @@
+│ │  
+│ │  setup(
+│ │      name="github_poster",
+│ │      author="yihong0618",
+│ │      author_email="zouzou0208@gmail.com",
+│ │      url="https://github.com/yihong0618/GitHubPoster",
+│ │      license="MIT",
+│ │ -    version="2.4.0",
+│ │ +    version="2.5.0",
+│ │      description="Make everything a GitHub svg poster and Skyline!",
+│ │      packages=find_packages(),
+│ │      include_package_data=True,
+│ │      install_requires=[
+│ │          "requests",
+│ │          "svgwrite",
+│ │          "pendulum",
+│ │   --- github_poster-2.4.0/tests/test_poster_utils.py
+│ ├── +++ github_poster-2.5.0/tests/test_poster_utils.py
+│ │┄ Files identical despite different names

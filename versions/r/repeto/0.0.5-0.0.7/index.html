@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/repeto-0.0.5.tar.gz tmp/repeto-0.0.7.tar.gz --html versions/r/repeto/0.0.5-0.0.7/index.html --text versions/r/repeto/0.0.5-0.0.7/diff.txt --markdown versions/r/repeto/0.0.5-0.0.7/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.91 KB</span></div>
+  <div><span class="source">tmp/repeto-0.0.5.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/repeto-0.0.7.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.87 KB</span></div>
+    <div><span class="source">repeto-0.0.5.tar</span> vs.</div>
+    <div id="repeto--.-.-.tar"><span class="source">repeto-0.0.7.tar</span>
+      <a class="anchor" href="#repeto--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">4.23 KB</span></div>
+      <div id="repeto--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#repeto--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 19 lines modified</td><td colspan="2">Offset 1, 19 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>523<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/local_dependencies/repeto/Cargo.toml</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>523<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/local_dependencies/repeto/Cargo.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>52<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:36:25.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/local_dependencies/repeto/src/lib.rs</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>52<span class="dp">·</span>2023-04-04<span class="dp">·</span>11:36:25.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/local_dependencies/repeto/src/lib.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7633<span class="dp">·</span>2023-04-04<span class="dp">·</span>13:37:39.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/local_dependencies/repeto/src/optimize/dynprog.rs</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7633<span class="dp">·</span>2023-04-04<span class="dp">·</span>13:37:39.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/local_dependencies/repeto/src/optimize/dynprog.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3489<span class="dp">·</span>2023-04-05<span class="dp">·</span>12:51:08.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/local_dependencies/repeto/src/optimize/index.rs</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3489<span class="dp">·</span>2023-04-05<span class="dp">·</span>12:51:08.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/local_dependencies/repeto/src/optimize/index.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8276<span class="dp">·</span>2023-04-04<span class="dp">·</span>13:37:11.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/local_dependencies/repeto/src/optimize/mod.rs</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8276<span class="dp">·</span>2023-04-04<span class="dp">·</span>13:37:11.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/local_dependencies/repeto/src/optimize/mod.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1193<span class="dp">·</span>2023-02-12<span class="dp">·</span>13:15:56.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/local_dependencies/repeto/src/optimize/trace.rs</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1193<span class="dp">·</span>2023-02-12<span class="dp">·</span>13:15:56.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/local_dependencies/repeto/src/optimize/trace.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2306<span class="dp">·</span>2023-04-04<span class="dp">·</span>13:06:15.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/local_dependencies/repeto/src/predict.rs</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2306<span class="dp">·</span>2023-04-04<span class="dp">·</span>13:06:15.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/local_dependencies/repeto/src/predict.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2721<span class="dp">·</span>2023-04-05<span class="dp">·</span>13:00:28.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/local_dependencies/repeto/src/repeats/inv.rs</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2721<span class="dp">·</span>2023-04-05<span class="dp">·</span>13:00:28.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/local_dependencies/repeto/src/repeats/inv.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-04<span class="dp">·</span>12:57:47.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/local_dependencies/repeto/src/repeats/mod.rs</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-04<span class="dp">·</span>12:57:47.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/local_dependencies/repeto/src/repeats/mod.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>94</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span>1<del>1</del>:<del>37</del>:0<del>8</del>.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/local_dependencies/repeto/tests/integration_test.rs</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>939</ins><span class="dp">·</span>2023-04-0<ins>5</ins><span class="dp">·</span>1<ins>5</ins>:<ins>50</ins>:0<ins>7</ins>.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/local_dependencies/repeto/tests/integration_test.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>507<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/Cargo.toml</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>507<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/Cargo.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-03<span class="dp">·</span>14:45:29.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/README.md</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-03<span class="dp">·</span>14:45:29.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>386<span class="dp">·</span>2023-04-05<span class="dp">·</span>11:20:15.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/pyproject.toml</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>386<span class="dp">·</span>2023-04-05<span class="dp">·</span>11:20:15.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<del>20</del>9<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>13</del>:<del>02</del>:<del>36</del>.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/repeto.pyi</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<ins>49</ins>9<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>09</ins>:<ins>41</ins>:<ins>45</ins>.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/repeto.pyi</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1363<span class="dp">·</span>2023-04-04<span class="dp">·</span>15:50:52.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/src/lib.rs</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1363<span class="dp">·</span>2023-04-04<span class="dp">·</span>15:50:52.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/src/lib.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>788</del>7<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>13</del>:<del>01</del>:0<del>6</del>.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/src/repeats.rs</td><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>897</ins>7<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>09</ins>:<ins>20</ins>:0<ins>1</ins>.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/src/repeats.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>3791</del><span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>3</del>:<del>01</del>:0<del>6</del>.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/tests/test_py_interface.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>5289</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>0</ins>:<ins>19</ins>:0<ins>1</ins>.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/tests/test_py_interface.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13947<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>3</del>:<del>19</del>:<del>5</del>0.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/Cargo.lock</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13947<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>4</ins>:<ins>00</ins>:<ins>1</ins>0.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/Cargo.lock</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>488<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>repeto-0.0.<del>5</del>/PKG-INFO</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>488<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>repeto-0.0.<ins>7</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">repeto-0.0.5/local_dependencies/repeto/src/optimize/dynprog.rs</span> vs.</div>
+      <div id="repeto--.-.-.tar---repeto--.-.--local_dependencies-repeto-src-optimize-dynprog.rs"><span class="source">repeto-0.0.7/local_dependencies/repeto/src/optimize/dynprog.rs</span>
+        <a class="anchor" href="#repeto--.-.-.tar---repeto--.-.--local_dependencies-repeto-src-optimize-dynprog.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">repeto-0.0.5/local_dependencies/repeto/src/optimize/index.rs</span> vs.</div>
+      <div id="repeto--.-.-.tar---repeto--.-.--local_dependencies-repeto-src-optimize-index.rs"><span class="source">repeto-0.0.7/local_dependencies/repeto/src/optimize/index.rs</span>
+        <a class="anchor" href="#repeto--.-.-.tar---repeto--.-.--local_dependencies-repeto-src-optimize-index.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">repeto-0.0.5/local_dependencies/repeto/src/optimize/mod.rs</span> vs.</div>
+      <div id="repeto--.-.-.tar---repeto--.-.--local_dependencies-repeto-src-optimize-mod.rs"><span class="source">repeto-0.0.7/local_dependencies/repeto/src/optimize/mod.rs</span>
+        <a class="anchor" href="#repeto--.-.-.tar---repeto--.-.--local_dependencies-repeto-src-optimize-mod.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">repeto-0.0.5/local_dependencies/repeto/src/optimize/trace.rs</span> vs.</div>
+      <div id="repeto--.-.-.tar---repeto--.-.--local_dependencies-repeto-src-optimize-trace.rs"><span class="source">repeto-0.0.7/local_dependencies/repeto/src/optimize/trace.rs</span>
+        <a class="anchor" href="#repeto--.-.-.tar---repeto--.-.--local_dependencies-repeto-src-optimize-trace.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">repeto-0.0.5/local_dependencies/repeto/src/predict.rs</span> vs.</div>
+      <div id="repeto--.-.-.tar---repeto--.-.--local_dependencies-repeto-src-predict.rs"><span class="source">repeto-0.0.7/local_dependencies/repeto/src/predict.rs</span>
+        <a class="anchor" href="#repeto--.-.-.tar---repeto--.-.--local_dependencies-repeto-src-predict.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">repeto-0.0.5/local_dependencies/repeto/src/repeats/inv.rs</span> vs.</div>
+      <div id="repeto--.-.-.tar---repeto--.-.--local_dependencies-repeto-src-repeats-inv.rs"><span class="source">repeto-0.0.7/local_dependencies/repeto/src/repeats/inv.rs</span>
+        <a class="anchor" href="#repeto--.-.-.tar---repeto--.-.--local_dependencies-repeto-src-repeats-inv.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">807 B</span></div>
+      <div><span class="source">repeto-0.0.5/repeto.pyi</span> vs.</div>
+      <div id="repeto--.-.-.tar---repeto--.-.--repeto.pyi"><span class="source">repeto-0.0.7/repeto.pyi</span>
+        <a class="anchor" href="#repeto--.-.-.tar---repeto--.-.--repeto.pyi">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 87, 14 lines modified</td><td colspan="2">Offset 87, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">87 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>seqranges(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>List[Range]:</td><td class="diffline">87 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>seqranges(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>List[Range]:</td></tr>
+<tr class="diffunmodified"><td class="diffline">88 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">88 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Ordered<span class="dp">·</span>sequence<span class="dp">·</span>blocks,<span class="dp">·</span>i.e.<span class="dp">·</span>sequence<span class="dp">·</span>ranges,<span class="dp">·</span>that<span class="dp">·</span>underlay<span class="dp">·</span>the<span class="dp">·</span>inverted<span class="dp">·</span>repeat.</td><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Ordered<span class="dp">·</span>sequence<span class="dp">·</span>blocks,<span class="dp">·</span>i.e.<span class="dp">·</span>sequence<span class="dp">·</span>ranges,<span class="dp">·</span>that<span class="dp">·</span>underlay<span class="dp">·</span>the<span class="dp">·</span>inverted<span class="dp">·</span>repeat.</td></tr>
+<tr class="diffunmodified"><td class="diffline">90 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">90 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">91 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pass</td><td class="diffline">91 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pass</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">92 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>to_bed12(self,<span class="dp">·</span>contig:<span class="dp">·</span>str,<span class="dp">·</span>*args,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">93 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;.&quot;,<span class="dp">·</span>score:<span class="dp">·</span>int<span class="dp">·</span>=<span class="dp">·</span>0,<span class="dp">·</span>strand:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;.&quot;,<span class="dp">·</span>color:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;0,0,0&quot;)<span class="dp">·</span>-&gt;<span class="dp">·</span>str:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">94 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">95 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Convert<span class="dp">·</span>inverted<span class="dp">·</span>repeat<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>BED12<span class="dp">·</span>record.<span class="dp">·</span>All<span class="dp">·</span>arguments<span class="dp">·</span>except<span class="dp">·</span>the<span class="dp">·</span>contig<span class="dp">·</span>should<span class="dp">·</span>be<span class="dp">·</span>passed<span class="dp">·</span>as<span class="dp">·</span>kwargs</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">96 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">97 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pass</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">92 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__len__(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>int:</td><td class="diffline">98 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__len__(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>int:</td></tr>
+<tr class="diffunmodified"><td class="diffline">93 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">99 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">94 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>The<span class="dp">·</span>length<span class="dp">·</span>of<span class="dp">·</span>inverted<span class="dp">·</span>repeats<span class="dp">·</span>is<span class="dp">·</span>defined<span class="dp">·</span>as<span class="dp">·</span>the<span class="dp">·</span>total<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>base<span class="dp">·</span>pairs<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>underlying<span class="dp">·</span>segments.</td><td class="diffline">100 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>The<span class="dp">·</span>length<span class="dp">·</span>of<span class="dp">·</span>inverted<span class="dp">·</span>repeats<span class="dp">·</span>is<span class="dp">·</span>defined<span class="dp">·</span>as<span class="dp">·</span>the<span class="dp">·</span>total<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>base<span class="dp">·</span>pairs<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>underlying<span class="dp">·</span>segments.</td></tr>
+<tr class="diffunmodified"><td class="diffline">95 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">101 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">96 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pass</td><td class="diffline">102 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pass</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">97 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__eq__(self,<span class="dp">·</span>other)<span class="dp">·</span>-&gt;<span class="dp">·</span>bool:<span class="dp">·</span>...</td><td class="diffline">103 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__eq__(self,<span class="dp">·</span>other)<span class="dp">·</span>-&gt;<span class="dp">·</span>bool:<span class="dp">·</span>...</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">repeto-0.0.5/src/lib.rs</span> vs.</div>
+      <div id="repeto--.-.-.tar---repeto--.-.--src-lib.rs"><span class="source">repeto-0.0.7/src/lib.rs</span>
+        <a class="anchor" href="#repeto--.-.-.tar---repeto--.-.--src-lib.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.74 KB</span></div>
+      <div><span class="source">repeto-0.0.5/src/repeats.rs</span> vs.</div>
+      <div id="repeto--.-.-.tar---repeto--.-.--src-repeats.rs"><span class="source">repeto-0.0.7/src/repeats.rs</span>
+        <a class="anchor" href="#repeto--.-.-.tar---repeto--.-.--src-repeats.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 181, 14 lines modified</td><td colspan="2">Offset 181, 38 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">181 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pub<span class="dp">·</span>fn<span class="dp">·</span>seqranges(&amp;self,<span class="dp">·</span>py:<span class="dp">·</span>Python)<span class="dp">·</span>-&gt;<span class="dp">·</span>Vec&lt;Py&lt;Range&gt;&gt;<span class="dp">·</span>{</td><td class="diffline">181 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pub<span class="dp">·</span>fn<span class="dp">·</span>seqranges(&amp;self,<span class="dp">·</span>py:<span class="dp">·</span>Python)<span class="dp">·</span>-&gt;<span class="dp">·</span>Vec&lt;Py&lt;Range&gt;&gt;<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">182 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>chain(</td><td class="diffline">182 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>chain(</td></tr>
+<tr class="diffunmodified"><td class="diffline">183 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.segments.iter().map(|x|<span class="dp">·</span>x.borrow(py).left.clone_ref(py)),</td><td class="diffline">183 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.segments.iter().map(|x|<span class="dp">·</span>x.borrow(py).left.clone_ref(py)),</td></tr>
+<tr class="diffunmodified"><td class="diffline">184 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.segments.iter().rev().map(|x|<span class="dp">·</span>x.borrow(py).right.clone_ref(py)),</td><td class="diffline">184 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.segments.iter().rev().map(|x|<span class="dp">·</span>x.borrow(py).right.clone_ref(py)),</td></tr>
+<tr class="diffunmodified"><td class="diffline">185 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>).collect()</td><td class="diffline">185 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>).collect()</td></tr>
+<tr class="diffunmodified"><td class="diffline">186 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td><td class="diffline">186 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">187 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#[pyo3(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">188 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>signature<span class="dp">·</span>=<span class="dp">·</span>(contig,<span class="dp">·</span>*args,<span class="dp">·</span>name<span class="dp">·</span>=<span class="dp">·</span>&quot;.&quot;,<span class="dp">·</span>score<span class="dp">·</span>=<span class="dp">·</span>0,<span class="dp">·</span>strand<span class="dp">·</span>=<span class="dp">·</span>&quot;.&quot;,<span class="dp">·</span>color<span class="dp">·</span>=<span class="dp">·</span>&quot;0,0,0&quot;),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">189 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>text_signature<span class="dp">·</span>=<span class="dp">·</span>None</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">190 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">191 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pub<span class="dp">·</span>fn<span class="dp">·</span>to_bed12(&amp;self,<span class="dp">·</span>py:<span class="dp">·</span>Python,<span class="dp">·</span>contig:<span class="dp">·</span>&amp;str,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">192 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>args:<span class="dp">·</span>&amp;PyTuple,<span class="dp">·</span>name:<span class="dp">·</span>&amp;str,<span class="dp">·</span>score:<span class="dp">·</span>u16,<span class="dp">·</span>strand:<span class="dp">·</span>&amp;str,<span class="dp">·</span>color:<span class="dp">·</span>&amp;str)<span class="dp">·</span>-&gt;<span class="dp">·</span>String<span class="dp">·</span>{</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">193 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert_eq!(args.len(),<span class="dp">·</span>0,<span class="dp">·</span>&quot;to_bed12<span class="dp">·</span>doesn&#x27;t<span class="dp">·</span>support<span class="dp">·</span>positional<span class="dp">·</span>arguments<span class="dp">·</span>except<span class="dp">·</span>&#x27;contig&#x27;.&quot;);</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">194 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert!(score<span class="dp">·</span>&lt;=<span class="dp">·</span>1000,<span class="dp">·</span>&quot;Score<span class="dp">·</span>must<span class="dp">·</span>be<span class="dp">·</span>from<span class="dp">·</span>0<span class="dp">·</span>to<span class="dp">·</span>1000&quot;);</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">195 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>let<span class="dp">·</span>range<span class="dp">·</span>=<span class="dp">·</span>self.brange(py);</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">196 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>let<span class="dp">·</span>(block_sizes,<span class="dp">·</span>block_starts):<span class="dp">·</span>(Vec&lt;usize&gt;,<span class="dp">·</span>Vec&lt;isize&gt;)<span class="dp">·</span>=<span class="dp">·</span>self.seqranges(py)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">197 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>.into_iter()</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">198 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>.map(|x|<span class="dp">·</span>(x.borrow(py).__len__(),<span class="dp">·</span>x.borrow(py).start<span class="dp">·</span>-<span class="dp">·</span>range.start))</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">199 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>.unzip();</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">200 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>let<span class="dp">·</span>block_sizes<span class="dp">·</span>=<span class="dp">·</span>block_sizes.into_iter().join(&quot;,&quot;);</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">201 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>let<span class="dp">·</span>block_starts<span class="dp">·</span>=<span class="dp">·</span>block_starts.into_iter().join(&quot;,&quot;);</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">202 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>format!(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">203 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">204 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>contig,<span class="dp">·</span>range.start,<span class="dp">·</span>range.end,<span class="dp">·</span>name,<span class="dp">·</span>score,<span class="dp">·</span>strand,<span class="dp">·</span>range.start,<span class="dp">·</span>range.end,<span class="dp">·</span>color,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">205 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.segments.len()<span class="dp">·</span>*<span class="dp">·</span>2,<span class="dp">·</span>block_sizes,<span class="dp">·</span>block_starts</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">206 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">207 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">187 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pub<span class="dp">·</span>fn<span class="dp">·</span>__len__(&amp;self,<span class="dp">·</span>py:<span class="dp">·</span>Python)<span class="dp">·</span>-&gt;<span class="dp">·</span>usize<span class="dp">·</span>{</td><td class="diffline">208 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pub<span class="dp">·</span>fn<span class="dp">·</span>__len__(&amp;self,<span class="dp">·</span>py:<span class="dp">·</span>Python)<span class="dp">·</span>-&gt;<span class="dp">·</span>usize<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">188 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.segments.iter().map(|x|<span class="dp">·</span>x.borrow(py).__len__(py)).sum()</td><td class="diffline">209 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.segments.iter().map(|x|<span class="dp">·</span>x.borrow(py).__len__(py)).sum()</td></tr>
+<tr class="diffunmodified"><td class="diffline">189 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td><td class="diffline">210 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">190 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pub<span class="dp">·</span>fn<span class="dp">·</span>__richcmp__(&amp;self,<span class="dp">·</span>other:<span class="dp">·</span>&amp;Self,<span class="dp">·</span>op:<span class="dp">·</span>CompareOp,<span class="dp">·</span>py:<span class="dp">·</span>Python&lt;&#x27;_&gt;)<span class="dp">·</span>-&gt;<span class="dp">·</span>PyResult&lt;PyObject&gt;<span class="dp">·</span>{</td><td class="diffline">211 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pub<span class="dp">·</span>fn<span class="dp">·</span>__richcmp__(&amp;self,<span class="dp">·</span>other:<span class="dp">·</span>&amp;Self,<span class="dp">·</span>op:<span class="dp">·</span>CompareOp,<span class="dp">·</span>py:<span class="dp">·</span>Python&lt;&#x27;_&gt;)<span class="dp">·</span>-&gt;<span class="dp">·</span>PyResult&lt;PyObject&gt;<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">191 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Ok(match<span class="dp">·</span>op<span class="dp">·</span>{</td><td class="diffline">212 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Ok(match<span class="dp">·</span>op<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">192 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>CompareOp::Eq<span class="dp">·</span>=&gt;</td><td class="diffline">213 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>CompareOp::Eq<span class="dp">·</span>=&gt;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.09 KB</span></div>
+      <div><span class="source">repeto-0.0.5/Cargo.lock</span> vs.</div>
+      <div id="repeto--.-.-.tar---repeto--.-.--Cargo.lock"><span class="source">repeto-0.0.7/Cargo.lock</span>
+        <a class="anchor" href="#repeto--.-.-.tar---repeto--.-.--Cargo.lock">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 25, 15 lines modified</td><td colspan="2">Offset 25, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.1.0&quot;</td><td class="diffline">25 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.1.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;registry+https://github.com/rust-lang/crates.io-index&quot;</td><td class="diffline">26 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;registry+https://github.com/rust-lang/crates.io-index&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa&quot;</td><td class="diffline">27 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">[[package]]</td><td class="diffline">28 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;biobit-alignment&quot;</td><td class="diffline">29 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;biobit-alignment&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.0.1&quot;</td><td class="diffline">30 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.0.1&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;git+https://github.com/nucleohub/biobit?rev=<del>683</del>c<del>0fa1946</del>0<del>c154</del>9<del>f9</del>8<del>b18f</del>d<del>be6b2b815</del>2<del>78</del>4<del>b3</del>#<del>683</del>c<del>0fa1946</del>0<del>c154</del>9<del>f9</del>8<del>b18f</del>d<del>be6b2b815</del>2<del>78</del>4<del>b3</del>&quot;</td><td class="diffline">31 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;git+https://github.com/nucleohub/biobit?rev=<ins>725</ins>c<ins>776b3b8</ins>0<ins>d0c6</ins>9<ins>90</ins>8<ins>ddd0</ins>d<ins>697d07171</ins>2<ins>e9</ins>4<ins>fc</ins>#<ins>725</ins>c<ins>776b3b8</ins>0<ins>d0c6</ins>9<ins>90</ins>8<ins>ddd0</ins>d<ins>697d07171</ins>2<ins>e9</ins>4<ins>fc</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">32 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span>&quot;geo&quot;,</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span>&quot;geo&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span>&quot;itertools&quot;,</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span>&quot;itertools&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">]</td><td class="diffline">35 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">[[package]]</td><td class="diffline">36 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;bitflags&quot;</td><td class="diffline">37 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;bitflags&quot;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 325, 24 lines modified</td><td colspan="2">Offset 325, 24 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">325 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;fb5a58c1855b4b6819d59012155603f0b22ad30cad752600aadfcb695265519a&quot;</td><td class="diffline">325 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;fb5a58c1855b4b6819d59012155603f0b22ad30cad752600aadfcb695265519a&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">326 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">326 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">327 </td><td class="diffpresent"><span class="dp">·</span>&quot;bitflags&quot;,</td><td class="diffline">327 </td><td class="diffpresent"><span class="dp">·</span>&quot;bitflags&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">328 </td><td class="diffpresent">]</td><td class="diffline">328 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">329 </td><td class="diffpresent">[[package]]</td><td class="diffline">329 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">330 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;repeto&quot;</td><td class="diffline">330 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;repeto&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">331 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.0.<del>5</del>&quot;</td><td class="diffline">331 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.0.<ins>7</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">332 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">332 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">333 </td><td class="diffpresent"><span class="dp">·</span>&quot;biobit-alignment&quot;,</td><td class="diffline">333 </td><td class="diffpresent"><span class="dp">·</span>&quot;biobit-alignment&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">334 </td><td class="diffpresent"><span class="dp">·</span>&quot;derive-getters&quot;,</td><td class="diffline">334 </td><td class="diffpresent"><span class="dp">·</span>&quot;derive-getters&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">335 </td><td class="diffpresent"><span class="dp">·</span>&quot;itertools&quot;,</td><td class="diffline">335 </td><td class="diffpresent"><span class="dp">·</span>&quot;itertools&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">336 </td><td class="diffpresent">]</td><td class="diffline">336 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">337 </td><td class="diffpresent">[[package]]</td><td class="diffline">337 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">338 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;repeto-py&quot;</td><td class="diffline">338 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;repeto-py&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">339 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.0.<del>5</del>&quot;</td><td class="diffline">339 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.0.<ins>7</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">340 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">340 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">341 </td><td class="diffpresent"><span class="dp">·</span>&quot;itertools&quot;,</td><td class="diffline">341 </td><td class="diffpresent"><span class="dp">·</span>&quot;itertools&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">342 </td><td class="diffpresent"><span class="dp">·</span>&quot;pyo3&quot;,</td><td class="diffline">342 </td><td class="diffpresent"><span class="dp">·</span>&quot;pyo3&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">343 </td><td class="diffpresent"><span class="dp">·</span>&quot;repeto&quot;,</td><td class="diffline">343 </td><td class="diffpresent"><span class="dp">·</span>&quot;repeto&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">344 </td><td class="diffpresent">]</td><td class="diffline">344 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">345 </td><td class="diffpresent">[[package]]</td><td class="diffline">345 </td><td class="diffpresent">[[package]]</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

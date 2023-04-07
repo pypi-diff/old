@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/autoplotlib-0.1.0.tar.gz tmp/autoplotlib-0.1.1.tar.gz --html versions/a/autoplotlib/0.1.0-0.1.1/index.html --text versions/a/autoplotlib/0.1.0-0.1.1/diff.txt --markdown versions/a/autoplotlib/0.1.0-0.1.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">11.9 KB</span></div>
+  <div><span class="source">tmp/autoplotlib-0.1.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/autoplotlib-0.1.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">11.8 KB</span></div>
+    <div><span class="source">autoplotlib-0.1.0.tar</span> vs.</div>
+    <div id="autoplotlib--.-.-.tar"><span class="source">autoplotlib-0.1.1.tar</span>
+      <a class="anchor" href="#autoplotlib--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.37 KB</span></div>
+      <div id="autoplotlib--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>123</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/HISTORY.md</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>245</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/HISTORY.md</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>300<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.1/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1151<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/.github/workflows/release_pypi.yaml</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1151<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/.github/workflows/release_pypi.yaml</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>34</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/autoplotlib/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>151</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/autoplotlib/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<del>46</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/autoplotlib/main.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<ins>59</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/autoplotlib/main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>897<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/autoplotlib/sandbox.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>897<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/autoplotlib/sandbox.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span>1102395<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/docs/autoplotlib_demo.gif</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span>1102395<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/docs/autoplotlib_demo.gif</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>43912<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/docs/autoplotlib_logo.png</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>43912<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/docs/autoplotlib_logo.png</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1155<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.1/docs/dev_guide.md</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>314183<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/notebooks/logo.ipynb</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>314183<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/notebooks/logo.ipynb</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1600<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/notebooks/test.ipynb</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1600<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/notebooks/test.ipynb</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>516<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/tests/test_sandbox.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>516<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/tests/test_sandbox.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1838<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/.gitignore</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1838<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1063<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/LICENSE</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1063<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>271</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/README.md</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>405</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>677</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/pyproject.toml</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>742</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>2893</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<del>0</del>/PKG-INFO</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>3137</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>autoplotlib-0.1.<ins>1</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">autoplotlib-0.1.0/.github/workflows/release_pypi.yaml</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--.github-workflows-release_pypi.yaml"><span class="source">autoplotlib-0.1.1/.github/workflows/release_pypi.yaml</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--.github-workflows-release_pypi.yaml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">946 B</span></div>
+      <div><span class="source">autoplotlib-0.1.0/autoplotlib/main.py</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--autoplotlib-main.py"><span class="source">autoplotlib-0.1.1/autoplotlib/main.py</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--autoplotlib-main.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 65, 15 lines modified</td><td colspan="2">Offset 65, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>IndexError:</td><td class="diffline">65 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>IndexError:</td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>ValueError(</td><td class="diffline">66 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>ValueError(</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;The<span class="dp">·</span>LLM<span class="dp">·</span>did<span class="dp">·</span>not<span class="dp">·</span>return<span class="dp">·</span>any<span class="dp">·</span>code.<span class="dp">·</span>&quot;</td><td class="diffline">67 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;The<span class="dp">·</span>LLM<span class="dp">·</span>did<span class="dp">·</span>not<span class="dp">·</span>return<span class="dp">·</span>any<span class="dp">·</span>code.<span class="dp">·</span>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Please<span class="dp">·</span>try<span class="dp">·</span>again<span class="dp">·</span>(maybe<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>different<span class="dp">·</span>prompt).&quot;</td><td class="diffline">68 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Please<span class="dp">·</span>try<span class="dp">·</span>again<span class="dp">·</span>(maybe<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>different<span class="dp">·</span>prompt).&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;LLM<span class="dp">·</span>response:<span class="dp">·</span>{llm_response}&quot;</td><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;LLM<span class="dp">·</span>response:<span class="dp">·</span>{llm_response}&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">70 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td><td class="diffline">70 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">71 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>safety_user_input_str<span class="dp">·</span>=<span class="dp">·</span>f&quot;Code<span class="dp">·</span>generated<span class="dp">·</span>by<span class="dp">·</span>LLM:<span class="dp">·</span>\n{code}<span class="dp">·</span>\n\nPress<span class="dp">·</span>y<span class="dp">·</span>and<span class="dp">·</span>enter<span class="dp">·</span>to<span class="dp">·</span>confirm<span class="dp">·</span>that<span class="dp">·</span>the<span class="dp">·</span>code<span class="dp">·</span>is<span class="dp">·</span>safe<span class="dp">·</span>and<span class="dp">·</span>to<span class="dp">·</span>run<span class="dp">·</span>the<span class="dp">·</span>code.<span class="dp">·</span>Press<span class="dp">·</span>any<span class="dp">·</span>other<span class="dp">·</span>key<span class="dp">·</span>and<span class="dp">·</span>enter<span class="dp">·</span>to<span class="dp">·</span>abort.&quot;</td><td class="diffline">71 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>safety_user_input_str<span class="dp">·</span>=<span class="dp">·</span>f&quot;Code<span class="dp">·</span>generated<span class="dp">·</span>by<span class="dp">·</span>LLM:<span class="dp">·</span>\n{code}<span class="dp">·</span>\n\nPress<span class="dp">·</span>y<span class="dp">·</span>and<span class="dp">·</span>enter<span class="dp">·</span>to<span class="dp">·</span>confirm<span class="dp">·</span>that<span class="dp">·</span>the<span class="dp">·</span>code<span class="dp">·</span>is<span class="dp">·</span>safe<span class="dp">·</span>and<span class="dp">·</span>to<span class="dp">·</span>run<span class="dp">·</span>the<span class="dp">·</span>code.<span class="dp">·</span>Press<span class="dp">·</span>any<span class="dp">·</span>other<span class="dp">·</span>key<span class="dp">·</span>and<span class="dp">·</span>enter<span class="dp">·</span>to<span class="dp">·</span>abort.<ins><span class="dp">·</span>Your<span class="dp">·</span>input:<span class="dp">·</span></ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">72 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>input(safety_user_input_str)<span class="dp">·</span>!=<span class="dp">·</span>&quot;y&quot;:</td><td class="diffline">72 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>input(safety_user_input_str)<span class="dp">·</span>!=<span class="dp">·</span>&quot;y&quot;:</td></tr>
+<tr class="diffunmodified"><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>ValueError(&quot;Code<span class="dp">·</span>not<span class="dp">·</span>confirmed<span class="dp">·</span>as<span class="dp">·</span>safe.<span class="dp">·</span>Aborting.&quot;)</td><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>ValueError(&quot;Code<span class="dp">·</span>not<span class="dp">·</span>confirmed<span class="dp">·</span>as<span class="dp">·</span>safe.<span class="dp">·</span>Aborting.&quot;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>verbose:</td><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>verbose:</td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(f&quot;Code<span class="dp">·</span>generated<span class="dp">·</span>by<span class="dp">·</span>LLM:<span class="dp">·</span>{code}&quot;)</td><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(f&quot;Code<span class="dp">·</span>generated<span class="dp">·</span>by<span class="dp">·</span>LLM:<span class="dp">·</span>{code}&quot;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>fig<span class="dp">·</span>=<span class="dp">·</span>plt.figure(**fig_args)</td><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>fig<span class="dp">·</span>=<span class="dp">·</span>plt.figure(**fig_args)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">autoplotlib-0.1.0/autoplotlib/sandbox.py</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--autoplotlib-sandbox.py"><span class="source">autoplotlib-0.1.1/autoplotlib/sandbox.py</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--autoplotlib-sandbox.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">autoplotlib-0.1.0/docs/autoplotlib_demo.gif</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--docs-autoplotlib_demo.gif"><span class="source">autoplotlib-0.1.1/docs/autoplotlib_demo.gif</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--docs-autoplotlib_demo.gif">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">autoplotlib-0.1.0/docs/autoplotlib_logo.png</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--docs-autoplotlib_logo.png"><span class="source">autoplotlib-0.1.1/docs/autoplotlib_logo.png</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--docs-autoplotlib_logo.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">autoplotlib-0.1.0/notebooks/logo.ipynb</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--notebooks-logo.ipynb"><span class="source">autoplotlib-0.1.1/notebooks/logo.ipynb</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--notebooks-logo.ipynb">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">autoplotlib-0.1.0/notebooks/test.ipynb</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--notebooks-test.ipynb"><span class="source">autoplotlib-0.1.1/notebooks/test.ipynb</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--notebooks-test.ipynb">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">autoplotlib-0.1.0/tests/test_sandbox.py</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--tests-test_sandbox.py"><span class="source">autoplotlib-0.1.1/tests/test_sandbox.py</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--tests-test_sandbox.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">autoplotlib-0.1.0/.gitignore</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--.gitignore"><span class="source">autoplotlib-0.1.1/.gitignore</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--.gitignore">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">89.0 B</span></div>
+      <div><span class="source">autoplotlib-0.1.0/LICENSE</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--LICENSE"><span class="source">autoplotlib-0.1.1/LICENSE</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.33 KB</span></div>
+      <div><span class="source">autoplotlib-0.1.0/README.md</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--README.md"><span class="source">autoplotlib-0.1.1/README.md</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 16% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">&lt;p<span class="dp">·</span>align=&quot;center&quot;&gt;</td><td class="diffline">1 </td><td class="diffpresent">&lt;p<span class="dp">·</span>align=&quot;center&quot;&gt;</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">&lt;img<span class="dp">·</span>src=&quot;./docs/autoplotlib_logo.png&quot;<span class="dp">·</span>width=&quot;250&quot;<span class="dp">·</span>/&gt;</td><td class="diffline">2 </td><td class="diffpresent">&lt;img<span class="dp">·</span>src=&quot;<ins>https://raw.githubusercontent</ins>.<ins>com/rdnfn/autoplotlib/main</ins>/docs/autoplotlib_logo.png&quot;<span class="dp">·</span>width=&quot;250&quot;<span class="dp">·</span>/&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">&lt;/p&gt;</td><td class="diffline">3 </td><td class="diffpresent">&lt;/p&gt;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent"><del>#</del><span class="dp">·</span>autoplotlib</td><td class="diffline">4 </td><td class="diffpresent"><ins>[![PyP</ins><ins>I</ins><span class="dp">·</span><ins>version](https://badge.fury.io/py/autoplotlib.svg)](https://pypi.org/project/</ins>autoplotlib<ins>/)</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">*Quickly<span class="dp">·</span>generate<span class="dp">·</span>plots<span class="dp">·</span>in<span class="dp">·</span>Python<span class="dp">·</span>by<span class="dp">·</span>simply<span class="dp">·</span>describing<span class="dp">·</span>them<span class="dp">·</span>through<span class="dp">·</span>text.*<span class="dp">·</span>For<span class="dp">·</span>example,<span class="dp">·</span>simply<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>prompt<span class="dp">·</span>&quot;create<span class="dp">·</span>a<span class="dp">·</span>scatter<span class="dp">·</span>plot<span class="dp">·</span>with<span class="dp">·</span>name<span class="dp">·</span>labels&quot;<span class="dp">·</span>instead<span class="dp">·</span>endlessly<span class="dp">·</span>searching<span class="dp">·</span>the<span class="dp">·</span>docs<span class="dp">·</span>and<span class="dp">·</span>stackoverflow.<span class="dp">·</span>Given<span class="dp">·</span>such<span class="dp">·</span>a<span class="dp">·</span>prompt,<span class="dp">·</span>the<span class="dp">·</span>`autoplotlib`<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>uses<span class="dp">·</span>the<span class="dp">·</span>OpenAI<span class="dp">·</span>API<span class="dp">·</span>to<span class="dp">·</span>automatically<span class="dp">·</span>generate<span class="dp">·</span>the<span class="dp">·</span>corresponding<span class="dp">·</span>code<span class="dp">·</span>and<span class="dp">·</span>plot<span class="dp">·</span>-<span class="dp">·</span>saving<span class="dp">·</span>you<span class="dp">·</span>time<span class="dp">·</span>and<span class="dp">·</span>effort.</td><td class="diffline">5 </td><td class="diffpresent">*Quickly<span class="dp">·</span>generate<span class="dp">·</span>plots<span class="dp">·</span>in<span class="dp">·</span>Python<span class="dp">·</span>by<span class="dp">·</span>simply<span class="dp">·</span>describing<span class="dp">·</span>them<span class="dp">·</span>through<span class="dp">·</span>text.*<span class="dp">·</span>For<span class="dp">·</span>example,<span class="dp">·</span>simply<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>prompt<span class="dp">·</span>&quot;create<span class="dp">·</span>a<span class="dp">·</span>scatter<span class="dp">·</span>plot<span class="dp">·</span>with<span class="dp">·</span>name<span class="dp">·</span>labels&quot;<span class="dp">·</span>instead<span class="dp">·</span><ins>of<span class="dp">·</span></ins>endlessly<span class="dp">·</span>searching<span class="dp">·</span>the<span class="dp">·</span>docs<span class="dp">·</span>and<span class="dp">·</span>stackoverflow.<span class="dp">·</span>Given<span class="dp">·</span>such<span class="dp">·</span>a<span class="dp">·</span>prompt,<span class="dp">·</span>the<span class="dp">·</span>`autoplotlib`<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>uses<span class="dp">·</span>the<span class="dp">·</span>OpenAI<span class="dp">·</span>API<span class="dp">·</span>to<span class="dp">·</span>automatically<span class="dp">·</span>generate<span class="dp">·</span>the<span class="dp">·</span>corresponding<span class="dp">·</span>code<span class="dp">·</span>and<span class="dp">·</span>plot<span class="dp">·</span>-<span class="dp">·</span>saving<span class="dp">·</span>you<span class="dp">·</span>time<span class="dp">·</span>and<span class="dp">·</span>effort.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">&gt;<span class="dp">·</span>**Warning**</td><td class="diffline">6 </td><td class="diffpresent">&gt;<span class="dp">·</span>**Warning**</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">&gt;<span class="dp">·</span>This<span class="dp">·</span>package<span class="dp">·</span>is<span class="dp">·</span>experimental.<span class="dp">·</span>The<span class="dp">·</span>package<span class="dp">·</span>can<span class="dp">·</span>execute<span class="dp">·</span>code<span class="dp">·</span>output<span class="dp">·</span>from<span class="dp">·</span>language<span class="dp">·</span>models.<span class="dp">·</span>Albeit<span class="dp">·</span>unlikely,<span class="dp">·</span>always<span class="dp">·</span>check<span class="dp">·</span>and<span class="dp">·</span>confirm<span class="dp">·</span>no<span class="dp">·</span>malicious<span class="dp">·</span>code<span class="dp">·</span>was<span class="dp">·</span>generated<span class="dp">·</span>by<span class="dp">·</span>the<span class="dp">·</span>model<span class="dp">·</span>before<span class="dp">·</span>execution.<span class="dp">·</span>Use<span class="dp">·</span>at<span class="dp">·</span>your<span class="dp">·</span>own<span class="dp">·</span>risk.</td><td class="diffline">7 </td><td class="diffpresent">&gt;<span class="dp">·</span>This<span class="dp">·</span>package<span class="dp">·</span>is<span class="dp">·</span>experimental.<span class="dp">·</span>The<span class="dp">·</span>package<span class="dp">·</span>can<span class="dp">·</span>execute<span class="dp">·</span>code<span class="dp">·</span>output<span class="dp">·</span>from<span class="dp">·</span>language<span class="dp">·</span>models.<span class="dp">·</span>Albeit<span class="dp">·</span>unlikely,<span class="dp">·</span>always<span class="dp">·</span>check<span class="dp">·</span>and<span class="dp">·</span>confirm<span class="dp">·</span>no<span class="dp">·</span>malicious<span class="dp">·</span>code<span class="dp">·</span>was<span class="dp">·</span>generated<span class="dp">·</span>by<span class="dp">·</span>the<span class="dp">·</span>model<span class="dp">·</span>before<span class="dp">·</span>execution.<span class="dp">·</span>Use<span class="dp">·</span>at<span class="dp">·</span>your<span class="dp">·</span>own<span class="dp">·</span>risk.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td><td class="diffline">8 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">1.<span class="dp">·</span>Install<span class="dp">·</span>the<span class="dp">·</span>Python<span class="dp">·</span>package:</td><td class="diffline">9 </td><td class="diffpresent">1.<span class="dp">·</span>Install<span class="dp">·</span>the<span class="dp">·</span>Python<span class="dp">·</span>package:</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 43, 31 lines modified</td><td colspan="2">Offset 43, 19 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">Ensure<span class="dp">·</span>the<span class="dp">·</span>labels<span class="dp">·</span>don&#x27;t<span class="dp">·</span>overlap.</td><td class="diffline">43 </td><td class="diffpresent">Ensure<span class="dp">·</span>the<span class="dp">·</span>labels<span class="dp">·</span>don&#x27;t<span class="dp">·</span>overlap.</td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">Mark<span class="dp">·</span>people<span class="dp">·</span>taller<span class="dp">·</span>than<span class="dp">·</span>170<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>star<span class="dp">·</span>instead<span class="dp">·</span>of<span class="dp">·</span>a<span class="dp">·</span>point.</td><td class="diffline">44 </td><td class="diffpresent">Mark<span class="dp">·</span>people<span class="dp">·</span>taller<span class="dp">·</span>than<span class="dp">·</span>170<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>star<span class="dp">·</span>instead<span class="dp">·</span>of<span class="dp">·</span>a<span class="dp">·</span>point.</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">&quot;&quot;&quot;</td><td class="diffline">45 </td><td class="diffpresent">&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent">code,<span class="dp">·</span>fig,<span class="dp">·</span>llm_response<span class="dp">·</span>=<span class="dp">·</span>aplt.plot(figure_description,<span class="dp">·</span>data=data)</td><td class="diffline">46 </td><td class="diffpresent">code,<span class="dp">·</span>fig,<span class="dp">·</span>llm_response<span class="dp">·</span>=<span class="dp">·</span>aplt.plot(figure_description,<span class="dp">·</span>data=data)</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">```</td><td class="diffline">47 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">&lt;img<span class="dp">·</span>src=&quot;./docs/autoplotlib_demo.gif&quot;<span class="dp">·</span>width=&quot;690&quot;<span class="dp">·</span>/&gt;</td><td class="diffline">48 </td><td class="diffpresent">&lt;img<span class="dp">·</span>src=&quot;<ins>https://raw.githubusercontent</ins>.<ins>com/rdnfn/autoplotlib/main</ins>/docs/autoplotlib_demo.gif&quot;<span class="dp">·</span>width=&quot;690&quot;<span class="dp">·</span>/&gt;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">##<span class="dp">·</span><del>Developme</del>n<del>t</del></td><td class="diffline">49 </td><td class="diffpresent">##<span class="dp">·</span><ins>C</ins><ins>ontributi</ins>n<ins>g</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">50 </td><td class="diffpresent">See<span class="dp">·</span>the<span class="dp">·</span>[development<span class="dp">·</span>guide](https://github.com/rdnfn/autoplotlib/blob/main/docs/dev_guide.md)<span class="dp">·</span>for<span class="dp">·</span>information<span class="dp">·</span>about<span class="dp">·</span>contributing.</td></tr>
+<tr class="diffdeleted"><td class="diffline">50 </td><td class="diffpresent">###<span class="dp">·</span>Setup</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">51 </td><td class="diffpresent">1.<span class="dp">·</span>Fork<span class="dp">·</span>the<span class="dp">·</span>repository.</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">52 </td><td class="diffpresent">2.<span class="dp">·</span>Clone<span class="dp">·</span>the<span class="dp">·</span>repository:</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>```</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>git<span class="dp">·</span>clone<span class="dp">·</span>&lt;yourforkpath&gt;</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>```</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">56 </td><td class="diffpresent">3.<span class="dp">·</span>Install<span class="dp">·</span>the<span class="dp">·</span>package<span class="dp">·</span>in<span class="dp">·</span>development<span class="dp">·</span>mode:</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>```</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>-e<span class="dp">·</span>&quot;.[dev]&quot;</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>```</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent">##<span class="dp">·</span>Potential<span class="dp">·</span>future<span class="dp">·</span>features</td><td class="diffline">51 </td><td class="diffpresent">##<span class="dp">·</span>Potential<span class="dp">·</span>future<span class="dp">·</span>features</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent">-<span class="dp">·</span>[<span class="dp">·</span>]<span class="dp">·</span>Add<span class="dp">·</span>sandboxing<span class="dp">·</span>of<span class="dp">·</span>code<span class="dp">·</span>execution<span class="dp">·</span>([see<span class="dp">·</span>here](https://stackoverflow.com/questions/3068139/how-can-i-sandbox-python-in-pure-python#3068475))</td><td class="diffline">52 </td><td class="diffpresent">-<span class="dp">·</span>[<span class="dp">·</span>]<span class="dp">·</span>Add<span class="dp">·</span>sandboxing<span class="dp">·</span>of<span class="dp">·</span>code<span class="dp">·</span>execution<span class="dp">·</span>([see<span class="dp">·</span>here](https://stackoverflow.com/questions/3068139/how-can-i-sandbox-python-in-pure-python#3068475))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent">##<span class="dp">·</span>License</td><td class="diffline">53 </td><td class="diffpresent">##<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1000 B</span></div>
+      <div><span class="source">autoplotlib-0.1.0/pyproject.toml</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--pyproject.toml"><span class="source">autoplotlib-0.1.1/pyproject.toml</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 14% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 29 lines modified</td><td colspan="2">Offset 1, 31 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[build-system]</td><td class="diffline">1 </td><td class="diffpresent">[build-system]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;hatchling&quot;]</td><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;hatchling&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;hatchling.build&quot;</td><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;hatchling.build&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">[project]</td><td class="diffline">4 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;autoplotlib&quot;</td><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;autoplotlib&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<del>0</del>&quot;</td><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<ins>1</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;rdnfn&quot;,<span class="dp">·</span>email=&quot;info@arduin.io&quot;<span class="dp">·</span>},</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;rdnfn&quot;,<span class="dp">·</span>email=&quot;info@arduin.io&quot;<span class="dp">·</span>},</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">]</td><td class="diffline">9 </td><td class="diffpresent">]</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;<del>S</del>i<del>ng</del>le<del>-lin</del>e<span class="dp">·</span>plots<span class="dp">·</span><del>fr</del>o<del>m</del><span class="dp">·</span><del>language</del><span class="dp">·</span><del>prompt<span class="dp">·</span></del>in<span class="dp">·</span><del>Py</del>tho<del>n</del>.&quot;</td><td class="diffline">10 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;<ins>Q</ins><ins>u</ins>i<ins>ck</ins>l<ins>y<span class="dp">·</span>g</ins>e<ins>n</ins><ins>erat</ins>e<span class="dp">·</span>plots<ins><span class="dp">·</span>in</ins><span class="dp">·</span><ins>Py</ins><ins>th</ins>o<ins>n</ins><span class="dp">·</span><ins>b</ins><ins>y<span class="dp">·</span>simply</ins><span class="dp">·</span><ins>describ</ins>in<ins>g</ins><span class="dp">·</span><ins>the</ins><ins>m<span class="dp">·</span></ins>th<ins>r</ins>o<ins>ugh<span class="dp">·</span>tex</ins><ins>t</ins>.&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">11 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;</td><td class="diffline">12 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">13 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License&quot;,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent&quot;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">]</td><td class="diffline">17 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">18 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;matplotlib&quot;,</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;matplotlib&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;langchain&quot;,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;langchain&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pandas&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;numpy&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">]</td><td class="diffline">23 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">[project.urls]</td><td class="diffline">24 </td><td class="diffpresent">[project.urls]</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">&quot;Homepage&quot;<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/rdnfn/autoplotlib&quot;</td><td class="diffline">25 </td><td class="diffpresent">&quot;Homepage&quot;<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/rdnfn/autoplotlib&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">&quot;Bug<span class="dp">·</span>Tracker&quot;<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/rdnfn/autoplotlib/issues&quot;</td><td class="diffline">26 </td><td class="diffpresent">&quot;Bug<span class="dp">·</span>Tracker&quot;<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/rdnfn/autoplotlib/issues&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">[project.optional-dependencies]</td><td class="diffline">27 </td><td class="diffpresent">[project.optional-dependencies]</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">dev<span class="dp">·</span>=<span class="dp">·</span>[&quot;pytest&quot;]</td><td class="diffline">28 </td><td class="diffpresent">dev<span class="dp">·</span>=<span class="dp">·</span>[&quot;pytest&quot;<ins>,&quot;bump2version&quot;</ins>]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">3.14 KB</span></div>
+      <div><span class="source">autoplotlib-0.1.0/PKG-INFO</span> vs.</div>
+      <div id="autoplotlib--.-.-.tar---autoplotlib--.-.--PKG-INFO"><span class="source">autoplotlib-0.1.1/PKG-INFO</span>
+        <a class="anchor" href="#autoplotlib--.-.-.tar---autoplotlib--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 17% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 32 lines modified</td><td colspan="2">Offset 1, 35 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>autoplotlib</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>autoplotlib</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>1</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span><del>S</del>i<del>ng</del>le<del>-lin</del>e<span class="dp">·</span>plots<span class="dp">·</span><del>fr</del>o<del>m</del><span class="dp">·</span><del>language</del><span class="dp">·</span><del>prompt<span class="dp">·</span></del>in<span class="dp">·</span><del>Py</del>tho<del>n</del>.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span><ins>Q</ins><ins>u</ins>i<ins>ck</ins>l<ins>y<span class="dp">·</span>g</ins>e<ins>n</ins><ins>erat</ins>e<span class="dp">·</span>plots<ins><span class="dp">·</span>in</ins><span class="dp">·</span><ins>Py</ins><ins>th</ins>o<ins>n</ins><span class="dp">·</span><ins>b</ins><ins>y<span class="dp">·</span>simply</ins><span class="dp">·</span><ins>describ</ins>in<ins>g</ins><span class="dp">·</span><ins>the</ins><ins>m<span class="dp">·</span></ins>th<ins>r</ins>o<ins>ugh<span class="dp">·</span>tex</ins><ins>t</ins>.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/rdnfn/autoplotlib</td><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/rdnfn/autoplotlib</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/rdnfn/autoplotlib/issues</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/rdnfn/autoplotlib/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>rdnfn<span class="dp">·</span>&lt;info@arduin.io&gt;</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>rdnfn<span class="dp">·</span>&lt;info@arduin.io&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">8 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td><td class="diffline">12 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>langchain</td><td class="diffline">13 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>langchain</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>matplotlib</td><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>matplotlib</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>numpy</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">16 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pandas</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>dev</td><td class="diffline">17 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>dev</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">18 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>bump2version;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&#x27;dev&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pytest;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&#x27;dev&#x27;</td><td class="diffline">19 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pytest;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&#x27;dev&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">20 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">&lt;p<span class="dp">·</span>align=&quot;center&quot;&gt;</td><td class="diffline">21 </td><td class="diffpresent">&lt;p<span class="dp">·</span>align=&quot;center&quot;&gt;</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">&lt;img<span class="dp">·</span>src=&quot;./docs/autoplotlib_logo.png&quot;<span class="dp">·</span>width=&quot;250&quot;<span class="dp">·</span>/&gt;</td><td class="diffline">22 </td><td class="diffpresent">&lt;img<span class="dp">·</span>src=&quot;<ins>https://raw.githubusercontent</ins>.<ins>com/rdnfn/autoplotlib/main</ins>/docs/autoplotlib_logo.png&quot;<span class="dp">·</span>width=&quot;250&quot;<span class="dp">·</span>/&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">&lt;/p&gt;</td><td class="diffline">23 </td><td class="diffpresent">&lt;/p&gt;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent"><del>#</del><span class="dp">·</span>autoplotlib</td><td class="diffline">24 </td><td class="diffpresent"><ins>[![PyP</ins><ins>I</ins><span class="dp">·</span><ins>version](https://badge.fury.io/py/autoplotlib.svg)](https://pypi.org/project/</ins>autoplotlib<ins>/)</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">*Quickly<span class="dp">·</span>generate<span class="dp">·</span>plots<span class="dp">·</span>in<span class="dp">·</span>Python<span class="dp">·</span>by<span class="dp">·</span>simply<span class="dp">·</span>describing<span class="dp">·</span>them<span class="dp">·</span>through<span class="dp">·</span>text.*<span class="dp">·</span>For<span class="dp">·</span>example,<span class="dp">·</span>simply<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>prompt<span class="dp">·</span>&quot;create<span class="dp">·</span>a<span class="dp">·</span>scatter<span class="dp">·</span>plot<span class="dp">·</span>with<span class="dp">·</span>name<span class="dp">·</span>labels&quot;<span class="dp">·</span>instead<span class="dp">·</span>endlessly<span class="dp">·</span>searching<span class="dp">·</span>the<span class="dp">·</span>docs<span class="dp">·</span>and<span class="dp">·</span>stackoverflow.<span class="dp">·</span>Given<span class="dp">·</span>such<span class="dp">·</span>a<span class="dp">·</span>prompt,<span class="dp">·</span>the<span class="dp">·</span>`autoplotlib`<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>uses<span class="dp">·</span>the<span class="dp">·</span>OpenAI<span class="dp">·</span>API<span class="dp">·</span>to<span class="dp">·</span>automatically<span class="dp">·</span>generate<span class="dp">·</span>the<span class="dp">·</span>corresponding<span class="dp">·</span>code<span class="dp">·</span>and<span class="dp">·</span>plot<span class="dp">·</span>-<span class="dp">·</span>saving<span class="dp">·</span>you<span class="dp">·</span>time<span class="dp">·</span>and<span class="dp">·</span>effort.</td><td class="diffline">25 </td><td class="diffpresent">*Quickly<span class="dp">·</span>generate<span class="dp">·</span>plots<span class="dp">·</span>in<span class="dp">·</span>Python<span class="dp">·</span>by<span class="dp">·</span>simply<span class="dp">·</span>describing<span class="dp">·</span>them<span class="dp">·</span>through<span class="dp">·</span>text.*<span class="dp">·</span>For<span class="dp">·</span>example,<span class="dp">·</span>simply<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>prompt<span class="dp">·</span>&quot;create<span class="dp">·</span>a<span class="dp">·</span>scatter<span class="dp">·</span>plot<span class="dp">·</span>with<span class="dp">·</span>name<span class="dp">·</span>labels&quot;<span class="dp">·</span>instead<span class="dp">·</span><ins>of<span class="dp">·</span></ins>endlessly<span class="dp">·</span>searching<span class="dp">·</span>the<span class="dp">·</span>docs<span class="dp">·</span>and<span class="dp">·</span>stackoverflow.<span class="dp">·</span>Given<span class="dp">·</span>such<span class="dp">·</span>a<span class="dp">·</span>prompt,<span class="dp">·</span>the<span class="dp">·</span>`autoplotlib`<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>uses<span class="dp">·</span>the<span class="dp">·</span>OpenAI<span class="dp">·</span>API<span class="dp">·</span>to<span class="dp">·</span>automatically<span class="dp">·</span>generate<span class="dp">·</span>the<span class="dp">·</span>corresponding<span class="dp">·</span>code<span class="dp">·</span>and<span class="dp">·</span>plot<span class="dp">·</span>-<span class="dp">·</span>saving<span class="dp">·</span>you<span class="dp">·</span>time<span class="dp">·</span>and<span class="dp">·</span>effort.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">&gt;<span class="dp">·</span>**Warning**</td><td class="diffline">26 </td><td class="diffpresent">&gt;<span class="dp">·</span>**Warning**</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">&gt;<span class="dp">·</span>This<span class="dp">·</span>package<span class="dp">·</span>is<span class="dp">·</span>experimental.<span class="dp">·</span>The<span class="dp">·</span>package<span class="dp">·</span>can<span class="dp">·</span>execute<span class="dp">·</span>code<span class="dp">·</span>output<span class="dp">·</span>from<span class="dp">·</span>language<span class="dp">·</span>models.<span class="dp">·</span>Albeit<span class="dp">·</span>unlikely,<span class="dp">·</span>always<span class="dp">·</span>check<span class="dp">·</span>and<span class="dp">·</span>confirm<span class="dp">·</span>no<span class="dp">·</span>malicious<span class="dp">·</span>code<span class="dp">·</span>was<span class="dp">·</span>generated<span class="dp">·</span>by<span class="dp">·</span>the<span class="dp">·</span>model<span class="dp">·</span>before<span class="dp">·</span>execution.<span class="dp">·</span>Use<span class="dp">·</span>at<span class="dp">·</span>your<span class="dp">·</span>own<span class="dp">·</span>risk.</td><td class="diffline">27 </td><td class="diffpresent">&gt;<span class="dp">·</span>This<span class="dp">·</span>package<span class="dp">·</span>is<span class="dp">·</span>experimental.<span class="dp">·</span>The<span class="dp">·</span>package<span class="dp">·</span>can<span class="dp">·</span>execute<span class="dp">·</span>code<span class="dp">·</span>output<span class="dp">·</span>from<span class="dp">·</span>language<span class="dp">·</span>models.<span class="dp">·</span>Albeit<span class="dp">·</span>unlikely,<span class="dp">·</span>always<span class="dp">·</span>check<span class="dp">·</span>and<span class="dp">·</span>confirm<span class="dp">·</span>no<span class="dp">·</span>malicious<span class="dp">·</span>code<span class="dp">·</span>was<span class="dp">·</span>generated<span class="dp">·</span>by<span class="dp">·</span>the<span class="dp">·</span>model<span class="dp">·</span>before<span class="dp">·</span>execution.<span class="dp">·</span>Use<span class="dp">·</span>at<span class="dp">·</span>your<span class="dp">·</span>own<span class="dp">·</span>risk.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td><td class="diffline">28 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">1.<span class="dp">·</span>Install<span class="dp">·</span>the<span class="dp">·</span>Python<span class="dp">·</span>package:</td><td class="diffline">29 </td><td class="diffpresent">1.<span class="dp">·</span>Install<span class="dp">·</span>the<span class="dp">·</span>Python<span class="dp">·</span>package:</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 61, 31 lines modified</td><td colspan="2">Offset 64, 19 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent">Ensure<span class="dp">·</span>the<span class="dp">·</span>labels<span class="dp">·</span>don&#x27;t<span class="dp">·</span>overlap.</td><td class="diffline">64 </td><td class="diffpresent">Ensure<span class="dp">·</span>the<span class="dp">·</span>labels<span class="dp">·</span>don&#x27;t<span class="dp">·</span>overlap.</td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent">Mark<span class="dp">·</span>people<span class="dp">·</span>taller<span class="dp">·</span>than<span class="dp">·</span>170<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>star<span class="dp">·</span>instead<span class="dp">·</span>of<span class="dp">·</span>a<span class="dp">·</span>point.</td><td class="diffline">65 </td><td class="diffpresent">Mark<span class="dp">·</span>people<span class="dp">·</span>taller<span class="dp">·</span>than<span class="dp">·</span>170<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>star<span class="dp">·</span>instead<span class="dp">·</span>of<span class="dp">·</span>a<span class="dp">·</span>point.</td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent">&quot;&quot;&quot;</td><td class="diffline">66 </td><td class="diffpresent">&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent">code,<span class="dp">·</span>fig,<span class="dp">·</span>llm_response<span class="dp">·</span>=<span class="dp">·</span>aplt.plot(figure_description,<span class="dp">·</span>data=data)</td><td class="diffline">67 </td><td class="diffpresent">code,<span class="dp">·</span>fig,<span class="dp">·</span>llm_response<span class="dp">·</span>=<span class="dp">·</span>aplt.plot(figure_description,<span class="dp">·</span>data=data)</td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent">```</td><td class="diffline">68 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">66 </td><td class="diffpresent">&lt;img<span class="dp">·</span>src=&quot;./docs/autoplotlib_demo.gif&quot;<span class="dp">·</span>width=&quot;690&quot;<span class="dp">·</span>/&gt;</td><td class="diffline">69 </td><td class="diffpresent">&lt;img<span class="dp">·</span>src=&quot;<ins>https://raw.githubusercontent</ins>.<ins>com/rdnfn/autoplotlib/main</ins>/docs/autoplotlib_demo.gif&quot;<span class="dp">·</span>width=&quot;690&quot;<span class="dp">·</span>/&gt;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">67 </td><td class="diffpresent">##<span class="dp">·</span><del>Developme</del>n<del>t</del></td><td class="diffline">70 </td><td class="diffpresent">##<span class="dp">·</span><ins>C</ins><ins>ontributi</ins>n<ins>g</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">71 </td><td class="diffpresent">See<span class="dp">·</span>the<span class="dp">·</span>[development<span class="dp">·</span>guide](https://github.com/rdnfn/autoplotlib/blob/main/docs/dev_guide.md)<span class="dp">·</span>for<span class="dp">·</span>information<span class="dp">·</span>about<span class="dp">·</span>contributing.</td></tr>
+<tr class="diffdeleted"><td class="diffline">68 </td><td class="diffpresent">###<span class="dp">·</span>Setup</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">69 </td><td class="diffpresent">1.<span class="dp">·</span>Fork<span class="dp">·</span>the<span class="dp">·</span>repository.</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">70 </td><td class="diffpresent">2.<span class="dp">·</span>Clone<span class="dp">·</span>the<span class="dp">·</span>repository:</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">71 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>```</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">72 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>git<span class="dp">·</span>clone<span class="dp">·</span>&lt;yourforkpath&gt;</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>```</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">74 </td><td class="diffpresent">3.<span class="dp">·</span>Install<span class="dp">·</span>the<span class="dp">·</span>package<span class="dp">·</span>in<span class="dp">·</span>development<span class="dp">·</span>mode:</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>```</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>-e<span class="dp">·</span>&quot;.[dev]&quot;</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">77 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>```</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">78 </td><td class="diffpresent">##<span class="dp">·</span>Potential<span class="dp">·</span>future<span class="dp">·</span>features</td><td class="diffline">72 </td><td class="diffpresent">##<span class="dp">·</span>Potential<span class="dp">·</span>future<span class="dp">·</span>features</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">79 </td><td class="diffpresent">-<span class="dp">·</span>[<span class="dp">·</span>]<span class="dp">·</span>Add<span class="dp">·</span>sandboxing<span class="dp">·</span>of<span class="dp">·</span>code<span class="dp">·</span>execution<span class="dp">·</span>([see<span class="dp">·</span>here](https://stackoverflow.com/questions/3068139/how-can-i-sandbox-python-in-pure-python#3068475))</td><td class="diffline">73 </td><td class="diffpresent">-<span class="dp">·</span>[<span class="dp">·</span>]<span class="dp">·</span>Add<span class="dp">·</span>sandboxing<span class="dp">·</span>of<span class="dp">·</span>code<span class="dp">·</span>execution<span class="dp">·</span>([see<span class="dp">·</span>here](https://stackoverflow.com/questions/3068139/how-can-i-sandbox-python-in-pure-python#3068475))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">80 </td><td class="diffpresent">##<span class="dp">·</span>License</td><td class="diffline">74 </td><td class="diffpresent">##<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

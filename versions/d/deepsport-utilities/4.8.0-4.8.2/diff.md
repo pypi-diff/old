@@ -1,0 +1,3439 @@
+# Comparing `tmp/deepsport_utilities-4.8.0.tar.gz` & `tmp/deepsport_utilities-4.8.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/deepsport_utilities-4.8.0.tar", last modified: Thu Mar 16 11:07:52 2023, max compression
++gzip compressed data, was "dist/deepsport_utilities-4.8.2.tar", last modified: Fri Apr  7 13:58:47 2023, max compression
+```
+
+## Comparing `deepsport_utilities-4.8.0.tar` & `deepsport_utilities-4.8.2.tar`
+
+### file list
+
+```diff
+@@ -1,66 +1,66 @@
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.534779 deepsport_utilities-4.8.0/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      207 2022-10-28 11:10:00.000000 deepsport_utilities-4.8.0/.gitignore
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      462 2022-11-25 12:56:28.000000 deepsport_utilities-4.8.0/.gitlab-ci.yml
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      312 2023-03-16 11:07:52.518779 deepsport_utilities-4.8.0/PKG-INFO
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     2802 2022-12-06 13:30:17.000000 deepsport_utilities-4.8.0/README.md
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.305781 deepsport_utilities-4.8.0/assets/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)   494314 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.0/assets/keemotion_3D_world_convention.png
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      896 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.0/calibration.md
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.411780 deepsport_utilities-4.8.0/deepsport_utilities/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      306 2023-02-14 09:30:53.000000 deepsport_utilities-4.8.0/deepsport_utilities/__init__.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     4177 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.0/deepsport_utilities/calib.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    19474 2022-11-25 12:56:28.000000 deepsport_utilities-4.8.0/deepsport_utilities/court.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     7216 2023-03-14 14:03:00.000000 deepsport_utilities-4.8.0/deepsport_utilities/dataset.py
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.428780 deepsport_utilities-4.8.0/deepsport_utilities/ds/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)        0 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.0/deepsport_utilities/ds/__init__.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     3618 2023-03-09 15:36:32.000000 deepsport_utilities-4.8.0/deepsport_utilities/ds/generic_dataset.py
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.443780 deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     1628 2023-03-09 14:36:01.000000 deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/__init__.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     9908 2023-03-14 14:06:50.000000 deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/dataset_splitters.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    12933 2023-03-14 09:01:44.000000 deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/instants_dataset.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     4125 2023-02-16 13:53:21.000000 deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/instants_transforms.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     6206 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/mod_source.c
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    19424 2023-03-16 10:41:13.000000 deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/views_dataset.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    16017 2023-03-15 17:19:30.000000 deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/views_transforms.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     9062 2023-03-14 13:57:55.000000 deepsport_utilities-4.8.0/deepsport_utilities/transforms.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    12310 2023-03-01 15:29:46.000000 deepsport_utilities-4.8.0/deepsport_utilities/utils.py
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.424780 deepsport_utilities-4.8.0/deepsport_utilities.egg-info/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      312 2023-03-16 11:07:52.000000 deepsport_utilities-4.8.0/deepsport_utilities.egg-info/PKG-INFO
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     1964 2023-03-16 11:07:52.000000 deepsport_utilities-4.8.0/deepsport_utilities.egg-info/SOURCES.txt
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)        1 2023-03-16 11:07:52.000000 deepsport_utilities-4.8.0/deepsport_utilities.egg-info/dependency_links.txt
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      138 2023-03-16 11:07:52.000000 deepsport_utilities-4.8.0/deepsport_utilities.egg-info/requires.txt
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)       26 2023-03-16 11:07:52.000000 deepsport_utilities-4.8.0/deepsport_utilities.egg-info/top_level.txt
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.284781 deepsport_utilities-4.8.0/docs/
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.457779 deepsport_utilities-4.8.0/docs/deepsport_utilities/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    20972 2023-03-16 11:07:50.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/calib.html
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    65194 2023-03-16 11:07:50.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/court.html
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    37710 2023-03-16 11:07:50.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/dataset.html
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.462779 deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    22914 2023-03-16 11:07:50.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/generic_dataset.html
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     7181 2023-03-16 11:07:50.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/index.html
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.486779 deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    45369 2023-03-16 11:07:51.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/dataset_splitters.html
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)   133533 2023-03-16 11:07:51.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/index.html
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    61527 2023-03-16 11:07:51.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/instants_dataset.html
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    22727 2023-03-16 11:07:51.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/instants_transforms.html
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    81674 2023-03-16 11:07:51.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/views_dataset.html
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    70845 2023-03-16 11:07:51.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/views_transforms.html
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     8395 2023-03-16 11:07:50.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/index.html
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    46595 2023-03-16 11:07:51.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/transforms.html
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    55589 2023-03-16 11:07:51.000000 deepsport_utilities-4.8.0/docs/deepsport_utilities/utils.html
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.491779 deepsport_utilities-4.8.0/examples/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     1009 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.0/examples/create_camera_views_dataset.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      882 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.0/examples/import_instants_dataset.py
+--rwxr-x---   0 gvanzand (3002593) gvanzand (3002593)      541 2022-11-25 13:12:57.000000 deepsport_utilities-4.8.0/release.sh
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      226 2023-02-14 09:26:08.000000 deepsport_utilities-4.8.0/requirements.txt
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)       38 2023-03-16 11:07:52.535779 deepsport_utilities-4.8.0/setup.cfg
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     1049 2023-03-16 11:05:44.000000 deepsport_utilities-4.8.0/setup.py
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.497779 deepsport_utilities-4.8.0/tests/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)        0 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.0/tests/__init__.py
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.501779 deepsport_utilities-4.8.0/tests/groundtruths/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    22651 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.0/tests/groundtruths/ball_view.png
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      287 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.0/tests/groundtruths/test_fill_polygon.png
+-drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-03-16 11:07:52.503779 deepsport_utilities-4.8.0/tests/input_imgs/
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)  2220963 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.0/tests/input_imgs/game_94132_frame_idx_0.png
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     5912 2023-02-15 10:39:58.000000 deepsport_utilities-4.8.0/tests/test_calib.py
+--rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     1116 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.0/tests/test_court.py
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.443850 deepsport_utilities-4.8.2/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      207 2022-10-28 11:10:00.000000 deepsport_utilities-4.8.2/.gitignore
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      462 2022-11-25 12:56:28.000000 deepsport_utilities-4.8.2/.gitlab-ci.yml
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      312 2023-04-07 13:58:47.442850 deepsport_utilities-4.8.2/PKG-INFO
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     2802 2022-12-06 13:30:17.000000 deepsport_utilities-4.8.2/README.md
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.333851 deepsport_utilities-4.8.2/assets/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)   494314 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.2/assets/keemotion_3D_world_convention.png
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      896 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.2/calibration.md
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.346851 deepsport_utilities-4.8.2/deepsport_utilities/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      306 2023-02-14 09:30:53.000000 deepsport_utilities-4.8.2/deepsport_utilities/__init__.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     4177 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.2/deepsport_utilities/calib.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    19474 2022-11-25 12:56:28.000000 deepsport_utilities-4.8.2/deepsport_utilities/court.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    11178 2023-04-07 11:55:45.000000 deepsport_utilities-4.8.2/deepsport_utilities/dataset.py
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.357851 deepsport_utilities-4.8.2/deepsport_utilities/ds/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)        0 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.2/deepsport_utilities/ds/__init__.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     3618 2023-03-09 15:36:32.000000 deepsport_utilities-4.8.2/deepsport_utilities/ds/generic_dataset.py
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.368851 deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     1628 2023-03-09 14:36:01.000000 deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/__init__.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    11187 2023-03-28 12:42:37.000000 deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/dataset_splitters.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    12933 2023-03-14 09:01:44.000000 deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/instants_dataset.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     4125 2023-02-16 13:53:21.000000 deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/instants_transforms.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     6206 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/mod_source.c
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    19424 2023-04-07 13:55:13.000000 deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/views_dataset.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    16017 2023-04-04 09:17:54.000000 deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/views_transforms.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     9068 2023-04-04 07:02:31.000000 deepsport_utilities-4.8.2/deepsport_utilities/transforms.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    12310 2023-03-01 15:29:46.000000 deepsport_utilities-4.8.2/deepsport_utilities/utils.py
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.354851 deepsport_utilities-4.8.2/deepsport_utilities.egg-info/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      312 2023-04-07 13:58:47.000000 deepsport_utilities-4.8.2/deepsport_utilities.egg-info/PKG-INFO
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     1964 2023-04-07 13:58:47.000000 deepsport_utilities-4.8.2/deepsport_utilities.egg-info/SOURCES.txt
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)        1 2023-04-07 13:58:47.000000 deepsport_utilities-4.8.2/deepsport_utilities.egg-info/dependency_links.txt
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      138 2023-04-07 13:58:47.000000 deepsport_utilities-4.8.2/deepsport_utilities.egg-info/requires.txt
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)       26 2023-04-07 13:58:47.000000 deepsport_utilities-4.8.2/deepsport_utilities.egg-info/top_level.txt
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.319851 deepsport_utilities-4.8.2/docs/
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.390850 deepsport_utilities-4.8.2/docs/deepsport_utilities/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    20972 2023-04-07 13:58:45.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/calib.html
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    65194 2023-04-07 13:58:45.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/court.html
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    51011 2023-04-07 13:58:45.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/dataset.html
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.394850 deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    22914 2023-04-07 13:58:45.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/generic_dataset.html
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     7181 2023-04-07 13:58:45.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/index.html
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.413850 deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    48799 2023-04-07 13:58:46.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/dataset_splitters.html
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)   135657 2023-04-07 13:58:46.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/index.html
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    61527 2023-04-07 13:58:46.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/instants_dataset.html
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    22727 2023-04-07 13:58:46.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/instants_transforms.html
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    81674 2023-04-07 13:58:46.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/views_dataset.html
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    70845 2023-04-07 13:58:46.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/views_transforms.html
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     8395 2023-04-07 13:58:45.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/index.html
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    46607 2023-04-07 13:58:46.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/transforms.html
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    55589 2023-04-07 13:58:46.000000 deepsport_utilities-4.8.2/docs/deepsport_utilities/utils.html
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.418850 deepsport_utilities-4.8.2/examples/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     1009 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.2/examples/create_camera_views_dataset.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      882 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.2/examples/import_instants_dataset.py
++-rwxr-x---   0 gvanzand (3002593) gvanzand (3002593)      541 2022-11-25 13:12:57.000000 deepsport_utilities-4.8.2/release.sh
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      226 2023-02-14 09:26:08.000000 deepsport_utilities-4.8.2/requirements.txt
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)       38 2023-04-07 13:58:47.444850 deepsport_utilities-4.8.2/setup.cfg
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     1049 2023-04-07 13:56:04.000000 deepsport_utilities-4.8.2/setup.py
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.423850 deepsport_utilities-4.8.2/tests/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)        0 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.2/tests/__init__.py
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.426850 deepsport_utilities-4.8.2/tests/groundtruths/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)    22651 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.2/tests/groundtruths/ball_view.png
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)      287 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.2/tests/groundtruths/test_fill_polygon.png
++drwxr-x---   0 gvanzand (3002593) gvanzand (3002593)        0 2023-04-07 13:58:47.428850 deepsport_utilities-4.8.2/tests/input_imgs/
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)  2220963 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.2/tests/input_imgs/game_94132_frame_idx_0.png
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     5912 2023-02-15 10:39:58.000000 deepsport_utilities-4.8.2/tests/test_calib.py
++-rw-r-----   0 gvanzand (3002593) gvanzand (3002593)     1116 2022-10-28 08:52:47.000000 deepsport_utilities-4.8.2/tests/test_court.py
+```
+
+### Comparing `deepsport_utilities-4.8.0/README.md` & `deepsport_utilities-4.8.2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/assets/keemotion_3D_world_convention.png` & `deepsport_utilities-4.8.2/assets/keemotion_3D_world_convention.png`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/calibration.md` & `deepsport_utilities-4.8.2/calibration.md`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities/calib.py` & `deepsport_utilities-4.8.2/deepsport_utilities/calib.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities/court.py` & `deepsport_utilities-4.8.2/deepsport_utilities/court.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities/ds/generic_dataset.py` & `deepsport_utilities-4.8.2/deepsport_utilities/ds/generic_dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/__init__.py` & `deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/dataset_splitters.py` & `deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/dataset_splitters.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,81 +1,104 @@
+-import random
++from collections import defaultdict
+ import dataclasses
++import random
+ import numpy as np
+ from deepsport_utilities.dataset import split_equally, Subset, SubsetType
+ 
+ @dataclasses.dataclass
+ class DeepSportDatasetSplitter: # pylint: disable=too-few-public-methods
+     validation_pc: int = 15
+     additional_keys_usage: str = "skip"
+-    folds: str = "ABCDE"
++    folds: str = "ABCDEF"
+     split = {
+         "A": ['KS-FR-CAEN', 'KS-FR-LIMOGES', 'KS-FR-ROANNE'],
+         "B": ['KS-FR-NANTES', 'KS-FR-BLOIS', 'KS-FR-FOS'],
+         "C": ['KS-FR-LEMANS', 'KS-FR-MONACO', 'KS-FR-STRASBOURG'],
+         "D": ['KS-FR-GRAVELINES', 'KS-FR-STCHAMOND', 'KS-FR-POITIERS'],
+         "E": ['KS-FR-NANCY', 'KS-FR-BOURGEB', 'KS-FR-VICHY'],
++        # F is a fictive fold for which all keys are used for training
+     }
+     def split_keys(self, keys, fold=0):
+-        assert 0 <= fold <= len(self.folds)-1, "Invalid fold index"
++        fold_index = fold
++        assert 0 <= fold_index <= len(self.folds)-1, "Invalid fold index"
+ 
+-        testing_fold = self.folds[fold]
+-        testing_keys = [k for k in keys if k.arena_label in self.split[testing_fold]]
+-
+-        remaining_arena_labels = [label for f in self.folds.replace(testing_fold, "") for label in self.split[f]]
+-        remaining_keys = [k for k in keys if k.arena_label in remaining_arena_labels]
++        testing_fold = self.folds[fold_index]
++        self.testing_arena_labels = set(self.split.get(testing_fold, []))
++        remaining_arena_labels = [label for f in self.folds.replace(testing_fold, "") for label in self.split.get(f, [])]
++        testing_keys = []
++        remaining_keys = defaultdict(list)
++        additional_keys = []
++        additional_arena_labels = set()
++        for key in keys:
++            if key.arena_label in remaining_arena_labels:
++                remaining_keys[key.instant_key].append(key)
++            elif key.arena_label in self.testing_arena_labels:
++                testing_keys.append(key)
++            else:
++                additional_keys.append(key)
++                additional_arena_labels.add(key.arena_label)
+ 
+         # Backup random seed
+         random_state = random.getstate()
+         random.seed(fold)
+ 
+-        validation_keys = random.sample(remaining_keys, len(remaining_keys)*self.validation_pc//100)
+-        training_keys = [k for k in remaining_keys if k not in validation_keys]
+-
+-        additional_keys = [k for k in keys if k not in training_keys+validation_keys+testing_keys]
++        total_length = len(remaining_keys)
++        validation_keys, training_keys = [], []
++        indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s for validation keys
++        indices[np.random.choice(total_length, total_length*self.validation_pc//100, replace=False)] = 1
++        for i, instant_key in zip(indices, remaining_keys):
++            (training_keys, validation_keys)[i].extend(remaining_keys[instant_key])
+ 
++        # Restore random seed
++        random.setstate(random_state)
++        testing2_keys = None
+         if additional_keys:
+             if self.additional_keys_usage == "testing":
+                 testing_keys += additional_keys
++                self.testing_arena_labels = self.testing_arena_labels.union(additional_arena_labels)
+             elif self.additional_keys_usage == "training":
+                 training_keys += additional_keys
+             elif self.additional_keys_usage == "validation":
+                 validation_keys += additional_keys
+             elif self.additional_keys_usage in ["none", "skip"]:
+                 pass
++            elif self.additional_keys_usage == "testing2":
++                testing2_keys = additional_keys
+             else:
+                 raise ValueError("They are additional arena labels that I don't know what to do with. Please tell me the 'additional_keys_usage' argument")
+ 
+-        # Restore random seed
+-        random.setstate(random_state)
+-        return training_keys, validation_keys, testing_keys
++        self.testing_arena_labels = list(self.testing_arena_labels)
++
++        return training_keys, validation_keys, testing_keys, testing2_keys
+ 
+     def __call__(self, dataset, fold=0):
+-        keys = list(dataset.keys.all())
+-        training_keys, validation_keys, testing_keys = self.split_keys(keys, fold)
+-        return [
++        training_keys, validation_keys, testing_keys, testing2_keys = self.split_keys(dataset.keys, fold)
++        subsets = [
+             Subset(name="training", subset_type=SubsetType.TRAIN, keys=training_keys, dataset=dataset),
+             Subset(name="validation", subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=1),
+             Subset(name="testing", subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=1),
+         ]
++        if testing2_keys:
++            subsets.append(Subset(name="testing2", subset_type=SubsetType.EVAL, keys=testing2_keys, dataset=dataset, repetitions=1))
++        return subsets
+ 
+ @dataclasses.dataclass
+ class ArenaLabelFoldsDatasetSplitter(DeepSportDatasetSplitter):
+     folds: str = "ABCDE"
+     test_fold: str = "A"
+     def __post_init__(self):
+         assert self.test_fold in self.split, f"Requested test_fold ({self.test_fold}) doesn't exist. Choose among {list(self.split)}."
+         assert all([fold in self.split for fold in self.folds]), f"One of the selected folds ({self.folds}) don't exist. Choose among {list(self.split)}."
+         self.folds = self.folds.replace(self.test_fold, "") # make sure test_fold is not used at training or validation
+     def __call__(self, dataset, fold=0):
+         assert 0 <= fold < len(self.folds)
+         keys = list(dataset.keys.all())
+ 
+-        testing_arena_labels = self.split[self.test_fold]
+-        testing_keys = [k for k in keys if k.arena_label in testing_arena_labels]
++        self.testing_arena_labels = self.split[self.test_fold]
++        testing_keys = [k for k in keys if k.arena_label in self.testing_arena_labels]
+ 
+         validation_arena_labels = self.split[self.folds[fold]]
+         validation_keys = [k for k in keys if k.arena_label in validation_arena_labels]
+ 
+         training_arena_labels = [arena_label for i in range(len(self.folds)) if i != fold for arena_label in self.split[self.folds[i]]]
+         training_keys = [k for k in keys if k.arena_label in training_arena_labels]
+ 
+@@ -166,37 +189,38 @@
+         return [
+             Subset(name="training", subset_type=SubsetType.TRAIN, keys=training_keys, dataset=dataset),
+             Subset(name="validation", subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=5),
+             Subset(name="testing", subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=5),
+         ]
+ 
+ class TestingArenaLabelsDatasetSplitter():
+-    def __init__(self, testing_arena_labels, validation_pc=15):
++    def __init__(self, testing_arena_labels, validation_pc=15, repetitions=1):
+         self.testing_arena_labels = testing_arena_labels
+         self.validation_pc = validation_pc
++        self.repetitions = repetitions
+         assert isinstance(self.testing_arena_labels, list)
+ 
+     def __call__(self, dataset, fold=0):
+         testing_keys, remaining_keys = [], []
+         for key in dataset.keys:
+             (remaining_keys, testing_keys)[key.arena_label in self.testing_arena_labels].append(key)
+ 
+         # Backup random seed
+         np_random_state = np.random.get_state()
+         np.random.seed(fold)
+ 
+-        total_length = len(remaining_keys) + len(testing_keys)
++        total_length = len(remaining_keys)
+         validation_keys, training_keys = [], []
+         validation_indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s for validation keys
+         validation_indices[np.random.choice(total_length, total_length*self.validation_pc//100, replace=False)] = 1
+         for i, key in zip(validation_indices, remaining_keys):
+             (training_keys, validation_keys)[i].append(key)
+ 
+         # Restore random seed
+         np.random.set_state(np_random_state)
+ 
+         subsets = [
+             Subset(name="training", subset_type=SubsetType.TRAIN, keys=training_keys, dataset=dataset),
+-            Subset(name="validation", subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=2),
+-            Subset(name="testing", subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=2),
++            Subset(name="validation", subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=self.repetitions),
++            Subset(name="testing", subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=self.repetitions),
+         ]
+         return [s for s in subsets if len(s.keys) > 0]
+```
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/instants_dataset.py` & `deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/instants_dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/instants_transforms.py` & `deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/instants_transforms.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/mod_source.c` & `deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/mod_source.c`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/views_dataset.py` & `deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/views_dataset.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -96,15 +96,15 @@
+         bot_idx   = np.argmax([d[0].y for d in point_and_margin_2D])
+ 
+         left  = max(-self.padding,             point_and_margin_2D[left_idx][0].x - point_and_margin_2D[left_idx][1])
+         right = min(calib.width+self.padding,  point_and_margin_2D[right_idx][0].x + point_and_margin_2D[right_idx][1])
+         top   = max(-self.padding,             point_and_margin_2D[top_idx][0].y - point_and_margin_2D[top_idx][1])
+         bot   = min(calib.height+self.padding, point_and_margin_2D[bot_idx][0].y + point_and_margin_2D[bot_idx][1])
+ 
+-        return BoundingBox(float(left), float(top), float(right-left), float(bot-top))
++        return BoundingBox(round(left), round(top), round(right-left), round(bot-top))
+ 
+ class BuildCameraViews(ViewBuilder):
+     """ Builds a view for each camera (margin parameter is useless)
+     """
+     def __call__(self, instant_key: InstantKey, instant:Instant):
+         for c in range(instant.num_cameras):
+             yield ViewDescription(c, 0, BoundingBox(0, 0, instant.calibs[c].width, instant.calibs[c].height))
+```
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities/ds/instants_dataset/views_transforms.py` & `deepsport_utilities-4.8.2/deepsport_utilities/ds/instants_dataset/views_transforms.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities/transforms.py` & `deepsport_utilities-4.8.2/deepsport_utilities/transforms.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -189,15 +189,15 @@
+         if self.regenerate:
+             item = copy.deepcopy(item)
+         return self._apply_transformation(item, A)
+ 
+ 
+ class DataExtractorTransform(Transform):
+     def __init__(self, *factories):
+-        self.factories = factories
++        self.factories = list(factories)
+     def __call__(self, key, item):
+         if not item:
+             return None
+         data = {}
+         for factory in self.factories:
+             if factory is None:
+                 continue
+```
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities/utils.py` & `deepsport_utilities-4.8.2/deepsport_utilities/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/deepsport_utilities.egg-info/SOURCES.txt` & `deepsport_utilities-4.8.2/deepsport_utilities.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/calib.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/calib.html`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/court.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/court.html`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/dataset.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/dataset.html`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -28,18 +28,20 @@
+ <span>Expand source code</span>
+ </summary>
+ <pre><code class="python">import dataclasses
+ from enum import IntFlag
+ import errno
+ import os
+ import random
++import shutil
++import threading
+ 
+ import numpy as np
+ 
+-from mlworkflow.datasets import batchify, Dataset, FilteredDataset, AugmentedDataset
++from mlworkflow.datasets import batchify, Dataset, AugmentedDataset, PickledDataset
+ from aleatorpy import pseudo_random, method # pylint: disable=unused-import
+ 
+ 
+ 
+ 
+ def collate_fn(items):
+     return {f&#34;batch_{k}&#34;: v for k,v in batchify(items).items()}
+@@ -55,37 +57,79 @@
+ # Any change here should be reported in experimentator as well
+ class Subset:
+     def __init__(self, name: str, subset_type: SubsetType, dataset: Dataset, keys=None, repetitions=1, desc=None):
+         keys = keys if keys is not None else dataset.keys.all()
+         assert isinstance(keys, (tuple, list)), f&#34;Received instance of {type(keys)} for subset {name}&#34;
+         self.name = name
+         self.type = subset_type
+-        self.dataset = FilteredDataset(dataset, predicate=lambda k,v: v is not None)
++        self.dataset = dataset#FilteredDataset(dataset, predicate=lambda k,v: v is not None)
+         self._keys = keys
+         self.keys = keys
+         self.repetitions = repetitions
+         self.desc = desc
+         self.is_training = self.type == SubsetType.TRAIN
+         loop = None if self.is_training else repetitions
+         self.shuffled_keys = pseudo_random(evolutive=self.is_training)(self.shuffled_keys)
+-        self.dataset.query_item = pseudo_random(loop=loop, input_dependent=True)(self.dataset.query_item)
++        self.query_item = pseudo_random(loop=loop, input_dependent=True)(self.query_item)
+ 
+     def shuffled_keys(self): # pylint: disable=method-hidden
+         keys = self.keys * self.repetitions
+         return random.sample(keys, len(keys)) if self.is_training else keys
+ 
+     def __len__(self):
+         return len(self.keys)*self.repetitions
+ 
+     def __str__(self):
+         return f&#34;{self.__class__.__name__}&lt;{self.name}&gt;({len(self)})&#34;
+ 
++    def query_item(self, key):
++        return self.dataset.query_item(key)
++
++    def chunkify(self, keys, chunk_size):
++        d = []
++        for k in keys:
++            try:
++                v = self.query_item(k)
++            except KeyError:
++                continue
++            if v is None:
++                continue
++            d.append((k, v))
++            if len(d) == chunk_size:  # yield complete sublist and create a new list
++                yield d
++                d = []
++
+     def batches(self, batch_size, keys=None, *args, **kwargs):
+         keys = keys or self.shuffled_keys()
+-        yield from self.dataset.batches(batch_size=batch_size, keys=keys, collate_fn=collate_fn, *args, **kwargs)
++        for chunk in self.chunkify(keys, chunk_size=batch_size):
++            keys, batch = list(zip(*chunk)) # transforms list of (k,v) into list of (k) and list of (v)
++            yield keys, collate_fn(batch)
++
++
++class FastFilteredDataset(Dataset):
++    def __init__(self, parent, predicate):
++        self.parent = parent
++        self.predicate = predicate
++        self.cached_keys = list(self.parent.keys.all())
++
++    def yield_keys(self):
++        yield from self.cached_keys
++
++    def __len__(self):
++        return len(self.cached_keys)
++
++    def query_item(self, key):
++        try:
++            item = self.parent.query_item(key)
++            if self.predicate(key, item):
++                return item
++        except KeyError:
++            pass
++        self.cached_keys.remove(key)
++        return None
+ 
+ 
+ class CombinedSubset(Subset):
+     def __init__(self, name, *subsets):
+         self.subsets = subsets
+         self.name = name
+         assert len(set(subset.type for subset in subsets)) == 1, &#34;Combined Subsets must have the same type&#34;
+@@ -209,14 +253,81 @@
+         arena_label, count = s.pop(-1)
+         index, _ = min(enumerate(f), key=(lambda x: x[1][&#34;count&#34;]))
+         f[index][&#34;count&#34;] += count
+         f[index][&#34;list&#34;].append(arena_label)
+     return [x[&#34;list&#34;] for x in f]
+ 
+ 
++# class UnSafeCachedPickledDataset(PickledDataset):
++#     def __init__(self, filename, local_scratch=&#34;&#34;):
++#         super().__init__(filename)
++#         local_scratch = local_scratch or os.environ.get(&#39;LOCALSCRATCH&#39;, &#34;&#34;)
++#         self.filename = None
++#         if local_scratch:
++#             def f():
++#                 print(&#34;Copying dataset to local scratch...&#34;)
++#                 self.filename = shutil.copy(filename, local_scratch)
++#                 print(&#34;Done.&#34;)
++#             self.sr = SideRunner()
++#             self.sr.do(f)
++#         else:
++#             self.query_item = super().query_item
++
++#     def query_item(self, key):
++#         if self.filename:
++#             super().__init__(self.filename)
++#             self.query_item = super().query_item
++#         return super().query_item(key)
++
++
++def first(filename):
++    try:
++        with open(filename, &#34;x&#34;) as _:
++            return True
++    except FileExistsError:
++        return False
++
++class CachedPickledDataset(PickledDataset):
++    def __init__(self, filename, local_scratch=&#34;&#34;):
++        super().__init__(filename)
++        local_scratch = local_scratch or os.environ.get(&#39;LOCALSCRATCH&#39;, &#34;&#34;)
++        self.filename = None
++        if local_scratch and local_scratch not in filename:
++            lock = os.path.join(local_scratch, f&#34;{os.path.basename(filename)}.lock&#34;)
++            if first(lock): # First process to reach this point copies the dataset
++                def f():
++                    print(f&#34;Copying dataset to local scratch: {filename} -&gt; {local_scratch}.&#34;)
++                    try:
++                        self.filename = shutil.copy(filename, local_scratch)
++                    except:
++                        try:
++                            os.remove(os.path.join(local_scratch, os.path.basename(filename)))
++                        except:
++                            pass
++                        print(&#34;Failed copying dataset.&#34;)
++                        self.query_item = super().query_item
++                    os.remove(lock)
++                self.thread = threading.Thread(target=f)
++                self.thread.start()
++                self.available = lambda: self.filename
++            else: # Other processes wait for the dataset to be copied
++                print(f&#34;Waiting for dataset to be copied to {local_scratch}/ ...&#34;)
++                self.filename = os.path.join(local_scratch, os.path.basename(filename))
++                self.available = lambda: not os.path.exists(lock)
++        else:
++            self.query_item = super().query_item
++
++    def query_item(self, key):
++        if self.available():
++            print(f&#34;Reloading dataset from {self.filename}&#34;)
++            super().__init__(self.filename)
++            self.query_item = super().query_item
++        return super().query_item(key)
++
++
+ 
+ def find(path, dirs=None, verbose=True):
+     if os.path.isabs(path):
+         if not os.path.isfile(path) and not os.path.isdir(path):
+             raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), path)
+         return path
+ 
+@@ -279,14 +390,31 @@
+                 print(&#34;{} found in {}&#34;.format(path, tmp_path))
+             return tmp_path
+ 
+     raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT),
+                                 &#34;{} (searched in {})&#34;.format(path, dirs))</code></pre>
+ </details>
+ </dd>
++<dt id="deepsport_utilities.dataset.first"><code class="name flex">
++<span>def <span class="ident">first</span></span>(<span>filename)</span>
++</code></dt>
++<dd>
++<div class="desc"></div>
++<details class="source">
++<summary>
++<span>Expand source code</span>
++</summary>
++<pre><code class="python">def first(filename):
++    try:
++        with open(filename, &#34;x&#34;) as _:
++            return True
++    except FileExistsError:
++        return False</code></pre>
++</details>
++</dd>
+ <dt id="deepsport_utilities.dataset.split_equally"><code class="name flex">
+ <span>def <span class="ident">split_equally</span></span>(<span>d, K)</span>
+ </code></dt>
+ <dd>
+ <div class="desc"><p>splits equally the keys of d given their values
+ arguments:
+ d (dict) - A dict {"label1": 30, "label2": 45, "label3": 22, &hellip; "label<N>": 14}
+@@ -425,14 +553,99 @@
+ </dd>
+ <dt id="deepsport_utilities.dataset.BasicDatasetSplitter.validation_pc"><code class="name">var <span class="ident">validation_pc</span> : int</code></dt>
+ <dd>
+ <div class="desc"></div>
+ </dd>
+ </dl>
+ </dd>
++<dt id="deepsport_utilities.dataset.CachedPickledDataset"><code class="flex name class">
++<span>class <span class="ident">CachedPickledDataset</span></span>
++<span>(</span><span>filename, local_scratch='')</span>
++</code></dt>
++<dd>
++<div class="desc"><p>A dataset compacted on the disk with Pickle. For initial creation from
++an old dataset::</p>
++<pre><code>in_mem_dataset = DictDataset({"a": 1, "b": 2, "c": 3})
++with open("file_path", "wb") as f:
++    PickledDataset.create(in_mem_dataset, f)
++</code></pre>
++<p>For using a PickledDataset::</p>
++<pre><code>with open("file_path", "rb") as f:
++    pd = PickledDataset(f)
++    pd = TransformedDataset(pd, [lambda x, draw: (x, x)])
++    X, Y = pd.query(pd.keys())
++    model.fit(X, Y)
++</code></pre></div>
++<details class="source">
++<summary>
++<span>Expand source code</span>
++</summary>
++<pre><code class="python">class CachedPickledDataset(PickledDataset):
++    def __init__(self, filename, local_scratch=&#34;&#34;):
++        super().__init__(filename)
++        local_scratch = local_scratch or os.environ.get(&#39;LOCALSCRATCH&#39;, &#34;&#34;)
++        self.filename = None
++        if local_scratch and local_scratch not in filename:
++            lock = os.path.join(local_scratch, f&#34;{os.path.basename(filename)}.lock&#34;)
++            if first(lock): # First process to reach this point copies the dataset
++                def f():
++                    print(f&#34;Copying dataset to local scratch: {filename} -&gt; {local_scratch}.&#34;)
++                    try:
++                        self.filename = shutil.copy(filename, local_scratch)
++                    except:
++                        try:
++                            os.remove(os.path.join(local_scratch, os.path.basename(filename)))
++                        except:
++                            pass
++                        print(&#34;Failed copying dataset.&#34;)
++                        self.query_item = super().query_item
++                    os.remove(lock)
++                self.thread = threading.Thread(target=f)
++                self.thread.start()
++                self.available = lambda: self.filename
++            else: # Other processes wait for the dataset to be copied
++                print(f&#34;Waiting for dataset to be copied to {local_scratch}/ ...&#34;)
++                self.filename = os.path.join(local_scratch, os.path.basename(filename))
++                self.available = lambda: not os.path.exists(lock)
++        else:
++            self.query_item = super().query_item
++
++    def query_item(self, key):
++        if self.available():
++            print(f&#34;Reloading dataset from {self.filename}&#34;)
++            super().__init__(self.filename)
++            self.query_item = super().query_item
++        return super().query_item(key)</code></pre>
++</details>
++<h3>Ancestors</h3>
++<ul class="hlist">
++<li>mlworkflow.datasets.PickledDataset</li>
++<li>mlworkflow.datasets.Dataset</li>
++</ul>
++<h3>Methods</h3>
++<dl>
++<dt id="deepsport_utilities.dataset.CachedPickledDataset.query_item"><code class="name flex">
++<span>def <span class="ident">query_item</span></span>(<span>self, key)</span>
++</code></dt>
++<dd>
++<div class="desc"><p>Returns a tuple for one item, typically (Xi, Yi), or (Xi,)</p></div>
++<details class="source">
++<summary>
++<span>Expand source code</span>
++</summary>
++<pre><code class="python">def query_item(self, key):
++    if self.available():
++        print(f&#34;Reloading dataset from {self.filename}&#34;)
++        super().__init__(self.filename)
++        self.query_item = super().query_item
++    return super().query_item(key)</code></pre>
++</details>
++</dd>
++</dl>
++</dd>
+ <dt id="deepsport_utilities.dataset.CombinedSubset"><code class="flex name class">
+ <span>class <span class="ident">CombinedSubset</span></span>
+ <span>(</span><span>name, *subsets)</span>
+ </code></dt>
+ <dd>
+ <div class="desc"></div>
+ <details class="source">
+@@ -544,14 +757,87 @@
+ <pre><code class="python">def yield_keys(self):
+     for key in self.keys:
+         yield key</code></pre>
+ </details>
+ </dd>
+ </dl>
+ </dd>
++<dt id="deepsport_utilities.dataset.FastFilteredDataset"><code class="flex name class">
++<span>class <span class="ident">FastFilteredDataset</span></span>
++<span>(</span><span>parent, predicate)</span>
++</code></dt>
++<dd>
++<div class="desc"></div>
++<details class="source">
++<summary>
++<span>Expand source code</span>
++</summary>
++<pre><code class="python">class FastFilteredDataset(Dataset):
++    def __init__(self, parent, predicate):
++        self.parent = parent
++        self.predicate = predicate
++        self.cached_keys = list(self.parent.keys.all())
++
++    def yield_keys(self):
++        yield from self.cached_keys
++
++    def __len__(self):
++        return len(self.cached_keys)
++
++    def query_item(self, key):
++        try:
++            item = self.parent.query_item(key)
++            if self.predicate(key, item):
++                return item
++        except KeyError:
++            pass
++        self.cached_keys.remove(key)
++        return None</code></pre>
++</details>
++<h3>Ancestors</h3>
++<ul class="hlist">
++<li>mlworkflow.datasets.Dataset</li>
++</ul>
++<h3>Methods</h3>
++<dl>
++<dt id="deepsport_utilities.dataset.FastFilteredDataset.query_item"><code class="name flex">
++<span>def <span class="ident">query_item</span></span>(<span>self, key)</span>
++</code></dt>
++<dd>
++<div class="desc"><p>Returns a tuple for one item, typically (Xi, Yi), or (Xi,)</p></div>
++<details class="source">
++<summary>
++<span>Expand source code</span>
++</summary>
++<pre><code class="python">def query_item(self, key):
++    try:
++        item = self.parent.query_item(key)
++        if self.predicate(key, item):
++            return item
++    except KeyError:
++        pass
++    self.cached_keys.remove(key)
++    return None</code></pre>
++</details>
++</dd>
++<dt id="deepsport_utilities.dataset.FastFilteredDataset.yield_keys"><code class="name flex">
++<span>def <span class="ident">yield_keys</span></span>(<span>self)</span>
++</code></dt>
++<dd>
++<div class="desc"></div>
++<details class="source">
++<summary>
++<span>Expand source code</span>
++</summary>
++<pre><code class="python">def yield_keys(self):
++    yield from self.cached_keys</code></pre>
++</details>
++</dd>
++</dl>
++</dd>
+ <dt id="deepsport_utilities.dataset.MergedDataset"><code class="flex name class">
+ <span>class <span class="ident">MergedDataset</span></span>
+ <span>(</span><span>*ds)</span>
+ </code></dt>
+ <dd>
+ <div class="desc"></div>
+ <details class="source">
+@@ -619,37 +905,56 @@
+ </summary>
+ <pre><code class="python">class Subset:
+     def __init__(self, name: str, subset_type: SubsetType, dataset: Dataset, keys=None, repetitions=1, desc=None):
+         keys = keys if keys is not None else dataset.keys.all()
+         assert isinstance(keys, (tuple, list)), f&#34;Received instance of {type(keys)} for subset {name}&#34;
+         self.name = name
+         self.type = subset_type
+-        self.dataset = FilteredDataset(dataset, predicate=lambda k,v: v is not None)
++        self.dataset = dataset#FilteredDataset(dataset, predicate=lambda k,v: v is not None)
+         self._keys = keys
+         self.keys = keys
+         self.repetitions = repetitions
+         self.desc = desc
+         self.is_training = self.type == SubsetType.TRAIN
+         loop = None if self.is_training else repetitions
+         self.shuffled_keys = pseudo_random(evolutive=self.is_training)(self.shuffled_keys)
+-        self.dataset.query_item = pseudo_random(loop=loop, input_dependent=True)(self.dataset.query_item)
++        self.query_item = pseudo_random(loop=loop, input_dependent=True)(self.query_item)
+ 
+     def shuffled_keys(self): # pylint: disable=method-hidden
+         keys = self.keys * self.repetitions
+         return random.sample(keys, len(keys)) if self.is_training else keys
+ 
+     def __len__(self):
+         return len(self.keys)*self.repetitions
+ 
+     def __str__(self):
+         return f&#34;{self.__class__.__name__}&lt;{self.name}&gt;({len(self)})&#34;
+ 
++    def query_item(self, key):
++        return self.dataset.query_item(key)
++
++    def chunkify(self, keys, chunk_size):
++        d = []
++        for k in keys:
++            try:
++                v = self.query_item(k)
++            except KeyError:
++                continue
++            if v is None:
++                continue
++            d.append((k, v))
++            if len(d) == chunk_size:  # yield complete sublist and create a new list
++                yield d
++                d = []
++
+     def batches(self, batch_size, keys=None, *args, **kwargs):
+         keys = keys or self.shuffled_keys()
+-        yield from self.dataset.batches(batch_size=batch_size, keys=keys, collate_fn=collate_fn, *args, **kwargs)</code></pre>
++        for chunk in self.chunkify(keys, chunk_size=batch_size):
++            keys, batch = list(zip(*chunk)) # transforms list of (k,v) into list of (k) and list of (v)
++            yield keys, collate_fn(batch)</code></pre>
+ </details>
+ <h3>Subclasses</h3>
+ <ul class="hlist">
+ <li><a title="deepsport_utilities.dataset.BalancedSubest" href="#deepsport_utilities.dataset.BalancedSubest">BalancedSubest</a></li>
+ <li><a title="deepsport_utilities.dataset.CombinedSubset" href="#deepsport_utilities.dataset.CombinedSubset">CombinedSubset</a></li>
+ </ul>
+ <h3>Methods</h3>
+@@ -661,15 +966,54 @@
+ <div class="desc"></div>
+ <details class="source">
+ <summary>
+ <span>Expand source code</span>
+ </summary>
+ <pre><code class="python">def batches(self, batch_size, keys=None, *args, **kwargs):
+     keys = keys or self.shuffled_keys()
+-    yield from self.dataset.batches(batch_size=batch_size, keys=keys, collate_fn=collate_fn, *args, **kwargs)</code></pre>
++    for chunk in self.chunkify(keys, chunk_size=batch_size):
++        keys, batch = list(zip(*chunk)) # transforms list of (k,v) into list of (k) and list of (v)
++        yield keys, collate_fn(batch)</code></pre>
++</details>
++</dd>
++<dt id="deepsport_utilities.dataset.Subset.chunkify"><code class="name flex">
++<span>def <span class="ident">chunkify</span></span>(<span>self, keys, chunk_size)</span>
++</code></dt>
++<dd>
++<div class="desc"></div>
++<details class="source">
++<summary>
++<span>Expand source code</span>
++</summary>
++<pre><code class="python">def chunkify(self, keys, chunk_size):
++    d = []
++    for k in keys:
++        try:
++            v = self.query_item(k)
++        except KeyError:
++            continue
++        if v is None:
++            continue
++        d.append((k, v))
++        if len(d) == chunk_size:  # yield complete sublist and create a new list
++            yield d
++            d = []</code></pre>
++</details>
++</dd>
++<dt id="deepsport_utilities.dataset.Subset.query_item"><code class="name flex">
++<span>def <span class="ident">query_item</span></span>(<span>self, key)</span>
++</code></dt>
++<dd>
++<div class="desc"></div>
++<details class="source">
++<summary>
++<span>Expand source code</span>
++</summary>
++<pre><code class="python">def query_item(self, key):
++    return self.dataset.query_item(key)</code></pre>
+ </details>
+ </dd>
+ <dt id="deepsport_utilities.dataset.Subset.shuffled_keys"><code class="name flex">
+ <span>def <span class="ident">shuffled_keys</span></span>(<span>self)</span>
+ </code></dt>
+ <dd>
+ <div class="desc"></div>
+@@ -794,14 +1138,15 @@
+ <li><code><a title="deepsport_utilities" href="index.html">deepsport_utilities</a></code></li>
+ </ul>
+ </li>
+ <li><h3><a href="#header-functions">Functions</a></h3>
+ <ul class="">
+ <li><code><a title="deepsport_utilities.dataset.collate_fn" href="#deepsport_utilities.dataset.collate_fn">collate_fn</a></code></li>
+ <li><code><a title="deepsport_utilities.dataset.find" href="#deepsport_utilities.dataset.find">find</a></code></li>
++<li><code><a title="deepsport_utilities.dataset.first" href="#deepsport_utilities.dataset.first">first</a></code></li>
+ <li><code><a title="deepsport_utilities.dataset.split_equally" href="#deepsport_utilities.dataset.split_equally">split_equally</a></code></li>
+ </ul>
+ </li>
+ <li><h3><a href="#header-classes">Classes</a></h3>
+ <ul>
+ <li>
+ <h4><code><a title="deepsport_utilities.dataset.BalancedSubest" href="#deepsport_utilities.dataset.BalancedSubest">BalancedSubest</a></code></h4>
+@@ -813,37 +1158,52 @@
+ <h4><code><a title="deepsport_utilities.dataset.BasicDatasetSplitter" href="#deepsport_utilities.dataset.BasicDatasetSplitter">BasicDatasetSplitter</a></code></h4>
+ <ul class="">
+ <li><code><a title="deepsport_utilities.dataset.BasicDatasetSplitter.testing_pc" href="#deepsport_utilities.dataset.BasicDatasetSplitter.testing_pc">testing_pc</a></code></li>
+ <li><code><a title="deepsport_utilities.dataset.BasicDatasetSplitter.validation_pc" href="#deepsport_utilities.dataset.BasicDatasetSplitter.validation_pc">validation_pc</a></code></li>
+ </ul>
+ </li>
+ <li>
++<h4><code><a title="deepsport_utilities.dataset.CachedPickledDataset" href="#deepsport_utilities.dataset.CachedPickledDataset">CachedPickledDataset</a></code></h4>
++<ul class="">
++<li><code><a title="deepsport_utilities.dataset.CachedPickledDataset.query_item" href="#deepsport_utilities.dataset.CachedPickledDataset.query_item">query_item</a></code></li>
++</ul>
++</li>
++<li>
+ <h4><code><a title="deepsport_utilities.dataset.CombinedSubset" href="#deepsport_utilities.dataset.CombinedSubset">CombinedSubset</a></code></h4>
+ <ul class="">
+ <li><code><a title="deepsport_utilities.dataset.CombinedSubset.batches" href="#deepsport_utilities.dataset.CombinedSubset.batches">batches</a></code></li>
+ </ul>
+ </li>
+ <li>
+ <h4><code><a title="deepsport_utilities.dataset.DatasetSamplerDataset" href="#deepsport_utilities.dataset.DatasetSamplerDataset">DatasetSamplerDataset</a></code></h4>
+ <ul class="">
+ <li><code><a title="deepsport_utilities.dataset.DatasetSamplerDataset.query_item" href="#deepsport_utilities.dataset.DatasetSamplerDataset.query_item">query_item</a></code></li>
+ <li><code><a title="deepsport_utilities.dataset.DatasetSamplerDataset.yield_keys" href="#deepsport_utilities.dataset.DatasetSamplerDataset.yield_keys">yield_keys</a></code></li>
+ </ul>
+ </li>
+ <li>
++<h4><code><a title="deepsport_utilities.dataset.FastFilteredDataset" href="#deepsport_utilities.dataset.FastFilteredDataset">FastFilteredDataset</a></code></h4>
++<ul class="">
++<li><code><a title="deepsport_utilities.dataset.FastFilteredDataset.query_item" href="#deepsport_utilities.dataset.FastFilteredDataset.query_item">query_item</a></code></li>
++<li><code><a title="deepsport_utilities.dataset.FastFilteredDataset.yield_keys" href="#deepsport_utilities.dataset.FastFilteredDataset.yield_keys">yield_keys</a></code></li>
++</ul>
++</li>
++<li>
+ <h4><code><a title="deepsport_utilities.dataset.MergedDataset" href="#deepsport_utilities.dataset.MergedDataset">MergedDataset</a></code></h4>
+ <ul class="">
+ <li><code><a title="deepsport_utilities.dataset.MergedDataset.query_item" href="#deepsport_utilities.dataset.MergedDataset.query_item">query_item</a></code></li>
+ <li><code><a title="deepsport_utilities.dataset.MergedDataset.yield_keys" href="#deepsport_utilities.dataset.MergedDataset.yield_keys">yield_keys</a></code></li>
+ </ul>
+ </li>
+ <li>
+ <h4><code><a title="deepsport_utilities.dataset.Subset" href="#deepsport_utilities.dataset.Subset">Subset</a></code></h4>
+ <ul class="">
+ <li><code><a title="deepsport_utilities.dataset.Subset.batches" href="#deepsport_utilities.dataset.Subset.batches">batches</a></code></li>
++<li><code><a title="deepsport_utilities.dataset.Subset.chunkify" href="#deepsport_utilities.dataset.Subset.chunkify">chunkify</a></code></li>
++<li><code><a title="deepsport_utilities.dataset.Subset.query_item" href="#deepsport_utilities.dataset.Subset.query_item">query_item</a></code></li>
+ <li><code><a title="deepsport_utilities.dataset.Subset.shuffled_keys" href="#deepsport_utilities.dataset.Subset.shuffled_keys">shuffled_keys</a></code></li>
+ </ul>
+ </li>
+ <li>
+ <h4><code><a title="deepsport_utilities.dataset.SubsetType" href="#deepsport_utilities.dataset.SubsetType">SubsetType</a></code></h4>
+ <ul class="">
+ <li><code><a title="deepsport_utilities.dataset.SubsetType.EVAL" href="#deepsport_utilities.dataset.SubsetType.EVAL">EVAL</a></code></li>
+```
+
+#### html2text {}
+
+```diff
+@@ -7,19 +7,21 @@
+ ****** Module deepsport_utilities.dataset ******
+     Expand source code
+ import dataclasses
+ from enum import IntFlag
+ import errno
+ import os
+ import random
++import shutil
++import threading
+ 
+ import numpy as np
+ 
+-from mlworkflow.datasets import batchify, Dataset, FilteredDataset,
+-AugmentedDataset
++from mlworkflow.datasets import batchify, Dataset, AugmentedDataset,
++PickledDataset
+ from aleatorpy import pseudo_random, method # pylint: disable=unused-import
+ 
+ 
+ 
+ 
+ def collate_fn(items):
+     return {f"batch_{k}": v for k,v in batchify(items).items()}
+@@ -37,41 +39,84 @@
+     def __init__(self, name: str, subset_type: SubsetType, dataset: Dataset,
+ keys=None, repetitions=1, desc=None):
+         keys = keys if keys is not None else dataset.keys.all()
+         assert isinstance(keys, (tuple, list)), f"Received instance of {type
+ (keys)} for subset {name}"
+         self.name = name
+         self.type = subset_type
+-        self.dataset = FilteredDataset(dataset, predicate=lambda k,v: v is not
+-None)
++        self.dataset = dataset#FilteredDataset(dataset, predicate=lambda k,v: v
++is not None)
+         self._keys = keys
+         self.keys = keys
+         self.repetitions = repetitions
+         self.desc = desc
+         self.is_training = self.type == SubsetType.TRAIN
+         loop = None if self.is_training else repetitions
+         self.shuffled_keys = pseudo_random(evolutive=self.is_training)
+ (self.shuffled_keys)
+-        self.dataset.query_item = pseudo_random(loop=loop,
+-input_dependent=True)(self.dataset.query_item)
++        self.query_item = pseudo_random(loop=loop, input_dependent=True)
++(self.query_item)
+ 
+     def shuffled_keys(self): # pylint: disable=method-hidden
+         keys = self.keys * self.repetitions
+         return random.sample(keys, len(keys)) if self.is_training else keys
+ 
+     def __len__(self):
+         return len(self.keys)*self.repetitions
+ 
+     def __str__(self):
+         return f"{self.__class__.__name__}<{self.name}>({len(self)})"
+ 
++    def query_item(self, key):
++        return self.dataset.query_item(key)
++
++    def chunkify(self, keys, chunk_size):
++        d = []
++        for k in keys:
++            try:
++                v = self.query_item(k)
++            except KeyError:
++                continue
++            if v is None:
++                continue
++            d.append((k, v))
++            if len(d) == chunk_size:  # yield complete sublist and create a new
++list
++                yield d
++                d = []
++
+     def batches(self, batch_size, keys=None, *args, **kwargs):
+         keys = keys or self.shuffled_keys()
+-        yield from self.dataset.batches(batch_size=batch_size, keys=keys,
+-collate_fn=collate_fn, *args, **kwargs)
++        for chunk in self.chunkify(keys, chunk_size=batch_size):
++            keys, batch = list(zip(*chunk)) # transforms list of (k,v) into
++list of (k) and list of (v)
++            yield keys, collate_fn(batch)
++
++
++class FastFilteredDataset(Dataset):
++    def __init__(self, parent, predicate):
++        self.parent = parent
++        self.predicate = predicate
++        self.cached_keys = list(self.parent.keys.all())
++
++    def yield_keys(self):
++        yield from self.cached_keys
++
++    def __len__(self):
++        return len(self.cached_keys)
++
++    def query_item(self, key):
++        try:
++            item = self.parent.query_item(key)
++            if self.predicate(key, item):
++                return item
++        except KeyError:
++            pass
++        self.cached_keys.remove(key)
++        return None
+ 
+ 
+ class CombinedSubset(Subset):
+     def __init__(self, name, *subsets):
+         self.subsets = subsets
+         self.name = name
+         assert len(set(subset.type for subset in subsets)) == 1, "Combined
+@@ -205,14 +250,87 @@
+         arena_label, count = s.pop(-1)
+         index, _ = min(enumerate(f), key=(lambda x: x[1]["count"]))
+         f[index]["count"] += count
+         f[index]["list"].append(arena_label)
+     return [x["list"] for x in f]
+ 
+ 
++# class UnSafeCachedPickledDataset(PickledDataset):
++#     def __init__(self, filename, local_scratch=""):
++#         super().__init__(filename)
++#         local_scratch = local_scratch or os.environ.get('LOCALSCRATCH', "")
++#         self.filename = None
++#         if local_scratch:
++#             def f():
++#                 print("Copying dataset to local scratch...")
++#                 self.filename = shutil.copy(filename, local_scratch)
++#                 print("Done.")
++#             self.sr = SideRunner()
++#             self.sr.do(f)
++#         else:
++#             self.query_item = super().query_item
++
++#     def query_item(self, key):
++#         if self.filename:
++#             super().__init__(self.filename)
++#             self.query_item = super().query_item
++#         return super().query_item(key)
++
++
++def first(filename):
++    try:
++        with open(filename, "x") as _:
++            return True
++    except FileExistsError:
++        return False
++
++class CachedPickledDataset(PickledDataset):
++    def __init__(self, filename, local_scratch=""):
++        super().__init__(filename)
++        local_scratch = local_scratch or os.environ.get('LOCALSCRATCH', "")
++        self.filename = None
++        if local_scratch and local_scratch not in filename:
++            lock = os.path.join(local_scratch, f"{os.path.basename
++(filename)}.lock")
++            if first(lock): # First process to reach this point copies the
++dataset
++                def f():
++                    print(f"Copying dataset to local scratch: {filename} ->
++{local_scratch}.")
++                    try:
++                        self.filename = shutil.copy(filename, local_scratch)
++                    except:
++                        try:
++                            os.remove(os.path.join(local_scratch,
++os.path.basename(filename)))
++                        except:
++                            pass
++                        print("Failed copying dataset.")
++                        self.query_item = super().query_item
++                    os.remove(lock)
++                self.thread = threading.Thread(target=f)
++                self.thread.start()
++                self.available = lambda: self.filename
++            else: # Other processes wait for the dataset to be copied
++                print(f"Waiting for dataset to be copied to {local_scratch}/
++...")
++                self.filename = os.path.join(local_scratch, os.path.basename
++(filename))
++                self.available = lambda: not os.path.exists(lock)
++        else:
++            self.query_item = super().query_item
++
++    def query_item(self, key):
++        if self.available():
++            print(f"Reloading dataset from {self.filename}")
++            super().__init__(self.filename)
++            self.query_item = super().query_item
++        return super().query_item(key)
++
++
+ 
+ def find(path, dirs=None, verbose=True):
+     if os.path.isabs(path):
+         if not os.path.isfile(path) and not os.path.isdir(path):
+             raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT),
+ path)
+         return path
+@@ -252,14 +370,22 @@
+               if os.path.isfile(tmp_path) or os.path.isdir(tmp_path):
+                   if verbose:
+                       print("{} found in {}".format(path, tmp_path))
+                   return tmp_path
+ 
+           raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT),
+                                       "{} (searched in {})".format(path, dirs))
++  def first(filename)
++        Expand source code
++      def first(filename):
++          try:
++              with open(filename, "x") as _:
++                  return True
++          except FileExistsError:
++              return False
+   def split_equally(d, K)
+       splits equally the keys of d given their values arguments: d (dict) - A
+       dict {"label1": 30, "label2": 45, "label3": 22, … "label": 14} K (int) -
+       The number of split to make returns: A list of 'K' lists splitting
+       equally the values of 'd': e.g. [[label1, label12, label19], [label2,
+       label15], [label3, label10, label11], …] where d["label1"]+d["label12"]+d
+       ["label19"] ~= d["label2"]+d["label15"] ~= d["label3"]+d["label10"]+d
+@@ -347,14 +473,84 @@
+       keys=validation_keys, dataset=dataset),
+                   Subset("testing", subset_type=SubsetType.EVAL,
+       keys=testing_keys, dataset=dataset),
+               ]
+       **** Class variables ****
+         var testing_pc :Â int
+         var validation_pc :Â int
++  class CachedPickledDataset (filename, local_scratch='')
++      A dataset compacted on the disk with Pickle. For initial creation from an
++      old dataset::
++      in_mem_dataset = DictDataset({"a": 1, "b": 2, "c": 3})
++      with open("file_path", "wb") as f:
++          PickledDataset.create(in_mem_dataset, f)
++      For using a PickledDataset::
++      with open("file_path", "rb") as f:
++          pd = PickledDataset(f)
++          pd = TransformedDataset(pd, [lambda x, draw: (x, x)])
++          X, Y = pd.query(pd.keys())
++          model.fit(X, Y)
++        Expand source code
++      class CachedPickledDataset(PickledDataset):
++          def __init__(self, filename, local_scratch=""):
++              super().__init__(filename)
++              local_scratch = local_scratch or os.environ.get('LOCALSCRATCH',
++      "")
++              self.filename = None
++              if local_scratch and local_scratch not in filename:
++                  lock = os.path.join(local_scratch, f"{os.path.basename
++      (filename)}.lock")
++                  if first(lock): # First process to reach this point copies
++      the dataset
++                      def f():
++                          print(f"Copying dataset to local scratch: {filename}
++      -> {local_scratch}.")
++                          try:
++                              self.filename = shutil.copy(filename,
++      local_scratch)
++                          except:
++                              try:
++                                  os.remove(os.path.join(local_scratch,
++      os.path.basename(filename)))
++                              except:
++                                  pass
++                              print("Failed copying dataset.")
++                              self.query_item = super().query_item
++                          os.remove(lock)
++                      self.thread = threading.Thread(target=f)
++                      self.thread.start()
++                      self.available = lambda: self.filename
++                  else: # Other processes wait for the dataset to be copied
++                      print(f"Waiting for dataset to be copied to
++      {local_scratch}/ ...")
++                      self.filename = os.path.join(local_scratch,
++      os.path.basename(filename))
++                      self.available = lambda: not os.path.exists(lock)
++              else:
++                  self.query_item = super().query_item
++
++          def query_item(self, key):
++              if self.available():
++                  print(f"Reloading dataset from {self.filename}")
++                  super().__init__(self.filename)
++                  self.query_item = super().query_item
++              return super().query_item(key)
++      **** Ancestors ****
++          * mlworkflow.datasets.PickledDataset
++          * mlworkflow.datasets.Dataset
++      **** Methods ****
++        def query_item(self, key)
++            Returns a tuple for one item, typically (Xi, Yi), or (Xi,)
++              Expand source code
++            def query_item(self, key):
++                if self.available():
++                    print(f"Reloading dataset from {self.filename}")
++                    super().__init__(self.filename)
++                    self.query_item = super().query_item
++                return super().query_item(key)
+   class CombinedSubset (name, *subsets)
+         Expand source code
+       class CombinedSubset(Subset):
+           def __init__(self, name, *subsets):
+               self.subsets = subsets
+               self.name = name
+               assert len(set(subset.type for subset in subsets)) == 1,
+@@ -422,14 +618,56 @@
+             def query_item(self, key):
+                 return self.parent.query_item(key)
+         def yield_keys(self)
+               Expand source code
+             def yield_keys(self):
+                 for key in self.keys:
+                     yield key
++  class FastFilteredDataset (parent, predicate)
++        Expand source code
++      class FastFilteredDataset(Dataset):
++          def __init__(self, parent, predicate):
++              self.parent = parent
++              self.predicate = predicate
++              self.cached_keys = list(self.parent.keys.all())
++
++          def yield_keys(self):
++              yield from self.cached_keys
++
++          def __len__(self):
++              return len(self.cached_keys)
++
++          def query_item(self, key):
++              try:
++                  item = self.parent.query_item(key)
++                  if self.predicate(key, item):
++                      return item
++              except KeyError:
++                  pass
++              self.cached_keys.remove(key)
++              return None
++      **** Ancestors ****
++          * mlworkflow.datasets.Dataset
++      **** Methods ****
++        def query_item(self, key)
++            Returns a tuple for one item, typically (Xi, Yi), or (Xi,)
++              Expand source code
++            def query_item(self, key):
++                try:
++                    item = self.parent.query_item(key)
++                    if self.predicate(key, item):
++                        return item
++                except KeyError:
++                    pass
++                self.cached_keys.remove(key)
++                return None
++        def yield_keys(self)
++              Expand source code
++            def yield_keys(self):
++                yield from self.cached_keys
+   class MergedDataset (*ds)
+         Expand source code
+       class MergedDataset(Dataset):
+           def __init__(self, *ds):
+               self.ds = ds
+               self.cache = {}
+           def yield_keys(self):
+@@ -461,52 +699,94 @@
+           def __init__(self, name: str, subset_type: SubsetType, dataset:
+       Dataset, keys=None, repetitions=1, desc=None):
+               keys = keys if keys is not None else dataset.keys.all()
+               assert isinstance(keys, (tuple, list)), f"Received instance of
+       {type(keys)} for subset {name}"
+               self.name = name
+               self.type = subset_type
+-              self.dataset = FilteredDataset(dataset, predicate=lambda k,v: v
+-      is not None)
++              self.dataset = dataset#FilteredDataset(dataset, predicate=lambda
++      k,v: v is not None)
+               self._keys = keys
+               self.keys = keys
+               self.repetitions = repetitions
+               self.desc = desc
+               self.is_training = self.type == SubsetType.TRAIN
+               loop = None if self.is_training else repetitions
+               self.shuffled_keys = pseudo_random(evolutive=self.is_training)
+       (self.shuffled_keys)
+-              self.dataset.query_item = pseudo_random(loop=loop,
+-      input_dependent=True)(self.dataset.query_item)
++              self.query_item = pseudo_random(loop=loop, input_dependent=True)
++      (self.query_item)
+ 
+           def shuffled_keys(self): # pylint: disable=method-hidden
+               keys = self.keys * self.repetitions
+               return random.sample(keys, len(keys)) if self.is_training else
+       keys
+ 
+           def __len__(self):
+               return len(self.keys)*self.repetitions
+ 
+           def __str__(self):
+               return f"{self.__class__.__name__}<{self.name}>({len(self)})"
+ 
++          def query_item(self, key):
++              return self.dataset.query_item(key)
++
++          def chunkify(self, keys, chunk_size):
++              d = []
++              for k in keys:
++                  try:
++                      v = self.query_item(k)
++                  except KeyError:
++                      continue
++                  if v is None:
++                      continue
++                  d.append((k, v))
++                  if len(d) == chunk_size:  # yield complete sublist and create
++      a new list
++                      yield d
++                      d = []
++
+           def batches(self, batch_size, keys=None, *args, **kwargs):
+               keys = keys or self.shuffled_keys()
+-              yield from self.dataset.batches(batch_size=batch_size, keys=keys,
+-      collate_fn=collate_fn, *args, **kwargs)
++              for chunk in self.chunkify(keys, chunk_size=batch_size):
++                  keys, batch = list(zip(*chunk)) # transforms list of (k,v)
++      into list of (k) and list of (v)
++                  yield keys, collate_fn(batch)
+       **** Subclasses ****
+           * BalancedSubest
+           * CombinedSubset
+       **** Methods ****
+         def batches(self, batch_size, keys=None, *args, **kwargs)
+               Expand source code
+             def batches(self, batch_size, keys=None, *args, **kwargs):
+                 keys = keys or self.shuffled_keys()
+-                yield from self.dataset.batches(batch_size=batch_size,
+-            keys=keys, collate_fn=collate_fn, *args, **kwargs)
++                for chunk in self.chunkify(keys, chunk_size=batch_size):
++                    keys, batch = list(zip(*chunk)) # transforms list of (k,v)
++            into list of (k) and list of (v)
++                    yield keys, collate_fn(batch)
++        def chunkify(self, keys, chunk_size)
++              Expand source code
++            def chunkify(self, keys, chunk_size):
++                d = []
++                for k in keys:
++                    try:
++                        v = self.query_item(k)
++                    except KeyError:
++                        continue
++                    if v is None:
++                        continue
++                    d.append((k, v))
++                    if len(d) == chunk_size:  # yield complete sublist and
++            create a new list
++                        yield d
++                        d = []
++        def query_item(self, key)
++              Expand source code
++            def query_item(self, key):
++                return self.dataset.query_item(key)
+         def shuffled_keys(self)
+               Expand source code
+             def shuffled_keys(self): # pylint: disable=method-hidden
+                 keys = self.keys * self.repetitions
+                 return random.sample(keys, len(keys)) if self.is_training else
+             keys
+   class SubsetType (value, names=None, *, module=None, qualname=None,
+@@ -567,31 +847,39 @@
+ 
+ ****** Index ******
+     * **** Super-module ****
+           o deepsport_utilities
+     * **** Functions ****
+           o collate_fn
+           o find
++          o first
+           o split_equally
+     * **** Classes ****
+           o *** BalancedSubest ***
+                 # shuffled_keys
+           o *** BasicDatasetSplitter ***
+                 # testing_pc
+                 # validation_pc
++          o *** CachedPickledDataset ***
++                # query_item
+           o *** CombinedSubset ***
+                 # batches
+           o *** DatasetSamplerDataset ***
+                 # query_item
+                 # yield_keys
++          o *** FastFilteredDataset ***
++                # query_item
++                # yield_keys
+           o *** MergedDataset ***
+                 # query_item
+                 # yield_keys
+           o *** Subset ***
+                 # batches
++                # chunkify
++                # query_item
+                 # shuffled_keys
+           o *** SubsetType ***
+                 # EVAL
+                 # TRAIN
+           o *** TolerentDataset ***
+                 # augment
+```
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/generic_dataset.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/generic_dataset.html`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/index.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/index.html`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/dataset_splitters.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/dataset_splitters.html`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -23,88 +23,111 @@
+ <h1 class="title">Module <code>deepsport_utilities.ds.instants_dataset.dataset_splitters</code></h1>
+ </header>
+ <section id="section-intro">
+ <details class="source">
+ <summary>
+ <span>Expand source code</span>
+ </summary>
+-<pre><code class="python">import random
++<pre><code class="python">from collections import defaultdict
+ import dataclasses
++import random
+ import numpy as np
+ from deepsport_utilities.dataset import split_equally, Subset, SubsetType
+ 
+ @dataclasses.dataclass
+ class DeepSportDatasetSplitter: # pylint: disable=too-few-public-methods
+     validation_pc: int = 15
+     additional_keys_usage: str = &#34;skip&#34;
+-    folds: str = &#34;ABCDE&#34;
++    folds: str = &#34;ABCDEF&#34;
+     split = {
+         &#34;A&#34;: [&#39;KS-FR-CAEN&#39;, &#39;KS-FR-LIMOGES&#39;, &#39;KS-FR-ROANNE&#39;],
+         &#34;B&#34;: [&#39;KS-FR-NANTES&#39;, &#39;KS-FR-BLOIS&#39;, &#39;KS-FR-FOS&#39;],
+         &#34;C&#34;: [&#39;KS-FR-LEMANS&#39;, &#39;KS-FR-MONACO&#39;, &#39;KS-FR-STRASBOURG&#39;],
+         &#34;D&#34;: [&#39;KS-FR-GRAVELINES&#39;, &#39;KS-FR-STCHAMOND&#39;, &#39;KS-FR-POITIERS&#39;],
+         &#34;E&#34;: [&#39;KS-FR-NANCY&#39;, &#39;KS-FR-BOURGEB&#39;, &#39;KS-FR-VICHY&#39;],
++        # F is a fictive fold for which all keys are used for training
+     }
+     def split_keys(self, keys, fold=0):
+-        assert 0 &lt;= fold &lt;= len(self.folds)-1, &#34;Invalid fold index&#34;
+-
+-        testing_fold = self.folds[fold]
+-        testing_keys = [k for k in keys if k.arena_label in self.split[testing_fold]]
++        fold_index = fold
++        assert 0 &lt;= fold_index &lt;= len(self.folds)-1, &#34;Invalid fold index&#34;
+ 
+-        remaining_arena_labels = [label for f in self.folds.replace(testing_fold, &#34;&#34;) for label in self.split[f]]
+-        remaining_keys = [k for k in keys if k.arena_label in remaining_arena_labels]
++        testing_fold = self.folds[fold_index]
++        self.testing_arena_labels = set(self.split.get(testing_fold, []))
++        remaining_arena_labels = [label for f in self.folds.replace(testing_fold, &#34;&#34;) for label in self.split.get(f, [])]
++        testing_keys = []
++        remaining_keys = defaultdict(list)
++        additional_keys = []
++        additional_arena_labels = set()
++        for key in keys:
++            if key.arena_label in remaining_arena_labels:
++                remaining_keys[key.instant_key].append(key)
++            elif key.arena_label in self.testing_arena_labels:
++                testing_keys.append(key)
++            else:
++                additional_keys.append(key)
++                additional_arena_labels.add(key.arena_label)
+ 
+         # Backup random seed
+         random_state = random.getstate()
+         random.seed(fold)
+ 
+-        validation_keys = random.sample(remaining_keys, len(remaining_keys)*self.validation_pc//100)
+-        training_keys = [k for k in remaining_keys if k not in validation_keys]
+-
+-        additional_keys = [k for k in keys if k not in training_keys+validation_keys+testing_keys]
++        total_length = len(remaining_keys)
++        validation_keys, training_keys = [], []
++        indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s for validation keys
++        indices[np.random.choice(total_length, total_length*self.validation_pc//100, replace=False)] = 1
++        for i, instant_key in zip(indices, remaining_keys):
++            (training_keys, validation_keys)[i].extend(remaining_keys[instant_key])
+ 
++        # Restore random seed
++        random.setstate(random_state)
++        testing2_keys = None
+         if additional_keys:
+             if self.additional_keys_usage == &#34;testing&#34;:
+                 testing_keys += additional_keys
++                self.testing_arena_labels = self.testing_arena_labels.union(additional_arena_labels)
+             elif self.additional_keys_usage == &#34;training&#34;:
+                 training_keys += additional_keys
+             elif self.additional_keys_usage == &#34;validation&#34;:
+                 validation_keys += additional_keys
+             elif self.additional_keys_usage in [&#34;none&#34;, &#34;skip&#34;]:
+                 pass
++            elif self.additional_keys_usage == &#34;testing2&#34;:
++                testing2_keys = additional_keys
+             else:
+                 raise ValueError(&#34;They are additional arena labels that I don&#39;t know what to do with. Please tell me the &#39;additional_keys_usage&#39; argument&#34;)
+ 
+-        # Restore random seed
+-        random.setstate(random_state)
+-        return training_keys, validation_keys, testing_keys
++        self.testing_arena_labels = list(self.testing_arena_labels)
++
++        return training_keys, validation_keys, testing_keys, testing2_keys
+ 
+     def __call__(self, dataset, fold=0):
+-        keys = list(dataset.keys.all())
+-        training_keys, validation_keys, testing_keys = self.split_keys(keys, fold)
+-        return [
++        training_keys, validation_keys, testing_keys, testing2_keys = self.split_keys(dataset.keys, fold)
++        subsets = [
+             Subset(name=&#34;training&#34;, subset_type=SubsetType.TRAIN, keys=training_keys, dataset=dataset),
+             Subset(name=&#34;validation&#34;, subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=1),
+             Subset(name=&#34;testing&#34;, subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=1),
+         ]
++        if testing2_keys:
++            subsets.append(Subset(name=&#34;testing2&#34;, subset_type=SubsetType.EVAL, keys=testing2_keys, dataset=dataset, repetitions=1))
++        return subsets
+ 
+ @dataclasses.dataclass
+ class ArenaLabelFoldsDatasetSplitter(DeepSportDatasetSplitter):
+     folds: str = &#34;ABCDE&#34;
+     test_fold: str = &#34;A&#34;
+     def __post_init__(self):
+         assert self.test_fold in self.split, f&#34;Requested test_fold ({self.test_fold}) doesn&#39;t exist. Choose among {list(self.split)}.&#34;
+         assert all([fold in self.split for fold in self.folds]), f&#34;One of the selected folds ({self.folds}) don&#39;t exist. Choose among {list(self.split)}.&#34;
+         self.folds = self.folds.replace(self.test_fold, &#34;&#34;) # make sure test_fold is not used at training or validation
+     def __call__(self, dataset, fold=0):
+         assert 0 &lt;= fold &lt; len(self.folds)
+         keys = list(dataset.keys.all())
+ 
+-        testing_arena_labels = self.split[self.test_fold]
+-        testing_keys = [k for k in keys if k.arena_label in testing_arena_labels]
++        self.testing_arena_labels = self.split[self.test_fold]
++        testing_keys = [k for k in keys if k.arena_label in self.testing_arena_labels]
+ 
+         validation_arena_labels = self.split[self.folds[fold]]
+         validation_keys = [k for k in keys if k.arena_label in validation_arena_labels]
+ 
+         training_arena_labels = [arena_label for i in range(len(self.folds)) if i != fold for arena_label in self.split[self.folds[i]]]
+         training_keys = [k for k in keys if k.arena_label in training_arena_labels]
+ 
+@@ -195,42 +218,43 @@
+         return [
+             Subset(name=&#34;training&#34;, subset_type=SubsetType.TRAIN, keys=training_keys, dataset=dataset),
+             Subset(name=&#34;validation&#34;, subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=5),
+             Subset(name=&#34;testing&#34;, subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=5),
+         ]
+ 
+ class TestingArenaLabelsDatasetSplitter():
+-    def __init__(self, testing_arena_labels, validation_pc=15):
++    def __init__(self, testing_arena_labels, validation_pc=15, repetitions=1):
+         self.testing_arena_labels = testing_arena_labels
+         self.validation_pc = validation_pc
++        self.repetitions = repetitions
+         assert isinstance(self.testing_arena_labels, list)
+ 
+     def __call__(self, dataset, fold=0):
+         testing_keys, remaining_keys = [], []
+         for key in dataset.keys:
+             (remaining_keys, testing_keys)[key.arena_label in self.testing_arena_labels].append(key)
+ 
+         # Backup random seed
+         np_random_state = np.random.get_state()
+         np.random.seed(fold)
+ 
+-        total_length = len(remaining_keys) + len(testing_keys)
++        total_length = len(remaining_keys)
+         validation_keys, training_keys = [], []
+         validation_indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s for validation keys
+         validation_indices[np.random.choice(total_length, total_length*self.validation_pc//100, replace=False)] = 1
+         for i, key in zip(validation_indices, remaining_keys):
+             (training_keys, validation_keys)[i].append(key)
+ 
+         # Restore random seed
+         np.random.set_state(np_random_state)
+ 
+         subsets = [
+             Subset(name=&#34;training&#34;, subset_type=SubsetType.TRAIN, keys=training_keys, dataset=dataset),
+-            Subset(name=&#34;validation&#34;, subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=2),
+-            Subset(name=&#34;testing&#34;, subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=2),
++            Subset(name=&#34;validation&#34;, subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=self.repetitions),
++            Subset(name=&#34;testing&#34;, subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=self.repetitions),
+         ]
+         return [s for s in subsets if len(s.keys) &gt; 0]</code></pre>
+ </details>
+ </section>
+ <section>
+ </section>
+ <section>
+@@ -294,16 +318,16 @@
+         assert self.test_fold in self.split, f&#34;Requested test_fold ({self.test_fold}) doesn&#39;t exist. Choose among {list(self.split)}.&#34;
+         assert all([fold in self.split for fold in self.folds]), f&#34;One of the selected folds ({self.folds}) don&#39;t exist. Choose among {list(self.split)}.&#34;
+         self.folds = self.folds.replace(self.test_fold, &#34;&#34;) # make sure test_fold is not used at training or validation
+     def __call__(self, dataset, fold=0):
+         assert 0 &lt;= fold &lt; len(self.folds)
+         keys = list(dataset.keys.all())
+ 
+-        testing_arena_labels = self.split[self.test_fold]
+-        testing_keys = [k for k in keys if k.arena_label in testing_arena_labels]
++        self.testing_arena_labels = self.split[self.test_fold]
++        testing_keys = [k for k in keys if k.arena_label in self.testing_arena_labels]
+ 
+         validation_arena_labels = self.split[self.folds[fold]]
+         validation_keys = [k for k in keys if k.arena_label in validation_arena_labels]
+ 
+         training_arena_labels = [arena_label for i in range(len(self.folds)) if i != fold for arena_label in self.split[self.folds[i]]]
+         training_keys = [k for k in keys if k.arena_label in training_arena_labels]
+ 
+@@ -327,75 +351,97 @@
+ <dd>
+ <div class="desc"></div>
+ </dd>
+ </dl>
+ </dd>
+ <dt id="deepsport_utilities.ds.instants_dataset.dataset_splitters.DeepSportDatasetSplitter"><code class="flex name class">
+ <span>class <span class="ident">DeepSportDatasetSplitter</span></span>
+-<span>(</span><span>validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDE')</span>
++<span>(</span><span>validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDEF')</span>
+ </code></dt>
+ <dd>
+-<div class="desc"><p>DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDE')</p></div>
++<div class="desc"><p>DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDEF')</p></div>
+ <details class="source">
+ <summary>
+ <span>Expand source code</span>
+ </summary>
+ <pre><code class="python">class DeepSportDatasetSplitter: # pylint: disable=too-few-public-methods
+     validation_pc: int = 15
+     additional_keys_usage: str = &#34;skip&#34;
+-    folds: str = &#34;ABCDE&#34;
++    folds: str = &#34;ABCDEF&#34;
+     split = {
+         &#34;A&#34;: [&#39;KS-FR-CAEN&#39;, &#39;KS-FR-LIMOGES&#39;, &#39;KS-FR-ROANNE&#39;],
+         &#34;B&#34;: [&#39;KS-FR-NANTES&#39;, &#39;KS-FR-BLOIS&#39;, &#39;KS-FR-FOS&#39;],
+         &#34;C&#34;: [&#39;KS-FR-LEMANS&#39;, &#39;KS-FR-MONACO&#39;, &#39;KS-FR-STRASBOURG&#39;],
+         &#34;D&#34;: [&#39;KS-FR-GRAVELINES&#39;, &#39;KS-FR-STCHAMOND&#39;, &#39;KS-FR-POITIERS&#39;],
+         &#34;E&#34;: [&#39;KS-FR-NANCY&#39;, &#39;KS-FR-BOURGEB&#39;, &#39;KS-FR-VICHY&#39;],
++        # F is a fictive fold for which all keys are used for training
+     }
+     def split_keys(self, keys, fold=0):
+-        assert 0 &lt;= fold &lt;= len(self.folds)-1, &#34;Invalid fold index&#34;
+-
+-        testing_fold = self.folds[fold]
+-        testing_keys = [k for k in keys if k.arena_label in self.split[testing_fold]]
++        fold_index = fold
++        assert 0 &lt;= fold_index &lt;= len(self.folds)-1, &#34;Invalid fold index&#34;
+ 
+-        remaining_arena_labels = [label for f in self.folds.replace(testing_fold, &#34;&#34;) for label in self.split[f]]
+-        remaining_keys = [k for k in keys if k.arena_label in remaining_arena_labels]
++        testing_fold = self.folds[fold_index]
++        self.testing_arena_labels = set(self.split.get(testing_fold, []))
++        remaining_arena_labels = [label for f in self.folds.replace(testing_fold, &#34;&#34;) for label in self.split.get(f, [])]
++        testing_keys = []
++        remaining_keys = defaultdict(list)
++        additional_keys = []
++        additional_arena_labels = set()
++        for key in keys:
++            if key.arena_label in remaining_arena_labels:
++                remaining_keys[key.instant_key].append(key)
++            elif key.arena_label in self.testing_arena_labels:
++                testing_keys.append(key)
++            else:
++                additional_keys.append(key)
++                additional_arena_labels.add(key.arena_label)
+ 
+         # Backup random seed
+         random_state = random.getstate()
+         random.seed(fold)
+ 
+-        validation_keys = random.sample(remaining_keys, len(remaining_keys)*self.validation_pc//100)
+-        training_keys = [k for k in remaining_keys if k not in validation_keys]
+-
+-        additional_keys = [k for k in keys if k not in training_keys+validation_keys+testing_keys]
++        total_length = len(remaining_keys)
++        validation_keys, training_keys = [], []
++        indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s for validation keys
++        indices[np.random.choice(total_length, total_length*self.validation_pc//100, replace=False)] = 1
++        for i, instant_key in zip(indices, remaining_keys):
++            (training_keys, validation_keys)[i].extend(remaining_keys[instant_key])
+ 
++        # Restore random seed
++        random.setstate(random_state)
++        testing2_keys = None
+         if additional_keys:
+             if self.additional_keys_usage == &#34;testing&#34;:
+                 testing_keys += additional_keys
++                self.testing_arena_labels = self.testing_arena_labels.union(additional_arena_labels)
+             elif self.additional_keys_usage == &#34;training&#34;:
+                 training_keys += additional_keys
+             elif self.additional_keys_usage == &#34;validation&#34;:
+                 validation_keys += additional_keys
+             elif self.additional_keys_usage in [&#34;none&#34;, &#34;skip&#34;]:
+                 pass
++            elif self.additional_keys_usage == &#34;testing2&#34;:
++                testing2_keys = additional_keys
+             else:
+                 raise ValueError(&#34;They are additional arena labels that I don&#39;t know what to do with. Please tell me the &#39;additional_keys_usage&#39; argument&#34;)
+ 
+-        # Restore random seed
+-        random.setstate(random_state)
+-        return training_keys, validation_keys, testing_keys
++        self.testing_arena_labels = list(self.testing_arena_labels)
++
++        return training_keys, validation_keys, testing_keys, testing2_keys
+ 
+     def __call__(self, dataset, fold=0):
+-        keys = list(dataset.keys.all())
+-        training_keys, validation_keys, testing_keys = self.split_keys(keys, fold)
+-        return [
++        training_keys, validation_keys, testing_keys, testing2_keys = self.split_keys(dataset.keys, fold)
++        subsets = [
+             Subset(name=&#34;training&#34;, subset_type=SubsetType.TRAIN, keys=training_keys, dataset=dataset),
+             Subset(name=&#34;validation&#34;, subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=1),
+             Subset(name=&#34;testing&#34;, subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=1),
+-        ]</code></pre>
++        ]
++        if testing2_keys:
++            subsets.append(Subset(name=&#34;testing2&#34;, subset_type=SubsetType.EVAL, keys=testing2_keys, dataset=dataset, repetitions=1))
++        return subsets</code></pre>
+ </details>
+ <h3>Subclasses</h3>
+ <ul class="hlist">
+ <li><a title="deepsport_utilities.ds.instants_dataset.dataset_splitters.ArenaLabelFoldsDatasetSplitter" href="#deepsport_utilities.ds.instants_dataset.dataset_splitters.ArenaLabelFoldsDatasetSplitter">ArenaLabelFoldsDatasetSplitter</a></li>
+ <li><a title="deepsport_utilities.ds.instants_dataset.dataset_splitters.KFoldsArenaLabelsTestingDatasetSplitter" href="#deepsport_utilities.ds.instants_dataset.dataset_splitters.KFoldsArenaLabelsTestingDatasetSplitter">KFoldsArenaLabelsTestingDatasetSplitter</a></li>
+ <li><a title="deepsport_utilities.ds.instants_dataset.dataset_splitters.OfficialFoldsDatasetSplitter" href="#deepsport_utilities.ds.instants_dataset.dataset_splitters.OfficialFoldsDatasetSplitter">OfficialFoldsDatasetSplitter</a></li>
+ <li><a title="deepsport_utilities.ds.instants_dataset.dataset_splitters.SingleArenaDatasetSplitter" href="#deepsport_utilities.ds.instants_dataset.dataset_splitters.SingleArenaDatasetSplitter">SingleArenaDatasetSplitter</a></li>
+@@ -427,56 +473,75 @@
+ <dd>
+ <div class="desc"></div>
+ <details class="source">
+ <summary>
+ <span>Expand source code</span>
+ </summary>
+ <pre><code class="python">def split_keys(self, keys, fold=0):
+-    assert 0 &lt;= fold &lt;= len(self.folds)-1, &#34;Invalid fold index&#34;
+-
+-    testing_fold = self.folds[fold]
+-    testing_keys = [k for k in keys if k.arena_label in self.split[testing_fold]]
++    fold_index = fold
++    assert 0 &lt;= fold_index &lt;= len(self.folds)-1, &#34;Invalid fold index&#34;
+ 
+-    remaining_arena_labels = [label for f in self.folds.replace(testing_fold, &#34;&#34;) for label in self.split[f]]
+-    remaining_keys = [k for k in keys if k.arena_label in remaining_arena_labels]
++    testing_fold = self.folds[fold_index]
++    self.testing_arena_labels = set(self.split.get(testing_fold, []))
++    remaining_arena_labels = [label for f in self.folds.replace(testing_fold, &#34;&#34;) for label in self.split.get(f, [])]
++    testing_keys = []
++    remaining_keys = defaultdict(list)
++    additional_keys = []
++    additional_arena_labels = set()
++    for key in keys:
++        if key.arena_label in remaining_arena_labels:
++            remaining_keys[key.instant_key].append(key)
++        elif key.arena_label in self.testing_arena_labels:
++            testing_keys.append(key)
++        else:
++            additional_keys.append(key)
++            additional_arena_labels.add(key.arena_label)
+ 
+     # Backup random seed
+     random_state = random.getstate()
+     random.seed(fold)
+ 
+-    validation_keys = random.sample(remaining_keys, len(remaining_keys)*self.validation_pc//100)
+-    training_keys = [k for k in remaining_keys if k not in validation_keys]
+-
+-    additional_keys = [k for k in keys if k not in training_keys+validation_keys+testing_keys]
++    total_length = len(remaining_keys)
++    validation_keys, training_keys = [], []
++    indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s for validation keys
++    indices[np.random.choice(total_length, total_length*self.validation_pc//100, replace=False)] = 1
++    for i, instant_key in zip(indices, remaining_keys):
++        (training_keys, validation_keys)[i].extend(remaining_keys[instant_key])
+ 
++    # Restore random seed
++    random.setstate(random_state)
++    testing2_keys = None
+     if additional_keys:
+         if self.additional_keys_usage == &#34;testing&#34;:
+             testing_keys += additional_keys
++            self.testing_arena_labels = self.testing_arena_labels.union(additional_arena_labels)
+         elif self.additional_keys_usage == &#34;training&#34;:
+             training_keys += additional_keys
+         elif self.additional_keys_usage == &#34;validation&#34;:
+             validation_keys += additional_keys
+         elif self.additional_keys_usage in [&#34;none&#34;, &#34;skip&#34;]:
+             pass
++        elif self.additional_keys_usage == &#34;testing2&#34;:
++            testing2_keys = additional_keys
+         else:
+             raise ValueError(&#34;They are additional arena labels that I don&#39;t know what to do with. Please tell me the &#39;additional_keys_usage&#39; argument&#34;)
+ 
+-    # Restore random seed
+-    random.setstate(random_state)
+-    return training_keys, validation_keys, testing_keys</code></pre>
++    self.testing_arena_labels = list(self.testing_arena_labels)
++
++    return training_keys, validation_keys, testing_keys, testing2_keys</code></pre>
+ </details>
+ </dd>
+ </dl>
+ </dd>
+ <dt id="deepsport_utilities.ds.instants_dataset.dataset_splitters.KFoldsArenaLabelsTestingDatasetSplitter"><code class="flex name class">
+ <span>class <span class="ident">KFoldsArenaLabelsTestingDatasetSplitter</span></span>
+ <span>(</span><span>fold_count=8, validation_pc=15, evaluation_sets_repetitions=5)</span>
+ </code></dt>
+ <dd>
+-<div class="desc"><p>DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDE')</p></div>
++<div class="desc"><p>DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDEF')</p></div>
+ <details class="source">
+ <summary>
+ <span>Expand source code</span>
+ </summary>
+ <pre><code class="python">class KFoldsArenaLabelsTestingDatasetSplitter(DeepSportDatasetSplitter):
+     def __init__(self, fold_count=8, validation_pc=15, evaluation_sets_repetitions=5):
+         self.fold_count = fold_count
+@@ -573,15 +638,15 @@
+ </dl>
+ </dd>
+ <dt id="deepsport_utilities.ds.instants_dataset.dataset_splitters.SingleArenaDatasetSplitter"><code class="flex name class">
+ <span>class <span class="ident">SingleArenaDatasetSplitter</span></span>
+ <span>(</span><span>specific_arena_label)</span>
+ </code></dt>
+ <dd>
+-<div class="desc"><p>DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDE')</p></div>
++<div class="desc"><p>DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDEF')</p></div>
+ <details class="source">
+ <summary>
+ <span>Expand source code</span>
+ </summary>
+ <pre><code class="python">class SingleArenaDatasetSplitter(DeepSportDatasetSplitter):
+     def __init__(self, specific_arena_label):
+         self.specific_arena_label = specific_arena_label
+@@ -620,51 +685,52 @@
+ <dd>
+ <div class="desc"></div>
+ </dd>
+ </dl>
+ </dd>
+ <dt id="deepsport_utilities.ds.instants_dataset.dataset_splitters.TestingArenaLabelsDatasetSplitter"><code class="flex name class">
+ <span>class <span class="ident">TestingArenaLabelsDatasetSplitter</span></span>
+-<span>(</span><span>testing_arena_labels, validation_pc=15)</span>
++<span>(</span><span>testing_arena_labels, validation_pc=15, repetitions=1)</span>
+ </code></dt>
+ <dd>
+ <div class="desc"></div>
+ <details class="source">
+ <summary>
+ <span>Expand source code</span>
+ </summary>
+ <pre><code class="python">class TestingArenaLabelsDatasetSplitter():
+-    def __init__(self, testing_arena_labels, validation_pc=15):
++    def __init__(self, testing_arena_labels, validation_pc=15, repetitions=1):
+         self.testing_arena_labels = testing_arena_labels
+         self.validation_pc = validation_pc
++        self.repetitions = repetitions
+         assert isinstance(self.testing_arena_labels, list)
+ 
+     def __call__(self, dataset, fold=0):
+         testing_keys, remaining_keys = [], []
+         for key in dataset.keys:
+             (remaining_keys, testing_keys)[key.arena_label in self.testing_arena_labels].append(key)
+ 
+         # Backup random seed
+         np_random_state = np.random.get_state()
+         np.random.seed(fold)
+ 
+-        total_length = len(remaining_keys) + len(testing_keys)
++        total_length = len(remaining_keys)
+         validation_keys, training_keys = [], []
+         validation_indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s for validation keys
+         validation_indices[np.random.choice(total_length, total_length*self.validation_pc//100, replace=False)] = 1
+         for i, key in zip(validation_indices, remaining_keys):
+             (training_keys, validation_keys)[i].append(key)
+ 
+         # Restore random seed
+         np.random.set_state(np_random_state)
+ 
+         subsets = [
+             Subset(name=&#34;training&#34;, subset_type=SubsetType.TRAIN, keys=training_keys, dataset=dataset),
+-            Subset(name=&#34;validation&#34;, subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=2),
+-            Subset(name=&#34;testing&#34;, subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=2),
++            Subset(name=&#34;validation&#34;, subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=self.repetitions),
++            Subset(name=&#34;testing&#34;, subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=self.repetitions),
+         ]
+         return [s for s in subsets if len(s.keys) &gt; 0]</code></pre>
+ </details>
+ </dd>
+ </dl>
+ </section>
+ </article>
+```
+
+#### html2text {}
+
+```diff
+@@ -2,83 +2,107 @@
+ 
+ 
+ 
+ 
+ 
+ ****** Module deepsport_utilities.ds.instants_dataset.dataset_splitters ******
+     Expand source code
+-import random
++from collections import defaultdict
+ import dataclasses
++import random
+ import numpy as np
+ from deepsport_utilities.dataset import split_equally, Subset, SubsetType
+ 
+ @dataclasses.dataclass
+ class DeepSportDatasetSplitter: # pylint: disable=too-few-public-methods
+     validation_pc: int = 15
+     additional_keys_usage: str = "skip"
+-    folds: str = "ABCDE"
++    folds: str = "ABCDEF"
+     split = {
+         "A": ['KS-FR-CAEN', 'KS-FR-LIMOGES', 'KS-FR-ROANNE'],
+         "B": ['KS-FR-NANTES', 'KS-FR-BLOIS', 'KS-FR-FOS'],
+         "C": ['KS-FR-LEMANS', 'KS-FR-MONACO', 'KS-FR-STRASBOURG'],
+         "D": ['KS-FR-GRAVELINES', 'KS-FR-STCHAMOND', 'KS-FR-POITIERS'],
+         "E": ['KS-FR-NANCY', 'KS-FR-BOURGEB', 'KS-FR-VICHY'],
++        # F is a fictive fold for which all keys are used for training
+     }
+     def split_keys(self, keys, fold=0):
+-        assert 0 <= fold <= len(self.folds)-1, "Invalid fold index"
+-
+-        testing_fold = self.folds[fold]
+-        testing_keys = [k for k in keys if k.arena_label in self.split
+-[testing_fold]]
++        fold_index = fold
++        assert 0 <= fold_index <= len(self.folds)-1, "Invalid fold index"
+ 
++        testing_fold = self.folds[fold_index]
++        self.testing_arena_labels = set(self.split.get(testing_fold, []))
+         remaining_arena_labels = [label for f in self.folds.replace
+-(testing_fold, "") for label in self.split[f]]
+-        remaining_keys = [k for k in keys if k.arena_label in
+-remaining_arena_labels]
++(testing_fold, "") for label in self.split.get(f, [])]
++        testing_keys = []
++        remaining_keys = defaultdict(list)
++        additional_keys = []
++        additional_arena_labels = set()
++        for key in keys:
++            if key.arena_label in remaining_arena_labels:
++                remaining_keys[key.instant_key].append(key)
++            elif key.arena_label in self.testing_arena_labels:
++                testing_keys.append(key)
++            else:
++                additional_keys.append(key)
++                additional_arena_labels.add(key.arena_label)
+ 
+         # Backup random seed
+         random_state = random.getstate()
+         random.seed(fold)
+ 
+-        validation_keys = random.sample(remaining_keys, len
+-(remaining_keys)*self.validation_pc//100)
+-        training_keys = [k for k in remaining_keys if k not in validation_keys]
+-
+-        additional_keys = [k for k in keys if k not in
+-training_keys+validation_keys+testing_keys]
++        total_length = len(remaining_keys)
++        validation_keys, training_keys = [], []
++        indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s for
++validation keys
++        indices[np.random.choice(total_length, total_length*self.validation_pc/
++/100, replace=False)] = 1
++        for i, instant_key in zip(indices, remaining_keys):
++            (training_keys, validation_keys)[i].extend(remaining_keys
++[instant_key])
+ 
++        # Restore random seed
++        random.setstate(random_state)
++        testing2_keys = None
+         if additional_keys:
+             if self.additional_keys_usage == "testing":
+                 testing_keys += additional_keys
++                self.testing_arena_labels = self.testing_arena_labels.union
++(additional_arena_labels)
+             elif self.additional_keys_usage == "training":
+                 training_keys += additional_keys
+             elif self.additional_keys_usage == "validation":
+                 validation_keys += additional_keys
+             elif self.additional_keys_usage in ["none", "skip"]:
+                 pass
++            elif self.additional_keys_usage == "testing2":
++                testing2_keys = additional_keys
+             else:
+                 raise ValueError("They are additional arena labels that I don't
+ know what to do with. Please tell me the 'additional_keys_usage' argument")
+ 
+-        # Restore random seed
+-        random.setstate(random_state)
+-        return training_keys, validation_keys, testing_keys
++        self.testing_arena_labels = list(self.testing_arena_labels)
++
++        return training_keys, validation_keys, testing_keys, testing2_keys
+ 
+     def __call__(self, dataset, fold=0):
+-        keys = list(dataset.keys.all())
+-        training_keys, validation_keys, testing_keys = self.split_keys(keys,
+-fold)
+-        return [
++        training_keys, validation_keys, testing_keys, testing2_keys =
++self.split_keys(dataset.keys, fold)
++        subsets = [
+             Subset(name="training", subset_type=SubsetType.TRAIN,
+ keys=training_keys, dataset=dataset),
+             Subset(name="validation", subset_type=SubsetType.EVAL,
+ keys=validation_keys, dataset=dataset, repetitions=1),
+             Subset(name="testing", subset_type=SubsetType.EVAL,
+ keys=testing_keys, dataset=dataset, repetitions=1),
+         ]
++        if testing2_keys:
++            subsets.append(Subset(name="testing2", subset_type=SubsetType.EVAL,
++keys=testing2_keys, dataset=dataset, repetitions=1))
++        return subsets
+ 
+ @dataclasses.dataclass
+ class ArenaLabelFoldsDatasetSplitter(DeepSportDatasetSplitter):
+     folds: str = "ABCDE"
+     test_fold: str = "A"
+     def __post_init__(self):
+         assert self.test_fold in self.split, f"Requested test_fold (
+@@ -87,17 +111,17 @@
+ selected folds ({self.folds}) don't exist. Choose among {list(self.split)}."
+         self.folds = self.folds.replace(self.test_fold, "") # make sure
+ test_fold is not used at training or validation
+     def __call__(self, dataset, fold=0):
+         assert 0 <= fold < len(self.folds)
+         keys = list(dataset.keys.all())
+ 
+-        testing_arena_labels = self.split[self.test_fold]
++        self.testing_arena_labels = self.split[self.test_fold]
+         testing_keys = [k for k in keys if k.arena_label in
+-testing_arena_labels]
++self.testing_arena_labels]
+ 
+         validation_arena_labels = self.split[self.folds[fold]]
+         validation_keys = [k for k in keys if k.arena_label in
+ validation_arena_labels]
+ 
+         training_arena_labels = [arena_label for i in range(len(self.folds)) if
+ i != fold for arena_label in self.split[self.folds[i]]]
+@@ -213,30 +237,31 @@
+             Subset(name="validation", subset_type=SubsetType.EVAL,
+ keys=validation_keys, dataset=dataset, repetitions=5),
+             Subset(name="testing", subset_type=SubsetType.EVAL,
+ keys=testing_keys, dataset=dataset, repetitions=5),
+         ]
+ 
+ class TestingArenaLabelsDatasetSplitter():
+-    def __init__(self, testing_arena_labels, validation_pc=15):
++    def __init__(self, testing_arena_labels, validation_pc=15, repetitions=1):
+         self.testing_arena_labels = testing_arena_labels
+         self.validation_pc = validation_pc
++        self.repetitions = repetitions
+         assert isinstance(self.testing_arena_labels, list)
+ 
+     def __call__(self, dataset, fold=0):
+         testing_keys, remaining_keys = [], []
+         for key in dataset.keys:
+             (remaining_keys, testing_keys)[key.arena_label in
+ self.testing_arena_labels].append(key)
+ 
+         # Backup random seed
+         np_random_state = np.random.get_state()
+         np.random.seed(fold)
+ 
+-        total_length = len(remaining_keys) + len(testing_keys)
++        total_length = len(remaining_keys)
+         validation_keys, training_keys = [], []
+         validation_indices = np.zeros(total_length, dtype=np.int32) # a vector
+ of 1s for validation keys
+         validation_indices[np.random.choice(total_length,
+ total_length*self.validation_pc//100, replace=False)] = 1
+         for i, key in zip(validation_indices, remaining_keys):
+             (training_keys, validation_keys)[i].append(key)
+@@ -244,17 +269,17 @@
+         # Restore random seed
+         np.random.set_state(np_random_state)
+ 
+         subsets = [
+             Subset(name="training", subset_type=SubsetType.TRAIN,
+ keys=training_keys, dataset=dataset),
+             Subset(name="validation", subset_type=SubsetType.EVAL,
+-keys=validation_keys, dataset=dataset, repetitions=2),
++keys=validation_keys, dataset=dataset, repetitions=self.repetitions),
+             Subset(name="testing", subset_type=SubsetType.EVAL,
+-keys=testing_keys, dataset=dataset, repetitions=2),
++keys=testing_keys, dataset=dataset, repetitions=self.repetitions),
+         ]
+         return [s for s in subsets if len(s.keys) > 0]
+ 
+ ***** Functions *****
+   def count_keys_per_arena_label(keys)
+       returns a dict of (arena_label: number of keys of that arena)
+         Expand source code
+@@ -293,17 +318,17 @@
+       (self.split)}."
+               self.folds = self.folds.replace(self.test_fold, "") # make sure
+       test_fold is not used at training or validation
+           def __call__(self, dataset, fold=0):
+               assert 0 <= fold < len(self.folds)
+               keys = list(dataset.keys.all())
+ 
+-              testing_arena_labels = self.split[self.test_fold]
++              self.testing_arena_labels = self.split[self.test_fold]
+               testing_keys = [k for k in keys if k.arena_label in
+-      testing_arena_labels]
++      self.testing_arena_labels]
+ 
+               validation_arena_labels = self.split[self.folds[fold]]
+               validation_keys = [k for k in keys if k.arena_label in
+       validation_arena_labels]
+ 
+               training_arena_labels = [arena_label for i in range(len
+       (self.folds)) if i != fold for arena_label in self.split[self.folds[i]]]
+@@ -320,141 +345,186 @@
+               ]
+       **** Ancestors ****
+           * DeepSportDatasetSplitter
+       **** Class variables ****
+         var folds :Â str
+         var test_fold :Â str
+   class DeepSportDatasetSplitter (validation_pc:Â intÂ =Â 15,
+-  additional_keys_usage:Â strÂ =Â 'skip', folds:Â strÂ =Â 'ABCDE')
++  additional_keys_usage:Â strÂ =Â 'skip', folds:Â strÂ =Â 'ABCDEF')
+       DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage:
+-      str = 'skip', folds: str = 'ABCDE')
++      str = 'skip', folds: str = 'ABCDEF')
+         Expand source code
+       class DeepSportDatasetSplitter: # pylint: disable=too-few-public-methods
+           validation_pc: int = 15
+           additional_keys_usage: str = "skip"
+-          folds: str = "ABCDE"
++          folds: str = "ABCDEF"
+           split = {
+               "A": ['KS-FR-CAEN', 'KS-FR-LIMOGES', 'KS-FR-ROANNE'],
+               "B": ['KS-FR-NANTES', 'KS-FR-BLOIS', 'KS-FR-FOS'],
+               "C": ['KS-FR-LEMANS', 'KS-FR-MONACO', 'KS-FR-STRASBOURG'],
+               "D": ['KS-FR-GRAVELINES', 'KS-FR-STCHAMOND', 'KS-FR-POITIERS'],
+               "E": ['KS-FR-NANCY', 'KS-FR-BOURGEB', 'KS-FR-VICHY'],
++              # F is a fictive fold for which all keys are used for training
+           }
+           def split_keys(self, keys, fold=0):
+-              assert 0 <= fold <= len(self.folds)-1, "Invalid fold index"
+-
+-              testing_fold = self.folds[fold]
+-              testing_keys = [k for k in keys if k.arena_label in self.split
+-      [testing_fold]]
++              fold_index = fold
++              assert 0 <= fold_index <= len(self.folds)-1, "Invalid fold index"
+ 
++              testing_fold = self.folds[fold_index]
++              self.testing_arena_labels = set(self.split.get(testing_fold, []))
+               remaining_arena_labels = [label for f in self.folds.replace
+-      (testing_fold, "") for label in self.split[f]]
+-              remaining_keys = [k for k in keys if k.arena_label in
+-      remaining_arena_labels]
++      (testing_fold, "") for label in self.split.get(f, [])]
++              testing_keys = []
++              remaining_keys = defaultdict(list)
++              additional_keys = []
++              additional_arena_labels = set()
++              for key in keys:
++                  if key.arena_label in remaining_arena_labels:
++                      remaining_keys[key.instant_key].append(key)
++                  elif key.arena_label in self.testing_arena_labels:
++                      testing_keys.append(key)
++                  else:
++                      additional_keys.append(key)
++                      additional_arena_labels.add(key.arena_label)
+ 
+               # Backup random seed
+               random_state = random.getstate()
+               random.seed(fold)
+ 
+-              validation_keys = random.sample(remaining_keys, len
+-      (remaining_keys)*self.validation_pc//100)
+-              training_keys = [k for k in remaining_keys if k not in
+-      validation_keys]
+-
+-              additional_keys = [k for k in keys if k not in
+-      training_keys+validation_keys+testing_keys]
++              total_length = len(remaining_keys)
++              validation_keys, training_keys = [], []
++              indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s
++      for validation keys
++              indices[np.random.choice(total_length,
++      total_length*self.validation_pc//100, replace=False)] = 1
++              for i, instant_key in zip(indices, remaining_keys):
++                  (training_keys, validation_keys)[i].extend(remaining_keys
++      [instant_key])
+ 
++              # Restore random seed
++              random.setstate(random_state)
++              testing2_keys = None
+               if additional_keys:
+                   if self.additional_keys_usage == "testing":
+                       testing_keys += additional_keys
++                      self.testing_arena_labels =
++      self.testing_arena_labels.union(additional_arena_labels)
+                   elif self.additional_keys_usage == "training":
+                       training_keys += additional_keys
+                   elif self.additional_keys_usage == "validation":
+                       validation_keys += additional_keys
+                   elif self.additional_keys_usage in ["none", "skip"]:
+                       pass
++                  elif self.additional_keys_usage == "testing2":
++                      testing2_keys = additional_keys
+                   else:
+                       raise ValueError("They are additional arena labels that I
+       don't know what to do with. Please tell me the 'additional_keys_usage'
+       argument")
+ 
+-              # Restore random seed
+-              random.setstate(random_state)
+-              return training_keys, validation_keys, testing_keys
++              self.testing_arena_labels = list(self.testing_arena_labels)
++
++              return training_keys, validation_keys, testing_keys,
++      testing2_keys
+ 
+           def __call__(self, dataset, fold=0):
+-              keys = list(dataset.keys.all())
+-              training_keys, validation_keys, testing_keys = self.split_keys
+-      (keys, fold)
+-              return [
++              training_keys, validation_keys, testing_keys, testing2_keys =
++      self.split_keys(dataset.keys, fold)
++              subsets = [
+                   Subset(name="training", subset_type=SubsetType.TRAIN,
+       keys=training_keys, dataset=dataset),
+                   Subset(name="validation", subset_type=SubsetType.EVAL,
+       keys=validation_keys, dataset=dataset, repetitions=1),
+                   Subset(name="testing", subset_type=SubsetType.EVAL,
+       keys=testing_keys, dataset=dataset, repetitions=1),
+               ]
++              if testing2_keys:
++                  subsets.append(Subset(name="testing2",
++      subset_type=SubsetType.EVAL, keys=testing2_keys, dataset=dataset,
++      repetitions=1))
++              return subsets
+       **** Subclasses ****
+           * ArenaLabelFoldsDatasetSplitter
+           * KFoldsArenaLabelsTestingDatasetSplitter
+           * OfficialFoldsDatasetSplitter
+           * SingleArenaDatasetSplitter
+       **** Class variables ****
+         var additional_keys_usage :Â str
+         var folds :Â str
+         var split
+         var validation_pc :Â int
+       **** Methods ****
+         def split_keys(self, keys, fold=0)
+               Expand source code
+             def split_keys(self, keys, fold=0):
+-                assert 0 <= fold <= len(self.folds)-1, "Invalid fold index"
+-
+-                testing_fold = self.folds[fold]
+-                testing_keys = [k for k in keys if k.arena_label in self.split
+-            [testing_fold]]
+-
++                fold_index = fold
++                assert 0 <= fold_index <= len(self.folds)-1, "Invalid fold
++            index"
++
++                testing_fold = self.folds[fold_index]
++                self.testing_arena_labels = set(self.split.get(testing_fold,
++            []))
+                 remaining_arena_labels = [label for f in self.folds.replace
+-            (testing_fold, "") for label in self.split[f]]
+-                remaining_keys = [k for k in keys if k.arena_label in
+-            remaining_arena_labels]
++            (testing_fold, "") for label in self.split.get(f, [])]
++                testing_keys = []
++                remaining_keys = defaultdict(list)
++                additional_keys = []
++                additional_arena_labels = set()
++                for key in keys:
++                    if key.arena_label in remaining_arena_labels:
++                        remaining_keys[key.instant_key].append(key)
++                    elif key.arena_label in self.testing_arena_labels:
++                        testing_keys.append(key)
++                    else:
++                        additional_keys.append(key)
++                        additional_arena_labels.add(key.arena_label)
+ 
+                 # Backup random seed
+                 random_state = random.getstate()
+                 random.seed(fold)
+ 
+-                validation_keys = random.sample(remaining_keys, len
+-            (remaining_keys)*self.validation_pc//100)
+-                training_keys = [k for k in remaining_keys if k not in
+-            validation_keys]
+-
+-                additional_keys = [k for k in keys if k not in
+-            training_keys+validation_keys+testing_keys]
++                total_length = len(remaining_keys)
++                validation_keys, training_keys = [], []
++                indices = np.zeros(total_length, dtype=np.int32) # a vector of
++            1s for validation keys
++                indices[np.random.choice(total_length,
++            total_length*self.validation_pc//100, replace=False)] = 1
++                for i, instant_key in zip(indices, remaining_keys):
++                    (training_keys, validation_keys)[i].extend(remaining_keys
++            [instant_key])
+ 
++                # Restore random seed
++                random.setstate(random_state)
++                testing2_keys = None
+                 if additional_keys:
+                     if self.additional_keys_usage == "testing":
+                         testing_keys += additional_keys
++                        self.testing_arena_labels =
++            self.testing_arena_labels.union(additional_arena_labels)
+                     elif self.additional_keys_usage == "training":
+                         training_keys += additional_keys
+                     elif self.additional_keys_usage == "validation":
+                         validation_keys += additional_keys
+                     elif self.additional_keys_usage in ["none", "skip"]:
+                         pass
++                    elif self.additional_keys_usage == "testing2":
++                        testing2_keys = additional_keys
+                     else:
+                         raise ValueError("They are additional arena labels that
+             I don't know what to do with. Please tell me the
+             'additional_keys_usage' argument")
+ 
+-                # Restore random seed
+-                random.setstate(random_state)
+-                return training_keys, validation_keys, testing_keys
++                self.testing_arena_labels = list(self.testing_arena_labels)
++
++                return training_keys, validation_keys, testing_keys,
++            testing2_keys
+   class KFoldsArenaLabelsTestingDatasetSplitter (fold_count=8,
+   validation_pc=15, evaluation_sets_repetitions=5)
+       DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage:
+-      str = 'skip', folds: str = 'ABCDE')
++      str = 'skip', folds: str = 'ABCDEF')
+         Expand source code
+       class KFoldsArenaLabelsTestingDatasetSplitter(DeepSportDatasetSplitter):
+           def __init__(self, fold_count=8, validation_pc=15,
+       evaluation_sets_repetitions=5):
+               self.fold_count = fold_count
+               self.validation_pc = validation_pc
+               self.evaluation_sets_repetitions = evaluation_sets_repetitions
+@@ -529,15 +599,15 @@
+       **** Ancestors ****
+           * DeepSportDatasetSplitter
+       **** Class variables ****
+         var eval_folds :Â str
+         var folds :Â str
+   class SingleArenaDatasetSplitter (specific_arena_label)
+       DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage:
+-      str = 'skip', folds: str = 'ABCDE')
++      str = 'skip', folds: str = 'ABCDEF')
+         Expand source code
+       class SingleArenaDatasetSplitter(DeepSportDatasetSplitter):
+           def __init__(self, specific_arena_label):
+               self.specific_arena_label = specific_arena_label
+               self.fold_count = 5
+           def __call__(self, dataset, fold=0):
+               keys = list(dataset.keys.all())
+@@ -564,33 +634,35 @@
+       **** Ancestors ****
+           * DeepSportDatasetSplitter
+       **** Class variables ****
+         var additional_keys_usage :Â str
+         var folds :Â str
+         var validation_pc :Â int
+   class TestingArenaLabelsDatasetSplitter (testing_arena_labels,
+-  validation_pc=15)
++  validation_pc=15, repetitions=1)
+         Expand source code
+       class TestingArenaLabelsDatasetSplitter():
+-          def __init__(self, testing_arena_labels, validation_pc=15):
++          def __init__(self, testing_arena_labels, validation_pc=15,
++      repetitions=1):
+               self.testing_arena_labels = testing_arena_labels
+               self.validation_pc = validation_pc
++              self.repetitions = repetitions
+               assert isinstance(self.testing_arena_labels, list)
+ 
+           def __call__(self, dataset, fold=0):
+               testing_keys, remaining_keys = [], []
+               for key in dataset.keys:
+                   (remaining_keys, testing_keys)[key.arena_label in
+       self.testing_arena_labels].append(key)
+ 
+               # Backup random seed
+               np_random_state = np.random.get_state()
+               np.random.seed(fold)
+ 
+-              total_length = len(remaining_keys) + len(testing_keys)
++              total_length = len(remaining_keys)
+               validation_keys, training_keys = [], []
+               validation_indices = np.zeros(total_length, dtype=np.int32) # a
+       vector of 1s for validation keys
+               validation_indices[np.random.choice(total_length,
+       total_length*self.validation_pc//100, replace=False)] = 1
+               for i, key in zip(validation_indices, remaining_keys):
+                   (training_keys, validation_keys)[i].append(key)
+@@ -598,17 +670,17 @@
+               # Restore random seed
+               np.random.set_state(np_random_state)
+ 
+               subsets = [
+                   Subset(name="training", subset_type=SubsetType.TRAIN,
+       keys=training_keys, dataset=dataset),
+                   Subset(name="validation", subset_type=SubsetType.EVAL,
+-      keys=validation_keys, dataset=dataset, repetitions=2),
++      keys=validation_keys, dataset=dataset, repetitions=self.repetitions),
+                   Subset(name="testing", subset_type=SubsetType.EVAL,
+-      keys=testing_keys, dataset=dataset, repetitions=2),
++      keys=testing_keys, dataset=dataset, repetitions=self.repetitions),
+               ]
+               return [s for s in subsets if len(s.keys) > 0]
+ 
+ ****** Index ******
+     * **** Super-module ****
+           o deepsport_utilities.ds.instants_dataset
+     * **** Functions ****
+```
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/index.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/index.html`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1076,75 +1076,97 @@
+ <h3>Ancestors</h3>
+ <ul class="hlist">
+ <li><a title="deepsport_utilities.transforms.Transform" href="../../transforms.html#deepsport_utilities.transforms.Transform">Transform</a></li>
+ </ul>
+ </dd>
+ <dt id="deepsport_utilities.ds.instants_dataset.DeepSportDatasetSplitter"><code class="flex name class">
+ <span>class <span class="ident">DeepSportDatasetSplitter</span></span>
+-<span>(</span><span>validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDE')</span>
++<span>(</span><span>validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDEF')</span>
+ </code></dt>
+ <dd>
+-<div class="desc"><p>DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDE')</p></div>
++<div class="desc"><p>DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDEF')</p></div>
+ <details class="source">
+ <summary>
+ <span>Expand source code</span>
+ </summary>
+ <pre><code class="python">class DeepSportDatasetSplitter: # pylint: disable=too-few-public-methods
+     validation_pc: int = 15
+     additional_keys_usage: str = &#34;skip&#34;
+-    folds: str = &#34;ABCDE&#34;
++    folds: str = &#34;ABCDEF&#34;
+     split = {
+         &#34;A&#34;: [&#39;KS-FR-CAEN&#39;, &#39;KS-FR-LIMOGES&#39;, &#39;KS-FR-ROANNE&#39;],
+         &#34;B&#34;: [&#39;KS-FR-NANTES&#39;, &#39;KS-FR-BLOIS&#39;, &#39;KS-FR-FOS&#39;],
+         &#34;C&#34;: [&#39;KS-FR-LEMANS&#39;, &#39;KS-FR-MONACO&#39;, &#39;KS-FR-STRASBOURG&#39;],
+         &#34;D&#34;: [&#39;KS-FR-GRAVELINES&#39;, &#39;KS-FR-STCHAMOND&#39;, &#39;KS-FR-POITIERS&#39;],
+         &#34;E&#34;: [&#39;KS-FR-NANCY&#39;, &#39;KS-FR-BOURGEB&#39;, &#39;KS-FR-VICHY&#39;],
++        # F is a fictive fold for which all keys are used for training
+     }
+     def split_keys(self, keys, fold=0):
+-        assert 0 &lt;= fold &lt;= len(self.folds)-1, &#34;Invalid fold index&#34;
++        fold_index = fold
++        assert 0 &lt;= fold_index &lt;= len(self.folds)-1, &#34;Invalid fold index&#34;
+ 
+-        testing_fold = self.folds[fold]
+-        testing_keys = [k for k in keys if k.arena_label in self.split[testing_fold]]
+-
+-        remaining_arena_labels = [label for f in self.folds.replace(testing_fold, &#34;&#34;) for label in self.split[f]]
+-        remaining_keys = [k for k in keys if k.arena_label in remaining_arena_labels]
++        testing_fold = self.folds[fold_index]
++        self.testing_arena_labels = set(self.split.get(testing_fold, []))
++        remaining_arena_labels = [label for f in self.folds.replace(testing_fold, &#34;&#34;) for label in self.split.get(f, [])]
++        testing_keys = []
++        remaining_keys = defaultdict(list)
++        additional_keys = []
++        additional_arena_labels = set()
++        for key in keys:
++            if key.arena_label in remaining_arena_labels:
++                remaining_keys[key.instant_key].append(key)
++            elif key.arena_label in self.testing_arena_labels:
++                testing_keys.append(key)
++            else:
++                additional_keys.append(key)
++                additional_arena_labels.add(key.arena_label)
+ 
+         # Backup random seed
+         random_state = random.getstate()
+         random.seed(fold)
+ 
+-        validation_keys = random.sample(remaining_keys, len(remaining_keys)*self.validation_pc//100)
+-        training_keys = [k for k in remaining_keys if k not in validation_keys]
+-
+-        additional_keys = [k for k in keys if k not in training_keys+validation_keys+testing_keys]
++        total_length = len(remaining_keys)
++        validation_keys, training_keys = [], []
++        indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s for validation keys
++        indices[np.random.choice(total_length, total_length*self.validation_pc//100, replace=False)] = 1
++        for i, instant_key in zip(indices, remaining_keys):
++            (training_keys, validation_keys)[i].extend(remaining_keys[instant_key])
+ 
++        # Restore random seed
++        random.setstate(random_state)
++        testing2_keys = None
+         if additional_keys:
+             if self.additional_keys_usage == &#34;testing&#34;:
+                 testing_keys += additional_keys
++                self.testing_arena_labels = self.testing_arena_labels.union(additional_arena_labels)
+             elif self.additional_keys_usage == &#34;training&#34;:
+                 training_keys += additional_keys
+             elif self.additional_keys_usage == &#34;validation&#34;:
+                 validation_keys += additional_keys
+             elif self.additional_keys_usage in [&#34;none&#34;, &#34;skip&#34;]:
+                 pass
++            elif self.additional_keys_usage == &#34;testing2&#34;:
++                testing2_keys = additional_keys
+             else:
+                 raise ValueError(&#34;They are additional arena labels that I don&#39;t know what to do with. Please tell me the &#39;additional_keys_usage&#39; argument&#34;)
+ 
+-        # Restore random seed
+-        random.setstate(random_state)
+-        return training_keys, validation_keys, testing_keys
++        self.testing_arena_labels = list(self.testing_arena_labels)
++
++        return training_keys, validation_keys, testing_keys, testing2_keys
+ 
+     def __call__(self, dataset, fold=0):
+-        keys = list(dataset.keys.all())
+-        training_keys, validation_keys, testing_keys = self.split_keys(keys, fold)
+-        return [
++        training_keys, validation_keys, testing_keys, testing2_keys = self.split_keys(dataset.keys, fold)
++        subsets = [
+             Subset(name=&#34;training&#34;, subset_type=SubsetType.TRAIN, keys=training_keys, dataset=dataset),
+             Subset(name=&#34;validation&#34;, subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=1),
+             Subset(name=&#34;testing&#34;, subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=1),
+-        ]</code></pre>
++        ]
++        if testing2_keys:
++            subsets.append(Subset(name=&#34;testing2&#34;, subset_type=SubsetType.EVAL, keys=testing2_keys, dataset=dataset, repetitions=1))
++        return subsets</code></pre>
+ </details>
+ <h3>Subclasses</h3>
+ <ul class="hlist">
+ <li><a title="deepsport_utilities.ds.instants_dataset.dataset_splitters.ArenaLabelFoldsDatasetSplitter" href="dataset_splitters.html#deepsport_utilities.ds.instants_dataset.dataset_splitters.ArenaLabelFoldsDatasetSplitter">ArenaLabelFoldsDatasetSplitter</a></li>
+ <li><a title="deepsport_utilities.ds.instants_dataset.dataset_splitters.KFoldsArenaLabelsTestingDatasetSplitter" href="dataset_splitters.html#deepsport_utilities.ds.instants_dataset.dataset_splitters.KFoldsArenaLabelsTestingDatasetSplitter">KFoldsArenaLabelsTestingDatasetSplitter</a></li>
+ <li><a title="deepsport_utilities.ds.instants_dataset.dataset_splitters.OfficialFoldsDatasetSplitter" href="dataset_splitters.html#deepsport_utilities.ds.instants_dataset.dataset_splitters.OfficialFoldsDatasetSplitter">OfficialFoldsDatasetSplitter</a></li>
+ <li><a title="deepsport_utilities.ds.instants_dataset.dataset_splitters.SingleArenaDatasetSplitter" href="dataset_splitters.html#deepsport_utilities.ds.instants_dataset.dataset_splitters.SingleArenaDatasetSplitter">SingleArenaDatasetSplitter</a></li>
+@@ -1176,46 +1198,65 @@
+ <dd>
+ <div class="desc"></div>
+ <details class="source">
+ <summary>
+ <span>Expand source code</span>
+ </summary>
+ <pre><code class="python">def split_keys(self, keys, fold=0):
+-    assert 0 &lt;= fold &lt;= len(self.folds)-1, &#34;Invalid fold index&#34;
++    fold_index = fold
++    assert 0 &lt;= fold_index &lt;= len(self.folds)-1, &#34;Invalid fold index&#34;
+ 
+-    testing_fold = self.folds[fold]
+-    testing_keys = [k for k in keys if k.arena_label in self.split[testing_fold]]
+-
+-    remaining_arena_labels = [label for f in self.folds.replace(testing_fold, &#34;&#34;) for label in self.split[f]]
+-    remaining_keys = [k for k in keys if k.arena_label in remaining_arena_labels]
++    testing_fold = self.folds[fold_index]
++    self.testing_arena_labels = set(self.split.get(testing_fold, []))
++    remaining_arena_labels = [label for f in self.folds.replace(testing_fold, &#34;&#34;) for label in self.split.get(f, [])]
++    testing_keys = []
++    remaining_keys = defaultdict(list)
++    additional_keys = []
++    additional_arena_labels = set()
++    for key in keys:
++        if key.arena_label in remaining_arena_labels:
++            remaining_keys[key.instant_key].append(key)
++        elif key.arena_label in self.testing_arena_labels:
++            testing_keys.append(key)
++        else:
++            additional_keys.append(key)
++            additional_arena_labels.add(key.arena_label)
+ 
+     # Backup random seed
+     random_state = random.getstate()
+     random.seed(fold)
+ 
+-    validation_keys = random.sample(remaining_keys, len(remaining_keys)*self.validation_pc//100)
+-    training_keys = [k for k in remaining_keys if k not in validation_keys]
+-
+-    additional_keys = [k for k in keys if k not in training_keys+validation_keys+testing_keys]
++    total_length = len(remaining_keys)
++    validation_keys, training_keys = [], []
++    indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s for validation keys
++    indices[np.random.choice(total_length, total_length*self.validation_pc//100, replace=False)] = 1
++    for i, instant_key in zip(indices, remaining_keys):
++        (training_keys, validation_keys)[i].extend(remaining_keys[instant_key])
+ 
++    # Restore random seed
++    random.setstate(random_state)
++    testing2_keys = None
+     if additional_keys:
+         if self.additional_keys_usage == &#34;testing&#34;:
+             testing_keys += additional_keys
++            self.testing_arena_labels = self.testing_arena_labels.union(additional_arena_labels)
+         elif self.additional_keys_usage == &#34;training&#34;:
+             training_keys += additional_keys
+         elif self.additional_keys_usage == &#34;validation&#34;:
+             validation_keys += additional_keys
+         elif self.additional_keys_usage in [&#34;none&#34;, &#34;skip&#34;]:
+             pass
++        elif self.additional_keys_usage == &#34;testing2&#34;:
++            testing2_keys = additional_keys
+         else:
+             raise ValueError(&#34;They are additional arena labels that I don&#39;t know what to do with. Please tell me the &#39;additional_keys_usage&#39; argument&#34;)
+ 
+-    # Restore random seed
+-    random.setstate(random_state)
+-    return training_keys, validation_keys, testing_keys</code></pre>
++    self.testing_arena_labels = list(self.testing_arena_labels)
++
++    return training_keys, validation_keys, testing_keys, testing2_keys</code></pre>
+ </details>
+ </dd>
+ </dl>
+ </dd>
+ <dt id="deepsport_utilities.ds.instants_dataset.DownloadFlags"><code class="flex name class">
+ <span>class <span class="ident">DownloadFlags</span></span>
+ <span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+@@ -1809,15 +1850,15 @@
+ </dl>
+ </dd>
+ <dt id="deepsport_utilities.ds.instants_dataset.KFoldsArenaLabelsTestingDatasetSplitter"><code class="flex name class">
+ <span>class <span class="ident">KFoldsArenaLabelsTestingDatasetSplitter</span></span>
+ <span>(</span><span>fold_count=8, validation_pc=15, evaluation_sets_repetitions=5)</span>
+ </code></dt>
+ <dd>
+-<div class="desc"><p>DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDE')</p></div>
++<div class="desc"><p>DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage: str = 'skip', folds: str = 'ABCDEF')</p></div>
+ <details class="source">
+ <summary>
+ <span>Expand source code</span>
+ </summary>
+ <pre><code class="python">class KFoldsArenaLabelsTestingDatasetSplitter(DeepSportDatasetSplitter):
+     def __init__(self, fold_count=8, validation_pc=15, evaluation_sets_repetitions=5):
+         self.fold_count = fold_count
+@@ -1940,51 +1981,52 @@
+     }</code></pre>
+ </details>
+ </dd>
+ </dl>
+ </dd>
+ <dt id="deepsport_utilities.ds.instants_dataset.TestingArenaLabelsDatasetSplitter"><code class="flex name class">
+ <span>class <span class="ident">TestingArenaLabelsDatasetSplitter</span></span>
+-<span>(</span><span>testing_arena_labels, validation_pc=15)</span>
++<span>(</span><span>testing_arena_labels, validation_pc=15, repetitions=1)</span>
+ </code></dt>
+ <dd>
+ <div class="desc"></div>
+ <details class="source">
+ <summary>
+ <span>Expand source code</span>
+ </summary>
+ <pre><code class="python">class TestingArenaLabelsDatasetSplitter():
+-    def __init__(self, testing_arena_labels, validation_pc=15):
++    def __init__(self, testing_arena_labels, validation_pc=15, repetitions=1):
+         self.testing_arena_labels = testing_arena_labels
+         self.validation_pc = validation_pc
++        self.repetitions = repetitions
+         assert isinstance(self.testing_arena_labels, list)
+ 
+     def __call__(self, dataset, fold=0):
+         testing_keys, remaining_keys = [], []
+         for key in dataset.keys:
+             (remaining_keys, testing_keys)[key.arena_label in self.testing_arena_labels].append(key)
+ 
+         # Backup random seed
+         np_random_state = np.random.get_state()
+         np.random.seed(fold)
+ 
+-        total_length = len(remaining_keys) + len(testing_keys)
++        total_length = len(remaining_keys)
+         validation_keys, training_keys = [], []
+         validation_indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s for validation keys
+         validation_indices[np.random.choice(total_length, total_length*self.validation_pc//100, replace=False)] = 1
+         for i, key in zip(validation_indices, remaining_keys):
+             (training_keys, validation_keys)[i].append(key)
+ 
+         # Restore random seed
+         np.random.set_state(np_random_state)
+ 
+         subsets = [
+             Subset(name=&#34;training&#34;, subset_type=SubsetType.TRAIN, keys=training_keys, dataset=dataset),
+-            Subset(name=&#34;validation&#34;, subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=2),
+-            Subset(name=&#34;testing&#34;, subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=2),
++            Subset(name=&#34;validation&#34;, subset_type=SubsetType.EVAL, keys=validation_keys, dataset=dataset, repetitions=self.repetitions),
++            Subset(name=&#34;testing&#34;, subset_type=SubsetType.EVAL, keys=testing_keys, dataset=dataset, repetitions=self.repetitions),
+         ]
+         return [s for s in subsets if len(s.keys) &gt; 0]</code></pre>
+ </details>
+ </dd>
+ <dt id="deepsport_utilities.ds.instants_dataset.UndistortTransform"><code class="flex name class">
+ <span>class <span class="ident">UndistortTransform</span></span>
+ </code></dt>
+```
+
+#### html2text {}
+
+```diff
+@@ -735,137 +735,182 @@
+                   h = h - h % self.block_size
+                   w = w - w % self.block_size
+                   instant.all_images[k] = image[:h, :w]
+               return instant
+       **** Ancestors ****
+           * Transform
+   class DeepSportDatasetSplitter (validation_pc:Â intÂ =Â 15,
+-  additional_keys_usage:Â strÂ =Â 'skip', folds:Â strÂ =Â 'ABCDE')
++  additional_keys_usage:Â strÂ =Â 'skip', folds:Â strÂ =Â 'ABCDEF')
+       DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage:
+-      str = 'skip', folds: str = 'ABCDE')
++      str = 'skip', folds: str = 'ABCDEF')
+         Expand source code
+       class DeepSportDatasetSplitter: # pylint: disable=too-few-public-methods
+           validation_pc: int = 15
+           additional_keys_usage: str = "skip"
+-          folds: str = "ABCDE"
++          folds: str = "ABCDEF"
+           split = {
+               "A": ['KS-FR-CAEN', 'KS-FR-LIMOGES', 'KS-FR-ROANNE'],
+               "B": ['KS-FR-NANTES', 'KS-FR-BLOIS', 'KS-FR-FOS'],
+               "C": ['KS-FR-LEMANS', 'KS-FR-MONACO', 'KS-FR-STRASBOURG'],
+               "D": ['KS-FR-GRAVELINES', 'KS-FR-STCHAMOND', 'KS-FR-POITIERS'],
+               "E": ['KS-FR-NANCY', 'KS-FR-BOURGEB', 'KS-FR-VICHY'],
++              # F is a fictive fold for which all keys are used for training
+           }
+           def split_keys(self, keys, fold=0):
+-              assert 0 <= fold <= len(self.folds)-1, "Invalid fold index"
+-
+-              testing_fold = self.folds[fold]
+-              testing_keys = [k for k in keys if k.arena_label in self.split
+-      [testing_fold]]
++              fold_index = fold
++              assert 0 <= fold_index <= len(self.folds)-1, "Invalid fold index"
+ 
++              testing_fold = self.folds[fold_index]
++              self.testing_arena_labels = set(self.split.get(testing_fold, []))
+               remaining_arena_labels = [label for f in self.folds.replace
+-      (testing_fold, "") for label in self.split[f]]
+-              remaining_keys = [k for k in keys if k.arena_label in
+-      remaining_arena_labels]
++      (testing_fold, "") for label in self.split.get(f, [])]
++              testing_keys = []
++              remaining_keys = defaultdict(list)
++              additional_keys = []
++              additional_arena_labels = set()
++              for key in keys:
++                  if key.arena_label in remaining_arena_labels:
++                      remaining_keys[key.instant_key].append(key)
++                  elif key.arena_label in self.testing_arena_labels:
++                      testing_keys.append(key)
++                  else:
++                      additional_keys.append(key)
++                      additional_arena_labels.add(key.arena_label)
+ 
+               # Backup random seed
+               random_state = random.getstate()
+               random.seed(fold)
+ 
+-              validation_keys = random.sample(remaining_keys, len
+-      (remaining_keys)*self.validation_pc//100)
+-              training_keys = [k for k in remaining_keys if k not in
+-      validation_keys]
+-
+-              additional_keys = [k for k in keys if k not in
+-      training_keys+validation_keys+testing_keys]
++              total_length = len(remaining_keys)
++              validation_keys, training_keys = [], []
++              indices = np.zeros(total_length, dtype=np.int32) # a vector of 1s
++      for validation keys
++              indices[np.random.choice(total_length,
++      total_length*self.validation_pc//100, replace=False)] = 1
++              for i, instant_key in zip(indices, remaining_keys):
++                  (training_keys, validation_keys)[i].extend(remaining_keys
++      [instant_key])
+ 
++              # Restore random seed
++              random.setstate(random_state)
++              testing2_keys = None
+               if additional_keys:
+                   if self.additional_keys_usage == "testing":
+                       testing_keys += additional_keys
++                      self.testing_arena_labels =
++      self.testing_arena_labels.union(additional_arena_labels)
+                   elif self.additional_keys_usage == "training":
+                       training_keys += additional_keys
+                   elif self.additional_keys_usage == "validation":
+                       validation_keys += additional_keys
+                   elif self.additional_keys_usage in ["none", "skip"]:
+                       pass
++                  elif self.additional_keys_usage == "testing2":
++                      testing2_keys = additional_keys
+                   else:
+                       raise ValueError("They are additional arena labels that I
+       don't know what to do with. Please tell me the 'additional_keys_usage'
+       argument")
+ 
+-              # Restore random seed
+-              random.setstate(random_state)
+-              return training_keys, validation_keys, testing_keys
++              self.testing_arena_labels = list(self.testing_arena_labels)
++
++              return training_keys, validation_keys, testing_keys,
++      testing2_keys
+ 
+           def __call__(self, dataset, fold=0):
+-              keys = list(dataset.keys.all())
+-              training_keys, validation_keys, testing_keys = self.split_keys
+-      (keys, fold)
+-              return [
++              training_keys, validation_keys, testing_keys, testing2_keys =
++      self.split_keys(dataset.keys, fold)
++              subsets = [
+                   Subset(name="training", subset_type=SubsetType.TRAIN,
+       keys=training_keys, dataset=dataset),
+                   Subset(name="validation", subset_type=SubsetType.EVAL,
+       keys=validation_keys, dataset=dataset, repetitions=1),
+                   Subset(name="testing", subset_type=SubsetType.EVAL,
+       keys=testing_keys, dataset=dataset, repetitions=1),
+               ]
++              if testing2_keys:
++                  subsets.append(Subset(name="testing2",
++      subset_type=SubsetType.EVAL, keys=testing2_keys, dataset=dataset,
++      repetitions=1))
++              return subsets
+       **** Subclasses ****
+           * ArenaLabelFoldsDatasetSplitter
+           * KFoldsArenaLabelsTestingDatasetSplitter
+           * OfficialFoldsDatasetSplitter
+           * SingleArenaDatasetSplitter
+       **** Class variables ****
+         var additional_keys_usage :Â str
+         var folds :Â str
+         var split
+         var validation_pc :Â int
+       **** Methods ****
+         def split_keys(self, keys, fold=0)
+               Expand source code
+             def split_keys(self, keys, fold=0):
+-                assert 0 <= fold <= len(self.folds)-1, "Invalid fold index"
+-
+-                testing_fold = self.folds[fold]
+-                testing_keys = [k for k in keys if k.arena_label in self.split
+-            [testing_fold]]
+-
++                fold_index = fold
++                assert 0 <= fold_index <= len(self.folds)-1, "Invalid fold
++            index"
++
++                testing_fold = self.folds[fold_index]
++                self.testing_arena_labels = set(self.split.get(testing_fold,
++            []))
+                 remaining_arena_labels = [label for f in self.folds.replace
+-            (testing_fold, "") for label in self.split[f]]
+-                remaining_keys = [k for k in keys if k.arena_label in
+-            remaining_arena_labels]
++            (testing_fold, "") for label in self.split.get(f, [])]
++                testing_keys = []
++                remaining_keys = defaultdict(list)
++                additional_keys = []
++                additional_arena_labels = set()
++                for key in keys:
++                    if key.arena_label in remaining_arena_labels:
++                        remaining_keys[key.instant_key].append(key)
++                    elif key.arena_label in self.testing_arena_labels:
++                        testing_keys.append(key)
++                    else:
++                        additional_keys.append(key)
++                        additional_arena_labels.add(key.arena_label)
+ 
+                 # Backup random seed
+                 random_state = random.getstate()
+                 random.seed(fold)
+ 
+-                validation_keys = random.sample(remaining_keys, len
+-            (remaining_keys)*self.validation_pc//100)
+-                training_keys = [k for k in remaining_keys if k not in
+-            validation_keys]
+-
+-                additional_keys = [k for k in keys if k not in
+-            training_keys+validation_keys+testing_keys]
++                total_length = len(remaining_keys)
++                validation_keys, training_keys = [], []
++                indices = np.zeros(total_length, dtype=np.int32) # a vector of
++            1s for validation keys
++                indices[np.random.choice(total_length,
++            total_length*self.validation_pc//100, replace=False)] = 1
++                for i, instant_key in zip(indices, remaining_keys):
++                    (training_keys, validation_keys)[i].extend(remaining_keys
++            [instant_key])
+ 
++                # Restore random seed
++                random.setstate(random_state)
++                testing2_keys = None
+                 if additional_keys:
+                     if self.additional_keys_usage == "testing":
+                         testing_keys += additional_keys
++                        self.testing_arena_labels =
++            self.testing_arena_labels.union(additional_arena_labels)
+                     elif self.additional_keys_usage == "training":
+                         training_keys += additional_keys
+                     elif self.additional_keys_usage == "validation":
+                         validation_keys += additional_keys
+                     elif self.additional_keys_usage in ["none", "skip"]:
+                         pass
++                    elif self.additional_keys_usage == "testing2":
++                        testing2_keys = additional_keys
+                     else:
+                         raise ValueError("They are additional arena labels that
+             I don't know what to do with. Please tell me the
+             'additional_keys_usage' argument")
+ 
+-                # Restore random seed
+-                random.setstate(random_state)
+-                return training_keys, validation_keys, testing_keys
++                self.testing_arena_labels = list(self.testing_arena_labels)
++
++                return training_keys, validation_keys, testing_keys,
++            testing2_keys
+   class DownloadFlags (value, names=None, *, module=None, qualname=None,
+   type=None, start=1)
+       An enumeration.
+         Expand source code
+       class DownloadFlags(IntFlag):
+           NONE = 0
+           WITH_IMAGE = 1
+@@ -1359,15 +1404,15 @@
+         var game_id :Â int
+             Alias for field number 1
+         var timestamp :Â int
+             Alias for field number 2
+   class KFoldsArenaLabelsTestingDatasetSplitter (fold_count=8,
+   validation_pc=15, evaluation_sets_repetitions=5)
+       DeepSportDatasetSplitter(validation_pc: int = 15, additional_keys_usage:
+-      str = 'skip', folds: str = 'ABCDE')
++      str = 'skip', folds: str = 'ABCDEF')
+         Expand source code
+       class KFoldsArenaLabelsTestingDatasetSplitter(DeepSportDatasetSplitter):
+           def __init__(self, fold_count=8, validation_pc=15,
+       evaluation_sets_repetitions=5):
+               self.fold_count = fold_count
+               self.validation_pc = validation_pc
+               self.evaluation_sets_repetitions = evaluation_sets_repetitions
+@@ -1459,33 +1504,35 @@
+                     "foot1": self.foot1.to_list(),
+                     "foot2": self.foot2.to_list(),
+                     "foot1_at_the_ground": self.foot1_at_the_ground,
+                     "foot2_at_the_ground": self.foot2_at_the_ground,
+                     "image": self.camera
+                 }
+   class TestingArenaLabelsDatasetSplitter (testing_arena_labels,
+-  validation_pc=15)
++  validation_pc=15, repetitions=1)
+         Expand source code
+       class TestingArenaLabelsDatasetSplitter():
+-          def __init__(self, testing_arena_labels, validation_pc=15):
++          def __init__(self, testing_arena_labels, validation_pc=15,
++      repetitions=1):
+               self.testing_arena_labels = testing_arena_labels
+               self.validation_pc = validation_pc
++              self.repetitions = repetitions
+               assert isinstance(self.testing_arena_labels, list)
+ 
+           def __call__(self, dataset, fold=0):
+               testing_keys, remaining_keys = [], []
+               for key in dataset.keys:
+                   (remaining_keys, testing_keys)[key.arena_label in
+       self.testing_arena_labels].append(key)
+ 
+               # Backup random seed
+               np_random_state = np.random.get_state()
+               np.random.seed(fold)
+ 
+-              total_length = len(remaining_keys) + len(testing_keys)
++              total_length = len(remaining_keys)
+               validation_keys, training_keys = [], []
+               validation_indices = np.zeros(total_length, dtype=np.int32) # a
+       vector of 1s for validation keys
+               validation_indices[np.random.choice(total_length,
+       total_length*self.validation_pc//100, replace=False)] = 1
+               for i, key in zip(validation_indices, remaining_keys):
+                   (training_keys, validation_keys)[i].append(key)
+@@ -1493,17 +1540,17 @@
+               # Restore random seed
+               np.random.set_state(np_random_state)
+ 
+               subsets = [
+                   Subset(name="training", subset_type=SubsetType.TRAIN,
+       keys=training_keys, dataset=dataset),
+                   Subset(name="validation", subset_type=SubsetType.EVAL,
+-      keys=validation_keys, dataset=dataset, repetitions=2),
++      keys=validation_keys, dataset=dataset, repetitions=self.repetitions),
+                   Subset(name="testing", subset_type=SubsetType.EVAL,
+-      keys=testing_keys, dataset=dataset, repetitions=2),
++      keys=testing_keys, dataset=dataset, repetitions=self.repetitions),
+               ]
+               return [s for s in subsets if len(s.keys) > 0]
+   class UndistortTransform
+         Expand source code
+       class UndistortTransform(Transform):
+           def __call__(self, key, view):
+               all_images = []
+```
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/instants_dataset.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/instants_dataset.html`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/instants_transforms.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/instants_transforms.html`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/views_dataset.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/views_dataset.html`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -125,15 +125,15 @@
+         bot_idx   = np.argmax([d[0].y for d in point_and_margin_2D])
+ 
+         left  = max(-self.padding,             point_and_margin_2D[left_idx][0].x - point_and_margin_2D[left_idx][1])
+         right = min(calib.width+self.padding,  point_and_margin_2D[right_idx][0].x + point_and_margin_2D[right_idx][1])
+         top   = max(-self.padding,             point_and_margin_2D[top_idx][0].y - point_and_margin_2D[top_idx][1])
+         bot   = min(calib.height+self.padding, point_and_margin_2D[bot_idx][0].y + point_and_margin_2D[bot_idx][1])
+ 
+-        return BoundingBox(float(left), float(top), float(right-left), float(bot-top))
++        return BoundingBox(round(left), round(top), round(right-left), round(bot-top))
+ 
+ class BuildCameraViews(ViewBuilder):
+     &#34;&#34;&#34; Builds a view for each camera (margin parameter is useless)
+     &#34;&#34;&#34;
+     def __call__(self, instant_key: InstantKey, instant:Instant):
+         for c in range(instant.num_cameras):
+             yield ViewDescription(c, 0, BoundingBox(0, 0, instant.calibs[c].width, instant.calibs[c].height))
+@@ -1111,15 +1111,15 @@
+         bot_idx   = np.argmax([d[0].y for d in point_and_margin_2D])
+ 
+         left  = max(-self.padding,             point_and_margin_2D[left_idx][0].x - point_and_margin_2D[left_idx][1])
+         right = min(calib.width+self.padding,  point_and_margin_2D[right_idx][0].x + point_and_margin_2D[right_idx][1])
+         top   = max(-self.padding,             point_and_margin_2D[top_idx][0].y - point_and_margin_2D[top_idx][1])
+         bot   = min(calib.height+self.padding, point_and_margin_2D[bot_idx][0].y + point_and_margin_2D[bot_idx][1])
+ 
+-        return BoundingBox(float(left), float(top), float(right-left), float(bot-top))</code></pre>
++        return BoundingBox(round(left), round(top), round(right-left), round(bot-top))</code></pre>
+ </details>
+ <h3>Subclasses</h3>
+ <ul class="hlist">
+ <li><a title="deepsport_utilities.ds.instants_dataset.views_dataset.BuildBallViews" href="#deepsport_utilities.ds.instants_dataset.views_dataset.BuildBallViews">BuildBallViews</a></li>
+ <li><a title="deepsport_utilities.ds.instants_dataset.views_dataset.BuildCameraViews" href="#deepsport_utilities.ds.instants_dataset.views_dataset.BuildCameraViews">BuildCameraViews</a></li>
+ <li><a title="deepsport_utilities.ds.instants_dataset.views_dataset.BuildCourtViews" href="#deepsport_utilities.ds.instants_dataset.views_dataset.BuildCourtViews">BuildCourtViews</a></li>
+ <li><a title="deepsport_utilities.ds.instants_dataset.views_dataset.BuildHeadsViews" href="#deepsport_utilities.ds.instants_dataset.views_dataset.BuildHeadsViews">BuildHeadsViews</a></li>
+@@ -1163,15 +1163,15 @@
+     bot_idx   = np.argmax([d[0].y for d in point_and_margin_2D])
+ 
+     left  = max(-self.padding,             point_and_margin_2D[left_idx][0].x - point_and_margin_2D[left_idx][1])
+     right = min(calib.width+self.padding,  point_and_margin_2D[right_idx][0].x + point_and_margin_2D[right_idx][1])
+     top   = max(-self.padding,             point_and_margin_2D[top_idx][0].y - point_and_margin_2D[top_idx][1])
+     bot   = min(calib.height+self.padding, point_and_margin_2D[bot_idx][0].y + point_and_margin_2D[bot_idx][1])
+ 
+-    return BoundingBox(float(left), float(top), float(right-left), float(bot-top))</code></pre>
++    return BoundingBox(round(left), round(top), round(right-left), round(bot-top))</code></pre>
+ </details>
+ </dd>
+ </dl>
+ </dd>
+ <dt id="deepsport_utilities.ds.instants_dataset.views_dataset.ViewDescription"><code class="flex name class">
+ <span>class <span class="ident">ViewDescription</span></span>
+ <span>(</span><span>camera, index, box: <a title="deepsport_utilities.utils.BoundingBox" href="../../utils.html#deepsport_utilities.utils.BoundingBox">BoundingBox</a>, **kwargs)</span>
+```
+
+#### html2text {}
+
+```diff
+@@ -115,15 +115,15 @@
+         right = min(calib.width+self.padding,  point_and_margin_2D[right_idx]
+ [0].x + point_and_margin_2D[right_idx][1])
+         top   = max(-self.padding,             point_and_margin_2D[top_idx]
+ [0].y - point_and_margin_2D[top_idx][1])
+         bot   = min(calib.height+self.padding, point_and_margin_2D[bot_idx]
+ [0].y + point_and_margin_2D[bot_idx][1])
+ 
+-        return BoundingBox(float(left), float(top), float(right-left), float
++        return BoundingBox(round(left), round(top), round(right-left), round
+ (bot-top))
+ 
+ class BuildCameraViews(ViewBuilder):
+     """ Builds a view for each camera (margin parameter is useless)
+     """
+     def __call__(self, instant_key: InstantKey, instant:Instant):
+         for c in range(instant.num_cameras):
+@@ -985,16 +985,16 @@
+               right = min(calib.width+self.padding,  point_and_margin_2D
+       [right_idx][0].x + point_and_margin_2D[right_idx][1])
+               top   = max(-self.padding,             point_and_margin_2D
+       [top_idx][0].y - point_and_margin_2D[top_idx][1])
+               bot   = min(calib.height+self.padding, point_and_margin_2D
+       [bot_idx][0].y + point_and_margin_2D[bot_idx][1])
+ 
+-              return BoundingBox(float(left), float(top), float(right-left),
+-      float(bot-top))
++              return BoundingBox(round(left), round(top), round(right-left),
++      round(bot-top))
+       **** Subclasses ****
+           * BuildBallViews
+           * BuildCameraViews
+           * BuildCourtViews
+           * BuildHeadsViews
+           * BuildPlayersViews
+           * BuildThumbnailViews
+@@ -1020,16 +1020,16 @@
+                 right = min(calib.width+self.padding,  point_and_margin_2D
+             [right_idx][0].x + point_and_margin_2D[right_idx][1])
+                 top   = max(-self.padding,             point_and_margin_2D
+             [top_idx][0].y - point_and_margin_2D[top_idx][1])
+                 bot   = min(calib.height+self.padding, point_and_margin_2D
+             [bot_idx][0].y + point_and_margin_2D[bot_idx][1])
+ 
+-                return BoundingBox(float(left), float(top), float(right-left),
+-            float(bot-top))
++                return BoundingBox(round(left), round(top), round(right-left),
++            round(bot-top))
+   class ViewDescription (camera, index, box:Â BoundingBox, **kwargs)
+         Expand source code
+       class ViewDescription():
+           def __init__(self, camera, index, box: BoundingBox, **kwargs):
+               self.camera = camera
+               self.index = index
+               self.box = box
+```
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/ds/instants_dataset/views_transforms.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/ds/instants_dataset/views_transforms.html`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/index.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/index.html`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/transforms.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/transforms.html`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -218,15 +218,15 @@
+         if self.regenerate:
+             item = copy.deepcopy(item)
+         return self._apply_transformation(item, A)
+ 
+ 
+ class DataExtractorTransform(Transform):
+     def __init__(self, *factories):
+-        self.factories = factories
++        self.factories = list(factories)
+     def __call__(self, key, item):
+         if not item:
+             return None
+         data = {}
+         for factory in self.factories:
+             if factory is None:
+                 continue
+@@ -255,15 +255,15 @@
+ <div class="desc"></div>
+ <details class="source">
+ <summary>
+ <span>Expand source code</span>
+ </summary>
+ <pre><code class="python">class DataExtractorTransform(Transform):
+     def __init__(self, *factories):
+-        self.factories = factories
++        self.factories = list(factories)
+     def __call__(self, key, item):
+         if not item:
+             return None
+         data = {}
+         for factory in self.factories:
+             if factory is None:
+                 continue
+```
+
+#### html2text {}
+
+```diff
+@@ -220,15 +220,15 @@
+         if self.regenerate:
+             item = copy.deepcopy(item)
+         return self._apply_transformation(item, A)
+ 
+ 
+ class DataExtractorTransform(Transform):
+     def __init__(self, *factories):
+-        self.factories = factories
++        self.factories = list(factories)
+     def __call__(self, key, item):
+         if not item:
+             return None
+         data = {}
+         for factory in self.factories:
+             if factory is None:
+                 continue
+@@ -240,15 +240,15 @@
+         return data
+ 
+ ***** Classes *****
+   class DataExtractorTransform (*factories)
+         Expand source code
+       class DataExtractorTransform(Transform):
+           def __init__(self, *factories):
+-              self.factories = factories
++              self.factories = list(factories)
+           def __call__(self, key, item):
+               if not item:
+                   return None
+               data = {}
+               for factory in self.factories:
+                   if factory is None:
+                       continue
+```
+
+### Comparing `deepsport_utilities-4.8.0/docs/deepsport_utilities/utils.html` & `deepsport_utilities-4.8.2/docs/deepsport_utilities/utils.html`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/examples/create_camera_views_dataset.py` & `deepsport_utilities-4.8.2/examples/create_camera_views_dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/examples/import_instants_dataset.py` & `deepsport_utilities-4.8.2/examples/import_instants_dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/release.sh` & `deepsport_utilities-4.8.2/release.sh`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/setup.py` & `deepsport_utilities-4.8.2/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -9,15 +9,15 @@
+     python_requires='>=3.8',
+     # 3.8 required for
+     #    - PEP 572 – Assignment Expressions (:=)
+     #    - `functools.cached_property` (although `mlworkflow.lazyproperty` could be used for older python versions)
+     # 3.7 required for
+     #    - EvalAI ... but we don't care anymore, do we?
+     description="",
+-    version='4.8.0',
++    version='4.8.2',
+     packages=find_packages(),
+     install_requires=[
+         "numpy", # was >=1.20", ... but I don't understand why
+         "scipy",
+         "opencv-python",
+         "imageio",
+         "m3u8",
+```
+
+### Comparing `deepsport_utilities-4.8.0/tests/groundtruths/ball_view.png` & `deepsport_utilities-4.8.2/tests/groundtruths/ball_view.png`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/tests/input_imgs/game_94132_frame_idx_0.png` & `deepsport_utilities-4.8.2/tests/input_imgs/game_94132_frame_idx_0.png`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/tests/test_calib.py` & `deepsport_utilities-4.8.2/tests/test_calib.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deepsport_utilities-4.8.0/tests/test_court.py` & `deepsport_utilities-4.8.2/tests/test_court.py`
+
+ * *Files identical despite different names*
+

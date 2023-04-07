@@ -1,0 +1,181 @@
+# Comparing `tmp/python_roborock-0.5.7.tar.gz` & `tmp/python_roborock-0.5.8.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "python_roborock-0.5.7.tar", max compression
++gzip compressed data, was "python_roborock-0.5.8.tar", max compression
+```
+
+## Comparing `python_roborock-0.5.7.tar` & `python_roborock-0.5.8.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,17 @@
+--rw-r--r--   0        0        0    35149 2023-04-07 13:52:55.275350 python_roborock-0.5.7/LICENSE
+--rw-r--r--   0        0        0     2221 2023-04-07 13:52:55.275350 python_roborock-0.5.7/README.md
+--rw-r--r--   0        0        0     1175 2023-04-07 13:52:55.999358 python_roborock-0.5.7/pyproject.toml
+--rw-r--r--   0        0        0      300 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/__init__.py
+--rw-r--r--   0        0        0    17099 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/api.py
+--rw-r--r--   0        0        0     3957 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/cli.py
+--rw-r--r--   0        0        0     8276 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/cloud_api.py
+--rw-r--r--   0        0        0     3704 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/code_mappings.py
+--rw-r--r--   0        0        0     9190 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/containers.py
+--rw-r--r--   0        0        0     1022 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/exceptions.py
+--rw-r--r--   0        0        0     7030 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/local_api.py
+--rw-r--r--   0        0        0     1194 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/offline/offline.py
+--rw-r--r--   0        0        0     6030 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/roborock_message.py
+--rw-r--r--   0        0        0      644 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/roborock_queue.py
+--rw-r--r--   0        0        0    12471 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/typing.py
+--rw-r--r--   0        0        0      809 2023-04-07 13:52:55.275350 python_roborock-0.5.7/roborock/util.py
+--rw-r--r--   0        0        0     3348 1970-01-01 00:00:00.000000 python_roborock-0.5.7/PKG-INFO
++-rw-r--r--   0        0        0    35149 2023-04-07 13:59:20.281025 python_roborock-0.5.8/LICENSE
++-rw-r--r--   0        0        0     2221 2023-04-07 13:59:20.281025 python_roborock-0.5.8/README.md
++-rw-r--r--   0        0        0     1175 2023-04-07 13:59:21.001014 python_roborock-0.5.8/pyproject.toml
++-rw-r--r--   0        0        0      300 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/__init__.py
++-rw-r--r--   0        0        0    17099 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/api.py
++-rw-r--r--   0        0        0     3957 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/cli.py
++-rw-r--r--   0        0        0     8276 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/cloud_api.py
++-rw-r--r--   0        0        0     3704 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/code_mappings.py
++-rw-r--r--   0        0        0     9190 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/containers.py
++-rw-r--r--   0        0        0     1022 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/exceptions.py
++-rw-r--r--   0        0        0     7030 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/local_api.py
++-rw-r--r--   0        0        0     1194 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/offline/offline.py
++-rw-r--r--   0        0        0     6030 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/roborock_message.py
++-rw-r--r--   0        0        0      644 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/roborock_queue.py
++-rw-r--r--   0        0        0    12468 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/typing.py
++-rw-r--r--   0        0        0      809 2023-04-07 13:59:20.281025 python_roborock-0.5.8/roborock/util.py
++-rw-r--r--   0        0        0     3348 1970-01-01 00:00:00.000000 python_roborock-0.5.8/PKG-INFO
+```
+
+### Comparing `python_roborock-0.5.7/LICENSE` & `python_roborock-0.5.8/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/README.md` & `python_roborock-0.5.8/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/pyproject.toml` & `python_roborock-0.5.8/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "python-roborock"
+-version = "0.5.7"
++version = "0.5.8"
+ description = "A package to control Roborock vacuums."
+ authors = ["humbertogontijo <humbertogontijo@users.noreply.github.com>"]
+ license = "GPL-3.0-only"
+ readme = "README.md"
+ repository = "https://github.com/humbertogontijo/python-roborock"
+ classifiers = [
+     "Development Status :: 5 - Production/Stable",
+```
+
+### Comparing `python_roborock-0.5.7/roborock/api.py` & `python_roborock-0.5.8/roborock/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/roborock/cli.py` & `python_roborock-0.5.8/roborock/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/roborock/cloud_api.py` & `python_roborock-0.5.8/roborock/cloud_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/roborock/code_mappings.py` & `python_roborock-0.5.8/roborock/code_mappings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/roborock/containers.py` & `python_roborock-0.5.8/roborock/containers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/roborock/exceptions.py` & `python_roborock-0.5.8/roborock/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/roborock/local_api.py` & `python_roborock-0.5.8/roborock/local_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/roborock/offline/offline.py` & `python_roborock-0.5.8/roborock/offline/offline.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/roborock/roborock_message.py` & `python_roborock-0.5.8/roborock/roborock_message.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/roborock/roborock_queue.py` & `python_roborock-0.5.8/roborock/roborock_queue.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/roborock/typing.py` & `python_roborock-0.5.8/roborock/typing.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -111,15 +111,15 @@
+ class CommandInfo:
+     prefix: bytes
+ 
+ 
+ CommandInfoMap: dict[RoborockCommand, CommandInfo] = {
+     RoborockCommand.GET_PROP: CommandInfo(prefix=b'\x00\x00\x00\x87'),
+     RoborockCommand.GET_STATUS: CommandInfo(prefix=b'\x00\x00\x00\x77'),
+-    RoborockCommand.SET_CUSTOM_MODE: CommandInfo(prefix=b'\x00\x00\x00\x87'),
++    RoborockCommand.SET_CUSTOM_MODE: CommandInfo(prefix=b'\x00\x00\x00w'),
+     RoborockCommand.GET_CHILD_LOCK_STATUS: CommandInfo(prefix=b'\x00\x00\x00\x87'),
+     RoborockCommand.GET_MULTI_MAPS_LIST: CommandInfo(prefix=b'\x00\x00\x00\x87'),
+     RoborockCommand.GET_IDENTIFY_FURNITURE_STATUS: CommandInfo(prefix=b'\x00\x00\x00\x87'),
+     RoborockCommand.SET_WATER_BOX_CUSTOM_MODE: CommandInfo(prefix=b'\x00\x00\x00\x87'),
+     RoborockCommand.GET_CLEAN_SEQUENCE: CommandInfo(prefix=b'\x00\x00\x00\x87'),
+     RoborockCommand.GET_CUSTOMIZE_CLEAN_MODE: CommandInfo(prefix=b'\x00\x00\x00\x87'),
+     RoborockCommand.GET_CARPET_CLEAN_MODE: CommandInfo(prefix=b'\x00\x00\x00\x87'),
+```
+
+### Comparing `python_roborock-0.5.7/roborock/util.py` & `python_roborock-0.5.8/roborock/util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `python_roborock-0.5.7/PKG-INFO` & `python_roborock-0.5.8/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: python-roborock
+-Version: 0.5.7
++Version: 0.5.8
+ Summary: A package to control Roborock vacuums.
+ Home-page: https://github.com/humbertogontijo/python-roborock
+ License: GPL-3.0-only
+ Author: humbertogontijo
+ Author-email: humbertogontijo@users.noreply.github.com
+ Requires-Python: >=3.9,<4.0
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: python-roborock Version: 0.5.7 Summary: A package
++Metadata-Version: 2.1 Name: python-roborock Version: 0.5.8 Summary: A package
+ to control Roborock vacuums. Home-page: https://github.com/humbertogontijo/
+ python-roborock License: GPL-3.0-only Author: humbertogontijo Author-email:
+ humbertogontijo@users.noreply.github.com Requires-Python: >=3.9,<4.0
+ Classifier: Development Status :: 5 - Production/Stable Classifier: Intended
+ Audience :: Developers Classifier: License :: OSI Approved :: GNU General
+ Public License v3 (GPLv3) Classifier: Natural Language :: English Classifier:
+ Operating System :: OS Independent Classifier: Programming Language :: Python
+```
+

@@ -1,0 +1,176 @@
+--- tmp/aiopioneer-0.4.0.tar.gz
++++ tmp/aiopioneer-0.4.0rc1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "aiopioneer-0.4.0.tar", last modified: Fri Apr  7 14:08:13 2023, max compression
+│ +gzip compressed data, was "aiopioneer-0.4.0rc1.tar", last modified: Wed Apr  5 21:55:59 2023, max compression
+│   --- aiopioneer-0.4.0.tar
+├── +++ aiopioneer-0.4.0rc1.tar
+│ ├── file list
+│ │ @@ -1,32 +1,32 @@
+│ │ -drwxrwx---   0 root         (0) adm          (4)        0 2023-04-07 14:08:13.596580 aiopioneer-0.4.0/
+│ │ --rw-rw----   0 root         (0) adm          (4)    11357 2022-11-17 13:13:29.000000 aiopioneer-0.4.0/LICENSE
+│ │ --rw-rw----   0 root         (0) adm          (4)    13461 2023-04-07 14:08:13.605265 aiopioneer-0.4.0/PKG-INFO
+│ │ --rw-rw----   0 root         (0) adm          (4)    12812 2023-03-11 20:27:45.000000 aiopioneer-0.4.0/README.md
+│ │ -drwxrwx---   0 root         (0) adm          (4)        0 2023-04-07 14:08:13.286584 aiopioneer-0.4.0/aiopioneer/
+│ │ --rw-rw----   0 root         (0) adm          (4)       68 2022-11-17 13:13:41.000000 aiopioneer-0.4.0/aiopioneer/__init__.py
+│ │ --rw-rw----   0 root         (0) adm          (4)     9864 2023-03-11 16:24:54.000000 aiopioneer-0.4.0/aiopioneer/cli.py
+│ │ --rw-rw----   0 root         (0) adm          (4)    12167 2023-04-04 00:22:07.000000 aiopioneer-0.4.0/aiopioneer/commands.py
+│ │ --rw-rw----   0 root         (0) adm          (4)    14911 2023-04-07 14:07:42.000000 aiopioneer-0.4.0/aiopioneer/const.py
+│ │ --rw-rw----   0 root         (0) adm          (4)    43747 2023-04-03 17:59:18.000000 aiopioneer-0.4.0/aiopioneer/param.py
+│ │ -drwxrwx---   0 root         (0) adm          (4)        0 2023-04-07 14:08:13.566581 aiopioneer-0.4.0/aiopioneer/parsers/
+│ │ --rw-rw----   0 root         (0) adm          (4)       35 2023-04-03 17:44:13.000000 aiopioneer-0.4.0/aiopioneer/parsers/__init__.py
+│ │ --rw-rw----   0 root         (0) adm          (4)     3205 2023-04-03 17:44:13.000000 aiopioneer-0.4.0/aiopioneer/parsers/audio.py
+│ │ --rw-rw----   0 root         (0) adm          (4)       41 2023-04-03 17:44:13.000000 aiopioneer-0.4.0/aiopioneer/parsers/const.py
+│ │ --rw-rw----   0 root         (0) adm          (4)    20107 2023-04-03 17:44:13.000000 aiopioneer-0.4.0/aiopioneer/parsers/dsp.py
+│ │ --rw-rw----   0 root         (0) adm          (4)    26292 2023-04-03 17:44:13.000000 aiopioneer-0.4.0/aiopioneer/parsers/information.py
+│ │ --rw-rw----   0 root         (0) adm          (4)     7566 2023-04-04 00:22:07.000000 aiopioneer-0.4.0/aiopioneer/parsers/parse.py
+│ │ --rw-rw----   0 root         (0) adm          (4)      630 2023-04-03 17:44:13.000000 aiopioneer-0.4.0/aiopioneer/parsers/response.py
+│ │ --rw-rw----   0 root         (0) adm          (4)    23791 2023-04-03 17:44:13.000000 aiopioneer-0.4.0/aiopioneer/parsers/settings.py
+│ │ --rw-rw----   0 root         (0) adm          (4)    15501 2023-04-03 17:44:13.000000 aiopioneer-0.4.0/aiopioneer/parsers/system.py
+│ │ --rw-rw----   0 root         (0) adm          (4)     3667 2023-04-04 00:22:07.000000 aiopioneer-0.4.0/aiopioneer/parsers/tuner.py
+│ │ --rw-rw----   0 root         (0) adm          (4)     8753 2023-04-03 17:44:13.000000 aiopioneer-0.4.0/aiopioneer/parsers/video.py
+│ │ --rw-rw----   0 root         (0) adm          (4)    74435 2023-04-04 00:22:07.000000 aiopioneer-0.4.0/aiopioneer/pioneer_avr.py
+│ │ --rw-rw----   0 root         (0) adm          (4)     5015 2023-03-29 19:15:30.000000 aiopioneer-0.4.0/aiopioneer/util.py
+│ │ -drwxrwx---   0 root         (0) adm          (4)        0 2023-04-07 14:08:13.376583 aiopioneer-0.4.0/aiopioneer.egg-info/
+│ │ --rw-rw----   0 root         (0) adm          (4)    13461 2023-04-07 14:08:12.000000 aiopioneer-0.4.0/aiopioneer.egg-info/PKG-INFO
+│ │ --rw-rw----   0 root         (0) adm          (4)      670 2023-04-07 14:08:13.000000 aiopioneer-0.4.0/aiopioneer.egg-info/SOURCES.txt
+│ │ --rw-rw----   0 root         (0) adm          (4)        1 2023-04-07 14:08:12.000000 aiopioneer-0.4.0/aiopioneer.egg-info/dependency_links.txt
+│ │ --rw-rw----   0 root         (0) adm          (4)       51 2023-04-07 14:08:12.000000 aiopioneer-0.4.0/aiopioneer.egg-info/entry_points.txt
+│ │ --rw-rw----   0 root         (0) adm          (4)       11 2023-04-07 14:08:12.000000 aiopioneer-0.4.0/aiopioneer.egg-info/top_level.txt
+│ │ --rw-rw----   0 root         (0) adm          (4)       38 2023-04-07 14:08:13.616019 aiopioneer-0.4.0/setup.cfg
+│ │ --rw-rw----   0 root         (0) adm          (4)     1100 2023-03-10 20:49:55.000000 aiopioneer-0.4.0/setup.py
+│ │ +drwxrwx---   0 root         (0) adm          (4)        0 2023-04-05 21:55:59.668516 aiopioneer-0.4.0rc1/
+│ │ +-rw-rw----   0 root         (0) adm          (4)    11357 2022-11-17 13:13:29.000000 aiopioneer-0.4.0rc1/LICENSE
+│ │ +-rw-rw----   0 root         (0) adm          (4)    13464 2023-04-05 21:55:59.678343 aiopioneer-0.4.0rc1/PKG-INFO
+│ │ +-rw-rw----   0 root         (0) adm          (4)    12812 2023-03-11 20:27:45.000000 aiopioneer-0.4.0rc1/README.md
+│ │ +drwxrwx---   0 root         (0) adm          (4)        0 2023-04-05 21:55:59.368520 aiopioneer-0.4.0rc1/aiopioneer/
+│ │ +-rw-rw----   0 root         (0) adm          (4)       68 2022-11-17 13:13:41.000000 aiopioneer-0.4.0rc1/aiopioneer/__init__.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)     9864 2023-03-11 16:24:54.000000 aiopioneer-0.4.0rc1/aiopioneer/cli.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)    12167 2023-04-04 00:22:07.000000 aiopioneer-0.4.0rc1/aiopioneer/commands.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)    14914 2023-04-05 21:55:53.000000 aiopioneer-0.4.0rc1/aiopioneer/const.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)    43747 2023-04-03 17:59:18.000000 aiopioneer-0.4.0rc1/aiopioneer/param.py
+│ │ +drwxrwx---   0 root         (0) adm          (4)        0 2023-04-05 21:55:59.648516 aiopioneer-0.4.0rc1/aiopioneer/parsers/
+│ │ +-rw-rw----   0 root         (0) adm          (4)       35 2023-04-03 17:44:13.000000 aiopioneer-0.4.0rc1/aiopioneer/parsers/__init__.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)     3205 2023-04-03 17:44:13.000000 aiopioneer-0.4.0rc1/aiopioneer/parsers/audio.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)       41 2023-04-03 17:44:13.000000 aiopioneer-0.4.0rc1/aiopioneer/parsers/const.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)    20107 2023-04-03 17:44:13.000000 aiopioneer-0.4.0rc1/aiopioneer/parsers/dsp.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)    26292 2023-04-03 17:44:13.000000 aiopioneer-0.4.0rc1/aiopioneer/parsers/information.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)     7566 2023-04-04 00:22:07.000000 aiopioneer-0.4.0rc1/aiopioneer/parsers/parse.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)      630 2023-04-03 17:44:13.000000 aiopioneer-0.4.0rc1/aiopioneer/parsers/response.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)    23791 2023-04-03 17:44:13.000000 aiopioneer-0.4.0rc1/aiopioneer/parsers/settings.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)    15501 2023-04-03 17:44:13.000000 aiopioneer-0.4.0rc1/aiopioneer/parsers/system.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)     3667 2023-04-04 00:22:07.000000 aiopioneer-0.4.0rc1/aiopioneer/parsers/tuner.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)     8753 2023-04-03 17:44:13.000000 aiopioneer-0.4.0rc1/aiopioneer/parsers/video.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)    74435 2023-04-04 00:22:07.000000 aiopioneer-0.4.0rc1/aiopioneer/pioneer_avr.py
+│ │ +-rw-rw----   0 root         (0) adm          (4)     5015 2023-03-29 19:15:30.000000 aiopioneer-0.4.0rc1/aiopioneer/util.py
+│ │ +drwxrwx---   0 root         (0) adm          (4)        0 2023-04-05 21:55:59.458518 aiopioneer-0.4.0rc1/aiopioneer.egg-info/
+│ │ +-rw-rw----   0 root         (0) adm          (4)    13464 2023-04-05 21:55:58.000000 aiopioneer-0.4.0rc1/aiopioneer.egg-info/PKG-INFO
+│ │ +-rw-rw----   0 root         (0) adm          (4)      670 2023-04-05 21:55:59.000000 aiopioneer-0.4.0rc1/aiopioneer.egg-info/SOURCES.txt
+│ │ +-rw-rw----   0 root         (0) adm          (4)        1 2023-04-05 21:55:58.000000 aiopioneer-0.4.0rc1/aiopioneer.egg-info/dependency_links.txt
+│ │ +-rw-rw----   0 root         (0) adm          (4)       51 2023-04-05 21:55:58.000000 aiopioneer-0.4.0rc1/aiopioneer.egg-info/entry_points.txt
+│ │ +-rw-rw----   0 root         (0) adm          (4)       11 2023-04-05 21:55:58.000000 aiopioneer-0.4.0rc1/aiopioneer.egg-info/top_level.txt
+│ │ +-rw-rw----   0 root         (0) adm          (4)       38 2023-04-05 21:55:59.687411 aiopioneer-0.4.0rc1/setup.cfg
+│ │ +-rw-rw----   0 root         (0) adm          (4)     1100 2023-03-10 20:49:55.000000 aiopioneer-0.4.0rc1/setup.py
+│ │   --- aiopioneer-0.4.0/LICENSE
+│ ├── +++ aiopioneer-0.4.0rc1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/PKG-INFO
+│ ├── +++ aiopioneer-0.4.0rc1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: aiopioneer
+│ │ -Version: 0.4.0
+│ │ +Version: 0.4.0rc1
+│ │  Summary: Asyncio Python library for controlling a Pioneer AVR via its API
+│ │  Home-page: https://github.com/crowbarz/aiopioneer.git
+│ │  Author: Crowbar Z
+│ │  Author-email: crowbarz@outlook.com
+│ │  Keywords: pioneer avr asyncio
+│ │  Classifier: Framework :: AsyncIO
+│ │  Classifier: Intended Audience :: Developers
+│ │   --- aiopioneer-0.4.0/README.md
+│ ├── +++ aiopioneer-0.4.0rc1/README.md
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/cli.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/cli.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/commands.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/commands.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/const.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/const.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """Constants for aiopioneer."""
+│ │  
+│ │  from enum import Enum
+│ │  
+│ │  DEFAULT_PORT = 8102
+│ │ -VERSION = "0.4.0"
+│ │ +VERSION = "0.4.0rc1"
+│ │  
+│ │  
+│ │  class Zones(Enum):
+│ │      """Valid aiopioneer zones"""
+│ │  
+│ │      Z1 = "1"
+│ │      Z2 = "2"
+│ │   --- aiopioneer-0.4.0/aiopioneer/param.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/param.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/parsers/audio.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/parsers/audio.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/parsers/dsp.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/parsers/dsp.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/parsers/information.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/parsers/information.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/parsers/parse.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/parsers/parse.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/parsers/response.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/parsers/response.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/parsers/settings.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/parsers/settings.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/parsers/system.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/parsers/system.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/parsers/tuner.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/parsers/tuner.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/parsers/video.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/parsers/video.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/pioneer_avr.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/pioneer_avr.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer/util.py
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer/util.py
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/aiopioneer.egg-info/PKG-INFO
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: aiopioneer
+│ │ -Version: 0.4.0
+│ │ +Version: 0.4.0rc1
+│ │  Summary: Asyncio Python library for controlling a Pioneer AVR via its API
+│ │  Home-page: https://github.com/crowbarz/aiopioneer.git
+│ │  Author: Crowbar Z
+│ │  Author-email: crowbarz@outlook.com
+│ │  Keywords: pioneer avr asyncio
+│ │  Classifier: Framework :: AsyncIO
+│ │  Classifier: Intended Audience :: Developers
+│ │   --- aiopioneer-0.4.0/aiopioneer.egg-info/SOURCES.txt
+│ ├── +++ aiopioneer-0.4.0rc1/aiopioneer.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- aiopioneer-0.4.0/setup.py
+│ ├── +++ aiopioneer-0.4.0rc1/setup.py
+│ │┄ Files identical despite different names

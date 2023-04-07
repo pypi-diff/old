@@ -1,0 +1,1435 @@
+# Comparing `tmp/jal-2023.4.1.tar.gz` & `tmp/jal-2023.4.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "jal-2023.4.1.tar", last modified: Thu Apr  6 16:45:36 2023, max compression
++gzip compressed data, was "jal-2023.4.2.tar", last modified: Fri Apr  7 14:03:47 2023, max compression
+```
+
+## Comparing `jal-2023.4.1.tar` & `jal-2023.4.2.tar`
+
+### file list
+
+```diff
+@@ -1,218 +1,218 @@
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.605576 jal-2023.4.1/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      176 2022-01-13 06:08:45.000000 jal-2023.4.1/MANIFEST.in
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2726 2023-04-06 16:45:36.605576 jal-2023.4.1/PKG-INFO
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.515575 jal-2023.4.1/docs/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7570 2023-03-10 16:25:52.000000 jal-2023.4.1/docs/README.md
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.518908 jal-2023.4.1/jal/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       24 2023-04-06 16:42:21.000000 jal-2023.4.1/jal/__init__.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     3788 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/constants.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.522242 jal-2023.4.1/jal/data_export/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2022-01-13 15:45:51.000000 jal-2023.4.1/jal/data_export/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    18508 2022-12-08 20:22:37.000000 jal-2023.4.1/jal/data_export/dlsg.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.522242 jal-2023.4.1/jal/data_export/tax_reports/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/data_export/tax_reports/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      990 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/data_export/tax_reports/portugal.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7089 2023-02-08 10:00:47.000000 jal-2023.4.1/jal/data_export/tax_reports/portugal.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1532 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/data_export/tax_reports/russia.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    38361 2023-02-25 20:04:03.000000 jal-2023.4.1/jal/data_export/tax_reports/russia.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6433 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/data_export/taxes.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5299 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/data_export/taxes_flow.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.538909 jal-2023.4.1/jal/data_export/templates/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-01-30 08:37:57.000000 jal-2023.4.1/jal/data_export/templates/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1286 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/data_export/templates/tax_prt_dividends.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2594 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/data_export/templates/tax_prt_shares.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6163 2022-01-30 08:37:57.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_bonds.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4792 2022-02-13 11:04:18.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_corporate_actions.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4938 2022-04-30 20:05:13.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_crypto.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4948 2022-04-30 20:05:13.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_derivatives.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3249 2022-02-13 11:04:18.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_dividends.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1450 2022-01-30 08:37:57.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_fees.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1133 2022-06-19 17:39:33.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_flow.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1654 2022-07-20 07:00:10.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_interests.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5303 2022-01-30 08:37:57.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_trades.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    10842 2023-02-08 13:35:53.000000 jal-2023.4.1/jal/data_export/xlsx.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.542242 jal-2023.4.1/jal/data_import/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/data_import/__init__.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.542242 jal-2023.4.1/jal/data_import/broker_statements/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-01-22 16:32:16.000000 jal-2023.4.1/jal/data_import/broker_statements/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    61366 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/data_import/broker_statements/ibkr.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    19903 2022-08-21 07:15:06.000000 jal-2023.4.1/jal/data_import/broker_statements/just2trade.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9470 2022-08-21 07:15:06.000000 jal-2023.4.1/jal/data_import/broker_statements/kit.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5857 2023-02-14 12:14:19.000000 jal-2023.4.1/jal/data_import/broker_statements/open_portfolio.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    30709 2023-02-14 12:16:51.000000 jal-2023.4.1/jal/data_import/broker_statements/openbroker.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15460 2022-12-07 21:59:21.000000 jal-2023.4.1/jal/data_import/broker_statements/psb.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    27469 2022-08-21 07:15:06.000000 jal-2023.4.1/jal/data_import/broker_statements/uralsib.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     3893 2023-03-05 19:06:08.000000 jal-2023.4.1/jal/data_import/category_recognizer.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      543 2021-08-05 15:24:10.000000 jal-2023.4.1/jal/data_import/import_schema.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15410 2023-04-02 16:26:35.000000 jal-2023.4.1/jal/data_import/slips.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13093 2023-03-01 17:12:57.000000 jal-2023.4.1/jal/data_import/slips_tax.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    33743 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/data_import/statement.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11314 2023-02-02 08:45:14.000000 jal-2023.4.1/jal/data_import/statement_xls.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6349 2022-08-20 19:04:41.000000 jal-2023.4.1/jal/data_import/statement_xml.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3224 2023-03-31 10:41:38.000000 jal-2023.4.1/jal/data_import/statements.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.552242 jal-2023.4.1/jal/db/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/db/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    17607 2023-02-27 16:25:45.000000 jal-2023.4.1/jal/db/account.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    21253 2023-02-23 19:25:45.000000 jal-2023.4.1/jal/db/asset.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     6074 2022-12-06 18:30:39.000000 jal-2023.4.1/jal/db/backup_restore.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7360 2023-02-27 17:48:37.000000 jal-2023.4.1/jal/db/balances_model.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4103 2023-02-27 16:03:46.000000 jal-2023.4.1/jal/db/category.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5218 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/db/closed_trade.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2399 2023-03-08 17:11:23.000000 jal-2023.4.1/jal/db/country.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    18460 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/db/db.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3941 2023-01-27 21:53:46.000000 jal-2023.4.1/jal/db/helpers.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15989 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/db/holdings_model.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)    16642 2023-02-23 10:35:04.000000 jal-2023.4.1/jal/db/ledger.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    60565 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/db/operations.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7486 2023-02-28 14:47:51.000000 jal-2023.4.1/jal/db/operations_model.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3379 2023-02-20 16:05:40.000000 jal-2023.4.1/jal/db/peer.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15210 2023-02-21 12:19:40.000000 jal-2023.4.1/jal/db/reference_models.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1190 2023-01-06 21:49:49.000000 jal-2023.4.1/jal/db/settings.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      438 2023-02-16 17:12:29.000000 jal-2023.4.1/jal/db/tag.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6761 2023-03-08 18:16:20.000000 jal-2023.4.1/jal/db/tax_estimator.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1458 2023-02-23 19:54:06.000000 jal-2023.4.1/jal/db/view_model.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.558909 jal-2023.4.1/jal/img/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2922 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/accept.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1443 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/add.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2049 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/add_child.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      435 2022-04-25 10:26:48.000000 jal-2023.4.1/jal/img/broom.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4004 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/cancel.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      806 2023-03-08 16:58:09.000000 jal-2023.4.1/jal/img/chart.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      898 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/copy.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2812 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/delete.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      583 2021-03-20 12:52:05.000000 jal-2023.4.1/jal/img/ibkr.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2340 2022-04-29 07:05:21.000000 jal-2023.4.1/jal/img/j2t.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5563 2022-01-13 06:08:45.000000 jal-2023.4.1/jal/img/jal.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1516 2021-03-22 11:20:31.000000 jal-2023.4.1/jal/img/kit.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1163 2022-12-28 10:47:37.000000 jal-2023.4.1/jal/img/list.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      342 2022-04-25 10:26:48.000000 jal-2023.4.1/jal/img/meatballs.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      611 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/new.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1175 2022-07-10 15:39:56.000000 jal-2023.4.1/jal/img/open_portfolio.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15086 2021-08-05 15:24:10.000000 jal-2023.4.1/jal/img/openbroker.ico
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1150 2021-08-05 15:24:10.000000 jal-2023.4.1/jal/img/psb.ico
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1150 2021-03-20 12:52:05.000000 jal-2023.4.1/jal/img/quik.ico
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2651 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/reconcile.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      822 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/remove.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1874 2023-03-08 16:53:42.000000 jal-2023.4.1/jal/img/tax.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1406 2021-03-20 12:52:05.000000 jal-2023.4.1/jal/img/uralsib.ico
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     1938 2023-01-19 12:05:21.000000 jal-2023.4.1/jal/jal.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    91499 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/jal_init.sql
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.562242 jal-2023.4.1/jal/languages/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      424 2020-12-21 16:23:10.000000 jal-2023.4.1/jal/languages/en.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    32025 2022-01-13 06:08:45.000000 jal-2023.4.1/jal/languages/en.qm
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      287 2022-04-25 10:26:48.000000 jal-2023.4.1/jal/languages/ru.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    86346 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/languages/ru.qm
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.565575 jal-2023.4.1/jal/net/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2021-08-17 15:15:47.000000 jal-2023.4.1/jal/net/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    24616 2023-03-22 16:11:44.000000 jal-2023.4.1/jal/net/downloader.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2912 2023-01-27 21:53:46.000000 jal-2023.4.1/jal/net/helpers.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2040 2023-03-06 11:34:17.000000 jal-2023.4.1/jal/pypi_description.md
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.568909 jal-2023.4.1/jal/reports/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/reports/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2914 2023-02-14 08:22:42.000000 jal-2023.4.1/jal/reports/category.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14324 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/reports/deals.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3868 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/reports/holdings.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14694 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/reports/income_spending.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2802 2023-02-19 13:19:11.000000 jal-2023.4.1/jal/reports/peer.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8684 2023-03-02 14:48:40.000000 jal-2023.4.1/jal/reports/profit_loss.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3287 2023-02-16 10:22:14.000000 jal-2023.4.1/jal/reports/reports.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2774 2023-02-16 10:21:05.000000 jal-2023.4.1/jal/reports/tag.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.575575 jal-2023.4.1/jal/ui/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/ui/__init__.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.578909 jal-2023.4.1/jal/ui/reports/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-01-13 15:45:51.000000 jal-2023.4.1/jal/ui/reports/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5179 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/reports/ui_category_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4099 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/ui/reports/ui_deals_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4159 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/ui/reports/ui_holdings_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4156 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/reports/ui_income_spending_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5382 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/reports/ui_peer_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4687 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/reports/ui_profit_loss_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5353 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/reports/ui_tag_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4805 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/reports/ui_tax_estimation.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12742 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_asset_dlg.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4056 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_flow_export_widget.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14782 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_login_fns_dlg.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     9324 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_main_window.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14510 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_operations_widget.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     5707 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_rebuild_window.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7302 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_reference_data_dlg.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2903 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_select_account_dlg.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3253 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_select_reference_dlg.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    16301 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_slip_import_dlg.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9674 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_tax_export_widget.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4023 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_update_quotes_window.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.592242 jal-2023.4.1/jal/updates/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/updates/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5122 2020-12-21 16:23:10.000000 jal-2023.4.1/jal/updates/jal_delta_10.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12870 2021-08-18 12:53:40.000000 jal-2023.4.1/jal/updates/jal_delta_11.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    26116 2021-01-13 17:04:46.000000 jal-2023.4.1/jal/updates/jal_delta_12.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    16516 2021-01-30 16:01:43.000000 jal-2023.4.1/jal/updates/jal_delta_13.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    34961 2021-02-27 17:35:02.000000 jal-2023.4.1/jal/updates/jal_delta_14.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2250 2021-02-27 17:35:02.000000 jal-2023.4.1/jal/updates/jal_delta_15.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3630 2021-02-27 17:35:02.000000 jal-2023.4.1/jal/updates/jal_delta_16.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    20912 2021-02-27 17:35:02.000000 jal-2023.4.1/jal/updates/jal_delta_17.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      656 2021-03-07 11:58:53.000000 jal-2023.4.1/jal/updates/jal_delta_18.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      686 2021-03-08 13:39:11.000000 jal-2023.4.1/jal/updates/jal_delta_19.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13578 2021-03-12 14:26:01.000000 jal-2023.4.1/jal/updates/jal_delta_20.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1428 2021-03-19 12:24:53.000000 jal-2023.4.1/jal/updates/jal_delta_21.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      949 2021-03-22 11:20:31.000000 jal-2023.4.1/jal/updates/jal_delta_22.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    17602 2021-04-08 12:12:36.000000 jal-2023.4.1/jal/updates/jal_delta_23.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      344 2021-04-11 10:57:46.000000 jal-2023.4.1/jal/updates/jal_delta_24.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8270 2021-04-22 04:11:28.000000 jal-2023.4.1/jal/updates/jal_delta_25.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2492 2021-08-12 19:15:12.000000 jal-2023.4.1/jal/updates/jal_delta_26.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    26325 2022-01-13 05:57:31.000000 jal-2023.4.1/jal/updates/jal_delta_27.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13276 2022-01-13 06:08:45.000000 jal-2023.4.1/jal/updates/jal_delta_28.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    35370 2022-01-13 15:45:51.000000 jal-2023.4.1/jal/updates/jal_delta_29.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8671 2022-02-13 13:11:58.000000 jal-2023.4.1/jal/updates/jal_delta_30.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11413 2022-02-13 11:04:18.000000 jal-2023.4.1/jal/updates/jal_delta_31.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12545 2022-03-31 14:26:11.000000 jal-2023.4.1/jal/updates/jal_delta_32.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4229 2022-03-31 14:26:11.000000 jal-2023.4.1/jal/updates/jal_delta_33.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2287 2022-04-06 14:47:21.000000 jal-2023.4.1/jal/updates/jal_delta_34.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2858 2022-04-30 20:05:13.000000 jal-2023.4.1/jal/updates/jal_delta_35.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3427 2022-06-19 17:39:33.000000 jal-2023.4.1/jal/updates/jal_delta_36.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3755 2022-07-20 07:00:10.000000 jal-2023.4.1/jal/updates/jal_delta_37.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    21913 2022-08-21 07:15:06.000000 jal-2023.4.1/jal/updates/jal_delta_38.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      343 2023-01-04 13:14:35.000000 jal-2023.4.1/jal/updates/jal_delta_39.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3055 2023-01-27 21:53:46.000000 jal-2023.4.1/jal/updates/jal_delta_40.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    48157 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/updates/jal_delta_41.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2085 2023-02-20 14:55:36.000000 jal-2023.4.1/jal/updates/jal_delta_42.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2528 2023-03-08 16:23:30.000000 jal-2023.4.1/jal/updates/jal_delta_43.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3020 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/updates/jal_delta_44.sql
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.605576 jal-2023.4.1/jal/widgets/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/widgets/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3918 2023-01-09 20:51:48.000000 jal-2023.4.1/jal/widgets/abstract_operation_details.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6808 2023-02-23 10:22:46.000000 jal-2023.4.1/jal/widgets/account_select.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13988 2023-02-27 15:59:08.000000 jal-2023.4.1/jal/widgets/asset_dialog.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11151 2023-02-23 19:44:39.000000 jal-2023.4.1/jal/widgets/corporate_action_widget.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.605576 jal-2023.4.1/jal/widgets/custom/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-12-24 19:32:40.000000 jal-2023.4.1/jal/widgets/custom/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4422 2023-02-14 11:55:13.000000 jal-2023.4.1/jal/widgets/custom/date_range_selector.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2016 2023-01-09 21:29:20.000000 jal-2023.4.1/jal/widgets/custom/db_lookup_combobox.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4258 2022-12-02 13:35:44.000000 jal-2023.4.1/jal/widgets/custom/log_viewer.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13738 2023-03-22 16:11:44.000000 jal-2023.4.1/jal/widgets/delegates.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9321 2023-03-08 16:41:32.000000 jal-2023.4.1/jal/widgets/dividend_widget.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8393 2023-03-31 10:41:38.000000 jal-2023.4.1/jal/widgets/helpers.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12298 2023-02-25 18:52:44.000000 jal-2023.4.1/jal/widgets/income_spending_widget.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)    13211 2023-03-06 11:43:59.000000 jal-2023.4.1/jal/widgets/main_window.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3391 2023-03-08 18:22:55.000000 jal-2023.4.1/jal/widgets/mdi.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2854 2022-12-26 13:26:40.000000 jal-2023.4.1/jal/widgets/operations_tabs.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7010 2023-02-20 13:28:14.000000 jal-2023.4.1/jal/widgets/operations_widget.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5935 2022-08-21 07:15:06.000000 jal-2023.4.1/jal/widgets/price_chart.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5666 2023-03-31 10:41:38.000000 jal-2023.4.1/jal/widgets/qr_scanner.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11082 2023-02-27 16:00:28.000000 jal-2023.4.1/jal/widgets/reference_data.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    21662 2023-02-27 15:30:11.000000 jal-2023.4.1/jal/widgets/reference_dialogs.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4863 2023-02-19 18:07:24.000000 jal-2023.4.1/jal/widgets/reference_selector.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      632 2022-12-26 08:54:07.000000 jal-2023.4.1/jal/widgets/register_designer_plugins.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3462 2023-02-23 10:23:05.000000 jal-2023.4.1/jal/widgets/selection_dialog.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7701 2023-02-08 10:33:24.000000 jal-2023.4.1/jal/widgets/tax_widget.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6922 2022-12-26 10:36:44.000000 jal-2023.4.1/jal/widgets/trade_widget.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    10120 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/widgets/transfer_widget.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.518908 jal-2023.4.1/jal.egg-info/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2726 2023-04-06 16:45:36.000000 jal-2023.4.1/jal.egg-info/PKG-INFO
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5592 2023-04-06 16:45:36.000000 jal-2023.4.1/jal.egg-info/SOURCES.txt
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)        1 2023-04-06 16:45:36.000000 jal-2023.4.1/jal.egg-info/dependency_links.txt
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       37 2023-04-06 16:45:36.000000 jal-2023.4.1/jal.egg-info/entry_points.txt
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       67 2023-04-06 16:45:36.000000 jal-2023.4.1/jal.egg-info/requires.txt
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       10 2023-04-06 16:45:36.000000 jal-2023.4.1/jal.egg-info/top_level.txt
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       38 2023-04-06 16:45:36.605576 jal-2023.4.1/setup.cfg
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1733 2023-01-19 11:44:27.000000 jal-2023.4.1/setup.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.230350 jal-2023.4.2/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      176 2022-01-13 06:08:45.000000 jal-2023.4.2/MANIFEST.in
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2726 2023-04-07 14:03:47.230350 jal-2023.4.2/PKG-INFO
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.180350 jal-2023.4.2/docs/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7570 2023-03-10 16:25:52.000000 jal-2023.4.2/docs/README.md
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.180350 jal-2023.4.2/jal/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       24 2023-04-07 14:03:15.000000 jal-2023.4.2/jal/__init__.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     3832 2023-04-07 10:26:33.000000 jal-2023.4.2/jal/constants.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.180350 jal-2023.4.2/jal/data_export/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2022-01-13 15:45:51.000000 jal-2023.4.2/jal/data_export/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    18508 2022-12-08 20:22:37.000000 jal-2023.4.2/jal/data_export/dlsg.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.180350 jal-2023.4.2/jal/data_export/tax_reports/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.2/jal/data_export/tax_reports/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      990 2023-02-07 18:26:24.000000 jal-2023.4.2/jal/data_export/tax_reports/portugal.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7089 2023-02-08 10:00:47.000000 jal-2023.4.2/jal/data_export/tax_reports/portugal.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1532 2023-02-07 18:26:24.000000 jal-2023.4.2/jal/data_export/tax_reports/russia.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    38361 2023-02-25 20:04:03.000000 jal-2023.4.2/jal/data_export/tax_reports/russia.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6433 2023-02-07 18:26:24.000000 jal-2023.4.2/jal/data_export/taxes.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5299 2023-02-07 18:26:24.000000 jal-2023.4.2/jal/data_export/taxes_flow.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.183683 jal-2023.4.2/jal/data_export/templates/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-01-30 08:37:57.000000 jal-2023.4.2/jal/data_export/templates/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1286 2023-02-07 18:26:24.000000 jal-2023.4.2/jal/data_export/templates/tax_prt_dividends.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2594 2023-02-07 18:26:24.000000 jal-2023.4.2/jal/data_export/templates/tax_prt_shares.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6163 2022-01-30 08:37:57.000000 jal-2023.4.2/jal/data_export/templates/tax_rus_bonds.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4792 2022-02-13 11:04:18.000000 jal-2023.4.2/jal/data_export/templates/tax_rus_corporate_actions.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4938 2022-04-30 20:05:13.000000 jal-2023.4.2/jal/data_export/templates/tax_rus_crypto.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4948 2022-04-30 20:05:13.000000 jal-2023.4.2/jal/data_export/templates/tax_rus_derivatives.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3249 2022-02-13 11:04:18.000000 jal-2023.4.2/jal/data_export/templates/tax_rus_dividends.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1450 2022-01-30 08:37:57.000000 jal-2023.4.2/jal/data_export/templates/tax_rus_fees.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1133 2022-06-19 17:39:33.000000 jal-2023.4.2/jal/data_export/templates/tax_rus_flow.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1654 2022-07-20 07:00:10.000000 jal-2023.4.2/jal/data_export/templates/tax_rus_interests.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5303 2022-01-30 08:37:57.000000 jal-2023.4.2/jal/data_export/templates/tax_rus_trades.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    10842 2023-02-08 13:35:53.000000 jal-2023.4.2/jal/data_export/xlsx.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.183683 jal-2023.4.2/jal/data_import/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.2/jal/data_import/__init__.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.187017 jal-2023.4.2/jal/data_import/broker_statements/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-01-22 16:32:16.000000 jal-2023.4.2/jal/data_import/broker_statements/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    63316 2023-04-07 14:01:23.000000 jal-2023.4.2/jal/data_import/broker_statements/ibkr.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    19903 2022-08-21 07:15:06.000000 jal-2023.4.2/jal/data_import/broker_statements/just2trade.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9470 2022-08-21 07:15:06.000000 jal-2023.4.2/jal/data_import/broker_statements/kit.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5857 2023-02-14 12:14:19.000000 jal-2023.4.2/jal/data_import/broker_statements/open_portfolio.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    30709 2023-02-14 12:16:51.000000 jal-2023.4.2/jal/data_import/broker_statements/openbroker.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15460 2022-12-07 21:59:21.000000 jal-2023.4.2/jal/data_import/broker_statements/psb.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    27469 2022-08-21 07:15:06.000000 jal-2023.4.2/jal/data_import/broker_statements/uralsib.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     3893 2023-03-05 19:06:08.000000 jal-2023.4.2/jal/data_import/category_recognizer.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      543 2021-08-05 15:24:10.000000 jal-2023.4.2/jal/data_import/import_schema.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15410 2023-04-02 16:26:35.000000 jal-2023.4.2/jal/data_import/slips.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13093 2023-03-01 17:12:57.000000 jal-2023.4.2/jal/data_import/slips_tax.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    35634 2023-04-07 14:00:29.000000 jal-2023.4.2/jal/data_import/statement.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11314 2023-02-02 08:45:14.000000 jal-2023.4.2/jal/data_import/statement_xls.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6420 2023-04-07 10:50:09.000000 jal-2023.4.2/jal/data_import/statement_xml.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3224 2023-03-31 10:41:38.000000 jal-2023.4.2/jal/data_import/statements.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.190350 jal-2023.4.2/jal/db/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.2/jal/db/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    17607 2023-02-27 16:25:45.000000 jal-2023.4.2/jal/db/account.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    21253 2023-02-23 19:25:45.000000 jal-2023.4.2/jal/db/asset.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     6074 2022-12-06 18:30:39.000000 jal-2023.4.2/jal/db/backup_restore.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7360 2023-02-27 17:48:37.000000 jal-2023.4.2/jal/db/balances_model.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4103 2023-02-27 16:03:46.000000 jal-2023.4.2/jal/db/category.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5218 2023-02-07 18:26:24.000000 jal-2023.4.2/jal/db/closed_trade.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2399 2023-03-08 17:11:23.000000 jal-2023.4.2/jal/db/country.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    18460 2023-04-05 22:37:44.000000 jal-2023.4.2/jal/db/db.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3941 2023-01-27 21:53:46.000000 jal-2023.4.2/jal/db/helpers.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15989 2023-04-02 15:04:30.000000 jal-2023.4.2/jal/db/holdings_model.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)    16642 2023-02-23 10:35:04.000000 jal-2023.4.2/jal/db/ledger.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    60565 2023-04-05 22:37:44.000000 jal-2023.4.2/jal/db/operations.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7486 2023-02-28 14:47:51.000000 jal-2023.4.2/jal/db/operations_model.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3379 2023-02-20 16:05:40.000000 jal-2023.4.2/jal/db/peer.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15210 2023-02-21 12:19:40.000000 jal-2023.4.2/jal/db/reference_models.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1190 2023-01-06 21:49:49.000000 jal-2023.4.2/jal/db/settings.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      438 2023-02-16 17:12:29.000000 jal-2023.4.2/jal/db/tag.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6761 2023-03-08 18:16:20.000000 jal-2023.4.2/jal/db/tax_estimator.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1458 2023-02-23 19:54:06.000000 jal-2023.4.2/jal/db/view_model.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.197017 jal-2023.4.2/jal/img/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2922 2021-05-26 12:51:46.000000 jal-2023.4.2/jal/img/accept.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1443 2021-05-26 12:51:46.000000 jal-2023.4.2/jal/img/add.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2049 2021-05-26 12:51:46.000000 jal-2023.4.2/jal/img/add_child.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      435 2022-04-25 10:26:48.000000 jal-2023.4.2/jal/img/broom.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4004 2021-05-26 12:51:46.000000 jal-2023.4.2/jal/img/cancel.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      806 2023-03-08 16:58:09.000000 jal-2023.4.2/jal/img/chart.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      898 2021-05-26 12:51:46.000000 jal-2023.4.2/jal/img/copy.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2812 2021-05-26 12:51:46.000000 jal-2023.4.2/jal/img/delete.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      583 2021-03-20 12:52:05.000000 jal-2023.4.2/jal/img/ibkr.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2340 2022-04-29 07:05:21.000000 jal-2023.4.2/jal/img/j2t.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5563 2022-01-13 06:08:45.000000 jal-2023.4.2/jal/img/jal.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1516 2021-03-22 11:20:31.000000 jal-2023.4.2/jal/img/kit.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1163 2022-12-28 10:47:37.000000 jal-2023.4.2/jal/img/list.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      342 2022-04-25 10:26:48.000000 jal-2023.4.2/jal/img/meatballs.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      611 2021-05-26 12:51:46.000000 jal-2023.4.2/jal/img/new.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1175 2022-07-10 15:39:56.000000 jal-2023.4.2/jal/img/open_portfolio.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15086 2021-08-05 15:24:10.000000 jal-2023.4.2/jal/img/openbroker.ico
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1150 2021-08-05 15:24:10.000000 jal-2023.4.2/jal/img/psb.ico
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1150 2021-03-20 12:52:05.000000 jal-2023.4.2/jal/img/quik.ico
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2651 2021-05-26 12:51:46.000000 jal-2023.4.2/jal/img/reconcile.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      822 2021-05-26 12:51:46.000000 jal-2023.4.2/jal/img/remove.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1874 2023-03-08 16:53:42.000000 jal-2023.4.2/jal/img/tax.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1406 2021-03-20 12:52:05.000000 jal-2023.4.2/jal/img/uralsib.ico
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     1938 2023-01-19 12:05:21.000000 jal-2023.4.2/jal/jal.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    91499 2023-04-05 22:37:44.000000 jal-2023.4.2/jal/jal_init.sql
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.197017 jal-2023.4.2/jal/languages/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      424 2020-12-21 16:23:10.000000 jal-2023.4.2/jal/languages/en.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    32025 2022-01-13 06:08:45.000000 jal-2023.4.2/jal/languages/en.qm
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      287 2022-04-25 10:26:48.000000 jal-2023.4.2/jal/languages/ru.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    86346 2023-04-02 15:04:30.000000 jal-2023.4.2/jal/languages/ru.qm
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.197017 jal-2023.4.2/jal/net/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2021-08-17 15:15:47.000000 jal-2023.4.2/jal/net/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    24616 2023-03-22 16:11:44.000000 jal-2023.4.2/jal/net/downloader.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2912 2023-01-27 21:53:46.000000 jal-2023.4.2/jal/net/helpers.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2040 2023-03-06 11:34:17.000000 jal-2023.4.2/jal/pypi_description.md
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.200350 jal-2023.4.2/jal/reports/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.2/jal/reports/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2914 2023-02-14 08:22:42.000000 jal-2023.4.2/jal/reports/category.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14324 2023-04-02 15:04:30.000000 jal-2023.4.2/jal/reports/deals.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3868 2023-04-02 15:04:30.000000 jal-2023.4.2/jal/reports/holdings.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14694 2023-04-02 15:04:30.000000 jal-2023.4.2/jal/reports/income_spending.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2802 2023-02-19 13:19:11.000000 jal-2023.4.2/jal/reports/peer.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8684 2023-03-02 14:48:40.000000 jal-2023.4.2/jal/reports/profit_loss.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3287 2023-02-16 10:22:14.000000 jal-2023.4.2/jal/reports/reports.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2774 2023-02-16 10:21:05.000000 jal-2023.4.2/jal/reports/tag.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.203683 jal-2023.4.2/jal/ui/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.2/jal/ui/__init__.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.207017 jal-2023.4.2/jal/ui/reports/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-01-13 15:45:51.000000 jal-2023.4.2/jal/ui/reports/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5179 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/reports/ui_category_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4099 2023-04-02 15:04:30.000000 jal-2023.4.2/jal/ui/reports/ui_deals_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4159 2023-04-02 15:04:30.000000 jal-2023.4.2/jal/ui/reports/ui_holdings_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4156 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/reports/ui_income_spending_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5382 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/reports/ui_peer_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4687 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/reports/ui_profit_loss_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5353 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/reports/ui_tag_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4805 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/reports/ui_tax_estimation.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12742 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/ui_asset_dlg.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4056 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/ui_flow_export_widget.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14782 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/ui_login_fns_dlg.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     9324 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/ui_main_window.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14510 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/ui_operations_widget.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     5707 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/ui_rebuild_window.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7302 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/ui_reference_data_dlg.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2903 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/ui_select_account_dlg.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3253 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/ui_select_reference_dlg.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    16301 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/ui_slip_import_dlg.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9674 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/ui_tax_export_widget.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4023 2023-04-02 11:45:41.000000 jal-2023.4.2/jal/ui/ui_update_quotes_window.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.220350 jal-2023.4.2/jal/updates/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.2/jal/updates/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5122 2020-12-21 16:23:10.000000 jal-2023.4.2/jal/updates/jal_delta_10.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12870 2021-08-18 12:53:40.000000 jal-2023.4.2/jal/updates/jal_delta_11.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    26116 2021-01-13 17:04:46.000000 jal-2023.4.2/jal/updates/jal_delta_12.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    16516 2021-01-30 16:01:43.000000 jal-2023.4.2/jal/updates/jal_delta_13.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    34961 2021-02-27 17:35:02.000000 jal-2023.4.2/jal/updates/jal_delta_14.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2250 2021-02-27 17:35:02.000000 jal-2023.4.2/jal/updates/jal_delta_15.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3630 2021-02-27 17:35:02.000000 jal-2023.4.2/jal/updates/jal_delta_16.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    20912 2021-02-27 17:35:02.000000 jal-2023.4.2/jal/updates/jal_delta_17.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      656 2021-03-07 11:58:53.000000 jal-2023.4.2/jal/updates/jal_delta_18.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      686 2021-03-08 13:39:11.000000 jal-2023.4.2/jal/updates/jal_delta_19.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13578 2021-03-12 14:26:01.000000 jal-2023.4.2/jal/updates/jal_delta_20.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1428 2021-03-19 12:24:53.000000 jal-2023.4.2/jal/updates/jal_delta_21.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      949 2021-03-22 11:20:31.000000 jal-2023.4.2/jal/updates/jal_delta_22.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    17602 2021-04-08 12:12:36.000000 jal-2023.4.2/jal/updates/jal_delta_23.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      344 2021-04-11 10:57:46.000000 jal-2023.4.2/jal/updates/jal_delta_24.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8270 2021-04-22 04:11:28.000000 jal-2023.4.2/jal/updates/jal_delta_25.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2492 2021-08-12 19:15:12.000000 jal-2023.4.2/jal/updates/jal_delta_26.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    26325 2022-01-13 05:57:31.000000 jal-2023.4.2/jal/updates/jal_delta_27.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13276 2022-01-13 06:08:45.000000 jal-2023.4.2/jal/updates/jal_delta_28.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    35370 2022-01-13 15:45:51.000000 jal-2023.4.2/jal/updates/jal_delta_29.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8671 2022-02-13 13:11:58.000000 jal-2023.4.2/jal/updates/jal_delta_30.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11413 2022-02-13 11:04:18.000000 jal-2023.4.2/jal/updates/jal_delta_31.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12545 2022-03-31 14:26:11.000000 jal-2023.4.2/jal/updates/jal_delta_32.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4229 2022-03-31 14:26:11.000000 jal-2023.4.2/jal/updates/jal_delta_33.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2287 2022-04-06 14:47:21.000000 jal-2023.4.2/jal/updates/jal_delta_34.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2858 2022-04-30 20:05:13.000000 jal-2023.4.2/jal/updates/jal_delta_35.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3427 2022-06-19 17:39:33.000000 jal-2023.4.2/jal/updates/jal_delta_36.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3755 2022-07-20 07:00:10.000000 jal-2023.4.2/jal/updates/jal_delta_37.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    21913 2022-08-21 07:15:06.000000 jal-2023.4.2/jal/updates/jal_delta_38.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      343 2023-01-04 13:14:35.000000 jal-2023.4.2/jal/updates/jal_delta_39.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3055 2023-01-27 21:53:46.000000 jal-2023.4.2/jal/updates/jal_delta_40.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    48157 2023-02-07 18:26:24.000000 jal-2023.4.2/jal/updates/jal_delta_41.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2085 2023-02-20 14:55:36.000000 jal-2023.4.2/jal/updates/jal_delta_42.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2528 2023-03-08 16:23:30.000000 jal-2023.4.2/jal/updates/jal_delta_43.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3020 2023-04-05 22:37:44.000000 jal-2023.4.2/jal/updates/jal_delta_44.sql
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.227017 jal-2023.4.2/jal/widgets/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.2/jal/widgets/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3918 2023-01-09 20:51:48.000000 jal-2023.4.2/jal/widgets/abstract_operation_details.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6808 2023-02-23 10:22:46.000000 jal-2023.4.2/jal/widgets/account_select.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13988 2023-02-27 15:59:08.000000 jal-2023.4.2/jal/widgets/asset_dialog.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11151 2023-02-23 19:44:39.000000 jal-2023.4.2/jal/widgets/corporate_action_widget.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.230350 jal-2023.4.2/jal/widgets/custom/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-12-24 19:32:40.000000 jal-2023.4.2/jal/widgets/custom/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4422 2023-02-14 11:55:13.000000 jal-2023.4.2/jal/widgets/custom/date_range_selector.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2016 2023-01-09 21:29:20.000000 jal-2023.4.2/jal/widgets/custom/db_lookup_combobox.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4258 2022-12-02 13:35:44.000000 jal-2023.4.2/jal/widgets/custom/log_viewer.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13738 2023-03-22 16:11:44.000000 jal-2023.4.2/jal/widgets/delegates.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9321 2023-03-08 16:41:32.000000 jal-2023.4.2/jal/widgets/dividend_widget.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8393 2023-03-31 10:41:38.000000 jal-2023.4.2/jal/widgets/helpers.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12298 2023-02-25 18:52:44.000000 jal-2023.4.2/jal/widgets/income_spending_widget.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)    13211 2023-03-06 11:43:59.000000 jal-2023.4.2/jal/widgets/main_window.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3391 2023-03-08 18:22:55.000000 jal-2023.4.2/jal/widgets/mdi.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2854 2022-12-26 13:26:40.000000 jal-2023.4.2/jal/widgets/operations_tabs.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7010 2023-02-20 13:28:14.000000 jal-2023.4.2/jal/widgets/operations_widget.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5935 2022-08-21 07:15:06.000000 jal-2023.4.2/jal/widgets/price_chart.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5666 2023-03-31 10:41:38.000000 jal-2023.4.2/jal/widgets/qr_scanner.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11082 2023-02-27 16:00:28.000000 jal-2023.4.2/jal/widgets/reference_data.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    21662 2023-02-27 15:30:11.000000 jal-2023.4.2/jal/widgets/reference_dialogs.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4863 2023-02-19 18:07:24.000000 jal-2023.4.2/jal/widgets/reference_selector.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      632 2022-12-26 08:54:07.000000 jal-2023.4.2/jal/widgets/register_designer_plugins.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3462 2023-02-23 10:23:05.000000 jal-2023.4.2/jal/widgets/selection_dialog.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7701 2023-02-08 10:33:24.000000 jal-2023.4.2/jal/widgets/tax_widget.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6922 2022-12-26 10:36:44.000000 jal-2023.4.2/jal/widgets/trade_widget.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    10120 2023-04-05 22:37:44.000000 jal-2023.4.2/jal/widgets/transfer_widget.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-07 14:03:47.180350 jal-2023.4.2/jal.egg-info/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2726 2023-04-07 14:03:47.000000 jal-2023.4.2/jal.egg-info/PKG-INFO
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5592 2023-04-07 14:03:47.000000 jal-2023.4.2/jal.egg-info/SOURCES.txt
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)        1 2023-04-07 14:03:47.000000 jal-2023.4.2/jal.egg-info/dependency_links.txt
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       37 2023-04-07 14:03:47.000000 jal-2023.4.2/jal.egg-info/entry_points.txt
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       67 2023-04-07 14:03:47.000000 jal-2023.4.2/jal.egg-info/requires.txt
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       10 2023-04-07 14:03:47.000000 jal-2023.4.2/jal.egg-info/top_level.txt
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       38 2023-04-07 14:03:47.230350 jal-2023.4.2/setup.cfg
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1733 2023-01-19 11:44:27.000000 jal-2023.4.2/setup.py
+```
+
+### Comparing `jal-2023.4.1/PKG-INFO` & `jal-2023.4.2/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: jal
+-Version: 2023.4.1
++Version: 2023.4.2
+ Summary: Just Another Ledger - project to track personal financial records
+ Home-page: https://github.com/titov-vv/jal
+ Author-email: jal@gmx.ru
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Topic :: Office/Business
+ Classifier: Topic :: Office/Business :: Financial
+ Classifier: Topic :: Office/Business :: Financial :: Accounting
+```
+
+### Comparing `jal-2023.4.1/docs/README.md` & `jal-2023.4.2/docs/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/constants.py` & `jal-2023.4.2/jal/constants.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -14,14 +14,15 @@
+     ICONS_PATH = "img"
+     IMPORT_PATH = "data_import"
+     EXPORT_PATH = "data_export"
+     IMPORT_SCHEMA_NAME = "import_schema.json"
+     LANG_PATH = "languages"
+     REPORT_PATH = "reports"
+     STATEMENT_PATH = "broker_statements"
++    STATEMENT_DUMP = "statement_error_log_"
+     TEMPLATE_PATH = "templates"
+     TAX_REPORT_PATH = "tax_reports"
+     TAX_TREATY_PARAM = "tax_treaty"
+     UPDATE_PREFIX = 'jal_delta_'
+     DEFAULT_ACCOUNT_PRECISION = 2
+```
+
+### Comparing `jal-2023.4.1/jal/data_export/dlsg.py` & `jal-2023.4.2/jal/data_export/dlsg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/tax_reports/portugal.json` & `jal-2023.4.2/jal/data_export/tax_reports/portugal.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/tax_reports/portugal.py` & `jal-2023.4.2/jal/data_export/tax_reports/portugal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/tax_reports/russia.json` & `jal-2023.4.2/jal/data_export/tax_reports/russia.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/tax_reports/russia.py` & `jal-2023.4.2/jal/data_export/tax_reports/russia.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/taxes.py` & `jal-2023.4.2/jal/data_export/taxes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/taxes_flow.py` & `jal-2023.4.2/jal/data_export/taxes_flow.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/templates/tax_prt_dividends.json` & `jal-2023.4.2/jal/data_export/templates/tax_prt_dividends.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/templates/tax_prt_shares.json` & `jal-2023.4.2/jal/data_export/templates/tax_prt_shares.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/templates/tax_rus_bonds.json` & `jal-2023.4.2/jal/data_export/templates/tax_rus_bonds.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/templates/tax_rus_corporate_actions.json` & `jal-2023.4.2/jal/data_export/templates/tax_rus_corporate_actions.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/templates/tax_rus_crypto.json` & `jal-2023.4.2/jal/data_export/templates/tax_rus_crypto.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/templates/tax_rus_derivatives.json` & `jal-2023.4.2/jal/data_export/templates/tax_rus_derivatives.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/templates/tax_rus_dividends.json` & `jal-2023.4.2/jal/data_export/templates/tax_rus_dividends.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/templates/tax_rus_fees.json` & `jal-2023.4.2/jal/data_export/templates/tax_rus_fees.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/templates/tax_rus_flow.json` & `jal-2023.4.2/jal/data_export/templates/tax_rus_flow.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/templates/tax_rus_interests.json` & `jal-2023.4.2/jal/data_export/templates/tax_rus_interests.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/templates/tax_rus_trades.json` & `jal-2023.4.2/jal/data_export/templates/tax_rus_trades.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_export/xlsx.py` & `jal-2023.4.2/jal/data_export/xlsx.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_import/broker_statements/ibkr.py` & `jal-2023.4.2/jal/data_import/broker_statements/ibkr.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,26 +1,28 @@
+ import logging
+ import re
+ from copy import deepcopy
+ from datetime import datetime
+ from itertools import groupby
+ from decimal import Decimal
++from lxml import etree
+ 
+ from PySide6.QtWidgets import QApplication
+ from jal.constants import PredefinedCategory, PredefinedAsset
+ from jal.widgets.helpers import ManipulateDate, ts2dt, ts2d
+ from jal.db.helpers import format_decimal
+ from jal.db.account import JalAccount
+ from jal.db.asset import JalAsset
+ from jal.db.operations import Dividend
+ from jal.data_import.statement import FOF, Statement_ImportError
+ from jal.data_import.statement_xml import StatementXML
+ 
+ JAL_STATEMENT_CLASS = "StatementIBKR"
+ IBKR_CALCULATION_PRECISION = 10
++DIVIDENDS_TABLE_ASSET_FIELD = 7
+ 
+ # -----------------------------------------------------------------------------------------------------------------------
+ class IBKRCashOp:
+     Dividend = 0
+     TaxWithhold = 1
+     DepositWithdrawal = 2
+     Fee = 3
+@@ -258,14 +260,37 @@
+                                             ('taxDescription', 'tax_description', str, None)],
+                                  'loader': self.load_taxes}
+         }
+ 
+     def tr(self, text):
+         return QApplication.translate("IBKR", text)
+ 
++    # Saves information from XML that is related with a given asset
++    def save_debug_info(self, account, asset):
++        # Dump statement info relevant to given asset
++        debug_info = 'Statement data:\n----------------------------------------------------------------\n'
++        assert self._statement is not None
++        symbols = [x['symbol'] for x in self._data[FOF.SYMBOLS] if x["asset"] == asset]
++        for symbol in symbols:
++            elements = self._statement.findall(f".//*[@symbol='{symbol}']")
++            for element in elements:
++                if 'accountId' in element.attrib:
++                    element.attrib['accountId'] = 'U7654321'  # Hide real account number
++                debug_info += etree.tostring(element).decode("utf-8")
++        debug_info += "----------------------------------------------------------------\n"
++        # Dump dividends info from database for the given asset from
++        db_account = self._map_db_account(account)
++        db_asset = self._map_db_asset(asset)
++        dividends = JalAccount(db_account).dump_dividends()
++        dividends = [x for x in dividends if x[DIVIDENDS_TABLE_ASSET_FIELD] == db_asset]
++        debug_info += "Database data:\n----------------------------------------------------------------\n"
++        debug_info += str(dividends)
++        debug_info += "\n----------------------------------------------------------------\n"
++        super().save_debug_info(debug_info=debug_info)
++
+     def validate_file_header_attributes(self, attributes):
+         if 'type' not in attributes:
+             raise Statement_ImportError(self.tr("Interactive Brokers report type not found"))
+         if attributes['type'] == "TCF":
+             raise Statement_ImportError(self.tr("You try to import Trade confimation report, not Activity report"))
+         if attributes['type'] != 'AF':
+             raise Statement_ImportError(self.tr("Unknown Interactive Brokers report type: ") + f"{attributes['type']}")
+@@ -877,15 +902,29 @@
+                     if len(m_payments):
+                         payments.remove(m_payments[0])
+                     else:
+                         not_matched_reversals.append(reversal)
+             else:
+                 payments.remove(t_payment)    # it is possible to kill exact match silently
+         taxes = [x for x in taxes if x in payments or x in not_matched_reversals]
+-        return taxes
++
++        # Sometimes IB split tax in several parts for Payment in Lieu of Dividend
++        # Below code aggregates such taxes but only negative values (positive might be a correction of previous tax)
++        key_func = lambda x: (x['account'], x['asset'], x['currency'], x['description'], x['timestamp'], x['reported'])
++        taxes_sorted = sorted(taxes, key=key_func)
++        tax_in_lieu = [x for x in taxes_sorted if x['amount'] < 0 and 'PAYMENT IN LIEU OF DIVIDEND' in x['description']]
++        other_taxes = [x for x in taxes_sorted if x not in tax_in_lieu]
++        lieu_aggregated = []
++        for k, group in groupby(tax_in_lieu, key=key_func):
++            group_list = list(group)
++            part = group_list[0]  # Take fist of several actions as a basis
++            part['amount'] = sum(tax['amount'] for tax in group_list)  # and update quantity in it
++            lieu_aggregated.append(part)
++        taxes_aggregated = sorted(other_taxes + lieu_aggregated, key=key_func)
++        return taxes_aggregated
+ 
+     def load_taxes(self, taxes):
+         cnt = 0   #FIXME Link this tax with asset
+         tax_base = max([0] + [x['id'] for x in self._data[FOF.INCOME_SPENDING]]) + 1
+         for i, tax in enumerate(taxes):
+             tax['id'] = tax_base + i
+             tax['peer'] = 0
+@@ -911,46 +950,41 @@
+         self.set_asset_counry(tax['asset'], parts['country'].lower())
+         description = parts['description']
+         previous_tax = Decimal(tax['amount']) if Decimal(tax['amount']) >= Decimal('0') else Decimal('0')
+         new_tax = -tax['amount'] if tax['amount'] < 0 else 0
+ 
+         dividend = self.find_dividend4tax(tax['timestamp'], tax['account'], tax['asset'], previous_tax, new_tax, description)
+         if dividend is None:
++            self.save_debug_info(account=tax['account'], asset=tax['asset'])
+             raise Statement_ImportError(self.tr("Dividend not found for withholding tax: ") + f"{tax}, {previous_tax}")
+         if dividend['id'] < 0:  # Notification is required if we adjust data for dividend that is already in Jal DB
+             logging.info(self.tr("Tax adjustment for dividend: ") +
+                          f"{dividend['tax']} -> {new_tax} ({ts2dt(dividend['timestamp'])} {dividend['description']})")
+         dividend["tax"] = new_tax
+         # append new dividend if it came from DB and haven't been loaded in self._data yet
+         if len([1 for x in self._data[FOF.ASSET_PAYMENTS] if x['id'] == dividend['id']]) == 0:
+             dividend['type'] = FOF.PAYMENT_DIVIDEND
+             self._data[FOF.ASSET_PAYMENTS].append(dividend)
+         return 1
+ 
+-    # Searches for divident that matches tax in the best way:
++    # Searches for dividend that matches tax in the best way:
+     # - it should have exactly the same account_id and asset_id
+     # - tax amount withheld from dividend should be equal to provided 'tax' value
+     # - timestamp should be the same or within previous year for weak match of Q1 taxes
+     # - note should be exactly the same or contain the same key elements
+     def find_dividend4tax(self, timestamp, account_id, asset_id, prev_tax, new_tax, note):
+         PaymentInLiueOfDividend = 'PAYMENT IN LIEU OF DIVIDEND'
+         TaxNotePattern = r"^(?P<symbol>.*\w) ?\((?P<isin>\w+)\)(?P<prefix>( \w*)+) +(?P<amount>\d+\.\d+)?(?P<suffix>.*)$"
+         DividendNotePattern = r"^(?P<symbol>.*\w) ?\((?P<isin>\w+)\)(?P<prefix>( \w*)+) +(?P<amount>\d+\.\d+)?(?P<suffix>.*) \(.*\)$"
+ 
+         dividends = [x for x in self._data[FOF.ASSET_PAYMENTS] if
+                      (x['type'] == FOF.PAYMENT_DIVIDEND or x['type'] == FOF.PAYMENT_STOCK_DIVIDEND)
+                      and x['asset'] == asset_id and x['account'] == account_id]
+-        account = [x for x in self._data[FOF.ACCOUNTS] if x["id"] == account_id][0]
+-        currency_symbol = [x for x in self._data[FOF.SYMBOLS] if x["asset"] == account['currency']][0]['symbol']
+-        db_currency = JalAsset(data={'symbol': currency_symbol, 'type': PredefinedAsset.Money}, search=True, create=False).id()
+-        db_account = JalAccount(data={'number': account['number'], 'currency': db_currency}, search=True, create=False).id()
+-        asset = self._asset(asset_id)
+-        isin = asset['isin'] if 'isin' in asset else ''
+-        symbols = [x for x in self._data[FOF.SYMBOLS] if x["asset"] == asset_id]
+-        db_asset = JalAsset(data={'isin': isin, 'symbol': symbols[0]['symbol']}, search=True, create=False).id()
++        db_account = self._map_db_account(account_id)
++        db_asset = self._map_db_asset(asset_id)
+         if db_account and db_asset:
+             for db_dividend in Dividend.get_list(db_account, db_asset, Dividend.Dividend):
+                 dividends.append({
+                     "id": -db_dividend.oid(),
+                     "account": account_id,
+                     "asset": asset_id,
+                     "timestamp": db_dividend.timestamp(),
+```
+
+### Comparing `jal-2023.4.1/jal/data_import/broker_statements/just2trade.py` & `jal-2023.4.2/jal/data_import/broker_statements/just2trade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_import/broker_statements/kit.py` & `jal-2023.4.2/jal/data_import/broker_statements/kit.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_import/broker_statements/open_portfolio.py` & `jal-2023.4.2/jal/data_import/broker_statements/open_portfolio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_import/broker_statements/openbroker.py` & `jal-2023.4.2/jal/data_import/broker_statements/openbroker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_import/broker_statements/psb.py` & `jal-2023.4.2/jal/data_import/broker_statements/psb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_import/broker_statements/uralsib.py` & `jal-2023.4.2/jal/data_import/broker_statements/uralsib.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_import/category_recognizer.py` & `jal-2023.4.2/jal/data_import/category_recognizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_import/import_schema.json` & `jal-2023.4.2/jal/data_import/import_schema.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_import/slips.py` & `jal-2023.4.2/jal/data_import/slips.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_import/slips_tax.py` & `jal-2023.4.2/jal/data_import/slips_tax.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_import/statement.py` & `jal-2023.4.2/jal/data_import/statement.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -120,26 +120,55 @@
+             FOF.INCOME_SPENDING: self._import_imcomes_and_spendings,
+             FOF.TRANSFERS: self._import_transfers,
+             FOF.TRADES: self._import_trades,
+             FOF.ASSET_PAYMENTS: self._import_asset_payments,
+             FOF.CORP_ACTIONS: self._import_corporate_actions
+         }
+ 
++    # If 'debug_info' is given as parameter it is saved in JAL main directory text file appened with timestamp
++    def save_debug_info(self, **kwargs):
++        if 'debug_info' in kwargs:
++            dump_name = get_app_path() + os.sep + Setup.STATEMENT_DUMP + datetime.now().strftime("%s") + ".txt"
++            try:
++                with open(dump_name, 'w') as dump_file:
++                    dump_file.write(f"JAL statement dump, {datetime.now().strftime('%y/%m/%d %H:%M:%S')}\n")
++                    dump_file.write("----------------------------------------------------------------\n")
++                    dump_file.write(str(kwargs['debug_info']))
++                logging.warning(self.tr("Debug information is saved in ") + dump_name)
++            except Exception as e:
++                logging.error(self.tr("Failed to write statement dump into: ") + dump_name + ": " + str(e))
++
+     # returns tuple (start_timestamp, end_timestamp)
+     def period(self):
+         if FOF.PERIOD in self._data:
+             return self._data[FOF.PERIOD][0], self._data[FOF.PERIOD][1]
+         else:
+             return 0, 0
+ 
+     # returns timestamp that is equal to the last second of initial timestamp
+     def _end_of_date(self, timestamp) -> int:
+         end_of_day = datetime.utcfromtimestamp(timestamp).replace(hour=23, minute=59, second=59)
+         return int(end_of_day.replace(tzinfo=timezone.utc).timestamp())
+ 
++    # Finds an account in jal database and returns its id
++    def _map_db_account(self, account_id: int) -> int:
++        account = [x for x in self._data[FOF.ACCOUNTS] if x["id"] == account_id][0]
++        currency_symbol = [x for x in self._data[FOF.SYMBOLS] if x["asset"] == account['currency']][0]['symbol']
++        db_currency = JalAsset(data={'symbol': currency_symbol, 'type': PredefinedAsset.Money}, search=True, create=False).id()
++        db_account = JalAccount(data={'number': account['number'], 'currency': db_currency}, search=True, create=False).id()
++        return db_account
++
++    # Finds an asset in jal database and returns its id
++    def _map_db_asset(self, asset_id: int) -> int:
++        asset = self._asset(asset_id)
++        isin = asset['isin'] if 'isin' in asset else ''
++        symbols = [x for x in self._data[FOF.SYMBOLS] if x["asset"] == asset_id]
++        db_asset = JalAsset(data={'isin': isin, 'symbol': symbols[0]['symbol']}, search=True, create=False).id()
++        return db_asset
++
+     # Loads JSON statement format from file defined by 'filename'
+     def load(self, filename: str) -> None:
+         self._data = {}
+         try:
+             with open(filename, 'r', encoding='utf-8') as exchange_file:
+                 try:
+                     self._data = json.load(exchange_file)
+```
+
+### Comparing `jal-2023.4.1/jal/data_import/statement_xls.py` & `jal-2023.4.2/jal/data_import/statement_xls.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/data_import/statement_xml.py` & `jal-2023.4.2/jal/data_import/statement_xml.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -12,14 +12,15 @@
+     statement_tag = ''      # Tag of the statement in XML (there might be several statements in one XML)
+     level_tag = ''          # Tag to filter out some records
+     STATEMENT_ROOT = '<statement_root>'
+ 
+     def __init__(self):
+         super().__init__()
+         self.statement_name = ''
++        self._statement = None
+         self._sections = {}
+         self._data = {
+             FOF.PERIOD: [None, None],
+             FOF.ACCOUNTS: [],
+             FOF.ASSETS: [],
+             FOF.SYMBOLS: [],
+             FOF.ASSETS_DATA: [],
+@@ -81,14 +82,15 @@
+         except etree.XMLSyntaxError as e:
+             raise Statement_ImportError(self.tr("Can't parse XML file: ") + e.msg)
+         self.validate_file_header_attributes(xml_root.findall('.')[0].attrib)
+         statements = xml_root.findall(self.statements_path)
+         for statement in statements:
+             if statement.tag != self.statement_tag:
+                 continue
++            self._statement = statement
+             header_data = self.get_section_data(statement)
+             self._sections[StatementXML.STATEMENT_ROOT]['loader'](header_data)
+ 
+             for section in self._sections:
+                 if section == StatementXML.STATEMENT_ROOT:
+                     continue  # skip header description
+                 section_elements = statement.xpath(section)  # Actually should be list of 0 or 1 element
+```
+
+### Comparing `jal-2023.4.1/jal/data_import/statements.py` & `jal-2023.4.2/jal/data_import/statements.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/account.py` & `jal-2023.4.2/jal/db/account.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/asset.py` & `jal-2023.4.2/jal/db/asset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/backup_restore.py` & `jal-2023.4.2/jal/db/backup_restore.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/balances_model.py` & `jal-2023.4.2/jal/db/balances_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/category.py` & `jal-2023.4.2/jal/db/category.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/closed_trade.py` & `jal-2023.4.2/jal/db/closed_trade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/country.py` & `jal-2023.4.2/jal/db/country.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/db.py` & `jal-2023.4.2/jal/db/db.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/helpers.py` & `jal-2023.4.2/jal/db/helpers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/holdings_model.py` & `jal-2023.4.2/jal/db/holdings_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/ledger.py` & `jal-2023.4.2/jal/db/ledger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/operations.py` & `jal-2023.4.2/jal/db/operations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/operations_model.py` & `jal-2023.4.2/jal/db/operations_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/peer.py` & `jal-2023.4.2/jal/db/peer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/reference_models.py` & `jal-2023.4.2/jal/db/reference_models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/settings.py` & `jal-2023.4.2/jal/db/settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/tax_estimator.py` & `jal-2023.4.2/jal/db/tax_estimator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/db/view_model.py` & `jal-2023.4.2/jal/db/view_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/accept.png` & `jal-2023.4.2/jal/img/accept.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/add.png` & `jal-2023.4.2/jal/img/add.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/add_child.png` & `jal-2023.4.2/jal/img/add_child.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/cancel.png` & `jal-2023.4.2/jal/img/cancel.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/chart.png` & `jal-2023.4.2/jal/img/chart.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/copy.png` & `jal-2023.4.2/jal/img/copy.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/delete.png` & `jal-2023.4.2/jal/img/delete.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/ibkr.png` & `jal-2023.4.2/jal/img/ibkr.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/j2t.png` & `jal-2023.4.2/jal/img/j2t.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/jal.png` & `jal-2023.4.2/jal/img/jal.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/kit.png` & `jal-2023.4.2/jal/img/kit.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/list.png` & `jal-2023.4.2/jal/img/list.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/new.png` & `jal-2023.4.2/jal/img/new.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/open_portfolio.png` & `jal-2023.4.2/jal/img/open_portfolio.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/openbroker.ico` & `jal-2023.4.2/jal/img/openbroker.ico`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/psb.ico` & `jal-2023.4.2/jal/img/psb.ico`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/quik.ico` & `jal-2023.4.2/jal/img/quik.ico`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/reconcile.png` & `jal-2023.4.2/jal/img/reconcile.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/remove.png` & `jal-2023.4.2/jal/img/remove.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/tax.png` & `jal-2023.4.2/jal/img/tax.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/img/uralsib.ico` & `jal-2023.4.2/jal/img/uralsib.ico`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/jal.py` & `jal-2023.4.2/jal/jal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/jal_init.sql` & `jal-2023.4.2/jal/jal_init.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/languages/en.qm` & `jal-2023.4.2/jal/languages/en.qm`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/languages/ru.qm` & `jal-2023.4.2/jal/languages/ru.qm`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/net/downloader.py` & `jal-2023.4.2/jal/net/downloader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/net/helpers.py` & `jal-2023.4.2/jal/net/helpers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/pypi_description.md` & `jal-2023.4.2/jal/pypi_description.md`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/reports/category.py` & `jal-2023.4.2/jal/reports/category.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/reports/deals.py` & `jal-2023.4.2/jal/reports/deals.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/reports/holdings.py` & `jal-2023.4.2/jal/reports/holdings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/reports/income_spending.py` & `jal-2023.4.2/jal/reports/income_spending.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/reports/peer.py` & `jal-2023.4.2/jal/reports/peer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/reports/profit_loss.py` & `jal-2023.4.2/jal/reports/profit_loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/reports/reports.py` & `jal-2023.4.2/jal/reports/reports.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/reports/tag.py` & `jal-2023.4.2/jal/reports/tag.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/reports/ui_category_report.py` & `jal-2023.4.2/jal/ui/reports/ui_category_report.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/reports/ui_deals_report.py` & `jal-2023.4.2/jal/ui/reports/ui_deals_report.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/reports/ui_holdings_report.py` & `jal-2023.4.2/jal/ui/reports/ui_holdings_report.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/reports/ui_income_spending_report.py` & `jal-2023.4.2/jal/ui/reports/ui_income_spending_report.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/reports/ui_peer_report.py` & `jal-2023.4.2/jal/ui/reports/ui_peer_report.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/reports/ui_profit_loss_report.py` & `jal-2023.4.2/jal/ui/reports/ui_profit_loss_report.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/reports/ui_tag_report.py` & `jal-2023.4.2/jal/ui/reports/ui_tag_report.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/reports/ui_tax_estimation.py` & `jal-2023.4.2/jal/ui/reports/ui_tax_estimation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/ui_asset_dlg.py` & `jal-2023.4.2/jal/ui/ui_asset_dlg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/ui_flow_export_widget.py` & `jal-2023.4.2/jal/ui/ui_flow_export_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/ui_login_fns_dlg.py` & `jal-2023.4.2/jal/ui/ui_login_fns_dlg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/ui_main_window.py` & `jal-2023.4.2/jal/ui/ui_main_window.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/ui_operations_widget.py` & `jal-2023.4.2/jal/ui/ui_operations_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/ui_rebuild_window.py` & `jal-2023.4.2/jal/ui/ui_rebuild_window.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/ui_reference_data_dlg.py` & `jal-2023.4.2/jal/ui/ui_reference_data_dlg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/ui_select_account_dlg.py` & `jal-2023.4.2/jal/ui/ui_select_account_dlg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/ui_select_reference_dlg.py` & `jal-2023.4.2/jal/ui/ui_select_reference_dlg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/ui_slip_import_dlg.py` & `jal-2023.4.2/jal/ui/ui_slip_import_dlg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/ui_tax_export_widget.py` & `jal-2023.4.2/jal/ui/ui_tax_export_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/ui/ui_update_quotes_window.py` & `jal-2023.4.2/jal/ui/ui_update_quotes_window.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_10.sql` & `jal-2023.4.2/jal/updates/jal_delta_10.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_11.sql` & `jal-2023.4.2/jal/updates/jal_delta_11.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_12.sql` & `jal-2023.4.2/jal/updates/jal_delta_12.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_13.sql` & `jal-2023.4.2/jal/updates/jal_delta_13.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_14.sql` & `jal-2023.4.2/jal/updates/jal_delta_14.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_15.sql` & `jal-2023.4.2/jal/updates/jal_delta_15.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_16.sql` & `jal-2023.4.2/jal/updates/jal_delta_16.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_17.sql` & `jal-2023.4.2/jal/updates/jal_delta_17.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_18.sql` & `jal-2023.4.2/jal/updates/jal_delta_18.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_19.sql` & `jal-2023.4.2/jal/updates/jal_delta_19.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_20.sql` & `jal-2023.4.2/jal/updates/jal_delta_20.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_21.sql` & `jal-2023.4.2/jal/updates/jal_delta_21.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_22.sql` & `jal-2023.4.2/jal/updates/jal_delta_22.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_23.sql` & `jal-2023.4.2/jal/updates/jal_delta_23.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_25.sql` & `jal-2023.4.2/jal/updates/jal_delta_25.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_26.sql` & `jal-2023.4.2/jal/updates/jal_delta_26.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_27.sql` & `jal-2023.4.2/jal/updates/jal_delta_27.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_28.sql` & `jal-2023.4.2/jal/updates/jal_delta_28.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_29.sql` & `jal-2023.4.2/jal/updates/jal_delta_29.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_30.sql` & `jal-2023.4.2/jal/updates/jal_delta_30.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_31.sql` & `jal-2023.4.2/jal/updates/jal_delta_31.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_32.sql` & `jal-2023.4.2/jal/updates/jal_delta_32.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_33.sql` & `jal-2023.4.2/jal/updates/jal_delta_33.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_34.sql` & `jal-2023.4.2/jal/updates/jal_delta_34.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_35.sql` & `jal-2023.4.2/jal/updates/jal_delta_35.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_36.sql` & `jal-2023.4.2/jal/updates/jal_delta_36.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_37.sql` & `jal-2023.4.2/jal/updates/jal_delta_37.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_38.sql` & `jal-2023.4.2/jal/updates/jal_delta_38.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_40.sql` & `jal-2023.4.2/jal/updates/jal_delta_40.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_41.sql` & `jal-2023.4.2/jal/updates/jal_delta_41.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_42.sql` & `jal-2023.4.2/jal/updates/jal_delta_42.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_43.sql` & `jal-2023.4.2/jal/updates/jal_delta_43.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/updates/jal_delta_44.sql` & `jal-2023.4.2/jal/updates/jal_delta_44.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/abstract_operation_details.py` & `jal-2023.4.2/jal/widgets/abstract_operation_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/account_select.py` & `jal-2023.4.2/jal/widgets/account_select.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/asset_dialog.py` & `jal-2023.4.2/jal/widgets/asset_dialog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/corporate_action_widget.py` & `jal-2023.4.2/jal/widgets/corporate_action_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/custom/date_range_selector.py` & `jal-2023.4.2/jal/widgets/custom/date_range_selector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/custom/db_lookup_combobox.py` & `jal-2023.4.2/jal/widgets/custom/db_lookup_combobox.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/custom/log_viewer.py` & `jal-2023.4.2/jal/widgets/custom/log_viewer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/delegates.py` & `jal-2023.4.2/jal/widgets/delegates.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/dividend_widget.py` & `jal-2023.4.2/jal/widgets/dividend_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/helpers.py` & `jal-2023.4.2/jal/widgets/helpers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/income_spending_widget.py` & `jal-2023.4.2/jal/widgets/income_spending_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/main_window.py` & `jal-2023.4.2/jal/widgets/main_window.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/mdi.py` & `jal-2023.4.2/jal/widgets/mdi.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/operations_tabs.py` & `jal-2023.4.2/jal/widgets/operations_tabs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/operations_widget.py` & `jal-2023.4.2/jal/widgets/operations_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/price_chart.py` & `jal-2023.4.2/jal/widgets/price_chart.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/qr_scanner.py` & `jal-2023.4.2/jal/widgets/qr_scanner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/reference_data.py` & `jal-2023.4.2/jal/widgets/reference_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/reference_dialogs.py` & `jal-2023.4.2/jal/widgets/reference_dialogs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/reference_selector.py` & `jal-2023.4.2/jal/widgets/reference_selector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/register_designer_plugins.py` & `jal-2023.4.2/jal/widgets/register_designer_plugins.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/selection_dialog.py` & `jal-2023.4.2/jal/widgets/selection_dialog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/tax_widget.py` & `jal-2023.4.2/jal/widgets/tax_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/trade_widget.py` & `jal-2023.4.2/jal/widgets/trade_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal/widgets/transfer_widget.py` & `jal-2023.4.2/jal/widgets/transfer_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/jal.egg-info/PKG-INFO` & `jal-2023.4.2/jal.egg-info/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: jal
+-Version: 2023.4.1
++Version: 2023.4.2
+ Summary: Just Another Ledger - project to track personal financial records
+ Home-page: https://github.com/titov-vv/jal
+ Author-email: jal@gmx.ru
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Topic :: Office/Business
+ Classifier: Topic :: Office/Business :: Financial
+ Classifier: Topic :: Office/Business :: Financial :: Accounting
+```
+
+### Comparing `jal-2023.4.1/jal.egg-info/SOURCES.txt` & `jal-2023.4.2/jal.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.4.1/setup.py` & `jal-2023.4.2/setup.py`
+
+ * *Files identical despite different names*
+

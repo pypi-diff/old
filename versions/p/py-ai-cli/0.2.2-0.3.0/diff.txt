@@ -1,0 +1,335 @@
+--- tmp/py-ai-cli-0.2.2.tar.gz
++++ tmp/py-ai-cli-0.3.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "py-ai-cli-0.2.2.tar", last modified: Fri Apr  7 09:53:18 2023, max compression
+│ +gzip compressed data, was "py-ai-cli-0.3.0.tar", last modified: Fri Apr  7 14:07:16 2023, max compression
+│   --- py-ai-cli-0.2.2.tar
+├── +++ py-ai-cli-0.3.0.tar
+│ ├── file list
+│ │ @@ -1,11 +1,12 @@
+│ │ --rw-r--r--   0        0        0     1538 2023-04-07 09:52:55.645674 py-ai-cli-0.2.2/CHANGELOG.md
+│ │ --rw-r--r--   0        0        0     3155 2023-04-07 09:52:55.649674 py-ai-cli-0.2.2/README.md
+│ │ --rw-r--r--   0        0        0     3940 2023-04-07 09:52:55.649674 py-ai-cli-0.2.2/README_ja.md
+│ │ --rw-r--r--   0        0        0     2922 2023-04-07 09:52:55.649674 py-ai-cli-0.2.2/README_zh.md
+│ │ --rw-r--r--   0        0        0     1996 2023-04-07 09:52:55.989678 py-ai-cli-0.2.2/pyproject.toml
+│ │ --rw-r--r--   0        0        0      690 2023-04-07 09:52:55.989678 py-ai-cli-0.2.2/src/ai_cli/__init__.py
+│ │ --rw-r--r--   0        0        0     5454 2023-04-07 09:52:55.989678 py-ai-cli-0.2.2/src/ai_cli/bot/__init__.py
+│ │ --rwxr-xr-x   0        0        0    13579 2023-04-07 09:52:55.989678 py-ai-cli-0.2.2/src/ai_cli/cli.py
+│ │ --rw-r--r--   0        0        0     4468 2023-04-07 09:52:55.989678 py-ai-cli-0.2.2/src/ai_cli/git.py
+│ │ --rw-r--r--   0        0        0     2800 2023-04-07 09:52:55.989678 py-ai-cli-0.2.2/src/ai_cli/setting.py
+│ │ --rw-r--r--   0        0        0     3631 1970-01-01 00:00:00.000000 py-ai-cli-0.2.2/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1663 2023-04-07 14:06:57.329149 py-ai-cli-0.3.0/CHANGELOG.md
+│ │ +-rw-r--r--   0        0        0     3155 2023-04-07 14:06:57.329149 py-ai-cli-0.3.0/README.md
+│ │ +-rw-r--r--   0        0        0     3940 2023-04-07 14:06:57.329149 py-ai-cli-0.3.0/README_ja.md
+│ │ +-rw-r--r--   0        0        0     2922 2023-04-07 14:06:57.329149 py-ai-cli-0.3.0/README_zh.md
+│ │ +-rw-r--r--   0        0        0     2021 2023-04-07 14:06:57.705180 py-ai-cli-0.3.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      690 2023-04-07 14:06:57.705180 py-ai-cli-0.3.0/src/ai_cli/__init__.py
+│ │ +-rw-r--r--   0        0        0     8143 2023-04-07 14:06:57.705180 py-ai-cli-0.3.0/src/ai_cli/bot/__init__.py
+│ │ +-rw-r--r--   0        0        0      195 2023-04-07 14:06:57.705180 py-ai-cli-0.3.0/src/ai_cli/bot/token.py
+│ │ +-rwxr-xr-x   0        0        0    13579 2023-04-07 14:06:57.705180 py-ai-cli-0.3.0/src/ai_cli/cli.py
+│ │ +-rw-r--r--   0        0        0     4468 2023-04-07 14:06:57.705180 py-ai-cli-0.3.0/src/ai_cli/git.py
+│ │ +-rw-r--r--   0        0        0     2822 2023-04-07 14:06:57.705180 py-ai-cli-0.3.0/src/ai_cli/setting.py
+│ │ +-rw-r--r--   0        0        0     3631 1970-01-01 00:00:00.000000 py-ai-cli-0.3.0/PKG-INFO
+│ │   --- py-ai-cli-0.2.2/CHANGELOG.md
+│ ├── +++ py-ai-cli-0.3.0/CHANGELOG.md
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,7 +1,12 @@
+│ │ +Release v0.3.0
+│ │ +---------------------------
+│ │ +
+│ │ +- feat: `chat` and `review` command now can auto summary previous conversation.
+│ │ +
+│ │  Release v0.2.0
+│ │  ---------------------------
+│ │  
+│ │  - feat: now support **New Bing** bot, you can use `ai setting --edit bot=BingBot` to switch to it
+│ │  - feat: add `--bot` option to `ask` command, you can use `ai ask --bot BingBot "Hello"` to use BingBot
+│ │  - refactor: setting file moved to `~/.config/ai_cli/setting.json`
+│ │   --- py-ai-cli-0.2.2/README.md
+│ ├── +++ py-ai-cli-0.3.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.2/README_ja.md
+│ ├── +++ py-ai-cli-0.3.0/README_ja.md
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.2/README_zh.md
+│ ├── +++ py-ai-cli-0.3.0/README_zh.md
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.2/pyproject.toml
+│ ├── +++ py-ai-cli-0.3.0/pyproject.toml
+│ │┄ Files 4% similar despite different names
+│ │ @@ -95,19 +95,20 @@
+│ │      { name = "Yufei Kang", email = "kou.uhi.x@gmail.com" },
+│ │  ]
+│ │  dependencies = [
+│ │      "rich>=13.3.1",
+│ │      "openai>=0.27.0",
+│ │      "pysocks>=1.7.1",
+│ │      "pyperclip>=1.8.2",
+│ │ -    "EdgeGPT>=0.1.13",
+│ │ +    "EdgeGPT>=0.1.22.1",
+│ │ +    "tiktoken>=0.3.3",
+│ │  ]
+│ │  requires-python = ">=3.8"
+│ │  readme = "README.md"
+│ │ -version = "0.2.2"
+│ │ +version = "0.3.0"
+│ │  
+│ │  [project.license]
+│ │  text = "MIT"
+│ │  
+│ │  [project.urls]
+│ │  Repository = "https://github.com/yufeikang/ai-cli"
+│ │  Documentation = "https://github.com/yufeikang/ai-cli/blob/main/README.md"
+│ │   --- py-ai-cli-0.2.2/src/ai_cli/__init__.py
+│ ├── +++ py-ai-cli-0.3.0/src/ai_cli/__init__.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -__version__ = "0.2.2"
+│ │ +__version__ = "0.3.0"
+│ │  
+│ │  import logging
+│ │  import os
+│ │  from logging.handlers import RotatingFileHandler
+│ │  from pathlib import Path
+│ │  
+│ │  HOME = Path.home()
+│ │   --- py-ai-cli-0.2.2/src/ai_cli/bot/__init__.py
+│ ├── +++ py-ai-cli-0.3.0/src/ai_cli/bot/__init__.py
+│ │┄ Files 23% similar despite different names
+│ │ @@ -7,14 +7,15 @@
+│ │  from collections import OrderedDict
+│ │  from typing import Generator, Union
+│ │  from uuid import uuid4
+│ │  
+│ │  import openai
+│ │  from EdgeGPT import Chatbot, ConversationStyle
+│ │  
+│ │ +from ai_cli.bot.token import get_token_count
+│ │  from ai_cli.setting import Setting
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  class ChatHistory:
+│ │      def __init__(self, question: str, answer: str, q_id: str, answer_append: bool = True):
+│ │ @@ -44,14 +45,21 @@
+│ │  
+│ │      def time_cost(self):
+│ │          return self.answer_time - self.question_time
+│ │  
+│ │      def __str__(self):
+│ │          return f"Question: {self.question}\nAnswer: {self._answer}\nTime cost: {self.time_cost()}"
+│ │  
+│ │ +    def __repr__(self):
+│ │ +        content = self.question
+│ │ +        if self._answer is not None:
+│ │ +            content += "\n"
+│ │ +            content += self._answer
+│ │ +        return content
+│ │ +
+│ │  
+│ │  class ChatHistoryContainer:
+│ │      def __init__(self):
+│ │          self.history = OrderedDict()
+│ │          self.answer_append = True
+│ │  
+│ │      def add_question(self, question: str):
+│ │ @@ -59,31 +67,45 @@
+│ │          self.history[q_id] = ChatHistory(question, None, q_id, self.answer_append)
+│ │          return q_id
+│ │  
+│ │      def add_answer(self, q_id: str, answer: str):
+│ │          self.history[q_id].answer = answer
+│ │          return self.history[q_id].answer
+│ │  
+│ │ +    def reset(self):
+│ │ +        self.history = OrderedDict()
+│ │ +
+│ │      def __iter__(self):
+│ │          return iter(self.history.values())
+│ │  
+│ │ +    def __str__(self) -> str:
+│ │ +        return "\n".join([repr(h) for h in self.history.values()])
+│ │ +
+│ │  
+│ │  class Bot(ABC):
+│ │      def __init__(self, setting: Setting):
+│ │          self.setting = setting
+│ │          self.history = ChatHistoryContainer()
+│ │          self.stream = not setting.no_stream
+│ │  
+│ │      @abstractmethod
+│ │      def _ask(self, question: str, stream=None) -> Union[str, Generator]:
+│ │          pass
+│ │  
+│ │ +    def should_summarize(self) -> bool:
+│ │ +        return False
+│ │ +
+│ │ +    def summarize(self):
+│ │ +        raise NotImplementedError("summarize method not implemented")
+│ │ +
+│ │      def ask(self, question: str, stream=None) -> Union[str, Generator]:
+│ │          stream = self.stream if stream is None else stream
+│ │          logger.info(f"Ask: {question} stream: {stream}")
+│ │ +        if self.should_summarize():
+│ │ +            self.summarize()
+│ │          question_id = self.history.add_question(question)
+│ │          if not stream:
+│ │              answer = self._ask(question, stream=stream)
+│ │              if isinstance(answer, Generator):
+│ │                  answer = list(answer)[0]
+│ │              logger.info(f"Answer: {answer}")
+│ │              self.history.add_answer(question_id, answer)
+│ │ @@ -92,58 +114,109 @@
+│ │              return (self.history.add_answer(question_id, a) for a in self._ask(question, stream=stream))
+│ │  
+│ │  
+│ │  class GPTBot(Bot):
+│ │      def __init__(self, setting: Setting):
+│ │          super().__init__(setting)
+│ │          self.model = setting.model
+│ │ +        self.max_tokens = setting.max_tokens
+│ │  
+│ │      def get_messages(self):
+│ │          for h in self.history:
+│ │              yield {"role": "user", "content": h.question}
+│ │              if h.answer is not None:
+│ │                  yield {"role": "assistant", "content": h.answer}
+│ │  
+│ │ +    def should_summarize(self) -> bool:
+│ │ +        content = str(self.history)
+│ │ +        logger.debug(f"All Content: {content}")
+│ │ +        token_count = get_token_count(content, self.model)
+│ │ +        logger.debug(f"Token count: {token_count}")
+│ │ +        if token_count > self.max_tokens / 2:
+│ │ +            logger.info(f"Token count: {token_count} > {self.max_tokens / 2}, should summarize")
+│ │ +            return True
+│ │ +        return super().should_summarize()
+│ │ +
+│ │ +    def summarize(self):
+│ │ +        self.history.add_question("TLDR")
+│ │ +        content = list(self._ask("", stream=False))[0]
+│ │ +        logger.info(f"Summarize: {content}")
+│ │ +        self.history.reset()
+│ │ +        q_id = self.history.add_question("TLDR")
+│ │ +        self.history.add_answer(q_id, content)
+│ │ +
+│ │      def _ask(self, question: str, stream=None) -> Union[str, Generator]:
+│ │          messages = list(self.get_messages())
+│ │          try:
+│ │              response = openai.ChatCompletion.create(model=self.setting.model, messages=messages, stream=stream)
+│ │              if not stream:
+│ │                  yield response.choices[0].message.content
+│ │              else:
+│ │                  for v in response:
+│ │                      if "content" in v.choices[0].delta:
+│ │                          yield v.choices[0].delta.content
+│ │          except openai.error.RateLimitError:
+│ │              logger.warning("[bold red]Rate limit exceeded, sleep for 10 seconds, then retry")
+│ │              time.sleep(10)
+│ │ -            return self._ask(question, stream=stream)
+│ │ +            return self._ask("", stream=stream)
+│ │  
+│ │  
+│ │  class BingBot(Bot):
+│ │      def __init__(self, setting: Setting):
+│ │          super().__init__(setting)
+│ │          self.style = ConversationStyle.creative
+│ │          self.history.answer_append = False
+│ │          self.bot = Chatbot(cookiePath=setting.bing_cookie)
+│ │          logger.info(f"BingBot init, cookie path: {setting.bing_cookie}")
+│ │ +        self.max_conversation = None
+│ │ +        self.current_conversation = 0
+│ │ +        self.prefix_prompt = None
+│ │ +
+│ │ +    def update_conversation(self, response: dict):
+│ │ +        throttling = response.get("item").get("throttling")
+│ │ +        if throttling:
+│ │ +            self.max_conversation = throttling.get("maxNumUserMessagesInConversation")
+│ │ +            self.current_conversation = throttling.get("numUserMessagesInConversation")
+│ │ +
+│ │ +    def should_summarize(self) -> bool:
+│ │ +        if self.current_conversation + 1 >= self.max_conversation:
+│ │ +            logger.info(
+│ │ +                f"Conversation count: {self.current_conversation + 1} >= {self.max_conversation}, should summarize"
+│ │ +            )
+│ │ +            return True
+│ │ +        return super().should_summarize()
+│ │ +
+│ │ +    def summarize(self):
+│ │ +        # reset conversation
+│ │ +        summary = list(self._ask("", stream=False))[0]
+│ │ +        logger.info(f"Summarize: {summary}")
+│ │ +        self.bot = Chatbot(cookiePath=self.setting.bing_cookie)
+│ │ +        self.prefix_prompt = summary
+│ │ +
+│ │ +    def _get_question(self, question: str) -> str:
+│ │ +        if self.prefix_prompt:
+│ │ +            logger.info("Add prefix prompt")
+│ │ +            question = self.prefix_prompt + "\n" + question
+│ │ +            self.prefix_prompt = None
+│ │ +        return question
+│ │  
+│ │      def _ask(self, question: str, stream=None) -> Union[str, Generator]:
+│ │ +        question = self._get_question(question)
+│ │          if not stream:
+│ │              result = asyncio.run(self.bot.ask(question, conversation_style=self.style))
+│ │              logger.debug(f"Answer: {json.dumps(result, ensure_ascii=False)}")
+│ │              messages = result.get("item").get("messages")
+│ │              yield messages[len(messages) - 1].get("text")
+│ │          else:
+│ │              gen = self.bot.chat_hub.ask_stream(
+│ │                  question, conversation_style=self.style, wss_link="wss://sydney.bing.com/sydney/ChatHub"
+│ │              )
+│ │              for result in self.sync_adapter(gen):
+│ │ -                logger.debug(f"Answer stream: {json.dumps(result, ensure_ascii=False)}")
+│ │                  if not result[0]:
+│ │ +                    logger.debug(f"Answer stream: {json.dumps(result, ensure_ascii=False)}")
+│ │                      yield result[1]
+│ │  
+│ │      def sync_adapter(self, async_generator):
+│ │          loop = asyncio.get_event_loop()
+│ │          async_gen = async_generator
+│ │          try:
+│ │              while True:
+│ │   --- py-ai-cli-0.2.2/src/ai_cli/cli.py
+│ ├── +++ py-ai-cli-0.3.0/src/ai_cli/cli.py
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.2/src/ai_cli/git.py
+│ ├── +++ py-ai-cli-0.3.0/src/ai_cli/git.py
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.2/src/ai_cli/setting.py
+│ ├── +++ py-ai-cli-0.3.0/src/ai_cli/setting.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -25,14 +25,15 @@
+│ │      bot = "GPTBot"  # GPTBot, BingBot,
+│ │      raw = False
+│ │      log_level = "INFO"
+│ │      debug = False
+│ │      proxy = None
+│ │      multi_line_input = False
+│ │      bing_cookie = None
+│ │ +    max_tokens = 4096
+│ │      review_prompt = "Please review the above code diff, looking for bugs and potential improvements."
+│ │      commit_prompt = "Please generate git commit message for the above code diff from user. The commit message should be in the following format: <type>(<scope>): <subject>"
+│ │  
+│ │      def __iter__(self):
+│ │          for k in self.__dir__():
+│ │              if k.startswith("_"):
+│ │                  continue
+│ │   --- py-ai-cli-0.2.2/PKG-INFO
+│ ├── +++ py-ai-cli-0.3.0/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: py_ai_cli
+│ │ -Version: 0.2.2
+│ │ +Version: 0.3.0
+│ │  Summary: This CLI tool allows you to easily chat with chatGPT in the command line. You can chat with it, ask questions, and even translate text. It also
+│ │  License: MIT
+│ │  Author-email: Yufei Kang <kou.uhi.x@gmail.com>
+│ │  Requires-Python: >=3.8
+│ │  Project-URL: Documentation, https://github.com/yufeikang/ai-cli/blob/main/README.md
+│ │  Project-URL: Repository, https://github.com/yufeikang/ai-cli
+│ │  Description-Content-Type: text/markdown

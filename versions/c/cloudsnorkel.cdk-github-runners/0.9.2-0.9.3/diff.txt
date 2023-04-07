@@ -1,0 +1,982 @@
+--- tmp/cloudsnorkel.cdk-github-runners-0.9.2.tar.gz
++++ tmp/cloudsnorkel.cdk-github-runners-0.9.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "cloudsnorkel.cdk-github-runners-0.9.2.tar", last modified: Thu Apr  6 21:57:29 2023, max compression
+│ +gzip compressed data, was "cloudsnorkel.cdk-github-runners-0.9.3.tar", last modified: Fri Apr  7 14:03:33 2023, max compression
+│   --- cloudsnorkel.cdk-github-runners-0.9.2.tar
+├── +++ cloudsnorkel.cdk-github-runners-0.9.3.tar
+│ ├── file list
+│ │ @@ -1,22 +1,22 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:57:29.175478 cloudsnorkel.cdk-github-runners-0.9.2/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11358 2023-04-06 21:57:17.000000 cloudsnorkel.cdk-github-runners-0.9.2/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-06 21:57:17.000000 cloudsnorkel.cdk-github-runners-0.9.2/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12603 2023-04-06 21:57:29.175478 cloudsnorkel.cdk-github-runners-0.9.2/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11544 2023-04-06 21:57:17.000000 cloudsnorkel.cdk-github-runners-0.9.2/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      234 2023-04-06 21:57:17.000000 cloudsnorkel.cdk-github-runners-0.9.2/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 21:57:29.175478 cloudsnorkel.cdk-github-runners-0.9.2/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1974 2023-04-06 21:57:17.000000 cloudsnorkel.cdk-github-runners-0.9.2/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:57:29.171478 cloudsnorkel.cdk-github-runners-0.9.2/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:57:29.171478 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:57:29.171478 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel/cdk_github_runners/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   510356 2023-04-06 21:57:17.000000 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel/cdk_github_runners/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:57:29.171478 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel/cdk_github_runners/_jsii/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      430 2023-04-06 21:57:17.000000 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel/cdk_github_runners/_jsii/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)  1977087 2023-04-06 21:57:17.000000 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel/cdk_github_runners/_jsii/cdk-github-runners@0.9.2.jsii.tgz
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 21:57:17.000000 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel/cdk_github_runners/py.typed
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:57:29.171478 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel.cdk_github_runners.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12603 2023-04-06 21:57:29.000000 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel.cdk_github_runners.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      570 2023-04-06 21:57:29.000000 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel.cdk_github_runners.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 21:57:29.000000 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel.cdk_github_runners.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      111 2023-04-06 21:57:29.000000 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel.cdk_github_runners.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       13 2023-04-06 21:57:29.000000 cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel.cdk_github_runners.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:03:33.148606 cloudsnorkel.cdk-github-runners-0.9.3/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11358 2023-04-07 14:03:21.000000 cloudsnorkel.cdk-github-runners-0.9.3/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-07 14:03:21.000000 cloudsnorkel.cdk-github-runners-0.9.3/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12603 2023-04-07 14:03:33.148606 cloudsnorkel.cdk-github-runners-0.9.3/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11544 2023-04-07 14:03:21.000000 cloudsnorkel.cdk-github-runners-0.9.3/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      234 2023-04-07 14:03:21.000000 cloudsnorkel.cdk-github-runners-0.9.3/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 14:03:33.148606 cloudsnorkel.cdk-github-runners-0.9.3/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1974 2023-04-07 14:03:21.000000 cloudsnorkel.cdk-github-runners-0.9.3/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:03:33.144606 cloudsnorkel.cdk-github-runners-0.9.3/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:03:33.144606 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:03:33.144606 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel/cdk_github_runners/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   554397 2023-04-07 14:03:21.000000 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel/cdk_github_runners/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:03:33.144606 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel/cdk_github_runners/_jsii/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      430 2023-04-07 14:03:21.000000 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel/cdk_github_runners/_jsii/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)  1979084 2023-04-07 14:03:21.000000 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel/cdk_github_runners/_jsii/cdk-github-runners@0.9.3.jsii.tgz
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 14:03:21.000000 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel/cdk_github_runners/py.typed
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:03:33.144606 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel.cdk_github_runners.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12603 2023-04-07 14:03:33.000000 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel.cdk_github_runners.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      570 2023-04-07 14:03:33.000000 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel.cdk_github_runners.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 14:03:33.000000 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel.cdk_github_runners.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      111 2023-04-07 14:03:33.000000 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel.cdk_github_runners.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       13 2023-04-07 14:03:33.000000 cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel.cdk_github_runners.egg-info/top_level.txt
+│ │   --- cloudsnorkel.cdk-github-runners-0.9.2/LICENSE
+│ ├── +++ cloudsnorkel.cdk-github-runners-0.9.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- cloudsnorkel.cdk-github-runners-0.9.2/PKG-INFO
+│ ├── +++ cloudsnorkel.cdk-github-runners-0.9.3/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: cloudsnorkel.cdk-github-runners
+│ │ -Version: 0.9.2
+│ │ +Version: 0.9.3
+│ │  Summary: CDK construct to create GitHub Actions self-hosted runners. A webhook listens to events and creates ephemeral runners on the fly.
+│ │  Home-page: https://github.com/CloudSnorkel/cdk-github-runners.git
+│ │  Author: Amir Szekely<amir@cloudsnorkel.com>
+│ │  License: Apache-2.0
+│ │  Project-URL: Source, https://github.com/CloudSnorkel/cdk-github-runners.git
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- cloudsnorkel.cdk-github-runners-0.9.2/README.md
+│ ├── +++ cloudsnorkel.cdk-github-runners-0.9.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- cloudsnorkel.cdk-github-runners-0.9.2/setup.py
+│ ├── +++ cloudsnorkel.cdk-github-runners-0.9.3/setup.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import json
+│ │  import setuptools
+│ │  
+│ │  kwargs = json.loads(
+│ │      """
+│ │  {
+│ │      "name": "cloudsnorkel.cdk-github-runners",
+│ │ -    "version": "0.9.2",
+│ │ +    "version": "0.9.3",
+│ │      "description": "CDK construct to create GitHub Actions self-hosted runners. A webhook listens to events and creates ephemeral runners on the fly.",
+│ │      "license": "Apache-2.0",
+│ │      "url": "https://github.com/CloudSnorkel/cdk-github-runners.git",
+│ │      "long_description_content_type": "text/markdown",
+│ │      "author": "Amir Szekely<amir@cloudsnorkel.com>",
+│ │      "bdist_wheel": {
+│ │          "universal": true
+│ │ @@ -22,15 +22,15 @@
+│ │      },
+│ │      "packages": [
+│ │          "cloudsnorkel.cdk_github_runners",
+│ │          "cloudsnorkel.cdk_github_runners._jsii"
+│ │      ],
+│ │      "package_data": {
+│ │          "cloudsnorkel.cdk_github_runners._jsii": [
+│ │ -            "cdk-github-runners@0.9.2.jsii.tgz"
+│ │ +            "cdk-github-runners@0.9.3.jsii.tgz"
+│ │          ],
+│ │          "cloudsnorkel.cdk_github_runners": [
+│ │              "py.typed"
+│ │          ]
+│ │      },
+│ │      "python_requires": "~=3.7",
+│ │      "install_requires": [
+│ │   --- cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel/cdk_github_runners/__init__.py
+│ ├── +++ cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel/cdk_github_runners/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -7692,14 +7692,706 @@
+│ │      def __repr__(self) -> str:
+│ │          return "Ec2RunnerProviderProps(%s)" % ", ".join(
+│ │              k + "=" + repr(v) for k, v in self._values.items()
+│ │          )
+│ │  
+│ │  
+│ │  @jsii.implements(IRunnerProvider)
+│ │ +class EcsRunnerProvider(
+│ │ +    _constructs_77d1e7e8.Construct,
+│ │ +    metaclass=jsii.JSIIMeta,
+│ │ +    jsii_type="@cloudsnorkel/cdk-github-runners.EcsRunnerProvider",
+│ │ +):
+│ │ +    '''(experimental) GitHub Actions runner provider using ECS on EC2 to execute jobs.
+│ │ +
+│ │ +    ECS can be useful when you want more control of the infrastructure running the GitHub Actions Docker containers. You can control the autoscaling
+│ │ +    group to scale down to zero during the night and scale up during work hours. This way you can still save money, but have to wait less for
+│ │ +    infrastructure to spin up.
+│ │ +
+│ │ +    This construct is not meant to be used by itself. It should be passed in the providers property for GitHubRunners.
+│ │ +
+│ │ +    :stability: experimental
+│ │ +    '''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        scope: _constructs_77d1e7e8.Construct,
+│ │ +        id: builtins.str,
+│ │ +        *,
+│ │ +        assign_public_ip: typing.Optional[builtins.bool] = None,
+│ │ +        capacity_provider: typing.Optional[_aws_cdk_aws_ecs_ceddda9d.AsgCapacityProvider] = None,
+│ │ +        cluster: typing.Optional[_aws_cdk_aws_ecs_ceddda9d.Cluster] = None,
+│ │ +        cpu: typing.Optional[jsii.Number] = None,
+│ │ +        docker_in_docker: typing.Optional[builtins.bool] = None,
+│ │ +        image_builder: typing.Optional[IRunnerImageBuilder] = None,
+│ │ +        instance_type: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.InstanceType] = None,
+│ │ +        labels: typing.Optional[typing.Sequence[builtins.str]] = None,
+│ │ +        max_instances: typing.Optional[jsii.Number] = None,
+│ │ +        memory_limit_mib: typing.Optional[jsii.Number] = None,
+│ │ +        min_instances: typing.Optional[jsii.Number] = None,
+│ │ +        security_groups: typing.Optional[typing.Sequence[_aws_cdk_aws_ec2_ceddda9d.ISecurityGroup]] = None,
+│ │ +        spot_max_price: typing.Optional[builtins.str] = None,
+│ │ +        storage_size: typing.Optional[_aws_cdk_ceddda9d.Size] = None,
+│ │ +        subnet_selection: typing.Optional[typing.Union[_aws_cdk_aws_ec2_ceddda9d.SubnetSelection, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +        vpc: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.IVpc] = None,
+│ │ +        log_retention: typing.Optional[_aws_cdk_aws_logs_ceddda9d.RetentionDays] = None,
+│ │ +        retry_options: typing.Optional[typing.Union[ProviderRetryOptions, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +    ) -> None:
+│ │ +        '''
+│ │ +        :param scope: -
+│ │ +        :param id: -
+│ │ +        :param assign_public_ip: (experimental) Assign public IP to the runner task. Make sure the task will have access to GitHub. A public IP might be required unless you have NAT gateway. Default: true
+│ │ +        :param capacity_provider: (experimental) Existing capacity provider to use. Default: new capacity provider
+│ │ +        :param cluster: (experimental) Existing ECS cluster to use. Default: a new cluster
+│ │ +        :param cpu: (experimental) The number of cpu units used by the task. 1024 units is 1 vCPU. Fractions of a vCPU are supported. Default: 1024
+│ │ +        :param docker_in_docker: (experimental) Support building and running Docker images by enabling Docker-in-Docker (dind) and the required CodeBuild privileged mode. Disabling this can speed up provisioning of CodeBuild runners. If you don't intend on running or building Docker images, disable this for faster start-up times. Default: true
+│ │ +        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder determines the OS and architecture of the runner. Default: EcsRunnerProvider.imageBuilder()
+│ │ +        :param instance_type: (experimental) Instance type of ECS cluster instances. Only used when creating a new cluster. Default: m5.large or m6g.large
+│ │ +        :param labels: (experimental) GitHub Actions labels used for this provider. These labels are used to identify which provider should spawn a new on-demand runner. Every job sends a webhook with the labels it's looking for based on runs-on. We match the labels from the webhook with the labels specified here. If all the labels specified here are present in the job's labels, this provider will be chosen and spawn a new runner. Default: ['ecs']
+│ │ +        :param max_instances: (experimental) The maximum number of instances to run in the cluster. Only used when creating a new cluster. Default: 5
+│ │ +        :param memory_limit_mib: (experimental) The amount (in MiB) of memory used by the task. Default: 3500
+│ │ +        :param min_instances: (experimental) The minimum number of instances to run in the cluster. Only used when creating a new cluster. Default: 0
+│ │ +        :param security_groups: (experimental) Security groups to assign to the task. Default: a new security group
+│ │ +        :param spot_max_price: (experimental) Use spot capacity and set a maximum price for spot instances. Default: no spot capacity
+│ │ +        :param storage_size: (experimental) Size of volume available for launched cluster instances. This modifies the boot volume size and doesn't add any additional volumes. Each instance can be used by multiple runners, so make sure there is enough space for all of them. Default: default size for AMI (usually 30GB for Linux and 50GB for Windows)
+│ │ +        :param subnet_selection: (experimental) Subnets to run the runners in. Default: ECS default
+│ │ +        :param vpc: (experimental) VPC to launch the runners in. Default: default account VPC
+│ │ +        :param log_retention: (experimental) The number of days log events are kept in CloudWatch Logs. When updating this property, unsetting it doesn't remove the log retention policy. To remove the retention policy, set the value to ``INFINITE``. Default: logs.RetentionDays.ONE_MONTH
+│ │ +        :param retry_options: (experimental) Options to retry operation in case of failure like missing capacity, or API quota issues. Default: retry 10 times up to about 45 minutes
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__c520325dd0289bf8c6670ecdce77df4b229a0a2681957e61665818d2fe7383a4)
+│ │ +            check_type(argname="argument scope", value=scope, expected_type=type_hints["scope"])
+│ │ +            check_type(argname="argument id", value=id, expected_type=type_hints["id"])
+│ │ +        props = EcsRunnerProviderProps(
+│ │ +            assign_public_ip=assign_public_ip,
+│ │ +            capacity_provider=capacity_provider,
+│ │ +            cluster=cluster,
+│ │ +            cpu=cpu,
+│ │ +            docker_in_docker=docker_in_docker,
+│ │ +            image_builder=image_builder,
+│ │ +            instance_type=instance_type,
+│ │ +            labels=labels,
+│ │ +            max_instances=max_instances,
+│ │ +            memory_limit_mib=memory_limit_mib,
+│ │ +            min_instances=min_instances,
+│ │ +            security_groups=security_groups,
+│ │ +            spot_max_price=spot_max_price,
+│ │ +            storage_size=storage_size,
+│ │ +            subnet_selection=subnet_selection,
+│ │ +            vpc=vpc,
+│ │ +            log_retention=log_retention,
+│ │ +            retry_options=retry_options,
+│ │ +        )
+│ │ +
+│ │ +        jsii.create(self.__class__, self, [scope, id, props])
+│ │ +
+│ │ +    @jsii.member(jsii_name="imageBuilder")
+│ │ +    @builtins.classmethod
+│ │ +    def image_builder(
+│ │ +        cls,
+│ │ +        scope: _constructs_77d1e7e8.Construct,
+│ │ +        id: builtins.str,
+│ │ +        *,
+│ │ +        architecture: typing.Optional[Architecture] = None,
+│ │ +        aws_image_builder_options: typing.Optional[typing.Union[AwsImageBuilderRunnerImageBuilderProps, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +        base_ami: typing.Optional[builtins.str] = None,
+│ │ +        base_docker_image: typing.Optional[builtins.str] = None,
+│ │ +        builder_type: typing.Optional[RunnerImageBuilderType] = None,
+│ │ +        code_build_options: typing.Optional[typing.Union[CodeBuildRunnerImageBuilderProps, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +        components: typing.Optional[typing.Sequence[RunnerImageComponent]] = None,
+│ │ +        log_removal_policy: typing.Optional[_aws_cdk_ceddda9d.RemovalPolicy] = None,
+│ │ +        log_retention: typing.Optional[_aws_cdk_aws_logs_ceddda9d.RetentionDays] = None,
+│ │ +        os: typing.Optional[Os] = None,
+│ │ +        rebuild_interval: typing.Optional[_aws_cdk_ceddda9d.Duration] = None,
+│ │ +        runner_version: typing.Optional[RunnerVersion] = None,
+│ │ +        security_groups: typing.Optional[typing.Sequence[_aws_cdk_aws_ec2_ceddda9d.ISecurityGroup]] = None,
+│ │ +        subnet_selection: typing.Optional[typing.Union[_aws_cdk_aws_ec2_ceddda9d.SubnetSelection, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +        vpc: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.IVpc] = None,
+│ │ +    ) -> RunnerImageBuilder:
+│ │ +        '''(experimental) Create new image builder that builds ECS specific runner images using Ubuntu.
+│ │ +
+│ │ +        Included components:
+│ │ +
+│ │ +        - ``RunnerImageComponent.requiredPackages()``
+│ │ +        - ``RunnerImageComponent.runnerUser()``
+│ │ +        - ``RunnerImageComponent.git()``
+│ │ +        - ``RunnerImageComponent.githubCli()``
+│ │ +        - ``RunnerImageComponent.awsCli()``
+│ │ +        - ``RunnerImageComponent.dockerInDocker()``
+│ │ +        - ``RunnerImageComponent.githubRunner()``
+│ │ +
+│ │ +        :param scope: -
+│ │ +        :param id: -
+│ │ +        :param architecture: (experimental) Image architecture. Default: Architecture.X86_64
+│ │ +        :param aws_image_builder_options: (experimental) Options specific to AWS Image Builder. Only used when builderType is RunnerImageBuilderType.AWS_IMAGE_BUILDER.
+│ │ +        :param base_ami: (experimental) Base AMI from which runner AMIs will be built. Default: latest Ubuntu 20.04 AMI for Os.LINUX_UBUNTU, latest Amazon Linux 2 AMI for Os.LINUX_AMAZON_2, latest Windows Server 2022 AMI for Os.WINDOWS
+│ │ +        :param base_docker_image: (experimental) Base image from which Docker runner images will be built. Default: public.ecr.aws/lts/ubuntu:22.04 for Os.LINUX_UBUNTU, public.ecr.aws/amazonlinux/amazonlinux:2 for Os.LINUX_AMAZON_2, mcr.microsoft.com/windows/servercore:ltsc2019-amd64 for Os.WINDOWS
+│ │ +        :param builder_type: Default: CodeBuild for Linux Docker image, AWS Image Builder for Windows Docker image and any AMI
+│ │ +        :param code_build_options: (experimental) Options specific to CodeBuild image builder. Only used when builderType is RunnerImageBuilderType.CODE_BUILD.
+│ │ +        :param components: (experimental) Components to install on the image. Default: none
+│ │ +        :param log_removal_policy: (experimental) Removal policy for logs of image builds. If deployment fails on the custom resource, try setting this to ``RemovalPolicy.RETAIN``. This way the CodeBuild logs can still be viewed, and you can see why the build failed. We try to not leave anything behind when removed. But sometimes a log staying behind is useful. Default: RemovalPolicy.DESTROY
+│ │ +        :param log_retention: (experimental) The number of days log events are kept in CloudWatch Logs. When updating this property, unsetting it doesn't remove the log retention policy. To remove the retention policy, set the value to ``INFINITE``. Default: logs.RetentionDays.ONE_MONTH
+│ │ +        :param os: (experimental) Image OS. Default: OS.LINUX
+│ │ +        :param rebuild_interval: (experimental) Schedule the image to be rebuilt every given interval. Useful for keeping the image up-do-date with the latest GitHub runner version and latest OS updates. Set to zero to disable. Default: Duration.days(7)
+│ │ +        :param runner_version: (experimental) Version of GitHub Runners to install. Default: latest version available
+│ │ +        :param security_groups: (experimental) Security Groups to assign to this instance.
+│ │ +        :param subnet_selection: (experimental) Where to place the network interfaces within the VPC. Default: no subnet
+│ │ +        :param vpc: (experimental) VPC to build the image in. Default: no VPC
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__7b459d87ca6935e6c04ff03be02ed821eef81dbc792be822f356697f6c0f0b82)
+│ │ +            check_type(argname="argument scope", value=scope, expected_type=type_hints["scope"])
+│ │ +            check_type(argname="argument id", value=id, expected_type=type_hints["id"])
+│ │ +        props = RunnerImageBuilderProps(
+│ │ +            architecture=architecture,
+│ │ +            aws_image_builder_options=aws_image_builder_options,
+│ │ +            base_ami=base_ami,
+│ │ +            base_docker_image=base_docker_image,
+│ │ +            builder_type=builder_type,
+│ │ +            code_build_options=code_build_options,
+│ │ +            components=components,
+│ │ +            log_removal_policy=log_removal_policy,
+│ │ +            log_retention=log_retention,
+│ │ +            os=os,
+│ │ +            rebuild_interval=rebuild_interval,
+│ │ +            runner_version=runner_version,
+│ │ +            security_groups=security_groups,
+│ │ +            subnet_selection=subnet_selection,
+│ │ +            vpc=vpc,
+│ │ +        )
+│ │ +
+│ │ +        return typing.cast(RunnerImageBuilder, jsii.sinvoke(cls, "imageBuilder", [scope, id, props]))
+│ │ +
+│ │ +    @jsii.member(jsii_name="addRetry")
+│ │ +    def _add_retry(
+│ │ +        self,
+│ │ +        task: typing.Union[_aws_cdk_aws_stepfunctions_ceddda9d.TaskStateBase, _aws_cdk_aws_stepfunctions_ceddda9d.Parallel],
+│ │ +        errors: typing.Sequence[builtins.str],
+│ │ +    ) -> None:
+│ │ +        '''
+│ │ +        :param task: -
+│ │ +        :param errors: -
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__8ae65c8ddf6460d5233d31505aed1efb3bc2bd158612ace80b099a23ce5ab1d8)
+│ │ +            check_type(argname="argument task", value=task, expected_type=type_hints["task"])
+│ │ +            check_type(argname="argument errors", value=errors, expected_type=type_hints["errors"])
+│ │ +        return typing.cast(None, jsii.invoke(self, "addRetry", [task, errors]))
+│ │ +
+│ │ +    @jsii.member(jsii_name="getStepFunctionTask")
+│ │ +    def get_step_function_task(
+│ │ +        self,
+│ │ +        *,
+│ │ +        github_domain_path: builtins.str,
+│ │ +        owner_path: builtins.str,
+│ │ +        repo_path: builtins.str,
+│ │ +        runner_name_path: builtins.str,
+│ │ +        runner_token_path: builtins.str,
+│ │ +    ) -> _aws_cdk_aws_stepfunctions_ceddda9d.IChainable:
+│ │ +        '''(experimental) Generate step function task(s) to start a new runner.
+│ │ +
+│ │ +        Called by GithubRunners and shouldn't be called manually.
+│ │ +
+│ │ +        :param github_domain_path: (experimental) Path to GitHub domain. Most of the time this will be github.com but for self-hosted GitHub instances, this will be different.
+│ │ +        :param owner_path: (experimental) Path to repository owner name.
+│ │ +        :param repo_path: (experimental) Path to repository name.
+│ │ +        :param runner_name_path: (experimental) Path to desired runner name. We specifically set the name to make troubleshooting easier.
+│ │ +        :param runner_token_path: (experimental) Path to runner token used to register token.
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        parameters = RunnerRuntimeParameters(
+│ │ +            github_domain_path=github_domain_path,
+│ │ +            owner_path=owner_path,
+│ │ +            repo_path=repo_path,
+│ │ +            runner_name_path=runner_name_path,
+│ │ +            runner_token_path=runner_token_path,
+│ │ +        )
+│ │ +
+│ │ +        return typing.cast(_aws_cdk_aws_stepfunctions_ceddda9d.IChainable, jsii.invoke(self, "getStepFunctionTask", [parameters]))
+│ │ +
+│ │ +    @jsii.member(jsii_name="grantStateMachine")
+│ │ +    def grant_state_machine(self, _: _aws_cdk_aws_iam_ceddda9d.IGrantable) -> None:
+│ │ +        '''(experimental) An optional method that modifies the role of the state machine after all the tasks have been generated.
+│ │ +
+│ │ +        This can be used to add additional policy
+│ │ +        statements to the state machine role that are not automatically added by the task returned from {@link getStepFunctionTask}.
+│ │ +
+│ │ +        :param _: -
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__529bdb7d6d31e3b7edbde6a9d1b6e8f5c461be3e551b7b08c3918cc923b785b8)
+│ │ +            check_type(argname="argument _", value=_, expected_type=type_hints["_"])
+│ │ +        return typing.cast(None, jsii.invoke(self, "grantStateMachine", [_]))
+│ │ +
+│ │ +    @jsii.member(jsii_name="labelsFromProperties")
+│ │ +    def _labels_from_properties(
+│ │ +        self,
+│ │ +        default_label: builtins.str,
+│ │ +        props_label: typing.Optional[builtins.str] = None,
+│ │ +        props_labels: typing.Optional[typing.Sequence[builtins.str]] = None,
+│ │ +    ) -> typing.List[builtins.str]:
+│ │ +        '''
+│ │ +        :param default_label: -
+│ │ +        :param props_label: -
+│ │ +        :param props_labels: -
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__f11d9c08955d770e27a043bd6b78d344029c8cbc3a22fca4138c21afe6b8ca4a)
+│ │ +            check_type(argname="argument default_label", value=default_label, expected_type=type_hints["default_label"])
+│ │ +            check_type(argname="argument props_label", value=props_label, expected_type=type_hints["props_label"])
+│ │ +            check_type(argname="argument props_labels", value=props_labels, expected_type=type_hints["props_labels"])
+│ │ +        return typing.cast(typing.List[builtins.str], jsii.invoke(self, "labelsFromProperties", [default_label, props_label, props_labels]))
+│ │ +
+│ │ +    @jsii.member(jsii_name="status")
+│ │ +    def status(
+│ │ +        self,
+│ │ +        status_function_role: _aws_cdk_aws_iam_ceddda9d.IGrantable,
+│ │ +    ) -> IRunnerProviderStatus:
+│ │ +        '''(experimental) Return status of the runner provider to be used in the main status function.
+│ │ +
+│ │ +        Also gives the status function any needed permissions to query the Docker image or AMI.
+│ │ +
+│ │ +        :param status_function_role: -
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__e7ecb1269ac1102589a8eb3fdd808b1c194dffc5acfa36b649506b72c0797c12)
+│ │ +            check_type(argname="argument status_function_role", value=status_function_role, expected_type=type_hints["status_function_role"])
+│ │ +        return typing.cast(IRunnerProviderStatus, jsii.invoke(self, "status", [status_function_role]))
+│ │ +
+│ │ +    @builtins.property
+│ │ +    @jsii.member(jsii_name="connections")
+│ │ +    def connections(self) -> _aws_cdk_aws_ec2_ceddda9d.Connections:
+│ │ +        '''(experimental) The network connections associated with this resource.
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        return typing.cast(_aws_cdk_aws_ec2_ceddda9d.Connections, jsii.get(self, "connections"))
+│ │ +
+│ │ +    @builtins.property
+│ │ +    @jsii.member(jsii_name="grantPrincipal")
+│ │ +    def grant_principal(self) -> _aws_cdk_aws_iam_ceddda9d.IPrincipal:
+│ │ +        '''(experimental) Grant principal used to add permissions to the runner role.
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        return typing.cast(_aws_cdk_aws_iam_ceddda9d.IPrincipal, jsii.get(self, "grantPrincipal"))
+│ │ +
+│ │ +    @builtins.property
+│ │ +    @jsii.member(jsii_name="labels")
+│ │ +    def labels(self) -> typing.List[builtins.str]:
+│ │ +        '''(experimental) Labels associated with this provider.
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        return typing.cast(typing.List[builtins.str], jsii.get(self, "labels"))
+│ │ +
+│ │ +    @builtins.property
+│ │ +    @jsii.member(jsii_name="logGroup")
+│ │ +    def log_group(self) -> _aws_cdk_aws_logs_ceddda9d.ILogGroup:
+│ │ +        '''(experimental) Log group where provided runners will save their logs.
+│ │ +
+│ │ +        Note that this is not the job log, but the runner itself. It will not contain output from the GitHub Action but only metadata on its execution.
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        return typing.cast(_aws_cdk_aws_logs_ceddda9d.ILogGroup, jsii.get(self, "logGroup"))
+│ │ +
+│ │ +
+│ │ +@jsii.data_type(
+│ │ +    jsii_type="@cloudsnorkel/cdk-github-runners.EcsRunnerProviderProps",
+│ │ +    jsii_struct_bases=[RunnerProviderProps],
+│ │ +    name_mapping={
+│ │ +        "log_retention": "logRetention",
+│ │ +        "retry_options": "retryOptions",
+│ │ +        "assign_public_ip": "assignPublicIp",
+│ │ +        "capacity_provider": "capacityProvider",
+│ │ +        "cluster": "cluster",
+│ │ +        "cpu": "cpu",
+│ │ +        "docker_in_docker": "dockerInDocker",
+│ │ +        "image_builder": "imageBuilder",
+│ │ +        "instance_type": "instanceType",
+│ │ +        "labels": "labels",
+│ │ +        "max_instances": "maxInstances",
+│ │ +        "memory_limit_mib": "memoryLimitMiB",
+│ │ +        "min_instances": "minInstances",
+│ │ +        "security_groups": "securityGroups",
+│ │ +        "spot_max_price": "spotMaxPrice",
+│ │ +        "storage_size": "storageSize",
+│ │ +        "subnet_selection": "subnetSelection",
+│ │ +        "vpc": "vpc",
+│ │ +    },
+│ │ +)
+│ │ +class EcsRunnerProviderProps(RunnerProviderProps):
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        *,
+│ │ +        log_retention: typing.Optional[_aws_cdk_aws_logs_ceddda9d.RetentionDays] = None,
+│ │ +        retry_options: typing.Optional[typing.Union[ProviderRetryOptions, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +        assign_public_ip: typing.Optional[builtins.bool] = None,
+│ │ +        capacity_provider: typing.Optional[_aws_cdk_aws_ecs_ceddda9d.AsgCapacityProvider] = None,
+│ │ +        cluster: typing.Optional[_aws_cdk_aws_ecs_ceddda9d.Cluster] = None,
+│ │ +        cpu: typing.Optional[jsii.Number] = None,
+│ │ +        docker_in_docker: typing.Optional[builtins.bool] = None,
+│ │ +        image_builder: typing.Optional[IRunnerImageBuilder] = None,
+│ │ +        instance_type: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.InstanceType] = None,
+│ │ +        labels: typing.Optional[typing.Sequence[builtins.str]] = None,
+│ │ +        max_instances: typing.Optional[jsii.Number] = None,
+│ │ +        memory_limit_mib: typing.Optional[jsii.Number] = None,
+│ │ +        min_instances: typing.Optional[jsii.Number] = None,
+│ │ +        security_groups: typing.Optional[typing.Sequence[_aws_cdk_aws_ec2_ceddda9d.ISecurityGroup]] = None,
+│ │ +        spot_max_price: typing.Optional[builtins.str] = None,
+│ │ +        storage_size: typing.Optional[_aws_cdk_ceddda9d.Size] = None,
+│ │ +        subnet_selection: typing.Optional[typing.Union[_aws_cdk_aws_ec2_ceddda9d.SubnetSelection, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +        vpc: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.IVpc] = None,
+│ │ +    ) -> None:
+│ │ +        '''(experimental) Properties for EcsRunnerProvider.
+│ │ +
+│ │ +        :param log_retention: (experimental) The number of days log events are kept in CloudWatch Logs. When updating this property, unsetting it doesn't remove the log retention policy. To remove the retention policy, set the value to ``INFINITE``. Default: logs.RetentionDays.ONE_MONTH
+│ │ +        :param retry_options: (experimental) Options to retry operation in case of failure like missing capacity, or API quota issues. Default: retry 10 times up to about 45 minutes
+│ │ +        :param assign_public_ip: (experimental) Assign public IP to the runner task. Make sure the task will have access to GitHub. A public IP might be required unless you have NAT gateway. Default: true
+│ │ +        :param capacity_provider: (experimental) Existing capacity provider to use. Default: new capacity provider
+│ │ +        :param cluster: (experimental) Existing ECS cluster to use. Default: a new cluster
+│ │ +        :param cpu: (experimental) The number of cpu units used by the task. 1024 units is 1 vCPU. Fractions of a vCPU are supported. Default: 1024
+│ │ +        :param docker_in_docker: (experimental) Support building and running Docker images by enabling Docker-in-Docker (dind) and the required CodeBuild privileged mode. Disabling this can speed up provisioning of CodeBuild runners. If you don't intend on running or building Docker images, disable this for faster start-up times. Default: true
+│ │ +        :param image_builder: (experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements. The image builder determines the OS and architecture of the runner. Default: EcsRunnerProvider.imageBuilder()
+│ │ +        :param instance_type: (experimental) Instance type of ECS cluster instances. Only used when creating a new cluster. Default: m5.large or m6g.large
+│ │ +        :param labels: (experimental) GitHub Actions labels used for this provider. These labels are used to identify which provider should spawn a new on-demand runner. Every job sends a webhook with the labels it's looking for based on runs-on. We match the labels from the webhook with the labels specified here. If all the labels specified here are present in the job's labels, this provider will be chosen and spawn a new runner. Default: ['ecs']
+│ │ +        :param max_instances: (experimental) The maximum number of instances to run in the cluster. Only used when creating a new cluster. Default: 5
+│ │ +        :param memory_limit_mib: (experimental) The amount (in MiB) of memory used by the task. Default: 3500
+│ │ +        :param min_instances: (experimental) The minimum number of instances to run in the cluster. Only used when creating a new cluster. Default: 0
+│ │ +        :param security_groups: (experimental) Security groups to assign to the task. Default: a new security group
+│ │ +        :param spot_max_price: (experimental) Use spot capacity and set a maximum price for spot instances. Default: no spot capacity
+│ │ +        :param storage_size: (experimental) Size of volume available for launched cluster instances. This modifies the boot volume size and doesn't add any additional volumes. Each instance can be used by multiple runners, so make sure there is enough space for all of them. Default: default size for AMI (usually 30GB for Linux and 50GB for Windows)
+│ │ +        :param subnet_selection: (experimental) Subnets to run the runners in. Default: ECS default
+│ │ +        :param vpc: (experimental) VPC to launch the runners in. Default: default account VPC
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        if isinstance(retry_options, dict):
+│ │ +            retry_options = ProviderRetryOptions(**retry_options)
+│ │ +        if isinstance(subnet_selection, dict):
+│ │ +            subnet_selection = _aws_cdk_aws_ec2_ceddda9d.SubnetSelection(**subnet_selection)
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__73c1978e12dcea1bd69ce0927a80bd887d7f7d1b6573831942495e9d5966b483)
+│ │ +            check_type(argname="argument log_retention", value=log_retention, expected_type=type_hints["log_retention"])
+│ │ +            check_type(argname="argument retry_options", value=retry_options, expected_type=type_hints["retry_options"])
+│ │ +            check_type(argname="argument assign_public_ip", value=assign_public_ip, expected_type=type_hints["assign_public_ip"])
+│ │ +            check_type(argname="argument capacity_provider", value=capacity_provider, expected_type=type_hints["capacity_provider"])
+│ │ +            check_type(argname="argument cluster", value=cluster, expected_type=type_hints["cluster"])
+│ │ +            check_type(argname="argument cpu", value=cpu, expected_type=type_hints["cpu"])
+│ │ +            check_type(argname="argument docker_in_docker", value=docker_in_docker, expected_type=type_hints["docker_in_docker"])
+│ │ +            check_type(argname="argument image_builder", value=image_builder, expected_type=type_hints["image_builder"])
+│ │ +            check_type(argname="argument instance_type", value=instance_type, expected_type=type_hints["instance_type"])
+│ │ +            check_type(argname="argument labels", value=labels, expected_type=type_hints["labels"])
+│ │ +            check_type(argname="argument max_instances", value=max_instances, expected_type=type_hints["max_instances"])
+│ │ +            check_type(argname="argument memory_limit_mib", value=memory_limit_mib, expected_type=type_hints["memory_limit_mib"])
+│ │ +            check_type(argname="argument min_instances", value=min_instances, expected_type=type_hints["min_instances"])
+│ │ +            check_type(argname="argument security_groups", value=security_groups, expected_type=type_hints["security_groups"])
+│ │ +            check_type(argname="argument spot_max_price", value=spot_max_price, expected_type=type_hints["spot_max_price"])
+│ │ +            check_type(argname="argument storage_size", value=storage_size, expected_type=type_hints["storage_size"])
+│ │ +            check_type(argname="argument subnet_selection", value=subnet_selection, expected_type=type_hints["subnet_selection"])
+│ │ +            check_type(argname="argument vpc", value=vpc, expected_type=type_hints["vpc"])
+│ │ +        self._values: typing.Dict[builtins.str, typing.Any] = {}
+│ │ +        if log_retention is not None:
+│ │ +            self._values["log_retention"] = log_retention
+│ │ +        if retry_options is not None:
+│ │ +            self._values["retry_options"] = retry_options
+│ │ +        if assign_public_ip is not None:
+│ │ +            self._values["assign_public_ip"] = assign_public_ip
+│ │ +        if capacity_provider is not None:
+│ │ +            self._values["capacity_provider"] = capacity_provider
+│ │ +        if cluster is not None:
+│ │ +            self._values["cluster"] = cluster
+│ │ +        if cpu is not None:
+│ │ +            self._values["cpu"] = cpu
+│ │ +        if docker_in_docker is not None:
+│ │ +            self._values["docker_in_docker"] = docker_in_docker
+│ │ +        if image_builder is not None:
+│ │ +            self._values["image_builder"] = image_builder
+│ │ +        if instance_type is not None:
+│ │ +            self._values["instance_type"] = instance_type
+│ │ +        if labels is not None:
+│ │ +            self._values["labels"] = labels
+│ │ +        if max_instances is not None:
+│ │ +            self._values["max_instances"] = max_instances
+│ │ +        if memory_limit_mib is not None:
+│ │ +            self._values["memory_limit_mib"] = memory_limit_mib
+│ │ +        if min_instances is not None:
+│ │ +            self._values["min_instances"] = min_instances
+│ │ +        if security_groups is not None:
+│ │ +            self._values["security_groups"] = security_groups
+│ │ +        if spot_max_price is not None:
+│ │ +            self._values["spot_max_price"] = spot_max_price
+│ │ +        if storage_size is not None:
+│ │ +            self._values["storage_size"] = storage_size
+│ │ +        if subnet_selection is not None:
+│ │ +            self._values["subnet_selection"] = subnet_selection
+│ │ +        if vpc is not None:
+│ │ +            self._values["vpc"] = vpc
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def log_retention(
+│ │ +        self,
+│ │ +    ) -> typing.Optional[_aws_cdk_aws_logs_ceddda9d.RetentionDays]:
+│ │ +        '''(experimental) The number of days log events are kept in CloudWatch Logs.
+│ │ +
+│ │ +        When updating
+│ │ +        this property, unsetting it doesn't remove the log retention policy. To
+│ │ +        remove the retention policy, set the value to ``INFINITE``.
+│ │ +
+│ │ +        :default: logs.RetentionDays.ONE_MONTH
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("log_retention")
+│ │ +        return typing.cast(typing.Optional[_aws_cdk_aws_logs_ceddda9d.RetentionDays], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def retry_options(self) -> typing.Optional[ProviderRetryOptions]:
+│ │ +        '''(experimental) Options to retry operation in case of failure like missing capacity, or API quota issues.
+│ │ +
+│ │ +        :default: retry 10 times up to about 45 minutes
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("retry_options")
+│ │ +        return typing.cast(typing.Optional[ProviderRetryOptions], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def assign_public_ip(self) -> typing.Optional[builtins.bool]:
+│ │ +        '''(experimental) Assign public IP to the runner task.
+│ │ +
+│ │ +        Make sure the task will have access to GitHub. A public IP might be required unless you have NAT gateway.
+│ │ +
+│ │ +        :default: true
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("assign_public_ip")
+│ │ +        return typing.cast(typing.Optional[builtins.bool], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def capacity_provider(
+│ │ +        self,
+│ │ +    ) -> typing.Optional[_aws_cdk_aws_ecs_ceddda9d.AsgCapacityProvider]:
+│ │ +        '''(experimental) Existing capacity provider to use.
+│ │ +
+│ │ +        :default: new capacity provider
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("capacity_provider")
+│ │ +        return typing.cast(typing.Optional[_aws_cdk_aws_ecs_ceddda9d.AsgCapacityProvider], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def cluster(self) -> typing.Optional[_aws_cdk_aws_ecs_ceddda9d.Cluster]:
+│ │ +        '''(experimental) Existing ECS cluster to use.
+│ │ +
+│ │ +        :default: a new cluster
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("cluster")
+│ │ +        return typing.cast(typing.Optional[_aws_cdk_aws_ecs_ceddda9d.Cluster], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def cpu(self) -> typing.Optional[jsii.Number]:
+│ │ +        '''(experimental) The number of cpu units used by the task.
+│ │ +
+│ │ +        1024 units is 1 vCPU. Fractions of a vCPU are supported.
+│ │ +
+│ │ +        :default: 1024
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("cpu")
+│ │ +        return typing.cast(typing.Optional[jsii.Number], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def docker_in_docker(self) -> typing.Optional[builtins.bool]:
+│ │ +        '''(experimental) Support building and running Docker images by enabling Docker-in-Docker (dind) and the required CodeBuild privileged mode.
+│ │ +
+│ │ +        Disabling this can
+│ │ +        speed up provisioning of CodeBuild runners. If you don't intend on running or building Docker images, disable this for faster start-up times.
+│ │ +
+│ │ +        :default: true
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("docker_in_docker")
+│ │ +        return typing.cast(typing.Optional[builtins.bool], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def image_builder(self) -> typing.Optional[IRunnerImageBuilder]:
+│ │ +        '''(experimental) Runner image builder used to build Docker images containing GitHub Runner and all requirements.
+│ │ +
+│ │ +        The image builder determines the OS and architecture of the runner.
+│ │ +
+│ │ +        :default: EcsRunnerProvider.imageBuilder()
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("image_builder")
+│ │ +        return typing.cast(typing.Optional[IRunnerImageBuilder], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def instance_type(self) -> typing.Optional[_aws_cdk_aws_ec2_ceddda9d.InstanceType]:
+│ │ +        '''(experimental) Instance type of ECS cluster instances.
+│ │ +
+│ │ +        Only used when creating a new cluster.
+│ │ +
+│ │ +        :default: m5.large or m6g.large
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("instance_type")
+│ │ +        return typing.cast(typing.Optional[_aws_cdk_aws_ec2_ceddda9d.InstanceType], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def labels(self) -> typing.Optional[typing.List[builtins.str]]:
+│ │ +        '''(experimental) GitHub Actions labels used for this provider.
+│ │ +
+│ │ +        These labels are used to identify which provider should spawn a new on-demand runner. Every job sends a webhook with the labels it's looking for
+│ │ +        based on runs-on. We match the labels from the webhook with the labels specified here. If all the labels specified here are present in the
+│ │ +        job's labels, this provider will be chosen and spawn a new runner.
+│ │ +
+│ │ +        :default: ['ecs']
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("labels")
+│ │ +        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def max_instances(self) -> typing.Optional[jsii.Number]:
+│ │ +        '''(experimental) The maximum number of instances to run in the cluster.
+│ │ +
+│ │ +        Only used when creating a new cluster.
+│ │ +
+│ │ +        :default: 5
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("max_instances")
+│ │ +        return typing.cast(typing.Optional[jsii.Number], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def memory_limit_mib(self) -> typing.Optional[jsii.Number]:
+│ │ +        '''(experimental) The amount (in MiB) of memory used by the task.
+│ │ +
+│ │ +        :default: 3500
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("memory_limit_mib")
+│ │ +        return typing.cast(typing.Optional[jsii.Number], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def min_instances(self) -> typing.Optional[jsii.Number]:
+│ │ +        '''(experimental) The minimum number of instances to run in the cluster.
+│ │ +
+│ │ +        Only used when creating a new cluster.
+│ │ +
+│ │ +        :default: 0
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("min_instances")
+│ │ +        return typing.cast(typing.Optional[jsii.Number], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def security_groups(
+│ │ +        self,
+│ │ +    ) -> typing.Optional[typing.List[_aws_cdk_aws_ec2_ceddda9d.ISecurityGroup]]:
+│ │ +        '''(experimental) Security groups to assign to the task.
+│ │ +
+│ │ +        :default: a new security group
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("security_groups")
+│ │ +        return typing.cast(typing.Optional[typing.List[_aws_cdk_aws_ec2_ceddda9d.ISecurityGroup]], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def spot_max_price(self) -> typing.Optional[builtins.str]:
+│ │ +        '''(experimental) Use spot capacity and set a maximum price for spot instances.
+│ │ +
+│ │ +        :default: no spot capacity
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("spot_max_price")
+│ │ +        return typing.cast(typing.Optional[builtins.str], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def storage_size(self) -> typing.Optional[_aws_cdk_ceddda9d.Size]:
+│ │ +        '''(experimental) Size of volume available for launched cluster instances.
+│ │ +
+│ │ +        This modifies the boot volume size and doesn't add any additional volumes.
+│ │ +
+│ │ +        Each instance can be used by multiple runners, so make sure there is enough space for all of them.
+│ │ +
+│ │ +        :default: default size for AMI (usually 30GB for Linux and 50GB for Windows)
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("storage_size")
+│ │ +        return typing.cast(typing.Optional[_aws_cdk_ceddda9d.Size], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def subnet_selection(
+│ │ +        self,
+│ │ +    ) -> typing.Optional[_aws_cdk_aws_ec2_ceddda9d.SubnetSelection]:
+│ │ +        '''(experimental) Subnets to run the runners in.
+│ │ +
+│ │ +        :default: ECS default
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("subnet_selection")
+│ │ +        return typing.cast(typing.Optional[_aws_cdk_aws_ec2_ceddda9d.SubnetSelection], result)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def vpc(self) -> typing.Optional[_aws_cdk_aws_ec2_ceddda9d.IVpc]:
+│ │ +        '''(experimental) VPC to launch the runners in.
+│ │ +
+│ │ +        :default: default account VPC
+│ │ +
+│ │ +        :stability: experimental
+│ │ +        '''
+│ │ +        result = self._values.get("vpc")
+│ │ +        return typing.cast(typing.Optional[_aws_cdk_aws_ec2_ceddda9d.IVpc], result)
+│ │ +
+│ │ +    def __eq__(self, rhs: typing.Any) -> builtins.bool:
+│ │ +        return isinstance(rhs, self.__class__) and rhs._values == self._values
+│ │ +
+│ │ +    def __ne__(self, rhs: typing.Any) -> builtins.bool:
+│ │ +        return not (rhs == self)
+│ │ +
+│ │ +    def __repr__(self) -> str:
+│ │ +        return "EcsRunnerProviderProps(%s)" % ", ".join(
+│ │ +            k + "=" + repr(v) for k, v in self._values.items()
+│ │ +        )
+│ │ +
+│ │ +
+│ │ +@jsii.implements(IRunnerProvider)
+│ │  class FargateRunnerProvider(
+│ │      _constructs_77d1e7e8.Construct,
+│ │      metaclass=jsii.JSIIMeta,
+│ │      jsii_type="@cloudsnorkel/cdk-github-runners.FargateRunnerProvider",
+│ │  ):
+│ │      '''(experimental) GitHub Actions runner provider using Fargate to execute jobs.
+│ │  
+│ │ @@ -9033,14 +9725,16 @@
+│ │      "CodeBuildRunnerProvider",
+│ │      "CodeBuildRunnerProviderProps",
+│ │      "ContainerImageBuilder",
+│ │      "ContainerImageBuilderProps",
+│ │      "Ec2Runner",
+│ │      "Ec2RunnerProvider",
+│ │      "Ec2RunnerProviderProps",
+│ │ +    "EcsRunnerProvider",
+│ │ +    "EcsRunnerProviderProps",
+│ │      "FargateRunner",
+│ │      "FargateRunnerProvider",
+│ │      "FargateRunnerProviderProps",
+│ │      "GitHubRunners",
+│ │      "GitHubRunnersProps",
+│ │      "IRunnerAmiStatus",
+│ │      "IRunnerImageBuilder",
+│ │ @@ -10103,14 +10797,114 @@
+│ │      subnet: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.ISubnet] = None,
+│ │      subnet_selection: typing.Optional[typing.Union[_aws_cdk_aws_ec2_ceddda9d.SubnetSelection, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │      vpc: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.IVpc] = None,
+│ │  ) -> None:
+│ │      """Type checking stubs"""
+│ │      pass
+│ │  
+│ │ +def _typecheckingstub__c520325dd0289bf8c6670ecdce77df4b229a0a2681957e61665818d2fe7383a4(
+│ │ +    scope: _constructs_77d1e7e8.Construct,
+│ │ +    id: builtins.str,
+│ │ +    *,
+│ │ +    assign_public_ip: typing.Optional[builtins.bool] = None,
+│ │ +    capacity_provider: typing.Optional[_aws_cdk_aws_ecs_ceddda9d.AsgCapacityProvider] = None,
+│ │ +    cluster: typing.Optional[_aws_cdk_aws_ecs_ceddda9d.Cluster] = None,
+│ │ +    cpu: typing.Optional[jsii.Number] = None,
+│ │ +    docker_in_docker: typing.Optional[builtins.bool] = None,
+│ │ +    image_builder: typing.Optional[IRunnerImageBuilder] = None,
+│ │ +    instance_type: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.InstanceType] = None,
+│ │ +    labels: typing.Optional[typing.Sequence[builtins.str]] = None,
+│ │ +    max_instances: typing.Optional[jsii.Number] = None,
+│ │ +    memory_limit_mib: typing.Optional[jsii.Number] = None,
+│ │ +    min_instances: typing.Optional[jsii.Number] = None,
+│ │ +    security_groups: typing.Optional[typing.Sequence[_aws_cdk_aws_ec2_ceddda9d.ISecurityGroup]] = None,
+│ │ +    spot_max_price: typing.Optional[builtins.str] = None,
+│ │ +    storage_size: typing.Optional[_aws_cdk_ceddda9d.Size] = None,
+│ │ +    subnet_selection: typing.Optional[typing.Union[_aws_cdk_aws_ec2_ceddda9d.SubnetSelection, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +    vpc: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.IVpc] = None,
+│ │ +    log_retention: typing.Optional[_aws_cdk_aws_logs_ceddda9d.RetentionDays] = None,
+│ │ +    retry_options: typing.Optional[typing.Union[ProviderRetryOptions, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │ +def _typecheckingstub__7b459d87ca6935e6c04ff03be02ed821eef81dbc792be822f356697f6c0f0b82(
+│ │ +    scope: _constructs_77d1e7e8.Construct,
+│ │ +    id: builtins.str,
+│ │ +    *,
+│ │ +    architecture: typing.Optional[Architecture] = None,
+│ │ +    aws_image_builder_options: typing.Optional[typing.Union[AwsImageBuilderRunnerImageBuilderProps, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +    base_ami: typing.Optional[builtins.str] = None,
+│ │ +    base_docker_image: typing.Optional[builtins.str] = None,
+│ │ +    builder_type: typing.Optional[RunnerImageBuilderType] = None,
+│ │ +    code_build_options: typing.Optional[typing.Union[CodeBuildRunnerImageBuilderProps, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +    components: typing.Optional[typing.Sequence[RunnerImageComponent]] = None,
+│ │ +    log_removal_policy: typing.Optional[_aws_cdk_ceddda9d.RemovalPolicy] = None,
+│ │ +    log_retention: typing.Optional[_aws_cdk_aws_logs_ceddda9d.RetentionDays] = None,
+│ │ +    os: typing.Optional[Os] = None,
+│ │ +    rebuild_interval: typing.Optional[_aws_cdk_ceddda9d.Duration] = None,
+│ │ +    runner_version: typing.Optional[RunnerVersion] = None,
+│ │ +    security_groups: typing.Optional[typing.Sequence[_aws_cdk_aws_ec2_ceddda9d.ISecurityGroup]] = None,
+│ │ +    subnet_selection: typing.Optional[typing.Union[_aws_cdk_aws_ec2_ceddda9d.SubnetSelection, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +    vpc: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.IVpc] = None,
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │ +def _typecheckingstub__8ae65c8ddf6460d5233d31505aed1efb3bc2bd158612ace80b099a23ce5ab1d8(
+│ │ +    task: typing.Union[_aws_cdk_aws_stepfunctions_ceddda9d.TaskStateBase, _aws_cdk_aws_stepfunctions_ceddda9d.Parallel],
+│ │ +    errors: typing.Sequence[builtins.str],
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │ +def _typecheckingstub__529bdb7d6d31e3b7edbde6a9d1b6e8f5c461be3e551b7b08c3918cc923b785b8(
+│ │ +    _: _aws_cdk_aws_iam_ceddda9d.IGrantable,
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │ +def _typecheckingstub__f11d9c08955d770e27a043bd6b78d344029c8cbc3a22fca4138c21afe6b8ca4a(
+│ │ +    default_label: builtins.str,
+│ │ +    props_label: typing.Optional[builtins.str] = None,
+│ │ +    props_labels: typing.Optional[typing.Sequence[builtins.str]] = None,
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │ +def _typecheckingstub__e7ecb1269ac1102589a8eb3fdd808b1c194dffc5acfa36b649506b72c0797c12(
+│ │ +    status_function_role: _aws_cdk_aws_iam_ceddda9d.IGrantable,
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │ +def _typecheckingstub__73c1978e12dcea1bd69ce0927a80bd887d7f7d1b6573831942495e9d5966b483(
+│ │ +    *,
+│ │ +    log_retention: typing.Optional[_aws_cdk_aws_logs_ceddda9d.RetentionDays] = None,
+│ │ +    retry_options: typing.Optional[typing.Union[ProviderRetryOptions, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +    assign_public_ip: typing.Optional[builtins.bool] = None,
+│ │ +    capacity_provider: typing.Optional[_aws_cdk_aws_ecs_ceddda9d.AsgCapacityProvider] = None,
+│ │ +    cluster: typing.Optional[_aws_cdk_aws_ecs_ceddda9d.Cluster] = None,
+│ │ +    cpu: typing.Optional[jsii.Number] = None,
+│ │ +    docker_in_docker: typing.Optional[builtins.bool] = None,
+│ │ +    image_builder: typing.Optional[IRunnerImageBuilder] = None,
+│ │ +    instance_type: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.InstanceType] = None,
+│ │ +    labels: typing.Optional[typing.Sequence[builtins.str]] = None,
+│ │ +    max_instances: typing.Optional[jsii.Number] = None,
+│ │ +    memory_limit_mib: typing.Optional[jsii.Number] = None,
+│ │ +    min_instances: typing.Optional[jsii.Number] = None,
+│ │ +    security_groups: typing.Optional[typing.Sequence[_aws_cdk_aws_ec2_ceddda9d.ISecurityGroup]] = None,
+│ │ +    spot_max_price: typing.Optional[builtins.str] = None,
+│ │ +    storage_size: typing.Optional[_aws_cdk_ceddda9d.Size] = None,
+│ │ +    subnet_selection: typing.Optional[typing.Union[_aws_cdk_aws_ec2_ceddda9d.SubnetSelection, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +    vpc: typing.Optional[_aws_cdk_aws_ec2_ceddda9d.IVpc] = None,
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │  def _typecheckingstub__f7098876c10584a4cc58e16d23fd86ffe1fc50f2b55ca60549136d05135c4dab(
+│ │      scope: _constructs_77d1e7e8.Construct,
+│ │      id: builtins.str,
+│ │      *,
+│ │      assign_public_ip: typing.Optional[builtins.bool] = None,
+│ │      cluster: typing.Optional[_aws_cdk_aws_ecs_ceddda9d.Cluster] = None,
+│ │      cpu: typing.Optional[jsii.Number] = None,
+│ │   --- cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel.cdk_github_runners.egg-info/PKG-INFO
+│ ├── +++ cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel.cdk_github_runners.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: cloudsnorkel.cdk-github-runners
+│ │ -Version: 0.9.2
+│ │ +Version: 0.9.3
+│ │  Summary: CDK construct to create GitHub Actions self-hosted runners. A webhook listens to events and creates ephemeral runners on the fly.
+│ │  Home-page: https://github.com/CloudSnorkel/cdk-github-runners.git
+│ │  Author: Amir Szekely<amir@cloudsnorkel.com>
+│ │  License: Apache-2.0
+│ │  Project-URL: Source, https://github.com/CloudSnorkel/cdk-github-runners.git
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- cloudsnorkel.cdk-github-runners-0.9.2/src/cloudsnorkel.cdk_github_runners.egg-info/SOURCES.txt
+│ ├── +++ cloudsnorkel.cdk-github-runners-0.9.3/src/cloudsnorkel.cdk_github_runners.egg-info/SOURCES.txt
+│ │┄ Files 1% similar despite different names
+│ │ @@ -7,8 +7,8 @@
+│ │  src/cloudsnorkel.cdk_github_runners.egg-info/SOURCES.txt
+│ │  src/cloudsnorkel.cdk_github_runners.egg-info/dependency_links.txt
+│ │  src/cloudsnorkel.cdk_github_runners.egg-info/requires.txt
+│ │  src/cloudsnorkel.cdk_github_runners.egg-info/top_level.txt
+│ │  src/cloudsnorkel/cdk_github_runners/__init__.py
+│ │  src/cloudsnorkel/cdk_github_runners/py.typed
+│ │  src/cloudsnorkel/cdk_github_runners/_jsii/__init__.py
+│ │ -src/cloudsnorkel/cdk_github_runners/_jsii/cdk-github-runners@0.9.2.jsii.tgz
+│ │ +src/cloudsnorkel/cdk_github_runners/_jsii/cdk-github-runners@0.9.3.jsii.tgz
