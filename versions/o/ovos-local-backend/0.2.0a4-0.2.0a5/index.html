@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/ovos_local_backend-0.2.0a4-py3-none-any.whl.zip tmp/ovos_local_backend-0.2.0a5-py3-none-any.whl.zip --html versions/o/ovos-local-backend/0.2.0a4-0.2.0a5/index.html --text versions/o/ovos-local-backend/0.2.0a4-0.2.0a5/diff.txt --markdown versions/o/ovos-local-backend/0.2.0a4-0.2.0a5/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">9.42 KB</span></div>
+  <div><span class="source">tmp/ovos_local_backend-0.2.0a4-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/ovos_local_backend-0.2.0a5-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">4.6 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 26 lines modified</td><td colspan="2">Offset 1, 26 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>3367<del>1</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>24</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>3367<ins>0</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>24</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>555<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/__main__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>555<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9116<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/configuration.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9116<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/configuration.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>34008<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/database.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>34008<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/database.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>103<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/session.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>103<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/session.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>177<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/version.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>177<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2102<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/backend/__init__.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2102<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/backend/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2211<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/backend/admin.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2211<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/backend/admin.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4482<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/backend/auth.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4482<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/backend/auth.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13756<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/backend/crud.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13756<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/backend/crud.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3401<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/backend/decorators.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3401<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/backend/decorators.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7977<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/backend/device.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7977<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/backend/device.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4841<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/backend/external_apis.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4841<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/backend/external_apis.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2276<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/backend/precise.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2276<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/backend/precise.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2112<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/backend/stt.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2112<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/backend/stt.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9823<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/utils/__init__.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9823<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/utils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6208<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/utils/geolocate.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6208<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/utils/geolocate.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1020<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend/utils/mail.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1020<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend/utils/mail.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11349<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend-0.2.0a<del>4</del>.dist-info/LICENSE</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11349<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>689<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend-0.2.0a<del>4</del>.dist-info/METADATA</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>689<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend-0.2.0a<del>4</del>.dist-info/WHEEL</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>73<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend-0.2.0a<del>4</del>.dist-info/entry_points.txt</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>73<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend-0.2.0a<del>4</del>.dist-info/top_level.txt</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2200<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<del>5</del><span class="dp">·</span>ovos_local_backend-0.2.0a<del>4</del>.dist-info/RECORD</td><td class="diffline">25 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2200<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>02:4<ins>9</ins><span class="dp">·</span>ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">24<span class="dp">·</span>files,<span class="dp">·</span>118643<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>3003<del>5</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>74.7%</td><td class="diffline">26 </td><td class="diffpresent">24<span class="dp">·</span>files,<span class="dp">·</span>118643<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>3003<ins>4</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>74.7%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">957 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 48, 26 lines modified</td><td colspan="2">Offset 48, 26 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend/utils/geolocate.py</td><td class="diffline">48 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend/utils/geolocate.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">49 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend/utils/mail.py</td><td class="diffline">50 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend/utils/mail.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">51 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend-0.2.0a<del>4</del>.dist-info/LICENSE</td><td class="diffline">52 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">53 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">54 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend-0.2.0a<del>4</del>.dist-info/METADATA</td><td class="diffline">54 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">55 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">56 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend-0.2.0a<del>4</del>.dist-info/WHEEL</td><td class="diffline">56 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">57 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">58 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend-0.2.0a<del>4</del>.dist-info/entry_points.txt</td><td class="diffline">58 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/entry_points.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">59 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">60 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend-0.2.0a<del>4</del>.dist-info/top_level.txt</td><td class="diffline">60 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">61 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">62 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend-0.2.0a<del>4</del>.dist-info/RECORD</td><td class="diffline">62 </td><td class="diffpresent">Filename:<span class="dp">·</span>ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">63 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">64 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">277 B</span></div>
+    <div id="ovos_local_backend-version.py"><span class="source">ovos_local_backend/version.py</span>
+      <a class="anchor" href="#ovos_local_backend-version.py">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 7 lines modified</td><td colspan="2">Offset 1, 7 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>The<span class="dp">·</span>following<span class="dp">·</span>lines<span class="dp">·</span>are<span class="dp">·</span>replaced<span class="dp">·</span>during<span class="dp">·</span>the<span class="dp">·</span>release<span class="dp">·</span>process.</td><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>The<span class="dp">·</span>following<span class="dp">·</span>lines<span class="dp">·</span>are<span class="dp">·</span>replaced<span class="dp">·</span>during<span class="dp">·</span>the<span class="dp">·</span>release<span class="dp">·</span>process.</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">#<span class="dp">·</span>START_VERSION_BLOCK</td><td class="diffline">2 </td><td class="diffpresent">#<span class="dp">·</span>START_VERSION_BLOCK</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">VERSION_MAJOR<span class="dp">·</span>=<span class="dp">·</span>0</td><td class="diffline">3 </td><td class="diffpresent">VERSION_MAJOR<span class="dp">·</span>=<span class="dp">·</span>0</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">VERSION_MINOR<span class="dp">·</span>=<span class="dp">·</span>2</td><td class="diffline">4 </td><td class="diffpresent">VERSION_MINOR<span class="dp">·</span>=<span class="dp">·</span>2</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">VERSION_BUILD<span class="dp">·</span>=<span class="dp">·</span>0</td><td class="diffline">5 </td><td class="diffpresent">VERSION_BUILD<span class="dp">·</span>=<span class="dp">·</span>0</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">VERSION_ALPHA<span class="dp">·</span>=<span class="dp">·</span><del>4</del></td><td class="diffline">6 </td><td class="diffpresent">VERSION_ALPHA<span class="dp">·</span>=<span class="dp">·</span><ins>5</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">#<span class="dp">·</span>END_VERSION_BLOCK</td><td class="diffline">7 </td><td class="diffpresent">#<span class="dp">·</span>END_VERSION_BLOCK</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">127 B</span></div>
+    <div><span class="source">ovos_local_backend-0.2.0a4.dist-info/LICENSE</span> vs.</div>
+    <div id="ovos_local_backend--.-.-a-.dist-info-LICENSE"><span class="source">ovos_local_backend-0.2.0a5.dist-info/LICENSE</span>
+      <a class="anchor" href="#ovos_local_backend--.-.-a-.dist-info-LICENSE">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">453 B</span></div>
+    <div><span class="source">ovos_local_backend-0.2.0a4.dist-info/METADATA</span> vs.</div>
+    <div id="ovos_local_backend--.-.-a-.dist-info-METADATA"><span class="source">ovos_local_backend-0.2.0a5.dist-info/METADATA</span>
+      <a class="anchor" href="#ovos_local_backend--.-.-a-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 0% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>ovos-local-backend</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>ovos-local-backend</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.2.0a<del>4</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.2.0a<ins>5</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>mock<span class="dp">·</span>mycroft<span class="dp">·</span>backend</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>mock<span class="dp">·</span>mycroft<span class="dp">·</span>backend</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OpenVoiceOS/OVOS-local-backend</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OpenVoiceOS/OVOS-local-backend</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>jarbasAI</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>jarbasAI</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>jarbasai@mailfence.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>jarbasai@mailfence.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache-2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache-2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>Flask<span class="dp">·</span>(&gt;=0.12)</td><td class="diffline">10 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>Flask<span class="dp">·</span>(&gt;=0.12)</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">2.95 KB</span></div>
+    <div><span class="source">ovos_local_backend-0.2.0a4.dist-info/RECORD</span> vs.</div>
+    <div id="ovos_local_backend--.-.-a-.dist-info-RECORD"><span class="source">ovos_local_backend-0.2.0a5.dist-info/RECORD</span>
+      <a class="anchor" href="#ovos_local_backend--.-.-a-.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 10% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 24 lines modified</td><td colspan="2">Offset 1, 24 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">ovos_local_backend/__init__.py,sha256=YMbBqDky5TUJdq4mx2Phaq6Vzx2Hd-bIf1YTTFSPxOA,53</td><td class="diffline">1 </td><td class="diffpresent">ovos_local_backend/__init__.py,sha256=YMbBqDky5TUJdq4mx2Phaq6Vzx2Hd-bIf1YTTFSPxOA,53</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">ovos_local_backend/__main__.py,sha256=FaCVoPxLlHy_IAfpIqpe8MVpu3HbyP5Xk0hA5-r-Wxo,555</td><td class="diffline">2 </td><td class="diffpresent">ovos_local_backend/__main__.py,sha256=FaCVoPxLlHy_IAfpIqpe8MVpu3HbyP5Xk0hA5-r-Wxo,555</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">ovos_local_backend/configuration.py,sha256=oYkIwhO1lySY1OOcHieA5QBzKyRuxSYOTgH0lr9RHWA,9116</td><td class="diffline">3 </td><td class="diffpresent">ovos_local_backend/configuration.py,sha256=oYkIwhO1lySY1OOcHieA5QBzKyRuxSYOTgH0lr9RHWA,9116</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">ovos_local_backend/database.py,sha256=1HkWjDuFQwGkEPeAVMEOUxRiQwTpPTnSI8VirqWyNG0,34008</td><td class="diffline">4 </td><td class="diffpresent">ovos_local_backend/database.py,sha256=1HkWjDuFQwGkEPeAVMEOUxRiQwTpPTnSI8VirqWyNG0,34008</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">ovos_local_backend/session.py,sha256=5--wfP8Vu0njYU90S_hJoyr4SnnRrG_w-bmpOO9_1hw,103</td><td class="diffline">5 </td><td class="diffpresent">ovos_local_backend/session.py,sha256=5--wfP8Vu0njYU90S_hJoyr4SnnRrG_w-bmpOO9_1hw,103</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">ovos_local_backend/version.py,sha256=<del>O</del><del>5aGdPTYAx55QJfiZ6cwYCf3U8</del>1<del>4QHbAPp7</del>e<del>0y1jY-4</del>,177</td><td class="diffline">6 </td><td class="diffpresent">ovos_local_backend/version.py,sha256=<ins>NymOxG0ODFSXncg8GOOSTSF9h</ins>1<ins>T1jTygNf</ins>e<ins>o</ins><ins>pwZnNG8</ins>,177</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">ovos_local_backend/backend/__init__.py,sha256=ZN4jJ4El_w--VNqRbEAT6l2EteDP3aT60tKdpUdF5GM,2102</td><td class="diffline">7 </td><td class="diffpresent">ovos_local_backend/backend/__init__.py,sha256=ZN4jJ4El_w--VNqRbEAT6l2EteDP3aT60tKdpUdF5GM,2102</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">ovos_local_backend/backend/admin.py,sha256=e3F-NDA08R9TB0orhbGe8pV50wEWF5T2gaeYH9fO0xM,2211</td><td class="diffline">8 </td><td class="diffpresent">ovos_local_backend/backend/admin.py,sha256=e3F-NDA08R9TB0orhbGe8pV50wEWF5T2gaeYH9fO0xM,2211</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">ovos_local_backend/backend/auth.py,sha256=8pm_SEQ-O_qJoykpRPf4e-Cq_dChNV_cGcFBWs9uEZs,4482</td><td class="diffline">9 </td><td class="diffpresent">ovos_local_backend/backend/auth.py,sha256=8pm_SEQ-O_qJoykpRPf4e-Cq_dChNV_cGcFBWs9uEZs,4482</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">ovos_local_backend/backend/crud.py,sha256=TiHARC3lEHwR0KHvele7Ph7xQ6uEr2EnMS3JTWEyzwc,13756</td><td class="diffline">10 </td><td class="diffpresent">ovos_local_backend/backend/crud.py,sha256=TiHARC3lEHwR0KHvele7Ph7xQ6uEr2EnMS3JTWEyzwc,13756</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">ovos_local_backend/backend/decorators.py,sha256=sMkOXpywkn2uWUrYEQmxjI1uZvXlGTu8DdBvoeGAVf4,3401</td><td class="diffline">11 </td><td class="diffpresent">ovos_local_backend/backend/decorators.py,sha256=sMkOXpywkn2uWUrYEQmxjI1uZvXlGTu8DdBvoeGAVf4,3401</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">ovos_local_backend/backend/device.py,sha256=xBPKy2_5pPyzCxeXCewDptN0X8UAWFy_N4lJaJff_RA,7977</td><td class="diffline">12 </td><td class="diffpresent">ovos_local_backend/backend/device.py,sha256=xBPKy2_5pPyzCxeXCewDptN0X8UAWFy_N4lJaJff_RA,7977</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">ovos_local_backend/backend/external_apis.py,sha256=h5vdGDNm5_vmcOjZak7m0XnFtM8zRf304x1K-byk-OU,4841</td><td class="diffline">13 </td><td class="diffpresent">ovos_local_backend/backend/external_apis.py,sha256=h5vdGDNm5_vmcOjZak7m0XnFtM8zRf304x1K-byk-OU,4841</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">ovos_local_backend/backend/precise.py,sha256=TdZo9ZYgZJJX_xqYuE5h83sT0iM3Mo9bwfAEGvOuMnE,2276</td><td class="diffline">14 </td><td class="diffpresent">ovos_local_backend/backend/precise.py,sha256=TdZo9ZYgZJJX_xqYuE5h83sT0iM3Mo9bwfAEGvOuMnE,2276</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">ovos_local_backend/backend/stt.py,sha256=DcEuc4zRsFcZOUPTvBkBQ0WtAG8_I89KCp2grlrgxho,2112</td><td class="diffline">15 </td><td class="diffpresent">ovos_local_backend/backend/stt.py,sha256=DcEuc4zRsFcZOUPTvBkBQ0WtAG8_I89KCp2grlrgxho,2112</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">ovos_local_backend/utils/__init__.py,sha256=4kIoEpAuUCbFPhgUu_6bO3z-OaprGDjRa-o81BYIeTs,9823</td><td class="diffline">16 </td><td class="diffpresent">ovos_local_backend/utils/__init__.py,sha256=4kIoEpAuUCbFPhgUu_6bO3z-OaprGDjRa-o81BYIeTs,9823</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">ovos_local_backend/utils/geolocate.py,sha256=OfrF6qDjH5kcAQmvFY5yFNXZoTD5Cbv0ugfUZ0s9Wj8,6208</td><td class="diffline">17 </td><td class="diffpresent">ovos_local_backend/utils/geolocate.py,sha256=OfrF6qDjH5kcAQmvFY5yFNXZoTD5Cbv0ugfUZ0s9Wj8,6208</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">ovos_local_backend/utils/mail.py,sha256=OXc3cvKRmQ3t0COmSdtkZYGQydnrzxvwngahfqrNg7s,1020</td><td class="diffline">18 </td><td class="diffpresent">ovos_local_backend/utils/mail.py,sha256=OXc3cvKRmQ3t0COmSdtkZYGQydnrzxvwngahfqrNg7s,1020</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">ovos_local_backend-0.2.0a<del>4</del>.dist-info/LICENSE,sha256=fYHkowW9JcaEcqCPTXYBayNJ9J1lGdYVb7Mf9oy6oEY,11349</td><td class="diffline">19 </td><td class="diffpresent">ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/LICENSE,sha256=fYHkowW9JcaEcqCPTXYBayNJ9J1lGdYVb7Mf9oy6oEY,11349</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">ovos_local_backend-0.2.0a<del>4</del>.dist-info/METADATA,sha256=<del>t</del><del>DBzChiWRXw3wgJlHR3</del>W<del>rI5WtNDPWW7aeC-kK_s5L</del>x<del>A</del>,689</td><td class="diffline">20 </td><td class="diffpresent">ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/METADATA,sha256=<ins>Qo8sHVyxrpCxCNn8P0</ins>W<ins>vMHeQVrWU1LsDLpigTVeO</ins>x<ins>E</ins><ins>0</ins>,689</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">ovos_local_backend-0.2.0a<del>4</del>.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92</td><td class="diffline">21 </td><td class="diffpresent">ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">ovos_local_backend-0.2.0a<del>4</del>.dist-info/entry_points.txt,sha256=0EEK_6ggH1Jn8ShRNLQSNGS8ZnLz9j3uyc2Z0ezJF0c,73</td><td class="diffline">22 </td><td class="diffpresent">ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/entry_points.txt,sha256=0EEK_6ggH1Jn8ShRNLQSNGS8ZnLz9j3uyc2Z0ezJF0c,73</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">ovos_local_backend-0.2.0a<del>4</del>.dist-info/top_level.txt,sha256=wzhQzBnq6wL0_UNQ2JBeakplDf_Mv-e7qBaZ7TR2Rlk,19</td><td class="diffline">23 </td><td class="diffpresent">ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/top_level.txt,sha256=wzhQzBnq6wL0_UNQ2JBeakplDf_Mv-e7qBaZ7TR2Rlk,19</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">ovos_local_backend-0.2.0a<del>4</del>.dist-info/RECORD,,</td><td class="diffline">24 </td><td class="diffpresent">ovos_local_backend-0.2.0a<ins>5</ins>.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

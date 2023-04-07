@@ -1,0 +1,185 @@
+# Comparing `tmp/phycv-1.2.4-py3-none-any.whl.zip` & `tmp/phycv-1.2.5-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,15 +1,15 @@
+-Zip file size: 15184 bytes, number of entries: 13
+--rw-rw-r--  2.0 unx      153 b- defN 23-Mar-21 18:19 phycv/__init__.py
+--rw-rw-r--  2.0 unx     7133 b- defN 23-Mar-21 18:19 phycv/page.py
+--rw-rw-r--  2.0 unx     9071 b- defN 23-Mar-21 18:19 phycv/page_gpu.py
+--rw-rw-r--  2.0 unx     3892 b- defN 23-Mar-21 18:19 phycv/pst.py
+--rw-rw-r--  2.0 unx     5945 b- defN 23-Mar-21 18:19 phycv/pst_gpu.py
+--rw-rw-r--  2.0 unx     4712 b- defN 23-Mar-21 18:19 phycv/utils.py
+--rw-rw-r--  2.0 unx     4404 b- defN 23-Mar-21 18:19 phycv/vevid.py
+--rw-rw-r--  2.0 unx     5558 b- defN 23-Mar-21 18:19 phycv/vevid_gpu.py
+--rw-rw-r--  2.0 unx     1954 b- defN 23-Mar-21 18:21 phycv-1.2.4.dist-info/LICENSE
+--rw-rw-r--  2.0 unx     2643 b- defN 23-Mar-21 18:21 phycv-1.2.4.dist-info/METADATA
+--rw-rw-r--  2.0 unx       92 b- defN 23-Mar-21 18:21 phycv-1.2.4.dist-info/WHEEL
+--rw-rw-r--  2.0 unx        6 b- defN 23-Mar-21 18:21 phycv-1.2.4.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx      951 b- defN 23-Mar-21 18:21 phycv-1.2.4.dist-info/RECORD
+-13 files, 46514 bytes uncompressed, 13634 bytes compressed:  70.7%
++Zip file size: 14993 bytes, number of entries: 13
++-rw-rw-r--  2.0 unx      153 b- defN 23-Apr-07 02:41 phycv/__init__.py
++-rw-rw-r--  2.0 unx     7133 b- defN 23-Apr-07 02:41 phycv/page.py
++-rw-rw-r--  2.0 unx     9071 b- defN 23-Apr-07 02:41 phycv/page_gpu.py
++-rw-rw-r--  2.0 unx     3888 b- defN 23-Apr-07 02:41 phycv/pst.py
++-rw-rw-r--  2.0 unx     5945 b- defN 23-Apr-07 02:41 phycv/pst_gpu.py
++-rw-rw-r--  2.0 unx     4712 b- defN 23-Apr-07 02:41 phycv/utils.py
++-rw-rw-r--  2.0 unx     4404 b- defN 23-Apr-07 02:41 phycv/vevid.py
++-rw-rw-r--  2.0 unx     5558 b- defN 23-Apr-07 02:41 phycv/vevid_gpu.py
++-rw-rw-r--  2.0 unx     1954 b- defN 23-Apr-07 02:43 phycv-1.2.5.dist-info/LICENSE
++-rw-rw-r--  2.0 unx     2279 b- defN 23-Apr-07 02:43 phycv-1.2.5.dist-info/METADATA
++-rw-rw-r--  2.0 unx       92 b- defN 23-Apr-07 02:43 phycv-1.2.5.dist-info/WHEEL
++-rw-rw-r--  2.0 unx        6 b- defN 23-Apr-07 02:43 phycv-1.2.5.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx      951 b- defN 23-Apr-07 02:43 phycv-1.2.5.dist-info/RECORD
++13 files, 46146 bytes uncompressed, 13443 bytes compressed:  70.9%
+```
+
+## zipnote {}
+
+```diff
+@@ -18,23 +18,23 @@
+ 
+ Filename: phycv/vevid.py
+ Comment: 
+ 
+ Filename: phycv/vevid_gpu.py
+ Comment: 
+ 
+-Filename: phycv-1.2.4.dist-info/LICENSE
++Filename: phycv-1.2.5.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: phycv-1.2.4.dist-info/METADATA
++Filename: phycv-1.2.5.dist-info/METADATA
+ Comment: 
+ 
+-Filename: phycv-1.2.4.dist-info/WHEEL
++Filename: phycv-1.2.5.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: phycv-1.2.4.dist-info/top_level.txt
++Filename: phycv-1.2.5.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: phycv-1.2.4.dist-info/RECORD
++Filename: phycv-1.2.5.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## phycv/pst.py
+
+```diff
+@@ -21,16 +21,16 @@
+ 
+         Args:
+             img_file (str, optional): path to the image. Defaults to None.
+             img_array (np.ndarray, optional): image in the form of np.ndarray. Defaults to None.
+         """
+         if img_array is not None:
+             self.img = img_array
+-            self.img = img_array.shape[0]
+-            self.img = img_array.shape[1]
++            self.h = img_array.shape[0]
++            self.w = img_array.shape[1]
+         else:
+             self.img = cv2.imread(img_file)
+             if not self.h and not self.w:
+                 self.h = self.img.shape[0]
+                 self.w = self.img.shape[1]
+             else:
+                 self.img = cv2.imresize(self.img, [self.h, self.w])
+```
+
+## Comparing `phycv-1.2.4.dist-info/LICENSE` & `phycv-1.2.5.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `phycv-1.2.4.dist-info/METADATA` & `phycv-1.2.5.dist-info/METADATA`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: phycv
+-Version: 1.2.4
++Version: 1.2.5
+ Summary: physics-inspired computer vision algorithms
+ Author: Jalali-Lab
+ Author-email: ucla.photonics.lab@gmail.com
+ Keywords: python,image processing,computational imaging,computer vision,physics-inspired algorithm
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: Intended Audience :: Science/Research
+@@ -30,14 +30,18 @@
+ [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/playlist?list=PLj--iTBXPaTWABQstUFA6l6_Rf3uiZq9T)
+ [![Wikipedia](https://img.shields.io/badge/Wikipedia-%23000000.svg?style=for-the-badge&logo=wikipedia&logoColor=white)](https://en.wikipedia.org/wiki/PhyCV)
+ 
+ Welcome to PhyCV ! The First Physics-inspired Computer Vision Python library developed by [Jalali-Lab](https://photonics.ucla.edu/) @ UCLA. This repo is maintained by [Yiming Zhou](https://yiming0416.github.io/).
+ 
+ ## Change Log
+ 
++* **Version 1.2.5**
++
++  Fix minor bugs in  `PST`.
++
+ * **Version 1.2.4**
+ 
+   Improve `PAGE` implementation. Pin `PyTorch` version to 1.13
+ 
+ * **Version 1.2.3**
+ 
+   Fix the opencv import bug in `pst_gpu.py` and `page_gpu.py`.   
+@@ -60,18 +64,8 @@
+ 
+ * **Version 1.1.0**
+ 
+   The `load_img` method now supports loading images from both an image files and image arrays.
+ 
+ * **Version 1.0.0**
+   
+-  The first release of PhyCV is available!# Change Log
+-
+-
+-If you find PhyCV useful in your research, please star :star: this repository and consider citing the following [preprint](https://arxiv.org/abs/2301.12531):
+-```
+-@article{zhou2023phycv,
+-  title={PhyCV: The First Physics-inspired Computer Vision Library},
+-  author={Zhou, Yiming and MacPhee, Callen and Suthar, Madhuri and Jalali, Bahram},
+-  journal={arXiv preprint arXiv:2301.12531},
+-  year={2023}
+-}
++  The first release of PhyCV is available!
+```
+
+## Comparing `phycv-1.2.4.dist-info/RECORD` & `phycv-1.2.5.dist-info/RECORD`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ phycv/__init__.py,sha256=EJiu2xSog6bJx69sIFm-6xne723LSFIGiamYiQJGl5g,153
+ phycv/page.py,sha256=KTkwJoOHJWO0y9URHtBpmU9Z5U_K6tMgOhCZ9QsyBvA,7133
+ phycv/page_gpu.py,sha256=0vOKgTF2CrObmhXhsVQ1L-wpTEdUExQIybVRbGO3spA,9071
+-phycv/pst.py,sha256=QE3iFN1oNs9eL_dJpL7Q7pGpaLCAd0LiYps_xe_BToU,3892
++phycv/pst.py,sha256=lAOd3gObRVajEw2vFc7LgKFkYT6VQ_cVvoRqDA50xEM,3888
+ phycv/pst_gpu.py,sha256=iRbtifQN7IeTweWy4FzzK5a9I1izt-Hl98C2h1FCK9E,5945
+ phycv/utils.py,sha256=touBP9uP_N04aNVjVzVcocCIqJktrmnDGfQevb-RAOc,4712
+ phycv/vevid.py,sha256=VWa-pMGyrh0OQBjjXauV_xmg_8gRi_RPVczz3W6T30Y,4404
+ phycv/vevid_gpu.py,sha256=b2fX6LvcfNKSseDflxJ2DAib8cXx4xcyz6Bmy__HroU,5558
+-phycv-1.2.4.dist-info/LICENSE,sha256=A32mYy8oA22r2BGupdbPz7QMiBHVuHzeyVFmqbr_Hvw,1954
+-phycv-1.2.4.dist-info/METADATA,sha256=5B7-4uI99msn6sHnE7MpfWPhmW-wmqrcfsP40vlQ6Sc,2643
+-phycv-1.2.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+-phycv-1.2.4.dist-info/top_level.txt,sha256=gDqNNJyqmgDgtzI5GE3g1DlDDGwg2PP1tQ-cZI_SYxY,6
+-phycv-1.2.4.dist-info/RECORD,,
++phycv-1.2.5.dist-info/LICENSE,sha256=A32mYy8oA22r2BGupdbPz7QMiBHVuHzeyVFmqbr_Hvw,1954
++phycv-1.2.5.dist-info/METADATA,sha256=g4jO82EHrQiFJm3PnpuimE5SGDkZyJHB56qeCA8SBus,2279
++phycv-1.2.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
++phycv-1.2.5.dist-info/top_level.txt,sha256=gDqNNJyqmgDgtzI5GE3g1DlDDGwg2PP1tQ-cZI_SYxY,6
++phycv-1.2.5.dist-info/RECORD,,
+```
+

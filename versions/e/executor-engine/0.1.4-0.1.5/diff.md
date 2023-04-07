@@ -1,0 +1,340 @@
+# Comparing `tmp/executor-engine-0.1.4.tar.gz` & `tmp/executor-engine-0.1.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "executor-engine-0.1.4.tar", last modified: Sat Apr  1 02:40:31 2023, max compression
++gzip compressed data, was "executor-engine-0.1.5.tar", last modified: Fri Apr  7 02:46:14 2023, max compression
+```
+
+## Comparing `executor-engine-0.1.4.tar` & `executor-engine-0.1.5.tar`
+
+### file list
+
+```diff
+@@ -1,41 +1,41 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 02:40:31.268250 executor-engine-0.1.4/
+--rw-r--r--   0 runner    (1001) docker     (123)     1072 2023-04-01 02:40:17.000000 executor-engine-0.1.4/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      882 2023-04-01 02:40:31.268250 executor-engine-0.1.4/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     4277 2023-04-01 02:40:17.000000 executor-engine-0.1.4/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 02:40:31.264250 executor-engine-0.1.4/executor/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 02:40:31.268250 executor-engine-0.1.4/executor/engine/
+--rw-r--r--   0 runner    (1001) docker     (123)      200 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      101 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9500 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/core.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 02:40:31.268250 executor-engine-0.1.4/executor/engine/job/
+--rw-r--r--   0 runner    (1001) docker     (123)      178 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/job/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13438 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/job/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3551 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/job/condition.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1878 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/job/dask.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 02:40:31.268250 executor-engine-0.1.4/executor/engine/job/extend/
+--rw-r--r--   0 runner    (1001) docker     (123)      111 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/job/extend/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4878 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/job/extend/subprocess.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6402 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/job/extend/webapp.py
+--rw-r--r--   0 runner    (1001) docker     (123)      179 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/job/local.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1759 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/job/process.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1689 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/job/thread.py
+--rw-r--r--   0 runner    (1001) docker     (123)      900 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/job/utils.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 02:40:31.268250 executor-engine-0.1.4/executor/engine/launcher/
+--rw-r--r--   0 runner    (1001) docker     (123)      258 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/launcher/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6732 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/launcher/core.py
+--rw-r--r--   0 runner    (1001) docker     (123)       49 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/log.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6632 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/manager.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 02:40:31.268250 executor-engine-0.1.4/executor/engine/middle/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/middle/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1556 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/middle/capture.py
+--rw-r--r--   0 runner    (1001) docker     (123)      464 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/middle/dir.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3552 2023-04-01 02:40:17.000000 executor-engine-0.1.4/executor/engine/utils.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 02:40:31.268250 executor-engine-0.1.4/executor_engine.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)      882 2023-04-01 02:40:31.000000 executor-engine-0.1.4/executor_engine.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      935 2023-04-01 02:40:31.000000 executor-engine-0.1.4/executor_engine.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-01 02:40:31.000000 executor-engine-0.1.4/executor_engine.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-01 02:40:31.000000 executor-engine-0.1.4/executor_engine.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (123)      307 2023-04-01 02:40:31.000000 executor-engine-0.1.4/executor_engine.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-01 02:40:31.000000 executor-engine-0.1.4/executor_engine.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-01 02:40:31.268250 executor-engine-0.1.4/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     2338 2023-04-01 02:40:17.000000 executor-engine-0.1.4/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:46:14.077788 executor-engine-0.1.5/
++-rw-r--r--   0 runner    (1001) docker     (123)     1072 2023-04-07 02:45:59.000000 executor-engine-0.1.5/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      882 2023-04-07 02:46:14.077788 executor-engine-0.1.5/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     4277 2023-04-07 02:45:59.000000 executor-engine-0.1.5/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:46:14.073788 executor-engine-0.1.5/executor/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:46:14.073788 executor-engine-0.1.5/executor/engine/
++-rw-r--r--   0 runner    (1001) docker     (123)      200 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      101 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9500 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/core.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:46:14.077788 executor-engine-0.1.5/executor/engine/job/
++-rw-r--r--   0 runner    (1001) docker     (123)      178 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/job/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13438 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/job/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3551 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/job/condition.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1878 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/job/dask.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:46:14.077788 executor-engine-0.1.5/executor/engine/job/extend/
++-rw-r--r--   0 runner    (1001) docker     (123)      111 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/job/extend/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4878 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/job/extend/subprocess.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6398 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/job/extend/webapp.py
++-rw-r--r--   0 runner    (1001) docker     (123)      179 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/job/local.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1759 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/job/process.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1689 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/job/thread.py
++-rw-r--r--   0 runner    (1001) docker     (123)      900 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/job/utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:46:14.077788 executor-engine-0.1.5/executor/engine/launcher/
++-rw-r--r--   0 runner    (1001) docker     (123)      258 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/launcher/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6976 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/launcher/core.py
++-rw-r--r--   0 runner    (1001) docker     (123)       49 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/log.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6632 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/manager.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:46:14.077788 executor-engine-0.1.5/executor/engine/middle/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/middle/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1556 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/middle/capture.py
++-rw-r--r--   0 runner    (1001) docker     (123)      464 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/middle/dir.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3552 2023-04-07 02:45:59.000000 executor-engine-0.1.5/executor/engine/utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 02:46:14.077788 executor-engine-0.1.5/executor_engine.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)      882 2023-04-07 02:46:14.000000 executor-engine-0.1.5/executor_engine.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      935 2023-04-07 02:46:14.000000 executor-engine-0.1.5/executor_engine.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 02:46:14.000000 executor-engine-0.1.5/executor_engine.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 02:46:14.000000 executor-engine-0.1.5/executor_engine.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)      307 2023-04-07 02:46:14.000000 executor-engine-0.1.5/executor_engine.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-07 02:46:14.000000 executor-engine-0.1.5/executor_engine.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 02:46:14.077788 executor-engine-0.1.5/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     2338 2023-04-07 02:45:59.000000 executor-engine-0.1.5/setup.py
+```
+
+### Comparing `executor-engine-0.1.4/LICENSE` & `executor-engine-0.1.5/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/PKG-INFO` & `executor-engine-0.1.5/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: executor-engine
+-Version: 0.1.4
++Version: 0.1.5
+ Summary: Package for manage job executions.
+ Home-page: https://github.com/Nanguage/executor-engine
+ Author: Weize Xu
+ Author-email: vet.xwz@gmail.com
+ License: MIT
+ Keywords: Job Management
+ Classifier: Development Status :: 3 - Alpha
+```
+
+### Comparing `executor-engine-0.1.4/README.md` & `executor-engine-0.1.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/executor/engine/core.py` & `executor-engine-0.1.5/executor/engine/core.py`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/executor/engine/job/base.py` & `executor-engine-0.1.5/executor/engine/job/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/executor/engine/job/condition.py` & `executor-engine-0.1.5/executor/engine/job/condition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/executor/engine/job/dask.py` & `executor-engine-0.1.5/executor/engine/job/dask.py`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/executor/engine/job/extend/subprocess.py` & `executor-engine-0.1.5/executor/engine/job/extend/subprocess.py`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/executor/engine/job/extend/webapp.py` & `executor-engine-0.1.5/executor/engine/job/extend/webapp.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -100,17 +100,17 @@
+                     raise TypeError(
+                         "web_launcher should be a callable object or str.")
+ 
+         def consume_resource(self) -> bool:
+             if super().consume_resource():
+                 if self.port is None:
+                     self.port = PortManager.get_port()
+-                    self.attrs.update({"address": f"{self.ip}:{self.port}"})
+                 else:
+                     PortManager.consume_port(self.port)
++                self.attrs.update({"address": f"{self.ip}:{self.port}"})
+                 return True
+             else:  # pragma: no cover
+                 return False
+ 
+         def release_resource(self) -> bool:
+             if self.port is None:  # pragma: no cover
+                 return False
+```
+
+### Comparing `executor-engine-0.1.4/executor/engine/job/process.py` & `executor-engine-0.1.5/executor/engine/job/process.py`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/executor/engine/job/thread.py` & `executor-engine-0.1.5/executor/engine/job/thread.py`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/executor/engine/job/utils.py` & `executor-engine-0.1.5/executor/engine/job/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/executor/engine/launcher/core.py` & `executor-engine-0.1.5/executor/engine/launcher/core.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -51,28 +51,32 @@
+     def __init__(
+             self, target_func: T.Union[T.Callable, Cmd2Func],
+             engine: T.Optional['Engine'] = None,
+             job_type: JOB_TYPES = 'process',
+             name: T.Optional[str] = None,
+             description: T.Optional[str] = None,
+             tags: T.Optional[T.List[str]] = None,
+-            **job_attrs):
++            job_attrs: T.Optional[dict] = None,):
+         self._engine = engine
+         self.target_func = target_func
+         self.__signature__ = inspect.signature(target_func)
+         self.job_type = job_type
+         if isinstance(target_func, Cmd2Func):
+             if self.job_type != 'webapp':
+                 self.job_type = 'subprocess'
+         self.desc = parse_func(target_func)
+         self.name = name or get_callable_name(target_func)
+         self.description = description or self.target_func.__doc__
+         functools.update_wrapper(self, target_func)
+         self.tags = tags or []
++        job_attrs = job_attrs or {}
+         self.job_attrs = job_attrs
++        self.job_attrs.update({
++            'name': self.name,
++        })
+ 
+     @property
+     def engine(self) -> Engine:
+         """Get the engine of the launcher."""
+         if self._engine is None:
+             self._engine = get_default_engine()
+         return self._engine
+@@ -136,15 +140,16 @@
+         self.engine.wait_job(job)
+         return self._fetch_result(job)
+ 
+     def to_async(self) -> "AsyncLauncher":
+         """Convert the launcher to async mode."""
+         return AsyncLauncher(
+             self.target_func, self._engine, self.job_type,
+-            self.name, self.description, self.tags, **self.job_attrs,
++            self.name, self.description, self.tags,
++            job_attrs=self.job_attrs,
+         )
+ 
+ 
+ class AsyncLauncher(LauncherBase):
+     @property
+     def async_mode(self):
+         """Check if the launcher is in async mode."""
+@@ -162,27 +167,28 @@
+         await job.join()
+         return self._fetch_result(job)
+ 
+     def to_sync(self) -> "SyncLauncher":
+         """Convert the launcher to sync mode."""
+         return SyncLauncher(
+             self.target_func, self._engine, self.job_type,
+-            self.name, self.description, self.tags, **self.job_attrs,
++            self.name, self.description, self.tags,
++            job_attrs=self.job_attrs,
+         )
+ 
+ 
+ def launcher(
+         func: T.Optional[T.Union[T.Callable, Cmd2Func]] = None,
+         engine: T.Optional['Engine'] = None,
+         async_mode: bool = False,
+         job_type: JOB_TYPES = 'process',
+         name: T.Optional[str] = None,
+         description: T.Optional[str] = None,
+         tags: T.Optional[T.List[str]] = None,
+-        **job_attrs: T.Dict):
++        job_attrs: T.Optional[dict] = None):
+     """Create a launcher for a function.
+ 
+     Args:
+         func: The function to be launched. If the function is instance of
+             [Cmd2Func](https://github.com/Nanguage/cmd2func),
+             the launcher will be in subprocess mode,
+             will launch `SubprocessJob` on each submit.
+@@ -194,21 +200,22 @@
+         description: The description of the launcher.
+         tags: The tags of the launcher.
+         job_attrs: The attributes for creating the job.
+     """
+     if func is None:
+         return functools.partial(
+             launcher, engine=engine, async_mode=async_mode,
+-            job_type=job_type,
+-            name=name, tags=tags,
++            job_type=job_type, name=name,
++            description=description, tags=tags,
++            job_attrs=job_attrs
+         )
+ 
+     launcher_cls: T.Union[T.Type[AsyncLauncher], T.Type[SyncLauncher]]
+     if async_mode:
+         launcher_cls = AsyncLauncher
+     else:
+         launcher_cls = SyncLauncher
+ 
+     return launcher_cls(
+         func, engine, job_type,
+-        name, description, tags, **job_attrs,
++        name, description, tags, job_attrs,
+     )
+```
+
+### Comparing `executor-engine-0.1.4/executor/engine/manager.py` & `executor-engine-0.1.5/executor/engine/manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/executor/engine/middle/capture.py` & `executor-engine-0.1.5/executor/engine/middle/capture.py`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/executor/engine/utils.py` & `executor-engine-0.1.5/executor/engine/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/executor_engine.egg-info/PKG-INFO` & `executor-engine-0.1.5/executor_engine.egg-info/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: executor-engine
+-Version: 0.1.4
++Version: 0.1.5
+ Summary: Package for manage job executions.
+ Home-page: https://github.com/Nanguage/executor-engine
+ Author: Weize Xu
+ Author-email: vet.xwz@gmail.com
+ License: MIT
+ Keywords: Job Management
+ Classifier: Development Status :: 3 - Alpha
+```
+
+### Comparing `executor-engine-0.1.4/executor_engine.egg-info/SOURCES.txt` & `executor-engine-0.1.5/executor_engine.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `executor-engine-0.1.4/setup.py` & `executor-engine-0.1.5/setup.py`
+
+ * *Files identical despite different names*
+
