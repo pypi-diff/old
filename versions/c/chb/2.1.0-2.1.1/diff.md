@@ -1,0 +1,256 @@
+# Comparing `tmp/chb-2.1.0.tar.gz` & `tmp/chb-2.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/chb-2.1.0.tar", last modified: Mon Mar 13 03:51:00 2023, max compression
++gzip compressed data, was "dist/chb-2.1.1.tar", last modified: Fri Apr  7 03:14:27 2023, max compression
+```
+
+## Comparing `chb-2.1.0.tar` & `chb-2.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,18 @@
+-drwxrwxr-x   0 chb       (1000) chb       (1000)        0 2023-03-13 03:51:00.754759 chb-2.1.0/
+--rw-rw-r--   0 chb       (1000) chb       (1000)     1073 2023-03-13 03:16:24.000000 chb-2.1.0/LICENSE.txt
+--rw-rw-r--   0 chb       (1000) chb       (1000)      615 2023-03-13 03:51:00.754759 chb-2.1.0/PKG-INFO
+--rw-rw-r--   0 chb       (1000) chb       (1000)      199 2023-03-13 03:16:24.000000 chb-2.1.0/README.md
+-drwxrwxr-x   0 chb       (1000) chb       (1000)        0 2023-03-13 03:51:00.754759 chb-2.1.0/chb/
+--rw-rw-r--   0 chb       (1000) chb       (1000)     5320 2023-03-13 03:16:24.000000 chb-2.1.0/chb/__init__.py
+--rw-rw-r--   0 chb       (1000) chb       (1000)     7303 2023-03-13 03:16:24.000000 chb-2.1.0/chb/_dao.py
+--rw-rw-r--   0 chb       (1000) chb       (1000)     3340 2023-03-13 03:16:24.000000 chb-2.1.0/chb/_importable.py
+--rw-rw-r--   0 chb       (1000) chb       (1000)     3873 2023-03-13 03:16:24.000000 chb-2.1.0/chb/_imports.py
+--rw-rw-r--   0 chb       (1000) chb       (1000)     4525 2023-03-13 03:16:24.000000 chb-2.1.0/chb/_log.py
+--rw-rw-r--   0 chb       (1000) chb       (1000)    23950 2023-03-13 03:46:28.000000 chb-2.1.0/chb/_utils.py
+-drwxrwxr-x   0 chb       (1000) chb       (1000)        0 2023-03-13 03:51:00.754759 chb-2.1.0/chb.egg-info/
+--rw-rw-r--   0 chb       (1000) chb       (1000)      615 2023-03-13 03:51:00.000000 chb-2.1.0/chb.egg-info/PKG-INFO
+--rw-rw-r--   0 chb       (1000) chb       (1000)      237 2023-03-13 03:51:00.000000 chb-2.1.0/chb.egg-info/SOURCES.txt
+--rw-rw-r--   0 chb       (1000) chb       (1000)        1 2023-03-13 03:51:00.000000 chb-2.1.0/chb.egg-info/dependency_links.txt
+--rw-rw-r--   0 chb       (1000) chb       (1000)        4 2023-03-13 03:51:00.000000 chb-2.1.0/chb.egg-info/top_level.txt
+--rw-rw-r--   0 chb       (1000) chb       (1000)       79 2023-03-13 03:51:00.754759 chb-2.1.0/setup.cfg
+--rw-rw-r--   0 chb       (1000) chb       (1000)     1004 2023-03-13 03:50:09.000000 chb-2.1.0/setup.py
++drwxrwxr-x   0 chb       (1000) chb       (1000)        0 2023-04-07 03:14:27.909933 chb-2.1.1/
++-rw-rw-r--   0 chb       (1000) chb       (1000)     1073 2023-03-13 03:16:24.000000 chb-2.1.1/LICENSE.txt
++-rw-rw-r--   0 chb       (1000) chb       (1000)      615 2023-04-07 03:14:27.909933 chb-2.1.1/PKG-INFO
++-rw-rw-r--   0 chb       (1000) chb       (1000)      199 2023-03-13 03:16:24.000000 chb-2.1.1/README.md
++drwxrwxr-x   0 chb       (1000) chb       (1000)        0 2023-04-07 03:14:27.909933 chb-2.1.1/chb/
++-rw-rw-r--   0 chb       (1000) chb       (1000)     5320 2023-03-13 03:16:24.000000 chb-2.1.1/chb/__init__.py
++-rw-rw-r--   0 chb       (1000) chb       (1000)     8292 2023-04-07 03:13:23.000000 chb-2.1.1/chb/_dao.py
++-rw-rw-r--   0 chb       (1000) chb       (1000)     3340 2023-03-13 03:16:24.000000 chb-2.1.1/chb/_importable.py
++-rw-rw-r--   0 chb       (1000) chb       (1000)     3873 2023-03-13 03:16:24.000000 chb-2.1.1/chb/_imports.py
++-rw-rw-r--   0 chb       (1000) chb       (1000)     4525 2023-03-13 03:16:24.000000 chb-2.1.1/chb/_log.py
++-rw-rw-r--   0 chb       (1000) chb       (1000)    23950 2023-03-13 03:46:28.000000 chb-2.1.1/chb/_utils.py
++drwxrwxr-x   0 chb       (1000) chb       (1000)        0 2023-04-07 03:14:27.909933 chb-2.1.1/chb.egg-info/
++-rw-rw-r--   0 chb       (1000) chb       (1000)      615 2023-04-07 03:14:27.000000 chb-2.1.1/chb.egg-info/PKG-INFO
++-rw-rw-r--   0 chb       (1000) chb       (1000)      237 2023-04-07 03:14:27.000000 chb-2.1.1/chb.egg-info/SOURCES.txt
++-rw-rw-r--   0 chb       (1000) chb       (1000)        1 2023-04-07 03:14:27.000000 chb-2.1.1/chb.egg-info/dependency_links.txt
++-rw-rw-r--   0 chb       (1000) chb       (1000)        4 2023-04-07 03:14:27.000000 chb-2.1.1/chb.egg-info/top_level.txt
++-rw-rw-r--   0 chb       (1000) chb       (1000)       79 2023-04-07 03:14:27.909933 chb-2.1.1/setup.cfg
++-rw-rw-r--   0 chb       (1000) chb       (1000)     1004 2023-04-07 03:13:35.000000 chb-2.1.1/setup.py
+```
+
+### Comparing `chb-2.1.0/LICENSE.txt` & `chb-2.1.1/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `chb-2.1.0/PKG-INFO` & `chb-2.1.1/PKG-INFO`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: chb
+-Version: 2.1.0
++Version: 2.1.1
+ Summary: chb常用代码库
+ Home-page: https://github.com/ChenHuabin321/pypi
+ Author: chenhuabin
+ Author-email: chenhuabin321@163.com
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+
+### Comparing `chb-2.1.0/chb/__init__.py` & `chb-2.1.1/chb/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `chb-2.1.0/chb/_dao.py` & `chb-2.1.1/chb/_dao.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -160,66 +160,93 @@
+         :param redisDB: redis.StrictRedis对象，现有的redis连接。当传递该对象时，后续的host、post等参数无效。
+         :param host: redis主机地址
+         :param port: redis端口
+         :param password: 密码
+         :param db: 数据库序号
+         """
+         if redisDB:
+-            self.__db = redisDB
++            self.db = redisDB
+         else:
+-            redis_c = redis.StrictRedis(host=host, port=port,
++            self.db = redis.StrictRedis(host=host, port=port,
+                                         password=password,
+                                         db=db)
+-            self.__db = redis_c
+ 
+     def __enter__(self):
+         return self
+ 
+     def __exit__(self, exc_type, exc_value, exc_trace):
+-        self.__db.close()
++        self.db.close()
+ 
+     def qsize(self, queue):
+-        return self.__db.llen(queue)  # 返回队列里面list内元素的数量
++        return self.db.llen(queue)  # 返回队列里面list内元素的数量
+ 
+     def lput(self, queue, item):
+-        self.__db.lpush(queue, item)  # 添加新元素到队列最左方
++        self.db.lpush(queue, item)  # 添加新元素到队列最左方
+ 
+     def rput(self, queue, item):
+-        self.__db.rpush(queue, item)  # 添加新元素到队列最右方
++        self.db.rpush(queue, item)  # 添加新元素到队列最右方
++
++    def lget_wait(self, queue, timeout=None):
++        # 返回队列第最左侧元素，如果为空则等待至有元素被加入队列（超时时间阈值为timeout，如果为None则一直等待）
++        item = self.db.blpop(queue, timeout=timeout)
++        if item:
++            item = item[1]  # 返回值为一个tuple
++        return item
+ 
+     def get_wait(self, queue, timeout=None):
+-        # 返回队列第一个元素，如果为空则等待至有元素被加入队列（超时时间阈值为timeout，如果为None则一直等待）
+-        item = self.__db.brpop(queue, timeout=timeout)
++        # 返回队列最右侧元素，如果为空则等待至有元素被加入队列（超时时间阈值为timeout，如果为None则一直等待）
++        item = self.db.brpop(queue, timeout=timeout)
+         if item:
+             item = item[1]  # 返回值为一个tuple
+         return item
+ 
+     def set_key(self, key, value):
+         """
+         设置键值对
+         :param key: 键名
+         :param value: 值
+         :return: Boolean
+         """
+-        return self.__db.set(key, value)
+-
++        return self.db.set(key, value)
+ 
+     def get_nowait(self, queue):
+         # 直接返回队列第一个元素，如果队列为空返回的是None
+-        item = self.__db.rpop(queue)
++        item = self.db.rpop(queue)
++        return item
++
++    def lget_nowait(self, queue):
++        # 直接返回队列第一个元素，如果队列为空返回的是None
++        item = self.db.lpop(queue)
+         return item
+ 
+     def random_get(self, queue):
+         """
+         送队列中随机获取一个元素
+         :param queue:
+         :return:
+         """
+-        length = self.__db.llen(queue)
++        length = self.db.llen(queue)
+         index = random.randint(0, length - 1)
+-        return self.__db.lindex(index)
++        return self.db.lindex(index)
+ 
+     def get_len(self, queue):
+         """
+         获取queue的长度
+         """
+-        return self.__db.llen(queue)
++        return self.db.llen(queue)
++
++    def hset(self, set_name, key, value):
++        """
++        向名为set_name的hash队列中添加一个键值对
++        """
++        if isinstance(value, (dict, list)):
++            value = json.dumps(value)
++        self.db.hset(set_name, key, value)
++
++    def gset(self, set_name, key):
++        """
++        从名为set_name的hash队列中获取一个键值对
++        """
++        value = self.db.hset(set_name, key)
++        if isinstance(value, (dict, list)):
++            value = json.loads(value)
++        return value
+```
+
+### Comparing `chb-2.1.0/chb/_importable.py` & `chb-2.1.1/chb/_importable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `chb-2.1.0/chb/_imports.py` & `chb-2.1.1/chb/_imports.py`
+
+ * *Files identical despite different names*
+
+### Comparing `chb-2.1.0/chb/_log.py` & `chb-2.1.1/chb/_log.py`
+
+ * *Files identical despite different names*
+
+### Comparing `chb-2.1.0/chb/_utils.py` & `chb-2.1.1/chb/_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `chb-2.1.0/chb.egg-info/PKG-INFO` & `chb-2.1.1/chb.egg-info/PKG-INFO`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: chb
+-Version: 2.1.0
++Version: 2.1.1
+ Summary: chb常用代码库
+ Home-page: https://github.com/ChenHuabin321/pypi
+ Author: chenhuabin
+ Author-email: chenhuabin321@163.com
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+
+### Comparing `chb-2.1.0/setup.py` & `chb-2.1.1/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import setuptools  # 导入setuptools打包工具
+ 
+ with open("README.md", "r", encoding="utf-8") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name="chb",  # 用自己的名替换其中的YOUR_USERNAME_
+-    version="2.1.0",  # 包版本号，便于维护版本
++    version="2.1.1",  # 包版本号，便于维护版本
+     author="chenhuabin",  # 作者，可以写自己的姓名
+     author_email="chenhuabin321@163.com",  # 作者联系方式，可写自己的邮箱地址
+     description="chb常用代码库",  # 包的简述
+     long_description=long_description,  # 包的详细介绍，一般在README.md文件内
+     long_description_content_type="text/markdown",
+     url="https://github.com/ChenHuabin321/pypi",  # 自己项目地址，比如github的项目地址
+     packages=setuptools.find_packages(),
+```
+

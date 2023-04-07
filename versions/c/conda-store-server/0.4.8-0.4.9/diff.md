@@ -1,0 +1,746 @@
+# Comparing `tmp/conda-store-server-0.4.8.tar.gz` & `tmp/conda-store-server-0.4.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "conda-store-server-0.4.8.tar", last modified: Thu Aug  4 05:00:45 2022, max compression
++gzip compressed data, was "conda-store-server-0.4.9.tar", last modified: Wed Aug 10 02:39:17 2022, max compression
+```
+
+## Comparing `conda-store-server-0.4.8.tar` & `conda-store-server-0.4.9.tar`
+
+### file list
+
+```diff
+@@ -1,57 +1,58 @@
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-04 05:00:45.197748 conda-store-server-0.4.8/
+--rw-r--r--   0 runner    (1001) docker     (121)     1457 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (121)      152 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (121)     2790 2022-08-04 05:00:45.197748 conda-store-server-0.4.8/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)      325 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-04 05:00:45.193748 conda-store-server-0.4.8/conda_store_server/
+--rw-r--r--   0 runner    (1001) docker     (121)       30 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (121)     9033 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/api.py
+--rw-r--r--   0 runner    (1001) docker     (121)    20077 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/app.py
+--rw-r--r--   0 runner    (1001) docker     (121)    13644 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/build.py
+--rw-r--r--   0 runner    (1001) docker     (121)      483 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/client.py
+--rw-r--r--   0 runner    (1001) docker     (121)     6985 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/conda.py
+--rw-r--r--   0 runner    (1001) docker     (121)     4729 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/environment.py
+--rw-r--r--   0 runner    (1001) docker     (121)    13837 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/orm.py
+--rw-r--r--   0 runner    (1001) docker     (121)    10167 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/schema.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-04 05:00:45.193748 conda-store-server-0.4.8/conda_store_server/server/
+--rw-r--r--   0 runner    (1001) docker     (121)        0 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (121)      139 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/__main__.py
+--rw-r--r--   0 runner    (1001) docker     (121)     7765 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/app.py
+--rw-r--r--   0 runner    (1001) docker     (121)    25605 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/auth.py
+--rw-r--r--   0 runner    (1001) docker     (121)     3347 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/dbutil.py
+--rw-r--r--   0 runner    (1001) docker     (121)      437 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/dependencies.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-04 05:00:45.197748 conda-store-server-0.4.8/conda_store_server/server/templates/
+--rw-r--r--   0 runner    (1001) docker     (121)      175 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/templates/404.html
+--rw-r--r--   0 runner    (1001) docker     (121)     1433 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/templates/alembic.ini
+--rw-r--r--   0 runner    (1001) docker     (121)     1639 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/templates/base.html
+--rw-r--r--   0 runner    (1001) docker     (121)     4070 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/templates/build.html
+--rw-r--r--   0 runner    (1001) docker     (121)     3375 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/templates/create.html
+--rw-r--r--   0 runner    (1001) docker     (121)     5786 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/templates/environment.html
+--rw-r--r--   0 runner    (1001) docker     (121)     2956 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/templates/home.html
+--rw-r--r--   0 runner    (1001) docker     (121)      194 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/templates/login.html
+--rw-r--r--   0 runner    (1001) docker     (121)     1574 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/templates/namespace.html
+--rw-r--r--   0 runner    (1001) docker     (121)     1701 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/templates/navigation.html
+--rw-r--r--   0 runner    (1001) docker     (121)     3757 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/templates/user.html
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-04 05:00:45.197748 conda-store-server-0.4.8/conda_store_server/server/views/
+--rw-r--r--   0 runner    (1001) docker     (121)      284 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/views/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (121)    23825 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/views/api.py
+--rw-r--r--   0 runner    (1001) docker     (121)     1201 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/views/metrics.py
+--rw-r--r--   0 runner    (1001) docker     (121)     5904 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/views/registry.py
+--rw-r--r--   0 runner    (1001) docker     (121)     6901 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/server/views/ui.py
+--rw-r--r--   0 runner    (1001) docker     (121)     6599 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/storage.py
+--rw-r--r--   0 runner    (1001) docker     (121)     1900 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/utils.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-04 05:00:45.197748 conda-store-server-0.4.8/conda_store_server/worker/
+--rw-r--r--   0 runner    (1001) docker     (121)        0 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/worker/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (121)      139 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/worker/__main__.py
+--rw-r--r--   0 runner    (1001) docker     (121)     1805 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/worker/app.py
+--rw-r--r--   0 runner    (1001) docker     (121)     7086 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/conda_store_server/worker/tasks.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-04 05:00:45.193748 conda-store-server-0.4.8/conda_store_server.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (121)     2790 2022-08-04 05:00:45.000000 conda-store-server-0.4.8/conda_store_server.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)     1766 2022-08-04 05:00:45.000000 conda-store-server-0.4.8/conda_store_server.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        1 2022-08-04 05:00:45.000000 conda-store-server-0.4.8/conda_store_server.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (121)      140 2022-08-04 05:00:45.000000 conda-store-server-0.4.8/conda_store_server.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        1 2022-08-04 05:00:44.000000 conda-store-server-0.4.8/conda_store_server.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (121)      253 2022-08-04 05:00:45.000000 conda-store-server-0.4.8/conda_store_server.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (121)       19 2022-08-04 05:00:45.000000 conda-store-server-0.4.8/conda_store_server.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (121)      154 2022-08-04 05:00:29.000000 conda-store-server-0.4.8/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (121)     1646 2022-08-04 05:00:45.197748 conda-store-server-0.4.8/setup.cfg
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-10 02:39:17.096001 conda-store-server-0.4.9/
++-rw-r--r--   0 runner    (1001) docker     (121)     1457 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (121)      152 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (121)     2790 2022-08-10 02:39:17.096001 conda-store-server-0.4.9/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (121)      325 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/README.md
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-10 02:39:17.092000 conda-store-server-0.4.9/conda_store_server/
++-rw-r--r--   0 runner    (1001) docker     (121)       30 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (121)     9033 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/api.py
++-rw-r--r--   0 runner    (1001) docker     (121)    21530 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/app.py
++-rw-r--r--   0 runner    (1001) docker     (121)    10950 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/build.py
++-rw-r--r--   0 runner    (1001) docker     (121)      483 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/client.py
++-rw-r--r--   0 runner    (1001) docker     (121)     6985 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/conda.py
++-rw-r--r--   0 runner    (1001) docker     (121)     4729 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/environment.py
++-rw-r--r--   0 runner    (1001) docker     (121)    13907 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/orm.py
++-rw-r--r--   0 runner    (1001) docker     (121)     7189 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/registry.py
++-rw-r--r--   0 runner    (1001) docker     (121)    10249 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/schema.py
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-10 02:39:17.096001 conda-store-server-0.4.9/conda_store_server/server/
++-rw-r--r--   0 runner    (1001) docker     (121)        0 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (121)      139 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/__main__.py
++-rw-r--r--   0 runner    (1001) docker     (121)     7765 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/app.py
++-rw-r--r--   0 runner    (1001) docker     (121)    25605 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/auth.py
++-rw-r--r--   0 runner    (1001) docker     (121)     3347 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/dbutil.py
++-rw-r--r--   0 runner    (1001) docker     (121)      437 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/dependencies.py
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-10 02:39:17.096001 conda-store-server-0.4.9/conda_store_server/server/templates/
++-rw-r--r--   0 runner    (1001) docker     (121)      175 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/templates/404.html
++-rw-r--r--   0 runner    (1001) docker     (121)     1433 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/templates/alembic.ini
++-rw-r--r--   0 runner    (1001) docker     (121)     1639 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/templates/base.html
++-rw-r--r--   0 runner    (1001) docker     (121)     4070 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/templates/build.html
++-rw-r--r--   0 runner    (1001) docker     (121)     3375 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/templates/create.html
++-rw-r--r--   0 runner    (1001) docker     (121)     5786 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/templates/environment.html
++-rw-r--r--   0 runner    (1001) docker     (121)     2956 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/templates/home.html
++-rw-r--r--   0 runner    (1001) docker     (121)      194 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/templates/login.html
++-rw-r--r--   0 runner    (1001) docker     (121)     1574 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/templates/namespace.html
++-rw-r--r--   0 runner    (1001) docker     (121)     1701 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/templates/navigation.html
++-rw-r--r--   0 runner    (1001) docker     (121)     3757 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/templates/user.html
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-10 02:39:17.096001 conda-store-server-0.4.9/conda_store_server/server/views/
++-rw-r--r--   0 runner    (1001) docker     (121)      284 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/views/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (121)    24033 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/views/api.py
++-rw-r--r--   0 runner    (1001) docker     (121)     1201 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/views/metrics.py
++-rw-r--r--   0 runner    (1001) docker     (121)     5904 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/views/registry.py
++-rw-r--r--   0 runner    (1001) docker     (121)     6901 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/server/views/ui.py
++-rw-r--r--   0 runner    (1001) docker     (121)     6599 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/storage.py
++-rw-r--r--   0 runner    (1001) docker     (121)     1900 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/utils.py
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-10 02:39:17.096001 conda-store-server-0.4.9/conda_store_server/worker/
++-rw-r--r--   0 runner    (1001) docker     (121)        0 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/worker/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (121)      139 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/worker/__main__.py
++-rw-r--r--   0 runner    (1001) docker     (121)     1805 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/worker/app.py
++-rw-r--r--   0 runner    (1001) docker     (121)     7402 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/conda_store_server/worker/tasks.py
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-08-10 02:39:17.096001 conda-store-server-0.4.9/conda_store_server.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (121)     2790 2022-08-10 02:39:17.000000 conda-store-server-0.4.9/conda_store_server.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (121)     1797 2022-08-10 02:39:17.000000 conda-store-server-0.4.9/conda_store_server.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (121)        1 2022-08-10 02:39:17.000000 conda-store-server-0.4.9/conda_store_server.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (121)      140 2022-08-10 02:39:17.000000 conda-store-server-0.4.9/conda_store_server.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (121)        1 2022-08-10 02:39:16.000000 conda-store-server-0.4.9/conda_store_server.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (121)      253 2022-08-10 02:39:17.000000 conda-store-server-0.4.9/conda_store_server.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (121)       19 2022-08-10 02:39:17.000000 conda-store-server-0.4.9/conda_store_server.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (121)      154 2022-08-10 02:39:04.000000 conda-store-server-0.4.9/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (121)     1646 2022-08-10 02:39:17.096001 conda-store-server-0.4.9/setup.cfg
+```
+
+### Comparing `conda-store-server-0.4.8/LICENSE` & `conda-store-server-0.4.9/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/PKG-INFO` & `conda-store-server-0.4.9/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: conda-store-server
+-Version: 0.4.8
++Version: 0.4.9
+ Summary: Conda Environment Management, Builds, and Serve
+ Home-page: https://github.com/Quansight/conda-store
+ Author: Christopher Ostrouchov
+ Author-email: chris.ostrouchov@gmail.com
+ License: BSD License
+ Project-URL: Bug Reports, https://github.com/quansight/conda-store
+ Project-URL: Documentation, https://conda-store.readthedocs.io/
+```
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/api.py` & `conda-store-server-0.4.9/conda_store_server/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/app.py` & `conda-store-server-0.4.9/conda_store_server/app.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -13,15 +13,24 @@
+     Bool,
+     validate,
+     TraitError,
+ )
+ from traitlets.config import LoggingConfigurable
+ from sqlalchemy.pool import NullPool
+ 
+-from conda_store_server import orm, utils, storage, schema, api, conda, environment
++from conda_store_server import (
++    orm,
++    utils,
++    storage,
++    schema,
++    api,
++    conda,
++    environment,
++    registry,
++)
+ 
+ 
+ def conda_store_validate_specification(
+     conda_store: "CondaStore", namespace: str, specification: schema.CondaSpecification
+ ) -> schema.CondaSpecification:
+     specification = environment.validate_environment_channels(
+         specification,
+@@ -51,14 +60,21 @@
+     storage_class = Type(
+         default_value=storage.S3Storage,
+         klass=storage.Storage,
+         allow_none=False,
+         config=True,
+     )
+ 
++    container_registry_class = Type(
++        default_value=registry.ContainerRegistry,
++        klass=registry.ContainerRegistry,
++        allow_none=False,
++        config=True,
++    )
++
+     store_directory = Unicode(
+         "conda-store-state",
+         help="directory for conda-store to build environments and store state",
+         config=True,
+     )
+ 
+     build_directory = Unicode(
+@@ -189,24 +205,28 @@
+ 
+     build_artifacts = List(
+         [
+             schema.BuildArtifactType.LOCKFILE,
+             schema.BuildArtifactType.YAML,
+             schema.BuildArtifactType.CONDA_PACK,
+             schema.BuildArtifactType.DOCKER_MANIFEST,
++            schema.BuildArtifactType.CONTAINER_REGISTRY,
+         ],
+         help="artifacts to build in conda-store. By default all of the artifacts",
+         config=True,
+     )
+ 
+     build_artifacts_kept_on_deletion = List(
+         [
+             schema.BuildArtifactType.LOGS,
+             schema.BuildArtifactType.LOCKFILE,
+             schema.BuildArtifactType.YAML,
++            # no possible way to delete these artifacts
++            # in most container registries via api
++            schema.BuildArtifactType.CONTAINER_REGISTRY,
+         ],
+         help="artifacts to keep on build deletion",
+         config=True,
+     )
+ 
+     serialize_builds = Bool(
+         True,
+@@ -252,15 +272,15 @@
+     default_permissions = Unicode(
+         "775",
+         help="default file permissions to assign to built environments",
+         config=True,
+     )
+ 
+     default_docker_base_image = Unicode(
+-        "library/debian:sid-slim",
++        "registry-1.docker.io/library/debian:sid-slim",
+         help="default base image used for the Dockerized environments. Make sure to have a proper glibc within image.",
+         config=True,
+     )
+ 
+     validate_specification = Callable(
+         conda_store_validate_specification,
+         help="callable function taking conda_store and specification as input arguments to apply for validating and modifying a given specification. If there are validation issues with the environment ValueError with message should be raised. If changed you may need to call the default function to preseve many of the trait effects e.g. `c.CondaStore.default_channels` etc",
+@@ -302,14 +322,23 @@
+     def storage(self):
+         if hasattr(self, "_storage"):
+             return self._storage
+         self._storage = self.storage_class(parent=self, log=self.log)
+         return self._storage
+ 
+     @property
++    def container_registry(self):
++        if hasattr(self, "_container_registry"):
++            return self._container_registry
++        self._container_registry = self.container_registry_class(
++            parent=self, log=self.log
++        )
++        return self._container_registry
++
++    @property
+     def celery_app(self):
+         if hasattr(self, "_celery_app"):
+             return self._celery_app
+ 
+         self._celery_app = Celery(
+             "tasks",
+             backend=self.celery_results_backend,
+@@ -442,17 +471,21 @@
+             self.db, namespace_id=namespace.id, name=specification.name
+         )
+         environment_was_empty = environment is None
+         if environment_was_empty:
+             environment = orm.Environment(
+                 name=specification.name,
+                 namespace_id=namespace.id,
++                description=specification.spec["description"],
+             )
+             self.db.add(environment)
+             self.db.commit()
++        else:
++            environment.description = specification.spec["description"]
++            self.db.commit()
+ 
+         build = self.create_build(environment.id, specification.sha256)
+ 
+         if environment_was_empty:
+             environment.current_build = build
+             self.db.commit()
+ 
+@@ -472,15 +505,18 @@
+         from conda_store_server.worker import tasks
+ 
+         artifact_tasks = []
+         if schema.BuildArtifactType.YAML in self.build_artifacts:
+             artifact_tasks.append(tasks.task_build_conda_env_export.si(build.id))
+         if schema.BuildArtifactType.CONDA_PACK in self.build_artifacts:
+             artifact_tasks.append(tasks.task_build_conda_pack.si(build.id))
+-        if schema.BuildArtifactType.DOCKER_MANIFEST in self.build_artifacts:
++        if (
++            schema.BuildArtifactType.DOCKER_MANIFEST in self.build_artifacts
++            or schema.BuildArtifactType.CONTAINER_REGISTRY in self.build_artifacts
++        ):
+             artifact_tasks.append(tasks.task_build_conda_docker.si(build.id))
+ 
+         (
+             tasks.task_update_storage_metrics.si()
+             | tasks.task_build_conda_environment.si(build.id)
+             | group(*artifact_tasks)
+             | tasks.task_update_storage_metrics.si()
+@@ -514,14 +550,25 @@
+ 
+         self.celery_app
+         # must import tasks after a celery app has been initialized
+         from conda_store_server.worker import tasks
+ 
+         tasks.task_update_environment_build.si(environment.id).apply_async()
+ 
++    def update_environment_description(self, namespace, name, description):
++
++        environment = api.get_environment(self.db, namespace=namespace, name=name)
++        if environment is None:
++            raise utils.CondaStoreError(
++                f"environment namespace={namespace} name={name} does not exist"
++            )
++
++        environment.description = description
++        self.db.commit()
++
+     def delete_namespace(self, namespace):
+         namespace = api.get_namespace(self.db, name=namespace)
+         if namespace is None:
+             raise utils.CondaStoreError(f"namespace={namespace} does not exist")
+ 
+         utcnow = datetime.datetime.utcnow()
+         namespace.deleted_on = utcnow
+```
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/build.py` & `conda-store-server-0.4.9/conda_store_server/build.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,10 +1,8 @@
+ import datetime
+-import gzip
+-import hashlib
+ import os
+ import stat
+ import subprocess
+ import tempfile
+ import traceback
+ 
+ import filelock
+@@ -288,93 +286,29 @@
+     conda_store.log.info(f"creating docker archive of conda environment={conda_prefix}")
+ 
+     user_conda = find_user_conda()
+     info = conda_info(user_conda)
+     download_dir = info["pkgs_dirs"][0]
+     precs = precs_from_environment_prefix(conda_prefix, download_dir, user_conda)
+     records = fetch_precs(download_dir, precs)
++    base_image = conda_store.container_registry.pull_image(
++        conda_store.default_docker_base_image
++    )
+     image = build_docker_environment_image(
+-        base_image=conda_store.default_docker_base_image,
++        base_image=base_image,
+         output_image=f"{build.specification.name}:{build.build_key}",
+         records=records,
+         default_prefix=info["env_vars"]["CONDA_ROOT"],
+         download_dir=download_dir,
+         user_conda=user_conda,
+         channels_remap=info.get("channels_remap", []),
+         layering_strategy="layered",
+     )
+ 
+-    # https://docs.docker.com/registry/spec/manifest-v2-2/#example-image-manifest
+-    docker_manifest = schema.DockerManifest.construct()
+-    docker_config = schema.DockerConfig.construct(
+-        config=schema.DockerConfigConfig(),
+-        container_config=schema.DockerConfigConfig(),
+-        rootfs=schema.DockerConfigRootFS(),
+-    )
+-
+-    for layer in image.layers:
+-        # https://github.com/google/nixery/pull/64#issuecomment-541019077
+-        # docker manifest expects compressed hash while configuration file
+-        # expects uncompressed hash -- good luck finding this detail in docs :)
+-        content_uncompressed_hash = hashlib.sha256(layer.content).hexdigest()
+-        content_compressed = gzip.compress(layer.content)
+-        content_compressed_hash = hashlib.sha256(content_compressed).hexdigest()
+-        conda_store.storage.set(
+-            conda_store.db,
+-            build.id,
+-            build.docker_blob_key(content_compressed_hash),
+-            content_compressed,
+-            content_type="application/gzip",
+-            artifact_type=schema.BuildArtifactType.DOCKER_BLOB,
+-        )
+-
+-        docker_layer = schema.DockerManifestLayer(
+-            size=len(content_compressed), digest=f"sha256:{content_compressed_hash}"
+-        )
+-        docker_manifest.layers.append(docker_layer)
+-
+-        docker_config_history = schema.DockerConfigHistory()
+-        docker_config.history.append(docker_config_history)
+-
+-        docker_config.rootfs.diff_ids.append(f"sha256:{content_uncompressed_hash}")
+-
+-    docker_config_content = docker_config.json().encode("utf-8")
+-    docker_config_hash = hashlib.sha256(docker_config_content).hexdigest()
+-    docker_manifest.config = schema.DockerManifestConfig(
+-        size=len(docker_config_content), digest=f"sha256:{docker_config_hash}"
+-    )
+-    docker_manifest_content = docker_manifest.json().encode("utf-8")
+-    docker_manifest_hash = hashlib.sha256(docker_manifest_content).hexdigest()
++    if (
++        schema.BuildArtifactType.BuildArtifactType.DOCKER_MANIFEST
++        in conda_store.build_artifacts
++    ):
++        conda_store.container_registry.store_image(conda_store, build, image)
+ 
+-    conda_store.storage.set(
+-        conda_store.db,
+-        build.id,
+-        build.docker_blob_key(docker_config_hash),
+-        docker_config_content,
+-        content_type="application/vnd.docker.container.image.v1+json",
+-        artifact_type=schema.BuildArtifactType.DOCKER_BLOB,
+-    )
+-
+-    # docker likes to have a sha256 key version of the manifest this
+-    # is sort of hack to avoid having to figure out which sha256
+-    # refers to which manifest.
+-    conda_store.storage.set(
+-        conda_store.db,
+-        build.id,
+-        f"docker/manifest/sha256:{docker_manifest_hash}",
+-        docker_manifest_content,
+-        content_type="application/vnd.docker.distribution.manifest.v2+json",
+-        artifact_type=schema.BuildArtifactType.DOCKER_BLOB,
+-    )
+-
+-    conda_store.storage.set(
+-        conda_store.db,
+-        build.id,
+-        build.docker_manifest_key,
+-        docker_manifest_content,
+-        content_type="application/vnd.docker.distribution.manifest.v2+json",
+-        artifact_type=schema.BuildArtifactType.DOCKER_MANIFEST,
+-    )
+-
+-    conda_store.log.info(
+-        f"built docker image: {image.name}:{image.tag} layers={len(image.layers)}"
+-    )
++    if schema.BuildArtifactType.CONTAINER_REGISTRY in conda_store.build_artifacts:
++        conda_store.container_registry.push_image(conda_store, build, image)
+```
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/conda.py` & `conda-store-server-0.4.9/conda_store_server/conda.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/environment.py` & `conda-store-server-0.4.9/conda_store_server/environment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/orm.py` & `conda-store-server-0.4.9/conda_store_server/orm.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -12,14 +12,15 @@
+     Unicode,
+     Text,
+     JSON,
+     Enum,
+     DateTime,
+     UniqueConstraint,
+     ForeignKey,
++    UnicodeText,
+ )
+ from sqlalchemy.orm import sessionmaker, relationship, scoped_session, backref
+ from sqlalchemy.ext.declarative import declarative_base
+ from sqlalchemy.ext.hybrid import hybrid_property
+ from sqlalchemy import create_engine
+ 
+ from conda_store_server import utils, schema
+@@ -272,14 +273,16 @@
+     current_build_id = Column(Integer, ForeignKey("build.id", use_alter=True))
+     current_build = relationship(
+         Build, foreign_keys=[current_build_id], post_update=True
+     )
+ 
+     deleted_on = Column(DateTime, default=None)
+ 
++    description = Column(UnicodeText, default=None)
++
+ 
+ class CondaChannel(Base):
+     __tablename__ = "conda_channel"
+ 
+     id = Column(Integer, primary_key=True)
+     name = Column(Unicode(255), unique=True, nullable=False)
+     last_update = Column(DateTime)
+```
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/schema.py` & `conda-store-server-0.4.9/conda_store_server/schema.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -98,14 +98,15 @@
+     DIRECTORY = "DIRECTORY"
+     LOCKFILE = "LOCKFILE"
+     LOGS = "LOGS"
+     YAML = "YAML"
+     CONDA_PACK = "CONDA_PACK"
+     DOCKER_BLOB = "DOCKER_BLOB"
+     DOCKER_MANIFEST = "DOCKER_MANIFEST"
++    CONTAINER_REGISTRY = "CONTAINER_REGISTRY"
+ 
+ 
+ class BuildStatus(enum.Enum):
+     QUEUED = "QUEUED"
+     BUILDING = "BUILDING"
+     COMPLETED = "COMPLETED"
+     FAILED = "FAILED"
+@@ -175,14 +176,15 @@
+ 
+ 
+ class CondaSpecification(BaseModel):
+     name: constr(regex=f"^[{ALLOWED_CHARACTERS}]+$")  # noqa: F722
+     channels: List[str] = []
+     dependencies: List[Union[str, CondaSpecificationPip]] = []
+     prefix: Optional[str]
++    description: Optional[str] = ""
+ 
+     @validator("dependencies", each_item=True)
+     def check_dependencies(cls, v):
+         from conda.models.match_spec import MatchSpec
+ 
+         if not isinstance(v, str):
+             return v  # ignore pip field
+```
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/app.py` & `conda-store-server-0.4.9/conda_store_server/server/app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/auth.py` & `conda-store-server-0.4.9/conda_store_server/server/auth.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/dbutil.py` & `conda-store-server-0.4.9/conda_store_server/server/dbutil.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/templates/alembic.ini` & `conda-store-server-0.4.9/conda_store_server/server/templates/alembic.ini`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/templates/base.html` & `conda-store-server-0.4.9/conda_store_server/server/templates/base.html`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/templates/build.html` & `conda-store-server-0.4.9/conda_store_server/server/templates/build.html`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/templates/create.html` & `conda-store-server-0.4.9/conda_store_server/server/templates/create.html`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/templates/environment.html` & `conda-store-server-0.4.9/conda_store_server/server/templates/environment.html`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/templates/home.html` & `conda-store-server-0.4.9/conda_store_server/server/templates/home.html`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/templates/namespace.html` & `conda-store-server-0.4.9/conda_store_server/server/templates/namespace.html`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/templates/navigation.html` & `conda-store-server-0.4.9/conda_store_server/server/templates/navigation.html`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/templates/user.html` & `conda-store-server-0.4.9/conda_store_server/server/templates/user.html`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/views/api.py` & `conda-store-server-0.4.9/conda_store_server/server/views/api.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -392,22 +392,28 @@
+ )
+ def api_update_environment_build(
+     namespace: str,
+     name: str,
+     request: Request,
+     conda_store=Depends(dependencies.get_conda_store),
+     auth=Depends(dependencies.get_auth),
+-    build_id: int = Body(..., embed=True),
++    build_id: int = Body(None, embed=True),
++    description: str = Body(None, embed=True),
+ ):
+     auth.authorize_request(
+         request, f"{namespace}/{name}", {Permissions.ENVIRONMENT_UPDATE}, require=True
+     )
+ 
+     try:
+-        conda_store.update_environment_build(namespace, name, build_id)
++        if build_id is not None:
++            conda_store.update_environment_build(namespace, name, build_id)
++
++        if description is not None:
++            conda_store.update_environment_description(namespace, name, description)
++
+     except utils.CondaStoreError as e:
+         raise HTTPException(status_code=400, detail=e.message)
+ 
+     return {"status": "ok"}
+ 
+ 
+ @router_api.delete(
+```
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/views/metrics.py` & `conda-store-server-0.4.9/conda_store_server/server/views/metrics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/views/registry.py` & `conda-store-server-0.4.9/conda_store_server/server/views/registry.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/server/views/ui.py` & `conda-store-server-0.4.9/conda_store_server/server/views/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/storage.py` & `conda-store-server-0.4.9/conda_store_server/storage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/utils.py` & `conda-store-server-0.4.9/conda_store_server/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/worker/app.py` & `conda-store-server-0.4.9/conda_store_server/worker/app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `conda-store-server-0.4.8/conda_store_server/worker/tasks.py` & `conda-store-server-0.4.9/conda_store_server/worker/tasks.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -131,14 +131,19 @@
+         conda_prefix = build_artifact.build.build_path(conda_store)
+         # be REALLY sure this is a directory within store directory
+         if conda_prefix.startswith(conda_store.store_directory) and os.path.isdir(
+             conda_prefix
+         ):
+             shutil.rmtree(conda_prefix)
+             conda_store.db.delete(build_artifact)
++    elif build_artifact.artifact_type == schema.BuildArtifactType.CONTAINER_REGISTRY:
++        pass
++        # # container registry tag deletion is not generally implemented
++        # # the underlying library `python_docker` is already capable
++        # conda_store.container_registry.delete_image(build_artifact.key)
+     elif build_artifact.artifact_type == schema.BuildArtifactType.LOCKFILE:
+         pass
+     else:
+         conda_store.log.info(f"deleting {build_artifact.key}")
+         conda_store.storage.delete(
+             conda_store.db, build_artifact.build.id, build_artifact.key
+         )
+```
+
+### Comparing `conda-store-server-0.4.8/conda_store_server.egg-info/PKG-INFO` & `conda-store-server-0.4.9/conda_store_server.egg-info/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: conda-store-server
+-Version: 0.4.8
++Version: 0.4.9
+ Summary: Conda Environment Management, Builds, and Serve
+ Home-page: https://github.com/Quansight/conda-store
+ Author: Christopher Ostrouchov
+ Author-email: chris.ostrouchov@gmail.com
+ License: BSD License
+ Project-URL: Bug Reports, https://github.com/quansight/conda-store
+ Project-URL: Documentation, https://conda-store.readthedocs.io/
+```
+
+### Comparing `conda-store-server-0.4.8/conda_store_server.egg-info/SOURCES.txt` & `conda-store-server-0.4.9/conda_store_server.egg-info/SOURCES.txt`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -7,14 +7,15 @@
+ conda_store_server/api.py
+ conda_store_server/app.py
+ conda_store_server/build.py
+ conda_store_server/client.py
+ conda_store_server/conda.py
+ conda_store_server/environment.py
+ conda_store_server/orm.py
++conda_store_server/registry.py
+ conda_store_server/schema.py
+ conda_store_server/storage.py
+ conda_store_server/utils.py
+ conda_store_server.egg-info/PKG-INFO
+ conda_store_server.egg-info/SOURCES.txt
+ conda_store_server.egg-info/dependency_links.txt
+ conda_store_server.egg-info/entry_points.txt
+```
+
+### Comparing `conda-store-server-0.4.8/setup.cfg` & `conda-store-server-0.4.9/setup.cfg`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,466 @@
+--- tmp/mmWave-0.1.95.tar.gz
++++ tmp/mmWave-0.1.96.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/mmWave-0.1.95.tar", last modified: Fri Mar 24 07:36:12 2023, max compression
+│ +gzip compressed data, was "dist/mmWave-0.1.96.tar", last modified: Fri Apr  7 03:23:20 2023, max compression
+│   --- mmWave-0.1.95.tar
+├── +++ mmWave-0.1.96.tar
+│ ├── file list
+│ │ @@ -1,43 +1,43 @@
+│ │ -drwxr-xr-x   0 zach       (501) staff       (20)        0 2023-03-24 07:36:12.216350 mmWave-0.1.95/
+│ │ --rw-r--r--   0 zach       (501) staff       (20)     6070 2023-03-24 07:36:12.216563 mmWave-0.1.95/PKG-INFO
+│ │ --rw-r--r--   0 zach       (501) staff       (20)     5569 2023-03-24 07:35:10.000000 mmWave-0.1.95/README.md
+│ │ -drwxr-xr-x   0 zach       (501) staff       (20)        0 2023-03-24 07:36:12.214152 mmWave-0.1.95/mmWave/
+│ │ --rw-r--r--   0 zach       (501) staff       (20)        2 2019-01-18 15:34:28.000000 mmWave-0.1.95/mmWave/__init__.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    15857 2020-05-13 09:15:42.000000 mmWave-0.1.95/mmWave/droneRN.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)     8286 2019-07-03 01:50:56.000000 mmWave-0.1.95/mmWave/highAccuracy.py
+│ │ --rw-r--r--   0 zach       (501) staff       (20)    18084 2021-05-26 05:59:29.000000 mmWave-0.1.95/mmWave/lpdFDS.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    12507 2023-02-04 06:54:20.000000 mmWave-0.1.95/mmWave/lpdISK.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)     4465 2019-12-05 19:36:36.000000 mmWave-0.1.95/mmWave/lpdISK_kv.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    11171 2022-11-03 03:52:22.000000 mmWave-0.1.95/mmWave/lpdISK_v2.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    17158 2023-03-24 07:25:35.000000 mmWave-0.1.95/mmWave/mrRadar.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    18021 2021-12-30 16:06:25.000000 mmWave-0.1.95/mmWave/pc3.py
+│ │ --rw-rw-r--   0 zach       (501) staff       (20)    19716 2022-10-06 04:29:24.000000 mmWave-0.1.95/mmWave/pc3OVH.py
+│ │ --rw-r--r--   0 zach       (501) staff       (20)    19045 2022-09-02 15:04:31.000000 mmWave-0.1.95/mmWave/pc3_360.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    22189 2022-03-02 12:54:15.000000 mmWave-0.1.95/mmWave/pc3_oob.py
+│ │ --rw-r--r--   0 zach       (501) staff       (20)    15532 2023-01-05 05:56:23.000000 mmWave-0.1.95/mmWave/pc3_v1884R.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    19380 2022-06-13 08:50:32.000000 mmWave-0.1.95/mmWave/pc3_v2.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    22899 2022-09-02 02:15:42.000000 mmWave-0.1.95/mmWave/pc3_vsd.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    11294 2022-09-15 06:03:06.000000 mmWave-0.1.95/mmWave/pc3_vsd_v2.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    10563 2019-12-01 23:33:06.000000 mmWave-0.1.95/mmWave/pc3d.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)     4209 2019-12-01 23:33:32.000000 mmWave-0.1.95/mmWave/pc3d_kv.py
+│ │ --rw-r--r--   0 zach       (501) staff       (20)    18872 2023-02-09 15:38:21.000000 mmWave-0.1.95/mmWave/pct.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)     4052 2019-11-26 11:17:46.000000 mmWave-0.1.95/mmWave/people3D.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)     8311 2020-04-21 03:50:24.000000 mmWave-0.1.95/mmWave/peopleMB.py
+│ │ --rw-r--r--   0 zach       (501) staff       (20)     5914 2022-10-13 04:02:11.000000 mmWave-0.1.95/mmWave/roadwayTMD_kv.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)     9165 2021-12-30 05:31:56.000000 mmWave-0.1.95/mmWave/srradar.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    15643 2020-04-17 03:47:43.000000 mmWave-0.1.95/mmWave/surfaceVD.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    18348 2023-03-24 07:23:52.000000 mmWave-0.1.95/mmWave/trafficMD.py
+│ │ --rw-r--r--   0 zach       (501) staff       (20)    19893 2023-03-24 07:30:55.000000 mmWave-0.1.95/mmWave/trafficMD_I480.py
+│ │ --rw-r--r--   0 zach       (501) staff       (20)     4612 2020-04-30 09:13:56.000000 mmWave-0.1.95/mmWave/trafficMD_kv.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    10456 2020-04-21 03:35:54.000000 mmWave-0.1.95/mmWave/vehicleOD.py
+│ │ --rw-r--r--   0 zach       (501) staff       (20)    10075 2020-07-21 15:14:04.000000 mmWave-0.1.95/mmWave/vehicleODHeatMap.py
+│ │ --rwxrwxrwx   0 zach       (501) staff       (20)    14108 2021-01-07 04:09:32.000000 mmWave-0.1.95/mmWave/vehicleODR.py
+│ │ --rw-r--r--   0 zach       (501) staff       (20)     7125 2020-02-04 15:39:27.000000 mmWave-0.1.95/mmWave/vitalsign.py
+│ │ --rw-r--r--   0 zach       (501) staff       (20)     2498 2020-10-21 06:27:00.000000 mmWave-0.1.95/mmWave/vitalsign_kv.py
+│ │ -drwxr-xr-x   0 zach       (501) staff       (20)        0 2023-03-24 07:36:12.215863 mmWave-0.1.95/mmWave.egg-info/
+│ │ --rw-r--r--   0 zach       (501) staff       (20)     6070 2023-03-24 07:36:11.000000 mmWave-0.1.95/mmWave.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 zach       (501) staff       (20)      770 2023-03-24 07:36:11.000000 mmWave-0.1.95/mmWave.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 zach       (501) staff       (20)        1 2023-03-24 07:36:11.000000 mmWave-0.1.95/mmWave.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 zach       (501) staff       (20)        7 2023-03-24 07:36:11.000000 mmWave-0.1.95/mmWave.egg-info/top_level.txt
+│ │ --rw-r--r--   0 zach       (501) staff       (20)       38 2023-03-24 07:36:12.217251 mmWave-0.1.95/setup.cfg
+│ │ --rw-r--r--   0 zach       (501) staff       (20)     6270 2023-03-24 07:31:23.000000 mmWave-0.1.95/setup.py
+│ │ +drwxr-xr-x   0 zach       (501) staff       (20)        0 2023-04-07 03:23:20.872240 mmWave-0.1.96/
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)     6147 2023-04-07 03:23:20.872405 mmWave-0.1.96/PKG-INFO
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)     5646 2023-04-07 03:20:06.000000 mmWave-0.1.96/README.md
+│ │ +drwxr-xr-x   0 zach       (501) staff       (20)        0 2023-04-07 03:23:20.870686 mmWave-0.1.96/mmWave/
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)        2 2019-01-18 15:34:28.000000 mmWave-0.1.96/mmWave/__init__.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    15857 2020-05-13 09:15:42.000000 mmWave-0.1.96/mmWave/droneRN.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)     8286 2019-07-03 01:50:56.000000 mmWave-0.1.96/mmWave/highAccuracy.py
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)    18084 2021-05-26 05:59:29.000000 mmWave-0.1.96/mmWave/lpdFDS.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    12507 2023-02-04 06:54:20.000000 mmWave-0.1.96/mmWave/lpdISK.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)     4465 2019-12-05 19:36:36.000000 mmWave-0.1.96/mmWave/lpdISK_kv.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    11171 2022-11-03 03:52:22.000000 mmWave-0.1.96/mmWave/lpdISK_v2.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    17158 2023-03-24 07:25:35.000000 mmWave-0.1.96/mmWave/mrRadar.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    18021 2021-12-30 16:06:25.000000 mmWave-0.1.96/mmWave/pc3.py
+│ │ +-rw-rw-r--   0 zach       (501) staff       (20)    19716 2022-10-06 04:29:24.000000 mmWave-0.1.96/mmWave/pc3OVH.py
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)    19045 2022-09-02 15:04:31.000000 mmWave-0.1.96/mmWave/pc3_360.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    22189 2022-03-02 12:54:15.000000 mmWave-0.1.96/mmWave/pc3_oob.py
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)    16407 2023-04-07 03:18:25.000000 mmWave-0.1.96/mmWave/pc3_v1884R.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    19380 2022-06-13 08:50:32.000000 mmWave-0.1.96/mmWave/pc3_v2.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    22899 2022-09-02 02:15:42.000000 mmWave-0.1.96/mmWave/pc3_vsd.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    11294 2022-09-15 06:03:06.000000 mmWave-0.1.96/mmWave/pc3_vsd_v2.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    10563 2019-12-01 23:33:06.000000 mmWave-0.1.96/mmWave/pc3d.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)     4209 2019-12-01 23:33:32.000000 mmWave-0.1.96/mmWave/pc3d_kv.py
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)    18872 2023-02-09 15:38:21.000000 mmWave-0.1.96/mmWave/pct.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)     4052 2019-11-26 11:17:46.000000 mmWave-0.1.96/mmWave/people3D.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)     8311 2020-04-21 03:50:24.000000 mmWave-0.1.96/mmWave/peopleMB.py
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)     5914 2022-10-13 04:02:11.000000 mmWave-0.1.96/mmWave/roadwayTMD_kv.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)     9165 2021-12-30 05:31:56.000000 mmWave-0.1.96/mmWave/srradar.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    15643 2020-04-17 03:47:43.000000 mmWave-0.1.96/mmWave/surfaceVD.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    18348 2023-03-24 07:23:52.000000 mmWave-0.1.96/mmWave/trafficMD.py
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)    19893 2023-03-24 07:30:55.000000 mmWave-0.1.96/mmWave/trafficMD_I480.py
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)     4612 2020-04-30 09:13:56.000000 mmWave-0.1.96/mmWave/trafficMD_kv.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    10456 2020-04-21 03:35:54.000000 mmWave-0.1.96/mmWave/vehicleOD.py
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)    10075 2020-07-21 15:14:04.000000 mmWave-0.1.96/mmWave/vehicleODHeatMap.py
+│ │ +-rwxrwxrwx   0 zach       (501) staff       (20)    14108 2021-01-07 04:09:32.000000 mmWave-0.1.96/mmWave/vehicleODR.py
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)     7125 2020-02-04 15:39:27.000000 mmWave-0.1.96/mmWave/vitalsign.py
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)     2498 2020-10-21 06:27:00.000000 mmWave-0.1.96/mmWave/vitalsign_kv.py
+│ │ +drwxr-xr-x   0 zach       (501) staff       (20)        0 2023-04-07 03:23:20.871950 mmWave-0.1.96/mmWave.egg-info/
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)     6147 2023-04-07 03:23:19.000000 mmWave-0.1.96/mmWave.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)      770 2023-04-07 03:23:20.000000 mmWave-0.1.96/mmWave.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)        1 2023-04-07 03:23:19.000000 mmWave-0.1.96/mmWave.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)        7 2023-04-07 03:23:20.000000 mmWave-0.1.96/mmWave.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)       38 2023-04-07 03:23:20.872781 mmWave-0.1.96/setup.cfg
+│ │ +-rw-r--r--   0 zach       (501) staff       (20)     6343 2023-04-07 03:21:21.000000 mmWave-0.1.96/setup.py
+│ │   --- mmWave-0.1.95/PKG-INFO
+│ ├── +++ mmWave-0.1.96/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mmWave
+│ │ -Version: 0.1.95
+│ │ +Version: 0.1.96
+│ │  Summary: Joybien mmWave (Batman-101/201/301/501/601) library
+│ │  Home-page: http://www.joybien.com
+│ │  Download-URL: https://pypi.org/project/mmWave
+│ │  Author: Bighead Chen
+│ │  Author-email: zach_chen@joybien.com
+│ │  Project-URL: API Source Code, https://github.com/bigheadG/mmWave
+│ │  Classifier: Programming Language :: Python :: 3
+│ │ @@ -146,9 +146,10 @@
+│ │  28. mmWave-1.0.93
+│ │      2023/02/10 trafficMD_I480 v2.0.4, revised v7 'tid' text position
+│ │  
+│ │  29. mmWave-1.0.95
+│ │      2023/03/24 mrRadar   v1.0.2  header enable/disable in inital
+│ │      2023/03/24 trafficMD v0.1.1  header enable/disable in inital
+│ │      2023/03/24  trafficMD_I480   ver:2.0.6 header enable/disable in inital
+│ │ -
+│ │ +30. mmWave-1.0.96
+│ │ +    2023/04/07 pc3_V1884R v0.0.2  add try..except in unpack
+│ │   --- mmWave-0.1.95/README.md
+│ ├── +++ mmWave-0.1.96/README.md
+│ │┄ Files 5% similar despite different names
+│ │ @@ -132,9 +132,10 @@
+│ │  28. mmWave-1.0.93
+│ │      2023/02/10 trafficMD_I480 v2.0.4, revised v7 'tid' text position
+│ │  
+│ │  29. mmWave-1.0.95
+│ │      2023/03/24 mrRadar   v1.0.2  header enable/disable in inital
+│ │      2023/03/24 trafficMD v0.1.1  header enable/disable in inital
+│ │      2023/03/24  trafficMD_I480   ver:2.0.6 header enable/disable in inital
+│ │ -
+│ │ +30. mmWave-1.0.96
+│ │ +    2023/04/07 pc3_V1884R v0.0.2  add try..except in unpack
+│ │   --- mmWave-0.1.95/mmWave/droneRN.py
+│ ├── +++ mmWave-0.1.96/mmWave/droneRN.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/highAccuracy.py
+│ ├── +++ mmWave-0.1.96/mmWave/highAccuracy.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/lpdFDS.py
+│ ├── +++ mmWave-0.1.96/mmWave/lpdFDS.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/lpdISK.py
+│ ├── +++ mmWave-0.1.96/mmWave/lpdISK.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/lpdISK_kv.py
+│ ├── +++ mmWave-0.1.96/mmWave/lpdISK_kv.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/lpdISK_v2.py
+│ ├── +++ mmWave-0.1.96/mmWave/lpdISK_v2.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/mrRadar.py
+│ ├── +++ mmWave-0.1.96/mmWave/mrRadar.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/pc3.py
+│ ├── +++ mmWave-0.1.96/mmWave/pc3.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/pc3OVH.py
+│ ├── +++ mmWave-0.1.96/mmWave/pc3OVH.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/pc3_360.py
+│ ├── +++ mmWave-0.1.96/mmWave/pc3_360.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/pc3_oob.py
+│ ├── +++ mmWave-0.1.96/mmWave/pc3_oob.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/pc3_v1884R.py
+│ ├── +++ mmWave-0.1.96/mmWave/pc3_v1884R.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -7,15 +7,16 @@
+│ │  # 
+│ │  # company: Joybien Technologies: www.joybien.com
+│ │  # author: Zach Chen
+│ │  #===========================================
+│ │  # output: v1010,v1011,v1012,v1020,v1021 Raw data
+│ │  # v0.0.1 : 2023/01/05 release
+│ │  #          (1)Output list data
+│ │ -# 
+│ │ +# v0.0.2 : 2023/04/07 add try...except
+│ │ +#
+│ │  
+│ │  import serial
+│ │  import time
+│ │  import struct
+│ │  import numpy as np
+│ │  import pandas as pd
+│ │  
+│ │ @@ -135,20 +136,25 @@
+│ │  				# read next 16 bytes for v, l, p, f
+│ │  				for i in range(32):
+│ │  					ch = self.port.read()
+│ │  					buf += ch
+│ │  					self.gdata = buf
+│ │  
+│ │  				if len(buf) == (32+8): # magic+header
+│ │ -					
+│ │ -					(self.hdr.version,self.hdr.totalPackLen,self.hdr.platform,self.hdr.frameNumber,
+│ │ -					self.hdr.timeCpuCycles,self.hdr.numDetectedObj,self.hdr.numTLVs,self.hdr.subFrameNumber) = struct.unpack('8I',buf[8:40]) 
+│ │ -					self.frameNumber = self.hdr.frameNumber
+│ │ -					verString = "{:X}".format(self.hdr.version)
+│ │ -					totalLen = self.hdr.totalPackLen
+│ │ +					try:
+│ │ +						(self.hdr.version,self.hdr.totalPackLen,self.hdr.platform,self.hdr.frameNumber,
+│ │ +						self.hdr.timeCpuCycles,self.hdr.numDetectedObj,self.hdr.numTLVs,self.hdr.subFrameNumber) = struct.unpack('8I',buf[8:40]) 
+│ │ +						self.frameNumber = self.hdr.frameNumber
+│ │ +						verString = "{:X}".format(self.hdr.version)
+│ │ +						totalLen = self.hdr.totalPackLen
+│ │ +					except:
+│ │ +						if self.dbg == True:
+│ │ +							print("unpack except:")
+│ │ +						return False
+│ │ +						
+│ │  					if disp:
+│ │  						self.headerShow()
+│ │  					
+│ │  					if self.playback == True:
+│ │  						return False
+│ │  					
+│ │  					if verString != self.version_keep or self.hdr.totalPackLen > 100000:
+│ │ @@ -247,31 +253,41 @@
+│ │  					print("===============================")
+│ │  					print(f"JB> (idle)->(TL):    numTLVs(tlvCount):{tlvCount}")
+│ │  				
+│ │  				
+│ │  			elif lstate == 'TL': #TLV Header type/length
+│ │  				idxFrom = idxTo 
+│ │  				idxTo += 8
+│ │ -				ttype, self.tlvLength = struct.unpack('2I', uartBuf[idxFrom : idxTo])
+│ │ +				try:
+│ │ +					ttype, self.tlvLength = struct.unpack('2I', uartBuf[idxFrom : idxTo])
+│ │ +				except:
+│ │ +					if self.dbg == True:
+│ │ +						print("Header unpack except")
+│ │ +					return (False,v1010,v1011,v1012,v1020,v1021)
+│ │ +						
+│ │  				if self.sm:
+│ │  					print(f"JB> (TL)->({ttype}) indexFrom:idxTo= {idxFrom}:{idxTo}  type:{ttype} tlvLength:{self.tlvLength}")
+│ │  				lstate = str(ttype)
+│ │  			
+│ │  			elif lstate == '1020': # count = Total Lentgh - 8   # eadrs: 8 bytes
+│ │  				
+│ │  				(points,dataBytes) = self.points_cal(dataBytes = 8, offset = 20) 
+│ │  				datalen = self.tlvLength - 20 # tlv(8 bytes) units(4x5=20 bytes)
+│ │  				 
+│ │  				
+│ │  				#print("JB> (1020) points: {:}    datalen:{:}  idxTo:{:}".format(points,datalen,idxTo))
+│ │  				#(0) unit unpack
+│ │  				idxFrom = idxTo
+│ │  				idxTo += 20
+│ │ -				
+│ │ -				self.u.elevationUnit,self.u.azimuthUnit,self.u.dopplerUnit,self.u.rangeUnit,self.u.snrUnit = struct.unpack('5f', uartBuf[idxFrom : idxTo])
+│ │ +				try:
+│ │ +					self.u.elevationUnit,self.u.azimuthUnit,self.u.dopplerUnit,self.u.rangeUnit,self.u.snrUnit = struct.unpack('5f', uartBuf[idxFrom : idxTo])
+│ │ +				except:
+│ │ +					if self.dbg == True:
+│ │ +						print("Header unpack except")
+│ │ +					return (False,v1010,v1011,v1012,v1020,v1021)
+│ │  				#print("JB> (1020-unit)  ==> elv:{:.4f} azimuth:{:.4f} doppler:{:.4f} range:{:.4f} snr:{:.4f}".format(self.u.elevationUnit,self.u.azimuthUnit,self.u.dopplerUnit,self.u.rangeUnit,self.u.snrUnit))
+│ │  				
+│ │  				#(1) reads unpack
+│ │  				idxFrom = idxTo
+│ │  				idxTo += datalen
+│ │  				
+│ │  				#sbuf = uartBuf[idxFrom : idxTo]
+│ │ @@ -328,55 +344,65 @@
+│ │  				
+│ │  			
+│ │  			elif lstate == '1011': #Target Index
+│ │  				(points,dataBytes) = self.points_cal(dataBytes=1,offset=0)
+│ │  				idxFrom = idxTo
+│ │  				idxTo += self.tlvLength
+│ │  				#print(f'(v1011) type:{ttype} length:{self.tlvLength} ')
+│ │ -				
+│ │ -				for i in range(points):
+│ │ -					tidx = struct.unpack('B', uartBuf[idxFrom + i*dataBytes : idxFrom + (i + 1)*dataBytes])
+│ │ -					#print(f'JB>(1011) point({i}) tidx:{tidx}')
+│ │ -					v1011.append(tidx)
+│ │ -				
+│ │ +				try:
+│ │ +					for i in range(points):
+│ │ +						tidx = struct.unpack('B', uartBuf[idxFrom + i*dataBytes : idxFrom + (i + 1)*dataBytes])
+│ │ +						#print(f'JB>(1011) point({i}) tidx:{tidx}')
+│ │ +						v1011.append(tidx)
+│ │ +				except:
+│ │ +					if self.dbg == True:
+│ │ +						print("(8)Improper Type 1011 Value structure found: ")
+│ │ +					return (False,v1010,v1011,v1012,v1020,v1021)
+│ │  				 
+│ │  				(chk,lstate,tlvCount) = self.idle_tl_check(tlvCount = tlvCount,state= lstate)
+│ │  				if chk:
+│ │  					return (True,v1010,v1011,v1012,v1020,v1021)
+│ │  				
+│ │  			
+│ │  			elif lstate == '1012': #Target Height
+│ │  				(points,dataBytes) = self.points_cal(dataBytes=12,offset=0)
+│ │  				
+│ │  				idxFrom = idxTo
+│ │  				idxTo += self.tlvLength
+│ │  				#print(f'(v1012) type:{ttype} length:{self.tlvLength} ')
+│ │ -				
+│ │ -				for i in range(points):
+│ │ -					(tid,maxZ,minZ) = struct.unpack('I2f', uartBuf[idxFrom + i*dataBytes : idxFrom + (i + 1)*dataBytes])
+│ │ -					#print(f'JB>(1012) point({i}) tid:{tid} minZ:{minZ} maxZ:{maxZ}  ')
+│ │ -					v1012.append((tid,maxZ,minZ))
+│ │ -				
+│ │ +				try:
+│ │ +					for i in range(points):
+│ │ +						(tid,maxZ,minZ) = struct.unpack('I2f', uartBuf[idxFrom + i*dataBytes : idxFrom + (i + 1)*dataBytes])
+│ │ +						#print(f'JB>(1012) point({i}) tid:{tid} minZ:{minZ} maxZ:{maxZ}  ')
+│ │ +						v1012.append((tid,maxZ,minZ))
+│ │ +				except:
+│ │ +					if self.dbg == True:
+│ │ +						print("(9)Improper Type 1012 Value structure found: ")
+│ │ +					return (False,v1010,v1011,v1012,v1020,v1021)
+│ │  				 
+│ │  				(chk,lstate,tlvCount) = self.idle_tl_check(tlvCount = tlvCount,state= lstate)
+│ │  				if chk:
+│ │  					return (True,v1010,v1011,v1012,v1020,v1021)
+│ │  				
+│ │  				 
+│ │  					
+│ │  			elif lstate == '1021': #Prescence Indication
+│ │  				(points,dataBytes) = self.points_cal(dataBytes=4,offset=0)
+│ │  				idxFrom = idxTo
+│ │  				idxTo += self.tlvLength
+│ │  			
+│ │  				#print(f'(v1021) type:{ttype} length:{self.tlvLength} ')
+│ │ -				
+│ │ -				for i in range(points):
+│ │ -					pri = struct.unpack('I', uartBuf[idxFrom + i*dataBytes : idxFrom + (i + 1)*dataBytes])
+│ │ -					v1012.append(pri)
+│ │ +				try:
+│ │ +					for i in range(points):
+│ │ +						pri = struct.unpack('I', uartBuf[idxFrom + i*dataBytes : idxFrom + (i + 1)*dataBytes])
+│ │ +						v1012.append(pri)
+│ │ +				except:
+│ │ +					if self.dbg == True:
+│ │ +						print("(10)Improper Type 1021 Value structure found: ")
+│ │ +					return (False,v1010,v1011,v1012,v1020,v1021)
+│ │  				
+│ │  				(chk,lstate,tlvCount) = self.idle_tl_check(tlvCount = tlvCount,state= lstate)
+│ │  				if chk:
+│ │  					return (True,v1010,v1011,v1012,v1020,v1021)
+│ │  				
+│ │  			else:
+│ │  				lstat = 'idle'
+│ │   --- mmWave-0.1.95/mmWave/pc3_v2.py
+│ ├── +++ mmWave-0.1.96/mmWave/pc3_v2.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/pc3_vsd.py
+│ ├── +++ mmWave-0.1.96/mmWave/pc3_vsd.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/pc3_vsd_v2.py
+│ ├── +++ mmWave-0.1.96/mmWave/pc3_vsd_v2.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/pc3d.py
+│ ├── +++ mmWave-0.1.96/mmWave/pc3d.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/pc3d_kv.py
+│ ├── +++ mmWave-0.1.96/mmWave/pc3d_kv.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/pct.py
+│ ├── +++ mmWave-0.1.96/mmWave/pct.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/people3D.py
+│ ├── +++ mmWave-0.1.96/mmWave/people3D.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/peopleMB.py
+│ ├── +++ mmWave-0.1.96/mmWave/peopleMB.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/roadwayTMD_kv.py
+│ ├── +++ mmWave-0.1.96/mmWave/roadwayTMD_kv.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/srradar.py
+│ ├── +++ mmWave-0.1.96/mmWave/srradar.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/surfaceVD.py
+│ ├── +++ mmWave-0.1.96/mmWave/surfaceVD.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/trafficMD.py
+│ ├── +++ mmWave-0.1.96/mmWave/trafficMD.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/trafficMD_I480.py
+│ ├── +++ mmWave-0.1.96/mmWave/trafficMD_I480.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/trafficMD_kv.py
+│ ├── +++ mmWave-0.1.96/mmWave/trafficMD_kv.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/vehicleOD.py
+│ ├── +++ mmWave-0.1.96/mmWave/vehicleOD.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/vehicleODHeatMap.py
+│ ├── +++ mmWave-0.1.96/mmWave/vehicleODHeatMap.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/vehicleODR.py
+│ ├── +++ mmWave-0.1.96/mmWave/vehicleODR.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/vitalsign.py
+│ ├── +++ mmWave-0.1.96/mmWave/vitalsign.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave/vitalsign_kv.py
+│ ├── +++ mmWave-0.1.96/mmWave/vitalsign_kv.py
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/mmWave.egg-info/PKG-INFO
+│ ├── +++ mmWave-0.1.96/mmWave.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mmWave
+│ │ -Version: 0.1.95
+│ │ +Version: 0.1.96
+│ │  Summary: Joybien mmWave (Batman-101/201/301/501/601) library
+│ │  Home-page: http://www.joybien.com
+│ │  Download-URL: https://pypi.org/project/mmWave
+│ │  Author: Bighead Chen
+│ │  Author-email: zach_chen@joybien.com
+│ │  Project-URL: API Source Code, https://github.com/bigheadG/mmWave
+│ │  Classifier: Programming Language :: Python :: 3
+│ │ @@ -146,9 +146,10 @@
+│ │  28. mmWave-1.0.93
+│ │      2023/02/10 trafficMD_I480 v2.0.4, revised v7 'tid' text position
+│ │  
+│ │  29. mmWave-1.0.95
+│ │      2023/03/24 mrRadar   v1.0.2  header enable/disable in inital
+│ │      2023/03/24 trafficMD v0.1.1  header enable/disable in inital
+│ │      2023/03/24  trafficMD_I480   ver:2.0.6 header enable/disable in inital
+│ │ -
+│ │ +30. mmWave-1.0.96
+│ │ +    2023/04/07 pc3_V1884R v0.0.2  add try..except in unpack
+│ │   --- mmWave-0.1.95/mmWave.egg-info/SOURCES.txt
+│ ├── +++ mmWave-0.1.96/mmWave.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- mmWave-0.1.95/setup.py
+│ ├── +++ mmWave-0.1.96/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -168,23 +168,26 @@
+│ │  #    2023/02/10 trafficMD_I480 v2.0.4, revised v7 'tid' text position
+│ │  #
+│ │  # @1.0.95
+│ │  #    2023/03/24 mrRadar   v1.0.2  header enable/disable in inital
+│ │  #    2023/03/24 trafficMD v0.1.1  header enable/disable in inital
+│ │  #    2023/03/24	trafficMD_I480   ver:2.0.6 header enable/disable in inital
+│ │  #
+│ │ +# @1.0.96
+│ │ +#    2023/04/07 pc3_V1884R v0.0.2  add try..except in unpack
+│ │ +#
+│ │  
+│ │  import setuptools
+│ │  
+│ │  with open("README.md", "r") as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │  setuptools.setup(
+│ │      name="mmWave",
+│ │ -    version="0.1.95",
+│ │ +    version="0.1.96",
+│ │      author="Bighead Chen",
+│ │      author_email="zach_chen@joybien.com",
+│ │      description="Joybien mmWave (Batman-101/201/301/501/601) library",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="http://www.joybien.com",
+│ │      download_url="https://pypi.org/project/mmWave",

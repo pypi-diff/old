@@ -1,0 +1,1908 @@
+--- tmp/cdktf-cdktf-provider-databricks-5.0.7.tar.gz
++++ tmp/cdktf-cdktf-provider-databricks-5.0.8.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "cdktf-cdktf-provider-databricks-5.0.7.tar", last modified: Wed Apr  5 03:18:32 2023, max compression
+│ +gzip compressed data, was "cdktf-cdktf-provider-databricks-5.0.8.tar", last modified: Fri Apr  7 03:19:31 2023, max compression
+│   --- cdktf-cdktf-provider-databricks-5.0.7.tar
+├── +++ cdktf-cdktf-provider-databricks-5.0.8.tar
+│ ├── file list
+│ │ @@ -1,229 +1,229 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16012 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4239 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3271 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      234 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-05 03:18:32.156534 cdktf-cdktf-provider-databricks-5.0.7/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8256 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.116534 cdktf-cdktf-provider-databricks-5.0.7/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.124534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9579 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.128534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/_jsii/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      423 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/_jsii/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)  6029334 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/_jsii/provider-databricks@5.0.7.jsii.tgz
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.132534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/aws_s3_mount/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    24254 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/aws_s3_mount/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.132534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/azure_adls_gen1_mount/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    35878 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/azure_adls_gen1_mount/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.132534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/azure_adls_gen2_mount/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    38516 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/azure_adls_gen2_mount/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.132534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/azure_blob_mount/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    33065 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/azure_blob_mount/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.132534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/catalog/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    35891 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/catalog/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.132534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/cluster/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   357225 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/cluster/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/cluster_policy/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    22833 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/cluster_policy/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_aws_assume_role_policy/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    24085 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_aws_assume_role_policy/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_aws_bucket_policy/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    25724 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_aws_bucket_policy/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_aws_crossaccount_policy/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18349 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_aws_crossaccount_policy/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_catalogs/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17542 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_catalogs/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_cluster/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   384767 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_cluster/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_cluster_policy/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    22586 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_cluster_policy/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_clusters/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18185 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_clusters/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_current_user/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16447 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_current_user/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_dbfs_file/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20312 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_dbfs_file/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_dbfs_file_paths/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    29342 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_dbfs_file_paths/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_directory/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19448 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_directory/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_group/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    50331 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_group/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_instance_pool/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   209139 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_instance_pool/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.136534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_job/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)  1524952 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_job/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_jobs/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17614 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_jobs/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_mws_credentials/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17917 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_mws_credentials/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_mws_workspaces/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17876 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_mws_workspaces/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_node_type/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    50782 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_node_type/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_notebook/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    26038 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_notebook/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_notebook_paths/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    29511 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_notebook_paths/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_schemas/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19612 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_schemas/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_service_principal/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    32042 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_service_principal/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_service_principals/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20975 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_service_principals/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_share/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    89715 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_share/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_shares/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17592 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_shares/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_spark_version/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    42307 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_spark_version/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_sql_warehouse/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    95234 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_sql_warehouse/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_sql_warehouses/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20483 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_sql_warehouses/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_tables/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    21628 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_tables/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_user/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20676 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_user/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_views/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    21587 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_views/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_zones/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    15626 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_zones/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/dbfs_file/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    23806 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/dbfs_file/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/directory/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    22233 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/directory/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/entitlements/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    35195 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/entitlements/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/external_location/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    30967 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/external_location/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/git_credential/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    25060 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/git_credential/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.140534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/global_init_script/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    34382 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/global_init_script/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/grants/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    53837 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/grants/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/group/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    36814 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/group/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/group_instance_profile/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19789 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/group_instance_profile/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/group_member/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19134 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/group_member/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/group_role/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18905 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/group_role/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/instance_pool/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   167466 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/instance_pool/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/instance_profile/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    26467 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/instance_profile/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/ip_access_list/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    24107 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/ip_access_list/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/job/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)  1413575 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/job/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/library/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    52725 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/library/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/metastore/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    51945 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/metastore/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/metastore_assignment/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    22302 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/metastore_assignment/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/metastore_data_access/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    77354 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/metastore_data_access/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mlflow_experiment/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    37357 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mlflow_experiment/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mlflow_model/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    45757 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mlflow_model/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.144534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mlflow_webhook/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    51339 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mlflow_webhook/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/model_serving/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    79930 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/model_serving/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mount/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   117718 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mount/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_credentials/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    22047 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_credentials/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_customer_managed_keys/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    45574 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_customer_managed_keys/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_log_delivery/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    40849 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_log_delivery/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_networks/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    82705 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_networks/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_permission_assignment/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    22072 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_permission_assignment/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_private_access_settings/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    36729 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_private_access_settings/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_storage_configurations/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    22748 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_storage_configurations/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_vpc_endpoint/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    54558 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_vpc_endpoint/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_workspaces/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   144297 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_workspaces/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/notebook/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    32377 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/notebook/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/obo_token/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    22054 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/obo_token/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/permission_assignment/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19813 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/permission_assignment/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/permissions/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    81680 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/permissions/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/pipeline/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   304424 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/pipeline/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/provider/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    70835 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/provider/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/provider_resource/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    23910 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/provider_resource/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/py.typed
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/recipient/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    62700 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/recipient/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/repo/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    35181 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/repo/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/schema/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    33276 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/schema/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.148534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/secret/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    21109 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/secret/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/secret_acl/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20987 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/secret_acl/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/secret_scope/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    32167 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/secret_scope/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/service_principal/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    51686 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/service_principal/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/service_principal_role/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19696 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/service_principal_role/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/service_principal_secret/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    22284 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/service_principal_secret/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/share/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    87207 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/share/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_alert/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    40760 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_alert/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_dashboard/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    21439 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_dashboard/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_endpoint/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   102154 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_endpoint/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_global_config/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    29798 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_global_config/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_permissions/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    50953 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_permissions/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_query/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   217440 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_query/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_visualization/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    30100 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_visualization/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_widget/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    68587 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_widget/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/storage_credential/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    75858 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/storage_credential/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/table/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    73312 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/table/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/token/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    26539 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/token/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/user/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    49997 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/user/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/user_instance_profile/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19721 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/user_instance_profile/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/user_role/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18837 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/user_role/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.152534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/workspace_conf/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18031 2023-04-05 03:18:18.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/workspace_conf/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 03:18:32.128534 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4239 2023-04-05 03:18:32.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7468 2023-04-05 03:18:32.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-05 03:18:32.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      106 2023-04-05 03:18:32.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       32 2023-04-05 03:18:32.000000 cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16012 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4239 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3271 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      234 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8256 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.275717 cdktf-cdktf-provider-databricks-5.0.8/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.291717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9579 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.291717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/_jsii/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      423 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/_jsii/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)  6039773 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/_jsii/provider-databricks@5.0.8.jsii.tgz
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.299717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/aws_s3_mount/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    24254 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/aws_s3_mount/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.299717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/azure_adls_gen1_mount/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35878 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/azure_adls_gen1_mount/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.299717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/azure_adls_gen2_mount/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    38516 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/azure_adls_gen2_mount/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.299717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/azure_blob_mount/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    33065 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/azure_blob_mount/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/catalog/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35891 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/catalog/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/cluster/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   357225 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/cluster/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/cluster_policy/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    22833 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/cluster_policy/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_aws_assume_role_policy/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    24085 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_aws_assume_role_policy/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_aws_bucket_policy/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    25724 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_aws_bucket_policy/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_aws_crossaccount_policy/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18349 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_aws_crossaccount_policy/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_catalogs/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17542 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_catalogs/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_cluster/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   384767 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_cluster/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_cluster_policy/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    22586 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_cluster_policy/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_clusters/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18185 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_clusters/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_current_user/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16447 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_current_user/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_dbfs_file/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20312 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_dbfs_file/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.303717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_dbfs_file_paths/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    29342 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_dbfs_file_paths/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.307717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_directory/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19448 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_directory/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.307717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_group/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    50331 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_group/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.307717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_instance_pool/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   209139 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_instance_pool/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.307717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_job/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)  1532766 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_job/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.307717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_jobs/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17614 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_jobs/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.307717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_mws_credentials/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17917 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_mws_credentials/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.307717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_mws_workspaces/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17876 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_mws_workspaces/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.307717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_node_type/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    50782 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_node_type/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_notebook/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    26038 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_notebook/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_notebook_paths/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    29511 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_notebook_paths/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_schemas/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19612 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_schemas/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_service_principal/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    32042 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_service_principal/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_service_principals/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20975 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_service_principals/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_share/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    89715 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_share/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_shares/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17592 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_shares/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_spark_version/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    42307 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_spark_version/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_sql_warehouse/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    95234 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_sql_warehouse/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_sql_warehouses/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20483 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_sql_warehouses/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_tables/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    21628 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_tables/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_user/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20676 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_user/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_views/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    21587 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_views/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_zones/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15626 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_zones/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/dbfs_file/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    23806 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/dbfs_file/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/directory/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    22233 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/directory/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/entitlements/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35195 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/entitlements/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.311717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/external_location/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    30967 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/external_location/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.315717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/git_credential/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    25060 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/git_credential/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.315717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/global_init_script/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    34382 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/global_init_script/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.315717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/grants/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    53837 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/grants/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.315717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/group/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    36814 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/group/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.315717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/group_instance_profile/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19789 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/group_instance_profile/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.315717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/group_member/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19134 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/group_member/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.315717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/group_role/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18905 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/group_role/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.315717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/instance_pool/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   167466 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/instance_pool/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.315717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/instance_profile/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    26467 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/instance_profile/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.315717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/ip_access_list/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    24107 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/ip_access_list/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.315717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/job/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)  1420468 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/job/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.319717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/library/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    52725 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/library/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.319717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/metastore/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    51945 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/metastore/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.319717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/metastore_assignment/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    22302 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/metastore_assignment/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.319717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/metastore_data_access/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    77354 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/metastore_data_access/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.319717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mlflow_experiment/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    37357 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mlflow_experiment/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.319717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mlflow_model/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    45757 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mlflow_model/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.319717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mlflow_webhook/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    51339 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mlflow_webhook/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.319717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/model_serving/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    79930 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/model_serving/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.319717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mount/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   117718 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mount/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_credentials/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    22047 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_credentials/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_customer_managed_keys/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    45574 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_customer_managed_keys/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_log_delivery/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    40849 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_log_delivery/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_networks/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    82705 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_networks/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_permission_assignment/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    22072 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_permission_assignment/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_private_access_settings/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    36729 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_private_access_settings/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_storage_configurations/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    22748 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_storage_configurations/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_vpc_endpoint/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    54558 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_vpc_endpoint/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_workspaces/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   144297 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_workspaces/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/notebook/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    32377 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/notebook/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/obo_token/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    22054 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/obo_token/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/permission_assignment/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19813 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/permission_assignment/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/permissions/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    81680 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/permissions/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.323717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/pipeline/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   304424 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/pipeline/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/provider/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    73500 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/provider/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/provider_resource/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    23910 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/provider_resource/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/py.typed
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/recipient/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    62700 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/recipient/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/repo/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35181 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/repo/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/schema/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    33276 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/schema/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/secret/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    21109 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/secret/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/secret_acl/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20987 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/secret_acl/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/secret_scope/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    32167 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/secret_scope/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/service_principal/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    51686 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/service_principal/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/service_principal_role/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19696 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/service_principal_role/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/service_principal_secret/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    22284 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/service_principal_secret/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/share/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    87207 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/share/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_alert/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    40760 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_alert/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_dashboard/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    21439 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_dashboard/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_endpoint/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   102154 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_endpoint/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.327717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_global_config/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    29798 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_global_config/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_permissions/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    50953 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_permissions/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_query/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   217440 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_query/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_visualization/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    30100 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_visualization/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_widget/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    68587 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_widget/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/storage_credential/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    75858 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/storage_credential/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/table/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    73312 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/table/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/token/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    26539 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/token/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/user/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    49997 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/user/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/user_instance_profile/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19721 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/user_instance_profile/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/user_role/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18837 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/user_role/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.331717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/workspace_conf/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18031 2023-04-07 03:19:13.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/workspace_conf/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 03:19:31.291717 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4239 2023-04-07 03:19:31.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7468 2023-04-07 03:19:31.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 03:19:31.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      106 2023-04-07 03:19:31.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       32 2023-04-07 03:19:31.000000 cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks.egg-info/top_level.txt
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/LICENSE
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/PKG-INFO
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: cdktf-cdktf-provider-databricks
+│ │ -Version: 5.0.7
+│ │ +Version: 5.0.8
+│ │  Summary: Prebuilt databricks Provider for Terraform CDK (cdktf)
+│ │  Home-page: https://github.com/cdktf/cdktf-provider-databricks.git
+│ │  Author: HashiCorp
+│ │  License: MPL-2.0
+│ │  Project-URL: Source, https://github.com/cdktf/cdktf-provider-databricks.git
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/README.md
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/README.md
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/setup.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import json
+│ │  import setuptools
+│ │  
+│ │  kwargs = json.loads(
+│ │      """
+│ │  {
+│ │      "name": "cdktf-cdktf-provider-databricks",
+│ │ -    "version": "5.0.7",
+│ │ +    "version": "5.0.8",
+│ │      "description": "Prebuilt databricks Provider for Terraform CDK (cdktf)",
+│ │      "license": "MPL-2.0",
+│ │      "url": "https://github.com/cdktf/cdktf-provider-databricks.git",
+│ │      "long_description_content_type": "text/markdown",
+│ │      "author": "HashiCorp",
+│ │      "bdist_wheel": {
+│ │          "universal": true
+│ │ @@ -126,15 +126,15 @@
+│ │          "cdktf_cdktf_provider_databricks.user",
+│ │          "cdktf_cdktf_provider_databricks.user_instance_profile",
+│ │          "cdktf_cdktf_provider_databricks.user_role",
+│ │          "cdktf_cdktf_provider_databricks.workspace_conf"
+│ │      ],
+│ │      "package_data": {
+│ │          "cdktf_cdktf_provider_databricks._jsii": [
+│ │ -            "provider-databricks@5.0.7.jsii.tgz"
+│ │ +            "provider-databricks@5.0.8.jsii.tgz"
+│ │          ],
+│ │          "cdktf_cdktf_provider_databricks": [
+│ │              "py.typed"
+│ │          ]
+│ │      },
+│ │      "python_requires": "~=3.7",
+│ │      "install_requires": [
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/aws_s3_mount/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/aws_s3_mount/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/azure_adls_gen1_mount/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/azure_adls_gen1_mount/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/azure_adls_gen2_mount/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/azure_adls_gen2_mount/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/azure_blob_mount/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/azure_blob_mount/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/catalog/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/catalog/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/cluster/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/cluster/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/cluster_policy/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/cluster_policy/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_aws_assume_role_policy/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_aws_assume_role_policy/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_aws_bucket_policy/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_aws_bucket_policy/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_aws_crossaccount_policy/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_aws_crossaccount_policy/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_catalogs/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_catalogs/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_cluster/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_cluster/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_cluster_policy/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_cluster_policy/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_clusters/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_clusters/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_current_user/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_current_user/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_dbfs_file/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_dbfs_file/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_dbfs_file_paths/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_dbfs_file_paths/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_directory/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_directory/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_group/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_group/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_instance_pool/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_instance_pool/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_job/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_job/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -22062,28 +22062,31 @@
+│ │  
+│ │      @jsii.member(jsii_name="putSqlTask")
+│ │      def put_sql_task(
+│ │          self,
+│ │          *,
+│ │          alert: typing.Optional[typing.Union["DataDatabricksJobJobSettingsSettingsTaskSqlTaskAlert", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │          dashboard: typing.Optional[typing.Union["DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboard", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +        file: typing.Optional[typing.Union["DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │          parameters: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+│ │          query: typing.Optional[typing.Union["DataDatabricksJobJobSettingsSettingsTaskSqlTaskQuery", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │          warehouse_id: typing.Optional[builtins.str] = None,
+│ │      ) -> None:
+│ │          '''
+│ │          :param alert: alert block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#alert DataDatabricksJob#alert}
+│ │          :param dashboard: dashboard block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#dashboard DataDatabricksJob#dashboard}
+│ │ +        :param file: file block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#file DataDatabricksJob#file}
+│ │          :param parameters: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#parameters DataDatabricksJob#parameters}.
+│ │          :param query: query block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#query DataDatabricksJob#query}
+│ │          :param warehouse_id: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#warehouse_id DataDatabricksJob#warehouse_id}.
+│ │          '''
+│ │          value = DataDatabricksJobJobSettingsSettingsTaskSqlTask(
+│ │              alert=alert,
+│ │              dashboard=dashboard,
+│ │ +            file=file,
+│ │              parameters=parameters,
+│ │              query=query,
+│ │              warehouse_id=warehouse_id,
+│ │          )
+│ │  
+│ │          return typing.cast(None, jsii.invoke(self, "putSqlTask", [value]))
+│ │  
+│ │ @@ -23239,54 +23242,62 @@
+│ │  
+│ │  @jsii.data_type(
+│ │      jsii_type="@cdktf/provider-databricks.dataDatabricksJob.DataDatabricksJobJobSettingsSettingsTaskSqlTask",
+│ │      jsii_struct_bases=[],
+│ │      name_mapping={
+│ │          "alert": "alert",
+│ │          "dashboard": "dashboard",
+│ │ +        "file": "file",
+│ │          "parameters": "parameters",
+│ │          "query": "query",
+│ │          "warehouse_id": "warehouseId",
+│ │      },
+│ │  )
+│ │  class DataDatabricksJobJobSettingsSettingsTaskSqlTask:
+│ │      def __init__(
+│ │          self,
+│ │          *,
+│ │          alert: typing.Optional[typing.Union["DataDatabricksJobJobSettingsSettingsTaskSqlTaskAlert", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │          dashboard: typing.Optional[typing.Union["DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboard", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +        file: typing.Optional[typing.Union["DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │          parameters: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+│ │          query: typing.Optional[typing.Union["DataDatabricksJobJobSettingsSettingsTaskSqlTaskQuery", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │          warehouse_id: typing.Optional[builtins.str] = None,
+│ │      ) -> None:
+│ │          '''
+│ │          :param alert: alert block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#alert DataDatabricksJob#alert}
+│ │          :param dashboard: dashboard block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#dashboard DataDatabricksJob#dashboard}
+│ │ +        :param file: file block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#file DataDatabricksJob#file}
+│ │          :param parameters: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#parameters DataDatabricksJob#parameters}.
+│ │          :param query: query block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#query DataDatabricksJob#query}
+│ │          :param warehouse_id: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#warehouse_id DataDatabricksJob#warehouse_id}.
+│ │          '''
+│ │          if isinstance(alert, dict):
+│ │              alert = DataDatabricksJobJobSettingsSettingsTaskSqlTaskAlert(**alert)
+│ │          if isinstance(dashboard, dict):
+│ │              dashboard = DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboard(**dashboard)
+│ │ +        if isinstance(file, dict):
+│ │ +            file = DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile(**file)
+│ │          if isinstance(query, dict):
+│ │              query = DataDatabricksJobJobSettingsSettingsTaskSqlTaskQuery(**query)
+│ │          if __debug__:
+│ │              type_hints = typing.get_type_hints(_typecheckingstub__a67e076a17de0d836526facc3b07ec2771d44111380ff640498ebbbee0d92868)
+│ │              check_type(argname="argument alert", value=alert, expected_type=type_hints["alert"])
+│ │              check_type(argname="argument dashboard", value=dashboard, expected_type=type_hints["dashboard"])
+│ │ +            check_type(argname="argument file", value=file, expected_type=type_hints["file"])
+│ │              check_type(argname="argument parameters", value=parameters, expected_type=type_hints["parameters"])
+│ │              check_type(argname="argument query", value=query, expected_type=type_hints["query"])
+│ │              check_type(argname="argument warehouse_id", value=warehouse_id, expected_type=type_hints["warehouse_id"])
+│ │          self._values: typing.Dict[builtins.str, typing.Any] = {}
+│ │          if alert is not None:
+│ │              self._values["alert"] = alert
+│ │          if dashboard is not None:
+│ │              self._values["dashboard"] = dashboard
+│ │ +        if file is not None:
+│ │ +            self._values["file"] = file
+│ │          if parameters is not None:
+│ │              self._values["parameters"] = parameters
+│ │          if query is not None:
+│ │              self._values["query"] = query
+│ │          if warehouse_id is not None:
+│ │              self._values["warehouse_id"] = warehouse_id
+│ │  
+│ │ @@ -23309,14 +23320,25 @@
+│ │  
+│ │          Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#dashboard DataDatabricksJob#dashboard}
+│ │          '''
+│ │          result = self._values.get("dashboard")
+│ │          return typing.cast(typing.Optional["DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboard"], result)
+│ │  
+│ │      @builtins.property
+│ │ +    def file(
+│ │ +        self,
+│ │ +    ) -> typing.Optional["DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile"]:
+│ │ +        '''file block.
+│ │ +
+│ │ +        Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#file DataDatabricksJob#file}
+│ │ +        '''
+│ │ +        result = self._values.get("file")
+│ │ +        return typing.cast(typing.Optional["DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile"], result)
+│ │ +
+│ │ +    @builtins.property
+│ │      def parameters(self) -> typing.Optional[typing.Mapping[builtins.str, builtins.str]]:
+│ │          '''Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#parameters DataDatabricksJob#parameters}.'''
+│ │          result = self._values.get("parameters")
+│ │          return typing.cast(typing.Optional[typing.Mapping[builtins.str, builtins.str]], result)
+│ │  
+│ │      @builtins.property
+│ │      def query(
+│ │ @@ -23525,14 +23547,105 @@
+│ │      ) -> None:
+│ │          if __debug__:
+│ │              type_hints = typing.get_type_hints(_typecheckingstub__7802924cd4e4b3bcfcfc319a5de1aef47a8e5ec02467a0c64ac9302c5e807cd2)
+│ │              check_type(argname="argument value", value=value, expected_type=type_hints["value"])
+│ │          jsii.set(self, "internalValue", value)
+│ │  
+│ │  
+│ │ +@jsii.data_type(
+│ │ +    jsii_type="@cdktf/provider-databricks.dataDatabricksJob.DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile",
+│ │ +    jsii_struct_bases=[],
+│ │ +    name_mapping={"path": "path"},
+│ │ +)
+│ │ +class DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile:
+│ │ +    def __init__(self, *, path: builtins.str) -> None:
+│ │ +        '''
+│ │ +        :param path: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#path DataDatabricksJob#path}.
+│ │ +        '''
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__7bc4be90b6c3cb59cbc8f67fe62bcc4b25ace9929e5fac8250a5250980c82e3c)
+│ │ +            check_type(argname="argument path", value=path, expected_type=type_hints["path"])
+│ │ +        self._values: typing.Dict[builtins.str, typing.Any] = {
+│ │ +            "path": path,
+│ │ +        }
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def path(self) -> builtins.str:
+│ │ +        '''Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#path DataDatabricksJob#path}.'''
+│ │ +        result = self._values.get("path")
+│ │ +        assert result is not None, "Required property 'path' is missing"
+│ │ +        return typing.cast(builtins.str, result)
+│ │ +
+│ │ +    def __eq__(self, rhs: typing.Any) -> builtins.bool:
+│ │ +        return isinstance(rhs, self.__class__) and rhs._values == self._values
+│ │ +
+│ │ +    def __ne__(self, rhs: typing.Any) -> builtins.bool:
+│ │ +        return not (rhs == self)
+│ │ +
+│ │ +    def __repr__(self) -> str:
+│ │ +        return "DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile(%s)" % ", ".join(
+│ │ +            k + "=" + repr(v) for k, v in self._values.items()
+│ │ +        )
+│ │ +
+│ │ +
+│ │ +class DataDatabricksJobJobSettingsSettingsTaskSqlTaskFileOutputReference(
+│ │ +    _cdktf_9a9027ec.ComplexObject,
+│ │ +    metaclass=jsii.JSIIMeta,
+│ │ +    jsii_type="@cdktf/provider-databricks.dataDatabricksJob.DataDatabricksJobJobSettingsSettingsTaskSqlTaskFileOutputReference",
+│ │ +):
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        terraform_resource: _cdktf_9a9027ec.IInterpolatingParent,
+│ │ +        terraform_attribute: builtins.str,
+│ │ +    ) -> None:
+│ │ +        '''
+│ │ +        :param terraform_resource: The parent resource.
+│ │ +        :param terraform_attribute: The attribute on the parent resource this class is referencing.
+│ │ +        '''
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__d20cd236728eeb3a413cbb5c3d82d96d1f1b9fec0f9779190dc1762703269b4e)
+│ │ +            check_type(argname="argument terraform_resource", value=terraform_resource, expected_type=type_hints["terraform_resource"])
+│ │ +            check_type(argname="argument terraform_attribute", value=terraform_attribute, expected_type=type_hints["terraform_attribute"])
+│ │ +        jsii.create(self.__class__, self, [terraform_resource, terraform_attribute])
+│ │ +
+│ │ +    @builtins.property
+│ │ +    @jsii.member(jsii_name="pathInput")
+│ │ +    def path_input(self) -> typing.Optional[builtins.str]:
+│ │ +        return typing.cast(typing.Optional[builtins.str], jsii.get(self, "pathInput"))
+│ │ +
+│ │ +    @builtins.property
+│ │ +    @jsii.member(jsii_name="path")
+│ │ +    def path(self) -> builtins.str:
+│ │ +        return typing.cast(builtins.str, jsii.get(self, "path"))
+│ │ +
+│ │ +    @path.setter
+│ │ +    def path(self, value: builtins.str) -> None:
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__f0577a699b2e18eb72799c544065fef4f7fd2ff7616eee02e07ddd45a7526918)
+│ │ +            check_type(argname="argument value", value=value, expected_type=type_hints["value"])
+│ │ +        jsii.set(self, "path", value)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    @jsii.member(jsii_name="internalValue")
+│ │ +    def internal_value(
+│ │ +        self,
+│ │ +    ) -> typing.Optional[DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile]:
+│ │ +        return typing.cast(typing.Optional[DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile], jsii.get(self, "internalValue"))
+│ │ +
+│ │ +    @internal_value.setter
+│ │ +    def internal_value(
+│ │ +        self,
+│ │ +        value: typing.Optional[DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile],
+│ │ +    ) -> None:
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__86feeb56ba84fb5588f6551714fa2c3fa5926e08bf9a0c917166395b82ce5f33)
+│ │ +            check_type(argname="argument value", value=value, expected_type=type_hints["value"])
+│ │ +        jsii.set(self, "internalValue", value)
+│ │ +
+│ │ +
+│ │  class DataDatabricksJobJobSettingsSettingsTaskSqlTaskOutputReference(
+│ │      _cdktf_9a9027ec.ComplexObject,
+│ │      metaclass=jsii.JSIIMeta,
+│ │      jsii_type="@cdktf/provider-databricks.dataDatabricksJob.DataDatabricksJobJobSettingsSettingsTaskSqlTaskOutputReference",
+│ │  ):
+│ │      def __init__(
+│ │          self,
+│ │ @@ -23565,14 +23678,23 @@
+│ │          '''
+│ │          value = DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboard(
+│ │              dashboard_id=dashboard_id
+│ │          )
+│ │  
+│ │          return typing.cast(None, jsii.invoke(self, "putDashboard", [value]))
+│ │  
+│ │ +    @jsii.member(jsii_name="putFile")
+│ │ +    def put_file(self, *, path: builtins.str) -> None:
+│ │ +        '''
+│ │ +        :param path: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#path DataDatabricksJob#path}.
+│ │ +        '''
+│ │ +        value = DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile(path=path)
+│ │ +
+│ │ +        return typing.cast(None, jsii.invoke(self, "putFile", [value]))
+│ │ +
+│ │      @jsii.member(jsii_name="putQuery")
+│ │      def put_query(self, *, query_id: builtins.str) -> None:
+│ │          '''
+│ │          :param query_id: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/d/job#query_id DataDatabricksJob#query_id}.
+│ │          '''
+│ │          value = DataDatabricksJobJobSettingsSettingsTaskSqlTaskQuery(query_id=query_id)
+│ │  
+│ │ @@ -23582,14 +23704,18 @@
+│ │      def reset_alert(self) -> None:
+│ │          return typing.cast(None, jsii.invoke(self, "resetAlert", []))
+│ │  
+│ │      @jsii.member(jsii_name="resetDashboard")
+│ │      def reset_dashboard(self) -> None:
+│ │          return typing.cast(None, jsii.invoke(self, "resetDashboard", []))
+│ │  
+│ │ +    @jsii.member(jsii_name="resetFile")
+│ │ +    def reset_file(self) -> None:
+│ │ +        return typing.cast(None, jsii.invoke(self, "resetFile", []))
+│ │ +
+│ │      @jsii.member(jsii_name="resetParameters")
+│ │      def reset_parameters(self) -> None:
+│ │          return typing.cast(None, jsii.invoke(self, "resetParameters", []))
+│ │  
+│ │      @jsii.member(jsii_name="resetQuery")
+│ │      def reset_query(self) -> None:
+│ │          return typing.cast(None, jsii.invoke(self, "resetQuery", []))
+│ │ @@ -23609,14 +23735,21 @@
+│ │      @jsii.member(jsii_name="dashboard")
+│ │      def dashboard(
+│ │          self,
+│ │      ) -> DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboardOutputReference:
+│ │          return typing.cast(DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboardOutputReference, jsii.get(self, "dashboard"))
+│ │  
+│ │      @builtins.property
+│ │ +    @jsii.member(jsii_name="file")
+│ │ +    def file(
+│ │ +        self,
+│ │ +    ) -> DataDatabricksJobJobSettingsSettingsTaskSqlTaskFileOutputReference:
+│ │ +        return typing.cast(DataDatabricksJobJobSettingsSettingsTaskSqlTaskFileOutputReference, jsii.get(self, "file"))
+│ │ +
+│ │ +    @builtins.property
+│ │      @jsii.member(jsii_name="query")
+│ │      def query(
+│ │          self,
+│ │      ) -> "DataDatabricksJobJobSettingsSettingsTaskSqlTaskQueryOutputReference":
+│ │          return typing.cast("DataDatabricksJobJobSettingsSettingsTaskSqlTaskQueryOutputReference", jsii.get(self, "query"))
+│ │  
+│ │      @builtins.property
+│ │ @@ -23630,14 +23763,21 @@
+│ │      @jsii.member(jsii_name="dashboardInput")
+│ │      def dashboard_input(
+│ │          self,
+│ │      ) -> typing.Optional[DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboard]:
+│ │          return typing.cast(typing.Optional[DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboard], jsii.get(self, "dashboardInput"))
+│ │  
+│ │      @builtins.property
+│ │ +    @jsii.member(jsii_name="fileInput")
+│ │ +    def file_input(
+│ │ +        self,
+│ │ +    ) -> typing.Optional[DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile]:
+│ │ +        return typing.cast(typing.Optional[DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile], jsii.get(self, "fileInput"))
+│ │ +
+│ │ +    @builtins.property
+│ │      @jsii.member(jsii_name="parametersInput")
+│ │      def parameters_input(
+│ │          self,
+│ │      ) -> typing.Optional[typing.Mapping[builtins.str, builtins.str]]:
+│ │          return typing.cast(typing.Optional[typing.Mapping[builtins.str, builtins.str]], jsii.get(self, "parametersInput"))
+│ │  
+│ │      @builtins.property
+│ │ @@ -25092,14 +25232,16 @@
+│ │      "DataDatabricksJobJobSettingsSettingsTaskSparkSubmitTask",
+│ │      "DataDatabricksJobJobSettingsSettingsTaskSparkSubmitTaskOutputReference",
+│ │      "DataDatabricksJobJobSettingsSettingsTaskSqlTask",
+│ │      "DataDatabricksJobJobSettingsSettingsTaskSqlTaskAlert",
+│ │      "DataDatabricksJobJobSettingsSettingsTaskSqlTaskAlertOutputReference",
+│ │      "DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboard",
+│ │      "DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboardOutputReference",
+│ │ +    "DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile",
+│ │ +    "DataDatabricksJobJobSettingsSettingsTaskSqlTaskFileOutputReference",
+│ │      "DataDatabricksJobJobSettingsSettingsTaskSqlTaskOutputReference",
+│ │      "DataDatabricksJobJobSettingsSettingsTaskSqlTaskQuery",
+│ │      "DataDatabricksJobJobSettingsSettingsTaskSqlTaskQueryOutputReference",
+│ │      "DataDatabricksJobJobSettingsSettingsTrigger",
+│ │      "DataDatabricksJobJobSettingsSettingsTriggerFileArrival",
+│ │      "DataDatabricksJobJobSettingsSettingsTriggerFileArrivalOutputReference",
+│ │      "DataDatabricksJobJobSettingsSettingsTriggerOutputReference",
+│ │ @@ -29677,14 +29819,15 @@
+│ │      """Type checking stubs"""
+│ │      pass
+│ │  
+│ │  def _typecheckingstub__a67e076a17de0d836526facc3b07ec2771d44111380ff640498ebbbee0d92868(
+│ │      *,
+│ │      alert: typing.Optional[typing.Union[DataDatabricksJobJobSettingsSettingsTaskSqlTaskAlert, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │      dashboard: typing.Optional[typing.Union[DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboard, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +    file: typing.Optional[typing.Union[DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │      parameters: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+│ │      query: typing.Optional[typing.Union[DataDatabricksJobJobSettingsSettingsTaskSqlTaskQuery, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │      warehouse_id: typing.Optional[builtins.str] = None,
+│ │  ) -> None:
+│ │      """Type checking stubs"""
+│ │      pass
+│ │  
+│ │ @@ -29736,14 +29879,40 @@
+│ │  
+│ │  def _typecheckingstub__7802924cd4e4b3bcfcfc319a5de1aef47a8e5ec02467a0c64ac9302c5e807cd2(
+│ │      value: typing.Optional[DataDatabricksJobJobSettingsSettingsTaskSqlTaskDashboard],
+│ │  ) -> None:
+│ │      """Type checking stubs"""
+│ │      pass
+│ │  
+│ │ +def _typecheckingstub__7bc4be90b6c3cb59cbc8f67fe62bcc4b25ace9929e5fac8250a5250980c82e3c(
+│ │ +    *,
+│ │ +    path: builtins.str,
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │ +def _typecheckingstub__d20cd236728eeb3a413cbb5c3d82d96d1f1b9fec0f9779190dc1762703269b4e(
+│ │ +    terraform_resource: _cdktf_9a9027ec.IInterpolatingParent,
+│ │ +    terraform_attribute: builtins.str,
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │ +def _typecheckingstub__f0577a699b2e18eb72799c544065fef4f7fd2ff7616eee02e07ddd45a7526918(
+│ │ +    value: builtins.str,
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │ +def _typecheckingstub__86feeb56ba84fb5588f6551714fa2c3fa5926e08bf9a0c917166395b82ce5f33(
+│ │ +    value: typing.Optional[DataDatabricksJobJobSettingsSettingsTaskSqlTaskFile],
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │  def _typecheckingstub__ac4d4591c2f65b905a70a46fed0e7e079574b31bb82f0b8f1c0e7cf5d0b21887(
+│ │      terraform_resource: _cdktf_9a9027ec.IInterpolatingParent,
+│ │      terraform_attribute: builtins.str,
+│ │  ) -> None:
+│ │      """Type checking stubs"""
+│ │      pass
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_jobs/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_jobs/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_mws_credentials/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_mws_credentials/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_mws_workspaces/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_mws_workspaces/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_node_type/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_node_type/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_notebook/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_notebook/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_notebook_paths/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_notebook_paths/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_schemas/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_schemas/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_service_principal/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_service_principal/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_service_principals/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_service_principals/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_share/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_share/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_shares/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_shares/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_spark_version/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_spark_version/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_sql_warehouse/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_sql_warehouse/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_sql_warehouses/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_sql_warehouses/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_tables/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_tables/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_user/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_user/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_views/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_views/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/data_databricks_zones/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/data_databricks_zones/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/dbfs_file/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/dbfs_file/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/directory/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/directory/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/entitlements/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/entitlements/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/external_location/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/external_location/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/git_credential/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/git_credential/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/global_init_script/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/global_init_script/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/grants/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/grants/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/group/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/group/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/group_instance_profile/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/group_instance_profile/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/group_member/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/group_member/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/group_role/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/group_role/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/instance_pool/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/instance_pool/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/instance_profile/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/instance_profile/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/ip_access_list/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/ip_access_list/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/job/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/job/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -21016,28 +21016,31 @@
+│ │  
+│ │      @jsii.member(jsii_name="putSqlTask")
+│ │      def put_sql_task(
+│ │          self,
+│ │          *,
+│ │          alert: typing.Optional[typing.Union["JobTaskSqlTaskAlert", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │          dashboard: typing.Optional[typing.Union["JobTaskSqlTaskDashboard", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +        file: typing.Optional[typing.Union["JobTaskSqlTaskFile", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │          parameters: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+│ │          query: typing.Optional[typing.Union["JobTaskSqlTaskQuery", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │          warehouse_id: typing.Optional[builtins.str] = None,
+│ │      ) -> None:
+│ │          '''
+│ │          :param alert: alert block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#alert Job#alert}
+│ │          :param dashboard: dashboard block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#dashboard Job#dashboard}
+│ │ +        :param file: file block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#file Job#file}
+│ │          :param parameters: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#parameters Job#parameters}.
+│ │          :param query: query block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#query Job#query}
+│ │          :param warehouse_id: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#warehouse_id Job#warehouse_id}.
+│ │          '''
+│ │          value = JobTaskSqlTask(
+│ │              alert=alert,
+│ │              dashboard=dashboard,
+│ │ +            file=file,
+│ │              parameters=parameters,
+│ │              query=query,
+│ │              warehouse_id=warehouse_id,
+│ │          )
+│ │  
+│ │          return typing.cast(None, jsii.invoke(self, "putSqlTask", [value]))
+│ │  
+│ │ @@ -22128,54 +22131,62 @@
+│ │  
+│ │  @jsii.data_type(
+│ │      jsii_type="@cdktf/provider-databricks.job.JobTaskSqlTask",
+│ │      jsii_struct_bases=[],
+│ │      name_mapping={
+│ │          "alert": "alert",
+│ │          "dashboard": "dashboard",
+│ │ +        "file": "file",
+│ │          "parameters": "parameters",
+│ │          "query": "query",
+│ │          "warehouse_id": "warehouseId",
+│ │      },
+│ │  )
+│ │  class JobTaskSqlTask:
+│ │      def __init__(
+│ │          self,
+│ │          *,
+│ │          alert: typing.Optional[typing.Union["JobTaskSqlTaskAlert", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │          dashboard: typing.Optional[typing.Union["JobTaskSqlTaskDashboard", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +        file: typing.Optional[typing.Union["JobTaskSqlTaskFile", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │          parameters: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+│ │          query: typing.Optional[typing.Union["JobTaskSqlTaskQuery", typing.Dict[builtins.str, typing.Any]]] = None,
+│ │          warehouse_id: typing.Optional[builtins.str] = None,
+│ │      ) -> None:
+│ │          '''
+│ │          :param alert: alert block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#alert Job#alert}
+│ │          :param dashboard: dashboard block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#dashboard Job#dashboard}
+│ │ +        :param file: file block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#file Job#file}
+│ │          :param parameters: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#parameters Job#parameters}.
+│ │          :param query: query block. Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#query Job#query}
+│ │          :param warehouse_id: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#warehouse_id Job#warehouse_id}.
+│ │          '''
+│ │          if isinstance(alert, dict):
+│ │              alert = JobTaskSqlTaskAlert(**alert)
+│ │          if isinstance(dashboard, dict):
+│ │              dashboard = JobTaskSqlTaskDashboard(**dashboard)
+│ │ +        if isinstance(file, dict):
+│ │ +            file = JobTaskSqlTaskFile(**file)
+│ │          if isinstance(query, dict):
+│ │              query = JobTaskSqlTaskQuery(**query)
+│ │          if __debug__:
+│ │              type_hints = typing.get_type_hints(_typecheckingstub__9c55d411175dc7feb366a8cf689c83a829da2940053bd1bd5a838ab0ef8b286d)
+│ │              check_type(argname="argument alert", value=alert, expected_type=type_hints["alert"])
+│ │              check_type(argname="argument dashboard", value=dashboard, expected_type=type_hints["dashboard"])
+│ │ +            check_type(argname="argument file", value=file, expected_type=type_hints["file"])
+│ │              check_type(argname="argument parameters", value=parameters, expected_type=type_hints["parameters"])
+│ │              check_type(argname="argument query", value=query, expected_type=type_hints["query"])
+│ │              check_type(argname="argument warehouse_id", value=warehouse_id, expected_type=type_hints["warehouse_id"])
+│ │          self._values: typing.Dict[builtins.str, typing.Any] = {}
+│ │          if alert is not None:
+│ │              self._values["alert"] = alert
+│ │          if dashboard is not None:
+│ │              self._values["dashboard"] = dashboard
+│ │ +        if file is not None:
+│ │ +            self._values["file"] = file
+│ │          if parameters is not None:
+│ │              self._values["parameters"] = parameters
+│ │          if query is not None:
+│ │              self._values["query"] = query
+│ │          if warehouse_id is not None:
+│ │              self._values["warehouse_id"] = warehouse_id
+│ │  
+│ │ @@ -22194,14 +22205,23 @@
+│ │  
+│ │          Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#dashboard Job#dashboard}
+│ │          '''
+│ │          result = self._values.get("dashboard")
+│ │          return typing.cast(typing.Optional["JobTaskSqlTaskDashboard"], result)
+│ │  
+│ │      @builtins.property
+│ │ +    def file(self) -> typing.Optional["JobTaskSqlTaskFile"]:
+│ │ +        '''file block.
+│ │ +
+│ │ +        Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#file Job#file}
+│ │ +        '''
+│ │ +        result = self._values.get("file")
+│ │ +        return typing.cast(typing.Optional["JobTaskSqlTaskFile"], result)
+│ │ +
+│ │ +    @builtins.property
+│ │      def parameters(self) -> typing.Optional[typing.Mapping[builtins.str, builtins.str]]:
+│ │          '''Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#parameters Job#parameters}.'''
+│ │          result = self._values.get("parameters")
+│ │          return typing.cast(typing.Optional[typing.Mapping[builtins.str, builtins.str]], result)
+│ │  
+│ │      @builtins.property
+│ │      def query(self) -> typing.Optional["JobTaskSqlTaskQuery"]:
+│ │ @@ -22398,14 +22418,100 @@
+│ │      def internal_value(self, value: typing.Optional[JobTaskSqlTaskDashboard]) -> None:
+│ │          if __debug__:
+│ │              type_hints = typing.get_type_hints(_typecheckingstub__09dad595b003faad10f9602a8b65d10b95bd37a7d28445f46dd2e54cc1231ece)
+│ │              check_type(argname="argument value", value=value, expected_type=type_hints["value"])
+│ │          jsii.set(self, "internalValue", value)
+│ │  
+│ │  
+│ │ +@jsii.data_type(
+│ │ +    jsii_type="@cdktf/provider-databricks.job.JobTaskSqlTaskFile",
+│ │ +    jsii_struct_bases=[],
+│ │ +    name_mapping={"path": "path"},
+│ │ +)
+│ │ +class JobTaskSqlTaskFile:
+│ │ +    def __init__(self, *, path: builtins.str) -> None:
+│ │ +        '''
+│ │ +        :param path: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#path Job#path}.
+│ │ +        '''
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__c2bcc3e45a26ac71319ee6ebb1d2a847eb87838a40f65645ebf993195b754c86)
+│ │ +            check_type(argname="argument path", value=path, expected_type=type_hints["path"])
+│ │ +        self._values: typing.Dict[builtins.str, typing.Any] = {
+│ │ +            "path": path,
+│ │ +        }
+│ │ +
+│ │ +    @builtins.property
+│ │ +    def path(self) -> builtins.str:
+│ │ +        '''Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#path Job#path}.'''
+│ │ +        result = self._values.get("path")
+│ │ +        assert result is not None, "Required property 'path' is missing"
+│ │ +        return typing.cast(builtins.str, result)
+│ │ +
+│ │ +    def __eq__(self, rhs: typing.Any) -> builtins.bool:
+│ │ +        return isinstance(rhs, self.__class__) and rhs._values == self._values
+│ │ +
+│ │ +    def __ne__(self, rhs: typing.Any) -> builtins.bool:
+│ │ +        return not (rhs == self)
+│ │ +
+│ │ +    def __repr__(self) -> str:
+│ │ +        return "JobTaskSqlTaskFile(%s)" % ", ".join(
+│ │ +            k + "=" + repr(v) for k, v in self._values.items()
+│ │ +        )
+│ │ +
+│ │ +
+│ │ +class JobTaskSqlTaskFileOutputReference(
+│ │ +    _cdktf_9a9027ec.ComplexObject,
+│ │ +    metaclass=jsii.JSIIMeta,
+│ │ +    jsii_type="@cdktf/provider-databricks.job.JobTaskSqlTaskFileOutputReference",
+│ │ +):
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        terraform_resource: _cdktf_9a9027ec.IInterpolatingParent,
+│ │ +        terraform_attribute: builtins.str,
+│ │ +    ) -> None:
+│ │ +        '''
+│ │ +        :param terraform_resource: The parent resource.
+│ │ +        :param terraform_attribute: The attribute on the parent resource this class is referencing.
+│ │ +        '''
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__cd9e70cee6c34facfe13e4feb7bafeb3c7d7cbac592571a0b4226e8023ad8475)
+│ │ +            check_type(argname="argument terraform_resource", value=terraform_resource, expected_type=type_hints["terraform_resource"])
+│ │ +            check_type(argname="argument terraform_attribute", value=terraform_attribute, expected_type=type_hints["terraform_attribute"])
+│ │ +        jsii.create(self.__class__, self, [terraform_resource, terraform_attribute])
+│ │ +
+│ │ +    @builtins.property
+│ │ +    @jsii.member(jsii_name="pathInput")
+│ │ +    def path_input(self) -> typing.Optional[builtins.str]:
+│ │ +        return typing.cast(typing.Optional[builtins.str], jsii.get(self, "pathInput"))
+│ │ +
+│ │ +    @builtins.property
+│ │ +    @jsii.member(jsii_name="path")
+│ │ +    def path(self) -> builtins.str:
+│ │ +        return typing.cast(builtins.str, jsii.get(self, "path"))
+│ │ +
+│ │ +    @path.setter
+│ │ +    def path(self, value: builtins.str) -> None:
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__ef204ab13109a4fab39343db3ce22448594ceec77876c0ee19e943a4cd43d344)
+│ │ +            check_type(argname="argument value", value=value, expected_type=type_hints["value"])
+│ │ +        jsii.set(self, "path", value)
+│ │ +
+│ │ +    @builtins.property
+│ │ +    @jsii.member(jsii_name="internalValue")
+│ │ +    def internal_value(self) -> typing.Optional[JobTaskSqlTaskFile]:
+│ │ +        return typing.cast(typing.Optional[JobTaskSqlTaskFile], jsii.get(self, "internalValue"))
+│ │ +
+│ │ +    @internal_value.setter
+│ │ +    def internal_value(self, value: typing.Optional[JobTaskSqlTaskFile]) -> None:
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__c7e9a3f81d98a85f99cbae3af4243fa8d3491704caa52e9543a3288f1bc1789a)
+│ │ +            check_type(argname="argument value", value=value, expected_type=type_hints["value"])
+│ │ +        jsii.set(self, "internalValue", value)
+│ │ +
+│ │ +
+│ │  class JobTaskSqlTaskOutputReference(
+│ │      _cdktf_9a9027ec.ComplexObject,
+│ │      metaclass=jsii.JSIIMeta,
+│ │      jsii_type="@cdktf/provider-databricks.job.JobTaskSqlTaskOutputReference",
+│ │  ):
+│ │      def __init__(
+│ │          self,
+│ │ @@ -22436,14 +22542,23 @@
+│ │          '''
+│ │          :param dashboard_id: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#dashboard_id Job#dashboard_id}.
+│ │          '''
+│ │          value = JobTaskSqlTaskDashboard(dashboard_id=dashboard_id)
+│ │  
+│ │          return typing.cast(None, jsii.invoke(self, "putDashboard", [value]))
+│ │  
+│ │ +    @jsii.member(jsii_name="putFile")
+│ │ +    def put_file(self, *, path: builtins.str) -> None:
+│ │ +        '''
+│ │ +        :param path: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#path Job#path}.
+│ │ +        '''
+│ │ +        value = JobTaskSqlTaskFile(path=path)
+│ │ +
+│ │ +        return typing.cast(None, jsii.invoke(self, "putFile", [value]))
+│ │ +
+│ │      @jsii.member(jsii_name="putQuery")
+│ │      def put_query(self, *, query_id: builtins.str) -> None:
+│ │          '''
+│ │          :param query_id: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks/r/job#query_id Job#query_id}.
+│ │          '''
+│ │          value = JobTaskSqlTaskQuery(query_id=query_id)
+│ │  
+│ │ @@ -22453,14 +22568,18 @@
+│ │      def reset_alert(self) -> None:
+│ │          return typing.cast(None, jsii.invoke(self, "resetAlert", []))
+│ │  
+│ │      @jsii.member(jsii_name="resetDashboard")
+│ │      def reset_dashboard(self) -> None:
+│ │          return typing.cast(None, jsii.invoke(self, "resetDashboard", []))
+│ │  
+│ │ +    @jsii.member(jsii_name="resetFile")
+│ │ +    def reset_file(self) -> None:
+│ │ +        return typing.cast(None, jsii.invoke(self, "resetFile", []))
+│ │ +
+│ │      @jsii.member(jsii_name="resetParameters")
+│ │      def reset_parameters(self) -> None:
+│ │          return typing.cast(None, jsii.invoke(self, "resetParameters", []))
+│ │  
+│ │      @jsii.member(jsii_name="resetQuery")
+│ │      def reset_query(self) -> None:
+│ │          return typing.cast(None, jsii.invoke(self, "resetQuery", []))
+│ │ @@ -22476,14 +22595,19 @@
+│ │  
+│ │      @builtins.property
+│ │      @jsii.member(jsii_name="dashboard")
+│ │      def dashboard(self) -> JobTaskSqlTaskDashboardOutputReference:
+│ │          return typing.cast(JobTaskSqlTaskDashboardOutputReference, jsii.get(self, "dashboard"))
+│ │  
+│ │      @builtins.property
+│ │ +    @jsii.member(jsii_name="file")
+│ │ +    def file(self) -> JobTaskSqlTaskFileOutputReference:
+│ │ +        return typing.cast(JobTaskSqlTaskFileOutputReference, jsii.get(self, "file"))
+│ │ +
+│ │ +    @builtins.property
+│ │      @jsii.member(jsii_name="query")
+│ │      def query(self) -> "JobTaskSqlTaskQueryOutputReference":
+│ │          return typing.cast("JobTaskSqlTaskQueryOutputReference", jsii.get(self, "query"))
+│ │  
+│ │      @builtins.property
+│ │      @jsii.member(jsii_name="alertInput")
+│ │      def alert_input(self) -> typing.Optional[JobTaskSqlTaskAlert]:
+│ │ @@ -22491,14 +22615,19 @@
+│ │  
+│ │      @builtins.property
+│ │      @jsii.member(jsii_name="dashboardInput")
+│ │      def dashboard_input(self) -> typing.Optional[JobTaskSqlTaskDashboard]:
+│ │          return typing.cast(typing.Optional[JobTaskSqlTaskDashboard], jsii.get(self, "dashboardInput"))
+│ │  
+│ │      @builtins.property
+│ │ +    @jsii.member(jsii_name="fileInput")
+│ │ +    def file_input(self) -> typing.Optional[JobTaskSqlTaskFile]:
+│ │ +        return typing.cast(typing.Optional[JobTaskSqlTaskFile], jsii.get(self, "fileInput"))
+│ │ +
+│ │ +    @builtins.property
+│ │      @jsii.member(jsii_name="parametersInput")
+│ │      def parameters_input(
+│ │          self,
+│ │      ) -> typing.Optional[typing.Mapping[builtins.str, builtins.str]]:
+│ │          return typing.cast(typing.Optional[typing.Mapping[builtins.str, builtins.str]], jsii.get(self, "parametersInput"))
+│ │  
+│ │      @builtins.property
+│ │ @@ -24042,14 +24171,16 @@
+│ │      "JobTaskSparkSubmitTask",
+│ │      "JobTaskSparkSubmitTaskOutputReference",
+│ │      "JobTaskSqlTask",
+│ │      "JobTaskSqlTaskAlert",
+│ │      "JobTaskSqlTaskAlertOutputReference",
+│ │      "JobTaskSqlTaskDashboard",
+│ │      "JobTaskSqlTaskDashboardOutputReference",
+│ │ +    "JobTaskSqlTaskFile",
+│ │ +    "JobTaskSqlTaskFileOutputReference",
+│ │      "JobTaskSqlTaskOutputReference",
+│ │      "JobTaskSqlTaskQuery",
+│ │      "JobTaskSqlTaskQueryOutputReference",
+│ │      "JobTimeouts",
+│ │      "JobTimeoutsOutputReference",
+│ │      "JobTrigger",
+│ │      "JobTriggerFileArrival",
+│ │ @@ -28580,14 +28711,15 @@
+│ │      """Type checking stubs"""
+│ │      pass
+│ │  
+│ │  def _typecheckingstub__9c55d411175dc7feb366a8cf689c83a829da2940053bd1bd5a838ab0ef8b286d(
+│ │      *,
+│ │      alert: typing.Optional[typing.Union[JobTaskSqlTaskAlert, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │      dashboard: typing.Optional[typing.Union[JobTaskSqlTaskDashboard, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │ +    file: typing.Optional[typing.Union[JobTaskSqlTaskFile, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │      parameters: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
+│ │      query: typing.Optional[typing.Union[JobTaskSqlTaskQuery, typing.Dict[builtins.str, typing.Any]]] = None,
+│ │      warehouse_id: typing.Optional[builtins.str] = None,
+│ │  ) -> None:
+│ │      """Type checking stubs"""
+│ │      pass
+│ │  
+│ │ @@ -28639,14 +28771,40 @@
+│ │  
+│ │  def _typecheckingstub__09dad595b003faad10f9602a8b65d10b95bd37a7d28445f46dd2e54cc1231ece(
+│ │      value: typing.Optional[JobTaskSqlTaskDashboard],
+│ │  ) -> None:
+│ │      """Type checking stubs"""
+│ │      pass
+│ │  
+│ │ +def _typecheckingstub__c2bcc3e45a26ac71319ee6ebb1d2a847eb87838a40f65645ebf993195b754c86(
+│ │ +    *,
+│ │ +    path: builtins.str,
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │ +def _typecheckingstub__cd9e70cee6c34facfe13e4feb7bafeb3c7d7cbac592571a0b4226e8023ad8475(
+│ │ +    terraform_resource: _cdktf_9a9027ec.IInterpolatingParent,
+│ │ +    terraform_attribute: builtins.str,
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │ +def _typecheckingstub__ef204ab13109a4fab39343db3ce22448594ceec77876c0ee19e943a4cd43d344(
+│ │ +    value: builtins.str,
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │ +def _typecheckingstub__c7e9a3f81d98a85f99cbae3af4243fa8d3491704caa52e9543a3288f1bc1789a(
+│ │ +    value: typing.Optional[JobTaskSqlTaskFile],
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │  def _typecheckingstub__b07ad3a08f8c0b09a2292e1ac957d8d7e76665fc65c0f542c9c4175a09261713(
+│ │      terraform_resource: _cdktf_9a9027ec.IInterpolatingParent,
+│ │      terraform_attribute: builtins.str,
+│ │  ) -> None:
+│ │      """Type checking stubs"""
+│ │      pass
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/library/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/library/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/metastore/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/metastore/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/metastore_assignment/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/metastore_assignment/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/metastore_data_access/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/metastore_data_access/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mlflow_experiment/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mlflow_experiment/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mlflow_model/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mlflow_model/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mlflow_webhook/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mlflow_webhook/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/model_serving/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/model_serving/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mount/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mount/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_credentials/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_credentials/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_customer_managed_keys/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_customer_managed_keys/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_log_delivery/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_log_delivery/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_networks/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_networks/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_permission_assignment/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_permission_assignment/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_private_access_settings/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_private_access_settings/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_storage_configurations/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_storage_configurations/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_vpc_endpoint/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_vpc_endpoint/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/mws_workspaces/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/mws_workspaces/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/notebook/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/notebook/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/obo_token/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/obo_token/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/permission_assignment/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/permission_assignment/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/permissions/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/permissions/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/pipeline/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/pipeline/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/provider/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/provider/__init__.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -49,14 +49,15 @@
+│ │          config_file: typing.Optional[builtins.str] = None,
+│ │          debug_headers: typing.Optional[typing.Union[builtins.bool, _cdktf_9a9027ec.IResolvable]] = None,
+│ │          debug_truncate_bytes: typing.Optional[jsii.Number] = None,
+│ │          google_credentials: typing.Optional[builtins.str] = None,
+│ │          google_service_account: typing.Optional[builtins.str] = None,
+│ │          host: typing.Optional[builtins.str] = None,
+│ │          http_timeout_seconds: typing.Optional[jsii.Number] = None,
+│ │ +        metadata_service_url: typing.Optional[builtins.str] = None,
+│ │          password: typing.Optional[builtins.str] = None,
+│ │          profile: typing.Optional[builtins.str] = None,
+│ │          rate_limit: typing.Optional[jsii.Number] = None,
+│ │          retry_timeout_seconds: typing.Optional[jsii.Number] = None,
+│ │          skip_verify: typing.Optional[typing.Union[builtins.bool, _cdktf_9a9027ec.IResolvable]] = None,
+│ │          token: typing.Optional[builtins.str] = None,
+│ │          username: typing.Optional[builtins.str] = None,
+│ │ @@ -81,14 +82,15 @@
+│ │          :param config_file: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#config_file DatabricksProvider#config_file}.
+│ │          :param debug_headers: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#debug_headers DatabricksProvider#debug_headers}.
+│ │          :param debug_truncate_bytes: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#debug_truncate_bytes DatabricksProvider#debug_truncate_bytes}.
+│ │          :param google_credentials: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#google_credentials DatabricksProvider#google_credentials}.
+│ │          :param google_service_account: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#google_service_account DatabricksProvider#google_service_account}.
+│ │          :param host: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#host DatabricksProvider#host}.
+│ │          :param http_timeout_seconds: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#http_timeout_seconds DatabricksProvider#http_timeout_seconds}.
+│ │ +        :param metadata_service_url: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#metadata_service_url DatabricksProvider#metadata_service_url}.
+│ │          :param password: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#password DatabricksProvider#password}.
+│ │          :param profile: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#profile DatabricksProvider#profile}.
+│ │          :param rate_limit: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#rate_limit DatabricksProvider#rate_limit}.
+│ │          :param retry_timeout_seconds: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#retry_timeout_seconds DatabricksProvider#retry_timeout_seconds}.
+│ │          :param skip_verify: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#skip_verify DatabricksProvider#skip_verify}.
+│ │          :param token: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#token DatabricksProvider#token}.
+│ │          :param username: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#username DatabricksProvider#username}.
+│ │ @@ -114,14 +116,15 @@
+│ │              config_file=config_file,
+│ │              debug_headers=debug_headers,
+│ │              debug_truncate_bytes=debug_truncate_bytes,
+│ │              google_credentials=google_credentials,
+│ │              google_service_account=google_service_account,
+│ │              host=host,
+│ │              http_timeout_seconds=http_timeout_seconds,
+│ │ +            metadata_service_url=metadata_service_url,
+│ │              password=password,
+│ │              profile=profile,
+│ │              rate_limit=rate_limit,
+│ │              retry_timeout_seconds=retry_timeout_seconds,
+│ │              skip_verify=skip_verify,
+│ │              token=token,
+│ │              username=username,
+│ │ @@ -205,14 +208,18 @@
+│ │      def reset_host(self) -> None:
+│ │          return typing.cast(None, jsii.invoke(self, "resetHost", []))
+│ │  
+│ │      @jsii.member(jsii_name="resetHttpTimeoutSeconds")
+│ │      def reset_http_timeout_seconds(self) -> None:
+│ │          return typing.cast(None, jsii.invoke(self, "resetHttpTimeoutSeconds", []))
+│ │  
+│ │ +    @jsii.member(jsii_name="resetMetadataServiceUrl")
+│ │ +    def reset_metadata_service_url(self) -> None:
+│ │ +        return typing.cast(None, jsii.invoke(self, "resetMetadataServiceUrl", []))
+│ │ +
+│ │      @jsii.member(jsii_name="resetPassword")
+│ │      def reset_password(self) -> None:
+│ │          return typing.cast(None, jsii.invoke(self, "resetPassword", []))
+│ │  
+│ │      @jsii.member(jsii_name="resetProfile")
+│ │      def reset_profile(self) -> None:
+│ │          return typing.cast(None, jsii.invoke(self, "resetProfile", []))
+│ │ @@ -347,14 +354,19 @@
+│ │  
+│ │      @builtins.property
+│ │      @jsii.member(jsii_name="httpTimeoutSecondsInput")
+│ │      def http_timeout_seconds_input(self) -> typing.Optional[jsii.Number]:
+│ │          return typing.cast(typing.Optional[jsii.Number], jsii.get(self, "httpTimeoutSecondsInput"))
+│ │  
+│ │      @builtins.property
+│ │ +    @jsii.member(jsii_name="metadataServiceUrlInput")
+│ │ +    def metadata_service_url_input(self) -> typing.Optional[builtins.str]:
+│ │ +        return typing.cast(typing.Optional[builtins.str], jsii.get(self, "metadataServiceUrlInput"))
+│ │ +
+│ │ +    @builtins.property
+│ │      @jsii.member(jsii_name="passwordInput")
+│ │      def password_input(self) -> typing.Optional[builtins.str]:
+│ │          return typing.cast(typing.Optional[builtins.str], jsii.get(self, "passwordInput"))
+│ │  
+│ │      @builtins.property
+│ │      @jsii.member(jsii_name="profileInput")
+│ │      def profile_input(self) -> typing.Optional[builtins.str]:
+│ │ @@ -634,14 +646,26 @@
+│ │      def http_timeout_seconds(self, value: typing.Optional[jsii.Number]) -> None:
+│ │          if __debug__:
+│ │              type_hints = typing.get_type_hints(_typecheckingstub__81d169ff2ff1974e491de4da7daf98fdbd54bdfaa5f77a74dd1051bcd4e78b37)
+│ │              check_type(argname="argument value", value=value, expected_type=type_hints["value"])
+│ │          jsii.set(self, "httpTimeoutSeconds", value)
+│ │  
+│ │      @builtins.property
+│ │ +    @jsii.member(jsii_name="metadataServiceUrl")
+│ │ +    def metadata_service_url(self) -> typing.Optional[builtins.str]:
+│ │ +        return typing.cast(typing.Optional[builtins.str], jsii.get(self, "metadataServiceUrl"))
+│ │ +
+│ │ +    @metadata_service_url.setter
+│ │ +    def metadata_service_url(self, value: typing.Optional[builtins.str]) -> None:
+│ │ +        if __debug__:
+│ │ +            type_hints = typing.get_type_hints(_typecheckingstub__ec9bf448a36925b01556edfae6e182259702a543fabec7ca690c168328e996c6)
+│ │ +            check_type(argname="argument value", value=value, expected_type=type_hints["value"])
+│ │ +        jsii.set(self, "metadataServiceUrl", value)
+│ │ +
+│ │ +    @builtins.property
+│ │      @jsii.member(jsii_name="password")
+│ │      def password(self) -> typing.Optional[builtins.str]:
+│ │          return typing.cast(typing.Optional[builtins.str], jsii.get(self, "password"))
+│ │  
+│ │      @password.setter
+│ │      def password(self, value: typing.Optional[builtins.str]) -> None:
+│ │          if __debug__:
+│ │ @@ -747,14 +771,15 @@
+│ │          "config_file": "configFile",
+│ │          "debug_headers": "debugHeaders",
+│ │          "debug_truncate_bytes": "debugTruncateBytes",
+│ │          "google_credentials": "googleCredentials",
+│ │          "google_service_account": "googleServiceAccount",
+│ │          "host": "host",
+│ │          "http_timeout_seconds": "httpTimeoutSeconds",
+│ │ +        "metadata_service_url": "metadataServiceUrl",
+│ │          "password": "password",
+│ │          "profile": "profile",
+│ │          "rate_limit": "rateLimit",
+│ │          "retry_timeout_seconds": "retryTimeoutSeconds",
+│ │          "skip_verify": "skipVerify",
+│ │          "token": "token",
+│ │          "username": "username",
+│ │ @@ -780,14 +805,15 @@
+│ │          config_file: typing.Optional[builtins.str] = None,
+│ │          debug_headers: typing.Optional[typing.Union[builtins.bool, _cdktf_9a9027ec.IResolvable]] = None,
+│ │          debug_truncate_bytes: typing.Optional[jsii.Number] = None,
+│ │          google_credentials: typing.Optional[builtins.str] = None,
+│ │          google_service_account: typing.Optional[builtins.str] = None,
+│ │          host: typing.Optional[builtins.str] = None,
+│ │          http_timeout_seconds: typing.Optional[jsii.Number] = None,
+│ │ +        metadata_service_url: typing.Optional[builtins.str] = None,
+│ │          password: typing.Optional[builtins.str] = None,
+│ │          profile: typing.Optional[builtins.str] = None,
+│ │          rate_limit: typing.Optional[jsii.Number] = None,
+│ │          retry_timeout_seconds: typing.Optional[jsii.Number] = None,
+│ │          skip_verify: typing.Optional[typing.Union[builtins.bool, _cdktf_9a9027ec.IResolvable]] = None,
+│ │          token: typing.Optional[builtins.str] = None,
+│ │          username: typing.Optional[builtins.str] = None,
+│ │ @@ -809,14 +835,15 @@
+│ │          :param config_file: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#config_file DatabricksProvider#config_file}.
+│ │          :param debug_headers: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#debug_headers DatabricksProvider#debug_headers}.
+│ │          :param debug_truncate_bytes: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#debug_truncate_bytes DatabricksProvider#debug_truncate_bytes}.
+│ │          :param google_credentials: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#google_credentials DatabricksProvider#google_credentials}.
+│ │          :param google_service_account: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#google_service_account DatabricksProvider#google_service_account}.
+│ │          :param host: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#host DatabricksProvider#host}.
+│ │          :param http_timeout_seconds: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#http_timeout_seconds DatabricksProvider#http_timeout_seconds}.
+│ │ +        :param metadata_service_url: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#metadata_service_url DatabricksProvider#metadata_service_url}.
+│ │          :param password: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#password DatabricksProvider#password}.
+│ │          :param profile: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#profile DatabricksProvider#profile}.
+│ │          :param rate_limit: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#rate_limit DatabricksProvider#rate_limit}.
+│ │          :param retry_timeout_seconds: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#retry_timeout_seconds DatabricksProvider#retry_timeout_seconds}.
+│ │          :param skip_verify: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#skip_verify DatabricksProvider#skip_verify}.
+│ │          :param token: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#token DatabricksProvider#token}.
+│ │          :param username: Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#username DatabricksProvider#username}.
+│ │ @@ -839,14 +866,15 @@
+│ │              check_type(argname="argument config_file", value=config_file, expected_type=type_hints["config_file"])
+│ │              check_type(argname="argument debug_headers", value=debug_headers, expected_type=type_hints["debug_headers"])
+│ │              check_type(argname="argument debug_truncate_bytes", value=debug_truncate_bytes, expected_type=type_hints["debug_truncate_bytes"])
+│ │              check_type(argname="argument google_credentials", value=google_credentials, expected_type=type_hints["google_credentials"])
+│ │              check_type(argname="argument google_service_account", value=google_service_account, expected_type=type_hints["google_service_account"])
+│ │              check_type(argname="argument host", value=host, expected_type=type_hints["host"])
+│ │              check_type(argname="argument http_timeout_seconds", value=http_timeout_seconds, expected_type=type_hints["http_timeout_seconds"])
+│ │ +            check_type(argname="argument metadata_service_url", value=metadata_service_url, expected_type=type_hints["metadata_service_url"])
+│ │              check_type(argname="argument password", value=password, expected_type=type_hints["password"])
+│ │              check_type(argname="argument profile", value=profile, expected_type=type_hints["profile"])
+│ │              check_type(argname="argument rate_limit", value=rate_limit, expected_type=type_hints["rate_limit"])
+│ │              check_type(argname="argument retry_timeout_seconds", value=retry_timeout_seconds, expected_type=type_hints["retry_timeout_seconds"])
+│ │              check_type(argname="argument skip_verify", value=skip_verify, expected_type=type_hints["skip_verify"])
+│ │              check_type(argname="argument token", value=token, expected_type=type_hints["token"])
+│ │              check_type(argname="argument username", value=username, expected_type=type_hints["username"])
+│ │ @@ -887,14 +915,16 @@
+│ │              self._values["google_credentials"] = google_credentials
+│ │          if google_service_account is not None:
+│ │              self._values["google_service_account"] = google_service_account
+│ │          if host is not None:
+│ │              self._values["host"] = host
+│ │          if http_timeout_seconds is not None:
+│ │              self._values["http_timeout_seconds"] = http_timeout_seconds
+│ │ +        if metadata_service_url is not None:
+│ │ +            self._values["metadata_service_url"] = metadata_service_url
+│ │          if password is not None:
+│ │              self._values["password"] = password
+│ │          if profile is not None:
+│ │              self._values["profile"] = profile
+│ │          if rate_limit is not None:
+│ │              self._values["rate_limit"] = rate_limit
+│ │          if retry_timeout_seconds is not None:
+│ │ @@ -1030,14 +1060,20 @@
+│ │      @builtins.property
+│ │      def http_timeout_seconds(self) -> typing.Optional[jsii.Number]:
+│ │          '''Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#http_timeout_seconds DatabricksProvider#http_timeout_seconds}.'''
+│ │          result = self._values.get("http_timeout_seconds")
+│ │          return typing.cast(typing.Optional[jsii.Number], result)
+│ │  
+│ │      @builtins.property
+│ │ +    def metadata_service_url(self) -> typing.Optional[builtins.str]:
+│ │ +        '''Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#metadata_service_url DatabricksProvider#metadata_service_url}.'''
+│ │ +        result = self._values.get("metadata_service_url")
+│ │ +        return typing.cast(typing.Optional[builtins.str], result)
+│ │ +
+│ │ +    @builtins.property
+│ │      def password(self) -> typing.Optional[builtins.str]:
+│ │          '''Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/databricks#password DatabricksProvider#password}.'''
+│ │          result = self._values.get("password")
+│ │          return typing.cast(typing.Optional[builtins.str], result)
+│ │  
+│ │      @builtins.property
+│ │      def profile(self) -> typing.Optional[builtins.str]:
+│ │ @@ -1116,14 +1152,15 @@
+│ │      config_file: typing.Optional[builtins.str] = None,
+│ │      debug_headers: typing.Optional[typing.Union[builtins.bool, _cdktf_9a9027ec.IResolvable]] = None,
+│ │      debug_truncate_bytes: typing.Optional[jsii.Number] = None,
+│ │      google_credentials: typing.Optional[builtins.str] = None,
+│ │      google_service_account: typing.Optional[builtins.str] = None,
+│ │      host: typing.Optional[builtins.str] = None,
+│ │      http_timeout_seconds: typing.Optional[jsii.Number] = None,
+│ │ +    metadata_service_url: typing.Optional[builtins.str] = None,
+│ │      password: typing.Optional[builtins.str] = None,
+│ │      profile: typing.Optional[builtins.str] = None,
+│ │      rate_limit: typing.Optional[jsii.Number] = None,
+│ │      retry_timeout_seconds: typing.Optional[jsii.Number] = None,
+│ │      skip_verify: typing.Optional[typing.Union[builtins.bool, _cdktf_9a9027ec.IResolvable]] = None,
+│ │      token: typing.Optional[builtins.str] = None,
+│ │      username: typing.Optional[builtins.str] = None,
+│ │ @@ -1247,14 +1284,20 @@
+│ │  
+│ │  def _typecheckingstub__81d169ff2ff1974e491de4da7daf98fdbd54bdfaa5f77a74dd1051bcd4e78b37(
+│ │      value: typing.Optional[jsii.Number],
+│ │  ) -> None:
+│ │      """Type checking stubs"""
+│ │      pass
+│ │  
+│ │ +def _typecheckingstub__ec9bf448a36925b01556edfae6e182259702a543fabec7ca690c168328e996c6(
+│ │ +    value: typing.Optional[builtins.str],
+│ │ +) -> None:
+│ │ +    """Type checking stubs"""
+│ │ +    pass
+│ │ +
+│ │  def _typecheckingstub__6cb6489f91725b35b690266d0aba1d034c02a1f2093c9e225404e01895dd3f12(
+│ │      value: typing.Optional[builtins.str],
+│ │  ) -> None:
+│ │      """Type checking stubs"""
+│ │      pass
+│ │  
+│ │  def _typecheckingstub__d6d4a000b74c231b9fc2c51d2dd5b632d98639e22400ee2272262dc66480131f(
+│ │ @@ -1311,14 +1354,15 @@
+│ │      config_file: typing.Optional[builtins.str] = None,
+│ │      debug_headers: typing.Optional[typing.Union[builtins.bool, _cdktf_9a9027ec.IResolvable]] = None,
+│ │      debug_truncate_bytes: typing.Optional[jsii.Number] = None,
+│ │      google_credentials: typing.Optional[builtins.str] = None,
+│ │      google_service_account: typing.Optional[builtins.str] = None,
+│ │      host: typing.Optional[builtins.str] = None,
+│ │      http_timeout_seconds: typing.Optional[jsii.Number] = None,
+│ │ +    metadata_service_url: typing.Optional[builtins.str] = None,
+│ │      password: typing.Optional[builtins.str] = None,
+│ │      profile: typing.Optional[builtins.str] = None,
+│ │      rate_limit: typing.Optional[jsii.Number] = None,
+│ │      retry_timeout_seconds: typing.Optional[jsii.Number] = None,
+│ │      skip_verify: typing.Optional[typing.Union[builtins.bool, _cdktf_9a9027ec.IResolvable]] = None,
+│ │      token: typing.Optional[builtins.str] = None,
+│ │      username: typing.Optional[builtins.str] = None,
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/provider_resource/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/provider_resource/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/recipient/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/recipient/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/repo/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/repo/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/schema/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/schema/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/secret/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/secret/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/secret_acl/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/secret_acl/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/secret_scope/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/secret_scope/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/service_principal/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/service_principal/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/service_principal_role/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/service_principal_role/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/service_principal_secret/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/service_principal_secret/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/share/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/share/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_alert/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_alert/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_dashboard/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_dashboard/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_endpoint/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_endpoint/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_global_config/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_global_config/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_permissions/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_permissions/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_query/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_query/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_visualization/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_visualization/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/sql_widget/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/sql_widget/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/storage_credential/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/storage_credential/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/table/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/table/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/token/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/token/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/user/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/user/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/user_instance_profile/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/user_instance_profile/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/user_role/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/user_role/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks/workspace_conf/__init__.py
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks/workspace_conf/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks.egg-info/PKG-INFO
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: cdktf-cdktf-provider-databricks
+│ │ -Version: 5.0.7
+│ │ +Version: 5.0.8
+│ │  Summary: Prebuilt databricks Provider for Terraform CDK (cdktf)
+│ │  Home-page: https://github.com/cdktf/cdktf-provider-databricks.git
+│ │  Author: HashiCorp
+│ │  License: MPL-2.0
+│ │  Project-URL: Source, https://github.com/cdktf/cdktf-provider-databricks.git
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- cdktf-cdktf-provider-databricks-5.0.7/src/cdktf_cdktf_provider_databricks.egg-info/SOURCES.txt
+│ ├── +++ cdktf-cdktf-provider-databricks-5.0.8/src/cdktf_cdktf_provider_databricks.egg-info/SOURCES.txt
+│ │┄ Files 0% similar despite different names
+│ │ @@ -7,15 +7,15 @@
+│ │  src/cdktf_cdktf_provider_databricks/py.typed
+│ │  src/cdktf_cdktf_provider_databricks.egg-info/PKG-INFO
+│ │  src/cdktf_cdktf_provider_databricks.egg-info/SOURCES.txt
+│ │  src/cdktf_cdktf_provider_databricks.egg-info/dependency_links.txt
+│ │  src/cdktf_cdktf_provider_databricks.egg-info/requires.txt
+│ │  src/cdktf_cdktf_provider_databricks.egg-info/top_level.txt
+│ │  src/cdktf_cdktf_provider_databricks/_jsii/__init__.py
+│ │ -src/cdktf_cdktf_provider_databricks/_jsii/provider-databricks@5.0.7.jsii.tgz
+│ │ +src/cdktf_cdktf_provider_databricks/_jsii/provider-databricks@5.0.8.jsii.tgz
+│ │  src/cdktf_cdktf_provider_databricks/aws_s3_mount/__init__.py
+│ │  src/cdktf_cdktf_provider_databricks/azure_adls_gen1_mount/__init__.py
+│ │  src/cdktf_cdktf_provider_databricks/azure_adls_gen2_mount/__init__.py
+│ │  src/cdktf_cdktf_provider_databricks/azure_blob_mount/__init__.py
+│ │  src/cdktf_cdktf_provider_databricks/catalog/__init__.py
+│ │  src/cdktf_cdktf_provider_databricks/cluster/__init__.py
+│ │  src/cdktf_cdktf_provider_databricks/cluster_policy/__init__.py
