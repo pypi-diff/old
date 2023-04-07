@@ -1,0 +1,1538 @@
+--- tmp/pyopenrivercam-0.4.2.tar.gz
++++ tmp/pyopenrivercam-0.4.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pyopenrivercam-0.4.2.tar", last modified: Tue Mar 14 10:58:51 2023, max compression
+│ +gzip compressed data, was "pyopenrivercam-0.4.3.tar", last modified: Fri Apr  7 09:17:26 2023, max compression
+│   --- pyopenrivercam-0.4.2.tar
+├── +++ pyopenrivercam-0.4.3.tar
+│ ├── file list
+│ │ @@ -1,50 +1,50 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-14 10:58:51.600729 pyopenrivercam-0.4.2/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    34523 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8666 2023-03-14 10:58:51.600729 pyopenrivercam-0.4.2/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7698 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-14 10:58:51.596728 pyopenrivercam-0.4.2/pyopenrivercam.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8666 2023-03-14 10:58:51.000000 pyopenrivercam-0.4.2/pyopenrivercam.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      949 2023-03-14 10:58:51.000000 pyopenrivercam-0.4.2/pyopenrivercam.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-14 10:58:51.000000 pyopenrivercam-0.4.2/pyopenrivercam.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       45 2023-03-14 10:58:51.000000 pyopenrivercam-0.4.2/pyopenrivercam.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-14 10:58:51.000000 pyopenrivercam-0.4.2/pyopenrivercam.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      247 2023-03-14 10:58:51.000000 pyopenrivercam-0.4.2/pyopenrivercam.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       12 2023-03-14 10:58:51.000000 pyopenrivercam-0.4.2/pyopenrivercam.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-14 10:58:51.596728 pyopenrivercam-0.4.2/pyorc/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      280 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-14 10:58:51.596728 pyopenrivercam-0.4.2/pyorc/api/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/api/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    33038 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/api/cameraconfig.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18631 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/api/frames.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    14155 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/api/mask.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4408 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/api/orcbase.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    24069 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/api/plot.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9126 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/api/transect.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    35404 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/api/velocimetry.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17222 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/api/video.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-14 10:58:51.596728 pyopenrivercam-0.4.2/pyorc/cli/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       32 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/cli/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    15586 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/cli/cli_elements.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8744 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/cli/cli_utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2035 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/cli/log.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9806 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/cli/main.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2583 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/const.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    34401 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/cv.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    21279 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/helpers.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6243 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/piv_process.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-14 10:58:51.596728 pyopenrivercam-0.4.2/pyorc/service/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       55 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/service/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1941 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/service/camera_config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20318 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/pyorc/service/velocimetry.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-14 10:58:51.600729 pyopenrivercam-0.4.2/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2174 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-14 10:58:51.600729 pyopenrivercam-0.4.2/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/tests/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    14442 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/tests/conftest.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5767 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/tests/test_cameraconfig.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2767 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/tests/test_cli.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3899 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/tests/test_frames.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1726 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/tests/test_mask.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1144 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/tests/test_transect.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2397 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/tests/test_velocimetry.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1554 2023-03-14 10:58:39.000000 pyopenrivercam-0.4.2/tests/test_video.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:17:26.074780 pyopenrivercam-0.4.3/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    34523 2023-04-07 09:17:07.000000 pyopenrivercam-0.4.3/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8666 2023-04-07 09:17:26.074780 pyopenrivercam-0.4.3/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7698 2023-04-07 09:17:07.000000 pyopenrivercam-0.4.3/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:17:26.066780 pyopenrivercam-0.4.3/pyopenrivercam.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8666 2023-04-07 09:17:26.000000 pyopenrivercam-0.4.3/pyopenrivercam.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      949 2023-04-07 09:17:26.000000 pyopenrivercam-0.4.3/pyopenrivercam.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 09:17:26.000000 pyopenrivercam-0.4.3/pyopenrivercam.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       45 2023-04-07 09:17:26.000000 pyopenrivercam-0.4.3/pyopenrivercam.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 09:17:25.000000 pyopenrivercam-0.4.3/pyopenrivercam.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      247 2023-04-07 09:17:26.000000 pyopenrivercam-0.4.3/pyopenrivercam.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       12 2023-04-07 09:17:26.000000 pyopenrivercam-0.4.3/pyopenrivercam.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:17:26.066780 pyopenrivercam-0.4.3/pyorc/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      280 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:17:26.070780 pyopenrivercam-0.4.3/pyorc/api/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/api/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    33354 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/api/cameraconfig.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20800 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/api/frames.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14887 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/api/mask.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4408 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/api/orcbase.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    25778 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/api/plot.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9126 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/api/transect.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35404 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/api/velocimetry.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19367 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/api/video.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:17:26.070780 pyopenrivercam-0.4.3/pyorc/cli/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       32 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/cli/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14708 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/cli/cli_elements.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8171 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/cli/cli_utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2035 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/cli/log.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9846 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/cli/main.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2583 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/const.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    39272 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/cv.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    21279 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/helpers.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6243 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/piv_process.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:17:26.070780 pyopenrivercam-0.4.3/pyorc/service/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       55 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/service/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1941 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/service/camera_config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19726 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/pyorc/service/velocimetry.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 09:17:26.074780 pyopenrivercam-0.4.3/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2174 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:17:26.074780 pyopenrivercam-0.4.3/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/tests/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14443 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/tests/conftest.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5767 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/tests/test_cameraconfig.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3255 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/tests/test_cli.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3899 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/tests/test_frames.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1726 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/tests/test_mask.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1178 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/tests/test_transect.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2397 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/tests/test_velocimetry.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1643 2023-04-07 09:17:08.000000 pyopenrivercam-0.4.3/tests/test_video.py
+│ │   --- pyopenrivercam-0.4.2/LICENSE
+│ ├── +++ pyopenrivercam-0.4.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/PKG-INFO
+│ ├── +++ pyopenrivercam-0.4.3/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pyopenrivercam
+│ │ -Version: 0.4.2
+│ │ +Version: 0.4.3
+│ │  Summary: pyopenrivercam (pyorc) is a front and backend to control river camera observation locations
+│ │  Home-page: https://github.com/localdevices/pyorc
+│ │  Author: Hessel Winsemius
+│ │  Author-email: winsemius@rainbowsensing.com
+│ │  License: AGPLv3
+│ │  Keywords: hydrology,hydrometry,river-flow,pyorc
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │   --- pyopenrivercam-0.4.2/README.md
+│ ├── +++ pyopenrivercam-0.4.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/pyopenrivercam.egg-info/PKG-INFO
+│ ├── +++ pyopenrivercam-0.4.3/pyopenrivercam.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pyopenrivercam
+│ │ -Version: 0.4.2
+│ │ +Version: 0.4.3
+│ │  Summary: pyopenrivercam (pyorc) is a front and backend to control river camera observation locations
+│ │  Home-page: https://github.com/localdevices/pyorc
+│ │  Author: Hessel Winsemius
+│ │  Author-email: winsemius@rainbowsensing.com
+│ │  License: AGPLv3
+│ │  Keywords: hydrology,hydrometry,river-flow,pyorc
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │   --- pyopenrivercam-0.4.2/pyopenrivercam.egg-info/SOURCES.txt
+│ ├── +++ pyopenrivercam-0.4.3/pyopenrivercam.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/pyorc/api/cameraconfig.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/api/cameraconfig.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -562,16 +562,19 @@
+│ │              measure the control points (e.g. 4326 for WGS84 lat-lon). Destination control points will automatically be
+│ │              reprojected to the local crs of the CameraConfig. (Default: None)
+│ │  
+│ │          """
+│ │          assert (isinstance(src, list)), f"src must be a list of (x, y) or (x, y, z) coordinates"
+│ │          assert (isinstance(dst, list)), f"dst must be a list of (x, y) or (x, y, z) coordinates"
+│ │          if np.array(dst).shape[1] == 2:
+│ │ -            assert (len(src) == 4), f"4 source points are expected in src, but {len(src)} were found"
+│ │ -            assert (len(dst) == 4), f"4 destination points are expected in dst, but {len(dst)} were found"
+│ │ +            assert (len(src) in [2, 4]), f"2 or 4 source points are expected in src, but {len(src)} were found"
+│ │ +            if len(src) == 4:
+│ │ +                assert (len(dst) == 4), f"4 destination points are expected in dst, but {len(dst)} were found"
+│ │ +            else:
+│ │ +                assert (len(dst) == 2), f"2 destination points are expected in dst, but {len(dst)} were found"
+│ │          else:
+│ │              assert(len(src) == len(dst)), f"Amount of (x, y, z) coordinates in src ({len(src)}) and dst ({len(dst)} must be equal"
+│ │              assert(len(src) >= 6), f"for (x, y, z) points, at least 6 pairs must be available, only {len(src)} provided"
+│ │          if h_ref is not None:
+│ │              assert (isinstance(h_ref, (float, int))), "h_ref must contain a float number"
+│ │          if z_0 is not None:
+│ │              assert (isinstance(z_0, (float, int))), "z_0 must be provided as type float"
+│ │ @@ -581,14 +584,17 @@
+│ │              if not (hasattr(self, "crs")):
+│ │                  raise ValueError(
+│ │                      'CameraConfig does not contain a crs, so gcps also cannot contain a crs. Ensure that the provided '
+│ │                      'destination coordinates are in a locally defined coordinate reference system, e.g. established '
+│ │                      'with a spirit level.')
+│ │              dst = helpers.xyz_transform(dst, crs, CRS.from_wkt(self.crs))
+│ │          # if there is no h_ref, then no local gauge system, so set h_ref to zero
+│ │ +        # check if 2 points are available
+│ │ +        if len(src) == 2:
+│ │ +            src, dst = cv._get_gcps_2_4(src, dst, self.width, self.height)
+│ │          if h_ref is None:
+│ │              h_ref = 0.
+│ │          self.gcps = {
+│ │              "src": src,
+│ │              "dst": dst,
+│ │              "h_ref": h_ref,
+│ │              "z_0": z_0,
+│ │   --- pyopenrivercam-0.4.2/pyorc/api/frames.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/api/frames.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -379,14 +379,76 @@
+│ │          frames_reduce = self._obj - roll_mean
+│ │          frames_thres = np.maximum(frames_reduce, 0)
+│ │          # # normalize
+│ │          frames_norm = (frames_thres * 255 / frames_thres.max(axis=-1).max(axis=-1)).astype("uint8")
+│ │          frames_norm = frames_norm.where(roll_mean != 0, 0)
+│ │          return frames_norm
+│ │  
+│ │ +
+│ │ +    def time_diff(self, thres=2, abs=False):
+│ │ +        """
+│ │ +        Apply a difference over time (i.e. subtract frame 1 from frame 2, frame 2 from frame 3, etcetera.
+│ │ +        This method is very efficient to highlight moving objects when the video is very stable. If the video
+│ │ +        is very unstable this filter may lead to very bad results.
+│ │ +
+│ │ +        Parameters
+│ │ +        ----------
+│ │ +        thres : float, optional
+│ │ +            obsolute value intensity threshold to set values to zero when intensity is lower than this threshold
+│ │ +            default: 2.
+│ │ +        abs : boolean, optional
+│ │ +            if set to True (default: False) apply absolute value on result
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        da : xr.DataArray
+│ │ +            filtered frames
+│ │ +
+│ │ +        """
+│ │ +        frames_diff = self._obj.astype(np.float32).diff(dim="time")
+│ │ +        frames_diff = frames_diff.where(np.abs(frames_diff) > thres)
+│ │ +        frames_diff.attrs = self._obj.attrs
+│ │ +        # frames_diff -= frames_diff.min(dim=["x", "y"])
+│ │ +        frames_diff = frames_diff.fillna(0.)
+│ │ +        if abs:
+│ │ +            return np.abs(frames_diff)
+│ │ +        return frames_diff
+│ │ +
+│ │ +
+│ │ +    def smooth(self, wdw=1):
+│ │ +        """
+│ │ +        Smooth each frame with a Gaussian kernel.
+│ │ +
+│ │ +        Parameters
+│ │ +        ----------
+│ │ +        wdw : int, optional
+│ │ +            window height or width applied. if set to 1 (default) then the total window is 3x3 (i.e. 2 * 1 + 1). When
+│ │ +            set to 2, the total window is 5x5 (i.e. 2 * 2 + 1). Very effective to apply before ``Frames.time_diff``.
+│ │ +            The value for ``wdw`` shouild be chosen such that the moving features of interest are not removed from
+│ │ +            the view. This can be based on a visual interpretation of a result.
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        da : xr.DataArray
+│ │ +            filtered frames
+│ │ +
+│ │ +        """
+│ │ +        stride = wdw * 2 + 1
+│ │ +        f = xr.apply_ufunc(
+│ │ +            cv._smooth,
+│ │ +            self._obj, stride,
+│ │ +            input_core_dims=[["y", "x"], []],
+│ │ +            output_core_dims=[["y", "x"]],
+│ │ +            output_dtypes=[np.float32],
+│ │ +            vectorize=True,
+│ │ +            dask="parallelized",
+│ │ +            keep_attrs=True
+│ │ +        )
+│ │ +        return f
+│ │ +
+│ │      def to_ani(
+│ │              self,
+│ │              fn,
+│ │              figure_kwargs=const.FIGURE_ARGS,
+│ │              video_kwargs=const.VIDEO_ARGS,
+│ │              anim_kwargs=const.ANIM_ARGS,
+│ │              progress_bar=True,
+│ │   --- pyopenrivercam-0.4.2/pyorc/api/mask.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/api/mask.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -330,7 +330,27 @@
+│ │          y_condition = np.abs(self[v_y] - ds_mean[v_y]) / ds_mean[v_y] < tolerance
+│ │          if mode == "or":
+│ │              mask = x_condition | y_condition
+│ │          else:
+│ │              mask = x_condition & y_condition
+│ │          return mask
+│ │  
+│ │ +
+│ │ +    @_base_mask()
+│ │ +    def window_replace(self, wdw=1, iter=1, **kwargs):
+│ │ +        """
+│ │ +    Replaces values in a certain window size with mean of their neighbours. Returns a Dataset instead of a mask.
+│ │ +    NOTE: This functionality may be moved to a different subclass in later releases.
+│ │ +
+│ │ +    Parameters
+│ │ +    ----------
+│ │ +    wdw : int, optional
+│ │ +        window used to determine relevant neighbours
+│ │ +        """
+│ │ +        ds = copy.deepcopy(self)
+│ │ +        for n in range(iter):
+│ │ +            # collect points within a stride, collate and analyze for median value and deviation
+│ │ +            ds_wdw = helpers.stack_window(ds, wdw=wdw, **kwargs)
+│ │ +            ds_mean = ds_wdw.mean(dim="stride")
+│ │ +            ds = ds.fillna(ds_mean)
+│ │ +        return ds
+│ │ +
+│ │   --- pyopenrivercam-0.4.2/pyorc/api/orcbase.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/api/orcbase.py
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/pyorc/api/plot.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/api/plot.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,7 +1,8 @@
+│ │ +import copy
+│ │  import functools
+│ │  import matplotlib.pyplot as plt
+│ │  import numpy as np
+│ │  from matplotlib import patheffects
+│ │  from matplotlib.collections import QuadMesh
+│ │  import matplotlib.ticker as mticker
+│ │  
+│ │ @@ -35,15 +36,27 @@
+│ │      """
+│ │      # This function is largely based on xarray.Dataset function _dsplot
+│ │      # Build on the original docstring
+│ │      plot_func.__doc__ = f"{plot_func.__doc__}{commondoc}"
+│ │  
+│ │      # apply wrapper to allow for partial update of the function, with updated docstring
+│ │      @functools.wraps(plot_func)
+│ │ -    def get_plot_method(ref, mode="local", ax=None, add_colorbar=False, add_cross_section=True, kwargs_line={}, *args, **kwargs):
+│ │ +    def get_plot_method(
+│ │ +            ref,
+│ │ +            mode="local",
+│ │ +            ax=None,
+│ │ +            add_colorbar=False,
+│ │ +            add_cross_section=True,
+│ │ +            add_text=False,
+│ │ +            text_prefix="",
+│ │ +            text_suffix="",
+│ │ +            kwargs_line={},
+│ │ +            *args,
+│ │ +            **kwargs
+│ │ +    ):
+│ │          """Retrieve plot method with all required inputs
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          ref : xr.Dataset
+│ │              velocimetry or transect object
+│ │          mode : str, optional
+│ │ @@ -52,14 +65,20 @@
+│ │              (i.e. produced with known CRS for control points).
+│ │          ax : plt.axes object, optional
+│ │              If None (default), use the current axes. Not applicable when using facets.
+│ │          add_colorbar : boolean, optional
+│ │              if True, a colorbar is added to axes (default: False)
+│ │          add_cross_section : boolean, optional
+│ │              if True, and a transect is plotted, the transect coordinates are plotted (default: True)
+│ │ +        add_text : boolean, optional
+│ │ +            if True, add a text label in the axes displaying information about the video's transect
+│ │ +        text_prefix : str, optional
+│ │ +            string to add in front of standard text on transect plot. Only used if ``add_text=True``
+│ │ +        text_suffix : str, optional
+│ │ +            String to add after standard text on transect plot. Only used if ``add_text=True``
+│ │          kwargs_line : dict, optional
+│ │              additional keyword arguments passed to matplotlib.pyplot.plot for plotting cross-section.
+│ │              (Default value = {})
+│ │          *args : additional arguments, passed to wrapped Matplotlib function.
+│ │          **kwargs : additional keyword arguments to wrapped Matplotlib function.
+│ │              
+│ │          Returns
+│ │ @@ -145,14 +164,17 @@
+│ │                  if mode == "camera":
+│ │                      # lens position is needed, so check this
+│ │                      if hasattr(ref._obj.camera_config, "lens_position"):
+│ │                          x_bottom, y_bottom = ref._obj.transect.get_xyz_perspective()
+│ │                          ax.plot(x_bottom, y_bottom, "#0088FF", alpha=0.3, linewidth=3, **kwargs_line)
+│ │                          ax.plot(x_bottom, y_bottom, "#0088FF", alpha=0.3, linewidth=2, **kwargs_line)
+│ │                          ax.plot(x_bottom, y_bottom, "#0088FF", alpha=0.3, linewidth=1, **kwargs_line)
+│ │ +                if add_text:
+│ │ +                    plot_text(ax, ref._obj, text_prefix, text_suffix)
+│ │ +
+│ │          if mode == "geographical" and not(is_transect):
+│ │              ax.set_extent(
+│ │                  [
+│ │                      x.min() - 0.0001,
+│ │                      x.max() + 0.0001,
+│ │                      y.min() - 0.0001,
+│ │                      y.max() + 0.0001
+│ │ @@ -572,14 +594,46 @@
+│ │      cb = ax.figure.colorbar(p, cax=cax, **kwargs)
+│ │      ticks_loc = cb.get_ticks().tolist()
+│ │      cb.set_ticks(mticker.FixedLocator(ticks_loc))
+│ │      cb.set_ticklabels([label_format.format(x) for x in ticks_loc], path_effects=path_effects, fontsize=size)
+│ │      cb.set_label(label="velocity [m/s]", size=size, path_effects=path_effects)
+│ │      return cb
+│ │  
+│ │ +def plot_text(ax, ds, prefix, suffix):
+│ │ +    if "q" not in ds:
+│ │ +        return
+│ │ +    _ds = copy.deepcopy(ds)
+│ │ +    path_effects = [
+│ │ +        patheffects.Stroke(linewidth=3, foreground="w"),
+│ │ +        patheffects.Normal(),
+│ │ +    ]
+│ │ +    xloc = 0.95
+│ │ +    yloc = 0.95
+│ │ +    _ds.transect.get_river_flow(q_name="q")
+│ │ +    Q = np.abs(_ds.river_flow)
+│ │ +    string = prefix
+│ │ +    string += "Water level: {:1.2f} m\nDischarge: {:1.2f} m3/s".format(_ds.transect.h_a, Q.values)
+│ │ +    if "q_nofill" in ds:
+│ │ +        _ds.transect.get_river_flow(q_name="q_nofill")
+│ │ +        Q_nofill = np.abs(_ds.river_flow)
+│ │ +        perc_measured = Q_nofill / Q * 100  # fraction that is truly measured compared to total
+│ │ +        string += " ({:1.0f}% measured)".format(perc_measured.values)
+│ │ +    # reset river flow if necessary
+│ │ +    string += suffix
+│ │ +    ax.text(
+│ │ +        xloc,
+│ │ +        yloc,
+│ │ +        string,
+│ │ +        size=24,
+│ │ +        horizontalalignment="right",
+│ │ +        verticalalignment="top",
+│ │ +        path_effects=path_effects,
+│ │ +        transform=ax.transAxes
+│ │ +    )
+│ │ +
+│ │  
+│ │  def _prepare_axes(ax=None, mode="local"):
+│ │      """Prepares the axes, needed to plot results, called from `pyorc.PIV.plot`.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      ax : plt.axes, optional
+│ │   --- pyopenrivercam-0.4.2/pyorc/api/transect.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/api/transect.py
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/pyorc/api/velocimetry.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/api/velocimetry.py
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/pyorc/api/video.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/api/video.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -35,14 +35,15 @@
+│ │      def __init__(
+│ │              self,
+│ │              fn,
+│ │              camera_config=None,
+│ │              h_a=None,
+│ │              start_frame=None,
+│ │              end_frame=None,
+│ │ +            freq=1,
+│ │              stabilize=None,
+│ │              mask_exterior=None,
+│ │      ):
+│ │          """
+│ │          Video class, inheriting parts from cv2.VideoCapture. Contains a camera configuration to it, and a start and end
+│ │          frame to read from the video. Several methods read frames into memory or into a xr.DataArray with attributes.
+│ │          These can then be processed with other pyorc API functionalities.
+│ │ @@ -60,43 +61,46 @@
+│ │              the camera)
+│ │          start_frame : int, optional
+│ │              first frame to use in analysis (default: 0)
+│ │          end_frame : int, optional
+│ │              last frame to use in analysis (if not set, last frame available in video will be used)
+│ │          stabilize : optional
+│ │              If set to a recipe name, the video will be stabilized by attempting to find rigid points and track these with
+│ │ -            Lukas Kanade optical flow. "fixed" for FOV that is meant to be in one place, "moving" for a moving FOV.
+│ │ +            Lukas Kanade optical flow. Currently supported is "fixed" for FOV that is meant to be in one place.
+│ │          mask_exterior : list of lists,
+│ │              set of coordinates, that together encapsulate the polygon that defines the mask, separating land from water.
+│ │              The mask is used to select region (on land) for rigid point search for stabilization.
+│ │          """
+│ │          assert(isinstance(start_frame, (int, type(None)))), 'start_frame must be of type "int"'
+│ │          assert(isinstance(end_frame, (int, type(None)))), 'end_frame must be of type "int"'
+│ │ -        assert(stabilize in ["fixed", "moving", "all", None]), 'stabilize must be "fixed", "moving" or "all"'
+│ │ +        assert(stabilize in ["fixed", None]), f'stabilize is only implemented for method "fixed", "{stabilize}" given'
+│ │          self.feats_pos = None
+│ │          self.feats_stats = None
+│ │          self.feats_errs = None
+│ │          self.ms = None
+│ │          self.mask = None
+│ │ +        self.stabilize = stabilize
+│ │          if camera_config is not None:
+│ │              self.camera_config = camera_config
+│ │          # if camera_config is not None:
+│ │              # check if h_a is supplied, if so, then also z_0 and h_ref must be available
+│ │              if h_a is not None:
+│ │                  assert(isinstance(self.camera_config.gcps["z_0"], float)),\
+│ │                      "h_a was supplied, but camera config's gcps do not contain z_0, this is needed for dynamic " \
+│ │                      "reprojection. You can supplying z_0 and h_ref in the camera_config's gcps upon making a camera " \
+│ │                      "configuration. "
+│ │                  assert (isinstance(self.camera_config.gcps["h_ref"], float)),\
+│ │                      "h_a was supplied, but camera config's gcps do not contain h_ref, this is needed for dynamic " \
+│ │                      "reprojection. You must supply z_0 and h_ref in the camera_config's gcps upon making a camera " \
+│ │                      "configuration. "
+│ │          cap = cv2.VideoCapture(fn)
+│ │ +        cap.set(cv2.CAP_PROP_ORIENTATION_AUTO, 180.0)
+│ │          self.height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+│ │          self.width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+│ │ +        self.mask_exterior = mask_exterior
+│ │          # explicitly open file for reading
+│ │          if mask_exterior is not None:
+│ │              # set a mask based on the roi points
+│ │              self.set_mask_from_exterior(mask_exterior)
+│ │          # set end and start frame
+│ │          self.frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+│ │          if start_frame is not None:
+│ │ @@ -117,35 +121,54 @@
+│ │          time, frame_number = cv.get_time_frames(cap, start_frame, end_frame)
+│ │          # check if end_frame changed
+│ │          if frame_number[-1] != end_frame:
+│ │              warnings.warn(f"End frame {end_frame} cannot be read from file. End frame is adapted to {frame_number[-1]}")
+│ │              end_frame = frame_number[-1]
+│ │  
+│ │          self.end_frame = end_frame
+│ │ +        self.freq = freq
+│ │          self.time = time
+│ │          self.frame_number = frame_number
+│ │          self.start_frame = start_frame
+│ │ -        if stabilize is not None:
+│ │ +        if self.stabilize is not None:
+│ │              # select the right recipe dependent on the movie being fixed or moving
+│ │ -            recipe = const.CLASSIFY_CAM[stabilize] if stabilize in const.CLASSIFY_CAM else []
+│ │ -            self._get_pos_feats(cap, recipe=recipe)
+│ │ -            self._get_ms()
+│ │ +            # recipe = const.CLASSIFY_CAM[self.stabilize] if self.stabilize in const.CLASSIFY_CAM else []
+│ │ +            self.get_ms(cap)
+│ │  
+│ │          self.fps = cap.get(cv2.CAP_PROP_FPS)
+│ │ +        self.rotation = cap.get(cv2.CAP_PROP_ORIENTATION_META)
+│ │          # set other properties
+│ │          self.h_a = h_a
+│ │          # make camera config part of the vidoe object
+│ │          self.fn = fn
+│ │          self._stills = {}  # here all stills are stored lazily
+│ │          # nothing to be done at this stage, release file for now.
+│ │          cap.release()
+│ │          del cap
+│ │  
+│ │  
+│ │      @property
+│ │ +    def mask_exterior(self):
+│ │ +        """
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        np.ndarray
+│ │ +            Mask of region of interest
+│ │ +        """
+│ │ +        return self._mask_exterior
+│ │ +
+│ │ +    @mask_exterior.setter
+│ │ +    def mask_exterior(self, mask_exterior):
+│ │ +        if mask_exterior is None:
+│ │ +            self._mask_exterior = None
+│ │ +        else:
+│ │ +            self._mask_exterior = mask_exterior
+│ │ +
+│ │ +    @property
+│ │      def mask(self):
+│ │          """
+│ │  
+│ │          Returns
+│ │          -------
+│ │          np.ndarray
+│ │              Mask of region of interest
+│ │ @@ -202,14 +225,42 @@
+│ │      def end_frame(self, end_frame=None):
+│ │          # sometimes last frames are not read by OpenCV, hence we skip the last frame always
+│ │          if end_frame is None:
+│ │              self._end_frame = self.frame_count - 1
+│ │          else:
+│ │              self._end_frame = min(self.frame_count - 1, end_frame)
+│ │  
+│ │ +    @property
+│ │ +    def freq(self):
+│ │ +        """
+│ │ +
+│ │ +        Returns
+│ │ +        -------
+│ │ +        int: frequency (1 in nth frames to select)
+│ │ +
+│ │ +        """
+│ │ +        return self._freq
+│ │ +
+│ │ +    @freq.setter
+│ │ +    def freq(self, freq=1):
+│ │ +        self._freq = freq
+│ │ +
+│ │ +    @property
+│ │ +    def stabilize(self):
+│ │ +        """
+│ │ +
+│ │ +        :return: int, last frame considered in analysis
+│ │ +        """
+│ │ +        return self._stabilize
+│ │ +
+│ │ +    @stabilize.setter
+│ │ +    def stabilize(self, stabilize=None):
+│ │ +        # sometimes last frames are not read by OpenCV, hence we skip the last frame always
+│ │ +        self._stabilize = stabilize
+│ │ +
+│ │  
+│ │      @property
+│ │      def h_a(self):
+│ │          """
+│ │  
+│ │          :return: Actual water level [m] during video
+│ │          """
+│ │ @@ -260,14 +311,32 @@
+│ │          """
+│ │          return self._corners
+│ │  
+│ │      @corners.setter
+│ │      def corners(self, corners):
+│ │          self._corners = corners
+│ │  
+│ │ +
+│ │ +    @property
+│ │ +    def rotation(self):
+│ │ +        return self._rotation
+│ │ +
+│ │ +    @rotation.setter
+│ │ +    def rotation(self, rotation_code):
+│ │ +        """
+│ │ +        Solves a likely bug in OpenCV (4.6.0) that straight up videos rotate in the wrong direction. Tested for both
+│ │ +        90 degree and 270 degrees rotation videos on several smartphone (iPhone and Android)
+│ │ +        """
+│ │ +        if rotation_code in [90, 270]:
+│ │ +            self._rotation = cv2.ROTATE_180
+│ │ +        else:
+│ │ +            self._rotation = None
+│ │ +
+│ │ +
+│ │ +
+│ │      def get_frame(self, n, method="grayscale", lens_corr=False):
+│ │          """
+│ │          Retrieve one frame. Frame will be corrected for lens distortion if lens parameters are given.
+│ │  
+│ │          :param n: int, frame number to retrieve
+│ │          :param method: str, can be "rgb", "grayscale", or "hsv", default: "grayscale"
+│ │          :param lens_corr: bool, optional, if set to True, lens parameters will be used to undistort image
+│ │ @@ -276,14 +345,16 @@
+│ │          assert(n >= 0), "frame number cannot be negative"
+│ │          assert(n - self.start_frame <= self.end_frame - self.start_frame), "frame number is larger than the different between the start and end frame"
+│ │          assert(method in ["grayscale", "rgb", "hsv"]), f'method must be "grayscale", "rgb" or "hsv", method is "{method}"'
+│ │          cap = cv2.VideoCapture(self.fn)
+│ │          cap.set(cv2.CAP_PROP_POS_FRAMES, n + self.start_frame)
+│ │          try:
+│ │              ret, img = cap.read()
+│ │ +            if self.rotation is not None:
+│ │ +                img = cv2.rotate(img, self.rotation)
+│ │          except:
+│ │              raise IOError(f"Cannot read")
+│ │          if ret:
+│ │              if self.ms is not None:
+│ │                  # correct for stabilization
+│ │                  h = img.shape[0]
+│ │                  w = img.shape[1]
+│ │ @@ -365,28 +436,33 @@
+│ │              "h_a": json.dumps(self.h_a)
+│ │          }
+│ │          frames = xr.DataArray(
+│ │              da.stack(data_array, axis=0),
+│ │              dims=dims,
+│ │              coords=coords,
+│ │              attrs=attrs
+│ │ -        )
+│ │ +        )[::self.freq]
+│ │          del coords["time"]
+│ │          if len(sample.shape) == 3:
+│ │              del coords["rgb"]
+│ │          # add coordinate grids (i.e. without time)
+│ │          frames = frames.frames._add_xy_coords([xp, yp], coords, const.PERSPECTIVE_ATTRS)
+│ │          frames.name = "frames"
+│ │          return frames
+│ │  
+│ │  
+│ │      def set_mask_from_exterior(self, exterior):
+│ │          mask_coords = np.array([exterior], dtype=np.int32)
+│ │          mask = np.zeros((self.height, self.width), np.uint8)
+│ │ -        self.mask = cv2.fillPoly(mask, [mask_coords], 255)
+│ │ +        mask = cv2.fillPoly(mask, [mask_coords], 255)
+│ │ +        mask[mask==0] = 1
+│ │ +        mask[mask==255] = 0
+│ │ +        mask[mask==1] = 255
+│ │ +        self.mask = mask
+│ │ +
+│ │  
+│ │      def _get_pos_feats(self, cap, split=2, recipe=const.CLASSIFY_STANDING_CAM):
+│ │          # go through the entire set of frames to gather transformation matrices per frame (except for the first one)
+│ │          # get the displacements of trackable features
+│ │          positions, stats, errs = cv._get_displacements(
+│ │              cap,
+│ │              start_frame=self.start_frame,
+│ │ @@ -400,17 +476,26 @@
+│ │              # select positions which are classified as water
+│ │              positions = positions[:, classes, :]
+│ │              stats = stats[:, classes]
+│ │          self.feats_pos = positions
+│ │          self.feats_stats = stats
+│ │          self.feats_errs = errs
+│ │  
+│ │ -    def _get_ms(self):
+│ │ -        # retrieve the transformation matrices for stabilization
+│ │ -        self.ms = cv._ms_from_displacements(self.feats_pos, self.feats_stats)
+│ │ +
+│ │ +    def get_ms(self, cap, split=2):
+│ │ +        self.ms = cv._get_ms_gftt(
+│ │ +            cap,
+│ │ +            start_frame=self.start_frame,
+│ │ +            end_frame=self.end_frame,
+│ │ +            split=split,
+│ │ +            mask=self.mask,
+│ │ +        )
+│ │ +    # def _get_ms(self):
+│ │ +    #     # retrieve the transformation matrices for stabilization
+│ │ +    #     self.ms = cv._ms_from_displacements(self.feats_pos, self.feats_stats)
+│ │  
+│ │  
+│ │      def plot_rigid_pts(self, ax=None, **kwargs):
+│ │          """
+│ │          Plots found rigid points (column, row) for stabilization and their path throughout the frames in time on an
+│ │          axes object.
+│ │   --- pyopenrivercam-0.4.2/pyorc/cli/cli_elements.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/cli/cli_elements.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -314,35 +314,23 @@
+│ │                      bbox_geo = helpers.xyz_transform(
+│ │                          bbox_geo,
+│ │                          crs_from=self.camera_config.crs,
+│ │                          crs_to=4326
+│ │                      )
+│ │                  self.p_bbox.set_xy(bbox_cam)
+│ │                  self.p_bbox_geo.set_xy(bbox_geo)
+│ │ -                # self.cam_config_cam = self.camera_config.plot_bbox(ax=self.ax, camera=True, alpha=0.5, zorder=2,
+│ │ -                #                                                    edgecolor="w")
+│ │ -                # self.cam_config_geo = self.camera_config.plot(ax=self.ax_geo, camera=False)
+│ │                  self.ax.figure.canvas.draw()
+│ │  
+│ │      def on_click(self, event):
+│ │          super(AoiSelect, self).on_click(event)
+│ │ -        # if len(self.src) == self.required_clicks and self.cam_config_cam is None:
+│ │ -        #     self.camera_config.set_bbox_from_corners(self.src)
+│ │ -        #     self.cam_config_cam = self.camera_config.plot_bbox(ax=self.ax, camera=True, alpha=0.5, zorder=2, edgecolor="w")
+│ │ -        #     self.cam_config_geo = self.camera_config.plot(ax=self.ax_geo, camera=False)
+│ │          if not(len(self.src) == self.required_clicks):
+│ │              # remove plot if present
+│ │              self.p_bbox.set_xy(np.zeros((0, 2)))
+│ │              self.p_bbox_geo.set_xy(np.zeros((0, 2)))
+│ │ -            # self.cam_config_cam.remove()
+│ │ -                # self.cam_config_geo.remove()
+│ │ -                # self.cam_config_cam = None
+│ │ -                # self.cam_config_geo = None
+│ │              self.ax.figure.canvas.draw()
+│ │ -                # self.ax.draw_idle()
+│ │  
+│ │  
+│ │  class GcpSelect(BaseSelect):
+│ │      """
+│ │      Selector tool to provide source GCP coordinates to pyOpenRiverCam
+│ │      """
+│ │  
+│ │ @@ -369,15 +357,15 @@
+│ │              xloc,
+│ │              yloc,
+│ │              "Select location of control points in the right order (check locations on map view)",
+│ │              size=12,
+│ │              path_effects=path_effects
+│ │          )
+│ │          self.ax_geo.legend()
+│ │ -        # # TODO: if no crs provided, then provide a normal axes with equal lengths on x and y axis
+│ │ +        # TODO: if no crs provided, then provide a normal axes with equal lengths on x and y axis
+│ │          self.required_clicks = len(self.dst)
+│ │  
+│ │      def on_click(self, event):
+│ │          super(GcpSelect, self).on_click(event)
+│ │          # update selected dst points
+│ │          dst_sel = self.dst[:len(self.src)]
+│ │          if len(dst_sel) > 0:
+│ │   --- pyopenrivercam-0.4.2/pyorc/cli/cli_utils.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/cli/cli_utils.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -9,21 +9,21 @@
+│ │  import yaml
+│ │  
+│ │  from pyorc import Video, helpers, CameraConfig
+│ │  from pyorc.cli.cli_elements import GcpSelect, AoiSelect
+│ │  from shapely.geometry import Point
+│ │  
+│ │  
+│ │ -def get_corners_interactive(fn, gcps, crs=None, frame_sample=0., logger=logging):
+│ │ +def get_corners_interactive(fn, gcps, crs=None, crs_gcps=None, frame_sample=0., logger=logging):
+│ │      vid = Video(fn, start_frame=frame_sample, end_frame=frame_sample + 1)
+│ │      # get first frame
+│ │      frame = vid.get_frame(0, method="rgb")
+│ │      src = gcps["src"]
+│ │ -    if crs is not None:
+│ │ -        dst = helpers.xyz_transform(gcps["dst"], crs_from=crs, crs_to=4326)
+│ │ +    if crs_gcps is not None:
+│ │ +        dst = helpers.xyz_transform(gcps["dst"], crs_from=crs_gcps, crs_to=4326)
+│ │      else:
+│ │          dst = gcps["dst"]
+│ │      # setup preliminary cam config
+│ │      cam_config = CameraConfig(height=frame.shape[0], width=frame.shape[1], gcps=gcps, crs=crs)
+│ │      selector = AoiSelect(frame, src, dst, cam_config, logger=logger)
+│ │      # uncomment below to test the interaction, not suitable for automated unit test
+│ │      plt.show(block=True)
+│ │ @@ -156,25 +156,14 @@
+│ │              assert(isinstance(val, list)), f"--src value {n} is not a list {val}"
+│ │              assert(len(val) == 2), f"--src value {n} must contain row, column coordinate but consists of {len(val)} numbers"
+│ │      return value
+│ │  
+│ │  def parse_dst(ctx, param, value):
+│ │      value = parse_json(ctx, param, value)
+│ │      value = validate_dst(value)
+│ │ -    # if value is not None:
+│ │ -    #     if len(value) == 4:
+│ │ -    #         # assume [x, y] pairs are provided
+│ │ -    #         len_points = 2
+│ │ -    #     elif len(value) < 6:
+│ │ -    #         raise click.UsageError(f"--dst must contain at least 4 with [x, y] or 6 with [x, y, z] points, contains {len(value)}.")
+│ │ -    #     else:
+│ │ -    #         len_points = 3
+│ │ -    #     for n, val in enumerate(value):
+│ │ -    #         assert(isinstance(val, list)), f"--dst value {n} is not a list {val}"
+│ │ -    #         assert(len(val) == len_points), f"--src value {n} must contain row, column coordinate but consists of {len(val)} numbers"
+│ │      return value
+│ │  
+│ │  
+│ │  def parse_str_num(ctx, param, value):
+│ │      if value is not None:
+│ │          try:
+│ │              float(value)
+│ │ @@ -200,18 +189,18 @@
+│ │          raise click.FileError(f"{fn} does not contain CRS, use a GIS program to add a valid CRS.")
+│ │      if gdf.crs is None:
+│ │          raise click.FileError(f"{fn} does not contain CRS, use a GIS program to add a valid CRS.")
+│ │      return coords, gdf.crs.to_wkt()
+│ │  
+│ │  def validate_dst(value):
+│ │      if value is not None:
+│ │ -        if len(value) == 4:
+│ │ +        if len(value) in [2, 4]:
+│ │              # assume [x, y] pairs are provided
+│ │              len_points = 2
+│ │          elif len(value) < 6:
+│ │ -            raise click.UsageError(f"--dst must contain at least 4 with [x, y] or 6 with [x, y, z] points, contains {len(value)}.")
+│ │ +            raise click.UsageError(f"--dst must contain at least 2 or 4 with [x, y] or 6 with [x, y, z] points, contains {len(value)}.")
+│ │          else:
+│ │              len_points = 3
+│ │          for n, val in enumerate(value):
+│ │              assert(isinstance(val, list)), f"--dst value {n} is not a list {val}"
+│ │              assert(len(val) == len_points), f"--src value {n} must contain row, column coordinate but consists of {len(val)} numbers"
+│ │      return value
+│ │   --- pyopenrivercam-0.4.2/pyorc/cli/log.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/cli/log.py
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/pyorc/cli/main.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/cli/main.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -102,15 +102,15 @@
+│ │      callback=cli_utils.parse_src,
+│ │      help='Source control points as list of [column, row] pairs.'
+│ │  )
+│ │  @click.option(
+│ │      "--dst",
+│ │      type=str,
+│ │      callback=cli_utils.parse_dst,
+│ │ -    help='Destination control points as list of 4 [x, y] pairs, or at least 6 [x, y, z]. If --crs_gcps is provided, --dst is assumed to be in this CRS."'
+│ │ +    help='Destination control points as list of 2 or 4 [x, y] pairs, or at least 6 [x, y, z]. If --crs_gcps is provided, --dst is assumed to be in this CRS."'
+│ │  )
+│ │  @click.option(
+│ │      "--z_0",
+│ │      type=float,
+│ │      help="Water level [m] +CRS (e.g. geoid or ellipsoid of GPS)"
+│ │  )
+│ │  @click.option(
+│ │ @@ -226,14 +226,15 @@
+│ │      if not corners:
+│ │          logger.warning("No corner points for projection provided. No problem, you can interactively click them in your objective")
+│ │          if click.confirm('Do you want to continue and provide corners interactively?', default=True):
+│ │              corners = cli_utils.get_corners_interactive(
+│ │                  videofile,
+│ │                  gcps,
+│ │                  crs=crs,
+│ │ +                crs_gcps=crs_gcps,
+│ │                  frame_sample=frame_sample,
+│ │                  logger=logger
+│ │              )
+│ │      pyorc.service.camera_config(
+│ │          video_file=videofile,
+│ │          cam_config_file=output,
+│ │          gcps=gcps,
+│ │   --- pyopenrivercam-0.4.2/pyorc/const.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/const.py
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/pyorc/cv.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/cv.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -66,14 +66,39 @@
+│ │          tolerance = np.quantile(test_variable, q_threshold)  # PARAMETER
+│ │      else:
+│ │          # tolerance as absolute value
+│ │          tolerance = abs_threshold
+│ │      return op(test_variable, tolerance)
+│ │  
+│ │  
+│ │ +def _combine_m(m1, m2):
+│ │ +    # extend to a 3x3 for matrix multiplication
+│ │ +    _m1 = np.append(m1, np.array([[0., 0., 1.]]), axis=0)
+│ │ +    _m2 = np.append(m2, np.array([[0., 0., 1.]]), axis=0)
+│ │ +    m_combi = _m1.dot(_m2)[0:2]
+│ │ +    return m_combi
+│ │ +
+│ │ +
+│ │ +def _smooth(img, stride):
+│ │ +    """
+│ │ +    Internal function to filter on too large differences from spatial mean
+│ │ +
+│ │ +    Parameters
+│ │ +    ----------
+│ │ +    img: image
+│ │ +    stride: window edge size
+│ │ +
+│ │ +    Returns
+│ │ +    -------
+│ │ +    img
+│ │ +    """
+│ │ +    blur = cv2.GaussianBlur(img.astype("float32"), (stride, stride), 0)
+│ │ +    return blur
+│ │ +
+│ │ +
+│ │  def _convert_edge(img, stride_1, stride_2):
+│ │      """
+│ │      internal function to do emphasize gradients with a band filter method, see main method
+│ │      """
+│ │      blur1 = cv2.GaussianBlur(img.astype("float32"), (stride_1, stride_1), 0)
+│ │      blur2 = cv2.GaussianBlur(img.astype("float32"), (stride_2, stride_2), 0)
+│ │      edges = blur2 - blur1
+│ │ @@ -112,14 +137,69 @@
+│ │  
+│ │      mtx[0, 2] = width / c  # define center x
+│ │      mtx[1, 2] = height / c  # define center y
+│ │      mtx[0, 0] = width  # define focal length x
+│ │      mtx[1, 1] = width  # define focal length y
+│ │      return mtx
+│ │  
+│ │ +
+│ │ +def _get_ms_gftt(cap, start_frame=0, end_frame=None, n_pts=None, split=2, mask=None, wdw=4):
+│ │ +    # set end_frame to last if not defined
+│ │ +    if end_frame is None:
+│ │ +        end_frame = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+│ │ +
+│ │ +    m = np.eye(3)[0:2]
+│ │ +    # m2 = np.eye(3)[0:2]
+│ │ +    ms = []
+│ │ +    # ms2 = []
+│ │ +    m_key = copy.deepcopy(m)
+│ │ +    # get start frame and points
+│ │ +    cap.set(cv2.CAP_PROP_POS_FRAMES, start_frame)
+│ │ +    # determine the mount of frames that must be processed
+│ │ +    n_frames = int(end_frame + 1) - int(start_frame)
+│ │ +
+│ │ +    # Read first frame
+│ │ +    _, img_key = cap.read()
+│ │ +    # Convert frame to grayscale
+│ │ +    img1 = cv2.cvtColor(img_key, cv2.COLOR_BGR2GRAY)
+│ │ +    img_key = img1
+│ │ +
+│ │ +    if n_pts is None:
+│ │ +        # use the square root of nr of pixels in a frame to decide on n_pts
+│ │ +        n_pts = int(np.sqrt(len(img_key.flatten())))
+│ │ +
+│ │ +    # get features from first key frame
+│ │ +    prev_pts = _gftt_split(img_key, split, n_pts, mask=mask)
+│ │ +
+│ │ +    pbar = tqdm(range(n_frames), position=0, leave=True)
+│ │ +    for i in pbar:
+│ │ +        ms.append(m)
+│ │ +        #     ms2.append(m2)
+│ │ +        _, img2 = cap.read()
+│ │ +        img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+│ │ +        curr_pts, status, err = cv2.calcOpticalFlowPyrLK(img_key, img2, prev_pts, None)
+│ │ +        #     curr_pts = curr_pts[status == 1]
+│ │ +        #     prev_pts = prev_pts[status == 1]
+│ │ +        m_part = cv2.estimateAffine2D(curr_pts, prev_pts)[0]
+│ │ +        m = _combine_m(m_key, m_part)
+│ │ +        if i % 30 == 0:
+│ │ +            img_key = img1
+│ │ +            prev_pts = _gftt_split(img_key, split, n_pts, mask=mask)
+│ │ +            m_key = copy.deepcopy(m)
+│ │ +        img1 = img2
+│ │ +
+│ │ +    # smooth the affines over time
+│ │ +    ma = np.array(ms)
+│ │ +    for m in range(ma.shape[1]):
+│ │ +        for n in range(ma.shape[2]):
+│ │ +            ma[wdw:-wdw, m, n] = np.convolve(ma[:, m, n], np.ones(wdw * 2 + 1) / (wdw * 2 + 1), mode="valid")
+│ │ +    ms_smooth = list(ma)
+│ │ +    return ms_smooth
+│ │ +
+│ │ +
+│ │  def _get_displacements(cap, start_frame=0, end_frame=None, n_pts=None, split=2, mask=None):
+│ │      """
+│ │      compute displacements from trackable features found in start frame
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      cap : cv2.Capture object
+│ │ @@ -167,37 +247,39 @@
+│ │  
+│ │  
+│ │      if n_pts is None:
+│ │          # use the square root of nr of pixels in a frame to decide on n_pts
+│ │          n_pts = int(np.sqrt(len(prev_gray.flatten())))
+│ │  
+│ │      # split image in smaller chunks if user wants
+│ │ -    v = 0
+│ │ -    h = 0
+│ │ -    ver_split, hor_split = np.int16(np.ceil(np.array(prev_gray.shape) / split))
+│ │ -    prev_pts = np.zeros((0, 1, 2), np.float32)
+│ │ -    while v < prev_gray.shape[0]:
+│ │ -        while h < prev_gray.shape[1]:
+│ │ -            sub_img = prev_gray[v:v + ver_split, h:h + hor_split]
+│ │ -            # get points over several quadrants
+│ │ -            subimg_pts = cv2.goodFeaturesToTrack(
+│ │ -                sub_img,
+│ │ -                maxCorners=int(n_pts/split**2),
+│ │ -                qualityLevel=0.3,
+│ │ -                minDistance=10,
+│ │ -                blockSize=1
+│ │ -            )
+│ │ -            # add offsets for quadrants
+│ │ -            if subimg_pts is not None:
+│ │ -                subimg_pts[:, :, 0] += h
+│ │ -                subimg_pts[:, :, 1] += v
+│ │ -                prev_pts = np.append(prev_pts, subimg_pts, axis=0)
+│ │ -            h += hor_split
+│ │ -        h = 0
+│ │ -        v += ver_split
+│ │ +    prev_pts = _gftt_split(prev_gray, split, n_pts)
+│ │ +
+│ │ +    # v = 0
+│ │ +    # h = 0
+│ │ +    # ver_split, hor_split = np.int16(np.ceil(np.array(prev_gray.shape) / split))
+│ │ +    # prev_pts = np.zeros((0, 1, 2), np.float32)
+│ │ +    # while v < prev_gray.shape[0]:
+│ │ +    #     while h < prev_gray.shape[1]:
+│ │ +    #         sub_img = prev_gray[v:v + ver_split, h:h + hor_split]
+│ │ +    #         # get points over several quadrants
+│ │ +    #         subimg_pts = cv2.goodFeaturesToTrack(
+│ │ +    #             sub_img,
+│ │ +    #             maxCorners=int(n_pts/split**2),
+│ │ +    #             qualityLevel=0.3,
+│ │ +    #             minDistance=10,
+│ │ +    #             blockSize=1
+│ │ +    #         )
+│ │ +    #         # add offsets for quadrants
+│ │ +    #         if subimg_pts is not None:
+│ │ +    #             subimg_pts[:, :, 0] += h
+│ │ +    #             subimg_pts[:, :, 1] += v
+│ │ +    #             prev_pts = np.append(prev_pts, subimg_pts, axis=0)
+│ │ +    #         h += hor_split
+│ │ +    #     h = 0
+│ │ +    #     v += ver_split
+│ │      # # get points over several quadrants
+│ │      # prev_pts = cv2.goodFeaturesToTrack(
+│ │      #     prev_gray,
+│ │      #     maxCorners=n_pts,
+│ │      #     qualityLevel=0.1,
+│ │      #     minDistance=10,
+│ │      #     blockSize=3
+│ │ @@ -267,22 +349,59 @@
+│ │          stats = np.append(stats, np.swapaxes(status, 0, 1), axis=0)
+│ │          errs = np.append(errs, np.swapaxes(err, 0, 1), axis=0)
+│ │          # prepare next frame
+│ │          prev_gray = curr_gray
+│ │          prev_pts = curr_pts
+│ │      return positions, stats, errs
+│ │  
+│ │ +def _get_gcps_2_4(src, dst, img_width, img_height):
+│ │ +    """
+│ │ +
+│ │ +    Parameters
+│ │ +    ----------
+│ │ +    src : list or array-like
+│ │ +        source control points (list of lists)
+│ │ +    dst : list or array-like
+│ │ +        destination control points (list of lists)
+│ │ +    img_width : width of original image frame
+│ │ +    img_height : height of original image frame
+│ │ +
+│ │ +    Returns
+│ │ +    -------
+│ │ +    src : list or array-like
+│ │ +        source control points (list of lists) converted to corner points
+│ │ +    dst : list or array-like
+│ │ +        destination control points (list of lists) converted to corner points
+│ │ +    """
+│ │ +    # first reverse the coordinate order of the y-axis
+│ │ +    _src = [[x, img_height - y] for x, y in src]
+│ │ +    # estimate affine transform (only rotation and translation)
+│ │ +    M = cv2.estimateAffinePartial2D(np.array(_src), np.array(dst))
+│ │ +    # complete M with a line indicating no perspective
+│ │ +    M = np.array(M[0].tolist() + [[0, 0, 1]])
+│ │ +    # establish corner coordinates
+│ │ +    corners = [
+│ │ +        [0, 0],
+│ │ +        [img_width, 0],
+│ │ +        [img_width, img_height],
+│ │ +        [0, img_height]
+│ │ +    ]
+│ │ +    dst = cv2.perspectiveTransform(np.float32([corners]), M)[0].tolist()
+│ │ +    # now get the corners back transformed to the real image coordinates
+│ │ +    src = [[x, img_height - y] for x, y in corners]
+│ │ +    return src, dst
+│ │ +
+│ │  
+│ │  def _get_shape(bbox, resolution=0.01, round=1):
+│ │      """
+│ │      defines the number of rows and columns needed in a target raster, to fit a given bounding box.
+│ │  
+│ │      :param bbox: shapely Polygon, bounding box
+│ │      :param resolution: resolution of target raster
+│ │ -    :param round: number of pixels to round intended shape to
+│ │ +    :param round: number of pixels to round intended sh ape to
+│ │      :return: numbers of rows and columns for target raster
+│ │      """
+│ │      coords = bbox.exterior.coords
+│ │      box_length = LineString(coords[0:2]).length
+│ │      box_width = LineString(coords[1:3]).length
+│ │      cols = int(np.ceil((box_length / resolution) / round)) * round
+│ │      rows = int(np.ceil((box_width / resolution) / round)) * round
+│ │ @@ -361,14 +480,41 @@
+│ │      rel_diff = cam_height_a / cam_height_ref
+│ │      # apply the diff on all coordinate, both x, and y directions
+│ │      _dest_x = list(cam_x + (np.array(x) - cam_x) * rel_diff)
+│ │      _dest_y = list(cam_y + (np.array(y) - cam_y) * rel_diff)
+│ │      dest_out = list(zip(_dest_x, _dest_y))
+│ │      return dest_out
+│ │  
+│ │ +def _gftt_split(img, split, n_pts, mask=None):
+│ │ +    # split image in smaller chunks if user wants
+│ │ +    v = 0
+│ │ +    h = 0
+│ │ +    ver_split, hor_split = np.int16(np.ceil(np.array(img.shape) / split))
+│ │ +    pts = np.zeros((0, 1, 2), np.float32)
+│ │ +    while v < img.shape[0]:
+│ │ +        while h < img.shape[1]:
+│ │ +            sub_img = img[v:v + ver_split, h:h + hor_split]
+│ │ +            # get points over several quadrants
+│ │ +            subimg_pts = cv2.goodFeaturesToTrack(
+│ │ +                sub_img,
+│ │ +                mask=mask[v:v + ver_split, h:h + hor_split] if mask is not None else None,
+│ │ +                maxCorners=int(n_pts/split**2),
+│ │ +                qualityLevel=0.3,
+│ │ +                minDistance=10,
+│ │ +                blockSize=1
+│ │ +            )
+│ │ +            # add offsets for quadrants
+│ │ +            if subimg_pts is not None:
+│ │ +                subimg_pts[:, :, 0] += h
+│ │ +                subimg_pts[:, :, 1] += v
+│ │ +                pts = np.append(pts, subimg_pts, axis=0)
+│ │ +            h += hor_split
+│ │ +        h = 0
+│ │ +        v += ver_split
+│ │ +    return pts
+│ │  
+│ │  def m_from_displacement(p1, p2, status):
+│ │      """
+│ │      Calculate transform from pair of point locations, derived from Lukas Kanade optical flow.
+│ │      The accompanying status array (see
+│ │      https://docs.opencv.org/3.4/dc/d6b/group__video__track.html#ga473e4b886d0bcc6b65831eb88ed93323 is used to only
+│ │      select points that were found in the optical flow algorithm.
+│ │ @@ -696,26 +842,27 @@
+│ │      n = start_frame
+│ │      time = []
+│ │      frame_number = []
+│ │      while ret:
+│ │          if n > end_frame:
+│ │              break
+│ │          t1 = cap.get(cv2.CAP_PROP_POS_MSEC)
+│ │ +        time.append(t1)
+│ │          ret, img = cap.read()  # read frame 1 + ...
+│ │          frame_number.append(n)
+│ │ -        time.append(t1)
+│ │          if ret == False:
+│ │              break
+│ │          # cv2.imwrite("test_{:04d}.jpg".format(n), img)
+│ │          t2 = cap.get(cv2.CAP_PROP_POS_MSEC)
+│ │          if t2 <= 0.:
+│ │              # we can no longer estimate time difference in the last frame read, so stop reading and set end_frame to one frame back
+│ │              break
+│ │  
+│ │          n += 1
+│ │ +    time[0] = 0
+│ │      return time, frame_number
+│ │  
+│ │  
+│ │  def transform_to_bbox(coords, bbox, resolution):
+│ │      """transforms a set of coordinates defined in crs of bbox, into a set of coordinates in cv2 compatible pixels
+│ │  
+│ │      Parameters
+│ │   --- pyopenrivercam-0.4.2/pyorc/helpers.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/helpers.py
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/pyorc/piv_process.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/piv_process.py
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/pyorc/service/camera_config.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/service/camera_config.py
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/pyorc/service/velocimetry.py
+│ ├── +++ pyopenrivercam-0.4.3/pyorc/service/velocimetry.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -96,15 +96,15 @@
+│ │              if check and ref.update:
+│ │                  run = False  # assume you don't run unless at least one thing changed
+│ │                  # start with config checks
+│ │                  fn_recipe = os.path.join(path_out, f"{ref.prefix}{func_name}.yml")
+│ │                  if not (os.path.isfile(fn_recipe)):
+│ │                      run = True
+│ │                  else:
+│ │ -                    recipe_part = {c: ref.recipe[c] for c in configs}
+│ │ +                    recipe_part = {c: ref.recipe[c] for c in configs if c in ref.recipe}
+│ │                      with open(fn_recipe, "r") as f:
+│ │                          cfg_ancient = f.read()
+│ │                      cfg = yaml.dump(recipe_part, default_flow_style=False, sort_keys=False)
+│ │                      if cfg != cfg_ancient:
+│ │                          # config has changed
+│ │                          ref.logger.debug(f'Configuration of "{func_name}" has changed, requiring rerun')
+│ │                          run = True
+│ │ @@ -132,15 +132,15 @@
+│ │              if run:
+│ │                  # apply the wrapped processor function
+│ │                  ref.logger.info(
+│ │                      f"Running {func_name}")
+│ │                  processor_func(ref, *args, **kwargs)
+│ │                  # after run, store configuration file and hashes of in- and outputs
+│ │                  fn_recipe = os.path.join(path_out, f"{ref.prefix}{func_name}.yml")
+│ │ -                recipe_part = {c: ref.recipe[c] for c in configs}
+│ │ +                recipe_part = {c: ref.recipe[c] for c in configs if c in ref.recipe}
+│ │                  with open(fn_recipe, "w") as f:
+│ │                      yaml.dump(recipe_part, f, default_flow_style=False, sort_keys=False)
+│ │                  # after run, store input and output hashes
+│ │                  for i in inputs + outputs:
+│ │                      fn_hash = os.path.join(path_out, f"{os.path.basename(getattr(ref, i))}.hash")
+│ │                      # get hash
+│ │                      hash256 = cli_utils.get_file_hash(getattr(ref, i))
+│ │ @@ -206,16 +206,14 @@
+│ │          if self.fn_transect_template is not None:
+│ │              self.fn_transects = [self.fn_transect_template(t) for t in recipe["transect"]]
+│ │          self.read = True
+│ │          self.write = False
+│ │          self.fn_video = videofile
+│ │          self.fn_cam_config = cameraconfig
+│ │          self.logger = logger
+│ │ -        # self.set_status_fn(stat_fn)
+│ │ -        # self.get_status()
+│ │          # TODO: perform checks, minimum steps required
+│ │          self.logger.info("pyorc velocimetry processor initialized")
+│ │  
+│ │      @property
+│ │      def output(self):
+│ │          return self._output
+│ │  
+│ │ @@ -252,38 +250,14 @@
+│ │          return self._fn_video
+│ │  
+│ │      @fn_video.setter
+│ │      def fn_video(self, fn_video):
+│ │          self._fn_video = fn_video
+│ │  
+│ │  
+│ │ -    def set_status_fn(self, fn):
+│ │ -        """
+│ │ -        Prepare expected status file, containing filenames and hashes of existing files if these are already processed
+│ │ -
+│ │ -        """
+│ │ -        self.status_fn = os.path.join(self.output, fn)
+│ │ -
+│ │ -
+│ │ -    def get_status(self):
+│ │ -        """
+│ │ -        sets status of project
+│ │ -        Returns
+│ │ -        -------
+│ │ -
+│ │ -        """
+│ │ -        if os.path.isfile(self.status_fn):
+│ │ -            # read file and return dict
+│ │ -            with open(self.status_fn, "r") as f:
+│ │ -                body = f.read()
+│ │ -            self.status = yaml.load(body, Loader=yaml.FullLoader)
+│ │ -        else:
+│ │ -            self.status = {}
+│ │ -
+│ │ -
+│ │      def process(self):
+│ │          """
+│ │          Single method to perform all processing in logical pre-defined order. Also checks for compulsory steps
+│ │  
+│ │  
+│ │          Returns
+│ │          -------
+│ │ @@ -296,17 +270,17 @@
+│ │          if "mask" in self.recipe:
+│ │              self.mask(**self.recipe["mask"])
+│ │          else:
+│ │              # no masking so use non-masked velocimetry as masked
+│ │              self.velocimetry_mask_obj = self.velocimetry_obj
+│ │          if "transect" in self.recipe:
+│ │              self.transect(**self.recipe["transect"])
+│ │ -        else:
+│ │ -            # no masking so use non-masked velocimetry as masked
+│ │ -            self.velocimetry_mask_obj = self.velocimetry_obj
+│ │ +        # else:
+│ │ +        #     # no masking so use non-masked velocimetry as masked
+│ │ +        #     self.velocimetry_mask_obj = self.velocimetry_obj
+│ │          if "plot" in self.recipe:
+│ │              self.plot(**self.recipe["plot"])
+│ │  
+│ │          # TODO .get_transect and check if it contains data,
+│ │  
+│ │          #  perform any post processing such as plotting or possibly later other analyses
+│ │  
+│ │ @@ -365,15 +339,15 @@
+│ │              with ProgressBar():
+│ │                  delayed_obj.compute()
+│ │              self.logger.info(f"Velocimetry written to {self.fn_piv}")
+│ │              # Load the velocimetry into memory to prevent re-writes in next steps
+│ │              self.velocimetry_obj = xr.open_dataset(self.fn_piv)
+│ │  
+│ │  
+│ │ -    @run_func_hash_io(attrs=["velocimetry_mask_obj"], check=True, inputs=["fn_piv"], outputs=["fn_piv_mask"])
+│ │ +    @run_func_hash_io(attrs=["velocimetry_mask_obj"], check=True, inputs=["fn_piv"], configs=["video", "frames", "velocimetry", "mask"], outputs=["fn_piv_mask"])
+│ │      def mask(self, write=False, **kwargs):
+│ │          # TODO go through several masking groups
+│ │          self.velocimetry_mask_obj = copy.deepcopy(self.velocimetry_obj)
+│ │          for mask_name, mask_grp in kwargs.items():
+│ │              self.logger.debug(f'Applying "{mask_name}" with parameters {mask_grp}')
+│ │              masks = get_masks(self.velocimetry_mask_obj, **mask_grp)
+│ │              # apply found masks on velocimetry object
+│ │ @@ -439,15 +413,15 @@
+│ │                  self.logger.debug(f'Writing transect "{transect_name}" to {fn_transect}')
+│ │                  delayed_obj = self.transects[transect_name].to_netcdf(fn_transect, compute=False)
+│ │                  with ProgressBar():
+│ │                      delayed_obj.compute()
+│ │                  self.logger.info(f'Transect "{transect_name}" written to {fn_transect}')
+│ │  
+│ │  
+│ │ -    @run_func_hash_io(check=True, configs=["video", "frames", "velocimetry", "transect", "plot"], inputs=["fn_video", "fn_piv_mask"], outputs=[])
+│ │ +    @run_func_hash_io(check=False, configs=["video", "frames", "velocimetry", "transect", "plot"], inputs=["fn_video", "fn_piv_mask"], outputs=[])
+│ │      def plot(self, **plot_recipes):
+│ │          _plot_recipes = copy.deepcopy(plot_recipes)
+│ │          for name, plot_params in _plot_recipes.items():
+│ │              self.logger.debug(f'Processing plot "{name}"')
+│ │              fn_jpg = os.path.join(self.output, self.prefix + name + ".jpg")
+│ │              mode = plot_params["mode"]
+│ │              ax = None
+│ │   --- pyopenrivercam-0.4.2/setup.py
+│ ├── +++ pyopenrivercam-0.4.3/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -8,15 +8,15 @@
+│ │  
+│ │  with open("README.md") as readme_file:
+│ │      readme = readme_file.read()
+│ │  
+│ │  setup(
+│ │      name="pyopenrivercam",
+│ │      description="pyopenrivercam (pyorc) is a front and backend to control river camera observation locations",
+│ │ -    version="0.4.2",
+│ │ +    version="0.4.3",
+│ │      long_description=readme + "\n\n",
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/localdevices/pyorc",
+│ │      author="Hessel Winsemius",
+│ │      author_email="winsemius@rainbowsensing.com",
+│ │      packages=find_packages(),
+│ │      package_dir={"pyorc": "pyorc"},
+│ │   --- pyopenrivercam-0.4.2/tests/conftest.py
+│ ├── +++ pyopenrivercam-0.4.3/tests/conftest.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -58,15 +58,15 @@
+│ │  
+│ │  
+│ │  @pytest.fixture
+│ │  def cli_cam_config_output():
+│ │      cam_config_fn = os.path.join(EXAMPLE_DATA_DIR, "ngwerere", "ngwerere_cli.json")
+│ │      yield cam_config_fn
+│ │      # remove after test
+│ │ -    os.remove(cam_config_fn)
+│ │ +    # os.remove(cam_config_fn)
+│ │  
+│ │  
+│ │  @pytest.fixture
+│ │  def gcps_src():
+│ │      return [
+│ │          [1421, 1001],
+│ │          [1251, 460],
+│ │ @@ -241,15 +241,15 @@
+│ │  
+│ │  
+│ │  @pytest.fixture
+│ │  def vid_cam_config_stabilize(cam_config):
+│ │      vid = pyorc.Video(
+│ │          os.path.join(EXAMPLE_DATA_DIR, "ngwerere", "ngwerere_20191103.mp4"),
+│ │          start_frame=0,
+│ │ -        end_frame=125,
+│ │ +        end_frame=20,
+│ │          camera_config=cam_config,
+│ │          h_a=0.,
+│ │          stabilize="fixed"
+│ │      )
+│ │      yield vid
+│ │   --- pyopenrivercam-0.4.2/tests/test_cameraconfig.py
+│ ├── +++ pyopenrivercam-0.4.3/tests/test_cameraconfig.py
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/tests/test_cli.py
+│ ├── +++ pyopenrivercam-0.4.3/tests/test_cli.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,10 +1,13 @@
+│ │ +import os.path
+│ │ +
+│ │  from click.testing import CliRunner
+│ │  from pyorc.cli.main import cli
+│ │  from pyorc.cli.cli_elements import GcpSelect, AoiSelect
+│ │ +from pyorc.cli import cli_utils
+│ │  from pyorc.helpers import xyz_transform
+│ │  import json
+│ │  
+│ │  def test_cli_cam_config(cli_obj):
+│ │      result = cli_obj.invoke(
+│ │          cli, [
+│ │              'camera-config',
+│ │ @@ -44,14 +47,17 @@
+│ │  
+│ │          ],
+│ │          echo=True
+│ │      )
+│ │      # assert result.exit_code == 0
+│ │  
+│ │  def test_cli_velocimetry(cli_obj, vid_file, cam_config_fn, cli_recipe_fn, cli_output_dir):
+│ │ +    # ensure we are in the right folder
+│ │ +    print(f"current file is: {os.path.dirname(__file__)}")
+│ │ +    os.chdir(os.path.dirname(__file__))
+│ │      result = cli_obj.invoke(
+│ │          cli, [
+│ │              'velocimetry',
+│ │              '-V',
+│ │              vid_file,
+│ │              '-c',
+│ │              cam_config_fn,
+│ │ @@ -63,14 +69,17 @@
+│ │          ],
+│ │          echo=True
+│ │      )
+│ │      assert result.exit_code == 0
+│ │  
+│ │  
+│ │  def test_service_video(velocity_flow_processor):
+│ │ +    # ensure we are in the right folder
+│ │ +    print(f"current file is: {os.path.dirname(__file__)}")
+│ │ +    os.chdir(os.path.dirname(__file__))
+│ │      # just test if everything is running
+│ │      velocity_flow_processor.process()
+│ │  
+│ │  
+│ │  def test_gcps_interact(gcps_dst, frame_rgb):
+│ │      import matplotlib.pyplot as plt
+│ │      # convert dst to
+│ │ @@ -94,7 +103,14 @@
+│ │      if hasattr(cam_config_without_aoi, "crs"):
+│ │          dst = xyz_transform(cam_config_without_aoi.gcps["dst"], crs_from=cam_config_without_aoi.crs, crs_to=4326)
+│ │      else:
+│ │          dst = cam_config_without_aoi.gcps["dst"]
+│ │      selector = AoiSelect(frame_rgb, src, dst, cam_config_without_aoi)
+│ │      # uncomment below to test the interaction, not suitable for automated unit test
+│ │      # plt.show(block=True)
+│ │ +
+│ │ +# cli utils
+│ │ +def test_read_shape(gcps_fn):
+│ │ +    coords, wkt = cli_utils.read_shape(gcps_fn)
+│ │ +    assert(isinstance(wkt, str))
+│ │ +    assert(isinstance(coords, list))
+│ │ +
+│ │   --- pyopenrivercam-0.4.2/tests/test_frames.py
+│ ├── +++ pyopenrivercam-0.4.3/tests/test_frames.py
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/tests/test_mask.py
+│ ├── +++ pyopenrivercam-0.4.3/tests/test_mask.py
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/tests/test_transect.py
+│ ├── +++ pyopenrivercam-0.4.3/tests/test_transect.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -32,14 +32,15 @@
+│ │          "geographical"
+│ │      ]
+│ │  )
+│ │  @pytest.mark.parametrize(
+│ │      "method",
+│ │      [
+│ │          "quiver",
+│ │ -        "scatter",
+│ │ +        # "scatter",
+│ │      ]
+│ │  )
+│ │  def test_plot(piv_transect, mode, method):
+│ │      piv_transect.transect.get_q()
+│ │ -    piv_transect.isel(quantile=2).transect.plot(method=method, mode=mode)
+│ │ -    plt.close("all")
+│ │ +    piv_transect.isel(quantile=2).transect.plot(method=method, mode=mode, add_text=True)
+│ │ +    plt.show()
+│ │ +    # plt.close("all")
+│ │   --- pyopenrivercam-0.4.2/tests/test_velocimetry.py
+│ ├── +++ pyopenrivercam-0.4.3/tests/test_velocimetry.py
+│ │┄ Files identical despite different names
+│ │   --- pyopenrivercam-0.4.2/tests/test_video.py
+│ ├── +++ pyopenrivercam-0.4.3/tests/test_video.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -27,14 +27,15 @@
+│ │      assert(vid.fps == 30.)
+│ │  
+│ │  
+│ │  @pytest.mark.parametrize(
+│ │      "video, method, result",
+│ │      [
+│ │          (pytest.lazy_fixture("vid_cam_config"), "grayscale", [85, 71, 65, 80]),
+│ │ +        (pytest.lazy_fixture("vid_cam_config_stabilize"), "grayscale", [8, 87, 76, 72]),
+│ │          (pytest.lazy_fixture("vid_cam_config"), "rgb", [84, 91, 57, 70]),
+│ │          (pytest.lazy_fixture("vid_cam_config"), "hsv", [36, 95, 91, 36])
+│ │      ]
+│ │  )
+│ │  def test_get_frame(video, method, result):
+│ │      frame = video.get_frame(1, method=method)
+│ │      assert(np.allclose(frame.flatten()[0:4], result))

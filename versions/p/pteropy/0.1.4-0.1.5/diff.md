@@ -1,0 +1,261 @@
+# Comparing `tmp/pteropy-0.1.4.tar.gz` & `tmp/pteropy-0.1.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pteropy-0.1.4.tar", last modified: Wed Apr  5 14:14:40 2023, max compression
++gzip compressed data, was "pteropy-0.1.5.tar", last modified: Fri Apr  7 09:18:08 2023, max compression
+```
+
+## Comparing `pteropy-0.1.4.tar` & `pteropy-0.1.5.tar`
+
+### file list
+
+```diff
+@@ -1,12 +1,12 @@
+-drwxrwxrwx   0        0        0        0 2023-04-05 14:14:40.274344 pteropy-0.1.4/
+--rw-rw-rw-   0        0        0     2146 2023-04-05 14:14:40.271343 pteropy-0.1.4/PKG-INFO
+--rw-rw-rw-   0        0        0     1694 2023-04-05 13:46:23.000000 pteropy-0.1.4/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-05 14:14:40.241339 pteropy-0.1.4/pteropy/
+--rw-rw-rw-   0        0        0     6397 2023-04-05 14:09:04.000000 pteropy-0.1.4/pteropy/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-05 14:14:40.264341 pteropy-0.1.4/pteropy.egg-info/
+--rw-rw-rw-   0        0        0     2146 2023-04-05 14:14:40.000000 pteropy-0.1.4/pteropy.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      162 2023-04-05 14:14:40.000000 pteropy-0.1.4/pteropy.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-05 14:14:40.000000 pteropy-0.1.4/pteropy.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        8 2023-04-05 14:14:40.000000 pteropy-0.1.4/pteropy.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-05 14:14:40.274344 pteropy-0.1.4/setup.cfg
+--rw-rw-rw-   0        0        0      730 2023-04-05 14:14:10.000000 pteropy-0.1.4/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:18:08.730472 pteropy-0.1.5/
++-rw-rw-rw-   0        0        0     2244 2023-04-07 09:18:08.728475 pteropy-0.1.5/PKG-INFO
++-rw-rw-rw-   0        0        0     1792 2023-04-07 09:17:47.000000 pteropy-0.1.5/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 09:18:08.701969 pteropy-0.1.5/pteropy/
++-rw-rw-rw-   0        0        0     6148 2023-04-07 09:14:36.000000 pteropy-0.1.5/pteropy/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:18:08.723472 pteropy-0.1.5/pteropy.egg-info/
++-rw-rw-rw-   0        0        0     2244 2023-04-07 09:18:08.000000 pteropy-0.1.5/pteropy.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      162 2023-04-07 09:18:08.000000 pteropy-0.1.5/pteropy.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 09:18:08.000000 pteropy-0.1.5/pteropy.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        8 2023-04-07 09:18:08.000000 pteropy-0.1.5/pteropy.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 09:18:08.731478 pteropy-0.1.5/setup.cfg
++-rw-rw-rw-   0        0        0      730 2023-04-07 09:17:54.000000 pteropy-0.1.5/setup.py
+```
+
+### Comparing `pteropy-0.1.4/PKG-INFO` & `pteropy-0.1.5/PKG-INFO`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pteropy
+-Version: 0.1.4
++Version: 0.1.5
+ Summary: 簡單存取Pterodactyl api
+ Home-page: https://github.com/HansHans135/pteropy
+ Author: seanbbear
+ Author-email: ccoccc14@gmail.com
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Classifier: Development Status :: 1 - Planning
+@@ -16,14 +16,20 @@
+ # pteropy
+ 適用於Pterodactyl api的python庫
+ 
+ # 安裝
+ ```
+ pip install pteropy
+ ```
++<br>
++
++```
++最新版本:v0.1.5
++在設定時會返回布林值來確認是否成功連接
++```
+ 
+ # Pterodactyl_Application範例
+ key創建位置:/admin/api
+ 
+ ## 基本設置
+ run.py
+```
+
+### Comparing `pteropy-0.1.4/README.md` & `pteropy-0.1.5/README.md`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,14 +1,20 @@
+ # pteropy
+ 適用於Pterodactyl api的python庫
+ 
+ # 安裝
+ ```
+ pip install pteropy
+ ```
++<br>
++
++```
++最新版本:v0.1.5
++在設定時會返回布林值來確認是否成功連接
++```
+ 
+ # Pterodactyl_Application範例
+ key創建位置:/admin/api
+ 
+ ## 基本設置
+ run.py
+```
+
+### Comparing `pteropy-0.1.4/pteropy/__init__.py` & `pteropy-0.1.5/pteropy/__init__.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,34 +1,32 @@
+ import requests
+ import os
+ import json
+ class Pterodactyl_Application:
+     def __init__(self, base_url, api_key):
+-        print("pteropy setting...")
++
+         if base_url[-1]=="/":
+             base_url=base_url[:-1]
+         self.base_url = base_url
+         self.api_key = api_key
+         endpoint = f"{self.base_url}/api/application/users"
+         headers = {
+             "Authorization": f"Bearer {self.api_key}",
+             "Content-Type": "application/json",
+             "Accept": "Application/vnd.pterodactyl.v1+json"
+         }
+         try:
+             response = requests.get(endpoint, headers=headers)
+         except:
+-            print("Pterodactyl panel url invalid :(")
+-            return
++            return False
+         try:
+             response.json()["errors"]
+-            print("Pterodactyl token invalid :(")
++            return False
+         except:
+-            print("pteropy ready!")
+-        #print(response.json())
++            return True
+     def list_uesrs(self):
+         url = f'{self.base_url}/api/application/users'
+         headers = {
+     "Authorization": f"Bearer {self.api_key}",
+     "Accept": "application/json",
+     "Content-Type": "application/json",
+ }
+@@ -57,37 +55,39 @@
+         for i in all:
+             if i[-5:] == ".json":
+                 with open(f"{f}/{i}", mode="r", encoding="utf-8") as filt:
+                     data = json.load(filt)
+                 print(data["name"])
+ 
+ 
++
++
+ class Pterodactyl_Client:
+     def __init__(self, base_url, api_key):
+-        print("pteropy setting...")
++        
+         if base_url[-1]=="/":
+             base_url=base_url[:-1]
+         self.base_url = base_url
+         self.api_key = api_key
+         endpoint = f"{self.base_url}/api/client/account"
+         headers = {
+             "Authorization": f"Bearer {self.api_key}",
+             "Content-Type": "application/json",
+             "Accept": "Application/vnd.pterodactyl.v1+json"
+         }
+         try:
+             response = requests.get(endpoint, headers=headers)
+         except:
+-            print("Pterodactyl panel url invalid :(")
+-            return
++            
++            return False
+         try:
+             response.json()["errors"]
+-            print("Pterodactyl token invalid :(")
++            return False
+         except:
+-            print("pteropy ready!")
++            return True
+     
+     def list_servers(self):
+         url = f'{self.base_url}/api/client'
+         headers = {
+     "Authorization": f"Bearer {self.api_key}",
+     "Accept": "application/json"
+     }
+```
+
+### Comparing `pteropy-0.1.4/pteropy.egg-info/PKG-INFO` & `pteropy-0.1.5/pteropy.egg-info/PKG-INFO`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pteropy
+-Version: 0.1.4
++Version: 0.1.5
+ Summary: 簡單存取Pterodactyl api
+ Home-page: https://github.com/HansHans135/pteropy
+ Author: seanbbear
+ Author-email: ccoccc14@gmail.com
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Classifier: Development Status :: 1 - Planning
+@@ -16,14 +16,20 @@
+ # pteropy
+ 適用於Pterodactyl api的python庫
+ 
+ # 安裝
+ ```
+ pip install pteropy
+ ```
++<br>
++
++```
++最新版本:v0.1.5
++在設定時會返回布林值來確認是否成功連接
++```
+ 
+ # Pterodactyl_Application範例
+ key創建位置:/admin/api
+ 
+ ## 基本設置
+ run.py
+```
+
+### Comparing `pteropy-0.1.4/setup.py` & `pteropy-0.1.5/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ import setuptools
+ with open("README.md", "r",encoding="utf-8") as f:
+     long_description = f.read()
+     
+ setuptools.setup(
+     name = "pteropy",
+-    version = "0.1.4",
++    version = "0.1.5",
+     author = "seanbbear",
+     author_email="ccoccc14@gmail.com",
+     description="簡單存取Pterodactyl api",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/HansHans135/pteropy",                                         
+     packages=setuptools.find_packages(),
+```
+

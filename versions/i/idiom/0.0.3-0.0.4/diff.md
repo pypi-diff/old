@@ -1,0 +1,537 @@
+# Comparing `tmp/idiom-0.0.3.tar.gz` & `tmp/idiom-0.0.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/idiom-0.0.3.tar", last modified: Fri Aug 13 11:12:41 2021, max compression
++gzip compressed data, was "idiom-0.0.4.tar", last modified: Fri Apr  7 09:17:31 2023, max compression
+```
+
+## Comparing `idiom-0.0.3.tar` & `idiom-0.0.4.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,15 @@
+-drwxr-xr-x   0 Thor.Whalen   (502) staff       (20)        0 2021-08-13 11:12:41.761641 idiom-0.0.3/
+--rw-r--r--   0 Thor.Whalen   (502) staff       (20)      383 2021-08-13 11:12:41.761833 idiom-0.0.3/PKG-INFO
+--rw-r--r--   0 Thor.Whalen   (502) staff       (20)       88 2020-11-14 00:47:56.000000 idiom-0.0.3/README.md
+-drwxr-xr-x   0 Thor.Whalen   (502) staff       (20)        0 2021-08-13 11:12:41.755026 idiom-0.0.3/idiom/
+--rw-r--r--   0 Thor.Whalen   (502) staff       (20)    15387 2021-08-13 11:11:06.000000 idiom-0.0.3/idiom/__init__.py
+-drwxr-xr-x   0 Thor.Whalen   (502) staff       (20)        0 2021-08-13 11:12:41.760897 idiom-0.0.3/idiom.egg-info/
+--rw-r--r--   0 Thor.Whalen   (502) staff       (20)      383 2021-08-13 11:12:40.000000 idiom-0.0.3/idiom.egg-info/PKG-INFO
+--rw-r--r--   0 Thor.Whalen   (502) staff       (20)      218 2021-08-13 11:12:40.000000 idiom-0.0.3/idiom.egg-info/SOURCES.txt
+--rw-r--r--   0 Thor.Whalen   (502) staff       (20)        1 2021-08-13 11:12:40.000000 idiom-0.0.3/idiom.egg-info/dependency_links.txt
+--rw-r--r--   0 Thor.Whalen   (502) staff       (20)        1 2021-08-13 11:12:40.000000 idiom-0.0.3/idiom.egg-info/not-zip-safe
+--rw-r--r--   0 Thor.Whalen   (502) staff       (20)       34 2021-08-13 11:12:40.000000 idiom-0.0.3/idiom.egg-info/requires.txt
+--rw-r--r--   0 Thor.Whalen   (502) staff       (20)        6 2021-08-13 11:12:40.000000 idiom-0.0.3/idiom.egg-info/top_level.txt
+--rw-r--r--   0 Thor.Whalen   (502) staff       (20)      441 2021-08-13 11:12:41.764620 idiom-0.0.3/setup.cfg
+--rw-r--r--   0 Thor.Whalen   (502) staff       (20)      371 2020-11-14 00:47:56.000000 idiom-0.0.3/setup.py
++drwxr-xr-x   0 thorwhalen   (501) staff       (20)        0 2023-04-07 09:17:31.259910 idiom-0.0.4/
++-rw-r--r--   0 thorwhalen   (501) staff       (20)     1069 2022-10-25 12:58:53.000000 idiom-0.0.4/LICENSE
++-rw-r--r--   0 thorwhalen   (501) staff       (20)      344 2023-04-07 09:17:31.260186 idiom-0.0.4/PKG-INFO
++-rw-r--r--   0 thorwhalen   (501) staff       (20)       88 2022-10-25 12:58:53.000000 idiom-0.0.4/README.md
++drwxr-xr-x   0 thorwhalen   (501) staff       (20)        0 2023-04-07 09:17:31.016632 idiom-0.0.4/idiom/
++-rw-r--r--   0 thorwhalen   (501) staff       (20)    20092 2023-04-07 08:09:02.000000 idiom-0.0.4/idiom/__init__.py
++drwxr-xr-x   0 thorwhalen   (501) staff       (20)        0 2023-04-07 09:17:31.257710 idiom-0.0.4/idiom.egg-info/
++-rw-r--r--   0 thorwhalen   (501) staff       (20)      344 2023-04-07 09:17:30.000000 idiom-0.0.4/idiom.egg-info/PKG-INFO
++-rw-r--r--   0 thorwhalen   (501) staff       (20)      226 2023-04-07 09:17:30.000000 idiom-0.0.4/idiom.egg-info/SOURCES.txt
++-rw-r--r--   0 thorwhalen   (501) staff       (20)        1 2023-04-07 09:17:30.000000 idiom-0.0.4/idiom.egg-info/dependency_links.txt
++-rw-r--r--   0 thorwhalen   (501) staff       (20)        1 2023-04-07 09:17:30.000000 idiom-0.0.4/idiom.egg-info/not-zip-safe
++-rw-r--r--   0 thorwhalen   (501) staff       (20)       34 2023-04-07 09:17:30.000000 idiom-0.0.4/idiom.egg-info/requires.txt
++-rw-r--r--   0 thorwhalen   (501) staff       (20)        6 2023-04-07 09:17:30.000000 idiom-0.0.4/idiom.egg-info/top_level.txt
++-rw-r--r--   0 thorwhalen   (501) staff       (20)      441 2023-04-07 09:17:31.263034 idiom-0.0.4/setup.cfg
++-rw-r--r--   0 thorwhalen   (501) staff       (20)      371 2022-10-25 12:58:53.000000 idiom-0.0.4/setup.py
+```
+
+### Comparing `idiom-0.0.3/idiom/__init__.py` & `idiom-0.0.4/idiom/__init__.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -20,25 +20,28 @@
+ from py2store.slib.s_zipfile import FileStreamsOfZip, FilesOfZip
+ 
+ # from py2store.base import Stream
+ 
+ from creek import Creek
+ from creek.util import PreIter
+ 
+-data_files = package_files("idiom.data")
++data_files = package_files('idiom.data')
+ 
+ english_word2vec_url = (
+-    "https://dl.fbaipublicfiles.com/fasttext/vectors-english/"
+-    "wiki-news-300d-1M-subword.vec.zip"
++    'https://dl.fbaipublicfiles.com/fasttext/vectors-english/'
++    'wiki-news-300d-1M-subword.vec.zip'
+ )
+-word_frequency_posixpath = data_files.joinpath("english-word-frequency.zip")
++word_frequency_posixpath = data_files.joinpath('english-word-frequency.zip')
+ 
+ 
+ def closest_words(
+-    word, k=10, search_words: Optional[Union[Callable, Iterable]] = None, vec_of_word=None
++    word,
++    k=10,
++    search_words: Optional[Union[Callable, Iterable]] = None,
++    vec_of_word=None,
+ ):
+     """Search words related to a give word.
+     Given a word, search for the `k` closest words to it from a search corpus
+     (which may just be the wordvec words filtered for specific patterns).
+ 
+     For example, find the closest 10 words to 'mad' that start with an L.
+ 
+@@ -67,52 +70,116 @@
+     target_word_vector = vec_of_word[word]
+     if search_words is None:
+         search_words = vec_of_word  # everything we have in vec_of_word
+     elif isinstance(search_words, Callable):
+         words_filter_func = search_words
+         search_words = filter(words_filter_func, vec_of_word)
+     assert isinstance(search_words, Iterable), (
+-        "search_words should None, an iterable or a filter " "function"
++        'search_words should None, an iterable or a filter ' 'function'
+     )
+ 
+     search_word_vectors = map(lambda k: (k, vec_of_word[k]), search_words)
+     return [
+         y[0]
+         for y in nlargest(
+             k, search_word_vectors, key=lambda x: -cosine(target_word_vector, x[1])
+         )
+     ]
+ 
+ 
++def word_frequency_streams_of_zip():
++    return FileStreamsOfZip(str(word_frequency_posixpath))
++
++
+ @lru_cache(maxsize=1)
+ def most_frequent_words(max_n_words=100_000):
+     """The set of most frequent words.
+     Note: Twice faster than using FilesOfZip and pandas.read_csv
+     """
+-    z = FileStreamsOfZip(str(word_frequency_posixpath))
+-    with z["unigram_freq.csv"] as zz:
+-        return set([x.decode().split(",")[0] for x in islice(zz, 0, max_n_words)])
++    z = word_frequency_streams_of_zip()
++    with z['unigram_freq.csv'] as zz:
++        return set([x.decode().split(',')[0] for x in islice(zz, 0, max_n_words)])
++
++
++def _always_true(x):
++    return True
++
++
++def word_frequencies():
++    """The set of most frequent words.
++    Note: Twice faster than using FilesOfZip and pandas.read_csv
++    """
++    z = word_frequency_streams_of_zip()
++    with z['unigram_freq.csv'] as zz:
++        next(zz)
++        for row in zz:
++            word, freq = row.strip().decode().split(',')
++            yield word, int(freq)
++
++
++@lru_cache(maxsize=1)
++def word_count_df():
++    import pandas as pd
++
++    count = pd.DataFrame(
++        [{'word': word, 'count': count} for word, count in word_frequencies()]
++    )
++    return count.set_index('word')
++
++
++from functools import cached_property
++
++
++class _IDF:
++    _frequency_of_the = 0.06
++    _count_of_the = 23_135_851_162  # "the" count in word_count_df
++    _mean_words_in_a_doc = 5000
++    N = int((_count_of_the / _frequency_of_the) / _mean_words_in_a_doc)
++
++    @cached_property
++    def count(self):
++        return word_count_df()
++
++    @cached_property
++    def logarithmic(self):
++        """This formula is a commonly used variant of IDF in the TF-IDF approach.
++        The logarithmic term ensures that words with very high counts are not penalized
++        too heavily, while still giving a significant weight to words that occur in a
++        small subset of documents."""
++        return np.log(1 + self.N / (1 + self.count))
++
++
++idf = _IDF()
++
++
++"""
++Logarithmic IDF: factor[word] = log(N / (1 + count[word])), where N is the total number of documents in the corpus. This formula is a commonly used variant of IDF in the TF-IDF approach. The logarithmic term ensures that words with very high counts are not penalized too heavily, while still giving a significant weight to words that occur in a small subset of documents.
++Smoothed IDF: factor[word] = log((N + 1) / (1 + count[word])) + 1, where N is the total number of documents in the corpus. This formula is similar to the logarithmic IDF, but with a smoothing term of 1 added to the numerator and denominator. This helps to avoid division by zero when a word appears in all documents, and gives a non-zero weight to all words.
++Probabilistic IDF: factor[word] = log((N - count[word] + 0.5) / (count[word] + 0.5)), where N is the total number of documents in the corpus. This formula is a variant of IDF that takes into account the document frequency of a word, as well as the collection frequency. The term 0.5 is added to the numerator and denominator to avoid division by zero.
++Max IDF: factor[word] = log(N / max(count.values())) - log(1 + count[word]), where N is the total number of documents in the corpus. This formula gives a weight to words based on their inverse document frequency, with a term subtracted to penalize words that occur frequently in a single document. The denominator of the second logarithm ensures that words with zero counts are not penalized too heavily.
++
++"""
+ 
+ 
+ def get_english_word2vec_zip_filepath():
+     from graze import Graze
+ 
+     g = Graze()
+     if english_word2vec_url not in g:
+         print(
+-            f"Downloading {english_word2vec_url} and storing it locally "
+-            f"(in {g.filepath_of(english_word2vec_url)})"
++            f'Downloading {english_word2vec_url} and storing it locally '
++            f'(in {g.filepath_of(english_word2vec_url)})'
+         )
+ 
+     zip_filepath = g.filepath_of(english_word2vec_url)
+ 
+     return zip_filepath
+ 
+ 
+-def line_to_raw_word_vec(line, encoding="utf-8", errors="strict"):
++def line_to_raw_word_vec(line, encoding='utf-8', errors='strict'):
+     word, vec = line.split(maxsplit=1)
+     return word.decode(encoding, errors), vec
+ 
+ 
+ skip_one_item = partial(PreIter().skip_items, n=1)
+ 
+ 
+@@ -130,36 +197,36 @@
+ 
+     def pre_iter(self, stream):
+         next(stream)  # consume the first line (it's a header)
+         return filter(
+             lambda wv: self.word_filt(wv[0]), map(line_to_raw_word_vec, stream)
+         )  # split word and vec
+ 
+-    data_to_obj = staticmethod(lambda wv: (wv[0], np.fromstring(wv[1], sep=" ")))
++    data_to_obj = staticmethod(lambda wv: (wv[0], np.fromstring(wv[1], sep=' ')))
+ 
+ 
+ class WordVecsOfZip(Store.wrap(FileStreamsOfZip)):
+     _obj_of_data = staticmethod(WordVecCreek)
+ 
+ 
+ def english_word2vec_stream(
+-    word_filt=None, zip_filepath=None, key="wiki-news-300d-1M-subword.vec"
++    word_filt=None, zip_filepath=None, key='wiki-news-300d-1M-subword.vec'
+ ):
+     zip_filepath = zip_filepath or get_english_word2vec_zip_filepath()
+     lines_of_zip = FileStreamsOfZip(zip_filepath)[key]
+     return WordVecCreek(lines_of_zip, word_filt)
+ 
+ 
+ def word_and_vecs(fp):
+     #     fin = io.open(fname, 'r', encoding='utf-8', newline='\n', errors='ignore')
+ 
+     # consume the first line (n_lines, n_dims) not yielded
+     # n_lines, n_dims = map(int, fp.readline().decode().split())
+     for line in fp:
+-        tok, *vec = line.decode().rstrip().split(" ")
++        tok, *vec = line.decode().rstrip().split(' ')
+         yield tok, tuple(map(float, vec))
+ 
+ 
+ Vec = np.ndarray
+ VecStore = Mapping[Any, Vec]
+ WordVecStore = Mapping[str, Vec]
+ 
+@@ -171,16 +238,16 @@
+ 
+         def tokenizer(string: str):
+             return pattern.findall(string)
+ 
+     return tokenizer
+ 
+ 
+-alpha_num_p = re.compile(r"[\w-]+")
+-letters_p = re.compile(r"[a-z]+")
++alpha_num_p = re.compile(r'[\w-]+')
++letters_p = re.compile(r'[a-z]+')
+ 
+ 
+ #
+ # def keys_and_vals_of_coll(coll):
+ #     if isinstance(coll, Mapping):
+ #         return zip(*coll.items())
+ #     else:
+@@ -212,43 +279,43 @@
+     words = most_frequent_words()
+     return dict(english_word2vec_stream(word_filt=words.__contains__))
+ 
+ 
+ @lru_cache(maxsize=1)
+ def _get_vec_of_word(corpus):
+     if isinstance(corpus, str):
+-        if corpus == "most_frequent_english":
++        if corpus == 'most_frequent_english':
+             words = most_frequent_words()
+             return dict(english_word2vec_stream(word_filt=words.__contains__))
+-        elif corpus == "english_all":
++        elif corpus == 'english_all':
+             dict(english_word2vec_stream())
+-    raise ValueError(f"Unrecognized corpus value: {corpus}")
++    raise ValueError(f'Unrecognized corpus value: {corpus}')
+ 
+ 
+-DFLT_WORDVEC_CORPUS_NAME = "most_frequent_english"
++DFLT_WORDVEC_CORPUS_NAME = 'most_frequent_english'
+ 
+ word_to_vec_corpus_aliases = {
+-    "most_frequent_english": "most_frequent_english",
+-    "most_frequent": "most_frequent_english",
+-    "english_70982": "most_frequent_english",
+-    "english_all": "english_all",
+-    "english_999994": "english_all",
++    'most_frequent_english': 'most_frequent_english',
++    'most_frequent': 'most_frequent_english',
++    'english_70982': 'most_frequent_english',
++    'english_all': 'english_all',
++    'english_999994': 'english_all',
+ }
+ 
+ 
+ def get_vec_of_word(corpus=DFLT_WORDVEC_CORPUS_NAME):
+     """Get a word_2_vec dict given an alias name"""
+     if corpus is None:
+         corpus = DFLT_WORDVEC_CORPUS_NAME
+     if isinstance(corpus, str):
+-        if corpus in {"most_frequent_english", "most_frequent", "english_70982"}:
+-            _get_vec_of_word("most_frequent_english")
+-        elif corpus in {"english_all", "english_999994"}:
+-            _get_vec_of_word("most_frequent_english")
+-    raise ValueError(f"Unrecognized corpus value: {corpus}")
++        if corpus in {'most_frequent_english', 'most_frequent', 'english_70982'}:
++            _get_vec_of_word('most_frequent_english')
++        elif corpus in {'english_all', 'english_999994'}:
++            _get_vec_of_word('most_frequent_english')
++    raise ValueError(f'Unrecognized corpus value: {corpus}')
+ 
+ 
+ @dataclass
+ class WordVec(Mapping):
+     """
+ 
+     Terms:
+@@ -268,15 +335,15 @@
+     ```
+ 
+     """
+ 
+     vec_of_word: WordVecStore = field(
+         default_factory=vec_of_word_default_factory, repr=False
+     )
+-    tokenizer = r"[\w-]+"
++    tokenizer = r'[\w-]+'
+ 
+     def __post_init__(self):
+         self.tokenizer = mk_tokenizer(self.tokenizer)
+ 
+     def dist(self, q1, q2):
+         """Cosine distance between two queries (through their corresponding vectors)"""
+         return cosine(self.query_to_vec(q1), self.query_to_vec(q2))
+@@ -307,19 +374,19 @@
+         return np.sum(list(self.vec_of_word.values()), axis=0)
+         # return np.mean(list(self.vec_of_word.values()), axis=0)
+ 
+     def vec_matrix(self, words):
+         return np.array([self.vec_of_word.get(w, None) for w in words])
+ 
+     def __repr__(self):
+-        tokenizer_name = getattr(self.tokenizer, "__name__", "unnamed_tokenizer")
++        tokenizer_name = getattr(self.tokenizer, '__name__', 'unnamed_tokenizer')
+         return (
+-            f"{self.__class__.__name__}("
+-            f"vec_of_word={type(self.vec_of_word).__name__} with {len(self.vec_of_word)} words, "
+-            f"tokenizer={tokenizer_name})"
++            f'{self.__class__.__name__}('
++            f'vec_of_word={type(self.vec_of_word).__name__} with {len(self.vec_of_word)} words, '
++            f'tokenizer={tokenizer_name})'
+         )
+ 
+     __call__ = query_to_vec
+ 
+     # TODO: Replace with "explicit" decorator
+     def __getitem__(self, k):
+         return self.vec_of_word[k]
+@@ -350,15 +417,15 @@
+ 
+         :param word_vec: A WordVec object that will
+         :param n_neighbors:
+         :param knn_kwargs:
+         """
+         word_vec = word_vec or WordVec()
+         self.word_vec = word_vec
+-        knn_kwargs = dict(n_neighbors=n_neighbors, metric="cosine", **knn_kwargs)
++        knn_kwargs = dict(n_neighbors=n_neighbors, metric='cosine', **knn_kwargs)
+         self.knn = NearestNeighbors(**knn_kwargs)
+ 
+     def fit(self, corpus: Corpus = None):
+         """Fit on the given corpus
+ 
+         :param corpus: A Mapping or iterable whose values we will fit on
+             - corpus values must be valid self.word_vec arguments (usually strings)
+@@ -393,17 +460,17 @@
+             self.search(query, include_dist)
+ 
+     def _when_searched_on_unfit_instance(self):
+         from warnings import warn
+ 
+         warn(
+             "The search object wasn't fitted yet, so I'm fitting it on the "
+-            "wordvec data itself. "
+-            "To avoid this message, do a .fit() before using the search "
+-            "functionality."
++            'wordvec data itself. '
++            'To avoid this message, do a .fit() before using the search '
++            'functionality.'
+         )
+         return self.fit()
+ 
+     __call__ = search
+ 
+ 
+ class StreamsOfZip(FileStreamsOfZip):
+@@ -425,21 +492,21 @@
+     from grub.examples.pypi import Search
+ 
+     s = Search(zip_filepath, search_words=target_words)
+     s.search('search for the right name')
+     ```
+     """
+ 
+-    tokenizer = re.compile(r"\w+").findall
++    tokenizer = re.compile(r'\w+').findall
+ 
+     def __init__(
+         self,
+         wordvec_zip_filepath=None,
+         search_words=None,
+-        wordvec_name_in_zip="wiki-news-300d-1M-subword.vec",
++        wordvec_name_in_zip='wiki-news-300d-1M-subword.vec',
+         n_neighbors=37,
+         verbose=False,
+     ):
+         self.wordvec_zip_filepath = (
+             wordvec_zip_filepath or get_english_word2vec_zip_filepath()
+         )
+         self.wordvec_name_in_zip = wordvec_name_in_zip
+@@ -452,15 +519,15 @@
+     @cached_property
+     def stream(self):
+         return StreamsOfZip(self.wordvec_zip_filepath)
+ 
+     @cached_property
+     def wordvecs(self):
+         if self.verbose:
+-            print("Gathering all the word vecs. This could take a few minutes...")
++            print('Gathering all the word vecs. This could take a few minutes...')
+         with self.stream[self.wordvec_name_in_zip] as fp:
+             all_wordvecs = dict(word_and_vecs(fp))
+         return all_wordvecs
+ 
+     def filtered_wordvecs(self, tok_filt):
+         with self.stream[self.wordvec_name_in_zip] as fp:
+             yield from filter(lambda x: tok_filt(x[0]), word_and_vecs(fp))
+@@ -480,15 +547,86 @@
+         return self.vec_matrix(tokens)
+ 
+     @cached_property
+     def knn(self):
+         target_wv = dict(self.filtered_wordvecs(lambda x: x in self.search_words))
+         X = np.array(list(target_wv.values()))
+ 
+-        knn = NearestNeighbors(n_neighbors=self.n_neighbors, metric="cosine").fit(X)
++        knn = NearestNeighbors(n_neighbors=self.n_neighbors, metric='cosine').fit(X)
+         knn.words = np.array(list(target_wv.keys()))
+         return knn
+ 
+     def search(self, query):
+         query_vec = self.query_to_vec(query)
+         r_dist, r_idx = self.knn.kneighbors(query_vec.reshape(1, -1))
+         return self.knn.words[r_idx]
++
++
++def get_singular(word: str) -> str:
++    return get_singular_w_inflect(word)
++
++
++def get_singular_w_inflect(word: str) -> str:
++    """Get the singular form of a word using inflect
++
++    See Also
++    --------
++
++    :func:`get_singular_w_nltk`, which creates plurals through a different method,
++    (a semantic approach). Once the data is loaded, nltk is faster than the inflect,
++    version, but gives less accurate results, since it's idea of singular is "the
++    base concept".
++
++    """
++    import inflect
++
++    p = inflect.engine()
++    singular = p.singular_noun(word)
++    if singular:
++        return singular
++    else:
++        return word
++
++
++def get_singular_w_nltk(word: str) -> str:
++    """Get the singular form of a word using nltk's wordnet
++
++    See Also
++    --------
++
++    :func:`get_singular_w_inflect`, which creates plurals through a different method,
++    (a rule-based approach). Once the data is loaded, nltk is faster than inflect,
++    but gives less accurate results, since it's idea of singular is "the base concept".
++
++    """
++    from nltk.corpus import wordnet
++
++    singular = word
++    synsets = wordnet.synsets(word, pos='n')
++    if synsets:
++        lemma = synsets[0].lemmas()[0]
++        singular = lemma.name()
++    return singular
++
++
++_uncommon_plurals_to_test_with = [
++    ('goose', 'geese'),
++    ('mouse', 'mice'),
++    ('tooth', 'teeth'),
++    ('foot', 'feet'),
++    ('child', 'children'),
++    ('person', 'people'),
++    ('man', 'men'),
++    ('woman', 'women'),
++    ('leaf', 'leaves'),
++    ('datum', 'data'),
++    ('cactus', 'cacti'),
++    ('focus', 'foci'),
++    ('fungus', 'fungi'),
++    ('syllabus', 'syllabi'),
++    ('thief', 'thieves'),
++    ('deer', 'deer'),
++    ('moose', 'moose'),
++    ('sheep', 'sheep'),
++    ('fish', 'fish'),
++    ('species', 'species'),
++]
+```
+
