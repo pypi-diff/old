@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/fp_browser_sdk-0.8.tar.gz tmp/fp_browser_sdk-0.8.1.tar.gz --html versions/f/fp-browser-sdk/0.8-0.8.1/index.html --text versions/f/fp-browser-sdk/0.8-0.8.1/diff.txt --markdown versions/f/fp-browser-sdk/0.8-0.8.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">18.1 KB</span></div>
+  <div><span class="source">tmp/fp_browser_sdk-0.8.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/fp_browser_sdk-0.8.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">286 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist/fp_browser_sdk-0.8.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>07:<del>47</del>:<del>32</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist/fp_browser_sdk-0.8.<ins>1.</ins>tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>07:<ins>59</ins>:<ins>50</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">17.8 KB</span></div>
+    <div><span class="source">fp_browser_sdk-0.8.tar</span> vs.</div>
+    <div id="fp_browser_sdk--.-.tar"><span class="source">fp_browser_sdk-0.8.1.tar</span>
+      <a class="anchor" href="#fp_browser_sdk--.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">13.1 KB</span></div>
+      <div id="fp_browser_sdk--.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 48 lines modified</td><td colspan="2">Offset 1, 48 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>32</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>50</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<del>2</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>32</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<ins>4</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>50</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8453<span class="dp">·</span>2023-02-12<span class="dp">·</span>04:55:25.000000<span class="dp">·</span>fp_browser_sdk-0.8/README.md</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8453<span class="dp">·</span>2023-02-12<span class="dp">·</span>04:55:25.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>32</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/</td><td class="diffline">4 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>50</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15571<span class="dp">·</span>2022-12-15<span class="dp">·</span>04:40:42.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/__init__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15571<span class="dp">·</span>2022-12-15<span class="dp">·</span>04:40:42.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>32</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/data/</td><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>50</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/data/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-08-05<span class="dp">·</span>08:21:32.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/data/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-08-05<span class="dp">·</span>08:21:32.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/data/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>183083<span class="dp">·</span>2022-08-16<span class="dp">·</span>02:45:13.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/data/motion.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>183083<span class="dp">·</span>2022-08-16<span class="dp">·</span>02:45:13.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/data/motion.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>32</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/</td><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>50</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-08-05<span class="dp">·</span>08:21:32.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/__init__.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-08-05<span class="dp">·</span>08:21:32.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6386<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/basic.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6386<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/basic.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3212<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/battery.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3212<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/battery.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>172<del>6</del>8<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>43</del>:<del>25</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/browser_enum.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>172<ins>5</ins>8<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>18</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/browser_enum.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3357<span class="dp">·</span>2023-03-13<span class="dp">·</span>13:15:24.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/client_hints.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3357<span class="dp">·</span>2023-03-13<span class="dp">·</span>13:15:24.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/client_hints.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5336<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/device_motion.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5336<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/device_motion.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2059<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/device_orientation.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2059<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/device_orientation.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7142<span class="dp">·</span>2023-01-15<span class="dp">·</span>06:50:48.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/document.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7142<span class="dp">·</span>2023-01-15<span class="dp">·</span>06:50:48.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/document.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>451<span class="dp">·</span>2022-08-07<span class="dp">·</span>03:58:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/exception.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>451<span class="dp">·</span>2022-08-07<span class="dp">·</span>03:58:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/exception.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2979<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:47:12.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/fingerprint_offset.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2979<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:47:12.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/fingerprint_offset.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1851<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/geo.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1851<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/geo.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3266<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/header.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3266<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/header.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>465<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/inject_js.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>465<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/inject_js.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2223<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/media.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2223<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/media.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2539<span class="dp">·</span>2022-08-05<span class="dp">·</span>07:15:01.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/module.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2539<span class="dp">·</span>2022-08-05<span class="dp">·</span>07:15:01.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/module.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6293<span class="dp">·</span>2023-01-15<span class="dp">·</span>06:50:48.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/navigator.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6293<span class="dp">·</span>2023-01-15<span class="dp">·</span>06:50:48.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/navigator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3917<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/network.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3917<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/network.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9140<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/performance.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9140<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/performance.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>32</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/</td><td class="diffline">28 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>50</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/permission_types/</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>294<span class="dp">·</span>2022-09-18<span class="dp">·</span>13:15:09.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/__init__.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>294<span class="dp">·</span>2022-09-18<span class="dp">·</span>13:15:09.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/permission_types/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13786<span class="dp">·</span>2022-12-17<span class="dp">·</span>12:48:42.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/permission_type.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13786<span class="dp">·</span>2022-12-17<span class="dp">·</span>12:48:42.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/permission_types/permission_type.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12917<span class="dp">·</span>2022-09-18<span class="dp">·</span>13:09:11.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/permission_type_102.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12917<span class="dp">·</span>2022-09-18<span class="dp">·</span>13:09:11.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/permission_types/permission_type_102.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12683<span class="dp">·</span>2022-12-17<span class="dp">·</span>12:48:42.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/permission_type_107.py</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12683<span class="dp">·</span>2022-12-17<span class="dp">·</span>12:48:42.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/permission_types/permission_type_107.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9857<span class="dp">·</span>2022-09-18<span class="dp">·</span>13:09:11.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/permission_type_88.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9857<span class="dp">·</span>2022-09-18<span class="dp">·</span>13:09:11.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/permission_types/permission_type_88.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10280<span class="dp">·</span>2022-09-18<span class="dp">·</span>13:09:11.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/permission_type_90.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10280<span class="dp">·</span>2022-09-18<span class="dp">·</span>13:09:11.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/permission_types/permission_type_90.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11710<span class="dp">·</span>2022-09-18<span class="dp">·</span>13:09:11.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/permission_type_93.py</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11710<span class="dp">·</span>2022-09-18<span class="dp">·</span>13:09:11.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/permission_types/permission_type_93.py</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1049<span class="dp">·</span>2022-12-17<span class="dp">·</span>12:48:42.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/util.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1049<span class="dp">·</span>2022-12-17<span class="dp">·</span>12:48:42.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/permission_types/util.py</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2087<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/plugin.py</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2087<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/plugin.py</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3923<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/screen.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3923<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/screen.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2343<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/speech_synthesis_voice.py</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2343<span class="dp">·</span>2022-11-10<span class="dp">·</span>12:59:52.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/speech_synthesis_voice.py</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1678<span class="dp">·</span>2023-02-12<span class="dp">·</span>04:54:23.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/ext/webrtc.py</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1678<span class="dp">·</span>2023-02-12<span class="dp">·</span>04:54:23.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/ext/webrtc.py</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>471<span class="dp">·</span>2022-11-11<span class="dp">·</span>04:36:45.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk/fp_browser_settings.py</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>471<span class="dp">·</span>2022-11-11<span class="dp">·</span>04:36:45.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk/fp_browser_settings.py</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>32</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk.egg-info/</td><td class="diffline">42 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>50</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<del>2</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>32</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk.egg-info/PKG-INFO</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<ins>4</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>49</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1448<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>32</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk.egg-info/SOURCES.txt</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1448<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>50</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>32</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk.egg-info/dependency_links.txt</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>49</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>32</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/fp_browser_sdk.egg-info/top_level.txt</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>49</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/fp_browser_sdk.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>32</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/setup.cfg</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>50</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<del>5</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<del>47</del>:<del>24</del>.000000<span class="dp">·</span>fp_browser_sdk-0.8/setup.py</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>leeyang<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<ins>7</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>07:<ins>59</ins>:<ins>43</ins>.000000<span class="dp">·</span>fp_browser_sdk-0.8<ins>.1</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/README.md</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--README.md"><span class="source">fp_browser_sdk-0.8.1/README.md</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/__init__.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-__init__.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/__init__.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/data/motion.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-data-motion.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/data/motion.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-data-motion.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/basic.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-basic.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/basic.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-basic.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/battery.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-battery.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/battery.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-battery.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">408 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/browser_enum.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-browser_enum.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/browser_enum.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-browser_enum.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>enum<span class="dp">·</span>import<span class="dp">·</span>Enum,<span class="dp">·</span>unique</td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>enum<span class="dp">·</span>import<span class="dp">·</span>Enum,<span class="dp">·</span>unique</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">@unique</td><td class="diffline">2 </td><td class="diffpresent">@unique</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">class<span class="dp">·</span>CanvasRandType(<del>str</del>,<span class="dp">·</span>Enum):</td><td class="diffline">3 </td><td class="diffpresent">class<span class="dp">·</span>CanvasRandType(<ins>int</ins>,<span class="dp">·</span>Enum):</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>FILL<span class="dp">·</span>=<span class="dp">·</span><del>&quot;fill</del><del>&quot;</del></td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>FILL<span class="dp">·</span>=<span class="dp">·</span><ins>0</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>SIZE<span class="dp">·</span>=<span class="dp">·</span><del>&quot;size</del><del>&quot;</del></td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>SIZE<span class="dp">·</span>=<span class="dp">·</span><ins>1</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">@unique</td><td class="diffline">6 </td><td class="diffpresent">@unique</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">class<span class="dp">·</span>BaseEnum(str,<span class="dp">·</span>Enum):</td><td class="diffline">7 </td><td class="diffpresent">class<span class="dp">·</span>BaseEnum(str,<span class="dp">·</span>Enum):</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>NULL<span class="dp">·</span>=<span class="dp">·</span>&quot;null&quot;</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>NULL<span class="dp">·</span>=<span class="dp">·</span>&quot;null&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/client_hints.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-client_hints.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/client_hints.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-client_hints.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/device_motion.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-device_motion.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/device_motion.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-device_motion.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/device_orientation.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-device_orientation.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/device_orientation.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-device_orientation.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/document.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-document.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/document.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-document.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/fingerprint_offset.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-fingerprint_offset.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/fingerprint_offset.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-fingerprint_offset.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/geo.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-geo.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/geo.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-geo.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/header.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-header.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/header.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-header.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/media.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-media.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/media.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-media.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/module.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-module.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/module.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-module.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/navigator.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-navigator.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/navigator.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-navigator.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/network.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-network.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/network.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-network.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/performance.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-performance.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/performance.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-performance.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">187 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/permission_type.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-permission_type.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/permission_types/permission_type.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-permission_type.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">195 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/permission_type_102.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-permission_type_---.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/permission_types/permission_type_102.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-permission_type_---.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">195 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/permission_type_107.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-permission_type_---.py-1"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/permission_types/permission_type_107.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-permission_type_---.py-1">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">193 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/permission_type_88.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-permission_type_--.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/permission_types/permission_type_88.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-permission_type_--.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">193 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/permission_type_90.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-permission_type_--.py-1"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/permission_types/permission_type_90.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-permission_type_--.py-1">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">193 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/permission_type_93.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-permission_type_--.py-2"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/permission_types/permission_type_93.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-permission_type_--.py-2">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/permission_types/util.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-util.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/permission_types/util.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-permission_types-util.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/plugin.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-plugin.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/plugin.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-plugin.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/screen.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-screen.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/screen.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-screen.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/speech_synthesis_voice.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-speech_synthesis_voice.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/speech_synthesis_voice.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-speech_synthesis_voice.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk/ext/webrtc.py</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-webrtc.py"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk/ext/webrtc.py</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk-ext-webrtc.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">fp_browser_sdk-0.8/fp_browser_sdk.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk.egg-info-SOURCES.txt"><span class="source">fp_browser_sdk-0.8.1/fp_browser_sdk.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#fp_browser_sdk--.-.tar---fp_browser_sdk--.--fp_browser_sdk.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

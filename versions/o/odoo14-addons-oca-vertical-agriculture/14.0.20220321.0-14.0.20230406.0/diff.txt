@@ -1,0 +1,35 @@
+--- tmp/odoo14_addons_oca_vertical_agriculture-14.0.20220321.0-py3-none-any.whl.zip
++++ tmp/odoo14_addons_oca_vertical_agriculture-14.0.20230406.0-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,6 +1,6 @@
+│ -Zip file size: 1457 bytes, number of entries: 4
+│ --rw-r--r--  2.0 unx      363 b- defN 22-Mar-22 05:05 odoo14_addons_oca_vertical_agriculture-14.0.20220321.0.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 22-Mar-22 05:05 odoo14_addons_oca_vertical_agriculture-14.0.20220321.0.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx        1 b- defN 22-Mar-22 05:05 odoo14_addons_oca_vertical_agriculture-14.0.20220321.0.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx      460 b- defN 22-Mar-22 05:05 odoo14_addons_oca_vertical_agriculture-14.0.20220321.0.dist-info/RECORD
+│ -4 files, 916 bytes uncompressed, 547 bytes compressed:  40.3%
+│ +Zip file size: 1468 bytes, number of entries: 4
+│ +-rw-r--r--  2.0 unx      409 b- defN 23-Apr-07 08:07 odoo14_addons_oca_vertical_agriculture-14.0.20230406.0.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 08:07 odoo14_addons_oca_vertical_agriculture-14.0.20230406.0.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx        1 b- defN 23-Apr-07 08:07 odoo14_addons_oca_vertical_agriculture-14.0.20230406.0.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 unx      460 b- defN 23-Apr-07 08:07 odoo14_addons_oca_vertical_agriculture-14.0.20230406.0.dist-info/RECORD
+│ +4 files, 962 bytes uncompressed, 558 bytes compressed:  42.0%
+├── zipnote {}
+│ @@ -1,13 +1,13 @@
+│ -Filename: odoo14_addons_oca_vertical_agriculture-14.0.20220321.0.dist-info/METADATA
+│ +Filename: odoo14_addons_oca_vertical_agriculture-14.0.20230406.0.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: odoo14_addons_oca_vertical_agriculture-14.0.20220321.0.dist-info/WHEEL
+│ +Filename: odoo14_addons_oca_vertical_agriculture-14.0.20230406.0.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: odoo14_addons_oca_vertical_agriculture-14.0.20220321.0.dist-info/top_level.txt
+│ +Filename: odoo14_addons_oca_vertical_agriculture-14.0.20230406.0.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: odoo14_addons_oca_vertical_agriculture-14.0.20220321.0.dist-info/RECORD
+│ +Filename: odoo14_addons_oca_vertical_agriculture-14.0.20230406.0.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:

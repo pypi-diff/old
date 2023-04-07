@@ -1,0 +1,214 @@
+--- tmp/EC2StepShell-1.1.0.tar.gz
++++ tmp/EC2StepShell-1.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "EC2StepShell-1.1.0.tar", last modified: Fri Apr  7 07:54:42 2023, max compression
+│ +gzip compressed data, was "EC2StepShell-1.1.1.tar", last modified: Fri Apr  7 08:02:23 2023, max compression
+│   --- EC2StepShell-1.1.0.tar
+├── +++ EC2StepShell-1.1.1.tar
+│ ├── file list
+│ │ @@ -1,36 +1,36 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 07:54:42.643750 EC2StepShell-1.1.0/
+│ │ --rw-rw-rw-   0        0        0      411 2023-04-07 06:26:29.000000 EC2StepShell-1.1.0/CHANGELOG.txt
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 07:54:42.626766 EC2StepShell-1.1.0/EC2StepShell.egg-info/
+│ │ --rw-rw-rw-   0        0        0      620 2023-02-12 14:45:17.000000 EC2StepShell-1.1.0/EC2StepShell.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-02-12 14:45:17.000000 EC2StepShell-1.1.0/EC2StepShell.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       58 2023-02-12 14:45:17.000000 EC2StepShell-1.1.0/EC2StepShell.egg-info/entry_points.txt
+│ │ --rw-rw-rw-   0        0        0       34 2023-02-12 14:45:17.000000 EC2StepShell-1.1.0/EC2StepShell.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       13 2023-02-12 14:45:17.000000 EC2StepShell-1.1.0/EC2StepShell.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0     1060 2023-02-12 10:55:59.000000 EC2StepShell-1.1.0/LICENCE.txt
+│ │ --rw-rw-rw-   0        0        0       81 2023-02-12 14:39:48.000000 EC2StepShell-1.1.0/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0     7020 2023-04-07 07:54:42.642750 EC2StepShell-1.1.0/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     5146 2023-04-07 06:27:31.000000 EC2StepShell-1.1.0/README.md
+│ │ --rw-rw-rw-   0        0        0      994 2023-04-07 06:27:35.000000 EC2StepShell-1.1.0/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0      664 2023-02-12 14:43:04.000000 EC2StepShell-1.1.0/requirements.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-07 07:54:42.643750 EC2StepShell-1.1.0/setup.cfg
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 07:54:42.605749 EC2StepShell-1.1.0/src/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 07:54:42.632750 EC2StepShell-1.1.0/src/EC2StepShell.egg-info/
+│ │ --rw-rw-rw-   0        0        0     7020 2023-04-07 07:54:42.000000 EC2StepShell-1.1.0/src/EC2StepShell.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      810 2023-04-07 07:54:42.000000 EC2StepShell-1.1.0/src/EC2StepShell.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-07 07:54:42.000000 EC2StepShell-1.1.0/src/EC2StepShell.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       58 2023-04-07 07:54:42.000000 EC2StepShell-1.1.0/src/EC2StepShell.egg-info/entry_points.txt
+│ │ --rw-rw-rw-   0        0        0       34 2023-04-07 07:54:42.000000 EC2StepShell-1.1.0/src/EC2StepShell.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       13 2023-04-07 07:54:42.000000 EC2StepShell-1.1.0/src/EC2StepShell.egg-info/top_level.txt
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 07:54:42.633749 EC2StepShell-1.1.0/src/ec2stepshell/
+│ │ --rw-rw-rw-   0        0        0      354 2023-02-12 15:25:15.000000 EC2StepShell-1.1.0/src/ec2stepshell/__init__.py
+│ │ --rw-rw-rw-   0        0        0      683 2023-04-07 07:22:41.000000 EC2StepShell-1.1.0/src/ec2stepshell/__main__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 07:54:42.634750 EC2StepShell-1.1.0/src/ec2stepshell/core/
+│ │ --rw-rw-rw-   0        0        0    11467 2023-04-07 07:36:41.000000 EC2StepShell-1.1.0/src/ec2stepshell/core/ReverseShell.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 07:54:42.639759 EC2StepShell-1.1.0/src/ec2stepshell/ssm/
+│ │ --rw-rw-rw-   0        0        0     3140 2023-04-07 07:51:10.000000 EC2StepShell-1.1.0/src/ec2stepshell/ssm/SsmWrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 07:54:42.641750 EC2StepShell-1.1.0/src/ec2stepshell/utils/
+│ │ --rw-rw-rw-   0        0        0     5042 2023-04-07 05:04:16.000000 EC2StepShell-1.1.0/src/ec2stepshell/utils/ArgumentsHandler.py
+│ │ --rw-rw-rw-   0        0        0      518 2023-02-12 15:28:22.000000 EC2StepShell-1.1.0/src/ec2stepshell/utils/CommandOutput.py
+│ │ --rw-rw-rw-   0        0        0     1147 2023-02-01 13:57:56.000000 EC2StepShell-1.1.0/src/ec2stepshell/utils/constants.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 07:54:42.641750 EC2StepShell-1.1.0/src/ec2stepshell/utils/terminal/
+│ │ --rw-rw-rw-   0        0        0     1645 2023-02-12 15:28:40.000000 EC2StepShell-1.1.0/src/ec2stepshell/utils/terminal/TerminalEmulator.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:02:23.306578 EC2StepShell-1.1.1/
+│ │ +-rw-rw-rw-   0        0        0      483 2023-04-07 07:59:10.000000 EC2StepShell-1.1.1/CHANGELOG.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:02:23.289578 EC2StepShell-1.1.1/EC2StepShell.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      620 2023-02-12 14:45:17.000000 EC2StepShell-1.1.1/EC2StepShell.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-02-12 14:45:17.000000 EC2StepShell-1.1.1/EC2StepShell.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       58 2023-02-12 14:45:17.000000 EC2StepShell-1.1.1/EC2StepShell.egg-info/entry_points.txt
+│ │ +-rw-rw-rw-   0        0        0       34 2023-02-12 14:45:17.000000 EC2StepShell-1.1.1/EC2StepShell.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       13 2023-02-12 14:45:17.000000 EC2StepShell-1.1.1/EC2StepShell.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0     1060 2023-02-12 10:55:59.000000 EC2StepShell-1.1.1/LICENCE.txt
+│ │ +-rw-rw-rw-   0        0        0       81 2023-02-12 14:39:48.000000 EC2StepShell-1.1.1/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0     7048 2023-04-07 08:02:23.306578 EC2StepShell-1.1.1/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     5174 2023-04-07 07:58:34.000000 EC2StepShell-1.1.1/README.md
+│ │ +-rw-rw-rw-   0        0        0      994 2023-04-07 07:58:42.000000 EC2StepShell-1.1.1/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0      664 2023-02-12 14:43:04.000000 EC2StepShell-1.1.1/requirements.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 08:02:23.306578 EC2StepShell-1.1.1/setup.cfg
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:02:23.278579 EC2StepShell-1.1.1/src/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:02:23.300578 EC2StepShell-1.1.1/src/EC2StepShell.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     7048 2023-04-07 08:02:23.000000 EC2StepShell-1.1.1/src/EC2StepShell.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      810 2023-04-07 08:02:23.000000 EC2StepShell-1.1.1/src/EC2StepShell.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 08:02:23.000000 EC2StepShell-1.1.1/src/EC2StepShell.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       58 2023-04-07 08:02:23.000000 EC2StepShell-1.1.1/src/EC2StepShell.egg-info/entry_points.txt
+│ │ +-rw-rw-rw-   0        0        0       34 2023-04-07 08:02:23.000000 EC2StepShell-1.1.1/src/EC2StepShell.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       13 2023-04-07 08:02:23.000000 EC2StepShell-1.1.1/src/EC2StepShell.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:02:23.301577 EC2StepShell-1.1.1/src/ec2stepshell/
+│ │ +-rw-rw-rw-   0        0        0      354 2023-02-12 15:25:15.000000 EC2StepShell-1.1.1/src/ec2stepshell/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      683 2023-04-07 07:22:41.000000 EC2StepShell-1.1.1/src/ec2stepshell/__main__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:02:23.302578 EC2StepShell-1.1.1/src/ec2stepshell/core/
+│ │ +-rw-rw-rw-   0        0        0    11467 2023-04-07 07:36:41.000000 EC2StepShell-1.1.1/src/ec2stepshell/core/ReverseShell.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:02:23.303578 EC2StepShell-1.1.1/src/ec2stepshell/ssm/
+│ │ +-rw-rw-rw-   0        0        0     3140 2023-04-07 07:51:10.000000 EC2StepShell-1.1.1/src/ec2stepshell/ssm/SsmWrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:02:23.305580 EC2StepShell-1.1.1/src/ec2stepshell/utils/
+│ │ +-rw-rw-rw-   0        0        0     5042 2023-04-07 05:04:16.000000 EC2StepShell-1.1.1/src/ec2stepshell/utils/ArgumentsHandler.py
+│ │ +-rw-rw-rw-   0        0        0      518 2023-02-12 15:28:22.000000 EC2StepShell-1.1.1/src/ec2stepshell/utils/CommandOutput.py
+│ │ +-rw-rw-rw-   0        0        0     1147 2023-02-01 13:57:56.000000 EC2StepShell-1.1.1/src/ec2stepshell/utils/constants.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:02:23.305580 EC2StepShell-1.1.1/src/ec2stepshell/utils/terminal/
+│ │ +-rw-rw-rw-   0        0        0     1645 2023-02-12 15:28:40.000000 EC2StepShell-1.1.1/src/ec2stepshell/utils/terminal/TerminalEmulator.py
+│ │   --- EC2StepShell-1.1.0/EC2StepShell.egg-info/SOURCES.txt
+│ ├── +++ EC2StepShell-1.1.1/EC2StepShell.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- EC2StepShell-1.1.0/LICENCE.txt
+│ ├── +++ EC2StepShell-1.1.1/LICENCE.txt
+│ │┄ Files identical despite different names
+│ │   --- EC2StepShell-1.1.0/PKG-INFO
+│ ├── +++ EC2StepShell-1.1.1/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: EC2StepShell
+│ │ -Version: 1.1.0
+│ │ +Version: 1.1.1
+│ │  Summary: EC2StepShell is an AWS post-exploitation tool for getting reverse shells in public or private EC2 instances
+│ │  Author-email: Eduard Agavriloae <saw-your-packet@breakingbreakpoints.com>
+│ │  License: Copyright 2023 saw-your-packet
+│ │          
+│ │          Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+│ │          
+│ │          The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+│ │ @@ -21,15 +21,15 @@
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENCE.txt
+│ │  
+│ │  # EC2StepShell
+│ │  
+│ │  EC2StepShell is an AWS post-exploitation tool for getting high privileges reverse shells in public or private EC2 instances.
+│ │ -It works by sending commands to EC2 instances using ssm:SendCommand and then retrieves the output using ssm:ListCommandInvocations.
+│ │ +It works by sending commands to EC2 instances using ssm:SendCommand and then retrieves the output using ssm:ListCommandInvocations or ssm:GetCommandInvocation.
+│ │  
+│ │  More details about how the tool works can be found here: https://securitycafe.ro/2023/03/08/ec2stepshell-reverse-shells-private-ec2-instances/
+│ │  
+│ │  ## Installation
+│ │  
+│ │  ```bash
+│ │  python -m pip install EC2StepShell
+│ │   --- EC2StepShell-1.1.0/README.md
+│ ├── +++ EC2StepShell-1.1.1/README.md
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  # EC2StepShell
+│ │  
+│ │  EC2StepShell is an AWS post-exploitation tool for getting high privileges reverse shells in public or private EC2 instances.
+│ │ -It works by sending commands to EC2 instances using ssm:SendCommand and then retrieves the output using ssm:ListCommandInvocations.
+│ │ +It works by sending commands to EC2 instances using ssm:SendCommand and then retrieves the output using ssm:ListCommandInvocations or ssm:GetCommandInvocation.
+│ │  
+│ │  More details about how the tool works can be found here: https://securitycafe.ro/2023/03/08/ec2stepshell-reverse-shells-private-ec2-instances/
+│ │  
+│ │  ## Installation
+│ │  
+│ │  ```bash
+│ │  python -m pip install EC2StepShell
+│ │   --- EC2StepShell-1.1.0/pyproject.toml
+│ ├── +++ EC2StepShell-1.1.1/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["setuptools>=61.0.0"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "EC2StepShell"
+│ │ -version = "1.1.0"
+│ │ +version = "1.1.1"
+│ │  description = "EC2StepShell is an AWS post-exploitation tool for getting reverse shells in public or private EC2 instances"
+│ │  readme = "README.md"
+│ │  authors = [{name = "Eduard Agavriloae", email = "saw-your-packet@breakingbreakpoints.com"}]
+│ │  license = {file = "LICENCE.txt" }
+│ │  classifiers = [
+│ │      "Development Status :: 5 - Production/Stable",
+│ │      "Intended Audience :: Information Technology",
+│ │   --- EC2StepShell-1.1.0/requirements.txt
+│ ├── +++ EC2StepShell-1.1.1/requirements.txt
+│ │┄ Files identical despite different names
+│ │   --- EC2StepShell-1.1.0/src/EC2StepShell.egg-info/PKG-INFO
+│ ├── +++ EC2StepShell-1.1.1/src/EC2StepShell.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: EC2StepShell
+│ │ -Version: 1.1.0
+│ │ +Version: 1.1.1
+│ │  Summary: EC2StepShell is an AWS post-exploitation tool for getting reverse shells in public or private EC2 instances
+│ │  Author-email: Eduard Agavriloae <saw-your-packet@breakingbreakpoints.com>
+│ │  License: Copyright 2023 saw-your-packet
+│ │          
+│ │          Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+│ │          
+│ │          The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+│ │ @@ -21,15 +21,15 @@
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENCE.txt
+│ │  
+│ │  # EC2StepShell
+│ │  
+│ │  EC2StepShell is an AWS post-exploitation tool for getting high privileges reverse shells in public or private EC2 instances.
+│ │ -It works by sending commands to EC2 instances using ssm:SendCommand and then retrieves the output using ssm:ListCommandInvocations.
+│ │ +It works by sending commands to EC2 instances using ssm:SendCommand and then retrieves the output using ssm:ListCommandInvocations or ssm:GetCommandInvocation.
+│ │  
+│ │  More details about how the tool works can be found here: https://securitycafe.ro/2023/03/08/ec2stepshell-reverse-shells-private-ec2-instances/
+│ │  
+│ │  ## Installation
+│ │  
+│ │  ```bash
+│ │  python -m pip install EC2StepShell
+│ │   --- EC2StepShell-1.1.0/src/EC2StepShell.egg-info/SOURCES.txt
+│ ├── +++ EC2StepShell-1.1.1/src/EC2StepShell.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- EC2StepShell-1.1.0/src/ec2stepshell/__main__.py
+│ ├── +++ EC2StepShell-1.1.1/src/ec2stepshell/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- EC2StepShell-1.1.0/src/ec2stepshell/core/ReverseShell.py
+│ ├── +++ EC2StepShell-1.1.1/src/ec2stepshell/core/ReverseShell.py
+│ │┄ Files identical despite different names
+│ │   --- EC2StepShell-1.1.0/src/ec2stepshell/ssm/SsmWrapper.py
+│ ├── +++ EC2StepShell-1.1.1/src/ec2stepshell/ssm/SsmWrapper.py
+│ │┄ Files identical despite different names
+│ │   --- EC2StepShell-1.1.0/src/ec2stepshell/utils/ArgumentsHandler.py
+│ ├── +++ EC2StepShell-1.1.1/src/ec2stepshell/utils/ArgumentsHandler.py
+│ │┄ Files identical despite different names
+│ │   --- EC2StepShell-1.1.0/src/ec2stepshell/utils/CommandOutput.py
+│ ├── +++ EC2StepShell-1.1.1/src/ec2stepshell/utils/CommandOutput.py
+│ │┄ Files identical despite different names
+│ │   --- EC2StepShell-1.1.0/src/ec2stepshell/utils/constants.py
+│ ├── +++ EC2StepShell-1.1.1/src/ec2stepshell/utils/constants.py
+│ │┄ Files identical despite different names
+│ │   --- EC2StepShell-1.1.0/src/ec2stepshell/utils/terminal/TerminalEmulator.py
+│ ├── +++ EC2StepShell-1.1.1/src/ec2stepshell/utils/terminal/TerminalEmulator.py
+│ │┄ Files identical despite different names

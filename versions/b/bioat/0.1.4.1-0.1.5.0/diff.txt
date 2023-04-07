@@ -1,0 +1,246 @@
+--- tmp/bioat-0.1.4.1.tar.gz
++++ tmp/bioat-0.1.5.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "bioat-0.1.4.1.tar", max compression
+│ +gzip compressed data, was "bioat-0.1.5.0.tar", max compression
+│   --- bioat-0.1.4.1.tar
+├── +++ bioat-0.1.5.0.tar
+│ ├── file list
+│ │ @@ -1,18 +1,22 @@
+│ │ --rw-r--r--   0        0        0     1080 2022-10-12 10:28:48.000000 bioat-0.1.4.1/LICENSE
+│ │ --rw-r--r--   0        0        0     1215 2023-03-31 15:29:35.600902 bioat-0.1.4.1/README.md
+│ │ --rw-r--r--   0        0        0     1022 2023-03-31 15:15:41.797886 bioat-0.1.4.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0      405 2023-03-26 12:29:32.947773 bioat-0.1.4.1/src/bioat/__init__.py
+│ │ --rw-r--r--   0        0        0      768 2023-03-14 13:58:46.427928 bioat-0.1.4.1/src/bioat/_dev_tools.py
+│ │ --rw-r--r--   0        0        0       63 2022-10-12 10:34:44.000000 bioat-0.1.4.1/src/bioat/_exceptions.py
+│ │ --rw-r--r--   0        0        0      509 2023-03-14 13:36:42.775834 bioat-0.1.4.1/src/bioat/about.py
+│ │ --rw-r--r--   0        0        0    13130 2023-03-31 17:13:33.632897 bioat-0.1.4.1/src/bioat/bam.py
+│ │ --rw-r--r--   0        0        0     1290 2023-03-28 12:30:40.282620 bioat-0.1.4.1/src/bioat/cli.py
+│ │ --rw-r--r--   0        0        0    11016 2023-03-13 04:00:08.114588 bioat-0.1.4.1/src/bioat/fastx.py
+│ │ --rw-r--r--   0        0        0      818 2023-03-13 04:16:15.365909 bioat-0.1.4.1/src/bioat/genome.py
+│ │ --rw-r--r--   0        0        0     5525 2023-03-15 02:19:03.778862 bioat-0.1.4.1/src/bioat/hic.py
+│ │ --rw-r--r--   0        0        0     1128 2023-03-26 11:49:26.175731 bioat-0.1.4.1/src/bioat/logger.py
+│ │ --rw-r--r--   0        0        0      685 2023-03-13 15:37:04.537990 bioat-0.1.4.1/src/bioat/mgi.py
+│ │ --rw-r--r--   0        0        0     5629 2023-03-12 14:27:33.279607 bioat-0.1.4.1/src/bioat/system.py
+│ │ --rw-r--r--   0        0        0     1565 2023-03-15 06:50:40.883980 bioat-0.1.4.1/src/bioat/table.py
+│ │ --rw-r--r--   0        0        0      181 2023-03-31 17:14:26.731213 bioat-0.1.4.1/src/bioat/version.py
+│ │ --rw-r--r--   0        0        0     2164 1970-01-01 00:00:00.000000 bioat-0.1.4.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1080 2022-10-12 10:28:48.000000 bioat-0.1.5.0/LICENSE
+│ │ +-rw-r--r--   0        0        0     1215 2023-03-31 15:29:35.600902 bioat-0.1.5.0/README.md
+│ │ +-rw-r--r--   0        0        0     1044 2023-04-07 08:01:46.846952 bioat-0.1.5.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      471 2023-04-01 11:15:49.201131 bioat-0.1.5.0/src/bioat/__init__.py
+│ │ +-rw-r--r--   0        0        0      508 2023-04-02 12:41:49.000000 bioat-0.1.5.0/src/bioat/about.py
+│ │ +-rw-r--r--   0        0        0    13130 2023-03-31 17:13:33.632897 bioat-0.1.5.0/src/bioat/bam.py
+│ │ +-rw-r--r--   0        0        0     1413 2023-04-06 11:55:25.000000 bioat-0.1.5.0/src/bioat/cli.py
+│ │ +-rw-r--r--   0        0        0       63 2022-10-12 10:34:44.000000 bioat-0.1.5.0/src/bioat/exceptions.py
+│ │ +-rw-r--r--   0        0        0    11016 2023-03-13 04:00:08.114588 bioat-0.1.5.0/src/bioat/fastx.py
+│ │ +-rw-r--r--   0        0        0      818 2023-03-13 04:16:15.365909 bioat-0.1.5.0/src/bioat/genome.py
+│ │ +-rw-r--r--   0        0        0     5529 2023-04-06 10:53:27.000000 bioat-0.1.5.0/src/bioat/hic.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-01 12:21:31.028419 bioat-0.1.5.0/src/bioat/lib/__init__.py
+│ │ +-rw-r--r--   0        0        0      854 2023-04-01 13:16:24.000000 bioat-0.1.5.0/src/bioat/lib/_dev_tools.py
+│ │ +-rw-r--r--   0        0        0     2285 2023-04-06 10:50:24.000000 bioat-0.1.5.0/src/bioat/lib/libcolor.py
+│ │ +-rw-r--r--   0        0        0     7917 2023-04-06 10:50:04.000000 bioat-0.1.5.0/src/bioat/lib/libcrispr.py
+│ │ +-rw-r--r--   0        0        0     1128 2023-03-26 11:49:26.175731 bioat-0.1.5.0/src/bioat/logger.py
+│ │ +-rw-r--r--   0        0        0      685 2023-03-13 15:37:04.537990 bioat-0.1.5.0/src/bioat/mgi.py
+│ │ +-rw-r--r--   0        0        0     5629 2023-03-12 14:27:33.279607 bioat-0.1.5.0/src/bioat/system.py
+│ │ +-rw-r--r--   0        0        0     3245 2023-04-07 08:00:16.234706 bioat-0.1.5.0/src/bioat/table.py
+│ │ +-rw-r--r--   0        0        0    23903 2023-04-06 13:09:33.000000 bioat-0.1.5.0/src/bioat/targeted_deep_sequencing.py
+│ │ +-rw-r--r--   0        0        0      536 2023-04-06 12:41:33.000000 bioat-0.1.5.0/src/bioat/version.py
+│ │ +-rw-r--r--   0        0        0     2207 1970-01-01 00:00:00.000000 bioat-0.1.5.0/PKG-INFO
+│ │   --- bioat-0.1.4.1/LICENSE
+│ ├── +++ bioat-0.1.5.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- bioat-0.1.4.1/README.md
+│ ├── +++ bioat-0.1.5.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- bioat-0.1.4.1/pyproject.toml
+│ ├── +++ bioat-0.1.5.0/pyproject.toml
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "bioat"
+│ │ -version = "0.1.4.1"
+│ │ +version = "0.1.5.0"
+│ │  description = "Bioinformatic toolkit with python (It's still under development!)"
+│ │  license = "MIT"
+│ │  authors = ["Herman Zhao <hermanzhaozzzz@gmail.com>"]
+│ │  repository = "https://github.com/hermanzhaozzzz/BioinformaticAnalysisTools"
+│ │  homepage = "https://github.com/hermanzhaozzzz/BioinformaticAnalysisTools"
+│ │  # README file(s) are used as the package description
+│ │  readme = "README.md"
+│ │ @@ -17,14 +17,15 @@
+│ │  numpy = "^1.24.1"
+│ │  tqdm = "^4.64.1"
+│ │  fire = "^0.5.0"
+│ │  cython = "^0.29.33"
+│ │  pysam = "^0.20.0"
+│ │  biopython = "^1.81"
+│ │  pandarallel = "^1.6.4"
+│ │ +matplotlib = "^3.7.1"
+│ │  
+│ │  [tool.poetry.scripts]
+│ │  bioat = "bioat.cli:main"
+│ │  
+│ │  [tool.poetry.group.dev.dependencies]
+│ │  pytest = "^7.1.3"
+│ │  pytest-cov = "^3.0"
+│ │   --- bioat-0.1.4.1/src/bioat/_dev_tools.py
+│ ├── +++ bioat-0.1.5.0/src/bioat/lib/_dev_tools.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,29 +1,32 @@
+│ │  import time
+│ │  import os
+│ │  import psutil
+│ │ +import logging
+│ │  
+│ │  
+│ │ -def elapsed_since(start):
+│ │ +def _elapsed_since(start):
+│ │      return time.strftime("%Mm:%Ss", time.gmtime(time.time() - start))
+│ │  
+│ │  
+│ │ -def get_process_memory():
+│ │ +def _get_process_memory():
+│ │      process = psutil.Process(os.getpid())
+│ │      mem_info = process.memory_info()
+│ │      return mem_info.rss
+│ │  
+│ │  
+│ │  def profile(func):
+│ │ +    """Decorator for calculate runtime of a function."""
+│ │ +
+│ │      def wrapper(*args, **kwargs):
+│ │ -        mem_before = get_process_memory()
+│ │ +        mem_before = _get_process_memory()
+│ │          start = time.time()
+│ │          result = func(*args, **kwargs)
+│ │ -        elapsed_time = elapsed_since(start)
+│ │ -        mem_after = get_process_memory()
+│ │ -        print("{}: \n\tmemory before: {:,}, after: {:,}, consumed: {:,}; \n\texec time: {}".format(
+│ │ +        elapsed_time = _elapsed_since(start)
+│ │ +        mem_after = _get_process_memory()
+│ │ +        logging.info("{}: \n\tmemory before: {:,}, after: {:,}, consumed: {:,}; \n\texec time: {}".format(
+│ │              func.__name__,
+│ │              mem_before, mem_after, mem_after - mem_before,
+│ │              elapsed_time))
+│ │          return result
+│ │  
+│ │ -    return wrapper
+│ │ +    return wrapper
+│ │   --- bioat-0.1.4.1/src/bioat/bam.py
+│ ├── +++ bioat-0.1.5.0/src/bioat/bam.py
+│ │┄ Files identical despite different names
+│ │   --- bioat-0.1.4.1/src/bioat/cli.py
+│ ├── +++ bioat-0.1.5.0/src/bioat/cli.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  from __future__ import absolute_import
+│ │  import fire
+│ │ -from bioat import about, Bam, Fastx, HiC, Mgi, System, Table, __version__
+│ │ +from bioat import about, Bam, Fastx, HiC, Mgi, System, Table, TargetedDeepSequencing, __version__
+│ │  
+│ │  
+│ │  class Cli(object):
+│ │      """Cli interface of python package <bioat>
+│ │  
+│ │      - <bioat> is a commandline tool and a python package, which is short for
+│ │          Bioinformatic Analysis Tools.
+│ │ @@ -15,15 +15,17 @@
+│ │      def __init__(self):
+│ │          self.bam = Bam()
+│ │          # self.fastx = Fastx()
+│ │          self.hic = HiC()
+│ │          self.mgi = Mgi()
+│ │          # self.system = System()
+│ │          self.table = Table()
+│ │ +        self.targeted_deep_sequencing = TargetedDeepSequencing()
+│ │  
+│ │ +    @classmethod
+│ │      def about(self):
+│ │          """Print information about <bioat>.
+│ │          """
+│ │          return about
+│ │  
+│ │      def list(self):
+│ │          """Print commands and subcommands.
+│ │ @@ -32,14 +34,15 @@
+│ │              if not att.startswith('_'):
+│ │                  print(f'{att}')
+│ │  
+│ │                  for sub_att in dir(getattr(self, att)):
+│ │                      if not sub_att.startswith('_'):
+│ │                          print(f'  ├── {sub_att}')
+│ │  
+│ │ +    @classmethod
+│ │      def version(self):
+│ │          """Print version information.
+│ │          """
+│ │          return __version__
+│ │  
+│ │  
+│ │  def main() -> int:
+│ │   --- bioat-0.1.4.1/src/bioat/fastx.py
+│ ├── +++ bioat-0.1.5.0/src/bioat/fastx.py
+│ │┄ Files identical despite different names
+│ │   --- bioat-0.1.4.1/src/bioat/genome.py
+│ ├── +++ bioat-0.1.5.0/src/bioat/genome.py
+│ │┄ Files identical despite different names
+│ │   --- bioat-0.1.4.1/src/bioat/hic.py
+│ ├── +++ bioat-0.1.5.0/src/bioat/hic.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  from __future__ import absolute_import
+│ │  
+│ │  import time
+│ │  import pandas as pd
+│ │  from bioat.logger import set_logging_level
+│ │  from pandarallel import pandarallel
+│ │  import logging
+│ │ -from bioat._dev_tools import profile
+│ │ +from bioat.lib._dev_tools import profile
+│ │  import gc
+│ │  
+│ │  
+│ │  try:
+│ │      pandarallel.initialize(
+│ │          progress_bar=False,
+│ │          use_memory_fs=True,
+│ │   --- bioat-0.1.4.1/src/bioat/logger.py
+│ ├── +++ bioat-0.1.5.0/src/bioat/logger.py
+│ │┄ Files identical despite different names
+│ │   --- bioat-0.1.4.1/src/bioat/mgi.py
+│ ├── +++ bioat-0.1.5.0/src/bioat/mgi.py
+│ │┄ Files identical despite different names
+│ │   --- bioat-0.1.4.1/src/bioat/system.py
+│ ├── +++ bioat-0.1.5.0/src/bioat/system.py
+│ │┄ Files identical despite different names
+│ │   --- bioat-0.1.4.1/PKG-INFO
+│ ├── +++ bioat-0.1.5.0/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,23 +1,24 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: bioat
+│ │ -Version: 0.1.4.1
+│ │ +Version: 0.1.5.0
+│ │  Summary: Bioinformatic toolkit with python (It's still under development!)
+│ │  Home-page: https://github.com/hermanzhaozzzz/BioinformaticAnalysisTools
+│ │  License: MIT
+│ │  Author: Herman Zhao
+│ │  Author-email: hermanzhaozzzz@gmail.com
+│ │  Requires-Python: >=3.9.6,<4.0.0
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │  Requires-Dist: biopython (>=1.81,<2.0)
+│ │  Requires-Dist: cython (>=0.29.33,<0.30.0)
+│ │  Requires-Dist: fire (>=0.5.0,<0.6.0)
+│ │ +Requires-Dist: matplotlib (>=3.7.1,<4.0.0)
+│ │  Requires-Dist: numpy (>=1.24.1,<2.0.0)
+│ │  Requires-Dist: pandarallel (>=1.6.4,<2.0.0)
+│ │  Requires-Dist: pandas (>=1.5.3,<2.0.0)
+│ │  Requires-Dist: pysam (>=0.20.0,<0.21.0)
+│ │  Requires-Dist: tqdm (>=4.64.1,<5.0.0)
+│ │  Project-URL: Repository, https://github.com/hermanzhaozzzz/BioinformaticAnalysisTools
+│ │  Description-Content-Type: text/markdown

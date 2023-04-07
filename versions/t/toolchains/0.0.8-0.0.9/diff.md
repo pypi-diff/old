@@ -1,0 +1,233 @@
+# Comparing `tmp/toolchains-0.0.8-py3-none-any.whl.zip` & `tmp/toolchains-0.0.9-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Zip file size: 139735 bytes, number of entries: 76
++Zip file size: 139775 bytes, number of entries: 76
+ -rw-r--r--  2.0 unx     1188 b- defN 23-Jan-31 08:49 pawnlib/__init__.py
+ -rw-r--r--  2.0 unx     1224 b- defN 23-Jan-31 08:49 pawnlib/__main__.py
+ -rw-r--r--  2.0 unx      293 b- defN 23-Mar-13 09:31 pawnlib/__version__.py
+ -rw-r--r--  2.0 unx       19 b- defN 22-Jul-21 06:00 pawnlib/asyncio/__init__.py
+ -rw-r--r--  2.0 unx     4261 b- defN 23-Feb-22 08:29 pawnlib/asyncio/run.py
+ -rw-r--r--  2.0 unx       36 b- defN 22-Jul-28 01:54 pawnlib/builder/__init__.py
+ -rw-r--r--  2.0 unx     5382 b- defN 23-Jan-31 06:30 pawnlib/builder/generator.py
+@@ -37,19 +37,19 @@
+ -rw-r--r--  2.0 unx    12393 b- defN 23-Feb-17 09:31 pawnlib/utils/http.py
+ -rw-r--r--  2.0 unx    12365 b- defN 23-Jan-31 02:23 pawnlib/utils/icx_signer.py
+ -rw-r--r--  2.0 unx    12172 b- defN 23-Jan-31 05:22 pawnlib/utils/log.py
+ -rw-r--r--  2.0 unx     5929 b- defN 23-Jan-31 06:40 pawnlib/utils/notify.py
+ -rw-r--r--  2.0 unx    22138 b- defN 23-Jan-31 06:38 pawnlib/utils/operate_handler.py
+ -rw-r--r--  2.0 unx     1233 b- defN 22-Jul-14 00:24 toolchains/__init__.py
+ -rw-r--r--  2.0 unx     1224 b- defN 22-Jul-14 00:24 toolchains/__main__.py
+--rw-r--r--  2.0 unx      489 b- defN 23-Mar-22 07:13 toolchains/__version__.py
++-rw-r--r--  2.0 unx      489 b- defN 23-Mar-22 07:23 toolchains/__version__.py
+ -rw-r--r--  2.0 unx        0 b- defN 22-Jul-21 02:37 toolchains/cli/__init__.py
+ -rw-r--r--  2.0 unx     1325 b- defN 22-Dec-23 00:38 toolchains/cli/aws.py
+ -rw-r--r--  2.0 unx    10926 b- defN 23-Feb-10 07:46 toolchains/cli/docker.py
+--rw-r--r--  2.0 unx     4798 b- defN 23-Mar-22 07:12 toolchains/cli/http.py
++-rw-r--r--  2.0 unx     4919 b- defN 23-Mar-22 07:23 toolchains/cli/http.py
+ -rw-r--r--  2.0 unx     8704 b- defN 23-Jan-16 02:26 toolchains/cli/icon.py
+ -rw-r--r--  2.0 unx     5432 b- defN 23-Mar-22 06:36 toolchains/cli/main_cli.py
+ -rw-r--r--  2.0 unx     8620 b- defN 23-Jan-16 02:09 toolchains/cli/wallet.py
+ -rw-r--r--  2.0 unx     2418 b- defN 22-Dec-23 00:38 toolchains/cli/websocket.py
+ -rw-r--r--  2.0 unx        0 b- defN 22-Dec-29 06:23 toolchains/cli/templates/__init__.py
+ -rw-r--r--  2.0 unx      751 b- defN 23-Jan-11 07:42 toolchains/cli/templates/docker_echo.tmpl
+ -rw-r--r--  2.0 unx      944 b- defN 23-Feb-10 07:51 toolchains/cli/templates/docker_planet.tmpl
+@@ -65,14 +65,14 @@
+ -rw-r--r--  2.0 unx       27 b- defN 22-Aug-01 02:18 toolchains/resource/__init__.py
+ -rw-r--r--  2.0 unx    36649 b- defN 23-Mar-13 06:37 toolchains/resource/alert_noti.py
+ -rw-r--r--  2.0 unx     3324 b- defN 23-Mar-13 06:03 toolchains/resource/test_noti.py
+ -rw-r--r--  2.0 unx    12407 b- defN 23-Mar-22 05:46 toolchains/resource/url_checker.py
+ -rw-r--r--  2.0 unx       46 b- defN 22-Dec-23 00:38 toolchains/utils/__init__.py
+ -rw-r--r--  2.0 unx     7979 b- defN 22-Dec-23 00:38 toolchains/utils/http.py
+ -rw-r--r--  2.0 unx    14837 b- defN 23-Jan-09 10:44 toolchains/utils/icx_signer.py
+--rw-r--r--  2.0 unx      961 b- defN 23-Mar-22 07:15 toolchains-0.0.8.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Mar-22 07:15 toolchains-0.0.8.dist-info/WHEEL
+--rw-r--r--  2.0 unx       55 b- defN 23-Mar-22 07:15 toolchains-0.0.8.dist-info/entry_points.txt
+--rw-r--r--  2.0 unx       19 b- defN 23-Mar-22 07:15 toolchains-0.0.8.dist-info/top_level.txt
+--rw-r--r--  2.0 unx        1 b- defN 23-Mar-22 07:15 toolchains-0.0.8.dist-info/zip-safe
+--rw-rw-r--  2.0 unx     6322 b- defN 23-Mar-22 07:15 toolchains-0.0.8.dist-info/RECORD
+-76 files, 488701 bytes uncompressed, 129783 bytes compressed:  73.4%
++-rw-r--r--  2.0 unx      961 b- defN 23-Mar-22 07:23 toolchains-0.0.9.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Mar-22 07:23 toolchains-0.0.9.dist-info/WHEEL
++-rw-r--r--  2.0 unx       55 b- defN 23-Mar-22 07:23 toolchains-0.0.9.dist-info/entry_points.txt
++-rw-r--r--  2.0 unx       19 b- defN 23-Mar-22 07:23 toolchains-0.0.9.dist-info/top_level.txt
++-rw-r--r--  2.0 unx        1 b- defN 23-Mar-22 07:23 toolchains-0.0.9.dist-info/zip-safe
++-rw-rw-r--  2.0 unx     6322 b- defN 23-Mar-22 07:23 toolchains-0.0.9.dist-info/RECORD
++76 files, 488822 bytes uncompressed, 129823 bytes compressed:  73.4%
+```
+
+## zipnote {}
+
+```diff
+@@ -204,26 +204,26 @@
+ 
+ Filename: toolchains/utils/http.py
+ Comment: 
+ 
+ Filename: toolchains/utils/icx_signer.py
+ Comment: 
+ 
+-Filename: toolchains-0.0.8.dist-info/METADATA
++Filename: toolchains-0.0.9.dist-info/METADATA
+ Comment: 
+ 
+-Filename: toolchains-0.0.8.dist-info/WHEEL
++Filename: toolchains-0.0.9.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: toolchains-0.0.8.dist-info/entry_points.txt
++Filename: toolchains-0.0.9.dist-info/entry_points.txt
+ Comment: 
+ 
+-Filename: toolchains-0.0.8.dist-info/top_level.txt
++Filename: toolchains-0.0.9.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: toolchains-0.0.8.dist-info/zip-safe
++Filename: toolchains-0.0.9.dist-info/zip-safe
+ Comment: 
+ 
+-Filename: toolchains-0.0.8.dist-info/RECORD
++Filename: toolchains-0.0.9.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## toolchains/__version__.py
+
+```diff
+@@ -4,13 +4,13 @@
+ except ImportError:
+     pawnlib_version = ""
+ 
+ 
+ __title__ = 'toolchains'
+ __description__ = 'toolchains is a collection of libraries for IaC.'
+ __url__ = 'https://github.com/jinwoo-j/toolchains'
+-__version__ = '0.0.8'
++__version__ = '0.0.9'
+ __author__ = 'Jinwoo Jeong'
+ __author_email__ = 'jinwoo@parametacorp.com'
+ __license__ = 'MIT'
+ __copyright__ = 'Copyright 2022 JINWOO'
+ __full_version__ = f'v{__version__} (pawns: v{pawnlib_version})'
+```
+
+## toolchains/cli/http.py
+
+```diff
+@@ -28,39 +28,40 @@
+     parser.add_argument('url', help='url')
+     parser.add_argument('-c', '--command', type=str, help=f'command', default=None, choices=["start", "stop", "restart", None])
+     parser.add_argument('-v', '--verbose', action='count', help=f'verbose mode. view level', default=0)
+     parser.add_argument('-s', '--sleep', type=float, help=f'sleep time seconds. ', default=1)
+     parser.add_argument('-m', '--method', type=str, help=f'method. ', default="get")
+     parser.add_argument('-t', '--timeout', type=int, help=f'timeout seconds ', default=10)
+     parser.add_argument('--success', nargs='+', help=f'timeout. ', default=['status_code==200'])
++    parser.add_argument('--ignore-ssl', type=str2bool, help=f'ignore ssl certificate ', default=False)
+ 
+     return parser
+ 
+ 
+ def check_url_process():
+     check_url = CheckURL(
+         url=pconf().args.url,
+         method=pconf().args.method,
+         # headers={
+         #     'Content-Type': "application/json",
+         #     # 'Content-Type': "application/x-www-form-urlencoded",
+         #     # 'User-Agent': "CheckURL"
+         # },
+         timeout=pconf().args.timeout * 1000,
+-        ignore_ssl=False,
+         # data={
+         #     "jinwoo": "asdasd"
+         # }
+         # success_criteria=[
+         #     ["status_code", ">=", 200],
+             # ["timing.total", "<", 1]
+         # ],
+         # success_operator="and",
+         success_criteria=pconf().args.success,
+         success_operator="and",
++        ignore_ssl=pconf().args.ignore_ssl,
+     )
+ 
+     pawn.increase(total_count=1)
+ 
+     if pconf().args.verbose == 0:
+         check_url.response.text = ""
+```
+
+## Comparing `toolchains-0.0.8.dist-info/METADATA` & `toolchains-0.0.9.dist-info/METADATA`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: toolchains
+-Version: 0.0.8
++Version: 0.0.9
+ Summary: toolchains is a collection of libraries for IaC.
+ Home-page: https://github.com/jinwoo-j/toolchains
+ Author: Jinwoo Jeong
+ Author-email: jinwoo@parametacorp.com
+ License: MIT
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+## Comparing `toolchains-0.0.8.dist-info/RECORD` & `toolchains-0.0.9.dist-info/RECORD`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -36,19 +36,19 @@
+ pawnlib/utils/http.py,sha256=BzZpDixc5EpEv9YQ67vEkT38BVvcyuYW1ZhmIYyms20,12393
+ pawnlib/utils/icx_signer.py,sha256=-NJIKOv6BR9Uc8LVK6R9G7VQmJb1Em-AXlUDppX4VbM,12365
+ pawnlib/utils/log.py,sha256=zYClSlvFJt9ZxZpApWvFZ7EcFRFtwUIyCyrtmUdfiLI,12172
+ pawnlib/utils/notify.py,sha256=UlQyJSfH7_NYxIcec84SDFDV3lBhbQE1CbTsxOHPvQ8,5929
+ pawnlib/utils/operate_handler.py,sha256=603oZfZhDB3yWyxeJoZZ-y_HPTu6inP74Q0g9LPWzFo,22138
+ toolchains/__init__.py,sha256=bxIs4ZT_qeEVW6Vl0JPQ9EqBM99Ahb_prhuEjRuivps,1233
+ toolchains/__main__.py,sha256=wmMMh9f5l39HY6p_IfARRZwRDcK1rnfENZdCb9tzJYg,1224
+-toolchains/__version__.py,sha256=F1WAZVtMFdnwR2I-9_84bxjbptAZGQzAfu1u9YkzDJA,489
++toolchains/__version__.py,sha256=5ccapOgsRZMnPfno7UgFLuJLXah2YiheYX-LudeNskI,489
+ toolchains/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ toolchains/cli/aws.py,sha256=l3349TdQiqe7fjlKHC5scQp2jby0MuJNHIIm7mvV9yo,1325
+ toolchains/cli/docker.py,sha256=VpRUuAlakLX4rLo46T6vfaLgA6LO3YC_tv0klpNB0bo,10926
+-toolchains/cli/http.py,sha256=N2M_RjfWrlIL22lIJpbxNTKQKnD26sgneXhU5nillpI,4798
++toolchains/cli/http.py,sha256=LzfmuopgUQv1V786Egxn3ZRgdlnaEfgEfm7g2ekEp6Y,4919
+ toolchains/cli/icon.py,sha256=4UV00t0FoJl54P6hEULaS7ae1ekialwvXkhsrt7RcVc,8704
+ toolchains/cli/main_cli.py,sha256=XhsyMMaxovwbF6kp6TDLlDiYs_9yzcp-cHvupHiYJvc,5432
+ toolchains/cli/wallet.py,sha256=ijE7WDK1p0vRKs2zejLq6W2my4IiA1cQrWDqe8Ccosg,8620
+ toolchains/cli/websocket.py,sha256=VAItyj122aIqYAbslc1TExS5pfTdPbP-zUZzWrPiK1k,2418
+ toolchains/cli/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ toolchains/cli/templates/docker_echo.tmpl,sha256=n8wgupbKut2As2Tppqp3kRgHBUN2B1Xdg5HEG_ZLdDc,751
+ toolchains/cli/templates/docker_planet.tmpl,sha256=ZWieQxkSkCKAKdD7e9VWZFn8VL1ECWqMZGjIHSowdS0,944
+@@ -64,13 +64,13 @@
+ toolchains/resource/__init__.py,sha256=XtCYdZPEyNmgMjyp28vG_KHOzsiJa-drCUh42k3kG1E,27
+ toolchains/resource/alert_noti.py,sha256=onG6DVOYXjOMkUrwTg9LKuxHAKUOBYit5hfp2EL5CUQ,36649
+ toolchains/resource/test_noti.py,sha256=obgCWBbIDuz-MNXhAVhXP6F2p53i4UJLHSRedAA2DcY,3324
+ toolchains/resource/url_checker.py,sha256=vWwSTYFZJa0ELk5Oi1AK2g1T4p55pur7_hj1X7hK7iU,12407
+ toolchains/utils/__init__.py,sha256=dbLfppokgbtLHfBZ0HQgWprEWUAk7Kv4yVPfkTK8Dkk,46
+ toolchains/utils/http.py,sha256=QY8inxZr08ZgWk0zRIRDa8i26DeOCzVnAI0Of_TEHIo,7979
+ toolchains/utils/icx_signer.py,sha256=FfPTYQx72yTGj7hYmLdjtiW1b_upIXWiFHIr-cDcA4k,14837
+-toolchains-0.0.8.dist-info/METADATA,sha256=C4X7TNLASnsh7sg8KHUgzS1wL0Xw7laFlwFIyBKdidY,961
+-toolchains-0.0.8.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+-toolchains-0.0.8.dist-info/entry_points.txt,sha256=0jqeQ8jyB0UTsMhl1vxneea03hNpdfytLmYTutvIdhU,55
+-toolchains-0.0.8.dist-info/top_level.txt,sha256=ToJU41yHn7A5SsVdhvBXweWXsrAEQj9er-2xDsI4yaY,19
+-toolchains-0.0.8.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+-toolchains-0.0.8.dist-info/RECORD,,
++toolchains-0.0.9.dist-info/METADATA,sha256=2Yi6qJvuPaTYXX5fozS469IDDvTgoE1TqQLrt5Y1q9c,961
++toolchains-0.0.9.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
++toolchains-0.0.9.dist-info/entry_points.txt,sha256=0jqeQ8jyB0UTsMhl1vxneea03hNpdfytLmYTutvIdhU,55
++toolchains-0.0.9.dist-info/top_level.txt,sha256=ToJU41yHn7A5SsVdhvBXweWXsrAEQj9er-2xDsI4yaY,19
++toolchains-0.0.9.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
++toolchains-0.0.9.dist-info/RECORD,,
+```
+

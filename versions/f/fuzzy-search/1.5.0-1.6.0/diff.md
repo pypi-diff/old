@@ -1,0 +1,626 @@
+# Comparing `tmp/fuzzy_search-1.5.0.tar.gz` & `tmp/fuzzy_search-1.6.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fuzzy_search-1.5.0.tar", last modified: Thu Feb  2 20:51:40 2023, max compression
++gzip compressed data, was "fuzzy_search-1.6.0.tar", last modified: Fri Apr  7 07:57:59 2023, max compression
+```
+
+## Comparing `fuzzy_search-1.5.0.tar` & `fuzzy_search-1.6.0.tar`
+
+### file list
+
+```diff
+@@ -1,35 +1,35 @@
+-drwxr-xr-x   0 marijnkoolen   (501) staff       (20)        0 2023-02-02 20:51:40.480485 fuzzy_search-1.5.0/
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     1085 2020-12-08 10:17:28.000000 fuzzy_search-1.5.0/LICENSE
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     7663 2023-02-02 20:51:40.480347 fuzzy_search-1.5.0/PKG-INFO
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     6745 2022-05-04 14:52:31.000000 fuzzy_search-1.5.0/README.md
+-drwxr-xr-x   0 marijnkoolen   (501) staff       (20)        0 2023-02-02 20:51:40.477987 fuzzy_search-1.5.0/fuzzy_search/
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)       22 2023-02-02 18:41:48.000000 fuzzy_search-1.5.0/fuzzy_search/__init__.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)      209 2020-12-28 12:32:03.000000 fuzzy_search-1.5.0/fuzzy_search/fuzzy_config.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     6839 2022-05-09 13:28:05.000000 fuzzy_search-1.5.0/fuzzy_search/fuzzy_context_searcher.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)    40080 2022-05-09 13:33:49.000000 fuzzy_search-1.5.0/fuzzy_search/fuzzy_match.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     7716 2020-12-07 10:17:03.000000 fuzzy_search-1.5.0/fuzzy_search/fuzzy_patterns.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     9262 2021-08-31 13:07:11.000000 fuzzy_search-1.5.0/fuzzy_search/fuzzy_phrase.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)    31370 2021-07-01 08:55:57.000000 fuzzy_search-1.5.0/fuzzy_search/fuzzy_phrase_model.py
+--rw-rw-rw-   0 marijnkoolen   (501) staff       (20)    49147 2022-07-29 13:08:24.000000 fuzzy_search-1.5.0/fuzzy_search/fuzzy_phrase_searcher.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     8716 2019-10-29 21:19:08.000000 fuzzy_search-1.5.0/fuzzy_search/fuzzy_searcher.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     8088 2023-02-02 18:33:08.000000 fuzzy_search-1.5.0/fuzzy_search/fuzzy_string.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)    18030 2021-09-10 09:16:12.000000 fuzzy_search-1.5.0/fuzzy_search/fuzzy_template.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)    32877 2021-08-31 13:48:09.000000 fuzzy_search-1.5.0/fuzzy_search/fuzzy_template_searcher.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     9595 2023-02-02 18:56:54.000000 fuzzy_search-1.5.0/fuzzy_search/similarity.py
+-drwxr-xr-x   0 marijnkoolen   (501) staff       (20)        0 2023-02-02 20:51:40.478637 fuzzy_search-1.5.0/fuzzy_search.egg-info/
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     7663 2023-02-02 20:51:40.000000 fuzzy_search-1.5.0/fuzzy_search.egg-info/PKG-INFO
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)      844 2023-02-02 20:51:40.000000 fuzzy_search-1.5.0/fuzzy_search.egg-info/SOURCES.txt
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)        1 2023-02-02 20:51:40.000000 fuzzy_search-1.5.0/fuzzy_search.egg-info/dependency_links.txt
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)       18 2023-02-02 20:51:40.000000 fuzzy_search-1.5.0/fuzzy_search.egg-info/top_level.txt
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)       38 2023-02-02 20:51:40.480524 fuzzy_search-1.5.0/setup.cfg
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     3983 2023-02-02 18:40:00.000000 fuzzy_search-1.5.0/setup.py
+-drwxr-xr-x   0 marijnkoolen   (501) staff       (20)        0 2023-02-02 20:51:40.480146 fuzzy_search-1.5.0/test/
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)        0 2020-10-14 12:59:55.000000 fuzzy_search-1.5.0/test/__init__.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     1946 2020-12-11 10:14:23.000000 fuzzy_search-1.5.0/test/test_fuzzy_context_searcher.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     9330 2020-12-31 09:40:05.000000 fuzzy_search-1.5.0/test/test_fuzzy_match.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     2847 2020-12-22 08:42:06.000000 fuzzy_search-1.5.0/test/test_fuzzy_phrase.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     3726 2021-06-23 14:43:21.000000 fuzzy_search-1.5.0/test/test_fuzzy_phrase_model.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)    18127 2021-09-10 08:38:19.000000 fuzzy_search-1.5.0/test/test_fuzzy_phrase_searcher.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     3315 2020-10-19 18:08:15.000000 fuzzy_search-1.5.0/test/test_fuzzy_string.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     6190 2020-12-14 11:34:04.000000 fuzzy_search-1.5.0/test/test_fuzzy_template.py
+--rw-r--r--   0 marijnkoolen   (501) staff       (20)     5756 2020-12-22 08:19:21.000000 fuzzy_search-1.5.0/test/test_fuzzy_template_searcher.py
++drwxr-xr-x   0 marijnkoolen   (501) staff       (20)        0 2023-04-07 07:57:59.850145 fuzzy_search-1.6.0/
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     1085 2020-12-08 10:17:28.000000 fuzzy_search-1.6.0/LICENSE
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     7663 2023-04-07 07:57:59.850022 fuzzy_search-1.6.0/PKG-INFO
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     6745 2022-05-04 14:52:31.000000 fuzzy_search-1.6.0/README.md
++drwxr-xr-x   0 marijnkoolen   (501) staff       (20)        0 2023-04-07 07:57:59.848344 fuzzy_search-1.6.0/fuzzy_search/
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)      397 2023-04-07 07:57:17.000000 fuzzy_search-1.6.0/fuzzy_search/__init__.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)      209 2020-12-28 12:32:03.000000 fuzzy_search-1.6.0/fuzzy_search/fuzzy_config.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     6839 2022-05-09 13:28:05.000000 fuzzy_search-1.6.0/fuzzy_search/fuzzy_context_searcher.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)    40080 2022-05-09 13:33:49.000000 fuzzy_search-1.6.0/fuzzy_search/fuzzy_match.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     7716 2020-12-07 10:17:03.000000 fuzzy_search-1.6.0/fuzzy_search/fuzzy_patterns.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     9262 2021-08-31 13:07:11.000000 fuzzy_search-1.6.0/fuzzy_search/fuzzy_phrase.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)    31370 2021-07-01 08:55:57.000000 fuzzy_search-1.6.0/fuzzy_search/fuzzy_phrase_model.py
++-rw-rw-rw-   0 marijnkoolen   (501) staff       (20)    50726 2023-04-06 14:05:11.000000 fuzzy_search-1.6.0/fuzzy_search/fuzzy_phrase_searcher.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     8716 2019-10-29 21:19:08.000000 fuzzy_search-1.6.0/fuzzy_search/fuzzy_searcher.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     8088 2023-02-02 18:33:08.000000 fuzzy_search-1.6.0/fuzzy_search/fuzzy_string.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)    18030 2021-09-10 09:16:12.000000 fuzzy_search-1.6.0/fuzzy_search/fuzzy_template.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)    32877 2021-08-31 13:48:09.000000 fuzzy_search-1.6.0/fuzzy_search/fuzzy_template_searcher.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     9595 2023-02-02 18:56:54.000000 fuzzy_search-1.6.0/fuzzy_search/similarity.py
++drwxr-xr-x   0 marijnkoolen   (501) staff       (20)        0 2023-04-07 07:57:59.848803 fuzzy_search-1.6.0/fuzzy_search.egg-info/
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     7663 2023-04-07 07:57:59.000000 fuzzy_search-1.6.0/fuzzy_search.egg-info/PKG-INFO
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)      844 2023-04-07 07:57:59.000000 fuzzy_search-1.6.0/fuzzy_search.egg-info/SOURCES.txt
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)        1 2023-04-07 07:57:59.000000 fuzzy_search-1.6.0/fuzzy_search.egg-info/dependency_links.txt
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)       18 2023-04-07 07:57:59.000000 fuzzy_search-1.6.0/fuzzy_search.egg-info/top_level.txt
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)       38 2023-04-07 07:57:59.850185 fuzzy_search-1.6.0/setup.cfg
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     3983 2023-02-02 18:40:00.000000 fuzzy_search-1.6.0/setup.py
++drwxr-xr-x   0 marijnkoolen   (501) staff       (20)        0 2023-04-07 07:57:59.849837 fuzzy_search-1.6.0/test/
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)        0 2020-10-14 12:59:55.000000 fuzzy_search-1.6.0/test/__init__.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     1946 2020-12-11 10:14:23.000000 fuzzy_search-1.6.0/test/test_fuzzy_context_searcher.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     9330 2020-12-31 09:40:05.000000 fuzzy_search-1.6.0/test/test_fuzzy_match.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     2847 2020-12-22 08:42:06.000000 fuzzy_search-1.6.0/test/test_fuzzy_phrase.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     3726 2021-06-23 14:43:21.000000 fuzzy_search-1.6.0/test/test_fuzzy_phrase_model.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)    17941 2023-04-07 07:55:40.000000 fuzzy_search-1.6.0/test/test_fuzzy_phrase_searcher.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     3315 2020-10-19 18:08:15.000000 fuzzy_search-1.6.0/test/test_fuzzy_string.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     6190 2020-12-14 11:34:04.000000 fuzzy_search-1.6.0/test/test_fuzzy_template.py
++-rw-r--r--   0 marijnkoolen   (501) staff       (20)     5756 2020-12-22 08:19:21.000000 fuzzy_search-1.6.0/test/test_fuzzy_template_searcher.py
+```
+
+### Comparing `fuzzy_search-1.5.0/LICENSE` & `fuzzy_search-1.6.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/PKG-INFO` & `fuzzy_search-1.6.0/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fuzzy_search
+-Version: 1.5.0
++Version: 1.6.0
+ Summary: Tool for fuzzy searching in texts with historical language use and OCR/HTR errors
+ Home-page: https://github.com/marijnkoolen/fuzzy-search
+ Author: Marijn Koolen
+ Author-email: marijn.koolen@gmail.com
+ License: MIT
+ Keywords: information extraction,historical research,digital resources
+ Platform: UNKNOWN
+```
+
+### Comparing `fuzzy_search-1.5.0/README.md` & `fuzzy_search-1.6.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search/fuzzy_context_searcher.py` & `fuzzy_search-1.6.0/fuzzy_search/fuzzy_context_searcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search/fuzzy_match.py` & `fuzzy_search-1.6.0/fuzzy_search/fuzzy_match.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search/fuzzy_patterns.py` & `fuzzy_search-1.6.0/fuzzy_search/fuzzy_patterns.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search/fuzzy_phrase.py` & `fuzzy_search-1.6.0/fuzzy_search/fuzzy_phrase.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search/fuzzy_phrase_model.py` & `fuzzy_search-1.6.0/fuzzy_search/fuzzy_phrase_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search/fuzzy_phrase_searcher.py` & `fuzzy_search-1.6.0/fuzzy_search/fuzzy_phrase_searcher.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+-from typing import Dict, List, Set, Union
+ import copy
+ import string
+ import re
+-from collections import defaultdict
+ import time
++from collections import defaultdict
++from typing import Dict, List, Set, Union
+ 
+ import fuzzy_search
+ from fuzzy_search.fuzzy_phrase_model import PhraseModel
+ from fuzzy_search.fuzzy_match import PhraseMatch, Candidate, adjust_match_offsets
+ from fuzzy_search.fuzzy_phrase import Phrase
+ from fuzzy_search.fuzzy_string import text2skipgrams, SkipGram, score_levenshtein_similarity_ratio
+ 
+@@ -296,15 +296,35 @@
+             best = max(overlapping[offset_length], key=lambda item: item.levenshtein_similarity)
+             filtered_matches.append(best)
+     return filtered_matches
+ 
+ 
+ class FuzzyPhraseSearcher(object):
+ 
+-    def __init__(self, config: Union[None, Dict[str, Union[str, int, float]]] = None):
++    def __init__(self, phrase_list: List[any] = None, phrase_model: Union[Dict[str, any], PhraseModel] = None,
++                 config: Union[None, Dict[str, Union[str, int, float]]] = None):
++        """This class represents the basic fuzzy searcher. You can pass a list of phrases or a phrase model and
++        configuration dictionary that overrides the default configuration values. The default config dictionary
++        is available via `fuzzy_search.default_config`.
++
++        To set e.g. the character ngram_size to 3 and the skip_size to 1 use the following dictionary:
++
++        config = {
++            'ngram_size': 3,
++            'skip_size': 1
++        }
++
++        :param phrase_list: a list of phrases (a list of strings or more complex dictionaries with phrases and variants)
++        :type phrase_list: list
++        :param phrase_model: a phrase model
++        :type phrase_model: PhraseModel
++        :param config: a configuration dictionary to override default configuration properties.
++        Only the properties in the config dictionaries of updated.
++        :type config: dict
++        """
+         self.__version__ = fuzzy_search.__version__
+         # default configuration
+         self.char_match_threshold = 0.5
+         self.ngram_threshold = 0.5
+         self.skipgram_threshold = 0.2
+         self.levenshtein_threshold = 0.5
+         self.max_length_variance = 1
+@@ -339,14 +359,23 @@
+         self.punctuation = string.punctuation
+         # non-default configuration
+         self.config = copy.deepcopy(default_config)
+         if config:
+             for key in config:
+                 self.config[key] = config[key]
+             self.configure(config)
++        if phrase_list is not None:
++            phrase_model = PhraseModel(phrases=phrase_list, config=config)
++            self.index_phrase_model(phrase_model)
++        if phrase_model is not None:
++            if isinstance(phrase_model, dict) or isinstance(phrase_model, list):
++                phrase_model = PhraseModel(model=phrase_model)
++            elif isinstance(phrase_model, PhraseModel) is False:
++                raise TypeError('invalid phrase_model type, should PhraseModel or a list of dictionaries')
++            self.index_phrase_model(phrase_model)
+ 
+     def configure(self, config: Dict[str, any]) -> None:
+         """Configure the fuzzy searcher with a given config object.
+ 
+         :param config: a config dictionary
+         :type config: Dict[str, Union[str, int, float]]
+         """
+```
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search/fuzzy_searcher.py` & `fuzzy_search-1.6.0/fuzzy_search/fuzzy_searcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search/fuzzy_string.py` & `fuzzy_search-1.6.0/fuzzy_search/fuzzy_string.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search/fuzzy_template.py` & `fuzzy_search-1.6.0/fuzzy_search/fuzzy_template.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search/fuzzy_template_searcher.py` & `fuzzy_search-1.6.0/fuzzy_search/fuzzy_template_searcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search/similarity.py` & `fuzzy_search-1.6.0/fuzzy_search/similarity.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search.egg-info/PKG-INFO` & `fuzzy_search-1.6.0/fuzzy_search.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fuzzy-search
+-Version: 1.5.0
++Version: 1.6.0
+ Summary: Tool for fuzzy searching in texts with historical language use and OCR/HTR errors
+ Home-page: https://github.com/marijnkoolen/fuzzy-search
+ Author: Marijn Koolen
+ Author-email: marijn.koolen@gmail.com
+ License: MIT
+ Keywords: information extraction,historical research,digital resources
+ Platform: UNKNOWN
+```
+
+### Comparing `fuzzy_search-1.5.0/fuzzy_search.egg-info/SOURCES.txt` & `fuzzy_search-1.6.0/fuzzy_search.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/setup.py` & `fuzzy_search-1.6.0/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/test/test_fuzzy_context_searcher.py` & `fuzzy_search-1.6.0/test/test_fuzzy_context_searcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/test/test_fuzzy_match.py` & `fuzzy_search-1.6.0/test/test_fuzzy_match.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/test/test_fuzzy_phrase.py` & `fuzzy_search-1.6.0/test/test_fuzzy_phrase.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/test/test_fuzzy_phrase_model.py` & `fuzzy_search-1.6.0/test/test_fuzzy_phrase_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/test/test_fuzzy_phrase_searcher.py` & `fuzzy_search-1.6.0/test/test_fuzzy_phrase_searcher.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -36,178 +36,175 @@
+         skipgram = SkipGram('ts', 0, 3)
+         candidate.add_skip_match(skipgram)
+         self.assertTrue(candidate.get_skip_set_overlap() > 0.0)
+ 
+ 
+ class TestFuzzyPhraseSearcher(TestCase):
+ 
++    def setUp(self) -> None:
++        self.searcher = FuzzyPhraseSearcher()
++
+     def test_can_make_default_phrase_searcher(self):
+-        searcher = FuzzyPhraseSearcher()
+-        self.assertNotEqual(searcher, None)
++        self.assertNotEqual(self.searcher, None)
+ 
+     def test_can_add_phrases_as_strings(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase = "test"
+-        searcher.index_phrases(phrases=[phrase])
+-        phrase_object = searcher.phrases.pop()
++        self.searcher.index_phrases(phrases=[phrase])
++        phrase_object = self.searcher.phrases.pop()
+         self.assertEqual(phrase_object.phrase_string, phrase)
+ 
+     def test_can_add_phrases_as_phrase_objects(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase = Phrase("test")
+-        searcher.index_phrases(phrases=[phrase])
+-        self.assertTrue(phrase in searcher.phrases)
++        self.searcher.index_phrases(phrases=[phrase])
++        self.assertTrue(phrase in self.searcher.phrases)
+ 
+     def test_can_generate_skip_matches(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase = "test"
+-        searcher.index_phrases(phrases=[phrase])
++        self.searcher.index_phrases(phrases=[phrase])
+         text = "this is a test"
+-        skip_matches = searcher.find_skipgram_matches({"text": text})
+-        phrase_object = searcher.phrases.pop()
++        skip_matches = self.searcher.find_skipgram_matches({"text": text})
++        phrase_object = self.searcher.phrases.pop()
+         self.assertTrue(phrase_object in skip_matches.match_set)
+ 
+     def test_can_filter_skipgram_threshold(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase = Phrase("test")
+-        searcher.index_phrases(phrases=[phrase])
++        self.searcher.index_phrases(phrases=[phrase])
+         text = "this is a test"
+-        skip_matches = searcher.find_skipgram_matches({"text": text})
++        skip_matches = self.searcher.find_skipgram_matches({"text": text})
+         phrases = filter_skipgram_threshold(skip_matches, 0.5)
+         self.assertEqual(len(phrases), 1)
+ 
+     def test_can_get_candidates(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase_model = PhraseModel(phrases=["test"])
+-        searcher.index_phrase_model(phrase_model=phrase_model)
++        self.searcher.index_phrase_model(phrase_model=phrase_model)
+         text = {"text": "this is a test"}
+-        skip_matches = searcher.find_skipgram_matches(text)
++        skip_matches = self.searcher.find_skipgram_matches(text)
+         phrases = get_skipmatch_candidates(text, skip_matches, 0.5, phrase_model=phrase_model)
+         self.assertEqual(len(phrases), 1)
+ 
+     def test_finds_multiple_candidates(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase_model = PhraseModel(phrases=["test"])
+-        searcher.index_phrase_model(phrase_model=phrase_model)
++        self.searcher.index_phrase_model(phrase_model=phrase_model)
+         text = {"text": "a test is a test is a test"}
+-        skip_matches = searcher.find_skipgram_matches(text)
++        skip_matches = self.searcher.find_skipgram_matches(text)
+         phrases = get_skipmatch_candidates(text, skip_matches, 0.5, phrase_model=phrase_model)
+         self.assertEqual(len(phrases), 3)
+ 
+     def test_searcher_finds_near_match(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase = "contains"
+-        searcher.index_phrases(phrases=[phrase])
++        self.searcher.index_phrases(phrases=[phrase])
+         text = "This text consaint some typos."
+-        matches = searcher.find_matches(text)
++        matches = self.searcher.find_matches(text)
+         self.assertEqual(len(matches), 1)
+ 
+     def test_searcher_is_case_sensitive(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase = "contains"
+-        searcher.index_phrases(phrases=[phrase])
++        self.searcher.index_phrases(phrases=[phrase])
+         text = "This text CONSAINT some typos."
+-        matches = searcher.find_matches(text)
++        matches = self.searcher.find_matches(text)
+         self.assertEqual(len(matches), 0)
+ 
+     def test_searcher_handles_ignorecase(self):
+-        searcher = FuzzyPhraseSearcher({"ignorecase": True})
++        searcher = FuzzyPhraseSearcher(config={"ignorecase": True})
+         phrase = "contains"
+         searcher.index_phrases(phrases=[phrase])
+         text = "This text CONSAINT some typos."
+         matches = searcher.find_matches(text)
+         self.assertEqual(len(matches), 1)
+ 
+     def test_searcher_uses_word_boundaries(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase = "contains"
+-        searcher.index_phrases(phrases=[phrase])
++        self.searcher.index_phrases(phrases=[phrase])
+         text = "This text containsi some typos."
+-        matches = searcher.find_matches(text)
++        matches = self.searcher.find_matches(text)
+         self.assertEqual(isinstance(matches, list), True)
+         self.assertEqual("containsi", matches[0].string)
+ 
+     def test_searcher_finds_repeat_phrases_as_multiple_matches(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase = "contains"
+-        searcher.index_phrases(phrases=[phrase])
++        self.searcher.index_phrases(phrases=[phrase])
+         text = "This text contains contains some repetition."
+-        matches = searcher.find_matches(text)
++        matches = self.searcher.find_matches(text)
+         self.assertEqual(len(matches), 2)
+         self.assertEqual("contains", matches[0].string)
+         self.assertEqual("contains", matches[1].string)
+ 
+     def test_searcher_finds_correct_start(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase = "contains"
+-        searcher.index_phrases(phrases=[phrase])
++        self.searcher.index_phrases(phrases=[phrase])
+         text = "This text con contains some weirdness."
+-        matches = searcher.find_matches(text)
++        matches = self.searcher.find_matches(text)
+         self.assertEqual("contains", matches[0].string)
+ 
+     def test_searcher_allows_length_variance(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase = "coffee"
+-        searcher.index_phrases(phrases=[phrase])
++        self.searcher.index_phrases(phrases=[phrase])
+         text = "For sale two units of coffy."
+-        matches = searcher.find_matches(text)
++        matches = self.searcher.find_matches(text)
+         self.assertEqual(len(matches), 1)
+ 
+     def test_searcher_allows_length_variance_2(self):
+-        searcher = FuzzyPhraseSearcher()
+         phrase = "Makelaars"
+-        searcher.index_phrases(phrases=[phrase])
++        self.searcher.index_phrases(phrases=[phrase])
+         text = 'door de Alakei&ers by na gecompletecrt'
+-        matches = searcher.find_matches(text)
++        matches = self.searcher.find_matches(text)
+         self.assertEqual(len(matches), 1)
+ 
++    def test_searcher_accepts_phrases_on_init(self):
++        phrase = "Makelaars"
++        searcher = FuzzyPhraseSearcher(phrase_list=[phrase])
++        self.assertEqual(1, len(searcher.phrases))
++
++
++class TestFuzzySearchVariants(TestCase):
++
++    def setUp(self) -> None:
++        self.searcher = FuzzyPhraseSearcher(config={"include_variants": True})
++        self.phrase = {"phrase": "okay", "variants": ["OK"]}
++
+     def test_searcher_can_toggle_variants(self):
+-        searcher = FuzzyPhraseSearcher({"include_variants": True})
+-        self.assertEqual(searcher.include_variants, True)
++        self.assertEqual(self.searcher.include_variants, True)
+ 
+     def test_searcher_can_register_variants(self):
+-        searcher = FuzzyPhraseSearcher({"include_variants": True})
+-        phrase = {"phrase": "okay", "variants": ["OK"]}
+-        searcher.index_phrase_model(phrase_model=PhraseModel([phrase]))
+-        self.assertEqual(len(searcher.variants), 1)
+-        variant = searcher.variants.pop()
++        self.searcher.index_phrase_model(phrase_model=PhraseModel([self.phrase]))
++        self.assertEqual(len(self.searcher.variants), 1)
++        variant = self.searcher.variants.pop()
+         self.assertEqual(variant.phrase_string, "OK")
+ 
+     def test_searcher_can_match_variants(self):
+-        searcher = FuzzyPhraseSearcher({"include_variants": True})
+-        phrase = {"phrase": "okay", "variants": ["OK"]}
+-        searcher.index_phrase_model(phrase_model=PhraseModel([phrase]))
++        self.searcher.index_phrase_model(phrase_model=PhraseModel([self.phrase]))
+         text = "This text is okay and this test is OK."
+-        matches = searcher.find_matches(text, include_variants=True)
+-        self.assertEqual(matches[1].phrase.phrase_string, phrase["phrase"])
+-        self.assertEqual(matches[1].variant.phrase_string, phrase["variants"][0])
++        matches = self.searcher.find_matches(text, include_variants=True)
++        self.assertEqual(matches[1].phrase.phrase_string, self.phrase["phrase"])
++        self.assertEqual(matches[1].variant.phrase_string, self.phrase["variants"][0])
++
++
++class TestFuzzySearchDistractors(TestCase):
++
++    def setUp(self) -> None:
++        self.searcher = FuzzyPhraseSearcher(config={"filter_distractors": True})
++        self.phrase = {"phrase": "okay", "distractors": ["OK"]}
+ 
+     def test_searcher_can_toggle_distractors(self):
+-        searcher = FuzzyPhraseSearcher({"filter_distractors": True})
+-        self.assertEqual(searcher.filter_distractors, True)
++        self.assertEqual(self.searcher.filter_distractors, True)
+ 
+     def test_searcher_can_register_distractors(self):
+-        searcher = FuzzyPhraseSearcher({"filter_distractors": True})
+-        phrase = {"phrase": "okay", "distractors": ["OK"]}
+-        searcher.index_phrase_model(phrase_model=PhraseModel([phrase]))
+-        self.assertEqual(len(searcher.distractors), 1)
+-        distractor = searcher.distractors.pop()
++        self.searcher.index_phrase_model(phrase_model=PhraseModel([self.phrase]))
++        self.assertEqual(len(self.searcher.distractors), 1)
++        distractor = self.searcher.distractors.pop()
+         self.assertEqual(distractor.phrase_string, "OK")
+ 
+     def test_searcher_can_match_distractors(self):
+-        searcher = FuzzyPhraseSearcher({"filter_distractors": True})
+         phrase = {"phrase": "baking", "distractors": ["braking"]}
+-        searcher.index_phrase_model(phrase_model=PhraseModel([phrase]))
++        self.searcher.index_phrase_model(phrase_model=PhraseModel([phrase]))
+         text = "This text is about baking and not about braking."
+-        matches = searcher.find_matches(text, filter_distractors=True)
++        matches = self.searcher.find_matches(text, filter_distractors=True)
+         self.assertEqual(len(matches), 1)
+-    """
+ 
+ 
+-"""
+ class TestFuzzySearchExactMatch(TestCase):
+ 
+     def setUp(self) -> None:
+         self.searcher = FuzzyPhraseSearcher()
+         self.phrase = {"phrase": "baking", "distractors": ["braking"]}
+         self.searcher.index_phrase_model(phrase_model=PhraseModel([self.phrase]))
+ 
+@@ -279,15 +276,15 @@
+             "ngram_threshold": 0.5,
+             "levenshtein_threshold": 0.6,
+             "ignorecase": False,
+             "max_length_variance": 3,
+             "ngram_size": 2,
+             "skip_size": 2,
+         }
+-        self.searcher = FuzzyPhraseSearcher(self.config)
++        self.searcher = FuzzyPhraseSearcher(config=self.config)
+         # create a list of domain phrases
+         self.domain_phrases = [
+             # terms for the chair and attendants of a meeting
+             "PRAESIDE",
+             "PRAESENTIBUS",
+             # some weekdays in Latin
+             "Veneris",
+@@ -350,15 +347,15 @@
+             "levenshtein_threshold": 0.6,
+             "ignorecase": False,
+             "include_variants": True,
+             "max_length_variance": 3,
+             "ngram_size": 2,
+             "skip_size": 2,
+         }
+-        self.searcher = FuzzyPhraseSearcher(self.config)
++        self.searcher = FuzzyPhraseSearcher(config=self.config)
+         # create a list of domain phrases
+         self.domain_phrases = [
+             {
+                 'phrase': 'den Heere',
+                 'variants': [
+                     'de Heer',
+                     'de Heeren',
+@@ -370,42 +367,42 @@
+         self.searcher.index_phrase_model(self.phrase_model)
+ 
+     def test_searcher_find_no_overlapping_variants(self):
+         phrase_matches = self.searcher.find_matches(self.text1)
+         self.assertEqual(len(phrase_matches), 1)
+ 
+     def test_searcher_allows_length_variance_2(self):
+-        searcher = FuzzyPhraseSearcher(self.config)
++        searcher = FuzzyPhraseSearcher(config=self.config)
+         searcher.ignorecase = True
+         phrase = "Admiraliteiten in t gemeen"
+         searcher.index_phrases(phrases=[phrase])
+         text = 'aaniraliteyten in het gemeen'
+         matches = searcher.find_matches(text)
+         self.assertEqual(len(matches), 1)
+ 
+     def test_searcher_allows_length_variance_3(self):
+-        searcher = FuzzyPhraseSearcher(self.config)
++        searcher = FuzzyPhraseSearcher(config=self.config)
+         searcher.ignorecase = True
+         phrase = 'Admiraliteit in Vriesland'
+         searcher.index_phrases(phrases=[phrase])
+         text = 'AduiraliteytVrieslaidt'
+         matches = searcher.find_matches(text)
+         self.assertEqual(len(matches), 1)
+ 
+     def test_searcher_finds_DONtfangen(self):
+-        searcher = FuzzyPhraseSearcher(self.config)
++        searcher = FuzzyPhraseSearcher(config=self.config)
+         searcher.ignorecase = True
+         phrase = "ONtfangen een Missive van"
+         searcher.index_phrases(phrases=[phrase])
+         text = 'DONtfangen een Missive van den Heere vander Goes'
+         matches = searcher.find_matches(text)
+         self.assertEqual(len(matches), 1)
+ 
+     def test_searcher_finds_long_opening(self):
+-        searcher = FuzzyPhraseSearcher(self.config)
++        searcher = FuzzyPhraseSearcher(config=self.config)
+         searcher.ignorecase = True
+         phrases = [
+             "hebben ter Vergaderinge ingebraght",
+             'hebben ter Vergaderinge ingebragt en laaten leezen de Resolutie'
+         ]
+         searcher.index_phrases(phrases=phrases)
+         text = "De Heeren Gedeputeerden van de Provincie van Zeelandt, hebben ter Vergaderinge ingebraght en laten lesen de Resolutie van de Heeren Staten van de hoogh-gemelde Provincie hare Principalen, raeckende het negotieren van hare quote voor een derde part in de Petitie tot de extraordinaris Equipage voor het loopende jaer, volgende de voorschreve Resolutie hier na geinsereert."
+```
+
+### Comparing `fuzzy_search-1.5.0/test/test_fuzzy_string.py` & `fuzzy_search-1.6.0/test/test_fuzzy_string.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/test/test_fuzzy_template.py` & `fuzzy_search-1.6.0/test/test_fuzzy_template.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fuzzy_search-1.5.0/test/test_fuzzy_template_searcher.py` & `fuzzy_search-1.6.0/test/test_fuzzy_template_searcher.py`
+
+ * *Files identical despite different names*
+
