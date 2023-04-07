@@ -1,0 +1,470 @@
+--- tmp/higlass-schema-0.0.4.tar.gz
++++ tmp/higlass_schema-0.0.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "higlass-schema-0.0.4.tar", last modified: Wed Mar 16 14:45:33 2022, max compression
+│ +gzip compressed data, last modified: Sun Feb  2 00:00:00 2020, max compression
+│   --- higlass-schema-0.0.4.tar
+├── +++ higlass_schema-0.0.6.tar
+│ ├── file list
+│ │ @@ -1,23 +1,101 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-03-16 14:45:33.286057 higlass-schema-0.0.4/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-03-16 14:45:33.278057 higlass-schema-0.0.4/.github/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-03-16 14:45:33.282057 higlass-schema-0.0.4/.github/workflows/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1689 2022-03-16 14:45:12.000000 higlass-schema-0.0.4/.github/workflows/test_and_deploy.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       75 2022-03-16 14:45:12.000000 higlass-schema-0.0.4/.gitignore
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1074 2022-03-16 14:45:12.000000 higlass-schema-0.0.4/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1083 2022-03-16 14:45:33.286057 higlass-schema-0.0.4/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      331 2022-03-16 14:45:12.000000 higlass-schema-0.0.4/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-03-16 14:45:33.286057 higlass-schema-0.0.4/higlass_schema/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      125 2022-03-16 14:45:12.000000 higlass-schema-0.0.4/higlass_schema/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      142 2022-03-16 14:45:32.000000 higlass-schema-0.0.4/higlass_schema/_version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1466 2022-03-16 14:45:12.000000 higlass-schema-0.0.4/higlass_schema/cli.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    17044 2022-03-16 14:45:12.000000 higlass-schema-0.0.4/higlass_schema/schema.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1403 2022-03-16 14:45:12.000000 higlass-schema-0.0.4/higlass_schema/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-03-16 14:45:33.286057 higlass-schema-0.0.4/higlass_schema.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1083 2022-03-16 14:45:33.000000 higlass-schema-0.0.4/higlass_schema.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      440 2022-03-16 14:45:33.000000 higlass-schema-0.0.4/higlass_schema.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        1 2022-03-16 14:45:33.000000 higlass-schema-0.0.4/higlass_schema.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       59 2022-03-16 14:45:33.000000 higlass-schema-0.0.4/higlass_schema.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       14 2022-03-16 14:45:33.000000 higlass-schema-0.0.4/higlass_schema.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       15 2022-03-16 14:45:33.000000 higlass-schema-0.0.4/higlass_schema.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      893 2022-03-16 14:45:33.286057 higlass-schema-0.0.4/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      127 2022-03-16 14:45:12.000000 higlass-schema-0.0.4/setup.py
+│ │ +-rw-r--r--   0        0        0      117 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/.github/dependabot.yml
+│ │ +-rw-r--r--   0        0        0     2242 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/.github/workflows/ci.yml
+│ │ +-rw-r--r--   0        0        0      314 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/higlass_schema/__init__.py
+│ │ +-rw-r--r--   0        0        0     1439 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/higlass_schema/cli.py
+│ │ +-rw-r--r--   0        0        0    16562 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/higlass_schema/schema.py
+│ │ +-rw-r--r--   0        0        0     1402 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/higlass_schema/utils.py
+│ │ +-rw-r--r--   0        0        0      884 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/test_schema.py
+│ │ +-rw-r--r--   0        0        0       76 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/README.md
+│ │ +-rw-r--r--   0        0        0    10226 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/1d-annotations.json
+│ │ +-rw-r--r--   0        0        0     3703 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/1d-constant-indicators.json
+│ │ +-rw-r--r--   0        0        0     3229 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/1d-heatmap-track-2.json
+│ │ +-rw-r--r--   0        0        0     7247 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/1d-heatmap-track.json
+│ │ +-rw-r--r--   0        0        0     8155 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/axis-margin.json
+│ │ +-rw-r--r--   0        0        0     4121 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/bar-track-color-range.json
+│ │ +-rw-r--r--   0        0        0     1148 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/bar-track.json
+│ │ +-rw-r--r--   0        0        0     5870 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/bar-zero-line.json
+│ │ +-rw-r--r--   0        0        0     2381 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/bedlike-track.json
+│ │ +-rw-r--r--   0        0        0     2126 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/bigwig-aggregation-modes.json
+│ │ +-rw-r--r--   0        0        0     4481 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/chromosome-labels.json
+│ │ +-rw-r--r--   0        0        0    10769 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/default.json
+│ │ +-rw-r--r--   0        0        0     8275 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/diagonal-split-heatmap.json
+│ │ +-rw-r--r--   0        0        0     3703 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/fancy-overlays.json
+│ │ +-rw-r--r--   0        0        0     2074 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/genbank-data-fetcher.json
+│ │ +-rw-r--r--   0        0        0     3773 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/gene-annotations.json
+│ │ +-rw-r--r--   0        0        0     7519 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/label-margin.json
+│ │ +-rw-r--r--   0        0        0     5448 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/lots-of-locks.json
+│ │ +-rw-r--r--   0        0        0     3620 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/overlay-chromosome-grid-track.json
+│ │ +-rw-r--r--   0        0        0     3652 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/overlay-track.json
+│ │ +-rw-r--r--   0        0        0     8707 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/docs/examples/viewconfs/overlay-tracks.json
+│ │ +-rw-r--r--   0        0        0      949 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/adjust-view-spacing.json
+│ │ +-rw-r--r--   0        0        0     8103 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/axis-specific-location-locks.json
+│ │ +-rw-r--r--   0        0        0     2090 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/axis.json
+│ │ +-rw-r--r--   0        0        0     5288 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/bar.json
+│ │ +-rw-r--r--   0        0        0    10636 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/continuous-scaling-1D-horizontal.json
+│ │ +-rw-r--r--   0        0        0     4727 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/continuous-scaling-1D-vertical.json
+│ │ +-rw-r--r--   0        0        0     2867 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/continuous-scaling-2D.json
+│ │ +-rw-r--r--   0        0        0      717 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/dummy-data-fetcher.json
+│ │ +-rw-r--r--   0        0        0      641 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/dummy-track.json
+│ │ +-rw-r--r--   0        0        0     1413 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/global-mouse-position.json
+│ │ +-rw-r--r--   0        0        0     1520 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/horizontal-1d-line-track-with-const.json
+│ │ +-rw-r--r--   0        0        0     3445 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/label-margin.json
+│ │ +-rw-r--r--   0        0        0     5070 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/label-split-heatmaps.json
+│ │ +-rw-r--r--   0        0        0     2477 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/loop-annotations.json
+│ │ +-rw-r--r--   0        0        0     1535 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/overlay-annotations-1d-2d.json
+│ │ +-rw-r--r--   0        0        0     1273 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/overlay-chrom-grid.json
+│ │ +-rw-r--r--   0        0        0     1372 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/simple-1d-horizontal-vertical-and-2d-data-track.json
+│ │ +-rw-r--r--   0        0        0      917 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/simple-heatmap-gene-annotations.json
+│ │ +-rw-r--r--   0        0        0      641 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/simple-heatmap.json
+│ │ +-rw-r--r--   0        0        0     5109 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/two-bars-and-a-heatmap.json
+│ │ +-rw-r--r--   0        0        0     8154 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs/viewport-projection.json
+│ │ +-rw-r--r--   0        0        0     1587 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-invalid/invalidTrackConfig.json
+│ │ +-rw-r--r--   0        0        0     1640 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/annotationsTilesView.json
+│ │ +-rw-r--r--   0        0        0     2805 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/divergentTrackConfig.json
+│ │ +-rw-r--r--   0        0        0     3491 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/divisionViewConfig.json
+│ │ +-rw-r--r--   0        0        0      503 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/emptyConf.json
+│ │ +-rw-r--r--   0        0        0     5298 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/exportDataConfig.json
+│ │ +-rw-r--r--   0        0        0    50011 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/fritzBug1.json
+│ │ +-rw-r--r--   0        0        0   100356 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/fritzBug2.json
+│ │ +-rw-r--r--   0        0        0     3690 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/geneAnnotationsOnly.json
+│ │ +-rw-r--r--   0        0        0     2135 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/geneAnnotationsOnly1.json
+│ │ +-rw-r--r--   0        0        0     3548 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/horizontalAndVerticalMultivec.json
+│ │ +-rw-r--r--   0        0        0     1250 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/horizontalDiagonalTrackViewConf.json
+│ │ +-rw-r--r--   0        0        0     3300 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/horizontalLineEnd.json
+│ │ +-rw-r--r--   0        0        0     1832 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/horizontalMultivecWithAggregation.json
+│ │ +-rw-r--r--   0        0        0     1753 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/horizontalMultivecWithFilteredRows.json
+│ │ +-rw-r--r--   0        0        0     3316 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/horizontalMultivecWithSmallerDimensions.json
+│ │ +-rw-r--r--   0        0        0     5720 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/horizontalMultivecWithZeroValueColorOption.json
+│ │ +-rw-r--r--   0        0        0    21964 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/local-tiles-viewconf.json
+│ │ +-rw-r--r--   0        0        0     2659 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/noGPSB.json
+│ │ +-rw-r--r--   0        0        0     2036 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/oneTrackConfig.json
+│ │ +-rw-r--r--   0        0        0     4231 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/oneViewConfig.json
+│ │ +-rw-r--r--   0        0        0     3874 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/oneZoomedOutViewConf.json
+│ │ +-rw-r--r--   0        0        0      912 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/onlyGPSB.json
+│ │ +-rw-r--r--   0        0        0     1722 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/osmConf.json
+│ │ +-rw-r--r--   0        0        0    17615 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/paperFigure1.json
+│ │ +-rw-r--r--   0        0        0     6739 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/project1D.json
+│ │ +-rw-r--r--   0        0        0     3187 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/rectangleDomains.json
+│ │ +-rw-r--r--   0        0        0     6687 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/restrictedZoom.json
+│ │ +-rw-r--r--   0        0        0     1735 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/simple1And2dAnnotations.json
+│ │ +-rw-r--r--   0        0        0     2213 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/simpleCenterViewConfig.json
+│ │ +-rw-r--r--   0        0        0     5962 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/smallViewconf.json
+│ │ +-rw-r--r--   0        0        0    12344 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/stacked-top-tracks.json
+│ │ +-rw-r--r--   0        0        0    31108 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/stacked-top-views.json
+│ │ +-rw-r--r--   0        0        0     4926 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/testViewConfX1.json
+│ │ +-rw-r--r--   0        0        0     4257 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/testViewConfX2.json
+│ │ +-rw-r--r--   0        0        0     5097 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/threeViews.json
+│ │ +-rw-r--r--   0        0        0     1076 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/topAxisOnly.json
+│ │ +-rw-r--r--   0        0        0     5420 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/twoViewConfig.json
+│ │ +-rw-r--r--   0        0        0     3936 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/valueIntervalTrackViewConf.json
+│ │ +-rw-r--r--   0        0        0     5152 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-more/viewportProjectionsWithoutFromViewUids.json
+│ │ +-rw-r--r--   0        0        0      254 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-tracks/chromInfoTrack.json
+│ │ +-rw-r--r--   0        0        0      396 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-tracks/chromosomeGridTrack.json
+│ │ +-rw-r--r--   0        0        0      587 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-tracks/heatmapTrack.json
+│ │ +-rw-r--r--   0        0        0      559 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-tracks/horizontalHeatmapTrack.json
+│ │ +-rw-r--r--   0        0        0      580 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-tracks/largeHorizontalHeatmapTrack.json
+│ │ +-rw-r--r--   0        0        0      593 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/tests/fixtures/test/view-configs-tracks/verticalHeatmapTrack.json
+│ │ +-rw-r--r--   0        0        0       88 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/.gitignore
+│ │ +-rw-r--r--   0        0        0     1074 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/LICENSE
+│ │ +-rw-r--r--   0        0        0      573 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/README.md
+│ │ +-rw-r--r--   0        0        0     1610 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     1549 2020-02-02 00:00:00.000000 higlass_schema-0.0.6/PKG-INFO
+│ │   --- higlass-schema-0.0.4/.github/workflows/test_and_deploy.yml
+│ ├── +++ higlass_schema-0.0.6/.github/workflows/ci.yml
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,56 +1,81 @@
+│ │ -name: tests
+│ │ +name: CI
+│ │  
+│ │ -on: 
+│ │ +on:
+│ │    push:
+│ │      branches:
+│ │        - main
+│ │      tags:
+│ │        - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
+│ │    pull_request:
+│ │ -    branches:
+│ │ -      - main
+│ │    workflow_dispatch:
+│ │  
+│ │  jobs:
+│ │ -  test:
+│ │ -    name: ${{ matrix.platform }} py${{ matrix.python-version }}
+│ │ -    runs-on: ${{ matrix.platform }}
+│ │ +  Lint:
+│ │ +    runs-on: ubuntu-latest
+│ │ +
+│ │ +    steps:
+│ │ +      - uses: actions/checkout@v3
+│ │ +      - uses: actions/setup-python@v4
+│ │ +        with:
+│ │ +          python-version: "3.x"
+│ │ +      - run: |
+│ │ +          pipx install hatch
+│ │ +          hatch run lint
+│ │ +
+│ │ +  Schema:
+│ │ +    name: JS viewconf validation with generated JSON Schema
+│ │ +    runs-on: ubuntu-latest
+│ │ +    steps:
+│ │ +      - uses: actions/checkout@v3
+│ │ +      - uses: actions/setup-python@v4
+│ │ +        with:
+│ │ +          python-version: "3.x"
+│ │ +
+│ │ +      - run: |
+│ │ +          pip install -e .
+│ │ +          higlass-schema export > schema.json
+│ │ +
+│ │ +      - uses: actions/setup-node@v3
+│ │ +        with:
+│ │ +          node-version: '16.x'
+│ │ +      - run: npm install -g ajv-cli
+│ │ +      - run: ajv validate -s schema.json -d "tests/fixtures/{docs/examples/viewconfs,test/{view-configs,view-configs-more}}/*.json"
+│ │ +
+│ │ +  Test:
+│ │ +    name: Test ${{ matrix.python-version }}
+│ │ +    runs-on: ubuntu-latest
+│ │      strategy:
+│ │        matrix:
+│ │ -        # platform: [ubuntu-latest, windows-latest, macos-latest]
+│ │ -        # python-version: [3.7, 3.8, 3.9, '3.10']
+│ │ -        platform: [ubuntu-latest]
+│ │ -        python-version: [3.7]
+│ │ +        python-version: ['3.7', '3.8', '3.9', '3.10', '3.11']
+│ │  
+│ │      steps:
+│ │ -      - uses: actions/checkout@v2
+│ │ +      - uses: actions/checkout@v3
+│ │  
+│ │        - name: Set up Python ${{ matrix.python-version }}
+│ │ -        uses: actions/setup-python@v2
+│ │ +        uses: actions/setup-python@v4
+│ │          with:
+│ │            python-version: ${{ matrix.python-version }}
+│ │  
+│ │        - name: Install dependencies
+│ │          run: |
+│ │ -          # python -m pip install --upgrade pip
+│ │ -          # pip install setuptools tox tox-gh-actions
+│ │ -          echo "TODO!"
+│ │ +          pipx install hatch
+│ │ +          hatch run test
+│ │  
+│ │ -  deploy:
+│ │ +  Release:
+│ │      # this will run when you have tagged a commit, starting with "v*"
+│ │      # and requires that you have put your twine API key in your 
+│ │      # github secrets (see readme for details)
+│ │ -    needs: [test]
+│ │ +    needs: [Test]
+│ │      runs-on: ubuntu-latest
+│ │      if: contains(github.ref, 'tags')
+│ │      steps:
+│ │ -      - uses: actions/checkout@v2
+│ │ +      - uses: actions/checkout@v3
+│ │        - name: Set up Python
+│ │ -        uses: actions/setup-python@v2
+│ │ +        uses: actions/setup-python@v4
+│ │          with:
+│ │            python-version: "3.x"
+│ │        - name: Install dependencies
+│ │          run: |
+│ │            python -m pip install --upgrade pip
+│ │            pip install build twine
+│ │        - name: Build and publish
+│ │   --- higlass-schema-0.0.4/LICENSE
+│ ├── +++ higlass_schema-0.0.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- higlass-schema-0.0.4/higlass_schema/cli.py
+│ ├── +++ higlass_schema-0.0.6/higlass_schema/cli.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,40 +1,40 @@
+│ │  import argparse
+│ │  import sys
+│ │  
+│ │ -from .schema import schema_json, Viewconf, View, Track
+│ │ -
+│ │  from pydantic import ValidationError
+│ │ -
+│ │  from rich.console import Console
+│ │  
+│ │ +from .schema import Track, View, Viewconf, schema_json
+│ │ +
+│ │  console = Console()
+│ │  
+│ │  
+│ │  def export(_: argparse.Namespace) -> None:
+│ │      console.print_json(schema_json(indent=2))
+│ │  
+│ │  
+│ │  def check(args: argparse.Namespace) -> None:
+│ │      try:
+│ │          if args.path == "-":
+│ │              raw = "\n".join(sys.stdin.readlines())
+│ │              Viewconf[View[Track]].parse_raw(raw)
+│ │          else:
+│ │              Viewconf[View[Track]].parse_file(args.path)
+│ │ -        console.print("✅ Valid viewconf.", style="green")
+│ │ +        console.print("✅ valid viewconf.", style="green")
+│ │      except ValidationError:
+│ │ +        msg = "❌ Invalid viewconf."
+│ │          if args.verbose:
+│ │ -            console.print("❌ invalid viewconf.", style="yellow")
+│ │ +            console.print(msg, style="yellow")
+│ │              console.print_exception()
+│ │ -        else:
+│ │ -            console.print(
+│ │ -                "❌ Invalid viewconf. Run [white]`hgschema check --verbose`[/white] for more details.",
+│ │ -                style="yellow",
+│ │ -            )
+│ │ +
+│ │ +        console.print(
+│ │ +            f"{msg} Run [white]`hgschema check --verbose`[/white] for more details.",
+│ │ +            style="yellow",
+│ │ +        )
+│ │          sys.exit(1)
+│ │  
+│ │  
+│ │  def main():
+│ │      parser = argparse.ArgumentParser()
+│ │      subparsers = parser.add_subparsers(dest="command")
+│ │      subparsers.required = True
+│ │   --- higlass-schema-0.0.4/higlass_schema/schema.py
+│ ├── +++ higlass_schema-0.0.6/higlass_schema/schema.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,9 +1,7 @@
+│ │ -from __future__ import annotations
+│ │ -
+│ │  import json
+│ │  from collections import OrderedDict
+│ │  from typing import (
+│ │      Any,
+│ │      Dict,
+│ │      Generator,
+│ │      Generic,
+│ │ @@ -14,39 +12,34 @@
+│ │      Union,
+│ │  )
+│ │  
+│ │  from pydantic import BaseModel as PydanticBaseModel
+│ │  from pydantic import Extra, Field
+│ │  from pydantic.class_validators import root_validator
+│ │  from pydantic.generics import GenericModel as PydanticGenericModel
+│ │ -from typing_extensions import Literal, TypedDict, Annotated
+│ │ +from typing_extensions import Annotated, Literal, TypedDict
+│ │  
+│ │  from .utils import exclude_properties_titles, get_schema_of, simplify_enum_schema
+│ │ -import functools
+│ │  
+│ │  
+│ │  # Override Basemodel
+│ │  class BaseModel(PydanticBaseModel):
+│ │      class Config:
+│ │          # wether __setattr__ should perform validation
+│ │          validate_assignment = True
+│ │          # exclude titles by defualt
+│ │          schema_extra = staticmethod(lambda s, _: exclude_properties_titles(s))
+│ │  
+│ │      # nice repr if printing with rich
+│ │      def __rich_repr__(self):
+│ │          return iter(self)
+│ │  
+│ │ -    # Omit fields which are None by default.
+│ │ -    @functools.wraps(PydanticBaseModel.dict)
+│ │      def dict(self, exclude_none: bool = True, **kwargs):
+│ │          return super().dict(exclude_none=exclude_none, **kwargs)
+│ │  
+│ │ -    # Omit fields which are None by default.
+│ │ -    @functools.wraps(PydanticBaseModel.json)
+│ │      def json(self, exclude_none: bool = True, **kwargs):
+│ │          return super().json(exclude_none=exclude_none, **kwargs)
+│ │  
+│ │  
+│ │  # Override Defaults for generic models
+│ │  class GenericModel(PydanticGenericModel):
+│ │      class Config:
+│ │ @@ -55,21 +48,17 @@
+│ │          # exclude titles by defualt
+│ │          schema_extra = staticmethod(lambda s, _: exclude_properties_titles(s))
+│ │  
+│ │      # nice repr if printing with rich
+│ │      def __rich_repr__(self):
+│ │          return iter(self)
+│ │  
+│ │ -    # Omit fields which are None by default.
+│ │ -    @functools.wraps(PydanticBaseModel.dict)
+│ │      def dict(self, exclude_none: bool = True, **kwargs):
+│ │          return super().dict(exclude_none=exclude_none, **kwargs)
+│ │  
+│ │ -    # Omit fields which are None by default.
+│ │ -    @functools.wraps(PydanticBaseModel.json)
+│ │      def json(self, exclude_none: bool = True, **kwargs):
+│ │          return super().json(exclude_none=exclude_none, **kwargs)
+│ │  
+│ │  
+│ │  ##################################################
+│ │  # General                                        #
+│ │  ##################################################
+│ │ @@ -142,14 +131,15 @@
+│ │  # This could probably be implemented generally with
+│ │  # pydantic.generics.Generic/typing.Generic, but we implement
+│ │  # concretely for the different lock types.
+│ │  
+│ │  
+│ │  LockEntry = Tuple[float, float, float]
+│ │  
+│ │ +
+│ │  # We'd rather have tuples in our final model, because a
+│ │  # __root__ model is clunky from a python user perspective.
+│ │  # We create this class to get validation for free in `root_validator`
+│ │  class _LockEntryModel(BaseModel):
+│ │      __root__: LockEntry
+│ │  
+│ │  
+│ │ @@ -411,15 +401,15 @@
+│ │      y: Optional[float] = None
+│ │  
+│ │  
+│ │  class CombinedTrack(BaseTrack[Literal["combined"]]):
+│ │      class Config:
+│ │          extra = Extra.ignore
+│ │  
+│ │ -    contents: List[Track]
+│ │ +    contents: List["Track"]
+│ │      position: Optional[str] = None
+│ │  
+│ │  
+│ │  Track = Union[
+│ │      EnumTrack,
+│ │      CombinedTrack,
+│ │      HeatmapTrack,
+│ │ @@ -540,27 +530,27 @@
+│ │      class Config:
+│ │          extra = Extra.forbid
+│ │          title = "HiGlass viewconf"
+│ │  
+│ │          @staticmethod
+│ │          def schema_extra(schema: Dict[str, Any], _) -> None:
+│ │              exclude_properties_titles(schema)
+│ │ -            # manually add minItems for views/trackSourceServers
+│ │ +            # manually add minItems for views
+│ │              # because pydantic.conlist breaks generics and Annotated
+│ │              # fields don't added
+│ │ -            for prop in ("views", "trackSourceServers"):
+│ │ +            for prop in ["views"]:
+│ │                  schema["properties"][prop]["minItems"] = 1
+│ │  
+│ │      editable: Optional[bool] = True
+│ │      viewEditable: Optional[bool] = True
+│ │      tracksEditable: Optional[bool] = True
+│ │      zoomFixed: Optional[bool] = None
+│ │      compactLayout: Optional[bool] = None
+│ │      exportViewUrl: Optional[str] = None
+│ │ -    trackSourceServers: Optional[Annotated[List[str], Field(min_items=1)]] = None
+│ │ +    trackSourceServers: Optional[List[str]] = None
+│ │      views: Optional[Annotated[List[ViewT], Field(min_items=1)]] = None
+│ │      zoomLocks: Optional[ZoomLocks] = None
+│ │      locationLocks: Optional[LocationLocks] = None
+│ │      valueScaleLocks: Optional[ValueScaleLocks] = None
+│ │      chromInfoPath: Optional[str] = None
+│ │   --- higlass-schema-0.0.4/higlass_schema/utils.py
+│ ├── +++ higlass_schema-0.0.6/higlass_schema/utils.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -2,15 +2,15 @@
+│ │  
+│ │  from pydantic import BaseModel, schema_of
+│ │  
+│ │  
+│ │  def simplify_schema(root_schema: Dict[str, Any]) -> Dict[str, Any]:
+│ │      """Lift defintion reference to root if only definition"""
+│ │      # type of root is not a reference to a definition
+│ │ -    if not "$ref" in root_schema:
+│ │ +    if "$ref" not in root_schema:
+│ │          return root_schema
+│ │  
+│ │      defs = list(root_schema["definitions"].values())
+│ │      if len(defs) != 1:
+│ │          return root_schema
+│ │  
+│ │      return defs[0]
+│ │ @@ -32,15 +32,14 @@
+│ │      exclude_properties_titles(schema)
+│ │      # remove autogenerated title
+│ │      schema.pop("title")
+│ │      return schema
+│ │  
+│ │  
+│ │  def simplify_enum_schema(schema: Dict[str, Any]):
+│ │ -
+│ │      # reduce union of enums into single enum
+│ │      if "anyOf" in schema:
+│ │          enum = []
+│ │          for entry in schema["anyOf"]:
+│ │              assert "enum" in entry
+│ │              enum.extend(entry["enum"])
+│ │          return {"enum": enum}

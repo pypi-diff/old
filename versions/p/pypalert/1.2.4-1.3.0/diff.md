@@ -1,0 +1,168 @@
+# Comparing `tmp/pypalert-1.2.4.tar.gz` & `tmp/pypalert-1.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pypalert-1.2.4.tar", last modified: Fri Mar 31 07:28:16 2023, max compression
++gzip compressed data, was "pypalert-1.3.0.tar", last modified: Fri Apr  7 01:31:04 2023, max compression
+```
+
+## Comparing `pypalert-1.2.4.tar` & `pypalert-1.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,14 @@
+-drwxrwxrwx   0        0        0        0 2023-03-31 07:28:16.084490 pypalert-1.2.4/
+--rw-rw-rw-   0        0        0      420 2023-03-31 07:27:40.000000 pypalert-1.2.4/LICENSE.rst
+--rw-rw-rw-   0        0        0      235 2023-03-31 07:28:16.085498 pypalert-1.2.4/PKG-INFO
+--rw-rw-rw-   0        0        0      584 2023-03-31 07:27:25.000000 pypalert-1.2.4/README.md
+--rw-rw-rw-   0        0        0      115 2023-03-31 07:28:16.086496 pypalert-1.2.4/setup.cfg
+--rw-rw-rw-   0        0        0      343 2023-03-31 07:28:00.000000 pypalert-1.2.4/setup.py
+-drwxrwxrwx   0        0        0        0 2023-03-31 07:28:16.049272 pypalert-1.2.4/src/
+-drwxrwxrwx   0        0        0        0 2023-03-31 07:28:16.065298 pypalert-1.2.4/src/pypalert/
+--rw-rw-rw-   0        0        0        0 2023-03-24 06:06:44.000000 pypalert-1.2.4/src/pypalert/__init__.py
+--rw-rw-rw-   0        0        0    11837 2023-03-31 07:28:01.000000 pypalert-1.2.4/src/pypalert/pypalert.py
+-drwxrwxrwx   0        0        0        0 2023-03-31 07:28:16.084490 pypalert-1.2.4/src/pypalert.egg-info/
+--rw-rw-rw-   0        0        0      235 2023-03-31 07:28:16.000000 pypalert-1.2.4/src/pypalert.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      234 2023-03-31 07:28:16.000000 pypalert-1.2.4/src/pypalert.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-03-31 07:28:16.000000 pypalert-1.2.4/src/pypalert.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        9 2023-03-31 07:28:16.000000 pypalert-1.2.4/src/pypalert.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-07 01:31:04.690430 pypalert-1.3.0/
++-rw-rw-rw-   0        0        0      420 2023-03-31 07:27:40.000000 pypalert-1.3.0/LICENSE.rst
++-rw-rw-rw-   0        0        0      235 2023-04-07 01:31:04.694842 pypalert-1.3.0/PKG-INFO
++-rw-rw-rw-   0        0        0      115 2023-04-07 01:31:04.694842 pypalert-1.3.0/setup.cfg
++-rw-rw-rw-   0        0        0      343 2023-04-07 01:30:49.000000 pypalert-1.3.0/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 01:31:04.652503 pypalert-1.3.0/src/
++drwxrwxrwx   0        0        0        0 2023-04-07 01:31:04.673272 pypalert-1.3.0/src/pypalert/
++-rw-rw-rw-   0        0        0        0 2023-03-24 06:06:44.000000 pypalert-1.3.0/src/pypalert/__init__.py
++-rw-rw-rw-   0        0        0    11846 2023-04-07 01:30:08.000000 pypalert-1.3.0/src/pypalert/pypalert.py
++drwxrwxrwx   0        0        0        0 2023-04-07 01:31:04.690430 pypalert-1.3.0/src/pypalert.egg-info/
++-rw-rw-rw-   0        0        0      235 2023-04-07 01:31:04.000000 pypalert-1.3.0/src/pypalert.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      224 2023-04-07 01:31:04.000000 pypalert-1.3.0/src/pypalert.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 01:31:04.000000 pypalert-1.3.0/src/pypalert.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        9 2023-04-07 01:31:04.000000 pypalert-1.3.0/src/pypalert.egg-info/top_level.txt
+```
+
+### Comparing `pypalert-1.2.4/src/pypalert/pypalert.py` & `pypalert-1.3.0/src/pypalert/pypalert.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -59,16 +59,18 @@
+                 #print(string)
+                 tmp = tmp + string
+                 #print("-----T="+str(len(tmp)))  
+                 #XYZstorage(string[70:])
+                 CRC16 = tmp[-4:]
+                 #print(len(tmp))
+                 
++                tmp_header = int(tmp[12:14], 16)
++                tmp_header = (tmp_header + 11) * 2
+                 #header
+-                header =tmp[:94]
++                header =tmp[:tmp_header]
+                 UTime = header[30:32] + header[28:30] + header[26:28] + header[24:26] + header[22:24]  
+                 UTime = int(UTime, base=16)
+                 #print(UTime)
+                 SPS = header[48:50] + header [46:48]
+                 SPS = int(SPS, base=16)
+                 
+                 scale = header [44:46] + header[42:44] + header [40:42] + header[38:40] 
+@@ -77,25 +79,22 @@
+                 binary_number = bytes.fromhex(scale)
+                 
+                 scale = struct.unpack('!f', binary_number)[0]
+                 scale = format(scale,'.2f')
+                 #print("scale" + str(scale))
+ 
+                 #print(CRC16)
+-                XYZdata = tmp[94:-4]
+-                #print("XYZdata---------"+str(len(XYZdata)))
+-                #print(header[50:52])
+-                if(header[50:52] == '03'):
++                XYZdata = tmp[tmp_header:-4]
++                #print(header[52:54])
++                if(header[52:54] == '03'):
+                     self.S303_3Axis = True
+-                elif(header[50:52] == '04'):
++                elif(header[52:54] == '04'):
+                     self.S303_3Axis = False
+                 
+                 self.UT.append(UTime)
+-                #print(len(self.UT))
+-                #print(self.UT)
+                 self.SPS = SPS
+                 self.scale = scale
+ 
+                 if(self.S303_3Axis):
+                     xconnect, yconnect, zconnect = data_cut(XYZdata,self.S303_3Axis)
+                     self.X.extend(xconnect)
+                     self.Y.extend(yconnect)
+@@ -285,14 +284,15 @@
+             if(self.connect_success == True):
+                 print("Port Wrong, so Nothing in list")
+             else:
+                 print("Connect Fail, so Nothing in list")
+ 
+ 
+ def data_cut(XYZstr,S303_3Axis):
++    #print(S303_3Axis)
+     xdata_cut = []
+     ydata_cut = []
+     zdata_cut = []
+     fdata_cut = []
+     flag = 0
+     #Little Endian 轉回正常
+     XYZhex = ''
+@@ -331,40 +331,40 @@
+             elif(flag == 1):
+                 ydata_cut.append(XYZdecimal)
+                 flag = flag +1
+             elif(flag == 2):
+                 zdata_cut.append(XYZdecimal)
+                 flag = flag +1
+             elif(flag == 3):
+-                zdata_cut.append(XYZdecimal)
++                fdata_cut.append(XYZdecimal)
+                 flag = 0
+     
+     
+     #print("XYZstr: " + str(len(XYZstr)))
+     if(S303_3Axis):
+         return xdata_cut, ydata_cut, zdata_cut
+     else:
+         return xdata_cut, ydata_cut, zdata_cut, fdata_cut
+ 
+ 
+ 
+ if __name__ == '__main__':
+     XXXX = ModbusData('10.0.0.50',502)
+-    aaaa = ModbusData('10.0.0.180',502)    
++    aaaa = ModbusData('10.0.0.68',502)
++    """aaaa = ModbusData('10.0.0.180',502)    
+     print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' + str(datetime.datetime.now()))
+ 
+     time.sleep(2)
+     x, n= XXXX.get_NsecondChannel3Data(10)
+     print(len(x))
+     print(len(n))
+-
+-    '''
++    """
++    
+     while True:
+         #bbbb = aaaa.get_Now_Channel1()
+         #data = XXXX.get_Now_Channel1()
+-        print("11111get_Now_UnixTime:", XXXX.get_Now_UnixTime())
+-
++        print(len(aaaa.get_Now_Channel4()))
++        print(len(XXXX.get_Now_Channel4()))
+         #print("Current data:", len(my_obj.get_Now_UnixTime()))
+-        print("22222get_Now_UnixTime:", aaaa.get_Now_UnixTime())
+         time.sleep(1)
+-    '''
++
+```
+
