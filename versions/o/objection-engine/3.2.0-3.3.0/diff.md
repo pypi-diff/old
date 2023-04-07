@@ -1,0 +1,297 @@
+# Comparing `tmp/objection_engine-3.2.0.tar.gz` & `tmp/objection_engine-3.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "objection_engine-3.2.0.tar", max compression
++gzip compressed data, was "objection_engine-3.3.0.tar", max compression
+```
+
+## Comparing `objection_engine-3.2.0.tar` & `objection_engine-3.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,17 @@
+--rw-r--r--   0        0        0     1096 2022-01-12 19:37:22.419606 objection_engine-3.2.0/LICENSE
+--rw-r--r--   0        0        0      135 2022-05-29 17:30:26.700912 objection_engine-3.2.0/objection_engine/__init__.py
+--rw-r--r--   0        0        0    24776 2022-11-17 19:41:33.857546 objection_engine-3.2.0/objection_engine/anim.py
+--rw-r--r--   0        0        0      940 2022-11-01 11:40:09.344859 objection_engine-3.2.0/objection_engine/beans/comment.py
+--rw-r--r--   0        0        0      419 2022-05-29 17:30:27.180226 objection_engine-3.2.0/objection_engine/beans/comment_bridge.py
+--rw-r--r--   0        0        0     1256 2022-11-17 19:41:33.868543 objection_engine-3.2.0/objection_engine/beans/font_constants.py
+--rw-r--r--   0        0        0     3168 2022-11-06 19:33:29.271936 objection_engine-3.2.0/objection_engine/beans/font_tools.py
+--rw-r--r--   0        0        0     3624 2022-11-17 19:41:33.881546 objection_engine-3.2.0/objection_engine/beans/img.py
+--rw-r--r--   0        0        0      764 2022-05-29 17:30:27.193330 objection_engine-3.2.0/objection_engine/beans/scene.py
+--rw-r--r--   0        0        0     5375 2022-11-17 19:41:33.899544 objection_engine-3.2.0/objection_engine/beans/text.py
+--rw-r--r--   0        0        0     1677 2022-06-08 19:45:44.250612 objection_engine-3.2.0/objection_engine/beans/video.py
+--rw-r--r--   0        0        0     7237 2022-11-01 11:40:09.352908 objection_engine-3.2.0/objection_engine/constants.py
+--rw-r--r--   0        0        0     7044 2022-11-17 19:41:33.913543 objection_engine-3.2.0/objection_engine/parse_tags.py
+--rw-r--r--   0        0        0     3044 2022-05-29 17:30:27.255795 objection_engine-3.2.0/objection_engine/polarity_analysis.py
+--rw-r--r--   0        0        0     4268 2022-11-17 19:41:49.757994 objection_engine-3.2.0/objection_engine/renderer.py
+--rw-r--r--   0        0        0     4373 2022-11-17 19:41:49.759995 objection_engine-3.2.0/objection_engine/utils.py
+--rw-r--r--   0        0        0      737 2022-11-17 19:42:40.583129 objection_engine-3.2.0/pyproject.toml
+--rw-r--r--   0        0        0     1090 1970-01-01 00:00:00.000000 objection_engine-3.2.0/setup.py
+--rw-r--r--   0        0        0     1092 1970-01-01 00:00:00.000000 objection_engine-3.2.0/PKG-INFO
++-rw-r--r--   0        0        0     1075 2021-10-15 10:08:59.067420 objection_engine-3.3.0/LICENSE
++-rw-r--r--   0        0        0    19025 2023-04-06 23:37:25.489269 objection_engine-3.3.0/objection_engine/MovieKit.py
++-rw-r--r--   0        0        0      132 2023-03-22 16:25:45.063760 objection_engine-3.3.0/objection_engine/__init__.py
++-rw-r--r--   0        0        0    58533 2023-04-06 23:37:25.489269 objection_engine-3.3.0/objection_engine/ace_attorney_scene.py
++-rw-r--r--   0        0        0      837 2023-04-06 23:37:25.493269 objection_engine-3.3.0/objection_engine/beans/comment.py
++-rw-r--r--   0        0        0      388 2023-04-06 23:37:25.493269 objection_engine-3.3.0/objection_engine/beans/text.py
++-rw-r--r--   0        0        0     1406 2023-04-06 23:37:25.493269 objection_engine-3.3.0/objection_engine/font_constants.py
++-rw-r--r--   0        0        0     3077 2023-04-06 23:37:25.493269 objection_engine-3.3.0/objection_engine/font_tools.py
++-rw-r--r--   0        0        0    10021 2023-04-06 23:37:25.493269 objection_engine-3.3.0/objection_engine/loading.py
++-rw-r--r--   0        0        0     4344 2023-04-06 23:37:25.493269 objection_engine-3.3.0/objection_engine/make_movie.py
++-rw-r--r--   0        0        0      670 2023-04-06 23:37:25.493269 objection_engine-3.3.0/objection_engine/math_helpers.py
++-rw-r--r--   0        0        0     9008 2023-04-06 23:37:25.493269 objection_engine-3.3.0/objection_engine/parse_tags.py
++-rw-r--r--   0        0        0       43 2023-04-06 23:37:25.493269 objection_engine-3.3.0/objection_engine/renderer.py
++-rw-r--r--   0        0        0     1063 2023-04-06 23:37:25.493269 objection_engine-3.3.0/objection_engine/tag_macros.py
++-rw-r--r--   0        0        0     2784 2023-04-06 23:37:25.493269 objection_engine-3.3.0/objection_engine/utils.py
++-rw-r--r--   0        0        0     1048 2023-04-06 23:37:25.493269 objection_engine-3.3.0/pyproject.toml
++-rw-r--r--   0        0        0     1407 1970-01-01 00:00:00.000000 objection_engine-3.3.0/PKG-INFO
+```
+
+### Comparing `objection_engine-3.2.0/LICENSE` & `objection_engine-3.3.0/LICENSE`
+
+ * *Ordering differences only*
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,21 +1,21 @@
+-MIT License
+-
+-Copyright (c) 2021 Luis Mayo Valbuena
+-
+-Permission is hereby granted, free of charge, to any person obtaining a copy
+-of this software and associated documentation files (the "Software"), to deal
+-in the Software without restriction, including without limitation the rights
+-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-copies of the Software, and to permit persons to whom the Software is
+-furnished to do so, subject to the following conditions:
+-
+-The above copyright notice and this permission notice shall be included in all
+-copies or substantial portions of the Software.
+-
+-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-SOFTWARE.
++MIT License
++
++Copyright (c) 2021 Luis Mayo Valbuena
++
++Permission is hereby granted, free of charge, to any person obtaining a copy
++of this software and associated documentation files (the "Software"), to deal
++in the Software without restriction, including without limitation the rights
++to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++copies of the Software, and to permit persons to whom the Software is
++furnished to do so, subject to the following conditions:
++
++The above copyright notice and this permission notice shall be included in all
++copies or substantial portions of the Software.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
++SOFTWARE.
+```
+
+### Comparing `objection_engine-3.2.0/objection_engine/beans/font_tools.py` & `objection_engine-3.3.0/objection_engine/font_tools.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,92 +1,92 @@
+-from objection_engine.beans.font_constants import FONT_ARRAY
+-from PIL import ImageFont
+-from typing import List, Dict, Union
+-from textwrap import wrap
+-import spacy
+-
+-nlp = spacy.blank("xx")
+-nlp.add_pipe('sentencizer')
+-
+-try:
+-    from fontTools.ttLib import TTFont
+-except:
+-    from fonttools.ttLib import TTFont
+-
+-def get_text_width(text, font_size = 15, font = None):
+-    if font is None:
+-        font = get_best_font(text, FONT_ARRAY)
+-    font_path = font['path']
+-    font_obj = ImageFont.truetype(font_path, font_size)
+-    return font_obj.getlength(text)
+-
+-def get_font_score(font, text):
+-    font_path = font['path']
+-    font = TTFont(font_path)
+-
+-    # We check all chars for presence on the font
+-    valid_chars = 0
+-    for char in text:
+-        # We check if the char is in any table of the font
+-        for table in font['cmap'].tables:
+-            if ord(char) in table.cmap:
+-                valid_chars += 1
+-                break
+-    return valid_chars
+-
+-def get_best_font(text, font_array):
+-    best_font = font_array[-1]
+-    best_font_points = 0
+-    text = text.replace('\n', '').replace('\r', '').replace('\t', '')
+-    for font in font_array:
+-        pts = get_font_score(font, text)
+-        if pts > best_font_points:
+-            best_font_points = pts
+-            best_font = font
+-        if best_font_points >= len(text):
+-            return font
+-    print(f'WARNING. NO OPTIMAL FONT FOUND, font: {best_font}, font score: {best_font_points}/{len(text)}, text \"{text}\"\n')
+-    return best_font
+-
+-
+-def fit_words_within_width(words: Union[list[str], str], font: ImageFont.FreeTypeFont, insert_space: bool):
+-    new_text = ""
+-    space = " " if insert_space else ""
+-    for word in words:
+-        last_sentence = new_text.split("\n")[-1] + word + space
+-        if font.getlength(text=last_sentence) >= 240:
+-            if new_text.split("\n")[-1] != "":
+-                new_text += "\n"
+-            new_text += fit_words_within_width(word, font, False) + space
+-        else:
+-            new_text += word + space
+-
+-    return new_text
+-
+-def split_str_into_newlines(text: str, font_path, font_size):
+-    font = ImageFont.truetype(font_path, font_size)
+-    words = text.split(" ")
+-    return fit_words_within_width(words, font, True)
+-
+-
+-def split_with_joined_sentences(text: str):
+-    """
+-    """
+-    tokens = nlp(text)
+-    sentences = [sent.text.strip() for sent in tokens.sents]
+-    joined_sentences = []
+-    i = 0
+-    while i < len(sentences):
+-        sentence = sentences[i]
+-        if len(sentence) > 85: # Long sentences should be wrapped to multiple shorter lines
+-            text_chunks = [chunk for chunk in wrap(sentence, 85)]
+-            joined_sentences = [*joined_sentences, *text_chunks]
+-            i += 1
+-        else:
+-            if i + 1 < len(sentences) and len(f"{sentence} {sentences[i+1]}") <= 85: # Maybe we can join two different sentences
+-                joined_sentences.append(sentence + " " + sentences[i+1])
+-                i += 2
+-            else:
+-                joined_sentences.append(sentence)
+-                i += 1
+-
++from .font_constants import FONT_ARRAY
++from PIL import ImageFont
++from typing import List, Dict, Union
++from textwrap import wrap
++import spacy
++
++nlp = spacy.blank("xx")
++nlp.add_pipe('sentencizer')
++
++try:
++    from fontTools.ttLib import TTFont
++except:
++    from fonttools.ttLib import TTFont
++
++def get_text_width(text, font_size = 15, font = None):
++    if font is None:
++        font = get_best_font(text, FONT_ARRAY)
++    font_path = font['path']
++    font_obj = ImageFont.truetype(font_path, font_size)
++    return font_obj.getlength(text)
++
++def get_font_score(font, text):
++    font_path = font['path']
++    font = TTFont(font_path)
++
++    # We check all chars for presence on the font
++    valid_chars = 0
++    for char in text:
++        # We check if the char is in any table of the font
++        for table in font['cmap'].tables:
++            if ord(char) in table.cmap:
++                valid_chars += 1
++                break
++    return valid_chars
++
++def get_best_font(text, font_array):
++    best_font = font_array[-1]
++    best_font_points = 0
++    text = text.replace('\n', '').replace('\r', '').replace('\t', '').replace('\u200B', '')
++    for font in font_array:
++        pts = get_font_score(font, text)
++        if pts > best_font_points:
++            best_font_points = pts
++            best_font = font
++        if best_font_points >= len(text):
++            return font
++    print(f'WARNING. NO OPTIMAL FONT FOUND, font: {best_font}, font score: {best_font_points}/{len(text)}, text \"{text}\"\n')
++    return best_font
++
++
++def fit_words_within_width(words: Union[list[str], str], font: ImageFont.FreeTypeFont, insert_space: bool):
++    new_text = ""
++    space = " " if insert_space else ""
++    for word in words:
++        last_sentence = new_text.split("\n")[-1] + word + space
++        if font.getlength(text=last_sentence) >= 240:
++            if new_text.split("\n")[-1] != "":
++                new_text += "\n"
++            new_text += fit_words_within_width(word, font, False) + space
++        else:
++            new_text += word + space
++
++    return new_text
++
++def split_str_into_newlines(text: str, font_path, font_size):
++    font = ImageFont.truetype(font_path, font_size)
++    words = text.split(" ")
++    return fit_words_within_width(words, font, True)
++
++
++def split_with_joined_sentences(text: str):
++    """
++    """
++    tokens = nlp(text)
++    sentences = [sent.text.strip() for sent in tokens.sents]
++    joined_sentences = []
++    i = 0
++    while i < len(sentences):
++        sentence = sentences[i]
++        if len(sentence) > 85: # Long sentences should be wrapped to multiple shorter lines
++            text_chunks = [chunk for chunk in wrap(sentence, 85)]
++            joined_sentences = [*joined_sentences, *text_chunks]
++            i += 1
++        else:
++            if i + 1 < len(sentences) and len(f"{sentence} {sentences[i+1]}") <= 85: # Maybe we can join two different sentences
++                joined_sentences.append(sentence + " " + sentences[i+1])
++                i += 2
++            else:
++                joined_sentences.append(sentence)
++                i += 1
++
+     return joined_sentences
+```
+

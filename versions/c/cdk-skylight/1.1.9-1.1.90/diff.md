@@ -1,0 +1,249 @@
+# Comparing `tmp/cdk-skylight-1.1.9.tar.gz` & `tmp/cdk-skylight-1.1.90.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "cdk-skylight-1.1.9.tar", last modified: Wed Jan 11 00:17:11 2023, max compression
++gzip compressed data, was "cdk-skylight-1.1.90.tar", last modified: Fri Apr  7 00:13:40 2023, max compression
+```
+
+## Comparing `cdk-skylight-1.1.9.tar` & `cdk-skylight-1.1.90.tar`
+
+### file list
+
+```diff
+@@ -1,27 +1,27 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-11 00:17:11.343539 cdk-skylight-1.1.9/
+--rw-r--r--   0 runner    (1001) docker     (123)    11358 2023-01-11 00:16:54.000000 cdk-skylight-1.1.9/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)       23 2023-01-11 00:16:54.000000 cdk-skylight-1.1.9/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     8224 2023-01-11 00:17:11.343539 cdk-skylight-1.1.9/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     7339 2023-01-11 00:16:54.000000 cdk-skylight-1.1.9/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)      236 2023-01-11 00:16:54.000000 cdk-skylight-1.1.9/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-01-11 00:17:11.343539 cdk-skylight-1.1.9/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1802 2023-01-11 00:16:54.000000 cdk-skylight-1.1.9/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-11 00:17:11.339539 cdk-skylight-1.1.9/src/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-11 00:17:11.339539 cdk-skylight-1.1.9/src/cdk_skylight/
+--rw-r--r--   0 runner    (1001) docker     (123)     7778 2023-01-11 00:16:54.000000 cdk-skylight-1.1.9/src/cdk_skylight/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-11 00:17:11.343539 cdk-skylight-1.1.9/src/cdk_skylight/_jsii/
+--rw-r--r--   0 runner    (1001) docker     (123)      391 2023-01-11 00:16:54.000000 cdk-skylight-1.1.9/src/cdk_skylight/_jsii/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    79719 2023-01-11 00:16:54.000000 cdk-skylight-1.1.9/src/cdk_skylight/_jsii/cdk-skylight@1.1.9.jsii.tgz
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-11 00:17:11.343539 cdk-skylight-1.1.9/src/cdk_skylight/authentication/
+--rw-r--r--   0 runner    (1001) docker     (123)    28299 2023-01-11 00:16:54.000000 cdk-skylight-1.1.9/src/cdk_skylight/authentication/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-11 00:17:11.343539 cdk-skylight-1.1.9/src/cdk_skylight/compute/
+--rw-r--r--   0 runner    (1001) docker     (123)    50139 2023-01-11 00:16:54.000000 cdk-skylight-1.1.9/src/cdk_skylight/compute/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-11 00:16:54.000000 cdk-skylight-1.1.9/src/cdk_skylight/py.typed
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-11 00:17:11.343539 cdk-skylight-1.1.9/src/cdk_skylight/storage/
+--rw-r--r--   0 runner    (1001) docker     (123)    17481 2023-01-11 00:16:54.000000 cdk-skylight-1.1.9/src/cdk_skylight/storage/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-11 00:17:11.343539 cdk-skylight-1.1.9/src/cdk_skylight.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     8224 2023-01-11 00:17:10.000000 cdk-skylight-1.1.9/src/cdk_skylight.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      511 2023-01-11 00:17:11.000000 cdk-skylight-1.1.9/src/cdk_skylight.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-11 00:17:10.000000 cdk-skylight-1.1.9/src/cdk_skylight.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      111 2023-01-11 00:17:11.000000 cdk-skylight-1.1.9/src/cdk_skylight.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       13 2023-01-11 00:17:11.000000 cdk-skylight-1.1.9/src/cdk_skylight.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:13:40.035822 cdk-skylight-1.1.90/
++-rw-r--r--   0 runner    (1001) docker     (123)    11358 2023-04-07 00:13:25.000000 cdk-skylight-1.1.90/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-07 00:13:25.000000 cdk-skylight-1.1.90/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     8256 2023-04-07 00:13:40.035822 cdk-skylight-1.1.90/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     7339 2023-04-07 00:13:25.000000 cdk-skylight-1.1.90/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)      234 2023-04-07 00:13:25.000000 cdk-skylight-1.1.90/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 00:13:40.035822 cdk-skylight-1.1.90/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1854 2023-04-07 00:13:25.000000 cdk-skylight-1.1.90/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:13:40.031822 cdk-skylight-1.1.90/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:13:40.035822 cdk-skylight-1.1.90/src/cdk_skylight/
++-rw-r--r--   0 runner    (1001) docker     (123)     7778 2023-04-07 00:13:25.000000 cdk-skylight-1.1.90/src/cdk_skylight/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:13:40.035822 cdk-skylight-1.1.90/src/cdk_skylight/_jsii/
++-rw-r--r--   0 runner    (1001) docker     (123)      393 2023-04-07 00:13:25.000000 cdk-skylight-1.1.90/src/cdk_skylight/_jsii/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    86449 2023-04-07 00:13:25.000000 cdk-skylight-1.1.90/src/cdk_skylight/_jsii/cdk-skylight@1.1.90.jsii.tgz
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:13:40.035822 cdk-skylight-1.1.90/src/cdk_skylight/authentication/
++-rw-r--r--   0 runner    (1001) docker     (123)    28299 2023-04-07 00:13:25.000000 cdk-skylight-1.1.90/src/cdk_skylight/authentication/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:13:40.035822 cdk-skylight-1.1.90/src/cdk_skylight/compute/
++-rw-r--r--   0 runner    (1001) docker     (123)    50139 2023-04-07 00:13:25.000000 cdk-skylight-1.1.90/src/cdk_skylight/compute/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 00:13:25.000000 cdk-skylight-1.1.90/src/cdk_skylight/py.typed
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:13:40.035822 cdk-skylight-1.1.90/src/cdk_skylight/storage/
++-rw-r--r--   0 runner    (1001) docker     (123)    17481 2023-04-07 00:13:25.000000 cdk-skylight-1.1.90/src/cdk_skylight/storage/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:13:40.035822 cdk-skylight-1.1.90/src/cdk_skylight.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     8256 2023-04-07 00:13:40.000000 cdk-skylight-1.1.90/src/cdk_skylight.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      512 2023-04-07 00:13:40.000000 cdk-skylight-1.1.90/src/cdk_skylight.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 00:13:40.000000 cdk-skylight-1.1.90/src/cdk_skylight.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      111 2023-04-07 00:13:40.000000 cdk-skylight-1.1.90/src/cdk_skylight.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       13 2023-04-07 00:13:40.000000 cdk-skylight-1.1.90/src/cdk_skylight.egg-info/top_level.txt
+```
+
+### Comparing `cdk-skylight-1.1.9/LICENSE` & `cdk-skylight-1.1.90/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `cdk-skylight-1.1.9/PKG-INFO` & `cdk-skylight-1.1.90/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,24 +1,24 @@
+ Metadata-Version: 2.1
+ Name: cdk-skylight
+-Version: 1.1.9
++Version: 1.1.90
+ Summary: cdk-skylight
+ Home-page: https://github.com/cdklabs/cdk-skylight.git
+ Author: Dudu (David) Twizer<dudut@amazon.com>
+ License: Apache-2.0
+ Project-URL: Source, https://github.com/cdklabs/cdk-skylight.git
+-Platform: UNKNOWN
+ Classifier: Intended Audience :: Developers
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: JavaScript
+ Classifier: Programming Language :: Python :: 3 :: Only
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Classifier: Typing :: Typed
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: License :: OSI Approved
+ Requires-Python: ~=3.7
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+@@ -198,9 +198,7 @@
+ });
+ 
+ myNodes.addAdDependency(secretObject);
+ myNodes.addStorageDependency(secretObject, storageMount);
+ myNodes.addEKSDependency(eks_cluster.eksCluster);
+ myNodes.addLocalCredFile(secretObject, 'myEKSNodes', 'myWebApp');
+ ```
+-
+-
+```
+
+### Comparing `cdk-skylight-1.1.9/README.md` & `cdk-skylight-1.1.90/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `cdk-skylight-1.1.9/setup.py` & `cdk-skylight-1.1.90/setup.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import json
+ import setuptools
+ 
+ kwargs = json.loads(
+     """
+ {
+     "name": "cdk-skylight",
+-    "version": "1.1.9",
++    "version": "1.1.90",
+     "description": "cdk-skylight",
+     "license": "Apache-2.0",
+     "url": "https://github.com/cdklabs/cdk-skylight.git",
+     "long_description_content_type": "text/markdown",
+     "author": "Dudu (David) Twizer<dudut@amazon.com>",
+     "bdist_wheel": {
+         "universal": true
+@@ -25,37 +25,38 @@
+         "cdk_skylight._jsii",
+         "cdk_skylight.authentication",
+         "cdk_skylight.compute",
+         "cdk_skylight.storage"
+     ],
+     "package_data": {
+         "cdk_skylight._jsii": [
+-            "cdk-skylight@1.1.9.jsii.tgz"
++            "cdk-skylight@1.1.90.jsii.tgz"
+         ],
+         "cdk_skylight": [
+             "py.typed"
+         ]
+     },
+     "python_requires": "~=3.7",
+     "install_requires": [
+         "aws-cdk-lib>=2.32.0, <3.0.0",
+         "constructs>=10.0.5, <11.0.0",
+-        "jsii>=1.73.0, <2.0.0",
++        "jsii>=1.80.0, <2.0.0",
+         "publication>=0.0.3",
+         "typeguard~=2.13.3"
+     ],
+     "classifiers": [
+         "Intended Audience :: Developers",
+         "Operating System :: OS Independent",
+         "Programming Language :: JavaScript",
+         "Programming Language :: Python :: 3 :: Only",
+         "Programming Language :: Python :: 3.7",
+         "Programming Language :: Python :: 3.8",
+         "Programming Language :: Python :: 3.9",
+         "Programming Language :: Python :: 3.10",
++        "Programming Language :: Python :: 3.11",
+         "Typing :: Typed",
+         "Development Status :: 5 - Production/Stable",
+         "License :: OSI Approved"
+     ],
+     "scripts": []
+ }
+ """
+```
+
+### Comparing `cdk-skylight-1.1.9/src/cdk_skylight/__init__.py` & `cdk-skylight-1.1.90/src/cdk_skylight/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cdk-skylight-1.1.9/src/cdk_skylight/authentication/__init__.py` & `cdk-skylight-1.1.90/src/cdk_skylight/authentication/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cdk-skylight-1.1.9/src/cdk_skylight/compute/__init__.py` & `cdk-skylight-1.1.90/src/cdk_skylight/compute/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cdk-skylight-1.1.9/src/cdk_skylight/storage/__init__.py` & `cdk-skylight-1.1.90/src/cdk_skylight/storage/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cdk-skylight-1.1.9/src/cdk_skylight.egg-info/PKG-INFO` & `cdk-skylight-1.1.90/src/cdk_skylight.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,24 +1,24 @@
+ Metadata-Version: 2.1
+ Name: cdk-skylight
+-Version: 1.1.9
++Version: 1.1.90
+ Summary: cdk-skylight
+ Home-page: https://github.com/cdklabs/cdk-skylight.git
+ Author: Dudu (David) Twizer<dudut@amazon.com>
+ License: Apache-2.0
+ Project-URL: Source, https://github.com/cdklabs/cdk-skylight.git
+-Platform: UNKNOWN
+ Classifier: Intended Audience :: Developers
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: JavaScript
+ Classifier: Programming Language :: Python :: 3 :: Only
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Classifier: Typing :: Typed
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: License :: OSI Approved
+ Requires-Python: ~=3.7
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+@@ -198,9 +198,7 @@
+ });
+ 
+ myNodes.addAdDependency(secretObject);
+ myNodes.addStorageDependency(secretObject, storageMount);
+ myNodes.addEKSDependency(eks_cluster.eksCluster);
+ myNodes.addLocalCredFile(secretObject, 'myEKSNodes', 'myWebApp');
+ ```
+-
+-
+```
+

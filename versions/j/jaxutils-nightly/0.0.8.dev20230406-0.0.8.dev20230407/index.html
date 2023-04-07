@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/jaxutils-nightly-0.0.8.dev20230406.tar.gz tmp/jaxutils-nightly-0.0.8.dev20230407.tar.gz --html versions/j/jaxutils-nightly/0.0.8.dev20230406-0.0.8.dev20230407/index.html --text versions/j/jaxutils-nightly/0.0.8.dev20230406-0.0.8.dev20230407/diff.txt --markdown versions/j/jaxutils-nightly/0.0.8.dev20230406-0.0.8.dev20230407/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.43 KB</span></div>
+  <div><span class="source">tmp/jaxutils-nightly-0.0.8.dev20230406.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/jaxutils-nightly-0.0.8.dev20230407.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">316 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist/jaxutils-nightly-0.0.8.dev2023040<del>6</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Thu</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>6</del><span class="dp">·</span>00:06:<del>35</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist/jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Fri</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>7</ins><span class="dp">·</span>00:06:<ins>17</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.04 KB</span></div>
+    <div><span class="source">jaxutils-nightly-0.0.8.dev20230406.tar</span> vs.</div>
+    <div id="jaxutils-nightly--.-.-.dev--------.tar"><span class="source">jaxutils-nightly-0.0.8.dev20230407.tar</span>
+      <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.59 KB</span></div>
+      <div id="jaxutils-nightly--.-.-.dev--------.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 20 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>35</del>.<del>133381</del><span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>17</ins>.<ins>491434</ins><span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4448<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>35</del>.<del>133381</del><span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4448<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>17</ins>.<ins>491434</ins><span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2894<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>28</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/README.md</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2894<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>11</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>35</del>.<del>133381</del><span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils/</td><td class="diffline">4 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>17</ins>.<ins>491434</ins><span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils/</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1701<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>28</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils/__init__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1701<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>11</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>509<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>35</del>.<del>133381</del><span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils/_version.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>509<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>17</ins>.<ins>491434</ins><span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils/_version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4944<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>28</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils/config.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4944<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>11</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3831<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>28</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils/data.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3831<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>11</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils/data.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3536<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>28</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils/dict.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3536<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>11</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils/dict.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13713<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>28</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils/parameters.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13713<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>11</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils/parameters.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2802<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>28</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils/pytree.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2802<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>11</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils/pytree.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>35</del>.<del>133381</del><span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils_nightly.egg-info/</td><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>17</ins>.<ins>491434</ins><span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils_nightly.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4448<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>35</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils_nightly.egg-info/PKG-INFO</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4448<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>17</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils_nightly.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>378<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>35</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils_nightly.egg-info/SOURCES.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>378<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>17</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils_nightly.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>35</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils_nightly.egg-info/dependency_links.txt</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>17</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils_nightly.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>141<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>35</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils_nightly.egg-info/requires.txt</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>141<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>17</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils_nightly.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>35</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/jaxutils_nightly.egg-info/top_level.txt</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>17</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/jaxutils_nightly.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>233<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>35</del>.<del>133381</del><span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/setup.cfg</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>233<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>17</ins>.<ins>491434</ins><span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2389<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>28</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/setup.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2389<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>11</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>83607<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>00:06:<del>28</del>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<del>6</del>/versioneer.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span>circleci<span class="dp">·</span><span class="dp">·</span>(3434)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>83607<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>00:06:<ins>11</ins>.000000<span class="dp">·</span>jaxutils-nightly-0.0.8.dev2023040<ins>7</ins>/versioneer.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">556 B</span></div>
+      <div><span class="source">jaxutils-nightly-0.0.8.dev20230406/PKG-INFO</span> vs.</div>
+      <div id="jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------PKG-INFO"><span class="source">jaxutils-nightly-0.0.8.dev20230407/PKG-INFO</span>
+        <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>jaxutils-nightly</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>jaxutils-nightly</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.8.dev2023040<del>6</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.8.dev2023040<ins>7</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Utility<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>JaxGaussianProcesses</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Utility<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>JaxGaussianProcesses</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Daniel<span class="dp">·</span>Dodd<span class="dp">·</span>and<span class="dp">·</span>Thomas<span class="dp">·</span>Pinder</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Daniel<span class="dp">·</span>Dodd<span class="dp">·</span>and<span class="dp">·</span>Thomas<span class="dp">·</span>Pinder</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>tompinder@live.co.uk</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>tompinder@live.co.uk</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>LICENSE</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://JaxUitls.readthedocs.io/en/latest/</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://JaxUitls.readthedocs.io/en/latest/</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/JaxGaussianProcesses/JaxUitls</td><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/JaxGaussianProcesses/JaxUitls</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">jaxutils-nightly-0.0.8.dev20230406/README.md</span> vs.</div>
+      <div id="jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------README.md"><span class="source">jaxutils-nightly-0.0.8.dev20230407/README.md</span>
+        <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">jaxutils-nightly-0.0.8.dev20230406/jaxutils/__init__.py</span> vs.</div>
+      <div id="jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils-__init__.py"><span class="source">jaxutils-nightly-0.0.8.dev20230407/jaxutils/__init__.py</span>
+        <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">jaxutils-nightly-0.0.8.dev20230406/jaxutils/config.py</span> vs.</div>
+      <div id="jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils-config.py"><span class="source">jaxutils-nightly-0.0.8.dev20230407/jaxutils/config.py</span>
+        <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">jaxutils-nightly-0.0.8.dev20230406/jaxutils/data.py</span> vs.</div>
+      <div id="jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils-data.py"><span class="source">jaxutils-nightly-0.0.8.dev20230407/jaxutils/data.py</span>
+        <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils-data.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">jaxutils-nightly-0.0.8.dev20230406/jaxutils/dict.py</span> vs.</div>
+      <div id="jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils-dict.py"><span class="source">jaxutils-nightly-0.0.8.dev20230407/jaxutils/dict.py</span>
+        <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils-dict.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">jaxutils-nightly-0.0.8.dev20230406/jaxutils/parameters.py</span> vs.</div>
+      <div id="jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils-parameters.py"><span class="source">jaxutils-nightly-0.0.8.dev20230407/jaxutils/parameters.py</span>
+        <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils-parameters.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">jaxutils-nightly-0.0.8.dev20230406/jaxutils/pytree.py</span> vs.</div>
+      <div id="jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils-pytree.py"><span class="source">jaxutils-nightly-0.0.8.dev20230407/jaxutils/pytree.py</span>
+        <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils-pytree.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">608 B</span></div>
+      <div><span class="source">jaxutils-nightly-0.0.8.dev20230406/jaxutils_nightly.egg-info/PKG-INFO</span> vs.</div>
+      <div id="jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils_nightly.egg-info-PKG-INFO"><span class="source">jaxutils-nightly-0.0.8.dev20230407/jaxutils_nightly.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------jaxutils_nightly.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>jaxutils-nightly</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>jaxutils-nightly</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.8.dev2023040<del>6</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.8.dev2023040<ins>7</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Utility<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>JaxGaussianProcesses</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Utility<span class="dp">·</span>functions<span class="dp">·</span>for<span class="dp">·</span>JaxGaussianProcesses</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Daniel<span class="dp">·</span>Dodd<span class="dp">·</span>and<span class="dp">·</span>Thomas<span class="dp">·</span>Pinder</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Daniel<span class="dp">·</span>Dodd<span class="dp">·</span>and<span class="dp">·</span>Thomas<span class="dp">·</span>Pinder</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>tompinder@live.co.uk</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>tompinder@live.co.uk</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>LICENSE</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://JaxUitls.readthedocs.io/en/latest/</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://JaxUitls.readthedocs.io/en/latest/</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/JaxGaussianProcesses/JaxUitls</td><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/JaxGaussianProcesses/JaxUitls</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">jaxutils-nightly-0.0.8.dev20230406/setup.py</span> vs.</div>
+      <div id="jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------setup.py"><span class="source">jaxutils-nightly-0.0.8.dev20230407/setup.py</span>
+        <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">jaxutils-nightly-0.0.8.dev20230406/versioneer.py</span> vs.</div>
+      <div id="jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------versioneer.py"><span class="source">jaxutils-nightly-0.0.8.dev20230407/versioneer.py</span>
+        <a class="anchor" href="#jaxutils-nightly--.-.-.dev--------.tar---jaxutils-nightly--.-.-.dev---------versioneer.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

@@ -1,0 +1,913 @@
+# Comparing `tmp/cs.fstags-20230217.tar.gz` & `tmp/cs.fstags-20230407.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "cs.fstags-20230217.tar", last modified: Fri Feb 17 00:36:49 2023, max compression
++gzip compressed data, was "cs.fstags-20230407.tar", last modified: Fri Apr  7 00:08:25 2023, max compression
+```
+
+## Comparing `cs.fstags-20230217.tar` & `cs.fstags-20230407.tar`
+
+### file list
+
+```diff
+@@ -1,22 +1,22 @@
+-drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-02-17 00:36:49.129006 cs.fstags-20230217/
+--rw-rw-r--   0 cameron    (501) cameron    (502)      148 2023-02-17 00:36:09.000000 cs.fstags-20230217/MANIFEST.in
+--rw-rw-r--   0 cameron    (501) cameron    (502)    20152 2023-02-17 00:36:49.129206 cs.fstags-20230217/PKG-INFO
+--rw-rw-r--   0 cameron    (501) cameron    (502)    35530 2023-02-17 00:36:17.000000 cs.fstags-20230217/README.md
+-drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-02-17 00:36:49.118617 cs.fstags-20230217/lib/
+-drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-02-17 00:36:49.119139 cs.fstags-20230217/lib/python/
+-drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-02-17 00:36:49.124457 cs.fstags-20230217/lib/python/cs/
+--rw-rw-r--   0 cameron    (501) cameron    (502)     7893 2023-02-17 00:36:09.000000 cs.fstags-20230217/lib/python/cs/fstags.1
+--rw-r--r--   0 cameron    (501) cameron    (502)     7052 2023-02-17 00:36:00.000000 cs.fstags-20230217/lib/python/cs/fstags.1.md
+--rw-rw-r--   0 cameron    (501) cameron    (502)    19383 2023-02-17 00:36:09.000000 cs.fstags-20230217/lib/python/cs/fstags.5
+--rw-r--r--   0 cameron    (501) cameron    (502)    17938 2023-02-17 00:36:00.000000 cs.fstags-20230217/lib/python/cs/fstags.5.md
+--rw-r--r--   0 cameron    (501) cameron    (502)    70214 2023-02-17 00:36:00.000000 cs.fstags-20230217/lib/python/cs/fstags.py
+-drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-02-17 00:36:49.128287 cs.fstags-20230217/lib/python/cs.fstags.egg-info/
+--rw-rw-r--   0 cameron    (501) cameron    (502)    20152 2023-02-17 00:36:49.000000 cs.fstags-20230217/lib/python/cs.fstags.egg-info/PKG-INFO
+--rw-rw-r--   0 cameron    (501) cameron    (502)      443 2023-02-17 00:36:49.000000 cs.fstags-20230217/lib/python/cs.fstags.egg-info/SOURCES.txt
+--rw-rw-r--   0 cameron    (501) cameron    (502)        1 2023-02-17 00:36:49.000000 cs.fstags-20230217/lib/python/cs.fstags.egg-info/dependency_links.txt
+--rw-rw-r--   0 cameron    (501) cameron    (502)       42 2023-02-17 00:36:49.000000 cs.fstags-20230217/lib/python/cs.fstags.egg-info/entry_points.txt
+--rw-rw-r--   0 cameron    (501) cameron    (502)      257 2023-02-17 00:36:49.000000 cs.fstags-20230217/lib/python/cs.fstags.egg-info/requires.txt
+--rw-rw-r--   0 cameron    (501) cameron    (502)        3 2023-02-17 00:36:49.000000 cs.fstags-20230217/lib/python/cs.fstags.egg-info/top_level.txt
+--rw-rw-r--   0 cameron    (501) cameron    (502)    20733 2023-02-17 00:36:39.000000 cs.fstags-20230217/pyproject.toml
+--rw-rw-r--   0 cameron    (501) cameron    (502)     1180 2023-02-17 00:36:49.129974 cs.fstags-20230217/setup.cfg
+--rw-rw-r--   0 cameron    (501) cameron    (502)       59 2023-02-17 00:36:17.000000 cs.fstags-20230217/setup.py
++drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:08:25.234267 cs.fstags-20230407/
++-rw-rw-r--   0 cameron    (501) cameron    (502)      148 2023-04-07 00:07:45.000000 cs.fstags-20230407/MANIFEST.in
++-rw-rw-r--   0 cameron    (501) cameron    (502)    20588 2023-04-07 00:08:25.234391 cs.fstags-20230407/PKG-INFO
++-rw-rw-r--   0 cameron    (501) cameron    (502)    35795 2023-04-07 00:07:53.000000 cs.fstags-20230407/README.md
++drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:08:25.229054 cs.fstags-20230407/lib/
++drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:08:25.229321 cs.fstags-20230407/lib/python/
++drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:08:25.232252 cs.fstags-20230407/lib/python/cs/
++-rw-rw-r--   0 cameron    (501) cameron    (502)     7893 2023-04-07 00:07:45.000000 cs.fstags-20230407/lib/python/cs/fstags.1
++-rw-r--r--   0 cameron    (501) cameron    (502)     7052 2023-04-07 00:07:36.000000 cs.fstags-20230407/lib/python/cs/fstags.1.md
++-rw-rw-r--   0 cameron    (501) cameron    (502)    19383 2023-04-07 00:07:45.000000 cs.fstags-20230407/lib/python/cs/fstags.5
++-rw-r--r--   0 cameron    (501) cameron    (502)    17938 2023-04-07 00:07:36.000000 cs.fstags-20230407/lib/python/cs/fstags.5.md
++-rw-r--r--   0 cameron    (501) cameron    (502)    70353 2023-04-07 00:07:36.000000 cs.fstags-20230407/lib/python/cs/fstags.py
++drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:08:25.234048 cs.fstags-20230407/lib/python/cs.fstags.egg-info/
++-rw-rw-r--   0 cameron    (501) cameron    (502)    20588 2023-04-07 00:08:25.000000 cs.fstags-20230407/lib/python/cs.fstags.egg-info/PKG-INFO
++-rw-rw-r--   0 cameron    (501) cameron    (502)      443 2023-04-07 00:08:25.000000 cs.fstags-20230407/lib/python/cs.fstags.egg-info/SOURCES.txt
++-rw-rw-r--   0 cameron    (501) cameron    (502)        1 2023-04-07 00:08:25.000000 cs.fstags-20230407/lib/python/cs.fstags.egg-info/dependency_links.txt
++-rw-rw-r--   0 cameron    (501) cameron    (502)       42 2023-04-07 00:08:25.000000 cs.fstags-20230407/lib/python/cs.fstags.egg-info/entry_points.txt
++-rw-rw-r--   0 cameron    (501) cameron    (502)      257 2023-04-07 00:08:25.000000 cs.fstags-20230407/lib/python/cs.fstags.egg-info/requires.txt
++-rw-rw-r--   0 cameron    (501) cameron    (502)        3 2023-04-07 00:08:25.000000 cs.fstags-20230407/lib/python/cs.fstags.egg-info/top_level.txt
++-rw-rw-r--   0 cameron    (501) cameron    (502)    21167 2023-04-07 00:08:17.000000 cs.fstags-20230407/pyproject.toml
++-rw-rw-r--   0 cameron    (501) cameron    (502)     1180 2023-04-07 00:08:25.234945 cs.fstags-20230407/setup.cfg
++-rw-rw-r--   0 cameron    (501) cameron    (502)       59 2023-04-07 00:07:53.000000 cs.fstags-20230407/setup.py
+```
+
+### Comparing `cs.fstags-20230217/PKG-INFO` & `cs.fstags-20230407/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: cs.fstags
+-Version: 20230217
++Version: 20230407
+ Summary: Simple filesystem based file tagging and the associated `fstags` command line script.
+ Home-page: https://bitbucket.org/cameron_simpson/css/commits/all
+ Author: Cameron Simpson
+ Author-email: Cameron Simpson <cs@cskk.id.au>
+ License: GNU General Public License v3 or later (GPLv3+)
+ Project-URL: URL, https://bitbucket.org/cameron_simpson/css/commits/all
+ Keywords: python3
+@@ -16,16 +16,17 @@
+ Classifier: Topic :: Software Development :: Libraries :: Python Modules
+ Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+ Description-Content-Type: text/markdown
+ 
+ Simple filesystem based file tagging
+ and the associated `fstags` command line script.
+ 
+-*Latest release 20230217*:
+-FSTagsCommand.cmd_rename: use -o for the format string as for other commands, -n is for "no action".
++*Latest release 20230407*:
++* FSTags: support open/close of self.update_mapping, update startup/shutdown to startup_shutdown.
++* Move the (optional) ORM open/close from FSTags.startup_shutdown to TagFile.save, greatly shortens the ORM lock.
+ 
+ Many basic tasks can be performed with the `fstags` command line utility,
+ documented under the `FSTagsCommand` class below.
+ 
+ Why `fstags`?
+ By storing the tags in a separate file we:
+ * can store tags without modifying a file
+@@ -87,15 +88,15 @@
+     fstags find --for-rsync /path/to/media backup=archive2 \
+     | rsync -ia --include-from=- /path/to/media /path/to/backup_archive2
+ 
+ ## Class `CascadeRule`
+ 
+ A cascade rule of possible source tag names to provide a target tag.
+ 
+-## `DEFAULT_FSTAGS = <cs.fstags.FSTags object at 0x10a4c55a0>`
++## `DEFAULT_FSTAGS = <cs.fstags.FSTags object at 0x10a665a20>`
+ 
+ A class to examine filesystem tags.
+ 
+ ## Class `FSTags(cs.resources.MultiOpenMixin, cs.context.ContextManagerMixin)`
+ 
+ A class to examine filesystem tags.
+ 
+@@ -146,15 +147,15 @@
+           Edit the direct tagsets of path, default: '.'
+           If path is a directory, provide the tags of its entries.
+           Otherwise edit just the tags for path.
+           -a    List all names in directory edit mode; normally
+                 names commencing with a dot are omitted.
+           -d    Treat directories like files: edit just its tags.
+         export [-a] [--direct] path {tag[=value]|-tag}...
+-          Export tags for files from path matching all the constraints.
++          Export tags for files from paths matching all the constraints.
+           -a        Export all paths, not just those with tags.
+           --direct  Export the direct tags instead of the computed tags.
+           The output is in the same CSV format as that from "sqltags export",
+           with the following columns:
+           * unixtime: the file's st_mtime from os.stat.
+           * id: empty
+           * name: the file path
+@@ -222,14 +223,16 @@
+           Rename paths according to a format string.
+           -o basename_format
+               Use basename_format as a Python format string to
+               compute the new basename for each path.
+         scrub paths...
+           Remove all tags for missing paths.
+           If a path is a directory, scrub the immediate paths in the directory.
++        shell
++          Run a command prompt via cmd.Cmd using this command's subcommands.
+         tag {-|path} {tag[=value]|-tag}...
+           Tag a path with multiple tags.
+           With the form "-tag", remove that tag from the direct tags.
+           A path named "-" indicates that paths should be read from the
+           standard input.
+         tagfile tagfile_path [subcommand ...]
+           Subcommands:
+@@ -325,14 +328,18 @@
+ 
+ Emit message if in verbose mode.
+ 
+ # Release Log
+ 
+ 
+ 
++*Release 20230407*:
++* FSTags: support open/close of self.update_mapping, update startup/shutdown to startup_shutdown.
++* Move the (optional) ORM open/close from FSTags.startup_shutdown to TagFile.save, greatly shortens the ORM lock.
++
+ *Release 20230217*:
+ FSTagsCommand.cmd_rename: use -o for the format string as for other commands, -n is for "no action".
+ 
+ *Release 20230212*:
+ * FSTags.keypath(fspath) and TaggedPath.keypath with the singleton filesystem path for a TaggedPath.
+ * TaggedPath.parent property.
+ * TaggedPath.findup(check) method.
+```
+
+### Comparing `cs.fstags-20230217/README.md` & `cs.fstags-20230407/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,12 +1,13 @@
+ Simple filesystem based file tagging
+ and the associated `fstags` command line script.
+ 
+-*Latest release 20230217*:
+-FSTagsCommand.cmd_rename: use -o for the format string as for other commands, -n is for "no action".
++*Latest release 20230407*:
++* FSTags: support open/close of self.update_mapping, update startup/shutdown to startup_shutdown.
++* Move the (optional) ORM open/close from FSTags.startup_shutdown to TagFile.save, greatly shortens the ORM lock.
+ 
+ Many basic tasks can be performed with the `fstags` command line utility,
+ documented under the `FSTagsCommand` class below.
+ 
+ Why `fstags`?
+ By storing the tags in a separate file we:
+ * can store tags without modifying a file
+@@ -74,15 +75,15 @@
+ 
+ *Method `CascadeRule.infer_tag(self, tagset)`*:
+ Apply the rule to the `TagSet` `tagset`.
+ Return a new `Tag(self.target,value)`
+ for the first cascade `value` found in `tagset`,
+ or `None` if there is no match.
+ 
+-## `DEFAULT_FSTAGS = <cs.fstags.FSTags object at 0x10a4c55a0>`
++## `DEFAULT_FSTAGS = <cs.fstags.FSTags object at 0x10a665a20>`
+ 
+ A class to examine filesystem tags.
+ 
+ ## Class `FSTags(cs.resources.MultiOpenMixin, cs.context.ContextManagerMixin)`
+ 
+ A class to examine filesystem tags.
+ 
+@@ -223,19 +224,16 @@
+ See if `format_string` looks like `[`*clausename*`]`*entryname*.
+ if so, return the corresponding config entry string,
+ otherwise return `format_string` unchanged.
+ 
+ *Method `FSTags.scrub(self, path)`*:
+ Scrub tags for names which do not exist in the filesystem.
+ 
+-*Method `FSTags.shutdown(self)`*:
+-Save any modified tag files on shutdown.
+-
+-*Method `FSTags.startup(self)`*:
+-Stub for startup.
++*Method `FSTags.startup_shutdown(self)`*:
++Sync tag files and db mapping on final close.
+ 
+ *Method `FSTags.sync(self)`*:
+ Flush modified tag files.
+ 
+ *Method `FSTags.tagfile_for(self, fspath)`*:
+ Return the `FSTagsTagFile` storing the `Tag`s for `fspath`.
+ 
+@@ -277,15 +275,15 @@
+           Edit the direct tagsets of path, default: '.'
+           If path is a directory, provide the tags of its entries.
+           Otherwise edit just the tags for path.
+           -a    List all names in directory edit mode; normally
+                 names commencing with a dot are omitted.
+           -d    Treat directories like files: edit just its tags.
+         export [-a] [--direct] path {tag[=value]|-tag}...
+-          Export tags for files from path matching all the constraints.
++          Export tags for files from paths matching all the constraints.
+           -a        Export all paths, not just those with tags.
+           --direct  Export the direct tags instead of the computed tags.
+           The output is in the same CSV format as that from "sqltags export",
+           with the following columns:
+           * unixtime: the file's st_mtime from os.stat.
+           * id: empty
+           * name: the file path
+@@ -353,14 +351,16 @@
+           Rename paths according to a format string.
+           -o basename_format
+               Use basename_format as a Python format string to
+               compute the new basename for each path.
+         scrub paths...
+           Remove all tags for missing paths.
+           If a path is a directory, scrub the immediate paths in the directory.
++        shell
++          Run a command prompt via cmd.Cmd using this command's subcommands.
+         tag {-|path} {tag[=value]|-tag}...
+           Tag a path with multiple tags.
+           With the form "-tag", remove that tag from the direct tags.
+           A path named "-" indicates that paths should be read from the
+           standard input.
+         tagfile tagfile_path [subcommand ...]
+           Subcommands:
+@@ -375,16 +375,15 @@
+           Test whether the path matches all the constraints.
+           --direct    Use direct tags instead of all tags.
+         xattr_export {-|paths...}
+           Import tag information from extended attributes.
+         xattr_import {-|paths...}
+           Update extended attributes from tags.
+ 
+-*Method `FSTagsCommand.apply_defaults(self)`*:
+-Set up the default values in `options`.
++*`FSTagsCommand.Options`*
+ 
+ *Method `FSTagsCommand.apply_opt(self, opt, val)`*:
+ Apply command line option.
+ 
+ *Method `FSTagsCommand.cmd_cp(self, argv)`*:
+ Usage: {cmd} [-finv] srcpath dstpath, {cmd} [-finv] srcpaths... dstdirpath
+ POSIX cp(1) equivalent, but also copying tags:
+@@ -405,25 +404,25 @@
+ Otherwise edit just the tags for path.
+ -a    List all names in directory edit mode; normally
+       names commencing with a dot are omitted.
+ -d    Treat directories like files: edit just its tags.
+ 
+ *Method `FSTagsCommand.cmd_export(self, argv)`*:
+ Usage: {cmd} [-a] [--direct] path {{tag[=value]|-tag}}...
+-Export tags for files from path matching all the constraints.
++Export tags for files from paths matching all the constraints.
+ -a        Export all paths, not just those with tags.
+ --direct  Export the direct tags instead of the computed tags.
+ The output is in the same CSV format as that from "sqltags export",
+ with the following columns:
+ * unixtime: the file's st_mtime from os.stat.
+ * id: empty
+ * name: the file path
+ * tags: the file's direct or indirect tags
+ 
+-*Method `FSTagsCommand.cmd_find(self, argv, *, runstate: cs.resources.RunState)`*:
++*Method `FSTagsCommand.cmd_find(self, argv)`*:
+ Usage: {cmd} [--direct] [--for-rsync] [-o output_format] path {{tag[=value]|-tag}}...
+ List files from path matching all the constraints.
+ --direct    Use direct tags instead of all tags.
+ --for-rsync Instead of listing matching paths, emit a
+             sequence of rsync(1) patterns suitable for use with
+             --include-from in order to do a selective rsync of the
+             matched paths.
+@@ -455,15 +454,15 @@
+ POSIX ln(1) equivalent, but also copying the tags:
+ link files and their tags into targetdir.
+ -f  Force: remove destination if it exists.
+ -i  Interactive: fail if the destination exists.
+ -n  No remove: fail if the destination exists.
+ -v  Verbose: show linked files.
+ 
+-*Method `FSTagsCommand.cmd_ls(self, argv, *, runstate: cs.resources.RunState)`*:
++*Method `FSTagsCommand.cmd_ls(self, argv)`*:
+ Usage: {cmd} [-d] [--direct] [-o output_format] [paths...]
+ List files from paths and their tags.
+ -d          Treat directories like files, do not recurse.
+ --direct    List direct tags instead of all tags.
+ -l          Long format.
+ -o output_format
+             Use output_format as a Python format string to lay out
+@@ -760,14 +759,18 @@
+ 
+ Emit message if in verbose mode.
+ 
+ # Release Log
+ 
+ 
+ 
++*Release 20230407*:
++* FSTags: support open/close of self.update_mapping, update startup/shutdown to startup_shutdown.
++* Move the (optional) ORM open/close from FSTags.startup_shutdown to TagFile.save, greatly shortens the ORM lock.
++
+ *Release 20230217*:
+ FSTagsCommand.cmd_rename: use -o for the format string as for other commands, -n is for "no action".
+ 
+ *Release 20230212*:
+ * FSTags.keypath(fspath) and TaggedPath.keypath with the singleton filesystem path for a TaggedPath.
+ * TaggedPath.parent property.
+ * TaggedPath.findup(check) method.
+```
+
+### Comparing `cs.fstags-20230217/lib/python/cs/fstags.1` & `cs.fstags-20230407/lib/python/cs/fstags.1`
+
+ * *Files identical despite different names*
+
+### Comparing `cs.fstags-20230217/lib/python/cs/fstags.1.md` & `cs.fstags-20230407/lib/python/cs/fstags.1.md`
+
+ * *Files identical despite different names*
+
+### Comparing `cs.fstags-20230217/lib/python/cs/fstags.5` & `cs.fstags-20230407/lib/python/cs/fstags.5`
+
+ * *Files identical despite different names*
+
+### Comparing `cs.fstags-20230217/lib/python/cs/fstags.5.md` & `cs.fstags-20230407/lib/python/cs/fstags.5.md`
+
+ * *Files identical despite different names*
+
+### Comparing `cs.fstags-20230217/lib/python/cs/fstags.py` & `cs.fstags-20230407/lib/python/cs/fstags.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -70,14 +70,15 @@
+         | rsync -ia --include-from=- /path/to/media /path/to/backup_archive2
+ 
+ '''
+ 
+ from configparser import ConfigParser
+ from contextlib import contextmanager
+ import csv
++from dataclasses import dataclass
+ import errno
+ from getopt import getopt, GetoptError
+ import json
+ import os
+ from os.path import (
+     abspath,
+     basename,
+@@ -110,30 +111,30 @@
+     cutsuffix,
+     get_ini_clause_entryname,
+     FormatAsError,
+     titleify_lc,
+ )
+ from cs.logutils import error, warning, ifverbose
+ from cs.pfx import Pfx, pfx, pfx_method, pfx_call
+-from cs.resources import MultiOpenMixin, RunState, uses_runstate
++from cs.resources import MultiOpenMixin, RunState
+ from cs.tagset import (
+     Tag,
+     TagSet,
+     TagBasedTest,
+     TagsOntology,
+     TagFile,
+     TagsOntologyCommand,
+     TagsCommandMixin,
+     RegexpTagRule,
+     tag_or_tag_value,
+ )
+ from cs.threads import locked, locked_property, State
+ from cs.upd import Upd, UpdProxy, uses_upd, print  # pylint: disable=redefined-builtin
+ 
+-__version__ = '20230217'
++__version__ = '20230407'
+ 
+ DISTINFO = {
+     'keywords': ["python3"],
+     'classifiers': [
+         "Programming Language :: Python",
+         "Programming Language :: Python :: 3",
+     ],
+@@ -199,19 +200,18 @@
+   GETOPT_SPEC = 'o:P'
+ 
+   USAGE_FORMAT = '''Usage: {cmd} [-o ontology] [-P] subcommand [...]
+   -o ontology   Specify the path to an ontology file.
+   -P            Physical. Resolve pathnames through symlinks.
+                 Default ~/.fstagsrc[general]physical or False.'''
+ 
+-  def apply_defaults(self):
+-    ''' Set up the default values in `options`.
+-    '''
+-    self.options.ontology_path = os.environ.get('FSTAGS_ONTOLOGY')
+-    self.options.physical = None
++  @dataclass
++  class Options(BaseCommand.Options):
++    ontology_path: Optional[str] = os.environ.get('FSTAGS_ONTOLOGY')
++    physical: Optional[bool] = None
+ 
+   def apply_opt(self, opt, val):
+     ''' Apply command line option.
+     '''
+     options = self.options
+     if opt == '-o':
+       options.ontology_path = val
+@@ -234,28 +234,30 @@
+             options,
+             fstags=fstags,
+             physical=fstags.config.physical,
+         ):
+           yield
+ 
+   @uses_upd
+-  @uses_runstate
+-  def cmd_autotag(self, argv, *, runstate: RunState, upd: Upd):
++  def cmd_autotag(self, argv, *, upd: Upd):
+     ''' Usage: {cmd} paths...
+           Tag paths based on rules from the rc file.
+     '''
+     options = self.options
+     fstags = options.fstags
++    runstate = options.runstate
+     if not argv:
+       argv = ['.']
+     filename_rules = fstags.config.filename_rules
+     with state(verbose=True):
+       with UpdProxy() as proxy:
+         for top_path in argv:
+           for isdir, path in rpaths(top_path, yield_dirs=True):
++            if runstate.cancelled:
++              return 1
+             spath = shortpath(path)
+             proxy.text = spath
+             with Pfx(spath):
+               ont = fstags.ontology_for(path)
+               tagged_path = fstags[path]
+               all_tags = tagged_path.merged_tags()
+               for autotag in tagged_path.infer_from_basename(filename_rules):
+@@ -332,26 +334,27 @@
+         # edit the tagsets, on per file on a line
+         elif not fstags.edit_dirpath(path, all_names=all_names):
+           xit = 1
+     return xit
+ 
+   def cmd_export(self, argv):
+     ''' Usage: {cmd} [-a] [--direct] path {{tag[=value]|-tag}}...
+-          Export tags for files from path matching all the constraints.
++          Export tags for files from paths matching all the constraints.
+           -a        Export all paths, not just those with tags.
+           --direct  Export the direct tags instead of the computed tags.
+           The output is in the same CSV format as that from "sqltags export",
+           with the following columns:
+           * unixtime: the file's st_mtime from os.stat.
+           * id: empty
+           * name: the file path
+           * tags: the file's direct or indirect tags
+     '''
+     options = self.options
+     fstags = options.fstags
++    runstate = options.runstate
+     badopts = False
+     all_paths = False
+     use_direct_tags = False
+     opts, argv = getopt(argv, 'a', longopts=['direct'])
+     for opt, _ in opts:
+       with Pfx(opt):
+         if opt == '-a':
+@@ -371,40 +374,42 @@
+       badopts = True
+     if badopts:
+       raise GetoptError("bad arguments")
+     xit = 0
+     csvw = csv.writer(sys.stdout)
+     for fspath in fstags.find(realpath(path), tag_choices,
+                               use_direct_tags=use_direct_tags):
++      if runstate.cancelled:
++        return 1
+       tagged_path = fstags[fspath]
+       # pylint: disable=superfluous-parens
+       if (not all_paths
+           and not (tagged_path if use_direct_tags else tagged_path.all_tags)):
+         continue
+       # TODO: this always writes the direct tags only
+       csvw.writerow(tagged_path.csvrow)
+     return xit
+ 
+   # pylint: disable=too-many-branches
+-  @uses_runstate
+-  def cmd_find(self, argv, *, runstate: RunState):
++  def cmd_find(self, argv):
+     ''' Usage: {cmd} [--direct] [--for-rsync] [-o output_format] path {{tag[=value]|-tag}}...
+           List files from path matching all the constraints.
+           --direct    Use direct tags instead of all tags.
+           --for-rsync Instead of listing matching paths, emit a
+                       sequence of rsync(1) patterns suitable for use with
+                       --include-from in order to do a selective rsync of the
+                       matched paths.
+           -o output_format
+                       Use output_format as a Python format string to lay out
+                       the listing.
+                       Default: {FIND_OUTPUT_FORMAT_DEFAULT}
+     '''
+     options = self.options
+     fstags = options.fstags
++    runstate = options.runstate
+     badopts = False
+     use_direct_tags = False
+     as_rsync_includes = False
+     output_format = FIND_OUTPUT_FORMAT_DEFAULT
+     opts, argv = getopt(argv, 'o:', longopts=['direct', 'for-rsync'])
+     for opt, value in opts:
+       with Pfx(opt):
+@@ -576,28 +581,28 @@
+           for key, value in data.items():
+             tag_name = '.'.join((tag_prefix, key)) if tag_prefix else key
+             tagged_path.add(
+                 Tag(tag_name, value, ontology=ont), verbose=verbose
+             )
+     return 0
+ 
+-  @uses_runstate
+-  def cmd_ls(self, argv, *, runstate: RunState):
++  def cmd_ls(self, argv):
+     ''' Usage: {cmd} [-d] [--direct] [-o output_format] [paths...]
+           List files from paths and their tags.
+           -d          Treat directories like files, do not recurse.
+           --direct    List direct tags instead of all tags.
+           -l          Long format.
+           -o output_format
+                       Use output_format as a Python format string to lay out
+                       the listing.
+                       Default: {LS_OUTPUT_FORMAT_DEFAULT}
+     '''
+     options = self.options
+     fstags = options.fstags
++    runstate = options.runstate
+     directories_like_files = False
+     use_direct_tags = False
+     long_format = False
+     output_format = LS_OUTPUT_FORMAT_DEFAULT
+     opts, argv = getopt(argv, 'dlo:', longopts=['direct'])
+     for opt, value in opts:
+       with Pfx(opt):
+@@ -1093,21 +1098,20 @@
+     self._tagged_paths = {}  # cache of per abspath `TaggedPath`
+     self._dirpath_ontologies = {}  # cache of per dirpath(path) `TagsOntology`
+     self.update_mapping = update_mapping
+     self.update_prefix = update_prefix
+     self.update_uuid_tag_name = update_uuid_tag_name
+     self._lock = RLock()
+ 
+-  def startup(self):
+-    ''' Stub for startup.
+-    '''
+-
+-  def shutdown(self):
+-    ''' Save any modified tag files on shutdown.
++  @contextmanager
++  def startup_shutdown(self):
++    ''' Sync tag files and db mapping on final close.
+     '''
++    yield
++    # save any modified tag files on shutdown.
+     self.sync()
+ 
+   @locked
+   @pfx_method
+   def sync(self):
+     ''' Flush modified tag files.
+     '''
+```
+
+### Comparing `cs.fstags-20230217/lib/python/cs.fstags.egg-info/PKG-INFO` & `cs.fstags-20230407/lib/python/cs.fstags.egg-info/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: cs.fstags
+-Version: 20230217
++Version: 20230407
+ Summary: Simple filesystem based file tagging and the associated `fstags` command line script.
+ Home-page: https://bitbucket.org/cameron_simpson/css/commits/all
+ Author: Cameron Simpson
+ Author-email: Cameron Simpson <cs@cskk.id.au>
+ License: GNU General Public License v3 or later (GPLv3+)
+ Project-URL: URL, https://bitbucket.org/cameron_simpson/css/commits/all
+ Keywords: python3
+@@ -16,16 +16,17 @@
+ Classifier: Topic :: Software Development :: Libraries :: Python Modules
+ Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+ Description-Content-Type: text/markdown
+ 
+ Simple filesystem based file tagging
+ and the associated `fstags` command line script.
+ 
+-*Latest release 20230217*:
+-FSTagsCommand.cmd_rename: use -o for the format string as for other commands, -n is for "no action".
++*Latest release 20230407*:
++* FSTags: support open/close of self.update_mapping, update startup/shutdown to startup_shutdown.
++* Move the (optional) ORM open/close from FSTags.startup_shutdown to TagFile.save, greatly shortens the ORM lock.
+ 
+ Many basic tasks can be performed with the `fstags` command line utility,
+ documented under the `FSTagsCommand` class below.
+ 
+ Why `fstags`?
+ By storing the tags in a separate file we:
+ * can store tags without modifying a file
+@@ -87,15 +88,15 @@
+     fstags find --for-rsync /path/to/media backup=archive2 \
+     | rsync -ia --include-from=- /path/to/media /path/to/backup_archive2
+ 
+ ## Class `CascadeRule`
+ 
+ A cascade rule of possible source tag names to provide a target tag.
+ 
+-## `DEFAULT_FSTAGS = <cs.fstags.FSTags object at 0x10a4c55a0>`
++## `DEFAULT_FSTAGS = <cs.fstags.FSTags object at 0x10a665a20>`
+ 
+ A class to examine filesystem tags.
+ 
+ ## Class `FSTags(cs.resources.MultiOpenMixin, cs.context.ContextManagerMixin)`
+ 
+ A class to examine filesystem tags.
+ 
+@@ -146,15 +147,15 @@
+           Edit the direct tagsets of path, default: '.'
+           If path is a directory, provide the tags of its entries.
+           Otherwise edit just the tags for path.
+           -a    List all names in directory edit mode; normally
+                 names commencing with a dot are omitted.
+           -d    Treat directories like files: edit just its tags.
+         export [-a] [--direct] path {tag[=value]|-tag}...
+-          Export tags for files from path matching all the constraints.
++          Export tags for files from paths matching all the constraints.
+           -a        Export all paths, not just those with tags.
+           --direct  Export the direct tags instead of the computed tags.
+           The output is in the same CSV format as that from "sqltags export",
+           with the following columns:
+           * unixtime: the file's st_mtime from os.stat.
+           * id: empty
+           * name: the file path
+@@ -222,14 +223,16 @@
+           Rename paths according to a format string.
+           -o basename_format
+               Use basename_format as a Python format string to
+               compute the new basename for each path.
+         scrub paths...
+           Remove all tags for missing paths.
+           If a path is a directory, scrub the immediate paths in the directory.
++        shell
++          Run a command prompt via cmd.Cmd using this command's subcommands.
+         tag {-|path} {tag[=value]|-tag}...
+           Tag a path with multiple tags.
+           With the form "-tag", remove that tag from the direct tags.
+           A path named "-" indicates that paths should be read from the
+           standard input.
+         tagfile tagfile_path [subcommand ...]
+           Subcommands:
+@@ -325,14 +328,18 @@
+ 
+ Emit message if in verbose mode.
+ 
+ # Release Log
+ 
+ 
+ 
++*Release 20230407*:
++* FSTags: support open/close of self.update_mapping, update startup/shutdown to startup_shutdown.
++* Move the (optional) ORM open/close from FSTags.startup_shutdown to TagFile.save, greatly shortens the ORM lock.
++
+ *Release 20230217*:
+ FSTagsCommand.cmd_rename: use -o for the format string as for other commands, -n is for "no action".
+ 
+ *Release 20230212*:
+ * FSTags.keypath(fspath) and TaggedPath.keypath with the singleton filesystem path for a TaggedPath.
+ * TaggedPath.parent property.
+ * TaggedPath.findup(check) method.
+```
+
+### Comparing `cs.fstags-20230217/pyproject.toml` & `cs.fstags-20230407/pyproject.toml`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -5,52 +5,53 @@
+     { name = "Cameron Simpson", email = "cs@cskk.id.au" },
+ ]
+ keywords = [
+     "python3",
+ ]
+ dependencies = [
+     "cs.cmdutils>=20210404",
+-    "cs.context>=20230212",
+-    "cs.deco>=20230212",
+-    "cs.fileutils>=20221118",
++    "cs.context>=20230331",
++    "cs.deco>=20230331",
++    "cs.fileutils>=20230401",
+     "cs.fs>=20220429",
+-    "cs.lex>=20230217",
++    "cs.lex>=20230401",
+     "cs.logutils>=20230212",
+-    "cs.pfx>=20221118",
+-    "cs.resources>=20230217",
++    "cs.pfx>=20230331",
++    "cs.resources>=20230331",
+     "cs.tagset>=20211212",
+-    "cs.threads>=20230212",
+-    "cs.upd>=20230217",
++    "cs.threads>=20230331",
++    "cs.upd>=20230401",
+     "icontract",
+     "typeguard",
+ ]
+ classifiers = [
+     "Programming Language :: Python",
+     "Programming Language :: Python :: 3",
+     "Development Status :: 4 - Beta",
+     "Intended Audience :: Developers",
+     "Operating System :: OS Independent",
+     "Topic :: Software Development :: Libraries :: Python Modules",
+     "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+ ]
+-version = "20230217"
++version = "20230407"
+ 
+ [project.license]
+ text = "GNU General Public License v3 or later (GPLv3+)"
+ 
+ [project.urls]
+ URL = "https://bitbucket.org/cameron_simpson/css/commits/all"
+ 
+ [project.readme]
+ text = """
+ Simple filesystem based file tagging
+ and the associated `fstags` command line script.
+ 
+-*Latest release 20230217*:
+-FSTagsCommand.cmd_rename: use -o for the format string as for other commands, -n is for \"no action\".
++*Latest release 20230407*:
++* FSTags: support open/close of self.update_mapping, update startup/shutdown to startup_shutdown.
++* Move the (optional) ORM open/close from FSTags.startup_shutdown to TagFile.save, greatly shortens the ORM lock.
+ 
+ Many basic tasks can be performed with the `fstags` command line utility,
+ documented under the `FSTagsCommand` class below.
+ 
+ Why `fstags`?
+ By storing the tags in a separate file we:
+ * can store tags without modifying a file
+@@ -112,15 +113,15 @@
+     fstags find --for-rsync /path/to/media backup=archive2 \\
+     | rsync -ia --include-from=- /path/to/media /path/to/backup_archive2
+ 
+ ## Class `CascadeRule`
+ 
+ A cascade rule of possible source tag names to provide a target tag.
+ 
+-## `DEFAULT_FSTAGS = <cs.fstags.FSTags object at 0x10a4c55a0>`
++## `DEFAULT_FSTAGS = <cs.fstags.FSTags object at 0x10a665a20>`
+ 
+ A class to examine filesystem tags.
+ 
+ ## Class `FSTags(cs.resources.MultiOpenMixin, cs.context.ContextManagerMixin)`
+ 
+ A class to examine filesystem tags.
+ 
+@@ -171,15 +172,15 @@
+           Edit the direct tagsets of path, default: '.'
+           If path is a directory, provide the tags of its entries.
+           Otherwise edit just the tags for path.
+           -a    List all names in directory edit mode; normally
+                 names commencing with a dot are omitted.
+           -d    Treat directories like files: edit just its tags.
+         export [-a] [--direct] path {tag[=value]|-tag}...
+-          Export tags for files from path matching all the constraints.
++          Export tags for files from paths matching all the constraints.
+           -a        Export all paths, not just those with tags.
+           --direct  Export the direct tags instead of the computed tags.
+           The output is in the same CSV format as that from \"sqltags export\",
+           with the following columns:
+           * unixtime: the file's st_mtime from os.stat.
+           * id: empty
+           * name: the file path
+@@ -247,14 +248,16 @@
+           Rename paths according to a format string.
+           -o basename_format
+               Use basename_format as a Python format string to
+               compute the new basename for each path.
+         scrub paths...
+           Remove all tags for missing paths.
+           If a path is a directory, scrub the immediate paths in the directory.
++        shell
++          Run a command prompt via cmd.Cmd using this command's subcommands.
+         tag {-|path} {tag[=value]|-tag}...
+           Tag a path with multiple tags.
+           With the form \"-tag\", remove that tag from the direct tags.
+           A path named \"-\" indicates that paths should be read from the
+           standard input.
+         tagfile tagfile_path [subcommand ...]
+           Subcommands:
+@@ -350,14 +353,18 @@
+ 
+ Emit message if in verbose mode.
+ 
+ # Release Log
+ 
+ 
+ 
++*Release 20230407*:
++* FSTags: support open/close of self.update_mapping, update startup/shutdown to startup_shutdown.
++* Move the (optional) ORM open/close from FSTags.startup_shutdown to TagFile.save, greatly shortens the ORM lock.
++
+ *Release 20230217*:
+ FSTagsCommand.cmd_rename: use -o for the format string as for other commands, -n is for \"no action\".
+ 
+ *Release 20230212*:
+ * FSTags.keypath(fspath) and TaggedPath.keypath with the singleton filesystem path for a TaggedPath.
+ * TaggedPath.parent property.
+ * TaggedPath.findup(check) method.
+```
+
+### Comparing `cs.fstags-20230217/setup.cfg` & `cs.fstags-20230407/setup.cfg`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [metadata]
+ name = cs.fstags
+-version = 20230217
++version = 20230407
+ author = Cameron Simpson
+ author_email = cs@cskk.id.au
+ license = GNU General Public License v3 or later (GPLv3+)
+ description = Simple filesystem based file tagging and the associated `fstags` command line script.
+ keywords = python3
+ url = https://bitbucket.org/cameron_simpson/css/commits/all
+ classifiers = 
+@@ -19,25 +19,25 @@
+ long_description_content_type = text/markdown
+ 
+ [options]
+ package_dir = 
+ 	= lib/python
+ install_requires = 
+ 	cs.cmdutils>=20210404
+-	cs.context>=20230212
+-	cs.deco>=20230212
+-	cs.fileutils>=20221118
++	cs.context>=20230331
++	cs.deco>=20230331
++	cs.fileutils>=20230401
+ 	cs.fs>=20220429
+-	cs.lex>=20230217
++	cs.lex>=20230401
+ 	cs.logutils>=20230212
+-	cs.pfx>=20221118
+-	cs.resources>=20230217
++	cs.pfx>=20230331
++	cs.resources>=20230331
+ 	cs.tagset>=20211212
+-	cs.threads>=20230212
+-	cs.upd>=20230217
++	cs.threads>=20230331
++	cs.upd>=20230401
+ 	icontract
+ 	typeguard
+ 
+ [options.entry_points]
+ console_scripts = 
+ 	fstags = cs.fstags:main
+```
+

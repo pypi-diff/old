@@ -1,0 +1,1655 @@
+# Comparing `tmp/TracGraphviz-1.4.0.1.tar.gz` & `tmp/TracGraphviz-1.4.0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/TracGraphviz-1.4.0.1.tar", last modified: Thu May 28 03:46:52 2020, max compression
++gzip compressed data, was "TracGraphviz-1.4.0.3.tar", last modified: Fri Apr  7 00:03:12 2023, max compression
+```
+
+## Comparing `TracGraphviz-1.4.0.1.tar` & `TracGraphviz-1.4.0.3.tar`
+
+### file list
+
+```diff
+@@ -1,36 +1,36 @@
+-drwxr-xr-x   0 rjollos    (501) staff       (20)        0 2020-05-28 03:46:52.000000 TracGraphviz-1.4.0.1/
+--rw-r--r--   0 rjollos    (501) staff       (20)    11599 2020-05-28 03:46:52.000000 TracGraphviz-1.4.0.1/PKG-INFO
+-drwxr-xr-x   0 rjollos    (501) staff       (20)        0 2020-05-28 03:46:52.000000 TracGraphviz-1.4.0.1/TracGraphviz.egg-info/
+--rw-r--r--   0 rjollos    (501) staff       (20)    11599 2020-05-28 03:46:52.000000 TracGraphviz-1.4.0.1/TracGraphviz.egg-info/PKG-INFO
+--rw-r--r--   0 rjollos    (501) staff       (20)     1044 2020-05-28 03:46:52.000000 TracGraphviz-1.4.0.1/TracGraphviz.egg-info/SOURCES.txt
+--rw-r--r--   0 rjollos    (501) staff       (20)       45 2020-05-28 03:46:52.000000 TracGraphviz-1.4.0.1/TracGraphviz.egg-info/entry_points.txt
+--rw-r--r--   0 rjollos    (501) staff       (20)       12 2020-05-28 03:46:52.000000 TracGraphviz-1.4.0.1/TracGraphviz.egg-info/requires.txt
+--rw-r--r--   0 rjollos    (501) staff       (20)        9 2020-05-28 03:46:52.000000 TracGraphviz-1.4.0.1/TracGraphviz.egg-info/top_level.txt
+--rw-r--r--   0 rjollos    (501) staff       (20)        1 2020-05-28 03:46:52.000000 TracGraphviz-1.4.0.1/TracGraphviz.egg-info/dependency_links.txt
+--rw-r--r--   0 rjollos    (501) staff       (20)     1411 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/COPYING
+--rw-r--r--   0 rjollos    (501) staff       (20)      852 2020-05-28 03:46:48.000000 TracGraphviz-1.4.0.1/setup.py
+-drwxr-xr-x   0 rjollos    (501) staff       (20)        0 2020-05-28 03:46:52.000000 TracGraphviz-1.4.0.1/examples/
+--rw-r--r--   0 rjollos    (501) staff       (20)      263 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FJustTestingGraphviz
+--rwxr-xr-x   0 rjollos    (501) staff       (20)      821 2017-05-27 09:18:49.000000 TracGraphviz-1.4.0.1/examples/load_examples.py
+--rw-r--r--   0 rjollos    (501) staff       (20)      490 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FOutputGif
+--rw-r--r--   0 rjollos    (501) staff       (20)     1328 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FMapNodesSvg
+--rw-r--r--   0 rjollos    (501) staff       (20)      354 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FMapWhole
+--rw-r--r--   0 rjollos    (501) staff       (20)      157 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FInvokingDot
+--rw-r--r--   0 rjollos    (501) staff       (20)      161 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FInvokingCirco
+--rw-r--r--   0 rjollos    (501) staff       (20)     1051 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FMapNodesPng
+--rw-r--r--   0 rjollos    (501) staff       (20)      161 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FInvokingNeato
+--rw-r--r--   0 rjollos    (501) staff       (20)     1746 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FGraphvizExample2
+--rw-r--r--   0 rjollos    (501) staff       (20)      490 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FOutputJpg
+--rw-r--r--   0 rjollos    (501) staff       (20)      448 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FGraphvizExample3
+--rw-r--r--   0 rjollos    (501) staff       (20)      490 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FOutputPng
+--rw-r--r--   0 rjollos    (501) staff       (20)      161 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FInvokingTwopi
+--rw-r--r--   0 rjollos    (501) staff       (20)     1056 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FWikiLinksSvg
+--rw-r--r--   0 rjollos    (501) staff       (20)     1055 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FWikiLinksPng
+--rw-r--r--   0 rjollos    (501) staff       (20)      855 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples
+--rw-r--r--   0 rjollos    (501) staff       (20)      157 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FInvokingFdp
+--rw-r--r--   0 rjollos    (501) staff       (20)      490 2016-08-23 01:24:17.000000 TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FOutputSvg
+-drwxr-xr-x   0 rjollos    (501) staff       (20)        0 2020-05-28 03:46:52.000000 TracGraphviz-1.4.0.1/graphviz/
+--rw-r--r--   0 rjollos    (501) staff       (20)    27155 2020-05-28 02:04:42.000000 TracGraphviz-1.4.0.1/graphviz/graphviz.py
+--rw-r--r--   0 rjollos    (501) staff       (20)       59 2020-05-27 02:58:04.000000 TracGraphviz-1.4.0.1/graphviz/__init__.py
+--rw-r--r--   0 rjollos    (501) staff       (20)       77 2020-05-28 03:46:52.000000 TracGraphviz-1.4.0.1/setup.cfg
+--rw-r--r--   0 rjollos    (501) staff       (20)     9163 2020-05-28 03:41:57.000000 TracGraphviz-1.4.0.1/README.rst
++drwxr-xr-x   0 jun66j5   (1000) jun66j5   (1000)        0 2023-04-07 00:03:12.921585 TracGraphviz-1.4.0.3/
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)     1411 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/COPYING
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)     9581 2023-04-07 00:03:12.921585 TracGraphviz-1.4.0.3/PKG-INFO
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)     9166 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/README.rst
++drwxr-xr-x   0 jun66j5   (1000) jun66j5   (1000)        0 2023-04-07 00:03:12.917585 TracGraphviz-1.4.0.3/TracGraphviz.egg-info/
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)     9581 2023-04-07 00:03:12.000000 TracGraphviz-1.4.0.3/TracGraphviz.egg-info/PKG-INFO
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)     1044 2023-04-07 00:03:12.000000 TracGraphviz-1.4.0.3/TracGraphviz.egg-info/SOURCES.txt
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)        1 2023-04-07 00:03:12.000000 TracGraphviz-1.4.0.3/TracGraphviz.egg-info/dependency_links.txt
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)       44 2023-04-07 00:03:12.000000 TracGraphviz-1.4.0.3/TracGraphviz.egg-info/entry_points.txt
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)        5 2023-04-07 00:03:12.000000 TracGraphviz-1.4.0.3/TracGraphviz.egg-info/requires.txt
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)        9 2023-04-07 00:03:12.000000 TracGraphviz-1.4.0.3/TracGraphviz.egg-info/top_level.txt
++drwxr-xr-x   0 jun66j5   (1000) jun66j5   (1000)        0 2023-04-07 00:03:12.921585 TracGraphviz-1.4.0.3/examples/
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      855 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)     1746 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FGraphvizExample2
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      448 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FGraphvizExample3
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      161 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FInvokingCirco
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      157 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FInvokingDot
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      157 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FInvokingFdp
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      161 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FInvokingNeato
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      161 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FInvokingTwopi
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      263 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FJustTestingGraphviz
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)     1051 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FMapNodesPng
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)     1328 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FMapNodesSvg
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      354 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FMapWhole
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      490 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FOutputGif
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      490 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FOutputJpg
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      490 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FOutputPng
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      490 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FOutputSvg
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)     1055 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FWikiLinksPng
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)     1056 2023-03-19 00:12:37.000000 TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FWikiLinksSvg
++-rwxr-xr-x   0 jun66j5   (1000) jun66j5   (1000)      823 2023-03-19 00:26:34.000000 TracGraphviz-1.4.0.3/examples/load_examples.py
++drwxr-xr-x   0 jun66j5   (1000) jun66j5   (1000)        0 2023-04-07 00:03:12.921585 TracGraphviz-1.4.0.3/graphviz/
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)       59 2023-03-19 00:12:36.000000 TracGraphviz-1.4.0.3/graphviz/__init__.py
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)    27984 2023-03-19 13:28:42.000000 TracGraphviz-1.4.0.3/graphviz/graphviz.py
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      106 2023-04-07 00:03:12.921585 TracGraphviz-1.4.0.3/setup.cfg
++-rw-r--r--   0 jun66j5   (1000) jun66j5   (1000)      973 2023-03-19 14:22:48.000000 TracGraphviz-1.4.0.3/setup.py
+```
+
+### filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-POSIX tar archive (GNU)
++POSIX tar archive
+```
+
+### Comparing `TracGraphviz-1.4.0.1/PKG-INFO` & `TracGraphviz-1.4.0.3/README.rst`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,277 +1,265 @@
+-Metadata-Version: 2.1
+-Name: TracGraphviz
+-Version: 1.4.0.1
+-Summary: Graphviz plugin for Trac 1.4
+-Home-page: https://trac-hacks.org/wiki/GraphvizPlugin
+-Author: Peter Kropf
+-Author-email: pkropf@gmail.com
+-License: BSD 3-Clause
+-Description: Trac Graphviz Wiki Processor
+-        ----------------------------
+-        
+-        Description
+-        ===========
+-        
+-        The graphviz wiki processor is a plugin for Trac that allows the the
+-        dynamic generation of diagrams by the various graphviz programs. The
+-        text of a wiki page can contain the source text for graphviz and the
+-        web browser will show the resulting image.
+-        
+-        
+-        Simple Example
+-        ++++++++++++++
+-        
+-        A simple example would be::
+-        
+-          #!graphviz
+-          digraph G {Hello->World->Graphviz->Rules}
+-        
+-        There are also several additional examples available in the examples
+-        directory.  They can be loaded into a Trac installation by the
+-        examples/load_examples.py program. Once loaded, navigate to the
+-        wiki/GraphvizExamples page to access the examples.
+-        
+-        
+-        Usage Details
+-        +++++++++++++
+-        
+-        The graphviz wiki processor supports all 5 graphviz drawing programs:
+-        dot, neato, twopi, circo and fdp. By default, the dot program is used
+-        to generate the images.
+-        
+-        The different programs can be invoked using one of these::
+-        
+-         #!graphviz
+-         #!graphviz.dot
+-         #!graphviz.neato
+-         #!graphviz.twopi
+-         #!graphviz.circo
+-         #!graphviz.fdp
+-         
+-        
+-        The supported image formats are: png (default), gif, jpg, svg and svgz.
+-        The format can be specified using a "/format" modifier, in the hashbang,
+-        as shown below::
+-        
+-         #!graphviz/svg
+-         #!graphviz.dot/png
+-         #!graphviz.circo/gif
+-         
+-         
+-        Platform Specific Requirements
+-        ==============================
+-        
+-        FreeBSD
+-        +++++++
+-        
+-        On FreeBSD systems, installing the x11-fonts/urwfonts package will
+-        provide the fonts needed for graphviz to correctly generate images.
+-        
+-        
+-        Optional requirements
+-        =====================
+-        
+-        To allow antialiasing of PNG images produced by graphviz, you need to
+-        have rsvg, the librsvg rasterizer, installed on your system. It can be
+-        downloaded from <http://librsvg.sourceforge.net/>. Note that rsvg is
+-        not available for Windows.
+-        
+-        
+-        Installation via Source
+-        =======================
+-        
+-        The installation of the graphviz plugin from source is done by
+-        creating a Python egg distribution file and copying the .egg file to
+-        the Trac plugins directory. Detailed information on Python eggs can be
+-        found at: http://peak.telecommunity.com/DevCenter/PythonEggs. In
+-        addition, the Easy Install package is required to create Python
+-        eggs. See http://peak.telecommunity.com/DevCenter/EasyInstall for more
+-        information on using and installing Easy Install.
+-        
+-        Download the source code for the graphviz plugin from
+-        http://trac-hacks.swapoff.org/download/graphvizplugin.zip or checkout
+-        the source from the trac hacks subversion repository at:
+-        http://trac-hacks.swapoff.org/svn/graphvizplugin.
+-        
+-        Change to the graphvizplugin/0.11 directory and run::
+-        
+-            python setup.py bdist_egg
+-        
+-        This will generate a python egg in the dist directory. Copy the egg
+-        file into the trac/plugins directory and follow the Configuration
+-        steps outlined below.
+-        
+-        
+-        Installation via Egg
+-        ====================
+-        
+-        todo
+-        
+-        
+-        Configuration
+-        =============
+-        
+-        Once the graphviz plugin has been installed either via source or via a
+-        python egg, some changes to the conf/trac.ini file must be done before it can 
+-        be used.
+-        
+-        As for any plugin, if you did a global installation (as opposed to simply 
+-        dropping the .egg in the plugins folder of your Trac environment), 
+-        you first need to enable it::
+-        
+-           [components]
+-           graphviz.* = enabled
+-        
+-        A new section called ``[graphviz]`` should be added to the trac.ini
+-        file with these fields::
+-        
+-            cache_dir       - The directory that will be used to cache the 
+-                              generated images. That directory must exist,
+-                              unless you keep the default 'gvcache' value,
+-                              in which case the plugin is allowed to create
+-                              the folder inside the Trac environment.
+-        
+-            cmd_path        - Full path to the directory where the graphviz
+-                              programs are located. If not specified, the
+-                              default is /usr/bin on Linux, c:\Program
+-                              Files\ATT\Graphviz\bin on Windows and
+-                              /usr/local/bin on FreeBSD 6.
+-        
+-            out_format      - Graph output format. Valid formats are: png, jpg,
+-                              svg, svgz, gif. If not specified, the default is
+-                              png. This setting can be overrided on a per-graph
+-                              basis.
+-        
+-            processor       - Graphviz default processor. Valid processors
+-                              are: dot, neato, twopi, fdp, circo. If not
+-                              specified, the default is dot. This setting can
+-                              be overrided on a per-graph basis.
+-        
+-                              GraphvizMacro will verify that the default
+-                              processor is installed and will not work if it
+-                              is missing. All other processors are optional.
+-                              If any of the other processors are missing, a
+-                              warning message will be sent to the trac log and
+-                              GraphvizMacro will continue to work.
+-        
+-            png_antialias   - If this entry exists in the configuration file,
+-                              then PNG outputs will be antialiased.
+-        
+-            rsvg_path       - Full path to the rsvg program (including the filename).
+-                              The default is `<cmd_path>/rsvg`.
+-        
+-            default_*       - These settings define the default graph, node and
+-                              edge attributes. They must be written as:
+-                                    default_TYPE_ATTRIBUTE = VALUE
+-                              where TYPE      is one of graph, node, edge
+-                                    ATTRIBUTE is a valid graphviz attribute
+-                                    VALUE     is the attribute value.
+-                                eg: default_edge_fontname = "Andale Mono"
+-                                    default_graph_fontsize = 10
+-        
+-            cache_manager   - If this entry exists in the configuration file,
+-                              then the cache management logic will be invoked
+-                              and the cache_max_size, cache_min_size,
+-                              cache_max_count and cache_min_count must be
+-                              defined.
+-        
+-            cache_max_size  - The maximum size in bytes that the cache should
+-                              consume. This is the high watermark for disk space
+-                              used.
+-        
+-            cache_min_size  - When cleaning out the cache, remove files until
+-                              this size in bytes is used by the cache. This is
+-                              the low watermark for disk space used.
+-        
+-            cache_max_count - The maximum number of files that the cache should
+-                              contain. This is the high watermark for the
+-                              directory entry count.
+-        
+-        The cache_dir directory must exist and the trac server must have read
+-        and write access.
+-        
+-        The cache manager is an attempt at keeping the cache directory under
+-        control. This is experimental code that may cause more problems than
+-        it fixes. The cache manager will be invoked only if a new graphviz
+-        image is to be produced. If the image can be loaded from the cache,
+-        then the cache manager shouldn't need to run. This should minimize the
+-        I/O performance impact on the trac server. When the cache manager
+-        determines that it should clean up the cache, it will delete files
+-        based on the file access time. The files that were least accessed will
+-        be deleted first.
+-        
+-        
+-        Configuration Example
+-        +++++++++++++++++++++
+-        
+-        Here is a sample graphviz section::
+-        
+-         [graphviz]
+-         cache_dir = /tmp/trac/htdocs/graphviz
+-         png_antialias = true
+-         default_graph_fontname = "Andale Mono"
+-         default_graph_fontsize = 10
+-        
+-        
+-        Here is a sample graphviz section that activates the cache manager::
+-        
+-         [graphviz]
+-         cache_dir = /tmp/trac/htdocs/graphviz
+-         png_antialias = true
+-         default_graph_fontname = "Andale Mono"
+-         default_graph_fontsize = 10
+-         cache_manager = yes
+-         cache_max_size = 10000000
+-         cache_min_size = 5000000
+-         cache_max_count = 2000
+-         cache_min_count = 1500
+-        
+-        The cache manager is turned on since there is an entry in the graphviz
+-        section called cache_manager. The value doesn't matter. To turn off
+-        the cache manager, simply comment out the cache_manager entry.
+-        
+-        When the size of all the files in the cache directory exceeds
+-        10,000,000 bytes or the number of files in the cache directory exceeds
+-        2,000, then files are deleted until the size is less than 5,000,000
+-        bytes and the number of files is less than 1,500.
+-        
+-        
+-        Here's the same example but for Windows systems::
+-        
+-         [graphviz] cache_dir = C:\projects\plugins\env\trac\htdocs\graphviz
+-         cache_manager = yes
+-         cache_max_size = 10000000
+-         cache_min_size = 5000000
+-         cache_max_count = 2000
+-         cache_min_count = 1500
+-        
+-        Notice that the png_antialias, rsvg_path, default_graph_fontname and
+-        default_graph_fontsize are not defined. This is because rsvg is not
+-        available on Windows and these options are not used.
+-        
+-        
+-        Contributors
+-        ============
+-        
+-        I'd like to extend my thanks to following people:
+-        
+-         * Kilian Cavalotti for
+-        
+-           * the code to allow the output format to be specified system wide and 
+-             per diagram.
+-        
+-           * work on the code to expand Trac wiki links within Graphviz
+-             diagrams.
+-        
+-         * Alec Thomas for creating Trac Hacks (http://trac-hacks.swapoff.org)
+-           and providing hosting for the Graphviz module.
+-        
+-         * Emmanuel Blot for the swift kick in the butt to get the 0.9 - 0.10
+-           releated bug fixes resolved ;-)
+-        
+-        
+-        $Id: README.txt 4543 2008-10-20 10:05:06Z cboos $
+-        
+-Keywords: trac graphviz
+-Platform: UNKNOWN
+-Description-Content-Type: text/x-rst
++Trac Graphviz Wiki Processor
++----------------------------
++
++Description
++===========
++
++The graphviz wiki processor is a plugin for Trac that allows the the
++dynamic generation of diagrams by the various graphviz programs. The
++text of a wiki page can contain the source text for graphviz and the
++web browser will show the resulting image.
++
++
++Simple Example
++++++++++++++++
++
++A simple example would be::
++
++  #!graphviz
++  digraph G {Hello->World->Graphviz->Rules}
++
++There are also several additional examples available in the examples
++directory.  They can be loaded into a Trac installation by the
++examples/load_examples.py program. Once loaded, navigate to the
++wiki/GraphvizExamples page to access the examples.
++
++
++Usage Details
+++++++++++++++
++
++The graphviz wiki processor supports all 5 graphviz drawing programs:
++dot, neato, twopi, circo and fdp. By default, the dot program is used
++to generate the images.
++
++The different programs can be invoked using one of these::
++
++ #!graphviz
++ #!graphviz.dot
++ #!graphviz.neato
++ #!graphviz.twopi
++ #!graphviz.circo
++ #!graphviz.fdp
++ 
++
++The supported image formats are: png (default), gif, jpg, svg and svgz.
++The format can be specified using a "/format" modifier, in the hashbang,
++as shown below::
++
++ #!graphviz/svg
++ #!graphviz.dot/png
++ #!graphviz.circo/gif
++ 
++ 
++Platform Specific Requirements
++==============================
++
++FreeBSD
+++++++++
++
++On FreeBSD systems, installing the x11-fonts/urwfonts package will
++provide the fonts needed for graphviz to correctly generate images.
++
++
++Optional requirements
++=====================
++
++To allow antialiasing of PNG images produced by graphviz, you need to
++have rsvg, the librsvg rasterizer, installed on your system. It can be
++downloaded from <http://librsvg.sourceforge.net/>. Note that rsvg is
++not available for Windows.
++
++
++Installation via Source
++=======================
++
++The installation of the graphviz plugin from source is done by
++creating a Python egg distribution file and copying the .egg file to
++the Trac plugins directory. Detailed information on Python eggs can be
++found at: http://peak.telecommunity.com/DevCenter/PythonEggs. In
++addition, the Easy Install package is required to create Python
++eggs. See http://peak.telecommunity.com/DevCenter/EasyInstall for more
++information on using and installing Easy Install.
++
++Download the source code for the graphviz plugin from
++http://trac-hacks.swapoff.org/download/graphvizplugin.zip or checkout
++the source from the trac hacks subversion repository at:
++http://trac-hacks.swapoff.org/svn/graphvizplugin.
++
++Change to the graphvizplugin/0.11 directory and run::
++
++    python setup.py bdist_egg
++
++This will generate a python egg in the dist directory. Copy the egg
++file into the trac/plugins directory and follow the Configuration
++steps outlined below.
++
++
++Installation via Egg
++====================
++
++todo
++
++
++Configuration
++=============
++
++Once the graphviz plugin has been installed either via source or via a
++python egg, some changes to the conf/trac.ini file must be done before it can 
++be used.
++
++As for any plugin, if you did a global installation (as opposed to simply 
++dropping the .egg in the plugins folder of your Trac environment), 
++you first need to enable it::
++
++   [components]
++   graphviz.* = enabled
++
++A new section called ``[graphviz]`` should be added to the trac.ini
++file with these fields::
++
++    cache_dir       - The directory that will be used to cache the 
++                      generated images. That directory must exist,
++                      unless you keep the default 'gvcache' value,
++                      in which case the plugin is allowed to create
++                      the folder inside the Trac environment.
++
++    cmd_path        - Full path to the directory where the graphviz
++                      programs are located. If not specified, the
++                      default is /usr/bin on Linux, c:\Program
++                      Files\ATT\Graphviz\bin on Windows and
++                      /usr/local/bin on FreeBSD 6.
++
++    out_format      - Graph output format. Valid formats are: png, jpg,
++                      svg, svgz, gif. If not specified, the default is
++                      png. This setting can be overrided on a per-graph
++                      basis.
++
++    processor       - Graphviz default processor. Valid processors
++                      are: dot, neato, twopi, fdp, circo. If not
++                      specified, the default is dot. This setting can
++                      be overrided on a per-graph basis.
++
++                      GraphvizMacro will verify that the default
++                      processor is installed and will not work if it
++                      is missing. All other processors are optional.
++                      If any of the other processors are missing, a
++                      warning message will be sent to the trac log and
++                      GraphvizMacro will continue to work.
++
++    png_antialias   - If this entry exists in the configuration file,
++                      then PNG outputs will be antialiased.
++
++    rsvg_path       - Full path to the rsvg program (including the filename).
++                      The default is `<cmd_path>/rsvg`.
++
++    default_*       - These settings define the default graph, node and
++                      edge attributes. They must be written as:
++                            default_TYPE_ATTRIBUTE = VALUE
++                      where TYPE      is one of graph, node, edge
++                            ATTRIBUTE is a valid graphviz attribute
++                            VALUE     is the attribute value.
++                        eg: default_edge_fontname = "Andale Mono"
++                            default_graph_fontsize = 10
++
++    cache_manager   - If this entry exists in the configuration file,
++                      then the cache management logic will be invoked
++                      and the cache_max_size, cache_min_size,
++                      cache_max_count and cache_min_count must be
++                      defined.
++
++    cache_max_size  - The maximum size in bytes that the cache should
++                      consume. This is the high watermark for disk space
++                      used.
++
++    cache_min_size  - When cleaning out the cache, remove files until
++                      this size in bytes is used by the cache. This is
++                      the low watermark for disk space used.
++
++    cache_max_count - The maximum number of files that the cache should
++                      contain. This is the high watermark for the
++                      directory entry count.
++
++The cache_dir directory must exist and the trac server must have read
++and write access.
++
++The cache manager is an attempt at keeping the cache directory under
++control. This is experimental code that may cause more problems than
++it fixes. The cache manager will be invoked only if a new graphviz
++image is to be produced. If the image can be loaded from the cache,
++then the cache manager shouldn't need to run. This should minimize the
++I/O performance impact on the trac server. When the cache manager
++determines that it should clean up the cache, it will delete files
++based on the file access time. The files that were least accessed will
++be deleted first.
++
++
++Configuration Example
+++++++++++++++++++++++
++
++Here is a sample graphviz section::
++
++ [graphviz]
++ cache_dir = /tmp/trac/htdocs/graphviz
++ png_antialias = true
++ default_graph_fontname = "Andale Mono"
++ default_graph_fontsize = 10
++
++
++Here is a sample graphviz section that activates the cache manager::
++
++ [graphviz]
++ cache_dir = /tmp/trac/htdocs/graphviz
++ png_antialias = true
++ default_graph_fontname = "Andale Mono"
++ default_graph_fontsize = 10
++ cache_manager = yes
++ cache_max_size = 10000000
++ cache_min_size = 5000000
++ cache_max_count = 2000
++ cache_min_count = 1500
++
++The cache manager is turned on since there is an entry in the graphviz
++section called cache_manager. The value doesn't matter. To turn off
++the cache manager, simply comment out the cache_manager entry.
++
++When the size of all the files in the cache directory exceeds
++10,000,000 bytes or the number of files in the cache directory exceeds
++2,000, then files are deleted until the size is less than 5,000,000
++bytes and the number of files is less than 1,500.
++
++
++Here's the same example but for Windows systems::
++
++ [graphviz] cache_dir = C:\projects\plugins\env\trac\htdocs\graphviz
++ cache_manager = yes
++ cache_max_size = 10000000
++ cache_min_size = 5000000
++ cache_max_count = 2000
++ cache_min_count = 1500
++
++Notice that the png_antialias, rsvg_path, default_graph_fontname and
++default_graph_fontsize are not defined. This is because rsvg is not
++available on Windows and these options are not used.
++
++
++Contributors
++============
++
++I'd like to extend my thanks to following people:
++
++ * Kilian Cavalotti for
++
++   * the code to allow the output format to be specified system wide and 
++     per diagram.
++
++   * work on the code to expand Trac wiki links within Graphviz
++     diagrams.
++
++ * Alec Thomas for creating Trac Hacks (http://trac-hacks.swapoff.org)
++   and providing hosting for the Graphviz module.
++
++ * Emmanuel Blot for the swift kick in the butt to get the 0.9 - 0.10
++   releated bug fixes resolved ;-)
++
++
++$Id: README.rst 17774 2020-05-28 16:25:13Z rjollos $
+```
+
+### Comparing `TracGraphviz-1.4.0.1/TracGraphviz.egg-info/PKG-INFO` & `TracGraphviz-1.4.0.3/PKG-INFO`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,277 +1,279 @@
+ Metadata-Version: 2.1
+ Name: TracGraphviz
+-Version: 1.4.0.1
+-Summary: Graphviz plugin for Trac 1.4
++Version: 1.4.0.3
++Summary: Graphviz plugin for Trac 1.4 and later
+ Home-page: https://trac-hacks.org/wiki/GraphvizPlugin
+ Author: Peter Kropf
+ Author-email: pkropf@gmail.com
+ License: BSD 3-Clause
+-Description: Trac Graphviz Wiki Processor
+-        ----------------------------
+-        
+-        Description
+-        ===========
+-        
+-        The graphviz wiki processor is a plugin for Trac that allows the the
+-        dynamic generation of diagrams by the various graphviz programs. The
+-        text of a wiki page can contain the source text for graphviz and the
+-        web browser will show the resulting image.
+-        
+-        
+-        Simple Example
+-        ++++++++++++++
+-        
+-        A simple example would be::
+-        
+-          #!graphviz
+-          digraph G {Hello->World->Graphviz->Rules}
+-        
+-        There are also several additional examples available in the examples
+-        directory.  They can be loaded into a Trac installation by the
+-        examples/load_examples.py program. Once loaded, navigate to the
+-        wiki/GraphvizExamples page to access the examples.
+-        
+-        
+-        Usage Details
+-        +++++++++++++
+-        
+-        The graphviz wiki processor supports all 5 graphviz drawing programs:
+-        dot, neato, twopi, circo and fdp. By default, the dot program is used
+-        to generate the images.
+-        
+-        The different programs can be invoked using one of these::
+-        
+-         #!graphviz
+-         #!graphviz.dot
+-         #!graphviz.neato
+-         #!graphviz.twopi
+-         #!graphviz.circo
+-         #!graphviz.fdp
+-         
+-        
+-        The supported image formats are: png (default), gif, jpg, svg and svgz.
+-        The format can be specified using a "/format" modifier, in the hashbang,
+-        as shown below::
+-        
+-         #!graphviz/svg
+-         #!graphviz.dot/png
+-         #!graphviz.circo/gif
+-         
+-         
+-        Platform Specific Requirements
+-        ==============================
+-        
+-        FreeBSD
+-        +++++++
+-        
+-        On FreeBSD systems, installing the x11-fonts/urwfonts package will
+-        provide the fonts needed for graphviz to correctly generate images.
+-        
+-        
+-        Optional requirements
+-        =====================
+-        
+-        To allow antialiasing of PNG images produced by graphviz, you need to
+-        have rsvg, the librsvg rasterizer, installed on your system. It can be
+-        downloaded from <http://librsvg.sourceforge.net/>. Note that rsvg is
+-        not available for Windows.
+-        
+-        
+-        Installation via Source
+-        =======================
+-        
+-        The installation of the graphviz plugin from source is done by
+-        creating a Python egg distribution file and copying the .egg file to
+-        the Trac plugins directory. Detailed information on Python eggs can be
+-        found at: http://peak.telecommunity.com/DevCenter/PythonEggs. In
+-        addition, the Easy Install package is required to create Python
+-        eggs. See http://peak.telecommunity.com/DevCenter/EasyInstall for more
+-        information on using and installing Easy Install.
+-        
+-        Download the source code for the graphviz plugin from
+-        http://trac-hacks.swapoff.org/download/graphvizplugin.zip or checkout
+-        the source from the trac hacks subversion repository at:
+-        http://trac-hacks.swapoff.org/svn/graphvizplugin.
+-        
+-        Change to the graphvizplugin/0.11 directory and run::
+-        
+-            python setup.py bdist_egg
+-        
+-        This will generate a python egg in the dist directory. Copy the egg
+-        file into the trac/plugins directory and follow the Configuration
+-        steps outlined below.
+-        
+-        
+-        Installation via Egg
+-        ====================
+-        
+-        todo
+-        
+-        
+-        Configuration
+-        =============
+-        
+-        Once the graphviz plugin has been installed either via source or via a
+-        python egg, some changes to the conf/trac.ini file must be done before it can 
+-        be used.
+-        
+-        As for any plugin, if you did a global installation (as opposed to simply 
+-        dropping the .egg in the plugins folder of your Trac environment), 
+-        you first need to enable it::
+-        
+-           [components]
+-           graphviz.* = enabled
+-        
+-        A new section called ``[graphviz]`` should be added to the trac.ini
+-        file with these fields::
+-        
+-            cache_dir       - The directory that will be used to cache the 
+-                              generated images. That directory must exist,
+-                              unless you keep the default 'gvcache' value,
+-                              in which case the plugin is allowed to create
+-                              the folder inside the Trac environment.
+-        
+-            cmd_path        - Full path to the directory where the graphviz
+-                              programs are located. If not specified, the
+-                              default is /usr/bin on Linux, c:\Program
+-                              Files\ATT\Graphviz\bin on Windows and
+-                              /usr/local/bin on FreeBSD 6.
+-        
+-            out_format      - Graph output format. Valid formats are: png, jpg,
+-                              svg, svgz, gif. If not specified, the default is
+-                              png. This setting can be overrided on a per-graph
+-                              basis.
+-        
+-            processor       - Graphviz default processor. Valid processors
+-                              are: dot, neato, twopi, fdp, circo. If not
+-                              specified, the default is dot. This setting can
+-                              be overrided on a per-graph basis.
+-        
+-                              GraphvizMacro will verify that the default
+-                              processor is installed and will not work if it
+-                              is missing. All other processors are optional.
+-                              If any of the other processors are missing, a
+-                              warning message will be sent to the trac log and
+-                              GraphvizMacro will continue to work.
+-        
+-            png_antialias   - If this entry exists in the configuration file,
+-                              then PNG outputs will be antialiased.
+-        
+-            rsvg_path       - Full path to the rsvg program (including the filename).
+-                              The default is `<cmd_path>/rsvg`.
+-        
+-            default_*       - These settings define the default graph, node and
+-                              edge attributes. They must be written as:
+-                                    default_TYPE_ATTRIBUTE = VALUE
+-                              where TYPE      is one of graph, node, edge
+-                                    ATTRIBUTE is a valid graphviz attribute
+-                                    VALUE     is the attribute value.
+-                                eg: default_edge_fontname = "Andale Mono"
+-                                    default_graph_fontsize = 10
+-        
+-            cache_manager   - If this entry exists in the configuration file,
+-                              then the cache management logic will be invoked
+-                              and the cache_max_size, cache_min_size,
+-                              cache_max_count and cache_min_count must be
+-                              defined.
+-        
+-            cache_max_size  - The maximum size in bytes that the cache should
+-                              consume. This is the high watermark for disk space
+-                              used.
+-        
+-            cache_min_size  - When cleaning out the cache, remove files until
+-                              this size in bytes is used by the cache. This is
+-                              the low watermark for disk space used.
+-        
+-            cache_max_count - The maximum number of files that the cache should
+-                              contain. This is the high watermark for the
+-                              directory entry count.
+-        
+-        The cache_dir directory must exist and the trac server must have read
+-        and write access.
+-        
+-        The cache manager is an attempt at keeping the cache directory under
+-        control. This is experimental code that may cause more problems than
+-        it fixes. The cache manager will be invoked only if a new graphviz
+-        image is to be produced. If the image can be loaded from the cache,
+-        then the cache manager shouldn't need to run. This should minimize the
+-        I/O performance impact on the trac server. When the cache manager
+-        determines that it should clean up the cache, it will delete files
+-        based on the file access time. The files that were least accessed will
+-        be deleted first.
+-        
+-        
+-        Configuration Example
+-        +++++++++++++++++++++
+-        
+-        Here is a sample graphviz section::
+-        
+-         [graphviz]
+-         cache_dir = /tmp/trac/htdocs/graphviz
+-         png_antialias = true
+-         default_graph_fontname = "Andale Mono"
+-         default_graph_fontsize = 10
+-        
+-        
+-        Here is a sample graphviz section that activates the cache manager::
+-        
+-         [graphviz]
+-         cache_dir = /tmp/trac/htdocs/graphviz
+-         png_antialias = true
+-         default_graph_fontname = "Andale Mono"
+-         default_graph_fontsize = 10
+-         cache_manager = yes
+-         cache_max_size = 10000000
+-         cache_min_size = 5000000
+-         cache_max_count = 2000
+-         cache_min_count = 1500
+-        
+-        The cache manager is turned on since there is an entry in the graphviz
+-        section called cache_manager. The value doesn't matter. To turn off
+-        the cache manager, simply comment out the cache_manager entry.
+-        
+-        When the size of all the files in the cache directory exceeds
+-        10,000,000 bytes or the number of files in the cache directory exceeds
+-        2,000, then files are deleted until the size is less than 5,000,000
+-        bytes and the number of files is less than 1,500.
+-        
+-        
+-        Here's the same example but for Windows systems::
+-        
+-         [graphviz] cache_dir = C:\projects\plugins\env\trac\htdocs\graphviz
+-         cache_manager = yes
+-         cache_max_size = 10000000
+-         cache_min_size = 5000000
+-         cache_max_count = 2000
+-         cache_min_count = 1500
+-        
+-        Notice that the png_antialias, rsvg_path, default_graph_fontname and
+-        default_graph_fontsize are not defined. This is because rsvg is not
+-        available on Windows and these options are not used.
+-        
+-        
+-        Contributors
+-        ============
+-        
+-        I'd like to extend my thanks to following people:
+-        
+-         * Kilian Cavalotti for
+-        
+-           * the code to allow the output format to be specified system wide and 
+-             per diagram.
+-        
+-           * work on the code to expand Trac wiki links within Graphviz
+-             diagrams.
+-        
+-         * Alec Thomas for creating Trac Hacks (http://trac-hacks.swapoff.org)
+-           and providing hosting for the Graphviz module.
+-        
+-         * Emmanuel Blot for the swift kick in the butt to get the 0.9 - 0.10
+-           releated bug fixes resolved ;-)
+-        
+-        
+-        $Id: README.txt 4543 2008-10-20 10:05:06Z cboos $
+-        
+ Keywords: trac graphviz
+-Platform: UNKNOWN
++Classifier: Programming Language :: Python :: 2.7
++Classifier: Programming Language :: Python :: 3
+ Description-Content-Type: text/x-rst
++License-File: COPYING
++
++Trac Graphviz Wiki Processor
++----------------------------
++
++Description
++===========
++
++The graphviz wiki processor is a plugin for Trac that allows the the
++dynamic generation of diagrams by the various graphviz programs. The
++text of a wiki page can contain the source text for graphviz and the
++web browser will show the resulting image.
++
++
++Simple Example
++++++++++++++++
++
++A simple example would be::
++
++  #!graphviz
++  digraph G {Hello->World->Graphviz->Rules}
++
++There are also several additional examples available in the examples
++directory.  They can be loaded into a Trac installation by the
++examples/load_examples.py program. Once loaded, navigate to the
++wiki/GraphvizExamples page to access the examples.
++
++
++Usage Details
+++++++++++++++
++
++The graphviz wiki processor supports all 5 graphviz drawing programs:
++dot, neato, twopi, circo and fdp. By default, the dot program is used
++to generate the images.
++
++The different programs can be invoked using one of these::
++
++ #!graphviz
++ #!graphviz.dot
++ #!graphviz.neato
++ #!graphviz.twopi
++ #!graphviz.circo
++ #!graphviz.fdp
++ 
++
++The supported image formats are: png (default), gif, jpg, svg and svgz.
++The format can be specified using a "/format" modifier, in the hashbang,
++as shown below::
++
++ #!graphviz/svg
++ #!graphviz.dot/png
++ #!graphviz.circo/gif
++ 
++ 
++Platform Specific Requirements
++==============================
++
++FreeBSD
+++++++++
++
++On FreeBSD systems, installing the x11-fonts/urwfonts package will
++provide the fonts needed for graphviz to correctly generate images.
++
++
++Optional requirements
++=====================
++
++To allow antialiasing of PNG images produced by graphviz, you need to
++have rsvg, the librsvg rasterizer, installed on your system. It can be
++downloaded from <http://librsvg.sourceforge.net/>. Note that rsvg is
++not available for Windows.
++
++
++Installation via Source
++=======================
++
++The installation of the graphviz plugin from source is done by
++creating a Python egg distribution file and copying the .egg file to
++the Trac plugins directory. Detailed information on Python eggs can be
++found at: http://peak.telecommunity.com/DevCenter/PythonEggs. In
++addition, the Easy Install package is required to create Python
++eggs. See http://peak.telecommunity.com/DevCenter/EasyInstall for more
++information on using and installing Easy Install.
++
++Download the source code for the graphviz plugin from
++http://trac-hacks.swapoff.org/download/graphvizplugin.zip or checkout
++the source from the trac hacks subversion repository at:
++http://trac-hacks.swapoff.org/svn/graphvizplugin.
++
++Change to the graphvizplugin/0.11 directory and run::
++
++    python setup.py bdist_egg
++
++This will generate a python egg in the dist directory. Copy the egg
++file into the trac/plugins directory and follow the Configuration
++steps outlined below.
++
++
++Installation via Egg
++====================
++
++todo
++
++
++Configuration
++=============
++
++Once the graphviz plugin has been installed either via source or via a
++python egg, some changes to the conf/trac.ini file must be done before it can 
++be used.
++
++As for any plugin, if you did a global installation (as opposed to simply 
++dropping the .egg in the plugins folder of your Trac environment), 
++you first need to enable it::
++
++   [components]
++   graphviz.* = enabled
++
++A new section called ``[graphviz]`` should be added to the trac.ini
++file with these fields::
++
++    cache_dir       - The directory that will be used to cache the 
++                      generated images. That directory must exist,
++                      unless you keep the default 'gvcache' value,
++                      in which case the plugin is allowed to create
++                      the folder inside the Trac environment.
++
++    cmd_path        - Full path to the directory where the graphviz
++                      programs are located. If not specified, the
++                      default is /usr/bin on Linux, c:\Program
++                      Files\ATT\Graphviz\bin on Windows and
++                      /usr/local/bin on FreeBSD 6.
++
++    out_format      - Graph output format. Valid formats are: png, jpg,
++                      svg, svgz, gif. If not specified, the default is
++                      png. This setting can be overrided on a per-graph
++                      basis.
++
++    processor       - Graphviz default processor. Valid processors
++                      are: dot, neato, twopi, fdp, circo. If not
++                      specified, the default is dot. This setting can
++                      be overrided on a per-graph basis.
++
++                      GraphvizMacro will verify that the default
++                      processor is installed and will not work if it
++                      is missing. All other processors are optional.
++                      If any of the other processors are missing, a
++                      warning message will be sent to the trac log and
++                      GraphvizMacro will continue to work.
++
++    png_antialias   - If this entry exists in the configuration file,
++                      then PNG outputs will be antialiased.
++
++    rsvg_path       - Full path to the rsvg program (including the filename).
++                      The default is `<cmd_path>/rsvg`.
++
++    default_*       - These settings define the default graph, node and
++                      edge attributes. They must be written as:
++                            default_TYPE_ATTRIBUTE = VALUE
++                      where TYPE      is one of graph, node, edge
++                            ATTRIBUTE is a valid graphviz attribute
++                            VALUE     is the attribute value.
++                        eg: default_edge_fontname = "Andale Mono"
++                            default_graph_fontsize = 10
++
++    cache_manager   - If this entry exists in the configuration file,
++                      then the cache management logic will be invoked
++                      and the cache_max_size, cache_min_size,
++                      cache_max_count and cache_min_count must be
++                      defined.
++
++    cache_max_size  - The maximum size in bytes that the cache should
++                      consume. This is the high watermark for disk space
++                      used.
++
++    cache_min_size  - When cleaning out the cache, remove files until
++                      this size in bytes is used by the cache. This is
++                      the low watermark for disk space used.
++
++    cache_max_count - The maximum number of files that the cache should
++                      contain. This is the high watermark for the
++                      directory entry count.
++
++The cache_dir directory must exist and the trac server must have read
++and write access.
++
++The cache manager is an attempt at keeping the cache directory under
++control. This is experimental code that may cause more problems than
++it fixes. The cache manager will be invoked only if a new graphviz
++image is to be produced. If the image can be loaded from the cache,
++then the cache manager shouldn't need to run. This should minimize the
++I/O performance impact on the trac server. When the cache manager
++determines that it should clean up the cache, it will delete files
++based on the file access time. The files that were least accessed will
++be deleted first.
++
++
++Configuration Example
+++++++++++++++++++++++
++
++Here is a sample graphviz section::
++
++ [graphviz]
++ cache_dir = /tmp/trac/htdocs/graphviz
++ png_antialias = true
++ default_graph_fontname = "Andale Mono"
++ default_graph_fontsize = 10
++
++
++Here is a sample graphviz section that activates the cache manager::
++
++ [graphviz]
++ cache_dir = /tmp/trac/htdocs/graphviz
++ png_antialias = true
++ default_graph_fontname = "Andale Mono"
++ default_graph_fontsize = 10
++ cache_manager = yes
++ cache_max_size = 10000000
++ cache_min_size = 5000000
++ cache_max_count = 2000
++ cache_min_count = 1500
++
++The cache manager is turned on since there is an entry in the graphviz
++section called cache_manager. The value doesn't matter. To turn off
++the cache manager, simply comment out the cache_manager entry.
++
++When the size of all the files in the cache directory exceeds
++10,000,000 bytes or the number of files in the cache directory exceeds
++2,000, then files are deleted until the size is less than 5,000,000
++bytes and the number of files is less than 1,500.
++
++
++Here's the same example but for Windows systems::
++
++ [graphviz] cache_dir = C:\projects\plugins\env\trac\htdocs\graphviz
++ cache_manager = yes
++ cache_max_size = 10000000
++ cache_min_size = 5000000
++ cache_max_count = 2000
++ cache_min_count = 1500
++
++Notice that the png_antialias, rsvg_path, default_graph_fontname and
++default_graph_fontsize are not defined. This is because rsvg is not
++available on Windows and these options are not used.
++
++
++Contributors
++============
++
++I'd like to extend my thanks to following people:
++
++ * Kilian Cavalotti for
++
++   * the code to allow the output format to be specified system wide and 
++     per diagram.
++
++   * work on the code to expand Trac wiki links within Graphviz
++     diagrams.
++
++ * Alec Thomas for creating Trac Hacks (http://trac-hacks.swapoff.org)
++   and providing hosting for the Graphviz module.
++
++ * Emmanuel Blot for the swift kick in the butt to get the 0.9 - 0.10
++   releated bug fixes resolved ;-)
++
++
++$Id: README.rst 17774 2020-05-28 16:25:13Z rjollos $
+```
+
+### Comparing `TracGraphviz-1.4.0.1/TracGraphviz.egg-info/SOURCES.txt` & `TracGraphviz-1.4.0.3/TracGraphviz.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `TracGraphviz-1.4.0.1/COPYING` & `TracGraphviz-1.4.0.3/COPYING`
+
+ * *Files identical despite different names*
+
+### Comparing `TracGraphviz-1.4.0.1/setup.py` & `TracGraphviz-1.4.0.3/setup.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,31 +1,35 @@
+ # -*- coding: utf-8 -*-
+ #
+ # Copyright (c) 2005, 2006, 2008 Peter Kropf. All rights reserved.
+ #
+-# $Id: setup.py 17773 2020-05-28 03:30:03Z rjollos $
++# $Id: setup.py 18525 2023-03-19 14:22:48Z jun66j5 $
+ 
+ 
+ from setuptools import setup, find_packages
+ 
+ 
+ with open('README.rst') as f:
+     long_description = f.read()
+ 
+ setup (
+     name = 'TracGraphviz',
+-    version = '1.4.0.1',
++    version = '1.4.0.3',
+     author = "Peter Kropf",
+     author_email = "pkropf@gmail.com",
+     packages = find_packages(),
+     package_data = {
+         'graphviz': ['examples/*']
+     },
+     entry_points={'trac.plugins': 'graphviz = graphviz.graphviz'},
+-    install_requires = ['Trac', 'Genshi'],
++    install_requires = ['Trac'],
+     keywords = "trac graphviz",
+     url = "https://trac-hacks.org/wiki/GraphvizPlugin",
+-    description = "Graphviz plugin for Trac 1.4",
++    description = "Graphviz plugin for Trac 1.4 and later",
+     long_description = long_description,
+     long_description_content_type = 'text/x-rst',
++    classifiers=[
++        "Programming Language :: Python :: 2.7",
++        "Programming Language :: Python :: 3",
++    ],
+     license = "BSD 3-Clause",
+ )
+```
+
+### Comparing `TracGraphviz-1.4.0.1/examples/load_examples.py` & `TracGraphviz-1.4.0.3/examples/load_examples.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -13,19 +13,19 @@
+     for file in os.listdir(examples_dir):
+         if 'GraphvizExamples' in file:
+             admin._do_wiki_import(os.path.join(examples_dir, file), 
+                                   file.replace('%2F', '/'))
+             loaded = True
+ 
+     if not loaded:
+-        print 'The %(examples_dir)s does not contain any GrapgvizExamples files.' % locals()
++        print('The %(examples_dir)s does not contain any GrapgvizExamples files.' % locals())
+ 
+ 
+ if __name__ == '__main__':
+     argv_len = len(sys.argv)
+     if argv_len == 2:
+         main(sys.argv[1])
+     elif argv_len == 3:
+         main(sys.argv[1], sys.argv[2])
+     else:
+-        print 'usage: load_examples.py trac_env_path [examples_directory]'
++        print('usage: load_examples.py trac_env_path [examples_directory]')
+         sys.exit(1)
+```
+
+### Comparing `TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FMapNodesSvg` & `TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FMapNodesSvg`
+
+ * *Files identical despite different names*
+
+### Comparing `TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FMapNodesPng` & `TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FMapNodesPng`
+
+ * *Files identical despite different names*
+
+### Comparing `TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FGraphvizExample2` & `TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FGraphvizExample2`
+
+ * *Files identical despite different names*
+
+### Comparing `TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FWikiLinksSvg` & `TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FWikiLinksSvg`
+
+ * *Files identical despite different names*
+
+### Comparing `TracGraphviz-1.4.0.1/examples/GraphvizExamples%2FWikiLinksPng` & `TracGraphviz-1.4.0.3/examples/GraphvizExamples%2FWikiLinksPng`
+
+ * *Files identical despite different names*
+
+### Comparing `TracGraphviz-1.4.0.1/examples/GraphvizExamples` & `TracGraphviz-1.4.0.3/examples/GraphvizExamples`
+
+ * *Files identical despite different names*
+
+### Comparing `TracGraphviz-1.4.0.1/graphviz/graphviz.py` & `TracGraphviz-1.4.0.3/graphviz/graphviz.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -25,37 +25,64 @@
+ # GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ # INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+ # IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+ # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ 
+ import inspect
+-import locale
+ import os
+-import pkg_resources
+ import re
+-import sha
++import hashlib
+ import subprocess
+ import sys
+ 
+-from StringIO import StringIO
+-
+-from genshi.core import  Stream
+-from genshi.input import HTMLParser
+-
+ from trac.config import BoolOption, IntOption, Option
+-from trac.core import *
++from trac.core import Component, implements
+ from trac.mimeview.api import RenderingContext, IHTMLPreviewRenderer, MIME_MAP
+-from trac.util.html import (TracHTMLSanitizer, escape, find_element,
+-                            Element, tag, Markup)
+-from trac.util.text import to_unicode
++from trac.util.compat import close_fds
++from trac.util.html import Markup, TracHTMLSanitizer, find_element, tag
+ from trac.util.translation import _
+ from trac.web.api import IRequestHandler
+ from trac.wiki.api import IWikiMacroProvider, WikiSystem
+-from trac.wiki.formatter import extract_link, WikiProcessor
++from trac.wiki.formatter import extract_link
++
++
++try:
++    unicode = unicode
++except NameError:
++    unicode = str
++
++
++if hasattr(subprocess.Popen, '__enter__'):
++    Popen = subprocess.Popen
++else:
++    class Popen(subprocess.Popen):
++        """From trac/util/compat.py in 1.4-stable"""
++
++        def __enter__(self):
++            return self
++
++        def __exit__(self, type, value, traceback):
++            if self.stdout:
++                self.stdout.close()
++            if self.stderr:
++                self.stderr.close()
++            try:
++                if self.stdin:
++                    self.stdin.close()
++            finally:
++                self.wait()
++
++
++try:
++    hashlib.sha1(usedforsecurity=False)
++except TypeError:
++    sha1 = hashlib.sha1
++else:
++    sha1 = lambda string: hashlib.sha1(string, usedforsecurity=False)
+ 
+ 
+ class Graphviz(Component):
+     """
+     The GraphvizPlugin (http://trac-hacks.org/wiki/GraphvizPlugin)
+     provides a plugin for Trac to render graphviz
+     (http://www.graphviz.org/) graph layouts within a Trac wiki page.
+@@ -64,15 +91,15 @@
+ 
+     # Available formats and processors, default first (dot/png)
+     Processors = ['dot', 'neato', 'twopi', 'circo', 'fdp']
+     Bitmap_Formats = ['png', 'jpg', 'gif']
+     Vector_Formats = ['svg', 'svgz']
+     Formats = Bitmap_Formats + Vector_Formats
+     Cmd_Paths = {
+-        'linux2':   ['/usr/bin',
++        'linux':    ['/usr/bin',
+                      '/usr/local/bin',],
+ 
+         'win32':    ['c:\\Program Files\\Graphviz\\bin',
+                      'c:\\Program Files\\ATT\\Graphviz\\bin',
+                      ],
+ 
+         'freebsd6': ['/usr/local/bin',
+@@ -82,14 +109,15 @@
+                      ],
+ 
+         'darwin':   ['/opt/local/bin',
+                      '/sw/bin',
+                      '/usr/local/bin'],
+ 
+         }
++    Cmd_Paths['linux2'] = Cmd_Paths['linux']  # Python 2 on Linux
+ 
+     # Note: the following options named "..._option" are those which need
+     #       some additional processing, see `_load_config()` below.
+ 
+     DEFAULT_CACHE_DIR = 'gvcache'
+ 
+     cache_dir_option = Option("graphviz", "cache_dir", DEFAULT_CACHE_DIR,
+@@ -317,19 +345,17 @@
+             self.log.error('render_macro: requested format (%s) not found.',
+                            out_format)
+             return self._error_div(
+                     tag.p(_("Graphviz macro processor error: "
+                             "requested format (%(fmt)s) not valid.",
+                             fmt=out_format)))
+ 
+-        encoded_cmd = (processor + unicode(self.processor_options)) \
+-            .encode(self.encoding)
+         encoded_content = content.encode(self.encoding)
+-        sha_key  = sha.new(encoded_cmd + encoded_content +
+-                           ('S' if self.sanitizer else '')).hexdigest()
++        sha_key = self._build_cache_key(processor, self.processor_options,
++                                        content, 'S' if self.sanitizer else '')
+         img_name = '%s.%s.%s' % (sha_key, processor, out_format)
+         # cache: hash.<dot>.<png>
+         img_path = os.path.join(self.cache_dir, img_name)
+         map_name = '%s.%s.map' % (sha_key, processor)
+         # cache: hash.<dot>.map
+         map_path = os.path.join(self.cache_dir, map_name)
+ 
+@@ -422,15 +448,15 @@
+ 
+         # for binary formats, add map
+         elif URL_in_graph and os.path.exists(map_path):
+             f = open(map_path, 'r')
+             map = f.readlines()
+             f.close()
+             map = "".join(map).replace('\n', '')
+-            return tag(tag.map(Markup(to_unicode(map)),
++            return tag(tag.map(Markup(unicode(map)),
+                                id='G' + sha_key, name='G' + sha_key),
+                        tag.img(src=img_url, usemap="#G" + sha_key,
+                                alt=_("GraphViz image")))
+         else:
+             return tag.img(src=img_url, alt=_("GraphViz image"))
+ 
+ 
+@@ -440,15 +466,14 @@
+         """Expand TracLinks that follow all URL= patterns."""
+         def expand(match):
+             attrib, wiki_text = match.groups() # "URL" or "href", "TracLink"
+             link = extract_link(self.env, context, wiki_text)
+             link = find_element(link, 'href')
+             if link:
+                 href = link.attrib.get('href')
+-                name = link.children
+                 description = link.attrib.get('title', '')
+             else:
+                 href = wiki_text
+                 description = None
+                 if self.sanitizer:
+                     href = ''
+             attribs = []
+@@ -463,16 +488,15 @@
+                                                  .replace('\n', '')))
+             return '\n'.join(attribs)
+         return re.sub(r'(URL|href)="(.*?)"', expand, content)
+ 
+     def _sanitize_html_labels(self, content):
+         def sanitize(match):
+             html = match.group(1)
+-            stream = Stream(HTMLParser(StringIO(html)))
+-            sanitized = (stream | self.sanitizer).render('xhtml', encoding=None)
++            sanitized = self.sanitizer.sanitize(html)
+             return "label=<%s>" % sanitized
+         return re.sub(r'label=<(.*)>', sanitize, content)
+ 
+     def _load_config(self):
+         """Preprocess the graphviz trac.ini configuration."""
+ 
+         # if 'graphviz' not in self.config.sections():
+@@ -516,15 +540,15 @@
+             return _("The default processor '%(proc)s' was not found "
+                      "in '%(paths)s'.", proc=self.processor, paths=cmd_paths)
+ 
+         for name in Graphviz.Processors:
+             pname = self._find_cmd(name, cmd_paths)
+ 
+             if not pname:
+-                self.log.warn('The %s program was not found. '
++                self.log.info('The %s program was not found. '
+                               'The graphviz/%s macro will be disabled.',
+                               pname, name)
+                 Graphviz.Processors.remove(name)
+ 
+             self.cmds[name] = pname
+ 
+         if self.png_anti_alias:
+@@ -555,49 +579,60 @@
+                 MIME_MAP[processor] = 'application/graphviz'
+ 
+     def _launch(self, encoded_input, *args):
+         """Launch a process (cmd), and returns exitcode, stdout + stderr"""
+         # Note: subprocess.Popen doesn't support unicode options arguments
+         # (http://bugs.python.org/issue1759845) so we have to encode them.
+         # Anyway, dot expects utf-8 or the encoding specified with -Gcharset.
+-        encoded_cmd = []
+-        for arg in args:
+-            if isinstance(arg, unicode):
+-                arg = arg.encode(self.encoding, 'replace')
+-            encoded_cmd.append(arg)
+-        p = subprocess.Popen(encoded_cmd, stdin=subprocess.PIPE,
+-                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+-        if encoded_input:
+-            p.stdin.write(encoded_input)
+-        p.stdin.close()
+-        out = p.stdout.read()
+-        err = p.stderr.read()
+-        failure = p.wait() != 0
++        encoded_cmd = self._launch_args(args)
++        with Popen(encoded_cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
++                   stderr=subprocess.PIPE, close_fds=close_fds) as p:
++            out, err = p.communicate(input=encoded_input)
++            failure = p.wait() != 0
+         if failure or err or out:
+             return (failure, tag.p(tag.br(), _("The command:"),
+                          tag.pre(repr(' '.join(encoded_cmd))),
+                          (_("succeeded but emitted the following output:"),
+                           _("failed with the following output:"))[failure],
+                          out and tag.pre(repr(out)),
+                          err and tag.pre(repr(err))))
+         else:
+             return (False, None)
+ 
++    if sys.version_info[0] != 2:
++        def _launch_args(self, args):
++            return tuple(args)
++    else:
++        def _launch_args(self, args):
++            encoding = sys.getfilesystemencoding()
++            return tuple(arg.encode(encoding, 'replace') for arg in args)
++
+     def _error_div(self, msg):
+         """Display msg in an error box, using Trac style."""
+-        if isinstance(msg, str):
+-            msg = to_unicode(msg)
+         self.log.error(msg)
+-        if isinstance(msg, unicode):
+-            msg = tag.pre(escape(msg))
++        msg = tag.pre(msg)
+         return tag.div(
+                 tag.strong(_("Graphviz macro processor has detected an error. "
+                              "Please fix the problem before continuing.")),
+                 msg, class_="system-message")
+ 
++    def _build_cache_key(self, *args):
++        vals = []
++        for arg in args:
++            if isinstance(arg, (list, tuple)):
++                vals.extend(arg)
++            else:
++                vals.append(arg)
++        vals = [val.encode('utf-8') if isinstance(val, unicode) else val
++                for val in vals]
++        key = sha1(b'\0'.join(vals)).hexdigest()
++        if isinstance(key, bytes):
++            key = key.decode('ascii')
++        return key
++
+     def _clean_cache(self):
+         """
+         The cache manager (clean_cache) is an attempt at keeping the
+         cache directory under control. When the cache manager
+         determines that it should clean up the cache, it will delete
+         files based on the file access time. The files that were least
+         accessed will be deleted first.
+@@ -627,16 +662,15 @@
+ 
+                 atime_list.setdefault(entry_list[name][7], []).append(name)
+                 count = count + 1
+ 
+                 size_list.setdefault(entry_list[name][6], []).append(name)
+                 size = size + entry_list[name][6]
+ 
+-            atime_keys = atime_list.keys()
+-            atime_keys.sort()
++            atime_keys = sorted(atime_list)
+ 
+             #self.log.debug('clean_cache.atime_keys: %s', atime_keys)
+             #self.log.debug('clean_cache.count: %d', count)
+             #self.log.debug('clean_cache.size: %d', size)
+ 
+             # In the spirit of keeping the code fairly simple, the
+             # clearing out of files from the cache directory may
+```
+
+### Comparing `TracGraphviz-1.4.0.1/README.rst` & `TracGraphviz-1.4.0.3/TracGraphviz.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,7 +1,21 @@
++Metadata-Version: 2.1
++Name: TracGraphviz
++Version: 1.4.0.3
++Summary: Graphviz plugin for Trac 1.4 and later
++Home-page: https://trac-hacks.org/wiki/GraphvizPlugin
++Author: Peter Kropf
++Author-email: pkropf@gmail.com
++License: BSD 3-Clause
++Keywords: trac graphviz
++Classifier: Programming Language :: Python :: 2.7
++Classifier: Programming Language :: Python :: 3
++Description-Content-Type: text/x-rst
++License-File: COPYING
++
+ Trac Graphviz Wiki Processor
+ ----------------------------
+ 
+ Description
+ ===========
+ 
+ The graphviz wiki processor is a plugin for Trac that allows the the
+@@ -258,8 +272,8 @@
+  * Alec Thomas for creating Trac Hacks (http://trac-hacks.swapoff.org)
+    and providing hosting for the Graphviz module.
+ 
+  * Emmanuel Blot for the swift kick in the butt to get the 0.9 - 0.10
+    releated bug fixes resolved ;-)
+ 
+ 
+-$Id: README.txt 4543 2008-10-20 10:05:06Z cboos $
++$Id: README.rst 17774 2020-05-28 16:25:13Z rjollos $
+```
+

@@ -1,0 +1,1064 @@
+# Comparing `tmp/ovos_lingua_franca-0.4.7a1-py3-none-any.whl.zip` & `tmp/ovos_lingua_franca-0.4.8a1-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,306 +1,323 @@
+-Zip file size: 406891 bytes, number of entries: 304
+--rw-r--r--  2.0 unx      316 b- defN 23-Feb-14 17:27 lingua_franca/__init__.py
+--rw-r--r--  2.0 unx     5617 b- defN 23-Feb-14 17:27 lingua_franca/bracket_expansion.py
+--rw-r--r--  2.0 unx       53 b- defN 23-Feb-14 17:27 lingua_franca/config.py
+--rw-r--r--  2.0 unx    25890 b- defN 23-Feb-14 17:27 lingua_franca/format.py
+--rw-r--r--  2.0 unx    29912 b- defN 23-Feb-14 17:27 lingua_franca/internal.py
+--rw-r--r--  2.0 unx    12718 b- defN 23-Feb-14 17:27 lingua_franca/parse.py
+--rw-r--r--  2.0 unx     2994 b- defN 23-Feb-14 17:27 lingua_franca/time.py
+--rw-r--r--  2.0 unx      177 b- defN 23-Feb-14 17:27 lingua_franca/version.py
+--rw-r--r--  2.0 unx     2346 b- defN 23-Feb-14 17:27 lingua_franca/lang/__init__.py
+--rw-r--r--  2.0 unx     6941 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_az.py
+--rw-r--r--  2.0 unx     4107 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_ca.py
+--rw-r--r--  2.0 unx     7279 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_cs.py
+--rw-r--r--  2.0 unx     2651 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_da.py
+--rw-r--r--  2.0 unx     2992 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_de.py
+--rw-r--r--  2.0 unx     7515 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_en.py
+--rw-r--r--  2.0 unx     7479 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_es.py
+--rw-r--r--  2.0 unx     6505 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_eu.py
+--rw-r--r--  2.0 unx     2319 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_fa.py
+--rw-r--r--  2.0 unx     1928 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_fr.py
+--rw-r--r--  2.0 unx     1880 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_hu.py
+--rw-r--r--  2.0 unx     7331 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_it.py
+--rw-r--r--  2.0 unx     8220 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_nl.py
+--rw-r--r--  2.0 unx    11499 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_pl.py
+--rw-r--r--  2.0 unx     2708 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_pt.py
+--rw-r--r--  2.0 unx     9220 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_ru.py
+--rw-r--r--  2.0 unx     3582 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_sl.py
+--rw-r--r--  2.0 unx     1330 b- defN 23-Feb-14 17:27 lingua_franca/lang/common_data_sv.py
+--rw-r--r--  2.0 unx    14468 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_az.py
+--rw-r--r--  2.0 unx    19840 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_ca.py
+--rw-r--r--  2.0 unx     1629 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_common.py
+--rw-r--r--  2.0 unx    14232 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_cs.py
+--rw-r--r--  2.0 unx    11679 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_da.py
+--rw-r--r--  2.0 unx    11178 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_de.py
+--rw-r--r--  2.0 unx    15639 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_en.py
+--rw-r--r--  2.0 unx     9259 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_es.py
+--rw-r--r--  2.0 unx    11167 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_eu.py
+--rw-r--r--  2.0 unx     9603 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_fa.py
+--rw-r--r--  2.0 unx     8155 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_fr.py
+--rw-r--r--  2.0 unx    10943 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_hu.py
+--rw-r--r--  2.0 unx    11016 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_it.py
+--rw-r--r--  2.0 unx    11437 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_nl.py
+--rw-r--r--  2.0 unx    12264 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_pl.py
+--rw-r--r--  2.0 unx     8718 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_pt.py
+--rw-r--r--  2.0 unx    17098 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_ru.py
+--rw-r--r--  2.0 unx    14252 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_sl.py
+--rw-r--r--  2.0 unx    12108 b- defN 23-Feb-14 17:27 lingua_franca/lang/format_sv.py
+--rw-r--r--  2.0 unx    45259 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_az.py
+--rw-r--r--  2.0 unx    42674 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_ca.py
+--rw-r--r--  2.0 unx    14662 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_common.py
+--rw-r--r--  2.0 unx    64003 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_cs.py
+--rw-r--r--  2.0 unx    33003 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_da.py
+--rw-r--r--  2.0 unx    37096 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_de.py
+--rw-r--r--  2.0 unx    67637 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_en.py
+--rw-r--r--  2.0 unx    42221 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_es.py
+--rw-r--r--  2.0 unx    39375 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_eu.py
+--rw-r--r--  2.0 unx    11378 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_fa.py
+--rw-r--r--  2.0 unx    39207 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_fr.py
+--rw-r--r--  2.0 unx      929 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_hu.py
+--rw-r--r--  2.0 unx    43148 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_it.py
+--rw-r--r--  2.0 unx    50286 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_nl.py
+--rw-r--r--  2.0 unx    51730 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_pl.py
+--rw-r--r--  2.0 unx    47737 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_pt.py
+--rw-r--r--  2.0 unx    66227 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_ru.py
+--rw-r--r--  2.0 unx       34 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_sl.py
+--rw-r--r--  2.0 unx    33548 b- defN 23-Feb-14 17:27 lingua_franca/lang/parse_sv.py
+--rw-r--r--  2.0 unx     7523 b- defN 23-Feb-14 17:27 lingua_franca/res/text/webcolors.json
+--rw-r--r--  2.0 unx        3 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/and.word
+--rw-r--r--  2.0 unx     3583 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/date_time.json
+--rw-r--r--  2.0 unx     4192 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/date_time_test.json
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/day.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/days.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/hour.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/hours.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/minute.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/minutes.word
+--rw-r--r--  2.0 unx      885 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/normalize.json
+--rw-r--r--  2.0 unx        2 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/or.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/second.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/seconds.word
+--rw-r--r--  2.0 unx      119 b- defN 23-Feb-14 17:27 lingua_franca/res/text/az-az/yesno.json
+--rw-r--r--  2.0 unx        2 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/and.word
+--rw-r--r--  2.0 unx     1956 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/colors.json
+--rw-r--r--  2.0 unx     3375 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/date_time.json
+--rw-r--r--  2.0 unx     4112 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/date_time_test.json
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/day.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/days.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/hour.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/hours.word
+--rw-r--r--  2.0 unx     5066 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/langs.json
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/minute.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/minutes.word
+--rw-r--r--  2.0 unx     1983 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/normalize.json
+--rw-r--r--  2.0 unx        2 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/or.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/second.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/seconds.word
+--rw-r--r--  2.0 unx      154 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ca-es/yesno.json
+--rw-r--r--  2.0 unx        1 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/and.word
+--rw-r--r--  2.0 unx     1619 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/colors.json
+--rw-r--r--  2.0 unx     3667 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/date_time.json
+--rw-r--r--  2.0 unx     4178 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/date_time_test.json
+--rw-r--r--  2.0 unx        3 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/day.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/days.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/hour.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/hours.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/minute.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/minutes.word
+--rw-r--r--  2.0 unx      946 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/normalize.json
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/or.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/second.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/seconds.word
+--rw-r--r--  2.0 unx      146 b- defN 23-Feb-14 17:27 lingua_franca/res/text/cs-cz/yesno.json
+--rw-r--r--  2.0 unx        2 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/and.word
+--rw-r--r--  2.0 unx     3439 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/date_time.json
+--rw-r--r--  2.0 unx     2998 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/date_time_test.json
+--rw-r--r--  2.0 unx        3 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/day.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/days.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/hour.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/hours.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/minute.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/minutes.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/or.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/second.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/seconds.word
+--rw-r--r--  2.0 unx      151 b- defN 23-Feb-14 17:27 lingua_franca/res/text/da-dk/yesno.json
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/and.word
+--rw-r--r--  2.0 unx     1239 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/colors.json
+--rw-r--r--  2.0 unx     4101 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/date_time.json
+--rw-r--r--  2.0 unx     4326 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/date_time_test.json
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/day.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/days.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/hour.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/hours.word
+--rw-r--r--  2.0 unx     4707 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/langs.json
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/minute.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/minutes.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/or.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/second.word
+--rw-r--r--  2.0 unx        9 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/seconds.word
+--rw-r--r--  2.0 unx      124 b- defN 23-Feb-14 17:27 lingua_franca/res/text/de-de/yesno.json
+--rw-r--r--  2.0 unx     3489 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-au/date_time.json
+--rw-r--r--  2.0 unx     4127 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-au/date_time_test.json
+--rw-r--r--  2.0 unx      132 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-au/yesno.json
+--rw-r--r--  2.0 unx        3 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/and.word
+--rw-r--r--  2.0 unx     7527 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/colors.json
+--rw-r--r--  2.0 unx     3494 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/date_time.json
+--rw-r--r--  2.0 unx     4131 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/date_time_test.json
+--rw-r--r--  2.0 unx        3 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/day.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/days.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/hour.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/hours.word
+--rw-r--r--  2.0 unx     2943 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/langs.json
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/minute.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/minutes.word
+--rw-r--r--  2.0 unx     5542 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/normalize.json
+--rw-r--r--  2.0 unx        2 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/or.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/second.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/seconds.word
+--rw-r--r--  2.0 unx      487 b- defN 23-Feb-14 17:27 lingua_franca/res/text/en-us/yesno.json
+--rw-r--r--  2.0 unx    10055 b- defN 23-Feb-14 17:27 lingua_franca/res/text/es-es/colors.json
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/es-es/day.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/es-es/days.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/es-es/hour.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/es-es/hours.word
+--rw-r--r--  2.0 unx     3929 b- defN 23-Feb-14 17:27 lingua_franca/res/text/es-es/langs.json
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/es-es/minute.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/es-es/minutes.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/es-es/second.word
+--rw-r--r--  2.0 unx        9 b- defN 23-Feb-14 17:27 lingua_franca/res/text/es-es/seconds.word
+--rw-r--r--  2.0 unx      152 b- defN 23-Feb-14 17:27 lingua_franca/res/text/es-es/yesno.json
+--rw-r--r--  2.0 unx     2337 b- defN 23-Feb-14 17:27 lingua_franca/res/text/eu-eu/date_time.json
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/eu-eu/day.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/eu-eu/days.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/eu-eu/hour.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/eu-eu/hours.word
+--rw-r--r--  2.0 unx     3165 b- defN 23-Feb-14 17:27 lingua_franca/res/text/eu-eu/langs.json
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/eu-eu/minute.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/eu-eu/minutes.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/eu-eu/second.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/eu-eu/seconds.word
+--rw-r--r--  2.0 unx      109 b- defN 23-Feb-14 17:27 lingua_franca/res/text/eu-eu/yesno.json
+--rw-r--r--  2.0 unx        2 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/and.word
+--rw-r--r--  2.0 unx     4052 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/date_time.json
+--rw-r--r--  2.0 unx     3705 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/date_time_test.json
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/day.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/days.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/hour.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/hours.word
+--rw-r--r--  2.0 unx       10 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/minute.word
+--rw-r--r--  2.0 unx       10 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/minutes.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/or.word
+--rw-r--r--  2.0 unx       10 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/second.word
+--rw-r--r--  2.0 unx       10 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/seconds.word
+--rw-r--r--  2.0 unx      187 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fa-ir/yesno.json
+--rw-r--r--  2.0 unx     3889 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fr-fr/date_time.json
+--rw-r--r--  2.0 unx     4264 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fr-fr/date_time_test.json
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fr-fr/day.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fr-fr/days.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fr-fr/hour.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fr-fr/hours.word
+--rw-r--r--  2.0 unx     4022 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fr-fr/langs.json
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fr-fr/minute.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fr-fr/minutes.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fr-fr/second.word
+--rw-r--r--  2.0 unx        9 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fr-fr/seconds.word
+--rw-r--r--  2.0 unx      144 b- defN 23-Feb-14 17:27 lingua_franca/res/text/fr-fr/yesno.json
+--rw-r--r--  2.0 unx     4961 b- defN 23-Feb-14 17:27 lingua_franca/res/text/gl-es/langs.json
+--rw-r--r--  2.0 unx     3892 b- defN 23-Feb-14 17:27 lingua_franca/res/text/hu-hu/date_time.json
+--rw-r--r--  2.0 unx     4194 b- defN 23-Feb-14 17:27 lingua_franca/res/text/hu-hu/date_time_test.json
+--rw-r--r--  2.0 unx      206 b- defN 23-Feb-14 17:27 lingua_franca/res/text/hu-hu/yesno.json
+--rw-r--r--  2.0 unx     7329 b- defN 23-Feb-14 17:27 lingua_franca/res/text/it-it/colors.json
+--rw-r--r--  2.0 unx     4392 b- defN 23-Feb-14 17:27 lingua_franca/res/text/it-it/date_time.json
+--rw-r--r--  2.0 unx     4145 b- defN 23-Feb-14 17:27 lingua_franca/res/text/it-it/date_time_test.json
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/it-it/day.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/it-it/days.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/it-it/hour.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/it-it/hours.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/it-it/minute.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/it-it/minutes.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/it-it/second.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/it-it/seconds.word
+--rw-r--r--  2.0 unx      210 b- defN 23-Feb-14 17:27 lingua_franca/res/text/it-it/yesno.json
+--rw-r--r--  2.0 unx     2834 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/colors.json
+--rw-r--r--  2.0 unx     3825 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/date_time.json
+--rw-r--r--  2.0 unx     4231 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/date_time_test.json
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/day.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/days.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/hour.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/hours.word
+--rw-r--r--  2.0 unx     4256 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/langs.json
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/minute.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/minutes.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/second.word
+--rw-r--r--  2.0 unx        9 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/seconds.word
+--rw-r--r--  2.0 unx       80 b- defN 23-Feb-14 17:27 lingua_franca/res/text/nl-nl/yesno.json
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/and.word
+--rw-r--r--  2.0 unx     4914 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/colors.json
+--rw-r--r--  2.0 unx     3720 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/date_time.json
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/day.word
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/days.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/hour.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/hours.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/minute.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/minutes.word
+--rw-r--r--  2.0 unx        9 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/or.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/second.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/seconds.word
+--rw-r--r--  2.0 unx      153 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pl-pl/yesno.json
+--rw-r--r--  2.0 unx     6794 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pt-pt/colors.json
+--rw-r--r--  2.0 unx     4464 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pt-pt/langs.json
+--rw-r--r--  2.0 unx     1751 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pt-pt/normalize.json
+--rw-r--r--  2.0 unx      434 b- defN 23-Feb-14 17:27 lingua_franca/res/text/pt-pt/yesno.json
+--rw-r--r--  2.0 unx     9888 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/colors.json
+--rw-r--r--  2.0 unx     5655 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/date_time.json
+--rw-r--r--  2.0 unx     5126 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/date_time_test.json
+--rw-r--r--  2.0 unx        9 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/day.word
+--rw-r--r--  2.0 unx        9 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/days.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/hour.word
+--rw-r--r--  2.0 unx       11 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/hours.word
+--rw-r--r--  2.0 unx       13 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/minute.word
+--rw-r--r--  2.0 unx       11 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/minutes.word
+--rw-r--r--  2.0 unx     1191 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/normalize.json
+--rw-r--r--  2.0 unx       15 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/second.word
+--rw-r--r--  2.0 unx       13 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/seconds.word
+--rw-r--r--  2.0 unx      154 b- defN 23-Feb-14 17:27 lingua_franca/res/text/ru-ru/yesno.json
+--rw-r--r--  2.0 unx        2 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/and.word
+--rw-r--r--  2.0 unx     3072 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/date_time.json
+--rw-r--r--  2.0 unx     4232 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/date_time_test.json
+--rw-r--r--  2.0 unx        3 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/day.word
+--rw-r--r--  2.0 unx        3 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/days.word
+--rw-r--r--  2.0 unx        3 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/hour.word
+--rw-r--r--  2.0 unx        2 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/hours.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/minute.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/minutes.word
+--rw-r--r--  2.0 unx      910 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/normalize.json
+--rw-r--r--  2.0 unx        3 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/or.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/second.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sl-si/seconds.word
+--rw-r--r--  2.0 unx     3469 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sv-se/date_time.json
+--rw-r--r--  2.0 unx     4191 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sv-se/date_time_test.json
+--rw-r--r--  2.0 unx        4 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sv-se/day.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sv-se/days.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sv-se/hour.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sv-se/hours.word
+--rw-r--r--  2.0 unx        6 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sv-se/minute.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sv-se/minutes.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sv-se/second.word
+--rw-r--r--  2.0 unx        9 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sv-se/seconds.word
+--rw-r--r--  2.0 unx      149 b- defN 23-Feb-14 17:27 lingua_franca/res/text/sv-se/yesno.json
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/tr-tr/day.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/tr-tr/days.word
+--rw-r--r--  2.0 unx        5 b- defN 23-Feb-14 17:27 lingua_franca/res/text/tr-tr/hour.word
+--rw-r--r--  2.0 unx        8 b- defN 23-Feb-14 17:27 lingua_franca/res/text/tr-tr/hours.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/tr-tr/minute.word
+--rw-r--r--  2.0 unx       10 b- defN 23-Feb-14 17:27 lingua_franca/res/text/tr-tr/minutes.word
+--rw-r--r--  2.0 unx        7 b- defN 23-Feb-14 17:27 lingua_franca/res/text/tr-tr/second.word
+--rw-r--r--  2.0 unx       10 b- defN 23-Feb-14 17:27 lingua_franca/res/text/tr-tr/seconds.word
+--rw-r--r--  2.0 unx      112 b- defN 23-Feb-14 17:27 lingua_franca/res/text/tr-tr/yesno.json
+--rw-r--r--  2.0 unx     2810 b- defN 23-Feb-14 17:27 lingua_franca/util/__init__.py
+--rw-r--r--  2.0 unx     4381 b- defN 23-Feb-14 17:27 lingua_franca/util/colors.py
+--rw-r--r--  2.0 unx    11357 b- defN 23-Feb-14 17:28 ovos_lingua_franca-0.4.7a1.dist-info/LICENSE
+--rw-r--r--  2.0 unx    16513 b- defN 23-Feb-14 17:28 ovos_lingua_franca-0.4.7a1.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Feb-14 17:28 ovos_lingua_franca-0.4.7a1.dist-info/WHEEL
+--rw-r--r--  2.0 unx       14 b- defN 23-Feb-14 17:28 ovos_lingua_franca-0.4.7a1.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx    28427 b- defN 23-Feb-14 17:28 ovos_lingua_franca-0.4.7a1.dist-info/RECORD
+-304 files, 1436307 bytes uncompressed, 360565 bytes compressed:  74.9%
++Zip file size: 435667 bytes, number of entries: 321
++-rw-r--r--  2.0 unx      316 b- defN 23-Apr-07 00:09 lingua_franca/__init__.py
++-rw-r--r--  2.0 unx     5617 b- defN 23-Apr-07 00:09 lingua_franca/bracket_expansion.py
++-rw-r--r--  2.0 unx       53 b- defN 23-Apr-07 00:09 lingua_franca/config.py
++-rw-r--r--  2.0 unx    26322 b- defN 23-Apr-07 00:09 lingua_franca/format.py
++-rw-r--r--  2.0 unx    29970 b- defN 23-Apr-07 00:09 lingua_franca/internal.py
++-rw-r--r--  2.0 unx    12718 b- defN 23-Apr-07 00:09 lingua_franca/parse.py
++-rw-r--r--  2.0 unx     2994 b- defN 23-Apr-07 00:09 lingua_franca/time.py
++-rw-r--r--  2.0 unx      177 b- defN 23-Apr-07 00:09 lingua_franca/version.py
++-rw-r--r--  2.0 unx     2346 b- defN 23-Apr-07 00:09 lingua_franca/lang/__init__.py
++-rw-r--r--  2.0 unx     6941 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_az.py
++-rw-r--r--  2.0 unx     4107 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_ca.py
++-rw-r--r--  2.0 unx     7279 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_cs.py
++-rw-r--r--  2.0 unx     2651 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_da.py
++-rw-r--r--  2.0 unx     2992 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_de.py
++-rw-r--r--  2.0 unx     7515 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_en.py
++-rw-r--r--  2.0 unx     7479 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_es.py
++-rw-r--r--  2.0 unx     6505 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_eu.py
++-rw-r--r--  2.0 unx     2319 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_fa.py
++-rw-r--r--  2.0 unx     1928 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_fr.py
++-rw-r--r--  2.0 unx     1880 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_hu.py
++-rw-r--r--  2.0 unx     7331 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_it.py
++-rw-r--r--  2.0 unx     8220 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_nl.py
++-rw-r--r--  2.0 unx    11499 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_pl.py
++-rw-r--r--  2.0 unx     2708 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_pt.py
++-rw-r--r--  2.0 unx     9398 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_ru.py
++-rw-r--r--  2.0 unx     3582 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_sl.py
++-rw-r--r--  2.0 unx     1330 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_sv.py
++-rw-r--r--  2.0 unx    11021 b- defN 23-Apr-07 00:09 lingua_franca/lang/common_data_uk.py
++-rw-r--r--  2.0 unx    14468 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_az.py
++-rw-r--r--  2.0 unx    19840 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_ca.py
++-rw-r--r--  2.0 unx     1629 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_common.py
++-rw-r--r--  2.0 unx    14232 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_cs.py
++-rw-r--r--  2.0 unx    11679 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_da.py
++-rw-r--r--  2.0 unx    11178 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_de.py
++-rw-r--r--  2.0 unx    15639 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_en.py
++-rw-r--r--  2.0 unx     9259 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_es.py
++-rw-r--r--  2.0 unx    11167 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_eu.py
++-rw-r--r--  2.0 unx     9603 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_fa.py
++-rw-r--r--  2.0 unx     8155 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_fr.py
++-rw-r--r--  2.0 unx    10943 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_hu.py
++-rw-r--r--  2.0 unx    11016 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_it.py
++-rw-r--r--  2.0 unx    11437 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_nl.py
++-rw-r--r--  2.0 unx    12264 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_pl.py
++-rw-r--r--  2.0 unx     8718 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_pt.py
++-rw-r--r--  2.0 unx    17098 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_ru.py
++-rw-r--r--  2.0 unx    14252 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_sl.py
++-rw-r--r--  2.0 unx    12108 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_sv.py
++-rw-r--r--  2.0 unx    18549 b- defN 23-Apr-07 00:09 lingua_franca/lang/format_uk.py
++-rw-r--r--  2.0 unx    45259 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_az.py
++-rw-r--r--  2.0 unx    42674 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_ca.py
++-rw-r--r--  2.0 unx    14795 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_common.py
++-rw-r--r--  2.0 unx    64003 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_cs.py
++-rw-r--r--  2.0 unx    33003 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_da.py
++-rw-r--r--  2.0 unx    37096 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_de.py
++-rw-r--r--  2.0 unx    67637 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_en.py
++-rw-r--r--  2.0 unx    42221 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_es.py
++-rw-r--r--  2.0 unx    39375 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_eu.py
++-rw-r--r--  2.0 unx    11378 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_fa.py
++-rw-r--r--  2.0 unx    39207 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_fr.py
++-rw-r--r--  2.0 unx      929 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_hu.py
++-rw-r--r--  2.0 unx    43148 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_it.py
++-rw-r--r--  2.0 unx    50286 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_nl.py
++-rw-r--r--  2.0 unx    51730 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_pl.py
++-rw-r--r--  2.0 unx    47737 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_pt.py
++-rw-r--r--  2.0 unx    66227 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_ru.py
++-rw-r--r--  2.0 unx       34 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_sl.py
++-rw-r--r--  2.0 unx    33548 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_sv.py
++-rw-r--r--  2.0 unx    74430 b- defN 23-Apr-07 00:09 lingua_franca/lang/parse_uk.py
++-rw-r--r--  2.0 unx     7523 b- defN 23-Apr-07 00:09 lingua_franca/res/text/webcolors.json
++-rw-r--r--  2.0 unx        3 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/and.word
++-rw-r--r--  2.0 unx     3583 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/date_time.json
++-rw-r--r--  2.0 unx     4192 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/date_time_test.json
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/day.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/days.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/hour.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/hours.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/minute.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/minutes.word
++-rw-r--r--  2.0 unx      885 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/normalize.json
++-rw-r--r--  2.0 unx        2 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/or.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/second.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/seconds.word
++-rw-r--r--  2.0 unx      119 b- defN 23-Apr-07 00:09 lingua_franca/res/text/az-az/yesno.json
++-rw-r--r--  2.0 unx        2 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/and.word
++-rw-r--r--  2.0 unx     1956 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/colors.json
++-rw-r--r--  2.0 unx     3375 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/date_time.json
++-rw-r--r--  2.0 unx     4112 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/date_time_test.json
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/day.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/days.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/hour.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/hours.word
++-rw-r--r--  2.0 unx     5066 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/langs.json
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/minute.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/minutes.word
++-rw-r--r--  2.0 unx     1983 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/normalize.json
++-rw-r--r--  2.0 unx        2 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/or.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/second.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/seconds.word
++-rw-r--r--  2.0 unx      154 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ca-es/yesno.json
++-rw-r--r--  2.0 unx        1 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/and.word
++-rw-r--r--  2.0 unx     1619 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/colors.json
++-rw-r--r--  2.0 unx     3667 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/date_time.json
++-rw-r--r--  2.0 unx     4178 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/date_time_test.json
++-rw-r--r--  2.0 unx        3 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/day.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/days.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/hour.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/hours.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/minute.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/minutes.word
++-rw-r--r--  2.0 unx      946 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/normalize.json
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/or.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/second.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/seconds.word
++-rw-r--r--  2.0 unx      146 b- defN 23-Apr-07 00:09 lingua_franca/res/text/cs-cz/yesno.json
++-rw-r--r--  2.0 unx        2 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/and.word
++-rw-r--r--  2.0 unx     3439 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/date_time.json
++-rw-r--r--  2.0 unx     2998 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/date_time_test.json
++-rw-r--r--  2.0 unx        3 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/day.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/days.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/hour.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/hours.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/minute.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/minutes.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/or.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/second.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/seconds.word
++-rw-r--r--  2.0 unx      151 b- defN 23-Apr-07 00:09 lingua_franca/res/text/da-dk/yesno.json
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/and.word
++-rw-r--r--  2.0 unx     1239 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/colors.json
++-rw-r--r--  2.0 unx     4101 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/date_time.json
++-rw-r--r--  2.0 unx     4326 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/date_time_test.json
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/day.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/days.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/hour.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/hours.word
++-rw-r--r--  2.0 unx     4707 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/langs.json
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/minute.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/minutes.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/or.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/second.word
++-rw-r--r--  2.0 unx        9 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/seconds.word
++-rw-r--r--  2.0 unx      124 b- defN 23-Apr-07 00:09 lingua_franca/res/text/de-de/yesno.json
++-rw-r--r--  2.0 unx     3489 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-au/date_time.json
++-rw-r--r--  2.0 unx     4127 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-au/date_time_test.json
++-rw-r--r--  2.0 unx      132 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-au/yesno.json
++-rw-r--r--  2.0 unx        3 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/and.word
++-rw-r--r--  2.0 unx     7527 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/colors.json
++-rw-r--r--  2.0 unx     3494 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/date_time.json
++-rw-r--r--  2.0 unx     4131 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/date_time_test.json
++-rw-r--r--  2.0 unx        3 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/day.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/days.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/hour.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/hours.word
++-rw-r--r--  2.0 unx     2943 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/langs.json
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/minute.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/minutes.word
++-rw-r--r--  2.0 unx     5542 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/normalize.json
++-rw-r--r--  2.0 unx        2 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/or.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/second.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/seconds.word
++-rw-r--r--  2.0 unx      487 b- defN 23-Apr-07 00:09 lingua_franca/res/text/en-us/yesno.json
++-rw-r--r--  2.0 unx    10055 b- defN 23-Apr-07 00:09 lingua_franca/res/text/es-es/colors.json
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/es-es/day.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/es-es/days.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/es-es/hour.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/es-es/hours.word
++-rw-r--r--  2.0 unx     3929 b- defN 23-Apr-07 00:09 lingua_franca/res/text/es-es/langs.json
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/es-es/minute.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/es-es/minutes.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/es-es/second.word
++-rw-r--r--  2.0 unx        9 b- defN 23-Apr-07 00:09 lingua_franca/res/text/es-es/seconds.word
++-rw-r--r--  2.0 unx      152 b- defN 23-Apr-07 00:09 lingua_franca/res/text/es-es/yesno.json
++-rw-r--r--  2.0 unx     2337 b- defN 23-Apr-07 00:09 lingua_franca/res/text/eu-eu/date_time.json
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/eu-eu/day.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/eu-eu/days.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/eu-eu/hour.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/eu-eu/hours.word
++-rw-r--r--  2.0 unx     3165 b- defN 23-Apr-07 00:09 lingua_franca/res/text/eu-eu/langs.json
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/eu-eu/minute.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/eu-eu/minutes.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/eu-eu/second.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/eu-eu/seconds.word
++-rw-r--r--  2.0 unx      109 b- defN 23-Apr-07 00:09 lingua_franca/res/text/eu-eu/yesno.json
++-rw-r--r--  2.0 unx        2 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/and.word
++-rw-r--r--  2.0 unx     4052 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/date_time.json
++-rw-r--r--  2.0 unx     3705 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/date_time_test.json
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/day.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/days.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/hour.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/hours.word
++-rw-r--r--  2.0 unx       10 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/minute.word
++-rw-r--r--  2.0 unx       10 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/minutes.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/or.word
++-rw-r--r--  2.0 unx       10 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/second.word
++-rw-r--r--  2.0 unx       10 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/seconds.word
++-rw-r--r--  2.0 unx      187 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fa-ir/yesno.json
++-rw-r--r--  2.0 unx     3889 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fr-fr/date_time.json
++-rw-r--r--  2.0 unx     4264 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fr-fr/date_time_test.json
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fr-fr/day.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fr-fr/days.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fr-fr/hour.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fr-fr/hours.word
++-rw-r--r--  2.0 unx     4022 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fr-fr/langs.json
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fr-fr/minute.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fr-fr/minutes.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fr-fr/second.word
++-rw-r--r--  2.0 unx        9 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fr-fr/seconds.word
++-rw-r--r--  2.0 unx      144 b- defN 23-Apr-07 00:09 lingua_franca/res/text/fr-fr/yesno.json
++-rw-r--r--  2.0 unx     4961 b- defN 23-Apr-07 00:09 lingua_franca/res/text/gl-es/langs.json
++-rw-r--r--  2.0 unx     3892 b- defN 23-Apr-07 00:09 lingua_franca/res/text/hu-hu/date_time.json
++-rw-r--r--  2.0 unx     4194 b- defN 23-Apr-07 00:09 lingua_franca/res/text/hu-hu/date_time_test.json
++-rw-r--r--  2.0 unx      206 b- defN 23-Apr-07 00:09 lingua_franca/res/text/hu-hu/yesno.json
++-rw-r--r--  2.0 unx     7329 b- defN 23-Apr-07 00:09 lingua_franca/res/text/it-it/colors.json
++-rw-r--r--  2.0 unx     4392 b- defN 23-Apr-07 00:09 lingua_franca/res/text/it-it/date_time.json
++-rw-r--r--  2.0 unx     4145 b- defN 23-Apr-07 00:09 lingua_franca/res/text/it-it/date_time_test.json
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/it-it/day.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/it-it/days.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/it-it/hour.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/it-it/hours.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/it-it/minute.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/it-it/minutes.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/it-it/second.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/it-it/seconds.word
++-rw-r--r--  2.0 unx      210 b- defN 23-Apr-07 00:09 lingua_franca/res/text/it-it/yesno.json
++-rw-r--r--  2.0 unx     2834 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/colors.json
++-rw-r--r--  2.0 unx     3825 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/date_time.json
++-rw-r--r--  2.0 unx     4231 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/date_time_test.json
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/day.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/days.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/hour.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/hours.word
++-rw-r--r--  2.0 unx     4256 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/langs.json
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/minute.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/minutes.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/second.word
++-rw-r--r--  2.0 unx        9 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/seconds.word
++-rw-r--r--  2.0 unx       80 b- defN 23-Apr-07 00:09 lingua_franca/res/text/nl-nl/yesno.json
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/and.word
++-rw-r--r--  2.0 unx     4914 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/colors.json
++-rw-r--r--  2.0 unx     3720 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/date_time.json
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/day.word
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/days.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/hour.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/hours.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/minute.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/minutes.word
++-rw-r--r--  2.0 unx        9 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/or.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/second.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/seconds.word
++-rw-r--r--  2.0 unx      153 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pl-pl/yesno.json
++-rw-r--r--  2.0 unx     6794 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pt-pt/colors.json
++-rw-r--r--  2.0 unx     4464 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pt-pt/langs.json
++-rw-r--r--  2.0 unx     1751 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pt-pt/normalize.json
++-rw-r--r--  2.0 unx      434 b- defN 23-Apr-07 00:09 lingua_franca/res/text/pt-pt/yesno.json
++-rw-r--r--  2.0 unx     9888 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/colors.json
++-rw-r--r--  2.0 unx     5655 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/date_time.json
++-rw-r--r--  2.0 unx     5126 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/date_time_test.json
++-rw-r--r--  2.0 unx        9 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/day.word
++-rw-r--r--  2.0 unx        9 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/days.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/hour.word
++-rw-r--r--  2.0 unx       11 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/hours.word
++-rw-r--r--  2.0 unx       13 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/minute.word
++-rw-r--r--  2.0 unx       11 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/minutes.word
++-rw-r--r--  2.0 unx     1191 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/normalize.json
++-rw-r--r--  2.0 unx       15 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/second.word
++-rw-r--r--  2.0 unx       13 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/seconds.word
++-rw-r--r--  2.0 unx      154 b- defN 23-Apr-07 00:09 lingua_franca/res/text/ru-ru/yesno.json
++-rw-r--r--  2.0 unx        2 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/and.word
++-rw-r--r--  2.0 unx     3072 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/date_time.json
++-rw-r--r--  2.0 unx     4232 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/date_time_test.json
++-rw-r--r--  2.0 unx        3 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/day.word
++-rw-r--r--  2.0 unx        3 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/days.word
++-rw-r--r--  2.0 unx        3 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/hour.word
++-rw-r--r--  2.0 unx        2 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/hours.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/minute.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/minutes.word
++-rw-r--r--  2.0 unx      910 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/normalize.json
++-rw-r--r--  2.0 unx        3 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/or.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/second.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sl-si/seconds.word
++-rw-r--r--  2.0 unx     3469 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sv-se/date_time.json
++-rw-r--r--  2.0 unx     4191 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sv-se/date_time_test.json
++-rw-r--r--  2.0 unx        4 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sv-se/day.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sv-se/days.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sv-se/hour.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sv-se/hours.word
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sv-se/minute.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sv-se/minutes.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sv-se/second.word
++-rw-r--r--  2.0 unx        9 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sv-se/seconds.word
++-rw-r--r--  2.0 unx      149 b- defN 23-Apr-07 00:09 lingua_franca/res/text/sv-se/yesno.json
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/tr-tr/day.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/tr-tr/days.word
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 00:09 lingua_franca/res/text/tr-tr/hour.word
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 00:09 lingua_franca/res/text/tr-tr/hours.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/tr-tr/minute.word
++-rw-r--r--  2.0 unx       10 b- defN 23-Apr-07 00:09 lingua_franca/res/text/tr-tr/minutes.word
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-07 00:09 lingua_franca/res/text/tr-tr/second.word
++-rw-r--r--  2.0 unx       10 b- defN 23-Apr-07 00:09 lingua_franca/res/text/tr-tr/seconds.word
++-rw-r--r--  2.0 unx      112 b- defN 23-Apr-07 00:09 lingua_franca/res/text/tr-tr/yesno.json
++-rw-r--r--  2.0 unx       19 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/and.word
++-rw-r--r--  2.0 unx     5702 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/date_time.json
++-rw-r--r--  2.0 unx     2154 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/date_time_test.json
++-rw-r--r--  2.0 unx        9 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/day.word
++-rw-r--r--  2.0 unx        9 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/days.word
++-rw-r--r--  2.0 unx       13 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/hour.word
++-rw-r--r--  2.0 unx       11 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/hours.word
++-rw-r--r--  2.0 unx       15 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/minute.word
++-rw-r--r--  2.0 unx       13 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/minutes.word
++-rw-r--r--  2.0 unx     1985 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/normalize.json
++-rw-r--r--  2.0 unx        6 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/or.word
++-rw-r--r--  2.0 unx       15 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/second.word
++-rw-r--r--  2.0 unx       13 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/seconds.word
++-rw-r--r--  2.0 unx      623 b- defN 23-Apr-07 00:09 lingua_franca/res/text/uk-uk/yesno.json
++-rw-r--r--  2.0 unx     2810 b- defN 23-Apr-07 00:09 lingua_franca/util/__init__.py
++-rw-r--r--  2.0 unx     4381 b- defN 23-Apr-07 00:09 lingua_franca/util/colors.py
++-rw-r--r--  2.0 unx    11357 b- defN 23-Apr-07 00:09 ovos_lingua_franca-0.4.8a1.dist-info/LICENSE
++-rw-r--r--  2.0 unx    16513 b- defN 23-Apr-07 00:09 ovos_lingua_franca-0.4.8a1.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 00:09 ovos_lingua_franca-0.4.8a1.dist-info/WHEEL
++-rw-r--r--  2.0 unx       14 b- defN 23-Apr-07 00:09 ovos_lingua_franca-0.4.8a1.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx    30032 b- defN 23-Apr-07 00:09 ovos_lingua_franca-0.4.8a1.dist-info/RECORD
++321 files, 1553300 bytes uncompressed, 386735 bytes compressed:  75.1%
+```
+
+## zipnote {}
+
+```diff
+@@ -75,14 +75,17 @@
+ 
+ Filename: lingua_franca/lang/common_data_sl.py
+ Comment: 
+ 
+ Filename: lingua_franca/lang/common_data_sv.py
+ Comment: 
+ 
++Filename: lingua_franca/lang/common_data_uk.py
++Comment: 
++
+ Filename: lingua_franca/lang/format_az.py
+ Comment: 
+ 
+ Filename: lingua_franca/lang/format_ca.py
+ Comment: 
+ 
+ Filename: lingua_franca/lang/format_common.py
+@@ -132,14 +135,17 @@
+ 
+ Filename: lingua_franca/lang/format_sl.py
+ Comment: 
+ 
+ Filename: lingua_franca/lang/format_sv.py
+ Comment: 
+ 
++Filename: lingua_franca/lang/format_uk.py
++Comment: 
++
+ Filename: lingua_franca/lang/parse_az.py
+ Comment: 
+ 
+ Filename: lingua_franca/lang/parse_ca.py
+ Comment: 
+ 
+ Filename: lingua_franca/lang/parse_common.py
+@@ -189,14 +195,17 @@
+ 
+ Filename: lingua_franca/lang/parse_sl.py
+ Comment: 
+ 
+ Filename: lingua_franca/lang/parse_sv.py
+ Comment: 
+ 
++Filename: lingua_franca/lang/parse_uk.py
++Comment: 
++
+ Filename: lingua_franca/res/text/webcolors.json
+ Comment: 
+ 
+ Filename: lingua_franca/res/text/az-az/and.word
+ Comment: 
+ 
+ Filename: lingua_franca/res/text/az-az/date_time.json
+@@ -885,29 +894,71 @@
+ 
+ Filename: lingua_franca/res/text/tr-tr/seconds.word
+ Comment: 
+ 
+ Filename: lingua_franca/res/text/tr-tr/yesno.json
+ Comment: 
+ 
++Filename: lingua_franca/res/text/uk-uk/and.word
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/date_time.json
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/date_time_test.json
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/day.word
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/days.word
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/hour.word
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/hours.word
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/minute.word
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/minutes.word
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/normalize.json
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/or.word
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/second.word
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/seconds.word
++Comment: 
++
++Filename: lingua_franca/res/text/uk-uk/yesno.json
++Comment: 
++
+ Filename: lingua_franca/util/__init__.py
+ Comment: 
+ 
+ Filename: lingua_franca/util/colors.py
+ Comment: 
+ 
+-Filename: ovos_lingua_franca-0.4.7a1.dist-info/LICENSE
++Filename: ovos_lingua_franca-0.4.8a1.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: ovos_lingua_franca-0.4.7a1.dist-info/METADATA
++Filename: ovos_lingua_franca-0.4.8a1.dist-info/METADATA
+ Comment: 
+ 
+-Filename: ovos_lingua_franca-0.4.7a1.dist-info/WHEEL
++Filename: ovos_lingua_franca-0.4.8a1.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: ovos_lingua_franca-0.4.7a1.dist-info/top_level.txt
++Filename: ovos_lingua_franca-0.4.8a1.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: ovos_lingua_franca-0.4.7a1.dist-info/RECORD
++Filename: ovos_lingua_franca-0.4.8a1.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## lingua_franca/format.py
+
+```diff
+@@ -161,21 +161,28 @@
+             if e['re'].match(str(number)):
+                 return e['format']
+             i = i + 1
+         return s
+ 
+     def _decade_format(self, number, number_tuple, lang):
+         s = self._format_string(number % 100, 'decade_format', lang)
++        decade = s.format(x=number_tuple.x, xx=number_tuple.xx,
++                        x0=number_tuple.x0, x_in_x0=number_tuple.x_in_x0,
++                        number=str(number % 100))
+         return s.format(x=number_tuple.x, xx=number_tuple.xx,
+                         x0=number_tuple.x0, x_in_x0=number_tuple.x_in_x0,
+                         number=str(number % 100))
+ 
+     def _number_format_hundreds(self, number, number_tuple, lang,
+                                 formatted_decade):
+         s = self._format_string(number % 1000, 'hundreds_format', lang)
++        hundreds = s.format(xxx=number_tuple.xxx, x00=number_tuple.x00,
++                          x_in_x00=number_tuple.x_in_x00,
++                          formatted_decade=formatted_decade,
++                          number=str(number % 1000))
+         return s.format(xxx=number_tuple.xxx, x00=number_tuple.x00,
+                         x_in_x00=number_tuple.x_in_x00,
+                         formatted_decade=formatted_decade,
+                         number=str(number % 1000))
+ 
+     def _number_format_thousand(self, number, number_tuple, lang,
+                                 formatted_decade, formatted_hundreds):
+```
+
+## lingua_franca/internal.py
+
+```diff
+@@ -6,21 +6,21 @@
+ from warnings import warn
+ from datetime import datetime
+ from lingua_franca import config
+ from lingua_franca.time import to_local
+ 
+ 
+ _SUPPORTED_LANGUAGES = ("az", "ca", "cs", "da", "de", "en", "es", "fr", "hu",
+-                        "it", "nl", "pl", "pt", "ru", "sl", "sv", "fa", "eu")
++                        "it", "nl", "pl", "pt", "ru", "sl", "sv", "fa", "eu", "uk")
+ 
+ _SUPPORTED_FULL_LOCALIZATIONS = ("az-az", "ca-es", "cs-cz", "da-dk", "de-de",
+                                  "en-au", "en-us", "es-es", "fr-fr",
+                                  "hu-hu", "it-it", "nl-nl", "pl-pl",
+                                  "fa-ir", "pt-pt", "ru-ru", "sl-si",
+-                                 "sv-se", "tr-tr", "eu-eu")
++                                 "sv-se", "tr-tr", "eu-eu", "uk-uk")
+ 
+ _DEFAULT_FULL_LANG_CODES = {'az': 'az-az',
+                             'ca': 'ca-es',
+                             'cs': 'cs-cz',
+                             'da': 'da-dk',
+                             'de': 'de-de',
+                             'en': 'en-us',
+@@ -32,15 +32,16 @@
+                             'it': 'it-it',
+                             'nl': 'nl-nl',
+                             'pl': 'pl-pl',
+                             'pt': 'pt-pt',
+                             'ru': 'ru-ru',
+                             'sl': 'sl-si',
+                             'sv': 'sv-se',
+-                            'tr': 'tr-tr'}
++                            'tr': 'tr-tr',
++                            'uk': 'uk-uk'}
+ 
+ __default_lang = None
+ __active_lang_code = None
+ __loaded_langs = []
+ 
+ _localized_functions = {}
+```
+
+## lingua_franca/version.py
+
+```diff
+@@ -1,7 +1,7 @@
+ # The following lines are replaced during the release process.
+ # START_VERSION_BLOCK
+ VERSION_MAJOR = 0
+ VERSION_MINOR = 4
+-VERSION_BUILD = 7
++VERSION_BUILD = 8
+ VERSION_ALPHA = 1
+ # END_VERSION_BLOCK
+```
+
+## lingua_franca/lang/common_data_ru.py
+
+```diff
+@@ -288,14 +288,20 @@
+     'милисекунд': 'milliseconds',
+     'секунда': 'seconds',
+     'секунды': 'seconds',
+     'секунд': 'seconds',
+     'минута': 'minutes',
+     'минуты': 'minutes',
+     'минут': 'minutes',
++    'година': 'hours',
++    'годин': 'hours',
++    'години': 'hours',
++    'годиною': 'hours',
++    'годинами': 'hours',
++    'годині': 'hours',
+     'час': 'hours',
+     'часа': 'hours',
+     'часов': 'hours',
+     'день': 'days',
+     'дня': 'days',
+     'дней': 'days',
+     'неделя': 'weeks',
+```
+
+## lingua_franca/lang/parse_common.py
+
+```diff
+@@ -196,19 +196,23 @@
+     resource_file = resolve_resource_file(f"text/{lang}/yesno.json")
+     if not resource_file:
+         raise FunctionNotLocalizedError(f"yesno.json missing for {lang}")
+ 
+     with open(resource_file) as f:
+         words = json.load(f)
+         words = {k: [_.lower() for _ in v] for k, v in words.items()}
+-
+-    text = unicodedata.normalize('NFD', text) \
+-        .encode('ascii', 'ignore').decode("utf-8")
++    # after encoding information is lost
++    if lang == 'uk-uk':
++        text = unicodedata.normalize('NFD', text)
++    else:
++        text = unicodedata.normalize('NFD', text) \
++            .encode('ascii', 'ignore').decode("utf-8")
+     text = text.lower()
+ 
++
+     # if user says yes but later says no, he changed his mind mid-sentence
+     # the highest index is the last yesno word
+     res = None
+     best = -1
+     # check if user said yes
+     for w in words["yes"]:
+         if w not in text:
+```
+
+## Comparing `ovos_lingua_franca-0.4.7a1.dist-info/LICENSE` & `ovos_lingua_franca-0.4.8a1.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `ovos_lingua_franca-0.4.7a1.dist-info/METADATA` & `ovos_lingua_franca-0.4.8a1.dist-info/METADATA`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: ovos-lingua-franca
+-Version: 0.4.7a1
++Version: 0.4.8a1
+ Summary: OpenVoiceOS's multilingual text parsing and formatting library
+ Home-page: https://github.com/OpenVoiceOS/ovos-lingua-franca
+ Author: Mycroft AI / OVOS
+ Author-email: jarbasai@mailfence.com
+ License: Apache2.0
+ Platform: UNKNOWN
+ Classifier: Development Status :: 4 - Beta
+```
+
+## Comparing `ovos_lingua_franca-0.4.7a1.dist-info/RECORD` & `ovos_lingua_franca-0.4.8a1.dist-info/RECORD`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ lingua_franca/__init__.py,sha256=P8DwF_29VXcFdu6-OgyMboshmSjtAhv9bc6gSfqepO4,316
+ lingua_franca/bracket_expansion.py,sha256=H0SxRAJbVI4flH6yOvpMrnK8syF3OfS0PtYHYq87zYA,5617
+ lingua_franca/config.py,sha256=BgOeP4q1GAOc8xH_4TWKRJi0Nc2CFdESdrWj9wW1a0A,53
+-lingua_franca/format.py,sha256=qIvmfCFs_XTaDU-O6Rvub8z0vNkDXB9m9TT5mPY71LY,25890
+-lingua_franca/internal.py,sha256=HG9lsFpzCGLhV24Z0oS2J_ZwnKiwGi7Jyl36HYk8_fA,29912
++lingua_franca/format.py,sha256=3oiohJR-s0NOlk5D3ug05H7Ja3m7UtfaMUrhlPfPqJE,26322
++lingua_franca/internal.py,sha256=StzhC5OzY1w7ulycJkD775PyL1oFKU_k5UNwVGi3Kqo,29970
+ lingua_franca/parse.py,sha256=fIsGYBySzQQTN00ZGikjMl3YzQ8s9jNsU32_c27H_s4,12718
+ lingua_franca/time.py,sha256=6iHeNEaNPxaHB0_3-RrqjFNhqzZZRkAtb5PW6CnrqUI,2994
+-lingua_franca/version.py,sha256=S3OkG2u7TIUg-OTtpNUk3YGWprIsRpSXNfRiQMI2y6I,177
++lingua_franca/version.py,sha256=7MxJqZl-L8PmnKnWbDoEYHnjdK239ZMJD5lzuEwZfuU,177
+ lingua_franca/lang/__init__.py,sha256=uwjAwJMurfKEgMtoGSgthnuRsp2__A9KAk2MuDDsJV4,2346
+ lingua_franca/lang/common_data_az.py,sha256=NwOzedclRf_2yR3e3tEilXkYVSK3PDKcCRwOCKYEfGI,6941
+ lingua_franca/lang/common_data_ca.py,sha256=Ne9NsaooWQiy2Px4j95dWHjNRwRxYC3N7vgmhgwfnVI,4107
+ lingua_franca/lang/common_data_cs.py,sha256=Ppg2CNB4xg8G3Gj-ktBnqdu3aZdM2m8TJgjIq4-KS7Q,7279
+ lingua_franca/lang/common_data_da.py,sha256=1-aze3CEyrVZnG6JhSdp7wlswRk6WQVEUak6EbuAK1E,2651
+ lingua_franca/lang/common_data_de.py,sha256=QeS0UJWnh9gZMz2O-clpAlWeb8lKgaSrJquEOKz07WE,2992
+ lingua_franca/lang/common_data_en.py,sha256=zPeYoLgEuA3cKN6WNnc83LfKtp17XKeGT44RqM0CAdk,7515
+@@ -18,17 +18,18 @@
+ lingua_franca/lang/common_data_fa.py,sha256=7qUuqD2Q4hNmumKd1lzl_rDRgSPbrHwNBHXEOhyxD_E,2319
+ lingua_franca/lang/common_data_fr.py,sha256=plO_vrSFbMy_bBv5FHCLyfEkBZd92cYnqahLgDrtsek,1928
+ lingua_franca/lang/common_data_hu.py,sha256=YRs8m_iH2Lm-DQuB1mbBRLNZXKfP8uhJROipI7yqye8,1880
+ lingua_franca/lang/common_data_it.py,sha256=bHMouHRGhXEAAo27sz8xS9KN5pMhvN55qJLpuhyKATc,7331
+ lingua_franca/lang/common_data_nl.py,sha256=7jcPlb7KLm1cH3fYB1zNq8Mo5BqhiuF-xUbLcM48wYM,8220
+ lingua_franca/lang/common_data_pl.py,sha256=SeAPjlRv472-oSSwOcoHN5OsNY5HhUfcIZAEkthoUm4,11499
+ lingua_franca/lang/common_data_pt.py,sha256=L6MUONJwVkvbsRqSNpvbTAMjjBoznVMSnVzXH-pBRYQ,2708
+-lingua_franca/lang/common_data_ru.py,sha256=gZp1FfmLWOOikVFXCepv5NduAsg87zgsIugoyQMWG4w,9220
++lingua_franca/lang/common_data_ru.py,sha256=zJwiVDl-DdamOyKScOeuzsPohrTXewj_HB8Kt_kn4ms,9398
+ lingua_franca/lang/common_data_sl.py,sha256=96wlLcLLriAf_k9d5PYGFYrCEwkTzLse33WzLsXNz8E,3582
+ lingua_franca/lang/common_data_sv.py,sha256=8E4-usc__DwmLEecPTWz38bAuQnWjWV3megWUciWNPQ,1330
++lingua_franca/lang/common_data_uk.py,sha256=Dw2PFn1BBWjvhopiE50H47eLyqEQxfPRy8fXAaJIDWc,11021
+ lingua_franca/lang/format_az.py,sha256=TfmbAPgd_9z7MoW6eStwLZUsrTX7AsNqufZ6RhtxIrQ,14468
+ lingua_franca/lang/format_ca.py,sha256=QWVmmAu_Jg4Yn45no3Ur-v3qY1TYMcLBLPwYGK4VUwg,19840
+ lingua_franca/lang/format_common.py,sha256=wFQsAwNxbPNNbG_SX2XVq_BPdAzcTQ4t2ZbfaZ31qks,1629
+ lingua_franca/lang/format_cs.py,sha256=pZG3AvLUi3oADXQuK0iFwlyfbj_KVAHAWEPPJLwbLVk,14232
+ lingua_franca/lang/format_da.py,sha256=LdoR8tp1P5aeWLRjBXIaYw7tgB4-wEtBpITvUjmKKSE,11679
+ lingua_franca/lang/format_de.py,sha256=tckW3AqpGkhHK6DQLS6DIs8XWTvXJY8mIIOQ-26mtP4,11178
+ lingua_franca/lang/format_en.py,sha256=1iaZNXztYhtTFGMjS4TTuljhi8gHsivlzMoo7Reqxl0,15639
+@@ -40,17 +41,18 @@
+ lingua_franca/lang/format_it.py,sha256=g6WKs9uCptwCEnCuM7ViS-0myPHni3FWBPv5iJHQFQ0,11016
+ lingua_franca/lang/format_nl.py,sha256=ac19VkujP7cXyrpohQsbMeaNXFz4UPQgAfCsf-RBGGc,11437
+ lingua_franca/lang/format_pl.py,sha256=XMfrAWG96LhR79Fw0Y5JwwLPJZNZ9Zw95oWTknX9f68,12264
+ lingua_franca/lang/format_pt.py,sha256=6apO-HqtCnks5ODgiqx4ZIBE-D7_6M5aHDdWqyuQpws,8718
+ lingua_franca/lang/format_ru.py,sha256=QQnlKVwtn3l0z1dY8fkSxXXaPN-qNZUdzQCqu20Dm2I,17098
+ lingua_franca/lang/format_sl.py,sha256=Apl0rN1bBA2-zJ6ogbdxtxERPc_PKyNpUHBDHry-HV0,14252
+ lingua_franca/lang/format_sv.py,sha256=LmF6ewtODsV3j9JQpuT_TdMttKAvuFHNrekoe0Fq0n0,12108
++lingua_franca/lang/format_uk.py,sha256=o8zZg84sCxPnfYSOYv_SZ6Da5wblNzLCm8VESUWjzhA,18549
+ lingua_franca/lang/parse_az.py,sha256=JMPZAzBjmv40gh55TxsxUGFYhSSJ9RYrFyQSJ6EEreE,45259
+ lingua_franca/lang/parse_ca.py,sha256=vNn9aOM-T_kaACjt1TyQJJUbB2d1FebkH_cQlMak7bk,42674
+-lingua_franca/lang/parse_common.py,sha256=xmuedEW3J2-hhWosl9lii74a5u-v7ps45iGoikm-uMk,14662
++lingua_franca/lang/parse_common.py,sha256=Sn7KZfY1C5YLZEYwCKLjk9BpSI6kjdroTM-2y6D-a6k,14795
+ lingua_franca/lang/parse_cs.py,sha256=mvgjw1MABelnJa8vagwGTQVhljVSuPJqhGI1FhVRJIg,64003
+ lingua_franca/lang/parse_da.py,sha256=Xod6isDnpcQzTyA3hSSMlcU2xCxnOEpw9zwYfca4jmQ,33003
+ lingua_franca/lang/parse_de.py,sha256=RK3s9FGUcqlfJ8c_bIvDyvMeq5B5V-3oLLsIGiX8rfk,37096
+ lingua_franca/lang/parse_en.py,sha256=8RbkY0FHmJmFvpuQWMFuO6JN_hJw5vZk5LXftF-9tDE,67637
+ lingua_franca/lang/parse_es.py,sha256=7iL3YNg9k5ZKZTkeqX8THpSmOPR07NhRBjeOulkQLBU,42221
+ lingua_franca/lang/parse_eu.py,sha256=IHx5j5ANSxAUduqvp2a4JuMdXK4PaEfpOx1crz90v70,39375
+ lingua_franca/lang/parse_fa.py,sha256=Z3WUHfj6LAZNHhLP4R1ytjNGS-HkIwHE3recxLcK6_E,11378
+@@ -59,14 +61,15 @@
+ lingua_franca/lang/parse_it.py,sha256=hWi5zMfNZBpQszwaqr3ywHYrvuLT5tFz9vF5giAMvIU,43148
+ lingua_franca/lang/parse_nl.py,sha256=dIsqL4jff3cXdJHSheeSu-tdbSU3UNUT3qEdm0o8CUE,50286
+ lingua_franca/lang/parse_pl.py,sha256=RClK7HcN_3RxDfTSVmp8lzE_RzP4sF5zWbmtf5SdTWs,51730
+ lingua_franca/lang/parse_pt.py,sha256=RsqaGK0ExDBYsvhyuHnweP1XfwlRwOdY-t-UpGD2gfM,47737
+ lingua_franca/lang/parse_ru.py,sha256=EBHZjA1hVZ3lht2QeSfME9z83Fcs4gbm1YizsPcLNm0,66227
+ lingua_franca/lang/parse_sl.py,sha256=R-qf5npD5OnoAOIjrivoSYk5RzYh1f91yZ8AzYCEIsA,34
+ lingua_franca/lang/parse_sv.py,sha256=frz7Ojbgen_26mSnKNiRSxc8WdYZ4TOqwdZqep9dcdA,33548
++lingua_franca/lang/parse_uk.py,sha256=qi3g53xJLJ_Tr17CSgEOqwaCCndHTGlr75N-BWJl5bw,74430
+ lingua_franca/res/text/webcolors.json,sha256=NsNJdbFi7HnuKLql0Cf7fDE5InRTS6M3jO_uBgd9b5Y,7523
+ lingua_franca/res/text/az-az/and.word,sha256=WxIW3E0A8iOv3RxiBk2ygnW_SoPh-kFBCMxcC0Bq3VE,3
+ lingua_franca/res/text/az-az/date_time.json,sha256=rnPkRfEDP5iIErn2ls3bWJqEAQs9nD_3z7r-TrpFwRU,3583
+ lingua_franca/res/text/az-az/date_time_test.json,sha256=4D3stU_PYgYuEvScEmGvJuq1ncoLUiQ90VBkcZ1mVRU,4192
+ lingua_franca/res/text/az-az/day.word,sha256=wfyP7-EeqxSjYxNw7imF0WdmQo7GbQIbzFBPTVfaasE,4
+ lingua_franca/res/text/az-az/days.word,sha256=wfyP7-EeqxSjYxNw7imF0WdmQo7GbQIbzFBPTVfaasE,4
+ lingua_franca/res/text/az-az/hour.word,sha256=5s43e6w_65x0YcCBbGCBoj22KNipbiAO8Stu5YWQ2FQ,4
+@@ -291,14 +294,28 @@
+ lingua_franca/res/text/tr-tr/hour.word,sha256=BlXBsrCh1uZx3WK1b1pQJhy94Cm5vHp9-fwKzadUHxo,5
+ lingua_franca/res/text/tr-tr/hours.word,sha256=v5NBE7jDkDVnrGNWRxgjGR_0o63p3Kh4jUR5AsDJRTE,8
+ lingua_franca/res/text/tr-tr/minute.word,sha256=j-vPSCe9ZHcfq2CuBXEAB_SJEno1GzEIhMkLjg6oxss,7
+ lingua_franca/res/text/tr-tr/minutes.word,sha256=xHMef7d9jv_T4DQWWIC4Aa1YJMsvRfavyU4XsqUfW24,10
+ lingua_franca/res/text/tr-tr/second.word,sha256=aSoqMqBybJRYeARZM8fZhZcFfCLfNlId2HxJtrcgJrY,7
+ lingua_franca/res/text/tr-tr/seconds.word,sha256=qxP30vkwSbjEOQuvTFs5NihNW-X6RsQ_k8EeS3_uBhc,10
+ lingua_franca/res/text/tr-tr/yesno.json,sha256=sL-lm1ATwENdhAo1m9SAXEzsNa-vsiMPdYZKGpuhIR4,112
++lingua_franca/res/text/uk-uk/and.word,sha256=zvhObMny1h9lrAUQ9Eb3ZROSUXR3R9d5fru05kux-aU,19
++lingua_franca/res/text/uk-uk/date_time.json,sha256=dKrdOlQX78Bn6_tqksrb6Kiga7u_-Pjv8V5jVdyr8OE,5702
++lingua_franca/res/text/uk-uk/date_time_test.json,sha256=IboF-xyHQtuL66PRuXiPpWsb8WEv3XIEsH5DoG6zzBw,2154
++lingua_franca/res/text/uk-uk/day.word,sha256=dJvFbOE8UTkZVCQuRkL5cw3R9Z2ancdO1jSFKEFt3aI,9
++lingua_franca/res/text/uk-uk/days.word,sha256=n36lXGm7817KY4978Xp0hT3gSo0Zd4wvqZRfBNbaInY,9
++lingua_franca/res/text/uk-uk/hour.word,sha256=isPwCgtSoNd2C9KrJ30O23S2F5uho4thoOFV9sBFcgs,13
++lingua_franca/res/text/uk-uk/hours.word,sha256=7ckBqqxM9n0MSvOcmXQnxpN4vpJsrP-O4CauiMIXU2A,11
++lingua_franca/res/text/uk-uk/minute.word,sha256=g8FTfbD3u5nwnQqyijnLJPYjtcW1StPqbxUzv4na1RM,15
++lingua_franca/res/text/uk-uk/minutes.word,sha256=wVvE7iJJRjODWib_aUCuWcXX82TJ1ng4mMgHGEleaXA,13
++lingua_franca/res/text/uk-uk/normalize.json,sha256=-MlJ_Lkom1dYHdIheQ34LbwgBxpdvtBoZuu8NxefVd4,1985
++lingua_franca/res/text/uk-uk/or.word,sha256=6ETpLLueS80ehg5TsJ9O1tkD6MEQST_lX4STr9VXNc4,6
++lingua_franca/res/text/uk-uk/second.word,sha256=IYHWtlEnguMxxRqZjtjHZdnETmhXk-UUN90FZjv5zqQ,15
++lingua_franca/res/text/uk-uk/seconds.word,sha256=4LnmqnErUHz29E20_2RZ5GGVf77gVV8b0iadNmugkEk,13
++lingua_franca/res/text/uk-uk/yesno.json,sha256=S8RI2JlvBVLabzARvcUF_bhFTFhj8ihiEGgojCRX03Y,623
+ lingua_franca/util/__init__.py,sha256=xQLRgE6FVR-XKsOykOsqEAGeJrrWDXv4T_zLhnMQ25k,2810
+ lingua_franca/util/colors.py,sha256=csCrGunLuHllbhh1uGKcXS19jvr_JraWhF5iiNfkIhM,4381
+-ovos_lingua_franca-0.4.7a1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+-ovos_lingua_franca-0.4.7a1.dist-info/METADATA,sha256=KVgBwK5whtVI-QIt2QK5VD2HSG9-QCIhD8fxozoxaKg,16513
+-ovos_lingua_franca-0.4.7a1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+-ovos_lingua_franca-0.4.7a1.dist-info/top_level.txt,sha256=6o8H43oGIet5QByc6E51EG_M65Wt6dE6pnG2A-tlPhk,14
+-ovos_lingua_franca-0.4.7a1.dist-info/RECORD,,
++ovos_lingua_franca-0.4.8a1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
++ovos_lingua_franca-0.4.8a1.dist-info/METADATA,sha256=JUx7Ty3_78QrAf5SB0N_M6uaGPS6CTM_s96NKL3AMBI,16513
++ovos_lingua_franca-0.4.8a1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
++ovos_lingua_franca-0.4.8a1.dist-info/top_level.txt,sha256=6o8H43oGIet5QByc6E51EG_M65Wt6dE6pnG2A-tlPhk,14
++ovos_lingua_franca-0.4.8a1.dist-info/RECORD,,
+```
+

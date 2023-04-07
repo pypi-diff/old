@@ -1,0 +1,1749 @@
+--- tmp/ai2-tango-1.2.0.tar.gz
++++ tmp/ai2-tango-1.2.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "ai2-tango-1.2.0.tar", last modified: Fri Feb 10 19:56:38 2023, max compression
+│ +gzip compressed data, was "ai2-tango-1.2.1.tar", last modified: Thu Apr  6 23:21:15 2023, max compression
+│   --- ai2-tango-1.2.0.tar
+├── +++ ai2-tango-1.2.1.tar
+│ ├── file list
+│ │ @@ -1,130 +1,130 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.982740 ai2-tango-1.2.0/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11357 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9159 2023-02-10 19:56:38.982740 ai2-tango-1.2.0/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8274 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.970740 ai2-tango-1.2.0/ai2_tango.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9159 2023-02-10 19:56:38.000000 ai2-tango-1.2.0/ai2_tango.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3545 2023-02-10 19:56:38.000000 ai2-tango-1.2.0/ai2_tango.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-10 19:56:38.000000 ai2-tango-1.2.0/ai2_tango.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       46 2023-02-10 19:56:38.000000 ai2-tango-1.2.0/ai2_tango.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1387 2023-02-10 19:56:38.000000 ai2-tango-1.2.0/ai2_tango.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        6 2023-02-10 19:56:38.000000 ai2-tango-1.2.0/ai2_tango.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      347 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-02-10 19:56:38.982740 ai2-tango-1.2.0/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3794 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.970740 ai2-tango-1.2.0/tango/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      674 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    26828 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/__main__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.974740 ai2-tango-1.2.0/tango/common/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      671 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      549 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/aliases.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1787 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/dataset_dict.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6074 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/det_hash.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2578 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/exceptions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2789 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/file_lock.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    36708 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/from_params.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5946 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/lazy.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    27037 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/logging.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    22721 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/params.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16052 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/registrable.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1274 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/remote_utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12494 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/sequences.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.974740 ai2-tango-1.2.0/tango/common/testing/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5360 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/testing/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4548 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/testing/steps.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3629 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/tqdm.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10309 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/common/util.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5030 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/executor.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.974740 ai2-tango-1.2.0/tango/executors/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      118 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/executors/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13932 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/executors/multicore_executor.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19305 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/format.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.974740 ai2-tango-1.2.0/tango/integrations/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      771 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.974740 ai2-tango-1.2.0/tango/integrations/beaker/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1063 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/beaker/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6800 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/beaker/common.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3961 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/beaker/entrypoint.sh
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    42289 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/beaker/executor.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4037 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/beaker/step_cache.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11578 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/beaker/workspace.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.974740 ai2-tango-1.2.0/tango/integrations/datasets/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11487 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/datasets/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.974740 ai2-tango-1.2.0/tango/integrations/fairscale/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1880 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/fairscale/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2908 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/fairscale/fsdp_config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4272 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/fairscale/module_wrapper.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5813 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/fairscale/training_engine.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.978740 ai2-tango-1.2.0/tango/integrations/flax/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      755 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/flax/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1907 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/flax/data.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7655 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/flax/eval.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2600 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/flax/eval_callback.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      687 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/flax/format.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      481 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/flax/model.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3024 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/flax/optim.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    25052 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/flax/train.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6731 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/flax/train_callback.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3166 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/flax/train_config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      500 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/flax/util.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1250 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/flax/wrapper.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.978740 ai2-tango-1.2.0/tango/integrations/gs/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      699 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/gs/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17761 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/gs/common.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3677 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/gs/step_cache.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8369 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/gs/workspace.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.978740 ai2-tango-1.2.0/tango/integrations/torch/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5073 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3646 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/data.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6976 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/eval.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2719 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/eval_callback.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      352 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/exceptions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1168 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/format.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      404 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/model.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2271 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/optim.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    33758 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/train.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9190 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/train_callback.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5630 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/train_config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11634 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/training_engine.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4211 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/torch/util.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.978740 ai2-tango-1.2.0/tango/integrations/transformers/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9702 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/transformers/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      496 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/transformers/config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1207 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/transformers/data.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19927 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/transformers/finetune.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10497 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/transformers/ia3.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2567 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/transformers/model.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      700 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/transformers/optim.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19390 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/transformers/run_generation.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9783 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/transformers/soft_prompt.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      580 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/transformers/tokenizer.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.982740 ai2-tango-1.2.0/tango/integrations/wandb/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1598 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/wandb/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6289 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/wandb/flax_train_callback.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5755 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/wandb/step_cache.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7885 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/wandb/torch_train_callback.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1260 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/wandb/util.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18448 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/integrations/wandb/workspace.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/py.typed
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3899 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/settings.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    38911 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/step.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1875 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/step_cache.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.982740 ai2-tango-1.2.0/tango/step_caches/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      184 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/step_caches/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6730 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/step_caches/local_step_cache.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1368 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/step_caches/memory_step_cache.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6269 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/step_caches/remote_step_cache.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12293 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/step_graph.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9754 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/step_info.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.982740 ai2-tango-1.2.0/tango/steps/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      316 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/steps/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7606 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/steps/dataset_remix.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      704 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/steps/print.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2572 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/steps/shell_step.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      237 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10600 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/workspace.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-10 19:56:38.982740 ai2-tango-1.2.0/tango/workspaces/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      180 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/workspaces/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16973 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/workspaces/local_workspace.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4087 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/workspaces/memory_workspace.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7996 2023-02-10 19:56:00.000000 ai2-tango-1.2.0/tango/workspaces/remote_workspace.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.424132 ai2-tango-1.2.1/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11357 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9159 2023-04-06 23:21:15.424132 ai2-tango-1.2.1/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8274 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.412132 ai2-tango-1.2.1/ai2_tango.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9159 2023-04-06 23:21:15.000000 ai2-tango-1.2.1/ai2_tango.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3545 2023-04-06 23:21:15.000000 ai2-tango-1.2.1/ai2_tango.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 23:21:15.000000 ai2-tango-1.2.1/ai2_tango.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       46 2023-04-06 23:21:15.000000 ai2-tango-1.2.1/ai2_tango.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1387 2023-04-06 23:21:15.000000 ai2-tango-1.2.1/ai2_tango.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        6 2023-04-06 23:21:15.000000 ai2-tango-1.2.1/ai2_tango.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      347 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 23:21:15.424132 ai2-tango-1.2.1/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3794 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.412132 ai2-tango-1.2.1/tango/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      818 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    26904 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/__main__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.416132 ai2-tango-1.2.1/tango/common/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      671 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      549 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/aliases.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1787 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/dataset_dict.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6074 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/det_hash.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2578 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/exceptions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2789 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/file_lock.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    36817 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/from_params.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5946 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/lazy.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    27037 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/logging.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    22721 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/params.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16052 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/registrable.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1274 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/remote_utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12494 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/sequences.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.416132 ai2-tango-1.2.1/tango/common/testing/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5360 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/testing/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4548 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/testing/steps.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3629 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/tqdm.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10415 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/common/util.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5030 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/executor.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.416132 ai2-tango-1.2.1/tango/executors/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      118 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/executors/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13932 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/executors/multicore_executor.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19305 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/format.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.416132 ai2-tango-1.2.1/tango/integrations/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      771 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.416132 ai2-tango-1.2.1/tango/integrations/beaker/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1063 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/beaker/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6800 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/beaker/common.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3961 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/beaker/entrypoint.sh
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    42339 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/beaker/executor.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4037 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/beaker/step_cache.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15633 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/beaker/workspace.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.416132 ai2-tango-1.2.1/tango/integrations/datasets/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11489 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/datasets/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.416132 ai2-tango-1.2.1/tango/integrations/fairscale/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1880 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/fairscale/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2908 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/fairscale/fsdp_config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4272 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/fairscale/module_wrapper.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5813 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/fairscale/training_engine.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.416132 ai2-tango-1.2.1/tango/integrations/flax/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      755 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/flax/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1907 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/flax/data.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7655 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/flax/eval.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2600 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/flax/eval_callback.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      687 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/flax/format.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      481 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/flax/model.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3024 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/flax/optim.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    25052 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/flax/train.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6731 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/flax/train_callback.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3166 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/flax/train_config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      500 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/flax/util.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1250 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/flax/wrapper.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.420132 ai2-tango-1.2.1/tango/integrations/gs/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      699 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/gs/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18144 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/gs/common.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3677 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/gs/step_cache.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15169 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/gs/workspace.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.420132 ai2-tango-1.2.1/tango/integrations/torch/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5073 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3646 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/data.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6976 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/eval.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2719 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/eval_callback.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      352 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/exceptions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1168 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/format.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      404 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/model.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2271 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/optim.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    33758 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/train.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9190 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/train_callback.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5630 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/train_config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11634 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/training_engine.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4211 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/torch/util.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.420132 ai2-tango-1.2.1/tango/integrations/transformers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9903 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/transformers/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      496 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/transformers/config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1207 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/transformers/data.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19927 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/transformers/finetune.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10497 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/transformers/ia3.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2567 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/transformers/model.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      700 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/transformers/optim.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19390 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/transformers/run_generation.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9783 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/transformers/soft_prompt.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      580 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/transformers/tokenizer.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.420132 ai2-tango-1.2.1/tango/integrations/wandb/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1598 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/wandb/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6289 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/wandb/flax_train_callback.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5755 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/wandb/step_cache.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7885 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/wandb/torch_train_callback.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1260 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/wandb/util.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18448 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/integrations/wandb/workspace.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/py.typed
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3899 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/settings.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    39603 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/step.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1875 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/step_cache.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.424132 ai2-tango-1.2.1/tango/step_caches/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      184 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/step_caches/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6730 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/step_caches/local_step_cache.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1368 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/step_caches/memory_step_cache.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6269 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/step_caches/remote_step_cache.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12293 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/step_graph.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9744 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/step_info.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.424132 ai2-tango-1.2.1/tango/steps/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      316 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/steps/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7606 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/steps/dataset_remix.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      704 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/steps/print.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2572 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/steps/shell_step.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      237 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/version.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16016 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/workspace.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:21:15.424132 ai2-tango-1.2.1/tango/workspaces/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      180 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/workspaces/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18076 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/workspaces/local_workspace.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4087 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/workspaces/memory_workspace.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7996 2023-04-06 23:20:35.000000 ai2-tango-1.2.1/tango/workspaces/remote_workspace.py
+│ │   --- ai2-tango-1.2.0/LICENSE
+│ ├── +++ ai2-tango-1.2.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/PKG-INFO
+│ ├── +++ ai2-tango-1.2.1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ai2-tango
+│ │ -Version: 1.2.0
+│ │ +Version: 1.2.1
+│ │  Summary: A library for choreographing your machine learning research.
+│ │  Home-page: https://github.com/allenai/tango
+│ │  Author: Allen Institute for Artificial Intelligence
+│ │  Author-email: contact@allenai.org
+│ │  License: Apache
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │ ├── html2text {}
+│ │ │ @@ -1,8 +1,8 @@
+│ │ │ -Metadata-Version: 2.1 Name: ai2-tango Version: 1.2.0 Summary: A library for
+│ │ │ +Metadata-Version: 2.1 Name: ai2-tango Version: 1.2.1 Summary: A library for
+│ │ │  choreographing your machine learning research. Home-page: https://github.com/
+│ │ │  allenai/tango Author: Allen Institute for Artificial Intelligence Author-email:
+│ │ │  contact@allenai.org License: Apache Classifier: Intended Audience :: Science/
+│ │ │  Research Classifier: Development Status :: 3 - Alpha Classifier: License :: OSI
+│ │ │  Approved :: Apache Software License Classifier: Programming Language :: Python
+│ │ │  :: 3 Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+│ │ │  Requires-Python: >=3.8.1 Description-Content-Type: text/markdown Provides-
+│ │   --- ai2-tango-1.2.0/README.md
+│ ├── +++ ai2-tango-1.2.1/README.md
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/ai2_tango.egg-info/PKG-INFO
+│ ├── +++ ai2-tango-1.2.1/ai2_tango.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ai2-tango
+│ │ -Version: 1.2.0
+│ │ +Version: 1.2.1
+│ │  Summary: A library for choreographing your machine learning research.
+│ │  Home-page: https://github.com/allenai/tango
+│ │  Author: Allen Institute for Artificial Intelligence
+│ │  Author-email: contact@allenai.org
+│ │  License: Apache
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │ ├── html2text {}
+│ │ │ @@ -1,8 +1,8 @@
+│ │ │ -Metadata-Version: 2.1 Name: ai2-tango Version: 1.2.0 Summary: A library for
+│ │ │ +Metadata-Version: 2.1 Name: ai2-tango Version: 1.2.1 Summary: A library for
+│ │ │  choreographing your machine learning research. Home-page: https://github.com/
+│ │ │  allenai/tango Author: Allen Institute for Artificial Intelligence Author-email:
+│ │ │  contact@allenai.org License: Apache Classifier: Intended Audience :: Science/
+│ │ │  Research Classifier: Development Status :: 3 - Alpha Classifier: License :: OSI
+│ │ │  Approved :: Apache Software License Classifier: Programming Language :: Python
+│ │ │  :: 3 Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+│ │ │  Requires-Python: >=3.8.1 Description-Content-Type: text/markdown Provides-
+│ │   --- ai2-tango-1.2.0/ai2_tango.egg-info/SOURCES.txt
+│ ├── +++ ai2-tango-1.2.1/ai2_tango.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/ai2_tango.egg-info/requires.txt
+│ ├── +++ ai2-tango-1.2.1/ai2_tango.egg-info/requires.txt
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/setup.py
+│ ├── +++ ai2-tango-1.2.1/setup.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/__init__.py
+│ ├── +++ ai2-tango-1.2.1/tango/__init__.py
+│ │┄ Files 25% similar despite different names
+│ │ @@ -8,26 +8,33 @@
+│ │      "DillFormatIterator",
+│ │      "Executor",
+│ │      "JsonFormat",
+│ │      "JsonFormatIterator",
+│ │      "SqliteDictFormat",
+│ │      "Step",
+│ │      "step",
+│ │ +    "StepInfo",
+│ │ +    "StepInfoSort",
+│ │ +    "StepState",
+│ │      "StepResources",
+│ │      "StepCache",
+│ │      "StepGraph",
+│ │ +    "Run",
+│ │ +    "RunInfo",
+│ │ +    "RunSort",
+│ │      "Workspace",
+│ │  ]
+│ │  
+│ │ -from tango.executor import Executor
+│ │ -from tango.format import (
+│ │ +from .executor import Executor
+│ │ +from .format import (
+│ │      DillFormat,
+│ │      DillFormatIterator,
+│ │      Format,
+│ │      JsonFormat,
+│ │      JsonFormatIterator,
+│ │      SqliteDictFormat,
+│ │  )
+│ │ -from tango.step import Step, StepResources, step
+│ │ -from tango.step_cache import StepCache
+│ │ -from tango.step_graph import StepGraph
+│ │ -from tango.workspace import Workspace
+│ │ +from .step import Step, StepResources, step
+│ │ +from .step_cache import StepCache
+│ │ +from .step_graph import StepGraph
+│ │ +from .step_info import StepInfo, StepState
+│ │ +from .workspace import Run, RunInfo, RunSort, StepInfoSort, Workspace
+│ │   --- ai2-tango-1.2.0/tango/__main__.py
+│ ├── +++ ai2-tango-1.2.1/tango/__main__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -461,32 +461,32 @@
+│ │          raise click.ClickException("Settings file already exists! Use -f/--force to overwrite it.")
+│ │      settings.to_file(path_to_write)
+│ │      cli_logger.info(
+│ │          "[green]\N{check mark} Settings file written to [bold]%s[/bold][/green]", path_to_write
+│ │      )
+│ │  
+│ │  
+│ │ -@settings.group(**_CLICK_GROUP_DEFAULTS)
+│ │ +@settings.group(name="set", **_CLICK_GROUP_DEFAULTS)
+│ │  @click.pass_obj
+│ │ -def set(settings: TangoGlobalSettings):
+│ │ +def set_setting(settings: TangoGlobalSettings):
+│ │      """
+│ │      Set a value in the settings file.
+│ │      """
+│ │      if settings.path is None:
+│ │          raise click.ClickException(
+│ │              "Settings file not found! Did you forget to call 'tango settings init'?"
+│ │          )
+│ │  
+│ │  
+│ │ -@set.result_callback()
+│ │ +@set_setting.result_callback()
+│ │  def save_settings(settings: TangoGlobalSettings):
+│ │      settings.save()
+│ │  
+│ │  
+│ │ -@set.command(**_CLICK_COMMAND_DEFAULTS)
+│ │ +@set_setting.command(**_CLICK_COMMAND_DEFAULTS)
+│ │  @click.argument(
+│ │      "workspace",
+│ │      type=str,
+│ │  )
+│ │  @click.option(
+│ │      "--validate/--no-validate",
+│ │      type=bool,
+│ │ @@ -512,15 +512,15 @@
+│ │              import_extra_module(package_name)
+│ │  
+│ │          Workspace.from_params(settings.workspace.copy())
+│ │  
+│ │      return settings
+│ │  
+│ │  
+│ │ -@set.command(**_CLICK_COMMAND_DEFAULTS)
+│ │ +@set_setting.command(**_CLICK_COMMAND_DEFAULTS)
+│ │  @click.argument(
+│ │      "packages",
+│ │      type=str,
+│ │      nargs=-1,
+│ │  )
+│ │  @click.option(
+│ │      "-a",
+│ │ @@ -558,43 +558,43 @@
+│ │              try:
+│ │                  import_module_and_submodules(package)
+│ │              except (ModuleNotFoundError, ImportError):
+│ │                  raise click.ClickException(f"Failed to import '{package}'")
+│ │      return settings
+│ │  
+│ │  
+│ │ -@set.command(**_CLICK_COMMAND_DEFAULTS)
+│ │ +@set_setting.command(**_CLICK_COMMAND_DEFAULTS)
+│ │  @click.argument(
+│ │      "level",
+│ │      type=click.Choice(["debug", "info", "warning", "error"], case_sensitive=False),
+│ │  )
+│ │  @click.pass_obj
+│ │  def log_level(settings: TangoGlobalSettings, level: str) -> TangoGlobalSettings:
+│ │      """
+│ │      Set the log level.
+│ │      """
+│ │      settings.log_level = level.lower()
+│ │      return settings
+│ │  
+│ │  
+│ │ -@set.command(**_CLICK_COMMAND_DEFAULTS)
+│ │ +@set_setting.command(**_CLICK_COMMAND_DEFAULTS)
+│ │  @click.argument(
+│ │      "value",
+│ │      type=bool,
+│ │  )
+│ │  @click.pass_obj
+│ │  def file_friendly_logging(settings: TangoGlobalSettings, value: bool) -> TangoGlobalSettings:
+│ │      """
+│ │      Toggle file friendly logging mode.
+│ │      """
+│ │      settings.file_friendly_logging = value
+│ │      return settings
+│ │  
+│ │  
+│ │ -@set.command(**_CLICK_COMMAND_DEFAULTS)
+│ │ +@set_setting.command(**_CLICK_COMMAND_DEFAULTS)
+│ │  @click.argument(
+│ │      "start_method",
+│ │      type=click.Choice(["fork", "spawn", "forkserver"], case_sensitive=True),
+│ │  )
+│ │  @click.pass_obj
+│ │  def multiprocessing_start_method(
+│ │      settings: TangoGlobalSettings, start_method: str
+│ │ @@ -602,15 +602,15 @@
+│ │      """
+│ │      Set the Python multiprocessing start method.
+│ │      """
+│ │      settings.multiprocessing_start_method = start_method
+│ │      return settings
+│ │  
+│ │  
+│ │ -@set.command(**_CLICK_COMMAND_DEFAULTS)
+│ │ +@set_setting.command(**_CLICK_COMMAND_DEFAULTS)
+│ │  @click.argument(
+│ │      "key",
+│ │      type=str,
+│ │  )
+│ │  @click.argument(
+│ │      "value",
+│ │      type=str,
+│ │   --- ai2-tango-1.2.0/tango/common/__init__.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/aliases.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/aliases.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/dataset_dict.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/dataset_dict.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/det_hash.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/det_hash.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/exceptions.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/file_lock.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/file_lock.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/from_params.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/from_params.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -456,28 +456,30 @@
+│ │              else:
+│ │                  if origin != Step and _params_contain_step(popped_params):
+│ │                      result = WithUnresolvedSteps(annotation.from_params, popped_params)
+│ │                  else:
+│ │                      result = annotation.from_params(popped_params)
+│ │  
+│ │              if isinstance(result, Step):
+│ │ -                expected_return_type = args[0]
+│ │ +                expected_return_type = args[0] if args else None
+│ │                  if isinstance(result, FunctionalStep):
+│ │                      return_type = inspect.signature(result.WRAPPED_FUNC).return_annotation
+│ │                  else:
+│ │                      return_type = inspect.signature(result.run).return_annotation
+│ │                  if return_type == inspect.Signature.empty:
+│ │                      logger.warning(
+│ │                          "Step %s has no return type annotation. Those are really helpful when "
+│ │                          "debugging, so we recommend them highly.",
+│ │                          result.__class__.__name__,
+│ │                      )
+│ │                  else:
+│ │                      try:
+│ │ -                        if not issubclass(return_type, expected_return_type):
+│ │ +                        if expected_return_type is not None and not issubclass(
+│ │ +                            return_type, expected_return_type
+│ │ +                        ):
+│ │                              raise ConfigurationError(
+│ │                                  f"Step {result.name} returns {return_type}, but "
+│ │                                  f"we expected {expected_return_type}."
+│ │                              )
+│ │                      except TypeError:
+│ │                          pass
+│ │   --- ai2-tango-1.2.0/tango/common/lazy.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/lazy.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/logging.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/logging.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/params.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/params.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/registrable.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/registrable.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/remote_utils.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/remote_utils.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/sequences.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/sequences.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/testing/__init__.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/testing/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/testing/steps.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/testing/steps.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/tqdm.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/tqdm.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/common/util.py
+│ ├── +++ ai2-tango-1.2.1/tango/common/util.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -3,14 +3,15 @@
+│ │  import signal
+│ │  import string
+│ │  import sys
+│ │  import traceback
+│ │  from collections import OrderedDict
+│ │  from dataclasses import asdict, is_dataclass
+│ │  from datetime import datetime, tzinfo
+│ │ +from enum import Enum
+│ │  from pathlib import Path
+│ │  from typing import Any, Iterable, Optional, Set, Tuple, Union
+│ │  
+│ │  import pytz
+│ │  
+│ │  from .exceptions import SigTermReceived
+│ │  
+│ │ @@ -315,7 +316,12 @@
+│ │          return o.strftime("%Y-%m-%dT%H:%M:%S")
+│ │      elif is_dataclass(o):
+│ │          return jsonify(asdict(o))
+│ │      elif isinstance(o, Path):
+│ │          return str(o)
+│ │      else:
+│ │          return o
+│ │ +
+│ │ +
+│ │ +class StrEnum(str, Enum):
+│ │ +    def __str__(self) -> str:
+│ │ +        return self.value
+│ │   --- ai2-tango-1.2.0/tango/executor.py
+│ ├── +++ ai2-tango-1.2.1/tango/executor.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/executors/multicore_executor.py
+│ ├── +++ ai2-tango-1.2.1/tango/executors/multicore_executor.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/format.py
+│ ├── +++ ai2-tango-1.2.1/tango/format.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/__init__.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/beaker/__init__.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/beaker/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/beaker/common.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/beaker/common.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/beaker/entrypoint.sh
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/beaker/entrypoint.sh
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/beaker/executor.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/beaker/executor.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -961,16 +961,17 @@
+│ │          self._check_if_cancelled()
+│ │  
+│ │          # Write the Beaker token secret.
+│ │          self.beaker.secret.write(Constants.BEAKER_TOKEN_SECRET_NAME, self.beaker.config.user_token)
+│ │          self._check_if_cancelled()
+│ │  
+│ │          # Write the Google Cloud token secret.
+│ │ -        self.beaker.secret.write(Constants.GOOGLE_TOKEN_SECRET_NAME, self.google_token)
+│ │ -        self._check_if_cancelled()
+│ │ +        if self.google_token is not None:
+│ │ +            self.beaker.secret.write(Constants.GOOGLE_TOKEN_SECRET_NAME, self.google_token)
+│ │ +            self._check_if_cancelled()
+│ │  
+│ │          # Build Tango command to run.
+│ │          command = [
+│ │              "tango",
+│ │              "--log-level",
+│ │              "debug",
+│ │              "--called-by-executor",
+│ │   --- ai2-tango-1.2.0/tango/integrations/beaker/step_cache.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/beaker/step_cache.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/beaker/workspace.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/beaker/workspace.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,39 +1,37 @@
+│ │  import json
+│ │  import logging
+│ │  import os
+│ │  import random
+│ │  from collections import OrderedDict
+│ │  from pathlib import Path
+│ │ -from typing import Dict, Optional, Type, TypeVar, Union, cast
+│ │ +from typing import Dict, List, Optional, Type, TypeVar, Union, cast
+│ │  from urllib.parse import ParseResult
+│ │  
+│ │  import petname
+│ │ +from beaker import Dataset
+│ │  from beaker import Dataset as BeakerDataset
+│ │  from beaker import (
+│ │      DatasetConflict,
+│ │      DatasetNotFound,
+│ │ +    DatasetSort,
+│ │      Digest,
+│ │      Experiment,
+│ │      ExperimentNotFound,
+│ │  )
+│ │  
+│ │  from tango.common.util import make_safe_filename, tango_cache_dir
+│ │ -from tango.integrations.beaker.common import (
+│ │ -    BeakerStepLock,
+│ │ -    Constants,
+│ │ -    dataset_url,
+│ │ -    get_client,
+│ │ -)
+│ │ -from tango.integrations.beaker.step_cache import BeakerStepCache
+│ │  from tango.step import Step
+│ │ -from tango.step_info import StepInfo
+│ │ -from tango.workspace import Run, Workspace
+│ │ +from tango.step_info import StepInfo, StepState
+│ │ +from tango.workspace import Run, RunInfo, RunSort, StepInfoSort, Workspace
+│ │  from tango.workspaces.remote_workspace import RemoteWorkspace
+│ │  
+│ │ +from .common import BeakerStepLock, Constants, dataset_url, get_client
+│ │ +from .step_cache import BeakerStepCache
+│ │ +
+│ │  T = TypeVar("T")
+│ │  U = TypeVar("U", Run, StepInfo)
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  @Workspace.register("beaker")
+│ │ @@ -148,36 +146,39 @@
+│ │              json.dump(o.to_json_dict(), f)
+│ │          while len(self._mem_cache) > self.STEP_INFO_CACHE_SIZE:
+│ │              self._mem_cache.popitem(last=False)
+│ │  
+│ │      def step_info(self, step_or_unique_id: Union[Step, str]) -> StepInfo:
+│ │          try:
+│ │              dataset = self.beaker.dataset.get(self.Constants.step_artifact_name(step_or_unique_id))
+│ │ -            file_info = self.beaker.dataset.file_info(dataset, self.Constants.STEP_INFO_FNAME)
+│ │ -            step_info: StepInfo
+│ │ -            cached = (
+│ │ -                None
+│ │ -                if file_info.digest is None
+│ │ -                else self._get_object_from_cache(file_info.digest, StepInfo)
+│ │ -            )
+│ │ -            if cached is not None:
+│ │ -                step_info = cached
+│ │ -            else:
+│ │ -                step_info_bytes = self.beaker.dataset.get_file(dataset, file_info, quiet=True)
+│ │ -                step_info = StepInfo.from_json_dict(json.loads(step_info_bytes))
+│ │ -                if file_info.digest is not None:
+│ │ -                    self._add_object_to_cache(file_info.digest, step_info)
+│ │ -            return step_info
+│ │ +            return self._get_step_info_from_dataset(dataset)
+│ │          except (DatasetNotFound, FileNotFoundError):
+│ │              if not isinstance(step_or_unique_id, Step):
+│ │                  raise KeyError(step_or_unique_id)
+│ │              step_info = StepInfo.new_from_step(step_or_unique_id)
+│ │              self._update_step_info(step_info)
+│ │              return step_info
+│ │  
+│ │ +    def _get_step_info_from_dataset(self, dataset: Dataset) -> StepInfo:
+│ │ +        file_info = self.beaker.dataset.file_info(dataset, Constants.STEP_INFO_FNAME)
+│ │ +        step_info: StepInfo
+│ │ +        cached = (
+│ │ +            None
+│ │ +            if file_info.digest is None
+│ │ +            else self._get_object_from_cache(file_info.digest, StepInfo)
+│ │ +        )
+│ │ +        if cached is not None:
+│ │ +            step_info = cached
+│ │ +        else:
+│ │ +            step_info_bytes = self.beaker.dataset.get_file(dataset, file_info, quiet=True)
+│ │ +            step_info = StepInfo.from_json_dict(json.loads(step_info_bytes))
+│ │ +            if file_info.digest is not None:
+│ │ +                self._add_object_to_cache(file_info.digest, step_info)
+│ │ +        return step_info
+│ │ +
+│ │      def _save_run(
+│ │          self, steps: Dict[str, StepInfo], run_data: Dict[str, str], name: Optional[str] = None
+│ │      ) -> Run:
+│ │          # Create a remote dataset that represents this run. The dataset which just contain
+│ │          # a JSON file that maps step names to step unique IDs.
+│ │          run_dataset: BeakerDataset
+│ │          if name is None:
+│ │ @@ -226,14 +227,133 @@
+│ │              for future in concurrent.futures.as_completed(run_futures):
+│ │                  run = future.result()
+│ │                  if run is not None:
+│ │                      runs[run.name] = run
+│ │  
+│ │          return runs
+│ │  
+│ │ +    def search_registered_runs(
+│ │ +        self,
+│ │ +        *,
+│ │ +        sort_by: Optional[RunSort] = None,
+│ │ +        sort_descending: bool = True,
+│ │ +        match: Optional[str] = None,
+│ │ +        start: Optional[int] = None,
+│ │ +        stop: Optional[int] = None,
+│ │ +    ) -> List[RunInfo]:
+│ │ +        if match is None:
+│ │ +            match = Constants.RUN_ARTIFACT_PREFIX
+│ │ +        else:
+│ │ +            match = Constants.RUN_ARTIFACT_PREFIX + match
+│ │ +
+│ │ +        if sort_by is None or sort_by == RunSort.START_DATE:
+│ │ +            sort = DatasetSort.created
+│ │ +        elif sort_by == RunSort.NAME:
+│ │ +            sort = DatasetSort.dataset_name
+│ │ +        else:
+│ │ +            raise NotImplementedError
+│ │ +
+│ │ +        runs = []
+│ │ +        for dataset in self.beaker.workspace.iter_datasets(
+│ │ +            match=match,
+│ │ +            results=False,
+│ │ +            cursor=start or 0,
+│ │ +            limit=None if stop is None else stop - (start or 0),
+│ │ +            sort_by=sort,
+│ │ +            descending=sort_descending,
+│ │ +        ):
+│ │ +            if dataset.name is not None and dataset.name.startswith(
+│ │ +                self.Constants.RUN_ARTIFACT_PREFIX
+│ │ +            ):
+│ │ +                run_name = dataset.name[len(self.Constants.RUN_ARTIFACT_PREFIX) :]
+│ │ +                runs.append(RunInfo(name=run_name, start_date=dataset.created))
+│ │ +
+│ │ +        return runs
+│ │ +
+│ │ +    def num_registered_runs(self, *, match: Optional[str] = None) -> int:
+│ │ +        if match is None:
+│ │ +            match = Constants.RUN_ARTIFACT_PREFIX
+│ │ +        else:
+│ │ +            match = Constants.RUN_ARTIFACT_PREFIX + match
+│ │ +
+│ │ +        count = 0
+│ │ +        for dataset in self.beaker.workspace.iter_datasets(
+│ │ +            match=match,
+│ │ +            results=False,
+│ │ +        ):
+│ │ +            if dataset.name is not None and dataset.name.startswith(Constants.RUN_ARTIFACT_PREFIX):
+│ │ +                count += 1
+│ │ +
+│ │ +        return count
+│ │ +
+│ │ +    def search_step_info(
+│ │ +        self,
+│ │ +        *,
+│ │ +        sort_by: Optional[StepInfoSort] = None,
+│ │ +        sort_descending: bool = True,
+│ │ +        match: Optional[str] = None,
+│ │ +        state: Optional[StepState] = None,
+│ │ +        start: int = 0,
+│ │ +        stop: Optional[int] = None,
+│ │ +    ) -> List[StepInfo]:
+│ │ +        if state is not None:
+│ │ +            raise NotImplementedError(
+│ │ +                f"{self.__class__.__name__} cannot filter steps efficiently by state"
+│ │ +            )
+│ │ +
+│ │ +        if match is None:
+│ │ +            match = Constants.STEP_ARTIFACT_PREFIX
+│ │ +        else:
+│ │ +            match = Constants.STEP_ARTIFACT_PREFIX + match
+│ │ +
+│ │ +        sort: Optional[DatasetSort] = None
+│ │ +        if sort_by is None or sort_by == StepInfoSort.START_TIME:
+│ │ +            sort = DatasetSort.created
+│ │ +        elif sort_by == StepInfoSort.UNIQUE_ID:
+│ │ +            sort = DatasetSort.dataset_name
+│ │ +        elif sort_by is not None:
+│ │ +            raise NotImplementedError
+│ │ +
+│ │ +        steps = []
+│ │ +        for dataset in self.beaker.workspace.iter_datasets(
+│ │ +            match=match,
+│ │ +            results=False,
+│ │ +            cursor=start or 0,
+│ │ +            limit=None if stop is None else stop - (start or 0),
+│ │ +            sort_by=sort or DatasetSort.created,
+│ │ +            descending=sort_descending,
+│ │ +        ):
+│ │ +            try:
+│ │ +                steps.append(self._get_step_info_from_dataset(dataset))
+│ │ +            except (DatasetNotFound, FileNotFoundError):
+│ │ +                continue
+│ │ +
+│ │ +        return steps
+│ │ +
+│ │ +    def num_steps(self, *, match: Optional[str] = None, state: Optional[StepState] = None) -> int:
+│ │ +        if state is not None:
+│ │ +            raise NotImplementedError(
+│ │ +                f"{self.__class__.__name__} cannot filter steps efficiently by state"
+│ │ +            )
+│ │ +
+│ │ +        if match is None:
+│ │ +            match = Constants.STEP_ARTIFACT_PREFIX
+│ │ +        else:
+│ │ +            match = Constants.STEP_ARTIFACT_PREFIX + match
+│ │ +
+│ │ +        count = 0
+│ │ +        for dataset in self.beaker.workspace.iter_datasets(
+│ │ +            match=match,
+│ │ +            results=False,
+│ │ +        ):
+│ │ +            if dataset.name is not None and dataset.name.startswith(Constants.STEP_ARTIFACT_PREFIX):
+│ │ +                count += 1
+│ │ +
+│ │ +        return count
+│ │ +
+│ │      def registered_run(self, name: str) -> Run:
+│ │          err_msg = f"Run '{name}' not found in workspace"
+│ │  
+│ │          try:
+│ │              dataset_for_run = self.beaker.dataset.get(self.Constants.run_artifact_name(name))
+│ │              # Make sure the run is in our workspace.
+│ │              if dataset_for_run.workspace_ref.id != self.beaker.workspace.get().id:  # type: ignore # TODO
+│ │   --- ai2-tango-1.2.0/tango/integrations/datasets/__init__.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/datasets/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -19,15 +19,14 @@
+│ │  .. code-block::
+│ │  
+│ │      tango run config.json
+│ │  
+│ │  """
+│ │  
+│ │  
+│ │ -import random
+│ │  import re
+│ │  from pathlib import Path
+│ │  from typing import Any, Dict, List, Optional, TypeVar, Union, overload
+│ │  
+│ │  from tango.common.aliases import PathOrStr
+│ │  from tango.common.dataset_dict import DatasetDict, IterableDatasetDict
+│ │  from tango.common.exceptions import ConfigurationError, IntegrationMissingError
+│ │ @@ -52,15 +51,15 @@
+│ │  
+│ │  @overload
+│ │  def convert_to_tango_dataset_dict(hf_dataset_dict: ds.DatasetDict) -> DatasetDict:
+│ │      ...
+│ │  
+│ │  
+│ │  @overload
+│ │ -def convert_to_tango_dataset_dict(hf_dataset_dict: ds.IterableDatasetDict) -> IterableDatasetDict:
+│ │ +def convert_to_tango_dataset_dict(hf_dataset_dict: ds.IterableDatasetDict) -> IterableDatasetDict:  # type: ignore
+│ │      ...
+│ │  
+│ │  
+│ │  def convert_to_tango_dataset_dict(hf_dataset_dict):
+│ │      """
+│ │      A helper function that can be used to convert a HuggingFace :class:`~datasets.DatasetDict`
+│ │      or :class:`~datasets.IterableDatasetDict` into a native Tango
+│ │   --- ai2-tango-1.2.0/tango/integrations/fairscale/__init__.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/fairscale/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/fairscale/fsdp_config.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/fairscale/fsdp_config.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/fairscale/module_wrapper.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/fairscale/module_wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/fairscale/training_engine.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/fairscale/training_engine.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/flax/__init__.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/flax/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/flax/data.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/flax/data.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/flax/eval.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/flax/eval.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/flax/eval_callback.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/flax/eval_callback.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/flax/format.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/flax/format.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/flax/optim.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/flax/optim.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/flax/train.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/flax/train.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/flax/train_callback.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/flax/train_callback.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/flax/train_config.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/flax/train_config.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/flax/wrapper.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/flax/wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/gs/__init__.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/gs/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/gs/common.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/gs/common.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -9,16 +9,18 @@
+│ │  import time
+│ │  from dataclasses import dataclass
+│ │  from pathlib import Path
+│ │  from typing import List, Optional, Union
+│ │  
+│ │  import google.auth
+│ │  from google.api_core import exceptions
+│ │ +from google.auth.credentials import Credentials
+│ │  from google.cloud import storage
+│ │ -from google.oauth2.credentials import Credentials
+│ │ +from google.oauth2.credentials import Credentials as OAuth2Credentials
+│ │ +from google.oauth2.service_account import Credentials as ServiceAccountCredentials
+│ │  
+│ │  from tango.common.aliases import PathOrStr
+│ │  from tango.common.exceptions import TangoError
+│ │  from tango.common.remote_utils import RemoteConstants
+│ │  from tango.step import Step
+│ │  from tango.step_info import StepInfo
+│ │  
+│ │ @@ -377,22 +379,25 @@
+│ │          # Path to the credentials file has been provided
+│ │          if isinstance(credentials, str) and credentials.endswith(".json"):
+│ │              with open(credentials) as file_ref:
+│ │                  credentials = file_ref.read()
+│ │          try:
+│ │              # If credentials dict has been passed as a json string
+│ │              credentials_dict = json.loads(credentials)
+│ │ -            credentials_dict.pop("type", None)
+│ │ -
+│ │ -            # sometimes the credentials dict may not contain `token` and `token_uri` keys,
+│ │ -            # but `Credentials()` needs the parameter.
+│ │ -            token = credentials_dict.pop("token", None)
+│ │ -            token_uri = credentials_dict.pop("token_uri", "https://oauth2.googleapis.com/token")
+│ │ -            credentials = Credentials(token=token, token_uri=token_uri, **credentials_dict)
+│ │ -        except json.decoder.JSONDecodeError:
+│ │ +            if credentials_dict.pop("type", None) == "service_account":
+│ │ +                credentials = ServiceAccountCredentials.from_service_account_info(credentials_dict)
+│ │ +            else:
+│ │ +                # sometimes the credentials dict may not contain `token` and `token_uri` keys,
+│ │ +                # but `Credentials()` needs the parameter.
+│ │ +                token = credentials_dict.pop("token", None)
+│ │ +                token_uri = credentials_dict.pop("token_uri", "https://oauth2.googleapis.com/token")
+│ │ +                credentials = OAuth2Credentials(
+│ │ +                    token=token, token_uri=token_uri, **credentials_dict
+│ │ +                )
+│ │ +        except (json.decoder.JSONDecodeError, TypeError, ValueError):
+│ │              # It is not a json string.
+│ │              # We use this string because BeakerExecutor cannot write a None secret.
+│ │              if credentials == "default":
+│ │                  credentials = None
+│ │      if not credentials:
+│ │          # Infer default credentials
+│ │          credentials, _ = google.auth.default()
+│ │   --- ai2-tango-1.2.0/tango/integrations/gs/step_cache.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/gs/step_cache.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/gs/workspace.py
+│ ├── +++ ai2-tango-1.2.1/tango/workspaces/remote_workspace.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,223 +1,231 @@
+│ │ -import datetime
+│ │ -import json
+│ │ -import random
+│ │ +import logging
+│ │ +import tempfile
+│ │ +import warnings
+│ │ +from abc import abstractmethod
+│ │ +from contextlib import contextmanager
+│ │  from pathlib import Path
+│ │ -from typing import Dict, Optional, TypeVar, Union, cast
+│ │ +from typing import Dict, Generator, Iterable, Iterator, Optional, Tuple, TypeVar, Union
+│ │  from urllib.parse import ParseResult
+│ │  
+│ │ -import petname
+│ │ -from google.cloud import datastore
+│ │ -from google.oauth2.credentials import Credentials
+│ │ -
+│ │ -from tango.integrations.gs.common import (
+│ │ -    Constants,
+│ │ -    GCSStepLock,
+│ │ -    get_client,
+│ │ -    get_credentials,
+│ │ -)
+│ │ -from tango.integrations.gs.step_cache import GSStepCache
+│ │ +from tango.common.exceptions import StepStateError
+│ │ +from tango.common.logging import file_handler
+│ │ +from tango.common.remote_utils import RemoteConstants
+│ │ +from tango.common.util import exception_to_string, tango_cache_dir, utc_now_datetime
+│ │  from tango.step import Step
+│ │ -from tango.step_info import StepInfo
+│ │ +from tango.step_caches.remote_step_cache import RemoteStepCache
+│ │ +from tango.step_info import StepInfo, StepState
+│ │  from tango.workspace import Run, Workspace
+│ │ -from tango.workspaces.remote_workspace import RemoteWorkspace
+│ │  
+│ │  T = TypeVar("T")
+│ │  
+│ │ +logger = logging.getLogger(__name__)
+│ │  
+│ │ -@Workspace.register("gs")
+│ │ -class GSWorkspace(RemoteWorkspace):
+│ │ +
+│ │ +class RemoteWorkspace(Workspace):
+│ │      """
+│ │ -    This is a :class:`~tango.workspace.Workspace` that stores step artifacts on Google Cloud Storage.
+│ │ +    This is a :class:`~tango.workspace.Workspace` that stores step artifacts on some remote storage location.
+│ │  
+│ │      .. tip::
+│ │ -        Registered as a :class:`~tango.workspace.Workspace` under the name "gs".
+│ │ -
+│ │ -    :param workspace: The name or ID of the Google Cloud bucket to use.
+│ │ -    :param project: The Google project ID. This is required for the datastore. If not provided,
+│ │ -        it will be inferred from the Google cloud credentials.
+│ │ -
+│ │ -    .. important::
+│ │ -        Credentials can be provided in the following ways:
+│ │ -
+│ │ -        - Using the `credentials` keyword argument:
+│ │ -            - You can specify the path to the credentials json file.
+│ │ -            - You can specify the `google.oauth2.credentials.Credentials()` object.
+│ │ -            - You can specify the json string of credentials dict.
+│ │ -
+│ │ -        - Using the default credentials: You can use your default google cloud credentials by running
+│ │ -          `gcloud auth application-default login`. If you are using `GSWorkspace` with
+│ │ -          :class:`~tango.integrations.beaker.BeakerExecutor`, you will need to set the environment variable
+│ │ -          `GOOGLE_TOKEN` to the credentials json file. The default location is usually
+│ │ -          `~/.config/gcloud/application_default_credentials.json`.
+│ │ -
+│ │ +        All remote workspaces inherit from this.
+│ │      """
+│ │  
+│ │ -    Constants = Constants
+│ │ -    NUM_CONCURRENT_WORKERS = 32
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        workspace: str,
+│ │ -        project: Optional[str] = None,
+│ │ -        credentials: Optional[Union[str, Credentials]] = None,
+│ │ -    ):
+│ │ -        self.client = get_client(bucket_name=workspace, credentials=credentials, project=project)
+│ │ -
+│ │ -        self.client.NUM_CONCURRENT_WORKERS = self.NUM_CONCURRENT_WORKERS
+│ │ -        self._cache = GSStepCache(workspace, client=self.client)
+│ │ -        self._locks: Dict[Step, GCSStepLock] = {}
+│ │ +    Constants = RemoteConstants
+│ │ +    NUM_CONCURRENT_WORKERS: int = 9
+│ │  
+│ │ -        super().__init__()
+│ │ +    @property
+│ │ +    @abstractmethod
+│ │ +    def cache(self) -> RemoteStepCache:
+│ │ +        raise NotImplementedError()
+│ │  
+│ │ -        credentials = get_credentials()
+│ │ -        project = project or credentials.quota_project_id
+│ │ -        self._ds = datastore.Client(namespace=workspace, project=project, credentials=credentials)
+│ │ +    @property
+│ │ +    @abstractmethod
+│ │ +    def steps_dir_name(self) -> str:
+│ │ +        raise NotImplementedError()
+│ │  
+│ │      @property
+│ │ -    def cache(self):
+│ │ -        return self._cache
+│ │ +    @abstractmethod
+│ │ +    def locks(self) -> Dict:
+│ │ +        raise NotImplementedError()
+│ │  
+│ │      @property
+│ │ -    def locks(self):
+│ │ -        return self._locks
+│ │ +    def steps_dir(self) -> Path:
+│ │ +        return tango_cache_dir() / self.steps_dir_name
+│ │  
+│ │      @property
+│ │ -    def steps_dir_name(self):
+│ │ -        return "gs_workspace"
+│ │ +    @abstractmethod
+│ │ +    def url(self) -> str:
+│ │ +        raise NotImplementedError()
+│ │  
+│ │      @classmethod
+│ │ +    @abstractmethod
+│ │      def from_parsed_url(cls, parsed_url: ParseResult) -> Workspace:
+│ │ -        workspace: str
+│ │ -        if parsed_url.netloc and parsed_url.path:
+│ │ -            # e.g. "gs://ai2/my-workspace"
+│ │ -            workspace = parsed_url.netloc + parsed_url.path
+│ │ -        elif parsed_url.netloc:
+│ │ -            # e.g. "gs://my-workspace"
+│ │ -            workspace = parsed_url.netloc
+│ │ -        else:
+│ │ -            raise ValueError(f"Bad URL for GS workspace '{parsed_url}'")
+│ │ -        return cls(workspace)
+│ │ +        raise NotImplementedError()
+│ │  
+│ │      @property
+│ │ -    def url(self) -> str:
+│ │ -        return self.client.url()
+│ │ +    def step_cache(self) -> RemoteStepCache:
+│ │ +        return self.cache
+│ │ +
+│ │ +    def step_dir(self, step_or_unique_id: Union[Step, str]) -> Path:
+│ │ +        unique_id = (
+│ │ +            step_or_unique_id if isinstance(step_or_unique_id, str) else step_or_unique_id.unique_id
+│ │ +        )
+│ │ +        path = self.steps_dir / unique_id
+│ │ +        path.mkdir(parents=True, exist_ok=True)
+│ │ +        return path
+│ │ +
+│ │ +    def work_dir(self, step: Step) -> Path:
+│ │ +        path = self.step_dir(step) / "work"
+│ │ +        path.mkdir(parents=True, exist_ok=True)
+│ │ +        return path
+│ │ +
+│ │ +    def step_info(self, step_or_unique_id: Union[Step, str]) -> StepInfo:
+│ │ +        raise NotImplementedError()
+│ │  
+│ │ -    def _remote_lock(self, step: Step) -> GCSStepLock:
+│ │ -        return GCSStepLock(self.client, step)
+│ │ +    @abstractmethod
+│ │ +    def _remote_lock(self, step: Step):
+│ │ +        raise NotImplementedError()
+│ │  
+│ │ +    @abstractmethod
+│ │      def _step_location(self, step: Step) -> str:
+│ │ -        return self.client.url(self.Constants.step_artifact_name(step))
+│ │ +        raise NotImplementedError()
+│ │  
+│ │ -    def _save_run(
+│ │ -        self, steps: Dict[str, StepInfo], run_data: Dict[str, str], name: Optional[str] = None
+│ │ -    ) -> Run:
+│ │ -        if name is None:
+│ │ -            while True:
+│ │ -                name = petname.generate() + str(random.randint(0, 100))
+│ │ -                if not self._ds.get(self._ds.key("run", name)):
+│ │ -                    break
+│ │ -        else:
+│ │ -            if self._ds.get(self._ds.key("run", name)):
+│ │ -                raise ValueError(f"Run name '{name}' is already in use")
+│ │ -
+│ │ -        run_entity = self._ds.entity(key=self._ds.key("run", name), exclude_from_indexes=("steps",))
+│ │ -        run_entity["start_date"] = datetime.datetime.now()
+│ │ -        run_entity["steps"] = json.dumps(run_data).encode()
+│ │ -        self._ds.put(run_entity)
+│ │ +    def step_starting(self, step: Step) -> None:
+│ │ +        # We don't do anything with uncacheable steps.
+│ │ +        if not step.cache_results:
+│ │ +            return
+│ │ +
+│ │ +        # Get local file lock + remote dataset lock.
+│ │ +        lock = self._remote_lock(step)
+│ │ +        lock.acquire()
+│ │ +        self.locks[step] = lock
+│ │ +
+│ │ +        step_info = self.step_info(step)
+│ │ +        if step_info.state == StepState.RUNNING:
+│ │ +            # Since we've acquired the step lock we know this step can't be running
+│ │ +            # elsewhere. But the step state can still say its running if the last
+│ │ +            warnings.warn(
+│ │ +                f"Step info for step '{step.unique_id}' is invalid - says step is running "
+│ │ +                "although it shouldn't be. Ignoring and overwriting step start time.",
+│ │ +                UserWarning,
+│ │ +            )
+│ │ +        elif step_info.state not in {StepState.INCOMPLETE, StepState.FAILED, StepState.UNCACHEABLE}:
+│ │ +            self.locks.pop(step).release()
+│ │ +            raise StepStateError(
+│ │ +                step,
+│ │ +                step_info.state,
+│ │ +                context=f"If you are certain the step is not running somewhere else, delete the step "
+│ │ +                f"datasets at {self._step_location(step)}",
+│ │ +            )
+│ │ +
+│ │ +        if step_info.state == StepState.FAILED:
+│ │ +            # Refresh the environment metadata since it might be out-of-date now.
+│ │ +            step_info.refresh()
+│ │  
+│ │ -        return Run(name=cast(str, name), steps=steps, start_date=run_entity["start_date"])
+│ │ +        # Update StepInfo to mark as running.
+│ │ +        try:
+│ │ +            step_info.start_time = utc_now_datetime()
+│ │ +            step_info.end_time = None
+│ │ +            step_info.error = None
+│ │ +            step_info.result_location = None
+│ │ +            self._update_step_info(step_info)
+│ │ +        except:  # noqa: E722
+│ │ +            self.locks.pop(step).release()
+│ │ +            raise
+│ │ +
+│ │ +    def step_finished(self, step: Step, result: T) -> T:
+│ │ +        # We don't do anything with uncacheable steps.
+│ │ +        if not step.cache_results:
+│ │ +            return result
+│ │ +
+│ │ +        step_info = self.step_info(step)
+│ │ +        if step_info.state != StepState.RUNNING:
+│ │ +            raise StepStateError(step, step_info.state)
+│ │ +
+│ │ +        # Update step info and save step execution metadata.
+│ │ +        # This needs to be done *before* adding the result to the cache, since adding
+│ │ +        # the result to the cache will commit the step dataset, making it immutable.
+│ │ +        step_info.end_time = utc_now_datetime()
+│ │ +        step_info.result_location = self._step_location(step)
+│ │ +        self._update_step_info(step_info)
+│ │ +
+│ │ +        self.cache[step] = result
+│ │ +        if hasattr(result, "__next__"):
+│ │ +            assert isinstance(result, Iterator)
+│ │ +            # Caching the iterator will consume it, so we write it to the cache and then read from the cache
+│ │ +            # for the return value.
+│ │ +            result = self.cache[step]
+│ │ +
+│ │ +        self.locks.pop(step).release()
+│ │ +
+│ │ +        return result
+│ │ +
+│ │ +    def step_failed(self, step: Step, e: BaseException) -> None:
+│ │ +        # We don't do anything with uncacheable steps.
+│ │ +        if not step.cache_results:
+│ │ +            return
+│ │  
+│ │ -    def _get_run_from_entity(self, run_entity: datastore.Entity) -> Optional[Run]:
+│ │          try:
+│ │ -            steps_info_bytes = run_entity["steps"]
+│ │ -            steps_info = json.loads(steps_info_bytes)
+│ │ -        except KeyError:
+│ │ -            return None
+│ │ +            step_info = self.step_info(step)
+│ │ +            if step_info.state != StepState.RUNNING:
+│ │ +                raise StepStateError(step, step_info.state)
+│ │ +            step_info.end_time = utc_now_datetime()
+│ │ +            step_info.error = exception_to_string(e)
+│ │ +            self._update_step_info(step_info)
+│ │ +        finally:
+│ │ +            self.locks.pop(step).release()
+│ │  
+│ │ +    def _get_run_step_info(self, targets: Iterable[Step]) -> Tuple[Dict, Dict]:
+│ │          import concurrent.futures
+│ │  
+│ │ +        all_steps = set(targets)
+│ │ +        for step in targets:
+│ │ +            all_steps |= step.recursive_dependencies
+│ │ +
+│ │          steps: Dict[str, StepInfo] = {}
+│ │ +        run_data: Dict[str, str] = {}
+│ │ +
+│ │ +        # Collect step info.
+│ │          with concurrent.futures.ThreadPoolExecutor(
+│ │ -            max_workers=self.NUM_CONCURRENT_WORKERS,
+│ │ -            thread_name_prefix="GSWorkspace._get_run_from_dataset()-",
+│ │ +            thread_name_prefix="RemoteWorkspace._get_run_step_info()-"
+│ │          ) as executor:
+│ │              step_info_futures = []
+│ │ -            for unique_id in steps_info.values():
+│ │ -                step_info_futures.append(executor.submit(self.step_info, unique_id))
+│ │ +            for step in all_steps:
+│ │ +                if step.name is None:
+│ │ +                    continue
+│ │ +                step_info_futures.append(executor.submit(self.step_info, step))
+│ │              for future in concurrent.futures.as_completed(step_info_futures):
+│ │                  step_info = future.result()
+│ │                  assert step_info.step_name is not None
+│ │                  steps[step_info.step_name] = step_info
+│ │ +                run_data[step_info.step_name] = step_info.unique_id
+│ │  
+│ │ -        return Run(name=run_entity.key.name, start_date=run_entity["start_date"], steps=steps)
+│ │ +        return steps, run_data
+│ │  
+│ │ -    def registered_runs(self) -> Dict[str, Run]:
+│ │ -        import concurrent.futures
+│ │ +    @abstractmethod
+│ │ +    def _save_run(
+│ │ +        self, steps: Dict[str, StepInfo], run_data: Dict[str, str], name: Optional[str] = None
+│ │ +    ) -> Run:
+│ │ +        raise NotImplementedError()
+│ │  
+│ │ -        runs: Dict[str, Run] = {}
+│ │ +    def register_run(self, targets: Iterable[Step], name: Optional[str] = None) -> Run:
+│ │ +        steps, run_data = self._get_run_step_info(targets)
+│ │ +        run = self._save_run(steps, run_data, name)
+│ │ +        return run
+│ │  
+│ │ -        with concurrent.futures.ThreadPoolExecutor(
+│ │ -            max_workers=self.NUM_CONCURRENT_WORKERS,
+│ │ -            thread_name_prefix="GSWorkspace.registered_runs()-",
+│ │ -        ) as executor:
+│ │ -            run_futures = []
+│ │ -            for run_entity in self._ds.query(kind="run").fetch():
+│ │ -                run_futures.append(executor.submit(self._get_run_from_entity, run_entity))
+│ │ -            for future in concurrent.futures.as_completed(run_futures):
+│ │ -                run = future.result()
+│ │ -                if run is not None:
+│ │ -                    runs[run.name] = run
+│ │ -
+│ │ -        return runs
+│ │ -
+│ │ -    def registered_run(self, name: str) -> Run:
+│ │ -        err_msg = f"Run '{name}' not found in workspace"
+│ │ -
+│ │ -        run_entity = self._ds.get(key=self._ds.key("run", name))
+│ │ -        if not run_entity:
+│ │ -            raise KeyError(err_msg)
+│ │ -
+│ │ -        run = self._get_run_from_entity(run_entity)
+│ │ -        if run is None:
+│ │ -            raise KeyError(err_msg)
+│ │ -        else:
+│ │ -            return run
+│ │ +    @abstractmethod
+│ │ +    def _save_run_log(self, name: str, log_file: Path):
+│ │ +        raise NotImplementedError()
+│ │  
+│ │ -    def step_info(self, step_or_unique_id: Union[Step, str]) -> StepInfo:
+│ │ -        unique_id = (
+│ │ -            step_or_unique_id if isinstance(step_or_unique_id, str) else step_or_unique_id.unique_id
+│ │ -        )
+│ │ -        step_info_entity = self._ds.get(key=self._ds.key("stepinfo", unique_id))
+│ │ -        if step_info_entity:
+│ │ -            step_info_bytes = step_info_entity["step_info_dict"]
+│ │ -            step_info = StepInfo.from_json_dict(json.loads(step_info_bytes))
+│ │ -            return step_info
+│ │ -        else:
+│ │ -            if not isinstance(step_or_unique_id, Step):
+│ │ -                raise KeyError(step_or_unique_id)
+│ │ -            step_info = StepInfo.new_from_step(step_or_unique_id)
+│ │ -            self._update_step_info(step_info)
+│ │ -            return step_info
+│ │ +    @contextmanager
+│ │ +    def capture_logs_for_run(self, name: str) -> Generator[None, None, None]:
+│ │ +        with tempfile.TemporaryDirectory() as tmp_dir_name:
+│ │ +            log_file = Path(tmp_dir_name) / "out.log"
+│ │ +            try:
+│ │ +                with file_handler(log_file):
+│ │ +                    yield None
+│ │ +            finally:
+│ │ +                self._save_run_log(name, log_file)
+│ │  
+│ │ +    @abstractmethod
+│ │      def _update_step_info(self, step_info: StepInfo):
+│ │ -        step_info_entity = self._ds.entity(
+│ │ -            key=self._ds.key("stepinfo", step_info.unique_id),
+│ │ -            exclude_from_indexes=("step_info_dict",),
+│ │ -        )
+│ │ -
+│ │ -        # We can store each key separately, but we only index things that are useful for querying.
+│ │ -        step_info_entity["step_name"] = step_info.step_name
+│ │ -        step_info_entity["start_time"] = step_info.start_time
+│ │ -        step_info_entity["end_time"] = step_info.end_time
+│ │ -        step_info_entity["result_location"] = step_info.result_location
+│ │ -        step_info_entity["step_info_dict"] = json.dumps(step_info.to_json_dict()).encode()
+│ │ -
+│ │ -        self._ds.put(step_info_entity)
+│ │ -
+│ │ -    def _save_run_log(self, name: str, log_file: Path):
+│ │ -        """
+│ │ -        The logs are stored in the bucket. The Run object details are stored in
+│ │ -        the remote database.
+│ │ -        """
+│ │ -        run_dataset = self.Constants.run_artifact_name(name)
+│ │ -        self.client.upload(run_dataset, log_file)
+│ │ +        raise NotImplementedError()
+│ │   --- ai2-tango-1.2.0/tango/integrations/torch/__init__.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/torch/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/torch/data.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/torch/data.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/torch/eval.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/torch/eval.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/torch/eval_callback.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/torch/eval_callback.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/torch/format.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/torch/format.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/torch/optim.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/torch/optim.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/torch/train.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/torch/train.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/torch/train_callback.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/torch/train_callback.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/torch/train_config.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/torch/train_config.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/torch/training_engine.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/torch/training_engine.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/torch/util.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/torch/util.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/transformers/__init__.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/transformers/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -102,14 +102,16 @@
+│ │              transformers::AutoModelForUniversalSegmentation::from_pretrained
+│ │              transformers::AutoModelForVideoClassification::from_config
+│ │              transformers::AutoModelForVideoClassification::from_pretrained
+│ │              transformers::AutoModelForVision2Seq::from_config
+│ │              transformers::AutoModelForVision2Seq::from_pretrained
+│ │              transformers::AutoModelForVisualQuestionAnswering::from_config
+│ │              transformers::AutoModelForVisualQuestionAnswering::from_pretrained
+│ │ +            transformers::AutoModelForZeroShotImageClassification::from_config
+│ │ +            transformers::AutoModelForZeroShotImageClassification::from_pretrained
+│ │              transformers::AutoModelForZeroShotObjectDetection::from_config
+│ │              transformers::AutoModelForZeroShotObjectDetection::from_pretrained
+│ │              transformers::AutoModelWithLMHead::from_config
+│ │              transformers::AutoModelWithLMHead::from_pretrained
+│ │  
+│ │  - :class:`~tango.integrations.torch.Optimizer`: All optimizers from transformers are registered according
+│ │    to their class names (e.g. "transformers::AdaFactor").
+│ │ @@ -150,14 +152,15 @@
+│ │  
+│ │          .. testoutput::
+│ │  
+│ │              transformers::constant
+│ │              transformers::constant_with_warmup
+│ │              transformers::cosine
+│ │              transformers::cosine_with_restarts
+│ │ +            transformers::inverse_sqrt
+│ │              transformers::linear
+│ │              transformers::polynomial
+│ │  
+│ │  - :class:`~tango.integrations.torch.DataCollator`: All data collators from transformers
+│ │    are registered according to their class name (e.g. "transformers::DefaultDataCollator").
+│ │  
+│ │    You can instantiate any of these from a config / params like so:
+│ │   --- ai2-tango-1.2.0/tango/integrations/transformers/data.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/transformers/data.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/transformers/finetune.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/transformers/finetune.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/transformers/ia3.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/transformers/ia3.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/transformers/model.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/transformers/model.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/transformers/optim.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/transformers/optim.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/transformers/run_generation.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/transformers/run_generation.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/transformers/soft_prompt.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/transformers/soft_prompt.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/transformers/tokenizer.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/transformers/tokenizer.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/wandb/__init__.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/wandb/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/wandb/flax_train_callback.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/wandb/flax_train_callback.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/wandb/step_cache.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/wandb/step_cache.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/wandb/torch_train_callback.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/wandb/torch_train_callback.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/wandb/util.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/wandb/util.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/integrations/wandb/workspace.py
+│ ├── +++ ai2-tango-1.2.1/tango/integrations/wandb/workspace.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/settings.py
+│ ├── +++ ai2-tango-1.2.1/tango/settings.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/step.py
+│ ├── +++ ai2-tango-1.2.1/tango/step.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -360,15 +360,30 @@
+│ │                  raise ConfigurationError(
+│ │                      "from_params was passed a ``params`` object that was not a ``Params``. This probably "
+│ │                      "indicates malformed parameters in a configuration file, where something that "
+│ │                      "should have been a dictionary was actually a list, or something else. "
+│ │                      f"This happened when constructing an object of type {cls}."
+│ │                  )
+│ │  
+│ │ -        raw_step_config = deepcopy(params.as_dict(quiet=True))
+│ │ +        # Build up a raw step config
+│ │ +        def replace_steps_with_refs(o: Any) -> Any:
+│ │ +            if isinstance(o, (list, tuple, set)):
+│ │ +                return o.__class__(replace_steps_with_refs(i) for i in o)
+│ │ +            elif isinstance(o, (dict, Params)):
+│ │ +                result = {key: replace_steps_with_refs(value) for key, value in o.items()}
+│ │ +                if isinstance(o, dict):
+│ │ +                    return result
+│ │ +                elif isinstance(o, Params):
+│ │ +                    return Params(result, history=o.history)
+│ │ +            elif isinstance(o, Step):
+│ │ +                return {"type": "ref", "ref": o.name}
+│ │ +            else:
+│ │ +                return deepcopy(o)
+│ │ +
+│ │ +        raw_step_config = replace_steps_with_refs(params.as_dict(quiet=True))
+│ │  
+│ │          as_registrable = cast(Type[Registrable], cls)
+│ │          if "type" in params and params["type"] not in as_registrable.list_available():
+│ │              as_registrable.search_modules(params["type"])
+│ │          choice = params.pop_choice(
+│ │              "type", choices=as_registrable.list_available(), default_to_first_choice=False
+│ │          )
+│ │   --- ai2-tango-1.2.0/tango/step_cache.py
+│ ├── +++ ai2-tango-1.2.1/tango/step_cache.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/step_caches/local_step_cache.py
+│ ├── +++ ai2-tango-1.2.1/tango/step_caches/local_step_cache.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/step_caches/memory_step_cache.py
+│ ├── +++ ai2-tango-1.2.1/tango/step_caches/memory_step_cache.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/step_caches/remote_step_cache.py
+│ ├── +++ ai2-tango-1.2.1/tango/step_caches/remote_step_cache.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/step_graph.py
+│ ├── +++ ai2-tango-1.2.1/tango/step_graph.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/step_info.py
+│ ├── +++ ai2-tango-1.2.1/tango/step_info.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -2,23 +2,22 @@
+│ │  import logging
+│ │  import os
+│ │  import platform
+│ │  import socket
+│ │  import sys
+│ │  from dataclasses import dataclass, field
+│ │  from datetime import datetime, timedelta
+│ │ -from enum import Enum
+│ │  from pathlib import Path
+│ │  from typing import Any, Dict, List, Optional, Set, Tuple
+│ │  
+│ │  import pytz
+│ │  
+│ │  from .common.from_params import FromParams
+│ │  from .common.logging import log_exception
+│ │ -from .common.util import jsonify, local_timezone, replace_steps_with_unique_id
+│ │ +from .common.util import StrEnum, jsonify, local_timezone, replace_steps_with_unique_id
+│ │  from .step import Step
+│ │  from .version import VERSION
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │  def get_pip_packages() -> Optional[List[Tuple[str, str]]]:
+│ │ @@ -33,15 +32,15 @@
+│ │          return sorted([(d.key, d.version) for d in iter(pkg_resources.working_set)])
+│ │      except Exception as exc:
+│ │          logger.error("Error saving pip packages")
+│ │          log_exception(exc)
+│ │      return None
+│ │  
+│ │  
+│ │ -class StepState(Enum):
+│ │ +class StepState(StrEnum):
+│ │      """Describes the possible state a step can be in."""
+│ │  
+│ │      INCOMPLETE = "incomplete"
+│ │      """The step has not run yet."""
+│ │  
+│ │      RUNNING = "running"
+│ │      """The step is running right now."""
+│ │   --- ai2-tango-1.2.0/tango/steps/dataset_remix.py
+│ ├── +++ ai2-tango-1.2.1/tango/steps/dataset_remix.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/steps/print.py
+│ ├── +++ ai2-tango-1.2.1/tango/steps/print.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/steps/shell_step.py
+│ ├── +++ ai2-tango-1.2.1/tango/steps/shell_step.py
+│ │┄ Files identical despite different names
+│ │   --- ai2-tango-1.2.0/tango/workspaces/local_workspace.py
+│ ├── +++ ai2-tango-1.2.1/tango/workspaces/local_workspace.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  import json
+│ │  import logging
+│ │  import os
+│ │  from datetime import datetime
+│ │  from pathlib import Path
+│ │ -from typing import Dict, Iterable, Iterator, Optional, Set, TypeVar, Union
+│ │ +from typing import Dict, Iterable, Iterator, List, Optional, Set, TypeVar, Union
+│ │  from urllib.parse import ParseResult
+│ │  
+│ │  import dill
+│ │  import petname
+│ │  from sqlitedict import SqliteDict
+│ │  
+│ │  from tango.common import PathOrStr
+│ │ @@ -15,15 +15,15 @@
+│ │  from tango.common.file_lock import FileLock
+│ │  from tango.common.logging import file_handler
+│ │  from tango.common.util import exception_to_string, utc_now_datetime
+│ │  from tango.step import Step
+│ │  from tango.step_cache import StepCache
+│ │  from tango.step_caches import LocalStepCache
+│ │  from tango.step_info import StepInfo, StepState
+│ │ -from tango.workspace import Run, Workspace
+│ │ +from tango.workspace import Run, StepInfoSort, Workspace
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  T = TypeVar("T")
+│ │  
+│ │  
+│ │  @Workspace.register("local")
+│ │ @@ -358,14 +358,46 @@
+│ │      def registered_runs(self) -> Dict[str, Run]:
+│ │          return {
+│ │              str(run_dir.name): self.registered_run(run_dir.name)
+│ │              for run_dir in self.runs_dir.iterdir()
+│ │              if run_dir.is_dir()
+│ │          }
+│ │  
+│ │ +    def search_step_info(
+│ │ +        self,
+│ │ +        *,
+│ │ +        sort_by: Optional[StepInfoSort] = None,
+│ │ +        sort_descending: bool = True,
+│ │ +        match: Optional[str] = None,
+│ │ +        state: Optional[StepState] = None,
+│ │ +        start: int = 0,
+│ │ +        stop: Optional[int] = None,
+│ │ +    ) -> List[StepInfo]:
+│ │ +        with SqliteDict(self.step_info_file, flag="r") as d:
+│ │ +            steps = [
+│ │ +                step
+│ │ +                for step in d.values()
+│ │ +                if (match is None or match in step.unique_id)
+│ │ +                and (state is None or step.state == state)
+│ │ +            ]
+│ │ +
+│ │ +        if sort_by == StepInfoSort.START_TIME:
+│ │ +            now = utc_now_datetime()
+│ │ +            steps = sorted(
+│ │ +                steps,
+│ │ +                key=lambda step: step.start_time or now,
+│ │ +                reverse=sort_descending,
+│ │ +            )
+│ │ +        elif sort_by == StepInfoSort.UNIQUE_ID:
+│ │ +            steps = sorted(steps, key=lambda step: step.unique_id, reverse=sort_descending)
+│ │ +        elif sort_by is not None:
+│ │ +            raise NotImplementedError
+│ │ +
+│ │ +        return steps[slice(start, stop)]
+│ │ +
+│ │      def registered_run(self, name: str) -> Run:
+│ │          run_dir = self.runs_dir / name
+│ │          if not run_dir.is_dir():
+│ │              raise KeyError(name)
+│ │          steps_for_run = self._load_registered_run(name)
+│ │          return Run(name, steps_for_run, datetime.fromtimestamp(run_dir.stat().st_ctime))
+│ │   --- ai2-tango-1.2.0/tango/workspaces/memory_workspace.py
+│ ├── +++ ai2-tango-1.2.1/tango/workspaces/memory_workspace.py
+│ │┄ Files identical despite different names

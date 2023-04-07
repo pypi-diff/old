@@ -1,0 +1,9560 @@
+# Comparing `tmp/mct-nightly-1.8.0.9022023.post443.tar.gz` & `tmp/mct-nightly-1.8.0.9032023.post431.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "mct-nightly-1.8.0.9022023.post443.tar", last modified: Thu Feb  9 00:04:44 2023, max compression
++gzip compressed data, was "mct-nightly-1.8.0.9032023.post431.tar", last modified: Thu Mar  9 00:04:31 2023, max compression
+```
+
+## Comparing `mct-nightly-1.8.0.9022023.post443.tar` & `mct-nightly-1.8.0.9032023.post431.tar`
+
+### file list
+
+```diff
+@@ -1,559 +1,573 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.600796 mct-nightly-1.8.0.9022023.post443/
+--rw-r--r--   0 runner    (1001) docker     (123)    10174 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/LICENSE.md
+--rw-r--r--   0 runner    (1001) docker     (123)    12038 2023-02-09 00:04:44.600796 mct-nightly-1.8.0.9022023.post443/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    10198 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.520795 mct-nightly-1.8.0.9022023.post443/mct_nightly.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)    12038 2023-02-09 00:04:44.000000 mct-nightly-1.8.0.9022023.post443/mct_nightly.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    34311 2023-02-09 00:04:44.000000 mct-nightly-1.8.0.9022023.post443/mct_nightly.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-09 00:04:44.000000 mct-nightly-1.8.0.9022023.post443/mct_nightly.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      117 2023-02-09 00:04:44.000000 mct-nightly-1.8.0.9022023.post443/mct_nightly.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       26 2023-02-09 00:04:44.000000 mct-nightly-1.8.0.9022023.post443/mct_nightly.egg-info/top_level.txt
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.520795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/
+--rw-r--r--   0 runner    (1001) docker     (123)     4229 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.520795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2943 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/analyzer.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.524795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/
+--rw-r--r--   0 runner    (1001) docker     (123)     1511 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.524795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/back2framework/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/back2framework/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2023 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/back2framework/base_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1666 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/base_substitutions.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.528795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2588 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/base_collector.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6864 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/histogram_collector.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3900 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/mean_collector.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5219 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/min_max_per_channel_collector.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7929 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/statistics_collector.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2102 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/statistics_collector_generator.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4027 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/constants.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4017 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/data_loader.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2281 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/defaultdict.py
+--rw-r--r--   0 runner    (1001) docker     (123)    22674 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/framework_implementation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6430 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/framework_info.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.528795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/fusion/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/fusion/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5411 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/fusion/layer_fusing.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.532795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/
+--rw-r--r--   0 runner    (1001) docker     (123)      773 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    28855 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/base_graph.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18516 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/base_node.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3733 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/edge.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2922 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/functional_node.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     4732 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/graph_matchers.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     5128 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/graph_searches.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.532795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3892 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/bipartite_graph.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2612 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/compute_graph_max_cut.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2470 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/cut.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17057 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/max_cut_astar.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3961 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/memory_element.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7175 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/memory_graph.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9272 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/virtual_activation_weights_node.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1723 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/immutable.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4673 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/logger.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.532795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/
+--rwxr-xr-x   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/__init__.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     3091 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/base_graph_filter.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     2210 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/base_matcher.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     3706 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/edge_matcher.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     1773 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/function.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     2745 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/node_matcher.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     1111 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/walk_matcher.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1217 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/memory_computation.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.536795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6804 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/bit_width_setter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2222 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/distance_weighting.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.536795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4297 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3920 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_aggregation_methods.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7100 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_data.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1602 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_functions_mapping.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19342 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_methods.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8046 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/mixed_precision_quantization_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6773 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/mixed_precision_search_facade.py
+--rw-r--r--   0 runner    (1001) docker     (123)    34634 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/mixed_precision_search_manager.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.540795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/search_methods/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/search_methods/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15272 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/search_methods/linear_programming.py
+--rw-r--r--   0 runner    (1001) docker     (123)    25266 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/sensitivity_evaluation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6333 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/solution_refinement_procedure.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1324 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/model_builder_mode.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5012 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/model_collector.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1209 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/model_validation.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.540795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/network_editors/
+--rw-r--r--   0 runner    (1001) docker     (123)     1307 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/network_editors/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17948 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/network_editors/actions.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1811 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/network_editors/edit_network.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3149 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/network_editors/node_filters.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1769 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/node_prior_info.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.540795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3034 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/candidate_node_quantization_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/core_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1482 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/debug_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4427 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/filter_nodes_candidates.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16262 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/node_quantization_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3462 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_analyzer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7244 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2335 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_fn_selection.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4085 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_fn_selection.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.544795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/
+--rw-r--r--   0 runner    (1001) docker     (123)     1608 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16499 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/error_functions.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2939 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/kmeans_params.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7294 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/lut_kmeans_params.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1772 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/outlier_filter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8479 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/power_of_two_selection.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4560 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_activations_computation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4323 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_computation.py
+--rw-r--r--   0 runner    (1001) docker     (123)    41697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_search.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5095 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_weights_computation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9684 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/symmetric_selection.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7874 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/uniform_selection.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2963 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantize_graph_weights.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3626 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantize_node.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.544795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantizers/
+--rw-r--r--   0 runner    (1001) docker     (123)      698 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantizers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2362 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantizers/kmeans_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2786 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantizers/lut_kmeans_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14176 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantizers/quantizers_helpers.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5166 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantizers/uniform_quantizers.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10673 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/set_node_quantization_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7469 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/similarity_analyzer.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.544795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/statistics_correction/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/statistics_correction/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3429 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/statistics_correction/apply_bias_correction_to_graph.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6103 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/statistics_correction/apply_second_moment_correction_to_graph.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10260 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/statistics_correction/compute_bias_correction_of_graph.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5584 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/statistics_correction/statistics_correction.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.548795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1463 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/apply_substitutions.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6434 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/batchnorm_folding.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5880 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/batchnorm_reconstruction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9969 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/batchnorm_refusing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9105 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/linear_collapsing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2296 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/linear_collapsing_substitution.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4866 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/residual_collapsing.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10978 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/scale_equalization.py
+--rw-r--r--   0 runner    (1001) docker     (123)    26858 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/shift_negative_activation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2625 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/softmax_shift.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3412 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/virtual_activation_weights_composition.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4240 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/weights_activation_split.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.548795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/
+--rw-r--r--   0 runner    (1001) docker     (123)     1463 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/current_tp_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2319 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/fusing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9107 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/op_quantization_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3040 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/operators.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8783 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/target_platform_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1375 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/target_platform_model_component.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.548795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/
+--rw-r--r--   0 runner    (1001) docker     (123)     1428 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8771 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/attribute_filter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2046 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/current_tpc.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4001 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/layer_filter_params.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6015 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/operations_to_layers.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9490 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/target_platform_capabilities.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1013 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/target_platform_capabilities_component.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1631 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/user_info.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.552796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/visualization/
+--rw-r--r--   0 runner    (1001) docker     (123)      698 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/visualization/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6371 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/visualization/final_config_visualizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5955 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/visualization/nn_visualizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20094 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/visualization/tensorboard_writer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4233 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/exporter.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.552796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/
+--rw-r--r--   0 runner    (1001) docker     (123)      698 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.552796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/
+--rw-r--r--   0 runner    (1001) docker     (123)      808 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2231 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/factory_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2439 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/float_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3837 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/instance_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15658 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/keras_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7162 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/mixed_precision_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15305 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/model_gradients.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2476 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/quantized_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2822 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/constants.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5007 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/default_framework_info.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.552796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/
+--rw-r--r--   0 runner    (1001) docker     (123)      698 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.556795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/
+--rw-r--r--   0 runner    (1001) docker     (123)      698 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3952 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/activation_decomposition.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3655 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/batchnorm_folding.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3168 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/batchnorm_reconstruction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2478 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/batchnorm_refusing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5610 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/input_scaling.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5937 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/linear_collapsing.py
+--rw-r--r--   0 runner    (1001) docker     (123)    26902 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/multi_head_attention_decomposition.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3827 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/relu_bound_to_power_of_2.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2354 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/remove_relu_upper_bound.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3188 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/residual_collapsing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5542 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/scale_equalization.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7714 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/separableconv_decomposition.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10776 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/shift_negative_activation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1623 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/softmax_shift.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1462 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/virtual_activation_weights_composition.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1814 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/weights_activation_split.py
+--rw-r--r--   0 runner    (1001) docker     (123)    27514 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/keras_implementation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1717 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/keras_model_validation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3936 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/keras_node_prior_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8881 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/kpi_data_facade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.556795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/mixed_precision/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/mixed_precision/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1900 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/mixed_precision/set_layer_to_bitwidth.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18051 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantization_facade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.556795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/
+--rw-r--r--   0 runner    (1001) docker     (123)      698 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1733 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/base_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6175 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/fake_quant_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3132 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/input_layer_quantize_transform.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4524 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/lut_fake_quant.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.556795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/mixed_precision/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/mixed_precision/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2837 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/mixed_precision/quantization_config_factory.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6854 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/mixed_precision/selective_activation_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10914 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/mixed_precision/selective_quantize_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7621 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/mixed_precision/selective_weights_quantizer.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.560795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/
+--rw-r--r--   0 runner    (1001) docker     (123)      698 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2639 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/common.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11418 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/connectivity_handler.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.560795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/nested_model/
+--rw-r--r--   0 runner    (1001) docker     (123)      698 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/nested_model/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7906 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/nested_model/edges_merger.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2760 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/nested_model/nested_model_handler.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2107 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/nested_model/nodes_merger.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2408 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/nested_model/outputs_merger.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5951 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/node_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8109 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/reader.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.560795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/statistics_correction/
+--rw-r--r--   0 runner    (1001) docker     (123)      698 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/statistics_correction/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3055 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/statistics_correction/apply_second_moment_correction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/tf_tensor_numpy.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.560795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/visualization/
+--rw-r--r--   0 runner    (1001) docker     (123)      698 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/visualization/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.560795 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.564796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/
+--rw-r--r--   0 runner    (1001) docker     (123)      813 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2279 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/factory_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3414 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/float_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1680 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/instance_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5152 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/mixed_precision_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17808 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/model_gradients.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12685 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/pytorch_model_builder.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.564796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5773 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/quantized_layer_wrapper.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1640 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/wrapper_quantize_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3704 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/quantized_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2442 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/constants.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4219 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/default_framework_info.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.564796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.564796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3038 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/batchnorm_folding.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2822 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/batchnorm_reconstruction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2162 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/batchnorm_refusing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4804 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/const_holder_conv.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5809 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/linear_collapsing.py
+--rw-r--r--   0 runner    (1001) docker     (123)    38525 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/multi_head_attention_decomposition.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1953 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/permute_call_method.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5563 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/relu_bound_to_power_of_2.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3492 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/reshape_with_static_shapes.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2911 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/residual_collapsing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3303 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/scale_equalization.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9833 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/shift_negative_activation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1588 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/softmax_shift.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1375 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/virtual_activation_weights_composition.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1616 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/weights_activation_split.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8782 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/kpi_data_facade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.568796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/mixed_precision/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/mixed_precision/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11340 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/mixed_precision/mixed_precision_wrapper.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1678 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/mixed_precision/set_layer_to_bitwidth.py
+--rw-r--r--   0 runner    (1001) docker     (123)    25965 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/pytorch_implementation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3245 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/pytorch_node_prior_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17587 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/quantization_facade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.568796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/quantizer/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/quantizer/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6481 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/quantizer/fake_quant_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4464 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/quantizer/lut_fake_quant.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.568796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/reader/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/reader/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12011 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/reader/graph_builders.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1789 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/reader/node_holders.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5801 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/reader/reader.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.568796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/statistics_correction/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/statistics_correction/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3256 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/statistics_correction/apply_second_moment_correction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2959 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)    23032 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/runner.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.568796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.568796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.568796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/latest/
+--rw-r--r--   0 runner    (1001) docker     (123)     1406 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/latest/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4176 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/target_platform_capabilities.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.568796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v1/
+--rw-r--r--   0 runner    (1001) docker     (123)      717 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v1/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6029 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v1/tp_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3797 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v1/tpc_keras.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3213 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v1/tpc_pytorch.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.568796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v2/
+--rw-r--r--   0 runner    (1001) docker     (123)      717 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v2/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6565 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v2/tp_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4273 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v2/tpc_keras.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3811 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v2/tpc_pytorch.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.572796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3/
+--rw-r--r--   0 runner    (1001) docker     (123)      717 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7867 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3/tp_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4570 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3/tpc_keras.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4148 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3/tpc_pytorch.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.572796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/
+--rw-r--r--   0 runner    (1001) docker     (123)      721 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8057 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/tp_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4583 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/tpc_keras.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4161 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/tpc_pytorch.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.572796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4/
+--rw-r--r--   0 runner    (1001) docker     (123)      717 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7867 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4/tp_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5325 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4/tpc_keras.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4666 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4/tpc_pytorch.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.572796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/
+--rw-r--r--   0 runner    (1001) docker     (123)      721 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8057 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/tp_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5429 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/tpc_keras.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4679 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/tpc_pytorch.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.572796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v5/
+--rw-r--r--   0 runner    (1001) docker     (123)      717 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v5/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7864 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v5/tp_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5325 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v5/tpc_keras.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4666 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v5/tpc_pytorch.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3459 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/get_target_platform_capabilities.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.572796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.572796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/latest/
+--rw-r--r--   0 runner    (1001) docker     (123)     1414 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/latest/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1924 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/target_platform_capabilities.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.572796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/
+--rw-r--r--   0 runner    (1001) docker     (123)      717 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7859 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/tp_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5331 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/tpc_keras.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4673 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/tpc_pytorch.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.572796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.576796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/latest/
+--rw-r--r--   0 runner    (1001) docker     (123)     1402 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/latest/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1930 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/target_platform_capabilities.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.576796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/
+--rw-r--r--   0 runner    (1001) docker     (123)      717 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5923 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/tp_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3150 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/tpc_keras.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2894 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/tpc_pytorch.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.576796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.576796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/latest/
+--rw-r--r--   0 runner    (1001) docker     (123)     1397 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/latest/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1925 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/target_platform_capabilities.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.576796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/
+--rw-r--r--   0 runner    (1001) docker     (123)      717 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7770 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/tp_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6066 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/tpc_keras.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4937 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/tpc_pytorch.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.576796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.576796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/
+--rw-r--r--   0 runner    (1001) docker     (123)     1082 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.576796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/fw_agonstic/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/fw_agonstic/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/fw_agonstic/exporter.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.576796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/keras/
+--rw-r--r--   0 runner    (1001) docker     (123)      699 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/keras/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1495 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/keras/base_keras_exporter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6022 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/keras/fakely_quant_keras_exporter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2989 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/keras/keras_export_facade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.580796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/pytorch/
+--rw-r--r--   0 runner    (1001) docker     (123)      699 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/pytorch/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1600 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/pytorch/base_pytorch_exporter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3301 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/pytorch/fakely_quant_onnx_pytorch_exporter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2892 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/pytorch/fakely_quant_torchscript_pytorch_exporter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3925 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/pytorch/pytorch_export_facade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.580796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/tflite/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/tflite/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3006 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/tflite/fakely_quant_tflite_exporter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8148 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/tflite/int8_tflite_exporter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3338 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/tflite/tflite_export_facade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.580796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/
+--rw-r--r--   0 runner    (1001) docker     (123)     1314 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.580796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/common/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/common/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2876 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/common/exporter_get_quantizer.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.580796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.580796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/builder/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/builder/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2494 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/builder/fully_quantized_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6745 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/builder/node_to_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2077 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/builder/node_to_quantizers.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3310 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/validate_layer.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.580796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.580796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2041 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/fully_quantized_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6216 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/node_to_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2086 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/node_to_quantizers.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1464 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/validate_layer.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.580796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.584796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/common/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/common/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10978 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/common/gptq_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)      687 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/common/gptq_constants.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2053 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/common/gptq_graph.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3389 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/common/gptq_quantizer_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15210 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/common/gptq_training.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.584796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6241 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/gptq_loss.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4064 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/gptq_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14276 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/gptq_training.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4684 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/graph_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14341 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantization_facade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.584796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/
+--rw-r--r--   0 runner    (1001) docker     (123)      815 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2925 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/config_factory.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.584796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/configs/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/configs/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2417 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/configs/base_quantizer_gptq_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10300 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/configs/weight_quantizer_gptq_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1913 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/kernel_functions.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6347 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/quant_utils.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.584796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/soft_rounding/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/soft_rounding/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14824 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/soft_rounding/symmetric_soft_quantizer.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.588796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/ste_rounding/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/ste_rounding/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11462 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/ste_rounding/symmetric_ste.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2026 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/ste_rounding/uniform_ste.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.588796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3187 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/gptq_graph_info.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2719 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/gptq_loss.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4729 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/gptq_model_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10835 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/gptq_training.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13255 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantization_facade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.588796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2574 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/gptq_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5844 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/quant_utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4232 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/quantizer_wrapper.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.588796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4436 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/ste_weights_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5484 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/runner.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.588796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.588796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/keras/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/keras/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9681 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/keras/quantization_facade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.588796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/pytorch/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/pytorch/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8364 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/pytorch/quantization_facade.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2552 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/runner.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.588796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.588796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/common/
+--rw-r--r--   0 runner    (1001) docker     (123)      802 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/common/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      830 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/common/constants.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3133 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/common/qat_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3326 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/common/qat_get_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6082 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/common/qat_get_quantizer_config.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.592796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14790 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantization_facade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.592796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/
+--rw-r--r--   0 runner    (1001) docker     (123)      856 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2275 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/base_keras_qat_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2123 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/quant_utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4083 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/quantization_builder.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.592796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/ste_rounding/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/ste_rounding/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13547 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/ste_rounding/symmetric_ste.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10969 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/ste_rounding/uniform_ste.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.592796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11875 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantization_facade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.592796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/
+--rw-r--r--   0 runner    (1001) docker     (123)      859 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2255 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/base_pytorch_qat_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3950 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/quantization_builder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5004 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/quantizer_utils.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.592796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9572 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/symmetric_ste.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8553 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/uniform_ste.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.592796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/
+--rw-r--r--   0 runner    (1001) docker     (123)     2149 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.596796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3141 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/base_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6333 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/base_trainable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1630 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/constants.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1222 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/get_all_subclasses.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2151 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/quant_utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4774 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/trainable_quantizer_config.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.596796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/
+--rw-r--r--   0 runner    (1001) docker     (123)     1618 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3361 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/base_keras_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4012 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/config_serialization.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.596796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/
+--rw-r--r--   0 runner    (1001) docker     (123)     2014 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.596796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3141 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/activation_pot_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3891 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/activation_symmetric_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5152 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/activation_uniform_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2168 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/base_keras_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)      944 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/constants.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.596796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3404 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/weights_pot_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4306 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/weights_symmetric_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8605 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/weights_uniform_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3563 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/load_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13847 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/quantize_wrapper.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2942 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/validation_functions.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.596796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/
+--rw-r--r--   0 runner    (1001) docker     (123)      696 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2241 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/base_pytorch_quantizer.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.600796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/
+--rw-r--r--   0 runner    (1001) docker     (123)     2109 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.600796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2878 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/activation_pot_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3582 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/activation_symmetric_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4806 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/activation_uniform_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1879 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/base_pytorch_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3020 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/base_symmetric_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2451 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/base_uniform_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)      920 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/constants.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 00:04:44.600796 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3097 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/weights_pot_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4940 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/weights_symmetric_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5340 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/weights_uniform_inferable_quantizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10469 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/quantize_wrapper.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4460 2023-02-09 00:03:56.000000 mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/quantizer_utils.py
+--rw-r--r--   0 runner    (1001) docker     (123)      111 2023-02-09 00:04:44.600796 mct-nightly-1.8.0.9022023.post443/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     2026 2023-02-09 00:04:43.000000 mct-nightly-1.8.0.9022023.post443/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.680048 mct-nightly-1.8.0.9032023.post431/
++-rw-r--r--   0 runner    (1001) docker     (123)    10174 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/LICENSE.md
++-rw-r--r--   0 runner    (1001) docker     (123)    12038 2023-03-09 00:04:31.680048 mct-nightly-1.8.0.9032023.post431/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    10198 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.636047 mct-nightly-1.8.0.9032023.post431/mct_nightly.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)    12038 2023-03-09 00:04:31.000000 mct-nightly-1.8.0.9032023.post431/mct_nightly.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    36750 2023-03-09 00:04:31.000000 mct-nightly-1.8.0.9032023.post431/mct_nightly.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-09 00:04:31.000000 mct-nightly-1.8.0.9032023.post431/mct_nightly.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      117 2023-03-09 00:04:31.000000 mct-nightly-1.8.0.9032023.post431/mct_nightly.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       26 2023-03-09 00:04:31.000000 mct-nightly-1.8.0.9032023.post431/mct_nightly.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.636047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/
++-rw-r--r--   0 runner    (1001) docker     (123)     4254 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.636047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2943 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/analyzer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.640047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/
++-rw-r--r--   0 runner    (1001) docker     (123)     1511 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.640047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/back2framework/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/back2framework/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2023 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/back2framework/base_model_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1666 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/base_substitutions.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.640047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2588 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/base_collector.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6864 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/histogram_collector.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3900 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/mean_collector.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5219 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/min_max_per_channel_collector.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7929 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/statistics_collector.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2102 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/statistics_collector_generator.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4027 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/constants.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4017 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/data_loader.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2281 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/defaultdict.py
++-rw-r--r--   0 runner    (1001) docker     (123)    22674 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/framework_implementation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6430 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/framework_info.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.640047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/fusion/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/fusion/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5411 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/fusion/layer_fusing.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.640047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/
++-rw-r--r--   0 runner    (1001) docker     (123)      773 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    28855 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/base_graph.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18516 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/base_node.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3733 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/edge.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2922 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/functional_node.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     4732 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/graph_matchers.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     5128 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/graph_searches.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.640047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3892 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/bipartite_graph.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2612 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/compute_graph_max_cut.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2470 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/cut.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17057 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/max_cut_astar.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3961 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/memory_element.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7175 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/memory_graph.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9272 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/virtual_activation_weights_node.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1723 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/immutable.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4673 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/logger.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.640047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/
++-rwxr-xr-x   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/__init__.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     3091 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/base_graph_filter.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     2210 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/base_matcher.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     3706 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/edge_matcher.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     1773 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/function.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     2745 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/node_matcher.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     1111 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/walk_matcher.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1217 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/memory_computation.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.644048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6804 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/bit_width_setter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2222 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/distance_weighting.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.644048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4297 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3920 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_aggregation_methods.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7100 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_data.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1602 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_functions_mapping.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19342 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_methods.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8046 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/mixed_precision_quantization_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6773 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/mixed_precision_search_facade.py
++-rw-r--r--   0 runner    (1001) docker     (123)    34634 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/mixed_precision_search_manager.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.644048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/search_methods/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/search_methods/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15458 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/search_methods/linear_programming.py
++-rw-r--r--   0 runner    (1001) docker     (123)    25266 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/sensitivity_evaluation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6333 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/solution_refinement_procedure.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1324 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/model_builder_mode.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5012 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/model_collector.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1209 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/model_validation.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.644048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/network_editors/
++-rw-r--r--   0 runner    (1001) docker     (123)     1307 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/network_editors/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17948 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/network_editors/actions.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1811 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/network_editors/edit_network.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3149 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/network_editors/node_filters.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1769 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/node_prior_info.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.644048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3034 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/candidate_node_quantization_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/core_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1482 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/debug_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4427 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/filter_nodes_candidates.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16262 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/node_quantization_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3462 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_analyzer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7244 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2335 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_fn_selection.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4085 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_fn_selection.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.648048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/
++-rw-r--r--   0 runner    (1001) docker     (123)     1608 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16499 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/error_functions.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2939 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/kmeans_params.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7294 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/lut_kmeans_params.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1772 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/outlier_filter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8479 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/power_of_two_selection.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4560 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_activations_computation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4323 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_computation.py
++-rw-r--r--   0 runner    (1001) docker     (123)    41697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_search.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5095 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_weights_computation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9684 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/symmetric_selection.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7874 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/uniform_selection.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2963 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantize_graph_weights.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3626 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantize_node.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.648048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantizers/
++-rw-r--r--   0 runner    (1001) docker     (123)      698 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantizers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2362 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantizers/kmeans_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2786 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantizers/lut_kmeans_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14176 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantizers/quantizers_helpers.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5166 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantizers/uniform_quantizers.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10673 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/set_node_quantization_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7469 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/similarity_analyzer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.648048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/statistics_correction/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/statistics_correction/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3429 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/statistics_correction/apply_bias_correction_to_graph.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6103 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/statistics_correction/apply_second_moment_correction_to_graph.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10260 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/statistics_correction/compute_bias_correction_of_graph.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5584 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/statistics_correction/statistics_correction.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.648048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1463 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/apply_substitutions.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6434 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/batchnorm_folding.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5880 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/batchnorm_reconstruction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9969 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/batchnorm_refusing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9105 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/linear_collapsing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2296 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/linear_collapsing_substitution.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4866 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/residual_collapsing.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10978 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/scale_equalization.py
++-rw-r--r--   0 runner    (1001) docker     (123)    26858 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/shift_negative_activation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2625 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/softmax_shift.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3412 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/virtual_activation_weights_composition.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4240 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/weights_activation_split.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.648048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/
++-rw-r--r--   0 runner    (1001) docker     (123)     1463 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/current_tp_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2319 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/fusing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9107 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/op_quantization_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3040 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/operators.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8783 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/target_platform_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1375 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/target_platform_model_component.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.648048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/
++-rw-r--r--   0 runner    (1001) docker     (123)     1428 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8771 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/attribute_filter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2046 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/current_tpc.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4001 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/layer_filter_params.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6015 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/operations_to_layers.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9490 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/target_platform_capabilities.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1013 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/target_platform_capabilities_component.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1631 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/user_info.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.652047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/visualization/
++-rw-r--r--   0 runner    (1001) docker     (123)      698 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/visualization/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6371 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/visualization/final_config_visualizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5955 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/visualization/nn_visualizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20094 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/visualization/tensorboard_writer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4233 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/exporter.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.652047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/
++-rw-r--r--   0 runner    (1001) docker     (123)      698 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.652047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/
++-rw-r--r--   0 runner    (1001) docker     (123)      808 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2231 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/factory_model_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2439 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/float_model_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3837 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/instance_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15658 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/keras_model_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7162 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/mixed_precision_model_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15305 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/model_gradients.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2476 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/quantized_model_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2822 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/constants.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5007 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/default_framework_info.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.652047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/
++-rw-r--r--   0 runner    (1001) docker     (123)      698 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.652047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/
++-rw-r--r--   0 runner    (1001) docker     (123)      698 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3952 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/activation_decomposition.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3655 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/batchnorm_folding.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3168 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/batchnorm_reconstruction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2478 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/batchnorm_refusing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5610 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/input_scaling.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5937 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/linear_collapsing.py
++-rw-r--r--   0 runner    (1001) docker     (123)    26902 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/multi_head_attention_decomposition.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3827 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/relu_bound_to_power_of_2.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2354 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/remove_relu_upper_bound.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3188 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/residual_collapsing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5542 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/scale_equalization.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7714 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/separableconv_decomposition.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10776 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/shift_negative_activation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1623 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/softmax_shift.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1462 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/virtual_activation_weights_composition.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1814 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/weights_activation_split.py
++-rw-r--r--   0 runner    (1001) docker     (123)    27514 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/keras_implementation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1717 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/keras_model_validation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3936 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/keras_node_prior_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8881 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/kpi_data_facade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.652047 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/mixed_precision/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/mixed_precision/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1900 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/mixed_precision/set_layer_to_bitwidth.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18051 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantization_facade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.656048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/
++-rw-r--r--   0 runner    (1001) docker     (123)      698 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1733 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/base_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6175 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/fake_quant_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3132 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/input_layer_quantize_transform.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4524 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/lut_fake_quant.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.656048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/mixed_precision/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/mixed_precision/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2837 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/mixed_precision/quantization_config_factory.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6854 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/mixed_precision/selective_activation_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10914 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/mixed_precision/selective_quantize_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7621 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/mixed_precision/selective_weights_quantizer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.656048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/
++-rw-r--r--   0 runner    (1001) docker     (123)      698 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2639 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/common.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11418 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/connectivity_handler.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.656048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/nested_model/
++-rw-r--r--   0 runner    (1001) docker     (123)      698 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/nested_model/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7906 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/nested_model/edges_merger.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2760 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/nested_model/nested_model_handler.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2107 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/nested_model/nodes_merger.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2408 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/nested_model/outputs_merger.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5951 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/node_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8109 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/reader.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.656048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/statistics_correction/
++-rw-r--r--   0 runner    (1001) docker     (123)      698 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/statistics_correction/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3055 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/statistics_correction/apply_second_moment_correction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/tf_tensor_numpy.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.656048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/visualization/
++-rw-r--r--   0 runner    (1001) docker     (123)      698 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/visualization/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.656048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.656048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/
++-rw-r--r--   0 runner    (1001) docker     (123)      813 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2279 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/factory_model_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3414 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/float_model_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1680 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/instance_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5152 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/mixed_precision_model_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17808 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/model_gradients.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12685 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/pytorch_model_builder.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.660048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5773 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/quantized_layer_wrapper.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1640 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/wrapper_quantize_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3704 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/quantized_model_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2626 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/constants.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4219 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/default_framework_info.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.660048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.660048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3038 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/batchnorm_folding.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2822 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/batchnorm_reconstruction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2162 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/batchnorm_refusing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4804 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/const_holder_conv.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5809 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/linear_collapsing.py
++-rw-r--r--   0 runner    (1001) docker     (123)    38365 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/multi_head_attention_decomposition.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1953 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/permute_call_method.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5563 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/relu_bound_to_power_of_2.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4153 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/reshape_with_static_shapes.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2911 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/residual_collapsing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3303 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/scale_equalization.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9833 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/shift_negative_activation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1588 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/softmax_shift.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1375 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/virtual_activation_weights_composition.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1616 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/weights_activation_split.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8782 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/kpi_data_facade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.660048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/mixed_precision/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/mixed_precision/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11340 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/mixed_precision/mixed_precision_wrapper.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1678 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/mixed_precision/set_layer_to_bitwidth.py
++-rw-r--r--   0 runner    (1001) docker     (123)    25965 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/pytorch_implementation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3245 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/pytorch_node_prior_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17587 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/quantization_facade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.660048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/quantizer/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/quantizer/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6483 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/quantizer/fake_quant_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4464 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/quantizer/lut_fake_quant.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.660048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/reader/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/reader/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12011 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/reader/graph_builders.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1789 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/reader/node_holders.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5801 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/reader/reader.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.660048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/statistics_correction/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/statistics_correction/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3256 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/statistics_correction/apply_second_moment_correction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2959 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)    23032 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/runner.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.660048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.660048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.660048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/latest/
++-rw-r--r--   0 runner    (1001) docker     (123)     1406 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/latest/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4176 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/target_platform_capabilities.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.660048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v1/
++-rw-r--r--   0 runner    (1001) docker     (123)      717 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v1/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6029 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v1/tp_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3797 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v1/tpc_keras.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3213 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v1/tpc_pytorch.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.664048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v2/
++-rw-r--r--   0 runner    (1001) docker     (123)      717 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v2/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6565 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v2/tp_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4273 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v2/tpc_keras.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3811 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v2/tpc_pytorch.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.664048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3/
++-rw-r--r--   0 runner    (1001) docker     (123)      717 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7867 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3/tp_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4570 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3/tpc_keras.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4148 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3/tpc_pytorch.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.664048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/
++-rw-r--r--   0 runner    (1001) docker     (123)      721 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8057 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/tp_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4583 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/tpc_keras.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4161 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/tpc_pytorch.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.664048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4/
++-rw-r--r--   0 runner    (1001) docker     (123)      717 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7867 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4/tp_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5325 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4/tpc_keras.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4666 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4/tpc_pytorch.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.664048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/
++-rw-r--r--   0 runner    (1001) docker     (123)      721 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8057 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/tp_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5429 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/tpc_keras.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4679 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/tpc_pytorch.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.664048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v5/
++-rw-r--r--   0 runner    (1001) docker     (123)      717 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v5/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7864 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v5/tp_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5325 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v5/tpc_keras.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4666 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v5/tpc_pytorch.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3459 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/get_target_platform_capabilities.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.664048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.664048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/latest/
++-rw-r--r--   0 runner    (1001) docker     (123)     1414 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/latest/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1924 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/target_platform_capabilities.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.664048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/
++-rw-r--r--   0 runner    (1001) docker     (123)      717 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7859 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/tp_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5331 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/tpc_keras.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4673 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/tpc_pytorch.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.664048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.664048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/latest/
++-rw-r--r--   0 runner    (1001) docker     (123)     1402 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/latest/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1930 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/target_platform_capabilities.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.664048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/
++-rw-r--r--   0 runner    (1001) docker     (123)      717 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5923 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/tp_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3150 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/tpc_keras.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2894 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/tpc_pytorch.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/latest/
++-rw-r--r--   0 runner    (1001) docker     (123)     1397 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/latest/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1925 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/target_platform_capabilities.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/
++-rw-r--r--   0 runner    (1001) docker     (123)      717 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7770 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/tp_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6066 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/tpc_keras.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4937 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/tpc_pytorch.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/
++-rw-r--r--   0 runner    (1001) docker     (123)     1082 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/fw_agonstic/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/fw_agonstic/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/fw_agonstic/exporter.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/keras/
++-rw-r--r--   0 runner    (1001) docker     (123)      699 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/keras/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1495 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/keras/base_keras_exporter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6022 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/keras/fakely_quant_keras_exporter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2989 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/keras/keras_export_facade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/pytorch/
++-rw-r--r--   0 runner    (1001) docker     (123)      699 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/pytorch/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1600 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/pytorch/base_pytorch_exporter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3301 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/pytorch/fakely_quant_onnx_pytorch_exporter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2892 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/pytorch/fakely_quant_torchscript_pytorch_exporter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3925 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/pytorch/pytorch_export_facade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/tflite/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/tflite/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3006 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/tflite/fakely_quant_tflite_exporter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8169 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/tflite/int8_tflite_exporter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3338 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/tflite/tflite_export_facade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/
++-rw-r--r--   0 runner    (1001) docker     (123)     1314 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/builder/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/builder/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2494 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/builder/fully_quantized_model_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6853 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/builder/node_to_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2077 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/builder/node_to_quantizers.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3335 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/validate_layer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2041 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/fully_quantized_model_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6239 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/node_to_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2086 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/node_to_quantizers.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1571 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/validate_layer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.668048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/common/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/common/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11798 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/common/gptq_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)      812 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/common/gptq_constants.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2826 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/common/gptq_graph.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3389 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/common/gptq_quantizer_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15250 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/common/gptq_training.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6241 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/gptq_loss.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16554 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/gptq_training.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5174 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/graph_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14341 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantization_facade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/
++-rw-r--r--   0 runner    (1001) docker     (123)      872 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4827 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/base_keras_gptq_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4604 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/quant_utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4391 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/quantization_builder.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/soft_rounding/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/soft_rounding/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15326 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/soft_rounding/symmetric_soft_quantizer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/ste_rounding/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/ste_rounding/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9364 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/ste_rounding/symmetric_ste.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2719 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/gptq_loss.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14105 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/gptq_training.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4368 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/graph_info.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13255 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantization_facade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/
++-rw-r--r--   0 runner    (1001) docker     (123)      876 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4884 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/base_pytorch_gptq_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3579 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/quant_utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4220 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/quantization_builder.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/soft_rounding/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/soft_rounding/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15172 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/soft_rounding/symmetric_soft_quantizer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9532 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/symmetric_ste.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5484 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/runner.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/keras/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/keras/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9681 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/keras/quantization_facade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/pytorch/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/pytorch/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8364 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/pytorch/quantization_facade.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2552 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/runner.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/common/
++-rw-r--r--   0 runner    (1001) docker     (123)      802 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/common/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      830 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/common/constants.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3133 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/common/qat_config.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14790 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantization_facade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.672048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/
++-rw-r--r--   0 runner    (1001) docker     (123)      856 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2156 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/base_keras_qat_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2123 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/quant_utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4229 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/quantization_builder.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.676048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/ste_rounding/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/ste_rounding/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13820 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/ste_rounding/symmetric_ste.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11089 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/ste_rounding/uniform_ste.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.676048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11875 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantization_facade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.676048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/
++-rw-r--r--   0 runner    (1001) docker     (123)      859 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2264 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/base_pytorch_qat_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4086 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/quantization_builder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5004 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/quantizer_utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.676048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9735 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/symmetric_ste.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8673 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/uniform_ste.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.676048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/
++-rw-r--r--   0 runner    (1001) docker     (123)     1615 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.676048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.676048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4599 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/activation_lut_pot_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3141 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/base_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1664 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/constants.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1222 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/get_all_subclasses.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2968 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/get_quantizers.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2153 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/quant_utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.676048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4279 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/load_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14646 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantize_wrapper.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3440 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizer_utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.676048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/
++-rw-r--r--   0 runner    (1001) docker     (123)     2112 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.676048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7485 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/activation_lut_pot_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3191 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/activation_pot_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3961 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/activation_symmetric_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5248 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/activation_uniform_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2228 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/base_keras_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)      944 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/constants.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.676048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4197 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_lut_pot_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9459 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_lut_symmetric_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3474 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_pot_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4376 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_symmetric_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8664 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_uniform_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2942 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/validation_functions.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.676048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10937 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantize_wrapper.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5929 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizer_utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.680048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/
++-rw-r--r--   0 runner    (1001) docker     (123)     2166 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.680048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2928 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/activation_pot_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3631 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/activation_symmetric_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4855 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/activation_uniform_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4871 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/base_lut_symmetric_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1919 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/base_pytorch_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3070 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/base_symmetric_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2501 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/base_uniform_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)      920 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/constants.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.680048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3972 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_lut_pot_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5181 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_lut_symmetric_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3147 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_pot_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5014 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_symmetric_inferable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5394 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_uniform_inferable_quantizer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.680048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.680048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6408 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/base_trainable_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6333 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/get_quantizer_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3789 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/get_quantizers.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1505 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/quant_utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4774 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/trainable_quantizer_config.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.680048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/keras/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/keras/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3411 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/keras/base_keras_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4062 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/keras/config_serialization.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1797 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/keras/quantizer_utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-09 00:04:31.680048 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/pytorch/
++-rw-r--r--   0 runner    (1001) docker     (123)      696 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/pytorch/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2266 2023-03-09 00:03:54.000000 mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/pytorch/base_pytorch_quantizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)      111 2023-03-09 00:04:31.680048 mct-nightly-1.8.0.9032023.post431/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     2026 2023-03-09 00:04:31.000000 mct-nightly-1.8.0.9032023.post431/setup.py
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/LICENSE.md` & `mct-nightly-1.8.0.9032023.post431/LICENSE.md`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/PKG-INFO` & `mct-nightly-1.8.0.9032023.post431/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mct-nightly
+-Version: 1.8.0.9022023.post443
++Version: 1.8.0.9032023.post431
+ Summary: A Model Compression Toolkit for neural networks
+ Home-page: UNKNOWN
+ License: UNKNOWN
+ Description: # Model Compression Toolkit (MCT)
+         
+         Model Compression Toolkit (MCT) is an open-source project for neural network model optimization under efficient, constrained hardware.
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/README.md` & `mct-nightly-1.8.0.9032023.post431/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/mct_nightly.egg-info/PKG-INFO` & `mct-nightly-1.8.0.9032023.post431/mct_nightly.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mct-nightly
+-Version: 1.8.0.9022023.post443
++Version: 1.8.0.9032023.post431
+ Summary: A Model Compression Toolkit for neural networks
+ Home-page: UNKNOWN
+ License: UNKNOWN
+ Description: # Model Compression Toolkit (MCT)
+         
+         Model Compression Toolkit (MCT) is an open-source project for neural network model optimization under efficient, constrained hardware.
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/mct_nightly.egg-info/SOURCES.txt` & `mct-nightly-1.8.0.9032023.post431/mct_nightly.egg-info/SOURCES.txt`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -323,16 +323,14 @@
+ model_compression_toolkit/exporter/model_exporter/pytorch/fakely_quant_torchscript_pytorch_exporter.py
+ model_compression_toolkit/exporter/model_exporter/pytorch/pytorch_export_facade.py
+ model_compression_toolkit/exporter/model_exporter/tflite/__init__.py
+ model_compression_toolkit/exporter/model_exporter/tflite/fakely_quant_tflite_exporter.py
+ model_compression_toolkit/exporter/model_exporter/tflite/int8_tflite_exporter.py
+ model_compression_toolkit/exporter/model_exporter/tflite/tflite_export_facade.py
+ model_compression_toolkit/exporter/model_wrapper/__init__.py
+-model_compression_toolkit/exporter/model_wrapper/common/__init__.py
+-model_compression_toolkit/exporter/model_wrapper/common/exporter_get_quantizer.py
+ model_compression_toolkit/exporter/model_wrapper/keras/__init__.py
+ model_compression_toolkit/exporter/model_wrapper/keras/validate_layer.py
+ model_compression_toolkit/exporter/model_wrapper/keras/builder/__init__.py
+ model_compression_toolkit/exporter/model_wrapper/keras/builder/fully_quantized_model_builder.py
+ model_compression_toolkit/exporter/model_wrapper/keras/builder/node_to_quantizer.py
+ model_compression_toolkit/exporter/model_wrapper/keras/builder/node_to_quantizers.py
+ model_compression_toolkit/exporter/model_wrapper/pytorch/__init__.py
+@@ -347,54 +345,48 @@
+ model_compression_toolkit/gptq/common/gptq_config.py
+ model_compression_toolkit/gptq/common/gptq_constants.py
+ model_compression_toolkit/gptq/common/gptq_graph.py
+ model_compression_toolkit/gptq/common/gptq_quantizer_config.py
+ model_compression_toolkit/gptq/common/gptq_training.py
+ model_compression_toolkit/gptq/keras/__init__.py
+ model_compression_toolkit/gptq/keras/gptq_loss.py
+-model_compression_toolkit/gptq/keras/gptq_model_builder.py
+ model_compression_toolkit/gptq/keras/gptq_training.py
+ model_compression_toolkit/gptq/keras/graph_info.py
+ model_compression_toolkit/gptq/keras/quantization_facade.py
+ model_compression_toolkit/gptq/keras/quantizer/__init__.py
+-model_compression_toolkit/gptq/keras/quantizer/config_factory.py
+-model_compression_toolkit/gptq/keras/quantizer/kernel_functions.py
++model_compression_toolkit/gptq/keras/quantizer/base_keras_gptq_quantizer.py
+ model_compression_toolkit/gptq/keras/quantizer/quant_utils.py
+-model_compression_toolkit/gptq/keras/quantizer/configs/__init__.py
+-model_compression_toolkit/gptq/keras/quantizer/configs/base_quantizer_gptq_config.py
+-model_compression_toolkit/gptq/keras/quantizer/configs/weight_quantizer_gptq_config.py
++model_compression_toolkit/gptq/keras/quantizer/quantization_builder.py
+ model_compression_toolkit/gptq/keras/quantizer/soft_rounding/__init__.py
+ model_compression_toolkit/gptq/keras/quantizer/soft_rounding/symmetric_soft_quantizer.py
+ model_compression_toolkit/gptq/keras/quantizer/ste_rounding/__init__.py
+ model_compression_toolkit/gptq/keras/quantizer/ste_rounding/symmetric_ste.py
+-model_compression_toolkit/gptq/keras/quantizer/ste_rounding/uniform_ste.py
+ model_compression_toolkit/gptq/pytorch/__init__.py
+-model_compression_toolkit/gptq/pytorch/gptq_graph_info.py
+ model_compression_toolkit/gptq/pytorch/gptq_loss.py
+-model_compression_toolkit/gptq/pytorch/gptq_model_builder.py
+ model_compression_toolkit/gptq/pytorch/gptq_training.py
++model_compression_toolkit/gptq/pytorch/graph_info.py
+ model_compression_toolkit/gptq/pytorch/quantization_facade.py
+ model_compression_toolkit/gptq/pytorch/quantizer/__init__.py
+-model_compression_toolkit/gptq/pytorch/quantizer/gptq_quantizer.py
++model_compression_toolkit/gptq/pytorch/quantizer/base_pytorch_gptq_quantizer.py
+ model_compression_toolkit/gptq/pytorch/quantizer/quant_utils.py
+-model_compression_toolkit/gptq/pytorch/quantizer/quantizer_wrapper.py
++model_compression_toolkit/gptq/pytorch/quantizer/quantization_builder.py
++model_compression_toolkit/gptq/pytorch/quantizer/soft_rounding/__init__.py
++model_compression_toolkit/gptq/pytorch/quantizer/soft_rounding/symmetric_soft_quantizer.py
+ model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/__init__.py
+-model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/ste_weights_quantizer.py
++model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/symmetric_ste.py
+ model_compression_toolkit/ptq/__init__.py
+ model_compression_toolkit/ptq/runner.py
+ model_compression_toolkit/ptq/keras/__init__.py
+ model_compression_toolkit/ptq/keras/quantization_facade.py
+ model_compression_toolkit/ptq/pytorch/__init__.py
+ model_compression_toolkit/ptq/pytorch/quantization_facade.py
+ model_compression_toolkit/qat/__init__.py
+ model_compression_toolkit/qat/common/__init__.py
+ model_compression_toolkit/qat/common/constants.py
+ model_compression_toolkit/qat/common/qat_config.py
+-model_compression_toolkit/qat/common/qat_get_quantizer.py
+-model_compression_toolkit/qat/common/qat_get_quantizer_config.py
+ model_compression_toolkit/qat/keras/__init__.py
+ model_compression_toolkit/qat/keras/quantization_facade.py
+ model_compression_toolkit/qat/keras/quantizer/__init__.py
+ model_compression_toolkit/qat/keras/quantizer/base_keras_qat_quantizer.py
+ model_compression_toolkit/qat/keras/quantizer/quant_utils.py
+ model_compression_toolkit/qat/keras/quantizer/quantization_builder.py
+ model_compression_toolkit/qat/keras/quantizer/ste_rounding/__init__.py
+@@ -406,48 +398,66 @@
+ model_compression_toolkit/qat/pytorch/quantizer/base_pytorch_qat_quantizer.py
+ model_compression_toolkit/qat/pytorch/quantizer/quantization_builder.py
+ model_compression_toolkit/qat/pytorch/quantizer/quantizer_utils.py
+ model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/__init__.py
+ model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/symmetric_ste.py
+ model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/uniform_ste.py
+ model_compression_toolkit/quantizers_infrastructure/__init__.py
+-model_compression_toolkit/quantizers_infrastructure/common/__init__.py
+-model_compression_toolkit/quantizers_infrastructure/common/base_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/common/base_trainable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/common/constants.py
+-model_compression_toolkit/quantizers_infrastructure/common/get_all_subclasses.py
+-model_compression_toolkit/quantizers_infrastructure/common/quant_utils.py
+-model_compression_toolkit/quantizers_infrastructure/common/trainable_quantizer_config.py
+-model_compression_toolkit/quantizers_infrastructure/keras/__init__.py
+-model_compression_toolkit/quantizers_infrastructure/keras/base_keras_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/keras/config_serialization.py
+-model_compression_toolkit/quantizers_infrastructure/keras/load_model.py
+-model_compression_toolkit/quantizers_infrastructure/keras/quantize_wrapper.py
+-model_compression_toolkit/quantizers_infrastructure/keras/validation_functions.py
+-model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/__init__.py
+-model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/base_keras_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/constants.py
+-model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/__init__.py
+-model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/activation_pot_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/activation_symmetric_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/activation_uniform_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/__init__.py
+-model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/weights_pot_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/weights_symmetric_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/weights_uniform_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/__init__.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/base_pytorch_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/quantize_wrapper.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/quantizer_utils.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/__init__.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/base_pytorch_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/base_symmetric_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/base_uniform_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/constants.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/__init__.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/activation_pot_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/activation_symmetric_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/activation_uniform_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/__init__.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/weights_pot_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/weights_symmetric_inferable_quantizer.py
+-model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/weights_uniform_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/__init__.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/__init__.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/activation_lut_pot_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/base_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/constants.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/get_all_subclasses.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/get_quantizers.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/quant_utils.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/__init__.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/load_model.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantize_wrapper.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizer_utils.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/validation_functions.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/__init__.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/base_keras_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/constants.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/__init__.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/activation_lut_pot_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/activation_pot_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/activation_symmetric_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/activation_uniform_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/__init__.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_lut_pot_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_lut_symmetric_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_pot_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_symmetric_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_uniform_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/__init__.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantize_wrapper.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizer_utils.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/__init__.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/base_lut_symmetric_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/base_pytorch_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/base_symmetric_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/base_uniform_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/constants.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/__init__.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/activation_pot_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/activation_symmetric_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/activation_uniform_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/__init__.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_lut_pot_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_lut_symmetric_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_pot_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_symmetric_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_uniform_inferable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/__init__.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/__init__.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/base_trainable_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/get_quantizer_config.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/get_quantizers.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/quant_utils.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/trainable_quantizer_config.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/keras/__init__.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/keras/base_keras_quantizer.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/keras/config_serialization.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/keras/quantizer_utils.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/pytorch/__init__.py
++model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/pytorch/base_pytorch_quantizer.py
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/__init__.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -49,12 +49,12 @@
+ from model_compression_toolkit.gptq.pytorch.quantization_facade import \
+     pytorch_gradient_post_training_quantization_experimental
+ from model_compression_toolkit.gptq.pytorch.quantization_facade import get_pytorch_gptq_config
+ 
+ from model_compression_toolkit.core.keras.kpi_data_facade import keras_kpi_data, keras_kpi_data_experimental
+ from model_compression_toolkit.core.pytorch.kpi_data_facade import pytorch_kpi_data, pytorch_kpi_data_experimental
+ 
+-from model_compression_toolkit.quantizers_infrastructure.keras.load_model import keras_load_quantized_model
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.load_model import keras_load_quantized_model
+ 
+ from model_compression_toolkit.exporter.model_exporter import tflite_export_model, TFLiteExportMode, keras_export_model, KerasExportMode, pytorch_export_model, PyTorchExportMode
+ 
+ __version__ = "1.8.0"
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/analyzer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/analyzer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/back2framework/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/back2framework/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/back2framework/base_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/back2framework/base_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/base_substitutions.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/base_substitutions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/base_collector.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/base_collector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/histogram_collector.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/histogram_collector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/mean_collector.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/mean_collector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/min_max_per_channel_collector.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/min_max_per_channel_collector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/statistics_collector.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/statistics_collector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/collectors/statistics_collector_generator.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/collectors/statistics_collector_generator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/constants.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/data_loader.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/data_loader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/defaultdict.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/defaultdict.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/framework_implementation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/framework_implementation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/framework_info.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/framework_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/fusion/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/fusion/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/fusion/layer_fusing.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/fusion/layer_fusing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/base_graph.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/base_graph.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/base_node.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/base_node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/edge.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/edge.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/functional_node.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/functional_node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/graph_matchers.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/graph_matchers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/graph_searches.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/graph_searches.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/bipartite_graph.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/bipartite_graph.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/compute_graph_max_cut.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/compute_graph_max_cut.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/cut.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/cut.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/max_cut_astar.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/max_cut_astar.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/memory_element.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/memory_element.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/memory_graph/memory_graph.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/memory_graph/memory_graph.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/graph/virtual_activation_weights_node.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/graph/virtual_activation_weights_node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/immutable.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/immutable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/logger.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/logger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/base_graph_filter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/base_graph_filter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/base_matcher.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/base_matcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/edge_matcher.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/edge_matcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/function.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/function.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/node_matcher.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/node_matcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/matchers/walk_matcher.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/matchers/walk_matcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/memory_computation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/memory_computation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/bit_width_setter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/bit_width_setter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/distance_weighting.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/distance_weighting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_aggregation_methods.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_aggregation_methods.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_data.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_functions_mapping.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_functions_mapping.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_methods.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/kpi_tools/kpi_methods.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/mixed_precision_quantization_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/mixed_precision_quantization_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/mixed_precision_search_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/mixed_precision_search_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/mixed_precision_search_manager.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/mixed_precision_search_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/search_methods/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/search_methods/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/search_methods/linear_programming.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/search_methods/linear_programming.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -18,14 +18,16 @@
+ from tqdm import tqdm
+ from typing import Dict, List, Tuple, Callable
+ 
+ from model_compression_toolkit.core.common import Logger
+ from model_compression_toolkit.core.common.mixed_precision.kpi_tools.kpi import KPI, KPITarget
+ from model_compression_toolkit.core.common.mixed_precision.mixed_precision_search_manager import MixedPrecisionSearchManager
+ 
++# Limit ILP solver runtime in seconds
++SOLVER_TIME_LIMIT = 60
+ 
+ def mp_integer_programming_search(search_manager: MixedPrecisionSearchManager,
+                                   target_kpi: KPI = None) -> List[int]:
+     """
+     Searching and returning a mixed-precision configuration using an ILP optimization solution.
+     It first builds a mapping from each layer's index (in the model) to a dictionary that maps the
+     bitwidth index to the observed sensitivity of the model when using that bitwidth for that layer.
+@@ -60,15 +62,18 @@
+     # Add all equations and inequalities that define the problem.
+     lp_problem = _formalize_problem(layer_to_indicator_vars_mapping,
+                                     layer_to_metrics_mapping,
+                                     layer_to_objective_vars_mapping,
+                                     target_kpi,
+                                     search_manager)
+ 
+-    lp_problem.solve()  # Try to solve the problem.
++    # Use default PULP solver. Limit runtime in seconds
++    solver = PULP_CBC_CMD(timeLimit=SOLVER_TIME_LIMIT)
++    lp_problem.solve(solver=solver)  # Try to solve the problem.
++
+     assert lp_problem.status == LpStatusOptimal, Logger.critical(
+         "No solution was found during solving the LP problem")
+     Logger.info(LpStatus[lp_problem.status])
+ 
+     # Take the bitwidth index only if its corresponding indicator is one.
+     config = np.asarray(
+         [[nbits for nbits, indicator in nbits_to_indicator.items() if indicator.varValue == 1.0] for
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/sensitivity_evaluation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/sensitivity_evaluation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/mixed_precision/solution_refinement_procedure.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/mixed_precision/solution_refinement_procedure.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/model_builder_mode.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/model_builder_mode.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/model_collector.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/model_collector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/model_validation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/model_validation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/network_editors/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/network_editors/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/network_editors/actions.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/network_editors/actions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/network_editors/edit_network.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/network_editors/edit_network.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/network_editors/node_filters.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/network_editors/node_filters.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/node_prior_info.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/node_prior_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/candidate_node_quantization_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/candidate_node_quantization_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/core_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/core_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/debug_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/debug_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/filter_nodes_candidates.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/filter_nodes_candidates.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/node_quantization_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/node_quantization_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_analyzer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_analyzer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_fn_selection.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_fn_selection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_fn_selection.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_fn_selection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/error_functions.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/error_functions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/kmeans_params.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/kmeans_params.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/lut_kmeans_params.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/lut_kmeans_params.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/outlier_filter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/outlier_filter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/power_of_two_selection.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/power_of_two_selection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_activations_computation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_activations_computation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_computation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_computation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_search.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_search.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_weights_computation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/qparams_weights_computation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/symmetric_selection.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/symmetric_selection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantization_params_generation/uniform_selection.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantization_params_generation/uniform_selection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantize_graph_weights.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantize_graph_weights.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantize_node.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantize_node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantizers/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantizers/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantizers/kmeans_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantizers/kmeans_quantizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantizers/lut_kmeans_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantizers/lut_kmeans_quantizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantizers/quantizers_helpers.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantizers/quantizers_helpers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/quantizers/uniform_quantizers.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/quantizers/uniform_quantizers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/quantization/set_node_quantization_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/quantization/set_node_quantization_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/similarity_analyzer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/similarity_analyzer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/statistics_correction/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/statistics_correction/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/statistics_correction/apply_bias_correction_to_graph.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/statistics_correction/apply_bias_correction_to_graph.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/statistics_correction/apply_second_moment_correction_to_graph.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/statistics_correction/apply_second_moment_correction_to_graph.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/statistics_correction/compute_bias_correction_of_graph.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/statistics_correction/compute_bias_correction_of_graph.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/statistics_correction/statistics_correction.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/statistics_correction/statistics_correction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/apply_substitutions.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/apply_substitutions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/batchnorm_folding.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/batchnorm_folding.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/batchnorm_reconstruction.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/batchnorm_reconstruction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/batchnorm_refusing.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/batchnorm_refusing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/linear_collapsing.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/linear_collapsing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/linear_collapsing_substitution.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/linear_collapsing_substitution.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/residual_collapsing.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/residual_collapsing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/scale_equalization.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/scale_equalization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/shift_negative_activation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/shift_negative_activation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/softmax_shift.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/softmax_shift.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/virtual_activation_weights_composition.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/virtual_activation_weights_composition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/substitutions/weights_activation_split.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/substitutions/weights_activation_split.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/current_tp_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/current_tp_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/fusing.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/fusing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/op_quantization_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/op_quantization_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/operators.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/operators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/target_platform_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/target_platform_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/target_platform_model_component.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/target_platform_model_component.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/attribute_filter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/attribute_filter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/current_tpc.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/current_tpc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/layer_filter_params.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/layer_filter_params.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/operations_to_layers.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/operations_to_layers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/target_platform_capabilities.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/target_platform_capabilities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/target_platform/targetplatform2framework/target_platform_capabilities_component.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/target_platform/targetplatform2framework/target_platform_capabilities_component.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/user_info.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/user_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/visualization/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/visualization/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/visualization/final_config_visualizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/visualization/final_config_visualizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/visualization/nn_visualizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/visualization/nn_visualizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/common/visualization/tensorboard_writer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/common/visualization/tensorboard_writer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/exporter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/exporter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/factory_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/factory_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/float_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/float_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/instance_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/instance_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/keras_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/keras_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/mixed_precision_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/mixed_precision_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/model_gradients.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/model_gradients.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/back2framework/quantized_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/back2framework/quantized_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/constants.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/default_framework_info.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/default_framework_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/activation_decomposition.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/activation_decomposition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/batchnorm_folding.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/batchnorm_folding.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/batchnorm_reconstruction.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/batchnorm_reconstruction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/batchnorm_refusing.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/batchnorm_refusing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/input_scaling.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/input_scaling.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/linear_collapsing.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/linear_collapsing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/multi_head_attention_decomposition.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/multi_head_attention_decomposition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/relu_bound_to_power_of_2.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/relu_bound_to_power_of_2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/remove_relu_upper_bound.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/remove_relu_upper_bound.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/residual_collapsing.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/residual_collapsing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/scale_equalization.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/scale_equalization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/separableconv_decomposition.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/separableconv_decomposition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/shift_negative_activation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/shift_negative_activation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/softmax_shift.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/softmax_shift.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/virtual_activation_weights_composition.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/virtual_activation_weights_composition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/graph_substitutions/substitutions/weights_activation_split.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/graph_substitutions/substitutions/weights_activation_split.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/keras_implementation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/keras_implementation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/keras_model_validation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/keras_model_validation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/keras_node_prior_info.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/keras_node_prior_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/kpi_data_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/kpi_data_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/mixed_precision/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/mixed_precision/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/mixed_precision/set_layer_to_bitwidth.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/mixed_precision/set_layer_to_bitwidth.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantization_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantization_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/base_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/base_quantizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/fake_quant_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/fake_quant_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/input_layer_quantize_transform.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/input_layer_quantize_transform.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/lut_fake_quant.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/lut_fake_quant.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/mixed_precision/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/mixed_precision/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/mixed_precision/quantization_config_factory.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/mixed_precision/quantization_config_factory.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/mixed_precision/selective_activation_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/mixed_precision/selective_activation_quantizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/mixed_precision/selective_quantize_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/mixed_precision/selective_quantize_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/quantizer/mixed_precision/selective_weights_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/quantizer/mixed_precision/selective_weights_quantizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/common.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/connectivity_handler.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/connectivity_handler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/nested_model/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/nested_model/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/nested_model/edges_merger.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/nested_model/edges_merger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/nested_model/nested_model_handler.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/nested_model/nested_model_handler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/nested_model/nodes_merger.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/nested_model/nodes_merger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/nested_model/outputs_merger.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/nested_model/outputs_merger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/node_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/node_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/reader/reader.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/reader/reader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/statistics_correction/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/statistics_correction/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/statistics_correction/apply_second_moment_correction.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/statistics_correction/apply_second_moment_correction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/tf_tensor_numpy.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/tf_tensor_numpy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/keras/visualization/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/keras/visualization/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/factory_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/factory_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/float_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/float_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/instance_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/instance_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/mixed_precision_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/mixed_precision_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/model_gradients.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/model_gradients.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/pytorch_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/pytorch_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/quantized_layer_wrapper.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/quantized_layer_wrapper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/wrapper_quantize_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/quantization_wrapper/wrapper_quantize_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/back2framework/quantized_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/back2framework/quantized_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/constants.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/constants.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -88,7 +88,11 @@
+ V_PROJ_WEIGHT = 'v_proj_weight'
+ K_PROJ_WEIGHT = 'k_proj_weight'
+ Q_PROJ_WEIGHT = 'q_proj_weight'
+ IN_PROJ_WEIGHT = 'in_proj_weight'
+ IN_PROJ_BIAS = 'in_proj_bias'
+ BIAS_K = 'bias_k'
+ BIAS_V = 'bias_v'
++
++# # Batch size value for 'reshape' and 'view' operators,
++# # the value is -1 so the batch size is inferred from the length of the array and remaining dimensions.
++BATCH_DIM_VALUE = -1
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/default_framework_info.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/default_framework_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/batchnorm_folding.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/batchnorm_folding.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/batchnorm_reconstruction.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/batchnorm_reconstruction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/batchnorm_refusing.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/batchnorm_refusing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/const_holder_conv.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/const_holder_conv.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/linear_collapsing.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/linear_collapsing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/multi_head_attention_decomposition.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/multi_head_attention_decomposition.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -54,29 +54,23 @@
+         # Add Zero Attn feature is Not Implemented
+         if ADD_ZERO_ATTN in mha_node.framework_attr.keys():
+             if mha_node.framework_attr[ADD_ZERO_ATTN] is not False:
+                 Logger.error('Add Zero Attn feature is Not Implemented')  # pragma: no cover
+ 
+         # Check if Add Bias KV feature is Active
+         if BIAS_K and BIAS_V in mha_node.weights.keys():
+-            if mha_node.weights[BIAS_K] and mha_node.weights[BIAS_V] is not None:
++            if mha_node.weights[BIAS_K] is not None and mha_node.weights[BIAS_V] is not None:
+                 Logger.error('Add BIAS_KV feature is Not Implemented')  # pragma: no cover
+ 
+         self.embed_dim = mha_node.framework_attr[EMBED_DIM]
+         self.num_heads = mha_node.framework_attr[NUM_HEADS]
+ 
+-        if KEY_DIM in mha_node.framework_attr:
+-            self.kdim = mha_node.framework_attr[KEY_DIM]
+-        else:
+-            self.kdim = False
++        self.kdim = mha_node.framework_attr[KEY_DIM]
+ 
+-        if VALUE_DIM in mha_node.framework_attr:
+-            self.vdim = mha_node.framework_attr[VALUE_DIM]
+-        else:
+-            self.vdim = False
++        self.vdim = mha_node.framework_attr[VALUE_DIM]
+ 
+         self.qdim = int(self.embed_dim / self.num_heads)
+ 
+         self.q_input, self.k_input, self.v_input = mha_node.input_shape
+ 
+         # check for input correctness
+         assert self.q_input[0] == self.k_input[0] == self.v_input[0], "Batch size must be equal to all inputs"
+@@ -704,15 +698,15 @@
+             graph: input graph
+             mha_node: MHA node to substitute inputs and outputs with
+         Returns:
+             Graph after applying the substitution.
+         """
+ 
+         if mha_node.reuse:
+-            raise Exception("MCT doesn't support reuse of MultiHeadAttention layer")
++            raise Exception("MCT doesn't support reuse of MultiHeadAttention layer")  # pragma: no cover
+         params = MHAParams(mha_node)
+ 
+         # project
+         # (B, q_seq, q_dim*n_h) --> (B, q_dim*n_h, q_seq)
+         # (B, kv_seq, k_dim) --> (B, q_dim*n_h, kv_seq)
+         # (B, kv_seq, v_dim) --> (B, q_dim*n_h, kv_seq)
+         q_transpose_node, k_transpose_node, v_transpose_node, \
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/permute_call_method.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/permute_call_method.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/relu_bound_to_power_of_2.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/relu_bound_to_power_of_2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/reshape_with_static_shapes.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/reshape_with_static_shapes.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -10,18 +10,21 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ from torch import reshape
+ import torch
++
++from model_compression_toolkit.core.common import Logger
+ from model_compression_toolkit.core.common.graph.graph_matchers import NodeOperationMatcher
+ from model_compression_toolkit.core import common
+ from model_compression_toolkit.core.common.graph.base_graph import Graph
+ from model_compression_toolkit.core.common.graph.base_node import BaseNode
++from model_compression_toolkit.core.pytorch.constants import BATCH_DIM_VALUE
+ 
+ 
+ class ReshapeWithStaticShapes(common.BaseSubstitution):
+     """
+     Replace "reshape" or "view" shape attributes. Shape attributes are replaced to static const values.
+     """
+ 
+@@ -43,22 +46,33 @@
+         Args:
+             graph: Graph we apply the substitution on.
+             node: node that match the pattern in the substitution init.
+ 
+         Returns:
+             Graph after applying the substitution.
+         """
++        # we want the batch size value to infer from the length of the array and remaining dimensions
++        if len(node.output_shape) == 1:
++            node.output_shape[0][0] = BATCH_DIM_VALUE
++        else:
++            Logger.error('Reshape or view nodes should have a single output shape')  # pragma: no cover
++
+         # configure the new static output shape attribute
+         node.op_call_args = node.output_shape
+ 
+         # modify the node input info
+         node.input_shape = [node.input_shape[0]]
++
++        # the first input is the tensor to be reshaped, we want his batch size value to infer
++        # from the length of the array and remaining dimensions
++        node.input_shape[0][0] = BATCH_DIM_VALUE
++
+         nodes_to_check = []
+         for in_edge in graph.incoming_edges(node):
+-            if in_edge.sink_index > 0: # the first input is the tensor to be reshaped
++            if in_edge.sink_index > 0:  # the first input is the tensor to be reshaped
+                 nodes_to_check.append(in_edge.source_node)
+                 graph.remove_edge(in_edge.source_node, node)
+         for n in nodes_to_check:
+             clean_graph_from_nodes_without_out_edges(graph, n)
+         return graph
+ 
+ 
+@@ -76,8 +90,8 @@
+     if len(graph.out_edges(node)) == 0 and node not in output_nodes:
+         nodes_to_check = []
+         for in_edge in graph.incoming_edges(node):
+             nodes_to_check.append(in_edge.source_node)
+             graph.remove_edge(in_edge.source_node, node)
+         graph.remove_node(node)
+         for n in nodes_to_check:
+-            clean_graph_from_nodes_without_out_edges(graph, n)
++            clean_graph_from_nodes_without_out_edges(graph, n)
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/residual_collapsing.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/residual_collapsing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/scale_equalization.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/scale_equalization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/shift_negative_activation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/shift_negative_activation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/softmax_shift.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/softmax_shift.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/virtual_activation_weights_composition.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/virtual_activation_weights_composition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/weights_activation_split.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/graph_substitutions/substitutions/weights_activation_split.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/kpi_data_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/kpi_data_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/mixed_precision/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/mixed_precision/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/mixed_precision/mixed_precision_wrapper.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/mixed_precision/mixed_precision_wrapper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/mixed_precision/set_layer_to_bitwidth.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/mixed_precision/set_layer_to_bitwidth.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/pytorch_implementation.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/pytorch_implementation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/pytorch_node_prior_info.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/pytorch_node_prior_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/quantization_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/quantization_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/quantizer/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/quantizer/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/quantizer/fake_quant_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/quantizer/fake_quant_builder.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -122,15 +122,15 @@
+     a = 0 if a > 0 else a
+     b = 0 if b < 0 else b
+     a, b = fix_range_to_include_zero(a, b, activation_n_bits)
+ 
+     min_value = 0
+     max_value = 2 ** activation_n_bits - 1
+     scale = (b - a) / ((2 ** activation_n_bits) - 1)
+-    zero_point = -int(a / scale)  # zp has to be positive, and a <=0, so we multiply by -1
++    zero_point = -round(a / scale)  # zp has to be positive, and a <=0, so we multiply by -1
+ 
+     return lambda x: q(x, min_value, max_value, scale, zero_point)
+ 
+ 
+ def q(x: torch.Tensor,
+       min_value: int,
+       max_value: int,
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/quantizer/lut_fake_quant.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/quantizer/lut_fake_quant.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/reader/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/reader/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/reader/graph_builders.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/reader/graph_builders.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/reader/node_holders.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/reader/node_holders.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/reader/reader.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/reader/reader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/statistics_correction/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/statistics_correction/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/statistics_correction/apply_second_moment_correction.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/statistics_correction/apply_second_moment_correction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/pytorch/utils.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/pytorch/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/runner.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/runner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/latest/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/latest/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/target_platform_capabilities.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/target_platform_capabilities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v1/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v1/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v1/tp_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v1/tp_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v1/tpc_keras.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v1/tpc_keras.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v1/tpc_pytorch.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v1/tpc_pytorch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v2/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v2/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v2/tp_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v2/tp_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v2/tpc_keras.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v2/tpc_keras.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v2/tpc_pytorch.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v2/tpc_pytorch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3/tp_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3/tp_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3/tpc_keras.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3/tpc_keras.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3/tpc_pytorch.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3/tpc_pytorch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/tp_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/tp_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/tpc_keras.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/tpc_keras.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/tpc_pytorch.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v3_lut/tpc_pytorch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4/tp_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4/tp_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4/tpc_keras.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4/tpc_keras.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4/tpc_pytorch.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4/tpc_pytorch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/tp_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/tp_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/tpc_keras.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/tpc_keras.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/tpc_pytorch.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v4_lut/tpc_pytorch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v5/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v5/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v5/tp_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v5/tp_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v5/tpc_keras.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v5/tpc_keras.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/default_tpc/v5/tpc_pytorch.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/default_tpc/v5/tpc_pytorch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/get_target_platform_capabilities.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/get_target_platform_capabilities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/latest/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/latest/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/target_platform_capabilities.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/target_platform_capabilities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/tp_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/tp_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/tpc_keras.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/tpc_keras.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/tpc_pytorch.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/imx500_tpc/v1/tpc_pytorch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/latest/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/latest/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/target_platform_capabilities.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/target_platform_capabilities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/tp_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/tp_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/tpc_keras.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/tpc_keras.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/tpc_pytorch.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/qnnpack_tpc/v1/tpc_pytorch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/latest/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/latest/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/target_platform_capabilities.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/target_platform_capabilities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/tp_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/tp_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/tpc_keras.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/tpc_keras.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/tpc_pytorch.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/core/tpc_models/tflite_tpc/v1/tpc_pytorch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/fw_agonstic/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/fw_agonstic/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/fw_agonstic/exporter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/fw_agonstic/exporter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/keras/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/keras/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/keras/base_keras_exporter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/keras/base_keras_exporter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/keras/fakely_quant_keras_exporter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/keras/fakely_quant_keras_exporter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/keras/keras_export_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/keras/keras_export_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/pytorch/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/pytorch/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/pytorch/base_pytorch_exporter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/pytorch/base_pytorch_exporter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/pytorch/fakely_quant_onnx_pytorch_exporter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/pytorch/fakely_quant_onnx_pytorch_exporter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/pytorch/fakely_quant_torchscript_pytorch_exporter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/pytorch/fakely_quant_torchscript_pytorch_exporter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/pytorch/pytorch_export_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/pytorch/pytorch_export_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/tflite/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/tflite/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/tflite/fakely_quant_tflite_exporter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/tflite/fakely_quant_tflite_exporter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/tflite/int8_tflite_exporter.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/tflite/int8_tflite_exporter.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -21,15 +21,16 @@
+ from keras import Sequential
+ from keras.layers import Dense, Conv2D, Reshape
+ from keras.models import clone_model
+ 
+ from model_compression_toolkit import quantizers_infrastructure as qi
+ from model_compression_toolkit.core.common import Logger
+ from model_compression_toolkit.exporter.model_exporter.keras.fakely_quant_keras_exporter import FakelyQuantKerasExporter
+-from model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers import constants as keras_inferable_constants
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers import \
++    constants as keras_inferable_constants
+ 
+ BIAS_INITIALIZER = 'bias_initializer'
+ BIAS_REGULARIZER = 'bias_regularizer'
+ BIAS_CONSTRAINT = 'bias_constraint'
+ ACTIVITY_REGULARIZER = 'activity_regularizer'
+ KERNEL_INITIALIZER = 'kernel_initializer'
+ KERNEL_REGULARIZER = 'kernel_regularizer'
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_exporter/tflite/tflite_export_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_exporter/tflite/tflite_export_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/common/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/soft_rounding/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/common/exporter_get_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/get_quantizers.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -8,27 +8,28 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
++
+ from model_compression_toolkit.core.common import Logger
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+ from model_compression_toolkit.quantizers_infrastructure import QuantizationTarget
+-from model_compression_toolkit.quantizers_infrastructure.common.constants import QUANTIZATION_TARGET, \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.constants import QUANTIZATION_TARGET, \
+     QUANTIZATION_METHOD
+-from model_compression_toolkit.quantizers_infrastructure.common.get_all_subclasses import get_all_subclasses
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.get_all_subclasses import get_all_subclasses
+ 
+ 
+-def get_quantizer_class(quant_target: QuantizationTarget,
+-                        quant_method: QuantizationMethod,
+-                        quantizer_base_class: type) -> type:
++def get_inferable_quantizer_class(quant_target: QuantizationTarget,
++                                  quant_method: QuantizationMethod,
++                                  quantizer_base_class: type) -> type:
+     """
+-    Searches for a quantizer class that matches the requested QuantizationTarget and QuantizationMethod.
++    Searches for an inferable quantizer class that matches the requested QuantizationTarget and QuantizationMethod.
+     Exactly one class should be found.
+ 
+     Args:
+         quant_target: QuantizationTarget value (Weights or Activation) which indicates what is the target for
+             quantization to use the quantizer for.
+         quant_method: A list of QuantizationMethod values to indicate all type of quantization methods that the
+             quantizer supports.
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/builder/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/builder/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/builder/fully_quantized_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/builder/fully_quantized_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/builder/node_to_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/builder/node_to_quantizer.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -13,33 +13,31 @@
+ # limitations under the License.
+ # ==============================================================================
+ from typing import Dict, Any
+ 
+ from model_compression_toolkit.core.common import BaseNode, Logger
+ from model_compression_toolkit.core.common.constants import THRESHOLD, RANGE_MIN, RANGE_MAX, SIGNED
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.exporter.model_wrapper.common.exporter_get_quantizer import get_quantizer_class
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import QuantizationTarget
+-from model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.base_keras_inferable_quantizer \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import QuantizationTarget
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.get_quantizers import \
++    get_inferable_quantizer_class
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.base_keras_inferable_quantizer \
+     import \
+     BaseKerasInferableQuantizer
+-import numpy as np
+ 
+ 
+ def get_inferable_quantizer_kwargs(node: BaseNode,
+                                    quantization_target: QuantizationTarget) -> Dict[str, Any]:
+     """
+     Get the quantization parameters for an inferable quantizer.
+     Args:
+         node: The node for which the quantizer is being created.
+         quantization_target: The target of the quantization (weights or activations).
+-
+     Returns:
+         The quantization parameters as a dictionary.
+-
+     """
+ 
+     if quantization_target == QuantizationTarget.Weights:
+         # Get the weights quantization configuration for the node
+         node_w_qc = node.final_weights_quantization_cfg
+         quantization_method = node_w_qc.weights_quantization_method
+ 
+@@ -54,15 +52,15 @@
+ 
+         elif quantization_method in [QuantizationMethod.UNIFORM]:
+             return {'num_bits': node_w_qc.weights_n_bits,
+                     'per_channel': node_w_qc.weights_per_channel_threshold,
+                     'min_range': list(node_w_qc.weights_quantization_params[RANGE_MIN].flatten()),
+                     'max_range': list(node_w_qc.weights_quantization_params[RANGE_MAX].flatten()),
+                     'channel_axis': node_w_qc.weights_channels_axis,
+-                    'input_rank': len(node_w_qc.weights_quantization_params[THRESHOLD].shape)}
++                    'input_rank': len(node_w_qc.weights_quantization_params[RANGE_MIN].shape)}
+         else:
+             Logger.critical(f'Not supported quantization method for inferable quantizers.')  # pragma: no cover
+ 
+     elif quantization_target == QuantizationTarget.Activation:
+         # Get the activation quantization configuration for the node
+         node_qc = node.final_activation_quantization_cfg
+         quantization_method = node_qc.activation_quantization_method
+@@ -85,52 +83,46 @@
+     else:
+         Logger.critical(f'{quantization_target} is not supported')  # pragma: no cover
+ 
+ 
+ def get_weights_quantizer_for_node(node: BaseNode) -> BaseKerasInferableQuantizer:
+     """
+     Get weights quantizer for a node.
+-
+     Args:
+         node: Node to create a weight quantizer for.
+-
+     Returns:
+         Quantizer for the node's weights.
+-
+     """
+     if node.final_weights_quantization_cfg is None:
+         Logger.critical(f'Can not set quantizer for a node with no final weights quantization configuration')  # pragma:
+         # no cover
+     node_w_qc = node.final_weights_quantization_cfg
+     weights_quantization_method = node_w_qc.weights_quantization_method
+ 
+-    quantier_for_node = get_quantizer_class(QuantizationTarget.Weights,
+-                                            weights_quantization_method,
+-                                            BaseKerasInferableQuantizer)
++    quantier_for_node = get_inferable_quantizer_class(QuantizationTarget.Weights,
++                                                      weights_quantization_method,
++                                                      BaseKerasInferableQuantizer)
+     kwargs = get_inferable_quantizer_kwargs(node, QuantizationTarget.Weights)
+ 
+     return quantier_for_node(**kwargs)
+ 
+ 
+ def get_activations_quantizer_for_node(node: BaseNode) -> BaseKerasInferableQuantizer:
+     """
+     Get activation quantizer for a node.
+-
+     Args:
+         node: Node to create an activation quantizer for.
+-
+     Returns:
+         Quantizer for the node's activations.
+-
+     """
+     if node.final_activation_quantization_cfg is None:
+         Logger.critical(f'Can not set quantizer for a node with no final activation quantization configuration')  #
+         # pragma: no cover
+     node_act_qc = node.final_activation_quantization_cfg
+     activation_quantization_method = node_act_qc.activation_quantization_method
+ 
+-    quantier_for_node = get_quantizer_class(QuantizationTarget.Activation,
+-                                            activation_quantization_method,
+-                                            BaseKerasInferableQuantizer)
++    quantier_for_node = get_inferable_quantizer_class(QuantizationTarget.Activation,
++                                                      activation_quantization_method,
++                                                      BaseKerasInferableQuantizer)
+     kwargs = get_inferable_quantizer_kwargs(node, QuantizationTarget.Activation)
+ 
+-    return quantier_for_node(**kwargs)
++    return quantier_for_node(**kwargs)
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/builder/node_to_quantizers.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/builder/node_to_quantizers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/keras/validate_layer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/keras/validate_layer.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -14,15 +14,15 @@
+ # ==============================================================================
+ from typing import Any
+ 
+ from keras.engine.input_layer import InputLayer
+ 
+ from model_compression_toolkit.core.common import Logger
+ from model_compression_toolkit.quantizers_infrastructure import KerasQuantizationWrapper
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import BaseInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import BaseInferableQuantizer
+ 
+ 
+ 
+ def is_keras_layer_exportable(layer: Any) -> bool:
+     """
+     Check whether a Keras layer is a valid exportable layer or not.
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/fully_quantized_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/fully_quantized_model_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/node_to_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/node_to_quantizer.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -14,18 +14,19 @@
+ # ==============================================================================
+ 
+ from typing import Dict, Any
+ 
+ from model_compression_toolkit.core.common import BaseNode, Logger
+ from model_compression_toolkit.core.common.constants import THRESHOLD, SIGNED, RANGE_MIN, RANGE_MAX
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.exporter.model_wrapper.common.exporter_get_quantizer import get_quantizer_class
+-from model_compression_toolkit.quantizers_infrastructure import pytorch_inferable_quantizers, QuantizationTarget, \
+-    BasePyTorchInferableQuantizer
+-from model_compression_toolkit.quantizers_infrastructure.pytorch.inferable_quantizers import constants as qi_inferable_quantizers_constants
++from model_compression_toolkit.quantizers_infrastructure import QuantizationTarget
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.get_quantizers import \
++    get_inferable_quantizer_class
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers import \
++    constants as qi_inferable_quantizers_constants, BasePyTorchInferableQuantizer
+ import numpy as np
+ 
+ 
+ def get_weights_inferable_quantizer_kwargs(node: BaseNode) -> Dict[str, Any]:
+     # Get the weights quantization configuration for the node
+     node_w_qc = node.final_weights_quantization_cfg
+     quantization_method = node_w_qc.weights_quantization_method
+@@ -64,15 +65,15 @@
+         return {qi_inferable_quantizers_constants.NUM_BITS: node_qc.activation_n_bits,
+                 qi_inferable_quantizers_constants.MIN_RANGE: np.asarray([node_qc.activation_quantization_params[RANGE_MIN]]),
+                 qi_inferable_quantizers_constants.MAX_RANGE: np.asarray([node_qc.activation_quantization_params[RANGE_MAX]])}
+     else:
+         Logger.critical(f'Not supported quantization method for inferable quantizers.')  # pragma: no cover
+ 
+ 
+-def get_weights_quantizer_for_node(node: BaseNode) -> pytorch_inferable_quantizers.BasePyTorchInferableQuantizer:
++def get_weights_quantizer_for_node(node: BaseNode) -> BasePyTorchInferableQuantizer:
+     """
+     Get weights quantizer for a node.
+ 
+     Args:
+         node: Node to create a weight quantizer for.
+ 
+     Returns:
+@@ -81,23 +82,23 @@
+     """
+     if node.final_weights_quantization_cfg is None:
+         Logger.critical(f'Can not set quantizer for a node with no final weights quantization configuration')  # pragma:
+         # no cover
+     node_w_qc = node.final_weights_quantization_cfg
+     weights_quantization_method = node_w_qc.weights_quantization_method
+ 
+-    quantier_for_node = get_quantizer_class(QuantizationTarget.Weights,
+-                                            weights_quantization_method,
+-                                            BasePyTorchInferableQuantizer)
++    quantier_for_node = get_inferable_quantizer_class(QuantizationTarget.Weights,
++                                                      weights_quantization_method,
++                                                      BasePyTorchInferableQuantizer)
+     kwargs = get_weights_inferable_quantizer_kwargs(node)
+ 
+     return quantier_for_node(**kwargs)
+ 
+ 
+-def get_activations_quantizer_for_node(node: BaseNode) -> pytorch_inferable_quantizers.BasePyTorchInferableQuantizer:
++def get_activations_quantizer_for_node(node: BaseNode) -> BasePyTorchInferableQuantizer:
+     """
+     Get activation quantizer for a node.
+ 
+     Args:
+         node: Node to create an activation quantizer for.
+ 
+     Returns:
+@@ -106,14 +107,14 @@
+     """
+     if node.final_activation_quantization_cfg is None:
+         Logger.critical(f'Can not set quantizer for a node with no final activation quantization configuration')  #
+         # pragma: no cover
+     node_act_qc = node.final_activation_quantization_cfg
+     activation_quantization_method = node_act_qc.activation_quantization_method
+ 
+-    quantier_for_node = get_quantizer_class(QuantizationTarget.Activation,
+-                                            activation_quantization_method,
+-                                            BasePyTorchInferableQuantizer)
++    quantier_for_node = get_inferable_quantizer_class(QuantizationTarget.Activation,
++                                                      activation_quantization_method,
++                                                      BasePyTorchInferableQuantizer)
+     kwargs = get_activation_inferable_quantizer_kwargs(node)
+ 
+     return quantier_for_node(**kwargs)
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/node_to_quantizers.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/builder/node_to_quantizers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/exporter/model_wrapper/pytorch/validate_layer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/exporter/model_wrapper/pytorch/validate_layer.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -10,15 +10,16 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ from typing import Any
+ 
+-from model_compression_toolkit.quantizers_infrastructure import PytorchQuantizationWrapper, \
++from model_compression_toolkit.quantizers_infrastructure import PytorchQuantizationWrapper
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers import \
+     BasePyTorchInferableQuantizer
+ 
+ 
+ def is_pytorch_layer_exportable(layer: Any) -> bool:
+     """
+     Check whether a torch Module is a valid exportable module or not.
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/common/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/common/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/common/gptq_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/common/gptq_config.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -12,14 +12,16 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ from enum import Enum
+ from typing import Callable, Any, Dict
+ from model_compression_toolkit.core.common.defaultdict import DefaultDict
+ from model_compression_toolkit.core import common
++from model_compression_toolkit.gptq.common.gptq_constants import N_BATCHES_STR, QUANT_PARAM_LEARNING_STR, N_EPOCHS_STR, \
++    MAX_LSB_STR
+ from model_compression_toolkit.gptq.common.gptq_quantizer_config import GPTQQuantizerConfig, SoftQuantizerConfig
+ 
+ 
+ class RoundingType(Enum):
+     """
+     An enum for choosing the GPTQ rounding methods
+     0. STRAIGHT-THROUGH ESTIMATOR
+@@ -69,15 +71,15 @@
+             rounding_type (RoundingType): An enum that defines the rounding type.
+             lsb_change_per_bit_width (dict): Whether to update the bias during the training or not.
+             eps (float): A floating point value for numeric stability.
+             use_jac_based_weights (bool): Whether to use jacobian-based weights for weighted average loss.
+             num_samples_for_loss (int): Number of samples to use for computing the jacobian-based weights.
+             norm_weights (bool): Whether to normalize the returned weights (to get values between 0 and 1).
+             optimizer_quantization_parameter (Any): Optimizer to override the rest optimizer  for quantizer parameters.
+-            optimizer_bias (Any): Optimizer to override the rest optimizerfor bias.
++            optimizer_bias (Any): Optimizer to override the rest optimizer for bias.
+             log_norm (bool): Whether to use log normalization to the GPTQ Jacobian-based weights.
+             weights_n_iter (int): Number of random iterations to run Jacobian approximation for GPTQ weights.
+             quantizer_config (GPTQQuantizerConfig): A class that contains the quantizer specific config.
+ 
+         """
+         self.n_iter = n_iter
+         self.optimizer = optimizer
+@@ -103,15 +105,14 @@
+ 
+         if self._verify_quantizer_config(quantizer_config, rounding_type):
+             self.quantizer_config = quantizer_config
+         else:
+             common.Logger.error(f"Quantizer config of type {type(quantizer_config)} "
+                                 f"is not suitable for rounding type {rounding_type}")
+ 
+-
+     def _verify_quantizer_config(self, quantizer_config, rounding_type) -> bool:
+         """
+         Verifies that the given quantizer config matches the given rounding type.
+ 
+         Args:
+             quantizer_config: A quantizer config.
+             rounding_type: A RoundingType.
+@@ -122,15 +123,14 @@
+         if rounding_type == RoundingType.SoftQuantizer:
+             return type(quantizer_config) == SoftQuantizerConfig
+ 
+         # Here, we compare type() and not isinstance to exclude instance equality because of inheritance
+         return type(quantizer_config) == GPTQQuantizerConfig
+ 
+ 
+-
+ class GradientPTQConfigV2(GradientPTQConfig):
+     """
+     Configuration to use for quantization with GradientPTQV2 (experimental).
+     """
+     def __init__(self,
+                  n_epochs: int,
+                  optimizer: Any,
+@@ -208,9 +208,25 @@
+ 
+         """
+         n_epochs = int(round(config_v1.n_iter) / n_ptq_iter)
+         v1_params = config_v1.__dict__
+         v1_params = {k: v for k, v in v1_params.items() if k != 'n_iter'}
+         return cls(n_epochs, **v1_params)
+ 
++    def get_extended_quantizer_parametes(self) -> Dict[str, Any]:
++        """
++        Return a dictionary with a mapping to necessary additional parameters for initializing the GPTQ quantizer.
++
++        Returns: A dictionary with parameters for initializing a quantizer.
++
++        """
++
++        if self.rounding_type == RoundingType.SoftQuantizer:
++            return {N_BATCHES_STR: self.quantizer_config.n_batches,
++                    QUANT_PARAM_LEARNING_STR: self.quantization_parameters_learning,
++                    N_EPOCHS_STR: self.n_epochs}
++        elif self.rounding_type == RoundingType.STE:
++            return {MAX_LSB_STR: self.lsb_change_per_bit_width}
++
++        return {}
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/common/gptq_quantizer_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/common/gptq_quantizer_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/common/gptq_training.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/common/gptq_training.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -93,24 +93,24 @@
+             w2train_res = []
+             if self.gptq_config.train_bias:
+                 if self.gptq_config.optimizer_bias is not None:
+                     optimizer_with_param.append((self.gptq_config.optimizer_bias, flattened_bias_weights))
+                 else:
+                     w2train_res.extend(flattened_bias_weights)
+                     if self.gptq_config.optimizer_rest is None:
+-                        Logger.error(
++                        Logger.error(  # pragma: no cover
+                             "To enable bias micro training an additional optimizer is required, please define the optimizer_rest")
+             if self.gptq_config.quantization_parameters_learning:
+                 if self.gptq_config.optimizer_quantization_parameter is not None:  # Ability to override optimizer
+                     optimizer_with_param.append((self.gptq_config.optimizer_quantization_parameter,
+                                                  trainable_quantization_parameters))
+                 else:
+                     w2train_res.extend(trainable_quantization_parameters)
+                 if self.gptq_config.optimizer_rest is None:
+-                    Logger.error(
++                    Logger.error(  # pragma: no cover
+                         "To enable bias micro training an additional optimizer is required, please define the optimizer_rest")
+             optimizer_with_param.append((self.gptq_config.optimizer_rest, w2train_res))
+ 
+         return optimizer_with_param
+ 
+ 
+     def compute_jacobian_based_weights(self,
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/gptq_loss.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/gptq_loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/gptq_training.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/gptq_training.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -8,42 +8,49 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-from typing import Callable, List, Tuple
++from functools import partial
++from typing import Callable, List, Tuple, Union
+ 
+ import tensorflow as tf
+-from tensorflow_model_optimization.python.core.quantization.keras.quantize_wrapper import QuantizeWrapper
++from keras import Model
++from tensorflow.keras.layers import Layer
+ from tqdm import tqdm
+ 
+ # As from Tensorflow 2.6, keras is a separate package and some classes should be imported differently.
++from model_compression_toolkit.core.common.user_info import UserInformation
++from model_compression_toolkit.core.keras.back2framework.keras_model_builder import KerasModelBuilder
+ from model_compression_toolkit.gptq.common.gptq_constants import REGULARIZATION_VALUES
+-from model_compression_toolkit.gptq.keras.gptq_model_builder import GPTQKerasModelBuilder
+ from packaging import version
+ 
++from model_compression_toolkit.gptq.common.gptq_graph import get_kernel_attribute_name_for_gptq
++from model_compression_toolkit.gptq.keras.quantizer.quantization_builder import quantization_builder
++from model_compression_toolkit.quantizers_infrastructure import KerasQuantizationWrapper
++
+ if version.parse(tf.__version__) < version.parse("2.6"):
+     from tensorflow.python.keras.engine.base_layer import TensorFlowOpLayer
+ else:
+     from keras.engine.base_layer import TensorFlowOpLayer
+ 
+ from model_compression_toolkit.core import common
+ from model_compression_toolkit.gptq.common.gptq_training import GPTQTrainer
+ from model_compression_toolkit.gptq.common.gptq_config import GradientPTQConfigV2, RoundingType
+ from model_compression_toolkit.core.common import Graph
+-from model_compression_toolkit.gptq.keras.graph_info import get_trainable_parameters, get_weights_for_loss, \
+-    get_soft_rounding_reg
++from model_compression_toolkit.gptq.keras.graph_info import get_weights_for_loss, \
++    get_soft_rounding_reg, get_gptq_trainable_parameters
+ from model_compression_toolkit.core.common.framework_info import FrameworkInfo
+ from model_compression_toolkit.core.common.framework_implementation import FrameworkImplementation
+ import numpy as np
+ import copy
+-from model_compression_toolkit.core.keras.constants import BIAS, USE_BIAS
+-from model_compression_toolkit.gptq.keras.quantizer import WeightQuantizeConfig
++from model_compression_toolkit.core.keras.constants import BIAS, USE_BIAS, KERNEL
++from model_compression_toolkit import quantizers_infrastructure as qi
+ 
+ 
+ class KerasGPTQTrainer(GPTQTrainer):
+     """
+     Keras GPTQ training class for fine-tuning a quantized model
+     """
+ 
+@@ -74,15 +81,15 @@
+                          fw_impl,
+                          fw_info,
+                          representative_data_gen)
+ 
+         self.loss_list = []
+         self.input_scale = 1
+ 
+-        trainable_weights, bias_weights, trainable_threshold, temperature_weights = get_trainable_parameters(
++        trainable_weights, bias_weights, trainable_threshold, temperature_weights = get_gptq_trainable_parameters(
+             self.fxp_model,
+             fw_info,
+             add_bias=gptq_config.train_bias)
+ 
+         self.flp_weights_list, self.fxp_weights_list = get_weights_for_loss(self.fxp_model)
+ 
+         if not (len(self.compare_points) == len(trainable_weights) == len(self.flp_weights_list) == len(
+@@ -93,35 +100,75 @@
+ 
+         flattened_trainable_weights = [w for layer_weights in trainable_weights for w in layer_weights]
+         flattened_bias_weights = [w for layer_weights in bias_weights for w in layer_weights]
+         trainable_quantization_parameters = trainable_threshold
+         self.optimizer_with_param = self.get_optimizer_with_param(flattened_trainable_weights,
+                                                                   flattened_bias_weights,
+                                                                   trainable_quantization_parameters)
+-        self.has_params_to_train = np.sum([len(optimizer_params_tuple[1]) for optimizer_params_tuple in self.optimizer_with_param])>0
++        self.has_params_to_train = np.sum(
++            [len(optimizer_params_tuple[1]) for optimizer_params_tuple in self.optimizer_with_param]) > 0
+ 
+         if self.float_user_info.input_scale != self.gptq_user_info.input_scale:
+             common.Logger.error("Input scale mismatch between float and GPTQ networks")  # pragma: no cover
+         else:
+             self.input_scale = self.gptq_user_info.input_scale
+ 
+         self.weights_for_average_loss = self.compute_jacobian_based_weights(representative_data_gen)
+ 
+-    def build_gptq_model(self):
++    def _is_gptq_applicable(self,
++                            node: common.BaseNode) -> bool:
++        """
++        A function for deciding if a layer should be fine-tuned during GPTQ.
++
++        Args:
++            node (BaseNode): Node for quantization decision
++
++        Returns:
++            A boolean whether the layer is to be wrapped with a QuantizeWrapper
++        """
++
++        if node.is_weights_quantization_enabled() and not self.fw_info.is_kernel_op(node.type):
++            common.Logger.error(f"GPTQ Error: Quantizing node {node.name} of type {node.type} "
++                                f"without a kernel isn't supported")
++        return node.is_weights_quantization_enabled()
++
++    def gptq_wrapper(self, n: common.BaseNode, layer: Layer) -> Union[qi.KerasQuantizationWrapper, Layer]:
++        """
++        A function which takes a computational graph node and a keras layer and perform the quantization wrapping.
++
++        Args:
++            n: A node of mct graph.
++            layer: A keras layer
++
++        Returns: Wrapped layer if the layer should be wrap, otherwise returns the layer as is.
++
++        """
++        if self._is_gptq_applicable(n):
++            weights_quantizers, activation_quantizers = quantization_builder(n, self.gptq_config)
++            return qi.KerasQuantizationWrapper(layer,
++                                               weights_quantizers=weights_quantizers,
++                                               activation_quantizers=activation_quantizers)
++        else:
++            return layer
++
++    def build_gptq_model(self) -> Tuple[Model, UserInformation]:
+         """
+         Build the GPTQ model with QuantizationWrappers
++
+         Returns:
+             Quantized graph for GPTQ fine-tuning, GPTQ graph user info
+         """
+ 
+-        return GPTQKerasModelBuilder(graph=self.graph_quant,
+-                                     gptq_config=self.gptq_config,
+-                                     append2output=self.compare_points,
+-                                     fw_info=self.fw_info,
+-                                     return_float_outputs=True).build_model()
++        gptq_model, gptq_user_info = KerasModelBuilder(graph=self.graph_quant,
++                                                       append2output=self.compare_points,
++                                                       fw_info=self.fw_info,
++                                                       return_float_outputs=True,
++                                                       wrapper=self.gptq_wrapper).build_model()
++
++        return gptq_model, gptq_user_info
+ 
+     def compute_gradients(self, in_y_float: List[tf.Tensor], input_data: List[np.ndarray],
+                           in_optimizer_with_param: List,
+                           training=True) -> Tuple[tf.Tensor, List[tf.Tensor]]:
+         """
+         Get outputs from both teacher and student networks. Compute the observed error,
+         and use it to compute the gradients and applying them to the student weights.
+@@ -222,15 +269,16 @@
+         Returns: None
+ 
+         """
+         for _ in tqdm(range(n_epochs)):
+             for data in tqdm(data_function()):
+                 input_data = [d * self.input_scale for d in data]
+ 
+-                loss_value_step, grads = self.nano_training_step(input_data, in_compute_gradients, in_optimizer_with_param, is_training)
++                loss_value_step, grads = self.nano_training_step(input_data, in_compute_gradients,
++                                                                 in_optimizer_with_param, is_training)
+                 # Run one step of gradient descent by updating
+                 # the value of the variables to minimize the loss.
+                 for i, (o, p) in enumerate(in_optimizer_with_param):
+                     o.apply_gradients(zip(grads[i], p))
+                 if self.gptq_config.log_function is not None:
+                     self.gptq_config.log_function(loss_value_step, grads[0], in_optimizer_with_param[0][-1],
+                                                   self.compare_points)
+@@ -243,39 +291,39 @@
+         and the quantized model's outputs.
+         Returns:
+             Updated graph after GPTQ.
+         """
+         graph = copy.copy(self.graph_quant)
+ 
+         for layer in self.fxp_model.layers:
+-            if isinstance(layer, QuantizeWrapper) and isinstance(
+-                    layer.quantize_config, WeightQuantizeConfig):
++            if isinstance(layer, KerasQuantizationWrapper):
+                 node = graph.find_node_by_name(layer.layer.name)
+                 if len(node) == 0 and isinstance(layer.layer, TensorFlowOpLayer):
+                     node = graph.find_node_by_name('_'.join(layer.layer.name.split('_')[3:]))
+                 if len(node) != 1:
+                     common.Logger.error(f"Can't update GPTQ graph due to missing layer named: {layer.layer.name}")
+                 node = node[0]
++                kernel_attribute = get_kernel_attribute_name_for_gptq(layer_type=node.type,
++                                                                      fw_info=self.fw_info)
+                 weights, weight_quant_config, activation_quant_config = \
+-                    layer.quantize_config.update_layer_quantization_params(layer)
++                    layer.weights_quantizers[kernel_attribute].update_layer_quantization_params(layer)
+                 for weight_attr, weight in weights.items():
+                     node.set_weights_by_keys(weight_attr, weight.numpy())
+                 for config_attr, config_value in weight_quant_config.items():
+                     node.final_weights_quantization_cfg.set_quant_config_attr(config_attr, config_value)
+                 for config_attr, config_value in activation_quant_config.items():
+                     node.final_activation_quantization_cfg.set_quant_config_attr(config_attr, config_value)
+                 if self.gptq_config.train_bias:
+                     use_bias = layer.layer.get_config().get(USE_BIAS)
+                     if use_bias is not None and use_bias:
+                         new_bias = layer.layer.bias.numpy()
+                         node.set_weights_by_keys(BIAS, new_bias)
+ 
+         return graph
+ 
+-
+     def _get_quantizer_regularization_values(self, rounding_type: RoundingType) -> List[tf.Tensor]:
+         """
+         Mapping between a rounding type to its matching regularization method.
+ 
+         Args:
+             rounding_type: GPTQ rounding type.
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantization_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantization_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/ste_rounding/__init__.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -8,9 +8,7 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-
+-from model_compression_toolkit.gptq.keras.quantizer.configs.weight_quantizer_gptq_config import WeightQuantizeConfig
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/configs/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/configs/base_quantizer_gptq_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/base_pytorch_qat_quantizer.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,65 +1,49 @@
+-# Copyright 2021 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
++from typing import Union
+ 
+-from tensorflow_model_optimization.python.core.quantization.keras.quantize_config import QuantizeConfig
+-from typing import Tuple, List, Any, Dict
+-from tensorflow import Tensor
+-import six, abc
++from model_compression_toolkit.core.common.logger import Logger
++from model_compression_toolkit.core.common.constants import FOUND_TORCH
+ 
++from model_compression_toolkit.quantizers_infrastructure import TrainableQuantizerWeightsConfig, \
++    TrainableQuantizerActivationConfig
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.pytorch.base_pytorch_quantizer import \
++    BasePytorchTrainableQuantizer
+ 
+-@six.add_metaclass(abc.ABCMeta)
+-class BaseQuantizeConfig(QuantizeConfig):
+-    """
+-    Base QuantizeConfig to define extra API methods needed by the GPTQ post-processing.
+-    """
++if FOUND_TORCH:
+ 
+-    @abc.abstractmethod
+-    def get_quantization_variable(self):
++    class BasePytorchQATTrainableQuantizer(BasePytorchTrainableQuantizer):
+         """
+-        A Functions that get the quantization parameters such as threshold, min, max ,etc.
+-
+-        Returns: A list of trainable variable
+-
+-        """
+-
+-    @abc.abstractmethod
+-    def update_layer_quantization_params(self, layer) -> Tuple[Dict[str, Any],
+-                                                               Dict[str, Any],
+-                                                               Dict[str, Any]]:
+-        """
+-        A Function to calculate the needed change in attributes in NodeQuantizationConfig after retraining.
+-        Usually a function of the config quantizers.
+-
+-        Args:
+-            layer: layer being quantized.
+-
+-        Returns:
+-            3 dictionaries of attributes the quantize_config retraining has changed during GPTQ retraining.
+-            Keys must match NodeQuantizationConfig attributes:
+-            1. layer weights
+-            2. weight quantization config attributes
+-            3. activation quantization config attributes
+-
++        A base class for trainable Keras quantizer for QAT.
+         """
+ 
+-    @abc.abstractmethod
+-    def get_trainable_quantizer_parameters(self) -> List[Tensor]:
+-        """
+-        A function to get a list trainable of trainable parameters for GPTQ retraining from config quantizers
++        def __init__(self,
++                     quantization_config: Union[TrainableQuantizerWeightsConfig, TrainableQuantizerActivationConfig]):
++            """
++            Initializes BasePytorchQATTrainableQuantizer object.
+ 
+-        Returns:
+-            A list of trainable Tensors
++            Args:
++                quantization_config: quantizer config class contains all the information about a quantizer configuration.
++            """
++            super().__init__(quantization_config)
+ 
+-        """
++else:
++    class BasePytorchQATTrainableQuantizer(BasePytorchTrainableQuantizer):
++        def __init__(self,
++                     quantization_config: Union[TrainableQuantizerWeightsConfig, TrainableQuantizerActivationConfig]):
++            super().__init__(quantization_config)
++            Logger.critical('Installing Pytorch is mandatory '
++                            'when using BasePytorchQATTrainableQuantizer. '
++                            'Could not find torch package.')  # pragma: no cover
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/configs/weight_quantizer_gptq_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/ste_rounding/symmetric_ste.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -9,211 +9,203 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ 
+-from typing import List, Tuple, Any, Dict
++from typing import Dict, Any, List
+ 
+-from tensorflow import Tensor
++import numpy as np
+ import tensorflow as tf
+-from packaging import version
+ 
+-# As from Tensorflow 2.6, keras is a separate package and some classes should be imported differently.
+-from model_compression_toolkit.gptq.keras.quantizer.soft_rounding.symmetric_soft_quantizer import SymmetricSoftRounding
+-
+-if version.parse(tf.__version__) < version.parse("2.6"):
+-    from tensorflow.python.keras.layers import Layer
+-else:
+-    from keras.engine.base_layer import Layer
++from model_compression_toolkit import RoundingType
++from model_compression_toolkit import quantizers_infrastructure as qi
++from model_compression_toolkit.core.common.target_platform import QuantizationMethod
++from model_compression_toolkit.gptq.common.gptq_constants import GPTQ_ITER, AUXVAR, PTQ_THRESHOLD
++from model_compression_toolkit.gptq.keras.quantizer import quant_utils as qutils
++from model_compression_toolkit.core.common.constants import THRESHOLD
++from model_compression_toolkit.core.common.defaultdict import DefaultDict
++from model_compression_toolkit.gptq.keras.quantizer.base_keras_gptq_quantizer import BaseKerasGPTQTrainableQuantizer
++from model_compression_toolkit.quantizers_infrastructure import TrainableQuantizerWeightsConfig
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.quant_utils import \
++    get_threshold_reshape_shape
++
++
++def pertubation_symmetric_quantizer(input_tensor: tf.Tensor,
++                                    auxvar_tensor: tf.Variable,
++                                    max_tensor: tf.Tensor,
++                                    num_bits: int,
++                                    signed: bool,
++                                    power_of_two: bool,
++                                    max_lsbs_change: int = 1) -> tf.Tensor:
++    """
++    Quantize a tensor symmetrically with maximum LSBs shift.
+ 
+-from tensorflow.python.training.tracking.data_structures import ListWrapper
+-from tensorflow_model_optimization.python.core.quantization.keras.quantizers import Quantizer
++    Args:
++        input_tensor: Tensor to quantize. values of this tensor are not changed during gptq.
++        auxvar_tensor: Tensor that manifests the bit shift the weight due to gptq
++        max_tensor: Tensor with max values to compute the threshold.
++        num_bits: Num of bits to use.
++        signed: Signedness of the quantization range.
++        power_of_two: Whether the threshold should be constrained or not.
++        max_lsbs_change: maximum number of LSBs that the auxvar is allowed to change
+ 
+-from model_compression_toolkit.gptq.keras.quantizer.configs.base_quantizer_gptq_config import BaseQuantizeConfig
+-from model_compression_toolkit.core.keras.constants import KERNEL
++    Returns:
++        A quantized tensor.
++    """
+ 
+-from model_compression_toolkit.gptq.common.gptq_config import GradientPTQConfigV2, RoundingType
+-from model_compression_toolkit.gptq.keras.quantizer.ste_rounding.symmetric_ste import STEWeightQuantizer
+-from model_compression_toolkit.core.common.target_platform.op_quantization_config import QuantizationMethod
+-from model_compression_toolkit.core.common.constants import THRESHOLD, RANGE_MAX, RANGE_MIN
+-from model_compression_toolkit.core import common
+-from model_compression_toolkit.core.common.quantization.node_quantization_config import NodeWeightsQuantizationConfig
+-from model_compression_toolkit.gptq.common import gptq_constants
++    if power_of_two:
++        max_tensor = qutils.power_of_two_max(max_tensor)
++    delta = qutils.calculate_delta(max_tensor, num_bits, signed)
++    input_tensor_int = tf.stop_gradient(tf.round(input_tensor / delta))
++    tensor_q = qutils.ste_round(
++        input_tensor_int + qutils.ste_clip(auxvar_tensor, max_val=max_lsbs_change * delta) / delta)
++    min_int = -int(signed) * (2 ** (num_bits - int(signed)))
++    max_int = (2 ** (num_bits - int(signed))) - 1
++    return delta * qutils.ste_clip(tensor_q, max_val=max_int, min_val=min_int)
+ 
+ 
+-class WeightQuantizeConfig(BaseQuantizeConfig):
++@mark_quantizer(quantization_target=qi.QuantizationTarget.Weights,
++                quantization_method=[QuantizationMethod.POWER_OF_TWO, QuantizationMethod.SYMMETRIC],
++                quantizer_type=RoundingType.STE)
++class STEWeightGPTQQuantizer(BaseKerasGPTQTrainableQuantizer):
+     """
+-    QuantizeConfig to quantize the weights of a layer using a TrainableQuantizer.
++    Trainable symmetric quantizer to quantize a layer weights.
+     """
+ 
+-    def __init__(self, weight_attrs: List[str],
+-                 final_weights_quantization_cfg: NodeWeightsQuantizationConfig,
+-                 gptq_config: GradientPTQConfigV2):
++    def __init__(self,
++                 quantization_config: TrainableQuantizerWeightsConfig,
++                 max_lsbs_change_map: dict = DefaultDict({}, lambda: 1)):
+         """
+-        Initialize a TrainableQuantizer and set as the weights quantizer.
+-        Args:
+-            weight_attrs: Attributes of the layer's weights to quantize.
+-            final_weights_quantization_cfg: quantization config of the current layer.
+-            gptq_config: A GPTQ configuration calls.
+-        """
+-
+-        num_bits = final_weights_quantization_cfg.weights_n_bits
+-        weight_channel_axis = final_weights_quantization_cfg.weights_channels_axis
+-        max_lsbs_change_map = gptq_config.lsb_change_per_bit_width
+-        self.weight_attrs = weight_attrs
+-        self.final_weights_quantization_cfg = final_weights_quantization_cfg
+-        self.gptq_config = gptq_config
+-
+-        if final_weights_quantization_cfg.weights_quantization_method in [QuantizationMethod.SYMMETRIC,
+-                                                                          QuantizationMethod.POWER_OF_TWO]:
+-            is_power_of_two = QuantizationMethod.POWER_OF_TWO == final_weights_quantization_cfg.weights_quantization_method
+-            threshold_values = final_weights_quantization_cfg.weights_quantization_params.get(THRESHOLD)
+-            if gptq_config.rounding_type == RoundingType.STE:
+-                self.weight_quantizer = STEWeightQuantizer(num_bits=num_bits,
+-                                                           per_channel=len(
+-                                                               threshold_values.flatten()) > 1,
+-                                                           threshold_values=threshold_values,
+-                                                           signed=True,
+-                                                           power_of_two=is_power_of_two,
+-                                                           quantization_axis=weight_channel_axis,
+-                                                           max_lsbs_change_map=max_lsbs_change_map)
+-            elif gptq_config.rounding_type == RoundingType.SoftQuantizer:
+-                self.weight_quantizer = SymmetricSoftRounding(num_bits=num_bits,
+-                                                              per_channel=len(
+-                                                                  threshold_values.flatten()) > 1,
+-                                                              threshold_values=threshold_values,
+-                                                              signed=True,
+-                                                              n_batches=gptq_config.quantizer_config.n_batches,
+-                                                              quantization_parameter_learning=gptq_config.quantization_parameters_learning,
+-                                                              quantization_axis=weight_channel_axis,
+-                                                              n_epochs=gptq_config.n_epochs,
+-                                                              power_of_two=is_power_of_two)
+-            else:
+-                common.Logger.error(
+-                    f"For quantization method {final_weights_quantization_cfg.weights_quantization_method}, "
+-                    f"GPTQ Rounding type {gptq_config.rounding_type} is not supported")
++        Initialize a STEWeightGPTQQuantizer object with parameters to use for the quantization.
+ 
+-    def get_weights_and_quantizers(self, layer: Layer) -> List[Tuple[Tensor, Quantizer]]:
+-        """
+-        Get a list of tuples with weights and the weight quantizer.
+-        The layer's attributes are used to get the weights.
+         Args:
+-            layer: The layer the WeightQuantizeConfig wraps.
+-
+-        Returns:
+-            List of tuples of the layer's weights and the weight quantizer.
++            quantization_config: Trainable weights quantizer config.
++            max_lsbs_change_map: a mapping between number of bits to max lsb change.
+         """
+-        return [(getattr(layer, weight_attr), self.weight_quantizer)
+-                for weight_attr in self.weight_attrs]
+-
+-    def get_activations_and_quantizers(self, layer: Layer) -> list:
+-        return []
+-
+-    def set_quantize_weights(self, layer: Layer, quantize_weights: List[Tensor]):
++        super().__init__(quantization_config)
++        self.num_bits = quantization_config.weights_n_bits
++        self.per_channel = quantization_config.weights_per_channel_threshold
++
++        threshold_values = quantization_config.weights_quantization_params[THRESHOLD]
++        self.threshold_shape = np.asarray(threshold_values).shape
++        self.threshold_values = np.reshape(np.asarray(threshold_values), [-1]) if self.per_channel else float(
++            threshold_values)
++
++        self.quantization_axis = quantization_config.weights_channels_axis
++        self.power_of_two = quantization_config.weights_quantization_method == QuantizationMethod.POWER_OF_TWO
++        self.max_lsbs_change = max_lsbs_change_map.get(self.num_bits)
++        self.quantizer_parameters = {}
++
++    def initialize_quantization(self,
++                                tensor_shape: Any,
++                                name: str,
++                                layer: Any) -> Dict[Any, Any]:
+         """
+-        Set the layer weights with new passed weights.
++        Return a dictionary of quantizer parameters and their names.
++
+         Args:
+-            layer: Layer to set its attributes.
+-            quantize_weights: Quantized weights to set as new weights.
++            tensor_shape: tensor shape of the quantized tensor.
++            name: Tensor name.
++            layer: Layer to quantize.
+ 
++        Returns:
++            Dictionary of parameters names to the variables.
+         """
+-        if len(self.weight_attrs) != len(quantize_weights):
+-            raise ValueError(
+-                '`set_quantize_weights` called on layer {} with {} '
+-                'weight parameters, but layer expects {} values.'.format(
+-                    layer.name, len(quantize_weights), len(self.weight_attrs)))  # pragma: no cover
+-
+-        for weight_attr, weight in zip(self.weight_attrs, quantize_weights):
+-            current_weight = getattr(layer, weight_attr)
+-            if current_weight.shape != weight.shape:
+-                raise ValueError('Existing layer weight shape {} is incompatible with'
+-                                 'provided weight shape {}'.format(
+-                    current_weight.shape, weight.shape))  # pragma: no cover
+ 
+-            setattr(layer, weight_attr, weight)
+-
+-    def set_quantize_activations(self, layer, quantize_activations: ListWrapper):
+-        pass
+-
+-    def get_output_quantizers(self, layer: Layer) -> list:
+-        return []
+-
+-    @classmethod
+-    def from_config(cls, config: dict):
++        ar_iter = layer.add_weight(
++            f"{name}_{GPTQ_ITER}",
++            shape=(),
++            initializer=tf.keras.initializers.Constant(0.0),
++            trainable=False)
++
++        ptq_threshold_tensor = layer.add_weight(
++            f"{name}_{PTQ_THRESHOLD}",
++            shape=len(self.threshold_values) if self.per_channel else (),
++            initializer=tf.keras.initializers.Constant(1.0),
++            trainable=False)
++        ptq_threshold_tensor.assign(self.threshold_values)
++
++        w = getattr(layer.layer, name)
++        auxvar_tensor = layer.add_weight(
++            f"{name}_{AUXVAR}",
++            shape=list(w.shape),
++            initializer=tf.keras.initializers.Constant(0.0),
++            trainable=True)
++
++        # save the quantizer added parameters for later calculations
++        self.quantizer_parameters = {PTQ_THRESHOLD: ptq_threshold_tensor,
++                                     AUXVAR: auxvar_tensor,
++                                     GPTQ_ITER: ar_iter}
++        return self.quantizer_parameters
++
++    def __call__(self,
++                 inputs: tf.Tensor,
++                 training: bool):
+         """
+-        Instantiates a `WeightQuantizeConfig` from its config.
++        Quantize a tensor.
+ 
+         Args:
+-            config: Output of `get_config()`.
++            inputs: Input tensor to quantize.
++            training: Whether the graph is in training mode.
+ 
+         Returns:
+-            A `WeightQuantizeConfig` instance.
++            The quantized tensor.
+         """
+ 
+-        return cls(**config)
++        auxvar = self.quantizer_parameters[AUXVAR]
++        ptq_threshold_tensor = self.quantizer_parameters[PTQ_THRESHOLD]
+ 
+-    def get_config(self) -> Dict[str, Any]:
+-        """
+-        Returns: The WeightQuantizeConfig configuration.
+-        """
+-        return {
+-            'weight_attrs': self.weight_attrs,
+-            'final_weights_quantization_cfg': self.final_weights_quantization_cfg,
+-            'gptq_config': self.gptq_config,
+-        }
++        if self.per_channel:
++            reshape_shape = get_threshold_reshape_shape(inputs.shape,
++                                                        quant_axis=self.quantization_axis,
++                                                        quant_axis_dim=-1)
++            ptq_threshold_tensor = tf.reshape(ptq_threshold_tensor, reshape_shape)
++            q_tensor = pertubation_symmetric_quantizer(inputs,
++                                                       auxvar,
++                                                       ptq_threshold_tensor,
++                                                       self.num_bits,
++                                                       signed=True,
++                                                       power_of_two=self.power_of_two,
++                                                       max_lsbs_change=self.max_lsbs_change)
++            return q_tensor
++        else:
++            return pertubation_symmetric_quantizer(inputs,
++                                                   auxvar,
++                                                   ptq_threshold_tensor,
++                                                   self.num_bits,
++                                                   signed=True,
++                                                   power_of_two=self.power_of_two)
+ 
+-    def update_layer_quantization_params(self, layer: Layer) -> (Dict[str, tf.Tensor], Dict[str, Dict], Dict):
++    def get_aux_variable(self) -> List[tf.Tensor]:
+         """
+-        A Function to calculate the needed change in attributes in NodeQuantizationConfig after retraining.
+-        Usually a function of the config quantizers.
+-
+-        Args:
+-            layer: layer being quantized.
++        This function return a list with the quantizer's quantization auxiliary variables.
+ 
+-        Returns:
+-            3 dictionaries describing the change in layer's weights, weights config, activation config
+-            that changed during GPTQ retraining.
+-            Keys must match NodeQuantizationConfig attributes
++        Returns: A list with the quantization auxiliary variables.
+ 
+         """
+-        weights = {}
+-        for weight, quantizer, quantizer_vars in layer._weight_vars:
+-            weights.update({KERNEL: quantizer(weight, training=False, weights=quantizer_vars)})
+ 
+-        quant_config = {gptq_constants.WEIGHTS_QUANTIZATION_PARAMS: self.weight_quantizer.get_quant_config(layer)}
++        return [self.quantizer_parameters[AUXVAR]]
+ 
+-        return weights, quant_config, {}
+-
+-    def get_trainable_quantizer_parameters(self) -> List[tf.Tensor]:
++    def get_quantization_variable(self) -> List[tf.Tensor]:
+         """
+-        A function to get a list trainable of trainable parameters for GPTQ retraining from config quantizers
++        This function return a list with the quantizer's quantization parameters variables.
+ 
+-        Returns:
+-            A list of trainable Tensors
++        Returns: A list with the quantization parameters.
+ 
+         """
+-        return self.weight_quantizer.get_trainable_parameters()
+-
+-    def get_aux_variable(self) -> List[tf.Tensor]:
+-        return [self.weight_quantizer.get_aux_variable()]
+ 
+-    def get_quantization_variable(self) -> List[tf.Tensor]:
+-        return self.weight_quantizer.get_quantization_variable()
++        return [self.quantizer_parameters[PTQ_THRESHOLD]]
+ 
+-    def __eq__(self, other: Any) -> bool:
++    def get_quant_config(self) -> Dict[str, np.ndarray]:
+         """
+-        Check whether it equals to another object or not.
+-        """
+-        if not isinstance(other, WeightQuantizeConfig):
+-            return False
++        Returns the config used to edit NodeQuantizationConfig after GPTQ retraining
+ 
+-        return (self.weight_attrs == other.weight_attrs and
+-                self.weight_quantizer == other.weight_quantizer and
+-                self.gptq_config == other.gptq_config)
++        Returns:
++            A dictionary of attributes the quantize_config retraining has changed during GPTQ retraining.
++            Keys must match NodeQuantizationConfig attributes
+ 
+-    def __ne__(self, other: Any) -> bool:
+-        """
+-        Check whether it differs from another object or not.
+         """
+-        return not self.__eq__(other)
++        old_threshold = self.quantizer_parameters[PTQ_THRESHOLD]
++        return {THRESHOLD: old_threshold.numpy().reshape(self.threshold_shape)}
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/kernel_functions.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/quant_utils.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,50 +1,36 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-import tensorflow as tf
+-from model_compression_toolkit.core.keras.constants import KERNEL
++from typing import Tuple, List
+ 
+ 
+-def get_kernel(weights_list: list) -> tf.Tensor:
++def get_threshold_reshape_shape(tensor_shape: Tuple, quant_axis: int, quant_axis_dim: int) -> List[int]:
+     """
+-    This function a list of weights and return the kernel
+-    Args:
+-        weights_list:  A list of Tensors
++    Gets a shape that contains 1 in all axis except the quantization axis, to adjust the threshold tensor for
++    per-channel quantization.
+ 
+-    Returns: The kernel tensor.
++    Args:
++        tensor_shape: The shape of th
+ 
+-    """
+-    for w in weights_list:
+-        if KERNEL in w.name:
+-            return w
+-    raise Exception("Can't find kernel variable")
++        e tensor to be quantized.
++        quant_axis: The axis along which the quantization happens (usually the tensor's channel axis).
++        quant_axis_dim: The dimension of the quantization axis.
+ 
++    Returns: A shape to reshape the threshold tensor according to.
+ 
+-def threshold_reshape(threshold_tensor: tf.Tensor, input_w: tf.Tensor, in_quantization_axis: int) -> tf.Tensor:
+     """
+-    This function take a threshold tensor and re-aline it to the weight tensor channel axis.
+-    Args:
+-        threshold_tensor: A tensor of threshold
+-        input_w: A weight tensor
+-        in_quantization_axis: A int value that represent the channel axis.
+-
+-    Returns: A reshape tensor of threshold.
++    n_axis = len(tensor_shape)
++    quantization_axis = n_axis + quant_axis if quant_axis < 0 else quant_axis
+ 
+-    """
+-    input_shape = input_w.shape
+-    n_axis = len(input_shape)
+-    quantization_axis = n_axis + in_quantization_axis if in_quantization_axis < 0 else in_quantization_axis
+-    reshape_shape = [-1 if i == quantization_axis else 1 for i in range(n_axis)]
+-    ptq_threshold_tensor = tf.reshape(threshold_tensor, reshape_shape)
+-    return ptq_threshold_tensor
++    return [quant_axis_dim if i == quantization_axis else 1 for i in range(n_axis)]
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/soft_rounding/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/soft_rounding/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/soft_rounding/symmetric_soft_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/soft_rounding/symmetric_soft_quantizer.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -12,26 +12,63 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ 
+ import tensorflow as tf
+ import numpy as np
+ 
++from model_compression_toolkit import RoundingType
++from model_compression_toolkit import quantizers_infrastructure as qi
+ from model_compression_toolkit.core.common import max_power_of_two
++from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+ from model_compression_toolkit.gptq.common.gptq_constants import PTQ_THRESHOLD, SCALE_PTQ, N_EPOCHS, \
+     MAX_ITERATIONS_DEFAULT, SOFT_ROUNDING_GAMMA, SOFT_ROUNDING_ZETA, SOFT_ROUNDING_BETA, GPTQ_ITER, AUXVAR
+ from model_compression_toolkit.gptq.keras.quantizer import quant_utils as qutils
+-from tensorflow_model_optimization.python.core.quantization.keras.quantize_wrapper import QuantizeWrapper
+-from tensorflow.python.framework.tensor_shape import TensorShape
+ from typing import Dict, Any, List
+ from model_compression_toolkit.core.common.constants import THRESHOLD, MIN_THRESHOLD
+ from model_compression_toolkit.core.common.logger import Logger
+-from model_compression_toolkit.core.keras.quantizer.base_quantizer import BaseTrainableQuantizer
++from model_compression_toolkit.gptq.keras.quantizer.base_keras_gptq_quantizer import BaseKerasGPTQTrainableQuantizer
++from model_compression_toolkit.gptq.keras.quantizer.quant_utils import power_of_two_max, clip, calculate_delta
++from model_compression_toolkit.quantizers_infrastructure import TrainableQuantizerWeightsConfig
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.quant_utils import \
++    get_threshold_reshape_shape
+ 
+ 
++def soft_rounding_symmetric_quantizer(input_tensor: tf.Tensor,
++                                      auxvar_tensor: tf.Variable,
++                                      threshold_tensor: tf.Tensor,
++                                      num_bits: int,
++                                      signed: bool,
++                                      power_of_two: bool) -> tf.Tensor:
++    """
++    Quantize a tensor symmetrically for GPTQ quantizers.
++
++    Args:
++        input_tensor: Tensor to quantize. values of this tensor are not changed during gptq.
++        auxvar_tensor: Tensor that manifests the bit shift of the quantized weights due to gptq training.
++        threshold_tensor: Tensor with values to compute the threshold.
++        num_bits: Num of bits to use.
++        signed: Signedness of the quantization range.
++        power_of_two: Whether the threshold should be constrained or not.
++
++    Returns:
++        A quantized tensor.
++    """
++
++    if power_of_two:
++        threshold_tensor = power_of_two_max(threshold_tensor)
++    delta = calculate_delta(threshold_tensor, num_bits, signed)
++    input_tensor = tf.stop_gradient(input_tensor)
++    input_tensor_int = tf.floor(input_tensor / delta)
++    tensor_q = input_tensor_int + auxvar_tensor
++    min_int = -int(signed) * (2 ** (num_bits - int(signed)))
++    max_int = (2 ** (num_bits - int(signed))) - 1
++    return delta * clip(tensor_q, max_val=max_int, min_val=min_int)
++
+ 
+ class LinearTempDecay:
+     """
+     Annealing process for the soft quantizer regularization temperature term.
+     """
+ 
+     def __init__(self, t_max: int, rel_start_decay: float = 0.2, start_b: int = 20, end_b: int = 2):
+@@ -65,93 +102,88 @@
+         rel_t = (t - self.start_decay) / (self.t_max - self.start_decay)
+ 
+         return self.start_b * is_before_start_decay + \
+                (1 - is_before_start_decay) * \
+                (self.end_b + (self.start_b - self.end_b) * tf.math.maximum(0.0, (1 - rel_t)))
+ 
+ 
+-class SymmetricSoftRounding(BaseTrainableQuantizer):
++@mark_quantizer(quantization_target=qi.QuantizationTarget.Weights,
++                quantization_method=[QuantizationMethod.POWER_OF_TWO, QuantizationMethod.SYMMETRIC],
++                quantizer_type=RoundingType.SoftQuantizer)
++class SymmetricSoftRoundingGPTQ(BaseKerasGPTQTrainableQuantizer):
+     """
+     Trainable symmetric quantizer to optimize the rounding of the quantized values using a soft quantization method.
+     """
+ 
+-    def __init__(self, num_bits: int,
+-                 per_channel: bool,
+-                 signed: bool,
+-                 power_of_two: bool,
+-                 n_batches: int,
+-                 quantization_parameter_learning: bool,
+-                 threshold_values: np.ndarray,
+-                 quantization_axis: int = -1,
++    def __init__(self,
++                 quantization_config: TrainableQuantizerWeightsConfig,
++                 n_batches: int = None,
++                 quantization_parameter_learning: bool = False,
+                  n_epochs: int = N_EPOCHS):
+         """
+-        Initialize a SymmetricSoftRounding object with parameters to use
++        Initialize a SymmetricSoftRoundingGPTQ object with parameters to use
+         for the quantization.
++
+         Args:
+-            num_bits: Number of bits to use for the quantization.
+-            per_channel: Whether to quantize per-channel or per-tensor.
+-            signed: Signedness to use for the quantization range.
+-            power_of_two: Whether the threshold should be constrained or not.
+-            n_batches: The expected number of batches for each trainig epoch.
++            quantization_config: Trainable weights quantizer config.
++            n_batches: The expected number of batches for each training epoch.
+             quantization_parameter_learning: Whether to train the quantization threshold.
+-            threshold_values: Threshold to use for the quantization.
+-            quantization_axis: Axis of tensor to use for the quantization.
+             n_epochs: Number of epochs to run training for.
+         """
+ 
+-        super().__init__()
+-        self.num_bits = num_bits
+-        self.per_channel = per_channel
+-        self.signed = signed
+-        self.power_of_two = power_of_two
+-        self.quantization_parameter_learning = quantization_parameter_learning
+-        self.quantization_axis = quantization_axis
++        if n_batches is None:
++            Logger.error("SymmetricSoftRoundingGPTQ got an uninitialized n_batches argument.")
++
++        super().__init__(quantization_config)
++        self.num_bits = quantization_config.weights_n_bits
++        self.per_channel = quantization_config.weights_per_channel_threshold
++
++        threshold_values = quantization_config.weights_quantization_params[THRESHOLD]
+         self.threshold_shape = np.asarray(threshold_values).shape
+         self.threshold_values = np.reshape(np.asarray(threshold_values), [-1]) if self.per_channel else np.asarray(
+             threshold_values)
++
++        self.quantization_axis = quantization_config.weights_channels_axis
++        self.power_of_two = quantization_config.weights_quantization_method == QuantizationMethod.POWER_OF_TWO
++        self.quantization_parameter_learning = quantization_parameter_learning
+         self.num_channels = len(self.threshold_values) if self.per_channel else 1
+ 
+         # gamma and zeta are stretch parameters for computing the rectified sigmoind function.
+         # beta is used to set the regularization term.
+         # See: https://arxiv.org/pdf/2004.10568.pdf
+         self.gamma = SOFT_ROUNDING_GAMMA
+         self.zeta = SOFT_ROUNDING_ZETA
+         self.beta = SOFT_ROUNDING_BETA
+ 
+         self.quantizer_parameters = {}
+ 
+         # Initializing the temperature decay according to the number of expected gradient steps
+-        if n_batches is None:
+-            Logger.warning(f"Number of batches is not set correctly for the Soft Quantizer. A default value of "  # pragma: no cover
+-                           f"{MAX_ITERATIONS_DEFAULT} is used to set the temperature decay which may affect the results.")
+-
+         init_decay = MAX_ITERATIONS_DEFAULT if n_batches is None else n_epochs * n_batches
+         self.linear_decay = LinearTempDecay(init_decay)
+ 
+-    def build(self,
+-              tensor_shape: TensorShape,
+-              name: str,
+-              layer: QuantizeWrapper) -> Dict[str, tf.Variable]:
++    def initialize_quantization(self,
++                                tensor_shape: Any,
++                                name: str,
++                                layer: Any) -> Dict[Any, Any]:
+         """
+-        Add variables to the quantizer.
++        Return a dictionary of quantizer parameters and their names.
+ 
+         Args:
+-            tensor_shape: Tensor shape the quantizer quantize.
+-            name: Prefix of variables names.
+-            layer: Layer to add the variables to. The variables are saved
+-            in the layer's scope.
++            tensor_shape: tensor shape of the quantized tensor.
++            name: Tensor name.
++            layer: Layer to quantize.
+ 
+         Returns:
+-            Dictionary of new variables.
++            Dictionary of parameters names to the variables.
+         """
+ 
+-        super().build(tensor_shape, name, layer)
+-
+         if self.per_channel:
+-            reshape_shape = self._get_threshold_reshape_shape(tensor_shape, quant_axis_dim=self.num_channels)
++            reshape_shape = get_threshold_reshape_shape(tensor_shape,
++                                                        quant_axis=self.quantization_axis,
++                                                        quant_axis_dim=self.num_channels)
+         else:
+             reshape_shape = [self.num_channels]
+ 
+         ar_iter = layer.add_weight(
+             f"{name}_{GPTQ_ITER}",
+             shape=(),
+             initializer=tf.keras.initializers.Constant(0.0),
+@@ -163,19 +195,19 @@
+             initializer=tf.keras.initializers.Constant(1.0),
+             trainable=False)
+         ptq_threshold_tensor.assign(self.threshold_values.reshape(reshape_shape))
+ 
+         w = getattr(layer.layer, name)
+         auxvar_tensor = layer.add_weight(
+             f"{name}_{AUXVAR}",
+-            shape=[*w.shape],
++            shape=list(w.shape),
+             initializer=tf.keras.initializers.Constant(0.0),
+             trainable=True)
+ 
+-        delta = qutils.calculate_delta(ptq_threshold_tensor, self.num_bits, self.signed)
++        delta = qutils.calculate_delta(ptq_threshold_tensor, self.num_bits, signed=True)
+         w_floor = tf.floor(w / delta)
+         rest = (w / delta) - w_floor  # rest of rounding [0, 1)
+         # Note that (rest - self.gamma) can't be zero since rest is positive and gamma is negative, so the division
+         # is safe
+         alpha = -qutils.safe_log((self.zeta - self.gamma) / (rest - self.gamma) - 1, 1e-16)  # => sigmoid(alpha) = rest
+ 
+         auxvar_tensor.assign(alpha)
+@@ -192,16 +224,18 @@
+                 trainable=True)
+             self.quantizer_parameters.update({SCALE_PTQ: scale})
+ 
+         return self.quantizer_parameters
+ 
+     def get_quantization_variable(self) -> List[tf.Tensor]:
+         """
+-        Returns:
+-            A list of the quantization parameters (if there are defined parameters for the quantizer).
++        This function return a list with the quantizer's quantization parameters variables.
++
++        Returns: A list with the quantization parameters if there are defined parameters.
++
+         """
+ 
+         if self.quantization_parameter_learning and not self.power_of_two:
+             return [self.quantizer_parameters[SCALE_PTQ]]
+         else:
+             return []
+ 
+@@ -213,138 +247,97 @@
+             regularization term.
+         """
+ 
+         st = self.get_soft_targets()
+         b = self.linear_decay(self.ar_iter.value())
+         return tf.reduce_sum(1 - tf.pow(tf.math.abs(st - .5) * 2, b))
+ 
+-    def get_trainable_parameters(self) -> List[tf.Tensor]:
+-        """
+-        A function to get a list trainable of trainable parameters of the quantizer for GPTQ retraining
+-
+-        Returns:
+-            A list of trainable Tensors
+-        """
+-        return [t for t in self.quantizer_parameters.values() if t.trainable]
+-
+-    def get_config(self) -> Dict[str, Any]:
+-        """
+-        Returns:
+-            Configuration of SymmetricSoftRounding.
+-        """
+-
+-        return {
+-            'num_bits': self.num_bits,
+-            'per_channel': self.per_channel,
+-        }
+-
+     def get_soft_targets(self) -> tf.Tensor:
+         """
+         Computes the rectified sigmoid function for the quantization target parameters.
+ 
+         Returns:
+             A tensor with the soft rounding targets values.
+ 
+         """
+         return qutils.clip(
+             tf.sigmoid(self.quantizer_parameters[AUXVAR]) * (self.zeta - self.gamma) + self.gamma, 1, 0)
+ 
+-    def get_aux_variable(self) -> tf.Tensor:
++    def get_aux_variable(self) -> List[tf.Tensor]:
+         """
+-        Returns:
+-            The auxiliary variable of the rounding learning.
++        This function return a list with the quantizer's quantization auxiliary variables.
++
++        Returns: A list with the quantization auxiliary variables.
++
+         """
+-        return self.quantizer_parameters[AUXVAR]
++        return [self.quantizer_parameters[AUXVAR]]
+ 
+-    def __call__(self, inputs: tf.Tensor,
+-                 training: bool,
+-                 weights: Dict[str, tf.Variable],
+-                 **kwargs: Dict[str, Any]) -> tf.Tensor:
++    def __call__(self,
++                 inputs: tf.Tensor,
++                 training: bool):
+         """
+         Quantize a tensor.
+ 
+         Args:
+             inputs: Input tensor to quantize.
+             training: Whether the graph is in training mode.
+-            weights: Dictionary of weights the quantizer can use to quantize the tensor.
+-            **kwargs: Additional variables the quantizer may receive.
+ 
+         Returns:
+             The quantized tensor.
+         """
+ 
+-        self.ar_iter = weights[GPTQ_ITER]
+-        ptq_threshold_tensor = weights[PTQ_THRESHOLD]
++        self.ar_iter = self.quantizer_parameters[GPTQ_ITER]
++        ptq_threshold_tensor = self.quantizer_parameters[PTQ_THRESHOLD]
+ 
+         if self.per_channel:
+-            reshape_shape = self._get_threshold_reshape_shape(inputs.shape, quant_axis_dim=-1)
++            reshape_shape = get_threshold_reshape_shape(inputs.shape,
++                                                        quant_axis=self.quantization_axis,
++                                                        quant_axis_dim=-1)
+ 
+             ##########################################################
+             # Calculate soft rounding targets and optimized threshold
+             ##########################################################
+             ptq_threshold_tensor_hat = tf.reshape(ptq_threshold_tensor, reshape_shape)
+             aux_var = self.get_soft_targets()
+ 
+             #####################################################
+             # Soft Rounding
+             #####################################################
+             if training:
+                 self.ar_iter.assign_add(1.0)
+             else:
+-                aux_var = tf.cast(weights[AUXVAR] >= 0, tf.float32)
++                aux_var = tf.cast(tf.math.greater_equal(aux_var, 0.5), tf.float32)
+ 
+             #####################################################
+             # Quantized Input
+             #####################################################
+-            q_tensor = qutils.symmetric_rounding_quantizer(input_tensor=inputs,
+-                                                           auxvar_tensor=aux_var,
+-                                                           threshold_tensor=ptq_threshold_tensor_hat,
+-                                                           num_bits=self.num_bits,
+-                                                           signed=self.signed,
+-                                                           power_of_two=self.power_of_two)
++            q_tensor = soft_rounding_symmetric_quantizer(input_tensor=inputs,
++                                                         auxvar_tensor=aux_var,
++                                                         threshold_tensor=ptq_threshold_tensor_hat,
++                                                         num_bits=self.num_bits,
++                                                         signed=True,
++                                                         power_of_two=self.power_of_two)
+ 
+             if self.quantization_parameter_learning and not self.power_of_two:
+                 scale = tf.reshape(self.quantizer_parameters[SCALE_PTQ], reshape_shape)
+                 q_tensor *= scale
+ 
+             return q_tensor
+         else:
+-            return qutils.symmetric_rounding_quantizer(input_tensor=inputs,
+-                                                       auxvar_tensor=weights[AUXVAR],
+-                                                       threshold_tensor=ptq_threshold_tensor.value(),
+-                                                       num_bits=self.num_bits,
+-                                                       signed=self.signed,
+-                                                       power_of_two=self.power_of_two)
++            return soft_rounding_symmetric_quantizer(input_tensor=inputs,
++                                                     auxvar_tensor=self.quantizer_parameters[AUXVAR],
++                                                     threshold_tensor=ptq_threshold_tensor.value(),
++                                                     num_bits=self.num_bits,
++                                                     signed=True,
++                                                     power_of_two=self.power_of_two)
+ 
+-    # TODO: Extract this method to a parent class of all GPTQ quantizer and use it in other quantizers (such as STE)
+-    def _get_threshold_reshape_shape(self, tensor_shape, quant_axis_dim):
+-        """
+-        Gets a shape that contains 1 in all axis except the quantization axis, to adjust the threshold tensor for
+-        per-channel quantization.
+-
+-        Args:
+-            tensor_shape: The shape of the tensor to be quantize.
+-            quant_axis_dim: The dimension of the quantization axis.
+-
+-        Returns: A shape to reshape the threshold tensor according to.
+-
+-        """
+-        n_axis = len(tensor_shape)
+-        quantization_axis = n_axis + self.quantization_axis if self.quantization_axis < 0 else \
+-            self.quantization_axis
+-
+-        return [quant_axis_dim if i == quantization_axis else 1 for i in range(n_axis)]
+-
+-    def get_quant_config(self, layer) -> Dict[str, np.ndarray]:
++    def get_quant_config(self) -> Dict[str, np.ndarray]:
+         """
+         Returns the config used to edit NodeQuantizationConfig after GPTQ retraining
+ 
+-        Args:
+-            layer: quantized layer
+-
+         Returns:
+             A dictionary of attributes the quantize_config retraining has changed during GPTQ retraining.
+             Keys must match NodeQuantizationConfig attributes
+         """
+ 
+         if self.power_of_two:
+             old_threshold = self.quantizer_parameters[PTQ_THRESHOLD]
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/ste_rounding/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/keras/quantizer/ste_rounding/symmetric_ste.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/ste_rounding/symmetric_ste.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,281 +1,290 @@
+-# Copyright 2021 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ 
+-from typing import Dict, Any, List
++from typing import Dict, Union
+ 
+ import numpy as np
+ import tensorflow as tf
+-from tensorflow_model_optimization.python.core.quantization.keras.quantize_wrapper import QuantizeWrapper
+ from tensorflow.python.framework.tensor_shape import TensorShape
+-from model_compression_toolkit.core.keras.quantizer.base_quantizer import BaseTrainableQuantizer
+-from model_compression_toolkit.gptq.common.gptq_constants import GPTQ_ITER, THRESHOLD_TENSOR, AUXVAR
+-from model_compression_toolkit.gptq.keras.quantizer import quant_utils as  qutils
+-from model_compression_toolkit.core.common.constants import THRESHOLD
+-from model_compression_toolkit.core.common.defaultdict import DefaultDict
+-from model_compression_toolkit.gptq.keras.quantizer.kernel_functions import get_kernel
++from model_compression_toolkit.core.common.constants import SIGNED
+ 
+-
+-def symmetric_quantizer(input_tensor: tf.Tensor,
+-                        max_tensor: tf.Tensor,
+-                        num_bits: int,
+-                        signed: bool,
+-                        power_of_two: bool = False) -> tf.Tensor:
+-    """
+-    Quantize a tensor symmetrically.
+-    Args:
+-        input_tensor: Tensor to quantize. values of this tensor are not changed during gptq.
+-        max_tensor: Tensor with max values to compute the threshold.
+-        num_bits: Num of bits to use.
+-        signed: Signedness of the quantization range.
+-        power_of_two: Whether the threshold should be constrained or not.
+-
+-    Returns:
+-        A quantized tensor.
+-    """
+-
+-    if power_of_two:
+-        max_tensor = qutils.power_of_two_max(max_tensor)
+-    delta = qutils.calculate_delta(max_tensor, num_bits, signed)
+-    tensor_q = qutils.ste_round(input_tensor / delta)
+-    min_int = -int(signed) * (2 ** (num_bits - int(signed)))
+-    max_int = (2 ** (num_bits - int(signed))) - 1
+-    return delta * qutils.ste_clip(tensor_q, max_val=max_int, min_val=min_int)
+-
+-
+-def pertubation_symmetric_quantizer(input_tensor: tf.Tensor,
+-                                    auxvar_tensor: tf.Variable,
+-                                    max_tensor: tf.Tensor,
+-                                    num_bits: int,
+-                                    signed: bool,
+-                                    power_of_two: bool,
+-                                    max_lsbs_change: int = 1) -> tf.Tensor:
+-    """
+-    Quantize a tensor symmetrically with maximum LSBs shift.
+-    Args:
+-        input_tensor: Tensor to quantize. values of this tensor are not changed during gptq.
+-        auxvar_tensor: Tensor that manifests the bit shift the weight due to gptq
+-        max_tensor: Tensor with max values to compute the threshold.
+-        num_bits: Num of bits to use.
+-        signed: Signedness of the quantization range.
+-        power_of_two: Whether the threshold should be constrained or not.
+-        max_lsbs_change: maximum number of LSBs that the auxvar is allowed to change
+-
+-    Returns:
+-        A quantized tensor.
+-    """
+-
+-    if power_of_two:
+-        max_tensor = qutils.power_of_two_max(max_tensor)
+-    delta = qutils.calculate_delta(max_tensor, num_bits, signed)
+-    input_tensor_int = tf.stop_gradient(tf.round(input_tensor / delta))
+-    tensor_q = qutils.ste_round(
+-        input_tensor_int + qutils.ste_clip(auxvar_tensor, max_val=max_lsbs_change * delta) / delta)
+-    min_int = -int(signed) * (2 ** (num_bits - int(signed)))
+-    max_int = (2 ** (num_bits - int(signed))) - 1
+-    return delta * qutils.ste_clip(tensor_q, max_val=max_int, min_val=min_int)
+-
+-
+-class STEWeightQuantizer(BaseTrainableQuantizer):
++from model_compression_toolkit.core.common.target_platform import QuantizationMethod
++from model_compression_toolkit.qat.common import THRESHOLD_TENSOR
++from model_compression_toolkit.qat.common.constants import FQ_MIN, FQ_MAX
++from model_compression_toolkit import quantizers_infrastructure as qi, TrainingMethod
++from model_compression_toolkit.core.common import constants as C
++from model_compression_toolkit.qat.keras.quantizer.base_keras_qat_quantizer import BaseKerasQATTrainableQuantizer
++from model_compression_toolkit.quantizers_infrastructure import TrainableQuantizerWeightsConfig, \
++    TrainableQuantizerActivationConfig
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers import \
++    WeightsPOTInferableQuantizer, WeightsSymmetricInferableQuantizer, ActivationPOTInferableQuantizer, \
++    ActivationSymmetricInferableQuantizer
++
++
++@mark_quantizer(quantization_target=qi.QuantizationTarget.Weights,
++                quantization_method=[QuantizationMethod.POWER_OF_TWO, QuantizationMethod.SYMMETRIC],
++                quantizer_type=TrainingMethod.STE)
++class STEWeightQATQuantizer(BaseKerasQATTrainableQuantizer):
+     """
+     Trainable constrained quantizer to quantize a layer inputs.
+     """
+ 
+-    def __init__(self,
+-                 num_bits: int,
+-                 per_channel: bool,
+-                 signed: bool,
+-                 threshold_values: np.ndarray,
+-                 quantization_axis: int = -1,
+-                 power_of_two: bool = True,
+-                 max_lsbs_change_map: dict = DefaultDict({}, lambda: 1)):
++    def __init__(self, quantization_config: TrainableQuantizerWeightsConfig):
+         """
+         Initialize a TrainableWeightQuantizer object with parameters to use
+         for the quantization.
+ 
+         Args:
+-            num_bits: Number of bits to use for the quantization.
+-            per_channel: Whether to quantize per-channel or per-tensor.
+-            signed: Signedness to use for the quantization range.
+-            threshold_values: Threshold to use for the quantization.
+-            quantization_axis: Axis of tensor to use for the quantization.
+-            power_of_two: Whether the threshold should be constrained or not.
+-            max_lsbs_change_map: a mapping between number of bits to max lsb change.
+-        """
+-        self.num_bits = num_bits
+-        self.per_channel = per_channel
+-        self.signed = signed
+-        self.threshold_shape = np.asarray(threshold_values).shape
+-        self.threshold_values = np.reshape(np.asarray(threshold_values), [-1]) if self.per_channel else float(
+-            threshold_values)
+-        self.quantization_axis = quantization_axis
+-        self.power_of_two = power_of_two
+-        self.max_lsbs_change = max_lsbs_change_map.get(num_bits)
++            quantization_config: trainable quantizer config class
++        """
++        super().__init__(quantization_config)
++        self.power_of_two = quantization_config.weights_quantization_method == QuantizationMethod.POWER_OF_TWO
++        self.threshold_values = quantization_config.weights_quantization_params[C.THRESHOLD]
++        self.threshold_shape = np.asarray(self.threshold_values).shape
++        self.per_channel = self.quantization_config.weights_per_channel_threshold
++        self.channel_axis = self.quantization_config.weights_channels_axis
++        self.np_threshold_values = np.reshape(np.asarray(self.threshold_values),[-1]) if self.channel_axis else float(self.threshold_values)
++
++        if self.per_channel and self.channel_axis not in [-1, len(self.threshold_shape) - 1]:
++            # Tensorflow's fake_quant_with_min_max_vars_per_channel only works on last axis, so
++            # need to move the quantization axis to the last axis
++            self.perm_vec = list(np.arange(len(self.threshold_shape)))
++            self.perm_vec[self.channel_axis] = len(self.threshold_shape) - 1
++            self.perm_vec[len(self.threshold_shape) - 1] = self.channel_axis
++        else:
++            self.perm_vec = None
++
++        if self.power_of_two:
++            self.np_threshold_values = np.power(2.0,np.ceil(np.log2(np.maximum(self.np_threshold_values, C.MIN_THRESHOLD))))
++
++        self.num_bits = self.quantization_config.weights_n_bits
++        delta = self.np_threshold_values / np.power(2.0, self.num_bits - int(C.WEIGHTS_SIGNED))
++        min_int = -int(C.WEIGHTS_SIGNED) * (2 ** (self.num_bits - int(C.WEIGHTS_SIGNED)))
++        max_int = (2 ** (self.num_bits - int(C.WEIGHTS_SIGNED))) - 1
++        self.min = delta * min_int
++        self.max = delta * max_int
+         self.quantizer_parameters = {}
+ 
+-    def build(self,
+-              tensor_shape: TensorShape,
+-              name: str,
+-              layer: QuantizeWrapper) -> Dict[str, tf.Variable]:
++    def initialize_quantization(self,
++                                tensor_shape: TensorShape,
++                                name: str,
++                                layer: qi.KerasQuantizationWrapper) -> Dict[str, tf.Variable]:
+         """
+         Add min and max variables to layer.
+         Args:
+             tensor_shape: Tensor shape the quantizer quantize.
+             name: Prefix of variables names.
+             layer: Layer to add the variables to. The variables are saved
+             in the layer's scope.
+ 
+         Returns:
+             Dictionary of new variables.
+         """
+-        w_shape = get_kernel(layer.weights).shape
+-        ar_iter = layer.add_weight(
+-            f"{name}_{GPTQ_ITER}",
+-            shape=(),
+-            initializer=tf.keras.initializers.Constant(0.0),
+-            trainable=False)
+-
+         ptq_threshold_tensor = layer.add_weight(
+             name + THRESHOLD_TENSOR,
+-            shape=len(self.threshold_values) if self.per_channel else (),
++            shape=len(self.np_threshold_values) if self.channel_axis else (),
+             initializer=tf.keras.initializers.Constant(1.0),
+             trainable=False)
+-        ptq_threshold_tensor.assign(self.threshold_values)
++        ptq_threshold_tensor.assign(self.np_threshold_values)
++
++        fq_min = layer.add_weight(
++            name + FQ_MIN,
++            shape=len(self.min) if self.channel_axis else (),
++            initializer=tf.keras.initializers.Constant(-1.0),
++            trainable=False)
++        fq_min.assign(self.min)
+ 
+-        auxvar_tensor = layer.add_weight(
+-            f"{name}_{AUXVAR}",
+-            shape=w_shape,
+-            initializer=tf.keras.initializers.Constant(0.0),
+-            trainable=True)
++        fq_max = layer.add_weight(
++            name + FQ_MAX,
++            shape=len(self.max) if self.channel_axis else (),
++            initializer=tf.keras.initializers.Constant(1.0),
++            trainable=False)
++        fq_max.assign(self.max)
+ 
+         # save the quantizer added parameters for later calculations
+         self.quantizer_parameters = {THRESHOLD_TENSOR: ptq_threshold_tensor,
+-                                     AUXVAR: auxvar_tensor,
+-                                     GPTQ_ITER: ar_iter}
++                                     FQ_MIN: fq_min, FQ_MAX: fq_max}
+         return self.quantizer_parameters
+ 
+-    def __call__(self, inputs: tf.Tensor,
+-                 training: bool,
+-                 weights: Dict[str, tf.Variable],
+-                 **kwargs: Dict[str, Any]):
++    def __call__(self,
++                 inputs: tf.Tensor,
++                 training: bool):
+         """
+         Quantize a tensor.
+         Args:
+             inputs: Input tensor to quantize.
+             training: Whether the graph is in training mode.
+             weights: Dictionary of weights the quantizer can use to quantize the tensor.
+             **kwargs: Additional variables the quantizer may receive.
+ 
+         Returns:
+             The quantized tensor.
+         """
+ 
+-        auxvar = weights[AUXVAR]
+-        ptq_threshold_tensor = weights[THRESHOLD_TENSOR]
+-
+-        if self.per_channel:
+-            input_shape = inputs.shape
+-            n_axis = len(input_shape)
+-            quantization_axis = n_axis + self.quantization_axis if self.quantization_axis < 0 else \
+-                self.quantization_axis
+-            reshape_shape = [-1 if i == quantization_axis else 1 for i in range(n_axis)]
+-            ptq_threshold_tensor = tf.reshape(ptq_threshold_tensor, reshape_shape)
+-            q_tensor = pertubation_symmetric_quantizer(inputs, auxvar,
+-                                                       ptq_threshold_tensor,
+-                                                       self.num_bits,
+-                                                       self.signed,
+-                                                       self.power_of_two,
+-                                                       max_lsbs_change=self.max_lsbs_change)
+-            return q_tensor
++        _min = self.quantizer_parameters[FQ_MIN]
++        _max = self.quantizer_parameters[FQ_MAX]
++        if self.channel_axis:
++            if self.perm_vec:
++                inputs = tf.transpose(inputs, perm=self.perm_vec)
++            q_tensor = tf.quantization.fake_quant_with_min_max_vars_per_channel(inputs, _min, _max,
++                                                                                num_bits=self.num_bits)
++            if self.perm_vec:
++                q_tensor = tf.transpose(q_tensor, perm=self.perm_vec)
+         else:
+-            return pertubation_symmetric_quantizer(inputs, auxvar,
+-                                                   ptq_threshold_tensor,
+-                                                   self.num_bits,
+-                                                   self.signed,
+-                                                   self.power_of_two)
++            q_tensor = tf.quantization.fake_quant_with_min_max_vars(inputs, _min, _max,
++                                                                    num_bits=self.num_bits)
+ 
+-    def get_aux_variable(self) -> tf.Tensor:
+-        return self.quantizer_parameters[AUXVAR]
++        return q_tensor
+ 
+-    def get_config(self) -> Dict[str, Any]:
++    def convert2inferable(self) -> Union[WeightsPOTInferableQuantizer, WeightsSymmetricInferableQuantizer]:
+         """
+-        Returns: Configuration of TrainableQuantizer.
++        Convert quantizer to inferable quantizer.
++
++        Returns:
++            BaseKerasInferableQuantizer object.
+         """
++        if self.power_of_two:
++            pot_threshold = 2 ** np.ceil(np.log2(self.quantizer_parameters[THRESHOLD_TENSOR]))
++            return WeightsPOTInferableQuantizer(num_bits=self.num_bits,
++                                                threshold=list(pot_threshold.flatten()),
++                                                per_channel=self.per_channel,
++                                                channel_axis=self.channel_axis,
++                                                input_rank=len(self.threshold_shape))
++        else:
++            return WeightsSymmetricInferableQuantizer(num_bits=self.num_bits,
++                                                      threshold=list(self.quantizer_parameters[
++                                                                         THRESHOLD_TENSOR].numpy().flatten()),
++                                                      per_channel=self.per_channel,
++                                                      channel_axis=self.channel_axis,
++                                                      input_rank=len(self.threshold_shape))
++
+ 
+-        return {
+-            'num_bits': self.num_bits,
+-            'per_channel': self.per_channel,
+-            'symmetric': self.symmetric,
+-            'power_of_two': self.power_of_two
+-        }
++@mark_quantizer(quantization_target=qi.QuantizationTarget.Activation,
++                quantization_method=[QuantizationMethod.POWER_OF_TWO, QuantizationMethod.SYMMETRIC],
++                quantizer_type=TrainingMethod.STE)
++class STEActivationQATQuantizer(BaseKerasQATTrainableQuantizer):
++    """
++    Trainable constrained quantizer to quantize a layer outputs.
++    """
+ 
+-    def get_quant_config(self, layer) -> Dict[str, np.ndarray]:
++    def __init__(self, quantization_config: TrainableQuantizerActivationConfig):
+         """
+-        Returns the config used to edit NodeQuantizationConfig after GPTQ retraining
++        Initialize a STEActivationQATQuantizer object with parameters to use
++        for the quantization.
+ 
+         Args:
+-            layer: quantized layer
+-
+-        Returns:
+-            A dictionary of attributes the quantize_config retraining has changed during GPTQ retraining.
+-            Keys must match NodeQuantizationConfig attributes
+-
++            quantization_config: trainable quantizer config class
+         """
+-        old_threshold = self.quantizer_parameters[THRESHOLD_TENSOR]
+-        return {THRESHOLD: old_threshold.numpy().reshape(self.threshold_shape)}
++        super().__init__(quantization_config)
++        self.power_of_two = quantization_config.activation_quantization_method == QuantizationMethod.POWER_OF_TWO
++        self.threshold_values = quantization_config.activation_quantization_params[C.THRESHOLD]
++        self.threshold_shape = np.asarray(self.threshold_values).shape
++        self.np_threshold_values = float(self.threshold_values)
++        self.signed = quantization_config.activation_quantization_params[SIGNED]
++        if self.power_of_two:
++            self.np_threshold_values = np.power(2.0,
++                                                np.ceil(np.log2(np.maximum(self.np_threshold_values, C.MIN_THRESHOLD))))
++        self.num_bits = quantization_config.activation_n_bits
++        delta = self.np_threshold_values / np.power(2.0, self.num_bits - int(self.signed))
++        min_int = -int(self.signed) * (2 ** (self.num_bits - int(self.signed)))
++        max_int = (2 ** (self.num_bits - int(self.signed))) - 1
++        self.min = delta * min_int
++        self.max = delta * max_int
++        self.quantizer_parameters = {}
+ 
+-    def get_trainable_parameters(self):
++    def initialize_quantization(self,
++                                tensor_shape: TensorShape,
++                                name: str,
++                                layer: qi.KerasQuantizationWrapper) -> Dict[str, tf.Variable]:
+         """
+-        A function to get a list trainable of trainable parameters of the quantizer for GPTQ retraining
++        Add min and max variables to layer.
++        Args:
++            tensor_shape: Tensor shape the quantizer quantize.
++            name: Prefix of variables names.
++            layer: Layer to add the variables to. The variables are saved
++            in the layer's scope.
+ 
+         Returns:
+-            A list of trainable Tensors
+-
++            Dictionary of new variables.
+         """
+-        return [t for t in self.quantizer_parameters.values() if t.trainable]
++        ptq_threshold_tensor = layer.add_weight(
++            name + THRESHOLD_TENSOR,
++            shape=(),
++            initializer=tf.keras.initializers.Constant(1.0),
++            trainable=False)
++        ptq_threshold_tensor.assign(self.np_threshold_values)
+ 
+-    def get_quantization_variable(self) -> List[tf.Tensor]:
+-        """
+-         This function return a list of quantizer parameters.
+-         Returns: A list of the quantizer parameters
++        fq_min = layer.add_weight(
++            name + FQ_MIN,
++            shape=(),
++            initializer=tf.keras.initializers.Constant(-1.0),
++            trainable=False)
++        fq_min.assign(self.min)
++
++        fq_max = layer.add_weight(
++            name + FQ_MAX,
++            shape=(),
++            initializer=tf.keras.initializers.Constant(1.0),
++            trainable=False)
++        fq_max.assign(self.max)
+ 
+-         """
+-        return [self.quantizer_parameters[THRESHOLD_TENSOR]]
++        # save the quantizer added parameters for later calculations
++        self.quantizer_parameters = {THRESHOLD_TENSOR: ptq_threshold_tensor,
++                                     FQ_MIN: fq_min, FQ_MAX: fq_max}
++        return self.quantizer_parameters
+ 
+-    def __eq__(self, other: Any) -> bool:
++    def __call__(self,
++                 inputs: tf.Tensor,
++                 training: bool):
+         """
+-        Check if equals to another object.
++        Quantize a tensor.
+         Args:
+-            other: Other object to compare.
++            inputs: Input tensor to quantize.
++            training: Whether the graph is in training mode.
+ 
+         Returns:
+-            Whether they are equal or not.
++            The quantized tensor.
+         """
+-        if not isinstance(other, STEWeightQuantizer):
+-            return False
+ 
+-        return (self.num_bits == other.num_bits and
+-                self.per_channel == other.per_channel and
+-                self.symmetric == other.symmetric)
++        _min = self.quantizer_parameters[FQ_MIN]
++        _max = self.quantizer_parameters[FQ_MAX]
++        q_tensor = tf.quantization.fake_quant_with_min_max_vars(inputs, _min, _max,
++                                                                num_bits=self.num_bits)
+ 
+-    def __ne__(self, other: Any) -> bool:
++        return q_tensor
++
++    def convert2inferable(self) -> Union[ActivationPOTInferableQuantizer, ActivationSymmetricInferableQuantizer]:
+         """
+-        Check if not equals to another object.
+-        Args:
+-            other: Other object to compare.
++        Convert quantizer to inferable quantizer.
+ 
+         Returns:
+-            Whether they are differ or not.
++            BaseKerasInferableQuantizer object.
+         """
+-        return not self.__eq__(other)
++
++        if self.power_of_two:
++            pot_threshold = 2 ** np.ceil(np.log2(self.quantizer_parameters[THRESHOLD_TENSOR]))
++            return ActivationPOTInferableQuantizer(num_bits=self.num_bits,
++                                                      # In activation quantization is per-tensor only - thus we pass
++                                                      # the threshold as a list with a len of 1
++                                                      threshold=[pot_threshold],
++                                                      signed=self.signed)
++        else:
++            return ActivationSymmetricInferableQuantizer(num_bits=self.num_bits,
++                                                         # In activation quantization is per-tensor only - thus we
++                                                         # pass the threshold as a list with a len of 1
++                                                         threshold=[
++                                                             self.quantizer_parameters[THRESHOLD_TENSOR].numpy()],
++                                                         signed=self.signed)
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/gptq_loss.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/gptq_loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/gptq_model_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_lut_symmetric_inferable_quantizer.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,113 +1,106 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-import torch
+-from typing import Tuple, List
+-from model_compression_toolkit.core.common.user_info import UserInformation
+-from model_compression_toolkit.core import common
+-from model_compression_toolkit.core.common.graph.base_graph import BaseNode
+-from model_compression_toolkit.gptq.common.gptq_config import GradientPTQConfig
+-from model_compression_toolkit.core.pytorch.default_framework_info import DEFAULT_PYTORCH_INFO
+-from model_compression_toolkit.core.pytorch.back2framework.pytorch_model_builder import PyTorchModelBuilder, PytorchModel
+-from model_compression_toolkit.core.common.graph.functional_node import FunctionalNode
+-from model_compression_toolkit.gptq.pytorch.quantizer.quantizer_wrapper import quantizer_wrapper
+-from model_compression_toolkit.core.pytorch.utils import get_working_device
+-from model_compression_toolkit.core.pytorch.constants import BUFFER
+-from model_compression_toolkit.core.pytorch.reader.node_holders import BufferHolder
+-from model_compression_toolkit.core.pytorch.back2framework.instance_builder import node_builder
+-
+-
+-class GPTQPytorchModel(PytorchModel):
+-    """
+-    Class for GPTQ PyTorch model.
+-    """
+-
+-    def __init__(self,
+-                 graph: common.Graph,
+-                 gptq_config: GradientPTQConfig,
+-                 append2output=None,
+-                 return_float_outputs: bool = True):
+-        """
+-        Args:
+-            graph: Graph to build the model from.
+-            gptq_config: Configuration for GPTQ optimization.
+-            append2output: Nodes to append to model's output.
+-            return_float_outputs: Whether the model returns float tensors or not.
+-        """
+-
+-        super().__init__(graph,
+-                         append2output,
+-                         DEFAULT_PYTORCH_INFO,
+-                         return_float_outputs)
+-
+-        for node in graph.nodes():
+-            if not isinstance(node, FunctionalNode):
+-                if node.type == BufferHolder:
+-                    self.add_module(node.name, node_builder(node))
+-                    self.get_submodule(node.name).register_buffer(node.name,torch.Tensor(node.get_weights_by_keys(BUFFER)).to(get_working_device()))
+-                else:
+-                    self.add_module(node.name, quantizer_wrapper(node, gptq_config))
+-
+-
+-    def _quantize_node_activations(self,
+-                                   node: BaseNode,
+-                                   input_tensors: List[torch.Tensor]) -> List[torch.Tensor]:
+-        """
+-        Quantize node's activation given input tensors.
+-
+-        Args:
+-            node: Node to quantize its outputs.
+-            input_tensors: Input tensors of the node.
+-
+-        Returns:
+-            Output of the node.
+-
+-        """
+-        return node.final_activation_quantization_cfg.quantize_node_output(input_tensors)
+-
+ 
+-class GPTQPytorchModelBuilder(PyTorchModelBuilder):
+-    """
+-    Builder of GPTQ Pytorch models.
+-    """
+-
+-    def __init__(self,
+-                 graph: common.Graph,
+-                 gptq_config: GradientPTQConfig,
+-                 append2output=None,
+-                 return_float_outputs: bool = True):
+-        """
++import numpy as np
+ 
+-        Args:
+-            graph: Graph to build the model from.
+-            gptq_config: Configuration for GPTQ optimization.
+-            append2output: Nodes to append to model's output.
+-            return_float_outputs: Whether the model returns float tensors or not.
+-        """
+-        super().__init__(graph,
+-                         append2output,
+-                         DEFAULT_PYTORCH_INFO,
+-                         return_float_outputs)
+-        self.gptq_config = gptq_config
+-
+-    def build_model(self) -> Tuple[PytorchModel, UserInformation]:
+-        """
+-        Build a GPTQ PyTorch model and return it.
+-        Returns:
+-            GPTQ PyTorch model and user information.
+-        """
+-        return GPTQPytorchModel(self.graph,
+-                                self.gptq_config,
+-                                self.append2output,
+-                                self.return_float_outputs), self.graph.user_info
++from model_compression_toolkit.core.common.constants import FOUND_TORCH
++from model_compression_toolkit.core.common.target_platform import QuantizationMethod
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer \
++    import mark_quantizer, \
++    QuantizationTarget
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.constants \
++    import MULTIPLIER_N_BITS, EPS
++
++if FOUND_TORCH:
++    import torch
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizer_utils \
++        import to_torch_tensor, get_working_device, lut_quantizer
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers \
++        .base_lut_symmetric_inferable_quantizer import BaseLUTSymmetricInferableQuantizer
++
++
++    @mark_quantizer(quantization_target=QuantizationTarget.Weights,
++                    quantization_method=[QuantizationMethod.LUT_SYM_QUANTIZER],
++                    quantizer_type=None)
++    class WeightsLUTSymmetricInferableQuantizer(BaseLUTSymmetricInferableQuantizer):
++        """
++        Class for quantizing weights using a lut symmetric quantizer
++        """
++
++        def __init__(self,
++                     num_bits: int,
++                     cluster_centers: np.ndarray,
++                     threshold: np.ndarray,
++                     per_channel: bool,
++                     channel_axis: int = None,
++                     multiplier_n_bits: int = MULTIPLIER_N_BITS,
++                     eps: float = EPS):
++            """
++            Initialize the quantizer with the specified parameters.
++
++            Args:
++                num_bits: number of bits to use for quantization
++                cluster_centers: the cluster centers to assign the weights
++                threshold: threshold for quantizing weights
++                per_channel: whether to use per-channel quantization
++                channel_axis: Axis of input to apply per-channel quantization on
++                multiplier_n_bits: Number of bits that determines the quantization range
++                eps: Small value for numerical stability in division
++            """
++
++            super(WeightsLUTSymmetricInferableQuantizer, self).__init__(threshold=threshold,
++                                                                        num_bits=num_bits,
++                                                                        cluster_centers=cluster_centers,
++                                                                        signed=True,
++                                                                        multiplier_n_bits=multiplier_n_bits,
++                                                                        eps=eps)
++
++            if per_channel:
++                assert channel_axis is not None, f'Channel axis is missing in per channel quantization'
++                assert len(
++                    threshold) >= 1, f'In per-channel quantization threshold should be of length >= 1 but is ' \
++                                     f'{len(threshold)}'
++            else:
++                assert len(
++                    threshold) == 1, f'In per-tensor quantization threshold should be of length 1 but is ' \
++                                     f'{len(threshold)}'
++
++            self.per_channel = per_channel
++            self.channel_axis = channel_axis
++
++            self.threshold = to_torch_tensor(self.threshold).to(get_working_device())
++            self.cluster_centers = to_torch_tensor(self.cluster_centers).to(get_working_device())
++
++        def __call__(self, inputs: torch.Tensor) -> torch.Tensor:
++            """
++            Quantize the given inputs using the quantizer parameters.
++
++            Args:
++                inputs: input tensor to quantize
++
++            Returns:
++                quantized tensor.
++            """
++            inputs.requires_grad = False
++            return lut_quantizer(inputs, cluster_centers=self.cluster_centers, signed=True,
++                                 threshold=self.threshold, multiplier_n_bits=self.multiplier_n_bits, eps=self.eps)
++
++
++else:
++    class WeightsLUTSymmetricInferableQuantizer:  # pragma: no cover
++        def __init__(self, *args, **kwargs):
++            raise Exception('Installing torch is mandatory '
++                            'when using WeightsLUTSymmetricInferableQuantizer. '
++                            'Could not find torch package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/gptq_training.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/symmetric_ste.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,223 +1,204 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-from typing import Callable, List, Tuple
+-
+-import numpy as np
+-from tqdm import tqdm
+-import copy
+ import torch
+-from model_compression_toolkit.core.common.logger import Logger
+-from model_compression_toolkit.gptq.common.gptq_training import GPTQTrainer
+-from model_compression_toolkit.gptq.common.gptq_config import GradientPTQConfigV2
+-from model_compression_toolkit.core.common import Graph
+-from model_compression_toolkit.core.common.framework_info import FrameworkInfo
+-from model_compression_toolkit.core.common.framework_implementation import FrameworkImplementation
+-from model_compression_toolkit.core.pytorch.constants import BIAS, KERNEL
+-from model_compression_toolkit.gptq.pytorch.gptq_model_builder import GPTQPytorchModelBuilder
+-from model_compression_toolkit.core.pytorch.utils import to_torch_tensor, set_model, torch_tensor_to_numpy
+-from model_compression_toolkit.gptq.pytorch.gptq_graph_info import get_trainable_parameters, get_weights_for_loss
+-from model_compression_toolkit.gptq.pytorch.quantizer.quantizer_wrapper import WeightQuantizerWrapper
+-
++import torch.nn as nn
++from typing import List, Dict
++import numpy as np
++from model_compression_toolkit.core.common.defaultdict import DefaultDict
+ 
+-class PytorchGPTQTrainer(GPTQTrainer):
++from model_compression_toolkit import quantizers_infrastructure as qi
++from model_compression_toolkit.core.common.target_platform import QuantizationMethod
++from model_compression_toolkit.gptq.common.gptq_config import RoundingType
++from model_compression_toolkit.gptq.pytorch.quantizer.base_pytorch_gptq_quantizer import \
++    BasePytorchGPTQTrainableQuantizer
++from model_compression_toolkit.core.pytorch.utils import to_torch_tensor, torch_tensor_to_numpy
++from model_compression_toolkit.gptq.pytorch.quantizer import quant_utils as qutils
++from model_compression_toolkit.gptq.common.gptq_constants import AUXVAR, PTQ_THRESHOLD, MAX_LSB_CHANGE
++from model_compression_toolkit.core.common.constants import THRESHOLD
++from model_compression_toolkit.quantizers_infrastructure import TrainableQuantizerWeightsConfig
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import \
++    mark_quantizer
++
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.quant_utils import \
++    get_threshold_reshape_shape
++
++
++def pertubation_symmetric_quantizer(input_tensor: torch.Tensor,
++                                    auxvar_tensor: nn.Parameter,
++                                    max_tensor: torch.Tensor,
++                                    num_bits: int,
++                                    signed: bool,
++                                    power_of_two: bool,
++                                    max_lsbs_change: int = MAX_LSB_CHANGE) -> nn.Parameter:
+     """
+-    Pytorch GPTQ training class for fine-tuning a quantized model
++    Quantize a tensor symmetrically with maximum LSBs shift.
++
++    Args:
++        input_tensor: Tensor to quantize. values of this tensor are not changed during gptq.
++        auxvar_tensor: Tensor that manifests the bit shift the weight due to gptq
++        max_tensor: Tensor with max values to compute the threshold.
++        num_bits: Num of bits to use.
++        signed: Signedness of the quantization range.
++        power_of_two: Whether the threshold should be constrained or not.
++        max_lsbs_change: maximum number of LSBs that the auxvar is allowed to change
++
++    Returns:
++        A quantized tensor.
+     """
+ 
+-    def __init__(self,
+-                 graph_float: Graph,
+-                 graph_quant: Graph,
+-                 gptq_config: GradientPTQConfigV2,
+-                 fw_impl: FrameworkImplementation,
+-                 fw_info: FrameworkInfo,
+-                 representative_data_gen: Callable):
+-        """
+-        Build two models from a graph: A teacher network (float model) and a student network (quantized model).
+-        Use the dataset generator to pass images through the teacher and student networks to get intermediate
+-        layers outputs. Use the outputs to compute the observed loss and to back-propagate the error
+-        in the student network, to minimize it in the next similar steps.
+-        All parameters (such as number of iterations, optimizer, etc.) are in GradientPTQConfig.
+-        Args:
+-            graph_float: Graph to build a float networks from.
+-            graph_quant: Graph to build a quantized networks from.
+-            gptq_config: GradientPTQConfigV2 with parameters about the tuning process.
+-            fw_impl: FrameworkImplementation object with a specific framework methods implementation.
+-            fw_info: Framework information
+-            representative_data_gen: Dataset to use for inputs of the models.
+-        """
+-        super().__init__(graph_float, graph_quant, gptq_config, fw_impl, fw_info, representative_data_gen)
+-        self.loss_list = []
+-        self.input_scale = 1
+-        if self.float_user_info.input_scale != self.gptq_user_info.input_scale:
+-            Logger.error("Input scale mismatch between float and GPTQ networks")  # pragma: no cover
+-        else:
+-            self.input_scale = self.gptq_user_info.input_scale
++    if power_of_two:
++        max_tensor = qutils.power_of_two_max(max_tensor)
++    delta = qutils.calculate_delta(max_tensor, num_bits, signed)
++    delta = to_torch_tensor(delta)
++    max_tensor_change = delta * max_lsbs_change
++
++    min_int = -int(signed) * (2 ** (num_bits - int(signed)))
++    max_int = (2 ** (num_bits - int(signed))) - 1
+ 
+-        trainable_weights, trainable_bias, trainable_threshold, trainable_temperature = get_trainable_parameters(
+-            self.fxp_model,
+-            add_bias=self.gptq_config.train_bias,
+-            quantization_parameters_learning=self.gptq_config.quantization_parameters_learning)
++    tensor_clipped = qutils.ste_clip(auxvar_tensor, min_val=-max_tensor_change, max_val=max_tensor_change) / delta
++    input_tensor_int = torch.round(input_tensor / delta).detach()
+ 
+-        self.flp_weights_list, self.fxp_weights_list = get_weights_for_loss(self.fxp_model)
+-        if not (len(self.compare_points) == len(trainable_weights) == len(self.flp_weights_list) == len(
+-                self.fxp_weights_list)):
+-            Logger.error(
+-                "GPTQ: Mismatch between number of compare points, number of layers with trainable weights " +
+-                "and number of float and quantized weights for loss")
++    tensor_q = qutils.ste_round(qutils.ste_round(input_tensor_int + tensor_clipped))
+ 
+-        self.optimizer_with_param = self.get_optimizer_with_param(trainable_weights,
+-                                                                  trainable_bias,
+-                                                                  trainable_threshold)
++    return delta * qutils.ste_clip(tensor_q, max_val=max_int, min_val=min_int)
+ 
+-        self.weights_for_average_loss = to_torch_tensor(self.compute_jacobian_based_weights(representative_data_gen))
+ 
+-    def build_gptq_model(self):
++@mark_quantizer(quantization_target=qi.QuantizationTarget.Weights,
++                quantization_method=[QuantizationMethod.POWER_OF_TWO, QuantizationMethod.SYMMETRIC],
++                quantizer_type=RoundingType.STE)
++class STEWeightGPTQQuantizer(BasePytorchGPTQTrainableQuantizer):
++    """
++    Trainable symmetric quantizer to quantize a layer weights.
++    """
++
++    def __init__(self,
++                 quantization_config: TrainableQuantizerWeightsConfig,
++                 max_lsbs_change_map: dict = DefaultDict({}, lambda: 1)):
+         """
+-        Build the GPTQ model with QuantizationWrappers
+-        Returns:
+-            Quantized graph for GPTQ fine-tuning, GPTQ graph user info
++        Construct a Pytorch model that utilize a fake weight quantizer of STE (Straight Through Estimator) for symmetric quantizer.
++
++        Args:
++            quantization_config: Trainable weights quantizer config.
+         """
+-        return GPTQPytorchModelBuilder(self.graph_quant,
+-                                       self.gptq_config,
+-                                       append2output=self.compare_points,
+-                                       return_float_outputs=True).build_model()
+-
+-    def train(self, representative_data_gen: Callable):
+-        """
+-          GPTQ Training using pytorch framework
+-          Args:
+-              representative_data_gen: Dataset generator to get images.
+-          Returns:
+-              Graph after GPTQ training
+-          """
+-        # Set Optimizers
+-        for (optimizer, params) in self.optimizer_with_param:
+-            optimizer.param_groups.clear()
+-            optimizer.add_param_group({'params': params})
+-
+-        # Set models mode
+-        set_model(self.float_model, False)
+-        set_model(self.fxp_model, True)
+-        self._set_requires_grad()
+-
+-        # ----------------------------------------------
+-        # Training loop
+-        # ----------------------------------------------
+-        self.micro_training_loop(representative_data_gen, self.gptq_config.n_epochs)
+-
+-    def compute_gradients(self,
+-                          y_float: List[torch.Tensor],
+-                          input_tensors: List[torch.Tensor]) -> Tuple[torch.Tensor, List[np.ndarray]]:
++        super().__init__(quantization_config)
++        self.num_bits = quantization_config.weights_n_bits
++        self.per_channel = quantization_config.weights_per_channel_threshold
++
++        threshold_values = quantization_config.weights_quantization_params[THRESHOLD]
++        self.threshold_shape = np.asarray(threshold_values).shape
++        self.threshold_values = np.reshape(np.asarray(threshold_values), [-1]) if self.per_channel else float(
++            threshold_values)
++
++        self.quantization_axis = quantization_config.weights_channels_axis
++        self.power_of_two = quantization_config.weights_quantization_method == QuantizationMethod.POWER_OF_TWO
++        self.max_lsbs_change = max_lsbs_change_map.get(self.num_bits)
++        self.quantizer_parameters = {}
++
++
++    def initialize_quantization(self,
++                                tensor_shape: torch.Size,
++                                name: str,
++                                layer: qi.PytorchQuantizationWrapper) -> Dict[str, nn.Parameter]:
+         """
+-        Get outputs from both teacher and student networks. Compute the observed error,
+-        and use it to compute the gradients and applying them to the student weights.
++        Return a dictionary of quantizer parameters and their names.
++
+         Args:
+-            y_float: A list of reference tensor from the floating point network.
+-            input_tensors: A list of Input tensors to pass through the networks.
++            tensor_shape: tensor shape of the quantized tensor.
++            name: Tensor name.
++            layer: Layer to quantize.
++
+         Returns:
+-            Loss and gradients.
++            Dictionary of parameters names to the variables.
+         """
+ 
+-        # Forward-pass
+-        y_fxp = self.fxp_model(input_tensors)
++        layer.register_parameter(f"{name}_{PTQ_THRESHOLD}",
++                                 nn.Parameter(torch.tensor(self.threshold_values, requires_grad=False)
++                                              if not self.per_channel
++                                              else to_torch_tensor(self.threshold_values),requires_grad=False))
++        layer.register_parameter(f"{name}_{AUXVAR}", nn.Parameter(to_torch_tensor(torch.zeros(self.threshold_shape)),
++                                                                  requires_grad=True))
++
++        # save the quantizer added parameters for later calculations
++        self.quantizer_parameters = {PTQ_THRESHOLD: layer.get_parameter(f"{name}_{PTQ_THRESHOLD}"),
++                                     AUXVAR: layer.get_parameter(f"{name}_{AUXVAR}")}
+ 
+-        # Loss
+-        loss_value = self.gptq_config.loss(y_fxp,
+-                                           y_float,
+-                                           self.fxp_weights_list,
+-                                           self.flp_weights_list,
+-                                           self.compare_points_mean,
+-                                           self.compare_points_std,
+-                                           self.weights_for_average_loss)
++        return self.quantizer_parameters
+ 
+-        # Back-pass
+-        loss_value.backward()
+ 
+-        # Get gradients
+-        grads = []
+-        for param in self.fxp_model.parameters():
+-            if param.requires_grad and param.grad is not None:
+-                grads.append(torch_tensor_to_numpy(param.grad))
++    def get_aux_variable(self) -> List[torch.Tensor]:
++        """
++        This function return a list with the quantizer's quantization auxiliary variables.
+ 
+-        return loss_value, grads
++        Returns: A list with the quantization auxiliary variables.
++        """
++        return [self.quantizer_parameters.get(AUXVAR)]
+ 
+-    def micro_training_loop(self,
+-                            data_function: Callable,
+-                            n_epochs: int):
++    def get_quantization_variable(self) -> List[torch.Tensor]:
+         """
+-        This function run a micro training loop on given set of parameters.
+-        Args:
+-            data_function: A callable function that give a batch of samples.
+-            n_epochs: Number of update iterations of representative dataset.
++        This function return a list with the quantizer's quantization parameters variables.
++
++        Returns: A list with the quantization parameters.
+         """
+-        for _ in tqdm(range(n_epochs)):
+-            for data in tqdm(data_function()):
+-                input_data = [d * self.input_scale for d in data]
+-                input_tensor = to_torch_tensor(input_data)
+-                y_float = self.float_model(input_tensor)  # running float model
+-                loss_value, grads = self.compute_gradients(y_float, input_tensor)
+-                # Run one step of gradient descent by updating the value of the variables to minimize the loss.
+-                for (optimizer, _) in self.optimizer_with_param:
+-                    optimizer.step()
+-                    optimizer.zero_grad()
+-                if self.gptq_config.log_function is not None:
+-                    self.gptq_config.log_function(loss_value.item(),
+-                                                  torch_tensor_to_numpy(grads),
+-                                                  torch_tensor_to_numpy(self.optimizer_with_param[0][-1]))
+-                self.loss_list.append(loss_value.item())
+-                Logger.debug(f'last loss value: {self.loss_list[-1]}')
++        return [self.quantizer_parameters.get(PTQ_THRESHOLD)]
+ 
+-    def update_graph(self) -> Graph:
++    def get_quant_config(self) -> Dict[str, np.ndarray]:
+         """
+-        Update a graph using GPTQ after minimizing the loss between the float model's output
+-        and the quantized model's outputs.
++        Returns the config used to edit NodeQuantizationConfig after GPTQ retraining
++
+         Returns:
+-            Updated graph after GPTQ.
++            A dictionary of attributes the quantize_config retraining has changed during GPTQ retraining.
++            Keys must match NodeQuantizationConfig attributes
++
++        """
++        old_threshold = self.quantizer_parameters[PTQ_THRESHOLD]
++        return {THRESHOLD: torch_tensor_to_numpy(old_threshold).reshape(self.threshold_shape)}
++
++    def __call__(self,
++                 inputs: nn.Parameter,
++                 training: bool) -> nn.Parameter:
+         """
+-        graph_quant = copy.copy(self.graph_quant)
++        Quantize a tensor.
++
++        Args:
++            inputs: Input tensor to quantize.
++            training: whether in training mode or not
+ 
+-        # Update graph after training
+-        for name, layer in self.fxp_model.named_modules():
+-            if isinstance(layer, WeightQuantizerWrapper):
+-                node = self.graph_quant.find_node_by_name(name)
+-                if len(node) != 1:
+-                    Logger.error(f"Can't update GPTQ graph due to missing layer named: {name}")
+-                node = node[0]
+-                # Weight
+-                node.set_weights_by_keys(KERNEL, self.fw_impl.to_numpy(layer.weight_quantizer(layer.float_weight, training=False)))
+-                # Weight quantization params
+-                if self.gptq_config.quantization_parameters_learning:
+-                    node.final_weights_quantization_cfg.set_weights_quantization_param(layer.weight_quantizer.get_weight_quant_params())
+-                # Bias
+-                if self.gptq_config.train_bias and hasattr(layer.op, BIAS):
+-                    node.set_weights_by_keys(BIAS, self.fw_impl.to_numpy(getattr(layer.op, BIAS)))
+-
+-
+-        return graph_quant
+-
+-    def _set_requires_grad(self):
+-        """
+-        Set require_grad flag for trainable parameters for GPTQ training
+-        """
+-        # Float model: freeze all the parameters in the network
+-        for param in self.float_model.parameters():
+-            param.requires_grad = False
+-
+-        # Fxp model: unfreeze bias trainable parameters
+-        for layer in self.fxp_model.modules():
+-            if isinstance(layer, WeightQuantizerWrapper):
+-                if hasattr(layer.op, BIAS):
+-                    bias = getattr(layer.op, BIAS)
+-                    bias.requires_grad = self.gptq_config.train_bias
++        Returns:
++            quantized tensor
++        """
++        auxvar = self.quantizer_parameters[AUXVAR]
++        ptq_threshold_tensor = self.quantizer_parameters[PTQ_THRESHOLD]
++
++        if self.per_channel:
++            reshape_shape = get_threshold_reshape_shape(inputs.shape,
++                                                        quant_axis=self.quantization_axis,
++                                                        quant_axis_dim=-1)
++            ptq_threshold_tensor = torch.reshape(ptq_threshold_tensor, reshape_shape)
++
++            q_tensor = pertubation_symmetric_quantizer(inputs,
++                                                       auxvar,
++                                                       ptq_threshold_tensor,
++                                                       self.num_bits,
++                                                       signed=True,
++                                                       power_of_two=self.power_of_two,
++                                                       max_lsbs_change=self.max_lsbs_change)
++            return q_tensor
++        else:
++            return pertubation_symmetric_quantizer(inputs,
++                                                   auxvar,
++                                                   ptq_threshold_tensor,
++                                                   self.num_bits,
++                                                   signed=True,
++                                                   power_of_two=self.power_of_two)
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantization_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantization_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/gptq_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/common/qat_config.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,71 +1,68 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-import torch
+-import torch.nn as nn
+-from typing import List, Union, Dict, Any
+-from abc import abstractmethod
+-from model_compression_toolkit.core.common import Logger
+ 
+-
+-class BaseWeightQuantizer(nn.Module):
+-
+-    def __init__(self):
+-        """
+-        Construct a Base Pytorch model that utilizes a fake weight quantizer
+-        """
+-        super().__init__()
+-        self.trainable_params = dict()
+-
+-    def get_trainable_params(self) -> List:
+-        """
+-        A function to get a list of trainable parameters of the quantizer for GPTQ retraining
+-        Returns:
+-            A list of trainable tensors
+-        """
+-        return [value for value in self.trainable_params.values() if value is not None]
+-
+-    @abstractmethod
+-    def get_aux_variable(self) -> torch.Tensor:
+-        """
+-        Returns auxiliary trainable variables
++from typing import Dict
++from enum import Enum
++from model_compression_toolkit.core import common
++from model_compression_toolkit.core.common.framework_info import FrameworkInfo
++
++def _is_qat_applicable(node: common.BaseNode,
++                       fw_info: FrameworkInfo) -> bool:
++    """
++    A function for deciding if a layer should be fine-tuned during QAT
++    Args:
++        node (BaseNode): Node for quantization decision
++        fw_info (FrameworkInfo): Pytorch quantization information
++
++    Returns:
++        A boolean whether the layer is to be wrapped with a QuantizeWrapper
++    """
++
++    if node.is_weights_quantization_enabled() and not fw_info.is_kernel_op(node.type):
++        common.Logger.error("QAT Error: Quantizing a node without a kernel isn't supported")
++    return node.is_weights_quantization_enabled() or node.is_activation_quantization_enabled()
++
++
++class TrainingMethod(Enum):
++    """
++    An enum for selecting a QAT training method
++
++    STE - Standard straight-through estimator. Includes PowerOfTwo, symmetric & uniform quantizers
++    """
++    STE = "STE",
++
++
++class QATConfig:
++    """
++    QAT configuration class.
++    """
++
++    def __init__(self, weight_training_method: TrainingMethod = TrainingMethod.STE,
++                 activation_training_method: TrainingMethod = TrainingMethod.STE,
++                 weight_quantizer_params_override: Dict = None,
++                 activation_quantizer_params_override: Dict = None,
++                 ):
+         """
+-        raise Logger.error(f'{self.__class__.__name__} have to implement the this abstract function.')
+ 
+-    @abstractmethod
+-    def get_quantization_variable(self) -> Union[torch.Tensor, List]:
+-        """
+-        Returns quantization trainable variables
+-        """
+-        raise Logger.error(f'{self.__class__.__name__} have to implement the this abstract function.')
+-
+-
+-    @abstractmethod
+-    def get_weight_quantization_params(self) -> Dict[str, Any]:
+-        """
+-        Returns weight quantization dictionary params
+-        """
+-        raise Logger.error(f'{self.__class__.__name__} have to implement the this abstract function.')
+-
+-    @abstractmethod
+-    def forward(self, w:nn.parameter, training:bool = True) -> torch.Tensor:
+-        """
+-        Forward-Pass
+         Args:
+-            w: weights to quantize.
+-            training: whether in training mode or not
+-        Returns:
+-            quantized weights
+-        """
+-        raise Logger.error(f'{self.__class__.__name__} have to implement the this abstract function.')
++            weight_training_method (TrainingMethod): Training method for weight quantizers
++            activation_training_method (TrainingMethod): Training method for activation quantizers:
++            weight_quantizer_params_override: A dictionary of parameters to override in weight quantization quantizer instantiation. Defaults to None (no parameters)
++            activation_quantizer_params_override: A dictionary of parameters to override in activation quantization quantizer instantiation. Defaults to None (no parameters)
++        """
++        self.weight_training_method = weight_training_method
++        self.activation_training_method = activation_training_method
++        self.weight_quantizer_params_override = {} if weight_quantizer_params_override is None else weight_quantizer_params_override
++        self.activation_quantizer_params_override = {} if activation_quantizer_params_override is None else activation_quantizer_params_override
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/quant_utils.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/quantizer_utils.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -8,42 +8,16 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-from typing import Union, Tuple
++from typing import Tuple
+ import torch
+-from torch.nn.functional import softmax, log_softmax, one_hot
+-from model_compression_toolkit.core.common.constants import MIN_THRESHOLD
+-from model_compression_toolkit.core.pytorch.utils import to_torch_tensor
+-
+-
+-def power_of_two_max(max_tensor: torch.Tensor) -> torch.Tensor:
+-    """
+-    Compute the power of two threshold for a tensor.
+-    """
+-    return torch.pow(2, ste_ceil(torch.log2(torch.clip(max_tensor, min=MIN_THRESHOLD, max=torch.inf))))
+-
+-
+-def calculate_delta(max_tensor: torch.Tensor,
+-                    num_bits: int,
+-                    signed: bool) -> torch.Tensor:
+-    """
+-    Compute the step size for the quantization.
+-    """
+-    return max_tensor / (2 ** (num_bits - int(signed)))
+-
+-
+-def ste_ceil(x: torch.Tensor) -> torch.Tensor:
+-    """
+-    Return the ceil values of a tensor.
+-    """
+-    return (torch.ceil(x) - x).detach() + x
+ 
+ 
+ def ste_round(x: torch.Tensor) -> torch.Tensor:
+     """
+     Calculate the rounded values of a tensor
+     Args:
+         x: input variable
+@@ -62,40 +36,14 @@
+         max_val: maximum value for clipping
+     Returns:
+         clipped variable
+     """
+     return (torch.clip(x, min=min_val, max=max_val) - x).detach() + x
+ 
+ 
+-def symmetric_quantizer(input_tensor: torch.Tensor,
+-                        max_tensor: torch.Tensor,
+-                        num_bits: int,
+-                        signed: bool,
+-                        power_of_two: bool = False) -> torch.Tensor:
+-    """
+-    Quantize a tensor symmetrically.
+-    Args:
+-        input_tensor: Tensor to quantize. values of this tensor are not changed during gptq.
+-        max_tensor: Tensor with max values to compute the threshold.
+-        num_bits: Num of bits to use.
+-        signed: Signedness of the quantization range.
+-        power_of_two: Whether the threshold should be constrained or not.
+-    Returns:
+-        A quantized tensor.
+-    """
+-
+-    if power_of_two:
+-        max_tensor = power_of_two_max(max_tensor)
+-    delta_tensor = calculate_delta(max_tensor, num_bits, signed)
+-    tensor_q = ste_round(input_tensor / delta_tensor)
+-    min_int = -int(signed) * (2 ** (num_bits - int(signed)))
+-    max_int = (2 ** (num_bits - int(signed))) - 1
+-    return delta_tensor * ste_clip(tensor_q, min_val=min_int, max_val=max_int)
+-
+-
+ def fix_range_to_include_zero(range_min: torch.Tensor,
+                               range_max: torch.Tensor,
+                               n_bits: int) -> Tuple[torch.Tensor, torch.Tensor]:
+     """
+     Adjusting the quantization range to include representation of 0.0 in the quantization grid.
+     If quantization per-channel, then range_min and range_max should be tensors in the specific shape that allows
+     quantization along the channel_axis.
+@@ -117,36 +65,72 @@
+     max_range_adj = range_max - range_min + min_range_adj
+ 
+     min_range_adj = min_range_adj * mid_range + max_negative * range_min
+     max_range_adj = max_range_adj * mid_range + min_positive * range_max
+     return min_range_adj, max_range_adj
+ 
+ 
++def symmetric_quantizer(tensor_data: torch.Tensor,
++                        threshold: torch.Tensor,
++                        n_bits: int,
++                        sign: bool = False) -> torch.Tensor:
++    """
++    Quantize a tensor according to the number of bits and threshold.
++    Symmetric quantization.
++    Args:
++        tensor_data: Tensor values to quantize.
++        threshold: threshold for quantization.
++        n_bits: Number of bits to quantize the tensor.
++        sign: sign of tensor_data
++    Returns:
++        Quantized data.
++    """
++
++    # Compute the step size of quantized values.
++    n_pos = 2 ** (n_bits - int(sign))
++    delta_tensor = threshold / n_pos
++
++    # Compute min/max int value
++    min_val = -int(sign) * n_pos
++    max_val = n_pos - 1
++
++    # Apply rounding
++    input_tensor_int = ste_round(tensor_data / delta_tensor)
++
++    # Clip data in range
++    clipped_tensor = ste_clip(input_tensor_int, min_val=min_val, max_val=max_val)
++
++    # Quantize the data between -threshold/threshold
++    q = delta_tensor * clipped_tensor
++    return q
++
++
+ def uniform_quantizer(tensor_data: torch.Tensor,
+-                       range_min: torch.Tensor,
+-                       range_max: torch.Tensor,
+-                       n_bits: int) -> torch.Tensor:
++                      range_min: torch.Tensor,
++                      range_max: torch.Tensor,
++                      n_bits: int) -> torch.Tensor:
+     """
+     Quantize a tensor according to given range (min, max) and number of bits.
++    Uniform quantization.
+     Args:
+         tensor_data: Tensor values to quantize.
+         range_min: minimum bound of the range for quantization (or array of min values per channel).
+         range_max: maximum bound of the range for quantization (or array of max values per channel).
+         n_bits: Number of bits to quantize the tensor.
+     Returns:
+         Quantized data.
+     """
+-    # adjusts the quantization rage so the quantization grid include zero.
++    # adjusts the quantization range so the quantization grid includes zero.
+     a, b = fix_range_to_include_zero(range_min, range_max, n_bits)
+ 
+     # Compute the step size of quantized values.
+     delta_tensor = (b - a) / (2 ** n_bits - 1)
+ 
+     # Apply rounding
+     input_tensor_int = ste_round((tensor_data - a) / delta_tensor)
+ 
+     # Clip data in range
+     clipped_tensor = ste_clip(input_tensor_int, min_val=0, max_val=2 ** n_bits - 1)
+ 
+     # Quantize the data between min/max of quantization range.
+     q = delta_tensor * clipped_tensor + a
+-    return q
++    return q
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/quantizer_wrapper.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/quantization_builder.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,89 +1,75 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-import torch
+-import torch.nn as nn
+-from model_compression_toolkit.core.common import BaseNode, Logger
+-from model_compression_toolkit.gptq.common.gptq_config import GradientPTQConfig, RoundingType
+-from model_compression_toolkit.gptq.pytorch.quantizer.gptq_quantizer import BaseWeightQuantizer
+-from model_compression_toolkit.gptq.pytorch.quantizer.ste_rounding.ste_weights_quantizer import STEWeightQuantizer
+-from model_compression_toolkit.core.pytorch.back2framework.instance_builder import node_builder
++from typing import List, Dict, Tuple
++
++from model_compression_toolkit import GradientPTQConfigV2
++from model_compression_toolkit.core import common
+ from model_compression_toolkit.core.pytorch.constants import KERNEL
+-from model_compression_toolkit.core.pytorch.utils import to_torch_tensor
+-from model_compression_toolkit.core.common.target_platform.op_quantization_config import QuantizationMethod
++from model_compression_toolkit.exporter.model_wrapper.pytorch.builder.node_to_quantizer import \
++    get_activation_inferable_quantizer_kwargs
++from model_compression_toolkit.gptq.pytorch.quantizer.base_pytorch_gptq_quantizer import \
++    BasePytorchGPTQTrainableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.get_quantizers import \
++    get_inferable_quantizer_class
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers import \
++    BasePyTorchInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.get_quantizer_config import \
++    get_trainable_quantizer_weights_config
++from model_compression_toolkit.qat.pytorch.quantizer.base_pytorch_qat_quantizer import BasePytorchQATTrainableQuantizer
++from model_compression_toolkit.quantizers_infrastructure import QuantizationTarget
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.get_quantizers import \
++    get_trainable_quantizer_class
++
++
++def quantization_builder(n: common.BaseNode,
++                         gptq_config: GradientPTQConfigV2,
++                         ) -> Tuple[Dict[str, BasePytorchQATTrainableQuantizer],
++                                    List[BasePyTorchInferableQuantizer]]:
++    """
++    Build quantizers for a node according to its quantization configuration and
++    a global NoOpQuantizeConfig object.
+ 
++    Args:
++        n: Node to build its QuantizeConfig.
++        gptq_config (GradientPTQConfigV2): GradientPTQConfigV2 configuration.
+ 
+-class WeightQuantizerWrapper(nn.Module):
++    Returns:
++        A dictionary which maps the weights kernel attribute to a quantizer for GPTQ training.
++        Note that we return a dictionary although there is only a single attribute that is being mapped to a quantizer,
++        to be compatible with the quantization infrastructure template.
++    """
+ 
+-    def __init__(self, node: BaseNode, gptq_config: GradientPTQConfig, weight_quantizer: BaseWeightQuantizer):
+-        """
+-        Construct a Pytorch model that constitutes as a wrapper for a Pytorch layer, built from a given graph node.
+-        Args:
+-            node: Node to build its Pytorch quantizer wrapper.
+-            gptq_config: GradientPTQConfig object with parameters about the tuning process.
+-            weight_quantizer: BaseWeightQuantizer object for gradient based weight quantizer
+-        """
+-        super().__init__()
+-
+-        # loading operation
+-        self.op = node.type(**node.framework_attr)
+-
+-        # loading the weights from the graph node (weights of the trained model)
+-        self.op.load_state_dict({k: torch.Tensor(v) for k, v in node.weights.items()}, strict=False)
+-        self.float_weight = to_torch_tensor(getattr(self.op, KERNEL)).detach()
+-
+-        # replace non-gradient needed nn.Parameter with gradient needed torch.tensor
+-        delattr(self.op, KERNEL)
+-        setattr(self.op, KERNEL, self.float_weight)
+-        setattr(getattr(self.op, KERNEL), 'requires_grad', True)
+-
+-        # quantizer
+-        self.weight_quantizer = weight_quantizer(node.final_weights_quantization_cfg, gptq_config, self.float_weight)
+-
+-    def forward(self, x: torch.Tensor) -> torch.Tensor:
+-        """
+-        Weight fake quantizer wrapper
+-        Args:
+-            x: input to layer.
+-        Returns:
+-            Output of layer after using operation with fake quantized weights
+-        """
+-        # Run weight quantizer
+-        setattr(self.op, KERNEL, self.weight_quantizer(self.float_weight))
+-        # Do computation
+-        return self.op(x)
++    weights_quantizers = {}
++    if n.is_weights_quantization_enabled():
++        quant_method = n.final_weights_quantization_cfg.weights_quantization_method
++        quantizer_class = get_trainable_quantizer_class(quant_target=QuantizationTarget.Weights,
++                                                        quantizer_type=gptq_config.rounding_type,
++                                                        quant_method=quant_method,
++                                                        quantizer_base_class=BasePytorchGPTQTrainableQuantizer)
++        weights_quantizers.update({KERNEL: quantizer_class(get_trainable_quantizer_weights_config(n),
++                                                           **gptq_config.get_extended_quantizer_parametes())})
++    activation_quantizers = []
++    if n.is_activation_quantization_enabled():
++        quant_method = n.final_activation_quantization_cfg.activation_quantization_method
++
++        quantizer_class = get_inferable_quantizer_class(quant_target=QuantizationTarget.Activation,
++                                                        quant_method=quant_method,
++                                                        quantizer_base_class=BasePyTorchInferableQuantizer)
+ 
++        kwargs = get_activation_inferable_quantizer_kwargs(n)
+ 
+-def quantizer_wrapper(node: BaseNode, gptq_config: GradientPTQConfig) -> nn.Module:
+-    """
+-    Construct a Pytorch model that constitutes as a wrapper for a Pytorch layer, built from a given graph node.
+-    Args:
+-        node: Node to build its Pytorch layer.
+-        gptq_config: GradientPTQConfig with parameters about the tuning process.
+-    """
+-    if node.is_weights_quantization_enabled():
+-        quantization_method = node.final_weights_quantization_cfg.weights_quantization_method
+-        if quantization_method in [QuantizationMethod.SYMMETRIC, QuantizationMethod.POWER_OF_TWO]:
+-            # STE quantizer
+-            # ---------------
+-            if gptq_config.rounding_type == RoundingType.STE:
+-                node_instance = WeightQuantizerWrapper(node, gptq_config, STEWeightQuantizer)
+-
+-        else:
+-            Logger.error(f"For quantization method {quantization_method}, GPTQ Rounding type {gptq_config.rounding_type} is not supported")
+-    else:
+-        # No quantization
+-        node_instance = node_builder(node)
++        activation_quantizers.append(quantizer_class(**kwargs))
+ 
+-    return node_instance
++    return weights_quantizers, activation_quantizers
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/keras/__init__.py`
+
+ * *Ordering differences only*
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -7,8 +7,8 @@
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+-# ==============================================================================
++# ==============================================================================
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/pytorch/quantizer/ste_rounding/ste_weights_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/pytorch/quantizer/base_pytorch_gptq_quantizer.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,103 +1,112 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-import torch
+-import torch.nn as nn
+-from typing import List, Union
+-from model_compression_toolkit.gptq.common.gptq_config import GradientPTQConfig
+-from model_compression_toolkit.gptq.pytorch.quantizer.gptq_quantizer import BaseWeightQuantizer
+-from model_compression_toolkit.core.pytorch.utils import to_torch_tensor
+-from model_compression_toolkit.gptq.pytorch.quantizer.quant_utils import ste_round, ste_clip
+-from model_compression_toolkit.gptq.common.gptq_constants import AUXVAR
+-from model_compression_toolkit.core.common.quantization.node_quantization_config import NodeWeightsQuantizationConfig
+-from model_compression_toolkit.core.common.constants import THRESHOLD
+-
+-
+-class STEWeightQuantizer(BaseWeightQuantizer):
+-    """
+-    Class that implements a quantizer with trainable parameters to be used for GPTQ training.
+-    """
+-
+-    def __init__(self,
+-                 weights_quantization_cfg: NodeWeightsQuantizationConfig,
+-                 gptq_config: GradientPTQConfig,
+-                 weight: torch.nn.Parameter):
+-        """
+-        Construct a Pytorch model that utilize a fake weight quantizer of STE (Straight Through Estimator) for symmetric quantizer.
+-        Args:
+-            weights_quantization_cfg: Configuration of weight quantization
+-            gptq_config: GradientPTQConfig object with parameters about the tuning process.
+-            weight: weight for auxiliary tensor creation.
+-        """
+-        super().__init__()
++from abc import abstractmethod
++from typing import Union, Dict, List
+ 
+-        self.signed = True
+-        self.num_bits = weights_quantization_cfg.weights_n_bits
+-        self.min_int = -int(self.signed) * (2 ** (self.num_bits - int(self.signed)))
+-        self.max_int = (2 ** (self.num_bits - int(self.signed))) - 1
+-        self.weight_shape = weight.shape
+-        self.threshold_values = weights_quantization_cfg.weights_quantization_params.get(THRESHOLD)
+-        self.delta_tensor = self.threshold_values / (2 ** (self.num_bits-int(self.signed)))
+-        self.max_delta_change = gptq_config.lsb_change_per_bit_width.get(self.num_bits)
+-
+-        # Set trainable tensors
+-        self.set_trainable_params()
+-
+-        # Create tensors
+-        self.delta_tensor = to_torch_tensor(self.delta_tensor)
+-        self.max_tensor_change = self.delta_tensor * self.max_delta_change
++from model_compression_toolkit.core.common.logger import Logger
++from model_compression_toolkit.core.common.constants import FOUND_TORCH
++from model_compression_toolkit.gptq.common.gptq_constants import WEIGHTS_QUANTIZATION_PARAMS
+ 
+-    def set_trainable_params(self):
+-        """
+-        A function to set a list of trainable parameters of the quantizer for GPTQ retraining
+-        """
+-        self.aux_tensor = nn.Parameter(to_torch_tensor(torch.zeros(self.weight_shape)), requires_grad=True)
+-        self.trainable_params.update({AUXVAR: self.aux_tensor})
++from model_compression_toolkit.quantizers_infrastructure import TrainableQuantizerWeightsConfig, \
++    TrainableQuantizerActivationConfig
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.base_trainable_quantizer import \
++    BaseTrainableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.pytorch.base_pytorch_quantizer import \
++    BasePytorchTrainableQuantizer
+ 
+-    def get_aux_variable(self) -> torch.Tensor:
+-        """
+-        Returns auxiliary trainable variables
+-        """
+-        return self.trainable_params.get(AUXVAR)
++if FOUND_TORCH:
++    from torch import Tensor
++    from model_compression_toolkit.quantizers_infrastructure import PytorchQuantizationWrapper
+ 
+-    def get_quantization_variable(self) -> Union[torch.Tensor, List]:
++    class BasePytorchGPTQTrainableQuantizer(BasePytorchTrainableQuantizer):
+         """
+-        Returns quantization trainable variables
++        A base class for trainable Pytorch quantizer for GPTQ.
+         """
+-        return []
+ 
+-    def get_weight_quantization_params(self) -> dict:
+-        """
+-        Returns weight quantization dictionary params
+-        """
+-        return {THRESHOLD: self.threshold_values}
++        def __init__(self,
++                     quantization_config: Union[TrainableQuantizerWeightsConfig, TrainableQuantizerActivationConfig]):
++            """
++            Initializes BasePytorchGPTQTrainableQuantizer object.
+ 
+-    def forward(self, w: nn.Parameter, training: bool = True) -> nn.Parameter:
+-        """
+-        Weight fake quantizer
+-        Args:
+-            w: weights to quantize.
+-            training: whether in training mode or not
+-        Returns:
+-            quantized weights
+-        """
+-        v0 = ste_clip(self.aux_tensor, min_val=-self.max_tensor_change, max_val=self.max_tensor_change)
+-        v1 = v0 / self.delta_tensor
+-        w0 = torch.round(w / self.delta_tensor).detach()
+-        w1 = w0 + v1
+-        w2 = ste_round(w1)
+-        w3 = ste_clip(w2, min_val=self.min_int, max_val=self.max_int)
+-        w_q = self.delta_tensor * w3
+-        return w_q
++            Args:
++                quantization_config: quantizer config class contains all the information about a quantizer configuration.
++            """
++
++            super().__init__(quantization_config)
++
++        def update_layer_quantization_params(self, layer: PytorchQuantizationWrapper
++                                             ) -> (Dict[str, Tensor], Dict[str, Dict], Dict):
++            """
++            A Function to calculate the needed change in attributes in NodeQuantizationConfig after retraining.
++
++            Args:
++                layer: A wrapped Pytorch layer.
++
++            Returns:
++                3 dictionaries describing the change in layer's weights, weights config, activation config
++                that changed during GPTQ retraining.
++                Keys must match NodeQuantizationConfig attributes
++
++            """
++            weights = {}
++            for weight, quantizer_vars, quantizer in layer.get_weights_vars():
++                if not isinstance(quantizer, BaseTrainableQuantizer):
++                    Logger.error(f"Expecting a GPTQ trainable quantizer, "  # pragma: no cover
++                                 f"but got {type(quantizer)} which is not callable.")
++                weights.update({weight: quantizer(training=False, inputs=quantizer_vars)})
++
++            quant_config = {WEIGHTS_QUANTIZATION_PARAMS: self.get_quant_config()}
++
++            return weights, quant_config, {}
++
++        def get_aux_variable(self) -> List[Tensor]:
++            """
++            This function return a list with the quantizer's quantization auxiliary variables.
++
++            Returns: A list with the quantization auxiliary variables.
++
++            """
++
++            return []  # pragma: no cover
++
++        def get_quantization_variable(self) -> List[Tensor]:
++            """
++            This function return a list with the quantizer's quantization parameters variables.
++
++            Returns: A list with the quantization parameters.
++
++            """
++
++            return []  # pragma: no cover
++
++        @abstractmethod
++        def get_quant_config(self):
++            """
++            Returns the config used to edit NodeQuantizationConfig after GPTQ retraining.
++
++            Returns:
++                A dictionary of attributes the quantize_config retraining has changed during GPTQ retraining.
++                Keys must match NodeQuantizationConfig attributes.
++
++            """
++            raise NotImplemented(f'{self.__class__.__name__} have to implement the '  # pragma: no cover
++                                 f'quantizer\'s get_quant_config.')
+ 
++else:
++    class BasePytorchGPTQTrainableQuantizer:  # pragma: no cover
++        def __init__(self, *args, **kwargs):
++            Logger.critical('Installing Pytorch is mandatory '
++                            'when using BasePytorchGPTQTrainableQuantizer. '
++                            'Could not find torch package.')  # pragma: no cover
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/gptq/runner.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/runner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/pytorch/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/keras/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/keras/quantization_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/keras/quantization_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/pytorch/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/pytorch/quantization_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/pytorch/quantization_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/ptq/runner.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/ptq/runner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/ste_rounding/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/common/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/common/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/common/constants.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/common/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/common/qat_get_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/get_quantizers.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -8,52 +8,57 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-from typing import Any
++from typing import Union
+ 
+-from model_compression_toolkit import TrainingMethod
++from model_compression_toolkit import TrainingMethod, RoundingType
+ from model_compression_toolkit.core.common import Logger
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+ from model_compression_toolkit.quantizers_infrastructure import QuantizationTarget
+-from model_compression_toolkit.quantizers_infrastructure.common.constants import QUANTIZATION_TARGET, \
+-    QUANTIZATION_METHOD, QUANTIZER_TYPE
+-from model_compression_toolkit.quantizers_infrastructure.common.get_all_subclasses import get_all_subclasses
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.constants \
++    import QUANTIZATION_TARGET, QUANTIZATION_METHOD, QUANTIZER_TYPE
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.get_all_subclasses \
++    import get_all_subclasses
+ 
+ 
+-def get_quantizer_class(quant_target: QuantizationTarget,
+-                        quantizer_type: TrainingMethod,
+-                        quant_method: QuantizationMethod,
+-                        quantizer_base_class: type) -> type:
++def get_trainable_quantizer_class(quant_target: QuantizationTarget,
++                                  quantizer_type: Union[TrainingMethod, RoundingType],
++                                  quant_method: QuantizationMethod,
++                                  quantizer_base_class: type) -> type:
+     """
+-    Searches for a quantizer class that matches the requested QuantizationTarget and QuantizationMethod and TrainingMethod.
+-    Exactly one class should be found.
++    Searches for a trainable quantizer class that matches the requested QuantizationTarget and QuantizationMethod and
++    a task dedicated quantizer type. Exactly one class should be found.
+ 
+     Args:
+         quant_target: QuantizationTarget value which indicates what is the target for quantization to
+             use the quantizer for.
+         quantizer_type: The type of the quantizer (quantization technique).
+             This can differ, depending on the purpose the quantizer is for.
+         quant_method: A list of QuantizationMethod values to indicate all type of quantization methods that the
+             quantizer supports.
+         quantizer_base_class: A type of quantizer that the requested quantizer should inherit from.
+ 
+     Returns: A class of a quantizer that inherits from BaseKerasQATTrainableQuantizer.
+ 
+     """
+     qat_quantizer_classes = get_all_subclasses(quantizer_base_class)
+-    filtered_quantizers = list(filter(lambda q_class: getattr(q_class, QUANTIZATION_TARGET) == quant_target and
+-                                                      getattr(q_class, QUANTIZATION_METHOD) is not None and
+-                                                       quant_method in getattr(q_class, QUANTIZATION_METHOD) and
+-                                                      getattr(q_class, QUANTIZER_TYPE) == quantizer_type,
++    if len(qat_quantizer_classes) == 0:
++        Logger.error(f"No quantizers were found that inherit from {quantizer_base_class}.")  # pragma: no cover
++
++    filtered_quantizers = list(filter(lambda q_class: getattr(q_class, QUANTIZATION_TARGET, None) is not None and
++                                                      getattr(q_class, QUANTIZATION_TARGET) == quant_target and
++                                                      getattr(q_class, QUANTIZATION_METHOD, None) is not None and
++                                                       quant_method in getattr(q_class, QUANTIZATION_METHOD, []) and
++                                                      getattr(q_class, QUANTIZER_TYPE, None) == quantizer_type,
+                                       qat_quantizer_classes))
+ 
+     if len(filtered_quantizers) != 1:
+-        Logger.error(f"Found {len(filtered_quantizers)} quantizer for target {quant_target.value} "
++        Logger.error(f"Found {len(filtered_quantizers)} quantizer for target {quant_target.value} "  # pragma: no cover
+                      f"that matches the requested quantization method {quant_method.name} and "
+                      f"quantizer type {quantizer_type.value} but there should be exactly one."
+                      f"The possible quantizers that were found are {filtered_quantizers}.")
+ 
+     return filtered_quantizers[0]
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/common/qat_get_quantizer_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/get_quantizer_config.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -10,58 +10,62 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ from typing import List
+ from model_compression_toolkit.core.common import BaseNode, Logger
+-from model_compression_toolkit.quantizers_infrastructure.common.trainable_quantizer_config import \
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.trainable_quantizer_config import \
+     TrainableQuantizerWeightsConfig, TrainableQuantizerActivationConfig, TrainableQuantizerCandidateConfig
+ 
+ 
+ def get_trainable_quantizer_weights_config(
+         n: BaseNode,
+-        weights_quantization_candidates: List[TrainableQuantizerCandidateConfig] = None) -> TrainableQuantizerWeightsConfig:
++        weights_quantization_candidates: List[TrainableQuantizerCandidateConfig] = None
++) -> TrainableQuantizerWeightsConfig:
+     """
+     Returns the relevant configuration for weights trainable quantizer
+ 
+     Args:
+-        n: BaseNode - the node to build a trainable quantizer from
++        n: BaseNode - the node to build a trainable quantizer from.
++        weights_quantization_candidates: A list of weights quantizer config candidates.
+ 
+     Returns:
+          TrainableQuantizerWeightsConfig: an object that contains the quantizer configuration
+     """
+     if n.final_weights_quantization_cfg is None:
+-        Logger.error(f'Node must have final_weights_quantization_cfg in order to build quantizer configuration')
++        Logger.error(f'Node must have final_weights_quantization_cfg in order to build quantizer configuration')  # pragma: no cover
+ 
+     final_cfg = n.final_weights_quantization_cfg
+     return TrainableQuantizerWeightsConfig(final_cfg.weights_quantization_method,
+                                            final_cfg.weights_n_bits,
+                                            final_cfg.weights_quantization_params,
+                                            final_cfg.enable_weights_quantization,
+                                            final_cfg.weights_channels_axis,
+                                            final_cfg.weights_per_channel_threshold,
+                                            final_cfg.min_threshold,
+                                            weights_quantization_candidates)
+ 
+ 
+ def get_trainable_quantizer_activation_config(
+         n: BaseNode,
+-        activation_quantization_candidates: List[TrainableQuantizerCandidateConfig] = None) -> TrainableQuantizerActivationConfig:
++        activation_quantization_candidates: List[TrainableQuantizerCandidateConfig] = None
++) -> TrainableQuantizerActivationConfig:
+     """
+     Returns configuration for activation trainable quantizer
+ 
+     Args:
+-        n: BaseNode - the node to build a trainable quantizer from
++        n: BaseNode - the node to build a trainable quantizer from.
++        activation_quantization_candidates: A list of activation quantizer candidates config.
+ 
+     Returns:
+          TrainableQuantizerActivationConfig - an object that contains the quantizer configuration
+     """
+     if n.final_activation_quantization_cfg is None:
+-        Logger.error(f'Node must have final_activation_quantization_cfg in order to build quantizer configuration')
++        Logger.error(f'Node must have final_activation_quantization_cfg in order to build quantizer configuration')  # pragma: no cover
+ 
+     final_cfg = n.final_activation_quantization_cfg
+     return TrainableQuantizerActivationConfig(final_cfg.activation_quantization_method,
+                                               final_cfg.activation_n_bits,
+                                               final_cfg.activation_quantization_params,
+                                               final_cfg.enable_activation_quantization,
+                                               final_cfg.min_threshold,
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantization_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantization_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/base_keras_qat_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/base_keras_qat_quantizer.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -13,15 +13,14 @@
+ # limitations under the License.
+ # ==============================================================================
+ from typing import Union
+ 
+ from model_compression_toolkit.core.common import Logger
+ from model_compression_toolkit.core.common.constants import FOUND_TF
+ 
+-from model_compression_toolkit.quantizers_infrastructure.common.base_trainable_quantizer import BaseTrainableQuantizer
+ from model_compression_toolkit.quantizers_infrastructure import TrainableQuantizerWeightsConfig, \
+     TrainableQuantizerActivationConfig, BaseKerasTrainableQuantizer
+ 
+ if FOUND_TF:
+ 
+     class BaseKerasQATTrainableQuantizer(BaseKerasTrainableQuantizer):
+         """
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/quant_utils.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/quant_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/quantization_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/quantization_builder.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -12,29 +12,30 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ from typing import Tuple, Dict, List
+ 
+ from model_compression_toolkit.core import common
+ from model_compression_toolkit.core.common.framework_info import FrameworkInfo
+-from model_compression_toolkit.qat.common.qat_get_quantizer import get_quantizer_class
+-from model_compression_toolkit.qat.common.qat_get_quantizer_config import get_trainable_quantizer_weights_config, \
+-    get_trainable_quantizer_activation_config, get_trainable_quantizer_quantization_candidates
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.get_quantizer_config import \
++    get_trainable_quantizer_weights_config, get_trainable_quantizer_activation_config, \
++    get_trainable_quantizer_quantization_candidates
+ from model_compression_toolkit.qat.keras.quantizer.base_keras_qat_quantizer import BaseKerasQATTrainableQuantizer
+ from model_compression_toolkit.qat.common.qat_config import QATConfig
+ from model_compression_toolkit.quantizers_infrastructure import QuantizationTarget
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.get_quantizers import \
++    get_trainable_quantizer_class
+ 
+ 
+ def quantization_builder(n: common.BaseNode,
+                          qat_config: QATConfig,
+                          fw_info: FrameworkInfo,
+                          ) -> Tuple[Dict[str, BaseKerasQATTrainableQuantizer], List[BaseKerasQATTrainableQuantizer]]:
+     """
+-    Build quantizers for a node according to its quantization configuration and
+-    a global NoOpQuantizeConfig object.
++    Build quantizers for a node according to its quantization configuration.
+ 
+     Args:
+         n: Node to build its QuantizeConfig.
+         qat_config (QATConfig): QAT configuration
+         fw_info: Framework information (e.g., mapping from layers to their attributes to quantize).
+ 
+     Returns:
+@@ -46,31 +47,31 @@
+     else:
+         wq_cand, aq_cand = None, None
+ 
+     weight_quantizers = {}
+     if n.is_weights_quantization_enabled():
+         quant_method = n.final_weights_quantization_cfg.weights_quantization_method
+ 
+-        quantizer_class = get_quantizer_class(QuantizationTarget.Weights,
+-                                              qat_config.weight_training_method,
+-                                              quant_method,
+-                                              BaseKerasQATTrainableQuantizer)
++        quantizer_class = get_trainable_quantizer_class(QuantizationTarget.Weights,
++                                                        qat_config.weight_training_method,
++                                                        quant_method,
++                                                        BaseKerasQATTrainableQuantizer)
+         attributes = fw_info.get_kernel_op_attributes(n.type)
+         for attr in attributes:
+             weight_quantizers.update({attr: quantizer_class(get_trainable_quantizer_weights_config(n, wq_cand),
+                                                             **qat_config.weight_quantizer_params_override)})
+ 
+     activation_quantizers = []
+     if n.is_activation_quantization_enabled():
+         quant_method = n.final_activation_quantization_cfg.activation_quantization_method
+         # single output -> normalize to list of output_shapes
+         output_shapes = n.output_shape if isinstance(n.output_shape[0], (list, tuple)) else [n.output_shape]
+ 
+-        quantizer_class = get_quantizer_class(QuantizationTarget.Activation,
+-                                              qat_config.activation_training_method,
+-                                              quant_method,
+-                                              BaseKerasQATTrainableQuantizer)
++        quantizer_class = get_trainable_quantizer_class(QuantizationTarget.Activation,
++                                                        qat_config.activation_training_method,
++                                                        quant_method,
++                                                        BaseKerasQATTrainableQuantizer)
+ 
+         activation_quantizers = [quantizer_class(get_trainable_quantizer_activation_config(n, aq_cand),
+                                                  **qat_config.activation_quantizer_params_override)] * len(output_shapes)
+ 
+     return weight_quantizers, activation_quantizers
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/ste_rounding/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/ste_rounding/symmetric_ste.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/keras/quantizer/ste_rounding/uniform_ste.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -9,75 +9,71 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ 
+-from typing import Dict, Union
++from typing import Dict
+ 
+ import numpy as np
+ import tensorflow as tf
+ from tensorflow.python.framework.tensor_shape import TensorShape
+-from model_compression_toolkit.core.common.constants import SIGNED
+-
++from model_compression_toolkit.core.common.constants import RANGE_MIN, RANGE_MAX
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.qat.common import THRESHOLD_TENSOR
+ from model_compression_toolkit.qat.common.constants import FQ_MIN, FQ_MAX
++from model_compression_toolkit.qat.keras.quantizer.quant_utils import adjust_range_to_include_zero
++from model_compression_toolkit.core.common.quantization.quantizers.quantizers_helpers import fix_range_to_include_zero
+ from model_compression_toolkit import quantizers_infrastructure as qi, TrainingMethod
+ from model_compression_toolkit.core.common import constants as C
+-import model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers as iq
+ from model_compression_toolkit.qat.keras.quantizer.base_keras_qat_quantizer import BaseKerasQATTrainableQuantizer
+ from model_compression_toolkit.quantizers_infrastructure import TrainableQuantizerWeightsConfig, \
+     TrainableQuantizerActivationConfig
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import \
++    mark_quantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers import \
++    BaseKerasInferableQuantizer, WeightsUniformInferableQuantizer, ActivationUniformInferableQuantizer
+ 
+ 
+ @mark_quantizer(quantization_target=qi.QuantizationTarget.Weights,
+-                quantization_method=[QuantizationMethod.POWER_OF_TWO, QuantizationMethod.SYMMETRIC],
++                quantization_method=[QuantizationMethod.UNIFORM],
+                 quantizer_type=TrainingMethod.STE)
+-class STEWeightQuantizer(BaseKerasQATTrainableQuantizer):
++class STEUniformWeightQATQuantizer(BaseKerasQATTrainableQuantizer):
+     """
+     Trainable constrained quantizer to quantize a layer inputs.
+     """
+ 
+     def __init__(self, quantization_config: TrainableQuantizerWeightsConfig):
+         """
+         Initialize a TrainableWeightQuantizer object with parameters to use
+         for the quantization.
+ 
+         Args:
+-            quantization_config: trainable quantizer config class
++            quantization_config: a trainable quantizer config class with attributes for the quantization.
++
+         """
+         super().__init__(quantization_config)
+-        self.power_of_two = quantization_config.weights_quantization_method == QuantizationMethod.POWER_OF_TWO
+-        self.threshold_values = quantization_config.weights_quantization_params[C.THRESHOLD]
+-        self.threshold_shape = np.asarray(self.threshold_values).shape
++        self.max_values = quantization_config.weights_quantization_params[RANGE_MAX]
++        self.min_values = quantization_config.weights_quantization_params[RANGE_MIN]
++        self.num_bits = self.quantization_config.weights_n_bits
+         self.per_channel = self.quantization_config.weights_per_channel_threshold
+         self.channel_axis = self.quantization_config.weights_channels_axis
+-        self.np_threshold_values = np.reshape(np.asarray(self.threshold_values),[-1]) if self.channel_axis else float(self.threshold_values)
++        self.min_max_shape = np.asarray(self.max_values).shape
++        self.max = np.reshape(self.max_values, [-1]) if self.per_channel else float(self.max_values)
++        self.min = np.reshape(self.min_values, [-1]) if self.per_channel else float(self.min_values)
+ 
+-        if self.per_channel and self.channel_axis not in [-1, len(self.threshold_shape) - 1]:
++        if self.per_channel and self.channel_axis not in [-1, len(self.min_max_shape) - 1]:
+             # Tensorflow's fake_quant_with_min_max_vars_per_channel only works on last axis, so
+             # need to move the quantization axis to the last axis
+-            self.perm_vec = list(np.arange(len(self.threshold_shape)))
+-            self.perm_vec[self.channel_axis] = len(self.threshold_shape) - 1
+-            self.perm_vec[len(self.threshold_shape) - 1] = self.channel_axis
++            self.perm_vec = list(np.arange(len(self.min_max_shape)))
++            self.perm_vec[self.channel_axis] = len(self.min_max_shape) - 1
++            self.perm_vec[len(self.min_max_shape) - 1] = self.channel_axis
+         else:
+             self.perm_vec = None
+ 
+-        if self.power_of_two:
+-            self.np_threshold_values = np.power(2.0,np.ceil(np.log2(np.maximum(self.np_threshold_values, C.MIN_THRESHOLD))))
+-
+-        self.num_bits = self.quantization_config.weights_n_bits
+-        delta = self.np_threshold_values / np.power(2.0, self.num_bits - int(C.WEIGHTS_SIGNED))
+-        min_int = -int(C.WEIGHTS_SIGNED) * (2 ** (self.num_bits - int(C.WEIGHTS_SIGNED)))
+-        max_int = (2 ** (self.num_bits - int(C.WEIGHTS_SIGNED))) - 1
+-        self.min = delta * min_int
+-        self.max = delta * max_int
+         self.quantizer_parameters = {}
+ 
+     def initialize_quantization(self,
+                                 tensor_shape: TensorShape,
+                                 name: str,
+                                 layer: qi.KerasQuantizationWrapper) -> Dict[str, tf.Variable]:
+         """
+@@ -87,123 +83,101 @@
+             name: Prefix of variables names.
+             layer: Layer to add the variables to. The variables are saved
+             in the layer's scope.
+ 
+         Returns:
+             Dictionary of new variables.
+         """
+-        ptq_threshold_tensor = layer.add_weight(
+-            name + THRESHOLD_TENSOR,
+-            shape=len(self.np_threshold_values) if self.channel_axis else (),
+-            initializer=tf.keras.initializers.Constant(1.0),
+-            trainable=False)
+-        ptq_threshold_tensor.assign(self.np_threshold_values)
+-
+         fq_min = layer.add_weight(
+             name + FQ_MIN,
+-            shape=len(self.min) if self.channel_axis else (),
++            shape=len(self.min) if self.per_channel else (),
+             initializer=tf.keras.initializers.Constant(-1.0),
+             trainable=False)
+         fq_min.assign(self.min)
+ 
+         fq_max = layer.add_weight(
+             name + FQ_MAX,
+-            shape=len(self.max) if self.channel_axis else (),
++            shape=len(self.max) if self.per_channel else (),
+             initializer=tf.keras.initializers.Constant(1.0),
+             trainable=False)
+         fq_max.assign(self.max)
+ 
+         # save the quantizer added parameters for later calculations
+-        self.quantizer_parameters = {THRESHOLD_TENSOR: ptq_threshold_tensor,
+-                                     FQ_MIN: fq_min, FQ_MAX: fq_max}
++        self.quantizer_parameters = {FQ_MIN: fq_min, FQ_MAX: fq_max}
+         return self.quantizer_parameters
+ 
+-    def __call__(self,
+-                 inputs: tf.Tensor,
++    def __call__(self, inputs: tf.Tensor,
+                  training: bool):
+         """
+         Quantize a tensor.
+         Args:
+             inputs: Input tensor to quantize.
+             training: Whether the graph is in training mode.
+-            weights: Dictionary of weights the quantizer can use to quantize the tensor.
+-            **kwargs: Additional variables the quantizer may receive.
+ 
+         Returns:
+             The quantized tensor.
+         """
+ 
+         _min = self.quantizer_parameters[FQ_MIN]
+         _max = self.quantizer_parameters[FQ_MAX]
+-        if self.channel_axis:
++        _min, _max = adjust_range_to_include_zero(_min, _max, self.num_bits)
++
++        if self.per_channel:
+             if self.perm_vec:
+                 inputs = tf.transpose(inputs, perm=self.perm_vec)
++
+             q_tensor = tf.quantization.fake_quant_with_min_max_vars_per_channel(inputs, _min, _max,
+                                                                                 num_bits=self.num_bits)
+             if self.perm_vec:
+                 q_tensor = tf.transpose(q_tensor, perm=self.perm_vec)
+         else:
+             q_tensor = tf.quantization.fake_quant_with_min_max_vars(inputs, _min, _max,
+                                                                     num_bits=self.num_bits)
+ 
+         return q_tensor
+ 
+-    def convert2inferable(self) -> Union[iq.WeightsPOTInferableQuantizer, iq.WeightsSymmetricInferableQuantizer]:
++    def convert2inferable(self) -> BaseKerasInferableQuantizer:
+         """
+         Convert quantizer to inferable quantizer.
+ 
+         Returns:
+             BaseKerasInferableQuantizer object.
+         """
+-        if self.power_of_two:
+-            pot_threshold = 2 ** np.ceil(np.log2(self.quantizer_parameters[THRESHOLD_TENSOR]))
+-            return iq.WeightsPOTInferableQuantizer(num_bits=self.num_bits,
+-                                                   threshold=list(pot_threshold.flatten()),
+-                                                   per_channel=self.per_channel,
+-                                                   channel_axis=self.channel_axis,
+-                                                   input_rank=len(self.threshold_shape))
+-        else:
+-            return iq.WeightsSymmetricInferableQuantizer(num_bits=self.num_bits,
+-                                                         threshold=list(self.quantizer_parameters[THRESHOLD_TENSOR].numpy().flatten()),
+-                                                         per_channel=self.per_channel,
+-                                                         channel_axis=self.channel_axis,
+-                                                         input_rank=len(self.threshold_shape))
++        min_range, max_range = fix_range_to_include_zero(self.quantizer_parameters[FQ_MIN].numpy(),
++                                                         self.quantizer_parameters[FQ_MAX].numpy(),
++                                                         self.num_bits)
++        return WeightsUniformInferableQuantizer(num_bits=self.num_bits,
++                                                min_range=list(min_range.flatten()),
++                                                max_range=list(max_range.flatten()),
++                                                per_channel=self.per_channel,
++                                                channel_axis=self.channel_axis,
++                                                input_rank=len(self.min_max_shape))
+ 
+ 
+ @mark_quantizer(quantization_target=qi.QuantizationTarget.Activation,
+-                quantization_method=[QuantizationMethod.POWER_OF_TWO, QuantizationMethod.SYMMETRIC],
++                quantization_method=[QuantizationMethod.UNIFORM],
+                 quantizer_type=TrainingMethod.STE)
+-class STEActivationQuantizer(BaseKerasQATTrainableQuantizer):
++class STEUniformActivationQATQuantizer(BaseKerasQATTrainableQuantizer):
+     """
+     Trainable constrained quantizer to quantize a layer outputs.
+     """
+ 
+     def __init__(self, quantization_config: TrainableQuantizerActivationConfig):
+         """
+-        Initialize a STEActivationQuantizer object with parameters to use
++        Initialize a STEUniformActivationQATQuantizer object with parameters to use
+         for the quantization.
+ 
+         Args:
+             quantization_config: trainable quantizer config class
+         """
+         super().__init__(quantization_config)
+-        self.power_of_two = quantization_config.activation_quantization_method == QuantizationMethod.POWER_OF_TWO
+-        self.threshold_values = quantization_config.activation_quantization_params[C.THRESHOLD]
+-        self.threshold_shape = np.asarray(self.threshold_values).shape
+-        self.np_threshold_values = float(self.threshold_values)
+-        self.signed = quantization_config.activation_quantization_params[SIGNED]
+-        if self.power_of_two:
+-            self.np_threshold_values = np.power(2.0,
+-                                                np.ceil(np.log2(np.maximum(self.np_threshold_values, C.MIN_THRESHOLD))))
++
+         self.num_bits = quantization_config.activation_n_bits
+-        delta = self.np_threshold_values / np.power(2.0, self.num_bits - int(self.signed))
+-        min_int = -int(self.signed) * (2 ** (self.num_bits - int(self.signed)))
+-        max_int = (2 ** (self.num_bits - int(self.signed))) - 1
+-        self.min = delta * min_int
+-        self.max = delta * max_int
++        self.min_range = quantization_config.activation_quantization_params[C.RANGE_MIN]
++        self.max_range = quantization_config.activation_quantization_params[C.RANGE_MAX]
+         self.quantizer_parameters = {}
+ 
+     def initialize_quantization(self,
+                                 tensor_shape: TensorShape,
+                                 name: str,
+                                 layer: qi.KerasQuantizationWrapper) -> Dict[str, tf.Variable]:
+         """
+@@ -213,38 +187,30 @@
+             name: Prefix of variables names.
+             layer: Layer to add the variables to. The variables are saved
+             in the layer's scope.
+ 
+         Returns:
+             Dictionary of new variables.
+         """
+-        ptq_threshold_tensor = layer.add_weight(
+-            name + THRESHOLD_TENSOR,
+-            shape=(),
+-            initializer=tf.keras.initializers.Constant(1.0),
+-            trainable=False)
+-        ptq_threshold_tensor.assign(self.np_threshold_values)
+-
+         fq_min = layer.add_weight(
+             name + FQ_MIN,
+             shape=(),
+             initializer=tf.keras.initializers.Constant(-1.0),
+             trainable=False)
+-        fq_min.assign(self.min)
++        fq_min.assign(self.min_range)
+ 
+         fq_max = layer.add_weight(
+             name + FQ_MAX,
+             shape=(),
+             initializer=tf.keras.initializers.Constant(1.0),
+             trainable=False)
+-        fq_max.assign(self.max)
++        fq_max.assign(self.max_range)
+ 
+         # save the quantizer added parameters for later calculations
+-        self.quantizer_parameters = {THRESHOLD_TENSOR: ptq_threshold_tensor,
+-                                     FQ_MIN: fq_min, FQ_MAX: fq_max}
++        self.quantizer_parameters = {FQ_MIN: fq_min, FQ_MAX: fq_max}
+         return self.quantizer_parameters
+ 
+     def __call__(self,
+                  inputs: tf.Tensor,
+                  training: bool):
+         """
+         Quantize a tensor.
+@@ -254,33 +220,28 @@
+ 
+         Returns:
+             The quantized tensor.
+         """
+ 
+         _min = self.quantizer_parameters[FQ_MIN]
+         _max = self.quantizer_parameters[FQ_MAX]
++        _min, _max = adjust_range_to_include_zero(_min, _max, self.num_bits)
+         q_tensor = tf.quantization.fake_quant_with_min_max_vars(inputs, _min, _max,
+                                                                 num_bits=self.num_bits)
+ 
+         return q_tensor
+ 
+-    def convert2inferable(self) -> Union[iq.ActivationPOTInferableQuantizer, iq.ActivationSymmetricInferableQuantizer]:
++    def convert2inferable(self) -> BaseKerasInferableQuantizer:
+         """
+         Convert quantizer to inferable quantizer.
+ 
+         Returns:
+             BaseKerasInferableQuantizer object.
+         """
+-
+-        if self.power_of_two:
+-            pot_threshold = 2 ** np.ceil(np.log2(self.quantizer_parameters[THRESHOLD_TENSOR]))
+-            return iq.ActivationPOTInferableQuantizer(num_bits=self.num_bits,
+-                                                      # In activation quantization is per-tensor only - thus we pass
+-                                                      # the threshold as a list with a len of 1
+-                                                      threshold=[pot_threshold],
+-                                                      signed=self.signed)
+-        else:
+-            return iq.ActivationSymmetricInferableQuantizer(num_bits=self.num_bits,
+-                                                            # In activation quantization is per-tensor only - thus we
+-                                                            # pass the threshold as a list with a len of 1
+-                                                            threshold=[self.quantizer_parameters[THRESHOLD_TENSOR].numpy()],
+-                                                            signed=self.signed)
++        min_range, max_range = fix_range_to_include_zero(self.quantizer_parameters[FQ_MIN].numpy(),
++                                                         self.quantizer_parameters[FQ_MAX].numpy(),
++                                                         self.num_bits)
++        return ActivationUniformInferableQuantizer(num_bits=self.num_bits,
++                                                   # In activation quantization is per-tensor only - thus we pass
++                                                   # the min/max as lists with a len of 1
++                                                   min_range=[min_range],
++                                                   max_range=[max_range])
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/keras/quantizer/ste_rounding/uniform_ste.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/uniform_ste.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -8,238 +8,184 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-
+ from typing import Dict
+ 
+ import numpy as np
+-import tensorflow as tf
+-from tensorflow.python.framework.tensor_shape import TensorShape
+-from model_compression_toolkit.core.common.constants import RANGE_MIN, RANGE_MAX
++import torch
++import torch.nn as nn
++from torch import Tensor
++
++from model_compression_toolkit.core.common.constants import RANGE_MAX, RANGE_MIN
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+ from model_compression_toolkit.qat.common.constants import FQ_MIN, FQ_MAX
+-from model_compression_toolkit.qat.keras.quantizer.quant_utils import adjust_range_to_include_zero
+-from model_compression_toolkit.core.common.quantization.quantizers.quantizers_helpers import fix_range_to_include_zero
+-from model_compression_toolkit import quantizers_infrastructure as qi, TrainingMethod
+ from model_compression_toolkit.core.common import constants as C
+-import model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers as iq
+-from model_compression_toolkit.qat.keras.quantizer.base_keras_qat_quantizer import BaseKerasQATTrainableQuantizer
+-from model_compression_toolkit.quantizers_infrastructure import TrainableQuantizerWeightsConfig, \
+-    TrainableQuantizerActivationConfig
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer
++from model_compression_toolkit import quantizers_infrastructure as qi, TrainingMethod
++from model_compression_toolkit.qat.pytorch.quantizer.base_pytorch_qat_quantizer import BasePytorchQATTrainableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer
++from model_compression_toolkit.core.pytorch.utils import to_torch_tensor
++from model_compression_toolkit.qat.pytorch.quantizer.quantizer_utils import uniform_quantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers import \
++    WeightsUniformInferableQuantizer, ActivationUniformInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.trainable_quantizer_config import \
++    TrainableQuantizerWeightsConfig, TrainableQuantizerActivationConfig
+ 
+ 
+ @mark_quantizer(quantization_target=qi.QuantizationTarget.Weights,
+                 quantization_method=[QuantizationMethod.UNIFORM],
+                 quantizer_type=TrainingMethod.STE)
+-class STEUniformWeightQuantizer(BaseKerasQATTrainableQuantizer):
++class STEUniformWeightQATQuantizer(BasePytorchQATTrainableQuantizer):
+     """
+     Trainable constrained quantizer to quantize a layer inputs.
+     """
+ 
+     def __init__(self, quantization_config: TrainableQuantizerWeightsConfig):
+         """
+         Initialize a TrainableWeightQuantizer object with parameters to use
+         for the quantization.
+ 
+         Args:
+-            quantization_config: a trainable quantizer config class with attributes for the quantization.
+-
++            quantization_config: trainable quantizer config class
+         """
+         super().__init__(quantization_config)
++        self.num_bits = self.quantization_config.weights_n_bits
++        self.min_int = 0
++        self.max_int = 2 ** self.num_bits - 1
+         self.max_values = quantization_config.weights_quantization_params[RANGE_MAX]
+         self.min_values = quantization_config.weights_quantization_params[RANGE_MIN]
+-        self.num_bits = self.quantization_config.weights_n_bits
+-        self.per_channel = self.quantization_config.weights_per_channel_threshold
+-        self.channel_axis = self.quantization_config.weights_channels_axis
+         self.min_max_shape = np.asarray(self.max_values).shape
+-        self.max = np.reshape(self.max_values, [-1]) if self.per_channel else float(self.max_values)
+-        self.min = np.reshape(self.min_values, [-1]) if self.per_channel else float(self.min_values)
+-
+-        if self.per_channel and self.channel_axis not in [-1, len(self.min_max_shape) - 1]:
+-            # Tensorflow's fake_quant_with_min_max_vars_per_channel only works on last axis, so
+-            # need to move the quantization axis to the last axis
+-            self.perm_vec = list(np.arange(len(self.min_max_shape)))
+-            self.perm_vec[self.channel_axis] = len(self.min_max_shape) - 1
+-            self.perm_vec[len(self.min_max_shape) - 1] = self.channel_axis
+-        else:
+-            self.perm_vec = None
++        self.max = np.reshape(self.max_values,
++                              [-1]) if self.quantization_config.weights_per_channel_threshold else float(
++            self.max_values)
++        self.min = np.reshape(self.min_values,
++                              [-1]) if self.quantization_config.weights_per_channel_threshold else float(
++            self.min_values)
+ 
+         self.quantizer_parameters = {}
+ 
+     def initialize_quantization(self,
+-                                tensor_shape: TensorShape,
++                                tensor_shape: torch.Size,
+                                 name: str,
+-                                layer: qi.KerasQuantizationWrapper) -> Dict[str, tf.Variable]:
++                                layer: qi.PytorchQuantizationWrapper) -> Dict[str, nn.Parameter]:
+         """
+         Add min and max variables to layer.
+         Args:
+             tensor_shape: Tensor shape the quantizer quantize.
+             name: Prefix of variables names.
+             layer: Layer to add the variables to. The variables are saved
+             in the layer's scope.
+ 
+         Returns:
+             Dictionary of new variables.
+         """
+-        fq_min = layer.add_weight(
+-            name + FQ_MIN,
+-            shape=len(self.min) if self.per_channel else (),
+-            initializer=tf.keras.initializers.Constant(-1.0),
+-            trainable=False)
+-        fq_min.assign(self.min)
+-
+-        fq_max = layer.add_weight(
+-            name + FQ_MAX,
+-            shape=len(self.max) if self.per_channel else (),
+-            initializer=tf.keras.initializers.Constant(1.0),
+-            trainable=False)
+-        fq_max.assign(self.max)
+ 
+-        # save the quantizer added parameters for later calculations
+-        self.quantizer_parameters = {FQ_MIN: fq_min, FQ_MAX: fq_max}
++        # Add min and max variables to layer.
++        layer.register_parameter(name+"_"+FQ_MIN, nn.Parameter(to_torch_tensor(self.min_values), requires_grad=False))
++        layer.register_parameter(name+"_"+FQ_MAX, nn.Parameter(to_torch_tensor(self.max_values), requires_grad=False))
++
++        # Save the quantizer parameters for later calculations
++        self.quantizer_parameters = {FQ_MIN: layer.get_parameter(name+"_"+FQ_MIN), FQ_MAX: layer.get_parameter(name+"_"+FQ_MAX)}
++
+         return self.quantizer_parameters
+ 
+-    def __call__(self, inputs: tf.Tensor,
+-                 training: bool):
++    def __call__(self,
++                 inputs: nn.Parameter,
++                 training: bool) -> Tensor:
+         """
+-        Quantize a tensor.
++        Quantize a tensor
+         Args:
+             inputs: Input tensor to quantize.
+-            training: Whether the graph is in training mode.
+-
++            training: whether in training mode or not
+         Returns:
+-            The quantized tensor.
++            quantized tensor
+         """
++        return uniform_quantizer(inputs, self.quantizer_parameters[FQ_MIN], self.quantizer_parameters[FQ_MAX], self.num_bits)
+ 
+-        _min = self.quantizer_parameters[FQ_MIN]
+-        _max = self.quantizer_parameters[FQ_MAX]
+-        _min, _max = adjust_range_to_include_zero(_min, _max, self.num_bits)
+-
+-        if self.per_channel:
+-            if self.perm_vec:
+-                inputs = tf.transpose(inputs, perm=self.perm_vec)
+-
+-            q_tensor = tf.quantization.fake_quant_with_min_max_vars_per_channel(inputs, _min, _max,
+-                                                                                num_bits=self.num_bits)
+-            if self.perm_vec:
+-                q_tensor = tf.transpose(q_tensor, perm=self.perm_vec)
+-        else:
+-            q_tensor = tf.quantization.fake_quant_with_min_max_vars(inputs, _min, _max,
+-                                                                    num_bits=self.num_bits)
+-
+-        return q_tensor
+-
+-    def convert2inferable(self) -> qi.BaseKerasInferableQuantizer:
++    def convert2inferable(self) -> WeightsUniformInferableQuantizer:
+         """
+         Convert quantizer to inferable quantizer.
+ 
+         Returns:
+-            BaseKerasInferableQuantizer object.
++            A pytorch inferable quanizer object.
+         """
+-        min_range, max_range = fix_range_to_include_zero(self.quantizer_parameters[FQ_MIN].numpy(),
+-                                                         self.quantizer_parameters[FQ_MAX].numpy(),
+-                                                         self.num_bits)
+-        return iq.WeightsUniformInferableQuantizer(num_bits=self.num_bits,
+-                                                   min_range=list(min_range.flatten()),
+-                                                   max_range=list(max_range.flatten()),
+-                                                   per_channel=self.per_channel,
+-                                                   channel_axis=self.channel_axis,
+-                                                   input_rank=len(self.min_max_shape))
++        _min = self.quantizer_parameters[FQ_MIN].cpu().detach().numpy()
++        _max = self.quantizer_parameters[FQ_MAX].cpu().detach().numpy()
++
++        return WeightsUniformInferableQuantizer(num_bits=self.num_bits,
++                                                min_range=_min, max_range=_max,
++                                                per_channel=self.quantization_config.weights_per_channel_threshold,
++                                                channel_axis=self.quantization_config.weights_channels_axis)
+ 
+ 
+ @mark_quantizer(quantization_target=qi.QuantizationTarget.Activation,
+                 quantization_method=[QuantizationMethod.UNIFORM],
+                 quantizer_type=TrainingMethod.STE)
+-class STEUniformActivationQuantizer(BaseKerasQATTrainableQuantizer):
++class STEUniformActivationQATQuantizer(BasePytorchQATTrainableQuantizer):
+     """
+-    Trainable constrained quantizer to quantize a layer outputs.
++    Trainable constrained quantizer to quantize a layer activations.
+     """
+ 
+     def __init__(self, quantization_config: TrainableQuantizerActivationConfig):
+         """
+-        Initialize a STEUniformActivationQuantizer object with parameters to use
+-        for the quantization.
++        Initialize a STEUniformActivationQATQuantizer object with parameters to use
++        for uniform quantization.
+ 
+         Args:
+             quantization_config: trainable quantizer config class
+         """
+         super().__init__(quantization_config)
+ 
++        np_min_range = quantization_config.activation_quantization_params[C.RANGE_MIN]
++        np_max_range = quantization_config.activation_quantization_params[C.RANGE_MAX]
++        self.min_range_tensor = torch.Tensor([np_min_range])
++        self.max_range_tensor = torch.Tensor([np_max_range])
+         self.num_bits = quantization_config.activation_n_bits
+-        self.min_range = quantization_config.activation_quantization_params[C.RANGE_MIN]
+-        self.max_range = quantization_config.activation_quantization_params[C.RANGE_MAX]
+         self.quantizer_parameters = {}
+ 
+     def initialize_quantization(self,
+-                                tensor_shape: TensorShape,
++                                tensor_shape: torch.Size,
+                                 name: str,
+-                                layer: qi.KerasQuantizationWrapper) -> Dict[str, tf.Variable]:
++                                layer: qi.PytorchQuantizationWrapper) -> Dict[str, nn.Parameter]:
+         """
+         Add min and max variables to layer.
+-        Args:
+-            tensor_shape: Tensor shape the quantizer quantize.
+-            name: Prefix of variables names.
+-            layer: Layer to add the variables to. The variables are saved
+-            in the layer's scope.
+-
+-        Returns:
+-            Dictionary of new variables.
+         """
+-        fq_min = layer.add_weight(
+-            name + FQ_MIN,
+-            shape=(),
+-            initializer=tf.keras.initializers.Constant(-1.0),
+-            trainable=False)
+-        fq_min.assign(self.min_range)
+-
+-        fq_max = layer.add_weight(
+-            name + FQ_MAX,
+-            shape=(),
+-            initializer=tf.keras.initializers.Constant(1.0),
+-            trainable=False)
+-        fq_max.assign(self.max_range)
++        layer.register_parameter(name+"_"+FQ_MIN, nn.Parameter(to_torch_tensor(self.min_range_tensor), requires_grad=True))
++        layer.register_parameter(name+"_"+FQ_MAX, nn.Parameter(to_torch_tensor(self.max_range_tensor), requires_grad=True))
+ 
+-        # save the quantizer added parameters for later calculations
+-        self.quantizer_parameters = {FQ_MIN: fq_min, FQ_MAX: fq_max}
++        # Save the quantizer parameters for later calculations
++        self.quantizer_parameters = {FQ_MIN: layer.get_parameter(name+"_"+FQ_MIN), FQ_MAX: layer.get_parameter(name+"_"+FQ_MAX)}
+         return self.quantizer_parameters
+ 
+     def __call__(self,
+-                 inputs: tf.Tensor,
+-                 training: bool):
++                 inputs: torch.Tensor,
++                 training: bool = True) -> torch.Tensor:
+         """
+         Quantize a tensor.
+         Args:
+             inputs: Input tensor to quantize.
+             training: Whether the graph is in training mode.
+ 
+         Returns:
+             The quantized tensor.
+         """
+ 
+         _min = self.quantizer_parameters[FQ_MIN]
+         _max = self.quantizer_parameters[FQ_MAX]
+-        _min, _max = adjust_range_to_include_zero(_min, _max, self.num_bits)
+-        q_tensor = tf.quantization.fake_quant_with_min_max_vars(inputs, _min, _max,
+-                                                                num_bits=self.num_bits)
+-
++        q_tensor = uniform_quantizer(inputs, _min, _max, self.num_bits)
+         return q_tensor
+ 
+-    def convert2inferable(self) -> qi.BaseKerasInferableQuantizer:
++    def convert2inferable(self) -> ActivationUniformInferableQuantizer:
+         """
+         Convert quantizer to inferable quantizer.
+ 
+         Returns:
+-            BaseKerasInferableQuantizer object.
++            A pytorch inferable quanizer object.
+         """
+-        min_range, max_range = fix_range_to_include_zero(self.quantizer_parameters[FQ_MIN].numpy(),
+-                                                         self.quantizer_parameters[FQ_MAX].numpy(),
+-                                                         self.num_bits)
+-        return iq.ActivationUniformInferableQuantizer(num_bits=self.num_bits,
+-                                                      # In activation quantization is per-tensor only - thus we pass
+-                                                      # the min/max as lists with a len of 1
+-                                                      min_range=[min_range],
+-                                                      max_range=[max_range])
++        _min = self.quantizer_parameters[FQ_MIN].cpu().detach().numpy()
++        _max = self.quantizer_parameters[FQ_MAX].cpu().detach().numpy()
++
++        return ActivationUniformInferableQuantizer(num_bits=self.num_bits,
++                                                   min_range=_min, max_range=_max)
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantization_facade.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantization_facade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/base_pytorch_qat_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/pytorch/base_pytorch_quantizer.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+@@ -13,36 +13,33 @@
+ # limitations under the License.
+ # ==============================================================================
+ from typing import Union
+ 
+ from model_compression_toolkit.core.common.logger import Logger
+ from model_compression_toolkit.core.common.constants import FOUND_TORCH
+ 
+-from model_compression_toolkit.quantizers_infrastructure.common.base_trainable_quantizer import BaseTrainableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.base_trainable_quantizer import BaseTrainableQuantizer
+ from model_compression_toolkit.quantizers_infrastructure import TrainableQuantizerWeightsConfig, \
+-    TrainableQuantizerActivationConfig, BasePytorchTrainableQuantizer
++    TrainableQuantizerActivationConfig
+ 
+ if FOUND_TORCH:
+ 
+-    class BasePytorchQATTrainableQuantizer(BasePytorchTrainableQuantizer):
+-        """
+-        A base class for trainable Keras quantizer for QAT.
+-        """
+-
++    class BasePytorchTrainableQuantizer(BaseTrainableQuantizer):
+         def __init__(self,
+                      quantization_config: Union[TrainableQuantizerWeightsConfig, TrainableQuantizerActivationConfig]):
+             """
+-            Initializes BasePytorchQATTrainableQuantizer object.
++            This class is a base Pytorch quantizer which validates the provided quantization config and defines an
++            abstract function which any quantizer needs to implement.
+ 
+             Args:
+-                quantization_config: quantizer config class contains all the information about a quantizer configuration.
++                quantization_config: quantizer config class contains all the information about the quantizer configuration.
+             """
+             super().__init__(quantization_config)
+ 
+ else:
+-    class BasePytorchTrainableQuantizer(BasePytorchTrainableQuantizer):
++    class BasePytorchTrainableQuantizer(BaseTrainableQuantizer):
+         def __init__(self,
+                      quantization_config: Union[TrainableQuantizerWeightsConfig, TrainableQuantizerActivationConfig]):
+             super().__init__(quantization_config)
+             Logger.critical('Installing Pytorch is mandatory '
+-                            'when using BasePytorchQATTrainableQuantizer. '
++                            'when using BasePytorchTrainableQuantizer. '
+                             'Could not find torch package.')  # pragma: no cover
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/quantization_builder.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/quantization_builder.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -13,30 +13,30 @@
+ # limitations under the License.
+ # ==============================================================================
+ from typing import List, Dict, Tuple
+ 
+ from model_compression_toolkit.core import common
+ from model_compression_toolkit.core.common.framework_info import FrameworkInfo
+ from model_compression_toolkit.qat.common.qat_config import QATConfig
+-from model_compression_toolkit.qat.common.qat_get_quantizer import get_quantizer_class
+-from model_compression_toolkit.qat.common.qat_get_quantizer_config import \
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.get_quantizer_config import \
+     get_trainable_quantizer_quantization_candidates, get_trainable_quantizer_weights_config, \
+     get_trainable_quantizer_activation_config
+ from model_compression_toolkit.qat.pytorch.quantizer.base_pytorch_qat_quantizer import BasePytorchQATTrainableQuantizer
+ from model_compression_toolkit.quantizers_infrastructure import QuantizationTarget
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.get_quantizers import \
++    get_trainable_quantizer_class
+ 
+ 
+ def quantization_builder(n: common.BaseNode,
+                          qat_config: QATConfig,
+                          fw_info: FrameworkInfo,
+                          ) -> Tuple[Dict[str, BasePytorchQATTrainableQuantizer],
+                                     List[BasePytorchQATTrainableQuantizer]]:
+     """
+-    Build quantizers for a node according to its quantization configuration and
+-    a global NoOpQuantizeConfig object.
++    Build quantizers for a node according to its quantization configuration.
+ 
+     Args:
+         n: Node to build its QuantizeConfig.
+         qat_config (QATConfig): QAT configuration
+         fw_info: Framework information (e.g., mapping from layers to their attributes to quantize).
+ 
+     Returns:
+@@ -47,28 +47,28 @@
+         wq_cand, aq_cand = get_trainable_quantizer_quantization_candidates(n)
+     else:
+         wq_cand, aq_cand = None, None
+ 
+     weight_quantizers = {}
+     if n.is_weights_quantization_enabled():
+         quant_method = n.final_weights_quantization_cfg.weights_quantization_method
+-        quantizer_class = get_quantizer_class(QuantizationTarget.Weights,
+-                                              qat_config.activation_training_method,
+-                                              quant_method,
+-                                              BasePytorchQATTrainableQuantizer)
++        quantizer_class = get_trainable_quantizer_class(QuantizationTarget.Weights,
++                                                        qat_config.weight_training_method,
++                                                        quant_method,
++                                                        BasePytorchQATTrainableQuantizer)
+         attributes = fw_info.get_kernel_op_attributes(n.type)
+         for attr in attributes:
+             weight_quantizers.update({attr: quantizer_class(get_trainable_quantizer_weights_config(n, wq_cand),
+                                                            **qat_config.weight_quantizer_params_override)})
+ 
+     activation_quantizers = []
+     if n.is_activation_quantization_enabled():
+         quant_method = n.final_activation_quantization_cfg.activation_quantization_method
+-        quantizer_class = get_quantizer_class(QuantizationTarget.Activation,
+-                                              qat_config.activation_training_method,
+-                                              quant_method,
+-                                              BasePytorchQATTrainableQuantizer)
++        quantizer_class = get_trainable_quantizer_class(QuantizationTarget.Activation,
++                                                        qat_config.activation_training_method,
++                                                        quant_method,
++                                                        BasePytorchQATTrainableQuantizer)
+ 
+         activation_quantizers = [quantizer_class(get_trainable_quantizer_activation_config(n, aq_cand),
+                                                  **qat_config.activation_quantizer_params_override)]
+ 
+     return weight_quantizers, activation_quantizers
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/quantizer_utils.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizer_utils.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,47 +1,62 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ from typing import Tuple
++
+ import torch
++import numpy as np
+ 
+ 
+-def ste_round(x: torch.Tensor) -> torch.Tensor:
++def get_working_device():
+     """
+-    Calculate the rounded values of a tensor
+-    Args:
+-        x: input variable
++    Get the working device of the environment
++
+     Returns:
+-        rounded value
++        Device "cuda" if GPU is available, else "cpu"
++
+     """
+-    return (torch.round(x) - x).detach() + x
++    return torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+ 
+ 
+-def ste_clip(x: torch.Tensor, min_val=-1.0, max_val=1.0) -> torch.Tensor:
++def to_torch_tensor(tensor):
+     """
+-    Clip a variable between fixed values such that min_val<=output<=max_val
++    Convert a Numpy array to a Torch tensor.
+     Args:
+-        x: input variable
+-        min_val: minimum value for clipping
+-        max_val: maximum value for clipping
++        tensor: Numpy array.
++
+     Returns:
+-        clipped variable
++        Torch tensor converted from the input Numpy array.
+     """
+-    return (torch.clip(x, min=min_val, max=max_val) - x).detach() + x
++    working_device = get_working_device()
++    if isinstance(tensor, torch.Tensor):
++        return tensor.to(working_device)
++    elif isinstance(tensor, list):
++        return [to_torch_tensor(t) for t in tensor]
++    elif isinstance(tensor, tuple):
++        return (to_torch_tensor(t) for t in tensor)
++    elif isinstance(tensor, np.ndarray):
++        return torch.from_numpy(tensor.astype(np.float32)).to(working_device)
++    elif isinstance(tensor, float):
++        return torch.Tensor([tensor]).to(working_device)
++    elif isinstance(tensor, int):
++        return torch.Tensor([tensor]).int().to(working_device)
++    else:
++        raise Exception(f'Conversion of type {type(tensor)} to {type(torch.Tensor)} is not supported')
+ 
+ 
+ def fix_range_to_include_zero(range_min: torch.Tensor,
+                               range_max: torch.Tensor,
+                               n_bits: int) -> Tuple[torch.Tensor, torch.Tensor]:
+     """
+     Adjusting the quantization range to include representation of 0.0 in the quantization grid.
+@@ -65,72 +80,73 @@
+     max_range_adj = range_max - range_min + min_range_adj
+ 
+     min_range_adj = min_range_adj * mid_range + max_negative * range_min
+     max_range_adj = max_range_adj * mid_range + min_positive * range_max
+     return min_range_adj, max_range_adj
+ 
+ 
+-def symmetric_quantizer(tensor_data: torch.Tensor,
+-                        threshold: torch.Tensor,
+-                        n_bits: int,
+-                        sign: bool = False) -> torch.Tensor:
+-    """
+-    Quantize a tensor according to the number of bits and threshold.
+-    Symmetric quantization.
++def lut_quantizer(tensor_data: torch.Tensor,
++                  cluster_centers: torch.Tensor,
++                  signed: bool,
++                  threshold: torch.Tensor,
++                  multiplier_n_bits: int,
++                  eps: float) -> torch.Tensor:
++    """
++    Quantize a tensor using a non-uniform quantization based on the pre-defined clusters.
++    1. Scales tensor_data with the threshold into n-bit quantization range.
++    2. Assigns cluster centers to each value.
++    3. Scales back by multiplying the result by threshold and dividing with the quantization range max value.
++    The result is the quantized tensor.
++
+     Args:
+-        tensor_data: Tensor values to quantize.
+-        threshold: threshold for quantization.
+-        n_bits: Number of bits to quantize the tensor.
+-        sign: sign of tensor_data
+-    Returns:
+-        Quantized data.
+-    """
++        tensor_data: Input activation tensor.
++        cluster_centers: The cluster centers to assign the tensor values.
++        signed: Whether the quantization is signed or not.
++        threshold: Threshold for quantization.
++        multiplier_n_bits: Number of bits that determines the quantization range
++        eps: Small value for numerical stability in division.
+ 
+-    # Compute the step size of quantized values.
+-    n_pos = 2 ** (n_bits - int(sign))
+-    delta_tensor = threshold / n_pos
++    Returns: Quantized tensor.
++    """
+ 
+-    # Compute min/max int value
+-    min_val = -int(sign) * n_pos
+-    max_val = n_pos - 1
++    tensor = int_quantization_with_threshold(tensor_data, n_bits=multiplier_n_bits, signed=signed, threshold=threshold,
++                                             eps=eps)
++    tensor = tensor.unsqueeze(-1)
+ 
+-    # Apply rounding
+-    input_tensor_int = ste_round(tensor_data / delta_tensor)
++    expanded_cluster_centers = cluster_centers.reshape([*[1 for _ in range(len(tensor.shape) - 1)], -1])
++    cluster_assignments = torch.argmin(torch.abs(tensor - expanded_cluster_centers), dim=-1)
++    centers = cluster_centers.flatten()[cluster_assignments]
+ 
+-    # Clip data in range
+-    clipped_tensor = ste_clip(input_tensor_int, min_val=min_val, max_val=max_val)
++    quant_tensor = (centers / (2 ** (multiplier_n_bits - int(signed)))) * threshold
+ 
+-    # Quantize the data between -threshold/threshold
+-    q = delta_tensor * clipped_tensor
+-    return q
++    return quant_tensor
+ 
+ 
+-def uniform_quantizer(tensor_data: torch.Tensor,
+-                      range_min: torch.Tensor,
+-                      range_max: torch.Tensor,
+-                      n_bits: int) -> torch.Tensor:
++def int_quantization_with_threshold(data: torch.Tensor,
++                                    n_bits: int,
++                                    signed: bool,
++                                    threshold: torch.Tensor,
++                                    eps: float) -> torch.Tensor:
+     """
+-    Quantize a tensor according to given range (min, max) and number of bits.
+-    Uniform quantization.
++    Divides data by threshold and quantize it to integers in the quantization range (depends on signed value).
++
+     Args:
+-        tensor_data: Tensor values to quantize.
+-        range_min: minimum bound of the range for quantization (or array of min values per channel).
+-        range_max: maximum bound of the range for quantization (or array of max values per channel).
+-        n_bits: Number of bits to quantize the tensor.
+-    Returns:
+-        Quantized data.
+-    """
+-    # adjusts the quantization range so the quantization grid includes zero.
+-    a, b = fix_range_to_include_zero(range_min, range_max, n_bits)
++        data: Tensor data.
++        n_bits: Number of bits that determines the quantization range.
++        signed: Whether the quantization is signed or not.
++        threshold: Threshold for quantization.
++        eps: Small value for numerical stability in division.
+ 
+-    # Compute the step size of quantized values.
+-    delta_tensor = (b - a) / (2 ** n_bits - 1)
++    Returns:
++        Uniform Quantized tensor.
+ 
+-    # Apply rounding
+-    input_tensor_int = ste_round((tensor_data - a) / delta_tensor)
++    """
+ 
+-    # Clip data in range
+-    clipped_tensor = ste_clip(input_tensor_int, min_val=0, max_val=2 ** n_bits - 1)
++    if signed:
++        clip_max = 2 ** (n_bits - 1) - 1
++        clip_min = -2 ** (n_bits - 1)
++    else:
++        clip_max = 2 ** n_bits - 1
++        clip_min = 0
+ 
+-    # Quantize the data between min/max of quantization range.
+-    q = delta_tensor * clipped_tensor + a
+-    return q
++    return torch.clip((data / (threshold + eps)) * (2 ** (n_bits - int(signed))),
++                      min=clip_min, max=clip_max)
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/symmetric_ste.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/qat/pytorch/quantizer/ste_rounding/symmetric_ste.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -18,27 +18,29 @@
+ import torch
+ import torch.nn as nn
+ 
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+ from model_compression_toolkit.qat.common import THRESHOLD_TENSOR
+ from model_compression_toolkit import quantizers_infrastructure as qi, TrainingMethod
+ from model_compression_toolkit.qat.pytorch.quantizer.base_pytorch_qat_quantizer import BasePytorchQATTrainableQuantizer
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer
+-from model_compression_toolkit.quantizers_infrastructure.pytorch import inferable_quantizers as iq
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer
+ from model_compression_toolkit.core.common import constants as C
+ from model_compression_toolkit.core.pytorch.utils import to_torch_tensor
+ from model_compression_toolkit.qat.pytorch.quantizer.quantizer_utils import ste_round, ste_clip, symmetric_quantizer
+-from model_compression_toolkit.quantizers_infrastructure.common.trainable_quantizer_config import \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers import \
++    WeightsPOTInferableQuantizer, WeightsSymmetricInferableQuantizer, ActivationPOTInferableQuantizer, \
++    ActivationSymmetricInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.trainable_quantizer_config import \
+     TrainableQuantizerWeightsConfig, TrainableQuantizerActivationConfig
+ 
+ 
+ @mark_quantizer(quantization_target=qi.QuantizationTarget.Weights,
+                 quantization_method=[QuantizationMethod.POWER_OF_TWO, QuantizationMethod.SYMMETRIC],
+                 quantizer_type=TrainingMethod.STE)
+-class STEWeightQuantizer(BasePytorchQATTrainableQuantizer):
++class STEWeightQATQuantizer(BasePytorchQATTrainableQuantizer):
+     """
+     Trainable constrained quantizer to quantize a layer weights.
+     """
+ 
+     def __init__(self, quantization_config: TrainableQuantizerWeightsConfig):
+         """
+         Initialize a TrainableWeightQuantizer object with parameters to use
+@@ -103,47 +105,47 @@
+             quantized tensor
+         """
+         w0 = ste_round(inputs / self.delta_tensor)
+         w1 = ste_clip(w0, min_val=self.min_int, max_val=self.max_int)
+         w_q = self.delta_tensor * w1
+         return w_q
+ 
+-    def convert2inferable(self) -> Union[iq.WeightsPOTInferableQuantizer, iq.WeightsSymmetricInferableQuantizer]:
++    def convert2inferable(self) -> Union[WeightsPOTInferableQuantizer, WeightsSymmetricInferableQuantizer]:
+         """
+         Convert quantizer to inferable quantizer.
+ 
+         Returns:
+             A pytorch inferable quanizer object.
+         """
+         np_threshold = self.quantizer_parameters[THRESHOLD_TENSOR].cpu().detach().numpy().flatten()
+         if self.power_of_two:
+             pot_threshold = 2 ** np.ceil(np.log2(np_threshold))
+-            return iq.WeightsPOTInferableQuantizer(num_bits=self.num_bits,
+-                                                   threshold=pot_threshold,
+-                                                   per_channel=self.quantization_config.weights_per_channel_threshold,
+-                                                   channel_axis=self.quantization_config.weights_channels_axis)
++            return WeightsPOTInferableQuantizer(num_bits=self.num_bits,
++                                                threshold=pot_threshold,
++                                                per_channel=self.quantization_config.weights_per_channel_threshold,
++                                                channel_axis=self.quantization_config.weights_channels_axis)
+         else:
+-            return iq.WeightsSymmetricInferableQuantizer(num_bits=self.num_bits,
+-                                                         threshold=np_threshold,
+-                                                         per_channel=self.quantization_config.weights_per_channel_threshold,
+-                                                         channel_axis=self.quantization_config.weights_channels_axis)
++            return WeightsSymmetricInferableQuantizer(num_bits=self.num_bits,
++                                                      threshold=np_threshold,
++                                                      per_channel=self.quantization_config.weights_per_channel_threshold,
++                                                      channel_axis=self.quantization_config.weights_channels_axis)
+ 
+ 
+ 
+ @mark_quantizer(quantization_target=qi.QuantizationTarget.Activation,
+                 quantization_method=[QuantizationMethod.POWER_OF_TWO, QuantizationMethod.SYMMETRIC],
+                 quantizer_type=TrainingMethod.STE)
+-class STEActivationQuantizer(BasePytorchQATTrainableQuantizer):
++class STEActivationQATQuantizer(BasePytorchQATTrainableQuantizer):
+     """
+     Trainable constrained quantizer to quantize a layer activations.
+     """
+ 
+     def __init__(self, quantization_config: TrainableQuantizerActivationConfig):
+         """
+-        Initialize a STEActivationQuantizer object with parameters to use
++        Initialize a STEActivationQATQuantizer object with parameters to use
+         for symmetric or power of two quantization.
+ 
+         Args:
+             quantization_config: trainable quantizer config class
+         """
+         super().__init__(quantization_config)
+         self.power_of_two = quantization_config.activation_quantization_method == QuantizationMethod.POWER_OF_TWO
+@@ -179,24 +181,24 @@
+             The quantized tensor.
+         """
+ 
+         _t = self.quantizer_parameters[THRESHOLD_TENSOR]
+         q_tensor = symmetric_quantizer(inputs, _t, self.num_bits, sign=self.sign)
+         return q_tensor
+ 
+-    def convert2inferable(self) -> Union[iq.ActivationPOTInferableQuantizer, iq.ActivationSymmetricInferableQuantizer]:
++    def convert2inferable(self) -> Union[ActivationPOTInferableQuantizer, ActivationSymmetricInferableQuantizer]:
+         """
+         Convert quantizer to inferable quantizer.
+ 
+         Returns:
+             A pytorch inferable quanizer object.
+         """
+         np_threshold = self.quantizer_parameters[THRESHOLD_TENSOR].cpu().detach().numpy()
+         if self.power_of_two:
+             pot_threshold = np.power(2.0, np.ceil(np.log2(np_threshold)))
+-            return iq.ActivationPOTInferableQuantizer(num_bits=self.num_bits,
+-                                                      threshold=pot_threshold,
+-                                                      signed=self.sign)
++            return ActivationPOTInferableQuantizer(num_bits=self.num_bits,
++                                                   threshold=pot_threshold,
++                                                   signed=self.sign)
+         else:
+-            return iq.ActivationSymmetricInferableQuantizer(num_bits=self.num_bits,
+-                                                            threshold=np_threshold,
+-                                                            signed=self.sign)
++            return ActivationSymmetricInferableQuantizer(num_bits=self.num_bits,
++                                                         threshold=np_threshold,
++                                                         signed=self.sign)
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/__init__.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -9,22 +9,21 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ 
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import QuantizationTarget, BaseInferableQuantizer
+-from model_compression_toolkit.quantizers_infrastructure.common.trainable_quantizer_config import \
+-    TrainableQuantizerWeightsConfig, TrainableQuantizerActivationConfig
+-from model_compression_toolkit.quantizers_infrastructure.keras.base_keras_quantizer import BaseKerasTrainableQuantizer
+-from model_compression_toolkit.quantizers_infrastructure.keras.load_model import keras_load_quantized_model
+-from model_compression_toolkit.quantizers_infrastructure.keras.quantize_wrapper import KerasQuantizationWrapper
+-from model_compression_toolkit.quantizers_infrastructure.pytorch.base_pytorch_quantizer import \
+-    BasePytorchTrainableQuantizer
+-from model_compression_toolkit.quantizers_infrastructure.pytorch.quantize_wrapper import PytorchQuantizationWrapper
+-
+-from model_compression_toolkit.quantizers_infrastructure.keras import inferable_quantizers as keras_inferable_quantizers
+-from model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.base_keras_inferable_quantizer import BaseKerasInferableQuantizer
+-
+-from model_compression_toolkit.quantizers_infrastructure.pytorch import inferable_quantizers as pytorch_inferable_quantizers
+-from model_compression_toolkit.quantizers_infrastructure.pytorch.inferable_quantizers.base_pytorch_inferable_quantizer import BasePyTorchInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.activation_inferable_quantizers.activation_pot_inferable_quantizer \
++    import ActivationPOTInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.activation_inferable_quantizers.activation_symmetric_inferable_quantizer \
++    import ActivationSymmetricInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.activation_inferable_quantizers.activation_uniform_inferable_quantizer \
++    import ActivationUniformInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.base_pytorch_inferable_quantizer \
++    import BasePyTorchInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.weights_inferable_quantizers.weights_pot_inferable_quantizer \
++    import WeightsPOTInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.weights_inferable_quantizers.weights_symmetric_inferable_quantizer \
++    import WeightsSymmetricInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.weights_inferable_quantizers.weights_uniform_inferable_quantizer \
++    import WeightsUniformInferableQuantizer
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/base_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/base_inferable_quantizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/base_trainable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/base_trainable_quantizer.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -15,19 +15,19 @@
+ 
+ from typing import Union
+ from inspect import signature
+ 
+ from model_compression_toolkit.core import common
+ from model_compression_toolkit.core.common import Logger
+ 
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import BaseInferableQuantizer, \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import BaseInferableQuantizer, \
+     QuantizationTarget
+-from model_compression_toolkit.quantizers_infrastructure.common.trainable_quantizer_config import \
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.trainable_quantizer_config import \
+     TrainableQuantizerActivationConfig, TrainableQuantizerWeightsConfig
+-from model_compression_toolkit.quantizers_infrastructure.common.constants import QUANTIZATION_METHOD, \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.constants import QUANTIZATION_METHOD, \
+     QUANTIZATION_TARGET
+ 
+ 
+ class BaseTrainableQuantizer(BaseInferableQuantizer):
+     def __init__(self,
+                  quantization_config: Union[TrainableQuantizerActivationConfig, TrainableQuantizerWeightsConfig]):
+         """
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/constants.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/constants.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -32,7 +32,10 @@
+ STEPS = "optimizer_step"
+ TRAINING = "training"
+ 
+ 
+ QUANTIZATION_TARGET = 'quantization_target'
+ QUANTIZATION_METHOD = 'quantization_method'
+ QUANTIZER_TYPE = 'quantizer_type'
++
++EPS = 1e-8
++MULTIPLIER_N_BITS = 8
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/get_all_subclasses.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/get_all_subclasses.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/quant_utils.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/common/quant_utils.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -11,14 +11,15 @@
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ import numpy as np
+ from typing import Tuple
+ 
++
+ def adjust_range_to_include_zero(range_min: np.ndarray,
+                                  range_max: np.ndarray,
+                                  n_bits: int) -> Tuple[np.ndarray, np.ndarray]:
+     """
+     Adjusting the quantization range to include representation of 0.0 in the quantization grid.
+     For per_channel quantization range_min\range_max should be tensors in the specific shape that allows
+     quantization along the channel_axis.
+@@ -41,8 +42,8 @@
+     min_range_adj = min_range_adj * mid_range + max_negative * range_min
+     max_range_adj = max_range_adj * mid_range + min_positive * range_max
+ 
+     # Make sure min_range_adj < 0 and max_range_adj > 0 to avoid small numeric error
+     min_range_adj = np.minimum(min_range_adj, 0)
+     max_range_adj = np.maximum(max_range_adj, 0)
+ 
+-    return min_range_adj, max_range_adj
++    return min_range_adj, max_range_adj
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/common/trainable_quantizer_config.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/common/trainable_quantizer_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/__init__.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,21 +1,23 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-import model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.weights_inferable_quantizers.weights_pot_inferable_quantizer
+-import model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.weights_inferable_quantizers.weights_symmetric_inferable_quantizer
+-import model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.weights_inferable_quantizers.weights_uniform_inferable_quantizer
+-import model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.activation_inferable_quantizers.activation_pot_inferable_quantizer
+-import model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.activation_inferable_quantizers.activation_symmetric_inferable_quantizer
+-import model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.activation_inferable_quantizers.activation_uniform_inferable_quantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.base_keras_inferable_quantizer import \
++    BaseKerasInferableQuantizer
+ 
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.weights_inferable_quantizers.weights_pot_inferable_quantizer import WeightsPOTInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.weights_inferable_quantizers.weights_symmetric_inferable_quantizer import WeightsSymmetricInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.weights_inferable_quantizers.weights_uniform_inferable_quantizer import WeightsUniformInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.activation_inferable_quantizers.activation_pot_inferable_quantizer import ActivationPOTInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.activation_inferable_quantizers.activation_symmetric_inferable_quantizer import ActivationSymmetricInferableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.activation_inferable_quantizers.activation_uniform_inferable_quantizer import ActivationUniformInferableQuantizer
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/base_keras_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/keras/base_keras_quantizer.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -13,21 +13,21 @@
+ # limitations under the License.
+ # ==============================================================================
+ from typing import Dict, Any, Union
+ 
+ from model_compression_toolkit.core.common import Logger
+ from model_compression_toolkit.core.common.constants import FOUND_TF
+ 
+-from model_compression_toolkit.quantizers_infrastructure.common.base_trainable_quantizer import BaseTrainableQuantizer
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.base_trainable_quantizer import BaseTrainableQuantizer
+ from model_compression_toolkit.quantizers_infrastructure import TrainableQuantizerWeightsConfig, \
+     TrainableQuantizerActivationConfig
+ 
+ if FOUND_TF:
+     QUANTIZATION_CONFIG = 'quantization_config'
+-    from model_compression_toolkit.quantizers_infrastructure.keras.config_serialization import config_serialization, \
++    from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.keras.config_serialization import config_serialization, \
+         config_deserialization
+ 
+ 
+     class BaseKerasTrainableQuantizer(BaseTrainableQuantizer):
+         def __init__(self,
+                      quantization_config: Union[TrainableQuantizerWeightsConfig, TrainableQuantizerActivationConfig]):
+             """
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/config_serialization.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/keras/config_serialization.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -14,17 +14,17 @@
+ # ==============================================================================
+ import copy
+ 
+ from typing import Any, Union
+ from enum import Enum
+ 
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.trainable_quantizer_config import \
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.common.trainable_quantizer_config import \
+     TrainableQuantizerActivationConfig, TrainableQuantizerWeightsConfig
+-from model_compression_toolkit.quantizers_infrastructure.common import constants as C
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common import constants as C
+ 
+ 
+ def transform_enum(v: Any):
+     """
+     If an enum is received it value is return otherwise the input is returned.
+     Args:
+         v: Any type
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/__init__.py`
+
+ * *Ordering differences only*
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -7,8 +7,8 @@
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+-# ==============================================================================
++# ==============================================================================
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/activation_pot_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/activation_pot_inferable_quantizer.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -17,19 +17,20 @@
+ import numpy as np
+ 
+ from model_compression_toolkit.core.common.logger import Logger
+ from model_compression_toolkit.core.common.constants import FOUND_TF
+ 
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+ from model_compression_toolkit.quantizers_infrastructure import QuantizationTarget
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer
+ 
+ 
+ if FOUND_TF:
+-    from model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.activation_inferable_quantizers.activation_symmetric_inferable_quantizer import ActivationSymmetricInferableQuantizer
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.activation_inferable_quantizers.activation_symmetric_inferable_quantizer \
++        import ActivationSymmetricInferableQuantizer
+ 
+     @mark_quantizer(quantization_target=QuantizationTarget.Activation,
+                     quantization_method=[QuantizationMethod.POWER_OF_TWO],
+                     quantizer_type=None)
+     class ActivationPOTInferableQuantizer(ActivationSymmetricInferableQuantizer):
+         """
+         Class for quantizing activations using power-of-two quantizer
+@@ -53,12 +54,12 @@
+                                                                   threshold=threshold,
+                                                                   signed=signed)
+ 
+             is_threshold_pot = np.all([int(np.log2(x)) == np.log2(x) for x in self.threshold.flatten()])
+             assert is_threshold_pot, f'Expected threshold to be power of 2 but is {self.threshold}'
+ 
+ else:
+-    class ActivationPOTInferableQuantizer:
++    class ActivationPOTInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             Logger.error('Installing tensorflow and tensorflow_model_optimization is mandatory '
+                          'when using ActivationPOTInferableQuantizer. '
+-                         'Could not find Tensorflow package.')  # pragma: no cover
++                         'Could not find Tensorflow package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/activation_symmetric_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/activation_symmetric_inferable_quantizer.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -15,21 +15,22 @@
+ from typing import List
+ 
+ import numpy as np
+ 
+ from model_compression_toolkit.core.common.constants import FOUND_TF
+ 
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
+     QuantizationTarget
+ 
+ 
+ if FOUND_TF:
+     import tensorflow as tf
+-    from model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.activation_inferable_quantizers.activation_uniform_inferable_quantizer import ActivationUniformInferableQuantizer
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.activation_inferable_quantizers.activation_uniform_inferable_quantizer \
++        import ActivationUniformInferableQuantizer
+ 
+     @mark_quantizer(quantization_target=QuantizationTarget.Activation,
+                     quantization_method=[QuantizationMethod.SYMMETRIC],
+                     quantizer_type=None)
+     class ActivationSymmetricInferableQuantizer(ActivationUniformInferableQuantizer):
+ 
+         """
+@@ -74,12 +75,12 @@
+             """
+             return {'num_bits': self.num_bits,
+                     'signed': self.signed,
+                     'threshold': self.threshold}
+ 
+ 
+ else:
+-    class ActivationSymmetricInferableQuantizer:
++    class ActivationSymmetricInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             raise Exception('Installing tensorflow and tensorflow_model_optimization is mandatory '
+                             'when using ActivationSymmetricInferableQuantizer. '
+                             'Could not find Tensorflow package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/activation_inferable_quantizers/activation_uniform_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/activation_uniform_inferable_quantizer.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -16,22 +16,23 @@
+ 
+ import numpy as np
+ 
+ from model_compression_toolkit.core.common.logger import Logger
+ from model_compression_toolkit.core.common.constants import FOUND_TF
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+ from model_compression_toolkit.quantizers_infrastructure import QuantizationTarget
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer
+-from model_compression_toolkit.quantizers_infrastructure.common.quant_utils import adjust_range_to_include_zero
+-from model_compression_toolkit.quantizers_infrastructure.keras.validation_functions import \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.quant_utils import \
++    adjust_range_to_include_zero
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.validation_functions import \
+     validate_uniform_min_max_ranges, validate_adjusted_min_max_ranges
+ 
+ if FOUND_TF:
+     import tensorflow as tf
+-    from model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.base_keras_inferable_quantizer import BaseKerasInferableQuantizer
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.base_keras_inferable_quantizer import BaseKerasInferableQuantizer
+ 
+     @mark_quantizer(quantization_target=QuantizationTarget.Activation,
+                     quantization_method=[QuantizationMethod.UNIFORM],
+                     quantizer_type=None)
+     class ActivationUniformInferableQuantizer(BaseKerasInferableQuantizer):
+         """
+         Class for quantizing activations using an uniform quantizer
+@@ -99,12 +100,12 @@
+                 Dictionary with the following keys: 'num_bits', 'min_range', 'max_range'
+             """
+             return {'num_bits': self.num_bits,
+                     'min_range': self.min_range,
+                     'max_range': self.max_range}
+ 
+ else:
+-    class ActivationUniformInferableQuantizer:
++    class ActivationUniformInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             Logger.error('Installing tensorflow and tensorflow_model_optimization is mandatory '
+                          'when using ActivationUniformInferableQuantizer. '
+-                         'Could not find Tensorflow package.')  # pragma: no cover
++                         'Could not find Tensorflow package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/base_keras_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/base_keras_inferable_quantizer.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -28,29 +28,29 @@
+             super(BaseKerasInferableQuantizer, self).__init__()
+ 
+         @abstractmethod
+         def get_config(self):
+             """
+             Return a dictionary with the configuration of the quantizer.
+             """
+-            raise NotImplemented(f'{self.__class__.__name__} did not implement get_config')
++            raise NotImplemented(f'{self.__class__.__name__} did not implement get_config')  # pragma: no cover
+ 
+         @abstractmethod
+         def __call__(self, inputs: tf.Tensor):
+             """
+             Quantize the given inputs using the quantizer parameters.
+ 
+             Args:
+                 inputs: input tensor to quantize
+ 
+             Returns:
+                 quantized tensor.
+             """
+-            raise NotImplemented(f'{self.__class__.__name__} did not implement __call__')
++            raise NotImplemented(f'{self.__class__.__name__} did not implement __call__')  # pragma: no cover
+ else:
+-    class BaseKerasInferableQuantizer:
++    class BaseKerasInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             raise Exception('Installing tensorflow and tensorflow_model_optimization is mandatory '
+                             'when using BaseKerasInferableQuantizer. '
+                             'Could not find Tensorflow package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/constants.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/activation_inferable_quantizers/__init__.py`
+
+ * *Ordering differences only*
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -7,8 +7,8 @@
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+-# ==============================================================================
++# ==============================================================================
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/weights_pot_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_pot_inferable_quantizer.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -14,18 +14,19 @@
+ # ==============================================================================
+ from typing import List
+ 
+ import numpy as np
+ 
+ from model_compression_toolkit.core.common.constants import FOUND_TF
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer, QuantizationTarget
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer, QuantizationTarget
+ 
+ if FOUND_TF:
+-    from model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.weights_inferable_quantizers.weights_symmetric_inferable_quantizer import WeightsSymmetricInferableQuantizer
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.weights_inferable_quantizers.weights_symmetric_inferable_quantizer \
++        import WeightsSymmetricInferableQuantizer
+ 
+     @mark_quantizer(quantization_target=QuantizationTarget.Weights,
+                     quantization_method=[QuantizationMethod.POWER_OF_TWO],
+                     quantizer_type=None)
+     class WeightsPOTInferableQuantizer(WeightsSymmetricInferableQuantizer):
+         """
+         Class for quantizing weights using power-of-two quantizer
+@@ -55,12 +56,12 @@
+                                                                input_rank=input_rank)
+ 
+             is_threshold_pot = np.all([int(np.log2(x)) == np.log2(x) for x in self.threshold.flatten()])
+             assert is_threshold_pot, f'Expected threshold to be power of 2 but is {self.threshold}'
+ 
+ 
+ else:
+-    class WeightsPOTInferableQuantizer:
++    class WeightsPOTInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             raise Exception('Installing tensorflow and tensorflow_model_optimization is mandatory '
+                             'when using WeightsPOTInferableQuantizer. '
+                             'Could not find Tensorflow package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/weights_symmetric_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_symmetric_inferable_quantizer.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -15,18 +15,19 @@
+ from typing import List
+ 
+ import numpy as np
+ 
+ from model_compression_toolkit.core.common.constants import FOUND_TF
+ 
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer, QuantizationTarget
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer, QuantizationTarget
+ 
+ if FOUND_TF:
+-    from model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.weights_inferable_quantizers.weights_uniform_inferable_quantizer import WeightsUniformInferableQuantizer
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.weights_inferable_quantizers.weights_uniform_inferable_quantizer \
++        import WeightsUniformInferableQuantizer
+ 
+     @mark_quantizer(quantization_target=QuantizationTarget.Weights,
+                     quantization_method=[QuantizationMethod.SYMMETRIC],
+                     quantizer_type=None)
+     class WeightsSymmetricInferableQuantizer(WeightsUniformInferableQuantizer):
+         """
+         Class for quantizing weights using a symmetric quantizer
+@@ -75,12 +76,12 @@
+             return {'num_bits': self.num_bits,
+                     'threshold': self.threshold,
+                     'per_channel': self.per_channel,
+                     'channel_axis': self.channel_axis,
+                     'input_rank': self.input_rank}
+ 
+ else:
+-    class WeightsSymmetricInferableQuantizer:
++    class WeightsSymmetricInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             raise Exception('Installing tensorflow and tensorflow_model_optimization is mandatory '
+                             'when using WeightsPOTInferableQuantizer. '
+                             'Could not find Tensorflow package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/inferable_quantizers/weights_inferable_quantizers/weights_uniform_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_uniform_inferable_quantizer.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -12,25 +12,25 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ from typing import List
+ 
+ import numpy as np
+ 
+-from model_compression_toolkit.core.common import Logger
+ from model_compression_toolkit.core.common.constants import FOUND_TF
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer, QuantizationTarget
+-from model_compression_toolkit.quantizers_infrastructure.common.quant_utils import adjust_range_to_include_zero
+-from model_compression_toolkit.quantizers_infrastructure.keras.validation_functions import \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer, QuantizationTarget
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.quant_utils import \
++    adjust_range_to_include_zero
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.validation_functions import \
+     validate_uniform_min_max_ranges, validate_adjusted_min_max_ranges
+ 
+ if FOUND_TF:
+     import tensorflow as tf
+-    from model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.base_keras_inferable_quantizer import BaseKerasInferableQuantizer
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.base_keras_inferable_quantizer import BaseKerasInferableQuantizer
+ 
+     @mark_quantizer(quantization_target=QuantizationTarget.Weights,
+                     quantization_method=[QuantizationMethod.UNIFORM],
+                     quantizer_type=None)
+     class WeightsUniformInferableQuantizer(BaseKerasInferableQuantizer):
+         """
+         Class for quantizing weights using a uniform quantizer
+@@ -152,12 +152,12 @@
+                     'max_range': self.max_range,
+                     'min_range': self.min_range,
+                     'channel_axis': self.channel_axis,
+                     'input_rank': self.input_rank}
+ 
+ 
+ else:
+-    class WeightsUniformInferableQuantizer:
++    class WeightsUniformInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             raise Exception('Installing tensorflow and tensorflow_model_optimization is mandatory '
+                             'when using WeightsUniformInferableQuantizer. '
+                             'Could not find Tensorflow package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/load_model.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/load_model.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -10,21 +10,21 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ from model_compression_toolkit.core.common import Logger
+ from model_compression_toolkit.core.common.constants import FOUND_TF
+-from model_compression_toolkit.quantizers_infrastructure.common.get_all_subclasses import get_all_subclasses
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.get_all_subclasses import get_all_subclasses
+ 
+ if FOUND_TF:
+     import tensorflow as tf
+     from model_compression_toolkit import quantizers_infrastructure as qi
+     from model_compression_toolkit.quantizers_infrastructure import BaseKerasTrainableQuantizer
+-    from model_compression_toolkit.quantizers_infrastructure.keras.inferable_quantizers.base_keras_inferable_quantizer \
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.base_keras_inferable_quantizer \
+         import \
+         BaseKerasInferableQuantizer
+     keras = tf.keras
+ 
+     def keras_load_quantized_model(filepath, custom_objects=None, compile=True, options=None):
+         """
+         This function wraps the keras load model and MCT quantization custom class to it.
+@@ -34,17 +34,27 @@
+             custom_objects: Additional custom objects
+             compile: Boolean, whether to compile the model after loading.
+             options: Optional `tf.saved_model.LoadOptions` object that specifies options for loading from SavedModel.
+ 
+         Returns: A keras Model
+ 
+         """
+-        qi_inferable_custom_objects = {subclass.__name__: subclass for subclass in get_all_subclasses(BaseKerasInferableQuantizer)}
++        qi_inferable_custom_objects = {subclass.__name__: subclass for subclass in
++                                       get_all_subclasses(BaseKerasInferableQuantizer)}
++        all_inferable_names = list(qi_inferable_custom_objects.keys())
++        if len(set(all_inferable_names)) < len(all_inferable_names):
++            Logger.error(f"Found multiple quantizers with the same name that inherit from BaseKerasInferableQuantizer"
++                         f"while trying to load a model.")
++
+         qi_trainable_custom_objects = {subclass.__name__: subclass for subclass in
+                                        get_all_subclasses(BaseKerasTrainableQuantizer)}
++        all_trainable_names = list(qi_trainable_custom_objects.keys())
++        if len(set(all_trainable_names)) < len(all_trainable_names):
++            Logger.error(f"Found multiple quantizers with the same name that inherit from BaseKerasTrainableQuantizer"
++                         f"while trying to load a model.")
+ 
+         # Merge dictionaries into one dict
+         qi_custom_objects = {**qi_inferable_custom_objects, **qi_trainable_custom_objects}
+ 
+         # Add non-quantizers custom objects
+         qi_custom_objects.update({qi.KerasQuantizationWrapper.__name__: qi.KerasQuantizationWrapper})
+         if custom_objects is not None:
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/quantize_wrapper.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantize_wrapper.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -8,20 +8,20 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-from typing import Dict, List
++from typing import Dict, List, Any, Tuple
+ from model_compression_toolkit import quantizers_infrastructure as qi
+ from model_compression_toolkit.core.common.constants import FOUND_TF
+ from model_compression_toolkit.core.common.logger import Logger
+ from model_compression_toolkit.quantizers_infrastructure import BaseInferableQuantizer
+-from model_compression_toolkit.quantizers_infrastructure.common.constants import WEIGHTS_QUANTIZERS, ACTIVATION_QUANTIZERS, LAYER, STEPS, TRAINING
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.constants import WEIGHTS_QUANTIZERS, ACTIVATION_QUANTIZERS, LAYER, STEPS, TRAINING
+ 
+ if FOUND_TF:
+     import tensorflow as tf
+     from tensorflow.python.util import tf_inspect
+     from tensorflow_model_optimization.python.core.keras import utils
+ 
+     keras = tf.keras
+@@ -299,14 +299,37 @@
+             if self.is_weights_quantization:
+                 for name, quantizer in self.weights_quantizers.items():
+                     if isinstance(quantizer, qi.BaseKerasTrainableQuantizer):
+                         inferable_weight_quantizers.update({name: quantizer.convert2inferable()})
+                 self.weights_quantizers = inferable_weight_quantizers
+                 self._set_weights_vars(False)
+ 
++        def get_weights_vars(self) -> List[Tuple[str, Any, BaseInferableQuantizer]]:
++            """
++            A getter of the layer's weights variables.
++
++            Returns:
++                List pf tuples of the wrapped layer's weights variables with weight name, values and assigned quantizer.
++
++            """
++
++            return self._weights_vars
++
++        def get_quantized_weights(self) -> Dict[str, tf.Tensor]:
++            """
++
++            Returns: A dictionary of weights attributes to quantized weights.
++
++            """
++            quantized_weights = {}
++            weights_var = self.get_weights_vars()
++            for name, w, quantizer in weights_var:
++                quantized_weights[name] = quantizer(w)
++            return quantized_weights
++
+ else:
+     class KerasQuantizationWrapper(object):
+         def __init__(self,
+                      layer,
+                      weights_quantizers: Dict[str, BaseInferableQuantizer] = None,
+                      activation_quantizers: List[BaseInferableQuantizer] = None):
+             """
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/keras/validation_functions.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/validation_functions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/base_pytorch_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/activation_pot_inferable_quantizer.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,45 +1,62 @@
+-# Copyright 2022 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+-from typing import Union
+ 
+-from model_compression_toolkit.core.common.logger import Logger
+-from model_compression_toolkit.core.common.constants import FOUND_TORCH
++import numpy as np
+ 
+-from model_compression_toolkit.quantizers_infrastructure.common.base_trainable_quantizer import BaseTrainableQuantizer
+-from model_compression_toolkit.quantizers_infrastructure import TrainableQuantizerWeightsConfig, \
+-    TrainableQuantizerActivationConfig
++from model_compression_toolkit.core.common.constants import FOUND_TORCH
++from model_compression_toolkit.core.common.target_platform import QuantizationMethod
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
++    QuantizationTarget
+ 
+ if FOUND_TORCH:
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.activation_inferable_quantizers.activation_symmetric_inferable_quantizer import \
++        ActivationSymmetricInferableQuantizer
++
++
++    @mark_quantizer(quantization_target=QuantizationTarget.Activation,
++                    quantization_method=[QuantizationMethod.POWER_OF_TWO],
++                    quantizer_type=None)
++    class ActivationPOTInferableQuantizer(ActivationSymmetricInferableQuantizer):
++        """
++        Class for quantizing activations using power-of-two quantizer
++        """
+ 
+-    class BasePytorchTrainableQuantizer(BaseTrainableQuantizer):
+         def __init__(self,
+-                     quantization_config: Union[TrainableQuantizerWeightsConfig, TrainableQuantizerActivationConfig]):
++                     num_bits: int,
++                     threshold: np.ndarray,
++                     signed: bool):
+             """
+-            This class is a base Pytorch quantizer which validates the provided quantization config and defines an
+-            abstract function which any quantizer needs to implement.
++            Initialize the quantizer with the specified parameters.
+ 
+             Args:
+-                quantization_config: quantizer config class contains all the information about the quantizer configuration.
++                num_bits: number of bits to use for quantization
++                threshold: threshold for quantizing activations
++                signed: whether to use signed quantization or not
+             """
+-            super().__init__(quantization_config)
++            # target of Activation quantization
++            super(ActivationPOTInferableQuantizer, self).__init__(num_bits=num_bits,
++                                                                  signed=signed,
++                                                                  threshold=threshold)
++
++            is_threshold_pot = np.all(np.round(np.log2(threshold.flatten()))==np.log2(threshold.flatten()))
++            assert is_threshold_pot, f'Expected threshold to be power of 2 but is {threshold}'
++
+ 
+ else:
+-    class BasePytorchTrainableQuantizer(BaseTrainableQuantizer):
+-        def __init__(self,
+-                     quantization_config: Union[TrainableQuantizerWeightsConfig, TrainableQuantizerActivationConfig]):
+-            super().__init__(quantization_config)
+-            Logger.critical('Installing Pytorch is mandatory '
+-                            'when using BasePytorchTrainableQuantizer. '
+-                            'Could not find torch package.')  # pragma: no cover
++    class ActivationPOTInferableQuantizer:  # pragma: no cover
++        def __init__(self, *args, **kwargs):
++            raise Exception('Installing torch is mandatory '
++                            'when using ActivationPOTInferableQuantizer. '
++                            'Could not find torch package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/__init__.py`
+
+ * *Ordering differences only*
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -7,8 +7,8 @@
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+-# ==============================================================================
++# ==============================================================================
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/activation_pot_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_pot_inferable_quantizer.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -13,51 +13,54 @@
+ # limitations under the License.
+ # ==============================================================================
+ 
+ import numpy as np
+ 
+ from model_compression_toolkit.core.common.constants import FOUND_TORCH
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
+     QuantizationTarget
+ 
+ if FOUND_TORCH:
+-    from model_compression_toolkit.quantizers_infrastructure.pytorch.inferable_quantizers\
+-        .activation_inferable_quantizers.activation_symmetric_inferable_quantizer import \
+-        ActivationSymmetricInferableQuantizer
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.weights_inferable_quantizers.weights_symmetric_inferable_quantizer import \
++        WeightsSymmetricInferableQuantizer
+ 
+ 
+-    @mark_quantizer(quantization_target=QuantizationTarget.Activation,
++    @mark_quantizer(quantization_target=QuantizationTarget.Weights,
+                     quantization_method=[QuantizationMethod.POWER_OF_TWO],
+                     quantizer_type=None)
+-    class ActivationPOTInferableQuantizer(ActivationSymmetricInferableQuantizer):
++    class WeightsPOTInferableQuantizer(WeightsSymmetricInferableQuantizer):
+         """
+-        Class for quantizing activations using power-of-two quantizer
++        Class for quantizing weights using power-of-two quantizer
+         """
+ 
+         def __init__(self,
+                      num_bits: int,
+                      threshold: np.ndarray,
+-                     signed: bool):
++                     per_channel: bool,
++                     channel_axis: int = None
++                     ):
+             """
+             Initialize the quantizer with the specified parameters.
+ 
+             Args:
+                 num_bits: number of bits to use for quantization
+                 threshold: threshold for quantizing activations
+-                signed: whether to use signed quantization or not
++                per_channel: whether to use per-channel quantization
++                channel_axis: Axis of input to apply per-channel quantization on.
+             """
+-            # target of Activation quantization
+-            super(ActivationPOTInferableQuantizer, self).__init__(num_bits=num_bits,
+-                                                                  signed=signed,
+-                                                                  threshold=threshold)
++            # target of Weights quantization
++            super(WeightsPOTInferableQuantizer, self).__init__(num_bits=num_bits,
++                                                               threshold=threshold,
++                                                               per_channel=per_channel,
++                                                               channel_axis=channel_axis)
+ 
+             is_threshold_pot = np.all(np.round(np.log2(threshold.flatten()))==np.log2(threshold.flatten()))
+             assert is_threshold_pot, f'Expected threshold to be power of 2 but is {threshold}'
+ 
+ 
+ else:
+-    class ActivationPOTInferableQuantizer:
++    class WeightsPOTInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             raise Exception('Installing torch is mandatory '
+-                            'when using ActivationPOTInferableQuantizer. '
++                            'when using WeightsPOTInferableQuantizer. '
+                             'Could not find torch package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/activation_symmetric_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/activation_symmetric_inferable_quantizer.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -12,21 +12,20 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ import numpy as np
+ 
+ from model_compression_toolkit.core.common.constants import FOUND_TORCH
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
+     QuantizationTarget
+ 
+ if FOUND_TORCH:
+     import torch
+-    from model_compression_toolkit.quantizers_infrastructure.pytorch.inferable_quantizers \
+-        .base_symmetric_inferable_quantizer import \
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.base_symmetric_inferable_quantizer import \
+         BaseSymmetricInferableQuantizer
+ 
+ 
+     @mark_quantizer(quantization_target=QuantizationTarget.Activation,
+                     quantization_method=[QuantizationMethod.SYMMETRIC],
+                     quantizer_type=None)
+     class ActivationSymmetricInferableQuantizer(BaseSymmetricInferableQuantizer):
+@@ -73,12 +72,12 @@
+             return torch.fake_quantize_per_tensor_affine(inputs,
+                                                          scale=self.scales,
+                                                          zero_point=self.zero_points,
+                                                          quant_min=self.min_quantized_domain,
+                                                          quant_max=self.max_quantized_domain)
+ 
+ else:
+-    class ActivationSymmetricInferableQuantizer:
++    class ActivationSymmetricInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             raise Exception('Installing torch is mandatory '
+                             'when using ActivationSymmetricInferableQuantizer. '
+                             'Could not find torch package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/activation_inferable_quantizers/activation_uniform_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/activation_inferable_quantizers/activation_uniform_inferable_quantizer.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -12,21 +12,20 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ import numpy as np
+ 
+ from model_compression_toolkit.core.common.constants import FOUND_TORCH
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
+     QuantizationTarget
+ 
+ if FOUND_TORCH:
+     import torch
+-    from model_compression_toolkit.quantizers_infrastructure.pytorch.inferable_quantizers \
+-        .base_uniform_inferable_quantizer import \
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.base_uniform_inferable_quantizer import \
+         BaseUniformInferableQuantizer
+ 
+ 
+     @mark_quantizer(quantization_target=QuantizationTarget.Activation,
+                     quantization_method=[QuantizationMethod.UNIFORM],
+                     quantizer_type=None)
+     class ActivationUniformInferableQuantizer(BaseUniformInferableQuantizer):
+@@ -90,12 +89,12 @@
+                                                          scale=self.scale,
+                                                          zero_point=self.zero_point,
+                                                          quant_min=self.min_quantized_domain,
+                                                          quant_max=self.max_quantized_domain)
+ 
+ 
+ else:
+-    class ActivationUniformInferableQuantizer:
++    class ActivationUniformInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             raise Exception('Installing torch is mandatory '
+                             'when using ActivationUniformInferableQuantizer. '
+                             'Could not find torch package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/base_pytorch_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/base_pytorch_inferable_quantizer.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -35,14 +35,14 @@
+ 
+             Args:
+                 inputs: input tensor to quantize
+ 
+             Returns:
+                 quantized tensor.
+             """
+-            raise NotImplemented(f'{self.__class__.__name__} did not implement __call__')
++            raise NotImplemented(f'{self.__class__.__name__} did not implement __call__')  # pragma: no cover
+ else:
+-    class BasePyTorchInferableQuantizer:
++    class BasePyTorchInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             raise Exception('Installing torch is mandatory '
+                             'when using BasePyTorchInferableQuantizer. '
+                             'Could not find torch package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/base_symmetric_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/base_symmetric_inferable_quantizer.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -12,19 +12,18 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ import numpy as np
+ 
+ from model_compression_toolkit.core.common.constants import FOUND_TORCH
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer
+ 
+ if FOUND_TORCH:
+-    from model_compression_toolkit.quantizers_infrastructure.pytorch.inferable_quantizers\
+-        .base_pytorch_inferable_quantizer import \
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.base_pytorch_inferable_quantizer import \
+         BasePyTorchInferableQuantizer
+ 
+ 
+     @mark_quantizer(quantization_target=None,
+                     quantization_method=[QuantizationMethod.SYMMETRIC],
+                     quantizer_type=None)
+     class BaseSymmetricInferableQuantizer(BasePyTorchInferableQuantizer):
+@@ -60,12 +59,12 @@
+                 self.min_quantized_domain = 0
+                 self.max_quantized_domain = (2 ** num_bits) - 1
+                 self.scales = threshold / 2 ** num_bits
+ 
+ 
+ 
+ else:
+-    class BaseSymmetricInferableQuantizer:
++    class BaseSymmetricInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             raise Exception('Installing torch is mandatory '
+                             'when using BaseSymmetricInferableQuantizer. '
+                             'Could not find torch package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/base_uniform_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/base_uniform_inferable_quantizer.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -12,19 +12,18 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
+ import numpy as np
+ 
+ from model_compression_toolkit.core.common.constants import FOUND_TORCH
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer
+ 
+ if FOUND_TORCH:
+-    from model_compression_toolkit.quantizers_infrastructure.pytorch.inferable_quantizers\
+-        .base_pytorch_inferable_quantizer import \
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.base_pytorch_inferable_quantizer import \
+         BasePyTorchInferableQuantizer
+ 
+ 
+     @mark_quantizer(quantization_target=None,
+                     quantization_method=[QuantizationMethod.UNIFORM],
+                     quantizer_type=None)
+     class BaseUniformInferableQuantizer(BasePyTorchInferableQuantizer):
+@@ -47,12 +46,12 @@
+             self.min_range = min_range
+             self.max_range = max_range
+             self.min_quantized_domain = 0
+             self.max_quantized_domain = 2 ** num_bits - 1
+ 
+ 
+ else:
+-    class BaseUniformInferableQuantizer:
++    class BaseUniformInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             raise Exception('Installing torch is mandatory '
+                             'when using BaseUniformInferableQuantizer. '
+                             'Could not find torch package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/constants.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/__init__.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/trainable_infrastructure/__init__.py`
+
+ * *Ordering differences only*
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -7,8 +7,8 @@
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+-# ==============================================================================
++# ==============================================================================
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/weights_pot_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/keras/quantizers/weights_inferable_quantizers/weights_lut_pot_inferable_quantizer.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -8,60 +8,72 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
++from typing import List
+ 
+ import numpy as np
+ 
+-from model_compression_toolkit.core.common.constants import FOUND_TORCH
++from model_compression_toolkit.core.common.constants import FOUND_TF
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
+     QuantizationTarget
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.constants import MULTIPLIER_N_BITS, EPS
+ 
+-if FOUND_TORCH:
+-    from model_compression_toolkit.quantizers_infrastructure.pytorch.inferable_quantizers\
+-        .weights_inferable_quantizers.weights_symmetric_inferable_quantizer import \
+-        WeightsSymmetricInferableQuantizer
++if FOUND_TF:
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.keras.quantizers.weights_inferable_quantizers.\
++        weights_lut_symmetric_inferable_quantizer import WeightsLUTSymmetricInferableQuantizer
+ 
+ 
+     @mark_quantizer(quantization_target=QuantizationTarget.Weights,
+-                    quantization_method=[QuantizationMethod.POWER_OF_TWO],
++                    quantization_method=[QuantizationMethod.LUT_POT_QUANTIZER],
+                     quantizer_type=None)
+-    class WeightsPOTInferableQuantizer(WeightsSymmetricInferableQuantizer):
++    class WeightsLUTPOTInferableQuantizer(WeightsLUTSymmetricInferableQuantizer):
+         """
+-        Class for quantizing weights using power-of-two quantizer
++        Class for quantizing weights using a lut power-of-two quantizer
+         """
+ 
+         def __init__(self,
+                      num_bits: int,
+-                     threshold: np.ndarray,
++                     cluster_centers: np.ndarray,
++                     threshold: List[float],
+                      per_channel: bool,
+-                     channel_axis: int = None
+-                     ):
++                     channel_axis: int = None,
++                     input_rank: int = None,
++                     multiplier_n_bits: int = MULTIPLIER_N_BITS,
++                     eps: float = EPS):
+             """
+             Initialize the quantizer with the specified parameters.
+ 
+             Args:
+                 num_bits: number of bits to use for quantization
+-                threshold: threshold for quantizing activations
++                cluster_centers: the cluster centers to assign the weights
++                threshold: threshold for quantizing weights
+                 per_channel: whether to use per-channel quantization
+-                channel_axis: Axis of input to apply per-channel quantization on.
++                channel_axis: axis along which to apply per-channel quantization
++                input_rank: number of dimensions of input tensor the quantizer quantizes
++                multiplier_n_bits: Number of bits that determines the quantization range
++                eps: Small value for numerical stability in division
+             """
+-            # target of Weights quantization
+-            super(WeightsPOTInferableQuantizer, self).__init__(num_bits=num_bits,
+-                                                               threshold=threshold,
+-                                                               per_channel=per_channel,
+-                                                               channel_axis=channel_axis)
+ 
+-            is_threshold_pot = np.all(np.round(np.log2(threshold.flatten()))==np.log2(threshold.flatten()))
+-            assert is_threshold_pot, f'Expected threshold to be power of 2 but is {threshold}'
++            super(WeightsLUTPOTInferableQuantizer, self).__init__(num_bits=num_bits,
++                                                                  cluster_centers=cluster_centers,
++                                                                  threshold=threshold,
++                                                                  per_channel=per_channel,
++                                                                  channel_axis=channel_axis,
++                                                                  input_rank=input_rank,
++                                                                  multiplier_n_bits=multiplier_n_bits,
++                                                                  eps=eps)
++
++            is_threshold_pot = np.all([int(np.log2(x)) == np.log2(x) for x in self.threshold.flatten()])
++            assert is_threshold_pot, f'Expected threshold to be power of 2 but is {self.threshold}'
+ 
+ 
+ else:
+-    class WeightsPOTInferableQuantizer:
++    class WeightsLUTPOTInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+-            raise Exception('Installing torch is mandatory '
+-                            'when using WeightsPOTInferableQuantizer. '
+-                            'Could not find torch package.')
++            raise Exception('Installing tensorflow and tensorflow_model_optimization is mandatory '
++                            'when using WeightsLUTPOTInferableQuantizer. '
++                            'Could not find Tensorflow package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/weights_symmetric_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_symmetric_inferable_quantizer.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -13,23 +13,22 @@
+ # limitations under the License.
+ # ==============================================================================
+ 
+ import numpy as np
+ 
+ from model_compression_toolkit.core.common.constants import FOUND_TORCH
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import mark_quantizer, \
+     QuantizationTarget
+ 
+ if FOUND_TORCH:
+     import torch
+-    from model_compression_toolkit.quantizers_infrastructure.pytorch.quantizer_utils import to_torch_tensor, \
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizer_utils import to_torch_tensor, \
+         get_working_device
+-    from model_compression_toolkit.quantizers_infrastructure.pytorch.inferable_quantizers \
+-        .base_symmetric_inferable_quantizer import \
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.base_symmetric_inferable_quantizer import \
+         BaseSymmetricInferableQuantizer
+ 
+ 
+     @mark_quantizer(quantization_target=QuantizationTarget.Weights,
+                     quantization_method=[QuantizationMethod.SYMMETRIC],
+                     quantizer_type=None)
+     class WeightsSymmetricInferableQuantizer(BaseSymmetricInferableQuantizer):
+@@ -94,12 +93,12 @@
+                                                          self.scales,
+                                                          self.zero_points,
+                                                          quant_min=self.min_quantized_domain,
+                                                          quant_max=self.max_quantized_domain)
+ 
+ 
+ else:
+-    class WeightsSymmetricInferableQuantizer:
++    class WeightsSymmetricInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             raise Exception('Installing torch is mandatory '
+                             'when using WeightsSymmetricInferableQuantizer. '
+                             'Could not find torch package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/inferable_quantizers/weights_inferable_quantizers/weights_uniform_inferable_quantizer.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantizers/weights_inferable_quantizers/weights_uniform_inferable_quantizer.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -14,23 +14,22 @@
+ # ==============================================================================
+ 
+ import numpy as np
+ 
+ from model_compression_toolkit.core.common.constants import FOUND_TORCH
+ from model_compression_toolkit.core.common.logger import Logger
+ from model_compression_toolkit.core.common.target_platform import QuantizationMethod
+-from model_compression_toolkit.quantizers_infrastructure.common.base_inferable_quantizer import QuantizationTarget, \
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.base_inferable_quantizer import QuantizationTarget, \
+     mark_quantizer
+ 
+ if FOUND_TORCH:
+     import torch
+-    from model_compression_toolkit.quantizers_infrastructure.pytorch.quantizer_utils import get_working_device, \
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizer_utils import get_working_device, \
+     fix_range_to_include_zero, to_torch_tensor
+-    from model_compression_toolkit.quantizers_infrastructure.pytorch.inferable_quantizers \
+-        .base_uniform_inferable_quantizer import \
++    from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.pytorch.quantizers.base_uniform_inferable_quantizer import \
+         BaseUniformInferableQuantizer
+ 
+ 
+     @mark_quantizer(quantization_target=QuantizationTarget.Weights,
+                     quantization_method=[QuantizationMethod.UNIFORM],
+                     quantizer_type=None)
+     class WeightsUniformInferableQuantizer(BaseUniformInferableQuantizer):
+@@ -99,12 +98,12 @@
+                                                          self.scales,
+                                                          self.zero_points,
+                                                          quant_min=self.min_quantized_domain,
+                                                          quant_max=self.max_quantized_domain)
+ 
+ 
+ else:
+-    class WeightsUniformInferableQuantizer:
++    class WeightsUniformInferableQuantizer:  # pragma: no cover
+         def __init__(self, *args, **kwargs):
+             Logger.error('Installing torch is mandatory '
+                          'when using WeightsUniformInferableQuantizer. '
+-                         'Could not find torch package.')  # pragma: no cover
++                         'Could not find torch package.')
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/quantize_wrapper.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/quantizers_infrastructure/inferable_infrastructure/pytorch/quantize_wrapper.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -8,22 +8,23 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================f
+-from typing import List, Union, Any, Dict
++from typing import List, Union, Any, Dict, Tuple
+ from model_compression_toolkit.core.common.constants import FOUND_TORCH
+ from model_compression_toolkit.core.common.logger import Logger
+ from model_compression_toolkit.quantizers_infrastructure import BaseInferableQuantizer
+-from model_compression_toolkit.quantizers_infrastructure.common.constants import LAYER, TRAINING
+-from model_compression_toolkit import quantizers_infrastructure as qi
++from model_compression_toolkit.quantizers_infrastructure.inferable_infrastructure.common.constants import LAYER, TRAINING
+ import inspect
+ 
++from model_compression_toolkit.quantizers_infrastructure.trainable_infrastructure.pytorch.base_pytorch_quantizer import \
++    BasePytorchTrainableQuantizer
+ 
+ if FOUND_TORCH:
+     import torch
+     import torch.nn as nn
+ 
+ 
+     class PytorchQuantizationWrapper(nn.Module):
+@@ -102,26 +103,26 @@
+             Convert the wrapper quantizers with inferable quantizers
+ 
+             """
+             # Activation quantizers
+             if self.is_activation_quantization:
+                 inferable_activation_quantizers = []
+                 for quantizer in self.activation_quantizers:
+-                    if isinstance(quantizer, qi.BasePytorchTrainableQuantizer):
++                    if isinstance(quantizer, BasePytorchTrainableQuantizer):
+                         inferable_activation_quantizers.append(quantizer.convert2inferable())
+                     else:
+                         Logger.error('Can only convert trainable quantizers based on BasePytorchTrainableQuantizer') # pragma: no cover
+                 self.activation_quantizers = inferable_activation_quantizers
+                 self._set_activation_vars()
+ 
+             # Weight quantizers
+             if self.is_weights_quantization:
+                 inferable_weight_quantizers = {}
+                 for name, quantizer in self.weights_quantizers.items():
+-                    if isinstance(quantizer, qi.BasePytorchTrainableQuantizer):
++                    if isinstance(quantizer, BasePytorchTrainableQuantizer):
+                         inferable_weight_quantizers.update({name: quantizer.convert2inferable()})
+                     else:
+                         Logger.error('Can only convert trainable quantizers based on BasePytorchTrainableQuantizer') # pragma: no cover
+                 self.weights_quantizers = inferable_weight_quantizers
+                 self._set_weights_vars(False)
+ 
+         def _set_weights_vars(self, is_training: bool = True):
+@@ -167,14 +168,25 @@
+             Returns: None
+ 
+             """
+             for weight_attr in self.weights_quantizers.keys():
+                 weight = quantized_weights.get(weight_attr)
+                 setattr(self.layer, weight_attr, weight)
+ 
++        def get_weights_vars(self) -> List[Tuple[str, Any, BaseInferableQuantizer]]:
++            """
++            A getter of the layer's weights variables.
++
++            Returns:
++                List pf tuples of the wrapped layer's weights variables with weight name, values and assigned quantizer.
++
++            """
++
++            return self._weights_vars
++
+         def forward(self,
+                     x: torch.Tensor,
+                     *args: List[Any],
+                     **kwargs: Dict[str, Any]) -> Union[torch.Tensor, List[torch.Tensor]]:
+             """
+             PytorchQuantizationWrapper forward functions
+             Args:
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/model_compression_toolkit/quantizers_infrastructure/pytorch/quantizer_utils.py` & `mct-nightly-1.8.0.9032023.post431/model_compression_toolkit/gptq/keras/quantizer/quant_utils.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,114 +1,133 @@
+-# Copyright 2023 Sony Semiconductor Israel, Inc. All rights reserved.
++# Copyright 2021 Sony Semiconductor Israel, Inc. All rights reserved.
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ # ==============================================================================
++
++import tensorflow as tf
++from model_compression_toolkit.core.common.constants import MIN_THRESHOLD
+ from typing import Tuple
+ 
+-import torch
+-import numpy as np
++
++def ste_ceil(x: tf.Tensor) -> tf.Tensor:
++    """
++    Return the ceil values of a tensor.
++    """
++    error = tf.stop_gradient(tf.math.ceil(x) - x)
++    return error + x
+ 
+ 
+-def get_working_device():
++def safe_log(x: tf.Tensor, eps: float) -> tf.Tensor:
+     """
+-    Get the working device of the environment
++    Computes log function of x unless x is smaller than some small value, so the log function would not fail.
+ 
+-    Returns:
+-        Device "cuda" if GPU is available, else "cpu"
++    Args:
++        x: input variable.
++        eps: limit value.
+ 
++    Returns: log of x where x > eps, else, log of eps.
+     """
+-    return torch.device('cuda' if torch.cuda.is_available() else 'cpu')
++    return tf.math.log(tf.maximum(x, eps))
+ 
+ 
+-def to_torch_tensor(tensor):
++def ste_round(x: tf.Tensor) -> tf.Tensor:
+     """
+-    Convert a Numpy array to a Torch tensor.
+-    Args:
+-        tensor: Numpy array.
++    Return the rounded values of a tensor.
++    """
++    error = tf.stop_gradient(tf.math.round(x) - x)
++    return error + x
+ 
+-    Returns:
+-        Torch tensor converted from the input Numpy array.
++
++def log2(x: tf.Tensor) -> tf.Tensor:
++    """
++    Compute log2 of a tensor.
++    """
++    return tf.experimental.numpy.log2(x)
++
++
++def power_of_two_max(max_tensor: tf.Tensor) -> tf.Tensor:
+     """
+-    working_device = get_working_device()
+-    if isinstance(tensor, torch.Tensor):
+-        return tensor.to(working_device)
+-    elif isinstance(tensor, list):
+-        return [to_torch_tensor(t) for t in tensor]
+-    elif isinstance(tensor, tuple):
+-        return (to_torch_tensor(t) for t in tensor)
+-    elif isinstance(tensor, np.ndarray):
+-        return torch.from_numpy(tensor.astype(np.float32)).to(working_device)
+-    elif isinstance(tensor, float):
+-        return torch.Tensor([tensor]).to(working_device)
+-    elif isinstance(tensor, int):
+-        return torch.Tensor([tensor]).int().to(working_device)
+-    else:
+-        raise Exception(f'Conversion of type {type(tensor)} to {type(torch.Tensor)} is not supported')
+-
+-
+-def get_activation_symmetric_quantization_range_and_scale(activation_is_signed: bool,
+-                                                          activation_n_bits: int,
+-                                                          activation_threshold: float):
+-    """
+-    Calculates lower and upper bounds on the quantization range, along with quantization scale,
+-    for symmetric quantization (used for the symmetric and power-of-two quantizers),
+-    according to whether the quantization is signed or unsigned.
++    Compute the power of two threshold for a tensor.
++    """
++    _2 = tf.convert_to_tensor(2.0, tf.float64)
++    return tf.cast(tf.math.pow(_2, ste_ceil(log2(tf.maximum(tf.cast(max_tensor, tf.float64),
++                                                            MIN_THRESHOLD)))), tf.float32)
++
+ 
++def calculate_delta(max_tensor: tf.Tensor,
++                    num_bits: int,
++                    signed: bool) -> tf.Tensor:
++    """
++    Compute the step size for the quantization.
++    """
++    return max_tensor / (2 ** (num_bits - int(signed)))
++
++
++def ste_clip(x: [tf.Tensor, tf.Variable], max_val=1, min_val=None) -> tf.Tensor:
++    """
++    clip a variable between fixed values such that min_val<=output<=max_val
+     Args:
+-        activation_is_signed: Whether the quantization is signed or not.
+-        activation_n_bits: Number of bits to use for quantization.
+-        activation_threshold: The quantization threshold.
++        x: input variable
++        max_val: maximum value for clipping
++        min_val: minimum value for clipping (defaults to -max_val)
+ 
+-    Returns: range lower bound, range upper bound and quantization scale.
++    Returns:
++        clipped variable
+ 
+     """
+-    if activation_is_signed:
+-        min_value = -2 ** (activation_n_bits - 1)
+-        max_value = 2 ** (activation_n_bits - 1) - 1
+-        scale = activation_threshold / 2 ** (activation_n_bits - 1)
+-    else:
+-        min_value = 0
+-        max_value = (2 ** activation_n_bits) - 1
+-        scale = activation_threshold / 2 ** activation_n_bits
++    min_val = -max_val if min_val is None else min_val
++    return tf.stop_gradient(tf.math.minimum(tf.math.maximum(x, min_val), max_val) - x) + x
+ 
+-    return min_value, max_value, scale
+ 
++def clip(x: [tf.Tensor, tf.Variable], max_val=1, min_val=None) -> tf.Tensor:
++    """
++    clip a variable between fixed values such that min_val<=output<=max_val
++    Args:
++        x: input variable
++        max_val: maximum value for clipping
++        min_val: minimum value for clipping (defaults to -max_val)
++    Returns:
++        clipped variable
++    """
++    min_val = -max_val if min_val is None else min_val
++    return tf.math.minimum(tf.math.maximum(x, min_val), max_val)
+ 
+-def fix_range_to_include_zero(range_min: torch.Tensor,
+-                              range_max: torch.Tensor,
+-                              n_bits: int) -> Tuple[torch.Tensor, torch.Tensor]:
++
++def fix_range_to_include_zero(range_min: tf.Tensor,
++                              range_max: tf.Tensor,
++                              n_bits: int) -> Tuple[tf.Tensor, tf.Tensor]:
+     """
+     Adjusting the quantization range to include representation of 0.0 in the quantization grid.
+     If quantization per-channel, then range_min and range_max should be tensors in the specific shape that allows
+     quantization along the channel_axis.
++
+     Args:
+         range_min: min bound of the quantization range (before adjustment).
+         range_max: max bound of the quantization range (before adjustment).
+         n_bits: Number of bits to quantize the tensor.
++
+     Returns: adjusted quantization range
+     """
+     min_positive = range_min > 0
+     max_negative = range_max < 0
+-    mid_range = torch.logical_and(torch.logical_not(min_positive), torch.logical_not(max_negative))
+-    min_positive = min_positive.float()
+-    max_negative = max_negative.float()
+-    mid_range = mid_range.float()
++    mid_range = tf.logical_and(tf.logical_not(min_positive), tf.logical_not(max_negative))
++    min_positive = tf.cast(min_positive, tf.float32)
++    max_negative = tf.cast(max_negative, tf.float32)
++    mid_range = tf.cast(mid_range, tf.float32)
+ 
+     scale = (range_max - range_min) / (2 ** n_bits - 1)
+-    min_range_adj = scale * torch.round(range_min / scale)
++    min_range_adj = scale * tf.round(range_min / scale)
+     max_range_adj = range_max - range_min + min_range_adj
+ 
+     min_range_adj = min_range_adj * mid_range + max_negative * range_min
+     max_range_adj = max_range_adj * mid_range + min_positive * range_max
+     return min_range_adj, max_range_adj
+-
+-
+```
+
+### Comparing `mct-nightly-1.8.0.9022023.post443/setup.py` & `mct-nightly-1.8.0.9032023.post431/setup.py`
+
+ * *Files identical despite different names*
+
