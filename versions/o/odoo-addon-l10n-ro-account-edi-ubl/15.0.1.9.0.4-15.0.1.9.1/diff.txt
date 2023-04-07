@@ -1,0 +1,168 @@
+--- tmp/odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4-py3-none-any.whl.zip
++++ tmp/odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,37 +1,37 @@
+│ -Zip file size: 70122 bytes, number of entries: 35
+│ --rw-r--r--  2.0 unx     3890 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/README.rst
+│ --rw-r--r--  2.0 unx      173 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/__init__.py
+│ --rw-r--r--  2.0 unx     1031 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/__manifest__.py
+│ --rw-r--r--  2.0 unx      818 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/init_hook.py
+│ --rw-r--r--  2.0 unx      769 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/data/account_edi_data.xml
+│ --rw-r--r--  2.0 unx      381 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/data/ubl_templates.xml
+│ --rw-r--r--  2.0 unx     8722 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/i18n/l10n_ro_account_edi_ubl.pot
+│ --rw-r--r--  2.0 unx      206 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/models/__init__.py
+│ --rw-r--r--  2.0 unx     8280 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/models/account_edi_format.py
+│ --rw-r--r--  2.0 unx     5479 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/models/account_edi_xml_cius_ro.py
+│ --rw-r--r--  2.0 unx     3999 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/models/account_move.py
+│ --rw-r--r--  2.0 unx     2552 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/models/product.py
+│ --rw-r--r--  2.0 unx      374 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/models/res_company.py
+│ --rw-r--r--  2.0 unx      448 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/models/res_config_settings.py
+│ --rw-r--r--  2.0 unx      757 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/models/res_partner.py
+│ --rw-r--r--  2.0 unx      512 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/readme/CONFIGURE.rst
+│ --rw-r--r--  2.0 unx      253 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/readme/CONTRIBUTORS.rst
+│ --rw-r--r--  2.0 unx       84 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/readme/DESCRIPTION.rst
+│ --rw-r--r--  2.0 unx      197 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/security/ir.model.access.csv
+│ --rw-r--r--  2.0 unx    10307 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/static/description/anaf.png
+│ --rw-r--r--  2.0 unx     3036 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/static/description/anaf.svg
+│ --rw-r--r--  2.0 unx     9004 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/static/description/icon.png
+│ --rw-r--r--  2.0 unx    28849 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/static/description/icon.svg
+│ --rw-r--r--  2.0 unx    13447 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/static/description/index.html
+│ --rw-r--r--  2.0 unx       36 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/tests/__init__.py
+│ --rw-r--r--  2.0 unx    13921 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/tests/test_acccount_edi_ubl.py
+│ --rw-r--r--  2.0 unx      679 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/views/account_invoice.xml
+│ --rw-r--r--  2.0 unx      750 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/views/cius_template.xml
+│ --rw-r--r--  2.0 unx      688 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/views/product_view.xml
+│ --rw-r--r--  2.0 unx     1419 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/views/res_config_settings_views.xml
+│ --rw-r--r--  2.0 unx      760 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edi_ubl/views/res_partner_view.xml
+│ --rw-r--r--  2.0 unx     4568 b- defN 23-Apr-06 05:11 odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 05:11 odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 05:11 odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx     4025 b- defN 23-Apr-06 05:11 odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/RECORD
+│ -35 files, 130511 bytes uncompressed, 63232 bytes compressed:  51.6%
+│ +Zip file size: 70104 bytes, number of entries: 35
+│ +-rw-r--r--  2.0 unx     3890 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/README.rst
+│ +-rw-r--r--  2.0 unx      173 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/__init__.py
+│ +-rw-r--r--  2.0 unx     1031 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/__manifest__.py
+│ +-rw-r--r--  2.0 unx      818 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/init_hook.py
+│ +-rw-r--r--  2.0 unx      769 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/data/account_edi_data.xml
+│ +-rw-r--r--  2.0 unx      381 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/data/ubl_templates.xml
+│ +-rw-r--r--  2.0 unx     8722 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/i18n/l10n_ro_account_edi_ubl.pot
+│ +-rw-r--r--  2.0 unx      206 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/models/__init__.py
+│ +-rw-r--r--  2.0 unx     8280 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/models/account_edi_format.py
+│ +-rw-r--r--  2.0 unx     5479 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/models/account_edi_xml_cius_ro.py
+│ +-rw-r--r--  2.0 unx     3999 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/models/account_move.py
+│ +-rw-r--r--  2.0 unx     2552 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/models/product.py
+│ +-rw-r--r--  2.0 unx      374 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/models/res_company.py
+│ +-rw-r--r--  2.0 unx      448 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/models/res_config_settings.py
+│ +-rw-r--r--  2.0 unx      757 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/models/res_partner.py
+│ +-rw-r--r--  2.0 unx      512 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/readme/CONFIGURE.rst
+│ +-rw-r--r--  2.0 unx      253 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/readme/CONTRIBUTORS.rst
+│ +-rw-r--r--  2.0 unx       84 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/readme/DESCRIPTION.rst
+│ +-rw-r--r--  2.0 unx      197 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/security/ir.model.access.csv
+│ +-rw-r--r--  2.0 unx    10307 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/static/description/anaf.png
+│ +-rw-r--r--  2.0 unx     3036 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/static/description/anaf.svg
+│ +-rw-r--r--  2.0 unx     9004 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/static/description/icon.png
+│ +-rw-r--r--  2.0 unx    28849 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/static/description/icon.svg
+│ +-rw-r--r--  2.0 unx    13447 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/static/description/index.html
+│ +-rw-r--r--  2.0 unx       36 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/tests/__init__.py
+│ +-rw-r--r--  2.0 unx    13921 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/tests/test_acccount_edi_ubl.py
+│ +-rw-r--r--  2.0 unx      679 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/views/account_invoice.xml
+│ +-rw-r--r--  2.0 unx      750 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/views/cius_template.xml
+│ +-rw-r--r--  2.0 unx      688 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/views/product_view.xml
+│ +-rw-r--r--  2.0 unx     1419 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/views/res_config_settings_views.xml
+│ +-rw-r--r--  2.0 unx      760 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edi_ubl/views/res_partner_view.xml
+│ +-rw-r--r--  2.0 unx     4566 b- defN 23-Apr-07 05:18 odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 05:18 odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 05:18 odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 unx     4017 b- defN 23-Apr-07 05:18 odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/RECORD
+│ +35 files, 130501 bytes uncompressed, 63230 bytes compressed:  51.5%
+├── zipnote {}
+│ @@ -87,20 +87,20 @@
+│  
+│  Filename: odoo/addons/l10n_ro_account_edi_ubl/views/res_config_settings_views.xml
+│  Comment: 
+│  
+│  Filename: odoo/addons/l10n_ro_account_edi_ubl/views/res_partner_view.xml
+│  Comment: 
+│  
+│ -Filename: odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/METADATA
+│ +Filename: odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/WHEEL
+│ +Filename: odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/top_level.txt
+│ +Filename: odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/RECORD
+│ +Filename: odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── odoo/addons/l10n_ro_account_edi_ubl/__manifest__.py
+│ @@ -16,15 +16,15 @@
+│          "views/res_config_settings_views.xml",
+│          "views/account_invoice.xml",
+│          "views/product_view.xml",
+│          "views/res_partner_view.xml",
+│          "views/cius_template.xml",
+│      ],
+│      "license": "AGPL-3",
+│ -    "version": "15.0.1.9.0",
+│ +    "version": "15.0.1.9.1",
+│      "author": "Terrabit," "NextERP Romania," "Odoo Community Association (OCA)",
+│      "website": "https://github.com/OCA/l10n-romania",
+│      "installable": True,
+│      "development_status": "Mature",
+│      "pre_init_hook": "pre_init_hook",
+│      "maintainers": ["dhongu", "feketemihai"],
+│  }
+│   --- odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/METADATA
+├── +++ odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/METADATA
+│┄ Files 1% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: odoo-addon-l10n-ro-account-edi-ubl
+│ -Version: 15.0.1.9.0.4
+│ +Version: 15.0.1.9.1
+│  Summary: Romania - Account EDI UBL
+│  Home-page: https://github.com/OCA/l10n-romania
+│  Author: Terrabit,NextERP Romania,Odoo Community Association (OCA)
+│  Author-email: support@odoo-community.org
+│  License: AGPL-3
+│  Platform: UNKNOWN
+│  Classifier: Programming Language :: Python
+│   --- odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/RECORD
+├── +++ odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/RECORD
+│┄ Files 16% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  odoo/addons/l10n_ro_account_edi_ubl/README.rst,sha256=q0aeVMvb5IsCD3kyRomE7cEHumKHifSMiFeQzU4BhD0,3890
+│  odoo/addons/l10n_ro_account_edi_ubl/__init__.py,sha256=ntRoTbE9mPme6r2pZcUXoUsJmujQ-yOkeulaLHA-la8,173
+│ -odoo/addons/l10n_ro_account_edi_ubl/__manifest__.py,sha256=p5xS0ngPUdAc4zAKNKptnHGpxJvLfvgvKjovtYp1ytc,1031
+│ +odoo/addons/l10n_ro_account_edi_ubl/__manifest__.py,sha256=u8-l--pznS7GZZK1rC-FxeHboWhYBb6bJC2hsgpuwW8,1031
+│  odoo/addons/l10n_ro_account_edi_ubl/init_hook.py,sha256=6D2k0MAGsJuOf3QvI3tWPV4oRvstuuz7p8qREpV8DCI,818
+│  odoo/addons/l10n_ro_account_edi_ubl/data/account_edi_data.xml,sha256=QPNcAV3LLhDFeT1uZsdzr9XwHkF37ApXeWNVUSldWmE,769
+│  odoo/addons/l10n_ro_account_edi_ubl/data/ubl_templates.xml,sha256=o01GLc3rL9o07E-UeS4pLw32aYD_F_Zpa1crb5cq_Jo,381
+│  odoo/addons/l10n_ro_account_edi_ubl/i18n/l10n_ro_account_edi_ubl.pot,sha256=hGEatqG2gR-Jh5CUkqt8_oOM8y2eosrFFIi0lMKXX-w,8722
+│  odoo/addons/l10n_ro_account_edi_ubl/models/__init__.py,sha256=gHxws4VQISU1wwH37eIQOnB1KMwK-4uJMzR1QVTuAaE,206
+│  odoo/addons/l10n_ro_account_edi_ubl/models/account_edi_format.py,sha256=qyK3qeG1hLcPKtXuYwLZ3S0dzOmr1rLrDivjVeOuF1A,8280
+│  odoo/addons/l10n_ro_account_edi_ubl/models/account_edi_xml_cius_ro.py,sha256=-ddZVr_Yi-skwerQ-z60_eBoyWvZP4maHTTnrRzaCEk,5479
+│ @@ -25,11 +25,11 @@
+│  odoo/addons/l10n_ro_account_edi_ubl/tests/__init__.py,sha256=d_70LKzRHzVYxgAMixtzaEchIzy5OZl8hMwZayXtm5w,36
+│  odoo/addons/l10n_ro_account_edi_ubl/tests/test_acccount_edi_ubl.py,sha256=77JLSrwvb0XtWe-53YGIWLHqBlsJOreQRP1-9V0a7-s,13921
+│  odoo/addons/l10n_ro_account_edi_ubl/views/account_invoice.xml,sha256=iRom5pvMJRnkMqCSvZR6h20Lgr4ppnxPfNGypKM8oJk,679
+│  odoo/addons/l10n_ro_account_edi_ubl/views/cius_template.xml,sha256=ZXUQcgMDSigaTFYSj8no0hFEktX3uJEbgQtjTQ1cHNw,750
+│  odoo/addons/l10n_ro_account_edi_ubl/views/product_view.xml,sha256=P1FPTauN7VaXPqlD4QSI99SP9tVMAhi40cPN-f4hq8I,688
+│  odoo/addons/l10n_ro_account_edi_ubl/views/res_config_settings_views.xml,sha256=sEMSfRLnakMRP47Hc64Xf5Ofu2LTNnIlABxD2olI5GU,1419
+│  odoo/addons/l10n_ro_account_edi_ubl/views/res_partner_view.xml,sha256=hOGmR0h0_LFfkqNxrSoGY61TOmXhlz0D6MMOG8cjtoY,760
+│ -odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/METADATA,sha256=j1QON7UdPAHCsLsJZIBoLbWkAGr3PfzxrHPBLqYA5cs,4568
+│ -odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+│ -odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+│ -odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.0.4.dist-info/RECORD,,
+│ +odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/METADATA,sha256=I12kieive3X5xQJ4jBsnK4lvSkXv5J-A94XaWzjLJZo,4566
+│ +odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+│ +odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+│ +odoo_addon_l10n_ro_account_edi_ubl-15.0.1.9.1.dist-info/RECORD,,

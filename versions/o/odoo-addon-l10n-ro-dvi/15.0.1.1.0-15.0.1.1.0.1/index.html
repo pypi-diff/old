@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/odoo_addon_l10n_ro_dvi-15.0.1.1.0-py3-none-any.whl.zip tmp/odoo_addon_l10n_ro_dvi-15.0.1.1.0.1-py3-none-any.whl.zip --html versions/o/odoo-addon-l10n-ro-dvi/15.0.1.1.0-15.0.1.1.0.1/index.html --text versions/o/odoo-addon-l10n-ro-dvi/15.0.1.1.0-15.0.1.1.0.1/diff.txt --markdown versions/o/odoo-addon-l10n-ro-dvi/15.0.1.1.0-15.0.1.1.0.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">14.0 KB</span></div>
+  <div><span class="source">tmp/odoo_addon_l10n_ro_dvi-15.0.1.1.0-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/odoo_addon_l10n_ro_dvi-15.0.1.1.0.1-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">5.45 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 28 lines modified</td><td colspan="2">Offset 1, 28 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>39<del>108</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>26</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>39<ins>054</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>26</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4023<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/README.rst</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4023<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>717<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/__manifest__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>717<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/__manifest__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20100<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/i18n/l10n_ro_dvi.pot</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20100<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/i18n/l10n_ro_dvi.pot</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>4149</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/i18n/ro.po</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>2972</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/i18n/ro.po</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>122<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/models/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>122<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/models/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1255<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/models/account_invoice.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1255<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/models/account_invoice.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14467<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/models/l10n_ro_account_dvi.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14467<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/models/l10n_ro_account_dvi.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2395<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/models/res_company.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2395<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/models/res_company.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6835<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/models/stock_landed_cost.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6835<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/models/stock_landed_cost.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>161<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/readme/CONTRIBUTORS.rst</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>161<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/readme/CONTRIBUTORS.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>245<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/readme/DESCRIPTION.rst</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>245<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/readme/DESCRIPTION.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>676<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/readme/USAGE.rst</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>676<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/readme/USAGE.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>741<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/security/ir.model.access.csv</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>741<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/security/ir.model.access.csv</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5435<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/static/description/icon.png</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5435<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/static/description/icon.png</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12848<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/static/description/icon.svg</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12848<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/static/description/icon.svg</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13417<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/static/description/index.html</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13417<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/static/description/index.html</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/tests/__init__.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4989<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/tests/test_dvi.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4989<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/tests/test_dvi.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7774<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/views/account_dvi_view.xml</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7774<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/views/account_dvi_view.xml</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>894<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/views/account_invoice_view.xml</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>894<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/views/account_invoice_view.xml</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1734<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo/addons/l10n_ro_dvi/views/stock_landed_cost_view.xml</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1734<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>17</ins><span class="dp">·</span>odoo/addons/l10n_ro_dvi/views/stock_landed_cost_view.xml</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>467<del>1</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/METADATA</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>467<ins>3</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>19</ins><span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0<ins>.1</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/WHEEL</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>19</ins><span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0<ins>.1</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/top_level.txt</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>19</ins><span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0<ins>.1</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<del>33</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span><del>16</del>:<del>55</del><span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/RECORD</td><td class="diffline">27 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<ins>41</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>05</ins>:<ins>19</ins><span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0<ins>.1</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">26<span class="dp">·</span>files,<span class="dp">·</span>1<del>30422</del><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>346<del>7</del>8<span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>73.<del>4</del>%</td><td class="diffline">28 </td><td class="diffpresent">26<span class="dp">·</span>files,<span class="dp">·</span>1<ins>29255</ins><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>346<ins>0</ins>8<span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>73.<ins>2</ins>%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">794 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 60, 20 lines modified</td><td colspan="2">Offset 60, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/l10n_ro_dvi/views/account_invoice_view.xml</td><td class="diffline">60 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/l10n_ro_dvi/views/account_invoice_view.xml</td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">61 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/l10n_ro_dvi/views/stock_landed_cost_view.xml</td><td class="diffline">62 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/l10n_ro_dvi/views/stock_landed_cost_view.xml</td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">63 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">64 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/METADATA</td><td class="diffline">64 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0.<ins>1.</ins>dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">65 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">66 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/WHEEL</td><td class="diffline">66 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0.<ins>1.</ins>dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">67 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">68 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/top_level.txt</td><td class="diffline">68 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0.<ins>1.</ins>dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">69 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">70 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/RECORD</td><td class="diffline">70 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_dvi-15.0.1.1.0.<ins>1.</ins>dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">71 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">71 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">72 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">72 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">4.19 KB</span></div>
+    <div id="odoo-addons-l--n_ro_dvi-i--n-ro.po"><span class="source">odoo/addons/l10n_ro_dvi/i18n/ro.po</span>
+      <a class="anchor" href="#odoo-addons-l--n_ro_dvi-i--n-ro.po">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 139, 15 lines modified</td><td colspan="2">Offset 139, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">139 </td><td class="diffpresent">#,<span class="dp">·</span>fuzzy</td><td class="diffline">139 </td><td class="diffpresent">#,<span class="dp">·</span>fuzzy</td></tr>
+<tr class="diffunmodified"><td class="diffline">140 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Customs<span class="dp">·</span>Duty<span class="dp">·</span>Value&quot;</td><td class="diffline">140 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Customs<span class="dp">·</span>Duty<span class="dp">·</span>Value&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">141 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Taxă<span class="dp">·</span>vamală&quot;</td><td class="diffline">141 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Taxă<span class="dp">·</span>vamală&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">142 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">142 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffunmodified"><td class="diffline">143 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.actions.act_window,name:l10n_ro_dvi.action_account_dvi</td><td class="diffline">143 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.actions.act_window,name:l10n_ro_dvi.action_account_dvi</td></tr>
+<tr class="diffunmodified"><td class="diffline">144 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields.selection,name:l10n_ro_dvi.selection__stock_landed_cost__l10n_ro_cost_type__dvi</td><td class="diffline">144 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields.selection,name:l10n_ro_dvi.selection__stock_landed_cost__l10n_ro_cost_type__dvi</td></tr>
+<tr class="diffdeleted"><td class="diffline">145 </td><td class="diffpresent">#:<span class="dp">·</span>model_terms:ir.ui.view,arch_db:l10n_ro_dvi.view_account_dvi_tree</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">146 </td><td class="diffpresent">#:<span class="dp">·</span>model_terms:ir.ui.view,arch_db:l10n_ro_dvi.view_move_form</td><td class="diffline">145 </td><td class="diffpresent">#:<span class="dp">·</span>model_terms:ir.ui.view,arch_db:l10n_ro_dvi.view_move_form</td></tr>
+<tr class="diffunmodified"><td class="diffline">147 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;DVI&quot;</td><td class="diffline">146 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;DVI&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">148 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;DVI&quot;</td><td class="diffline">147 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;DVI&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">149 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">148 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffunmodified"><td class="diffline">150 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi_line__invoice_id</td><td class="diffline">149 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi_line__invoice_id</td></tr>
+<tr class="diffunmodified"><td class="diffline">151 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;DVI<span class="dp">·</span>Invoice&quot;</td><td class="diffline">150 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;DVI<span class="dp">·</span>Invoice&quot;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 179, 50 lines modified</td><td colspan="2">Offset 178, 42 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">179 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">178 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffunmodified"><td class="diffline">180 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__date</td><td class="diffline">179 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__date</td></tr>
+<tr class="diffunmodified"><td class="diffline">181 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Date&quot;</td><td class="diffline">180 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Date&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">182 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Data&quot;</td><td class="diffline">181 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Data&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">183 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">182 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffdeleted"><td class="diffline">184 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_account_move__display_name</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">185 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__display_name</td><td class="diffline">183 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__display_name</td></tr>
+<tr class="diffunmodified"><td class="diffline">186 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi_line__display_name</td><td class="diffline">184 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi_line__display_name</td></tr>
+<tr class="diffdeleted"><td class="diffline">187 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_res_company__display_name</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">188 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_stock_landed_cost__display_name</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">189 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_stock_valuation_adjustment_lines__display_name</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">190 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Display<span class="dp">·</span>Name&quot;</td><td class="diffline">185 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Display<span class="dp">·</span>Name&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">191 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Nume<span class="dp">·</span>afișat&quot;</td><td class="diffline">186 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Nume<span class="dp">·</span>afișat&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">192 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">187 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffunmodified"><td class="diffline">193 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields.selection,name:l10n_ro_dvi.selection__l10n_ro_account_dvi__state__draft</td><td class="diffline">188 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields.selection,name:l10n_ro_dvi.selection__l10n_ro_account_dvi__state__draft</td></tr>
+<tr class="diffunmodified"><td class="diffline">194 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Draft&quot;</td><td class="diffline">189 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Draft&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">195 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Ciorna&quot;</td><td class="diffline">190 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Ciorna&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">196 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">191 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffunmodified"><td class="diffline">197 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__message_follower_ids</td><td class="diffline">192 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__message_follower_ids</td></tr>
+<tr class="diffunmodified"><td class="diffline">198 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Followers&quot;</td><td class="diffline">193 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Followers&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">199 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td><td class="diffline">194 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">200 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">195 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffchanged"><td class="diffline">201 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__message_<del>chan</del>ne<del>l</del>_ids</td><td class="diffline">196 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__message_<ins>part</ins>ne<ins>r</ins>_ids</td></tr>
+<tr class="diffchanged"><td class="diffline">202 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Followers<span class="dp">·</span>(<del>Chan</del>ne<del>l</del>s)&quot;</td><td class="diffline">197 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Followers<span class="dp">·</span>(<ins>Part</ins>ne<ins>r</ins>s)&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">203 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td><td class="diffline">198 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">204 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">199 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffchanged"><td class="diffline">205 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__<del>m</del><del>es</del>s<del>ag</del>e<del>_p</del>a<del>rt</del><del>n</del>e<del>r_ids</del></td><td class="diffline">200 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__<ins>ha</ins>s<ins>_m</ins>e<ins>ss</ins>a<ins>g</ins>e</td></tr>
+<tr class="diffchanged"><td class="diffline">206 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;<del>F</del><del>ollow</del>e<del>r</del>s<del><span class="dp">·</span>(</del><del>P</del>a<del>rt</del><del>n</del>e<del>rs)</del>&quot;</td><td class="diffline">201 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;<ins>Has<span class="dp">·</span>M</ins>es<ins>s</ins>a<ins>g</ins>e&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">207 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td><td class="diffline">202 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">208 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">203 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffdeleted"><td class="diffline">209 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_account_move__id</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">210 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__id</td><td class="diffline">204 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__id</td></tr>
+<tr class="diffunmodified"><td class="diffline">211 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi_line__id</td><td class="diffline">205 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi_line__id</td></tr>
+<tr class="diffdeleted"><td class="diffline">212 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_res_company__id</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">213 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_stock_landed_cost__id</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">214 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_stock_valuation_adjustment_lines__id</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">215 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;ID&quot;</td><td class="diffline">206 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;ID&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">216 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;ID&quot;</td><td class="diffline">207 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;ID&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">217 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">208 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffunmodified"><td class="diffline">218 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,help:l10n_ro_dvi.field_l10n_ro_account_dvi__message_needaction</td><td class="diffline">209 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,help:l10n_ro_dvi.field_l10n_ro_account_dvi__message_needaction</td></tr>
+<tr class="diffunmodified"><td class="diffline">219 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,help:l10n_ro_dvi.field_l10n_ro_account_dvi__message_unread</td><td class="diffline">210 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,help:l10n_ro_dvi.field_l10n_ro_account_dvi__message_unread</td></tr>
+<tr class="diffunmodified"><td class="diffline">220 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;If<span class="dp">·</span>checked,<span class="dp">·</span>new<span class="dp">·</span>messages<span class="dp">·</span>require<span class="dp">·</span>your<span class="dp">·</span>attention.&quot;</td><td class="diffline">211 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;If<span class="dp">·</span>checked,<span class="dp">·</span>new<span class="dp">·</span>messages<span class="dp">·</span>require<span class="dp">·</span>your<span class="dp">·</span>attention.&quot;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 319, 20 lines modified</td><td colspan="2">Offset 310, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">319 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">310 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffunmodified"><td class="diffline">320 </td><td class="diffpresent">#:<span class="dp">·</span>model_terms:ir.ui.view,arch_db:l10n_ro_dvi.view_account_dvi_form</td><td class="diffline">311 </td><td class="diffpresent">#:<span class="dp">·</span>model_terms:ir.ui.view,arch_db:l10n_ro_dvi.view_account_dvi_form</td></tr>
+<tr class="diffunmodified"><td class="diffline">321 </td><td class="diffpresent">#,<span class="dp">·</span>fuzzy</td><td class="diffline">312 </td><td class="diffpresent">#,<span class="dp">·</span>fuzzy</td></tr>
+<tr class="diffunmodified"><td class="diffline">322 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Landed<span class="dp">·</span>Costs&quot;</td><td class="diffline">313 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Landed<span class="dp">·</span>Costs&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">323 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Costuri<span class="dp">·</span>Adiționale<span class="dp">·</span>Stoc&quot;</td><td class="diffline">314 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Costuri<span class="dp">·</span>Adiționale<span class="dp">·</span>Stoc&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">324 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">315 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffdeleted"><td class="diffline">325 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_account_move____last_update</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">326 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi____last_update</td><td class="diffline">316 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi____last_update</td></tr>
+<tr class="diffunmodified"><td class="diffline">327 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi_line____last_update</td><td class="diffline">317 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi_line____last_update</td></tr>
+<tr class="diffdeleted"><td class="diffline">328 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_res_company____last_update</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">329 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_stock_landed_cost____last_update</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">330 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_stock_valuation_adjustment_lines____last_update</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">331 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Last<span class="dp">·</span>Modified<span class="dp">·</span>on&quot;</td><td class="diffline">318 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Last<span class="dp">·</span>Modified<span class="dp">·</span>on&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">332 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Ultima<span class="dp">·</span>modificare<span class="dp">·</span>pe&quot;</td><td class="diffline">319 </td><td class="diffpresent">msgstr<span class="dp">·</span>&quot;Ultima<span class="dp">·</span>modificare<span class="dp">·</span>pe&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">333 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td><td class="diffline">320 </td><td class="diffpresent">#.<span class="dp">·</span>module:<span class="dp">·</span>l10n_ro_dvi</td></tr>
+<tr class="diffunmodified"><td class="diffline">334 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__write_uid</td><td class="diffline">321 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi__write_uid</td></tr>
+<tr class="diffunmodified"><td class="diffline">335 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi_line__write_uid</td><td class="diffline">322 </td><td class="diffpresent">#:<span class="dp">·</span>model:ir.model.fields,field_description:l10n_ro_dvi.field_l10n_ro_account_dvi_line__write_uid</td></tr>
+<tr class="diffunmodified"><td class="diffline">336 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Last<span class="dp">·</span>Updated<span class="dp">·</span>by&quot;</td><td class="diffline">323 </td><td class="diffpresent">msgid<span class="dp">·</span>&quot;Last<span class="dp">·</span>Updated<span class="dp">·</span>by&quot;</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">522 B</span></div>
+    <div><span class="source">odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/METADATA</span> vs.</div>
+    <div id="odoo_addon_l--n_ro_dvi---.-.-.-.-.dist-info-METADATA"><span class="source">odoo_addon_l10n_ro_dvi-15.0.1.1.0.1.dist-info/METADATA</span>
+      <a class="anchor" href="#odoo_addon_l--n_ro_dvi---.-.-.-.-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 0% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>odoo-addon-l10n-ro-dvi</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>odoo-addon-l10n-ro-dvi</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>15.0.1.1.0</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>15.0.1.1.0<ins>.1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Romania<span class="dp">·</span>-<span class="dp">·</span>DVI</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Romania<span class="dp">·</span>-<span class="dp">·</span>DVI</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OCA/l10n-romania</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OCA/l10n-romania</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Terrabit,NextERP<span class="dp">·</span>Romania,Odoo<span class="dp">·</span>Community<span class="dp">·</span>Association<span class="dp">·</span>(OCA)</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Terrabit,NextERP<span class="dp">·</span>Romania,Odoo<span class="dp">·</span>Community<span class="dp">·</span>Association<span class="dp">·</span>(OCA)</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>support@odoo-community.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>support@odoo-community.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>AGPL-3</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>AGPL-3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">2.94 KB</span></div>
+    <div><span class="source">odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/RECORD</span> vs.</div>
+    <div id="odoo_addon_l--n_ro_dvi---.-.-.-.-.dist-info-RECORD"><span class="source">odoo_addon_l10n_ro_dvi-15.0.1.1.0.1.dist-info/RECORD</span>
+      <a class="anchor" href="#odoo_addon_l--n_ro_dvi---.-.-.-.-.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 5% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 12 lines modified</td><td colspan="2">Offset 1, 12 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/README.rst,sha256=WNcHDyoPxLbhTCPrAXrG9xpkzf-bz8Bq9PeDLPhbgVE,4023</td><td class="diffline">1 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/README.rst,sha256=WNcHDyoPxLbhTCPrAXrG9xpkzf-bz8Bq9PeDLPhbgVE,4023</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21</td><td class="diffline">2 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/__manifest__.py,sha256=516EGTD-FqfNs7wKkK8iLX99rvb8JLVwcQuU1m4ifIY,717</td><td class="diffline">3 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/__manifest__.py,sha256=516EGTD-FqfNs7wKkK8iLX99rvb8JLVwcQuU1m4ifIY,717</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/i18n/l10n_ro_dvi.pot,sha256=QwN1zdxFKAylKKRfwEWTHei5TtMlnvRq8WBeTthl7NY,20100</td><td class="diffline">4 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/i18n/l10n_ro_dvi.pot,sha256=QwN1zdxFKAylKKRfwEWTHei5TtMlnvRq8WBeTthl7NY,20100</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/i18n/ro.po,sha256=<del>nHU6XJi2edy6yyGKqWewZdnOxMtOYGdw96gfX6wafew</del>,2<del>4149</del></td><td class="diffline">5 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/i18n/ro.po,sha256=<ins>xLKrhVuyPhWd10YUfVULEOGeDUv5tNn4P5qcPGFYB0Q</ins>,2<ins>2972</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/models/__init__.py,sha256=wggHUfbw11xUsQGH4rAUgbhiKT7lUZ3HJ15CM2z_hzs,122</td><td class="diffline">6 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/models/__init__.py,sha256=wggHUfbw11xUsQGH4rAUgbhiKT7lUZ3HJ15CM2z_hzs,122</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/models/account_invoice.py,sha256=-TyFh0CUHboKy8v8yif4k5myTSmjVX7BR6A3cb2QTKc,1255</td><td class="diffline">7 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/models/account_invoice.py,sha256=-TyFh0CUHboKy8v8yif4k5myTSmjVX7BR6A3cb2QTKc,1255</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/models/l10n_ro_account_dvi.py,sha256=T77ICURL1_NqqrKlkhhGUmfGPVv-Ff5x_JTKkRDnNM8,14467</td><td class="diffline">8 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/models/l10n_ro_account_dvi.py,sha256=T77ICURL1_NqqrKlkhhGUmfGPVv-Ff5x_JTKkRDnNM8,14467</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/models/res_company.py,sha256=SnSfgYsyqV62uGCv_hHoAdwf-Wv_urgydy_TmwiQ3rU,2395</td><td class="diffline">9 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/models/res_company.py,sha256=SnSfgYsyqV62uGCv_hHoAdwf-Wv_urgydy_TmwiQ3rU,2395</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/models/stock_landed_cost.py,sha256=6GJ0G-pmFboSkwHdnwFGT-jxRVEFHu8NbOz7jZ9vEV8,6835</td><td class="diffline">10 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/models/stock_landed_cost.py,sha256=6GJ0G-pmFboSkwHdnwFGT-jxRVEFHu8NbOz7jZ9vEV8,6835</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/readme/CONTRIBUTORS.rst,sha256=Qk9MiMuXB-mUSdyPGjFLcZwMWkq7lTkSECDQuUja3FE,161</td><td class="diffline">11 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/readme/CONTRIBUTORS.rst,sha256=Qk9MiMuXB-mUSdyPGjFLcZwMWkq7lTkSECDQuUja3FE,161</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/readme/DESCRIPTION.rst,sha256=tTDA6FSyoJafMkUth5n05gFz4_U_F4UlVJ_YszpGzmg,245</td><td class="diffline">12 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/readme/DESCRIPTION.rst,sha256=tTDA6FSyoJafMkUth5n05gFz4_U_F4UlVJ_YszpGzmg,245</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 16, 11 lines modified</td><td colspan="2">Offset 16, 11 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/static/description/icon.svg,sha256=_BYPcbgMXrbd_GqcueGJD-LwaDHPThZQ-n9Z3YBXGBk,12848</td><td class="diffline">16 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/static/description/icon.svg,sha256=_BYPcbgMXrbd_GqcueGJD-LwaDHPThZQ-n9Z3YBXGBk,12848</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/static/description/index.html,sha256=ArKZ0QiC8ptY3htJUq_O_7BRWsg8PaWFICCc11v6904,13417</td><td class="diffline">17 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/static/description/index.html,sha256=ArKZ0QiC8ptY3htJUq_O_7BRWsg8PaWFICCc11v6904,13417</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/tests/__init__.py,sha256=IbVm61uZLOZhGC9JD2_ef5E_fadgwDtkJVxd_RYI5vU,23</td><td class="diffline">18 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/tests/__init__.py,sha256=IbVm61uZLOZhGC9JD2_ef5E_fadgwDtkJVxd_RYI5vU,23</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/tests/test_dvi.py,sha256=ko87xw_zoIL-fNqTCSIlyMbJiOnl8dCTB1jgjiXxI2I,4989</td><td class="diffline">19 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/tests/test_dvi.py,sha256=ko87xw_zoIL-fNqTCSIlyMbJiOnl8dCTB1jgjiXxI2I,4989</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/views/account_dvi_view.xml,sha256=irkywvC09O6_BsVcFGJmssFB5CGtsvx0CiZtO36ByeA,7774</td><td class="diffline">20 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/views/account_dvi_view.xml,sha256=irkywvC09O6_BsVcFGJmssFB5CGtsvx0CiZtO36ByeA,7774</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/views/account_invoice_view.xml,sha256=1BDJrcWFR_W3WDTtm5-BM5mde64BedjZ7ZtVYZ0sMu0,894</td><td class="diffline">21 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/views/account_invoice_view.xml,sha256=1BDJrcWFR_W3WDTtm5-BM5mde64BedjZ7ZtVYZ0sMu0,894</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/views/stock_landed_cost_view.xml,sha256=bd5IHsi2yNYm5BykxoGpjgCl3EcHKZhDzRwRwjCht4k,1734</td><td class="diffline">22 </td><td class="diffpresent">odoo/addons/l10n_ro_dvi/views/stock_landed_cost_view.xml,sha256=bd5IHsi2yNYm5BykxoGpjgCl3EcHKZhDzRwRwjCht4k,1734</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/METADATA,sha256=<del>taShXilPEVqkzNjX_H2jG7rFIxniZD4Bvv_XWlTqYYM</del>,467<del>1</del></td><td class="diffline">23 </td><td class="diffpresent">odoo_addon_l10n_ro_dvi-15.0.1.1.0.<ins>1.</ins>dist-info/METADATA,sha256=<ins>zPwQaR_x26pC5-2x7jzOqdDBJ6xP00ALQQsE7BD747I</ins>,467<ins>3</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92</td><td class="diffline">24 </td><td class="diffpresent">odoo_addon_l10n_ro_dvi-15.0.1.1.0.<ins>1.</ins>dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5</td><td class="diffline">25 </td><td class="diffpresent">odoo_addon_l10n_ro_dvi-15.0.1.1.0.<ins>1.</ins>dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">odoo_addon_l10n_ro_dvi-15.0.1.1.0.dist-info/RECORD,,</td><td class="diffline">26 </td><td class="diffpresent">odoo_addon_l10n_ro_dvi-15.0.1.1.0.<ins>1.</ins>dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

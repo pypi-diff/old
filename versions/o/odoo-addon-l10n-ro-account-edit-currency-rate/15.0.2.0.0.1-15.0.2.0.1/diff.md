@@ -1,0 +1,146 @@
+# Comparing `tmp/odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1-py3-none-any.whl.zip` & `tmp/odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,19 +1,19 @@
+-Zip file size: 15040 bytes, number of entries: 17
+--rw-r--r--  2.0 unx     3564 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/README.rst
+--rw-r--r--  2.0 unx       21 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/__init__.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/__manifest__.py
+--rw-r--r--  2.0 unx     1315 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/i18n/l10n_ro_account_edit_currency_rate.pot
+--rw-r--r--  2.0 unx       27 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/models/__init__.py
+--rw-r--r--  2.0 unx     3279 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/models/account_move.py
+--rw-r--r--  2.0 unx      221 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/readme/CONTRIBUTORS.rst
+--rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/readme/DESCRIPTION.rst
+--rw-r--r--  2.0 unx      299 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/readme/INSTALL.rst
+--rw-r--r--  2.0 unx      566 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/static/description/icon.png
+--rw-r--r--  2.0 unx    13164 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/static/description/index.html
+--rw-r--r--  2.0 unx       38 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/tests/__init__.py
+--rw-r--r--  2.0 unx     4139 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_edit_currency_rate/tests/test_edit_currency_rate.py
+--rw-r--r--  2.0 unx     4260 b- defN 23-Apr-06 05:12 odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 05:12 odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/WHEEL
+--rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 05:12 odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     2105 b- defN 23-Apr-06 05:12 odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/RECORD
+-17 files, 33777 bytes uncompressed, 11314 bytes compressed:  66.5%
++Zip file size: 15021 bytes, number of entries: 17
++-rw-r--r--  2.0 unx     3564 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/README.rst
++-rw-r--r--  2.0 unx       21 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/__init__.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/__manifest__.py
++-rw-r--r--  2.0 unx     1315 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/i18n/l10n_ro_account_edit_currency_rate.pot
++-rw-r--r--  2.0 unx       27 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/models/__init__.py
++-rw-r--r--  2.0 unx     3279 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/models/account_move.py
++-rw-r--r--  2.0 unx      221 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/readme/CONTRIBUTORS.rst
++-rw-r--r--  2.0 unx       97 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/readme/DESCRIPTION.rst
++-rw-r--r--  2.0 unx      299 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/readme/INSTALL.rst
++-rw-r--r--  2.0 unx      566 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/static/description/icon.png
++-rw-r--r--  2.0 unx    13164 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/static/description/index.html
++-rw-r--r--  2.0 unx       38 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/tests/__init__.py
++-rw-r--r--  2.0 unx     4139 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_edit_currency_rate/tests/test_edit_currency_rate.py
++-rw-r--r--  2.0 unx     4258 b- defN 23-Apr-07 05:18 odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 05:18 odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/WHEEL
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 05:18 odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     2097 b- defN 23-Apr-07 05:18 odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/RECORD
++17 files, 33767 bytes uncompressed, 11311 bytes compressed:  66.5%
+```
+
+## zipnote {}
+
+```diff
+@@ -33,20 +33,20 @@
+ 
+ Filename: odoo/addons/l10n_ro_account_edit_currency_rate/tests/__init__.py
+ Comment: 
+ 
+ Filename: odoo/addons/l10n_ro_account_edit_currency_rate/tests/test_edit_currency_rate.py
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/METADATA
++Filename: odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/METADATA
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/WHEEL
++Filename: odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/top_level.txt
++Filename: odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/RECORD
++Filename: odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## odoo/addons/l10n_ro_account_edit_currency_rate/__manifest__.py
+
+```diff
+@@ -1,14 +1,14 @@
+ # Copyright 2018 NextERP Romania
+ # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+ 
+ {
+     "name": "Romania - Invoice Edit Currency Rate",
+     "summary": "Romania - Invoice Edit Currency Rate",
+-    "version": "15.0.2.0.0",
++    "version": "15.0.2.0.1",
+     "category": "Localization",
+     "author": "NextERP Romania," "Odoo Community Association (OCA)",
+     "website": "https://github.com/OCA/l10n-romania",
+     "license": "AGPL-3",
+     "installable": True,
+     "development_status": "Mature",
+     "maintainers": ["mcojocaru"],
+```
+
+## Comparing `odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/METADATA` & `odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: odoo-addon-l10n-ro-account-edit-currency-rate
+-Version: 15.0.2.0.0.1
++Version: 15.0.2.0.1
+ Summary: Romania - Invoice Edit Currency Rate
+ Home-page: https://github.com/OCA/l10n-romania
+ Author: NextERP Romania,Odoo Community Association (OCA)
+ Author-email: support@odoo-community.org
+ License: AGPL-3
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python
+```
+
+## Comparing `odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/RECORD` & `odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/RECORD`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,17 +1,17 @@
+ odoo/addons/l10n_ro_account_edit_currency_rate/README.rst,sha256=8nBKi4hOHyOdpgp11Xx7Fr5r0hv9sVLRXizo2XZkkkI,3564
+ odoo/addons/l10n_ro_account_edit_currency_rate/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+-odoo/addons/l10n_ro_account_edit_currency_rate/__manifest__.py,sha256=zk3zKiKJ5vNpR6D1YveXWtgb47czPbqE5F2CAh-xQvY,585
++odoo/addons/l10n_ro_account_edit_currency_rate/__manifest__.py,sha256=24s2SuU_8xkCaeO5WHywxGbjoaBwUveCeX4Lps5X_xc,585
+ odoo/addons/l10n_ro_account_edit_currency_rate/i18n/l10n_ro_account_edit_currency_rate.pot,sha256=XnhIR_O7oMe4iQA_mqORnnmsqnBIxNla6Buv_k83-38,1315
+ odoo/addons/l10n_ro_account_edit_currency_rate/models/__init__.py,sha256=9829nnQdRNsJmZEDfsGtCQQqM2W0JuYarPptYP2zJzU,27
+ odoo/addons/l10n_ro_account_edit_currency_rate/models/account_move.py,sha256=7pe3e7W_N9Tex9omTf3opjnRvnLUfOAiWKX12o07TS8,3279
+ odoo/addons/l10n_ro_account_edit_currency_rate/readme/CONTRIBUTORS.rst,sha256=T6bMgTxC7xJ5D32f_RiOkxyrZD3uOMD8J0ATNqumjY8,221
+ odoo/addons/l10n_ro_account_edit_currency_rate/readme/DESCRIPTION.rst,sha256=WMVRVyXECmBJmVFs1GcT-WRik6FZDmqN480Oe7sYscg,97
+ odoo/addons/l10n_ro_account_edit_currency_rate/readme/INSTALL.rst,sha256=unVSQIibAiIuJ6ZhMcw0r-rZAZ3JK2TWyV-wBNfXJKk,299
+ odoo/addons/l10n_ro_account_edit_currency_rate/static/description/icon.png,sha256=MND3TYqrnM623pd0tf3WhoHU-3X5Ns6ho-Yz_HcYlTk,566
+ odoo/addons/l10n_ro_account_edit_currency_rate/static/description/index.html,sha256=wW3vpVt6h7mTZG0ONwqH8GomqeOV58lxOL3bA3akKyM,13164
+ odoo/addons/l10n_ro_account_edit_currency_rate/tests/__init__.py,sha256=s6mIaRCUtlK_nPjX0uUqK1pkJ15bLInrAcT0eD1Pkn0,38
+ odoo/addons/l10n_ro_account_edit_currency_rate/tests/test_edit_currency_rate.py,sha256=EH9ArVC4tft8iVlEg9I7FT6Zn2IeZ3-wE6-CjDpe1F0,4139
+-odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/METADATA,sha256=ssAC3aynygso_wtLKMTktf2cIAu3fRGri0khCz8EeME,4260
+-odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+-odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+-odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.0.1.dist-info/RECORD,,
++odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/METADATA,sha256=BXaxli5ckuJSfbyHewD0mxkpqSR2JJbpjRI2Y1NLICE,4258
++odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
++odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
++odoo_addon_l10n_ro_account_edit_currency_rate-15.0.2.0.1.dist-info/RECORD,,
+```
+

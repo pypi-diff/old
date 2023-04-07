@@ -1,0 +1,189 @@
+--- tmp/dojo_truant-2023.4.6.0.tar.gz
++++ tmp/dojo_truant-2023.4.6.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dojo_truant-2023.4.6.0.tar", last modified: Thu Apr  6 19:59:44 2023, max compression
+│ +gzip compressed data, was "dojo_truant-2023.4.6.2.tar", last modified: Fri Apr  7 05:11:42 2023, max compression
+│   --- dojo_truant-2023.4.6.0.tar
+├── +++ dojo_truant-2023.4.6.2.tar
+│ ├── file list
+│ │ @@ -1,18 +1,20 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:59:44.573825 dojo_truant-2023.4.6.0/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       24 2023-04-06 19:59:29.000000 dojo_truant-2023.4.6.0/LICENSE.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      638 2023-04-06 19:59:44.573825 dojo_truant-2023.4.6.0/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-06 19:59:29.000000 dojo_truant-2023.4.6.0/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:59:44.573825 dojo_truant-2023.4.6.0/dojo/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      134 2023-04-06 19:59:29.000000 dojo_truant-2023.4.6.0/dojo/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11232 2023-04-06 19:59:29.000000 dojo_truant-2023.4.6.0/dojo/api.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 19:59:29.000000 dojo_truant-2023.4.6.0/dojo/api_multi.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3194 2023-04-06 19:59:29.000000 dojo_truant-2023.4.6.0/dojo/product.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      737 2023-04-06 19:59:29.000000 dojo_truant-2023.4.6.0/dojo/product_type.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:59:44.573825 dojo_truant-2023.4.6.0/dojo_truant.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      638 2023-04-06 19:59:44.000000 dojo_truant-2023.4.6.0/dojo_truant.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      294 2023-04-06 19:59:44.000000 dojo_truant-2023.4.6.0/dojo_truant.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 19:59:44.000000 dojo_truant-2023.4.6.0/dojo_truant.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-06 19:59:44.000000 dojo_truant-2023.4.6.0/dojo_truant.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-06 19:59:44.000000 dojo_truant-2023.4.6.0/dojo_truant.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      613 2023-04-06 19:59:29.000000 dojo_truant-2023.4.6.0/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 19:59:44.573825 dojo_truant-2023.4.6.0/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 05:11:42.074000 dojo_truant-2023.4.6.2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1469 2023-04-07 05:11:27.000000 dojo_truant-2023.4.6.2/LICENSE.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      638 2023-04-07 05:11:42.070001 dojo_truant-2023.4.6.2/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 05:11:27.000000 dojo_truant-2023.4.6.2/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 05:11:42.070001 dojo_truant-2023.4.6.2/dojo/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      242 2023-04-07 05:11:27.000000 dojo_truant-2023.4.6.2/dojo/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11207 2023-04-07 05:11:27.000000 dojo_truant-2023.4.6.2/dojo/api.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 05:11:27.000000 dojo_truant-2023.4.6.2/dojo/api_multi.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      933 2023-04-07 05:11:27.000000 dojo_truant-2023.4.6.2/dojo/dojo_group.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3194 2023-04-07 05:11:27.000000 dojo_truant-2023.4.6.2/dojo/product.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      737 2023-04-07 05:11:27.000000 dojo_truant-2023.4.6.2/dojo/product_type.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2366 2023-04-07 05:11:27.000000 dojo_truant-2023.4.6.2/dojo/write_chain.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 05:11:42.070001 dojo_truant-2023.4.6.2/dojo_truant.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      638 2023-04-07 05:11:42.000000 dojo_truant-2023.4.6.2/dojo_truant.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      333 2023-04-07 05:11:42.000000 dojo_truant-2023.4.6.2/dojo_truant.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 05:11:42.000000 dojo_truant-2023.4.6.2/dojo_truant.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-07 05:11:42.000000 dojo_truant-2023.4.6.2/dojo_truant.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-07 05:11:42.000000 dojo_truant-2023.4.6.2/dojo_truant.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      613 2023-04-07 05:11:27.000000 dojo_truant-2023.4.6.2/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 05:11:42.074000 dojo_truant-2023.4.6.2/setup.cfg
+│ │   --- dojo_truant-2023.4.6.0/PKG-INFO
+│ ├── +++ dojo_truant-2023.4.6.2/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dojo_truant
+│ │ -Version: 2023.4.6.0
+│ │ +Version: 2023.4.6.2
+│ │  Summary: A minimal client for deject dojo to be used by me in my projects. Some functionality may be absent.
+│ │  Author-email: Chris Halbersma <chalbersma@auditboard.com>
+│ │  License: BSD-3-Clause
+│ │  Keywords: defectDojo
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Requires-Python: >=3.9
+│ │  Description-Content-Type: text/markdown
+│ │   --- dojo_truant-2023.4.6.0/dojo/api.py
+│ ├── +++ dojo_truant-2023.4.6.2/dojo/api.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -51,22 +51,22 @@
+│ │          self.id = kwargs.get("id", None)
+│ │  
+│ │          self.action = kwargs.get("action", None)
+│ │          self.kwargs = kwargs
+│ │  
+│ │          if self.action == "get":
+│ │  
+│ │ -            self.data = self.get_obj()
+│ │ +            self.get_obj()
+│ │          elif self.action == "new":
+│ │  
+│ │ -            self.id, self.data = self.new_obj()
+│ │ +            self.new_obj()
+│ │  
+│ │          elif self.action == "search":
+│ │  
+│ │ -            self.id, self.data = self.search_for_obj()
+│ │ +            self.search_for_obj()
+│ │  
+│ │      def see_if_changes(self, wanted_state, include_gone=False, include_new=False):
+│ │  
+│ │          """
+│ │          See if there's any changes between the current objec and the wanted state.
+│ │          :return:
+│ │          """
+│ │ @@ -141,17 +141,15 @@
+│ │          '''
+│ │  
+│ │          obj_data = self.api_call(endpoint=self.endpoint.safe_substitute(id=self.id),
+│ │                                   method="GET")
+│ │  
+│ │          self.logger.debug(obj_data)
+│ │  
+│ │ -        data = obj_data
+│ │ -
+│ │ -        return data
+│ │ +        self.data = obj_data
+│ │  
+│ │      def new_obj(self):
+│ │  
+│ │          '''
+│ │  
+│ │          :return: id, data
+│ │          '''
+│ │ @@ -166,15 +164,17 @@
+│ │                                   json=self.data)
+│ │  
+│ │              if data is not None:
+│ │                  id = data[self.kwargs.get("id_column", self._id_column)]
+│ │          else:
+│ │              self.logger.error("Validation of New Object Failed")
+│ │  
+│ │ -        return id, data
+│ │ +
+│ │ +        self.id = id
+│ │ +        self.data = data
+│ │  
+│ │      def search_for_obj(self):
+│ │  
+│ │          '''
+│ │  
+│ │          :return: id, data
+│ │          '''
+│ │ @@ -196,15 +196,16 @@
+│ │                  id = self.data[self.kwargs.get("id_column", self._id_column)]
+│ │              else:
+│ │                  self.logger.warning("Unable to find object with given terms.")
+│ │  
+│ │          else:
+│ │              self.logger.error("Unable to process search terms")
+│ │  
+│ │ -        return id, data
+│ │ +        self.id = id
+│ │ +        self.data = data
+│ │  
+│ │  
+│ │      def validate_obj(self, enforce_all=False):
+│ │  
+│ │          create_validation = self.kwargs.get("model_validation", self._model_validation)
+│ │  
+│ │          valid = True
+│ │   --- dojo_truant-2023.4.6.0/dojo/product.py
+│ ├── +++ dojo_truant-2023.4.6.2/dojo/product.py
+│ │┄ Files identical despite different names
+│ │   --- dojo_truant-2023.4.6.0/dojo/product_type.py
+│ ├── +++ dojo_truant-2023.4.6.2/dojo/product_type.py
+│ │┄ Files identical despite different names
+│ │   --- dojo_truant-2023.4.6.0/dojo_truant.egg-info/PKG-INFO
+│ ├── +++ dojo_truant-2023.4.6.2/dojo_truant.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dojo-truant
+│ │ -Version: 2023.4.6.0
+│ │ +Version: 2023.4.6.2
+│ │  Summary: A minimal client for deject dojo to be used by me in my projects. Some functionality may be absent.
+│ │  Author-email: Chris Halbersma <chalbersma@auditboard.com>
+│ │  License: BSD-3-Clause
+│ │  Keywords: defectDojo
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Requires-Python: >=3.9
+│ │  Description-Content-Type: text/markdown
+│ │   --- dojo_truant-2023.4.6.0/pyproject.toml
+│ ├── +++ dojo_truant-2023.4.6.2/pyproject.toml
+│ │┄ Files 22% similar despite different names
+│ │ @@ -3,15 +3,15 @@
+│ │    "twine",
+│ │    "setuptools"
+│ │  ]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "dojo_truant"
+│ │ -version = "2023.04.06.0"
+│ │ +version = "2023.04.06.2"
+│ │  authors = [
+│ │      {name = "Chris Halbersma", email = "chalbersma@auditboard.com"},
+│ │  ]
+│ │  description = "A minimal client for deject dojo to be used by me in my projects. Some functionality may be absent."
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.9"
+│ │  keywords = ["defectDojo"]

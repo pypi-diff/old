@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/gpt-chatbot-cli-0.3.3.tar.gz tmp/gpt-chatbot-cli-0.3.4.tar.gz --html versions/g/gpt-chatbot-cli/0.3.3-0.3.4/index.html --text versions/g/gpt-chatbot-cli/0.3.3-0.3.4/diff.txt --markdown versions/g/gpt-chatbot-cli/0.3.3-0.3.4/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">9.2 KB</span></div>
+  <div><span class="source">tmp/gpt-chatbot-cli-0.3.3.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/gpt-chatbot-cli-0.3.4.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">280 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;gpt-chatbot-cli-0.3.<del>3</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>05:1<del>0</del>:2<del>9</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;gpt-chatbot-cli-0.3.<ins>4</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.86 KB</span></div>
+    <div><span class="source">gpt-chatbot-cli-0.3.3.tar</span> vs.</div>
+    <div id="gpt-chatbot-cli--.-.-.tar"><span class="source">gpt-chatbot-cli-0.3.4.tar</span>
+      <a class="anchor" href="#gpt-chatbot-cli--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.81 KB</span></div>
+      <div id="gpt-chatbot-cli--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#gpt-chatbot-cli--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 22 lines modified</td><td colspan="2">Offset 1, 22 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<del>0</del>:2<del>9</del>.<del>505790</del><span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins>.<ins>926428</ins><span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1051<span class="dp">·</span>2023-02-02<span class="dp">·</span>00:55:38.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/LICENCE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1051<span class="dp">·</span>2023-02-02<span class="dp">·</span>00:55:38.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/LICENCE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2313<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<del>0</del>:2<del>9</del>.<del>505790</del><span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2313<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins>.<ins>926428</ins><span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1645<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:08:12.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1645<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:08:12.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>999<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>0</del>8:<del>12</del>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/pyproject.toml</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>999<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>1</ins>8:<ins>07</ins>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<del>0</del>:2<del>9</del>.<del>505790</del><span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/setup.cfg</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins>.<ins>926428</ins><span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<del>0</del>:2<del>9</del>.<del>502</del>4<del>57</del><span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/</td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins>.<ins>916</ins>4<ins>28</ins><span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<del>0</del>:2<del>9</del>.<del>502457</del><span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gpt_chatbot_cli.egg-info/</td><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins>.<ins>919761</ins><span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gpt_chatbot_cli.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2313<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<del>0</del>:2<del>9</del>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gpt_chatbot_cli.egg-info/PKG-INFO</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2313<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gpt_chatbot_cli.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>508<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<del>0</del>:2<del>9</del>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gpt_chatbot_cli.egg-info/SOURCES.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>508<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gpt_chatbot_cli.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<del>0</del>:2<del>9</del>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gpt_chatbot_cli.egg-info/dependency_links.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gpt_chatbot_cli.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>61<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<del>0</del>:2<del>9</del>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gpt_chatbot_cli.egg-info/entry_points.txt</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>61<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gpt_chatbot_cli.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>82<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<del>0</del>:2<del>9</del>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gpt_chatbot_cli.egg-info/requires.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>82<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gpt_chatbot_cli.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<del>0</del>:2<del>9</del>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gpt_chatbot_cli.egg-info/top_level.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gpt_chatbot_cli.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<del>0</del>:2<del>9</del>.<del>5057</del>9<del>0</del><span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gptchatbotcli/</td><td class="diffline">15 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:1<ins>9</ins>:2<ins>4</ins>.<ins>9230</ins>9<ins>5</ins><span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gptchatbotcli/</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>97<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>0</del>8:1<del>2</del>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gptchatbotcli/__init__.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>97<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>1</ins>8:1<ins>1</ins>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gptchatbotcli/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>784</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>08</del>:<del>12</del>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gptchatbotcli/database.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>813</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>16</ins>:<ins>06</ins>.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gptchatbotcli/database.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>429<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:08:12.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gptchatbotcli/history.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>429<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:08:12.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gptchatbotcli/history.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7383<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:08:12.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gptchatbotcli/index.py</td><td class="diffline">19 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7383<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:08:12.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gptchatbotcli/index.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1702<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:08:12.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gptchatbotcli/openapi_controller.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1702<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:08:12.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gptchatbotcli/openapi_controller.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1242<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:08:12.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gptchatbotcli/payloads.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1242<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:08:12.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gptchatbotcli/payloads.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>404<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:08:12.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<del>3</del>/src/gptchatbotcli/services.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rukh<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>404<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:08:12.000000<span class="dp">·</span>gpt-chatbot-cli-0.3.<ins>4</ins>/src/gptchatbotcli/services.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">gpt-chatbot-cli-0.3.3/LICENCE</span> vs.</div>
+      <div id="gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--LICENCE"><span class="source">gpt-chatbot-cli-0.3.4/LICENCE</span>
+        <a class="anchor" href="#gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--LICENCE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">566 B</span></div>
+      <div><span class="source">gpt-chatbot-cli-0.3.3/PKG-INFO</span> vs.</div>
+      <div id="gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--PKG-INFO"><span class="source">gpt-chatbot-cli-0.3.4/PKG-INFO</span>
+        <a class="anchor" href="#gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gpt-chatbot-cli</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gpt-chatbot-cli</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<ins>4</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>minimal<span class="dp">·</span>chatgpt<span class="dp">·</span>cli</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>minimal<span class="dp">·</span>chatgpt<span class="dp">·</span>cli</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Ruben<span class="dp">·</span>Kharel<span class="dp">·</span>&lt;talkto@rubenk.com.np&gt;</td><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Ruben<span class="dp">·</span>Kharel<span class="dp">·</span>&lt;talkto@rubenk.com.np&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/slithery0/gpt-chatbot-cli</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/slithery0/gpt-chatbot-cli</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/slithery0/gpt-chatbot-cli/issues</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/slithery0/gpt-chatbot-cli/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Keywords:<span class="dp">·</span>chatgpt,gpt-chatbot,chatgpt-cli</td><td class="diffline">8 </td><td class="diffpresent">Keywords:<span class="dp">·</span>chatgpt,gpt-chatbot,chatgpt-cli</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">gpt-chatbot-cli-0.3.3/README.md</span> vs.</div>
+      <div id="gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--README.md"><span class="source">gpt-chatbot-cli-0.3.4/README.md</span>
+        <a class="anchor" href="#gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">527 B</span></div>
+      <div><span class="source">gpt-chatbot-cli-0.3.3/pyproject.toml</span> vs.</div>
+      <div id="gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--pyproject.toml"><span class="source">gpt-chatbot-cli-0.3.4/pyproject.toml</span>
+        <a class="anchor" href="#gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 11% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[build-system]</td><td class="diffline">1 </td><td class="diffpresent">[build-system]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;setuptools&gt;=61.0&quot;,<span class="dp">·</span>&quot;wheel&quot;]</td><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;setuptools&gt;=61.0&quot;,<span class="dp">·</span>&quot;wheel&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;setuptools.build_meta&quot;</td><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;setuptools.build_meta&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">[project]</td><td class="diffline">4 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;gpt-chatbot-cli&quot;</td><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;gpt-chatbot-cli&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<del>3</del>&quot;</td><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<ins>4</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;Ruben<span class="dp">·</span>Kharel&quot;,<span class="dp">·</span>email=&quot;talkto@rubenk.com.np&quot;<span class="dp">·</span>},</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;Ruben<span class="dp">·</span>Kharel&quot;,<span class="dp">·</span>email=&quot;talkto@rubenk.com.np&quot;<span class="dp">·</span>},</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">]</td><td class="diffline">9 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>minimal<span class="dp">·</span>chatgpt<span class="dp">·</span>cli&quot;</td><td class="diffline">10 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>minimal<span class="dp">·</span>chatgpt<span class="dp">·</span>cli&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">11 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>{file<span class="dp">·</span>=<span class="dp">·</span>&quot;LICENSE&quot;}</td><td class="diffline">12 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>{file<span class="dp">·</span>=<span class="dp">·</span>&quot;LICENSE&quot;}</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;chatgpt&quot;,<span class="dp">·</span>&quot;gpt-chatbot&quot;,<span class="dp">·</span>&quot;chatgpt-cli&quot;]<span class="dp">·</span></td><td class="diffline">13 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;chatgpt&quot;,<span class="dp">·</span>&quot;gpt-chatbot&quot;,<span class="dp">·</span>&quot;chatgpt-cli&quot;]<span class="dp">·</span></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">624 B</span></div>
+      <div><span class="source">gpt-chatbot-cli-0.3.3/src/gpt_chatbot_cli.egg-info/PKG-INFO</span> vs.</div>
+      <div id="gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--src-gpt_chatbot_cli.egg-info-PKG-INFO"><span class="source">gpt-chatbot-cli-0.3.4/src/gpt_chatbot_cli.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--src-gpt_chatbot_cli.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gpt-chatbot-cli</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>gpt-chatbot-cli</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<ins>4</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>minimal<span class="dp">·</span>chatgpt<span class="dp">·</span>cli</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>minimal<span class="dp">·</span>chatgpt<span class="dp">·</span>cli</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Ruben<span class="dp">·</span>Kharel<span class="dp">·</span>&lt;talkto@rubenk.com.np&gt;</td><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Ruben<span class="dp">·</span>Kharel<span class="dp">·</span>&lt;talkto@rubenk.com.np&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/slithery0/gpt-chatbot-cli</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/slithery0/gpt-chatbot-cli</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/slithery0/gpt-chatbot-cli/issues</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/slithery0/gpt-chatbot-cli/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Keywords:<span class="dp">·</span>chatgpt,gpt-chatbot,chatgpt-cli</td><td class="diffline">8 </td><td class="diffpresent">Keywords:<span class="dp">·</span>chatgpt,gpt-chatbot,chatgpt-cli</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">717 B</span></div>
+      <div><span class="source">gpt-chatbot-cli-0.3.3/src/gptchatbotcli/database.py</span> vs.</div>
+      <div id="gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--src-gptchatbotcli-database.py"><span class="source">gpt-chatbot-cli-0.3.4/src/gptchatbotcli/database.py</span>
+        <a class="anchor" href="#gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--src-gptchatbotcli-database.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 24% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 9, 15 lines modified</td><td colspan="2">Offset 9, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.write(&quot;&quot;)</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.write(&quot;&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">db<span class="dp">·</span>=<span class="dp">·</span>TinyDB(chat_history_path)</td><td class="diffline">10 </td><td class="diffpresent">db<span class="dp">·</span>=<span class="dp">·</span>TinyDB(chat_history_path)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">def<span class="dp">·</span>init_chat_history(message,<span class="dp">·</span>preset,<span class="dp">·</span>model):</td><td class="diffline">11 </td><td class="diffpresent">def<span class="dp">·</span>init_chat_history(message,<span class="dp">·</span>preset,<span class="dp">·</span>model):</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>generate<span class="dp">·</span>random<span class="dp">·</span>string</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>generate<span class="dp">·</span>random<span class="dp">·</span>string</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>_id<span class="dp">·</span>=<span class="dp">·</span>str(time.time()).replace(&quot;.&quot;,<span class="dp">·</span>&quot;&quot;)</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>_id<span class="dp">·</span>=<span class="dp">·</span>str(time.time()).replace(&quot;.&quot;,<span class="dp">·</span>&quot;&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>print(&quot;Saving<span class="dp">·</span>chat<span class="dp">·</span>history...&quot;)</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>print(&quot;Saving<span class="dp">·</span>chat<span class="dp">·</span>history...&quot;)</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>db.insert({&quot;_id&quot;:<span class="dp">·</span>_id,<span class="dp">·</span>&quot;preset&quot;:<span class="dp">·</span>preset,<span class="dp">·</span>&quot;model&quot;:<span class="dp">·</span>model,<span class="dp">·</span>&#x27;messages&#x27;:<span class="dp">·</span>message})</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>db.insert({&quot;_id&quot;:<span class="dp">·</span>_id,<span class="dp">·</span>&quot;preset&quot;:<span class="dp">·</span>preset,<span class="dp">·</span>&quot;<ins>title&quot;:<span class="dp">·</span>&quot;Untitled&quot;+&quot;_&quot;+_id<span class="dp">·</span>,&quot;</ins>model&quot;:<span class="dp">·</span>model,<span class="dp">·</span>&#x27;messages&#x27;:<span class="dp">·</span>message})</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>_id</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>_id</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">def<span class="dp">·</span>update_chat_history(id,<span class="dp">·</span>message):</td><td class="diffline">17 </td><td class="diffpresent">def<span class="dp">·</span>update_chat_history(id,<span class="dp">·</span>message):</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>db.update({&#x27;messages&#x27;:<span class="dp">·</span>message},<span class="dp">·</span>Query()._id<span class="dp">·</span>==<span class="dp">·</span>id)</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>db.update({&#x27;messages&#x27;:<span class="dp">·</span>message},<span class="dp">·</span>Query()._id<span class="dp">·</span>==<span class="dp">·</span>id)</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>True</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>True</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">def<span class="dp">·</span>get_all_chat_history():</td><td class="diffline">20 </td><td class="diffpresent">def<span class="dp">·</span>get_all_chat_history():</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">gpt-chatbot-cli-0.3.3/src/gptchatbotcli/index.py</span> vs.</div>
+      <div id="gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--src-gptchatbotcli-index.py"><span class="source">gpt-chatbot-cli-0.3.4/src/gptchatbotcli/index.py</span>
+        <a class="anchor" href="#gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--src-gptchatbotcli-index.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">gpt-chatbot-cli-0.3.3/src/gptchatbotcli/openapi_controller.py</span> vs.</div>
+      <div id="gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--src-gptchatbotcli-openapi_controller.py"><span class="source">gpt-chatbot-cli-0.3.4/src/gptchatbotcli/openapi_controller.py</span>
+        <a class="anchor" href="#gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--src-gptchatbotcli-openapi_controller.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">gpt-chatbot-cli-0.3.3/src/gptchatbotcli/payloads.py</span> vs.</div>
+      <div id="gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--src-gptchatbotcli-payloads.py"><span class="source">gpt-chatbot-cli-0.3.4/src/gptchatbotcli/payloads.py</span>
+        <a class="anchor" href="#gpt-chatbot-cli--.-.-.tar---gpt-chatbot-cli--.-.--src-gptchatbotcli-payloads.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

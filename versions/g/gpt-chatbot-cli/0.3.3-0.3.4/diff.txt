@@ -1,0 +1,138 @@
+--- tmp/gpt-chatbot-cli-0.3.3.tar.gz
++++ tmp/gpt-chatbot-cli-0.3.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "gpt-chatbot-cli-0.3.3.tar", last modified: Fri Apr  7 05:10:29 2023, max compression
+│ +gzip compressed data, was "gpt-chatbot-cli-0.3.4.tar", last modified: Fri Apr  7 05:19:24 2023, max compression
+│   --- gpt-chatbot-cli-0.3.3.tar
+├── +++ gpt-chatbot-cli-0.3.4.tar
+│ ├── file list
+│ │ @@ -1,22 +1,22 @@
+│ │ -drwxr-xr-x   0 rukh      (1000) rukh      (1000)        0 2023-04-07 05:10:29.505790 gpt-chatbot-cli-0.3.3/
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)     1051 2023-02-02 00:55:38.000000 gpt-chatbot-cli-0.3.3/LICENCE
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)     2313 2023-04-07 05:10:29.505790 gpt-chatbot-cli-0.3.3/PKG-INFO
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)     1645 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.3/README.md
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)      999 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.3/pyproject.toml
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)       38 2023-04-07 05:10:29.505790 gpt-chatbot-cli-0.3.3/setup.cfg
+│ │ -drwxr-xr-x   0 rukh      (1000) rukh      (1000)        0 2023-04-07 05:10:29.502457 gpt-chatbot-cli-0.3.3/src/
+│ │ -drwxr-xr-x   0 rukh      (1000) rukh      (1000)        0 2023-04-07 05:10:29.502457 gpt-chatbot-cli-0.3.3/src/gpt_chatbot_cli.egg-info/
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)     2313 2023-04-07 05:10:29.000000 gpt-chatbot-cli-0.3.3/src/gpt_chatbot_cli.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)      508 2023-04-07 05:10:29.000000 gpt-chatbot-cli-0.3.3/src/gpt_chatbot_cli.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)        1 2023-04-07 05:10:29.000000 gpt-chatbot-cli-0.3.3/src/gpt_chatbot_cli.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)       61 2023-04-07 05:10:29.000000 gpt-chatbot-cli-0.3.3/src/gpt_chatbot_cli.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)       82 2023-04-07 05:10:29.000000 gpt-chatbot-cli-0.3.3/src/gpt_chatbot_cli.egg-info/requires.txt
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)       14 2023-04-07 05:10:29.000000 gpt-chatbot-cli-0.3.3/src/gpt_chatbot_cli.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 rukh      (1000) rukh      (1000)        0 2023-04-07 05:10:29.505790 gpt-chatbot-cli-0.3.3/src/gptchatbotcli/
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)       97 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.3/src/gptchatbotcli/__init__.py
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)      784 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.3/src/gptchatbotcli/database.py
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)      429 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.3/src/gptchatbotcli/history.py
+│ │ --rwxr-xr-x   0 rukh      (1000) rukh      (1000)     7383 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.3/src/gptchatbotcli/index.py
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)     1702 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.3/src/gptchatbotcli/openapi_controller.py
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)     1242 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.3/src/gptchatbotcli/payloads.py
+│ │ --rw-r--r--   0 rukh      (1000) rukh      (1000)      404 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.3/src/gptchatbotcli/services.py
+│ │ +drwxr-xr-x   0 rukh      (1000) rukh      (1000)        0 2023-04-07 05:19:24.926428 gpt-chatbot-cli-0.3.4/
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)     1051 2023-02-02 00:55:38.000000 gpt-chatbot-cli-0.3.4/LICENCE
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)     2313 2023-04-07 05:19:24.926428 gpt-chatbot-cli-0.3.4/PKG-INFO
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)     1645 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.4/README.md
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)      999 2023-04-07 05:18:07.000000 gpt-chatbot-cli-0.3.4/pyproject.toml
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)       38 2023-04-07 05:19:24.926428 gpt-chatbot-cli-0.3.4/setup.cfg
+│ │ +drwxr-xr-x   0 rukh      (1000) rukh      (1000)        0 2023-04-07 05:19:24.916428 gpt-chatbot-cli-0.3.4/src/
+│ │ +drwxr-xr-x   0 rukh      (1000) rukh      (1000)        0 2023-04-07 05:19:24.919761 gpt-chatbot-cli-0.3.4/src/gpt_chatbot_cli.egg-info/
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)     2313 2023-04-07 05:19:24.000000 gpt-chatbot-cli-0.3.4/src/gpt_chatbot_cli.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)      508 2023-04-07 05:19:24.000000 gpt-chatbot-cli-0.3.4/src/gpt_chatbot_cli.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)        1 2023-04-07 05:19:24.000000 gpt-chatbot-cli-0.3.4/src/gpt_chatbot_cli.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)       61 2023-04-07 05:19:24.000000 gpt-chatbot-cli-0.3.4/src/gpt_chatbot_cli.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)       82 2023-04-07 05:19:24.000000 gpt-chatbot-cli-0.3.4/src/gpt_chatbot_cli.egg-info/requires.txt
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)       14 2023-04-07 05:19:24.000000 gpt-chatbot-cli-0.3.4/src/gpt_chatbot_cli.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 rukh      (1000) rukh      (1000)        0 2023-04-07 05:19:24.923095 gpt-chatbot-cli-0.3.4/src/gptchatbotcli/
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)       97 2023-04-07 05:18:11.000000 gpt-chatbot-cli-0.3.4/src/gptchatbotcli/__init__.py
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)      813 2023-04-07 05:16:06.000000 gpt-chatbot-cli-0.3.4/src/gptchatbotcli/database.py
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)      429 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.4/src/gptchatbotcli/history.py
+│ │ +-rwxr-xr-x   0 rukh      (1000) rukh      (1000)     7383 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.4/src/gptchatbotcli/index.py
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)     1702 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.4/src/gptchatbotcli/openapi_controller.py
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)     1242 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.4/src/gptchatbotcli/payloads.py
+│ │ +-rw-r--r--   0 rukh      (1000) rukh      (1000)      404 2023-04-07 05:08:12.000000 gpt-chatbot-cli-0.3.4/src/gptchatbotcli/services.py
+│ │   --- gpt-chatbot-cli-0.3.3/LICENCE
+│ ├── +++ gpt-chatbot-cli-0.3.4/LICENCE
+│ │┄ Files identical despite different names
+│ │   --- gpt-chatbot-cli-0.3.3/PKG-INFO
+│ ├── +++ gpt-chatbot-cli-0.3.4/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gpt-chatbot-cli
+│ │ -Version: 0.3.3
+│ │ +Version: 0.3.4
+│ │  Summary: A minimal chatgpt cli
+│ │  Author-email: Ruben Kharel <talkto@rubenk.com.np>
+│ │  Project-URL: Homepage, https://github.com/slithery0/gpt-chatbot-cli
+│ │  Project-URL: Bug Tracker, https://github.com/slithery0/gpt-chatbot-cli/issues
+│ │  Keywords: chatgpt,gpt-chatbot,chatgpt-cli
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: Intended Audience :: End Users/Desktop
+│ │   --- gpt-chatbot-cli-0.3.3/README.md
+│ ├── +++ gpt-chatbot-cli-0.3.4/README.md
+│ │┄ Files identical despite different names
+│ │   --- gpt-chatbot-cli-0.3.3/pyproject.toml
+│ ├── +++ gpt-chatbot-cli-0.3.4/pyproject.toml
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["setuptools>=61.0", "wheel"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "gpt-chatbot-cli"
+│ │ -version = "0.3.3"
+│ │ +version = "0.3.4"
+│ │  authors = [
+│ │    { name="Ruben Kharel", email="talkto@rubenk.com.np" },
+│ │  ]
+│ │  description = "A minimal chatgpt cli"
+│ │  readme = "README.md"
+│ │  license = {file = "LICENSE"}
+│ │  keywords = ["chatgpt", "gpt-chatbot", "chatgpt-cli"]
+│ │   --- gpt-chatbot-cli-0.3.3/src/gpt_chatbot_cli.egg-info/PKG-INFO
+│ ├── +++ gpt-chatbot-cli-0.3.4/src/gpt_chatbot_cli.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gpt-chatbot-cli
+│ │ -Version: 0.3.3
+│ │ +Version: 0.3.4
+│ │  Summary: A minimal chatgpt cli
+│ │  Author-email: Ruben Kharel <talkto@rubenk.com.np>
+│ │  Project-URL: Homepage, https://github.com/slithery0/gpt-chatbot-cli
+│ │  Project-URL: Bug Tracker, https://github.com/slithery0/gpt-chatbot-cli/issues
+│ │  Keywords: chatgpt,gpt-chatbot,chatgpt-cli
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: Intended Audience :: End Users/Desktop
+│ │   --- gpt-chatbot-cli-0.3.3/src/gptchatbotcli/database.py
+│ ├── +++ gpt-chatbot-cli-0.3.4/src/gptchatbotcli/database.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -9,15 +9,15 @@
+│ │      f.write("")
+│ │  db = TinyDB(chat_history_path)
+│ │  
+│ │  def init_chat_history(message, preset, model):
+│ │    # generate random string
+│ │    _id = str(time.time()).replace(".", "")
+│ │    # print("Saving chat history...")
+│ │ -  db.insert({"_id": _id, "preset": preset, "model": model, 'messages': message})
+│ │ +  db.insert({"_id": _id, "preset": preset, "title": "Untitled"+"_"+_id ,"model": model, 'messages': message})
+│ │    return _id
+│ │  
+│ │  def update_chat_history(id, message):
+│ │    db.update({'messages': message}, Query()._id == id)
+│ │    return True
+│ │  
+│ │  def get_all_chat_history():
+│ │   --- gpt-chatbot-cli-0.3.3/src/gptchatbotcli/index.py
+│ ├── +++ gpt-chatbot-cli-0.3.4/src/gptchatbotcli/index.py
+│ │┄ Files identical despite different names
+│ │   --- gpt-chatbot-cli-0.3.3/src/gptchatbotcli/openapi_controller.py
+│ ├── +++ gpt-chatbot-cli-0.3.4/src/gptchatbotcli/openapi_controller.py
+│ │┄ Files identical despite different names
+│ │   --- gpt-chatbot-cli-0.3.3/src/gptchatbotcli/payloads.py
+│ ├── +++ gpt-chatbot-cli-0.3.4/src/gptchatbotcli/payloads.py
+│ │┄ Files identical despite different names

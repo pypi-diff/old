@@ -1,0 +1,306 @@
+# Comparing `tmp/odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4-py3-none-any.whl.zip` & `tmp/odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,96 +1,96 @@
+-Zip file size: 115342 bytes, number of entries: 94
+--rw-r--r--  2.0 unx     4309 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/README.rst
+--rw-r--r--  2.0 unx       21 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/__init__.py
+--rw-r--r--  2.0 unx      677 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/__manifest__.py
+--rw-r--r--  2.0 unx     1144 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/data/res_partner_anaf_cron.xml
+--rw-r--r--  2.0 unx     6257 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/am.po
+--rw-r--r--  2.0 unx     6453 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/ar.po
+--rw-r--r--  2.0 unx     6431 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/bg.po
+--rw-r--r--  2.0 unx     6378 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/bs.po
+--rw-r--r--  2.0 unx     6373 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/ca.po
+--rw-r--r--  2.0 unx     6172 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/ca_ES.po
+--rw-r--r--  2.0 unx     6344 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/cs.po
+--rw-r--r--  2.0 unx     6268 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/da.po
+--rw-r--r--  2.0 unx     6405 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/de.po
+--rw-r--r--  2.0 unx     6477 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/el_GR.po
+--rw-r--r--  2.0 unx     6327 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/en_GB.po
+--rw-r--r--  2.0 unx     6374 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/es.po
+--rw-r--r--  2.0 unx     6282 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/es_AR.po
+--rw-r--r--  2.0 unx     6286 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/es_CL.po
+--rw-r--r--  2.0 unx     6265 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/es_CO.po
+--rw-r--r--  2.0 unx     6313 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/es_CR.po
+--rw-r--r--  2.0 unx     6281 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/es_DO.po
+--rw-r--r--  2.0 unx     6389 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/es_EC.po
+--rw-r--r--  2.0 unx     6312 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/es_ES.po
+--rw-r--r--  2.0 unx     6413 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/es_MX.po
+--rw-r--r--  2.0 unx     6265 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/es_PE.po
+--rw-r--r--  2.0 unx     6231 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/es_PY.po
+--rw-r--r--  2.0 unx     6322 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/es_VE.po
+--rw-r--r--  2.0 unx     6297 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/et.po
+--rw-r--r--  2.0 unx     6316 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/eu.po
+--rw-r--r--  2.0 unx     6336 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/fa.po
+--rw-r--r--  2.0 unx     6296 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/fi.po
+--rw-r--r--  2.0 unx     6512 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/fr.po
+--rw-r--r--  2.0 unx     6336 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/fr_CA.po
+--rw-r--r--  2.0 unx     6371 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/fr_CH.po
+--rw-r--r--  2.0 unx     6315 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/gl.po
+--rw-r--r--  2.0 unx     6161 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/gl_ES.po
+--rw-r--r--  2.0 unx     6296 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/he.po
+--rw-r--r--  2.0 unx     6415 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/hr.po
+--rw-r--r--  2.0 unx     6420 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/hr_HR.po
+--rw-r--r--  2.0 unx     6353 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/hu.po
+--rw-r--r--  2.0 unx     6356 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/id.po
+--rw-r--r--  2.0 unx     6411 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/it.po
+--rw-r--r--  2.0 unx     6296 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/ja.po
+--rw-r--r--  2.0 unx     6222 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/ko.po
+--rw-r--r--  2.0 unx     5840 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/l10n_ro_vat_on_payment.pot
+--rw-r--r--  2.0 unx     6423 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/lt.po
+--rw-r--r--  2.0 unx     6303 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/lt_LT.po
+--rw-r--r--  2.0 unx     6285 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/lv.po
+--rw-r--r--  2.0 unx     6449 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/mk.po
+--rw-r--r--  2.0 unx     6444 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/mn.po
+--rw-r--r--  2.0 unx     6320 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/nb.po
+--rw-r--r--  2.0 unx     6329 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/nb_NO.po
+--rw-r--r--  2.0 unx     6324 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/nl.po
+--rw-r--r--  2.0 unx     6333 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/nl_BE.po
+--rw-r--r--  2.0 unx     6342 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/nl_NL.po
+--rw-r--r--  2.0 unx     6389 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/pl.po
+--rw-r--r--  2.0 unx     6338 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/pt.po
+--rw-r--r--  2.0 unx     6387 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/pt_BR.po
+--rw-r--r--  2.0 unx     6410 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/pt_PT.po
+--rw-r--r--  2.0 unx     7452 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/ro.po
+--rw-r--r--  2.0 unx     6495 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/ru.po
+--rw-r--r--  2.0 unx     6398 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/sk.po
+--rw-r--r--  2.0 unx     6228 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/sk_SK.po
+--rw-r--r--  2.0 unx     6412 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/sl.po
+--rw-r--r--  2.0 unx     6227 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/sr.po
+--rw-r--r--  2.0 unx     6352 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/sr@latin.po
+--rw-r--r--  2.0 unx     6305 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/sv.po
+--rw-r--r--  2.0 unx     6563 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/th.po
+--rw-r--r--  2.0 unx     6400 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/tr.po
+--rw-r--r--  2.0 unx     6338 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/tr_TR.po
+--rw-r--r--  2.0 unx     6433 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/uk.po
+--rw-r--r--  2.0 unx     6307 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/vi.po
+--rw-r--r--  2.0 unx     6241 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/vi_VN.po
+--rw-r--r--  2.0 unx     6333 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/zh_CN.po
+--rw-r--r--  2.0 unx     6309 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/i18n/zh_TW.po
+--rw-r--r--  2.0 unx     1743 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/migrations/15.0.1.3.1/pre-migration.py
+--rw-r--r--  2.0 unx       84 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/models/__init__.py
+--rw-r--r--  2.0 unx     2967 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/models/account_move.py
+--rw-r--r--  2.0 unx     4341 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/models/res_partner.py
+--rw-r--r--  2.0 unx     1811 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/models/res_partner_anaf.py
+--rw-r--r--  2.0 unx      249 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/readme/CONTRIBUTORS.rst
+--rw-r--r--  2.0 unx       82 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/readme/DESCRIPTION.rst
+--rw-r--r--  2.0 unx      287 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/readme/INSTALL.rst
+--rw-r--r--  2.0 unx      775 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/readme/USAGE.rst
+--rw-r--r--  2.0 unx      189 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/security/ir.model.access.csv
+--rw-r--r--  2.0 unx      566 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/static/description/icon.png
+--rw-r--r--  2.0 unx    14194 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/static/description/index.html
+--rw-r--r--  2.0 unx       34 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/tests/__init__.py
+--rw-r--r--  2.0 unx     3939 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/tests/test_vat_on_payment.py
+--rw-r--r--  2.0 unx     3776 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_vat_on_payment/views/res_partner_view.xml
+--rw-r--r--  2.0 unx     4992 b- defN 23-Apr-06 05:10 odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 05:10 odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/WHEEL
+--rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 05:10 odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     9945 b- defN 23-Apr-06 05:10 odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/RECORD
+-94 files, 507258 bytes uncompressed, 98858 bytes compressed:  80.5%
++Zip file size: 115324 bytes, number of entries: 94
++-rw-r--r--  2.0 unx     4309 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/README.rst
++-rw-r--r--  2.0 unx       21 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/__init__.py
++-rw-r--r--  2.0 unx      677 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/__manifest__.py
++-rw-r--r--  2.0 unx     1144 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/data/res_partner_anaf_cron.xml
++-rw-r--r--  2.0 unx     6257 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/am.po
++-rw-r--r--  2.0 unx     6453 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/ar.po
++-rw-r--r--  2.0 unx     6431 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/bg.po
++-rw-r--r--  2.0 unx     6378 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/bs.po
++-rw-r--r--  2.0 unx     6373 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/ca.po
++-rw-r--r--  2.0 unx     6172 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/ca_ES.po
++-rw-r--r--  2.0 unx     6344 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/cs.po
++-rw-r--r--  2.0 unx     6268 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/da.po
++-rw-r--r--  2.0 unx     6405 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/de.po
++-rw-r--r--  2.0 unx     6477 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/el_GR.po
++-rw-r--r--  2.0 unx     6327 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/en_GB.po
++-rw-r--r--  2.0 unx     6374 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/es.po
++-rw-r--r--  2.0 unx     6282 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/es_AR.po
++-rw-r--r--  2.0 unx     6286 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/es_CL.po
++-rw-r--r--  2.0 unx     6265 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/es_CO.po
++-rw-r--r--  2.0 unx     6313 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/es_CR.po
++-rw-r--r--  2.0 unx     6281 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/es_DO.po
++-rw-r--r--  2.0 unx     6389 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/es_EC.po
++-rw-r--r--  2.0 unx     6312 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/es_ES.po
++-rw-r--r--  2.0 unx     6413 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/es_MX.po
++-rw-r--r--  2.0 unx     6265 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/es_PE.po
++-rw-r--r--  2.0 unx     6231 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/es_PY.po
++-rw-r--r--  2.0 unx     6322 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/es_VE.po
++-rw-r--r--  2.0 unx     6297 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/et.po
++-rw-r--r--  2.0 unx     6316 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/eu.po
++-rw-r--r--  2.0 unx     6336 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/fa.po
++-rw-r--r--  2.0 unx     6296 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/fi.po
++-rw-r--r--  2.0 unx     6512 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/fr.po
++-rw-r--r--  2.0 unx     6336 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/fr_CA.po
++-rw-r--r--  2.0 unx     6371 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/fr_CH.po
++-rw-r--r--  2.0 unx     6315 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/gl.po
++-rw-r--r--  2.0 unx     6161 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/gl_ES.po
++-rw-r--r--  2.0 unx     6296 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/he.po
++-rw-r--r--  2.0 unx     6415 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/hr.po
++-rw-r--r--  2.0 unx     6420 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/hr_HR.po
++-rw-r--r--  2.0 unx     6353 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/hu.po
++-rw-r--r--  2.0 unx     6356 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/id.po
++-rw-r--r--  2.0 unx     6411 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/it.po
++-rw-r--r--  2.0 unx     6296 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/ja.po
++-rw-r--r--  2.0 unx     6222 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/ko.po
++-rw-r--r--  2.0 unx     5840 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/l10n_ro_vat_on_payment.pot
++-rw-r--r--  2.0 unx     6423 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/lt.po
++-rw-r--r--  2.0 unx     6303 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/lt_LT.po
++-rw-r--r--  2.0 unx     6285 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/lv.po
++-rw-r--r--  2.0 unx     6449 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/mk.po
++-rw-r--r--  2.0 unx     6444 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/mn.po
++-rw-r--r--  2.0 unx     6320 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/nb.po
++-rw-r--r--  2.0 unx     6329 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/nb_NO.po
++-rw-r--r--  2.0 unx     6324 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/nl.po
++-rw-r--r--  2.0 unx     6333 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/nl_BE.po
++-rw-r--r--  2.0 unx     6342 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/nl_NL.po
++-rw-r--r--  2.0 unx     6389 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/pl.po
++-rw-r--r--  2.0 unx     6338 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/pt.po
++-rw-r--r--  2.0 unx     6387 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/pt_BR.po
++-rw-r--r--  2.0 unx     6410 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/pt_PT.po
++-rw-r--r--  2.0 unx     7452 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/ro.po
++-rw-r--r--  2.0 unx     6495 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/ru.po
++-rw-r--r--  2.0 unx     6398 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/sk.po
++-rw-r--r--  2.0 unx     6228 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/sk_SK.po
++-rw-r--r--  2.0 unx     6412 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/sl.po
++-rw-r--r--  2.0 unx     6227 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/sr.po
++-rw-r--r--  2.0 unx     6352 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/sr@latin.po
++-rw-r--r--  2.0 unx     6305 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/sv.po
++-rw-r--r--  2.0 unx     6563 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/th.po
++-rw-r--r--  2.0 unx     6400 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/tr.po
++-rw-r--r--  2.0 unx     6338 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/tr_TR.po
++-rw-r--r--  2.0 unx     6433 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/uk.po
++-rw-r--r--  2.0 unx     6307 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/vi.po
++-rw-r--r--  2.0 unx     6241 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/vi_VN.po
++-rw-r--r--  2.0 unx     6333 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/zh_CN.po
++-rw-r--r--  2.0 unx     6309 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/i18n/zh_TW.po
++-rw-r--r--  2.0 unx     1743 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/migrations/15.0.1.3.1/pre-migration.py
++-rw-r--r--  2.0 unx       84 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/models/__init__.py
++-rw-r--r--  2.0 unx     2967 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/models/account_move.py
++-rw-r--r--  2.0 unx     4341 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/models/res_partner.py
++-rw-r--r--  2.0 unx     1811 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/models/res_partner_anaf.py
++-rw-r--r--  2.0 unx      249 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/readme/CONTRIBUTORS.rst
++-rw-r--r--  2.0 unx       82 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/readme/DESCRIPTION.rst
++-rw-r--r--  2.0 unx      287 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/readme/INSTALL.rst
++-rw-r--r--  2.0 unx      775 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/readme/USAGE.rst
++-rw-r--r--  2.0 unx      189 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/security/ir.model.access.csv
++-rw-r--r--  2.0 unx      566 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/static/description/icon.png
++-rw-r--r--  2.0 unx    14194 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/static/description/index.html
++-rw-r--r--  2.0 unx       34 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/tests/__init__.py
++-rw-r--r--  2.0 unx     3939 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/tests/test_vat_on_payment.py
++-rw-r--r--  2.0 unx     3776 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_vat_on_payment/views/res_partner_view.xml
++-rw-r--r--  2.0 unx     4990 b- defN 23-Apr-07 05:17 odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 05:17 odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/WHEEL
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 05:17 odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     9937 b- defN 23-Apr-07 05:17 odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/RECORD
++94 files, 507248 bytes uncompressed, 98856 bytes compressed:  80.5%
+```
+
+## zipnote {}
+
+```diff
+@@ -264,20 +264,20 @@
+ 
+ Filename: odoo/addons/l10n_ro_vat_on_payment/tests/test_vat_on_payment.py
+ Comment: 
+ 
+ Filename: odoo/addons/l10n_ro_vat_on_payment/views/res_partner_view.xml
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/METADATA
++Filename: odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/METADATA
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/WHEEL
++Filename: odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/top_level.txt
++Filename: odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/RECORD
++Filename: odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## odoo/addons/l10n_ro_vat_on_payment/__manifest__.py
+
+```diff
+@@ -7,15 +7,15 @@
+     "data": [
+         "views/res_partner_view.xml",
+         "security/ir.model.access.csv",
+         "data/res_partner_anaf_cron.xml",
+     ],
+     "depends": ["l10n_ro_config"],
+     "license": "AGPL-3",
+-    "version": "15.0.2.4.0",
++    "version": "15.0.2.4.1",
+     "author": "NextERP Romania,"
+     "Forest and Biomass Romania,"
+     "Odoo Community Association (OCA)",
+     "website": "https://github.com/OCA/l10n-romania",
+     "installable": True,
+     "development_status": "Mature",
+     "maintainers": ["feketemihai"],
+```
+
+## Comparing `odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/METADATA` & `odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/METADATA`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: odoo-addon-l10n-ro-vat-on-payment
+-Version: 15.0.2.4.0.4
++Version: 15.0.2.4.1
+ Summary: Romania - VAT on Payment
+ Home-page: https://github.com/OCA/l10n-romania
+ Author: NextERP Romania,Forest and Biomass Romania,Odoo Community Association (OCA)
+ Author-email: support@odoo-community.org
+ License: AGPL-3
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python
+```
+
+## Comparing `odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/RECORD` & `odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/RECORD`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ odoo/addons/l10n_ro_vat_on_payment/README.rst,sha256=cPwdS4k9TGCtZbFAwy8QKzRGm3dUZe80RO6FM95z9as,4309
+ odoo/addons/l10n_ro_vat_on_payment/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+-odoo/addons/l10n_ro_vat_on_payment/__manifest__.py,sha256=xYJilSDTiWejZk5VsljS_gV22bsiFW7yDmAFAxJKmGE,677
++odoo/addons/l10n_ro_vat_on_payment/__manifest__.py,sha256=gmHaK3lWdndodoh7AI3R4Kkjmr3Co6OM81UAB-hGYyo,677
+ odoo/addons/l10n_ro_vat_on_payment/data/res_partner_anaf_cron.xml,sha256=OYkZ0Bi8iLe6lZaMhtCKDlGPqIl35duibUTUce9Dei8,1144
+ odoo/addons/l10n_ro_vat_on_payment/i18n/am.po,sha256=c3ShrN2FPz--oSdm07Ngqo-Vx8mQb_YQ3aoNPSlU9QQ,6257
+ odoo/addons/l10n_ro_vat_on_payment/i18n/ar.po,sha256=-4T_Q_6PMcqeZ_D3tebRojzyhWrtAJbQnowlxCbi8tA,6453
+ odoo/addons/l10n_ro_vat_on_payment/i18n/bg.po,sha256=TKUwnCrnm_LCj7eq7y2iWuiGhE7tb9M1ru86Xf0dy-U,6431
+ odoo/addons/l10n_ro_vat_on_payment/i18n/bs.po,sha256=Q8OLRcUMnoc3mPreeGlNH8AXs0g67SR4fbCQLOc4DCc,6378
+ odoo/addons/l10n_ro_vat_on_payment/i18n/ca.po,sha256=mUk-dLaJ4rjfqmoX3PmcWX2r6ld62ZvOcESnjdYgDS0,6373
+ odoo/addons/l10n_ro_vat_on_payment/i18n/ca_ES.po,sha256=XWkQNLZAw_D2K8XbuPKufUjkM4jhcAH6c_CNcK5z8ew,6172
+@@ -84,11 +84,11 @@
+ odoo/addons/l10n_ro_vat_on_payment/readme/USAGE.rst,sha256=iSYlkiNKU9PQtflzuqNJOWBPU98KlwHYJiF61BqDjf0,775
+ odoo/addons/l10n_ro_vat_on_payment/security/ir.model.access.csv,sha256=H5Uyv47kiKSQ4cgG_kkKExPs-b366QvsY3cLm7n9QhU,189
+ odoo/addons/l10n_ro_vat_on_payment/static/description/icon.png,sha256=MND3TYqrnM623pd0tf3WhoHU-3X5Ns6ho-Yz_HcYlTk,566
+ odoo/addons/l10n_ro_vat_on_payment/static/description/index.html,sha256=wlRpfZwQ7kM89ku1aoH9yOylZrGjuV0dGFWLHrK7mw8,14194
+ odoo/addons/l10n_ro_vat_on_payment/tests/__init__.py,sha256=-u3myh0wcicBGBj0eVgNqbdH4m76LLaGMnyeSo1yYy8,34
+ odoo/addons/l10n_ro_vat_on_payment/tests/test_vat_on_payment.py,sha256=N4-9r_SVEUfayQkfDlj_QxUP4f35gzE61zhYH4osXeU,3939
+ odoo/addons/l10n_ro_vat_on_payment/views/res_partner_view.xml,sha256=Q8hHghTkBg4qaOs0z1b5TeqIw9pWLB1eD3yrl3d5pew,3776
+-odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/METADATA,sha256=QOvJ2n1RArNmUA646aVslZFP3QGHxKhyhcml-mHlJho,4992
+-odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+-odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+-odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.0.4.dist-info/RECORD,,
++odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/METADATA,sha256=rZLP3a0xUmDlOjmt-6JKPli2dzEf1pWLQP3TVMwiHIc,4990
++odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
++odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
++odoo_addon_l10n_ro_vat_on_payment-15.0.2.4.1.dist-info/RECORD,,
+```
+

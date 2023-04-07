@@ -1,0 +1,99 @@
+# Comparing `tmp/odoo_addons_oca_l10n_romania-15.0.20230405.5-py3-none-any.whl.zip` & `tmp/odoo_addons_oca_l10n_romania-15.0.20230406.5-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,6 +1,6 @@
+-Zip file size: 1636 bytes, number of entries: 4
+--rw-r--r--  2.0 unx     2542 b- defN 23-Apr-06 05:12 odoo_addons_oca_l10n_romania-15.0.20230405.5.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 05:12 odoo_addons_oca_l10n_romania-15.0.20230405.5.dist-info/WHEEL
+--rw-r--r--  2.0 unx        1 b- defN 23-Apr-06 05:12 odoo_addons_oca_l10n_romania-15.0.20230405.5.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx      421 b- defN 23-Apr-06 05:12 odoo_addons_oca_l10n_romania-15.0.20230405.5.dist-info/RECORD
+-4 files, 3056 bytes uncompressed, 806 bytes compressed:  73.6%
++Zip file size: 1683 bytes, number of entries: 4
++-rw-r--r--  2.0 unx     3024 b- defN 23-Apr-07 05:19 odoo_addons_oca_l10n_romania-15.0.20230406.5.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 05:19 odoo_addons_oca_l10n_romania-15.0.20230406.5.dist-info/WHEEL
++-rw-r--r--  2.0 unx        1 b- defN 23-Apr-07 05:19 odoo_addons_oca_l10n_romania-15.0.20230406.5.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx      421 b- defN 23-Apr-07 05:19 odoo_addons_oca_l10n_romania-15.0.20230406.5.dist-info/RECORD
++4 files, 3538 bytes uncompressed, 853 bytes compressed:  75.9%
+```
+
+## zipnote {}
+
+```diff
+@@ -1,13 +1,13 @@
+-Filename: odoo_addons_oca_l10n_romania-15.0.20230405.5.dist-info/METADATA
++Filename: odoo_addons_oca_l10n_romania-15.0.20230406.5.dist-info/METADATA
+ Comment: 
+ 
+-Filename: odoo_addons_oca_l10n_romania-15.0.20230405.5.dist-info/WHEEL
++Filename: odoo_addons_oca_l10n_romania-15.0.20230406.5.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: odoo_addons_oca_l10n_romania-15.0.20230405.5.dist-info/top_level.txt
++Filename: odoo_addons_oca_l10n_romania-15.0.20230406.5.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: odoo_addons_oca_l10n_romania-15.0.20230405.5.dist-info/RECORD
++Filename: odoo_addons_oca_l10n_romania-15.0.20230406.5.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## Comparing `odoo_addons_oca_l10n_romania-15.0.20230405.5.dist-info/METADATA` & `odoo_addons_oca_l10n_romania-15.0.20230406.5.dist-info/METADATA`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,42 +1,48 @@
+ Metadata-Version: 2.1
+ Name: odoo-addons-oca-l10n-romania
+-Version: 15.0.20230405.5
++Version: 15.0.20230406.5
+ Summary: Meta package for oca-l10n-romania Odoo addons
+ Home-page: UNKNOWN
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python
+ Classifier: Framework :: Odoo
+ Classifier: Framework :: Odoo :: 15.0
+ Requires-Dist: odoo-addon-l10n-ro-account-anaf-sync (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-import-mt940-alpha (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-import-mt940-base (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-import-mt940-bcr (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-import-mt940-brd (<15.1dev,>=15.0dev)
++Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-import-mt940-ing (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-import-mt940-rffsn (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-report (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-account-edi-ubl (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-account-edit-currency-rate (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-account-period-close (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-account-report-invoice (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-address-extended (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-city (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-config (<15.1dev,>=15.0dev)
++Requires-Dist: odoo-addon-l10n-ro-dvi (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-fiscal-validation (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-nondeductible-vat (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-partner-create-by-vat (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-partner-unique (<15.1dev,>=15.0dev)
++Requires-Dist: odoo-addon-l10n-ro-payment-receipt-report (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-payment-to-statement (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-siruta (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-stock (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-stock-account (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-stock-account-date (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-stock-account-date-wizard (<15.1dev,>=15.0dev)
++Requires-Dist: odoo-addon-l10n-ro-stock-account-mrp (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-stock-account-notice (<15.1dev,>=15.0dev)
++Requires-Dist: odoo-addon-l10n-ro-stock-account-reception-in-progress (<15.1dev,>=15.0dev)
++Requires-Dist: odoo-addon-l10n-ro-stock-picking-comment-template (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-stock-picking-valued-report (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-stock-price-difference (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-stock-report (<15.1dev,>=15.0dev)
+ Requires-Dist: odoo-addon-l10n-ro-vat-on-payment (<15.1dev,>=15.0dev)
+ 
+ UNKNOWN
+```
+

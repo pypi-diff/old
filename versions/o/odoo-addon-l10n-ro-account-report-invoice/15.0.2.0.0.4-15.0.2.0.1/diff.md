@@ -1,0 +1,169 @@
+# Comparing `tmp/odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4-py3-none-any.whl.zip` & `tmp/odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,28 +1,28 @@
+-Zip file size: 22345 bytes, number of entries: 26
+--rw-r--r--  2.0 unx     3558 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/README.rst
+--rw-r--r--  2.0 unx       58 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/__init__.py
+--rw-r--r--  2.0 unx      714 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/__manifest__.py
+--rw-r--r--  2.0 unx     3744 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/init_hook.py
+--rw-r--r--  2.0 unx     4310 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/i18n/l10n_ro_account_report_invoice.pot
+--rw-r--r--  2.0 unx     4431 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/i18n/ro.po
+--rw-r--r--  2.0 unx     1488 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/migrations/15.0.1.2.1/pre-migration.py
+--rw-r--r--  2.0 unx      112 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/models/__init__.py
+--rw-r--r--  2.0 unx     1048 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/models/account_move.py
+--rw-r--r--  2.0 unx      310 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/models/res_company.py
+--rw-r--r--  2.0 unx      345 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/models/res_config_settings.py
+--rw-r--r--  2.0 unx      231 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/models/sale_order.py
+--rw-r--r--  2.0 unx      173 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/readme/CONTRIBUTORS.rst
+--rw-r--r--  2.0 unx      193 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/readme/DESCRIPTION.rst
+--rw-r--r--  2.0 unx      287 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/readme/INSTALL.rst
+--rw-r--r--  2.0 unx      566 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/static/description/icon.png
+--rw-r--r--  2.0 unx    13061 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/static/description/index.html
+--rw-r--r--  2.0 unx       33 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/tests/__init__.py
+--rw-r--r--  2.0 unx     1890 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/tests/test_currency_rate.py
+--rw-r--r--  2.0 unx     2040 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/views/account_invoice_view.xml
+--rw-r--r--  2.0 unx     5049 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/views/invoice_report.xml
+--rw-r--r--  2.0 unx     1836 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_report_invoice/views/res_config_settings_view.xml
+--rw-r--r--  2.0 unx     4222 b- defN 23-Apr-06 05:11 odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 05:11 odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/WHEEL
+--rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 05:11 odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     3145 b- defN 23-Apr-06 05:11 odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/RECORD
+-26 files, 52941 bytes uncompressed, 16879 bytes compressed:  68.1%
++Zip file size: 22322 bytes, number of entries: 26
++-rw-r--r--  2.0 unx     3558 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/README.rst
++-rw-r--r--  2.0 unx       58 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/__init__.py
++-rw-r--r--  2.0 unx      714 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/__manifest__.py
++-rw-r--r--  2.0 unx     3744 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/init_hook.py
++-rw-r--r--  2.0 unx     4310 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/i18n/l10n_ro_account_report_invoice.pot
++-rw-r--r--  2.0 unx     4431 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/i18n/ro.po
++-rw-r--r--  2.0 unx     1488 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/migrations/15.0.1.2.1/pre-migration.py
++-rw-r--r--  2.0 unx      112 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/models/__init__.py
++-rw-r--r--  2.0 unx     1048 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/models/account_move.py
++-rw-r--r--  2.0 unx      310 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/models/res_company.py
++-rw-r--r--  2.0 unx      345 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/models/res_config_settings.py
++-rw-r--r--  2.0 unx      231 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/models/sale_order.py
++-rw-r--r--  2.0 unx      173 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/readme/CONTRIBUTORS.rst
++-rw-r--r--  2.0 unx      193 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/readme/DESCRIPTION.rst
++-rw-r--r--  2.0 unx      287 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/readme/INSTALL.rst
++-rw-r--r--  2.0 unx      566 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/static/description/icon.png
++-rw-r--r--  2.0 unx    13061 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/static/description/index.html
++-rw-r--r--  2.0 unx       33 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/tests/__init__.py
++-rw-r--r--  2.0 unx     1890 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/tests/test_currency_rate.py
++-rw-r--r--  2.0 unx     2040 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/views/account_invoice_view.xml
++-rw-r--r--  2.0 unx     5049 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/views/invoice_report.xml
++-rw-r--r--  2.0 unx     1836 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_report_invoice/views/res_config_settings_view.xml
++-rw-r--r--  2.0 unx     4220 b- defN 23-Apr-07 05:17 odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 05:17 odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/WHEEL
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 05:17 odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     3137 b- defN 23-Apr-07 05:17 odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/RECORD
++26 files, 52931 bytes uncompressed, 16872 bytes compressed:  68.1%
+```
+
+## zipnote {}
+
+```diff
+@@ -60,20 +60,20 @@
+ 
+ Filename: odoo/addons/l10n_ro_account_report_invoice/views/invoice_report.xml
+ Comment: 
+ 
+ Filename: odoo/addons/l10n_ro_account_report_invoice/views/res_config_settings_view.xml
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/METADATA
++Filename: odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/METADATA
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/WHEEL
++Filename: odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/top_level.txt
++Filename: odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/RECORD
++Filename: odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## odoo/addons/l10n_ro_account_report_invoice/__manifest__.py
+
+```diff
+@@ -1,14 +1,14 @@
+ # Copyright 2018 NextERP Romania
+ # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+ 
+ {
+     "name": "Romania - Invoice Report",
+     "summary": "Romania - Invoice Report",
+-    "version": "15.0.2.0.0",
++    "version": "15.0.2.0.1",
+     "category": "Localization",
+     "author": "NextERP Romania," "Odoo Community Association (OCA)",
+     "website": "https://github.com/OCA/l10n-romania",
+     "license": "AGPL-3",
+     "installable": True,
+     "development_status": "Mature",
+     "maintainers": ["feketemihai"],
+```
+
+## Comparing `odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/METADATA` & `odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/METADATA`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: odoo-addon-l10n-ro-account-report-invoice
+-Version: 15.0.2.0.0.4
++Version: 15.0.2.0.1
+ Summary: Romania - Invoice Report
+ Home-page: https://github.com/OCA/l10n-romania
+ Author: NextERP Romania,Odoo Community Association (OCA)
+ Author-email: support@odoo-community.org
+ License: AGPL-3
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python
+```
+
+## Comparing `odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/RECORD` & `odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/RECORD`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ odoo/addons/l10n_ro_account_report_invoice/README.rst,sha256=aaJwxtELhPoQWpWZ2eGsH9O1N0XrBVefHnVIc4K43bg,3558
+ odoo/addons/l10n_ro_account_report_invoice/__init__.py,sha256=DTlvBq_jsY9-bI7IX5G1nJ97xL8HiiWXeq9trHFzu0E,58
+-odoo/addons/l10n_ro_account_report_invoice/__manifest__.py,sha256=iIYnSiQpnaHRRMqsxk_l9rErKKoVKniZQG5XHzRsxgs,714
++odoo/addons/l10n_ro_account_report_invoice/__manifest__.py,sha256=mFSvijzcdfbKi5osOx_6TY7ETuFhFRhVkjBwNyFWOE0,714
+ odoo/addons/l10n_ro_account_report_invoice/init_hook.py,sha256=MpYUoN7Qa9iKnbi3ammBl2rGz_-TnNEW5jyjwLne0D0,3744
+ odoo/addons/l10n_ro_account_report_invoice/i18n/l10n_ro_account_report_invoice.pot,sha256=BoOu5mdVvLjmTzMyqEV4Pnde-DCyJXLnIBKqX6zo99c,4310
+ odoo/addons/l10n_ro_account_report_invoice/i18n/ro.po,sha256=1T72JzGwpMefOIB0kyBqiS6I_n97dwu19M3qcRIo5_A,4431
+ odoo/addons/l10n_ro_account_report_invoice/migrations/15.0.1.2.1/pre-migration.py,sha256=z6W8W18aYCJqLBx0xaNSR__Cf0o5ckYsAEDv-C40jZU,1488
+ odoo/addons/l10n_ro_account_report_invoice/models/__init__.py,sha256=eGPMDW0hBCZeUNor7MNsXr2Gn0C0JllfkNoXJ41Q_k4,112
+ odoo/addons/l10n_ro_account_report_invoice/models/account_move.py,sha256=HmGZoaFSOfKHi9xKtbCheUwvHAsNMiDgeS6wqsImQp0,1048
+ odoo/addons/l10n_ro_account_report_invoice/models/res_company.py,sha256=5fQrpdDagLMvIHVA8Lml4R5loCwpQTEXA3v25oOVUe4,310
+@@ -16,11 +16,11 @@
+ odoo/addons/l10n_ro_account_report_invoice/static/description/icon.png,sha256=MND3TYqrnM623pd0tf3WhoHU-3X5Ns6ho-Yz_HcYlTk,566
+ odoo/addons/l10n_ro_account_report_invoice/static/description/index.html,sha256=3kSr1nxoMoE4rNPatbgcl2Ytw9nBvhctZ9J32HANc88,13061
+ odoo/addons/l10n_ro_account_report_invoice/tests/__init__.py,sha256=8g1GL0K0cWTnCo28MMHThcSTFWh2XAd2nPOP6H_2OUA,33
+ odoo/addons/l10n_ro_account_report_invoice/tests/test_currency_rate.py,sha256=lpeFFXjxhnTgimN7HDdEbQ18sxvAoWMOZfb5Z3jPd2w,1890
+ odoo/addons/l10n_ro_account_report_invoice/views/account_invoice_view.xml,sha256=GD-AmZ2TayvhgI-H4Zz5K-WLsTgRzr6PStmnnf9XqNU,2040
+ odoo/addons/l10n_ro_account_report_invoice/views/invoice_report.xml,sha256=UhkCEiCyJflmm2ycvoI1-fZv2h4pe2kxBvEoS3PEQyg,5049
+ odoo/addons/l10n_ro_account_report_invoice/views/res_config_settings_view.xml,sha256=6K4FaKI0SuqHk12LUbAlKA2DR6tHba4SqyWZxBr-NeA,1836
+-odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/METADATA,sha256=YTwb5zST7M3_eGIOKB8PL_T8HKZnGFSIeA5MGCQrM-c,4222
+-odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+-odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+-odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.0.4.dist-info/RECORD,,
++odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/METADATA,sha256=3V-s_fS3O3e93itWVB7JiXgAhtSAbaGDIAiG2_IK_BM,4220
++odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
++odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
++odoo_addon_l10n_ro_account_report_invoice-15.0.2.0.1.dist-info/RECORD,,
+```
+

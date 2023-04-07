@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/odoo_addon_l10n_ro_address_extended-15.0.2.2.0.1-py3-none-any.whl.zip tmp/odoo_addon_l10n_ro_address_extended-15.0.2.2.1-py3-none-any.whl.zip --html versions/o/odoo-addon-l10n-ro-address-extended/15.0.2.2.0.1-15.0.2.2.1/index.html --text versions/o/odoo-addon-l10n-ro-address-extended/15.0.2.2.0.1-15.0.2.2.1/diff.txt --markdown versions/o/odoo-addon-l10n-ro-address-extended/15.0.2.2.0.1-15.0.2.2.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">10.7 KB</span></div>
+  <div><span class="source">tmp/odoo_addon_l10n_ro_address_extended-15.0.2.2.0.1-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/odoo_addon_l10n_ro_address_extended-15.0.2.2.1-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">5.22 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 24 lines modified</td><td colspan="2">Offset 1, 24 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>193<del>7</del>4<span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>22</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>193<ins>5</ins>4<span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>22</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3570<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/README.rst</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3570<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>58<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>58<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>766<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/__manifest__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>766<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/__manifest__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/init_hook.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/init_hook.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1917<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/i18n/l10n_ro_address_extended.pot</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1917<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/i18n/l10n_ro_address_extended.pot</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1316<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/migrations/15.0.1.1.1/pre-migration.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1316<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/migrations/15.0.1.1.1/pre-migration.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>52<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/models/__init__.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>52<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/models/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1064<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/models/res_company.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1064<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/models/res_company.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6331<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/models/res_partner.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6331<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/models/res_partner.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>173<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/readme/CONTRIBUTORS.rst</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>173<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/readme/CONTRIBUTORS.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>186<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/readme/DESCRIPTION.rst</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>186<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/readme/DESCRIPTION.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>289<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/readme/INSTALL.rst</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>289<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/readme/INSTALL.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>566<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/static/description/icon.png</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>566<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/static/description/icon.png</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13080<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/static/description/index.html</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13080<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/static/description/index.html</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>33<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/tests/__init__.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>33<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7037<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/tests/test_street_fields.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7037<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/tests/test_street_fields.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>830<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/views/res_company_view.xml</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>830<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/views/res_company_view.xml</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1803<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>0</del><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/views/res_partner_view.xml</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1803<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>7</ins><span class="dp">·</span>odoo/addons/l10n_ro_address_extended/views/res_partner_view.xml</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>425<del>9</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>1</del><span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2<del>.0</del>.1.dist-info/METADATA</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>425<ins>7</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>8</ins><span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>1</del><span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2<del>.0</del>.1.dist-info/WHEEL</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>8</ins><span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>1</del><span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2<del>.0</del>.1.dist-info/top_level.txt</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>8</ins><span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25<del>12</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>6</del><span class="dp">·</span>05:1<del>1</del><span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2<del>.0</del>.1.dist-info/RECORD</td><td class="diffline">23 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25<ins>04</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span>05:1<ins>8</ins><span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">22<span class="dp">·</span>files,<span class="dp">·</span>469<del>4</del>0<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>1502<del>4</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>68.0%</td><td class="diffline">24 </td><td class="diffpresent">22<span class="dp">·</span>files,<span class="dp">·</span>469<ins>3</ins>0<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>1502<ins>0</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>68.0%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">914 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 48, 20 lines modified</td><td colspan="2">Offset 48, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/l10n_ro_address_extended/views/res_company_view.xml</td><td class="diffline">48 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/l10n_ro_address_extended/views/res_company_view.xml</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">49 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/l10n_ro_address_extended/views/res_partner_view.xml</td><td class="diffline">50 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/l10n_ro_address_extended/views/res_partner_view.xml</td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">51 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2.<del>0.</del>1.dist-info/METADATA</td><td class="diffline">52 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">53 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">54 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2.<del>0.</del>1.dist-info/WHEEL</td><td class="diffline">54 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">55 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">56 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2.<del>0.</del>1.dist-info/top_level.txt</td><td class="diffline">56 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">57 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">58 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2.<del>0.</del>1.dist-info/RECORD</td><td class="diffline">58 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">59 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">60 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">774 B</span></div>
+    <div id="odoo-addons-l--n_ro_address_extended-__manifest__.py"><span class="source">odoo/addons/l10n_ro_address_extended/__manifest__.py</span>
+      <a class="anchor" href="#odoo-addons-l--n_ro_address_extended-__manifest__.py">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 6, 15 lines modified</td><td colspan="2">Offset 6, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;name&quot;:<span class="dp">·</span>&quot;Romania<span class="dp">·</span>-<span class="dp">·</span>Extended<span class="dp">·</span>Addresses&quot;,</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;name&quot;:<span class="dp">·</span>&quot;Romania<span class="dp">·</span>-<span class="dp">·</span>Extended<span class="dp">·</span>Addresses&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;category&quot;:<span class="dp">·</span>&quot;Localization&quot;,</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;category&quot;:<span class="dp">·</span>&quot;Localization&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;summary&quot;:<span class="dp">·</span>&quot;Romania<span class="dp">·</span>-<span class="dp">·</span>Extended<span class="dp">·</span>Addresses&quot;,</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;summary&quot;:<span class="dp">·</span>&quot;Romania<span class="dp">·</span>-<span class="dp">·</span>Extended<span class="dp">·</span>Addresses&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;depends&quot;:<span class="dp">·</span>[&quot;base_address_extended&quot;,<span class="dp">·</span>&quot;l10n_ro_config&quot;],</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;depends&quot;:<span class="dp">·</span>[&quot;base_address_extended&quot;,<span class="dp">·</span>&quot;l10n_ro_config&quot;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;data&quot;:<span class="dp">·</span>[&quot;views/res_company_view.xml&quot;,<span class="dp">·</span>&quot;views/res_partner_view.xml&quot;],</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;data&quot;:<span class="dp">·</span>[&quot;views/res_company_view.xml&quot;,<span class="dp">·</span>&quot;views/res_partner_view.xml&quot;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pre_init_hook&quot;:<span class="dp">·</span>&quot;pre_init_hook&quot;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pre_init_hook&quot;:<span class="dp">·</span>&quot;pre_init_hook&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;license&quot;:<span class="dp">·</span>&quot;AGPL-3&quot;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;license&quot;:<span class="dp">·</span>&quot;AGPL-3&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;version&quot;:<span class="dp">·</span>&quot;15.0.2.2.<del>0</del>&quot;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;version&quot;:<span class="dp">·</span>&quot;15.0.2.2.<ins>1</ins>&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;author&quot;:<span class="dp">·</span>&quot;NextERP<span class="dp">·</span>Romania,&quot;</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;author&quot;:<span class="dp">·</span>&quot;NextERP<span class="dp">·</span>Romania,&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Forest<span class="dp">·</span>and<span class="dp">·</span>Biomass<span class="dp">·</span>Romania,&quot;</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Forest<span class="dp">·</span>and<span class="dp">·</span>Biomass<span class="dp">·</span>Romania,&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Odoo<span class="dp">·</span>Community<span class="dp">·</span>Association<span class="dp">·</span>(OCA)&quot;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Odoo<span class="dp">·</span>Community<span class="dp">·</span>Association<span class="dp">·</span>(OCA)&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;website&quot;:<span class="dp">·</span>&quot;https://github.com/OCA/l10n-romania&quot;,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;website&quot;:<span class="dp">·</span>&quot;https://github.com/OCA/l10n-romania&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;installable&quot;:<span class="dp">·</span>True,</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;installable&quot;:<span class="dp">·</span>True,</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;development_status&quot;:<span class="dp">·</span>&quot;Mature&quot;,</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;development_status&quot;:<span class="dp">·</span>&quot;Mature&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;maintainers&quot;:<span class="dp">·</span>[&quot;feketemihai&quot;],</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;maintainers&quot;:<span class="dp">·</span>[&quot;feketemihai&quot;],</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">594 B</span></div>
+    <div><span class="source">odoo_addon_l10n_ro_address_extended-15.0.2.2.0.1.dist-info/METADATA</span> vs.</div>
+    <div id="odoo_addon_l--n_ro_address_extended---.-.-.-.-.-.dist-info-METADATA"><span class="source">odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/METADATA</span>
+      <a class="anchor" href="#odoo_addon_l--n_ro_address_extended---.-.-.-.-.-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 0% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>odoo-addon-l10n-ro-address-extended</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>odoo-addon-l10n-ro-address-extended</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>15.0.2.2.<del>0.</del>1</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>15.0.2.2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Romania<span class="dp">·</span>-<span class="dp">·</span>Extended<span class="dp">·</span>Addresses</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Romania<span class="dp">·</span>-<span class="dp">·</span>Extended<span class="dp">·</span>Addresses</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OCA/l10n-romania</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OCA/l10n-romania</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>NextERP<span class="dp">·</span>Romania,Forest<span class="dp">·</span>and<span class="dp">·</span>Biomass<span class="dp">·</span>Romania,Odoo<span class="dp">·</span>Community<span class="dp">·</span>Association<span class="dp">·</span>(OCA)</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>NextERP<span class="dp">·</span>Romania,Forest<span class="dp">·</span>and<span class="dp">·</span>Biomass<span class="dp">·</span>Romania,Odoo<span class="dp">·</span>Community<span class="dp">·</span>Association<span class="dp">·</span>(OCA)</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>support@odoo-community.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>support@odoo-community.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>AGPL-3</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>AGPL-3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">3.09 KB</span></div>
+    <div><span class="source">odoo_addon_l10n_ro_address_extended-15.0.2.2.0.1.dist-info/RECORD</span> vs.</div>
+    <div id="odoo_addon_l--n_ro_address_extended---.-.-.-.-.-.dist-info-RECORD"><span class="source">odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/RECORD</span>
+      <a class="anchor" href="#odoo_addon_l--n_ro_address_extended---.-.-.-.-.-.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 7% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/README.rst,sha256=VAMFDgtEo30g9Rcx6evkZb-l8htNbQG3Ff4Rae4PhYA,3570</td><td class="diffline">1 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/README.rst,sha256=VAMFDgtEo30g9Rcx6evkZb-l8htNbQG3Ff4Rae4PhYA,3570</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/__init__.py,sha256=DTlvBq_jsY9-bI7IX5G1nJ97xL8HiiWXeq9trHFzu0E,58</td><td class="diffline">2 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/__init__.py,sha256=DTlvBq_jsY9-bI7IX5G1nJ97xL8HiiWXeq9trHFzu0E,58</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/__manifest__.py,sha256=<del>yy6AU-IxzU</del>J<del>fLs-j6KhkRPikEMtKJ</del>-<del>hSc6h7aGQmYqc</del>,766</td><td class="diffline">3 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/__manifest__.py,sha256=<ins>qXYoBcn5uC</ins>J<ins>43wBPZin1sdEKUfzyU</ins>-<ins>9lO7kj6vpybc8</ins>,766</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/init_hook.py,sha256=cYr9UKENnKq-1ocR6UWvijJbFkHTwyFUYVciliiPzxg,1001</td><td class="diffline">4 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/init_hook.py,sha256=cYr9UKENnKq-1ocR6UWvijJbFkHTwyFUYVciliiPzxg,1001</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/i18n/l10n_ro_address_extended.pot,sha256=8Y-_wh-XyQsn7ehMQVztisS9KgvLTApVuJaZ9y8mXYs,1917</td><td class="diffline">5 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/i18n/l10n_ro_address_extended.pot,sha256=8Y-_wh-XyQsn7ehMQVztisS9KgvLTApVuJaZ9y8mXYs,1917</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/migrations/15.0.1.1.1/pre-migration.py,sha256=x2LWBU_TI-qVRPdK_dN2EURH4tTiLUgX3sJTVFDhSuw,1316</td><td class="diffline">6 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/migrations/15.0.1.1.1/pre-migration.py,sha256=x2LWBU_TI-qVRPdK_dN2EURH4tTiLUgX3sJTVFDhSuw,1316</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/models/__init__.py,sha256=rA-h_uK3oCC6wMV9p2xj4DSKG9YcpRIRP8C-KfpFC9c,52</td><td class="diffline">7 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/models/__init__.py,sha256=rA-h_uK3oCC6wMV9p2xj4DSKG9YcpRIRP8C-KfpFC9c,52</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/models/res_company.py,sha256=5DD8WVQVAkmSHJ_-7I7M9SqiO8RermB78tFRvYjT82I,1064</td><td class="diffline">8 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/models/res_company.py,sha256=5DD8WVQVAkmSHJ_-7I7M9SqiO8RermB78tFRvYjT82I,1064</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/models/res_partner.py,sha256=gNDN6koWmYYSteHwV_0HrkTx3ACVwlMdzeVrL0Dy92k,6331</td><td class="diffline">9 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/models/res_partner.py,sha256=gNDN6koWmYYSteHwV_0HrkTx3ACVwlMdzeVrL0Dy92k,6331</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/readme/CONTRIBUTORS.rst,sha256=dNi9MtPyI4HYGgmDlgXb-Co0S_XtqQ3Mn1khyHznYZg,173</td><td class="diffline">10 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/readme/CONTRIBUTORS.rst,sha256=dNi9MtPyI4HYGgmDlgXb-Co0S_XtqQ3Mn1khyHznYZg,173</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 12, 11 lines modified</td><td colspan="2">Offset 12, 11 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/readme/INSTALL.rst,sha256=JkcwrZhjuJpnPf0s2a99OKifWct7wtvJ2J2JZN7vwjY,289</td><td class="diffline">12 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/readme/INSTALL.rst,sha256=JkcwrZhjuJpnPf0s2a99OKifWct7wtvJ2J2JZN7vwjY,289</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/static/description/icon.png,sha256=MND3TYqrnM623pd0tf3WhoHU-3X5Ns6ho-Yz_HcYlTk,566</td><td class="diffline">13 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/static/description/icon.png,sha256=MND3TYqrnM623pd0tf3WhoHU-3X5Ns6ho-Yz_HcYlTk,566</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/static/description/index.html,sha256=QWlD2eEC797EHOfCPcF1XlC7vpyfB9MK9YxZkiO4Jh8,13080</td><td class="diffline">14 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/static/description/index.html,sha256=QWlD2eEC797EHOfCPcF1XlC7vpyfB9MK9YxZkiO4Jh8,13080</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/tests/__init__.py,sha256=N1YOWQ1uRhNQFQPCU-0a1m2myezvGQok4u7C_xVmSps,33</td><td class="diffline">15 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/tests/__init__.py,sha256=N1YOWQ1uRhNQFQPCU-0a1m2myezvGQok4u7C_xVmSps,33</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/tests/test_street_fields.py,sha256=_xa08aSH8XppNXdEinmRrN44T0Xwmj18IVafWWchGp4,7037</td><td class="diffline">16 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/tests/test_street_fields.py,sha256=_xa08aSH8XppNXdEinmRrN44T0Xwmj18IVafWWchGp4,7037</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/views/res_company_view.xml,sha256=dghKUBnuCcGSjgHWbnYlkHkjUeoL6HhTiw4Ba-HLXNs,830</td><td class="diffline">17 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/views/res_company_view.xml,sha256=dghKUBnuCcGSjgHWbnYlkHkjUeoL6HhTiw4Ba-HLXNs,830</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/views/res_partner_view.xml,sha256=H5yCEAZ4YNz-Tc-7oijFZXStPc1byJMNSePpiwEHfkA,1803</td><td class="diffline">18 </td><td class="diffpresent">odoo/addons/l10n_ro_address_extended/views/res_partner_view.xml,sha256=H5yCEAZ4YNz-Tc-7oijFZXStPc1byJMNSePpiwEHfkA,1803</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">odoo_addon_l10n_ro_address_extended-15.0.2.2.<del>0.</del>1.dist-info/METADATA,sha256=<del>GQNPfIyOzTtlQ4syufsaHIr8EyZ8MuvkQ</del>S<del>cYT1D1GEw</del>,425<del>9</del></td><td class="diffline">19 </td><td class="diffpresent">odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/METADATA,sha256=<ins>XaZKqSczcPiK5xxmbuhK6F3mRqqXxYGBF</ins>S<ins>D9GYZC9CM</ins>,425<ins>7</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">odoo_addon_l10n_ro_address_extended-15.0.2.2.<del>0.</del>1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92</td><td class="diffline">20 </td><td class="diffpresent">odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">odoo_addon_l10n_ro_address_extended-15.0.2.2.<del>0.</del>1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5</td><td class="diffline">21 </td><td class="diffpresent">odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">odoo_addon_l10n_ro_address_extended-15.0.2.2.<del>0.</del>1.dist-info/RECORD,,</td><td class="diffline">22 </td><td class="diffpresent">odoo_addon_l10n_ro_address_extended-15.0.2.2.1.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

@@ -1,0 +1,174 @@
+# Comparing `tmp/odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3-py3-none-any.whl.zip` & `tmp/odoo_addon_l10n_ro_account_period_close-15.0.3.2.1-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,30 +1,30 @@
+-Zip file size: 27916 bytes, number of entries: 28
+--rw-r--r--  2.0 unx     4310 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/README.rst
+--rw-r--r--  2.0 unx       43 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/__init__.py
+--rw-r--r--  2.0 unx      821 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/__manifest__.py
+--rw-r--r--  2.0 unx    10023 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/i18n/l10n_ro_account_period_close.pot
+--rw-r--r--  2.0 unx    11167 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/i18n/ro.po
+--rw-r--r--  2.0 unx     1276 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/migrations/15.0.3.0.1/pre-migration.py
+--rw-r--r--  2.0 unx       57 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/models/__init__.py
+--rw-r--r--  2.0 unx      966 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/models/account.py
+--rw-r--r--  2.0 unx    11329 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/models/account_period_close.py
+--rw-r--r--  2.0 unx      390 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/readme/CONFIGURE.rst
+--rw-r--r--  2.0 unx      173 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/readme/CONTRIBUTORS.rst
+--rw-r--r--  2.0 unx       73 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/readme/DESCRIPTION.rst
+--rw-r--r--  2.0 unx      295 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/readme/INSTALL.rst
+--rw-r--r--  2.0 unx      385 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/readme/USAGE.rst
+--rw-r--r--  2.0 unx      511 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/security/account_security.xml
+--rw-r--r--  2.0 unx      550 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/security/ir.model.access.csv
+--rw-r--r--  2.0 unx      566 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/static/description/icon.png
+--rw-r--r--  2.0 unx    14245 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/static/description/index.html
+--rw-r--r--  2.0 unx       34 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/tests/__init__.py
+--rw-r--r--  2.0 unx    12548 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/tests/test_period_closing.py
+--rw-r--r--  2.0 unx     4860 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/views/account_period_close_view.xml
+--rw-r--r--  2.0 unx       44 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/wizards/__init__.py
+--rw-r--r--  2.0 unx     1641 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/wizards/wizard_account_period_closing.py
+--rw-r--r--  2.0 unx     2099 b- defN 23-Apr-06 05:10 odoo/addons/l10n_ro_account_period_close/wizards/wizard_account_period_closing_view.xml
+--rw-r--r--  2.0 unx     5038 b- defN 23-Apr-06 05:10 odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 05:10 odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/WHEEL
+--rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 05:10 odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     3374 b- defN 23-Apr-06 05:10 odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/RECORD
+-28 files, 86915 bytes uncompressed, 22064 bytes compressed:  74.6%
++Zip file size: 27901 bytes, number of entries: 28
++-rw-r--r--  2.0 unx     4310 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/README.rst
++-rw-r--r--  2.0 unx       43 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/__init__.py
++-rw-r--r--  2.0 unx      821 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/__manifest__.py
++-rw-r--r--  2.0 unx    10023 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/i18n/l10n_ro_account_period_close.pot
++-rw-r--r--  2.0 unx    11167 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/i18n/ro.po
++-rw-r--r--  2.0 unx     1276 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/migrations/15.0.3.0.1/pre-migration.py
++-rw-r--r--  2.0 unx       57 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/models/__init__.py
++-rw-r--r--  2.0 unx      966 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/models/account.py
++-rw-r--r--  2.0 unx    11329 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/models/account_period_close.py
++-rw-r--r--  2.0 unx      390 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/readme/CONFIGURE.rst
++-rw-r--r--  2.0 unx      173 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/readme/CONTRIBUTORS.rst
++-rw-r--r--  2.0 unx       73 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/readme/DESCRIPTION.rst
++-rw-r--r--  2.0 unx      295 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/readme/INSTALL.rst
++-rw-r--r--  2.0 unx      385 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/readme/USAGE.rst
++-rw-r--r--  2.0 unx      511 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/security/account_security.xml
++-rw-r--r--  2.0 unx      550 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/security/ir.model.access.csv
++-rw-r--r--  2.0 unx      566 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/static/description/icon.png
++-rw-r--r--  2.0 unx    14245 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/static/description/index.html
++-rw-r--r--  2.0 unx       34 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/tests/__init__.py
++-rw-r--r--  2.0 unx    12548 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/tests/test_period_closing.py
++-rw-r--r--  2.0 unx     4860 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/views/account_period_close_view.xml
++-rw-r--r--  2.0 unx       44 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/wizards/__init__.py
++-rw-r--r--  2.0 unx     1641 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/wizards/wizard_account_period_closing.py
++-rw-r--r--  2.0 unx     2099 b- defN 23-Apr-07 05:17 odoo/addons/l10n_ro_account_period_close/wizards/wizard_account_period_closing_view.xml
++-rw-r--r--  2.0 unx     5036 b- defN 23-Apr-07 05:17 odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 05:17 odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/WHEEL
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 05:17 odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     3366 b- defN 23-Apr-07 05:17 odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/RECORD
++28 files, 86905 bytes uncompressed, 22065 bytes compressed:  74.6%
+```
+
+## zipnote {}
+
+```diff
+@@ -66,20 +66,20 @@
+ 
+ Filename: odoo/addons/l10n_ro_account_period_close/wizards/wizard_account_period_closing.py
+ Comment: 
+ 
+ Filename: odoo/addons/l10n_ro_account_period_close/wizards/wizard_account_period_closing_view.xml
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/METADATA
++Filename: odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/METADATA
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/WHEEL
++Filename: odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/top_level.txt
++Filename: odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/RECORD
++Filename: odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## odoo/addons/l10n_ro_account_period_close/__manifest__.py
+
+```diff
+@@ -8,15 +8,15 @@
+     "data": [
+         "views/account_period_close_view.xml",
+         "wizards/wizard_account_period_closing_view.xml",
+         "security/account_security.xml",
+         "security/ir.model.access.csv",
+     ],
+     "license": "AGPL-3",
+-    "version": "15.0.3.2.0",
++    "version": "15.0.3.2.1",
+     "author": "NextERP Romania,"
+     "Forest and Biomass Romania,"
+     "Odoo Community Association (OCA)",
+     "website": "https://github.com/OCA/l10n-romania",
+     "installable": True,
+     "development_status": "Mature",
+     "external_dependencies": {"python": ["python-dateutil"]},
+```
+
+## Comparing `odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/METADATA` & `odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: odoo-addon-l10n-ro-account-period-close
+-Version: 15.0.3.2.0.3
++Version: 15.0.3.2.1
+ Summary: Romania - Account Period Closing
+ Home-page: https://github.com/OCA/l10n-romania
+ Author: NextERP Romania,Forest and Biomass Romania,Odoo Community Association (OCA)
+ Author-email: support@odoo-community.org
+ License: AGPL-3
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python
+```
+
+## Comparing `odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/RECORD` & `odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/RECORD`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ odoo/addons/l10n_ro_account_period_close/README.rst,sha256=hN8hdiVSkSgfs5fAcxuh6W7JQ-72_1Z7sWbvoi_WD2U,4310
+ odoo/addons/l10n_ro_account_period_close/__init__.py,sha256=0XNpxETgFdVxFDEw03O8oL3NtTSk3we-HEZW2sPKzIU,43
+-odoo/addons/l10n_ro_account_period_close/__manifest__.py,sha256=KREwlIl_SbTBsbBCq1W5AvhGs7dAN-I8v0v8Fkq9qPI,821
++odoo/addons/l10n_ro_account_period_close/__manifest__.py,sha256=jrqWPPxAV0uOvpChLi9NP2FXOOSEAllD2qThvQRSooc,821
+ odoo/addons/l10n_ro_account_period_close/i18n/l10n_ro_account_period_close.pot,sha256=sROTK3CsX_yNaOiJIQwH4PIAqnZ6ImRuOG268GgmGoY,10023
+ odoo/addons/l10n_ro_account_period_close/i18n/ro.po,sha256=qsnZ1tQTevTJHso-t9l7YDO_SCh3aIYU0CO0unhqxR0,11167
+ odoo/addons/l10n_ro_account_period_close/migrations/15.0.3.0.1/pre-migration.py,sha256=eL4b30uY5bTQEeet_VCfAuZVxLfHckQkhCtrE8eqB6k,1276
+ odoo/addons/l10n_ro_account_period_close/models/__init__.py,sha256=rfcMOyFHJ_rUCYYcwL3dRAazav-DscBX_w1bzHGMeaE,57
+ odoo/addons/l10n_ro_account_period_close/models/account.py,sha256=dWghKryRx3CAMfhUQtTSm7hJI2rk93DNXycpHRBZBj4,966
+ odoo/addons/l10n_ro_account_period_close/models/account_period_close.py,sha256=G_oRR3_XUJtD3nyJMFk8pqkAXl-X9wo1G5WEqURD6mQ,11329
+ odoo/addons/l10n_ro_account_period_close/readme/CONFIGURE.rst,sha256=OOifjFnDaSKF7wRq5AB791-UgzcEWgyoB0fbCcrlh3M,390
+@@ -18,11 +18,11 @@
+ odoo/addons/l10n_ro_account_period_close/static/description/index.html,sha256=gpQXxHItGCzTWSZ-k6UwpQr2yltyE7DRkI-vhXNwems,14245
+ odoo/addons/l10n_ro_account_period_close/tests/__init__.py,sha256=652cLQUHKOjiM3tTvJjsSV9bU4seA9_kJMHg5Angmn0,34
+ odoo/addons/l10n_ro_account_period_close/tests/test_period_closing.py,sha256=9q03tl2jBjDiPpigxZ0Zc8y2BRBllxxlkWNKoKEoITo,12548
+ odoo/addons/l10n_ro_account_period_close/views/account_period_close_view.xml,sha256=I8NlzHUgzfpk5LG_6W41jGQQUyb5no00_D9LQCVRV7k,4860
+ odoo/addons/l10n_ro_account_period_close/wizards/__init__.py,sha256=mlwYA0aTY1BpsuAUFVc3bLa1pzIYK5gjifGtPyQRb2g,44
+ odoo/addons/l10n_ro_account_period_close/wizards/wizard_account_period_closing.py,sha256=lTHZh1gd6iqu0wN6VltxUMLb8zrE5HmD9WwNN_TG0rE,1641
+ odoo/addons/l10n_ro_account_period_close/wizards/wizard_account_period_closing_view.xml,sha256=tjdMgDYcHufsX5czDeAqtVD7poJyKm_7kntr55ee8Cg,2099
+-odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/METADATA,sha256=bqpkfyViGmKf_GI89ggJFIyoiv2trKJ2HmiBO9gEWCI,5038
+-odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+-odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+-odoo_addon_l10n_ro_account_period_close-15.0.3.2.0.3.dist-info/RECORD,,
++odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/METADATA,sha256=ByMHfd52_xCO-jroYjYXZtn44EMBJw6uCUeKP3Cv39U,5036
++odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
++odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
++odoo_addon_l10n_ro_account_period_close-15.0.3.2.1.dist-info/RECORD,,
+```
+

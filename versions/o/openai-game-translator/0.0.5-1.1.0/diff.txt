@@ -1,0 +1,596 @@
+--- tmp/openai-game-translator-0.0.5.tar.gz
++++ tmp/openai-game-translator-1.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "openai-game-translator-0.0.5.tar", last modified: Tue Apr  4 19:54:00 2023, max compression
+│ +gzip compressed data, was "openai-game-translator-1.1.0.tar", last modified: Fri Apr  7 05:23:21 2023, max compression
+│   --- openai-game-translator-0.0.5.tar
+├── +++ openai-game-translator-1.1.0.tar
+│ ├── file list
+│ │ @@ -1,39 +1,48 @@
+│ │ -drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-04 19:54:00.493574 openai-game-translator-0.0.5/
+│ │ --rw-r--r--   0 arika      (501) staff       (20)    11357 2023-03-21 20:15:17.000000 openai-game-translator-0.0.5/LICENSE
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     1962 2023-04-04 19:54:00.493669 openai-game-translator-0.0.5/PKG-INFO
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     1318 2023-04-04 19:53:23.000000 openai-game-translator-0.0.5/README.md
+│ │ -drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-04 19:54:00.486874 openai-game-translator-0.0.5/game_translator/
+│ │ --rw-r--r--   0 arika      (501) staff       (20)       50 2023-03-31 19:27:17.000000 openai-game-translator-0.0.5/game_translator/__init__.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)       41 2023-03-31 19:40:14.000000 openai-game-translator-0.0.5/game_translator/__main__.py
+│ │ -drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-04 19:54:00.487857 openai-game-translator-0.0.5/game_translator/audio/
+│ │ --rw-r--r--   0 arika      (501) staff       (20)       28 2023-04-04 03:22:32.000000 openai-game-translator-0.0.5/game_translator/audio/__init__.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     2337 2023-03-29 20:20:03.000000 openai-game-translator-0.0.5/game_translator/audio/record.py
+│ │ -drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-04 19:54:00.488713 openai-game-translator-0.0.5/game_translator/aws_streaming_transcription/
+│ │ --rw-r--r--   0 arika      (501) staff       (20)        0 2023-04-04 03:21:28.000000 openai-game-translator-0.0.5/game_translator/aws_streaming_transcription/__init__.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     2634 2023-03-29 20:20:03.000000 openai-game-translator-0.0.5/game_translator/aws_streaming_transcription/live_stream.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     3430 2023-03-29 20:20:03.000000 openai-game-translator-0.0.5/game_translator/aws_streaming_transcription/prerecorded_stream.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     4824 2023-04-04 03:17:18.000000 openai-game-translator-0.0.5/game_translator/game_translator.py
+│ │ -drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-04 19:54:00.489254 openai-game-translator-0.0.5/game_translator/openai_translation/
+│ │ --rw-r--r--   0 arika      (501) staff       (20)       36 2023-04-04 03:19:10.000000 openai-game-translator-0.0.5/game_translator/openai_translation/__init__.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)      569 2023-03-29 20:20:03.000000 openai-game-translator-0.0.5/game_translator/openai_translation/chat.py
+│ │ -drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-04 19:54:00.490083 openai-game-translator-0.0.5/game_translator/xunfei_speed_transcription/
+│ │ --rw-r--r--   0 arika      (501) staff       (20)       70 2023-04-04 03:04:33.000000 openai-game-translator-0.0.5/game_translator/xunfei_speed_transcription/__init__.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     7697 2023-04-04 03:20:10.000000 openai-game-translator-0.0.5/game_translator/xunfei_speed_transcription/ost_fast.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     7613 2023-04-04 03:00:04.000000 openai-game-translator-0.0.5/game_translator/xunfei_speed_transcription/seve_file.py
+│ │ -drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-04 19:54:00.491123 openai-game-translator-0.0.5/openai_game_translator.egg-info/
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     1962 2023-04-04 19:54:00.000000 openai-game-translator-0.0.5/openai_game_translator.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     1070 2023-04-04 19:54:00.000000 openai-game-translator-0.0.5/openai_game_translator.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 arika      (501) staff       (20)        1 2023-04-04 19:54:00.000000 openai-game-translator-0.0.5/openai_game_translator.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 arika      (501) staff       (20)       67 2023-04-04 19:54:00.000000 openai-game-translator-0.0.5/openai_game_translator.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 arika      (501) staff       (20)      121 2023-04-04 19:54:00.000000 openai-game-translator-0.0.5/openai_game_translator.egg-info/requires.txt
+│ │ --rw-r--r--   0 arika      (501) staff       (20)       16 2023-04-04 19:54:00.000000 openai-game-translator-0.0.5/openai_game_translator.egg-info/top_level.txt
+│ │ --rw-r--r--   0 arika      (501) staff       (20)      572 2023-04-04 19:41:08.000000 openai-game-translator-0.0.5/pyproject.toml
+│ │ --rw-r--r--   0 arika      (501) staff       (20)      646 2023-04-04 19:54:00.494001 openai-game-translator-0.0.5/setup.cfg
+│ │ -drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-04 19:54:00.493316 openai-game-translator-0.0.5/tests/
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     2521 2023-03-31 18:22:34.000000 openai-game-translator-0.0.5/tests/test_all.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     1660 2023-03-30 01:53:20.000000 openai-game-translator-0.0.5/tests/test_aws_live.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     1768 2023-03-29 20:20:03.000000 openai-game-translator-0.0.5/tests/test_aws_pre.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     2396 2023-03-29 20:55:11.000000 openai-game-translator-0.0.5/tests/test_game_translator.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     1187 2023-03-29 20:20:03.000000 openai-game-translator-0.0.5/tests/test_openai.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)      915 2023-03-29 20:20:03.000000 openai-game-translator-0.0.5/tests/test_record.py
+│ │ --rw-r--r--   0 arika      (501) staff       (20)     1199 2023-03-29 21:28:15.000000 openai-game-translator-0.0.5/tests/test_xunfei.py
+│ │ +drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-07 05:23:21.990534 openai-game-translator-1.1.0/
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)      304 2023-04-07 04:55:20.000000 openai-game-translator-1.1.0/.bumpversion.cfg
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)      791 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/CONTRIBUTING.md
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)    11357 2023-03-21 20:15:17.000000 openai-game-translator-1.1.0/LICENSE
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)      462 2023-04-07 05:17:48.000000 openai-game-translator-1.1.0/MANIFEST.in
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     2133 2023-04-07 05:12:54.000000 openai-game-translator-1.1.0/Makefile
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)    15299 2023-04-07 05:23:21.990319 openai-game-translator-1.1.0/PKG-INFO
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     1695 2023-04-07 04:15:40.000000 openai-game-translator-1.1.0/README.md
+│ │ +drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-07 05:23:21.985398 openai-game-translator-1.1.0/game_translator/
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)      295 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/game_translator/__init__.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)       42 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/game_translator/__main__.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)       22 2023-04-07 04:55:20.000000 openai-game-translator-1.1.0/game_translator/_version.py
+│ │ +drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-07 05:23:21.986058 openai-game-translator-1.1.0/game_translator/audio/
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)       29 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/game_translator/audio/__init__.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)   160044 2023-04-05 01:22:22.000000 openai-game-translator-1.1.0/game_translator/audio/audio_sample_little.wav
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     2557 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/game_translator/audio/record.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)   282668 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/game_translator/audio/test.wav
+│ │ +drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-07 05:23:21.986809 openai-game-translator-1.1.0/game_translator/aws_streaming_transcription/
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)        0 2023-04-05 01:22:22.000000 openai-game-translator-1.1.0/game_translator/aws_streaming_transcription/__init__.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     2630 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/game_translator/aws_streaming_transcription/live_stream.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     3445 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/game_translator/aws_streaming_transcription/prerecorded_stream.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     4724 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/game_translator/game_translator.py
+│ │ +drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-07 05:23:21.987146 openai-game-translator-1.1.0/game_translator/openai_translation/
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)       37 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/game_translator/openai_translation/__init__.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)      688 2023-04-07 04:45:17.000000 openai-game-translator-1.1.0/game_translator/openai_translation/chat.py
+│ │ +drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-07 05:23:21.987639 openai-game-translator-1.1.0/game_translator/xunfei_speed_transcription/
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)       70 2023-04-05 01:22:22.000000 openai-game-translator-1.1.0/game_translator/xunfei_speed_transcription/__init__.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     7672 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/game_translator/xunfei_speed_transcription/ost_fast.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     7608 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/game_translator/xunfei_speed_transcription/seve_file.py
+│ │ +drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-07 05:23:21.988772 openai-game-translator-1.1.0/openai_game_translator.egg-info/
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)    15299 2023-04-07 05:23:21.000000 openai-game-translator-1.1.0/openai_game_translator.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     1246 2023-04-07 05:23:21.000000 openai-game-translator-1.1.0/openai_game_translator.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)        1 2023-04-07 05:23:21.000000 openai-game-translator-1.1.0/openai_game_translator.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)       67 2023-04-07 05:23:21.000000 openai-game-translator-1.1.0/openai_game_translator.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)      261 2023-04-07 05:23:21.000000 openai-game-translator-1.1.0/openai_game_translator.egg-info/requires.txt
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)       16 2023-04-07 05:23:21.000000 openai-game-translator-1.1.0/openai_game_translator.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     1242 2023-04-07 05:13:40.000000 openai-game-translator-1.1.0/pyproject.toml
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)       38 2023-04-07 05:23:21.990584 openai-game-translator-1.1.0/setup.cfg
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)       38 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/setup.py
+│ │ +drwxr-xr-x   0 arika      (501) staff       (20)        0 2023-04-07 05:23:21.990035 openai-game-translator-1.1.0/tests/
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)      179 2023-04-05 01:22:22.000000 openai-game-translator-1.1.0/tests/.coveragerc
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     2059 2023-04-05 01:22:22.000000 openai-game-translator-1.1.0/tests/test_all.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     1675 2023-04-05 01:22:22.000000 openai-game-translator-1.1.0/tests/test_aws_live.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     1798 2023-04-05 01:22:22.000000 openai-game-translator-1.1.0/tests/test_aws_pre.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     2442 2023-04-05 01:22:22.000000 openai-game-translator-1.1.0/tests/test_game_translator.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     1201 2023-04-05 01:22:22.000000 openai-game-translator-1.1.0/tests/test_openai.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     1094 2023-04-07 04:06:17.000000 openai-game-translator-1.1.0/tests/test_record.py
+│ │ +-rw-r--r--   0 arika      (501) staff       (20)     1229 2023-04-05 01:22:22.000000 openai-game-translator-1.1.0/tests/test_xunfei.py
+│ │   --- openai-game-translator-0.0.5/LICENSE
+│ ├── +++ openai-game-translator-1.1.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- openai-game-translator-0.0.5/game_translator/audio/record.py
+│ ├── +++ openai-game-translator-1.1.0/game_translator/audio/record.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,19 +1,14 @@
+│ │  """
+│ │  reference: https://github.com/dylanz666/pyaudio-learning
+│ │  """
+│ │  import audioop
+│ │  import wave
+│ │  import pyaudio
+│ │  
+│ │ -# streaming settings
+│ │ -stream_format = pyaudio.paInt16
+│ │ -pyaudio_instance = pyaudio.PyAudio()
+│ │ -sample_width = pyaudio_instance.get_sample_size(stream_format)
+│ │ -
+│ │  
+│ │  class Detector:
+│ │      """
+│ │      A class representing a audio recorder.
+│ │  
+│ │      Attributes:
+│ │      """
+│ │ @@ -23,69 +18,75 @@
+│ │          channels=1,
+│ │          rate=44100,
+│ │          chunk=1024,
+│ │          audio_min_rms=500,
+│ │          max_low_audio_flag=100,
+│ │          recording=True,
+│ │          recording_file="test.wav",
+│ │ +        stream_format=pyaudio.paInt16,
+│ │ +        pyaudio_instance=pyaudio.PyAudio(),
+│ │      ):
+│ │          self.channels = channels
+│ │          self.rate = rate
+│ │          self.chunk = chunk
+│ │          self.audio_min_rms = audio_min_rms
+│ │          self.max_low_audio_flag = max_low_audio_flag
+│ │          self.recording = recording
+│ │          self.recording_file = recording_file
+│ │          self.audio_frames = []
+│ │ +        self.stream_format = stream_format
+│ │ +        self.pyaudio_instance = pyaudio_instance
+│ │ +        self.sample_width = self.pyaudio_instance.get_sample_size(stream_format)
+│ │  
+│ │      def detect_audio(self):
+│ │          """
+│ │          A function to detect audio.
+│ │  
+│ │          """
+│ │  
+│ │          print("start detecting audio ... ")
+│ │ -
+│ │ -        stream = pyaudio_instance.open(
+│ │ -            format=stream_format,
+│ │ +        # print(self.pyaudio_instance.open.read(1024))
+│ │ +        stream = self.pyaudio_instance.open(
+│ │ +            format=self.stream_format,
+│ │              channels=self.channels,
+│ │              rate=self.rate,
+│ │              input=True,
+│ │              frames_per_buffer=self.chunk,
+│ │          )
+│ │          low_audio_flag = 0
+│ │          detect_count = 0
+│ │          while True:
+│ │              detect_count += 1
+│ │ -
+│ │              stream_data = stream.read(self.chunk)
+│ │ -
+│ │              rms = audioop.rms(stream_data, 2)
+│ │ -            # print(f"the {detect_count} time detecting：", rms)
+│ │ +            # print(f"the {detect_count} time detecting: ", rms)
+│ │  
+│ │ -            low_audio_flag = 0 if rms > self.audio_min_rms else low_audio_flag + 1
+│ │ +            if rms > self.audio_min_rms:
+│ │ +                low_audio_flag = 0
+│ │ +            else:
+│ │ +                low_audio_flag += 1
+│ │  
+│ │              # 100 consecutive samples of low audio
+│ │              if low_audio_flag > self.max_low_audio_flag:
+│ │                  print("detecting finished ... ")
+│ │                  break
+│ │              self.audio_frames.append(stream_data)
+│ │          stream.stop_stream()
+│ │          stream.close()
+│ │ -        pyaudio_instance.terminate()
+│ │ +        self.pyaudio_instance.terminate()
+│ │          if self.recording:
+│ │              self.record()
+│ │          return self
+│ │  
+│ │      def record(self):
+│ │          """
+│ │          A function to record audio.
+│ │  
+│ │          """
+│ │  
+│ │          waveframe = wave.open(self.recording_file, "wb")
+│ │          waveframe.setnchannels(self.channels)
+│ │ -        waveframe.setsampwidth(sample_width)
+│ │ +        waveframe.setsampwidth(self.sample_width)
+│ │          waveframe.setframerate(self.rate)
+│ │          waveframe.writeframes(b"".join(self.audio_frames))
+│ │          waveframe.close()
+│ │          return self
+│ │ ├── encoding
+│ │ │ @@ -1 +1 @@
+│ │ │ -utf-8
+│ │ │ +us-ascii
+│ │   --- openai-game-translator-0.0.5/game_translator/aws_streaming_transcription/live_stream.py
+│ ├── +++ openai-game-translator-1.1.0/game_translator/aws_streaming_transcription/live_stream.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -48,15 +48,17 @@
+│ │      return "".join(s)
+│ │  
+│ │  
+│ │  async def basic_transcribe(max_low_audio_flag=20, audio_min_rms=100):
+│ │      client = TranscribeStreamingClient(region="us-east-2")
+│ │  
+│ │      stream = await client.start_stream_transcription(
+│ │ -        language_code="en-US", media_sample_rate_hz=16000, media_encoding="pcm",
+│ │ +        language_code="en-US",
+│ │ +        media_sample_rate_hz=16000,
+│ │ +        media_encoding="pcm",
+│ │      )
+│ │  
+│ │      async def write_chunks():
+│ │          low_audio_flag = 0
+│ │          while True:
+│ │              data = sd.rec(
+│ │                  1024 * 8, samplerate=16000, channels=1, blocking=True, dtype="int16"
+│ │ @@ -67,15 +69,15 @@
+│ │  
+│ │              low_audio_flag = 0 if rms > audio_min_rms else low_audio_flag + 1
+│ │  
+│ │              # 100 consecutive samples of low audio
+│ │              if low_audio_flag > max_low_audio_flag:
+│ │                  break
+│ │  
+│ │ -            # convert the audio frame to a byte stream and send it to the transcription service.
+│ │ +            # convert the audio frame to byte stream and send it to service.
+│ │              await stream.input_stream.send_audio_event(audio_chunk=data.tobytes())
+│ │  
+│ │          await stream.input_stream.end_stream()
+│ │  
+│ │      handler = MyEventHandler(stream.output_stream)
+│ │      await asyncio.gather(write_chunks(), handler.handle_events())
+│ │   --- openai-game-translator-0.0.5/game_translator/aws_streaming_transcription/prerecorded_stream.py
+│ ├── +++ openai-game-translator-1.1.0/game_translator/aws_streaming_transcription/prerecorded_stream.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  # reference: https://github.com/awslabs/amazon-transcribe-streaming-sdk
+│ │  # document:  https://docs.aws.amazon.com/transcribe/latest/dg/streaming.html
+│ │  """
+│ │ -default installation requires aws-crt~=0.14 but 0.14 can not be installed 
+│ │ +default installation requires aws-crt~=0.14 but 0.14 can not be installed
+│ │      - install manually by cloning the sdk and change setup.py and setup.cfg 's awscrt requiremente to >= 0.14
+│ │      - 0.16 works
+│ │  """
+│ │  import asyncio
+│ │  
+│ │  # This example uses aiofile for asynchronous file reads.
+│ │  # It's not a dependency of the project but can be installed
+│ │ @@ -72,15 +72,17 @@
+│ │  
+│ │  async def basic_transcribe(audio_path: str):
+│ │      # Setup up our client with our chosen AWS region
+│ │      client = TranscribeStreamingClient(region=REGION)
+│ │  
+│ │      # Start transcription to generate our async stream
+│ │      stream = await client.start_stream_transcription(
+│ │ -        language_code="en-US", media_sample_rate_hz=SAMPLE_RATE, media_encoding="pcm",
+│ │ +        language_code="en-US",
+│ │ +        media_sample_rate_hz=SAMPLE_RATE,
+│ │ +        media_encoding="pcm",
+│ │      )
+│ │  
+│ │      async def write_chunks():
+│ │          # NOTE: For pre-recorded files longer than 5 minutes, the sent audio
+│ │          # chunks should be rate limited to match the realtime bitrate of the
+│ │          # audio stream to avoid signing issues.
+│ │          async with aiofile.AIOFile(audio_path, "rb") as afp:
+│ │   --- openai-game-translator-0.0.5/game_translator/game_translator.py
+│ ├── +++ openai-game-translator-1.1.0/game_translator/game_translator.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -107,28 +107,25 @@
+│ │          elif self.transcription_model == "aws_pre":
+│ │              text = self.aws_prerecored_transcription()
+│ │          elif self.transcription_model == "aws_live":
+│ │              text = self.aws_live_transcription()
+│ │  
+│ │          res = translate_sentence(text, self.target_language)
+│ │          return res
+│ │ -    
+│ │ +
+│ │ +
+│ │  def main():
+│ │      parser = argparse.ArgumentParser(description="Description of your program")
+│ │      parser.add_argument(
+│ │ -        "--file", type=str, default="./audio/test.wav", help="prerecorded file path"
+│ │ -    )
+│ │ -    parser.add_argument("--xunfei_appid", type=str, help="xunfei transcription appid")
+│ │ -    parser.add_argument("--xunfei_apikey", type=str, help="xunfei transcription apikey")
+│ │ -    parser.add_argument(
+│ │ -        "--xunfei_apisecret", type=str, help="xunfei transccription api secret"
+│ │ -    )
+│ │ -    parser.add_argument(
+│ │ -        "--openai_key", required=True, type=str, help="open ai translatio api key"
+│ │ +        "--file", type=str, default="./audio/test.wav", help="file path"
+│ │      )
+│ │ +    parser.add_argument("--xunfei_appid", type=str, help="xunfei appid")
+│ │ +    parser.add_argument("--xunfei_apikey", type=str, help="xunfei apikey")
+│ │ +    parser.add_argument("--xunfei_apisecret", type=str, help="xunfei api secret")
+│ │ +    parser.add_argument("--openai_key", required=True, type=str, help="openai api key")
+│ │      parser.add_argument(
+│ │          "-t",
+│ │          "--transcription_model",
+│ │          required=True,
+│ │          type=str,
+│ │          choices=["xunfei", "aws_pre", "aws_live"],
+│ │          help="xunfei and aws_pre need prerecorded audios, aws_live not",
+│ │ @@ -164,12 +161,10 @@
+│ │      new_translator.openai_translation()
+│ │  
+│ │  
+│ │  if __name__ == "__main__":
+│ │      main()
+│ │  
+│ │  
+│ │ -
+│ │ -
+│ │  # todo: language change
+│ │  # todo: precision
+│ │  # todo: audio transmitting
+│ │   --- openai-game-translator-0.0.5/game_translator/xunfei_speed_transcription/ost_fast.py
+│ ├── +++ openai-game-translator-1.1.0/game_translator/xunfei_speed_transcription/ost_fast.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -157,28 +157,29 @@
+│ │      def get_query_body(self, task_id):
+│ │          """
+│ │          A function to get query body
+│ │  
+│ │          """
+│ │          post_data = {
+│ │              "common": {"app_id": self.APPID},
+│ │ -            "business": {"task_id": task_id,},
+│ │ +            "business": {
+│ │ +                "task_id": task_id,
+│ │ +            },
+│ │          }
+│ │          body = json.dumps(post_data)
+│ │          return body
+│ │  
+│ │      def call(self, url, body, headers):
+│ │          """
+│ │          A function to call xunfei
+│ │  
+│ │          """
+│ │          try:
+│ │              response = requests.post(url, data=body, headers=headers, timeout=8)
+│ │              status_code = response.status_code
+│ │ -            interval = response.elapsed.total_seconds()
+│ │              if status_code != 200:
+│ │                  info = response.content
+│ │                  return info
+│ │              else:
+│ │                  resp_data = json.loads(response.text)
+│ │                  return resp_data
+│ │          except Exception as e:
+│ │   --- openai-game-translator-0.0.5/game_translator/xunfei_speed_transcription/seve_file.py
+│ ├── +++ openai-game-translator-1.1.0/game_translator/xunfei_speed_transcription/seve_file.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -91,15 +91,15 @@
+│ │              api_secret=api_secret,
+│ │              body=file_data,
+│ │          )
+│ │          try:
+│ │              resp = requests.post(url, headers=headerss, data=file_data, timeout=8)
+│ │              # print("Chunk upload success. STATUS：", resp.status_code, resp.text)
+│ │              return resp.json()
+│ │ -        except Exception as e:
+│ │ +        except Exception:
+│ │              # print("Chunk upload failed！Exception ：%s" % e)
+│ │              return False
+│ │  
+│ │      # chunk upload complete
+│ │      def upload_cut_complete(self, body_dict):
+│ │          file_data_type = "application/json"
+│ │          url = lfasr_host + api_cut_complete
+│ │   --- openai-game-translator-0.0.5/openai_game_translator.egg-info/SOURCES.txt
+│ ├── +++ openai-game-translator-1.1.0/openai_game_translator.egg-info/SOURCES.txt
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,30 +1,38 @@
+│ │ +.bumpversion.cfg
+│ │ +CONTRIBUTING.md
+│ │  LICENSE
+│ │ +MANIFEST.in
+│ │ +Makefile
+│ │  README.md
+│ │  pyproject.toml
+│ │ -setup.cfg
+│ │ +setup.py
+│ │  game_translator/__init__.py
+│ │  game_translator/__main__.py
+│ │ +game_translator/_version.py
+│ │  game_translator/game_translator.py
+│ │  game_translator/audio/__init__.py
+│ │ +game_translator/audio/audio_sample_little.wav
+│ │  game_translator/audio/record.py
+│ │ +game_translator/audio/test.wav
+│ │  game_translator/aws_streaming_transcription/__init__.py
+│ │  game_translator/aws_streaming_transcription/live_stream.py
+│ │  game_translator/aws_streaming_transcription/prerecorded_stream.py
+│ │  game_translator/openai_translation/__init__.py
+│ │  game_translator/openai_translation/chat.py
+│ │  game_translator/xunfei_speed_transcription/__init__.py
+│ │  game_translator/xunfei_speed_transcription/ost_fast.py
+│ │  game_translator/xunfei_speed_transcription/seve_file.py
+│ │  openai_game_translator.egg-info/PKG-INFO
+│ │  openai_game_translator.egg-info/SOURCES.txt
+│ │  openai_game_translator.egg-info/dependency_links.txt
+│ │  openai_game_translator.egg-info/entry_points.txt
+│ │  openai_game_translator.egg-info/requires.txt
+│ │  openai_game_translator.egg-info/top_level.txt
+│ │ +tests/.coveragerc
+│ │  tests/test_all.py
+│ │  tests/test_aws_live.py
+│ │  tests/test_aws_pre.py
+│ │  tests/test_game_translator.py
+│ │  tests/test_openai.py
+│ │  tests/test_record.py
+│ │  tests/test_xunfei.py
+│ │   --- openai-game-translator-0.0.5/tests/test_aws_live.py
+│ ├── +++ openai-game-translator-1.1.0/tests/test_aws_live.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -2,17 +2,16 @@
+│ │  import asyncio
+│ │  import os
+│ │  import sys
+│ │  import io
+│ │  import numpy as np
+│ │  
+│ │  sys.path.append(os.path.abspath("../"))
+│ │ -
+│ │  from unittest.mock import patch
+│ │ -from aws_streaming_transcription.live_stream import basic_transcribe, select_result
+│ │ +from game_translator.aws_streaming_transcription.live_stream import basic_transcribe, select_result
+│ │  
+│ │  
+│ │  class TestLiveStream(unittest.TestCase):
+│ │      @patch("sounddevice.rec")
+│ │      def test_transcription_success(self, mock_rec):
+│ │          # Set up mock audio data
+│ │          with patch("sys.stdout", new=io.StringIO()) as fake_out:
+│ │   --- openai-game-translator-0.0.5/tests/test_aws_pre.py
+│ ├── +++ openai-game-translator-1.1.0/tests/test_aws_pre.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,30 +1,28 @@
+│ │  import unittest
+│ │  import asyncio
+│ │  import os
+│ │  import sys
+│ │  import io
+│ │  import numpy as np
+│ │ -
+│ │  sys.path.append(os.path.abspath("../"))
+│ │ -
+│ │  from unittest.mock import patch
+│ │ -from aws_streaming_transcription.prerecorded_stream import (
+│ │ +from game_translator.aws_streaming_transcription.prerecorded_stream import (
+│ │      basic_transcribe,
+│ │      select_result,
+│ │  )
+│ │  
+│ │  
+│ │  def contains_substring(string, substring):
+│ │      return substring in string
+│ │  
+│ │  
+│ │  class TestPrerecorded(unittest.TestCase):
+│ │      def setUp(self):
+│ │ -        self.filepath = "../audio/audio_sample_little.wav"
+│ │ +        self.filepath = "../game_translator/audio/audio_sample_little.wav"
+│ │  
+│ │      def test_transcription(self):
+│ │          # Set up mock audio data
+│ │          with patch("sys.stdout", new=io.StringIO()) as fake_out:
+│ │              # Run the function under test and get the result
+│ │              loop1 = asyncio.get_event_loop()
+│ │              result = loop1.run_until_complete(basic_transcribe(self.filepath))
+│ │   --- openai-game-translator-0.0.5/tests/test_game_translator.py
+│ ├── +++ openai-game-translator-1.1.0/tests/test_game_translator.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,28 +1,26 @@
+│ │  import os
+│ │  import sys
+│ │  import io
+│ │  import unittest
+│ │  
+│ │  from unittest.mock import patch
+│ │ -
+│ │  sys.path.append(os.path.abspath("../"))
+│ │ -
+│ │ -from game_translator import gameTranslator
+│ │ +from game_translator.game_translator import gameTranslator
+│ │  
+│ │  
+│ │  def contains_substring(string, substring):
+│ │      return substring in string
+│ │  
+│ │  
+│ │  class TranslatorTest(unittest.TestCase):
+│ │      def test_xunfei_openai(self):
+│ │          translator1 = gameTranslator(
+│ │              "xunfei",
+│ │ -            filepath="../audio/audio_sample_little.wav",
+│ │ +            filepath="../game_translator/audio/audio_sample_little.wav",
+│ │              xunfei_appid=self.appid,
+│ │              xunfei_apikey=self.apikey,
+│ │              xunfei_apisecret=self.apisecret,
+│ │              prerecorded=1,
+│ │              output_language="English",
+│ │          )
+│ │  
+│ │ @@ -40,15 +38,15 @@
+│ │                  )
+│ │              )
+│ │  
+│ │      def test_aws_pre_openai(self):
+│ │          translator3 = gameTranslator(
+│ │              "aws_pre",
+│ │              prerecorded=1,
+│ │ -            filepath="../audio/audio_sample_little.wav",
+│ │ +            filepath="../game_translator/audio/audio_sample_little.wav",
+│ │              output_language="English",
+│ │          )
+│ │  
+│ │          with patch("sys.stdout", new=io.StringIO()) as fake_out:
+│ │              res = translator3.openai_translation()
+│ │              self.assertIsNotNone(res)
+│ │              self.assertTrue(
+│ │   --- openai-game-translator-0.0.5/tests/test_openai.py
+│ ├── +++ openai-game-translator-1.1.0/tests/test_openai.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,16 +1,14 @@
+│ │  import unittest
+│ │  import os
+│ │  import sys
+│ │  import io
+│ │ -
+│ │  sys.path.append(os.path.abspath("../"))
+│ │ -
+│ │  from unittest.mock import patch
+│ │ -from openai_translation.chat import translate_sentence
+│ │ +from game_translator.openai_translation.chat import translate_sentence
+│ │  
+│ │  
+│ │  def contains_substring(string, substring):
+│ │      return substring in string
+│ │  
+│ │  
+│ │  class TestOpenai(unittest.TestCase):
+│ │   --- openai-game-translator-0.0.5/tests/test_xunfei.py
+│ ├── +++ openai-game-translator-1.1.0/tests/test_xunfei.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,25 +1,23 @@
+│ │  import unittest
+│ │  import io
+│ │  import sys
+│ │  import os
+│ │ -
+│ │  sys.path.append(os.path.abspath("../"))
+│ │ -
+│ │  from unittest.mock import patch
+│ │ -from xunfei_speed_transcription.ost_fast import xf_transcriptor
+│ │ +from game_translator.xunfei_speed_transcription.ost_fast import xf_transcriptor
+│ │  
+│ │  
+│ │  def contains_substring(string, substring):
+│ │      return substring in string
+│ │  
+│ │  
+│ │  class TestXFTranscriptor(unittest.TestCase):
+│ │      def setUp(self):  #
+│ │ -        self.file_path = "../audio/audio_sample_little.wav"
+│ │ +        self.file_path = "../game_translator/audio/audio_sample_little.wav"
+│ │          self.transcriptor = xf_transcriptor(
+│ │              self.appid, self.apikey, self.apisecret, self.file_path
+│ │          )
+│ │  
+│ │      # def test_task_create(self):
+│ │      #     task_id = self.transcriptor.task_create()
+│ │      #     self.assertIsNotNone(task_id)
