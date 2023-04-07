@@ -1,0 +1,247 @@
+# Comparing `tmp/pylipd-1.0.4.tar.gz` & `tmp/pylipd-1.0.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pylipd-1.0.4.tar", last modified: Fri Apr  7 05:48:36 2023, max compression
++gzip compressed data, was "pylipd-1.0.5.tar", last modified: Fri Apr  7 06:01:32 2023, max compression
+```
+
+## Comparing `pylipd-1.0.4.tar` & `pylipd-1.0.5.tar`
+
+### file list
+
+```diff
+@@ -1,32 +1,32 @@
+-drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 05:48:36.915622 pylipd-1.0.4/
+--rw-r--r--   0 varun      (502) staff       (20)    11357 2022-09-22 13:14:27.000000 pylipd-1.0.4/LICENSE
+--rw-r--r--   0 varun      (502) staff       (20)     1282 2023-04-07 05:48:36.915667 pylipd-1.0.4/PKG-INFO
+--rw-r--r--   0 varun      (502) staff       (20)      630 2023-03-22 12:37:06.000000 pylipd-1.0.4/README.md
+-drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 05:48:36.913297 pylipd-1.0.4/pylipd/
+--rw-r--r--   0 varun      (502) staff       (20)       22 2023-04-07 05:47:22.000000 pylipd-1.0.4/pylipd/__init__.py
+-drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 05:48:36.914154 pylipd-1.0.4/pylipd/globals/
+--rw-r--r--   0 varun      (502) staff       (20)        0 2023-01-10 17:13:18.000000 pylipd-1.0.4/pylipd/globals/__init__.py
+--rw-r--r--   0 varun      (502) staff       (20)      383 2022-11-15 21:36:42.000000 pylipd-1.0.4/pylipd/globals/blacklist.py
+--rw-r--r--   0 varun      (502) staff       (20)    14564 2023-03-06 15:30:09.000000 pylipd-1.0.4/pylipd/globals/schema.py
+--rw-r--r--   0 varun      (502) staff       (20)      197 2022-11-14 07:40:00.000000 pylipd-1.0.4/pylipd/globals/urls.py
+--rw-r--r--   0 varun      (502) staff       (20)    15815 2023-02-10 12:09:50.000000 pylipd-1.0.4/pylipd/legacy_utils.py
+--rw-r--r--   0 varun      (502) staff       (20)    28677 2023-04-07 04:11:12.000000 pylipd-1.0.4/pylipd/lipd.py
+--rw-r--r--   0 varun      (502) staff       (20)    42808 2023-03-31 15:11:12.000000 pylipd-1.0.4/pylipd/lipd_to_rdf.py
+--rw-r--r--   0 varun      (502) staff       (20)     1742 2023-04-07 05:39:21.000000 pylipd-1.0.4/pylipd/multi_processing.py
+--rw-r--r--   0 varun      (502) staff       (20)    17140 2023-02-23 13:16:36.000000 pylipd-1.0.4/pylipd/rdf_to_lipd.py
+-drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 05:48:36.914485 pylipd-1.0.4/pylipd/series/
+--rw-r--r--   0 varun      (502) staff       (20)        0 2023-01-10 17:13:31.000000 pylipd-1.0.4/pylipd/series/__init__.py
+--rw-r--r--   0 varun      (502) staff       (20)     3223 2022-11-15 20:06:27.000000 pylipd-1.0.4/pylipd/series/regexes.py
+--rw-r--r--   0 varun      (502) staff       (20)     2270 2023-03-22 17:52:14.000000 pylipd-1.0.4/pylipd/test.py
+--rw-r--r--   0 varun      (502) staff       (20)     3942 2023-04-07 05:46:07.000000 pylipd-1.0.4/pylipd/usage.py
+--rw-r--r--   0 varun      (502) staff       (20)     2602 2023-02-23 10:01:04.000000 pylipd-1.0.4/pylipd/utils.py
+-drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 05:48:36.915526 pylipd-1.0.4/pylipd.egg-info/
+--rw-r--r--   0 varun      (502) staff       (20)     1282 2023-04-07 05:48:36.000000 pylipd-1.0.4/pylipd.egg-info/PKG-INFO
+--rw-r--r--   0 varun      (502) staff       (20)      588 2023-04-07 05:48:36.000000 pylipd-1.0.4/pylipd.egg-info/SOURCES.txt
+--rw-r--r--   0 varun      (502) staff       (20)        1 2023-04-07 05:48:36.000000 pylipd-1.0.4/pylipd.egg-info/dependency_links.txt
+--rw-r--r--   0 varun      (502) staff       (20)        1 2023-02-24 09:46:52.000000 pylipd-1.0.4/pylipd.egg-info/not-zip-safe
+--rw-r--r--   0 varun      (502) staff       (20)       29 2023-04-07 05:48:36.000000 pylipd-1.0.4/pylipd.egg-info/requires.txt
+--rw-r--r--   0 varun      (502) staff       (20)        7 2023-04-07 05:48:36.000000 pylipd-1.0.4/pylipd.egg-info/top_level.txt
+--rw-r--r--   0 varun      (502) staff       (20)      104 2023-02-10 17:39:16.000000 pylipd-1.0.4/pyproject.toml
+--rw-r--r--   0 varun      (502) staff       (20)      686 2023-04-07 05:48:36.915922 pylipd-1.0.4/setup.cfg
+--rw-r--r--   0 varun      (502) staff       (20)      956 2023-04-07 05:47:26.000000 pylipd-1.0.4/setup.py
++drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 06:01:32.010823 pylipd-1.0.5/
++-rw-r--r--   0 varun      (502) staff       (20)    11357 2022-09-22 13:14:27.000000 pylipd-1.0.5/LICENSE
++-rw-r--r--   0 varun      (502) staff       (20)     1282 2023-04-07 06:01:32.010873 pylipd-1.0.5/PKG-INFO
++-rw-r--r--   0 varun      (502) staff       (20)      630 2023-03-22 12:37:06.000000 pylipd-1.0.5/README.md
++drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 06:01:32.009281 pylipd-1.0.5/pylipd/
++-rw-r--r--   0 varun      (502) staff       (20)       22 2023-04-07 06:00:00.000000 pylipd-1.0.5/pylipd/__init__.py
++drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 06:01:32.009755 pylipd-1.0.5/pylipd/globals/
++-rw-r--r--   0 varun      (502) staff       (20)        0 2023-01-10 17:13:18.000000 pylipd-1.0.5/pylipd/globals/__init__.py
++-rw-r--r--   0 varun      (502) staff       (20)      383 2022-11-15 21:36:42.000000 pylipd-1.0.5/pylipd/globals/blacklist.py
++-rw-r--r--   0 varun      (502) staff       (20)    14564 2023-03-06 15:30:09.000000 pylipd-1.0.5/pylipd/globals/schema.py
++-rw-r--r--   0 varun      (502) staff       (20)      197 2022-11-14 07:40:00.000000 pylipd-1.0.5/pylipd/globals/urls.py
++-rw-r--r--   0 varun      (502) staff       (20)    15815 2023-02-10 12:09:50.000000 pylipd-1.0.5/pylipd/legacy_utils.py
++-rw-r--r--   0 varun      (502) staff       (20)    28677 2023-04-07 04:11:12.000000 pylipd-1.0.5/pylipd/lipd.py
++-rw-r--r--   0 varun      (502) staff       (20)    42808 2023-03-31 15:11:12.000000 pylipd-1.0.5/pylipd/lipd_to_rdf.py
++-rw-r--r--   0 varun      (502) staff       (20)     1742 2023-04-07 05:39:21.000000 pylipd-1.0.5/pylipd/multi_processing.py
++-rw-r--r--   0 varun      (502) staff       (20)    17140 2023-02-23 13:16:36.000000 pylipd-1.0.5/pylipd/rdf_to_lipd.py
++drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 06:01:32.009953 pylipd-1.0.5/pylipd/series/
++-rw-r--r--   0 varun      (502) staff       (20)        0 2023-01-10 17:13:31.000000 pylipd-1.0.5/pylipd/series/__init__.py
++-rw-r--r--   0 varun      (502) staff       (20)     3223 2022-11-15 20:06:27.000000 pylipd-1.0.5/pylipd/series/regexes.py
++-rw-r--r--   0 varun      (502) staff       (20)     2270 2023-03-22 17:52:14.000000 pylipd-1.0.5/pylipd/test.py
++-rw-r--r--   0 varun      (502) staff       (20)     4141 2023-04-07 05:57:19.000000 pylipd-1.0.5/pylipd/usage.py
++-rw-r--r--   0 varun      (502) staff       (20)     2602 2023-02-23 10:01:04.000000 pylipd-1.0.5/pylipd/utils.py
++drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 06:01:32.010727 pylipd-1.0.5/pylipd.egg-info/
++-rw-r--r--   0 varun      (502) staff       (20)     1282 2023-04-07 06:01:32.000000 pylipd-1.0.5/pylipd.egg-info/PKG-INFO
++-rw-r--r--   0 varun      (502) staff       (20)      588 2023-04-07 06:01:32.000000 pylipd-1.0.5/pylipd.egg-info/SOURCES.txt
++-rw-r--r--   0 varun      (502) staff       (20)        1 2023-04-07 06:01:32.000000 pylipd-1.0.5/pylipd.egg-info/dependency_links.txt
++-rw-r--r--   0 varun      (502) staff       (20)        1 2023-02-24 09:46:52.000000 pylipd-1.0.5/pylipd.egg-info/not-zip-safe
++-rw-r--r--   0 varun      (502) staff       (20)       29 2023-04-07 06:01:32.000000 pylipd-1.0.5/pylipd.egg-info/requires.txt
++-rw-r--r--   0 varun      (502) staff       (20)        7 2023-04-07 06:01:32.000000 pylipd-1.0.5/pylipd.egg-info/top_level.txt
++-rw-r--r--   0 varun      (502) staff       (20)      104 2023-02-10 17:39:16.000000 pylipd-1.0.5/pyproject.toml
++-rw-r--r--   0 varun      (502) staff       (20)      686 2023-04-07 06:01:32.011122 pylipd-1.0.5/setup.cfg
++-rw-r--r--   0 varun      (502) staff       (20)      956 2023-04-07 05:59:53.000000 pylipd-1.0.5/setup.py
+```
+
+### Comparing `pylipd-1.0.4/LICENSE` & `pylipd-1.0.5/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pylipd-1.0.4/PKG-INFO` & `pylipd-1.0.5/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ Metadata-Version: 2.1
+ Name: pylipd
+-Version: 1.0.4
++Version: 1.0.5
+ Summary: Python utilities for handling LiPD data
+ Home-page: https://github.com/linkedearth/pylipd
+-Download-URL: https://github.com/linkedearth/pylipd/tarball/1.0.4
++Download-URL: https://github.com/linkedearth/pylipd/tarball/1.0.5
+ Author: Varun Ratnakar
+ Author-email: varunratnakar@gmail.com
+ License: Apache 2-0 License
+ Project-URL: Bug Tracker, https://github.com/linkedearth/pylipd/issues
+ Keywords: Paleoclimate, Data Analysis, LiPD
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+### Comparing `pylipd-1.0.4/README.md` & `pylipd-1.0.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pylipd-1.0.4/pylipd/globals/schema.py` & `pylipd-1.0.5/pylipd/globals/schema.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pylipd-1.0.4/pylipd/legacy_utils.py` & `pylipd-1.0.5/pylipd/legacy_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pylipd-1.0.4/pylipd/lipd.py` & `pylipd-1.0.5/pylipd/lipd.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pylipd-1.0.4/pylipd/lipd_to_rdf.py` & `pylipd-1.0.5/pylipd/lipd_to_rdf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pylipd-1.0.4/pylipd/multi_processing.py` & `pylipd-1.0.5/pylipd/multi_processing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pylipd-1.0.4/pylipd/rdf_to_lipd.py` & `pylipd-1.0.5/pylipd/rdf_to_lipd.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pylipd-1.0.4/pylipd/series/regexes.py` & `pylipd-1.0.5/pylipd/series/regexes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pylipd-1.0.4/pylipd/test.py` & `pylipd-1.0.5/pylipd/test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pylipd-1.0.4/pylipd/usage.py` & `pylipd-1.0.5/pylipd/usage.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -6,14 +6,22 @@
+ # - Edit local LiPD & update endpoint
+ ####################
+ 
+ 
+ local_lipd_dir = "/Users/varun/git/LiPD/PyLiPD/data/lpd.latest"
+ remote_lipd_endpoint = "https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2"
+ 
++url = 'https://lipdverse.org/data/RRh3T4NCsf4MgrxhXbJq/1_0_0//Ocn-Philippines.Stott.2007.lpd'
++        
++lipd = LiPD()
++lipd.load(url)
++ts_list=lipd.get_timeseries(lipd.get_all_dataset_names())
++
++exit()
++
+ '''
+ lipd = LiPD()
+ # Convert LiPD files to RDF    
+ lipd.convert_lipd_dir_to_rdf(
+     local_lipd_dir,
+     local_lipd_dir+".nq", 
+     parallel=False)
+```
+
+### Comparing `pylipd-1.0.4/pylipd/utils.py` & `pylipd-1.0.5/pylipd/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pylipd-1.0.4/pylipd.egg-info/PKG-INFO` & `pylipd-1.0.5/pylipd.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ Metadata-Version: 2.1
+ Name: pylipd
+-Version: 1.0.4
++Version: 1.0.5
+ Summary: Python utilities for handling LiPD data
+ Home-page: https://github.com/linkedearth/pylipd
+-Download-URL: https://github.com/linkedearth/pylipd/tarball/1.0.4
++Download-URL: https://github.com/linkedearth/pylipd/tarball/1.0.5
+ Author: Varun Ratnakar
+ Author-email: varunratnakar@gmail.com
+ License: Apache 2-0 License
+ Project-URL: Bug Tracker, https://github.com/linkedearth/pylipd/issues
+ Keywords: Paleoclimate, Data Analysis, LiPD
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+### Comparing `pylipd-1.0.4/pylipd.egg-info/SOURCES.txt` & `pylipd-1.0.5/pylipd.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `pylipd-1.0.4/setup.cfg` & `pylipd-1.0.5/setup.cfg`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [metadata]
+ name = pylipd
+-version = 1.0.4
++version = 1.0.5
+ author = Varun Ratnakar
+ author_email = varunratnakar@gmail.com
+ description = Python utilities for handling LiPD data
+ long_description = file: README.md
+ long_description_content_type = text/markdown
+ url = https://github.com/linkedearth/pylipd
+ project_urls =
+```
+
+### Comparing `pylipd-1.0.4/setup.py` & `pylipd-1.0.5/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ import os
+ 
+ from setuptools import setup, find_packages
+ 
+ 
+-version = '1.0.4'
++version = '1.0.5'
+ 
+ # Read the readme file contents into variable
+ def read(fname):
+     return open(os.path.join(os.path.dirname(__file__), fname)).read()
+ 
+ setup(
+     name='pylipd',
+```
+

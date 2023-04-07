@@ -1,0 +1,396 @@
+# Comparing `tmp/typing_filter-0.1.0.tar.gz` & `tmp/typing_filter-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "typing_filter-0.1.0.tar", max compression
++gzip compressed data, was "typing_filter-0.1.1.tar", max compression
+```
+
+## Comparing `typing_filter-0.1.0.tar` & `typing_filter-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,6 +1,6 @@
+--rw-r--r--   0        0        0    35148 2023-03-22 23:29:46.719994 typing_filter-0.1.0/LICENSE
+--rw-r--r--   0        0        0     2522 2023-04-07 04:55:34.883624 typing_filter-0.1.0/README.md
+--rw-r--r--   0        0        0      786 2023-04-07 05:35:44.948460 typing_filter-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0      331 2023-04-07 04:23:05.425465 typing_filter-0.1.0/typing_filter/__init__.py
+--rw-r--r--   0        0        0    11010 2023-04-07 04:50:20.847811 typing_filter-0.1.0/typing_filter/typing_filter.py
+--rw-r--r--   0        0        0     3499 1970-01-01 00:00:00.000000 typing_filter-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0    35148 2023-03-22 23:29:46.719994 typing_filter-0.1.1/LICENSE
++-rw-r--r--   0        0        0     2500 2023-04-07 06:01:07.414872 typing_filter-0.1.1/README.md
++-rw-r--r--   0        0        0      789 2023-04-07 06:01:53.594523 typing_filter-0.1.1/pyproject.toml
++-rw-r--r--   0        0        0      331 2023-04-07 06:01:55.898483 typing_filter-0.1.1/typing_filter/__init__.py
++-rw-r--r--   0        0        0    11010 2023-04-07 04:50:20.847811 typing_filter-0.1.1/typing_filter/typing_filter.py
++-rw-r--r--   0        0        0     3470 1970-01-01 00:00:00.000000 typing_filter-0.1.1/PKG-INFO
+```
+
+### Comparing `typing_filter-0.1.0/LICENSE` & `typing_filter-0.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `typing_filter-0.1.0/README.md` & `typing_filter-0.1.1/README.md`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -18,76 +18,64 @@
+         Notion Roadmap »
+     </strong></a>
+   </p>
+ </div>
+ 
+ 
+ <!-- Project Demo -->
+-<!-- https://user-images.githubusercontent.com/6320907/189829171-1e91c3e2-0feb-4e7a-aa12-0a4d899f059b.mp4 -->
++https://user-images.githubusercontent.com/6320907/230550634-3ac6b92a-bbd2-4723-93ce-218ad02d8a31.mov
+ 
+ 
+ <!-- ## Table of contents
+ * [Contact](#contact)
+ * [Acknowledgments](#acknowledgments) -->
+ 
+ 
+ ## Installation
+-
+-This is an example of how you may give instructions on setting up your project locally.
+-To get a local copy up and running follow these simple example steps.
+-
+-1. First step
+-2. Clone the repo
+-   ```sh
+-   git clone https://github.com/github_username/repo_name.git
+-   ```
+-3. Import the package
+-   ```python
+-   import ytlink
+-   ```
+-
++Install the package from [PyPi](https://pypi.org/project/typing-filter/) via pip
++ ```sh
++ pip install typing-filter
++ ```
+ 
+ <p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
+ ## Usage
+-
+-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
++With a list of options ready, a list of descriptions, just import the package call the launch function.
+ ```python
+-import numpy as np
+-import stp
+-# Dimensionless, time-dependent parameter for self assembly matrix
+-alpha = lambda t : np.cos(t) + 2
+-W = stp.self_assembly_rate_matrix(alpha)
+-
+-# The initial matrix
+-print(W(0))
+-# [[-2.  3.  9.]
+-# [ 1. -3.  0.]
+-# [ 1.  0. -9.]]
+-
+-# A later matrix
+-print(W(1))
+-# [[-2.          2.54030231  6.45313581]
+-# [ 1.         -2.54030231  0.        ]
+-# [ 1.          0.         -6.45313581]]
++import typing_filter
++options = ['Alaska', 'Massachusetts', 'California']
++descriptions = [None, 'My home state', 'My current state']
++choice = typing_filter.launch(options, descriptions)
+ ```
++The selected choice is returned by the launch function, and is None if the operation was canceled.
+ 
++Additional options can be made by tweaking the launch command:
++```python
++import typing_filter
++options = ['Alaska', 'Massachusetts', 'California']
++descriptions = [None, 'My home state', 'My current state']
++choice = typing_filter.launch(
++  options, descriptions,
++  description_separator=': ',
++  header='Press Escape to quit!',
++  prompt='Input:',
++  selector='==>>', selector_padding=3
++)
++```
+ 
+-_For more examples, please refer to the [Documentation]._
++<!-- _For more examples, please refer to the [Documentation]._ -->
+ 
+ <p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
+ ## Roadmap
+ 
+ Refer to the [Notion Roadmap] for future features and the state of the project.
+ 
+-
+ <p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
+ ## Contact
+ Created by [Jonathan Delgado](https://jdelgado.net/).
+ 
+-
+ <p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
+ [Notion Roadmap]: https://otanan.notion.site/
+-[Documentation]: https://stochastic-thermodynamics-in-python.readthedocs.io/en/latest/
++[Documentation]: https://stochastic-thermodynamics-in-python.readthedocs.io/en/latest/
+```
+
+#### html2text {}
+
+```diff
+@@ -1,27 +1,29 @@
+ 
+                            ***** Typing Filter *****
+  Simple CLI for a typing filter to provide choices to a user and let them type
+                   in phrases which filters possible options.
+ 
+                   Status: in progress    Â·Notion_Roadmap_Â»
+-   ## Installation This is an example of how you may give instructions on
+-setting up your project locally. To get a local copy up and running follow
+-these simple example steps. 1. First step 2. Clone the repo ```sh git clone
+-https://github.com/github_username/repo_name.git ``` 3. Import the package
+-```python import ytlink ```
++ https://user-images.githubusercontent.com/6320907/230550634-3ac6b92a-bbd2-
++4723-93ce-218ad02d8a31.mov  ## Installation Install the package from [PyPi]
++(https://pypi.org/project/typing-filter/) via pip ```sh pip install typing-
++filter ```
+                                                                   (back_to_top)
+-## Usage Use this space to show useful examples of how a project can be used.
+-Additional screenshots, code examples and demos work well in this space. You
+-may also link to more resources. ```python import numpy as np import stp #
+-Dimensionless, time-dependent parameter for self assembly matrix alpha = lambda
+-t : np.cos(t) + 2 W = stp.self_assembly_rate_matrix(alpha) # The initial matrix
+-print(W(0)) # [[-2. 3. 9.] # [ 1. -3. 0.] # [ 1. 0. -9.]] # A later matrix
+-print(W(1)) # [[-2. 2.54030231 6.45313581] # [ 1. -2.54030231 0. ] # [ 1. 0. -
+-6.45313581]] ``` _For more examples, please refer to the [Documentation]._
++## Usage With a list of options ready, a list of descriptions, just import the
++package call the launch function. ```python import typing_filter options =
++['Alaska', 'Massachusetts', 'California'] descriptions = [None, 'My home
++state', 'My current state'] choice = typing_filter.launch(options,
++descriptions) ``` The selected choice is returned by the launch function, and
++is None if the operation was canceled. Additional options can be made by
++tweaking the launch command: ```python import typing_filter options =
++['Alaska', 'Massachusetts', 'California'] descriptions = [None, 'My home
++state', 'My current state'] choice = typing_filter.launch( options,
++descriptions, description_separator=': ', header='Press Escape to quit!',
++prompt='Input:', selector='==>>', selector_padding=3 ) ```
+                                                                   (back_to_top)
+ ## Roadmap Refer to the [Notion Roadmap] for future features and the state of
+ the project.
+                                                                   (back_to_top)
+ ## Contact Created by [Jonathan Delgado](https://jdelgado.net/).
+                                                                   (back_to_top)
+ [Notion Roadmap]: https://otanan.notion.site/ [Documentation]: https://
+```
+
+### Comparing `typing_filter-0.1.0/typing_filter/typing_filter.py` & `typing_filter-0.1.1/typing_filter/typing_filter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `typing_filter-0.1.0/PKG-INFO` & `typing_filter-0.1.1/PKG-INFO`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ Metadata-Version: 2.1
+ Name: typing-filter
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: Simple CLI to provide choices to a user, and let them type in phrases which filters possible options.
+-Home-page: https://github.com/otanan/typing_filter
++Home-page: https://jdelgado.net/
+ License: GNU GENERAL PUBLIC LICENSE
+-Keywords: select,choice,inquirer
++Keywords: select,choice,filter,CLI,inquirer
+ Author: Jonathan Delgado
+ Author-email: jonathandelgado0327@gmail.com
+ Requires-Python: >=3.7
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: Other/Proprietary License
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: Python :: 3
+@@ -41,76 +41,65 @@
+         Notion Roadmap »
+     </strong></a>
+   </p>
+ </div>
+ 
+ 
+ <!-- Project Demo -->
+-<!-- https://user-images.githubusercontent.com/6320907/189829171-1e91c3e2-0feb-4e7a-aa12-0a4d899f059b.mp4 -->
++https://user-images.githubusercontent.com/6320907/230550634-3ac6b92a-bbd2-4723-93ce-218ad02d8a31.mov
+ 
+ 
+ <!-- ## Table of contents
+ * [Contact](#contact)
+ * [Acknowledgments](#acknowledgments) -->
+ 
+ 
+ ## Installation
+-
+-This is an example of how you may give instructions on setting up your project locally.
+-To get a local copy up and running follow these simple example steps.
+-
+-1. First step
+-2. Clone the repo
+-   ```sh
+-   git clone https://github.com/github_username/repo_name.git
+-   ```
+-3. Import the package
+-   ```python
+-   import ytlink
+-   ```
+-
++Install the package from [PyPi](https://pypi.org/project/typing-filter/) via pip
++ ```sh
++ pip install typing-filter
++ ```
+ 
+ <p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
+ ## Usage
+-
+-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
++With a list of options ready, a list of descriptions, just import the package call the launch function.
+ ```python
+-import numpy as np
+-import stp
+-# Dimensionless, time-dependent parameter for self assembly matrix
+-alpha = lambda t : np.cos(t) + 2
+-W = stp.self_assembly_rate_matrix(alpha)
+-
+-# The initial matrix
+-print(W(0))
+-# [[-2.  3.  9.]
+-# [ 1. -3.  0.]
+-# [ 1.  0. -9.]]
+-
+-# A later matrix
+-print(W(1))
+-# [[-2.          2.54030231  6.45313581]
+-# [ 1.         -2.54030231  0.        ]
+-# [ 1.          0.         -6.45313581]]
++import typing_filter
++options = ['Alaska', 'Massachusetts', 'California']
++descriptions = [None, 'My home state', 'My current state']
++choice = typing_filter.launch(options, descriptions)
+ ```
++The selected choice is returned by the launch function, and is None if the operation was canceled.
+ 
++Additional options can be made by tweaking the launch command:
++```python
++import typing_filter
++options = ['Alaska', 'Massachusetts', 'California']
++descriptions = [None, 'My home state', 'My current state']
++choice = typing_filter.launch(
++  options, descriptions,
++  description_separator=': ',
++  header='Press Escape to quit!',
++  prompt='Input:',
++  selector='==>>', selector_padding=3
++)
++```
+ 
+-_For more examples, please refer to the [Documentation]._
++<!-- _For more examples, please refer to the [Documentation]._ -->
+ 
+ <p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
+ ## Roadmap
+ 
+ Refer to the [Notion Roadmap] for future features and the state of the project.
+ 
+-
+ <p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
+ ## Contact
+ Created by [Jonathan Delgado](https://jdelgado.net/).
+ 
+-
+ <p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
+ [Notion Roadmap]: https://otanan.notion.site/
+ [Documentation]: https://stochastic-thermodynamics-in-python.readthedocs.io/en/latest/
++
+```
+
+#### html2text {}
+
+```diff
+@@ -1,39 +1,41 @@
+-Metadata-Version: 2.1 Name: typing-filter Version: 0.1.0 Summary: Simple CLI to
++Metadata-Version: 2.1 Name: typing-filter Version: 0.1.1 Summary: Simple CLI to
+ provide choices to a user, and let them type in phrases which filters possible
+-options. Home-page: https://github.com/otanan/typing_filter License: GNU
+-GENERAL PUBLIC LICENSE Keywords: select,choice,inquirer Author: Jonathan
+-Delgado Author-email: jonathandelgado0327@gmail.com Requires-Python: >=3.7
+-Classifier: Intended Audience :: Developers Classifier: License :: Other/
+-Proprietary License Classifier: Operating System :: OS Independent Classifier:
+-Programming Language :: Python :: 3 Classifier: Programming Language :: Python
+-:: 3.7 Classifier: Programming Language :: Python :: 3.8 Classifier:
+-Programming Language :: Python :: 3.9 Classifier: Programming Language ::
+-Python :: 3.10 Classifier: Programming Language :: Python :: 3.11 Classifier:
+-Programming Language :: Python :: 3.7 Project-URL: Repository, https://
+-github.com/otanan/typing_filter Description-Content-Type: text/markdown
++options. Home-page: https://jdelgado.net/ License: GNU GENERAL PUBLIC LICENSE
++Keywords: select,choice,filter,CLI,inquirer Author: Jonathan Delgado Author-
++email: jonathandelgado0327@gmail.com Requires-Python: >=3.7 Classifier:
++Intended Audience :: Developers Classifier: License :: Other/Proprietary
++License Classifier: Operating System :: OS Independent Classifier: Programming
++Language :: Python :: 3 Classifier: Programming Language :: Python :: 3.7
++Classifier: Programming Language :: Python :: 3.8 Classifier: Programming
++Language :: Python :: 3.9 Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11 Classifier: Programming
++Language :: Python :: 3.7 Project-URL: Repository, https://github.com/otanan/
++typing_filter Description-Content-Type: text/markdown
+                            ***** Typing Filter *****
+  Simple CLI for a typing filter to provide choices to a user and let them type
+                   in phrases which filters possible options.
+ 
+                   Status: in progress    Â·Notion_Roadmap_Â»
+-   ## Installation This is an example of how you may give instructions on
+-setting up your project locally. To get a local copy up and running follow
+-these simple example steps. 1. First step 2. Clone the repo ```sh git clone
+-https://github.com/github_username/repo_name.git ``` 3. Import the package
+-```python import ytlink ```
++ https://user-images.githubusercontent.com/6320907/230550634-3ac6b92a-bbd2-
++4723-93ce-218ad02d8a31.mov  ## Installation Install the package from [PyPi]
++(https://pypi.org/project/typing-filter/) via pip ```sh pip install typing-
++filter ```
+                                                                   (back_to_top)
+-## Usage Use this space to show useful examples of how a project can be used.
+-Additional screenshots, code examples and demos work well in this space. You
+-may also link to more resources. ```python import numpy as np import stp #
+-Dimensionless, time-dependent parameter for self assembly matrix alpha = lambda
+-t : np.cos(t) + 2 W = stp.self_assembly_rate_matrix(alpha) # The initial matrix
+-print(W(0)) # [[-2. 3. 9.] # [ 1. -3. 0.] # [ 1. 0. -9.]] # A later matrix
+-print(W(1)) # [[-2. 2.54030231 6.45313581] # [ 1. -2.54030231 0. ] # [ 1. 0. -
+-6.45313581]] ``` _For more examples, please refer to the [Documentation]._
++## Usage With a list of options ready, a list of descriptions, just import the
++package call the launch function. ```python import typing_filter options =
++['Alaska', 'Massachusetts', 'California'] descriptions = [None, 'My home
++state', 'My current state'] choice = typing_filter.launch(options,
++descriptions) ``` The selected choice is returned by the launch function, and
++is None if the operation was canceled. Additional options can be made by
++tweaking the launch command: ```python import typing_filter options =
++['Alaska', 'Massachusetts', 'California'] descriptions = [None, 'My home
++state', 'My current state'] choice = typing_filter.launch( options,
++descriptions, description_separator=': ', header='Press Escape to quit!',
++prompt='Input:', selector='==>>', selector_padding=3 ) ```
+                                                                   (back_to_top)
+ ## Roadmap Refer to the [Notion Roadmap] for future features and the state of
+ the project.
+                                                                   (back_to_top)
+ ## Contact Created by [Jonathan Delgado](https://jdelgado.net/).
+                                                                   (back_to_top)
+ [Notion Roadmap]: https://otanan.notion.site/ [Documentation]: https://
+```
+

@@ -1,0 +1,579 @@
+--- tmp/mkdocs_file_filter_plugin-0.0.6.tar.gz
++++ tmp/mkdocs_file_filter_plugin-0.0.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "mkdocs_file_filter_plugin-0.0.6.tar", max compression
+│ +gzip compressed data, was "mkdocs_file_filter_plugin-0.0.7.tar", max compression
+│   --- mkdocs_file_filter_plugin-0.0.6.tar
+├── +++ mkdocs_file_filter_plugin-0.0.7.tar
+│ ├── file list
+│ │ @@ -1,11 +1,10 @@
+│ │ --rw-r--r--   0        0        0     1073 2023-02-21 10:42:11.613002 mkdocs_file_filter_plugin-0.0.6/LICENSE
+│ │ --rw-r--r--   0        0        0    13809 2023-02-21 10:42:11.613002 mkdocs_file_filter_plugin-0.0.6/README.md
+│ │ --rw-r--r--   0        0        0        0 2023-02-21 10:42:11.613002 mkdocs_file_filter_plugin-0.0.6/mkdocs_file_filter_plugin/__init__.py
+│ │ --rw-r--r--   0        0        0     1569 2023-02-21 10:42:11.613002 mkdocs_file_filter_plugin-0.0.6/mkdocs_file_filter_plugin/external_config.py
+│ │ --rw-r--r--   0        0        0     4214 2023-02-21 10:42:11.613002 mkdocs_file_filter_plugin-0.0.6/mkdocs_file_filter_plugin/judger.py
+│ │ --rw-r--r--   0        0        0     4295 2023-02-21 10:42:11.613002 mkdocs_file_filter_plugin-0.0.6/mkdocs_file_filter_plugin/plugin.py
+│ │ --rw-r--r--   0        0        0     1117 2023-02-21 10:42:11.613002 mkdocs_file_filter_plugin-0.0.6/mkdocs_file_filter_plugin/plugin_config.py
+│ │ --rw-r--r--   0        0        0      882 2023-02-21 10:42:11.613002 mkdocs_file_filter_plugin-0.0.6/mkdocs_file_filter_plugin/util.py
+│ │ --rw-r--r--   0        0        0     2130 2023-02-21 10:42:30.793005 mkdocs_file_filter_plugin-0.0.6/pyproject.toml
+│ │ --rw-r--r--   0        0        0    15411 1970-01-01 00:00:00.000000 mkdocs_file_filter_plugin-0.0.6/setup.py
+│ │ --rw-r--r--   0        0        0    15706 1970-01-01 00:00:00.000000 mkdocs_file_filter_plugin-0.0.6/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1073 2023-04-07 05:59:10.741592 mkdocs_file_filter_plugin-0.0.7/LICENSE
+│ │ +-rw-r--r--   0        0        0    15886 2023-04-07 05:59:10.741592 mkdocs_file_filter_plugin-0.0.7/README.md
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 05:59:10.741592 mkdocs_file_filter_plugin-0.0.7/mkdocs_file_filter_plugin/__init__.py
+│ │ +-rw-r--r--   0        0        0     1597 2023-04-07 05:59:10.741592 mkdocs_file_filter_plugin-0.0.7/mkdocs_file_filter_plugin/external_config.py
+│ │ +-rw-r--r--   0        0        0     4161 2023-04-07 05:59:10.741592 mkdocs_file_filter_plugin-0.0.7/mkdocs_file_filter_plugin/judger.py
+│ │ +-rw-r--r--   0        0        0     4288 2023-04-07 05:59:10.741592 mkdocs_file_filter_plugin-0.0.7/mkdocs_file_filter_plugin/plugin.py
+│ │ +-rw-r--r--   0        0        0     1103 2023-04-07 05:59:10.741592 mkdocs_file_filter_plugin-0.0.7/mkdocs_file_filter_plugin/plugin_config.py
+│ │ +-rw-r--r--   0        0        0      876 2023-04-07 05:59:10.741592 mkdocs_file_filter_plugin-0.0.7/mkdocs_file_filter_plugin/util.py
+│ │ +-rw-r--r--   0        0        0     3420 2023-04-07 05:59:31.321698 mkdocs_file_filter_plugin-0.0.7/pyproject.toml
+│ │ +-rw-r--r--   0        0        0    17846 1970-01-01 00:00:00.000000 mkdocs_file_filter_plugin-0.0.7/PKG-INFO
+│ │   --- mkdocs_file_filter_plugin-0.0.6/LICENSE
+│ ├── +++ mkdocs_file_filter_plugin-0.0.7/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- mkdocs_file_filter_plugin-0.0.6/README.md
+│ ├── +++ mkdocs_file_filter_plugin-0.0.7/README.md
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,11 +1,13 @@
+│ │  # MkDocs File Filter Plugin
+│ │  
+│ │ -[![PyPI - Version][pypi-v-image]][pypi-v-link]
+│ │ -[![PyPI - Python Version][pypi-pyversions-image]][pypi-pyversions-link]
+│ │ +[![PyPI - version][pypi-version-image]][pypi-version-link]
+│ │ +[![PyPI - python version][pypi-pyversions-image]][pypi-pyversions-link]
+│ │ +[![PyPI - python version][pypi-downloads-image]][pypi-downloads-link]
+│ │ +[![GitHub - ci][github-ci-image]][github-ci-link]
+│ │  
+│ │  > :exclamation: **This plugin is under early Alpha stage.** Significant changes may occur. It may not yet be fully compatible with other MkDocs configurations and thus may break with some advanced configs. Once these have been resolved and all bugs have been ironed out, it will be moved to an upper stage.
+│ │  
+│ │  ---
+│ │  
+│ │  `mkdocs-file-filter-plugin` is a [mkdocs plugin][mkdocs-plugins] that allows you to exclude/include files using Unix-style wildcards (`globs`), regular expressions (`regexes`), `.mkdocsignore` ([gitignore-style][gitignore] file) or Markdown/FrontMatter `tags` metadata.
+│ │  
+│ │ @@ -22,14 +24,15 @@
+│ │    - [Tags](#tags)
+│ │      - [Tags metadata property](#tags-metadata-property)
+│ │      - [Custom metadata list](#custom-metadata-list)
+│ │    - [.mkdocsignore](#mkdocsignore)
+│ │    - [Navigation filtering](#navigation-filtering)
+│ │    - [Filter only documentation pages](#filter-only-documentation-pages)
+│ │    - [Conflict behavior](#conflict-behavior)
+│ │ +- [3rd party plugins compatibility](#3rd-party-plugins-compatibility)
+│ │  - [License](#license)
+│ │  
+│ │  ## Installation
+│ │  
+│ │  This package requires Python >=3.8 and MkDocs version 1.4.0 or higher.
+│ │  
+│ │  ### pip
+│ │ @@ -40,15 +43,15 @@
+│ │  pip install mkdocs-file-filter-plugin
+│ │  ```
+│ │  
+│ │  Or include it in a `requirements.txt` file in your project:
+│ │  
+│ │  ```python
+│ │  mkdocs==1.4.*
+│ │ -mkdocs-file-filter-plugin==0.0.*
+│ │ +mkdocs-file-filter-plugin
+│ │  ```
+│ │  
+│ │  and run
+│ │  
+│ │  ```console
+│ │  pip install -r requirements.txt
+│ │  ```
+│ │ @@ -438,25 +441,63 @@
+│ │  
+│ │  **RESULT:** Include only markdown files with the meta-data tag `released` and all theme and other files under the docs folder like images, etc.
+│ │  
+│ │  ### Conflict behavior
+│ │  
+│ │  It is possible to exclude and include will have conflict. For example, you could exclude `drafts/**` but include `*.md`. In that case, **include** has higher priority over exclude. So all `*.md` files from the drafts folder will be **included**.
+│ │  
+│ │ +## 3rd party plugins compatibility
+│ │ +
+│ │ +This plugin has been tested with [Material for MkDocs][mkdocs-material-link] theme, and two 3rd party plugins that nicely complement each other.
+│ │ +
+│ │ +- [mkdocs-awesome-pages-plugin][mkdocs-awesome-pages-plugin-pypi] plugin allows you to customize how your pages show up in the navigation of your MkDocs without having to configure the entire structure in your `mkdocs.yml`
+│ │ +- [mkdocs-exclude-unused-files][mkdocs-exclude-unused-files-pypi] cleans up mkdocs output from files that are not referenced in pages (useful to have the smaller artifact and not exposing not attached files after filtration with the file-filter).
+│ │ +
+│ │ +Example `mkdocs.yml` config with the proper order of plugins.
+│ │ +
+│ │ +```yaml
+│ │ +# mkdocs.yml
+│ │ +plugins:
+│ │ +  - search
+│ │ +  - awesome-pages #before file-filter
+│ │ +    # awesome-pages config
+│ │ +  - file-filter:
+│ │ +      only_doc_pages: true
+│ │ +      mkdocsignore: true
+│ │ +      exclude_glob:
+│ │ +        - "**/draft-*.md"
+│ │ +        - "**/preview-*.md"
+│ │ +      include_regex:
+│ │ +        - "tags.md"
+│ │ +      include_tag:
+│ │ +        - released
+│ │ +        - public preview
+│ │ +      exclude_tag:
+│ │ +        - draft
+│ │ +  - mkdocs_exclude_unused_files #after file-filter
+│ │ +    # exclude-unused-files config
+│ │ +```
+│ │ +
+│ │  ## License
+│ │  
+│ │  `mkdocs-file-filter-plugin` is distributed under the terms of the [MIT][mit] license.
+│ │  
+│ │ -[pypi-v-image]: https://img.shields.io/pypi/v/mkdocs-file-filter-plugin.svg
+│ │ -[pypi-v-link]: https://pypi.org/project/mkdocs-file-filter-plugin
+│ │ -[pypi-pyversions-image]: https://img.shields.io/pypi/pyversions/mkdocs-file-filter-plugin.svg
+│ │ +[pypi-version-image]: https://img.shields.io/pypi/v/mkdocs-file-filter-plugin?style=flat-square
+│ │ +[pypi-version-link]: https://pypi.org/project/mkdocs-file-filter-plugin
+│ │ +[pypi-pyversions-image]: https://img.shields.io/pypi/pyversions/mkdocs-file-filter-plugin?style=flat-square
+│ │  [pypi-pyversions-link]: https://pypi.org/project/mkdocs-file-filter-plugin
+│ │ +[pypi-downloads-image]: https://img.shields.io/pypi/dm/mkdocs-file-filter-plugin?style=flat-square
+│ │ +[pypi-downloads-link]: https://pypi.org/project/mkdocs-file-filter-plugin
+│ │ +[github-ci-image]: https://img.shields.io/github/actions/workflow/status/DariuszPorowski/mkdocs-file-filter-plugin/workflow.ci.yml?style=flat-square&branch=main&event=push
+│ │ +[github-ci-link]: https://github.com/DariuszPorowski/mkdocs-file-filter-plugin/actions/workflows/workflow.ci.yml?query=branch%3Amain+event%3Apush
+│ │  [mkdocs-plugins]: http://www.mkdocs.org/user-guide/plugins
+│ │  [mkdocs-envs]: https://www.mkdocs.org/user-guide/configuration/#environment-variables
+│ │  [mkdocs-metadata]: https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data
+│ │  [mkdocs-docs-dir]: https://www.mkdocs.org/user-guide/configuration/#docs_dir
+│ │  [mkdocs-nav]: https://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation
+│ │  [poetry]: https://python-poetry.org
+│ │  [pip]: https://pip.pypa.io
+│ │  [gitignore]: https://git-scm.com/docs/gitignore#_pattern_format
+│ │  [mit]: https://opensource.org/licenses/MIT
+│ │ +[mkdocs-material-link]: https://squidfunk.github.io/mkdocs-material
+│ │  [mkdocs-awesome-pages-plugin-pypi]: https://pypi.org/project/mkdocs-awesome-pages-plugin
+│ │ +[mkdocs-exclude-unused-files-pypi]: https://pypi.org/project/mkdocs-exclude-unused-files
+│ │   --- mkdocs_file_filter_plugin-0.0.6/mkdocs_file_filter_plugin/external_config.py
+│ ├── +++ mkdocs_file_filter_plugin-0.0.7/mkdocs_file_filter_plugin/external_config.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  import os
+│ │  import pathlib
+│ │  
+│ │  import yaml
+│ │  from mkdocs.exceptions import PluginError
+│ │ -from schema import Optional, Schema, SchemaError
+│ │ -from yaml_env_tag import construct_env_tag
+│ │ +from schema import Optional, Schema, SchemaError  # type: ignore
+│ │ +from yaml_env_tag import construct_env_tag  # type: ignore
+│ │  
+│ │  from . import util as LOG
+│ │  
+│ │  
+│ │  class ExternalConfig:
+│ │      def __init__(self):
+│ │          self.config_schema = Schema(
+│ │ @@ -27,17 +27,17 @@
+│ │                  Optional("include_tag"): [str],
+│ │                  Optional("filter_nav"): bool,
+│ │              }
+│ │          )
+│ │  
+│ │      def load(self, config_path):
+│ │          config_path = pathlib.Path(config_path)
+│ │ -        LOG.debug("Loading config file: ", os.path.basename(config_path))
+│ │ +        LOG.debug(f"Loading config file: {str(os.path.basename(config_path))}")
+│ │          yaml.SafeLoader.add_constructor("!ENV", construct_env_tag)
+│ │ -        with open(config_path, encoding="utf-8", mode="r") as f:
+│ │ +        with open(config_path, encoding="utf-8") as f:
+│ │              config = yaml.safe_load(f) or {}
+│ │          self.__validate(config)
+│ │          return config
+│ │  
+│ │      def __validate(self, config):
+│ │          try:
+│ │              self.config_schema.validate(config)
+│ │   --- mkdocs_file_filter_plugin-0.0.6/mkdocs_file_filter_plugin/judger.py
+│ ├── +++ mkdocs_file_filter_plugin-0.0.7/mkdocs_file_filter_plugin/judger.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import fnmatch
+│ │  import os
+│ │  import pathlib
+│ │  import re
+│ │ -from typing import Union
+│ │ +from typing import Optional, Union
+│ │  from urllib.parse import urlsplit
+│ │  
+│ │ -import igittigitt
+│ │ +import igittigitt  # type: ignore
+│ │  from mkdocs.config.defaults import MkDocsConfig
+│ │  from mkdocs.structure.files import File as MkDocsFile
+│ │  from mkdocs.structure.nav import Link as MkDocsLink
+│ │  from mkdocs.structure.nav import Section as MkDocsSection
+│ │  from mkdocs.structure.pages import Page as MkDocsPage
+│ │  
+│ │  from . import util as LOG
+│ │ @@ -21,47 +21,40 @@
+│ │  class Judger:
+│ │      def __init__(self, plugin_config: PluginConfig, mkdocs_config: MkDocsConfig):
+│ │          self.plugin_config = plugin_config
+│ │          self.mkdocs_config = mkdocs_config
+│ │  
+│ │          if self.plugin_config.mkdocsignore:
+│ │              self.mkdocsignore_parser = igittigitt.IgnoreParser()
+│ │ -            self.mkdocsignore_parser.parse_rule_file(
+│ │ -                pathlib.Path(self.plugin_config.mkdocsignore_file)
+│ │ -            )
+│ │ +            self.mkdocsignore_parser.parse_rule_file(pathlib.Path(self.plugin_config.mkdocsignore_file))
+│ │  
+│ │ -    def evaluate_nav(self, nav: NavigationItem) -> NavigationItem:
+│ │ +    def evaluate_nav(self, nav: NavigationItem) -> Optional[NavigationItem]:
+│ │          if isinstance(nav, MkDocsSection):
+│ │              nev_section = [self.evaluate_nav(child) for child in nav.children]
+│ │              nev_section = list(filter(lambda item: item is not None, nev_section))
+│ │              if nev_section != []:
+│ │ -                return MkDocsSection(nav.title, nev_section)
+│ │ +                return MkDocsSection(nav.title, nev_section)  # type: ignore
+│ │              else:
+│ │                  LOG.debug(f"remove navigation section: {nav.title}")
+│ │                  return None
+│ │ -        else:
+│ │ +        elif isinstance(nav, MkDocsLink):
+│ │              scheme, netloc, path, query, fragment = urlsplit(nav.url)
+│ │ -            if (
+│ │ -                isinstance(nav, MkDocsLink)
+│ │ -                and not nav.url.startswith("/")
+│ │ -                and not scheme
+│ │ -                and not netloc
+│ │ -            ):
+│ │ +            if not nav.url.startswith("/") and not scheme and not netloc:
+│ │                  LOG.debug(f"remove navigation link: {nav.title} {nav.url}")
+│ │                  return None
+│ │              else:
+│ │                  return nav
+│ │ +        else:
+│ │ +            return nav
+│ │  
+│ │      def evaluate_file(self, file: MkDocsFile):
+│ │          if self.plugin_config.only_doc_pages and not file.is_documentation_page():
+│ │ -            return True, "omitted - not doc page"
+│ │ +            return True, "skipped - not doc page"
+│ │  
+│ │ -        file.src_path, file.abs_src_path = self.__path_fix(
+│ │ -            file.src_path, file.abs_src_path
+│ │ -        )
+│ │ +        file.src_path, file.abs_src_path = self.__path_fix(file.src_path, file.abs_src_path)
+│ │  
+│ │          for glob in self.plugin_config.include_glob:
+│ │              if fnmatch.fnmatchcase(file.src_path, glob):
+│ │                  return True, str(f"glob: {glob}")
+│ │          for regex in self.plugin_config.include_regex:
+│ │              if re.match(regex, file.src_path):
+│ │                  return True, str(f"regex: {regex}")
+│ │ @@ -85,15 +78,15 @@
+│ │                  if tag in tags:
+│ │                      return (
+│ │                          False,
+│ │                          str(f"{self.plugin_config.metadata_property}: {tag}"),
+│ │                      )
+│ │          if self.plugin_config.mkdocsignore is True:
+│ │              if self.mkdocsignore_parser.match(pathlib.Path(file.abs_src_path)):
+│ │ -                return file, False, "mkdocsignore"
+│ │ +                return False, "mkdocsignore"
+│ │          return True, "no rule"
+│ │  
+│ │      def __path_fix(self, src_path, abs_src_path):
+│ │          if os.sep != "/":
+│ │              src_path = src_path.replace(os.sep, "/")
+│ │              abs_src_path = abs_src_path.replace(os.sep, "/")
+│ │          return src_path, abs_src_path
+│ │   --- mkdocs_file_filter_plugin-0.0.6/mkdocs_file_filter_plugin/plugin.py
+│ ├── +++ mkdocs_file_filter_plugin-0.0.7/mkdocs_file_filter_plugin/plugin.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,12 +1,13 @@
+│ │  import pathlib
+│ │  
+│ │  from mkdocs.config.defaults import MkDocsConfig
+│ │  from mkdocs.exceptions import PluginError as MkDocsPluginError
+│ │  from mkdocs.plugins import BasePlugin as MkDocsPlugin
+│ │ +from mkdocs.plugins import event_priority
+│ │  from mkdocs.structure.files import Files as MkDocsFiles
+│ │  from mkdocs.structure.nav import Navigation as MkDocsNavigation
+│ │  from mkdocs.structure.nav import (
+│ │      _add_parent_links,
+│ │      _add_previous_and_next_links,
+│ │      _get_by_type,
+│ │  )
+│ │ @@ -26,61 +27,57 @@
+│ │          for name, plugin in config.plugins.items():
+│ │              if name == "file-filter":
+│ │                  break
+│ │              if hasattr(plugin, "on_nav"):
+│ │                  LOG.info(
+│ │                      str(
+│ │                          f'The plugin "{name}" might not work correctly when '
+│ │ -                        "placed before file-filter in the list of plugins. "
+│ │ +                        "placed after file-filter in the list of plugins. "
+│ │                          'It defines an "on_nav" handler that will be overridden '
+│ │                          "by file-filter in some circumstances."
+│ │                      )
+│ │                  )
+│ │              if hasattr(plugin, "on_files"):
+│ │                  LOG.info(
+│ │                      str(
+│ │                          f'The plugin "{name}" might not work correctly when '
+│ │ -                        "placed before file-filter in the list of plugins. "
+│ │ +                        "placed after file-filter in the list of plugins. "
+│ │                          'It defines an "on_files" handler that will be overridden '
+│ │                          "by file-filter in some circumstances."
+│ │                      )
+│ │                  )
+│ │  
+│ │          if self.config.config is not None:
+│ │              external_config = ExternalConfig()
+│ │              file_filter_config = external_config.load(self.config.config)
+│ │  
+│ │              for k in self.config.keys():
+│ │                  if k != "config":
+│ │                      self.config[k] = file_filter_config.get(k, self.config[k])
+│ │  
+│ │ -            config.watch.append(pathlib.Path(self.config.config))
+│ │ +            config.watch.append(str(pathlib.Path(self.config.config)))
+│ │  
+│ │          if not self.config.enabled:
+│ │              LOG.debug("plugin disabled")
+│ │              return
+│ │          if not self.config.enabled_on_serve and self.is_serve:
+│ │              LOG.debug("plugin disabled on serve")
+│ │              return
+│ │  
+│ │          if self.config.mkdocsignore is True:
+│ │              if pathlib.Path(self.config.mkdocsignore_file).is_file() is False:
+│ │ -                raise MkDocsPluginError(
+│ │ -                    str(
+│ │ -                        f"The path '{self.config.mkdocsignore_file}' "
+│ │ -                        "isn't an existing file."
+│ │ -                    )
+│ │ -                )
+│ │ -            config.watch.append(pathlib.Path(self.config.mkdocsignore_file))
+│ │ +                raise MkDocsPluginError(str(f"The path '{self.config.mkdocsignore_file}' isn't an existing file."))
+│ │ +            config.watch.append(str(pathlib.Path(self.config.mkdocsignore_file)))
+│ │  
+│ │          for k in self.config.keys():
+│ │              LOG.debug(f"Config value '{k}' = {self.config[k]}")
+│ │  
+│ │          return config
+│ │  
+│ │ +    # @event_priority(-100)
+│ │      def on_files(self, files: MkDocsFiles, config: MkDocsConfig):
+│ │          if not self.config.enabled:
+│ │              return
+│ │          if not self.config.enabled_on_serve and self.is_serve:
+│ │              return
+│ │  
+│ │          judger = Judger(self.config, config)
+│ │ @@ -91,14 +88,15 @@
+│ │                  LOG.debug(f"include file: {file.src_path} (because {reason})")
+│ │                  files_new.append(file)
+│ │              else:
+│ │                  LOG.debug(f"exclude file: {file.src_path} (because {reason})")
+│ │  
+│ │          return MkDocsFiles(files_new)
+│ │  
+│ │ +    @event_priority(-100)
+│ │      def on_nav(self, nav: MkDocsNavigation, config: MkDocsConfig, files: MkDocsFiles):
+│ │          if not self.config.enabled:
+│ │              return
+│ │          if not self.config.enabled_on_serve and self.is_serve:
+│ │              return
+│ │          if not self.config.filter_nav:
+│ │              return
+│ │   --- mkdocs_file_filter_plugin-0.0.6/mkdocs_file_filter_plugin/plugin_config.py
+│ ├── +++ mkdocs_file_filter_plugin-0.0.7/mkdocs_file_filter_plugin/plugin_config.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -12,10 +12,8 @@
+│ │      include_glob = MkDocsConfigOptions.Type(list, default=[])
+│ │      include_regex = MkDocsConfigOptions.Type(list, default=[])
+│ │      include_tag = MkDocsConfigOptions.Type(list, default=[])
+│ │      filter_nav = MkDocsConfigOptions.Type(bool, default=True)
+│ │      metadata_property = MkDocsConfigOptions.Type(str, default="tags")
+│ │      mkdocsignore = MkDocsConfigOptions.Type(bool, default=False)
+│ │      mkdocsignore_file = MkDocsConfigOptions.File(exists=False, default=".mkdocsignore")
+│ │ -    config = MkDocsConfigOptions.Optional(
+│ │ -        MkDocsConfigOptions.File(exists=True, default=None)
+│ │ -    )
+│ │ +    config = MkDocsConfigOptions.Optional(MkDocsConfigOptions.File(exists=True, default=None))
+│ │   --- mkdocs_file_filter_plugin-0.0.6/mkdocs_file_filter_plugin/util.py
+│ ├── +++ mkdocs_file_filter_plugin-0.0.7/mkdocs_file_filter_plugin/util.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -11,15 +11,15 @@
+│ │  
+│ │  PLUGIN_LABEL = "FILE-FILTER"
+│ │  
+│ │  
+│ │  def _format_trace(*args):
+│ │      first = args[0]
+│ │      rest = [str(el) for el in args[1:]]
+│ │ -    text = "[%s] %s" % (PLUGIN_LABEL, first)
+│ │ +    text = f"[{PLUGIN_LABEL}] {first}"
+│ │      return " ".join([text] + rest)
+│ │  
+│ │  
+│ │  def info(*args):
+│ │      """
+│ │      General purpose print function, as trace,
+│ │      for the mkdocs-macros framework;
+│ │   --- mkdocs_file_filter_plugin-0.0.6/PKG-INFO
+│ ├── +++ mkdocs_file_filter_plugin-0.0.7/PKG-INFO
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,15 +1,16 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mkdocs-file-filter-plugin
+│ │ -Version: 0.0.6
+│ │ +Version: 0.0.7
+│ │  Summary: A MkDocs plugin that lets you exclude/include docs files using globs, regexes, gitignore-style file and Markdown/Frontmatter tags metadata.
+│ │  Home-page: https://github.com/DariuszPorowski/mkdocs-file-filter-plugin
+│ │  License: MIT
+│ │  Keywords: mkdocs,plugin,exclude,include,glob,regex,gitignore,markdown,frontmatter,metadata,tags
+│ │  Author: Dariusz Porowski
+│ │ +Author-email: 3431813+dariuszporowski@users.noreply.github.com
+│ │  Requires-Python: >=3.8.1,<4.0
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Intended Audience :: Information Technology
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python
+│ │ @@ -21,28 +22,30 @@
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Topic :: Documentation
+│ │  Requires-Dist: igittigitt (>=2.1.2,<3.0.0)
+│ │ -Requires-Dist: mkdocs (>=1.4.0,<2.0.0)
+│ │ +Requires-Dist: mkdocs (>=1.4.2,<2.0.0)
+│ │  Requires-Dist: pyyaml (>=6.0,<7.0)
+│ │  Requires-Dist: pyyaml-env-tag (>=0.1,<0.2)
+│ │  Requires-Dist: schema (>=0.7.5,<0.8.0)
+│ │  Project-URL: Documentation, https://github.com/DariuszPorowski/mkdocs-file-filter-plugin/blob/main/README.md
+│ │  Project-URL: History, https://github.com/DariuszPorowski/mkdocs-file-filter-plugin/releases
+│ │  Project-URL: Issues, https://github.com/DariuszPorowski/mkdocs-file-filter-plugin/issues
+│ │  Project-URL: Repository, https://github.com/DariuszPorowski/mkdocs-file-filter-plugin
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  # MkDocs File Filter Plugin
+│ │  
+│ │ -[![PyPI - Version][pypi-v-image]][pypi-v-link]
+│ │ -[![PyPI - Python Version][pypi-pyversions-image]][pypi-pyversions-link]
+│ │ +[![PyPI - version][pypi-version-image]][pypi-version-link]
+│ │ +[![PyPI - python version][pypi-pyversions-image]][pypi-pyversions-link]
+│ │ +[![PyPI - python version][pypi-downloads-image]][pypi-downloads-link]
+│ │ +[![GitHub - ci][github-ci-image]][github-ci-link]
+│ │  
+│ │  > :exclamation: **This plugin is under early Alpha stage.** Significant changes may occur. It may not yet be fully compatible with other MkDocs configurations and thus may break with some advanced configs. Once these have been resolved and all bugs have been ironed out, it will be moved to an upper stage.
+│ │  
+│ │  ---
+│ │  
+│ │  `mkdocs-file-filter-plugin` is a [mkdocs plugin][mkdocs-plugins] that allows you to exclude/include files using Unix-style wildcards (`globs`), regular expressions (`regexes`), `.mkdocsignore` ([gitignore-style][gitignore] file) or Markdown/FrontMatter `tags` metadata.
+│ │  
+│ │ @@ -59,14 +62,15 @@
+│ │    - [Tags](#tags)
+│ │      - [Tags metadata property](#tags-metadata-property)
+│ │      - [Custom metadata list](#custom-metadata-list)
+│ │    - [.mkdocsignore](#mkdocsignore)
+│ │    - [Navigation filtering](#navigation-filtering)
+│ │    - [Filter only documentation pages](#filter-only-documentation-pages)
+│ │    - [Conflict behavior](#conflict-behavior)
+│ │ +- [3rd party plugins compatibility](#3rd-party-plugins-compatibility)
+│ │  - [License](#license)
+│ │  
+│ │  ## Installation
+│ │  
+│ │  This package requires Python >=3.8 and MkDocs version 1.4.0 or higher.
+│ │  
+│ │  ### pip
+│ │ @@ -77,15 +81,15 @@
+│ │  pip install mkdocs-file-filter-plugin
+│ │  ```
+│ │  
+│ │  Or include it in a `requirements.txt` file in your project:
+│ │  
+│ │  ```python
+│ │  mkdocs==1.4.*
+│ │ -mkdocs-file-filter-plugin==0.0.*
+│ │ +mkdocs-file-filter-plugin
+│ │  ```
+│ │  
+│ │  and run
+│ │  
+│ │  ```console
+│ │  pip install -r requirements.txt
+│ │  ```
+│ │ @@ -475,26 +479,64 @@
+│ │  
+│ │  **RESULT:** Include only markdown files with the meta-data tag `released` and all theme and other files under the docs folder like images, etc.
+│ │  
+│ │  ### Conflict behavior
+│ │  
+│ │  It is possible to exclude and include will have conflict. For example, you could exclude `drafts/**` but include `*.md`. In that case, **include** has higher priority over exclude. So all `*.md` files from the drafts folder will be **included**.
+│ │  
+│ │ +## 3rd party plugins compatibility
+│ │ +
+│ │ +This plugin has been tested with [Material for MkDocs][mkdocs-material-link] theme, and two 3rd party plugins that nicely complement each other.
+│ │ +
+│ │ +- [mkdocs-awesome-pages-plugin][mkdocs-awesome-pages-plugin-pypi] plugin allows you to customize how your pages show up in the navigation of your MkDocs without having to configure the entire structure in your `mkdocs.yml`
+│ │ +- [mkdocs-exclude-unused-files][mkdocs-exclude-unused-files-pypi] cleans up mkdocs output from files that are not referenced in pages (useful to have the smaller artifact and not exposing not attached files after filtration with the file-filter).
+│ │ +
+│ │ +Example `mkdocs.yml` config with the proper order of plugins.
+│ │ +
+│ │ +```yaml
+│ │ +# mkdocs.yml
+│ │ +plugins:
+│ │ +  - search
+│ │ +  - awesome-pages #before file-filter
+│ │ +    # awesome-pages config
+│ │ +  - file-filter:
+│ │ +      only_doc_pages: true
+│ │ +      mkdocsignore: true
+│ │ +      exclude_glob:
+│ │ +        - "**/draft-*.md"
+│ │ +        - "**/preview-*.md"
+│ │ +      include_regex:
+│ │ +        - "tags.md"
+│ │ +      include_tag:
+│ │ +        - released
+│ │ +        - public preview
+│ │ +      exclude_tag:
+│ │ +        - draft
+│ │ +  - mkdocs_exclude_unused_files #after file-filter
+│ │ +    # exclude-unused-files config
+│ │ +```
+│ │ +
+│ │  ## License
+│ │  
+│ │  `mkdocs-file-filter-plugin` is distributed under the terms of the [MIT][mit] license.
+│ │  
+│ │ -[pypi-v-image]: https://img.shields.io/pypi/v/mkdocs-file-filter-plugin.svg
+│ │ -[pypi-v-link]: https://pypi.org/project/mkdocs-file-filter-plugin
+│ │ -[pypi-pyversions-image]: https://img.shields.io/pypi/pyversions/mkdocs-file-filter-plugin.svg
+│ │ +[pypi-version-image]: https://img.shields.io/pypi/v/mkdocs-file-filter-plugin?style=flat-square
+│ │ +[pypi-version-link]: https://pypi.org/project/mkdocs-file-filter-plugin
+│ │ +[pypi-pyversions-image]: https://img.shields.io/pypi/pyversions/mkdocs-file-filter-plugin?style=flat-square
+│ │  [pypi-pyversions-link]: https://pypi.org/project/mkdocs-file-filter-plugin
+│ │ +[pypi-downloads-image]: https://img.shields.io/pypi/dm/mkdocs-file-filter-plugin?style=flat-square
+│ │ +[pypi-downloads-link]: https://pypi.org/project/mkdocs-file-filter-plugin
+│ │ +[github-ci-image]: https://img.shields.io/github/actions/workflow/status/DariuszPorowski/mkdocs-file-filter-plugin/workflow.ci.yml?style=flat-square&branch=main&event=push
+│ │ +[github-ci-link]: https://github.com/DariuszPorowski/mkdocs-file-filter-plugin/actions/workflows/workflow.ci.yml?query=branch%3Amain+event%3Apush
+│ │  [mkdocs-plugins]: http://www.mkdocs.org/user-guide/plugins
+│ │  [mkdocs-envs]: https://www.mkdocs.org/user-guide/configuration/#environment-variables
+│ │  [mkdocs-metadata]: https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data
+│ │  [mkdocs-docs-dir]: https://www.mkdocs.org/user-guide/configuration/#docs_dir
+│ │  [mkdocs-nav]: https://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation
+│ │  [poetry]: https://python-poetry.org
+│ │  [pip]: https://pip.pypa.io
+│ │  [gitignore]: https://git-scm.com/docs/gitignore#_pattern_format
+│ │  [mit]: https://opensource.org/licenses/MIT
+│ │ +[mkdocs-material-link]: https://squidfunk.github.io/mkdocs-material
+│ │  [mkdocs-awesome-pages-plugin-pypi]: https://pypi.org/project/mkdocs-awesome-pages-plugin
+│ │ +[mkdocs-exclude-unused-files-pypi]: https://pypi.org/project/mkdocs-exclude-unused-files
