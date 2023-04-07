@@ -1,0 +1,493 @@
+--- tmp/kiwitcms-github-marketplace-2.1.0.tar.gz
++++ tmp/kiwitcms-github-marketplace-2.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "kiwitcms-github-marketplace-2.1.0.tar", last modified: Mon Aug 15 19:04:03 2022, max compression
+│ +gzip compressed data, was "kiwitcms-github-marketplace-2.2.0.tar", last modified: Fri Apr  7 13:09:00 2023, max compression
+│   --- kiwitcms-github-marketplace-2.1.0.tar
+├── +++ kiwitcms-github-marketplace-2.2.0.tar
+│ ├── file list
+│ │ @@ -1,56 +1,56 @@
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.830901 kiwitcms-github-marketplace-2.1.0/
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)    35149 2021-04-27 19:25:31.000000 kiwitcms-github-marketplace-2.1.0/LICENSE
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      208 2022-02-23 19:15:12.000000 kiwitcms-github-marketplace-2.1.0/MANIFEST.in
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)    10159 2022-08-15 19:04:03.831901 kiwitcms-github-marketplace-2.1.0/PKG-INFO
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)     9410 2022-08-15 19:03:32.000000 kiwitcms-github-marketplace-2.1.0/README.rst
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.827901 kiwitcms-github-marketplace-2.1.0/kiwitcms_github_marketplace.egg-info/
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)    10159 2022-08-15 19:04:03.000000 kiwitcms-github-marketplace-2.1.0/kiwitcms_github_marketplace.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)     1774 2022-08-15 19:04:03.000000 kiwitcms-github-marketplace-2.1.0/kiwitcms_github_marketplace.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)        1 2022-08-15 19:04:03.000000 kiwitcms-github-marketplace-2.1.0/kiwitcms_github_marketplace.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)       64 2022-08-15 19:04:03.000000 kiwitcms-github-marketplace-2.1.0/kiwitcms_github_marketplace.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)        1 2022-08-15 19:04:03.000000 kiwitcms-github-marketplace-2.1.0/kiwitcms_github_marketplace.egg-info/not-zip-safe
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)       58 2022-08-15 19:04:03.000000 kiwitcms-github-marketplace-2.1.0/kiwitcms_github_marketplace.egg-info/requires.txt
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)       42 2022-08-15 19:04:03.000000 kiwitcms-github-marketplace-2.1.0/kiwitcms_github_marketplace.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)       58 2022-06-30 10:37:24.000000 kiwitcms-github-marketplace-2.1.0/requirements.txt
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      129 2022-08-15 19:04:03.831901 kiwitcms-github-marketplace-2.1.0/setup.cfg
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)     1684 2022-08-15 19:03:32.000000 kiwitcms-github-marketplace-2.1.0/setup.py
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.828901 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)        0 2021-04-27 19:25:31.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/__init__.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)     1720 2022-08-15 18:33:00.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/admin.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      321 2022-02-20 13:20:22.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/apps.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      553 2022-02-20 13:20:22.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/checks.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)     2613 2022-02-16 15:05:52.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/docker.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      879 2022-02-21 15:47:58.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/mailchimp.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      374 2022-02-09 11:11:58.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/menu.py
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.829901 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/migrations/
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)     1532 2022-06-30 10:13:34.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/migrations/0001_initial.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      966 2022-02-09 11:11:58.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/migrations/0002_update_fields.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      416 2022-02-09 11:11:58.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/migrations/0003_sender_email_field.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      392 2022-02-09 11:11:58.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/migrations/0004_models_jsonfield.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      614 2022-02-21 12:55:39.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/migrations/0005_add_support_and_tenant_flags.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)     1040 2022-08-15 18:33:00.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/migrations/0006_add_subscription_field.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)        0 2021-04-27 19:25:31.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/migrations/__init__.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)     1380 2022-08-15 18:33:00.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/models.py
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.829901 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/quay/
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)       57 2022-02-09 14:16:51.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/quay/__init__.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)     2353 2022-02-09 21:44:26.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/quay/quay_api_client.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)     4687 2022-02-09 14:16:51.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/quay/quay_session.py
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.825901 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/static/
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.825901 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/static/tcms_github_marketplace/
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.830901 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/static/tcms_github_marketplace/js/
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      924 2022-02-16 15:05:52.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/static/tcms_github_marketplace/js/subscription.js
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.825901 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/templates/
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.830901 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/templates/tcms_github_marketplace/
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.830901 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/templates/tcms_github_marketplace/email/
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      270 2022-08-14 14:51:18.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/templates/tcms_github_marketplace/email/exit_poll.txt
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)    11048 2022-08-04 08:25:18.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/templates/tcms_github_marketplace/subscription.html
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.830901 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/templates/tcms_tenants/
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)     2562 2021-06-10 13:43:41.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/templates/tcms_tenants/override_new.html
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.830901 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/templatetags/
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)        0 2021-04-27 19:25:31.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/templatetags/__init__.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      373 2021-04-27 19:25:31.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/templatetags/github_marketplace.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)      804 2022-02-09 11:11:58.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/urls.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)     5542 2022-08-14 14:51:18.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/utils.py
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)    17601 2022-08-15 18:33:00.000000 kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/views.py
+│ │ -drwxrwxr-x   0 senko     (1001) senko     (1001)        0 2022-08-15 19:04:03.830901 kiwitcms-github-marketplace-2.1.0/tcms_settings_dir/
+│ │ --rw-rw-r--   0 senko     (1001) senko     (1001)       65 2022-02-09 11:11:58.000000 kiwitcms-github-marketplace-2.1.0/tcms_settings_dir/__init__.py
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.603509 kiwitcms-github-marketplace-2.2.0/
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)    35149 2021-04-27 19:25:31.000000 kiwitcms-github-marketplace-2.2.0/LICENSE
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)      208 2022-02-23 19:15:12.000000 kiwitcms-github-marketplace-2.2.0/MANIFEST.in
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)    10477 2023-04-07 13:09:00.603509 kiwitcms-github-marketplace-2.2.0/PKG-INFO
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)     9708 2023-04-07 13:08:15.000000 kiwitcms-github-marketplace-2.2.0/README.rst
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.601508 kiwitcms-github-marketplace-2.2.0/kiwitcms_github_marketplace.egg-info/
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)    10477 2023-04-07 13:09:00.000000 kiwitcms-github-marketplace-2.2.0/kiwitcms_github_marketplace.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)     1774 2023-04-07 13:09:00.000000 kiwitcms-github-marketplace-2.2.0/kiwitcms_github_marketplace.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)        1 2023-04-07 13:09:00.000000 kiwitcms-github-marketplace-2.2.0/kiwitcms_github_marketplace.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)       65 2023-04-07 13:09:00.000000 kiwitcms-github-marketplace-2.2.0/kiwitcms_github_marketplace.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)        1 2023-04-07 13:09:00.000000 kiwitcms-github-marketplace-2.2.0/kiwitcms_github_marketplace.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)       58 2023-04-07 13:09:00.000000 kiwitcms-github-marketplace-2.2.0/kiwitcms_github_marketplace.egg-info/requires.txt
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)       42 2023-04-07 13:09:00.000000 kiwitcms-github-marketplace-2.2.0/kiwitcms_github_marketplace.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)       58 2023-04-07 09:54:47.000000 kiwitcms-github-marketplace-2.2.0/requirements.txt
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)      129 2023-04-07 13:09:00.604508 kiwitcms-github-marketplace-2.2.0/setup.cfg
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)     1684 2023-04-07 13:08:15.000000 kiwitcms-github-marketplace-2.2.0/setup.py
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.602508 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)        0 2021-04-27 19:25:31.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/__init__.py
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)     1720 2022-08-15 18:33:00.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/admin.py
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)      321 2022-02-20 13:20:22.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/apps.py
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)      553 2022-02-20 13:20:22.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/checks.py
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)     2613 2022-02-16 15:05:52.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/docker.py
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)      879 2022-02-21 15:47:58.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/mailchimp.py
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)      374 2022-02-09 11:11:58.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/menu.py
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.602508 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/migrations/
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)     1532 2022-06-30 10:13:34.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/migrations/0001_initial.py
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)      965 2023-04-07 11:54:56.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/migrations/0002_update_fields.py
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)      415 2023-04-07 11:54:56.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/migrations/0003_sender_email_field.py
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)      391 2023-04-07 11:54:56.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/migrations/0004_models_jsonfield.py
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)      613 2023-04-07 11:54:56.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/migrations/0005_add_support_and_tenant_flags.py
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)     1039 2023-04-07 11:54:56.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/migrations/0006_add_subscription_field.py
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)        0 2021-04-27 19:25:31.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/migrations/__init__.py
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)     1380 2022-08-15 18:33:00.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/models.py
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.603509 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/quay/
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)       57 2022-02-09 14:16:51.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/quay/__init__.py
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)     2353 2022-02-09 21:44:26.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/quay/quay_api_client.py
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)     4687 2022-02-09 14:16:51.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/quay/quay_session.py
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.599508 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/static/
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.599508 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/static/tcms_github_marketplace/
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.603509 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/static/tcms_github_marketplace/js/
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)      924 2022-02-16 15:05:52.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/static/tcms_github_marketplace/js/subscription.js
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.599508 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/templates/
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.603509 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/templates/tcms_github_marketplace/
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.603509 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/templates/tcms_github_marketplace/email/
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)      270 2022-08-14 14:51:18.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/templates/tcms_github_marketplace/email/exit_poll.txt
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)    11048 2022-08-04 08:25:18.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/templates/tcms_github_marketplace/subscription.html
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.603509 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/templates/tcms_tenants/
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)     2562 2021-06-10 13:43:41.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/templates/tcms_tenants/override_new.html
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.603509 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/templatetags/
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)        0 2021-04-27 19:25:31.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/templatetags/__init__.py
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)      373 2021-04-27 19:25:31.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/templatetags/github_marketplace.py
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)      804 2022-02-09 11:11:58.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/urls.py
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)     5552 2023-04-07 11:55:11.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/utils.py
+│ │ +-rw-r--r--   0 senko     (1001) senko     (1001)    17627 2023-04-07 12:39:37.000000 kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/views.py
+│ │ +drwxr-xr-x   0 senko     (1001) senko     (1001)        0 2023-04-07 13:09:00.603509 kiwitcms-github-marketplace-2.2.0/tcms_settings_dir/
+│ │ +-rw-rw-r--   0 senko     (1001) senko     (1001)       65 2022-02-09 11:11:58.000000 kiwitcms-github-marketplace-2.2.0/tcms_settings_dir/__init__.py
+│ │   --- kiwitcms-github-marketplace-2.1.0/LICENSE
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/PKG-INFO
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/PKG-INFO
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,15 +1,16 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: kiwitcms-github-marketplace
+│ │ -Version: 2.1.0
+│ │ +Version: 2.2.0
+│ │  Summary: GitHub Marketplace integration for Kiwi TCMS
+│ │  Home-page: https://github.com/kiwitcms/github-marketplace/
+│ │  Author: Kiwi TCMS
+│ │  Author-email: info@kiwitcms.org
+│ │  License: GPLv3+
+│ │ +Platform: UNKNOWN
+│ │  Classifier: Framework :: Django
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Topic :: Software Development :: Quality Assurance
+│ │  Classifier: Topic :: Software Development :: Testing
+│ │  Classifier: Environment :: Web Environment
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+│ │ @@ -78,15 +79,26 @@
+│ │    to private docker repositories. Format is
+│ │    ``Docker repositories: quay.io/kiwitcms/<repo1>, quay.io/kiwitcms/<repo2>``
+│ │  
+│ │  
+│ │  Changelog
+│ │  ---------
+│ │  
+│ │ -v2.1.0 154 Aug 2022)
+│ │ +v2.2.0 (07 Apr 2023)
+│ │ +~~~~~~~~~~~~~~~~~~~~
+│ │ +
+│ │ +- Fix fallback typo for FastSpring SKUs
+│ │ +- Adjust the fallback match string for Kiwi TCMS Enterprise on FastSpring
+│ │ +- Update requests from 2.28.1 to 2.28.2
+│ │ +- Adjust callbacks for newer PyGithub
+│ │ +- Reformat files with Black
+│ │ +- Don't raise general exceptions
+│ │ +
+│ │ +
+│ │ +v2.1.0 (15 Aug 2022)
+│ │  ~~~~~~~~~~~~~~~~~~~~
+│ │  
+│ │  - Send an exit poll after a subscription has been cancelled
+│ │  - Add filters to Purchase admin page
+│ │  - Match username with email address for GitHub hooks too
+│ │  - Add Purchase.subscription field
+│ │  - Record subscription ID and search FastSpring tenants across
+│ │ @@ -354,7 +366,9 @@
+│ │  - Handle GitHub hook pings
+│ │  
+│ │  
+│ │  v0.1.0 (24 April 2019) - initial release
+│ │  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+│ │  
+│ │  - Free plan purchases from Marketplace redirect to Public Tenant
+│ │ +
+│ │ +
+│ │   --- kiwitcms-github-marketplace-2.1.0/README.rst
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/README.rst
+│ │┄ Files 1% similar despite different names
+│ │ @@ -59,15 +59,26 @@
+│ │    to private docker repositories. Format is
+│ │    ``Docker repositories: quay.io/kiwitcms/<repo1>, quay.io/kiwitcms/<repo2>``
+│ │  
+│ │  
+│ │  Changelog
+│ │  ---------
+│ │  
+│ │ -v2.1.0 154 Aug 2022)
+│ │ +v2.2.0 (07 Apr 2023)
+│ │ +~~~~~~~~~~~~~~~~~~~~
+│ │ +
+│ │ +- Fix fallback typo for FastSpring SKUs
+│ │ +- Adjust the fallback match string for Kiwi TCMS Enterprise on FastSpring
+│ │ +- Update requests from 2.28.1 to 2.28.2
+│ │ +- Adjust callbacks for newer PyGithub
+│ │ +- Reformat files with Black
+│ │ +- Don't raise general exceptions
+│ │ +
+│ │ +
+│ │ +v2.1.0 (15 Aug 2022)
+│ │  ~~~~~~~~~~~~~~~~~~~~
+│ │  
+│ │  - Send an exit poll after a subscription has been cancelled
+│ │  - Add filters to Purchase admin page
+│ │  - Match username with email address for GitHub hooks too
+│ │  - Add Purchase.subscription field
+│ │  - Record subscription ID and search FastSpring tenants across
+│ │   --- kiwitcms-github-marketplace-2.1.0/kiwitcms_github_marketplace.egg-info/PKG-INFO
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/kiwitcms_github_marketplace.egg-info/PKG-INFO
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,15 +1,16 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: kiwitcms-github-marketplace
+│ │ -Version: 2.1.0
+│ │ +Version: 2.2.0
+│ │  Summary: GitHub Marketplace integration for Kiwi TCMS
+│ │  Home-page: https://github.com/kiwitcms/github-marketplace/
+│ │  Author: Kiwi TCMS
+│ │  Author-email: info@kiwitcms.org
+│ │  License: GPLv3+
+│ │ +Platform: UNKNOWN
+│ │  Classifier: Framework :: Django
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Topic :: Software Development :: Quality Assurance
+│ │  Classifier: Topic :: Software Development :: Testing
+│ │  Classifier: Environment :: Web Environment
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+│ │ @@ -78,15 +79,26 @@
+│ │    to private docker repositories. Format is
+│ │    ``Docker repositories: quay.io/kiwitcms/<repo1>, quay.io/kiwitcms/<repo2>``
+│ │  
+│ │  
+│ │  Changelog
+│ │  ---------
+│ │  
+│ │ -v2.1.0 154 Aug 2022)
+│ │ +v2.2.0 (07 Apr 2023)
+│ │ +~~~~~~~~~~~~~~~~~~~~
+│ │ +
+│ │ +- Fix fallback typo for FastSpring SKUs
+│ │ +- Adjust the fallback match string for Kiwi TCMS Enterprise on FastSpring
+│ │ +- Update requests from 2.28.1 to 2.28.2
+│ │ +- Adjust callbacks for newer PyGithub
+│ │ +- Reformat files with Black
+│ │ +- Don't raise general exceptions
+│ │ +
+│ │ +
+│ │ +v2.1.0 (15 Aug 2022)
+│ │  ~~~~~~~~~~~~~~~~~~~~
+│ │  
+│ │  - Send an exit poll after a subscription has been cancelled
+│ │  - Add filters to Purchase admin page
+│ │  - Match username with email address for GitHub hooks too
+│ │  - Add Purchase.subscription field
+│ │  - Record subscription ID and search FastSpring tenants across
+│ │ @@ -354,7 +366,9 @@
+│ │  - Handle GitHub hook pings
+│ │  
+│ │  
+│ │  v0.1.0 (24 April 2019) - initial release
+│ │  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+│ │  
+│ │  - Free plan purchases from Marketplace redirect to Public Tenant
+│ │ +
+│ │ +
+│ │   --- kiwitcms-github-marketplace-2.1.0/kiwitcms_github_marketplace.egg-info/SOURCES.txt
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/kiwitcms_github_marketplace.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/setup.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -21,15 +21,15 @@
+│ │                  continue
+│ │              requires.append(line.strip())
+│ │          return requires
+│ │  
+│ │  
+│ │  setup(
+│ │      name="kiwitcms-github-marketplace",
+│ │ -    version="2.1.0",
+│ │ +    version="2.2.0",
+│ │      description="GitHub Marketplace integration for Kiwi TCMS",
+│ │      long_description=get_long_description(),
+│ │      author="Kiwi TCMS",
+│ │      author_email="info@kiwitcms.org",
+│ │      url="https://github.com/kiwitcms/github-marketplace/",
+│ │      license="GPLv3+",
+│ │      install_requires=get_install_requires("requirements.txt"),
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/admin.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/admin.py
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/checks.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/checks.py
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/docker.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/docker.py
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/mailchimp.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/mailchimp.py
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/migrations/0001_initial.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/migrations/0001_initial.py
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/migrations/0002_update_fields.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/migrations/0002_update_fields.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,15 +1,14 @@
+│ │  # Generated by Django 2.2.1 on 2019-05-05 07:59
+│ │  
+│ │  from django.contrib.postgres.indexes import GinIndex
+│ │  from django.db import migrations, models
+│ │  
+│ │  
+│ │  class Migration(migrations.Migration):
+│ │ -
+│ │      dependencies = [
+│ │          ("tcms_github_marketplace", "0001_initial"),
+│ │      ]
+│ │  
+│ │      operations = [
+│ │          migrations.RemoveIndex(
+│ │              model_name="purchase",
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/migrations/0005_add_support_and_tenant_flags.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/migrations/0005_add_support_and_tenant_flags.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,14 +1,13 @@
+│ │  # Generated by Django 4.0.2 on 2022-02-20 13:42
+│ │  
+│ │  from django.db import migrations, models
+│ │  
+│ │  
+│ │  class Migration(migrations.Migration):
+│ │ -
+│ │      dependencies = [
+│ │          ("tcms_github_marketplace", "0004_models_jsonfield"),
+│ │      ]
+│ │  
+│ │      operations = [
+│ │          migrations.AddField(
+│ │              model_name="purchase",
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/migrations/0006_add_subscription_field.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/migrations/0006_add_subscription_field.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -13,15 +13,14 @@
+│ │                  subscription = subscription["id"]
+│ │  
+│ │              purchase.subscription = subscription
+│ │              purchase.save()
+│ │  
+│ │  
+│ │  class Migration(migrations.Migration):
+│ │ -
+│ │      dependencies = [
+│ │          ("tcms_github_marketplace", "0005_add_support_and_tenant_flags"),
+│ │      ]
+│ │  
+│ │      operations = [
+│ │          migrations.AddField(
+│ │              model_name="purchase",
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/models.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/models.py
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/quay/quay_api_client.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/quay/quay_api_client.py
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/quay/quay_session.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/quay/quay_session.py
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/static/tcms_github_marketplace/js/subscription.js
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/static/tcms_github_marketplace/js/subscription.js
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/templates/tcms_github_marketplace/subscription.html
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/templates/tcms_github_marketplace/subscription.html
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/templates/tcms_tenants/override_new.html
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/templates/tcms_tenants/override_new.html
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/urls.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/urls.py
+│ │┄ Files identical despite different names
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/utils.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/utils.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,19 +1,18 @@
+│ │ -# Copyright (c) 2019-2022 Alexander Todorov <atodorov@MrSenko.com>
+│ │ +# Copyright (c) 2019-2023 Alexander Todorov <atodorov@MrSenko.com>
+│ │  
+│ │  # Licensed under the GPL 3.0: https://www.gnu.org/licenses/gpl-3.0.txt
+│ │  
+│ │  import hmac
+│ │  import hashlib
+│ │  from base64 import b64encode
+│ │  from datetime import timedelta
+│ │  
+│ │ -from github import MainClass
+│ │ +import github
+│ │  from github.Requester import Requester
+│ │ -
+│ │  from social_django.models import UserSocialAuth
+│ │  
+│ │  from django.conf import settings
+│ │  from django.contrib.auth import get_user_model
+│ │  from django.http import HttpResponse, HttpResponseForbidden
+│ │  from django.utils.translation import gettext_lazy as _
+│ │  
+│ │ @@ -57,18 +56,19 @@
+│ │      # note2: GitHub documentation says that for this method we must
+│ │      # use Basic Authentication, where the username is the OAuth application
+│ │      # client_id and the password is its client_secret.
+│ │      gh_api = Requester(
+│ │          settings.SOCIAL_AUTH_GITHUB_KEY,
+│ │          settings.SOCIAL_AUTH_GITHUB_SECRET,
+│ │          None,
+│ │ -        MainClass.DEFAULT_BASE_URL,
+│ │ -        MainClass.DEFAULT_TIMEOUT,
+│ │ +        None,
+│ │ +        github.Consts.DEFAULT_BASE_URL,
+│ │ +        github.Consts.DEFAULT_TIMEOUT,
+│ │          "KiwiTCMS/Python",
+│ │ -        MainClass.DEFAULT_PER_PAGE,
+│ │ +        github.Consts.DEFAULT_PER_PAGE,
+│ │          True,
+│ │          None,
+│ │          None,
+│ │      )
+│ │  
+│ │      revoke_url = f"/applications/{settings.SOCIAL_AUTH_GITHUB_KEY}/tokens/{token}"
+│ │      _headers, _data = gh_api.requestJsonAndCheck("DELETE", revoke_url)
+│ │   --- kiwitcms-github-marketplace-2.1.0/tcms_github_marketplace/views.py
+│ ├── +++ kiwitcms-github-marketplace-2.2.0/tcms_github_marketplace/views.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  # pylint: disable=missing-permission-required, no-self-use
+│ │  #
+│ │ -# Copyright (c) 2019-2022 Alexander Todorov <atodorov@MrSenko.com>
+│ │ +# Copyright (c) 2019-2023 Alexander Todorov <atodorov@MrSenko.com>
+│ │  #
+│ │  # Licensed under the GPL 3.0: https://www.gnu.org/licenses/gpl-3.0.txt
+│ │  
+│ │  import json
+│ │  from datetime import datetime
+│ │  
+│ │  from django.db.models import Q
+│ │ @@ -139,18 +139,18 @@
+│ │          and "sku" in event["data"]["subscription"]
+│ │          and event["data"]["subscription"]["sku"]
+│ │      ):
+│ │          return event["data"]["subscription"]["sku"]
+│ │  
+│ │      sku = ""
+│ │      if "kiwitcms-private-tenant" in json.dumps(event):
+│ │ -        sku += "x-tenant+version"
+│ │ +        sku = "x-tenant+version"
+│ │  
+│ │ -    if "kiwitcms-enterprise-subscription" in json.dumps(event):
+│ │ -        sku += "x-tenant+version+enterprise"
+│ │ +    if "kiwitcms-enterprise" in json.dumps(event):
+│ │ +        sku = "x-tenant+version+enterprise"
+│ │  
+│ │      return sku
+│ │  
+│ │  
+│ │  def find_subscription_for_fastspring(event):
+│ │      subscription = None
+│ │  
+│ │ @@ -213,15 +213,17 @@
+│ │                      "subtotalInPayoutCurrency"
+│ │                  ]
+│ │              elif "subtotalInPayoutCurrency" in event["data"]["order"]:
+│ │                  sub_total_in_payout_currency = event["data"]["order"][
+│ │                      "subtotalInPayoutCurrency"
+│ │                  ]
+│ │              else:
+│ │ -                raise Exception("subtotalInPayoutCurrency not found in FastSpring data")
+│ │ +                raise RuntimeError(
+│ │ +                    "subtotalInPayoutCurrency not found in FastSpring data"
+│ │ +                )
+│ │  
+│ │              event["marketplace_purchase"] = {
+│ │                  "billing_cycle": "monthly",
+│ │                  "plan": {
+│ │                      "monthly_price_in_cents": sub_total_in_payout_currency * 100,
+│ │                  },
+│ │                  "account": {

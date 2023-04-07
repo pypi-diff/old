@@ -1,0 +1,1676 @@
+--- tmp/chemivec-0.1.0.tar.gz
++++ tmp/chemivec-0.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "chemivec-0.1.0.tar", last modified: Sat Mar 18 16:09:39 2023, max compression
+│ +gzip compressed data, was "chemivec-0.1.1.tar", last modified: Wed Nov  9 12:37:21 2022, max compression
+│   --- chemivec-0.1.0.tar
+├── +++ chemivec-0.1.1.tar
+│ ├── file list
+│ │ @@ -1,54 +1,19 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.929813 chemivec-0.1.0/
+│ │ --rw-rw-rw-   0        0        0       69 2023-03-17 08:08:22.000000 chemivec-0.1.0/.gitignore
+│ │ --rw-rw-rw-   0        0        0      758 2023-03-18 07:55:14.000000 chemivec-0.1.0/CMakeLists.txt
+│ │ --rw-rw-rw-   0        0        0      169 2023-03-18 16:09:39.929813 chemivec-0.1.0/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     2071 2023-03-18 07:19:54.000000 chemivec-0.1.0/Readme.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.829791 chemivec-0.1.0/_skbuild/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.829791 chemivec-0.1.0/_skbuild/win-amd64-3.10/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.832791 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.830792 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/include/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.849796 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/include/unity/
+│ │ --rw-rw-rw-   0        0        0    94449 2023-03-18 07:56:38.000000 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/include/unity/unity.h
+│ │ --rw-rw-rw-   0        0        0    97475 2023-03-18 07:56:38.000000 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/include/unity/unity_internals.h
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.851797 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/lib/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.832791 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/lib/cmake/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.860800 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/lib/cmake/unity/
+│ │ --rw-rw-rw-   0        0        0       54 2023-03-18 07:56:38.000000 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/lib/cmake/unity/unityConfig.cmake
+│ │ --rw-rw-rw-   0        0        0     2822 2023-03-18 07:56:41.000000 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/lib/cmake/unity/unityConfigVersion.cmake
+│ │ --rw-rw-rw-   0        0        0      866 2023-03-18 07:56:41.000000 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/lib/cmake/unity/unityTargets-release.cmake
+│ │ --rw-rw-rw-   0        0        0     4013 2023-03-18 07:56:41.000000 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/lib/cmake/unity/unityTargets.cmake
+│ │ --rw-rw-rw-   0        0        0    62706 2023-03-18 07:57:26.000000 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/lib/unity.lib
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.833793 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/src/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.876802 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/src/chemivec/
+│ │ --rw-rw-rw-   0        0        0       74 2023-03-18 07:57:32.000000 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/src/chemivec/__init__.py
+│ │ --rw-rw-rw-   0        0        0  5477888 2023-03-18 07:57:31.000000 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/src/chemivec/_chemivec.pyd
+│ │ --rw-rw-rw-   0        0        0     1514 2023-03-18 07:57:32.000000 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/src/chemivec/options.py
+│ │ --rw-rw-rw-   0        0        0     3193 2023-03-18 07:57:32.000000 chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/src/chemivec/search.py
+│ │ --rw-rw-rw-   0        0        0      361 2023-03-18 06:05:42.000000 chemivec-0.1.0/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-18 16:09:39.930813 chemivec-0.1.0/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      389 2023-03-15 06:06:02.000000 chemivec-0.1.0/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.878803 chemivec-0.1.0/src/
+│ │ --rw-rw-rw-   0        0        0     1420 2023-03-18 07:41:59.000000 chemivec-0.1.0/src/CMakeLists.txt
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.884804 chemivec-0.1.0/src/chemivec/
+│ │ --rw-rw-rw-   0        0        0       74 2023-03-18 07:32:23.000000 chemivec-0.1.0/src/chemivec/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1675 2023-03-18 15:53:18.000000 chemivec-0.1.0/src/chemivec/options.py
+│ │ --rw-rw-rw-   0        0        0     3071 2023-03-18 15:49:25.000000 chemivec-0.1.0/src/chemivec/search.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.911809 chemivec-0.1.0/src/chemivec.egg-info/
+│ │ --rw-rw-rw-   0        0        0      169 2023-03-18 16:09:39.000000 chemivec-0.1.0/src/chemivec.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1236 2023-03-18 16:09:39.000000 chemivec-0.1.0/src/chemivec.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-18 16:09:39.000000 chemivec-0.1.0/src/chemivec.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       18 2023-03-18 16:09:39.000000 chemivec-0.1.0/src/chemivec.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        9 2023-03-18 16:09:39.000000 chemivec-0.1.0/src/chemivec.egg-info/top_level.txt
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.913811 chemivec-0.1.0/src/core/
+│ │ --rw-rw-rw-   0        0        0     1011 2023-03-16 05:58:25.000000 chemivec-0.1.0/src/core/CMakeLists.txt
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.917812 chemivec-0.1.0/src/core/src/
+│ │ --rw-rw-rw-   0        0        0     5958 2023-03-18 07:17:42.000000 chemivec-0.1.0/src/core/src/core.c
+│ │ --rw-rw-rw-   0        0        0     1230 2023-03-18 07:17:42.000000 chemivec-0.1.0/src/core/src/core.h
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.921813 chemivec-0.1.0/src/pyext/
+│ │ --rw-rw-rw-   0        0        0     1067 2023-03-17 08:16:21.000000 chemivec-0.1.0/src/pyext/CMakeLists.txt
+│ │ --rw-rw-rw-   0        0        0    10251 2023-03-18 15:04:08.000000 chemivec-0.1.0/src/pyext/pyext.c
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.925813 chemivec-0.1.0/src/tests/
+│ │ --rw-rw-rw-   0        0        0      670 2023-03-18 07:51:38.000000 chemivec-0.1.0/src/tests/CMakeLists.txt
+│ │ --rw-rw-rw-   0        0        0     4577 2023-03-18 07:57:47.000000 chemivec-0.1.0/src/tests/test.c
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-18 16:09:39.927812 chemivec-0.1.0/tests/
+│ │ --rw-rw-rw-   0        0        0     3842 2023-03-18 15:54:56.000000 chemivec-0.1.0/tests/basic_test.py
+│ │ +-rw-r--r--   0        0        0     1492 2022-11-09 12:37:21.000000 chemivec-0.1.1/.github/workflows/build_wheels.yml
+│ │ +-rw-r--r--   0        0        0       64 2022-11-09 12:37:21.000000 chemivec-0.1.1/.gitignore
+│ │ +-rw-r--r--   0        0        0      756 2022-11-09 12:37:21.000000 chemivec-0.1.1/CMakeLists.txt
+│ │ +-rw-r--r--   0        0        0     3197 2022-11-09 12:37:21.000000 chemivec-0.1.1/Readme.md
+│ │ +-rw-r--r--   0        0        0      519 2022-11-09 12:37:21.000000 chemivec-0.1.1/_setup.py
+│ │ +-rw-r--r--   0        0        0     1569 2022-11-09 12:37:21.000000 chemivec-0.1.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     1328 2022-11-09 12:37:21.000000 chemivec-0.1.1/src/CMakeLists.txt
+│ │ +-rw-r--r--   0        0        0       77 2022-11-09 12:37:21.000000 chemivec-0.1.1/src/chemivec/__init__.py
+│ │ +-rw-r--r--   0        0        0     1617 2022-11-09 12:37:21.000000 chemivec-0.1.1/src/chemivec/options.py
+│ │ +-rw-r--r--   0        0        0     3509 2022-11-09 12:37:21.000000 chemivec-0.1.1/src/chemivec/search.py
+│ │ +-rw-r--r--   0        0        0      633 2022-11-09 12:37:21.000000 chemivec-0.1.1/src/core/CMakeLists.txt
+│ │ +-rw-r--r--   0        0        0     5527 2022-11-09 12:37:21.000000 chemivec-0.1.1/src/core/src/core.c
+│ │ +-rw-r--r--   0        0        0     1222 2022-11-09 12:37:21.000000 chemivec-0.1.1/src/core/src/core.h
+│ │ +-rw-r--r--   0        0        0     1199 2022-11-09 12:37:21.000000 chemivec-0.1.1/src/pyext/CMakeLists.txt
+│ │ +-rw-r--r--   0        0        0    10391 2022-11-09 12:37:21.000000 chemivec-0.1.1/src/pyext/pyext.c
+│ │ +-rw-r--r--   0        0        0      610 2022-11-09 12:37:21.000000 chemivec-0.1.1/src/tests/CMakeLists.txt
+│ │ +-rw-r--r--   0        0        0     4688 2022-11-09 12:37:21.000000 chemivec-0.1.1/src/tests/test.c
+│ │ +-rw-r--r--   0        0        0     4063 2022-11-09 12:37:21.000000 chemivec-0.1.1/tests/rxn_substructure_test.py
+│ │ +-rw-r--r--   0        0        0     3498 2022-11-09 12:37:21.000000 chemivec-0.1.1/PKG-INFO
+│ │   --- chemivec-0.1.0/CMakeLists.txt
+│ ├── +++ chemivec-0.1.1/CMakeLists.txt
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,17 +1,15 @@
+│ │ -cmake_minimum_required(VERSION 3.15)
+│ │ +cmake_minimum_required(VERSION 3.16)
+│ │  
+│ │  project(Chemivec LANGUAGES NONE)
+│ │  
+│ │ -
+│ │  # Override Indigo options to install indigo-core only
+│ │  set(BUILD_INDIGO_WRAPPERS OFF CACHE STRING "Build all existing Indigo API wrappers" FORCE)
+│ │  set(BUILD_INDIGO_UTILS OFF CACHE STRING "Build indigo-cano, indigo-deco and indigo-depict utilities" FORCE)
+│ │  set(BUILD_BINGO OFF CACHE STRING "Build all existing Bingo cartridges" FORCE)
+│ │  set(BUILD_BINGO_ELASTIC OFF CACHE STRING "Build Bingo Elastic cartridges for Java and Python" FORCE)
+│ │  set(WITH_STATIC ON CACHE STRING "Build Indigo static library as well as shared" FORCE)
+│ │  set(ENABLE_TESTS OFF CACHE STRING "Enable Indigo CTest tests" FORCE)
+│ │  
+│ │  # Tests
+│ │ -
+│ │  set(TEST_CHEMIVEC ON CACHE STRING "Enable Chemivec CTest tests")
+│ │  add_subdirectory(src)
+│ │   --- chemivec-0.1.0/_skbuild/win-amd64-3.10/cmake-install/src/chemivec/search.py
+│ ├── +++ chemivec-0.1.1/src/chemivec/search.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,81 +1,89 @@
+│ │ -from typing import Union
+│ │ -import numpy as np
+│ │ -import pandas as pd
+│ │ -import multiprocessing as mp
+│ │ -
+│ │ -from ._chemivec import _rxn_match
+│ │ -from .options import get_option, set_option
+│ │ -
+│ │ -def _convert_to_numpy(arr: Union[np.ndarray, pd.DataFrame, pd.Series, list]) -> np.ndarray:
+│ │ -    # Check the array type and convert everything to numpy
+│ │ -    if isinstance(arr, pd.DataFrame):
+│ │ -        if arr.shape[1] > 1:
+│ │ -            raise ValueError("Input dataframe has more than one column, "
+│ │ -                             "please use Series, 1D Numpy array or single column Dataframe")
+│ │ -        arr = arr.squeeze().to_numpy()
+│ │ -    elif isinstance(arr, pd.Series):
+│ │ -        arr = arr.to_numpy()
+│ │ -    elif isinstance(arr, list):
+│ │ -        arr = np.array(arr, dtype=object)
+│ │ -    elif isinstance(arr, np.ndarray):
+│ │ -        pass
+│ │ -    else:
+│ │ -        raise ValueError("Input array can be from the following types: list, np.ndrray, pd.Series or pd.Dataframe,"
+│ │ -                         f"got {type(arr)} type instead")
+│ │ -    return arr
+│ │ -
+│ │ -
+│ │ -def rxn_match(arr: Union[np.ndarray, pd.DataFrame, pd.Series, list],
+│ │ -              query_smarts: str = None,
+│ │ -              aam_mode: str = "DAYLIGHT-AAM",
+│ │ -              num_cores: Union[int, None] = None) -> np.ndarray:
+│ │ -    """
+│ │ -    Vectorized reaction substructure search. Input SMILES array and query SMARTS. Both should
+│ │ -    be reactions, e.g. contains ">>" sign. By default uses daylight atom-to-atom mapping rules:
+│ │ -    https://www.daylight.com/dayhtml/doc/theory/theory.smarts.html (Section 4.6 Reaction Queries)
+│ │ -    If no atom mapping found in query - atom mappings are ignored
+│ │ -    Example:
+│ │ -        rxn_match([ '[C:1]=O>>[C:1]O', 'C=O>>CO' ],
+│ │ -                  query_smarts = '[C:1]=O>>[C:1]O'
+│ │ -                  )
+│ │ -        output: array([ True, False])
+│ │ -
+│ │ -        rxn_match([ '[C:1]=O>>[C:1]O', 'C=O>>CO' ],
+│ │ -                  query_smarts='C=O>>CO'
+│ │ -                  )
+│ │ -        output: array([ True, True])
+│ │ -
+│ │ -    :param num_cores:
+│ │ -    :param arr: input array of reaction SMILES, supported inputs: np.ndarray, pd.DataFrame, pd.Series, list
+│ │ -    :param query_smarts: (str) reaction SMARTS
+│ │ -    :param aam_mode: (str) by defaylt "DAYLIGHT-AAM"
+│ │ -    :return: (np.ndarray[bool]) boolean result as numpy array
+│ │ -    """
+│ │ -    # query smarts
+│ │ -    if query_smarts is None or not query_smarts:
+│ │ -        raise ValueError(f"query_smarts could not be empty or None, should be a SMARTS string")
+│ │ -
+│ │ -    # num_cores
+│ │ -    if num_cores:
+│ │ -        if num_cores < 0:
+│ │ -            raise ValueError("Negative 'num_cores' values not allowed")
+│ │ -        elif num_cores == 0 or num_cores > mp.cpu_count():
+│ │ -            num_cores = mp.cpu_count()
+│ │ -    else:
+│ │ -        num_cores = get_option("num_cores")
+│ │ -
+│ │ -    arr = _convert_to_numpy(arr)
+│ │ -
+│ │ -
+│ │ -
+│ │ -    # check item type
+│ │ -    # first check 'np.str_' because it is subclass of 'str'
+│ │ -    if isinstance(arr[0], np.str_):
+│ │ -        return _rxn_match(arr.astype(object), query_smarts, aam_mode, num_cores)
+│ │ -    elif isinstance(arr[0], str):
+│ │ -        return _rxn_match(arr.astype(object), query_smarts, aam_mode, num_cores)
+│ │ -
+│ │ -    raise ValueError(f"Input should be array of python or numpy strings, instead got array of {type(arr[0])}")
+│ │ -
+│ │ -
+│ │ -
+│ │ +from typing import Union
+│ │ +import numpy as np
+│ │ +import pandas as pd
+│ │ +import multiprocessing as mp
+│ │ +
+│ │ +from ._chemivec import _rxn_match, _rxn_smarts_isok
+│ │ +from .options import get_option, set_option, _process_n_jobs
+│ │ +
+│ │ +def _convert_to_numpy(arr: Union[np.ndarray, pd.DataFrame, pd.Series, list]) -> np.ndarray:
+│ │ +    # Check the array type and convert everything to numpy
+│ │ +    if isinstance(arr, pd.DataFrame):
+│ │ +        if arr.shape[1] > 1:
+│ │ +            raise ValueError("Input dataframe has more than one column, "
+│ │ +                             "please use Series, 1D Numpy array or single column Dataframe")
+│ │ +        arr = arr.squeeze().to_numpy()
+│ │ +    elif isinstance(arr, pd.Series):
+│ │ +        arr = arr.to_numpy()
+│ │ +    elif isinstance(arr, list):
+│ │ +        arr = np.array(arr, dtype=object)
+│ │ +    elif isinstance(arr, np.ndarray):
+│ │ +        pass
+│ │ +    else:
+│ │ +        raise ValueError("Input array can be from the following types: list, np.ndrray, pd.Series or pd.Dataframe,"
+│ │ +                         f"got {type(arr)} type instead")
+│ │ +    return arr
+│ │ +
+│ │ +
+│ │ +def rxn_subsearch(arr: Union[np.ndarray, pd.DataFrame, pd.Series, list],
+│ │ +                  query_smarts: str = None,
+│ │ +                  aam_mode: str = "DAYLIGHT-AAM",
+│ │ +                  n_jobs: Union[int, None] = None) -> np.ndarray:
+│ │ +    """
+│ │ +    Vectorized reaction substructure search. Input SMILES array and query SMARTS. Both should
+│ │ +    be reactions, e.g. contains ">>" sign. By default, uses daylight atom-to-atom mapping rules:
+│ │ +    https://www.daylight.com/dayhtml/doc/theory/theory.smarts.html (Section 4.6 Reaction Queries)
+│ │ +    If no atom mapping found in query - atom mappings are ignored. By default, uses all available cores
+│ │ +    for parallel computation. This number can be set globally `chemivec.set_option('n_jobs', 12)`
+│ │ +
+│ │ +    Example:
+│ │ +        rxn_subsearch([ '[C:1]=O>>[C:1]O', 'C=O>>CO' ],
+│ │ +                  query_smarts = '[C:1]=O>>[C:1]O'
+│ │ +                  )
+│ │ +        output: array([ True, False])
+│ │ +
+│ │ +        rxn_subsearch([ '[C:1]=O>>[C:1]O', 'C=O>>CO' ],
+│ │ +                  query_smarts='C=O>>CO'
+│ │ +                  )
+│ │ +        output: array([ True, True])
+│ │ +
+│ │ +    :param arr: input array of reaction SMILES, supported inputs: np.ndarray, pd.DataFrame, pd.Series, list
+│ │ +    :param query_smarts: (str) reaction SMARTS
+│ │ +    :param aam_mode: (str) by defaylt "DAYLIGHT-AAM"
+│ │ +    :param n_jobs: (int) number of threads or parallel computation, max by default
+│ │ +    :return: (np.ndarray[bool]) boolean result as numpy array
+│ │ +    """
+│ │ +    # query smarts
+│ │ +    if query_smarts is None or not query_smarts:
+│ │ +        raise ValueError(f"query_smarts could not be empty or None, should be a SMARTS string")
+│ │ +    if not _rxn_smarts_isok(query_smarts):
+│ │ +        raise ValueError(f"Invalid reaction SMARTS: {query_smarts}")
+│ │ +
+│ │ +    # n_jobs
+│ │ +    if n_jobs:
+│ │ +        n_jobs = _process_n_jobs(n_jobs)
+│ │ +    else:
+│ │ +        n_jobs = get_option("n_jobs")
+│ │ +
+│ │ +    # input array
+│ │ +    arr = _convert_to_numpy(arr)
+│ │ +
+│ │ +    # check array dims
+│ │ +    if arr.ndim != 1:
+│ │ +        raise ValueError(f"Multidimensional input arrays not allowed")
+│ │ +
+│ │ +    # empty array
+│ │ +    if arr.shape[0] == 0:
+│ │ +        return np.array([], dtype=bool)
+│ │ +
+│ │ +    # check item type
+│ │ +    # first check 'np.str_' because it is subclass of 'str'
+│ │ +    if isinstance(arr[0], np.str_):
+│ │ +        return _rxn_match(arr.astype(object), query_smarts, aam_mode, n_jobs)
+│ │ +    elif isinstance(arr[0], str):
+│ │ +        return _rxn_match(arr, query_smarts, aam_mode, n_jobs)
+│ │ +
+│ │ +    raise ValueError(f"Input should be array of python or numpy strings, instead got array of {type(arr[0])}")
+│ │ +
+│ │ +
+│ │ +
+│ │   --- chemivec-0.1.0/src/chemivec/options.py
+│ ├── +++ chemivec-0.1.1/src/chemivec/options.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,58 +1,57 @@
+│ │ -from typing import Union
+│ │ -import numpy as np
+│ │ -import pandas as pd
+│ │ -import multiprocessing as mp
+│ │ -import re
+│ │ -
+│ │ -from ._chemivec import _set_option, _get_option
+│ │ -
+│ │ -SUPPORTED_OPTIONS = {
+│ │ -    "num_cores": int
+│ │ -}
+│ │ -
+│ │ -def _set_str_option(name: str, value: str):
+│ │ -    if not isinstance(value, str):
+│ │ -        raise TypeError(f"'{name}' value '{value}' is not a string")
+│ │ -    _set_option(name, value)
+│ │ -
+│ │ -
+│ │ -def _check_num_cores(value: int) -> str:
+│ │ -    if isinstance(value, float):
+│ │ -        raise TypeError(f"float type not allowed, int or string expected")
+│ │ -    value = int(value)
+│ │ -    if value < 0:
+│ │ -        raise ValueError(f"Negative 'num_cores' not allowed")
+│ │ -    elif value == 0 or value > mp.cpu_count():
+│ │ -        value = mp.cpu_count()
+│ │ -    return str(value)
+│ │ -
+│ │ -
+│ │ -
+│ │ -def set_option(name: str, value: Union[str, int]):
+│ │ -    """
+│ │ -    Set global option in Chemivec module.
+│ │ -    :param name: (str) option name
+│ │ -    :param value: option value
+│ │ -    :return:
+│ │ -    """
+│ │ -    if not name in SUPPORTED_OPTIONS:
+│ │ -        raise ValueError(f"Option `{name}` not supported, must be one of : {SUPPORTED_OPTIONS.keys()}")
+│ │ -
+│ │ -    # num_cores
+│ │ -    if name == "num_cores":
+│ │ -        value = _check_num_cores(value)
+│ │ -        _set_option(name, value)
+│ │ -
+│ │ -
+│ │ -def get_option(name: str):
+│ │ -    """
+│ │ -    Get global option from Chemivec module by name
+│ │ -    :param name: option name
+│ │ -    :return:
+│ │ -    """
+│ │ -    if not name in SUPPORTED_OPTIONS:
+│ │ -        raise ValueError(f"Option `{name}` not supported, must be one of : {SUPPORTED_OPTIONS.keys()}")
+│ │ -    if SUPPORTED_OPTIONS[name] == int:
+│ │ -        return int(_get_option(name))
+│ │ -    elif SUPPORTED_OPTIONS[name] == str:
+│ │ -        return str(_get_option(name))
+│ │ +from typing import Union
+│ │ +import numpy as np
+│ │ +import pandas as pd
+│ │ +import multiprocessing as mp
+│ │ +import re
+│ │ +
+│ │ +from ._chemivec import _set_option, _get_option
+│ │ +
+│ │ +SUPPORTED_OPTIONS = {
+│ │ +    "n_jobs": int
+│ │ +}
+│ │ +
+│ │ +def _set_str_option(name: str, value: str):
+│ │ +    if not isinstance(value, str):
+│ │ +        raise TypeError(f"'{name}' value '{value}' is not a string")
+│ │ +    _set_option(name, value)
+│ │ +
+│ │ +
+│ │ +def _process_n_jobs(value: int) -> str:
+│ │ +    if isinstance(value, float):
+│ │ +        raise TypeError(f"float type not allowed, int or string expected")
+│ │ +    value = int(value)
+│ │ +    if value < 0:
+│ │ +        raise ValueError(f"Negative 'n_jobs' not allowed")
+│ │ +    elif value == 0 or value > mp.cpu_count():
+│ │ +        value = mp.cpu_count()
+│ │ +    return str(value)
+│ │ +
+│ │ +def set_option(name: str, value: Union[str, int]):
+│ │ +    """
+│ │ +    Set global option in Chemivec module.
+│ │ +    :param name: (str) option name
+│ │ +    :param value: option value
+│ │ +    :return:
+│ │ +    """
+│ │ +    if not name in SUPPORTED_OPTIONS:
+│ │ +        raise ValueError(f"Option `{name}` not supported, must be one of : {SUPPORTED_OPTIONS.keys()}")
+│ │ +
+│ │ +    # n_jobs
+│ │ +    if name == "n_jobs":
+│ │ +        value = _process_n_jobs(value)
+│ │ +
+│ │ +    _set_option(name, value)
+│ │ +
+│ │ +
+│ │ +def get_option(name: str):
+│ │ +    """
+│ │ +    Get global option from Chemivec module by name
+│ │ +    :param name: (str) option name
+│ │ +    :return: option value
+│ │ +    """
+│ │ +    if not name in SUPPORTED_OPTIONS:
+│ │ +        raise ValueError(f"Option `{name}` not supported, must be one of : {SUPPORTED_OPTIONS.keys()}")
+│ │ +    if SUPPORTED_OPTIONS[name] == int:
+│ │ +        return int(_get_option(name))
+│ │ +    elif SUPPORTED_OPTIONS[name] == str:
+│ │ +        return str(_get_option(name))
+│ │   --- chemivec-0.1.0/src/core/src/core.c
+│ ├── +++ chemivec-0.1.1/src/core/src/core.c
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,190 +1,183 @@
+│ │ -//
+│ │ -// Created by ergot on 09/03/2023.
+│ │ -//
+│ │ -
+│ │ -
+│ │ -#define NO_IMPORT_ARRAY // NumPy C-API is already imported
+│ │ -#include "core.h"
+│ │ -
+│ │ -PyArrayObject *cstr2numpy(char **strings, int size) {
+│ │ -    npy_intp dims[] = {size};
+│ │ -
+│ │ -    // create empty 1D numpy array of python objects
+│ │ -    PyArrayObject* arr = (PyArrayObject*)PyArray_EMPTY(1, dims, NPY_OBJECT, NPY_ARRAY_C_CONTIGUOUS);
+│ │ -
+│ │ -    // copy strings to numpy array
+│ │ -    for (npy_intp i = 0; i < size; i++) {
+│ │ -        PyArray_SETITEM(arr, PyArray_GETPTR1(arr, i), PyUnicode_FromString(strings[i]));
+│ │ -    }
+│ │ -    return arr;
+│ │ -}
+│ │ -
+│ │ -/***
+│ │ - * Creates array of C strings from Numpy array of python strings
+│ │ - * @param np_array numpy array of python unicode strings
+│ │ - * @return pointer array of UTF8 strings
+│ │ - */
+│ │ -char** numpy2cstr(PyArrayObject* np_array) {
+│ │ -    PyObject** pystr = PyArray_DATA(np_array);
+│ │ -    npy_intp size = PyArray_SIZE(np_array);
+│ │ -    char** cstr = PyMem_Malloc(size * sizeof(char*));
+│ │ -    for (npy_intp i = 0; i < size; i++) {
+│ │ -        cstr[i] = (char*)PyUnicode_AsUTF8(pystr[i]);
+│ │ -    }
+│ │ -    return cstr;
+│ │ -}
+│ │ -
+│ │ -
+│ │ -int checkQuerySmarts(char* querySmarts, qword sid){
+│ │ -    indigoSetSessionId(sid);
+│ │ -    qword query = indigoLoadReactionSmartsFromString(querySmarts);
+│ │ -    char message[1024];
+│ │ -    if (query == -1) {
+│ │ -        snprintf(message, strlen(querySmarts) * sizeof(char) + 40, "Invalid SMARTS '%s' for reaction query\n", querySmarts);
+│ │ -        PyErr_SetString(PyExc_ValueError, message);
+│ │ -        return -1;
+│ │ -    }
+│ │ -    indigoFree(query);
+│ │ -//    indigoReleaseSessionId(sid);
+│ │ -    return 0;
+│ │ -}
+│ │ -
+│ │ -/***
+│ │ - * Reaction substructure search for single batch.
+│ │ - * @param batch pointer to ReactionBatch object
+│ │ - * @param query handle of indigo Query object
+│ │ - * @param mode "DAYLIGHT-AAM" or ignored
+│ │ - */
+│ │ -void reactionMatchBatch(ReactionBatch* batch, int query, const char *mode) {
+│ │ -    indigoSetSessionId(batch->sid);
+│ │ -    for (int i = 0; i < batch->size; i++) {
+│ │ -        int rxn = indigoLoadReactionFromString(batch->pinput[i]);
+│ │ -        if (rxn == -1) {
+│ │ -            printf("[%d %d] Invalid SMILES: %s\n", batch->threadid, i, batch->pinput[i]);
+│ │ -            batch->poutput[i] = NPY_FALSE;
+│ │ -            continue;
+│ │ -        }
+│ │ -        int matcher = indigoSubstructureMatcher(rxn, mode);
+│ │ -        int match = indigoMatch(matcher, query);
+│ │ -        if (match != 0)
+│ │ -            batch->poutput[i] = NPY_TRUE;
+│ │ -        else
+│ │ -            batch->poutput[i] = NPY_FALSE;
+│ │ -//        debug info
+│ │ -//        printf("[%i %i]:\n in =  %s\n out = %i\n", batch->threadid, i, batch->pinput[i], batch->poutput[i]);
+│ │ -        indigoFree(rxn);
+│ │ -        indigoFree(matcher);
+│ │ -        indigoFree(match);
+│ │ -    }
+│ │ -}
+│ │ -
+│ │ -
+│ │ -void reactionMatchLin(char **in_data, npy_bool *out_data, int size, char *querySmarts, const char *mode) {
+│ │ -    // Single Thread
+│ │ -    
+│ │ -    ReactionBatch* batch = PyMem_Malloc(sizeof(ReactionBatch));
+│ │ -    batch->sid = indigoAllocSessionId();
+│ │ -    batch->threadid = 0;
+│ │ -    batch->pinput = in_data;
+│ │ -    batch->poutput = out_data;
+│ │ -    batch->size = size;
+│ │ -
+│ │ -    qword query = indigoLoadReactionSmartsFromString(querySmarts);
+│ │ -    if (query == -1) {
+│ │ -        printf("Invalid SMARTS: %s", querySmarts);
+│ │ -        return;
+│ │ -    }
+│ │ -    indigoOptimize(query, NULL);
+│ │ -
+│ │ -    reactionMatchBatch(batch, query, mode);
+│ │ -
+│ │ -    indigoFree(query);
+│ │ -    indigoReleaseSessionId(batch->sid);
+│ │ -    PyMem_Free(batch);
+│ │ -    return;
+│ │ -}
+│ │ -
+│ │ -/**
+│ │ - * Vectorized version of reaction match. Creates new
+│ │ - * boolean NumPy array of the same shape as an output.
+│ │ - * @param in_data C array of reaction smiles
+│ │ - * @param querySmarts string of query smarts
+│ │ - * @param mode "DAYLIGHT-AAM" or NULL
+│ │ - * @return
+│ │ - */
+│ │ -void reactionMatchVec(char **in_data, npy_bool *out_data, int size, char *querySmarts, const char *mode, int numCores) {
+│ │ -
+│ │ -//    if (checkQuerySmarts(querySmarts) == -1) {
+│ │ -//        return NULL;
+│ │ -//    };
+│ │ -
+│ │ -    // Multi Thread
+│ │ -    int num_threads = numCores;
+│ │ -    int batch_size = size / num_threads;
+│ │ -
+│ │ -    // NO PYTHON FUNCTIONS HERE
+│ │ -    #pragma omp parallel num_threads(num_threads)
+│ │ -    {
+│ │ -        // Create batch per each thread
+│ │ -        ReactionBatch* batch = malloc(sizeof(ReactionBatch));
+│ │ -        batch->sid = indigoAllocSessionId();
+│ │ -        batch->threadid = omp_get_thread_num();
+│ │ -        int start_idx = batch->threadid * batch_size;
+│ │ -        int end_idx = start_idx + batch_size;
+│ │ -        if (batch->threadid == num_threads - 1) {
+│ │ -            end_idx = size; // last batch
+│ │ -        }
+│ │ -        batch->pinput = in_data + start_idx;
+│ │ -        batch->poutput = out_data + start_idx;
+│ │ -        batch->size = end_idx - start_idx;
+│ │ -
+│ │ -        // Create query object
+│ │ -        int query = indigoLoadReactionSmartsFromString(querySmarts);
+│ │ -        if (query == -1) {
+│ │ -            printf("Invalid reaction SMARTS %s\n", querySmarts);
+│ │ -            exit(EXIT_FAILURE);
+│ │ -        }
+│ │ -        indigoOptimize(query, NULL);
+│ │ -
+│ │ -        reactionMatchBatch(batch, query, mode);
+│ │ -
+│ │ -        indigoFree(query);
+│ │ -        indigoReleaseSessionId(batch->sid);
+│ │ -        free(batch);
+│ │ -    }
+│ │ -
+│ │ -    return;
+│ │ -}
+│ │ -
+│ │ -
+│ │ -PyArrayObject *
+│ │ -reactionMatchNumPy(PyArrayObject *np_input, char *querySmarts, char *aamMode, int numCores, ChemivecOptions *options) {
+│ │ -//    if (checkQuerySmarts(querySmarts) == -1) {
+│ │ -//        return NULL;
+│ │ -//    }
+│ │ -
+│ │ -    // set num_cores
+│ │ -
+│ │ -
+│ │ -    // check query SMARTS
+│ │ -    if (checkQuerySmarts(querySmarts, options->sid) == -1) {
+│ │ -        return NULL;
+│ │ -    };
+│ │ -
+│ │ -
+│ │ -    int size = PyArray_SIZE(np_input);
+│ │ -    npy_intp dims[] = {size};
+│ │ -    char ** in_data = numpy2cstr(np_input);
+│ │ -
+│ │ -    PyArrayObject* np_output = (PyArrayObject*)PyArray_EMPTY(1, dims, NPY_BOOL, NPY_ARRAY_C_CONTIGUOUS);
+│ │ -    npy_bool* out_data = (npy_bool*) PyArray_DATA(np_output); // output boolean array
+│ │ -
+│ │ -    reactionMatchVec(in_data, out_data, size, querySmarts, aamMode, numCores);
+│ │ -//    reactionMatchLin(in_data, out_data, size, querySmarts, aam_mode);
+│ │ -
+│ │ -    PyMem_Free(in_data);
+│ │ -    PyArray_XDECREF(np_output);
+│ │ -    return np_output;
+│ │ -}
+│ │ -
+│ │ -
+│ │ +//
+│ │ +// Created by ergot on 09/03/2023.
+│ │ +//
+│ │ +
+│ │ +#define NO_IMPORT_ARRAY // NumPy C-API is already imported
+│ │ +#include "core.h"
+│ │ +
+│ │ +PyArrayObject *cstr2numpy(char **strings, int size) {
+│ │ +    npy_intp dims[] = {size};
+│ │ +
+│ │ +    // create empty 1D numpy array of python objects
+│ │ +    PyArrayObject* arr = (PyArrayObject*)PyArray_EMPTY(1, dims, NPY_OBJECT, NPY_ARRAY_C_CONTIGUOUS);
+│ │ +
+│ │ +    // copy strings to numpy array
+│ │ +    for (npy_intp i = 0; i < size; i++) {
+│ │ +        PyArray_SETITEM(arr, PyArray_GETPTR1(arr, i), PyUnicode_FromString(strings[i]));
+│ │ +    }
+│ │ +    return arr;
+│ │ +}
+│ │ +
+│ │ +/***
+│ │ + * Creates array of C strings from Numpy array of python strings
+│ │ + * @param np_array numpy array of python unicode strings
+│ │ + * @return pointer array of UTF8 strings
+│ │ + */
+│ │ +char** numpy2cstr(PyArrayObject* np_array) {
+│ │ +    PyObject** pystr = PyArray_DATA(np_array);
+│ │ +    npy_intp size = PyArray_SIZE(np_array);
+│ │ +    char** cstr = PyMem_Malloc(size * sizeof(char*));
+│ │ +    for (npy_intp i = 0; i < size; i++) {
+│ │ +        cstr[i] = (char*)PyUnicode_AsUTF8(pystr[i]);
+│ │ +    }
+│ │ +    return cstr;
+│ │ +}
+│ │ +
+│ │ +
+│ │ +int checkReactionSmarts(char* smarts, qword sid){
+│ │ +    indigoSetSessionId(sid);
+│ │ +    qword query = indigoLoadReactionSmartsFromString(smarts);
+│ │ +    if (query == -1) {
+│ │ +        return -1;
+│ │ +    }
+│ │ +    indigoFree(query);
+│ │ +    return 0;
+│ │ +}
+│ │ +
+│ │ +/***
+│ │ + * Reaction substructure search for single batch.
+│ │ + * @param batch pointer to ReactionBatch object
+│ │ + * @param query handle of indigo Query object
+│ │ + * @param mode "DAYLIGHT-AAM" or ignored
+│ │ + */
+│ │ +void reactionMatchBatch(ReactionBatch* batch, int query, const char *mode) {
+│ │ +    indigoSetSessionId(batch->sid);
+│ │ +    for (int i = 0; i < batch->size; i++) {
+│ │ +        int rxn = indigoLoadReactionFromString(batch->pinput[i]);
+│ │ +        if (rxn == -1) {
+│ │ +            printf("Invalid reaction SMILES: %s\n", batch->pinput[i]);
+│ │ +            batch->poutput[i] = NPY_FALSE;
+│ │ +            continue;
+│ │ +        }
+│ │ +        int matcher = indigoSubstructureMatcher(rxn, mode);
+│ │ +        int match = indigoMatch(matcher, query);
+│ │ +        if (match != 0)
+│ │ +            batch->poutput[i] = NPY_TRUE;
+│ │ +        else
+│ │ +            batch->poutput[i] = NPY_FALSE;
+│ │ +        //  printf("[%i %i]:\n in =  %s\n out = %i\n", batch->threadid, i, batch->pinput[i], batch->poutput[i]);
+│ │ +        indigoFree(rxn);
+│ │ +        indigoFree(matcher);
+│ │ +        indigoFree(match);
+│ │ +    }
+│ │ +}
+│ │ +
+│ │ +
+│ │ +void reactionMatchLin(char **in_data, npy_bool *out_data, int size, char *querySmarts, const char *mode) {
+│ │ +    // Single Thread
+│ │ +    
+│ │ +    ReactionBatch* batch = PyMem_Malloc(sizeof(ReactionBatch));
+│ │ +    batch->sid = indigoAllocSessionId();
+│ │ +    batch->threadid = 0;
+│ │ +    batch->pinput = in_data;
+│ │ +    batch->poutput = out_data;
+│ │ +    batch->size = size;
+│ │ +
+│ │ +    qword query = indigoLoadReactionSmartsFromString(querySmarts);
+│ │ +    if (query == -1) {
+│ │ +        printf("Invalid reaction SMARTS: %s", querySmarts);
+│ │ +        return;
+│ │ +    }
+│ │ +    indigoOptimize(query, NULL);
+│ │ +
+│ │ +    reactionMatchBatch(batch, query, mode);
+│ │ +
+│ │ +    indigoFree(query);
+│ │ +    indigoReleaseSessionId(batch->sid);
+│ │ +    PyMem_Free(batch);
+│ │ +    return;
+│ │ +}
+│ │ +
+│ │ +/**
+│ │ + * Vectorized version of reaction match. Creates new
+│ │ + * boolean NumPy array of the same shape as an output.
+│ │ + * @param in_data C array of reaction smiles
+│ │ + * @param querySmarts string of query smarts
+│ │ + * @param mode "DAYLIGHT-AAM" or NULL
+│ │ + * @return
+│ │ + */
+│ │ +void reactionMatchVec(char **in_data, npy_bool *out_data, int size, char *querySmarts, const char *mode, int numCores) {
+│ │ +
+│ │ +//    if (checkQuerySmarts(querySmarts) == -1) {
+│ │ +//        return NULL;
+│ │ +//    };
+│ │ +
+│ │ +    // Multi Thread
+│ │ +    int num_threads = numCores;
+│ │ +    int batch_size = size / num_threads;
+│ │ +
+│ │ +    // NO PYTHON FUNCTIONS HERE
+│ │ +    #pragma omp parallel num_threads(num_threads)
+│ │ +    {
+│ │ +        // Create batch per each thread
+│ │ +        ReactionBatch* batch = malloc(sizeof(ReactionBatch));
+│ │ +        batch->sid = indigoAllocSessionId();
+│ │ +        batch->threadid = omp_get_thread_num();
+│ │ +        int start_idx = batch->threadid * batch_size;
+│ │ +        int end_idx = start_idx + batch_size;
+│ │ +        if (batch->threadid == num_threads - 1) {
+│ │ +            end_idx = size; // last batch
+│ │ +        }
+│ │ +        batch->pinput = in_data + start_idx;
+│ │ +        batch->poutput = out_data + start_idx;
+│ │ +        batch->size = end_idx - start_idx;
+│ │ +
+│ │ +        // Create query object
+│ │ +        int query = indigoLoadReactionSmartsFromString(querySmarts);
+│ │ +        if (query == -1) {
+│ │ +            printf("Invalid reaction SMARTS %s\n", querySmarts);
+│ │ +            exit(EXIT_FAILURE);
+│ │ +        }
+│ │ +        indigoOptimize(query, NULL);
+│ │ +
+│ │ +        reactionMatchBatch(batch, query, mode);
+│ │ +
+│ │ +        indigoFree(query);
+│ │ +        indigoReleaseSessionId(batch->sid);
+│ │ +        free(batch);
+│ │ +    }
+│ │ +
+│ │ +    return;
+│ │ +}
+│ │ +
+│ │ +
+│ │ +PyObject *
+│ │ +reactionMatchNumPy(PyObject *np_input, char *querySmarts, char *aamMode, int numCores, ChemivecOptions *options) {
+│ │ +//    if (checkQuerySmarts(querySmarts) == -1) {
+│ │ +//        return NULL;
+│ │ +//    }
+│ │ +
+│ │ +    // set n_jobs
+│ │ +
+│ │ +    // check query SMARTS
+│ │ +    if (checkReactionSmarts(querySmarts, options->sid) == -1) {
+│ │ +        return NULL;
+│ │ +    };
+│ │ +
+│ │ +
+│ │ +    int size = PyArray_SIZE((PyArrayObject*)np_input);
+│ │ +    npy_intp dims[] = {size};
+│ │ +    char ** in_data = numpy2cstr((PyArrayObject*)np_input);
+│ │ +
+│ │ +    PyArrayObject* np_output = (PyArrayObject*)PyArray_EMPTY(1, dims, NPY_BOOL, NPY_ARRAY_C_CONTIGUOUS);
+│ │ +    npy_bool* out_data = (npy_bool*) PyArray_DATA(np_output); // output boolean array
+│ │ +
+│ │ +    reactionMatchVec(in_data, out_data, size, querySmarts, aamMode, numCores);
+│ │ +//    reactionMatchLin(in_data, out_data, size, querySmarts, aam_mode);
+│ │ +
+│ │ +    PyMem_Free(in_data);
+│ │ +    PyArray_XDECREF(np_output);
+│ │ +    return (PyObject*)np_output;
+│ │ +}
+│ │ +
+│ │ +
+│ │   --- chemivec-0.1.0/src/core/src/core.h
+│ ├── +++ chemivec-0.1.1/src/core/src/core.h
+│ │┄ Files 26% similar despite different names
+│ │ @@ -1,50 +1,53 @@
+│ │ -//
+│ │ -// Created by ergot on 09/03/2023.
+│ │ -//
+│ │ -
+│ │ -#ifndef CHEMIVEC_VEC_H
+│ │ -#define CHEMIVEC_VEC_H
+│ │ -#endif //CHEMIVEC_VEC_H
+│ │ -
+│ │ -#include "Python.h"
+│ │ -#include "indigo.h"
+│ │ -#include <omp.h>
+│ │ -
+│ │ -#define PY_ARRAY_UNIQUE_SYMBOL CHEMIVEC_ARRAY_API
+│ │ -#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+│ │ -#include "numpy/arrayobject.h"
+│ │ -
+│ │ -typedef struct {
+│ │ -    qword sid;
+│ │ -    int num_cores;
+│ │ -} ChemivecOptions;
+│ │ -
+│ │ -typedef struct {
+│ │ -    char** pinput;
+│ │ -    npy_bool* poutput;
+│ │ -    int size;
+│ │ -    qword sid;
+│ │ -    int threadid;
+│ │ -} ReactionBatch;
+│ │ -
+│ │ -PyArrayObject* cstr2numpy(char** strings, int size);
+│ │ -
+│ │ -char** numpy2cstr(PyArrayObject * np_array);
+│ │ -
+│ │ -void reactionMatchBatch(ReactionBatch* batch, int query, const char *mode);
+│ │ -
+│ │ -void reactionMatchLin(char **in_data, npy_bool *out_data, int size, char *querySmarts, const char *mode);
+│ │ -
+│ │ -void reactionMatchVec(char **in_data, npy_bool *out_data, int size, char *querySmarts, const char *mode, int numCores);
+│ │ -
+│ │ -PyArrayObject *
+│ │ -reactionMatchNumPy(PyArrayObject *np_input, char *querySmarts, char *aamMode, int numCores, ChemivecOptions *options);
+│ │ -
+│ │ -
+│ │ -inline static void finishSearch(int rxn, int matcher, int match) {
+│ │ -    indigoFree(rxn);
+│ │ -    indigoFree(matcher);
+│ │ -    indigoFree(match);
+│ │ -}
+│ │ -
+│ │ -
+│ │ +//
+│ │ +// Created by ergot on 09/03/2023.
+│ │ +//
+│ │ +
+│ │ +#ifndef CHEMIVEC_CORE_H
+│ │ +#define CHEMIVEC_CORE_H
+│ │ +#endif //CHEMIVEC_CORE_H
+│ │ +
+│ │ +#include "Python.h"
+│ │ +#include "indigo.h"
+│ │ +#include "omp.h"
+│ │ +
+│ │ +#define PY_ARRAY_UNIQUE_SYMBOL CHEMIVEC_ARRAY_API
+│ │ +#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+│ │ +#include "numpy/arrayobject.h"
+│ │ +
+│ │ +
+│ │ +typedef struct {
+│ │ +    qword sid;
+│ │ +    int n_jobs;
+│ │ +} ChemivecOptions;
+│ │ +
+│ │ +typedef struct {
+│ │ +    char** pinput;
+│ │ +    npy_bool* poutput;
+│ │ +    int size;
+│ │ +    qword sid;
+│ │ +    int threadid;
+│ │ +} ReactionBatch;
+│ │ +
+│ │ +PyArrayObject* cstr2numpy(char** strings, int size);
+│ │ +
+│ │ +char** numpy2cstr(PyArrayObject * np_array);
+│ │ +
+│ │ +int checkReactionSmarts(char* smarts, qword sid);
+│ │ +
+│ │ +void reactionMatchBatch(ReactionBatch* batch, int query, const char *mode);
+│ │ +
+│ │ +void reactionMatchLin(char **in_data, npy_bool *out_data, int size, char *querySmarts, const char *mode);
+│ │ +
+│ │ +void reactionMatchVec(char **in_data, npy_bool *out_data, int size, char *querySmarts, const char *mode, int numCores);
+│ │ +
+│ │ +PyObject *
+│ │ +reactionMatchNumPy(PyObject *np_input, char *querySmarts, char *aamMode, int numCores, ChemivecOptions *options);
+│ │ +
+│ │ +
+│ │ +inline static void finishSearch(int rxn, int matcher, int match) {
+│ │ +    indigoFree(rxn);
+│ │ +    indigoFree(matcher);
+│ │ +    indigoFree(match);
+│ │ +}
+│ │ +
+│ │ +
+│ │   --- chemivec-0.1.0/src/pyext/CMakeLists.txt
+│ ├── +++ chemivec-0.1.1/src/pyext/CMakeLists.txt
+│ │┄ Files 27% similar despite different names
+│ │ @@ -1,37 +1,39 @@
+│ │ -cmake_minimum_required(VERSION 3.15)
+│ │ -project(_chemivec LANGUAGES C CXX)
+│ │ -
+│ │ -# Find Python
+│ │ -find_package(Python3 REQUIRED Development Interpreter NumPy)
+│ │ -
+│ │ -# Find all sources
+│ │ -file(GLOB ${PROJECT_NAME}_SOURCES
+│ │ -        ${CMAKE_CURRENT_SOURCE_DIR}/*.c)
+│ │ -
+│ │ -# Main target
+│ │ -# SKbuild by setup.py
+│ │ -if(SKBUILD)
+│ │ -    python3_add_library(${PROJECT_NAME} ${${PROJECT_NAME}_SOURCES})
+│ │ -    target_link_libraries(${PROJECT_NAME} PRIVATE chemivec-core)
+│ │ -    install(TARGETS ${PROJECT_NAME} LIBRARY DESTINATION src/chemivec)
+│ │ -# Clion CMake build
+│ │ -else()
+│ │ -    python3_add_library(${PROJECT_NAME} ${${PROJECT_NAME}_SOURCES})
+│ │ -    set_target_properties (${PROJECT_NAME} PROPERTIES
+│ │ -            LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/src/chemivec
+│ │ -            )
+│ │ -    target_link_libraries(${PROJECT_NAME} PRIVATE chemivec-core)
+│ │ -    # Run pytest after build
+│ │ -    if (TEST_CHEMIVEC)
+│ │ -        add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+│ │ -                WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+│ │ -                COMMAND pytest ./tests -v)
+│ │ -    endif()
+│ │ -endif()
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ -
+│ │ +cmake_minimum_required(VERSION 3.16)
+│ │ +project(_chemivec LANGUAGES C CXX)
+│ │ +
+│ │ +# Find all sources
+│ │ +file(GLOB ${PROJECT_NAME}_SOURCES
+│ │ +        ${CMAKE_CURRENT_SOURCE_DIR}/*.c)
+│ │ +
+│ │ +
+│ │ +## Python extension naming
+│ │ +#add_library(${PROJECT_NAME} MODULE ${${PROJECT_NAME}_SOURCES})
+│ │ +#target_link_libraries(${PROJECT_NAME} PRIVATE chemivec-core)
+│ │ +#set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
+│ │ +#
+│ │ +#if(WIN32)
+│ │ +#    set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".pyd")
+│ │ +#else()
+│ │ +#    set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".so")
+│ │ +#endif()
+│ │ +
+│ │ +# Find Python
+│ │ +find_package(Python3 REQUIRED Interpreter Development.Module)
+│ │ +Python3_add_library(${PROJECT_NAME} ${${PROJECT_NAME}_SOURCES})
+│ │ +target_link_libraries(${PROJECT_NAME} PRIVATE chemivec-core)
+│ │ +install(TARGETS ${PROJECT_NAME} LIBRARY DESTINATION ${CMAKE_SOURCE_DIR}/src/chemivec)
+│ │ +
+│ │ +# Run pytest after build
+│ │ +if (NOT $ENV{CIBUILDWHEELS} MATCHES 1)
+│ │ +    set_target_properties(${PROJECT_NAME} PROPERTIES
+│ │ +            LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/src/chemivec
+│ │ +            )
+│ │ +    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+│ │ +            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+│ │ +            COMMAND pytest ./tests -v)
+│ │ +endif()
+│ │ +
+│ │ +
+│ │ +
+│ │ +
+│ │ +
+│ │   --- chemivec-0.1.0/src/pyext/pyext.c
+│ ├── +++ chemivec-0.1.1/src/pyext/pyext.c
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,320 +1,340 @@
+│ │ -//
+│ │ -// Created by Alex on 09/03/2023.
+│ │ -//
+│ │ -
+│ │ -#define PY_SSIZE_T_CLEAN
+│ │ -#include "Python.h"
+│ │ -
+│ │ -#define PY_ARRAY_UNIQUE_SYMBOL CHEMIVEC_ARRAY_API
+│ │ -#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+│ │ -#include "numpy/arrayobject.h"
+│ │ -
+│ │ -#include "core.h"
+│ │ -
+│ │ -
+│ │ -static ChemivecOptions* options;
+│ │ -
+│ │ -static int initOptions(qword SessionId) {
+│ │ -    options = (ChemivecOptions*) PyMem_Malloc(sizeof(options));
+│ │ -    if (options == NULL) {
+│ │ -        return -1;
+│ │ -    }
+│ │ -    options->sid = SessionId;
+│ │ -    options->num_cores = omp_get_max_threads();
+│ │ -    return 0;
+│ │ -}
+│ │ -
+│ │ -// Define the module deallocation function
+│ │ -static void freeModule() {
+│ │ -    // Indigo
+│ │ -    indigoSetSessionId(options->sid);
+│ │ -    if (indigoCountReferences() > 0) {
+│ │ -        indigoFreeAllObjects();
+│ │ -    }
+│ │ -    indigoReleaseSessionId(options->sid);
+│ │ -
+│ │ -    // Module Options
+│ │ -    PyMem_Free(options);
+│ │ -}
+│ │ -
+│ │ -
+│ │ -/*
+│ │ -
+│ │ -
+│ │ -PyArrayObject* createNumpyArrFromString(int size, const char** strings) {
+│ │ -    npy_intp dims[] = {size};
+│ │ -
+│ │ -    // create empty 1D numpy array of python objects
+│ │ -    PyArrayObject* arr = (PyArrayObject*)PyArray_EMPTY(1, dims, NPY_OBJECT, NPY_ARRAY_C_CONTIGUOUS);
+│ │ -
+│ │ -    // copy strings to numpy array
+│ │ -    for (npy_intp i = 0; i < size; i++) {
+│ │ -        PyArray_SETITEM(arr, PyArray_GETPTR1(arr, i), PyUnicode_FromString(strings[i]));
+│ │ -    }
+│ │ -    return arr;
+│ │ -}
+│ │ -
+│ │ -qword initIndigo() {
+│ │ -    printf("Starting indigo session ... ");
+│ │ -
+│ │ -    // start session
+│ │ -    qword id = indigoAllocSessionId();
+│ │ -
+│ │ -    if (id == -1) {
+│ │ -        printf("FAILED\n");
+│ │ -        exit(1);
+│ │ -    }
+│ │ -
+│ │ -    printf("OK \nversion:   %s\n", indigoVersion());
+│ │ -    return id;
+│ │ -}
+│ │ -
+│ │ -
+│ │ -int main() {
+│ │ -
+│ │ -    // Initialize Python interpreter
+│ │ -    Py_Initialize();
+│ │ -
+│ │ -    // Initialize NumPy
+│ │ -    initNumpy();
+│ │ -
+│ │ -    PyObject* pyobj = PyUnicode_FromString("Hello World!");
+│ │ -
+│ │ -    char* buf = calloc(SMILE_BUF_LEN, sizeof(char));
+│ │ -    int len = unicodeAsUTF8(pyobj, buf);
+│ │ -    if (len > 0) {
+│ │ -        printf("length:%i string: %.5s", len, buf);
+│ │ -    }
+│ │ -    free(buf);
+│ │ -
+│ │ -
+│ │ -
+│ │ -    // Initialize Indigo
+│ │ -    qword sessionId = initIndigo();
+│ │ -
+│ │ -
+│ │ -    // Define C array of string in_data
+│ │ -//    const char* strings[] = {"[C:1](=O)C>>[C:1](O)C",
+│ │ -//                             "C(=C)C>>C(O)C",
+│ │ -//                             "[C:2]=O>>[C:2]O",
+│ │ -//                             "C=O>>CO"};
+│ │ -    const char* strings[] = {"[C:1](=O)C>>[C:1](O)C",
+│ │ -                             "C=O>>CO",
+│ │ -                             "[C:2]=O>>[C:2]O",
+│ │ -                             "[C:1](=O)C>>C(O)[C:1]",
+│ │ -                             "[C:2]=O>>[C:2]O",
+│ │ -                             "[C:1](=O)C>>C(O)[C:1]",
+│ │ -                             };
+│ │ -
+│ │ -    // Determine number of elements in the string array
+│ │ -    int size = sizeof(strings) / sizeof(char*);
+│ │ -    npy_intp dims[] = {size};
+│ │ -
+│ │ -    // Create input and output numpy arrays
+│ │ -    PyArrayObject* np_input = createNumpyArrFromString(size, strings);
+│ │ -    PyArrayObject* np_output = (PyArrayObject*)PyArray_EMPTY(1, dims, NPY_BOOL, NPY_ARRAY_C_CONTIGUOUS);
+│ │ -
+│ │ -    size = PyArray_SIZE(np_input);
+│ │ -
+│ │ -    PyObject* repr = PyObject_Repr((PyObject*)np_input);
+│ │ -    printf("Input array:\n%s\n", PyUnicode_AsUTF8(repr));
+│ │ -
+│ │ -    // Access the in_data pointer and shape of the array
+│ │ -    PyObject** in_data = (PyObject**) PyArray_DATA(np_input);
+│ │ -    npy_bool* out_data = (npy_bool*) PyArray_DATA(np_output);
+│ │ -
+│ │ -    // Create Indigo query object
+│ │ -    const char* querySmarts = "[C:1]=[O]>>[C:1]-[OX2]";
+│ │ -    int query = indigoLoadReactionSmartsFromString(querySmarts);
+│ │ -    indigoOptimize(query, NULL);
+│ │ -    printf("Query: %s\n", querySmarts);
+│ │ -
+│ │ -
+│ │ -//    int num_threads = omp_get_max_threads();
+│ │ -    int num_threads = 2;
+│ │ -
+│ │ -//    Py_BEGIN_ALLOW_THREADS;
+│ │ -
+│ │ -    // Divide input in_data into batches
+│ │ -    int batch_size = size / num_threads;
+│ │ -
+│ │ -//    #pragma omp parallel num_threads(num_threads)
+│ │ -//    {
+│ │ -//        int thread_num = omp_get_thread_num();
+│ │ -//        int start_idx = thread_num * batch_size;
+│ │ -//        int end_idx = start_idx + batch_size;
+│ │ -//        // last batch
+│ │ -//        if (thread_num == num_threads - 1) {
+│ │ -//            end_idx = size;
+│ │ -//        }
+│ │ -//        int current_size = end_idx - start_idx;
+│ │ -//        reactionSubstructureSearchBatch_py(in_data + start_idx,
+│ │ -//                                        out_data + start_idx,
+│ │ -//                                        current_size,
+│ │ -//                                        query,
+│ │ -//                                        strbuf,
+│ │ -//                                        "DAYLIGHT-AAM");
+│ │ -//    }
+│ │ -
+│ │ -//    Py_END_ALLOW_THREADS;
+│ │ -
+│ │ -    // Iterate over the in_data pointer to access the Python strings
+│ │ -//    reactionSubstructureSearchBatch_py(in_data, out_data, PyArray_SIZE(np_input), query, NULL);
+│ │ -
+│ │ -    // Convert Python strings to C strings
+│ │ -    char ** smiles_array = numpyAsUTF8(np_input);
+│ │ -    reactionMatchBatch_py(smiles_array, out_data, size, query, "DAYLIGHT-AAM");
+│ │ -    free(smiles_array);
+│ │ -
+│ │ -    PyArrayObject* np_output_vec = reactionMatchVec(np_input, "[C:1]=[O]>>[C:1]-[OX2]", "DAYLIGHT-AAM");
+│ │ -//    PyArrayObject* np_output_vec = NULL;
+│ │ -
+│ │ -
+│ │ -    // Print output array
+│ │ -
+│ │ -    if (np_output != NULL) {
+│ │ -        repr = PyObject_Repr((PyObject*)np_output);
+│ │ -        printf("Output array:\n%s\n", PyUnicode_AsUTF8(repr));
+│ │ -        Py_DECREF(np_output);
+│ │ -    }
+│ │ -
+│ │ -    if (np_output_vec != NULL) {
+│ │ -        repr = PyObject_Repr((PyObject*)np_output_vec);
+│ │ -        printf("Output array vec:\n%s\n", PyUnicode_AsUTF8(repr));
+│ │ -        Py_DECREF(np_output_vec);
+│ │ -    }
+│ │ -
+│ │ -
+│ │ -    // Decrement the reference count of the NumPy array object
+│ │ -    Py_DECREF(np_input);
+│ │ -
+│ │ -
+│ │ -    // Shut down Python interpreter
+│ │ -    Py_Finalize();
+│ │ -
+│ │ -    // End Indigo session and free memory
+│ │ -    indigoFreeAllObjects();
+│ │ -    indigoReleaseSessionId(sessionId);
+│ │ -
+│ │ -    const char* rxnSmarts = "[F:1][C:2]([F:31])([F:30])[C:3]1[CH:4]=[C:5]([C@H:13]2[O:17][C:16](=[O:18])[N:15]([CH2:19][C:20]3[C:25](Br)=[CH:24][N:23]=[C:22]([S:27][CH3:28])[N:21]=3)[C@H:14]2[CH3:29])[CH:6]=[C:7]([C:9]([F:12])([F:11])[F:10])[CH:8]=1.[CH:32]([C:35]1[CH:36]=[C:37](B(O)O)[C:38]([O:41][CH3:42])=[N:39][CH:40]=1)([CH3:34])[CH3:33].C([O-])([O-])=O.[K+].[K+].[NH4+].[Cl-]>C(OCC)(=O)C.[Pd](Cl)Cl.C(P(C(C)(C)C)[C-]1C=CC=C1)(C)(C)C.[C-]1(P(C(C)(C)C)C(C)(C)C)C=CC=C1.[Fe+2]>[F:1][C:2]([F:31])([F:30])[C:3]1[CH:4]=[C:5]([C@H:13]2[O:17][C:16](=[O:18])[N:15]([CH2:19][C:20]3[C:25]([C:37]4[C:38]([O:41][CH3:42])=[N:39][CH:40]=[C:35]([CH:32]([CH3:34])[CH3:33])[CH:36]=4)=[CH:24][N:23]=[C:22]([S:27][CH3:28])[N:21]=3)[C@H:14]2[CH3:29])[CH:6]=[C:7]([C:9]([F:12])([F:11])[F:10])[CH:8]=1";
+│ │ -    const char* querySmarts = "[B;X3,4]-[C,c:1].[C,c:2]-[Cl,Br,I,$([O]-S)]>>[C,c:1]-[C,c:2]";
+│ │ -
+│ │ -    int rxn = indigoLoadReactionSmartsFromString(rxnSmarts);
+│ │ -    int query = indigoLoadReactionSmartsFromString(querySmarts);
+│ │ -    int matcher = indigoSubstructureMatcher(rxn, NULL);
+│ │ -    int match = indigoMatch(matcher, query);
+│ │ -
+│ │ -    if (reactionSubstructureMatch((char*)rxnSmarts, query))
+│ │ -        printf("%s - SMARTS query matched!\n", querySmarts);
+│ │ -    else
+│ │ -        printf("No matches found\n");
+│ │ -
+│ │ -
+│ │ -
+│ │ -    return 0;
+│ │ -}
+│ │ -
+│ │ -
+│ │ -*/
+│ │ -
+│ │ -// Methods definition
+│ │ -
+│ │ -/**
+│ │ - * Set option by name
+│ │ - * Option names and values always passed as Unicode Python strings
+│ │ - * type checking is done on the python side
+│ │ - * @param self
+│ │ - * @param args option name, option value as python strings
+│ │ - * @return None if successful
+│ │ - */
+│ │ -PyObject* _set_option(PyObject* self, PyObject* args) {
+│ │ -    char* option_name;
+│ │ -    char* option_value;
+│ │ -    if (!PyArg_ParseTuple(args, "ss", &option_name, &option_value)) {
+│ │ -        return NULL;
+│ │ -    }
+│ │ -
+│ │ -    if (strcmp(option_name, "num_cores") == 0) {
+│ │ -        options->num_cores = atoi(option_value);
+│ │ -//        printf("set num_cores: %d\n", options->num_cores);
+│ │ -        return Py_None;
+│ │ -    } else {
+│ │ -        printf("Option %s not allowed\n", option_name);
+│ │ -        return NULL;
+│ │ -    }
+│ │ -}
+│ │ -
+│ │ -/**
+│ │ - * Get option by name
+│ │ - * @param self
+│ │ - * @param args option name
+│ │ - * @return option value, always python string
+│ │ - */
+│ │ -PyObject* _get_option(PyObject* self, PyObject* args) {
+│ │ -    char* option_name;
+│ │ -    if (!PyArg_ParseTuple(args, "s", &option_name)) {
+│ │ -        return NULL;
+│ │ -    }
+│ │ -
+│ │ -    if (strcmp(option_name, "num_cores") == 0) {
+│ │ -//        printf("get num_cores: %d\n", options->num_cores);
+│ │ -        PyObject* value = PyUnicode_FromFormat("%d", options->num_cores);
+│ │ -//        Py_DecRef(value);
+│ │ -        return value;
+│ │ -    } else {
+│ │ -        printf("Option %s not found\n");
+│ │ -        return NULL;
+│ │ -    }
+│ │ -
+│ │ -}
+│ │ -
+│ │ -PyObject* _rxn_match(PyObject* self, PyObject* args, PyObject* kwargs) {
+│ │ -    static char* keywords[] = {"np_input", "query_smarts", "aam_mode", "num_cores", NULL};
+│ │ -
+│ │ -    PyArrayObject* np_input;
+│ │ -    char* querySmarts;
+│ │ -    char* aamMode;
+│ │ -    int numCores;
+│ │ -
+│ │ -    // Parse the arguments using PyArg_ParseTuple
+│ │ -    if (!PyArg_ParseTupleAndKeywords(args, kwargs, "Ossi", keywords, &np_input, &querySmarts, &aamMode, &numCores)) {
+│ │ -        return NULL;
+│ │ -    }
+│ │ -
+│ │ -    return (PyObject*) reactionMatchNumPy(np_input, querySmarts, aamMode, numCores, options);
+│ │ -}
+│ │ -
+│ │ -
+│ │ -
+│ │ -// Define the module methods
+│ │ -static PyMethodDef methods[] = {
+│ │ -        {"_rxn_match", (PyCFunction) _rxn_match, METH_VARARGS | METH_KEYWORDS, "C-API vecorized reaction match"},
+│ │ -        {"_set_option", (PyCFunction) _set_option, METH_VARARGS, "Set option"},
+│ │ -        {"_get_option", (PyCFunction) _get_option, METH_VARARGS, "Get option"},
+│ │ -        {NULL, NULL, 0, NULL}   // Sentinel value to indicate end of list
+│ │ -};
+│ │ -
+│ │ -
+│ │ -
+│ │ -// Define the module structure
+│ │ -static PyModuleDef module_def = {
+│ │ -        PyModuleDef_HEAD_INIT,
+│ │ -        "Internal \"_chemivec\" module", // Also don't forget to change name here
+│ │ -        "Vectorized cheminformatics module, based on Indigo C-API",
+│ │ -        -1,
+│ │ -        methods,
+│ │ -        NULL, // Optional slot definitions
+│ │ -        NULL, // Optional traversal function
+│ │ -        NULL, // Optional clear function
+│ │ -        freeModule  // Optional module deallocation function
+│ │ -};
+│ │ -
+│ │ -
+│ │ -// Define module name here by PyInit_<your_modul_ename>
+│ │ -PyMODINIT_FUNC PyInit__chemivec(void) {
+│ │ -    import_array();
+│ │ -    qword SessionId = indigoAllocSessionId();
+│ │ -    initOptions(SessionId);
+│ │ -    PyObject* module = PyModule_Create(&module_def);
+│ │ -    return module;
+│ │ +//
+│ │ +// Created by Alex on 09/03/2023.
+│ │ +//
+│ │ +
+│ │ +#define PY_SSIZE_T_CLEAN
+│ │ +#include "Python.h"
+│ │ +
+│ │ +#define PY_ARRAY_UNIQUE_SYMBOL CHEMIVEC_ARRAY_API
+│ │ +#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+│ │ +#include "numpy/arrayobject.h"
+│ │ +
+│ │ +#include "core.h"
+│ │ +
+│ │ +
+│ │ +static ChemivecOptions* options;
+│ │ +
+│ │ +static int initOptions(qword SessionId) {
+│ │ +    options = (ChemivecOptions*) PyMem_Malloc(sizeof(options));
+│ │ +    if (options == NULL) {
+│ │ +        return -1;
+│ │ +    }
+│ │ +    options->sid = SessionId;
+│ │ +    options->n_jobs = omp_get_max_threads();
+│ │ +    return 0;
+│ │ +}
+│ │ +
+│ │ +// Define the module deallocation function
+│ │ +static void freeModule() {
+│ │ +    // Indigo
+│ │ +    indigoSetSessionId(options->sid);
+│ │ +    if (indigoCountReferences() > 0) {
+│ │ +        indigoFreeAllObjects();
+│ │ +    }
+│ │ +    indigoReleaseSessionId(options->sid);
+│ │ +
+│ │ +    // Module Options
+│ │ +    PyMem_Free(options);
+│ │ +}
+│ │ +
+│ │ +
+│ │ +/*
+│ │ +
+│ │ +
+│ │ +PyArrayObject* createNumpyArrFromString(int size, const char** strings) {
+│ │ +    npy_intp dims[] = {size};
+│ │ +
+│ │ +    // create empty 1D numpy array of python objects
+│ │ +    PyArrayObject* arr = (PyArrayObject*)PyArray_EMPTY(1, dims, NPY_OBJECT, NPY_ARRAY_C_CONTIGUOUS);
+│ │ +
+│ │ +    // copy strings to numpy array
+│ │ +    for (npy_intp i = 0; i < size; i++) {
+│ │ +        PyArray_SETITEM(arr, PyArray_GETPTR1(arr, i), PyUnicode_FromString(strings[i]));
+│ │ +    }
+│ │ +    return arr;
+│ │ +}
+│ │ +
+│ │ +qword initIndigo() {
+│ │ +    printf("Starting indigo session ... ");
+│ │ +
+│ │ +    // start session
+│ │ +    qword id = indigoAllocSessionId();
+│ │ +
+│ │ +    if (id == -1) {
+│ │ +        printf("FAILED\n");
+│ │ +        exit(1);
+│ │ +    }
+│ │ +
+│ │ +    printf("OK \nversion:   %s\n", indigoVersion());
+│ │ +    return id;
+│ │ +}
+│ │ +
+│ │ +
+│ │ +int main() {
+│ │ +
+│ │ +    // Initialize Python interpreter
+│ │ +    Py_Initialize();
+│ │ +
+│ │ +    // Initialize NumPy
+│ │ +    initNumpy();
+│ │ +
+│ │ +    PyObject* pyobj = PyUnicode_FromString("Hello World!");
+│ │ +
+│ │ +    char* buf = calloc(SMILE_BUF_LEN, sizeof(char));
+│ │ +    int len = unicodeAsUTF8(pyobj, buf);
+│ │ +    if (len > 0) {
+│ │ +        printf("length:%i string: %.5s", len, buf);
+│ │ +    }
+│ │ +    free(buf);
+│ │ +
+│ │ +
+│ │ +
+│ │ +    // Initialize Indigo
+│ │ +    qword sessionId = initIndigo();
+│ │ +
+│ │ +
+│ │ +    // Define C array of string in_data
+│ │ +//    const char* strings[] = {"[C:1](=O)C>>[C:1](O)C",
+│ │ +//                             "C(=C)C>>C(O)C",
+│ │ +//                             "[C:2]=O>>[C:2]O",
+│ │ +//                             "C=O>>CO"};
+│ │ +    const char* strings[] = {"[C:1](=O)C>>[C:1](O)C",
+│ │ +                             "C=O>>CO",
+│ │ +                             "[C:2]=O>>[C:2]O",
+│ │ +                             "[C:1](=O)C>>C(O)[C:1]",
+│ │ +                             "[C:2]=O>>[C:2]O",
+│ │ +                             "[C:1](=O)C>>C(O)[C:1]",
+│ │ +                             };
+│ │ +
+│ │ +    // Determine number of elements in the string array
+│ │ +    int size = sizeof(strings) / sizeof(char*);
+│ │ +    npy_intp dims[] = {size};
+│ │ +
+│ │ +    // Create input and output numpy arrays
+│ │ +    PyArrayObject* np_input = createNumpyArrFromString(size, strings);
+│ │ +    PyArrayObject* np_output = (PyArrayObject*)PyArray_EMPTY(1, dims, NPY_BOOL, NPY_ARRAY_C_CONTIGUOUS);
+│ │ +
+│ │ +    size = PyArray_SIZE(np_input);
+│ │ +
+│ │ +    PyObject* repr = PyObject_Repr((PyObject*)np_input);
+│ │ +    printf("Input array:\n%s\n", PyUnicode_AsUTF8(repr));
+│ │ +
+│ │ +    // Access the in_data pointer and shape of the array
+│ │ +    PyObject** in_data = (PyObject**) PyArray_DATA(np_input);
+│ │ +    npy_bool* out_data = (npy_bool*) PyArray_DATA(np_output);
+│ │ +
+│ │ +    // Create Indigo query object
+│ │ +    const char* querySmarts = "[C:1]=[O]>>[C:1]-[OX2]";
+│ │ +    int query = indigoLoadReactionSmartsFromString(querySmarts);
+│ │ +    indigoOptimize(query, NULL);
+│ │ +    printf("Query: %s\n", querySmarts);
+│ │ +
+│ │ +
+│ │ +//    int num_threads = omp_get_max_threads();
+│ │ +    int num_threads = 2;
+│ │ +
+│ │ +//    Py_BEGIN_ALLOW_THREADS;
+│ │ +
+│ │ +    // Divide input in_data into batches
+│ │ +    int batch_size = size / num_threads;
+│ │ +
+│ │ +//    #pragma omp parallel num_threads(num_threads)
+│ │ +//    {
+│ │ +//        int thread_num = omp_get_thread_num();
+│ │ +//        int start_idx = thread_num * batch_size;
+│ │ +//        int end_idx = start_idx + batch_size;
+│ │ +//        // last batch
+│ │ +//        if (thread_num == num_threads - 1) {
+│ │ +//            end_idx = size;
+│ │ +//        }
+│ │ +//        int current_size = end_idx - start_idx;
+│ │ +//        reactionSubstructureSearchBatch_py(in_data + start_idx,
+│ │ +//                                        out_data + start_idx,
+│ │ +//                                        current_size,
+│ │ +//                                        query,
+│ │ +//                                        strbuf,
+│ │ +//                                        "DAYLIGHT-AAM");
+│ │ +//    }
+│ │ +
+│ │ +//    Py_END_ALLOW_THREADS;
+│ │ +
+│ │ +    // Iterate over the in_data pointer to access the Python strings
+│ │ +//    reactionSubstructureSearchBatch_py(in_data, out_data, PyArray_SIZE(np_input), query, NULL);
+│ │ +
+│ │ +    // Convert Python strings to C strings
+│ │ +    char ** smiles_array = numpyAsUTF8(np_input);
+│ │ +    reactionMatchBatch_py(smiles_array, out_data, size, query, "DAYLIGHT-AAM");
+│ │ +    free(smiles_array);
+│ │ +
+│ │ +    PyArrayObject* np_output_vec = reactionMatchVec(np_input, "[C:1]=[O]>>[C:1]-[OX2]", "DAYLIGHT-AAM");
+│ │ +//    PyArrayObject* np_output_vec = NULL;
+│ │ +
+│ │ +
+│ │ +    // Print output array
+│ │ +
+│ │ +    if (np_output != NULL) {
+│ │ +        repr = PyObject_Repr((PyObject*)np_output);
+│ │ +        printf("Output array:\n%s\n", PyUnicode_AsUTF8(repr));
+│ │ +        Py_DECREF(np_output);
+│ │ +    }
+│ │ +
+│ │ +    if (np_output_vec != NULL) {
+│ │ +        repr = PyObject_Repr((PyObject*)np_output_vec);
+│ │ +        printf("Output array vec:\n%s\n", PyUnicode_AsUTF8(repr));
+│ │ +        Py_DECREF(np_output_vec);
+│ │ +    }
+│ │ +
+│ │ +
+│ │ +    // Decrement the reference count of the NumPy array object
+│ │ +    Py_DECREF(np_input);
+│ │ +
+│ │ +
+│ │ +    // Shut down Python interpreter
+│ │ +    Py_Finalize();
+│ │ +
+│ │ +    // End Indigo session and free memory
+│ │ +    indigoFreeAllObjects();
+│ │ +    indigoReleaseSessionId(sessionId);
+│ │ +
+│ │ +    const char* rxnSmarts = "[F:1][C:2]([F:31])([F:30])[C:3]1[CH:4]=[C:5]([C@H:13]2[O:17][C:16](=[O:18])[N:15]([CH2:19][C:20]3[C:25](Br)=[CH:24][N:23]=[C:22]([S:27][CH3:28])[N:21]=3)[C@H:14]2[CH3:29])[CH:6]=[C:7]([C:9]([F:12])([F:11])[F:10])[CH:8]=1.[CH:32]([C:35]1[CH:36]=[C:37](B(O)O)[C:38]([O:41][CH3:42])=[N:39][CH:40]=1)([CH3:34])[CH3:33].C([O-])([O-])=O.[K+].[K+].[NH4+].[Cl-]>C(OCC)(=O)C.[Pd](Cl)Cl.C(P(C(C)(C)C)[C-]1C=CC=C1)(C)(C)C.[C-]1(P(C(C)(C)C)C(C)(C)C)C=CC=C1.[Fe+2]>[F:1][C:2]([F:31])([F:30])[C:3]1[CH:4]=[C:5]([C@H:13]2[O:17][C:16](=[O:18])[N:15]([CH2:19][C:20]3[C:25]([C:37]4[C:38]([O:41][CH3:42])=[N:39][CH:40]=[C:35]([CH:32]([CH3:34])[CH3:33])[CH:36]=4)=[CH:24][N:23]=[C:22]([S:27][CH3:28])[N:21]=3)[C@H:14]2[CH3:29])[CH:6]=[C:7]([C:9]([F:12])([F:11])[F:10])[CH:8]=1";
+│ │ +    const char* querySmarts = "[B;X3,4]-[C,c:1].[C,c:2]-[Cl,Br,I,$([O]-S)]>>[C,c:1]-[C,c:2]";
+│ │ +
+│ │ +    int rxn = indigoLoadReactionSmartsFromString(rxnSmarts);
+│ │ +    int query = indigoLoadReactionSmartsFromString(querySmarts);
+│ │ +    int matcher = indigoSubstructureMatcher(rxn, NULL);
+│ │ +    int match = indigoMatch(matcher, query);
+│ │ +
+│ │ +    if (reactionSubstructureMatch((char*)rxnSmarts, query))
+│ │ +        printf("%s - SMARTS query matched!\n", querySmarts);
+│ │ +    else
+│ │ +        printf("No matches found\n");
+│ │ +
+│ │ +
+│ │ +
+│ │ +    return 0;
+│ │ +}
+│ │ +
+│ │ +
+│ │ +*/
+│ │ +
+│ │ +// Methods definition
+│ │ +
+│ │ +/**
+│ │ + * Set option by name
+│ │ + * Option names and values always passed as Unicode Python strings
+│ │ + * type checking is done on the python side
+│ │ + * @param self
+│ │ + * @param args option name, option value as python strings
+│ │ + * @return None if successful
+│ │ + */
+│ │ +PyObject* _set_option(PyObject* self, PyObject* args) {
+│ │ +    char* option_name;
+│ │ +    char* option_value;
+│ │ +    if (!PyArg_ParseTuple(args, "ss", &option_name, &option_value)) {
+│ │ +        return NULL;
+│ │ +    }
+│ │ +
+│ │ +    if (strcmp(option_name, "n_jobs") == 0) {
+│ │ +        options->n_jobs = atoi(option_value);
+│ │ +//        printf("set n_jobs: %d\n", options->n_jobs);
+│ │ +        return Py_None;
+│ │ +    } else {
+│ │ +        printf("Option %s not allowed\n", option_name);
+│ │ +        return NULL;
+│ │ +    }
+│ │ +}
+│ │ +
+│ │ +/**
+│ │ + * Get option by name
+│ │ + * @param self
+│ │ + * @param args option name
+│ │ + * @return option value, always python string
+│ │ + */
+│ │ +PyObject* _get_option(PyObject* self, PyObject* args) {
+│ │ +    char* option_name;
+│ │ +    if (!PyArg_ParseTuple(args, "s", &option_name)) {
+│ │ +        return NULL;
+│ │ +    }
+│ │ +
+│ │ +    if (strcmp(option_name, "n_jobs") == 0) {
+│ │ +//        printf("get n_jobs: %d\n", options->n_jobs);
+│ │ +        PyObject* value = PyUnicode_FromFormat("%d", options->n_jobs);
+│ │ +//        Py_DecRef(value);
+│ │ +        return value;
+│ │ +    } else {
+│ │ +        printf("Option %s not found\n", option_name);
+│ │ +        return NULL;
+│ │ +    }
+│ │ +
+│ │ +}
+│ │ +
+│ │ +
+│ │ +
+│ │ +PyObject* _rxn_match(PyObject* self, PyObject* args, PyObject* kwargs) {
+│ │ +    static char* keywords[] = {"np_input", "query_smarts", "aam_mode", "n_jobs", NULL};
+│ │ +
+│ │ +    PyObject* np_input;
+│ │ +    char* querySmarts;
+│ │ +    char* aamMode;
+│ │ +    int numCores;
+│ │ +
+│ │ +    // Parse the arguments using PyArg_ParseTuple
+│ │ +    if (!PyArg_ParseTupleAndKeywords(args, kwargs, "Ossi", keywords, &np_input, &querySmarts, &aamMode, &numCores)) {
+│ │ +        return NULL;
+│ │ +    }
+│ │ +
+│ │ +    return (PyObject*) reactionMatchNumPy(np_input, querySmarts, aamMode, numCores, options);
+│ │ +}
+│ │ +
+│ │ +
+│ │ +PyObject* _rxn_smarts_isok(PyObject* self, PyObject* args) {
+│ │ +    char* smarts;
+│ │ +    if (!PyArg_ParseTuple(args, "s", &smarts)) {
+│ │ +        return NULL;
+│ │ +    }
+│ │ +
+│ │ +    indigoSetSessionId(options->sid);
+│ │ +    qword query = indigoLoadReactionSmartsFromString(smarts);
+│ │ +
+│ │ +    if (query == -1) {
+│ │ +        return Py_False;
+│ │ +    }
+│ │ +
+│ │ +    indigoFree(query);
+│ │ +    return Py_True;
+│ │ +}
+│ │ +
+│ │ +
+│ │ +// Define the module methods
+│ │ +static PyMethodDef methods[] = {
+│ │ +        {"_rxn_match", (PyCFunction) _rxn_match, METH_VARARGS | METH_KEYWORDS, "C-API vecorized reaction match"},
+│ │ +        {"_rxn_smarts_isok", (PyCFunction) _rxn_smarts_isok, METH_VARARGS, "Check reaction SMARTS"},
+│ │ +        {"_set_option", (PyCFunction) _set_option, METH_VARARGS,           "Set option"},
+│ │ +        {"_get_option", (PyCFunction) _get_option, METH_VARARGS,           "Get option"},
+│ │ +        {NULL, NULL, 0, NULL}   // Sentinel value to indicate end of list
+│ │ +};
+│ │ +
+│ │ +
+│ │ +
+│ │ +// Define the module structure
+│ │ +static PyModuleDef module_def = {
+│ │ +        PyModuleDef_HEAD_INIT,
+│ │ +        "Internal \"_chemivec\" module", // Also don't forget to change name here
+│ │ +        "Vectorized cheminformatics module, based on Indigo C-API",
+│ │ +        -1,
+│ │ +        methods,
+│ │ +        NULL, // Optional slot definitions
+│ │ +        NULL, // Optional traversal function
+│ │ +        NULL, // Optional clear function
+│ │ +        freeModule  // Optional module deallocation function
+│ │ +};
+│ │ +
+│ │ +
+│ │ +// Define module name here by PyInit_<your_modul_ename>
+│ │ +PyMODINIT_FUNC PyInit__chemivec(void) {
+│ │ +    import_array();
+│ │ +    qword SessionId = indigoAllocSessionId();
+│ │ +    initOptions(SessionId);
+│ │ +    PyObject* module = PyModule_Create(&module_def);
+│ │ +    return module;
+│ │  }
+│ │   --- chemivec-0.1.0/src/tests/CMakeLists.txt
+│ ├── +++ chemivec-0.1.1/src/tests/CMakeLists.txt
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,25 +1,22 @@
+│ │ -cmake_minimum_required(VERSION 3.15)
+│ │ -project(chemivec-tests)
+│ │ -
+│ │ -
+│ │ -#set_property(GLOBAL PROPERTY CTEST_TARGETS_ADDED 1)
+│ │ -enable_testing()
+│ │ -
+│ │ -include(CTest)
+│ │ -include(FetchContent)
+│ │ -FetchContent_Declare(
+│ │ -        unity
+│ │ -        GIT_REPOSITORY https://github.com/ThrowTheSwitch/Unity.git
+│ │ -)
+│ │ -FetchContent_MakeAvailable(unity)
+│ │ -
+│ │ -
+│ │ -# Find Python, Numpy, OpenMP
+│ │ -file(GLOB ${PROJECT_NAME}_SOURCES
+│ │ -        ${CMAKE_CURRENT_SOURCE_DIR}/*.c)
+│ │ -
+│ │ -message(STATUS "Tests added as: ${PROJECT_NAME}.exe")
+│ │ -
+│ │ -add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_SOURCES})
+│ │ -target_link_libraries(${PROJECT_NAME} chemivec-core unity)
+│ │ -add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME})
+│ │ +cmake_minimum_required(VERSION 3.16)
+│ │ +project(chemivec-tests)
+│ │ +
+│ │ +enable_testing()
+│ │ +
+│ │ +include(CTest)
+│ │ +include(FetchContent)
+│ │ +FetchContent_Declare(
+│ │ +        unity
+│ │ +        GIT_REPOSITORY https://github.com/ThrowTheSwitch/Unity.git
+│ │ +)
+│ │ +FetchContent_MakeAvailable(unity)
+│ │ +
+│ │ +file(GLOB ${PROJECT_NAME}_SOURCES
+│ │ +        ${CMAKE_CURRENT_SOURCE_DIR}/*.c)
+│ │ +
+│ │ +add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_SOURCES})
+│ │ +set_target_properties(${PROJECT_NAME} PROPERTIES EXCLUDE_FROM_ALL TRUE)
+│ │ +target_link_libraries(${PROJECT_NAME}
+│ │ +        PRIVATE chemivec-core
+│ │ +        PRIVATE unity)
+│ │ +add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME})

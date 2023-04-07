@@ -1,0 +1,147 @@
+--- tmp/wikidata-bot-framework-7.0.7.tar.gz
++++ tmp/wikidata-bot-framework-7.0.8.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "wikidata-bot-framework-7.0.7.tar", last modified: Sat Mar  4 17:26:54 2023, max compression
+│ +gzip compressed data, was "wikidata-bot-framework-7.0.8.tar", last modified: Fri Apr  7 13:07:44 2023, max compression
+│   --- wikidata-bot-framework-7.0.7.tar
+├── +++ wikidata-bot-framework-7.0.8.tar
+│ ├── file list
+│ │ @@ -1,22 +1,22 @@
+│ │ -drwxr-xr-x   0 aoyansarkar   (501) staff       (20)        0 2023-03-04 17:26:54.801784 wikidata-bot-framework-7.0.7/
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)     1070 2023-01-08 17:41:08.000000 wikidata-bot-framework-7.0.7/LICENSE
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)     1186 2023-03-04 17:26:54.801617 wikidata-bot-framework-7.0.7/PKG-INFO
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)      146 2023-01-08 17:41:08.000000 wikidata-bot-framework-7.0.7/README.md
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)     1382 2023-03-04 17:24:25.000000 wikidata-bot-framework-7.0.7/pyproject.toml
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)       38 2023-03-04 17:26:54.801827 wikidata-bot-framework-7.0.7/setup.cfg
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)       38 2023-01-08 18:32:42.000000 wikidata-bot-framework-7.0.7/setup.py
+│ │ -drwxr-xr-x   0 aoyansarkar   (501) staff       (20)        0 2023-03-04 17:26:54.800212 wikidata-bot-framework-7.0.7/wikidata_bot_framework/
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)    35607 2023-02-20 02:18:20.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework/__init__.py
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)      705 2023-02-04 22:38:43.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework/constants.py
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)    12102 2023-03-04 17:24:25.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework/dataclasses.py
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)     4782 2023-02-03 21:36:54.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework/process_reason.py
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)     1327 2023-01-23 02:06:05.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework/sentry.py
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)     1659 2023-02-04 17:10:17.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework/transformers.py
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)     8626 2023-02-20 01:04:13.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework/utils.py
+│ │ -drwxr-xr-x   0 aoyansarkar   (501) staff       (20)        0 2023-03-04 17:26:54.801269 wikidata-bot-framework-7.0.7/wikidata_bot_framework.egg-info/
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)     1186 2023-03-04 17:26:54.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)      565 2023-03-04 17:26:54.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)        1 2023-03-04 17:26:54.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)      102 2023-03-04 17:26:54.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework.egg-info/requires.txt
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)       23 2023-03-04 17:26:54.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework.egg-info/top_level.txt
+│ │ --rw-r--r--   0 aoyansarkar   (501) staff       (20)        1 2023-01-08 18:38:56.000000 wikidata-bot-framework-7.0.7/wikidata_bot_framework.egg-info/zip-safe
+│ │ +drwxr-xr-x   0 aoyansarkar   (501) staff       (20)        0 2023-04-07 13:07:44.743328 wikidata-bot-framework-7.0.8/
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)     1070 2023-01-08 17:41:08.000000 wikidata-bot-framework-7.0.8/LICENSE
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)     1186 2023-04-07 13:07:44.743140 wikidata-bot-framework-7.0.8/PKG-INFO
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)      146 2023-01-08 17:41:08.000000 wikidata-bot-framework-7.0.8/README.md
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)     1382 2023-04-07 13:07:33.000000 wikidata-bot-framework-7.0.8/pyproject.toml
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)       38 2023-04-07 13:07:44.743383 wikidata-bot-framework-7.0.8/setup.cfg
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)       38 2023-01-08 18:32:42.000000 wikidata-bot-framework-7.0.8/setup.py
+│ │ +drwxr-xr-x   0 aoyansarkar   (501) staff       (20)        0 2023-04-07 13:07:44.741459 wikidata-bot-framework-7.0.8/wikidata_bot_framework/
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)    35594 2023-04-07 13:07:33.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework/__init__.py
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)      705 2023-02-04 22:38:43.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework/constants.py
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)    12102 2023-03-04 17:24:25.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework/dataclasses.py
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)     4782 2023-02-03 21:36:54.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework/process_reason.py
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)     1327 2023-01-23 02:06:05.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework/sentry.py
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)     1659 2023-02-04 17:10:17.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework/transformers.py
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)     8626 2023-02-20 01:04:13.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework/utils.py
+│ │ +drwxr-xr-x   0 aoyansarkar   (501) staff       (20)        0 2023-04-07 13:07:44.742738 wikidata-bot-framework-7.0.8/wikidata_bot_framework.egg-info/
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)     1186 2023-04-07 13:07:44.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)      565 2023-04-07 13:07:44.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)        1 2023-04-07 13:07:44.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)      102 2023-04-07 13:07:44.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework.egg-info/requires.txt
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)       23 2023-04-07 13:07:44.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 aoyansarkar   (501) staff       (20)        1 2023-01-08 18:38:56.000000 wikidata-bot-framework-7.0.8/wikidata_bot_framework.egg-info/zip-safe
+│ │   --- wikidata-bot-framework-7.0.7/LICENSE
+│ ├── +++ wikidata-bot-framework-7.0.8/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- wikidata-bot-framework-7.0.7/PKG-INFO
+│ ├── +++ wikidata-bot-framework-7.0.8/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: wikidata-bot-framework
+│ │ -Version: 7.0.7
+│ │ +Version: 7.0.8
+│ │  Summary: A framework for making Wikidata bots.
+│ │  License: MIT License
+│ │  Project-URL: repository, https://github.com/PythonCoderAS/wikidata-bot-framework
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │   --- wikidata-bot-framework-7.0.7/pyproject.toml
+│ ├── +++ wikidata-bot-framework-7.0.8/pyproject.toml
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["setuptools"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "wikidata-bot-framework"
+│ │ -version = "7.0.7"
+│ │ +version = "7.0.8"
+│ │  description = "A framework for making Wikidata bots."
+│ │  readme = "README.md"
+│ │  dependencies = [
+│ │      "pywikibot",
+│ │      "mwparserfromhell",
+│ │      "python-dotenv",
+│ │      "sentry-sdk",
+│ │   --- wikidata-bot-framework-7.0.7/wikidata_bot_framework/__init__.py
+│ ├── +++ wikidata-bot-framework-7.0.8/wikidata_bot_framework/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -702,15 +702,15 @@
+│ │                              )
+│ │                              acted = True
+│ │          with start_span(
+│ │              op="post_output_process", description="Post Output Process Hook"
+│ │          ):
+│ │              if self.post_output_process_hook(output, item):
+│ │                  re_cycle |= self.processed_hook(
+│ │ -                    item, ProcessReason.post_output_process_hook
+│ │ +                    item, ProcessReason.post_output
+│ │                  )
+│ │                  if not acted:
+│ │                      acted = True
+│ │          if acted:
+│ │              with start_span(op="pre_edit_process", description="Pre Edit Process Hook"):
+│ │                  self.pre_edit_process_hook(output, item)
+│ │              with start_span(op="edit_entity", description="Edit Entity"):
+│ │   --- wikidata-bot-framework-7.0.7/wikidata_bot_framework/constants.py
+│ ├── +++ wikidata-bot-framework-7.0.8/wikidata_bot_framework/constants.py
+│ │┄ Files identical despite different names
+│ │   --- wikidata-bot-framework-7.0.7/wikidata_bot_framework/dataclasses.py
+│ ├── +++ wikidata-bot-framework-7.0.8/wikidata_bot_framework/dataclasses.py
+│ │┄ Files identical despite different names
+│ │   --- wikidata-bot-framework-7.0.7/wikidata_bot_framework/process_reason.py
+│ ├── +++ wikidata-bot-framework-7.0.8/wikidata_bot_framework/process_reason.py
+│ │┄ Files identical despite different names
+│ │   --- wikidata-bot-framework-7.0.7/wikidata_bot_framework/sentry.py
+│ ├── +++ wikidata-bot-framework-7.0.8/wikidata_bot_framework/sentry.py
+│ │┄ Files identical despite different names
+│ │   --- wikidata-bot-framework-7.0.7/wikidata_bot_framework/transformers.py
+│ ├── +++ wikidata-bot-framework-7.0.8/wikidata_bot_framework/transformers.py
+│ │┄ Files identical despite different names
+│ │   --- wikidata-bot-framework-7.0.7/wikidata_bot_framework/utils.py
+│ ├── +++ wikidata-bot-framework-7.0.8/wikidata_bot_framework/utils.py
+│ │┄ Files identical despite different names
+│ │   --- wikidata-bot-framework-7.0.7/wikidata_bot_framework.egg-info/PKG-INFO
+│ ├── +++ wikidata-bot-framework-7.0.8/wikidata_bot_framework.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: wikidata-bot-framework
+│ │ -Version: 7.0.7
+│ │ +Version: 7.0.8
+│ │  Summary: A framework for making Wikidata bots.
+│ │  License: MIT License
+│ │  Project-URL: repository, https://github.com/PythonCoderAS/wikidata-bot-framework
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │   --- wikidata-bot-framework-7.0.7/wikidata_bot_framework.egg-info/SOURCES.txt
+│ ├── +++ wikidata-bot-framework-7.0.8/wikidata_bot_framework.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
