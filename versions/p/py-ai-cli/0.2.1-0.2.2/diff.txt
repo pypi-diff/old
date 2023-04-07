@@ -1,0 +1,123 @@
+--- tmp/py-ai-cli-0.2.1.tar.gz
++++ tmp/py-ai-cli-0.2.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "py-ai-cli-0.2.1.tar", last modified: Thu Apr  6 15:07:53 2023, max compression
+│ +gzip compressed data, was "py-ai-cli-0.2.2.tar", last modified: Fri Apr  7 09:53:18 2023, max compression
+│   --- py-ai-cli-0.2.1.tar
+├── +++ py-ai-cli-0.2.2.tar
+│ ├── file list
+│ │ @@ -1,11 +1,11 @@
+│ │ --rw-r--r--   0        0        0     1538 2023-04-06 15:07:34.464676 py-ai-cli-0.2.1/CHANGELOG.md
+│ │ --rw-r--r--   0        0        0     3155 2023-04-06 15:07:34.464676 py-ai-cli-0.2.1/README.md
+│ │ --rw-r--r--   0        0        0     3940 2023-04-06 15:07:34.464676 py-ai-cli-0.2.1/README_ja.md
+│ │ --rw-r--r--   0        0        0     2922 2023-04-06 15:07:34.464676 py-ai-cli-0.2.1/README_zh.md
+│ │ --rw-r--r--   0        0        0     1996 2023-04-06 15:07:34.868677 py-ai-cli-0.2.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0      690 2023-04-06 15:07:34.868677 py-ai-cli-0.2.1/src/ai_cli/__init__.py
+│ │ --rw-r--r--   0        0        0     5626 2023-04-06 15:07:34.868677 py-ai-cli-0.2.1/src/ai_cli/bot/__init__.py
+│ │ --rwxr-xr-x   0        0        0    13579 2023-04-06 15:07:34.868677 py-ai-cli-0.2.1/src/ai_cli/cli.py
+│ │ --rw-r--r--   0        0        0     4468 2023-04-06 15:07:34.868677 py-ai-cli-0.2.1/src/ai_cli/git.py
+│ │ --rw-r--r--   0        0        0     2800 2023-04-06 15:07:34.868677 py-ai-cli-0.2.1/src/ai_cli/setting.py
+│ │ --rw-r--r--   0        0        0     3631 1970-01-01 00:00:00.000000 py-ai-cli-0.2.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1538 2023-04-07 09:52:55.645674 py-ai-cli-0.2.2/CHANGELOG.md
+│ │ +-rw-r--r--   0        0        0     3155 2023-04-07 09:52:55.649674 py-ai-cli-0.2.2/README.md
+│ │ +-rw-r--r--   0        0        0     3940 2023-04-07 09:52:55.649674 py-ai-cli-0.2.2/README_ja.md
+│ │ +-rw-r--r--   0        0        0     2922 2023-04-07 09:52:55.649674 py-ai-cli-0.2.2/README_zh.md
+│ │ +-rw-r--r--   0        0        0     1996 2023-04-07 09:52:55.989678 py-ai-cli-0.2.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      690 2023-04-07 09:52:55.989678 py-ai-cli-0.2.2/src/ai_cli/__init__.py
+│ │ +-rw-r--r--   0        0        0     5454 2023-04-07 09:52:55.989678 py-ai-cli-0.2.2/src/ai_cli/bot/__init__.py
+│ │ +-rwxr-xr-x   0        0        0    13579 2023-04-07 09:52:55.989678 py-ai-cli-0.2.2/src/ai_cli/cli.py
+│ │ +-rw-r--r--   0        0        0     4468 2023-04-07 09:52:55.989678 py-ai-cli-0.2.2/src/ai_cli/git.py
+│ │ +-rw-r--r--   0        0        0     2800 2023-04-07 09:52:55.989678 py-ai-cli-0.2.2/src/ai_cli/setting.py
+│ │ +-rw-r--r--   0        0        0     3631 1970-01-01 00:00:00.000000 py-ai-cli-0.2.2/PKG-INFO
+│ │   --- py-ai-cli-0.2.1/CHANGELOG.md
+│ ├── +++ py-ai-cli-0.2.2/CHANGELOG.md
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.1/README.md
+│ ├── +++ py-ai-cli-0.2.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.1/README_ja.md
+│ ├── +++ py-ai-cli-0.2.2/README_ja.md
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.1/README_zh.md
+│ ├── +++ py-ai-cli-0.2.2/README_zh.md
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.1/pyproject.toml
+│ ├── +++ py-ai-cli-0.2.2/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -99,15 +99,15 @@
+│ │      "openai>=0.27.0",
+│ │      "pysocks>=1.7.1",
+│ │      "pyperclip>=1.8.2",
+│ │      "EdgeGPT>=0.1.13",
+│ │  ]
+│ │  requires-python = ">=3.8"
+│ │  readme = "README.md"
+│ │ -version = "0.2.1"
+│ │ +version = "0.2.2"
+│ │  
+│ │  [project.license]
+│ │  text = "MIT"
+│ │  
+│ │  [project.urls]
+│ │  Repository = "https://github.com/yufeikang/ai-cli"
+│ │  Documentation = "https://github.com/yufeikang/ai-cli/blob/main/README.md"
+│ │   --- py-ai-cli-0.2.1/src/ai_cli/__init__.py
+│ ├── +++ py-ai-cli-0.2.2/src/ai_cli/__init__.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -__version__ = "0.2.1"
+│ │ +__version__ = "0.2.2"
+│ │  
+│ │  import logging
+│ │  import os
+│ │  from logging.handlers import RotatingFileHandler
+│ │  from pathlib import Path
+│ │  
+│ │  HOME = Path.home()
+│ │   --- py-ai-cli-0.2.1/src/ai_cli/bot/__init__.py
+│ ├── +++ py-ai-cli-0.2.2/src/ai_cli/bot/__init__.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -104,19 +104,17 @@
+│ │                  yield {"role": "assistant", "content": h.answer}
+│ │  
+│ │      def _ask(self, question: str, stream=None) -> Union[str, Generator]:
+│ │          messages = list(self.get_messages())
+│ │          try:
+│ │              response = openai.ChatCompletion.create(model=self.setting.model, messages=messages, stream=stream)
+│ │              if not stream:
+│ │ -                logger.debug(f"Answer: {json.dumps(response, ensure_ascii=False)}")
+│ │                  yield response.choices[0].message.content
+│ │              else:
+│ │                  for v in response:
+│ │ -                    logger.debug(f"Answer stream: {json.dumps(v, ensure_ascii=False)}")
+│ │                      if "content" in v.choices[0].delta:
+│ │                          yield v.choices[0].delta.content
+│ │          except openai.error.RateLimitError:
+│ │              logger.warning("[bold red]Rate limit exceeded, sleep for 10 seconds, then retry")
+│ │              time.sleep(10)
+│ │              return self._ask(question, stream=stream)
+│ │   --- py-ai-cli-0.2.1/src/ai_cli/cli.py
+│ ├── +++ py-ai-cli-0.2.2/src/ai_cli/cli.py
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.1/src/ai_cli/git.py
+│ ├── +++ py-ai-cli-0.2.2/src/ai_cli/git.py
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.1/src/ai_cli/setting.py
+│ ├── +++ py-ai-cli-0.2.2/src/ai_cli/setting.py
+│ │┄ Files identical despite different names
+│ │   --- py-ai-cli-0.2.1/PKG-INFO
+│ ├── +++ py-ai-cli-0.2.2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: py_ai_cli
+│ │ -Version: 0.2.1
+│ │ +Version: 0.2.2
+│ │  Summary: This CLI tool allows you to easily chat with chatGPT in the command line. You can chat with it, ask questions, and even translate text. It also
+│ │  License: MIT
+│ │  Author-email: Yufei Kang <kou.uhi.x@gmail.com>
+│ │  Requires-Python: >=3.8
+│ │  Project-URL: Documentation, https://github.com/yufeikang/ai-cli/blob/main/README.md
+│ │  Project-URL: Repository, https://github.com/yufeikang/ai-cli
+│ │  Description-Content-Type: text/markdown

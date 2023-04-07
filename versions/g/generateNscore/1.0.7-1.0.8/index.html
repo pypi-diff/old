@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/generatenscore-1.0.7.tar.gz tmp/generatenscore-1.0.8.tar.gz --html versions/g/generateNscore/1.0.7-1.0.8/index.html --text versions/g/generateNscore/1.0.7-1.0.8/diff.txt --markdown versions/g/generateNscore/1.0.7-1.0.8/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.81 KB</span></div>
+  <div><span class="source">tmp/generatenscore-1.0.7.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/generatenscore-1.0.8.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.75 KB</span></div>
+    <div><span class="source">generatenscore-1.0.7.tar</span> vs.</div>
+    <div id="generatenscore--.-.-.tar"><span class="source">generatenscore-1.0.8.tar</span>
+      <a class="anchor" href="#generatenscore--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.63 KB</span></div>
+      <div id="generatenscore--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>167<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/Embedding<span class="dp">·</span>Images<span class="dp">·</span>in<span class="dp">·</span>HTMLs.url</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>167<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/Embedding<span class="dp">·</span>Images<span class="dp">·</span>in<span class="dp">·</span>HTMLs.url</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>158<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/Packaging.url</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>158<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/Packaging.url</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/certutil<span class="dp">·</span>-encode<span class="dp">·</span>mypicture.png<span class="dp">·</span>mypicture.txt.txt</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/certutil<span class="dp">·</span>-encode<span class="dp">·</span>mypicture.png<span class="dp">·</span>mypicture.txt.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2029<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/up8c18p01.png</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2029<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/up8c18p01.png</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2850<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/up8c18p01.txt</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2850<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/up8c18p01.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>564<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/updatePackage.txt</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>564<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/updatePackage.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>161<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/src/generateNscore/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>161<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/src/generateNscore/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2284<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/src/generateNscore/_common.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2284<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/src/generateNscore/_common.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9263<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/src/generateNscore/_generateEm.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9263<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/src/generateNscore/_generateEm.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17850<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/src/generateNscore/_generateMakeHTMLs.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17850<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/src/generateNscore/_generateMakeHTMLs.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9951<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/src/generateNscore/_scoreEm.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9951<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/src/generateNscore/_scoreEm.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14836<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/src/generateNscore/makeChoices.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14836<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/src/generateNscore/makeChoices.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1091<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/LICENSE.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1091<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/LICENSE.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2502<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/README.md</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2502<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>78</del>9<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/pyproject.toml</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>82</ins>9<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<del>178</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<del>7</del>/PKG-INFO</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<ins>222</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>generatenscore-1.0.<ins>8</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">generatenscore-1.0.7/up8c18p01.png</span> vs.</div>
+      <div id="generatenscore--.-.-.tar---generatenscore--.-.--up-c--p--.png"><span class="source">generatenscore-1.0.8/up8c18p01.png</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--up-c--p--.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">generatenscore-1.0.7/up8c18p01.txt</span> vs.</div>
+      <div id="generatenscore--.-.-.tar---generatenscore--.-.--up-c--p--.txt"><span class="source">generatenscore-1.0.8/up8c18p01.txt</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--up-c--p--.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">generatenscore-1.0.7/updatePackage.txt</span> vs.</div>
+      <div id="generatenscore--.-.-.tar---generatenscore--.-.--updatePackage.txt"><span class="source">generatenscore-1.0.8/updatePackage.txt</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--updatePackage.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">generatenscore-1.0.7/src/generateNscore/_common.py</span> vs.</div>
+      <div id="generatenscore--.-.-.tar---generatenscore--.-.--src-generateNscore-_common.py"><span class="source">generatenscore-1.0.8/src/generateNscore/_common.py</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--src-generateNscore-_common.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">generatenscore-1.0.7/src/generateNscore/_generateEm.py</span> vs.</div>
+      <div id="generatenscore--.-.-.tar---generatenscore--.-.--src-generateNscore-_generateEm.py"><span class="source">generatenscore-1.0.8/src/generateNscore/_generateEm.py</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--src-generateNscore-_generateEm.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">generatenscore-1.0.7/src/generateNscore/_generateMakeHTMLs.py</span> vs.</div>
+      <div id="generatenscore--.-.-.tar---generatenscore--.-.--src-generateNscore-_generateMakeHTMLs.py"><span class="source">generatenscore-1.0.8/src/generateNscore/_generateMakeHTMLs.py</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--src-generateNscore-_generateMakeHTMLs.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">generatenscore-1.0.7/src/generateNscore/_scoreEm.py</span> vs.</div>
+      <div id="generatenscore--.-.-.tar---generatenscore--.-.--src-generateNscore-_scoreEm.py"><span class="source">generatenscore-1.0.8/src/generateNscore/_scoreEm.py</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--src-generateNscore-_scoreEm.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">generatenscore-1.0.7/src/generateNscore/makeChoices.py</span> vs.</div>
+      <div id="generatenscore--.-.-.tar---generatenscore--.-.--src-generateNscore-makeChoices.py"><span class="source">generatenscore-1.0.8/src/generateNscore/makeChoices.py</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--src-generateNscore-makeChoices.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">generatenscore-1.0.7/LICENSE.txt</span> vs.</div>
+      <div id="generatenscore--.-.-.tar---generatenscore--.-.--LICENSE.txt"><span class="source">generatenscore-1.0.8/LICENSE.txt</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--LICENSE.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">generatenscore-1.0.7/README.md</span> vs.</div>
+      <div id="generatenscore--.-.-.tar---generatenscore--.-.--README.md"><span class="source">generatenscore-1.0.8/README.md</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.03 KB</span></div>
+      <div><span class="source">generatenscore-1.0.7/pyproject.toml</span> vs.</div>
+      <div id="generatenscore--.-.-.tar---generatenscore--.-.--pyproject.toml"><span class="source">generatenscore-1.0.8/pyproject.toml</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 16% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 25 lines modified</td><td colspan="2">Offset 1, 26 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[build-system]<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">[build-system]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;hatchling&quot;]<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;hatchling&quot;]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;hatchling.build&quot;<em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;hatchling.build&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">[project]<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">[project]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;generateNscore&quot;<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;generateNscore&quot;<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.0.<del>7</del>&quot;<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.0.<ins>8</ins>&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;Sukmock<span class="dp">·</span>Lee&quot;,<span class="dp">·</span>email=&quot;smlee@inha.ac.kr&quot;<span class="dp">·</span>},<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;Sukmock<span class="dp">·</span>Lee&quot;,<span class="dp">·</span>email=&quot;smlee@inha.ac.kr&quot;<span class="dp">·</span>},<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">]<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>generate<span class="dp">·</span>question<span class="dp">·</span>sheets<span class="dp">·</span>in<span class="dp">·</span>HTML<span class="dp">·</span>files<span class="dp">·</span>and<span class="dp">·</span>to<span class="dp">·</span>score<span class="dp">·</span>answers<span class="dp">·</span>in<span class="dp">·</span>text<span class="dp">·</span>files&quot;<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>generate<span class="dp">·</span>question<span class="dp">·</span>sheets<span class="dp">·</span>in<span class="dp">·</span>HTML<span class="dp">·</span>files<span class="dp">·</span>and<span class="dp">·</span>to<span class="dp">·</span>score<span class="dp">·</span>answers<span class="dp">·</span>in<span class="dp">·</span>text<span class="dp">·</span>files&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;<em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[<em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Topic<span class="dp">·</span>::<span class="dp">·</span>Education<span class="dp">·</span>::<span class="dp">·</span>Testing&quot;,<em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Topic<span class="dp">·</span>::<span class="dp">·</span>Education<span class="dp">·</span>::<span class="dp">·</span>Testing&quot;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,<em>\xd</em></td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License&quot;,<em>\xd</em></td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License&quot;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent&quot;,<em>\xd</em></td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent&quot;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Education&quot;,<em>\xd</em></td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Education&quot;,<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop&quot;<em>\xd</em></td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop&quot;<ins>,</ins><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">]<em>\xd</em></td><td class="diffline">22 </td><td class="diffpresent">]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">23 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">[project.urls]<em>\xd</em></td><td class="diffline">24 </td><td class="diffpresent">[project.urls]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">&quot;Homepage&quot;<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/generateNscore/generateNscore&quot;<em>\xd</em></td><td class="diffline">25 </td><td class="diffpresent">&quot;Homepage&quot;<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/generateNscore/generateNscore&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">&quot;Bug<span class="dp">·</span>Tracker&quot;<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/generateNscore/generateNscore/issues&quot;</td><td class="diffline">26 </td><td class="diffpresent">&quot;Bug<span class="dp">·</span>Tracker&quot;<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/generateNscore/generateNscore/issues&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.81 KB</span></div>
+      <div><span class="source">generatenscore-1.0.7/PKG-INFO</span> vs.</div>
+      <div id="generatenscore--.-.-.tar---generatenscore--.-.--PKG-INFO"><span class="source">generatenscore-1.0.8/PKG-INFO</span>
+        <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>generateNscore</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>generateNscore</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<del>7</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<ins>8</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>generate<span class="dp">·</span>question<span class="dp">·</span>sheets<span class="dp">·</span>in<span class="dp">·</span>HTML<span class="dp">·</span>files<span class="dp">·</span>and<span class="dp">·</span>to<span class="dp">·</span>score<span class="dp">·</span>answers<span class="dp">·</span>in<span class="dp">·</span>text<span class="dp">·</span>files</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>generate<span class="dp">·</span>question<span class="dp">·</span>sheets<span class="dp">·</span>in<span class="dp">·</span>HTML<span class="dp">·</span>files<span class="dp">·</span>and<span class="dp">·</span>to<span class="dp">·</span>score<span class="dp">·</span>answers<span class="dp">·</span>in<span class="dp">·</span>text<span class="dp">·</span>files</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/generateNscore/generateNscore</td><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/generateNscore/generateNscore</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/generateNscore/generateNscore/issues</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/generateNscore/generateNscore/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Sukmock<span class="dp">·</span>Lee<span class="dp">·</span>&lt;smlee@inha.ac.kr&gt;</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Sukmock<span class="dp">·</span>Lee<span class="dp">·</span>&lt;smlee@inha.ac.kr&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE.txt</td><td class="diffline">8 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE.txt</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Education</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Education</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Education<span class="dp">·</span>::<span class="dp">·</span>Testing</td><td class="diffline">15 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Education<span class="dp">·</span>::<span class="dp">·</span>Testing</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td><td class="diffline">16 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td></tr>
+</table>      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol">⊟</div>
+        <div><span class="diffsize">1.96 KB</span></div>
+        <div id="generatenscore--.-.-.tar---generatenscore--.-.--PKG-INFO---html-text---"><span class="source">html2text {}</span>
+          <a class="anchor" href="#generatenscore--.-.-.tar---generatenscore--.-.--PKG-INFO---html-text---">¶</a>
+        </div>
+        </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 21 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>generateNscore<span class="dp">·</span>Version:<span class="dp">·</span>1.0.<del>7</del><span class="dp">·</span>Summary:<span class="dp">·</span>A<span class="dp">·</span>package<span class="dp">·</span>to</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>generateNscore<span class="dp">·</span>Version:<span class="dp">·</span>1.0.<ins>8</ins><span class="dp">·</span>Summary:<span class="dp">·</span>A<span class="dp">·</span>package<span class="dp">·</span>to</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">generate<span class="dp">·</span>question<span class="dp">·</span>sheets<span class="dp">·</span>in<span class="dp">·</span>HTML<span class="dp">·</span>files<span class="dp">·</span>and<span class="dp">·</span>to<span class="dp">·</span>score<span class="dp">·</span>answers<span class="dp">·</span>in<span class="dp">·</span>text<span class="dp">·</span>files</td><td class="diffline">2 </td><td class="diffpresent">generate<span class="dp">·</span>question<span class="dp">·</span>sheets<span class="dp">·</span>in<span class="dp">·</span>HTML<span class="dp">·</span>files<span class="dp">·</span>and<span class="dp">·</span>to<span class="dp">·</span>score<span class="dp">·</span>answers<span class="dp">·</span>in<span class="dp">·</span>text<span class="dp">·</span>files</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/generateNscore/generateNscore</td><td class="diffline">3 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/generateNscore/generateNscore</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/generateNscore/generateNscore/</td><td class="diffline">4 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/generateNscore/generateNscore/</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">issues<span class="dp">·</span>Author-email:<span class="dp">·</span>Sukmock<span class="dp">·</span>Lee</td><td class="diffline">5 </td><td class="diffpresent">issues<span class="dp">·</span>Author-email:<span class="dp">·</span>Sukmock<span class="dp">·</span>Lee</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">inha.ac.kr&gt;<span class="dp">·</span>License-File:<span class="dp">·</span>LICENSE.txt<span class="dp">·</span>Classifier:<span class="dp">·</span><del>Int</del>e<del>nd</del>e<del>d</del><span class="dp">·</span><del>Audience</del><span class="dp">·</span><del>::</del></td><td class="diffline">6 </td><td class="diffpresent">inha.ac.kr&gt;<span class="dp">·</span>License-File:<span class="dp">·</span>LICENSE.txt<span class="dp">·</span>Classifier:<span class="dp">·</span><ins>Dev</ins>e<ins>lo</ins><ins>pm</ins>e<ins>n</ins><ins>t</ins><span class="dp">·</span><ins>S</ins><ins>tatus<span class="dp">·</span>::</ins><span class="dp">·</span><ins>3</ins><ins><span class="dp">·</span>-</ins></td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent">Education<span class="dp">·</span>Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop<span class="dp">·</span>Classifier:</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License<span class="dp">·</span>Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">Independent<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>Classifier:<span class="dp">·</span>Topic</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">10 </td><td class="diffpresent">::<span class="dp">·</span>Education<span class="dp">·</span>::<span class="dp">·</span>Testing<span class="dp">·</span>Requires-Python:<span class="dp">·</span>&gt;=3.7<span class="dp">·</span>Description-Content-Type:<span class="dp">·</span>text/</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">11 </td><td class="diffpresent">markdown<span class="dp">·</span>#<span class="dp">·</span>generateNscore<span class="dp">·</span>What<span class="dp">·</span>is<span class="dp">·</span>it?<span class="dp">·</span>generateNscore<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>that</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">12 </td><td class="diffpresent">provides<span class="dp">·</span>as<span class="dp">·</span>many<span class="dp">·</span>personalized<span class="dp">·</span>question<span class="dp">·</span>sheets<span class="dp">·</span>in<span class="dp">·</span>HTML<span class="dp">·</span>files<span class="dp">·</span>as<span class="dp">·</span>you<span class="dp">·</span>want.<span class="dp">·</span>It</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">ai<del>ms</del><span class="dp">·</span>t<del>o<span class="dp">·</span>b</del>e<span class="dp">·</span><del>o</del>ne<span class="dp">·</span><del>of</del><span class="dp">·</span><del>f</del>u<del>ndame</del>n<del>ta</del>l<del><span class="dp">·</span>teaching</del><span class="dp">·</span>t<del>ools.</del><span class="dp">·</span><del>H</del>e<del>lp</del></td><td class="diffline">7 </td><td class="diffpresent"><ins>Alpha<span class="dp">·</span>Cl</ins>a<ins>ssif</ins>i<ins>e</ins><ins>r:</ins><span class="dp">·</span><ins>In</ins>t<ins>end</ins>e<ins>d</ins><span class="dp">·</span><ins>Audi</ins><ins>e</ins>n<ins>c</ins>e<span class="dp">·</span><ins>::</ins><span class="dp">·</span><ins>E</ins><ins>d</ins>u<ins>catio</ins>n<ins><span class="dp">·</span>C</ins>l<ins>assifier:</ins><span class="dp">·</span><ins>In</ins>t<ins>ended</ins><span class="dp">·</span><ins>Aud</ins><ins>i</ins>e<ins>n</ins><ins>ce</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop<span class="dp">·</span>Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Education<span class="dp">·</span>::<span class="dp">·</span>Testing<span class="dp">·</span>Requires-Python:<span class="dp">·</span>&gt;=3.7</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown<span class="dp">·</span>#<span class="dp">·</span>generateNscore<span class="dp">·</span>What<span class="dp">·</span>is<span class="dp">·</span>it?</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">generateNscore<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>that<span class="dp">·</span>provides<span class="dp">·</span>as<span class="dp">·</span>many<span class="dp">·</span>personalized<span class="dp">·</span>question</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">13 </td><td class="diffpresent">sheets<span class="dp">·</span>in<span class="dp">·</span>HTML<span class="dp">·</span>files<span class="dp">·</span>as<span class="dp">·</span>you<span class="dp">·</span>want.<span class="dp">·</span>It<span class="dp">·</span>aims<span class="dp">·</span>to<span class="dp">·</span>be<span class="dp">·</span>one<span class="dp">·</span>of<span class="dp">·</span>fundamental<span class="dp">·</span>teaching</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">14 </td><td class="diffpresent">tools.<span class="dp">·</span>Help</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>Documentation</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>Documentation</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>Changelog</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>Changelog</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Features</td><td class="diffline">17 </td><td class="diffpresent">Features</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>Generates<span class="dp">·</span>as<span class="dp">·</span>many<span class="dp">·</span>personalized<span class="dp">·</span>question<span class="dp">·</span>sheets<span class="dp">·</span>in<span class="dp">·</span>HTML<span class="dp">·</span>files<span class="dp">·</span>as<span class="dp">·</span>one<span class="dp">·</span>wants</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>Generates<span class="dp">·</span>as<span class="dp">·</span>many<span class="dp">·</span>personalized<span class="dp">·</span>question<span class="dp">·</span>sheets<span class="dp">·</span>in<span class="dp">·</span>HTML<span class="dp">·</span>files<span class="dp">·</span>as<span class="dp">·</span>one<span class="dp">·</span>wants</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>few<span class="dp">·</span>strings<span class="dp">·</span>of<span class="dp">·</span>text.</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>few<span class="dp">·</span>strings<span class="dp">·</span>of<span class="dp">·</span>text.</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>The<span class="dp">·</span>amount<span class="dp">·</span>of<span class="dp">·</span>random<span class="dp">·</span>personalization<span class="dp">·</span>is<span class="dp">·</span>under<span class="dp">·</span>total<span class="dp">·</span>control<span class="dp">·</span>of<span class="dp">·</span>users.</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>The<span class="dp">·</span>amount<span class="dp">·</span>of<span class="dp">·</span>random<span class="dp">·</span>personalization<span class="dp">·</span>is<span class="dp">·</span>under<span class="dp">·</span>total<span class="dp">·</span>control<span class="dp">·</span>of<span class="dp">·</span>users.</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>Each<span class="dp">·</span>HTML<span class="dp">·</span>file<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>name<span class="dp">·</span>corresponding<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>identification<span class="dp">·</span>number.</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>Each<span class="dp">·</span>HTML<span class="dp">·</span>file<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>name<span class="dp">·</span>corresponding<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>identification<span class="dp">·</span>number.</td></tr>
+</table>      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

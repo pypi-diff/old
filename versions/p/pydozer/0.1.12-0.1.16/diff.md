@@ -1,0 +1,304 @@
+# Comparing `tmp/pydozer-0.1.12.tar.gz` & `tmp/pydozer-0.1.16.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pydozer-0.1.12.tar", max compression
++gzip compressed data, was "pydozer-0.1.16.tar", max compression
+```
+
+## Comparing `pydozer-0.1.12.tar` & `pydozer-0.1.16.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,18 @@
+--rw-r--r--   0        0        0     1075 2023-03-08 02:19:48.717924 pydozer-0.1.12/LICENSE
+--rw-r--r--   0        0        0     2938 2023-03-21 08:07:11.316734 pydozer-0.1.12/README.md
+--rw-r--r--   0        0        0        0 2023-03-21 08:07:11.316892 pydozer-0.1.12/pydozer/__init__.py
+--rw-r--r--   0        0        0     4799 2023-03-21 08:07:11.317319 pydozer-0.1.12/pydozer/api.py
+--rw-r--r--   0        0        0     2986 2023-03-21 08:07:11.317600 pydozer-0.1.12/pydozer/common_pb2.py
+--rw-r--r--   0        0        0     9876 2023-03-21 08:07:11.317888 pydozer-0.1.12/pydozer/common_pb2_grpc.py
+--rw-r--r--   0        0        0     1774 2023-03-21 08:07:11.317987 pydozer-0.1.12/pydozer/health_pb2.py
+--rw-r--r--   0        0        0     4418 2023-03-21 08:07:11.318163 pydozer-0.1.12/pydozer/health_pb2_grpc.py
+--rw-r--r--   0        0        0     4584 2023-03-21 08:07:11.318436 pydozer-0.1.12/pydozer/helper.py
+--rw-r--r--   0        0        0     3543 2023-03-21 08:07:11.318702 pydozer-0.1.12/pydozer/ingest.py
+--rw-r--r--   0        0        0     3003 2023-03-21 08:07:11.318873 pydozer-0.1.12/pydozer/ingest_pb2.py
+--rw-r--r--   0        0        0     7120 2023-03-21 08:07:11.319043 pydozer-0.1.12/pydozer/ingest_pb2_grpc.py
+--rw-r--r--   0        0        0     4116 2023-03-21 08:07:11.319147 pydozer-0.1.12/pydozer/types_pb2.py
+--rw-r--r--   0        0        0      159 2023-03-21 08:07:11.319251 pydozer-0.1.12/pydozer/types_pb2_grpc.py
+--rw-r--r--   0        0        0      557 2023-03-21 08:06:19.587466 pydozer-0.1.12/pyproject.toml
+--rw-r--r--   0        0        0     3670 1970-01-01 00:00:00.000000 pydozer-0.1.12/PKG-INFO
++-rw-r--r--   0        0        0     1075 2023-03-08 02:19:48.717924 pydozer-0.1.16/LICENSE
++-rw-r--r--   0        0        0     2938 2023-03-21 08:07:11.316734 pydozer-0.1.16/README.md
++-rw-r--r--   0        0        0        0 2023-03-21 08:07:11.316892 pydozer-0.1.16/pydozer/__init__.py
++-rw-r--r--   0        0        0     4799 2023-03-21 08:07:11.317319 pydozer-0.1.16/pydozer/api.py
++-rw-r--r--   0        0        0     1328 2023-04-07 09:53:36.497225 pydozer-0.1.16/pydozer/auth_pb2.py
++-rw-r--r--   0        0        0     2606 2023-04-07 09:53:36.497515 pydozer-0.1.16/pydozer/auth_pb2_grpc.py
++-rw-r--r--   0        0        0     2986 2023-04-07 03:31:13.534198 pydozer-0.1.16/pydozer/common_pb2.py
++-rw-r--r--   0        0        0     9824 2023-04-07 09:53:36.497873 pydozer-0.1.16/pydozer/common_pb2_grpc.py
++-rw-r--r--   0        0        0     1774 2023-04-07 03:28:04.344688 pydozer-0.1.16/pydozer/health_pb2.py
++-rw-r--r--   0        0        0     4418 2023-04-07 03:31:22.495001 pydozer-0.1.16/pydozer/health_pb2_grpc.py
++-rw-r--r--   0        0        0     4584 2023-03-21 08:07:11.318436 pydozer-0.1.16/pydozer/helper.py
++-rw-r--r--   0        0        0     3543 2023-03-21 08:07:11.318702 pydozer-0.1.16/pydozer/ingest.py
++-rw-r--r--   0        0        0     3003 2023-04-07 03:31:43.195968 pydozer-0.1.16/pydozer/ingest_pb2.py
++-rw-r--r--   0        0        0     7120 2023-04-07 03:31:49.763489 pydozer-0.1.16/pydozer/ingest_pb2_grpc.py
++-rw-r--r--   0        0        0     4547 2023-04-07 09:53:36.498202 pydozer-0.1.16/pydozer/types_pb2.py
++-rw-r--r--   0        0        0      159 2023-04-07 03:28:04.345106 pydozer-0.1.16/pydozer/types_pb2_grpc.py
++-rw-r--r--   0        0        0      557 2023-04-07 09:53:36.498508 pydozer-0.1.16/pyproject.toml
++-rw-r--r--   0        0        0     3670 1970-01-01 00:00:00.000000 pydozer-0.1.16/PKG-INFO
+```
+
+### Comparing `pydozer-0.1.12/LICENSE` & `pydozer-0.1.16/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pydozer-0.1.12/README.md` & `pydozer-0.1.16/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pydozer-0.1.12/pydozer/api.py` & `pydozer-0.1.16/pydozer/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pydozer-0.1.12/pydozer/common_pb2.py` & `pydozer-0.1.16/pydozer/common_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pydozer-0.1.12/pydozer/common_pb2_grpc.py` & `pydozer-0.1.16/pydozer/common_pb2_grpc.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -6,20 +6,17 @@
+ import pydozer.types_pb2 as types__pb2
+ 
+ 
+ class CommonGrpcServiceStub(object):
+     """*
+     CommonGrpcService allows developers to query data from various endpoints.
+ 
+-    The service supports both Pull and Push queries. It provides methods to
+-    return metadata about the fields that can be used to construct the data types
+-    dynamically.
++    The service supports both Pull and Push queries. It provides methods to return metadata about the fields that can be used to construct the data types dynamically.
+ 
+-    This is preferred while working with libraries or in the case of dynamic
+-    scenarios and interpreted languages.
++    This is preferred while working with libraries or in the case of dynamic scenarios and interpreted languages.
+     """
+ 
+     def __init__(self, channel):
+         """Constructor.
+ 
+         Args:
+             channel: A grpc.Channel.
+@@ -51,26 +48,22 @@
+                 )
+ 
+ 
+ class CommonGrpcServiceServicer(object):
+     """*
+     CommonGrpcService allows developers to query data from various endpoints.
+ 
+-    The service supports both Pull and Push queries. It provides methods to
+-    return metadata about the fields that can be used to construct the data types
+-    dynamically.
++    The service supports both Pull and Push queries. It provides methods to return metadata about the fields that can be used to construct the data types dynamically.
+ 
+-    This is preferred while working with libraries or in the case of dynamic
+-    scenarios and interpreted languages.
++    This is preferred while working with libraries or in the case of dynamic scenarios and interpreted languages.
+     """
+ 
+     def count(self, request, context):
+         """*
+-        Counts the number of records satisfying the given query. See
+-        [Query](../query) for the query format.
++        Counts the number of records satisfying the given query. See [Query](../query) for the query format.
+ 
+         If no query is specified, total number of records will be returned.
+         """
+         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+         context.set_details('Method not implemented!')
+         raise NotImplementedError('Method not implemented!')
+ 
+@@ -82,16 +75,15 @@
+         """
+         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+         context.set_details('Method not implemented!')
+         raise NotImplementedError('Method not implemented!')
+ 
+     def OnEvent(self, request, context):
+         """*
+-        Subscribes to the Dozer event stream, optionally applies a filter. See
+-        [Query](../query) for the filter format.
++        Subscribes to the Dozer event stream, optionally applies a filter. See [Query](../query) for the filter format.
+ 
+         This API is unstable and may change in the future.
+         """
+         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+         context.set_details('Method not implemented!')
+         raise NotImplementedError('Method not implemented!')
+ 
+@@ -144,20 +136,17 @@
+ 
+ 
+  # This class is part of an EXPERIMENTAL API.
+ class CommonGrpcService(object):
+     """*
+     CommonGrpcService allows developers to query data from various endpoints.
+ 
+-    The service supports both Pull and Push queries. It provides methods to
+-    return metadata about the fields that can be used to construct the data types
+-    dynamically.
++    The service supports both Pull and Push queries. It provides methods to return metadata about the fields that can be used to construct the data types dynamically.
+ 
+-    This is preferred while working with libraries or in the case of dynamic
+-    scenarios and interpreted languages.
++    This is preferred while working with libraries or in the case of dynamic scenarios and interpreted languages.
+     """
+ 
+     @staticmethod
+     def count(request,
+             target,
+             options=(),
+             channel_credentials=None,
+```
+
+### Comparing `pydozer-0.1.12/pydozer/health_pb2.py` & `pydozer-0.1.16/pydozer/health_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pydozer-0.1.12/pydozer/health_pb2_grpc.py` & `pydozer-0.1.16/pydozer/health_pb2_grpc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pydozer-0.1.12/pydozer/helper.py` & `pydozer-0.1.16/pydozer/helper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pydozer-0.1.12/pydozer/ingest.py` & `pydozer-0.1.16/pydozer/ingest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pydozer-0.1.12/pydozer/ingest_pb2.py` & `pydozer-0.1.16/pydozer/ingest_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pydozer-0.1.12/pydozer/ingest_pb2_grpc.py` & `pydozer-0.1.16/pydozer/ingest_pb2_grpc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pydozer-0.1.12/pydozer/types_pb2.py` & `pydozer-0.1.16/pydozer/types_pb2.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -10,37 +10,39 @@
+ 
+ _sym_db = _symbol_database.Default()
+ 
+ 
+ from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+ 
+ 
+-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0btypes.proto\x12\x0b\x64ozer.types\x1a\x1fgoogle/protobuf/timestamp.proto\"\xbc\x01\n\tOperation\x12\'\n\x03typ\x18\x01 \x01(\x0e\x32\x1a.dozer.types.OperationType\x12%\n\x03old\x18\x02 \x01(\x0b\x32\x13.dozer.types.RecordH\x00\x88\x01\x01\x12 \n\x03new\x18\x03 \x01(\x0b\x32\x13.dozer.types.Record\x12\x13\n\x06new_id\x18\x04 \x01(\x04H\x01\x88\x01\x01\x12\x15\n\rendpoint_name\x18\x05 \x01(\tB\x06\n\x04_oldB\t\n\x07_new_id\"=\n\x06Record\x12\"\n\x06values\x18\x01 \x03(\x0b\x32\x12.dozer.types.Value\x12\x0f\n\x07version\x18\x02 \x01(\r\"?\n\x0cRecordWithId\x12\n\n\x02id\x18\x01 \x01(\x04\x12#\n\x06record\x18\x02 \x01(\x0b\x32\x13.dozer.types.Record\"u\n\x0bSchemaEvent\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\x04\x12\x15\n\rprimary_index\x18\x03 \x03(\x05\x12,\n\x06\x66ields\x18\x04 \x03(\x0b\x32\x1c.dozer.types.FieldDefinition\"Q\n\x0f\x46ieldDefinition\x12\x1e\n\x03typ\x18\x01 \x01(\x0e\x32\x11.dozer.types.Type\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x10\n\x08nullable\x18\x03 \x01(\x08\"!\n\tPointType\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"A\n\x0bRustDecimal\x12\r\n\x05\x66lags\x18\x01 \x01(\r\x12\n\n\x02lo\x18\x02 \x01(\r\x12\x0b\n\x03mid\x18\x03 \x01(\r\x12\n\n\x02hi\x18\x04 \x01(\r\"\xc6\x02\n\x05Value\x12\x14\n\nuint_value\x18\x01 \x01(\x04H\x00\x12\x13\n\tint_value\x18\x02 \x01(\x03H\x00\x12\x15\n\x0b\x66loat_value\x18\x03 \x01(\x01H\x00\x12\x14\n\nbool_value\x18\x04 \x01(\x08H\x00\x12\x16\n\x0cstring_value\x18\x05 \x01(\tH\x00\x12\x15\n\x0b\x62ytes_value\x18\x07 \x01(\x0cH\x00\x12\x31\n\rdecimal_value\x18\x08 \x01(\x0b\x32\x18.dozer.types.RustDecimalH\x00\x12\x35\n\x0ftimestamp_value\x18\t \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x00\x12\x14\n\ndate_value\x18\n \x01(\tH\x00\x12-\n\x0bpoint_value\x18\x0b \x01(\x0b\x32\x16.dozer.types.PointTypeH\x00\x42\x07\n\x05value*G\n\tEventType\x12\x07\n\x03\x41LL\x10\x00\x12\x0f\n\x0bINSERT_ONLY\x10\x01\x12\x0f\n\x0bUPDATE_ONLY\x10\x02\x12\x0f\n\x0b\x44\x45LETE_ONLY\x10\x03*3\n\rOperationType\x12\n\n\x06INSERT\x10\x00\x12\n\n\x06\x44\x45LETE\x10\x01\x12\n\n\x06UPDATE\x10\x02*\x8e\x01\n\x04Type\x12\x08\n\x04UInt\x10\x00\x12\x07\n\x03Int\x10\x01\x12\t\n\x05\x46loat\x10\x02\x12\x0b\n\x07\x42oolean\x10\x03\x12\n\n\x06String\x10\x04\x12\x08\n\x04Text\x10\x05\x12\n\n\x06\x42inary\x10\x06\x12\x0b\n\x07\x44\x65\x63imal\x10\x07\x12\r\n\tTimestamp\x10\x08\x12\x08\n\x04\x44\x61te\x10\t\x12\x08\n\x04\x42son\x10\n\x12\t\n\x05Point\x10\x0b\x62\x06proto3')
++DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0btypes.proto\x12\x0b\x64ozer.types\x1a\x1fgoogle/protobuf/timestamp.proto\"\xbc\x01\n\tOperation\x12\'\n\x03typ\x18\x01 \x01(\x0e\x32\x1a.dozer.types.OperationType\x12%\n\x03old\x18\x02 \x01(\x0b\x32\x13.dozer.types.RecordH\x00\x88\x01\x01\x12 \n\x03new\x18\x03 \x01(\x0b\x32\x13.dozer.types.Record\x12\x13\n\x06new_id\x18\x04 \x01(\x04H\x01\x88\x01\x01\x12\x15\n\rendpoint_name\x18\x05 \x01(\tB\x06\n\x04_oldB\t\n\x07_new_id\"=\n\x06Record\x12\"\n\x06values\x18\x01 \x03(\x0b\x32\x12.dozer.types.Value\x12\x0f\n\x07version\x18\x02 \x01(\r\"?\n\x0cRecordWithId\x12\n\n\x02id\x18\x01 \x01(\x04\x12#\n\x06record\x18\x02 \x01(\x0b\x32\x13.dozer.types.Record\"u\n\x0bSchemaEvent\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\x04\x12\x15\n\rprimary_index\x18\x03 \x03(\x05\x12,\n\x06\x66ields\x18\x04 \x03(\x0b\x32\x1c.dozer.types.FieldDefinition\"Q\n\x0f\x46ieldDefinition\x12\x1e\n\x03typ\x18\x01 \x01(\x0e\x32\x11.dozer.types.Type\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x10\n\x08nullable\x18\x03 \x01(\x08\"!\n\tPointType\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"0\n\x0c\x44urationType\x12\r\n\x05value\x18\x01 \x01(\t\x12\x11\n\ttime_unit\x18\x02 \x01(\t\"A\n\x0bRustDecimal\x12\r\n\x05\x66lags\x18\x01 \x01(\r\x12\n\n\x02lo\x18\x02 \x01(\r\x12\x0b\n\x03mid\x18\x03 \x01(\r\x12\n\n\x02hi\x18\x04 \x01(\r\"\xae\x03\n\x05Value\x12\x14\n\nuint_value\x18\x01 \x01(\x04H\x00\x12\x18\n\x0euint_128_value\x18\x02 \x01(\tH\x00\x12\x13\n\tint_value\x18\x03 \x01(\x03H\x00\x12\x17\n\rint_128_value\x18\x04 \x01(\tH\x00\x12\x15\n\x0b\x66loat_value\x18\x05 \x01(\x01H\x00\x12\x14\n\nbool_value\x18\x06 \x01(\x08H\x00\x12\x16\n\x0cstring_value\x18\x07 \x01(\tH\x00\x12\x15\n\x0b\x62ytes_value\x18\x08 \x01(\x0cH\x00\x12\x31\n\rdecimal_value\x18\t \x01(\x0b\x32\x18.dozer.types.RustDecimalH\x00\x12\x35\n\x0ftimestamp_value\x18\n \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x00\x12\x14\n\ndate_value\x18\x0b \x01(\tH\x00\x12-\n\x0bpoint_value\x18\x0c \x01(\x0b\x32\x16.dozer.types.PointTypeH\x00\x12\x33\n\x0e\x64uration_value\x18\r \x01(\x0b\x32\x19.dozer.types.DurationTypeH\x00\x42\x07\n\x05value*G\n\tEventType\x12\x07\n\x03\x41LL\x10\x00\x12\x0f\n\x0bINSERT_ONLY\x10\x01\x12\x0f\n\x0bUPDATE_ONLY\x10\x02\x12\x0f\n\x0b\x44\x45LETE_ONLY\x10\x03*3\n\rOperationType\x12\n\n\x06INSERT\x10\x00\x12\n\n\x06\x44\x45LETE\x10\x01\x12\n\n\x06UPDATE\x10\x02*\xb0\x01\n\x04Type\x12\x08\n\x04UInt\x10\x00\x12\x08\n\x04U128\x10\x01\x12\x07\n\x03Int\x10\x02\x12\x08\n\x04I128\x10\x03\x12\t\n\x05\x46loat\x10\x04\x12\x0b\n\x07\x42oolean\x10\x05\x12\n\n\x06String\x10\x06\x12\x08\n\x04Text\x10\x07\x12\n\n\x06\x42inary\x10\x08\x12\x0b\n\x07\x44\x65\x63imal\x10\t\x12\r\n\tTimestamp\x10\n\x12\x08\n\x04\x44\x61te\x10\x0b\x12\x08\n\x04\x42son\x10\x0c\x12\t\n\x05Point\x10\r\x12\x0c\n\x08\x44uration\x10\x0e\x62\x06proto3')
+ 
+ _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
+ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'types_pb2', globals())
+ if _descriptor._USE_C_DESCRIPTORS == False:
+ 
+   DESCRIPTOR._options = None
+-  _EVENTTYPE._serialized_start=1013
+-  _EVENTTYPE._serialized_end=1084
+-  _OPERATIONTYPE._serialized_start=1086
+-  _OPERATIONTYPE._serialized_end=1137
+-  _TYPE._serialized_start=1140
+-  _TYPE._serialized_end=1282
++  _EVENTTYPE._serialized_start=1167
++  _EVENTTYPE._serialized_end=1238
++  _OPERATIONTYPE._serialized_start=1240
++  _OPERATIONTYPE._serialized_end=1291
++  _TYPE._serialized_start=1294
++  _TYPE._serialized_end=1470
+   _OPERATION._serialized_start=62
+   _OPERATION._serialized_end=250
+   _RECORD._serialized_start=252
+   _RECORD._serialized_end=313
+   _RECORDWITHID._serialized_start=315
+   _RECORDWITHID._serialized_end=378
+   _SCHEMAEVENT._serialized_start=380
+   _SCHEMAEVENT._serialized_end=497
+   _FIELDDEFINITION._serialized_start=499
+   _FIELDDEFINITION._serialized_end=580
+   _POINTTYPE._serialized_start=582
+   _POINTTYPE._serialized_end=615
+-  _RUSTDECIMAL._serialized_start=617
+-  _RUSTDECIMAL._serialized_end=682
+-  _VALUE._serialized_start=685
+-  _VALUE._serialized_end=1011
++  _DURATIONTYPE._serialized_start=617
++  _DURATIONTYPE._serialized_end=665
++  _RUSTDECIMAL._serialized_start=667
++  _RUSTDECIMAL._serialized_end=732
++  _VALUE._serialized_start=735
++  _VALUE._serialized_end=1165
+ # @@protoc_insertion_point(module_scope)
+```
+
+### Comparing `pydozer-0.1.12/pyproject.toml` & `pydozer-0.1.16/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "pydozer"
+-version = "0.1.12"
++version = "0.1.16"
+ description = "Python wrapper for the Dozer API"
+ authors = ["Dozer Team <api@getdozer.io>"]
+ license = "MIT"
+ readme = "README.md"
+ 
+ [tool.poetry.dependencies]
+ python = "^3.9"
+```
+
+### Comparing `pydozer-0.1.12/PKG-INFO` & `pydozer-0.1.16/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pydozer
+-Version: 0.1.12
++Version: 0.1.16
+ Summary: Python wrapper for the Dozer API
+ License: MIT
+ Author: Dozer Team
+ Author-email: api@getdozer.io
+ Requires-Python: >=3.9,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: pydozer Version: 0.1.12 Summary: Python wrapper for
++Metadata-Version: 2.1 Name: pydozer Version: 0.1.16 Summary: Python wrapper for
+ the Dozer API License: MIT Author: Dozer Team Author-email: api@getdozer.io
+ Requires-Python: >=3.9,<4.0 Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3 Classifier: Programming
+ Language :: Python :: 3.9 Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.11 Requires-Dist: grpcio
+ (>=1.51.3,<2.0.0) Requires-Dist: grpcio-reflection (>=1.51.3,<2.0.0) Requires-
+ Dist: polars (>=0.16.10,<0.17.0) Requires-Dist: protobuf (>=4.22.0,<5.0.0)
+```
+

@@ -1,0 +1,816 @@
+# Comparing `tmp/mindsdb_sql-0.5.0.tar.gz` & `tmp/mindsdb_sql-0.5.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist\mindsdb_sql-0.5.0.tar", last modified: Mon Apr  3 19:59:58 2023, max compression
++gzip compressed data, was "dist\mindsdb_sql-0.5.1.tar", last modified: Fri Apr  7 09:50:46 2023, max compression
+```
+
+## Comparing `mindsdb_sql-0.5.0.tar` & `mindsdb_sql-0.5.1.tar`
+
+### file list
+
+```diff
+@@ -1,93 +1,93 @@
+-drwxrwxrwx   0        0        0        0 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/
+--rw-rw-rw-   0        0        0      535 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/PKG-INFO
+--rw-rw-rw-   0        0        0     7245 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql/
+--rw-rw-rw-   0        0        0      365 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/__about__.py
+--rw-rw-rw-   0        0        0     1195 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/__init__.py
+--rw-rw-rw-   0        0        0      170 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/exceptions.py
+-drwxrwxrwx   0        0        0        0 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/
+--rw-rw-rw-   0        0        0        0 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/
+--rw-rw-rw-   0        0        0      537 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/__init__.py
+--rw-rw-rw-   0        0        0      842 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/alter_table.py
+--rw-rw-rw-   0        0        0     1343 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/base.py
+--rw-rw-rw-   0        0        0      460 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/commit_transaction.py
+--rw-rw-rw-   0        0        0     2287 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/create.py
+--rw-rw-rw-   0        0        0      994 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/delete.py
+--rw-rw-rw-   0        0        0      942 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/describe.py
+--rw-rw-rw-   0        0        0     3056 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/drop.py
+--rw-rw-rw-   0        0        0      659 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/explain.py
+--rw-rw-rw-   0        0        0     3099 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/insert.py
+--rw-rw-rw-   0        0        0      466 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/rollback_transaction.py
+-drwxrwxrwx   0        0        0        0 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/
+--rw-rw-rw-   0        0        0      567 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/__init__.py
+--rw-rw-rw-   0        0        0     1482 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/case.py
+--rw-rw-rw-   0        0        0     1113 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/common_table_expression.py
+--rw-rw-rw-   0        0        0     1593 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/constant.py
+--rw-rw-rw-   0        0        0     2372 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/identifier.py
+--rw-rw-rw-   0        0        0     1381 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/join.py
+--rw-rw-rw-   0        0        0      662 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/native_query.py
+--rw-rw-rw-   0        0        0     5949 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/operation.py
+--rw-rw-rw-   0        0        0      806 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/order_by.py
+--rw-rw-rw-   0        0        0      389 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/parameter.py
+--rw-rw-rw-   0        0        0     5904 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/select.py
+--rw-rw-rw-   0        0        0      504 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/star.py
+--rw-rw-rw-   0        0        0      648 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/tuple.py
+--rw-rw-rw-   0        0        0      774 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/type_cast.py
+--rw-rw-rw-   0        0        0     1178 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/union.py
+--rw-rw-rw-   0        0        0     3296 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/set.py
+--rw-rw-rw-   0        0        0     2979 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/show.py
+--rw-rw-rw-   0        0        0      469 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/start_transaction.py
+--rw-rw-rw-   0        0        0     2407 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/update.py
+--rw-rw-rw-   0        0        0      639 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/use.py
+-drwxrwxrwx   0        0        0        0 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/
+--rw-rw-rw-   0        0        0        0 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/
+--rw-rw-rw-   0        0        0      672 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/__init__.py
+--rw-rw-rw-   0        0        0     1582 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/create_database.py
+--rw-rw-rw-   0        0        0      953 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/create_file.py
+--rw-rw-rw-   0        0        0     2078 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/create_job.py
+--rw-rw-rw-   0        0        0     1201 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/create_ml_engine.py
+--rw-rw-rw-   0        0        0     5361 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/create_predictor.py
+--rw-rw-rw-   0        0        0     1534 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/create_view.py
+--rw-rw-rw-   0        0        0      704 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/drop_dataset.py
+--rw-rw-rw-   0        0        0      713 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/drop_datasource.py
+--rw-rw-rw-   0        0        0      737 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/drop_integration.py
+--rw-rw-rw-   0        0        0      692 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/drop_job.py
+--rw-rw-rw-   0        0        0      708 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/drop_ml_engine.py
+--rw-rw-rw-   0        0        0      906 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/drop_predictor.py
+--rw-rw-rw-   0        0        0      223 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/finetune_predictor.py
+--rw-rw-rw-   0        0        0      359 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/latest.py
+--rw-rw-rw-   0        0        0     8087 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/lexer.py
+--rw-rw-rw-   0        0        0    43432 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/parser.py
+--rw-rw-rw-   0        0        0      311 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/retrain_predictor.py
+-drwxrwxrwx   0        0        0        0 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mysql/
+--rw-rw-rw-   0        0        0       67 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mysql/__init__.py
+--rw-rw-rw-   0        0        0     1046 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mysql/lexer.py
+--rw-rw-rw-   0        0        0    29432 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mysql/parser.py
+--rw-rw-rw-   0        0        0      904 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mysql/show_index.py
+--rw-rw-rw-   0        0        0      686 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mysql/variable.py
+--rw-rw-rw-   0        0        0     6292 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/lexer.py
+--rw-rw-rw-   0        0        0      751 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/logger.py
+--rw-rw-rw-   0        0        0    21323 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/parser.py
+--rw-rw-rw-   0        0        0     2497 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/parser/utils.py
+-drwxrwxrwx   0        0        0        0 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql/planner/
+--rw-rw-rw-   0        0        0      150 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/planner/__init__.py
+--rw-rw-rw-   0        0        0      878 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/planner/query_plan.py
+--rw-rw-rw-   0        0        0    47975 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/planner/query_planner.py
+--rw-rw-rw-   0        0        0    21367 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/planner/query_prepare.py
+--rw-rw-rw-   0        0        0      536 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/planner/step_result.py
+--rw-rw-rw-   0        0        0     8280 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/planner/steps.py
+--rw-rw-rw-   0        0        0     2981 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/planner/ts_utils.py
+--rw-rw-rw-   0        0        0    17443 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/planner/utils.py
+-drwxrwxrwx   0        0        0        0 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql/render/
+--rw-rw-rw-   0        0        0        0 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/render/__init__.py
+--rw-rw-rw-   0        0        0    20561 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/mindsdb_sql/render/sqlalchemy_render.py
+-drwxrwxrwx   0        0        0        0 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql.egg-info/
+--rw-rw-rw-   0        0        0      535 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0     3150 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       49 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       12 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/mindsdb_sql.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-03 19:59:58.000000 mindsdb_sql-0.5.0/setup.cfg
+--rw-rw-rw-   0        0        0      843 2023-04-03 19:59:35.000000 mindsdb_sql-0.5.0/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/
++-rw-rw-rw-   0        0        0      535 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/PKG-INFO
++-rw-rw-rw-   0        0        0     7245 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql/
++-rw-rw-rw-   0        0        0      365 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/__about__.py
++-rw-rw-rw-   0        0        0     1195 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/__init__.py
++-rw-rw-rw-   0        0        0      170 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/exceptions.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/
++-rw-rw-rw-   0        0        0        0 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/
++-rw-rw-rw-   0        0        0      537 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/__init__.py
++-rw-rw-rw-   0        0        0      842 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/alter_table.py
++-rw-rw-rw-   0        0        0     1343 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/base.py
++-rw-rw-rw-   0        0        0      460 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/commit_transaction.py
++-rw-rw-rw-   0        0        0     2287 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/create.py
++-rw-rw-rw-   0        0        0      994 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/delete.py
++-rw-rw-rw-   0        0        0      942 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/describe.py
++-rw-rw-rw-   0        0        0     3056 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/drop.py
++-rw-rw-rw-   0        0        0      659 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/explain.py
++-rw-rw-rw-   0        0        0     3099 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/insert.py
++-rw-rw-rw-   0        0        0      466 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/rollback_transaction.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/
++-rw-rw-rw-   0        0        0      567 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/__init__.py
++-rw-rw-rw-   0        0        0     1482 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/case.py
++-rw-rw-rw-   0        0        0     1113 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/common_table_expression.py
++-rw-rw-rw-   0        0        0     1593 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/constant.py
++-rw-rw-rw-   0        0        0     2372 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/identifier.py
++-rw-rw-rw-   0        0        0     1381 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/join.py
++-rw-rw-rw-   0        0        0      662 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/native_query.py
++-rw-rw-rw-   0        0        0     5949 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/operation.py
++-rw-rw-rw-   0        0        0      806 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/order_by.py
++-rw-rw-rw-   0        0        0      464 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/parameter.py
++-rw-rw-rw-   0        0        0     5904 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/select.py
++-rw-rw-rw-   0        0        0      504 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/star.py
++-rw-rw-rw-   0        0        0      648 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/tuple.py
++-rw-rw-rw-   0        0        0      774 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/type_cast.py
++-rw-rw-rw-   0        0        0     1178 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/union.py
++-rw-rw-rw-   0        0        0     3296 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/set.py
++-rw-rw-rw-   0        0        0     2979 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/show.py
++-rw-rw-rw-   0        0        0      469 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/start_transaction.py
++-rw-rw-rw-   0        0        0     2407 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/update.py
++-rw-rw-rw-   0        0        0      639 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/use.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/
++-rw-rw-rw-   0        0        0        0 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/
++-rw-rw-rw-   0        0        0      672 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/__init__.py
++-rw-rw-rw-   0        0        0     1582 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/create_database.py
++-rw-rw-rw-   0        0        0      953 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/create_file.py
++-rw-rw-rw-   0        0        0     2078 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/create_job.py
++-rw-rw-rw-   0        0        0     1201 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/create_ml_engine.py
++-rw-rw-rw-   0        0        0     5361 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/create_predictor.py
++-rw-rw-rw-   0        0        0     1534 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/create_view.py
++-rw-rw-rw-   0        0        0      704 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/drop_dataset.py
++-rw-rw-rw-   0        0        0      713 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/drop_datasource.py
++-rw-rw-rw-   0        0        0      737 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/drop_integration.py
++-rw-rw-rw-   0        0        0      692 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/drop_job.py
++-rw-rw-rw-   0        0        0      708 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/drop_ml_engine.py
++-rw-rw-rw-   0        0        0      906 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/drop_predictor.py
++-rw-rw-rw-   0        0        0      223 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/finetune_predictor.py
++-rw-rw-rw-   0        0        0      359 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/latest.py
++-rw-rw-rw-   0        0        0     8125 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/lexer.py
++-rw-rw-rw-   0        0        0    43489 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/parser.py
++-rw-rw-rw-   0        0        0      311 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/retrain_predictor.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mysql/
++-rw-rw-rw-   0        0        0       67 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mysql/__init__.py
++-rw-rw-rw-   0        0        0     1046 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mysql/lexer.py
++-rw-rw-rw-   0        0        0    29432 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mysql/parser.py
++-rw-rw-rw-   0        0        0      904 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mysql/show_index.py
++-rw-rw-rw-   0        0        0      686 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mysql/variable.py
++-rw-rw-rw-   0        0        0     6292 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/lexer.py
++-rw-rw-rw-   0        0        0      751 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/logger.py
++-rw-rw-rw-   0        0        0    21323 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/parser.py
++-rw-rw-rw-   0        0        0     2497 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/parser/utils.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql/planner/
++-rw-rw-rw-   0        0        0      150 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/planner/__init__.py
++-rw-rw-rw-   0        0        0      878 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/planner/query_plan.py
++-rw-rw-rw-   0        0        0    49858 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/planner/query_planner.py
++-rw-rw-rw-   0        0        0    21367 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/planner/query_prepare.py
++-rw-rw-rw-   0        0        0      536 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/planner/step_result.py
++-rw-rw-rw-   0        0        0     8280 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/planner/steps.py
++-rw-rw-rw-   0        0        0     2981 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/planner/ts_utils.py
++-rw-rw-rw-   0        0        0    17886 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/planner/utils.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql/render/
++-rw-rw-rw-   0        0        0        0 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/render/__init__.py
++-rw-rw-rw-   0        0        0    20561 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/mindsdb_sql/render/sqlalchemy_render.py
++drwxrwxrwx   0        0        0        0 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql.egg-info/
++-rw-rw-rw-   0        0        0      535 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0     3150 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       49 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       12 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/mindsdb_sql.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 09:50:46.000000 mindsdb_sql-0.5.1/setup.cfg
++-rw-rw-rw-   0        0        0      843 2023-04-07 09:50:24.000000 mindsdb_sql-0.5.1/setup.py
+```
+
+### Comparing `mindsdb_sql-0.5.0/PKG-INFO` & `mindsdb_sql-0.5.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.2
+ Name: mindsdb_sql
+-Version: 0.5.0
++Version: 0.5.1
+ Summary: Pure python SQL parser
+ Home-page: https://github.com/mindsdb/mindsdb_sql
+ Author: MindsDB Inc
+ Author-email: jorge@mindsdb.com
+ License: GPL-3.0
+ Download-URL: https://pypi.org/project/mindsdb_sql
+ Description: UNKNOWN
+```
+
+### Comparing `mindsdb_sql-0.5.0/README.md` & `mindsdb_sql-0.5.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/__init__.py` & `mindsdb_sql-0.5.1/mindsdb_sql/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/__init__.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/alter_table.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/alter_table.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/base.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/create.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/create.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/delete.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/delete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/describe.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/describe.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/drop.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/drop.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/explain.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/explain.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/insert.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/insert.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/__init__.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/case.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/case.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/common_table_expression.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/common_table_expression.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/constant.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/constant.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/identifier.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/identifier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/join.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/join.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/native_query.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/native_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/operation.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/operation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/order_by.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/order_by.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/select.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/select.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/tuple.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/tuple.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/type_cast.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/type_cast.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/select/union.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/select/union.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/set.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/set.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/show.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/show.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/update.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/update.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/ast/use.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/ast/use.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/__init__.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/create_database.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/create_database.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/create_file.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/create_file.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/create_job.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/create_job.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/create_ml_engine.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/create_ml_engine.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/create_predictor.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/create_predictor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/create_view.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/create_view.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/drop_dataset.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/drop_dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/drop_datasource.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/drop_datasource.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/drop_integration.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/drop_integration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/drop_job.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/drop_job.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/drop_ml_engine.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/drop_ml_engine.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/drop_predictor.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/drop_predictor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/lexer.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/lexer.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -24,15 +24,15 @@
+         # Mindsdb special
+ 
+         PREDICTOR, PREDICTORS, DATASOURCE, INTEGRATION, INTEGRATIONS,DATASOURCES,
+         STREAM, STREAMS, PUBLICATION, PUBLICATIONS, VIEW, VIEWS, DATASETS, DATASET,
+         MODEL, MODELS, ML_ENGINE, ML_ENGINES, HANDLERS,
+         FINETUNE,
+         LATEST, HORIZON, USING,
+-        ENGINE, TRAIN, PREDICT, PARAMETERS, JOB, EVERY,
++        ENGINE, TRAIN, PREDICT, PARAMETERS, JOB, EVERY,PROJECT,
+ 
+         # SHOW/DDL Keywords
+ 
+         SHOW, SCHEMAS, SCHEMA, DATABASES, DATABASE, TABLES, TABLE, FULL, EXTENDED, PROCESSLIST,
+         MUTEX, CODE, SLAVE, REPLICA, REPLICAS, CHANNEL, TRIGGERS, KEYS, STORAGE, LOGS, BINARY,
+         MASTER, PRIVILEGES, PROFILES, HOSTS, OPEN, INDEXES,
+         VARIABLES, SESSION, STATUS,
+@@ -102,14 +102,15 @@
+     MODEL = r'\bMODEL\b'
+     MODELS = r'\bMODELS\b'
+     ML_ENGINE = r'\bML_ENGINE\b'
+     ML_ENGINES = r'\bML_ENGINES\b'
+     HANDLERS = r'\bHANDLERS\b'
+     JOB = r'\bJOB\b'
+     EVERY = r'\bEVERY\b'
++    PROJECT = r'\bPROJECT\b'
+ 
+     # Misc
+     SET = r'\bSET\b'
+     START = r'\bSTART\b'
+     TRANSACTION = r'\bTRANSACTION\b'
+     COMMIT = r'\bCOMMIT\b'
+     ROLLBACK = r'\bROLLBACK\b'
+```
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mindsdb/parser.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mindsdb/parser.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -165,14 +165,15 @@
+     def drop_view(self, p):
+         if_exists = hasattr(p, 'IF_EXISTS')
+         return DropView(p.enumeration, if_exists=if_exists)
+ 
+     # DROP DATABASE
+     @_('DROP DATABASE identifier',
+        'DROP DATABASE IF_EXISTS identifier',
++       'DROP PROJECT identifier',
+        'DROP SCHEMA identifier',
+        'DROP SCHEMA IF_EXISTS identifier')
+     def drop_database(self, p):
+         if_exists = hasattr(p, 'IF_EXISTS')
+         return DropDatabase(name=p.identifier, if_exists=if_exists)
+ 
+     # Transactions
+@@ -709,14 +710,15 @@
+ 
+         return CreateDatabase(name=p.database_engine['id'],
+                                 engine=p.database_engine['engine'],
+                                 is_replace=is_replace,
+                                 parameters=parameters)
+ 
+     @_('DATABASE id',
++       'PROJECT id',
+        'DATABASE id ENGINE string',
+        'DATABASE id ENGINE EQUALS string',
+        'DATABASE id WITH ENGINE string',
+        'DATABASE id WITH ENGINE EQUALS string')
+     def database_engine(self, p):
+         string = None
+         if hasattr(p, 'string'):
+```
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mysql/lexer.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mysql/lexer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mysql/parser.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mysql/parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mysql/show_index.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mysql/show_index.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/dialects/mysql/variable.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/dialects/mysql/variable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/lexer.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/lexer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/logger.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/logger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/parser.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/parser/utils.py` & `mindsdb_sql-0.5.1/mindsdb_sql/parser/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/planner/query_plan.py` & `mindsdb_sql-0.5.1/mindsdb_sql/planner/query_plan.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/planner/query_planner.py` & `mindsdb_sql-0.5.1/mindsdb_sql/planner/query_planner.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ import copy
+ from collections import defaultdict
+ from mindsdb_sql.exceptions import PlanningException
+ from mindsdb_sql.parser import ast
+ from mindsdb_sql.parser.ast import (Select, Identifier, Join, Star, BinaryOperation, Constant, OrderBy,
+                                     BetweenOperation, Union, NullConstant, CreateTable, Function, Insert,
+-                                    Update, NativeQuery)
++                                    Update, NativeQuery, Parameter)
+ 
+ from mindsdb_sql.parser.dialects.mindsdb.latest import Latest
+ from mindsdb_sql.planner.steps import (FetchDataframeStep, ProjectStep, JoinStep, ApplyPredictorStep,
+                                        ApplyPredictorRowStep, FilterStep, GroupByStep, LimitOffsetStep, OrderByStep,
+                                        UnionStep, MapReduceStep, MultipleSteps, ApplyTimeseriesPredictorStep,
+                                        GetPredictorColumns, SaveToTable, InsertToTable, UpdateToTable, SubSelectStep)
+ from mindsdb_sql.planner.ts_utils import (validate_ts_where_condition, find_time_filter, replace_time_filter,
+@@ -135,39 +135,88 @@
+         return FetchDataframeStep(integration=integration_name, query=fetch_df_select)
+ 
+     def plan_integration_select(self, select):
+         """Plan for a select query that can be fully executed in an integration"""
+ 
+         return self.plan.add_step(self.get_integration_select_step(select))
+ 
+-    def plan_nested_select(self, select):
++    def get_integration_name(self, node: Identifier):
++        if len(node.parts) > 1 and node.parts[0] in self.integrations:
++            return node.parts[0]
+ 
++    def get_query_info(self, query):
+         # get all predictors
+         mdb_entities = []
+-        used_integrations = set()
++        projects = []
++        integrations = set()
+ 
+         def find_predictors(node, is_table, **kwargs):
+             if isinstance(node, ast.NativeQuery):
+                 # has NativeQuery syntax
+                 mdb_entities.append(node)
+ 
+             if is_table and isinstance(node, ast.Identifier):
+-                if len(node.parts) > 1 and node.parts[0] in self.integrations:
+-                    used_integrations.add(node.parts[0])
++                integration = self.get_integration_name(node)
+ 
+                 if self.is_predictor(node):
+                     mdb_entities.append(node)
++                    if integration is not None:
++                        projects.append(integration)
++                    return
++
++                if integration is not None and not integration in projects:
++                    integrations.add(integration)
++
++        utils.query_traversal(query, find_predictors)
++        return {'mdb_entities': mdb_entities, 'integrations': integrations}
++
++    def plan_select_identifier(self, query):
++        query_info = self.get_query_info(query)
++
++        if len(query_info['integrations']) == 0 and len(query_info['mdb_entities']) >= 1:
++            # select from predictor
++            return self.plan_select_from_predictor(query)
++        elif len(query_info['integrations']) <= 1 and len(query_info['mdb_entities']) == 0:
++            # one integration without predictors
++            return self.plan_integration_select(query)
++
++        # find subselects
++        main_integration = self.get_integration_name(query.from_table)
++
++        def find_selects(node, **kwargs):
++            if isinstance(node, Select):
++                query_info2 = self.get_query_info(node)
++                if (
++                        len(query_info2['integrations']) > 1 or
++                        main_integration not in query_info2['integrations'] or
++                        len(query_info2['mdb_entities']) > 0
++                ):
++                    # need to execute in planner
++
++                    node.parentheses = False
++                    last_step = self.plan_select(node)
++                    node2 = Parameter(last_step.result)
++
++                    return node2
+ 
+-        utils.query_traversal(select, find_predictors)
++        query.targets = utils.query_traversal(query.targets, find_selects)
++        utils.query_traversal(query.where, find_selects)
++
++        self.plan_select_identifier(query)
++
++    def plan_nested_select(self, select):
++
++        query_info = self.get_query_info(select)
++        # get all predictors
+ 
+         if (
+-            len(mdb_entities) == 0
+-            and len(used_integrations) < 2
+-            and not 'files' in used_integrations
+-            and not 'views' in used_integrations
++            len(query_info['mdb_entities']) == 0
++            and len(query_info['integrations']) < 2
++            and not 'files' in query_info['integrations']
++            and not 'views' in query_info['integrations']
+         ):
+             # if no predictor inside = run as is
+             return self.plan_integration_nested_select(select)
+         else:
+             return self.plan_mdb_nested_select(select)
+ 
+     def plan_integration_nested_select(self, select):
+@@ -1012,16 +1061,14 @@
+             ))
+         else:
+             self.plan.add_step(InsertToTable(
+                 table=table,
+                 query=query,
+             ))
+ 
+-
+-
+     def plan_update(self, query):
+         if query.from_select is None:
+             raise PlanningException(f'Support only insert from select')
+ 
+         integration_name = query.table.parts[0]
+ 
+         # plan sub-select first
+@@ -1038,18 +1085,15 @@
+             update_command=update_command
+         ))
+ 
+     def plan_select(self, query, integration=None):
+         from_table = query.from_table
+ 
+         if isinstance(from_table, Identifier):
+-            if self.is_predictor(from_table):
+-                return self.plan_select_from_predictor(query)
+-            else:
+-                return self.plan_integration_select(query)
++            return self.plan_select_identifier(query)
+         elif isinstance(from_table, Select):
+             return self.plan_nested_select(query)
+         elif isinstance(from_table, Join):
+             return self.plan_join(query, integration=integration)
+         elif isinstance(from_table, NativeQuery):
+             integration = from_table.integration.parts[0].lower()
+             step = FetchDataframeStep(integration=integration, raw_query=from_table.query)
+@@ -1104,15 +1148,14 @@
+         elif isinstance(query, Update):
+             self.plan_update(query)
+         else:
+             raise PlanningException(f'Unsupported query type {type(query)}')
+ 
+         return self.plan
+ 
+-
+     def prepare_steps(self, query):
+         statement_planner = PreparedStatementPlanner(self)
+ 
+         # return generator
+         return statement_planner.prepare_steps(query)
+ 
+     def execute_steps(self, params=None):
+```
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/planner/query_prepare.py` & `mindsdb_sql-0.5.1/mindsdb_sql/planner/query_prepare.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/planner/step_result.py` & `mindsdb_sql-0.5.1/mindsdb_sql/planner/step_result.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/planner/steps.py` & `mindsdb_sql-0.5.1/mindsdb_sql/planner/steps.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/planner/ts_utils.py` & `mindsdb_sql-0.5.1/mindsdb_sql/planner/ts_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/planner/utils.py` & `mindsdb_sql-0.5.1/mindsdb_sql/planner/utils.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ import copy
+ 
+ from mindsdb_sql.exceptions import PlanningException
+ from mindsdb_sql.parser.ast import (Identifier, Operation, Star, Select, BinaryOperation, Constant,
+-                                    OrderBy, BetweenOperation, NullConstant, TypeCast)
++                                    OrderBy, BetweenOperation, NullConstant, TypeCast, Parameter)
+ from mindsdb_sql.parser import ast
+ 
+ 
+ def get_integration_path_from_identifier(identifier):
+     parts = identifier.parts
+     integration_name = parts[0]
+     new_parts = parts[1:]
+@@ -101,14 +101,16 @@
+             recursively_disambiguate_identifiers(new_op, integration_name, table)
+             new_query_targets.append(new_op)
+         elif isinstance(target, TypeCast):
+             new_op = copy.deepcopy(target)
+             if isinstance(target.arg, Identifier):
+                 disambiguate_integration_column_identifier(new_op.arg, integration_name, table)
+             new_query_targets.append(new_op)
++        elif isinstance(target, Parameter):
++            new_query_targets.append(target)
+         else:
+             raise PlanningException(f'Unknown select target {type(target)}')
+     return new_query_targets
+ 
+ 
+ def recursively_disambiguate_identifiers_in_select(select, integration_name, table):
+     select.targets = disambiguate_select_targets(select.targets, integration_name, table)
+@@ -163,24 +165,30 @@
+ 
+ 
+ def recursively_extract_column_values(op, row_dict, predictor):
+     if isinstance(op, BinaryOperation) and op.op == '=':
+         id = op.args[0]
+         value = op.args[1]
+ 
+-        if not (isinstance(id, Identifier) and isinstance(value, Constant)):
++        if not (
++                isinstance(id, Identifier)
++                and
++                (isinstance(value, Constant) or isinstance(value, Parameter))
++        ):
+             raise PlanningException(f'The WHERE clause for selecting from a predictor'
+                                     f' must contain pairs \'Identifier(...) = Constant(...)\','
+                                     f' found instead: {id.to_tree()}, {value.to_tree()}')
+ 
+         id = disambiguate_predictor_column_identifier(id, predictor)
+ 
+         if str(id) in row_dict:
+             raise PlanningException(f'Multiple values provided for {str(id)}')
+-        row_dict[str(id)] = value.value
++        if isinstance(value, Constant):
++            value = value.value
++        row_dict[str(id)] = value
+     elif isinstance(op, BinaryOperation) and op.op == 'and':
+         recursively_extract_column_values(op.args[0], row_dict, predictor)
+         recursively_extract_column_values(op.args[1], row_dict, predictor)
+     else:
+         raise PlanningException(f'Only \'and\' and \'=\' operations allowed in WHERE clause, found: {op.to_tree()}')
+ 
+ 
+@@ -383,15 +391,20 @@
+             if node_out is not None:
+                 node.where = node_out
+     elif isinstance(node, ast.OrderBy):
+         if node.field is not None:
+             node_out = query_traversal(node.field, callback)
+             if node_out is not None:
+                 node.field = node_out
+-    # TODO update statement
++    elif isinstance(node, list):
++        array = []
++        for node2 in node:
++            node_out = query_traversal(node2, callback) or node2
++            array.append(node_out)
++        return array
+ 
+ 
+ def convert_join_to_list(join):
+     # join tree to table list
+ 
+     if isinstance(join.right, ast.Join):
+         raise NotImplementedError('Wrong join AST')
+```
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql/render/sqlalchemy_render.py` & `mindsdb_sql-0.5.1/mindsdb_sql/render/sqlalchemy_render.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql.egg-info/PKG-INFO` & `mindsdb_sql-0.5.1/mindsdb_sql.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.2
+ Name: mindsdb-sql
+-Version: 0.5.0
++Version: 0.5.1
+ Summary: Pure python SQL parser
+ Home-page: https://github.com/mindsdb/mindsdb_sql
+ Author: MindsDB Inc
+ Author-email: jorge@mindsdb.com
+ License: GPL-3.0
+ Download-URL: https://pypi.org/project/mindsdb_sql
+ Description: UNKNOWN
+```
+
+### Comparing `mindsdb_sql-0.5.0/mindsdb_sql.egg-info/SOURCES.txt` & `mindsdb_sql-0.5.1/mindsdb_sql.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `mindsdb_sql-0.5.0/setup.py` & `mindsdb_sql-0.5.1/setup.py`
+
+ * *Files identical despite different names*
+

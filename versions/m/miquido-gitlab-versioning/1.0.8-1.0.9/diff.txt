@@ -1,0 +1,64 @@
+--- tmp/miquido_gitlab_versioning-1.0.8.tar.gz
++++ tmp/miquido_gitlab_versioning-1.0.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "miquido_gitlab_versioning-1.0.8.tar", last modified: Fri Jul  2 11:02:19 2021, max compression
+│ +gzip compressed data, was "miquido_gitlab_versioning-1.0.9.tar", last modified: Fri Jul  2 11:38:55 2021, max compression
+│   --- miquido_gitlab_versioning-1.0.8.tar
+├── +++ miquido_gitlab_versioning-1.0.9.tar
+│ ├── file list
+│ │ @@ -1,7 +1,7 @@
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2021-07-02 11:02:19.981579 miquido_gitlab_versioning-1.0.8/
+│ │ --rw-r--r--   0 root         (0) root         (0)      848 2021-07-02 11:02:19.981579 miquido_gitlab_versioning-1.0.8/PKG-INFO
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2021-07-02 11:02:19.981579 miquido_gitlab_versioning-1.0.8/miquido_gitlab_versioning/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       45 2021-07-02 08:24:50.448067 miquido_gitlab_versioning-1.0.8/miquido_gitlab_versioning/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      107 2021-07-02 11:02:01.715948 miquido_gitlab_versioning-1.0.8/miquido_gitlab_versioning/__main__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1545 2021-07-02 11:02:01.715948 miquido_gitlab_versioning-1.0.8/miquido_gitlab_versioning/gitlab_versioning.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1527 2021-07-02 11:02:19.701554 miquido_gitlab_versioning-1.0.8/setup.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2021-07-02 11:38:55.341754 miquido_gitlab_versioning-1.0.9/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      848 2021-07-02 11:38:55.341754 miquido_gitlab_versioning-1.0.9/PKG-INFO
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2021-07-02 11:38:55.341754 miquido_gitlab_versioning-1.0.9/miquido_gitlab_versioning/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       45 2021-07-02 11:38:45.844905 miquido_gitlab_versioning-1.0.9/miquido_gitlab_versioning/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      107 2021-07-02 11:38:45.844905 miquido_gitlab_versioning-1.0.9/miquido_gitlab_versioning/__main__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1545 2021-07-02 11:38:45.844905 miquido_gitlab_versioning-1.0.9/miquido_gitlab_versioning/gitlab_versioning.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1527 2021-07-02 11:38:55.241745 miquido_gitlab_versioning-1.0.9/setup.py
+│ │   --- miquido_gitlab_versioning-1.0.8/PKG-INFO
+│ ├── +++ miquido_gitlab_versioning-1.0.9/PKG-INFO
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  Metadata-Version: 1.1
+│ │  Name: miquido_gitlab_versioning
+│ │ -Version: 1.0.8
+│ │ -Summary: Manage build number by incrementing gitlab environment variable (build no = 1),
+│ │ +Version: 1.0.9
+│ │ +Summary: Manage build number by incrementing gitlab environment variable (build no = 2),
+│ │  Home-page: UNKNOWN
+│ │  Author: Marek
+│ │  Author-email: marek.moscichowski@miquido.com
+│ │  License: MIT
+│ │  Description: UNKNOWN
+│ │  Keywords: GITLAB
+│ │  Platform: UNKNOWN
+│ │   --- miquido_gitlab_versioning-1.0.8/miquido_gitlab_versioning/gitlab_versioning.py
+│ ├── +++ miquido_gitlab_versioning-1.0.9/miquido_gitlab_versioning/gitlab_versioning.py
+│ │┄ Files identical despite different names
+│ │   --- miquido_gitlab_versioning-1.0.8/setup.py
+│ ├── +++ miquido_gitlab_versioning-1.0.9/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  from distutils.core import setup
+│ │  setup(
+│ │    name = 'miquido_gitlab_versioning',         # How you named your package folder (MyLib)
+│ │    packages = ['miquido_gitlab_versioning'],   # Chose the same as "name"
+│ │ -  version = '1.0.8',
+│ │ +  version = '1.0.9',
+│ │    license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
+│ │ -  description = 'Manage build number by incrementing gitlab environment variable (build no = 1),',   # Give a short description about your library
+│ │ +  description = 'Manage build number by incrementing gitlab environment variable (build no = 2),',   # Give a short description about your library
+│ │    author = 'Marek',                   # Type in your name
+│ │    author_email = 'marek.moscichowski@miquido.com',      # Type in your E-Mail
+│ │    keywords = ['GITLAB'],   # Keywords that define your package best
+│ │    install_requires=[            # I get to this in a second
+│ │            'requests'
+│ │        ],
+│ │    classifiers=[

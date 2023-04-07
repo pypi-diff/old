@@ -1,0 +1,125 @@
+# Comparing `tmp/griseo-0.6.1.tar.gz` & `tmp/griseo-0.7.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "griseo-0.6.1.tar", max compression
++gzip compressed data, was "griseo-0.7.0.tar", max compression
+```
+
+## Comparing `griseo-0.6.1.tar` & `griseo-0.7.0.tar`
+
+### file list
+
+```diff
+@@ -1,6 +1,6 @@
+--rw-r--r--   0        0        0    11357 2023-03-31 00:48:44.258133 griseo-0.6.1/LICENSE
+--rw-r--r--   0        0        0      280 2023-04-07 09:26:25.990781 griseo-0.6.1/README.md
+--rw-r--r--   0        0        0     2968 2023-04-07 09:28:53.214550 griseo-0.6.1/griseo/__init__.py
+--rw-r--r--   0        0        0      653 2023-03-31 01:58:54.505124 griseo-0.6.1/griseo/__main__.py
+--rw-r--r--   0        0        0     1193 2023-04-07 09:29:11.917146 griseo-0.6.1/pyproject.toml
+--rw-r--r--   0        0        0     1115 1970-01-01 00:00:00.000000 griseo-0.6.1/PKG-INFO
++-rw-r--r--   0        0        0    11357 2023-03-31 00:48:44.258133 griseo-0.7.0/LICENSE
++-rw-r--r--   0        0        0      280 2023-04-07 09:26:25.990781 griseo-0.7.0/README.md
++-rw-r--r--   0        0        0     3191 2023-04-07 09:51:38.914570 griseo-0.7.0/griseo/__init__.py
++-rw-r--r--   0        0        0      653 2023-03-31 01:58:54.505124 griseo-0.7.0/griseo/__main__.py
++-rw-r--r--   0        0        0     1193 2023-04-07 09:53:24.837658 griseo-0.7.0/pyproject.toml
++-rw-r--r--   0        0        0     1115 1970-01-01 00:00:00.000000 griseo-0.7.0/PKG-INFO
+```
+
+### Comparing `griseo-0.6.1/LICENSE` & `griseo-0.7.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `griseo-0.6.1/griseo/__init__.py` & `griseo-0.7.0/griseo/__init__.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -10,17 +10,21 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ import sys
+ from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter, REMAINDER
++from importlib import metadata
+ 
+ import openai
+ 
++__version__ = metadata.version(__package__)
++del metadata  # avoids polluting the results of dir(__package__)
++
+ 
+ def spin(response, print_role) -> (str, str):
+     role, content = '', ''
+     for chunk in response:
+         delta = chunk['choices'][0]['delta']
+         if delta.get('role') and print_role:
+             role = delta['role']
+@@ -87,13 +91,14 @@
+         raise Exception(
+             "No API key provided. You can configure your API key by `export OPENAI_API_KEY=<API-KEY>`"
+             " or `echo OPENAI_API_KEY=<API-KEY> >> .env`.")
+     openai.api_key = api_key
+ 
+     griseo = ArgumentParser(formatter_class=ArgumentDefaultsHelpFormatter)
+     griseo.add_argument('words', nargs=REMAINDER)
++    griseo.add_argument('-v', '--version', action='version', version=__version__)
+ 
+     args = griseo.parse_args()
+     if len(args.words) != 0:
+         oneshot(args.words)
+     else:
+         chat()
+```
+
+### Comparing `griseo-0.6.1/griseo/__main__.py` & `griseo-0.7.0/griseo/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `griseo-0.6.1/pyproject.toml` & `griseo-0.7.0/pyproject.toml`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -10,15 +10,15 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ [tool.poetry]
+ name = "griseo"
+-version = "0.6.1"
++version = "0.7.0"
+ description = "Chat with OpenAI in the Hacker way."
+ authors = ["tison <wander4096@gmail.com>"]
+ license = "Apache-2.0"
+ readme = "README.md"
+ homepage = "https://github.com/korandoru/griseo"
+ repository = "https://github.com/korandoru/griseo"
+ documentation = "https://github.com/korandoru/griseo"
+```
+
+### Comparing `griseo-0.6.1/PKG-INFO` & `griseo-0.7.0/PKG-INFO`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: griseo
+-Version: 0.6.1
++Version: 0.7.0
+ Summary: Chat with OpenAI in the Hacker way.
+ Home-page: https://github.com/korandoru/griseo
+ License: Apache-2.0
+ Keywords: chatgpt,cli,openai
+ Author: tison
+ Author-email: wander4096@gmail.com
+ Requires-Python: >=3.8,<4.0
+```
+
