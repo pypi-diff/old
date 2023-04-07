@@ -1,0 +1,1717 @@
+--- tmp/compas_cem-0.7.0.tar.gz
++++ tmp/compas_cem-0.8.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "compas_cem-0.7.0.tar", last modified: Mon Sep 26 23:25:08 2022, max compression
+│ +gzip compressed data, was "compas_cem-0.8.0.tar", last modified: Fri Apr  7 14:42:12 2023, max compression
+│   --- compas_cem-0.7.0.tar
+├── +++ compas_cem-0.8.0.tar
+│ ├── file list
+│ │ @@ -1,284 +1,296 @@
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.384551 compas_cem-0.7.0/
+│ │ --rw-rw-rw-   0        0        0     1637 2022-09-26 23:19:41.000000 compas_cem-0.7.0/AUTHORS.rst
+│ │ --rw-rw-rw-   0        0        0    11684 2022-09-26 23:19:41.000000 compas_cem-0.7.0/CHANGELOG.rst
+│ │ --rw-rw-rw-   0        0        0     1098 2022-09-26 23:19:41.000000 compas_cem-0.7.0/LICENSE
+│ │ --rw-rw-rw-   0        0        0      395 2022-09-26 23:19:41.000000 compas_cem-0.7.0/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0     8785 2022-09-26 23:25:08.384551 compas_cem-0.7.0/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     6490 2022-09-26 23:19:41.000000 compas_cem-0.7.0/README.rst
+│ │ --rw-rw-rw-   0        0        0       51 2022-09-26 23:19:42.000000 compas_cem-0.7.0/requirements.txt
+│ │ --rw-rw-rw-   0        0        0      612 2022-09-26 23:25:08.384551 compas_cem-0.7.0/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     2099 2022-09-26 23:19:42.000000 compas_cem-0.7.0/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:06.337212 compas_cem-0.7.0/src/
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:07.290634 compas_cem-0.7.0/src/compas_cem/
+│ │ --rw-rw-rw-   0        0        0     2083 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:07.290634 compas_cem-0.7.0/src/compas_cem/data/
+│ │ --rw-rw-rw-   0        0        0      446 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/data/__init__.py
+│ │ --rw-rw-rw-   0        0        0      363 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/data/data.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:07.290634 compas_cem-0.7.0/src/compas_cem/diagrams/
+│ │ --rw-rw-rw-   0        0        0      591 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/diagrams/__init__.py
+│ │ --rw-rw-rw-   0        0        0     8522 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/diagrams/diagram.py
+│ │ --rw-rw-rw-   0        0        0     1470 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/diagrams/form.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:07.290634 compas_cem-0.7.0/src/compas_cem/diagrams/mixins/
+│ │ --rw-rw-rw-   0        0        0      578 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/diagrams/mixins/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1963 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/diagrams/mixins/edge_mixins.py
+│ │ --rw-rw-rw-   0        0        0     2003 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/diagrams/mixins/node_mixins.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:07.290634 compas_cem-0.7.0/src/compas_cem/diagrams/topology/
+│ │ --rw-rw-rw-   0        0        0      595 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/diagrams/topology/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3963 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/diagrams/topology/mesh_mixins.py
+│ │ --rw-rw-rw-   0        0        0    29787 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/diagrams/topology/topology.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:07.290634 compas_cem-0.7.0/src/compas_cem/elements/
+│ │ --rw-rw-rw-   0        0        0      670 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/elements/__init__.py
+│ │ --rw-rw-rw-   0        0        0      880 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/elements/deviation.py
+│ │ --rw-rw-rw-   0        0        0     1551 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/elements/edge.py
+│ │ --rw-rw-rw-   0        0        0     1386 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/elements/node.py
+│ │ --rw-rw-rw-   0        0        0     1357 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/elements/trail.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:07.306218 compas_cem-0.7.0/src/compas_cem/equilibrium/
+│ │ --rw-rw-rw-   0        0        0      592 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/equilibrium/__init__.py
+│ │ --rw-rw-rw-   0        0        0    14109 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/equilibrium/force.py
+│ │ --rw-rw-rw-   0        0        0    14704 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/equilibrium/force_numpy.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:07.306218 compas_cem-0.7.0/src/compas_cem/ghpython/
+│ │ --rw-rw-rw-   0        0        0      752 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/__init__.py
+│ │ --rw-rw-rw-   0        0        0    12761 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/artists.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:06.352833 compas_cem-0.7.0/src/compas_cem/ghpython/components/
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:07.306218 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/
+│ │ --rw-rw-rw-   0        0        0     1023 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/icon.png
+│ │ --rw-rw-rw-   0        0        0     2163 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.306436 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/
+│ │ --rw-rw-rw-   0        0        0      933 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/icon.png
+│ │ --rw-rw-rw-   0        0        0     2234 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.306436 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/
+│ │ --rw-rw-rw-   0        0        0     1141 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/icon.png
+│ │ --rw-rw-rw-   0        0        0     2794 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.306436 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/
+│ │ --rw-rw-rw-   0        0        0     2029 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/icon.png
+│ │ --rw-rw-rw-   0        0        0     4304 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.306436 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/
+│ │ --rw-rw-rw-   0        0        0      491 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/icon.png
+│ │ --rw-rw-rw-   0        0        0     1122 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.306436 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/
+│ │ --rw-rw-rw-   0        0        0      535 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/icon.png
+│ │ --rw-rw-rw-   0        0        0     1149 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.306436 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/
+│ │ --rw-rw-rw-   0        0        0      546 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/icon.png
+│ │ --rw-rw-rw-   0        0        0     1096 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.306436 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/
+│ │ --rw-rw-rw-   0        0        0      542 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/icon.png
+│ │ --rw-rw-rw-   0        0        0     1096 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.306436 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/
+│ │ --rw-rw-rw-   0        0        0      597 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/icon.png
+│ │ --rw-rw-rw-   0        0        0     1158 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.306436 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/
+│ │ --rw-rw-rw-   0        0        0      475 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/icon.png
+│ │ --rw-rw-rw-   0        0        0     1098 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.322051 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleForm/
+│ │ --rw-rw-rw-   0        0        0      455 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleForm/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleForm/icon.png
+│ │ --rw-rw-rw-   0        0        0     1069 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleForm/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.322051 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/
+│ │ --rw-rw-rw-   0        0        0      934 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/icon.png
+│ │ --rw-rw-rw-   0        0        0     2295 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.322051 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeDeviation/
+│ │ --rw-rw-rw-   0        0        0      476 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeDeviation/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeDeviation/icon.png
+│ │ --rw-rw-rw-   0        0        0      957 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeDeviation/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.322051 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/
+│ │ --rw-rw-rw-   0        0        0      634 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/icon.png
+│ │ --rw-rw-rw-   0        0        0     1321 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.322051 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_FormFinding/
+│ │ --rw-rw-rw-   0        0        0      464 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_FormFinding/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_FormFinding/icon.png
+│ │ --rw-rw-rw-   0        0        0     1362 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_FormFinding/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.322051 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_Info/
+│ │ --rw-rw-rw-   0        0        0      481 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_Info/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_Info/icon.png
+│ │ --rw-rw-rw-   0        0        0      458 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_Info/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.322051 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONExportDiagram/
+│ │ --rw-rw-rw-   0        0        0      418 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONExportDiagram/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONExportDiagram/icon.png
+│ │ --rw-rw-rw-   0        0        0      920 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONExportDiagram/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.322051 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONImportForm/
+│ │ --rw-rw-rw-   0        0        0      435 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONImportForm/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONImportForm/icon.png
+│ │ --rw-rw-rw-   0        0        0      774 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONImportForm/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.322051 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONImportTopology/
+│ │ --rw-rw-rw-   0        0        0      451 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONImportTopology/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONImportTopology/icon.png
+│ │ --rw-rw-rw-   0        0        0      794 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONImportTopology/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.322051 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/
+│ │ --rw-rw-rw-   0        0        0      593 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/icon.png
+│ │ --rw-rw-rw-   0        0        0      879 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.322051 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeSupport/
+│ │ --rw-rw-rw-   0        0        0      436 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeSupport/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeSupport/icon.png
+│ │ --rw-rw-rw-   0        0        0      725 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeSupport/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.322051 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/
+│ │ --rw-rw-rw-   0        0        0      771 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/icon.png
+│ │ --rw-rw-rw-   0        0        0     1125 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.337674 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterDeviationEdge/
+│ │ --rw-rw-rw-   0        0        0      438 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterDeviationEdge/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterDeviationEdge/icon.png
+│ │ --rw-rw-rw-   0        0        0     1363 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterDeviationEdge/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.337674 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadX/
+│ │ --rw-rw-rw-   0        0        0      431 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadX/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadX/icon.png
+│ │ --rw-rw-rw-   0        0        0     1373 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadX/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.337674 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadY/
+│ │ --rw-rw-rw-   0        0        0      431 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadY/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadY/icon.png
+│ │ --rw-rw-rw-   0        0        0     1373 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadY/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.337674 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadZ/
+│ │ --rw-rw-rw-   0        0        0      431 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadZ/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadZ/icon.png
+│ │ --rw-rw-rw-   0        0        0     1373 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadZ/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.337674 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginX/
+│ │ --rw-rw-rw-   0        0        0      441 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginX/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginX/icon.png
+│ │ --rw-rw-rw-   0        0        0     1382 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginX/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.337674 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginY/
+│ │ --rw-rw-rw-   0        0        0      441 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginY/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginY/icon.png
+│ │ --rw-rw-rw-   0        0        0     1382 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginY/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.337674 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginZ/
+│ │ --rw-rw-rw-   0        0        0      441 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginZ/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginZ/icon.png
+│ │ --rw-rw-rw-   0        0        0     1368 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginZ/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.337674 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterTrailEdge/
+│ │ --rw-rw-rw-   0        0        0      423 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterTrailEdge/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterTrailEdge/icon.png
+│ │ --rw-rw-rw-   0        0        0     1348 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterTrailEdge/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.337674 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_Proxy/
+│ │ --rw-rw-rw-   0        0        0      713 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_Proxy/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_Proxy/icon.png
+│ │ --rw-rw-rw-   0        0        0      789 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_Proxy/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.337674 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsEdges/
+│ │ --rw-rw-rw-   0        0        0      483 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsEdges/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsEdges/icon.png
+│ │ --rw-rw-rw-   0        0        0     1061 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsEdges/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.337674 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/
+│ │ --rw-rw-rw-   0        0        0      524 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/icon.png
+│ │ --rw-rw-rw-   0        0        0      933 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.337674 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/
+│ │ --rw-rw-rw-   0        0        0      667 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/icon.png
+│ │ --rw-rw-rw-   0        0        0      875 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.353301 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/
+│ │ --rw-rw-rw-   0        0        0      533 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/icon.png
+│ │ --rw-rw-rw-   0        0        0      865 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.353301 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/
+│ │ --rw-rw-rw-   0        0        0     1248 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/icon.png
+│ │ --rw-rw-rw-   0        0        0     1575 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.353301 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/
+│ │ --rw-rw-rw-   0        0        0      677 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/code.py
+│ │ --rw-rw-rw-   0        0        0     2759 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/icon.png
+│ │ --rw-rw-rw-   0        0        0     1125 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/metadata.json
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.368925 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/
+│ │ --rw-rw-rw-   0        0        0     3278 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ArtistColors.ghuser
+│ │ --rw-rw-rw-   0        0        0     3473 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ArtistForm.ghuser
+│ │ --rw-rw-rw-   0        0        0     3625 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ArtistTopology.ghuser
+│ │ --rw-rw-rw-   0        0        0     4717 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstrainedFormFinding.ghuser
+│ │ --rw-rw-rw-   0        0        0     3027 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintDeviationEdgeLength.ghuser
+│ │ --rw-rw-rw-   0        0        0     3064 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintNodeLine.ghuser
+│ │ --rw-rw-rw-   0        0        0     3053 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintNodePlane.ghuser
+│ │ --rw-rw-rw-   0        0        0     3042 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintNodePoint.ghuser
+│ │ --rw-rw-rw-   0        0        0     3105 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintReactionForce.ghuser
+│ │ --rw-rw-rw-   0        0        0     3028 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintTrailEdgeForce.ghuser
+│ │ --rw-rw-rw-   0        0        0     2942 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_DisassembleForm.ghuser
+│ │ --rw-rw-rw-   0        0        0     3328 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_DisassembleTopology.ghuser
+│ │ --rw-rw-rw-   0        0        0     2962 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_EdgeDeviation.ghuser
+│ │ --rw-rw-rw-   0        0        0     3188 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_EdgeTrail.ghuser
+│ │ --rw-rw-rw-   0        0        0     3122 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_FormFinding.ghuser
+│ │ --rw-rw-rw-   0        0        0     2658 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_Info.ghuser
+│ │ --rw-rw-rw-   0        0        0     2955 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_JSONExportDiagram.ghuser
+│ │ --rw-rw-rw-   0        0        0     2867 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_JSONImportForm.ghuser
+│ │ --rw-rw-rw-   0        0        0     2884 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_JSONImportTopology.ghuser
+│ │ --rw-rw-rw-   0        0        0     2952 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_NodeLoad.ghuser
+│ │ --rw-rw-rw-   0        0        0     2826 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_NodeSupport.ghuser
+│ │ --rw-rw-rw-   0        0        0     3137 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_OriginNodesMove.ghuser
+│ │ --rw-rw-rw-   0        0        0     3051 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterDeviationEdge.ghuser
+│ │ --rw-rw-rw-   0        0        0     3047 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterNodeLoadX.ghuser
+│ │ --rw-rw-rw-   0        0        0     3038 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterNodeLoadY.ghuser
+│ │ --rw-rw-rw-   0        0        0     3045 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterNodeLoadZ.ghuser
+│ │ --rw-rw-rw-   0        0        0     3043 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterNodeOriginX.ghuser
+│ │ --rw-rw-rw-   0        0        0     3048 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterNodeOriginY.ghuser
+│ │ --rw-rw-rw-   0        0        0     3047 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterNodeOriginZ.ghuser
+│ │ --rw-rw-rw-   0        0        0     3051 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterTrailEdge.ghuser
+│ │ --rw-rw-rw-   0        0        0     2988 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_Proxy.ghuser
+│ │ --rw-rw-rw-   0        0        0     3004 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ResultsEdges.ghuser
+│ │ --rw-rw-rw-   0        0        0     2955 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ResultsSupportNodes.ghuser
+│ │ --rw-rw-rw-   0        0        0     3034 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_SearchEdgeKey.ghuser
+│ │ --rw-rw-rw-   0        0        0     2983 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_SearchNodeKey.ghuser
+│ │ --rw-rw-rw-   0        0        0     3222 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_TopologyDiagram.ghuser
+│ │ --rw-rw-rw-   0        0        0     3045 2022-09-26 23:24:59.000000 compas_cem-0.7.0/src/compas_cem/ghpython/components/ghuser/CompasCem_TrailsShift.ghuser
+│ │ --rw-rw-rw-   0        0        0      702 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/install.py
+│ │ --rw-rw-rw-   0        0        0      504 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/register.py
+│ │ --rw-rw-rw-   0        0        0      940 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/ghpython/uninstall.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.368925 compas_cem-0.7.0/src/compas_cem/loads/
+│ │ --rw-rw-rw-   0        0        0      442 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/loads/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1703 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/loads/node.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.368925 compas_cem-0.7.0/src/compas_cem/optimization/
+│ │ --rw-rw-rw-   0        0        0     1371 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.368925 compas_cem-0.7.0/src/compas_cem/optimization/constraints/
+│ │ --rw-rw-rw-   0        0        0      799 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/constraints/__init__.py
+│ │ --rw-rw-rw-   0        0        0     5820 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/constraints/constraint.py
+│ │ --rw-rw-rw-   0        0        0     4127 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/constraints/force.py
+│ │ --rw-rw-rw-   0        0        0      926 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/constraints/length.py
+│ │ --rw-rw-rw-   0        0        0     3478 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/constraints/line.py
+│ │ --rw-rw-rw-   0        0        0      809 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/constraints/mesh.py
+│ │ --rw-rw-rw-   0        0        0      692 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/constraints/plane.py
+│ │ --rw-rw-rw-   0        0        0      574 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/constraints/point.py
+│ │ --rw-rw-rw-   0        0        0     1528 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/grad.py
+│ │ --rw-rw-rw-   0        0        0     4242 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/nlopt.py
+│ │ --rw-rw-rw-   0        0        0      427 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/objective_func.py
+│ │ --rw-rw-rw-   0        0        0    15452 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/optimizer.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.384551 compas_cem-0.7.0/src/compas_cem/optimization/parameters/
+│ │ --rw-rw-rw-   0        0        0      766 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/parameters/__init__.py
+│ │ --rw-rw-rw-   0        0        0      835 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/parameters/deviation.py
+│ │ --rw-rw-rw-   0        0        0     2484 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/parameters/edge.py
+│ │ --rw-rw-rw-   0        0        0     3873 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/parameters/load.py
+│ │ --rw-rw-rw-   0        0        0     2400 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/parameters/node.py
+│ │ --rw-rw-rw-   0        0        0     4331 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/parameters/origin.py
+│ │ --rw-rw-rw-   0        0        0     2251 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/parameters/parameter.py
+│ │ --rw-rw-rw-   0        0        0      817 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/parameters/trail.py
+│ │ --rw-rw-rw-   0        0        0     4053 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/optimization/proxy.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.384551 compas_cem-0.7.0/src/compas_cem/plotters/
+│ │ --rw-rw-rw-   0        0        0      701 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/plotters/__init__.py
+│ │ --rw-rw-rw-   0        0        0    10259 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/plotters/formartist.py
+│ │ --rw-rw-rw-   0        0        0      363 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/plotters/plotter.py
+│ │ --rw-rw-rw-   0        0        0     3480 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/plotters/proxy.py
+│ │ --rw-rw-rw-   0        0        0      460 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/plotters/register.py
+│ │ --rw-rw-rw-   0        0        0    10544 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/plotters/topologyartist.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.384551 compas_cem-0.7.0/src/compas_cem/supports/
+│ │ --rw-rw-rw-   0        0        0      457 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/supports/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1745 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/supports/node.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:08.384551 compas_cem-0.7.0/src/compas_cem/viewers/
+│ │ --rw-rw-rw-   0        0        0     1014 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/viewers/__init__.py
+│ │ --rw-rw-rw-   0        0        0    25030 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/viewers/diagramobject.py
+│ │ --rw-rw-rw-   0        0        0     2585 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/viewers/formobject.py
+│ │ --rw-rw-rw-   0        0        0      386 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/viewers/register.py
+│ │ --rw-rw-rw-   0        0        0     4021 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/viewers/topologyobject.py
+│ │ --rw-rw-rw-   0        0        0     1414 2022-09-26 23:19:42.000000 compas_cem-0.7.0/src/compas_cem/viewers/viewer.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-26 23:25:07.290634 compas_cem-0.7.0/src/compas_cem.egg-info/
+│ │ --rw-rw-rw-   0        0        0     8785 2022-09-26 23:25:06.000000 compas_cem-0.7.0/src/compas_cem.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0    13705 2022-09-26 23:25:06.000000 compas_cem-0.7.0/src/compas_cem.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2022-09-26 23:25:06.000000 compas_cem-0.7.0/src/compas_cem.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       20 2022-09-26 23:25:06.000000 compas_cem-0.7.0/src/compas_cem.egg-info/entry_points.txt
+│ │ --rw-rw-rw-   0        0        0        2 2022-09-26 23:24:13.000000 compas_cem-0.7.0/src/compas_cem.egg-info/not-zip-safe
+│ │ --rw-rw-rw-   0        0        0       46 2022-09-26 23:25:06.000000 compas_cem-0.7.0/src/compas_cem.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       11 2022-09-26 23:25:06.000000 compas_cem-0.7.0/src/compas_cem.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.748160 compas_cem-0.8.0/
+│ │ +-rw-rw-rw-   0        0        0     1799 2023-04-07 14:39:19.000000 compas_cem-0.8.0/AUTHORS.rst
+│ │ +-rw-rw-rw-   0        0        0    12087 2023-04-07 14:39:19.000000 compas_cem-0.8.0/CHANGELOG.rst
+│ │ +-rw-rw-rw-   0        0        0     1098 2023-04-07 14:39:19.000000 compas_cem-0.8.0/LICENSE
+│ │ +-rw-rw-rw-   0        0        0      395 2023-04-07 14:39:19.000000 compas_cem-0.8.0/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0     8785 2023-04-07 14:42:12.748160 compas_cem-0.8.0/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     6490 2023-04-07 14:39:19.000000 compas_cem-0.8.0/README.rst
+│ │ +-rw-rw-rw-   0        0        0       51 2023-04-07 14:39:20.000000 compas_cem-0.8.0/requirements.txt
+│ │ +-rw-rw-rw-   0        0        0      612 2023-04-07 14:42:12.748160 compas_cem-0.8.0/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     2099 2023-04-07 14:39:20.000000 compas_cem-0.8.0/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.544993 compas_cem-0.8.0/src/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.576226 compas_cem-0.8.0/src/compas_cem/
+│ │ +-rw-rw-rw-   0        0        0     2083 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.576226 compas_cem-0.8.0/src/compas_cem/data/
+│ │ +-rw-rw-rw-   0        0        0      446 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/data/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      363 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/data/data.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.576226 compas_cem-0.8.0/src/compas_cem/diagrams/
+│ │ +-rw-rw-rw-   0        0        0      591 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/diagrams/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     8898 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/diagrams/diagram.py
+│ │ +-rw-rw-rw-   0        0        0     1470 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/diagrams/form.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.576226 compas_cem-0.8.0/src/compas_cem/diagrams/mixins/
+│ │ +-rw-rw-rw-   0        0        0      578 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/diagrams/mixins/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1963 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/diagrams/mixins/edge_mixins.py
+│ │ +-rw-rw-rw-   0        0        0     2003 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/diagrams/mixins/node_mixins.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.576226 compas_cem-0.8.0/src/compas_cem/diagrams/topology/
+│ │ +-rw-rw-rw-   0        0        0      595 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/diagrams/topology/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3963 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/diagrams/topology/mesh_mixins.py
+│ │ +-rw-rw-rw-   0        0        0    29847 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/diagrams/topology/topology.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.592128 compas_cem-0.8.0/src/compas_cem/elements/
+│ │ +-rw-rw-rw-   0        0        0      670 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/elements/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      880 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/elements/deviation.py
+│ │ +-rw-rw-rw-   0        0        0     1551 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/elements/edge.py
+│ │ +-rw-rw-rw-   0        0        0     1386 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/elements/node.py
+│ │ +-rw-rw-rw-   0        0        0     1357 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/elements/trail.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.592128 compas_cem-0.8.0/src/compas_cem/equilibrium/
+│ │ +-rw-rw-rw-   0        0        0      594 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/equilibrium/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    14342 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/equilibrium/force.py
+│ │ +-rw-rw-rw-   0        0        0    14935 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/equilibrium/force_numpy.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.592128 compas_cem-0.8.0/src/compas_cem/ghpython/
+│ │ +-rw-rw-rw-   0        0        0      752 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    12761 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/artists.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.560588 compas_cem-0.8.0/src/compas_cem/ghpython/components/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.592128 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/
+│ │ +-rw-rw-rw-   0        0        0     1023 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/icon.png
+│ │ +-rw-rw-rw-   0        0        0     2163 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.592128 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/
+│ │ +-rw-rw-rw-   0        0        0      933 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/icon.png
+│ │ +-rw-rw-rw-   0        0        0     2234 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.592128 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/
+│ │ +-rw-rw-rw-   0        0        0     1141 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/icon.png
+│ │ +-rw-rw-rw-   0        0        0     2794 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.607464 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/
+│ │ +-rw-rw-rw-   0        0        0     2029 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/icon.png
+│ │ +-rw-rw-rw-   0        0        0     4304 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.607464 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/
+│ │ +-rw-rw-rw-   0        0        0      491 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1122 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.607464 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintEdgeDirection/
+│ │ +-rw-rw-rw-   0        0        0      597 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintEdgeDirection/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintEdgeDirection/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1127 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintEdgeDirection/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.607464 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/
+│ │ +-rw-rw-rw-   0        0        0      535 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1149 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.607464 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/
+│ │ +-rw-rw-rw-   0        0        0      546 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1096 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.607464 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/
+│ │ +-rw-rw-rw-   0        0        0      542 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1096 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.607464 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePolyline/
+│ │ +-rw-rw-rw-   0        0        0      575 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePolyline/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePolyline/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1117 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePolyline/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.607464 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/
+│ │ +-rw-rw-rw-   0        0        0      597 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1158 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.623139 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/
+│ │ +-rw-rw-rw-   0        0        0      475 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1098 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.623139 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleForm/
+│ │ +-rw-rw-rw-   0        0        0      455 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleForm/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleForm/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1069 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleForm/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.623139 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/
+│ │ +-rw-rw-rw-   0        0        0      934 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/icon.png
+│ │ +-rw-rw-rw-   0        0        0     2295 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.623139 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeDeviation/
+│ │ +-rw-rw-rw-   0        0        0      476 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeDeviation/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeDeviation/icon.png
+│ │ +-rw-rw-rw-   0        0        0      957 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeDeviation/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.623139 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/
+│ │ +-rw-rw-rw-   0        0        0      634 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1321 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.623139 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_FormFinding/
+│ │ +-rw-rw-rw-   0        0        0      464 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_FormFinding/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_FormFinding/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1362 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_FormFinding/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.638721 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_Info/
+│ │ +-rw-rw-rw-   0        0        0      481 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_Info/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_Info/icon.png
+│ │ +-rw-rw-rw-   0        0        0      458 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_Info/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.638721 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONExportDiagram/
+│ │ +-rw-rw-rw-   0        0        0      418 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONExportDiagram/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONExportDiagram/icon.png
+│ │ +-rw-rw-rw-   0        0        0      920 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONExportDiagram/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.638721 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONImportForm/
+│ │ +-rw-rw-rw-   0        0        0      435 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONImportForm/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONImportForm/icon.png
+│ │ +-rw-rw-rw-   0        0        0      774 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONImportForm/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.638721 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONImportTopology/
+│ │ +-rw-rw-rw-   0        0        0      451 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONImportTopology/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONImportTopology/icon.png
+│ │ +-rw-rw-rw-   0        0        0      794 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONImportTopology/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.638721 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/
+│ │ +-rw-rw-rw-   0        0        0      593 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/icon.png
+│ │ +-rw-rw-rw-   0        0        0      879 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.638721 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeSupport/
+│ │ +-rw-rw-rw-   0        0        0      436 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeSupport/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeSupport/icon.png
+│ │ +-rw-rw-rw-   0        0        0      725 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeSupport/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.638721 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/
+│ │ +-rw-rw-rw-   0        0        0      771 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1125 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.654342 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterDeviationEdge/
+│ │ +-rw-rw-rw-   0        0        0      438 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterDeviationEdge/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterDeviationEdge/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1363 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterDeviationEdge/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.654342 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadX/
+│ │ +-rw-rw-rw-   0        0        0      431 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadX/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadX/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1373 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadX/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.654342 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadY/
+│ │ +-rw-rw-rw-   0        0        0      431 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadY/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadY/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1373 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadY/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.654342 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadZ/
+│ │ +-rw-rw-rw-   0        0        0      431 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadZ/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadZ/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1373 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadZ/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.654342 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginX/
+│ │ +-rw-rw-rw-   0        0        0      441 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginX/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginX/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1382 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginX/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.654342 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginY/
+│ │ +-rw-rw-rw-   0        0        0      441 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginY/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginY/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1382 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginY/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.654342 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginZ/
+│ │ +-rw-rw-rw-   0        0        0      441 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginZ/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginZ/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1368 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginZ/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.669971 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterTrailEdge/
+│ │ +-rw-rw-rw-   0        0        0      423 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterTrailEdge/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterTrailEdge/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1348 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterTrailEdge/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.669971 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_Proxy/
+│ │ +-rw-rw-rw-   0        0        0      713 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_Proxy/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_Proxy/icon.png
+│ │ +-rw-rw-rw-   0        0        0      789 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_Proxy/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.669971 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsEdges/
+│ │ +-rw-rw-rw-   0        0        0      483 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsEdges/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsEdges/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1061 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsEdges/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.669971 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/
+│ │ +-rw-rw-rw-   0        0        0      524 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/icon.png
+│ │ +-rw-rw-rw-   0        0        0      933 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.669971 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/
+│ │ +-rw-rw-rw-   0        0        0      667 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/icon.png
+│ │ +-rw-rw-rw-   0        0        0      875 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.669971 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/
+│ │ +-rw-rw-rw-   0        0        0      533 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/icon.png
+│ │ +-rw-rw-rw-   0        0        0      865 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.669971 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/
+│ │ +-rw-rw-rw-   0        0        0     1248 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1575 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.685595 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/
+│ │ +-rw-rw-rw-   0        0        0      677 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/code.py
+│ │ +-rw-rw-rw-   0        0        0     2759 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/icon.png
+│ │ +-rw-rw-rw-   0        0        0     1125 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/metadata.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.716866 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/
+│ │ +-rw-rw-rw-   0        0        0     3280 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ArtistColors.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3475 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ArtistForm.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3635 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ArtistTopology.ghuser
+│ │ +-rw-rw-rw-   0        0        0     4707 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstrainedFormFinding.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3028 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintDeviationEdgeLength.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3101 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintEdgeDirection.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3057 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintNodeLine.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3057 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintNodePlane.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3040 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintNodePoint.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3049 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintNodePolyline.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3093 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintReactionForce.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3031 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintTrailEdgeForce.ghuser
+│ │ +-rw-rw-rw-   0        0        0     2939 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_DisassembleForm.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3324 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_DisassembleTopology.ghuser
+│ │ +-rw-rw-rw-   0        0        0     2953 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_EdgeDeviation.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3186 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_EdgeTrail.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3126 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_FormFinding.ghuser
+│ │ +-rw-rw-rw-   0        0        0     2655 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_Info.ghuser
+│ │ +-rw-rw-rw-   0        0        0     2958 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_JSONExportDiagram.ghuser
+│ │ +-rw-rw-rw-   0        0        0     2861 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_JSONImportForm.ghuser
+│ │ +-rw-rw-rw-   0        0        0     2886 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_JSONImportTopology.ghuser
+│ │ +-rw-rw-rw-   0        0        0     2949 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_NodeLoad.ghuser
+│ │ +-rw-rw-rw-   0        0        0     2825 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_NodeSupport.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3122 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_OriginNodesMove.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3042 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterDeviationEdge.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3047 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterNodeLoadX.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3050 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterNodeLoadY.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3048 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterNodeLoadZ.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3042 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterNodeOriginX.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3043 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterNodeOriginY.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3041 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterNodeOriginZ.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3057 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ParameterTrailEdge.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3001 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_Proxy.ghuser
+│ │ +-rw-rw-rw-   0        0        0     2998 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ResultsEdges.ghuser
+│ │ +-rw-rw-rw-   0        0        0     2951 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_ResultsSupportNodes.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3035 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_SearchEdgeKey.ghuser
+│ │ +-rw-rw-rw-   0        0        0     2986 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_SearchNodeKey.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3223 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_TopologyDiagram.ghuser
+│ │ +-rw-rw-rw-   0        0        0     3045 2023-04-07 14:42:04.000000 compas_cem-0.8.0/src/compas_cem/ghpython/components/ghuser/CompasCem_TrailsShift.ghuser
+│ │ +-rw-rw-rw-   0        0        0      702 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/install.py
+│ │ +-rw-rw-rw-   0        0        0      504 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/register.py
+│ │ +-rw-rw-rw-   0        0        0      940 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/ghpython/uninstall.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.716866 compas_cem-0.8.0/src/compas_cem/loads/
+│ │ +-rw-rw-rw-   0        0        0      442 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/loads/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1703 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/loads/node.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.716866 compas_cem-0.8.0/src/compas_cem/optimization/
+│ │ +-rw-rw-rw-   0        0        0     1371 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.732487 compas_cem-0.8.0/src/compas_cem/optimization/constraints/
+│ │ +-rw-rw-rw-   0        0        0      876 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/constraints/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     5820 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/constraints/constraint.py
+│ │ +-rw-rw-rw-   0        0        0     7126 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/constraints/direction.py
+│ │ +-rw-rw-rw-   0        0        0     4127 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/constraints/force.py
+│ │ +-rw-rw-rw-   0        0        0      926 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/constraints/length.py
+│ │ +-rw-rw-rw-   0        0        0     3478 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/constraints/line.py
+│ │ +-rw-rw-rw-   0        0        0      809 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/constraints/mesh.py
+│ │ +-rw-rw-rw-   0        0        0      692 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/constraints/plane.py
+│ │ +-rw-rw-rw-   0        0        0      574 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/constraints/point.py
+│ │ +-rw-rw-rw-   0        0        0     4202 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/constraints/polyline.py
+│ │ +-rw-rw-rw-   0        0        0     1528 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/grad.py
+│ │ +-rw-rw-rw-   0        0        0     4242 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/nlopt.py
+│ │ +-rw-rw-rw-   0        0        0      427 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/objective_func.py
+│ │ +-rw-rw-rw-   0        0        0    15444 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/optimizer.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.732487 compas_cem-0.8.0/src/compas_cem/optimization/parameters/
+│ │ +-rw-rw-rw-   0        0        0      766 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/parameters/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      835 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/parameters/deviation.py
+│ │ +-rw-rw-rw-   0        0        0     2484 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/parameters/edge.py
+│ │ +-rw-rw-rw-   0        0        0     3902 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/parameters/load.py
+│ │ +-rw-rw-rw-   0        0        0     2400 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/parameters/node.py
+│ │ +-rw-rw-rw-   0        0        0     4331 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/parameters/origin.py
+│ │ +-rw-rw-rw-   0        0        0     2251 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/parameters/parameter.py
+│ │ +-rw-rw-rw-   0        0        0      817 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/parameters/trail.py
+│ │ +-rw-rw-rw-   0        0        0     4053 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/optimization/proxy.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.732487 compas_cem-0.8.0/src/compas_cem/plotters/
+│ │ +-rw-rw-rw-   0        0        0      701 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/plotters/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    10259 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/plotters/formartist.py
+│ │ +-rw-rw-rw-   0        0        0      363 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/plotters/plotter.py
+│ │ +-rw-rw-rw-   0        0        0     3480 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/plotters/proxy.py
+│ │ +-rw-rw-rw-   0        0        0      460 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/plotters/register.py
+│ │ +-rw-rw-rw-   0        0        0    10544 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/plotters/topologyartist.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.748160 compas_cem-0.8.0/src/compas_cem/supports/
+│ │ +-rw-rw-rw-   0        0        0      457 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/supports/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1745 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/supports/node.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.748160 compas_cem-0.8.0/src/compas_cem/viewers/
+│ │ +-rw-rw-rw-   0        0        0     1014 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/viewers/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    25032 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/viewers/diagramobject.py
+│ │ +-rw-rw-rw-   0        0        0     2585 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/viewers/formobject.py
+│ │ +-rw-rw-rw-   0        0        0      386 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/viewers/register.py
+│ │ +-rw-rw-rw-   0        0        0     4021 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/viewers/topologyobject.py
+│ │ +-rw-rw-rw-   0        0        0     1414 2023-04-07 14:39:20.000000 compas_cem-0.8.0/src/compas_cem/viewers/viewer.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 14:42:12.576226 compas_cem-0.8.0/src/compas_cem.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     8785 2023-04-07 14:42:12.000000 compas_cem-0.8.0/src/compas_cem.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0    14448 2023-04-07 14:42:12.000000 compas_cem-0.8.0/src/compas_cem.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 14:42:12.000000 compas_cem-0.8.0/src/compas_cem.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       20 2023-04-07 14:42:12.000000 compas_cem-0.8.0/src/compas_cem.egg-info/entry_points.txt
+│ │ +-rw-rw-rw-   0        0        0        2 2023-04-07 14:41:30.000000 compas_cem-0.8.0/src/compas_cem.egg-info/not-zip-safe
+│ │ +-rw-rw-rw-   0        0        0       46 2023-04-07 14:42:12.000000 compas_cem-0.8.0/src/compas_cem.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       11 2023-04-07 14:42:12.000000 compas_cem-0.8.0/src/compas_cem.egg-info/top_level.txt
+│ │   --- compas_cem-0.7.0/AUTHORS.rst
+│ ├── +++ compas_cem-0.8.0/AUTHORS.rst
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,25 +1,25 @@
+│ │  ********************************************************************************
+│ │  Citing
+│ │  ********************************************************************************
+│ │  
+│ │ -If you use **COMPAS CEM** for a project or research, please cite our paper preprint:
+│ │ +If you use **COMPAS CEM** for a project or research, please consider citing our journal paper:
+│ │  
+│ │  .. code-block:: latex
+│ │  
+│ │ -    @misc{pastrana_constrainedformfinding_2021,
+│ │ -          title = {Constrained {{Form}}-{{Finding}} of {{Tension}}-{{Compression Structures}} Using {{Automatic Differentiation}}},
+│ │ -          author={Pastrana, Rafael and
+│ │ -                  Ohlbrock, Patrick Ole and
+│ │ -                  D'Acunto, Pierluigi and
+│ │ -                  Parascho, Stefana},
+│ │ -          year={2021},
+│ │ -          url={https://arxiv.org/abs/2111.02607},
+│ │ -          eprint={2111.02607},
+│ │ -          archivePrefix={arXiv}}
+│ │ +    @article{pastrana_constrainedformfinding_2022,
+│ │ +             title = {Constrained {Form}-{Finding} of {Tension}–{Compression} {Structures} using {Automatic} {Differentiation}},
+│ │ +             author = {Pastrana, Rafael and Ohlbrock, Patrick Ole and Oberbichler, Thomas and D’Acunto, Pierluigi and Parascho, Stefana},
+│ │ +             journal = {Computer-Aided Design},
+│ │ +             doi = {10.1016/j.cad.2022.103435},
+│ │ +             volume = {155},
+│ │ +             issn = {0010-4485},
+│ │ +             url = {https://www.sciencedirect.com/science/article/pii/S0010448522001683},
+│ │ +             month = feb,
+│ │ +             year = {2022}}
+│ │  
+│ │  And the code repository:
+│ │  
+│ │  .. code-block:: latex
+│ │  
+│ │      @software{compas_cem,
+│ │          title={{COMPAS~CEM}: The {Combinatorial Equilibrium Modeling} framework for {COMPAS}},
+│ │ @@ -31,11 +31,11 @@
+│ │          doi={10.5281/zenodo.5705740},
+│ │          url={https://arpastrana.github.io/compas\_cem}}
+│ │  
+│ │  
+│ │  Authors
+│ │  =======
+│ │  
+│ │ -* Rafael Pastrana <arpj@princeton> `@arpastrana <https://github.com/arpastrana>`_
+│ │ +* Rafael Pastrana <arpastrana@princeton> `@arpastrana <https://github.com/arpastrana>`_
+│ │  * Ole Ohlbrock <ohlbrock@arch.ethz.ch> `@OleOhlbrock <https://github.com/OleOhlbrock>`_
+│ │  * Pierluigi D'Acunto <pierluigidacunto@tum.de> `@pierluigidacunto <https://github.com/pierluigidacunto>`_
+│ │ -* Stefana Parascho <parascho@princeton.edu> `@stefanaparascho <https://github.com/stefanaparascho>`_
+│ │ +* Stefana Parascho <stefana.parascho@epfl.ch> `@stefanaparascho <https://github.com/stefanaparascho>`_
+│ │ ├── encoding
+│ │ │ @@ -1 +1 @@
+│ │ │ -us-ascii
+│ │ │ +utf-8
+│ │   --- compas_cem-0.7.0/CHANGELOG.rst
+│ ├── +++ compas_cem-0.8.0/CHANGELOG.rst
+│ │┄ Files 2% similar despite different names
+│ │ @@ -2,14 +2,33 @@
+│ │  =========
+│ │  
+│ │  All notable changes to this project will be documented in this file.
+│ │  
+│ │  The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`_
+│ │  and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_.
+│ │  
+│ │ +0.8.0
+│ │ +----------
+│ │ +
+│ │ +**Added**
+│ │ +
+│ │ +- Added `PolylineConstraint` component to grasshopper plugin.
+│ │ +- Implemented `constraints.PolylineConstraint`.
+│ │ +- Added `EdgeDirectionConstraint` component to grasshopper plugin.
+│ │ +- Implemented `constraints.EdgeDirectionConstraint`.
+│ │ +- Added `Diagram.edge_plane` to query the projection plane of an edge.
+│ │ +
+│ │ +**Changed**
+│ │ +
+│ │ +**Fixed**
+│ │ +
+│ │ +**Deprecated**
+│ │ +
+│ │ +**Removed**
+│ │ +
+│ │  0.7.0
+│ │  ----------
+│ │  
+│ │  **Added**
+│ │  
+│ │  - Added sequence coloring for nodes to `plotters.TopologyArtist`.
+│ │  - Automatically compute edge widths from a two-tuple with `plotters.FormArtist`.
+│ │   --- compas_cem-0.7.0/LICENSE
+│ ├── +++ compas_cem-0.8.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/PKG-INFO
+│ ├── +++ compas_cem-0.8.0/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: compas_cem
+│ │ -Version: 0.7.0
+│ │ +Version: 0.8.0
+│ │  Summary: The Combinatorial Equilibrium Modeling framework for COMPAS
+│ │  Home-page: https://github.com/arpastrana/compas_cem
+│ │  Author: Rafael Pastrana
+│ │  Author-email: arpj@princeton.edu
+│ │  License: MIT license
+│ │  Description: ********************************************************************************
+│ │          COMPAS CEM
+│ │   --- compas_cem-0.7.0/README.rst
+│ ├── +++ compas_cem-0.8.0/README.rst
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/setup.cfg
+│ ├── +++ compas_cem-0.8.0/setup.cfg
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/setup.py
+│ ├── +++ compas_cem-0.8.0/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -24,15 +24,15 @@
+│ │  
+│ │  long_description = read("README.rst")
+│ │  requirements = read("requirements.txt").split("\n")
+│ │  optional_requirements = {}
+│ │  
+│ │  setup(
+│ │      name="compas_cem",
+│ │ -    version="0.7.0",
+│ │ +    version="0.8.0",
+│ │      description="The Combinatorial Equilibrium Modeling framework for COMPAS",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/arpastrana/compas_cem",
+│ │      author="Rafael Pastrana",
+│ │      author_email="arpj@princeton.edu",
+│ │      license="MIT license",
+│ │   --- compas_cem-0.7.0/src/compas_cem/__init__.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -23,15 +23,15 @@
+│ │  
+│ │  import os
+│ │  
+│ │  __author__ = ["Rafael Pastrana"]
+│ │  __copyright__ = "Copyright 2020 - Princeton University"
+│ │  __license__ = "MIT License"
+│ │  __email__ = "arpj@princeton.edu"
+│ │ -__version__ = "0.7.0"
+│ │ +__version__ = "0.8.0"
+│ │  
+│ │  
+│ │  # Directories
+│ │  HERE = os.path.dirname(__file__)
+│ │  HOME = os.path.abspath(os.path.join(HERE, "../../"))
+│ │  DATA = os.path.abspath(os.path.join(HOME, "data"))
+│ │  DOCS = os.path.abspath(os.path.join(HOME, "docs"))
+│ │   --- compas_cem-0.7.0/src/compas_cem/diagrams/__init__.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/diagrams/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/diagrams/diagram.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/diagrams/diagram.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -251,14 +251,30 @@
+│ │          Return
+│ │          ------
+│ │          length : ``float``
+│ │              The edge length.
+│ │          """
+│ │          return self.edge_attribute(key=edge, name="length")
+│ │  
+│ │ +    def edge_plane(self, edge):
+│ │ +        """
+│ │ +        Gets the projection plane at an edge.
+│ │ +
+│ │ +        Parameters
+│ │ +        ----------
+│ │ +        edge : ``tuple``
+│ │ +            The u, v edge key.
+│ │ +
+│ │ +        Return
+│ │ +        ------
+│ │ +        plane : ``tuple``
+│ │ +            The projection plane of the edge.
+│ │ +        """
+│ │ +        return self.edge_attribute(key=edge, name="plane")
+│ │ +
+│ │  # ==============================================================================
+│ │  # Magic methods
+│ │  # ==============================================================================
+│ │  
+│ │      def __repr__(self):
+│ │          """
+│ │          """
+│ │   --- compas_cem-0.7.0/src/compas_cem/diagrams/form.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/diagrams/form.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/diagrams/mixins/__init__.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/diagrams/mixins/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/diagrams/mixins/edge_mixins.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/diagrams/mixins/edge_mixins.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/diagrams/mixins/node_mixins.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/diagrams/mixins/node_mixins.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/diagrams/topology/__init__.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/diagrams/topology/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/diagrams/topology/mesh_mixins.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/diagrams/topology/mesh_mixins.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/diagrams/topology/topology.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/diagrams/topology/topology.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -906,15 +906,15 @@
+│ │  
+│ │  # ==============================================================================
+│ │  # Mappings
+│ │  # ==============================================================================
+│ │  
+│ │      def trail_sequences(self, key):
+│ │          """
+│ │ -        Create a mapping between the sequences in the diagram and the nodes in the trail.
+│ │ +        Create a mapping between topological sequences and the nodes in a trail.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          key : ``int``
+│ │              The trail key.
+│ │  
+│ │          Returns
+│ │ @@ -926,15 +926,17 @@
+│ │          for node in self.trail(key):
+│ │              sequences[self.node_sequence(node)] = node
+│ │  
+│ │          return sequences
+│ │  
+│ │      def trails_sequences(self):
+│ │          """
+│ │ -        Creates a mapping between the nodes in all the trails and the available sequences.
+│ │ +        Creates a mapping of mappings between the nodes of the trails and the sequences.
+│ │ +
+│ │ +        The mapping has the form ``{trail_key: {sequence: node}}``.
+│ │  
+│ │          Returns
+│ │          -------
+│ │          sequences_map : ``Dict[int]``
+│ │              A dictionary wherein keys are trail keys and values are dictionaries
+│ │              wherein keys are sequences and values are node keys.
+│ │          """
+│ │   --- compas_cem-0.7.0/src/compas_cem/elements/__init__.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/elements/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/elements/deviation.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/elements/deviation.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/elements/edge.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/elements/edge.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/elements/node.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/elements/node.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/elements/trail.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/elements/trail.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/equilibrium/__init__.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/equilibrium/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -25,8 +25,9 @@
+│ │  # from .<module> import *
+│ │  from .force import *  # noqa F403
+│ │  
+│ │  import compas
+│ │  if not compas.IPY:
+│ │      from .force_numpy import *  # noqa F403
+│ │  
+│ │ +
+│ │  __all__ = [name for name in dir() if not name.startswith('_')]
+│ │   --- compas_cem-0.7.0/src/compas_cem/equilibrium/force.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/equilibrium/force.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -65,14 +65,15 @@
+│ │  
+│ │      # mapping between trails and sequences
+│ │      trails_sequences = topology.trails_sequences()
+│ │  
+│ │      # create data containers that describe equilibrium state
+│ │      reaction_forces = {}
+│ │      trail_forces = {}
+│ │ +    trail_directions = {}
+│ │      residual_vectors = {node: topology.reaction_force(node) for node in topology.nodes()}
+│ │      node_xyz = {node: topology.node_coordinates(node) for node in topology.nodes()}
+│ │  
+│ │      # compute last sequence
+│ │      klast = topology.sequence_last()
+│ │      if kmax is not None:
+│ │          assert kmax >= 0, "Kmax must be a non-negative number!"
+│ │ @@ -80,15 +81,15 @@
+│ │              klast = kmax
+│ │  
+│ │      for t in range(tmax):  # max iterations
+│ │  
+│ │          # store last positions for residual
+│ │          last_xyz = {k: v for k, v in node_xyz.items()}
+│ │  
+│ │ -        for k in range(klast + 1):  # sequences
+│ │ +        for k in range(topology.number_of_sequences()):  # sequences
+│ │  
+│ │              for key, trail in topology.trails(keys=True):
+│ │  
+│ │                  # if index is larger than available nodes in trail, skip trail
+│ │                  if k not in trails_sequences[key]:
+│ │                      continue
+│ │  
+│ │ @@ -140,20 +141,24 @@
+│ │                          # print out warning if there is a swipe in the force state of the edge
+│ │                          if plength * length < 0.:
+│ │                              print("Warning! Force state has flipped for edge {} due to plane intersection".format(edge))
+│ │                          # override signed length
+│ │                          length = plength
+│ │  
+│ │                  # store next node position
+│ │ -                next_pos = add_vectors(pos, scale_vector(normalize_vector(rvec), length))
+│ │ +                nrvec = normalize_vector(rvec)
+│ │ +                next_pos = add_vectors(pos, scale_vector(nrvec, length))
+│ │                  node_xyz[next_node] = next_pos
+│ │  
+│ │                  # store trail force
+│ │                  trail_forces[edge] = copysign(length_vector(rvec), length)
+│ │  
+│ │ +                # store trail direction
+│ │ +                trail_directions[edge] = nrvec
+│ │ +
+│ │                  # store residual vector
+│ │                  residual_vectors[next_node] = rvec
+│ │  
+│ │                  # do callback
+│ │                  if callback:
+│ │                      callback()
+│ │  
+│ │ @@ -181,19 +186,20 @@
+│ │          msg = "====== Completed Equilibrium in {} iters. Residual: {}======"
+│ │          print(msg.format(t, distance))
+│ │  
+│ │      eq_state = {}
+│ │      eq_state["node_xyz"] = node_xyz
+│ │      eq_state["trail_forces"] = trail_forces
+│ │      eq_state["reaction_forces"] = reaction_forces
+│ │ +    eq_state["trail_directions"] = trail_directions
+│ │  
+│ │      return eq_state
+│ │  
+│ │  
+│ │ -def form_update(form, node_xyz, trail_forces, reaction_forces):
+│ │ +def form_update(form, node_xyz, trail_forces, reaction_forces, **kwargs):
+│ │      """
+│ │      Update the node and edge attributes of a form after equilibrating it.
+│ │      """
+│ │      # assign nodes' coordinates
+│ │      for node, xyz in node_xyz.items():
+│ │          form.node_attributes(key=node, names=["x", "y", "z"], values=xyz)
+│ │   --- compas_cem-0.7.0/src/compas_cem/equilibrium/force_numpy.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/equilibrium/force_numpy.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -53,39 +53,40 @@
+│ │      trails_sequences = topology.trails_sequences()
+│ │  
+│ │      # input, output
+│ │      node_xyz = {n: np.array(topology.node_coordinates(n)) for n in topology.nodes()}
+│ │  
+│ │      # output, mutable
+│ │      edge_forces = {e: np.array(topology.edge_force(e)) for e in topology.edges()}
+│ │ -    edge_lengths = {e: np.array(topology.edge_attribute(e, "length")) for e in topology.edges()}
+│ │ +    edge_lengths = {e: np.array(topology.edge_length_2(e)) for e in topology.edges()}
+│ │  
+│ │      # input, immutable
+│ │      # numpy
+│ │      node_loads = {n: np.array(topology.node_load(n)) for n in topology.nodes()}
+│ │      # no numpy
+│ │      node_direct = {n: topology._connected_direct_deviation_edges(n) for n in topology.nodes()}
+│ │      node_indirect = {n: topology._connected_indirect_deviation_edges(n) for n in topology.nodes()}
+│ │      edge_keys = {e for e in topology.edges()}
+│ │  
+│ │      # edge planes
+│ │      edge_planes = {}
+│ │      for edge in topology.trail_edges():
+│ │ -        plane = topology.edge_attribute(edge, "plane")
+│ │ +        plane = topology.edge_plane(edge)
+│ │          if not plane:
+│ │              continue
+│ │          plane = [np.array(vector) for vector in plane]
+│ │          edge_planes[edge] = plane
+│ │  
+│ │      # internals
+│ │      residual_vectors = {node: np.array(topology.reaction_force(node)) for node in topology.nodes()}
+│ │  
+│ │      # output
+│ │      reaction_forces = {}
+│ │      trail_forces = {}
+│ │ +    trail_directions = {}
+│ │  
+│ │      for t in range(tmax):  # max iterations
+│ │  
+│ │          # store last positions for residual
+│ │          last_positions = {k: v for k, v in node_xyz.items()}
+│ │  
+│ │          for k in range(topology.number_of_sequences()):  # sequences
+│ │ @@ -148,19 +149,23 @@
+│ │                      # check that returned length is not null
+│ │                      if plength:
+│ │                          length = plength
+│ │  
+│ │                  # compute trail force
+│ │                  trail_force = length_vector_numpy(rvec)  # always positive
+│ │  
+│ │ +                # compute trail direction by normalizing residual vector
+│ │                  # NOTE: to avoid NaNs, do not normalize residual vector if it is zero length
+│ │                  nrvec = rvec / trail_force
+│ │                  if np.isnan(length_vector_numpy(nrvec)):
+│ │                      nrvec = rvec
+│ │  
+│ │ +                # store trail direction
+│ │ +                trail_directions[edge] = nrvec
+│ │ +
+│ │                  # store next node position
+│ │                  next_pos = pos + length * nrvec
+│ │                  node_xyz[next_node] = next_pos
+│ │  
+│ │                  # correct trail force sign based on trail signed length
+│ │                  # NOTE: autograd.np does not support derivatives of copysign
+│ │                  if trail_force * length < 0.0:
+│ │ @@ -199,21 +204,22 @@
+│ │      if verbose:
+│ │          msg = "====== Completed Equilibrium in {} iters. Residual: {}======"
+│ │          print(msg.format(t, distance))
+│ │  
+│ │      eq_state = {}
+│ │      eq_state["node_xyz"] = node_xyz
+│ │      eq_state["trail_forces"] = trail_forces
+│ │ +    eq_state["trail_directions"] = trail_directions
+│ │      eq_state["reaction_forces"] = reaction_forces
+│ │  
+│ │      # return node_xyz, trail_forces, reaction_forces
+│ │      return eq_state
+│ │  
+│ │  
+│ │ -def form_update(form, node_xyz, trail_forces, reaction_forces):
+│ │ +def form_update(form, node_xyz, trail_forces, reaction_forces, **kwargs):
+│ │      """
+│ │      Update the node and edge attributes of a form after equilibrating it.
+│ │      """
+│ │      # assign nodes' coordinates
+│ │      for node, xyz in node_xyz.items():
+│ │          form.node_attributes(key=node, names=["x", "y", "z"], values=xyz)
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/__init__.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/artists.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/artists.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistColors/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistForm/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ArtistTopology/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintEdgeDirection/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintNodePolyline/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleForm/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleForm/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleForm/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeDeviation/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleForm/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeDeviation/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeDeviation/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_DisassembleTopology/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_FormFinding/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeDeviation/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_FormFinding/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_FormFinding/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_Info/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_EdgeTrail/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONExportDiagram/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_FormFinding/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONExportDiagram/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONExportDiagram/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONImportForm/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_Info/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONImportForm/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONImportForm/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONImportTopology/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONExportDiagram/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_JSONImportTopology/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONImportTopology/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONImportForm/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeSupport/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_JSONImportTopology/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_NodeSupport/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeSupport/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeLoad/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterDeviationEdge/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_NodeSupport/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterDeviationEdge/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterDeviationEdge/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadX/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_OriginNodesMove/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadX/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadX/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadY/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterDeviationEdge/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadY/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadY/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadZ/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadX/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadZ/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadZ/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginX/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadY/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginX/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginX/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginY/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeLoadZ/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginY/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginY/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginZ/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginX/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginZ/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginZ/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterTrailEdge/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginY/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ParameterTrailEdge/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterTrailEdge/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_Proxy/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_Proxy/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_Proxy/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterNodeOriginZ/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_Proxy/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_Proxy/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsEdges/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ParameterTrailEdge/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsEdges/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsEdges/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_Proxy/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsEdges/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_ResultsSupportNodes/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchEdgeKey/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_TopologyDiagram/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/code.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/code.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/icon.png
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_SearchNodeKey/icon.png
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/metadata.json
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/components/CompasCem_TrailsShift/metadata.json
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/install.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/install.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/ghpython/uninstall.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/ghpython/uninstall.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/loads/node.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/loads/node.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/__init__.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/constraints/__init__.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/parameters/__init__.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  """
+│ │  compas_cem.optimization
+│ │  ****************************
+│ │  
+│ │ -.. currentmodule:: compas_cem.optimization.constraints
+│ │ +.. currentmodule:: compas_cem.optimization.parameters
+│ │  
+│ │  
+│ │  Classes
+│ │  =======
+│ │  
+│ │  .. autosummary::
+│ │      :toctree: generated/
+│ │ @@ -22,21 +22,18 @@
+│ │  
+│ │  """
+│ │  
+│ │  from __future__ import absolute_import
+│ │  from __future__ import division
+│ │  from __future__ import print_function
+│ │  
+│ │ -
+│ │  # from .<module> import *
+│ │ -from .constraint import *  # noqa F403
+│ │ -from .point import *  # noqa F403
+│ │ -from .plane import *  # noqa F403
+│ │ -from .line import *  # noqa F403
+│ │ -from .force import *  # noqa F403
+│ │ -from .length import *  # noqa F403
+│ │ -
+│ │ -# import compas
+│ │ -# if not compas.IPY:
+│ │ -#     from .mesh import *
+│ │ +from .parameter import *  # noqa F403
+│ │ +from .edge import *  # noqa F403
+│ │ +from .node import *  # noqa F403
+│ │ +from .load import *  # noqa F403
+│ │ +from .origin import *  # noqa F403
+│ │ +from .trail import *  # noqa F403
+│ │ +from .deviation import *  # noqa F403
+│ │ +
+│ │  
+│ │  __all__ = [name for name in dir() if not name.startswith('_')]
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/constraints/constraint.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/constraints/constraint.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/constraints/force.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/constraints/force.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/constraints/length.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/constraints/length.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/constraints/line.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/constraints/line.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/constraints/mesh.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/constraints/mesh.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/constraints/plane.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/constraints/plane.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/constraints/point.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/constraints/point.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/grad.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/grad.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/nlopt.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/nlopt.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/optimizer.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/optimizer.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -33,16 +33,16 @@
+│ │  class Optimizer(Data):
+│ │      """
+│ │      An object that modifies a form diagram to meet multiple constraints.
+│ │      """
+│ │      def __init__(self, **kwargs):
+│ │          super(Optimizer, self).__init__(**kwargs)
+│ │  
+│ │ -        self.parameters = dict()
+│ │ -        self.constraints = dict()
+│ │ +        self.parameters = {}
+│ │ +        self.constraints = {}
+│ │  
+│ │          self.x_opt = None
+│ │          self.time_opt = None
+│ │          self.penalty = None
+│ │          self.evals = None
+│ │          self.gradient_norm = None
+│ │          self.status = None
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/parameters/__init__.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/viewers/__init__.py
+│ │┄ Files 27% similar despite different names
+│ │ @@ -1,39 +1,53 @@
+│ │  """
+│ │ -compas_cem.optimization
+│ │ +compas_cem.viewers
+│ │  ****************************
+│ │  
+│ │ -.. currentmodule:: compas_cem.optimization.parameters
+│ │ +.. currentmodule:: compas_cem.viewers
+│ │  
+│ │  
+│ │ -Classes
+│ │ -=======
+│ │ +Visualization objects
+│ │ +=====================
+│ │  
+│ │  .. autosummary::
+│ │      :toctree: generated/
+│ │      :nosignatures:
+│ │  
+│ │ +    DiagramObject
+│ │ +    FormDiagramObject
+│ │ +    TopologyDiagramObject
+│ │  
+│ │ -Functions
+│ │ -=========
+│ │ +Viewers
+│ │ +=======
+│ │  
+│ │  .. autosummary::
+│ │      :toctree: generated/
+│ │      :nosignatures:
+│ │  
+│ │ +    Viewer
+│ │  """
+│ │  
+│ │  from __future__ import absolute_import
+│ │  from __future__ import division
+│ │  from __future__ import print_function
+│ │  
+│ │ -# from .<module> import *
+│ │ -from .parameter import *  # noqa F403
+│ │ -from .edge import *  # noqa F403
+│ │ -from .node import *  # noqa F403
+│ │ -from .load import *  # noqa F403
+│ │ -from .origin import *  # noqa F403
+│ │ -from .trail import *  # noqa F403
+│ │ -from .deviation import *  # noqa F403
+│ │ +
+│ │ +def is_compasviewers_installed():
+│ │ +    try:
+│ │ +        import compas_view2  # noqa F401
+│ │ +    except ImportError:
+│ │ +        return False
+│ │ +    return True
+│ │ +
+│ │ +
+│ │ +if is_compasviewers_installed():
+│ │ +
+│ │ +    from .diagramobject import *  # noqa F403
+│ │ +    from .topologyobject import *  # noqa F403
+│ │ +    from .formobject import *  # noqa F403
+│ │ +    from .register import register_objects
+│ │ +    from .viewer import *  # noqa F403
+│ │ +
+│ │ +    register_objects()
+│ │  
+│ │  
+│ │  __all__ = [name for name in dir() if not name.startswith('_')]
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/parameters/deviation.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/parameters/deviation.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/parameters/edge.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/parameters/edge.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/parameters/load.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/parameters/load.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -73,15 +73,15 @@
+│ │  
+│ │      from compas_cem.plotters import Plotter
+│ │  
+│ │      # create a topology diagram
+│ │      topology = TopologyDiagram()
+│ │  
+│ │      # add nodes
+│ │ -    num_nodes = 3
+│ │ +    num_nodes = 7
+│ │      for i in range(num_nodes):
+│ │          topology.add_node(Node(i, [float(i), 0.0, 0.0]))
+│ │  
+│ │      # add edges with negative values for a compression-only structure
+│ │      length = -1.0
+│ │      for i, j in pairwise(range(num_nodes)):
+│ │          topology.add_edge(TrailEdge(i, j, length))
+│ │ @@ -95,33 +95,35 @@
+│ │      # optimization
+│ │      optimizer = Optimizer()
+│ │  
+│ │      # create point constraints at random
+│ │      radius = fabs(length)
+│ │      pt = [0., 0., 0.]
+│ │      points = []
+│ │ +
+│ │      for i in range(1, num_nodes):
+│ │          theta = 0.5 * pi * random()
+│ │          x = radius * cos(theta)
+│ │          y = radius * sin(theta * choice([-1., 1.]))
+│ │          pt = Point(*add_vectors(pt, [x, y, 0.]))
+│ │          optimizer.add_constraint(PointConstraint(i, pt))
+│ │          points.append(pt)
+│ │  
+│ │      for i in range(num_nodes - 1):
+│ │          optimizer.add_parameter(NodeLoadXParameter(i, 0.5, 0.5))
+│ │          optimizer.add_parameter(NodeLoadYParameter(i, 0.5, 0.5))
+│ │  
+│ │      # optimize
+│ │ -    cform = optimizer.solve(topology, "LBFGS", iters=500, verbose=True)
+│ │ +    cform = optimizer.solve(topology, "SLSQP", iters=500, verbose=True)
+│ │  
+│ │      # plot
+│ │      plotter = Plotter(figsize=(16.0, 9.0))
+│ │  
+│ │      # plotter.add(form)
+│ │      for point in points:
+│ │          plotter.add(point, facecolor=(1, 0.5, 0.05))
+│ │  
+│ │ +    plotter.add(topology)
+│ │      plotter.add(cform)
+│ │  
+│ │      plotter.zoom_extents()
+│ │      plotter.show()
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/parameters/node.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/parameters/node.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/parameters/origin.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/parameters/origin.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/parameters/parameter.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/parameters/parameter.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/parameters/trail.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/parameters/trail.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/optimization/proxy.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/optimization/proxy.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/plotters/__init__.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/plotters/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/plotters/formartist.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/plotters/formartist.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/plotters/proxy.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/plotters/proxy.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/plotters/topologyartist.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/plotters/topologyartist.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/supports/node.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/supports/node.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/viewers/diagramobject.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/viewers/diagramobject.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -413,14 +413,15 @@
+│ │          meshes = self._edge_meshes()
+│ │  
+│ │          for edge_type, edges in self.edges_by_type.items():
+│ │              if not edges:
+│ │                  continue
+│ │              edge_meshes = [meshes[edge] for edge in edges]
+│ │              color = self.edge_color[edges[0]]  # TODO: needs cleaner alternative
+│ │ +
+│ │              self.viewer.add(Collection(edge_meshes),
+│ │                              facecolor=color,
+│ │                              linecolor=color,
+│ │                              show_edges=True,
+│ │                              opacity=self.default_opacity)
+│ │  
+│ │      def draw_edges2(self):
+│ │   --- compas_cem-0.7.0/src/compas_cem/viewers/formobject.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/viewers/formobject.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/viewers/topologyobject.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/viewers/topologyobject.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem/viewers/viewer.py
+│ ├── +++ compas_cem-0.8.0/src/compas_cem/viewers/viewer.py
+│ │┄ Files identical despite different names
+│ │   --- compas_cem-0.7.0/src/compas_cem.egg-info/PKG-INFO
+│ ├── +++ compas_cem-0.8.0/src/compas_cem.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: compas-cem
+│ │ -Version: 0.7.0
+│ │ +Version: 0.8.0
+│ │  Summary: The Combinatorial Equilibrium Modeling framework for COMPAS
+│ │  Home-page: https://github.com/arpastrana/compas_cem
+│ │  Author: Rafael Pastrana
+│ │  Author-email: arpj@princeton.edu
+│ │  License: MIT license
+│ │  Description: ********************************************************************************
+│ │          COMPAS CEM
+│ │   --- compas_cem-0.7.0/src/compas_cem.egg-info/SOURCES.txt
+│ ├── +++ compas_cem-0.8.0/src/compas_cem.egg-info/SOURCES.txt
+│ │┄ Files 0% similar despite different names
+│ │ @@ -49,23 +49,29 @@
+│ │  src/compas_cem/ghpython/components/CompasCem_ArtistTopology/metadata.json
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/code.py
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/icon.png
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstrainedFormFinding/metadata.json
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/code.py
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/icon.png
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintDeviationEdgeLength/metadata.json
+│ │ +src/compas_cem/ghpython/components/CompasCem_ConstraintEdgeDirection/code.py
+│ │ +src/compas_cem/ghpython/components/CompasCem_ConstraintEdgeDirection/icon.png
+│ │ +src/compas_cem/ghpython/components/CompasCem_ConstraintEdgeDirection/metadata.json
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/code.py
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/icon.png
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintNodeLine/metadata.json
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/code.py
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/icon.png
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintNodePlane/metadata.json
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/code.py
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/icon.png
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintNodePoint/metadata.json
+│ │ +src/compas_cem/ghpython/components/CompasCem_ConstraintNodePolyline/code.py
+│ │ +src/compas_cem/ghpython/components/CompasCem_ConstraintNodePolyline/icon.png
+│ │ +src/compas_cem/ghpython/components/CompasCem_ConstraintNodePolyline/metadata.json
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/code.py
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/icon.png
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintReactionForce/metadata.json
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/code.py
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/icon.png
+│ │  src/compas_cem/ghpython/components/CompasCem_ConstraintTrailEdgeForce/metadata.json
+│ │  src/compas_cem/ghpython/components/CompasCem_DisassembleForm/code.py
+│ │ @@ -150,17 +156,19 @@
+│ │  src/compas_cem/ghpython/components/CompasCem_TrailsShift/icon.png
+│ │  src/compas_cem/ghpython/components/CompasCem_TrailsShift/metadata.json
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_ArtistColors.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_ArtistForm.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_ArtistTopology.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_ConstrainedFormFinding.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintDeviationEdgeLength.ghuser
+│ │ +src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintEdgeDirection.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintNodeLine.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintNodePlane.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintNodePoint.ghuser
+│ │ +src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintNodePolyline.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintReactionForce.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_ConstraintTrailEdgeForce.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_DisassembleForm.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_DisassembleTopology.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_EdgeDeviation.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_EdgeTrail.ghuser
+│ │  src/compas_cem/ghpython/components/ghuser/CompasCem_FormFinding.ghuser
+│ │ @@ -192,20 +200,22 @@
+│ │  src/compas_cem/optimization/grad.py
+│ │  src/compas_cem/optimization/nlopt.py
+│ │  src/compas_cem/optimization/objective_func.py
+│ │  src/compas_cem/optimization/optimizer.py
+│ │  src/compas_cem/optimization/proxy.py
+│ │  src/compas_cem/optimization/constraints/__init__.py
+│ │  src/compas_cem/optimization/constraints/constraint.py
+│ │ +src/compas_cem/optimization/constraints/direction.py
+│ │  src/compas_cem/optimization/constraints/force.py
+│ │  src/compas_cem/optimization/constraints/length.py
+│ │  src/compas_cem/optimization/constraints/line.py
+│ │  src/compas_cem/optimization/constraints/mesh.py
+│ │  src/compas_cem/optimization/constraints/plane.py
+│ │  src/compas_cem/optimization/constraints/point.py
+│ │ +src/compas_cem/optimization/constraints/polyline.py
+│ │  src/compas_cem/optimization/parameters/__init__.py
+│ │  src/compas_cem/optimization/parameters/deviation.py
+│ │  src/compas_cem/optimization/parameters/edge.py
+│ │  src/compas_cem/optimization/parameters/load.py
+│ │  src/compas_cem/optimization/parameters/node.py
+│ │  src/compas_cem/optimization/parameters/origin.py
+│ │  src/compas_cem/optimization/parameters/parameter.py

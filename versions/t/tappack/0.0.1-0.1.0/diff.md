@@ -1,0 +1,58 @@
+# Comparing `tmp/tappack-0.0.1.tar.gz` & `tmp/tappack-0.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "tappack-0.0.1.tar", last modified: Wed Apr  5 10:18:03 2023, max compression
++gzip compressed data, was "tappack-0.1.0.tar", last modified: Fri Apr  7 14:50:42 2023, max compression
+```
+
+## Comparing `tappack-0.0.1.tar` & `tappack-0.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,19 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 10:18:03.458487 tappack-0.0.1/
+--rw-r--r--   0 runner    (1001) docker     (123)     1994 2023-04-05 10:18:03.454487 tappack-0.0.1/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1644 2023-04-05 10:18:00.000000 tappack-0.0.1/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-05 10:18:03.458487 tappack-0.0.1/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)      993 2023-04-05 10:17:55.000000 tappack-0.0.1/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 10:18:03.454487 tappack-0.0.1/tappack/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 10:17:55.000000 tappack-0.0.1/tappack/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      301 2023-04-05 10:17:55.000000 tappack-0.0.1/tappack/autoexec.be.template
+--rw-r--r--   0 runner    (1001) docker     (123)     4078 2023-04-05 10:18:00.000000 tappack-0.0.1/tappack/packaging.py
+--rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-05 10:18:00.000000 tappack-0.0.1/tappack/version
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 10:18:03.454487 tappack-0.0.1/tappack.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     1994 2023-04-05 10:18:03.000000 tappack-0.0.1/tappack.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      292 2023-04-05 10:18:03.000000 tappack-0.0.1/tappack.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-05 10:18:03.000000 tappack-0.0.1/tappack.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       52 2023-04-05 10:18:03.000000 tappack-0.0.1/tappack.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-05 10:18:03.000000 tappack-0.0.1/tappack.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-05 10:18:03.000000 tappack-0.0.1/tappack.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:50:42.420867 tappack-0.1.0/
++-rw-r--r--   0 runner    (1001) docker     (123)     3257 2023-04-07 14:50:42.420867 tappack-0.1.0/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2907 2023-04-07 14:50:40.000000 tappack-0.1.0/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 14:50:42.420867 tappack-0.1.0/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)      993 2023-04-07 14:50:36.000000 tappack-0.1.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:50:42.420867 tappack-0.1.0/tappack/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 14:50:36.000000 tappack-0.1.0/tappack/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      301 2023-04-07 14:50:36.000000 tappack-0.1.0/tappack/autoexec.be.template
++-rw-r--r--   0 runner    (1001) docker     (123)       19 2023-04-07 14:50:40.000000 tappack-0.1.0/tappack/constants.py
++-rw-r--r--   0 runner    (1001) docker     (123)      921 2023-04-07 14:50:40.000000 tappack-0.1.0/tappack/packaging.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4627 2023-04-07 14:50:40.000000 tappack-0.1.0/tappack/source.py
++-rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-07 14:50:40.000000 tappack-0.1.0/tappack/version
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:50:42.420867 tappack-0.1.0/tappack.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     3257 2023-04-07 14:50:42.000000 tappack-0.1.0/tappack.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      331 2023-04-07 14:50:42.000000 tappack-0.1.0/tappack.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 14:50:42.000000 tappack-0.1.0/tappack.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       52 2023-04-07 14:50:42.000000 tappack-0.1.0/tappack.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-07 14:50:42.000000 tappack-0.1.0/tappack.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-07 14:50:42.000000 tappack-0.1.0/tappack.egg-info/top_level.txt
+```
+
+### Comparing `tappack-0.0.1/setup.py` & `tappack-0.1.0/setup.py`
+
+ * *Files identical despite different names*
+

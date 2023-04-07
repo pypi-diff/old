@@ -1,0 +1,862 @@
+--- tmp/bframe-0.0.7-py3-none-any.whl.zip
++++ tmp/bframe-0.0.8-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,18 +1,18 @@
+│ -Zip file size: 19364 bytes, number of entries: 16
+│ --rw-rw-rw-  2.0 fat     1376 b- defN 23-Apr-06 06:18 bframe/__init__.py
+│ --rw-rw-rw-  2.0 fat     5046 b- defN 23-Apr-06 05:58 bframe/_frame.py
+│ --rw-rw-rw-  2.0 fat     2346 b- defN 23-Apr-06 05:53 bframe/ctx.py
+│ --rw-rw-rw-  2.0 fat     4178 b- defN 23-Apr-06 05:53 bframe/frame.py
+│ --rw-rw-rw-  2.0 fat     2064 b- defN 23-Apr-06 02:12 bframe/local.py
+│ --rw-rw-rw-  2.0 fat     2359 b- defN 23-Apr-06 00:24 bframe/logger.py
+│ --rw-rw-rw-  2.0 fat     3140 b- defN 23-Apr-06 00:24 bframe/route.py
+│ --rw-rw-rw-  2.0 fat     3385 b- defN 23-Apr-06 06:07 bframe/server.py
+│ --rw-rw-rw-  2.0 fat     3118 b- defN 23-Apr-06 01:11 bframe/utils.py
+│ --rw-rw-rw-  2.0 fat     6569 b- defN 23-Apr-06 06:15 bframe/wrappers.py
+│ --rw-rw-rw-  2.0 fat     3277 b- defN 23-Apr-06 06:08 bframe/wsgi.py
+│ --rw-rw-rw-  2.0 fat     1065 b- defN 23-Apr-06 06:26 bframe-0.0.7.dist-info/LICENSE
+│ --rw-rw-rw-  2.0 fat     2589 b- defN 23-Apr-06 06:26 bframe-0.0.7.dist-info/METADATA
+│ --rw-rw-rw-  2.0 fat       92 b- defN 23-Apr-06 06:26 bframe-0.0.7.dist-info/WHEEL
+│ --rw-rw-rw-  2.0 fat        7 b- defN 23-Apr-06 06:26 bframe-0.0.7.dist-info/top_level.txt
+│ --rw-rw-r--  2.0 fat     1178 b- defN 23-Apr-06 06:26 bframe-0.0.7.dist-info/RECORD
+│ -16 files, 41789 bytes uncompressed, 17476 bytes compressed:  58.2%
+│ +Zip file size: 20332 bytes, number of entries: 16
+│ +-rw-rw-rw-  2.0 fat     1376 b- defN 23-Apr-07 14:46 bframe/__init__.py
+│ +-rw-rw-rw-  2.0 fat     5176 b- defN 23-Apr-07 12:56 bframe/_frame.py
+│ +-rw-rw-rw-  2.0 fat     2346 b- defN 23-Apr-06 12:36 bframe/ctx.py
+│ +-rw-rw-rw-  2.0 fat     4062 b- defN 23-Apr-07 13:54 bframe/frame.py
+│ +-rw-rw-rw-  2.0 fat     2044 b- defN 23-Apr-07 12:56 bframe/local.py
+│ +-rw-rw-rw-  2.0 fat     2477 b- defN 23-Apr-07 12:56 bframe/logger.py
+│ +-rw-rw-rw-  2.0 fat     6855 b- defN 23-Apr-07 14:23 bframe/route.py
+│ +-rw-rw-rw-  2.0 fat     3424 b- defN 23-Apr-07 12:56 bframe/server.py
+│ +-rw-rw-rw-  2.0 fat     3118 b- defN 23-Apr-05 12:31 bframe/utils.py
+│ +-rw-rw-rw-  2.0 fat     7220 b- defN 23-Apr-07 14:15 bframe/wrappers.py
+│ +-rw-rw-rw-  2.0 fat     3331 b- defN 23-Apr-07 12:56 bframe/wsgi.py
+│ +-rw-rw-rw-  2.0 fat     1086 b- defN 23-Apr-07 14:49 bframe-0.0.8.dist-info/LICENSE
+│ +-rw-rw-rw-  2.0 fat     2731 b- defN 23-Apr-07 14:49 bframe-0.0.8.dist-info/METADATA
+│ +-rw-rw-rw-  2.0 fat       92 b- defN 23-Apr-07 14:49 bframe-0.0.8.dist-info/WHEEL
+│ +-rw-rw-rw-  2.0 fat        7 b- defN 23-Apr-07 14:49 bframe-0.0.8.dist-info/top_level.txt
+│ +-rw-rw-r--  2.0 fat     1178 b- defN 23-Apr-07 14:49 bframe-0.0.8.dist-info/RECORD
+│ +16 files, 46523 bytes uncompressed, 18444 bytes compressed:  60.4%
+├── zipnote {}
+│ @@ -27,23 +27,23 @@
+│  
+│  Filename: bframe/wrappers.py
+│  Comment: 
+│  
+│  Filename: bframe/wsgi.py
+│  Comment: 
+│  
+│ -Filename: bframe-0.0.7.dist-info/LICENSE
+│ +Filename: bframe-0.0.8.dist-info/LICENSE
+│  Comment: 
+│  
+│ -Filename: bframe-0.0.7.dist-info/METADATA
+│ +Filename: bframe-0.0.8.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: bframe-0.0.7.dist-info/WHEEL
+│ +Filename: bframe-0.0.8.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: bframe-0.0.7.dist-info/top_level.txt
+│ +Filename: bframe-0.0.8.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: bframe-0.0.7.dist-info/RECORD
+│ +Filename: bframe-0.0.8.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── bframe/__init__.py
+│ @@ -17,15 +17,15 @@
+│  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+│  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+│  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+│  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+│  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+│  SOFTWARE.
+│  """
+│ -__version__ = "0.0.7"
+│ +__version__ = "0.0.8"
+│  
+│  
+│  __all__ = ["request", "g", "Frame", "Redirect", "Logger", "abort", "WSGIProxy"]
+│  
+│  from .ctx import g, request
+│  from .frame import Frame
+│  from .logger import Logger
+├── bframe/_frame.py
+│ @@ -22,15 +22,17 @@
+│  SOFTWARE.
+│  """
+│  import inspect
+│  import threading
+│  from typing import Callable, Union
+│  
+│  from bframe import __version__
+│ -from bframe.server import HTTP_METHOD, Request, SimpleHTTPServer, SimpleRequestHandler
+│ +from bframe.server import HTTP_METHOD
+│ +from bframe.server import Request
+│ +from bframe.server import SimpleHTTPServer, SimpleRequestHandler
+│  from bframe.logger import Logger as Log
+│  from bframe.logger import init_logger
+│  from bframe.route import Tree
+│  
+│  MethodSenquenceAlias = Union[tuple, list]
+│  
+│  
+│ @@ -50,15 +52,18 @@
+│      Logger: Log = init_logger(__name__)
+│  
+│      def __init__(self, name: str = None) -> None:
+│          self.app_name = name
+│          if name is None:
+│              self.app_name = __name__
+│  
+│ -    def add_route(self, url: str, func_or_class: Callable, method: MethodSenquenceAlias = None):
+│ +    def add_route(self,
+│ +                  url: str,
+│ +                  func_or_class: Callable,
+│ +                  method: MethodSenquenceAlias = None):
+│          def _add_class_handle(cls):
+│              meth = [method.lower()
+│                      for method in HTTP_METHOD if hasattr(cls, method.lower())]
+│              for m in meth:
+│                  _url = "%s/%s" % (url, m.upper())
+│                  self.RouteMap.add(_url, getattr(cls(), m))
+│  
+│ @@ -107,28 +112,28 @@
+│          return wrapper
+│  
+│      def run(self, address: str = "127.0.0.1", port: int = 7256):
+│          self.Logger.info("run mode: no wsgi")
+│          try:
+│              if self.Server is None:
+│                  with self.ServerLock:
+│ -                    self.Server = SimpleHTTPServer(server_address=(address, port),
+│ -                                                   RequestHandlerClass=SimpleRequestHandler,
+│ +                    self.Server = SimpleHTTPServer(server_address=(address, port),  # noqa
+│ +                                                   RequestHandlerClass=SimpleRequestHandler,  # noqa
+│                                                     application=self)
+│              self.Logger.info("start server http://%s:%s" % (address, port))
+│              self.Server.serve_forever()
+│          except KeyboardInterrupt:
+│              self.Logger.info("shutdown server")
+│              self.Server.shutdown()
+│  
+│      def test_client(self):
+│          return TestClient(self)
+│  
+│      def dispatch(self, request: Request):
+│ -        raise NotImplemented
+│ +        raise NotImplementedError
+│  
+│      def __call__(self, request: Request):
+│          return self.dispatch(request)
+│  
+│  
+│  class TestClient:
+├── bframe/frame.py
+│ @@ -1,117 +1,113 @@
+│ -"""
+│ -MIT License
+│ -
+│ -Copyright (c) 2023 Bean-jun
+│ -
+│ -Permission is hereby granted, free of charge, to any person obtaining a copy
+│ -of this software and associated documentation files (the "Software"), to deal
+│ -in the Software without restriction, including without limitation the rights
+│ -to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+│ -copies of the Software, and to permit persons to whom the Software is
+│ -furnished to do so, subject to the following conditions:
+│ -
+│ -The above copyright notice and this permission notice shall be included in all
+│ -copies or substantial portions of the Software.
+│ -
+│ -THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+│ -IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+│ -FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+│ -AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+│ -LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+│ -OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+│ -SOFTWARE.
+│ -"""
+│ -import json
+│ -from typing import Any, Callable, Union
+│ -
+│ -from bframe._frame import _Frame
+│ -from bframe.ctx import RequestCtx
+│ -from bframe.server import Request, Response
+│ -from bframe.route import NoSetControllerException
+│ -from bframe.utils import get_code_desc, parse_execept_code, to_bytes
+│ -
+│ -MethodSenquenceAlias = Union[tuple, list]
+│ -
+│ -
+│ -class Frame(_Frame):
+│ -
+│ -    before_funs_list = list()
+│ -    after_funs_list = list()
+│ -    error_funs_dict = dict()
+│ -
+│ -    def match_handle(self, request: Request) -> Callable:
+│ -        url = "%s/%s" % (request.Path, request.Method)
+│ -        return self.RouteMap.find(url)
+│ -
+│ -    def wrapper_response(self, resp: Any) -> Response:
+│ -        self.Logger.info("wrapper_response:", str(resp)[:20])
+│ -        if isinstance(resp, Response):
+│ -            resp.Body = to_bytes(resp.Body)
+│ -            return resp
+│ -        if isinstance(resp, (str, bytes)):
+│ -            return Response(code=200,
+│ -                            body=to_bytes(resp))
+│ -        if isinstance(resp, dict):
+│ -            return Response(code=200,
+│ -                            headers={"Content-Type": "application/json"},
+│ -                            body=to_bytes(json.dumps(resp)))
+│ -
+│ -    def add_before_handle(self, f):
+│ -        self.before_funs_list.append(f)
+│ -        return f
+│ -
+│ -    def add_after_handle(self, f):
+│ -        self.after_funs_list.append(f)
+│ -        return f
+│ -
+│ -    def add_error_handle(self, code):
+│ -        def wrapper(f):
+│ -            self.error_funs_dict[code] = f
+│ -            return f
+│ -        return wrapper
+│ -
+│ -    def before_handle(self):
+│ -        self.Logger.info("before_handle")
+│ -        for handle in self.before_funs_list:
+│ -            rv = handle()
+│ -            if rv:
+│ -                return rv
+│ -
+│ -    def dispatch_handle(self, request: Request):
+│ -        handle = self.match_handle(request)
+│ -        return self.wrapper_response(handle())
+│ -
+│ -    def error_handle(self, e):
+│ -        self.Logger.info("error_handle")
+│ -        code = parse_execept_code(e)
+│ -        if code in self.error_funs_dict:
+│ -            response = self.wrapper_response(self.error_funs_dict[code]())
+│ -        else:
+│ -            response = Response(code, body=get_code_desc(code))
+│ -        return response
+│ -
+│ -    def finally_handle(self, response: Response):
+│ -        self.Logger.info("finally_handle")
+│ -        for handle in self.after_funs_list:
+│ -            response = handle(response)
+│ -        return response
+│ -
+│ -    def dispatch(self, r: Request):
+│ -        # self.Logger.info("thread:", threading.enumerate())
+│ -        ctx = RequestCtx(r)
+│ -        with ctx:
+│ -            ctx.push()
+│ -            try:
+│ -                response = self.before_handle()
+│ -                if response is None:
+│ -                    response = self.dispatch_handle(r)
+│ -                response = self.wrapper_response(response)
+│ -            except NoSetControllerException as e:
+│ -                self.Logger.debug(e.args)
+│ -                response = Response(code=404)
+│ -            except Exception as e:
+│ -                self.Logger.debug(e.args)
+│ -                response = self.error_handle(e)
+│ -            finally:
+│ -                response = self.finally_handle(response)
+│ -                return response
+│ +"""
+│ +MIT License
+│ +
+│ +Copyright (c) 2023 Bean-jun
+│ +
+│ +Permission is hereby granted, free of charge, to any person obtaining a copy
+│ +of this software and associated documentation files (the "Software"), to deal
+│ +in the Software without restriction, including without limitation the rights
+│ +to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+│ +copies of the Software, and to permit persons to whom the Software is
+│ +furnished to do so, subject to the following conditions:
+│ +
+│ +The above copyright notice and this permission notice shall be included in all
+│ +copies or substantial portions of the Software.
+│ +
+│ +THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+│ +IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+│ +FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+│ +AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+│ +LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+│ +OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+│ +SOFTWARE.
+│ +"""
+│ +import json
+│ +from typing import Any, Callable, Union
+│ +
+│ +from bframe._frame import _Frame
+│ +from bframe.ctx import RequestCtx
+│ +from bframe.ctx import request as req
+│ +from bframe.server import Request, Response
+│ +from bframe.route import NoSetControllerException
+│ +from bframe.utils import get_code_desc, parse_execept_code, to_bytes
+│ +
+│ +MethodSenquenceAlias = Union[tuple, list]
+│ +
+│ +
+│ +class Frame(_Frame):
+│ +
+│ +    before_funs_list = list()
+│ +    after_funs_list = list()
+│ +    error_funs_dict = dict()
+│ +
+│ +    def match_handle(self) -> Callable:
+│ +        url = "%s/%s" % (req.Path, req.Method)
+│ +        return self.RouteMap.find(req.set_path_args, url)
+│ +
+│ +    def wrapper_response(self, resp: Any) -> Response:
+│ +        if isinstance(resp, Response):
+│ +            resp.Body = to_bytes(resp.Body)
+│ +            return resp
+│ +        if isinstance(resp, (str, bytes)):
+│ +            return Response(code=200,
+│ +                            body=to_bytes(resp))
+│ +        if isinstance(resp, dict):
+│ +            return Response(code=200,
+│ +                            headers={"Content-Type": "application/json"},
+│ +                            body=to_bytes(json.dumps(resp)))
+│ +
+│ +    def add_before_handle(self, f):
+│ +        self.before_funs_list.append(f)
+│ +        return f
+│ +
+│ +    def add_after_handle(self, f):
+│ +        self.after_funs_list.append(f)
+│ +        return f
+│ +
+│ +    def add_error_handle(self, code):
+│ +        def wrapper(f):
+│ +            self.error_funs_dict[code] = f
+│ +            return f
+│ +        return wrapper
+│ +
+│ +    def before_handle(self):
+│ +        for handle in self.before_funs_list:
+│ +            rv = handle()
+│ +            if rv:
+│ +                return rv
+│ +
+│ +    def dispatch_handle(self):
+│ +        handle = self.match_handle()
+│ +        return self.wrapper_response(handle(**req.Path_Args))
+│ +
+│ +    def error_handle(self, e):
+│ +        code = parse_execept_code(e)
+│ +        if code in self.error_funs_dict:
+│ +            response = self.wrapper_response(self.error_funs_dict[code]())
+│ +        else:
+│ +            response = Response(code, body=get_code_desc(code))
+│ +        return response
+│ +
+│ +    def finally_handle(self, response: Response):
+│ +        for handle in self.after_funs_list:
+│ +            response = handle(response)
+│ +        return response
+│ +
+│ +    def dispatch(self, r: Request):
+│ +        ctx = RequestCtx(r)
+│ +        with ctx:
+│ +            ctx.push()
+│ +            try:
+│ +                response = self.before_handle()
+│ +                if response is None:
+│ +                    response = self.dispatch_handle()
+│ +                response = self.wrapper_response(response)
+│ +            except NoSetControllerException as e:
+│ +                self.Logger.debug(e.args)
+│ +                response = Response(code=404)
+│ +            except Exception as e:
+│ +                self.Logger.debug(e.args)
+│ +                response = self.error_handle(e)
+│ +            finally:
+│ +                response = self.finally_handle(response)
+│ +                return response
+├── bframe/local.py
+│ @@ -19,15 +19,14 @@
+│  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+│  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+│  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+│  SOFTWARE.
+│  """
+│  from threading import get_ident
+│  from bframe.logger import __logger as logger
+│ -import typing as t
+│  
+│  logger.module = __name__
+│  
+│  
+│  class Local():
+│  
+│      def __init__(self):
+├── bframe/logger.py
+│ @@ -31,15 +31,19 @@
+│  INFO = 0x0  # info
+│  DEBUG = 0x1  # debug
+│  WARN = 0x2  # warn
+│  
+│  
+│  class BaseLogger():
+│  
+│ -    def __init__(self, module, level: int = INFO, log_file: str = "log.log", out: TextIO = sys.stdout):
+│ +    def __init__(self,
+│ +                 module,
+│ +                 level: int = INFO,
+│ +                 log_file: str = "log.log",
+│ +                 out: TextIO = sys.stdout):
+│          self.__module = module
+│          self.level = level
+│          archive_file(os.getcwd(), log_file)
+│          self.log = open(log_file, "a", encoding="utf-8")
+│          self.out = out
+│  
+│      @property
+│ @@ -47,15 +51,16 @@
+│          return self.__module
+│  
+│      @module.setter
+│      def module(self, module):
+│          self.__module = module
+│  
+│      def write(self, level, *msg):
+│ -        _msg = "[%s] - [%s] %s\n" % (str(datetime.datetime.now()), self.module, " ".join([str(m) for m in msg]))
+│ +        _msg = "[%s] - [%s] %s\n" % (str(datetime.datetime.now()),
+│ +                                     self.module, " ".join([str(m) for m in msg]))  # noqa
+│          if level >= self.level:
+│              self.log.write(_msg)
+│              self.log.flush()
+│          self.out.write(_msg)
+│  
+│      def info(self, *msg):
+│          self.write(INFO, *msg)
+├── bframe/route.py
+│ @@ -37,17 +37,20 @@
+│  
+│  
+│  class NoSetControllerException(Exception):
+│      """未配置请求控制器"""
+│      pass
+│  
+│  
+│ -class Tree:
+│ +class BaseTree:
+│  
+│ -    def __init__(self, root: str = "", func: Callable = "", children: list = None) -> None:
+│ +    def __init__(self,
+│ +                 root: str = "",
+│ +                 func: Callable = "",
+│ +                 children: list = None):
+│          self.root = root
+│          self.func = func
+│          if children is None:
+│              self.children = list()
+│          else:
+│              self.children = children
+│  
+│ @@ -89,7 +92,115 @@
+│          if len(nodes) == n:
+│              return self.func
+│  
+│          node = self.find_node(nodes[n])
+│          if not node:
+│              return ""
+│          return node.__find(nodes, n+1)
+│ +
+│ +
+│ +class MatchTree():
+│ +
+│ +    def __init__(self):
+│ +        """
+│ +        <str:name>
+│ +        <int:pk>
+│ +        <reg:name>
+│ +        """
+│ +        self.left = "<"
+│ +        self.right = ">"
+│ +        self.split = ":"
+│ +        self.node = None
+│ +        self.node_type = None
+│ +        self.node_name = None
+│ +        self.rule = {
+│ +            "str": str,
+│ +            "int": int,
+│ +            # "reg": "",
+│ +        }
+│ +
+│ +    def is_support_match(self, node: str) -> bool:
+│ +        """节点是否支持匹配"""
+│ +        if node.startswith(self.left) and node.endswith(self.right) and self.split in node:
+│ +            self.node = node
+│ +            self.initialization()
+│ +            if self.node_type not in self.rule.keys():
+│ +                return False
+│ +            return True
+│ +        return False
+│ +
+│ +    def initialization(self):
+│ +        """解析node"""
+│ +        self.node_type, self.node_name = self.node.removeprefix(self.left).\
+│ +            removesuffix(self.right).\
+│ +            split(self.split, 1)
+│ +
+│ +    def match(self, _node: str):
+│ +        """匹配新节点"""
+│ +        v = self.rule.get(self.node_type)(_node)
+│ +        return True, {self.node_name: v}
+│ +
+│ +
+│ +class Tree(BaseTree):
+│ +
+│ +    def __init__(self, root: str = "", func: Callable = "", children: list = None) -> None:
+│ +        super().__init__(root, func, children)
+│ +        self.match = False
+│ +        self.match_tree = MatchTree()
+│ +
+│ +    def add(self, path: str = "", func: Callable = ""):
+│ +        node = self.split_path(path)
+│ +        self.__match_add(node, func)
+│ +
+│ +    def find(self, call_back: Callable, path: str = "") -> Callable:
+│ +        node = self.split_path(path)
+│ +        func = self.__match_find(node, call_back)
+│ +        if not callable(func):
+│ +            raise NoSetControllerException("%s 未配置请求控制器" % "/".join(node))
+│ +        return func
+│ +
+│ +    def find_match_node(self, node: str, call_back: Callable = None, open_match=True) -> object:
+│ +        for _node in self.children:
+│ +            if open_match and _node.match and self.match_tree.is_support_match(_node.root):
+│ +                status, value = self.match_tree.match(node)
+│ +                if status and call_back:
+│ +                    call_back(**value)
+│ +                    return _node
+│ +            elif _node.root == node:
+│ +                return _node
+│ +        return None
+│ +
+│ +    def __match_add(self, nodes: List[AnyPath], func: Callable, n: int = 0) -> bool:
+│ +        if callable(self.__find_conflict(nodes)):
+│ +            raise ReqRepeatException("%s 请求配置重复" % "/".join(nodes))
+│ +
+│ +        if len(nodes) == n:
+│ +            self.func = func
+│ +            return True
+│ +
+│ +        node = self.find_node(nodes[n])
+│ +        if not node:
+│ +            node = Tree(nodes[n])
+│ +            if node.match_tree.is_support_match(nodes[n]):
+│ +                node.match = True
+│ +                node.match_tree = MatchTree()   # 需要匹配才配置匹配树
+│ +            self.children.append(node)
+│ +        return node.__match_add(nodes, func, n+1)
+│ +
+│ +    def __find_conflict(self, nodes: List[AnyPath], n: int = 0):
+│ +        if len(nodes) == n:
+│ +            return self.func
+│ +
+│ +        # 查找是否出现相同的匹配树
+│ +        node = self.find_match_node(nodes[n], open_match=False)
+│ +        if not node:
+│ +            return ""
+│ +        return node.__match_find(nodes, n+1)
+│ +
+│ +    def __match_find(self, nodes: List[AnyPath], call_back: Callable, n: int = 0) -> Callable:
+│ +        if len(nodes) == n:
+│ +            return self.func
+│ +
+│ +        node = self.find_match_node(nodes[n], call_back)
+│ +        if not node:
+│ +            return ""
+│ +        return node.__match_find(nodes, call_back, n+1)
+├── bframe/server.py
+│ @@ -29,16 +29,22 @@
+│  logger.module = __name__
+│  
+│  HTTP_METHOD = ["GET", "POST", "PUT", "DELETE"]
+│  
+│  
+│  class SimpleHTTPServer(HTTPServer):
+│  
+│ -    def __init__(self, server_address, RequestHandlerClass, bind_and_activate=True, application=None):
+│ -        super().__init__(server_address, RequestHandlerClass, bind_and_activate)
+│ +    def __init__(self,
+│ +                 server_address,
+│ +                 RequestHandlerClass,
+│ +                 bind_and_activate=True,
+│ +                 application=None):
+│ +        super().__init__(server_address,
+│ +                         RequestHandlerClass,
+│ +                         bind_and_activate)
+│          self.application = application
+│  
+│      def set_app(self, application):
+│          self.application = application
+│  
+│  
+│  class HTTPHandleMix:
+│ @@ -61,21 +67,19 @@
+│      def do_handle(self):
+│          # TODO:解析请求体
+│          req = Request(self.command,
+│                        self.path,
+│                        self.protocol_version,
+│                        dict(self.headers))
+│          if req.method != "GET":
+│ -            length = req.Headers.get("content-length") or 0
+│ +            length = req.Headers.get("Content-Length") or 0
+│              req._BaseRequest__parse_body(self.rfile.read(int(length)))
+│          try:
+│ -            logger.info(req.Method, req.Path)
+│              res = self.server.application(req)
+│ -        except Exception as e:
+│ -            logger.info(e.args)
+│ +        except Exception:
+│              res = Response(code=500,
+│                             body="Internal Server Error")
+│  
+│          self.__send_response(res)
+│  
+│      def write(self, content):
+│          if isinstance(content, bytes):
+├── bframe/wrappers.py
+│ @@ -31,15 +31,19 @@
+│  class BaseFile:
+│  
+│      name: str = ""
+│      filename: str = ""
+│      file_type: str = ""
+│      body: bytes = b""
+│  
+│ -    def __init__(self, name: str, filename: str, file_type: str, body: bytes) -> None:
+│ +    def __init__(self,
+│ +                 name: str,
+│ +                 filename: str,
+│ +                 file_type: str,
+│ +                 body: bytes):
+│          self.name = name
+│          self.filename = filename
+│          self.file_type = file_type
+│          self.body = body
+│  
+│      def save(self, dst):
+│          with open(dst, "wb") as f:
+│ @@ -52,25 +56,44 @@
+│      Path: str = ""
+│      Args: dict = {}
+│      Protoc: str = ""
+│      Headers: dict = {}
+│      Body: str = b""
+│      Data: dict = {}
+│      File: dict[str:BaseFile] = {}
+│ +    Path_Args: dict = {}
+│  
+│ -    def __init__(self, method: str = "", path: str = "", protoc: str = "", headers: dict = None):
+│ +    def __init__(self,
+│ +                 method: str = "",
+│ +                 path: str = "",
+│ +                 protoc: str = "",
+│ +                 headers: dict = None):
+│ +        self.__initializa_args()
+│          self.Method = method
+│          if "?" in path:
+│              self.Path, self.Args = self.__initializa_path(path)
+│          else:
+│              self.Path = path
+│          self.Protoc = protoc
+│          if headers is None:
+│              headers = dict()
+│ -        self.Headers = {k.replace("_", "-").lower(): v for k, v in headers.items()}
+│ +        self.Headers = {k.replace("_", "-").title(): v
+│ +                        for k, v in headers.items()}
+│ +
+│ +    def __initializa_args(self):
+│ +        """初始化参数,避免地址引用导致数据异常"""
+│ +        self.Method = ""
+│ +        self.Path = ""
+│ +        self.Args = {}
+│ +        self.Protoc = ""
+│ +        self.Headers = {}
+│ +        self.Body = ""
+│ +        self.Data = {}
+│ +        self.File = {}
+│ +        self.Path_Args = {}
+│  
+│      def __initializa_path(self, path):
+│          path, args_str = path.split("?")
+│          args = dict()
+│  
+│          if args_str == "":
+│              return path, args
+│ @@ -90,19 +113,20 @@
+│  
+│          def get_filed_name(line):
+│              ret = re.match(b'Content-Disposition: form-data; name="(.+)"',
+│                             line)
+│              return ret.groups()[0]
+│  
+│          def get_file_filed_name(line):
+│ -            ret = re.match(b'Content-Disposition: form-data; name="(.+)"; filename="(.+)"',
+│ +            ret = re.match(b'Content-Disposition: form-data; \
+│ +                            name="(.+)"; filename="(.+)"',
+│                             line)
+│              return ret.groups()
+│  
+│ -        content_type = self.Headers.get("content-type")
+│ +        content_type = self.Headers.get("Content-Type")
+│          boundary = get_boundary(content_type)
+│  
+│          lines = self.Body.split(to_bytes(boundary))
+│          for line in lines:
+│              if not line.startswith(b"\r\n"):
+│                  continue
+│              line_list = line.split(b"\r\n")
+│ @@ -141,25 +165,27 @@
+│              self.Data.update({to_str(filed): to_str(value)})
+│  
+│      def __parse_json(self):
+│          self.Data.update(json.loads(self.Body))
+│  
+│      def __parse_body(self, data):
+│          self.Body = data
+│ -        content_type = self.Headers.get("content-type")
+│ +        content_type = self.Headers.get("Content-Type")
+│  
+│          if content_type.startswith("multipart/form-data"):
+│              return self.__parse_form_data()
+│          elif content_type.startswith("application/x-www-form-urlencoded"):
+│              return self.__parse_form_urlencoded()
+│          elif content_type.startswith("application/json"):
+│              return self.__parse_json()
+│          # TODO: parse other type
+│          ...
+│  
+│ +    def set_path_args(self, **kwds):
+│ +        self.Path_Args.update(kwds)
+│  
+│  class Request(BaseRequest):
+│  
+│      @property
+│      def forms(self):
+│          return self.Data
+│  
+│ @@ -186,15 +212,15 @@
+│  
+│  class Response:
+│  
+│      Code: int = 200
+│      Headers: dict = {}
+│      Body: str = ""
+│  
+│ -    def __init__(self, code: int = 200, headers: dict = None, body: str = "") -> None:
+│ +    def __init__(self, code: int = 200, headers: dict = None, body: str = ""):
+│          self.Code = code
+│          self.Headers = headers if headers else dict()
+│          self.Body = body
+│  
+│  
+│  class Redirect(Response):
+│ ├── encoding
+│ │ @@ -1 +1 @@
+│ │ -us-ascii
+│ │ +utf-8
+├── bframe/wsgi.py
+│ @@ -46,38 +46,40 @@
+│  
+│      def response_headers(self, headers):
+│          headers['Server'] = self.application.version
+│          headers['Date'] = email.utils.formatdate(time.time(), usegmt=True)
+│          ret = [(k, v) for k, v in headers.items()]
+│          return ret
+│  
+│ -    def wsgi_app(self, environ: dict, start_response: typing.Callable) -> typing.Any:
+│ +    def wsgi_app(self,
+│ +                 environ: dict,
+│ +                 start_response: typing.Callable) -> typing.Any:
+│          logger.info("run mode: wsgi")
+│          headers = {k[len("HTTP_"):].lower(): v for k,
+│                     v in environ.items() if k.startswith("HTTP")}
+│          headers.update({
+│ -            "content-type": environ["CONTENT_TYPE"],
+│ -            "content-length": environ["CONTENT_LENGTH"],
+│ +            "Content-Type": environ["CONTENT_TYPE"],
+│ +            "Content-Length": environ["CONTENT_LENGTH"],
+│          })
+│          req = Request(
+│              method=environ.get("REQUEST_METHOD"),
+│              path="%s?%s" % (environ.get("PATH_INFO"),
+│                              environ.get("QUERY_STRING")),
+│              protoc=environ.get("SERVER_PROTOCOL"),
+│              headers=headers,
+│          )
+│          # TODO:解析请求体
+│          # input = environ["wsgi.input"]
+│          # d = x.read(int(environ["CONTENT_LENGTH"]))
+│          if req.method != "GET":
+│ -            length = req.Headers.get("content-length") or 0
+│ -            req._BaseRequest__parse_body(environ["wsgi.input"].read(int(length)))
+│ +            length = req.Headers.get("Content-Length") or 0
+│ +            req._BaseRequest__parse_body(environ["wsgi.input"].read(int(length)))   # noqa
+│          setattr(req, "environ", environ)
+│  
+│          response: Response = self.application(req)
+│          start_response(self.response_status(response.Code),
+│                         self.response_headers(response.Headers))
+│  
+│          return [response.Body]
+│  
+│ -    def __call__(self, environ: dict, start_response: typing.Callable) -> typing.Any:
+│ +    def __call__(self, environ: dict, start_response: typing.Callable) -> typing.Any:   # noqa
+│          return self.wsgi_app(environ, start_response)
+│   --- bframe-0.0.7.dist-info/METADATA
+├── +++ bframe-0.0.8.dist-info/METADATA
+│┄ Files 4% similar despite different names
+│ @@ -1,18 +1,20 @@
+│  Metadata-Version: 2.1
+│  Name: bframe
+│ -Version: 0.0.7
+│ +Version: 0.0.8
+│  Summary: A simple python web server frame
+│  Home-page: https://github.com/Bean-jun/bframe
+│  Author: Bean-jun
+│  Author-email: 1342104001@qq.com
+│  License: MIT License
+│  Platform: UNKNOWN
+│  Classifier: License :: OSI Approved :: MIT License
+│  Classifier: Programming Language :: Python :: 3.9
+│ +Classifier: Programming Language :: Python :: 3.10
+│ +Classifier: Programming Language :: Python :: 3.11
+│  Description-Content-Type: text/markdown
+│  License-File: LICENSE
+│  
+│  # A simple python web server frame
+│  
+│  > `wranning`: same flask, not flask!
+│  
+│ @@ -136,7 +138,9 @@
+│  
+│  ### 支持重定向
+│  
+│  ### 支持g变量
+│  
+│  ### 解析请求体
+│  
+│ +### 支持简易路径参数匹配
+│ +

@@ -1,0 +1,152 @@
+# Comparing `tmp/json_extendend-0.0.1.tar.gz` & `tmp/json_extendend-0.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "json_extendend-0.0.1.tar", last modified: Fri Apr  7 14:32:27 2023, max compression
++gzip compressed data, was "json_extendend-0.0.2.tar", last modified: Fri Apr  7 14:42:52 2023, max compression
+```
+
+## Comparing `json_extendend-0.0.1.tar` & `json_extendend-0.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,17 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 14:32:27.639328 json_extendend-0.0.1/
+--rw-rw-rw-   0        0        0     1077 2023-04-07 12:07:07.000000 json_extendend-0.0.1/LICENSE
+--rw-rw-rw-   0        0        0      745 2023-04-07 14:32:27.638302 json_extendend-0.0.1/PKG-INFO
+--rw-rw-rw-   0        0        0       72 2023-04-07 14:25:01.000000 json_extendend-0.0.1/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-07 14:32:27.611302 json_extendend-0.0.1/_core/
+--rw-rw-rw-   0        0        0    19089 2023-04-07 13:01:25.000000 json_extendend-0.0.1/_core/json_extended.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 14:32:27.634304 json_extendend-0.0.1/_core/json_extendend.egg-info/
+--rw-rw-rw-   0        0        0      745 2023-04-07 14:32:27.000000 json_extendend-0.0.1/_core/json_extendend.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      345 2023-04-07 14:32:27.000000 json_extendend-0.0.1/_core/json_extendend.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 14:32:27.000000 json_extendend-0.0.1/_core/json_extendend.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       13 2023-04-07 14:32:27.000000 json_extendend-0.0.1/_core/json_extendend.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       14 2023-04-07 14:32:27.000000 json_extendend-0.0.1/_core/json_extendend.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-07 14:32:27.639328 json_extendend-0.0.1/setup.cfg
+--rw-rw-rw-   0        0        0     1078 2023-04-07 14:31:43.000000 json_extendend-0.0.1/setup.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 14:32:27.637302 json_extendend-0.0.1/tests/
+--rw-rw-rw-   0        0        0     2568 2023-04-07 14:17:36.000000 json_extendend-0.0.1/tests/testsuite_io.py
+--rw-rw-rw-   0        0        0     4861 2023-04-07 14:17:37.000000 json_extendend-0.0.1/tests/testsuite_privates.py
+--rw-rw-rw-   0        0        0    21483 2023-04-07 14:17:38.000000 json_extendend-0.0.1/tests/testsuite_publics.py
++drwxrwxrwx   0        0        0        0 2023-04-07 14:42:52.182764 json_extendend-0.0.2/
++-rw-rw-rw-   0        0        0     1077 2023-04-07 12:07:07.000000 json_extendend-0.0.2/LICENSE
++-rw-rw-rw-   0        0        0      745 2023-04-07 14:42:52.181764 json_extendend-0.0.2/PKG-INFO
++-rw-rw-rw-   0        0        0       72 2023-04-07 14:25:01.000000 json_extendend-0.0.2/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 14:42:52.156764 json_extendend-0.0.2/_core/
++-rw-rw-rw-   0        0        0    19089 2023-04-07 13:01:25.000000 json_extendend-0.0.2/_core/json_extended.py
++drwxrwxrwx   0        0        0        0 2023-04-07 14:42:52.176763 json_extendend-0.0.2/_core/json_extendend.egg-info/
++-rw-rw-rw-   0        0        0      745 2023-04-07 14:42:52.000000 json_extendend-0.0.2/_core/json_extendend.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      302 2023-04-07 14:42:52.000000 json_extendend-0.0.2/_core/json_extendend.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 14:42:52.000000 json_extendend-0.0.2/_core/json_extendend.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       14 2023-04-07 14:42:52.000000 json_extendend-0.0.2/_core/json_extendend.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 14:42:52.182764 json_extendend-0.0.2/setup.cfg
++-rw-rw-rw-   0        0        0      961 2023-04-07 14:42:14.000000 json_extendend-0.0.2/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 14:42:52.180765 json_extendend-0.0.2/tests/
++-rw-rw-rw-   0        0        0     2568 2023-04-07 14:17:36.000000 json_extendend-0.0.2/tests/testsuite_io.py
++-rw-rw-rw-   0        0        0     4861 2023-04-07 14:17:37.000000 json_extendend-0.0.2/tests/testsuite_privates.py
++-rw-rw-rw-   0        0        0    21483 2023-04-07 14:17:38.000000 json_extendend-0.0.2/tests/testsuite_publics.py
+```
+
+### Comparing `json_extendend-0.0.1/LICENSE` & `json_extendend-0.0.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `json_extendend-0.0.1/PKG-INFO` & `json_extendend-0.0.2/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: json_extendend
+-Version: 0.0.1
++Version: 0.0.2
+ Summary: additional methods for handling json files in python
+ Home-page: https://github.com/Schnilsibus/jsonExtended.git
+ Author: Nils Urbach
+ Author-email: ndu01u@gmail.com
+ Keywords: json,extended
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+```
+
+### Comparing `json_extendend-0.0.1/_core/json_extended.py` & `json_extendend-0.0.2/_core/json_extended.py`
+
+ * *Files identical despite different names*
+
+### Comparing `json_extendend-0.0.1/_core/json_extendend.egg-info/PKG-INFO` & `json_extendend-0.0.2/_core/json_extendend.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: json-extendend
+-Version: 0.0.1
++Version: 0.0.2
+ Summary: additional methods for handling json files in python
+ Home-page: https://github.com/Schnilsibus/jsonExtended.git
+ Author: Nils Urbach
+ Author-email: ndu01u@gmail.com
+ Keywords: json,extended
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+```
+
+### Comparing `json_extendend-0.0.1/setup.py` & `json_extendend-0.0.2/setup.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import setuptools
+ 
+ with open("README.md", "r") as fp:
+     long_description = fp.read()
+ 
+ setuptools.setup(
+     name = "json_extendend",
+-    version = "0.0.1",
++    version = "0.0.2",
+     author = "Nils Urbach",
+     author_email = "ndu01u@gmail.com",
+     description = "additional methods for handling json files in python",
+     long_description = long_description,
+     long_description_content_type="text/markdown",
+     keywords = [
+         "json",
+@@ -23,16 +23,9 @@
+         "License :: OSI Approved :: MIT License",
+         "Operating System :: OS Independent",
+         "Natural Language :: English",
+         "Programming Language :: Python",
+         "Topic :: Text Processing",
+         "Topic :: Utilities",
+     ],
+-    install_requires = [
+-        "json",
+-        "pathlib",
+-    ],
+     test_suite = "tests",
+-    tests_require = [
+-        "sys",
+-    ]
+ )
+```
+
+### Comparing `json_extendend-0.0.1/tests/testsuite_io.py` & `json_extendend-0.0.2/tests/testsuite_io.py`
+
+ * *Files identical despite different names*
+
+### Comparing `json_extendend-0.0.1/tests/testsuite_privates.py` & `json_extendend-0.0.2/tests/testsuite_privates.py`
+
+ * *Files identical despite different names*
+
+### Comparing `json_extendend-0.0.1/tests/testsuite_publics.py` & `json_extendend-0.0.2/tests/testsuite_publics.py`
+
+ * *Files identical despite different names*
+
