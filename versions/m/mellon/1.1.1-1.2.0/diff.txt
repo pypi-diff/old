@@ -1,0 +1,1733 @@
+--- tmp/mellon-1.1.1.tar.gz
++++ tmp/mellon-1.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "mellon-1.1.1.tar", last modified: Sat Mar 25 01:27:26 2023, max compression
+│ +gzip compressed data, was "mellon-1.2.0.tar", last modified: Fri Apr  7 00:19:43 2023, max compression
+│   --- mellon-1.1.1.tar
+├── +++ mellon-1.2.0.tar
+│ ├── file list
+│ │ @@ -1,23 +1,23 @@
+│ │ -drwxrws---   0 dotto    (71780) setty_m_grp (239268)        0 2023-03-25 01:27:26.843740 mellon-1.1.1/
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)    35148 2022-09-23 00:29:04.000000 mellon-1.1.1/LICENSE
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)     1462 2023-03-25 01:27:26.842259 mellon-1.1.1/PKG-INFO
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)     1042 2023-03-25 01:20:03.000000 mellon-1.1.1/README.rst
+│ │ -drwxrws---   0 dotto    (71780) setty_m_grp (239268)        0 2023-03-25 01:27:26.816550 mellon-1.1.1/mellon/
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)      826 2023-03-25 01:20:12.000000 mellon-1.1.1/mellon/__init__.py
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)     1950 2022-12-06 00:00:08.000000 mellon-1.1.1/mellon/base_cov.py
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)     6100 2023-03-25 00:19:43.000000 mellon-1.1.1/mellon/conditional.py
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)     2481 2023-03-25 01:09:57.000000 mellon-1.1.1/mellon/cov.py
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)     8427 2023-03-25 00:21:49.000000 mellon-1.1.1/mellon/decomposition.py
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)     2389 2022-12-06 00:00:08.000000 mellon-1.1.1/mellon/derivatives.py
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)     9799 2023-03-08 04:51:49.000000 mellon-1.1.1/mellon/inference.py
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)    37227 2023-03-25 00:50:34.000000 mellon-1.1.1/mellon/model.py
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)     6890 2023-03-24 21:00:48.000000 mellon-1.1.1/mellon/parameters.py
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)     3486 2023-03-16 21:24:59.000000 mellon-1.1.1/mellon/util.py
+│ │ -drwxrws---   0 dotto    (71780) setty_m_grp (239268)        0 2023-03-25 01:27:26.837399 mellon-1.1.1/mellon.egg-info/
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)     1462 2023-03-25 01:27:26.000000 mellon-1.1.1/mellon.egg-info/PKG-INFO
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)      368 2023-03-25 01:27:26.000000 mellon-1.1.1/mellon.egg-info/SOURCES.txt
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)        1 2023-03-25 01:27:26.000000 mellon-1.1.1/mellon.egg-info/dependency_links.txt
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)       24 2023-03-25 01:27:26.000000 mellon-1.1.1/mellon.egg-info/requires.txt
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)        7 2023-03-25 01:27:26.000000 mellon-1.1.1/mellon.egg-info/top_level.txt
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)       38 2023-03-25 01:27:26.844754 mellon-1.1.1/setup.cfg
+│ │ --rw-rw----   0 dotto    (71780) setty_m_grp (239268)     1100 2023-03-25 00:23:30.000000 mellon-1.1.1/setup.py
+│ │ +drwxrws---   0 dotto    (71780) setty_m_grp (239268)        0 2023-04-07 00:19:43.590659 mellon-1.2.0/
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)    35148 2022-09-23 00:29:04.000000 mellon-1.2.0/LICENSE
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)     1767 2023-04-07 00:19:43.587915 mellon-1.2.0/PKG-INFO
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)     1347 2023-03-28 23:01:29.000000 mellon-1.2.0/README.rst
+│ │ +drwxrws---   0 dotto    (71780) setty_m_grp (239268)        0 2023-04-07 00:19:43.560958 mellon-1.2.0/mellon/
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)     1051 2023-04-07 00:12:22.000000 mellon-1.2.0/mellon/__init__.py
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)     1897 2023-04-01 02:53:36.000000 mellon-1.2.0/mellon/base_cov.py
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)     7231 2023-03-31 23:12:47.000000 mellon-1.2.0/mellon/conditional.py
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)     2481 2023-03-25 01:09:57.000000 mellon-1.2.0/mellon/cov.py
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)     9200 2023-04-01 02:53:25.000000 mellon-1.2.0/mellon/decomposition.py
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)     2389 2022-12-06 00:00:08.000000 mellon-1.2.0/mellon/derivatives.py
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)    14318 2023-04-03 23:17:39.000000 mellon-1.2.0/mellon/inference.py
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)    57914 2023-04-06 22:16:53.000000 mellon-1.2.0/mellon/model.py
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)     9222 2023-04-03 18:53:33.000000 mellon-1.2.0/mellon/parameters.py
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)     4546 2023-04-02 21:34:32.000000 mellon-1.2.0/mellon/util.py
+│ │ +drwxrws---   0 dotto    (71780) setty_m_grp (239268)        0 2023-04-07 00:19:43.582831 mellon-1.2.0/mellon.egg-info/
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)     1767 2023-04-07 00:19:43.000000 mellon-1.2.0/mellon.egg-info/PKG-INFO
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)      368 2023-04-07 00:19:43.000000 mellon-1.2.0/mellon.egg-info/SOURCES.txt
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)        1 2023-04-07 00:19:43.000000 mellon-1.2.0/mellon.egg-info/dependency_links.txt
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)       24 2023-04-07 00:19:43.000000 mellon-1.2.0/mellon.egg-info/requires.txt
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)        7 2023-04-07 00:19:43.000000 mellon-1.2.0/mellon.egg-info/top_level.txt
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)       38 2023-04-07 00:19:43.592374 mellon-1.2.0/setup.cfg
+│ │ +-rw-rw----   0 dotto    (71780) setty_m_grp (239268)     1100 2023-03-25 00:23:30.000000 mellon-1.2.0/setup.py
+│ │   --- mellon-1.1.1/LICENSE
+│ ├── +++ mellon-1.2.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- mellon-1.1.1/PKG-INFO
+│ ├── +++ mellon-1.2.0/PKG-INFO
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,24 +1,28 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mellon
+│ │ -Version: 1.1.1
+│ │ +Version: 1.2.0
+│ │  Summary: Non-parametric density estimator.
+│ │  Home-page: https://github.com/settylab/mellon
+│ │  Author: Setty Lab
+│ │  Author-email: msetty@fredhutch.org
+│ │  License: GNU General Public License v3.0
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+│ │  Description-Content-Type: text/x-rst
+│ │  License-File: LICENSE
+│ │  
+│ │  .. image:: https://zenodo.org/badge/558998366.svg
+│ │     :target: https://zenodo.org/badge/latestdoi/558998366
+│ │  .. image:: https://codecov.io/github/settylab/Mellon/branch/main/graph/badge.svg?token=TKIKXK4MPG 
+│ │ -    :target: https://codecov.io/github/settylab/Mellon
+│ │ +    :target: https://app.codecov.io/github/settylab/Mellon
+│ │ +.. image:: https://badge.fury.io/py/mellon.svg
+│ │ +       :target: https://badge.fury.io/py/mellon
+│ │ +.. image:: https://static.pepy.tech/personalized-badge/mellon?period=total&units=international_system&left_color=grey&right_color=lightgrey&left_text=Downloads
+│ │ +    :target: https://pepy.tech/project/mellon
+│ │  
+│ │  Mellon is a non-parametric density estimator based on the NearestNeighbors distribution.
+│ │  
+│ │  Installation
+│ │  ============
+│ │  
+│ │  To install with pip you can run:
+│ │   --- mellon-1.1.1/README.rst
+│ ├── +++ mellon-1.2.0/README.rst
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,11 +1,15 @@
+│ │  .. image:: https://zenodo.org/badge/558998366.svg
+│ │     :target: https://zenodo.org/badge/latestdoi/558998366
+│ │  .. image:: https://codecov.io/github/settylab/Mellon/branch/main/graph/badge.svg?token=TKIKXK4MPG 
+│ │ -    :target: https://codecov.io/github/settylab/Mellon
+│ │ +    :target: https://app.codecov.io/github/settylab/Mellon
+│ │ +.. image:: https://badge.fury.io/py/mellon.svg
+│ │ +       :target: https://badge.fury.io/py/mellon
+│ │ +.. image:: https://static.pepy.tech/personalized-badge/mellon?period=total&units=international_system&left_color=grey&right_color=lightgrey&left_text=Downloads
+│ │ +    :target: https://pepy.tech/project/mellon
+│ │  
+│ │  Mellon is a non-parametric density estimator based on the NearestNeighbors distribution.
+│ │  
+│ │  Installation
+│ │  ============
+│ │  
+│ │  To install with pip you can run:
+│ │   --- mellon-1.1.1/mellon/__init__.py
+│ ├── +++ mellon-1.2.0/mellon/__init__.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,38 +1,44 @@
+│ │  from jax.config import config as jaxconfig
+│ │  
+│ │  jaxconfig.update("jax_enable_x64", True)
+│ │  jaxconfig.update("jax_platform_name", "cpu")
+│ │  
+│ │ -__version__ = "1.1.1"
+│ │ +__version__ = "1.2.0"
+│ │  
+│ │  from .base_cov import Covariance
+│ │ -from .util import stabilize, mle, distance, Log
+│ │ +from .util import stabilize, mle, distance, Log, local_dimensionality
+│ │  from .cov import Matern32, Matern52, ExpQuad, Exponential, RatQuad
+│ │  from .inference import (
+│ │      compute_transform,
+│ │ +    compute_dimensionality_transform,
+│ │      compute_loss_func,
+│ │ +    compute_dimensionality_loss_func,
+│ │      minimize_adam,
+│ │      minimize_lbfgsb,
+│ │      compute_log_density_x,
+│ │      compute_conditional_mean,
+│ │ +    compute_conditional_mean_explog,
+│ │  )
+│ │  from .parameters import (
+│ │      compute_landmarks,
+│ │      k_means,
+│ │      compute_nn_distances,
+│ │ +    compute_distances,
+│ │      compute_d,
+│ │      compute_mu,
+│ │      compute_ls,
+│ │      compute_cov_func,
+│ │      compute_L,
+│ │      compute_initial_value,
+│ │ +    compute_initial_dimensionalities,
+│ │  )
+│ │  from .derivatives import (
+│ │      gradient,
+│ │      hessian,
+│ │      hessian_log_determinant,
+│ │  )
+│ │  from .model import (
+│ │      DensityEstimator,
+│ │      FunctionEstimator,
+│ │ +    DimensionalityEstimator,
+│ │  )
+│ │   --- mellon-1.1.1/mellon/base_cov.py
+│ ├── +++ mellon-1.2.0/mellon/base_cov.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -36,18 +36,17 @@
+│ │  
+│ │      def __str__(self):
+│ │          return self.__repr__()
+│ │  
+│ │      def __repr__(self):
+│ │          return "(" + repr(self.left) + " + " + repr(self.right) + ")"
+│ │  
+│ │ -    def __call__(self, x, y):
+│ │ +    def k(self, x, y):
+│ │          if callable(self.right):
+│ │              return self.left(x, y) + self.right(x, y)
+│ │ -        print(type(self.right))
+│ │          return self.left(x, y) + self.right
+│ │  
+│ │  
+│ │  class Mul(Covariance):
+│ │      R"""
+│ │      Supports multiplying covariance functions with * operator.
+│ │      """
+│ │ @@ -58,15 +57,15 @@
+│ │  
+│ │      def __str__(self):
+│ │          return self.__repr__()
+│ │  
+│ │      def __repr__(self):
+│ │          return "(" + repr(self.left) + " * " + repr(self.right) + ")"
+│ │  
+│ │ -    def __call__(self, x, y):
+│ │ +    def k(self, x, y):
+│ │          if callable(self.right):
+│ │              return self.left(x, y) * self.right(x, y)
+│ │          return self.left(x, y) * self.right
+│ │  
+│ │  
+│ │  class Pow(Covariance):
+│ │      R"""
+│ │ @@ -79,9 +78,9 @@
+│ │  
+│ │      def __str__(self):
+│ │          return self.__repr__()
+│ │  
+│ │      def __repr__(self):
+│ │          return "(" + repr(self.left) + " ** " + repr(self.right) + ")"
+│ │  
+│ │ -    def __call__(self, x, y):
+│ │ +    def k(self, x, y):
+│ │          return self.left(x, y) ** self.right
+│ │   --- mellon-1.1.1/mellon/conditional.py
+│ ├── +++ mellon-1.2.0/mellon/conditional.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,11 +1,14 @@
+│ │ -from jax.numpy import dot, square
+│ │ +from jax.numpy import dot, square, isnan, any
+│ │  from jax.numpy.linalg import cholesky
+│ │  from jax.scipy.linalg import solve_triangular
+│ │ -from .util import stabilize, DEFAULT_JITTER
+│ │ +from .util import stabilize, DEFAULT_JITTER, Log
+│ │ +
+│ │ +
+│ │ +logger = Log()
+│ │  
+│ │  
+│ │  def _full_conditional_mean(
+│ │      x,
+│ │      y,
+│ │      mu,
+│ │      cov_func,
+│ │ @@ -32,15 +35,23 @@
+│ │      """
+│ │      if d1 := len(x.shape) < 2:
+│ │          x = x[:, None]
+│ │      sigma2 = square(sigma)
+│ │      K = cov_func(x, x)
+│ │      sigma2 = max(sigma2, jitter)
+│ │      L = cholesky(stabilize(K, jitter=sigma2))
+│ │ -    weights = solve_triangular(L.T, solve_triangular(L, y, lower=True))
+│ │ +    if any(isnan(L)):
+│ │ +        message = (
+│ │ +            f"Covariance not positively definite with jitter={jitter}. "
+│ │ +            "Consider increasing the jitter for numerical stabilization."
+│ │ +        )
+│ │ +        logger.error(message)
+│ │ +        raise ValueError(message)
+│ │ +    r = y - mu
+│ │ +    weights = solve_triangular(L.T, solve_triangular(L, r, lower=True))
+│ │  
+│ │      if d1:
+│ │  
+│ │          def mean(Xnew):
+│ │              Kus = cov_func(Xnew[:, None], x)
+│ │              return mu + dot(Kus, weights)
+│ │  
+│ │ @@ -84,14 +95,21 @@
+│ │          x = x[:, None]
+│ │      if len(Xnew.shape) < 2:
+│ │          Xnew = Xnew[:, None]
+│ │      sigma2 = square(sigma)
+│ │      K = cov_func(x, x)
+│ │      sigma2 = max(sigma2, jitter)
+│ │      L = cholesky(stabilize(K, jitter=sigma2))
+│ │ +    if any(isnan(L)):
+│ │ +        message = (
+│ │ +            f"Covariance not positively definite with jitter={jitter}. "
+│ │ +            "Consider increasing the jitter for numerical stabilization."
+│ │ +        )
+│ │ +        logger.error(message)
+│ │ +        raise ValueError(message)
+│ │      Kus = cov_func(Xnew, x)
+│ │  
+│ │      def mean(y):
+│ │          weights = solve_triangular(L.T, solve_triangular(L, y, lower=True))
+│ │          return mu + dot(Kus, weights)
+│ │  
+│ │      return mean
+│ │ @@ -131,14 +149,21 @@
+│ │          x = x[:, None]
+│ │      if len(xu.shape) < 2:
+│ │          xu = xu[:, None]
+│ │      sigma2 = square(sigma)
+│ │      Kuu = cov_func(xu, xu)
+│ │      Kuf = cov_func(xu, x)
+│ │      Luu = cholesky(stabilize(Kuu, jitter))
+│ │ +    if any(isnan(Luu)):
+│ │ +        message = (
+│ │ +            f"Covariance of landmarks not positively definite with jitter={jitter}. "
+│ │ +            "Consider increasing the jitter for numerical stabilization."
+│ │ +        )
+│ │ +        logger.error(message)
+│ │ +        raise ValueError(message)
+│ │      A = solve_triangular(Luu, Kuf, lower=True)
+│ │      sigma2 = max(sigma2, jitter)
+│ │      L_B = cholesky(stabilize(dot(A, A.T), sigma2))
+│ │      r = y - mu
+│ │      c = solve_triangular(L_B, dot(A, r), lower=True)
+│ │      z = solve_triangular(L_B.T, c)
+│ │      weights = solve_triangular(Luu.T, z)
+│ │ @@ -195,14 +220,21 @@
+│ │          xu = xu[:, None]
+│ │      if len(Xnew.shape) < 2:
+│ │          Xnew = Xnew[:, None]
+│ │      sigma2 = square(sigma)
+│ │      Kuu = cov_func(xu, xu)
+│ │      Kuf = cov_func(xu, x)
+│ │      Luu = cholesky(stabilize(Kuu, jitter))
+│ │ +    if any(isnan(Luu)):
+│ │ +        message = (
+│ │ +            f"Covariance of landmarks not positively definite with jitter={jitter}. "
+│ │ +            "Consider increasing the jitter for numerical stabilization."
+│ │ +        )
+│ │ +        logger.error(message)
+│ │ +        raise ValueError(message)
+│ │      A = solve_triangular(Luu, Kuf, lower=True)
+│ │      sigma2 = max(sigma2, jitter)
+│ │      L_B = cholesky(stabilize(dot(A, A.T), sigma2))
+│ │      Kus = cov_func(Xnew, xu)
+│ │  
+│ │      def mean(y):
+│ │          r = y - mu
+│ │   --- mellon-1.1.1/mellon/cov.py
+│ ├── +++ mellon-1.2.0/mellon/cov.py
+│ │┄ Files identical despite different names
+│ │   --- mellon-1.1.1/mellon/decomposition.py
+│ ├── +++ mellon-1.2.0/mellon/decomposition.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -from jax.numpy import cumsum, searchsorted, count_nonzero, sqrt
+│ │ +from jax.numpy import cumsum, searchsorted, count_nonzero, sqrt, isnan, any
+│ │  from jax.numpy.linalg import eigh, cholesky, qr
+│ │  from jax.scipy.linalg import solve_triangular
+│ │  from .util import stabilize, DEFAULT_JITTER, Log
+│ │  
+│ │  
+│ │  DEFAULT_RANK = 0.99
+│ │  DEFAULT_METHOD = "auto"
+│ │ @@ -67,31 +67,37 @@
+│ │          in the low rank approximation.
+│ │      :type method: str
+│ │      :return: :math:`s, v` - The top eigenvalues and eigenvectors.
+│ │      :rtype: array-like, array-like
+│ │      """
+│ │  
+│ │      s, v = eigh(A)
+│ │ +    if any(s <= 0):
+│ │ +        message = (
+│ │ +            "Singuarity detected in covariance matrix. "
+│ │ +            "This can complicated prediction. Consider raising the jitter."
+│ │ +        )
+│ │ +        logger.warning(message)
+│ │      p = count_nonzero(s > 0)  # stability
+│ │ -    summed = cumsum(s[:-p-1:-1])
+│ │ +    summed = cumsum(s[: -p - 1 : -1])
+│ │      if method == "percent":
+│ │          # automatically choose rank to capture some percent of the eigenvalues
+│ │          target = summed[-1] * rank
+│ │          p = searchsorted(summed, target)
+│ │          if p == 0:
+│ │              logger.warning(
+│ │ -                f'Low variance percentage {rank:%} indicated rank=0. '
+│ │ -                'Bumping rank to 1.'
+│ │ +                f"Low variance percentage {rank:%} indicated rank=0. "
+│ │ +                "Bumping rank to 1."
+│ │              )
+│ │              p = 1
+│ │      else:
+│ │          p = min(rank, p)
+│ │      if (method == "percent" and rank < 1) or rank < len(summed):
+│ │ -        frac = summed[p]/summed[-1]
+│ │ -        logger.info(f'Recovering {frac:%} variance in eigendecomposition.')
+│ │ +        frac = summed[p] / summed[-1]
+│ │ +        logger.info(f"Recovering {frac:%} variance in eigendecomposition.")
+│ │      s_ = s[-p:]
+│ │      v_ = v[:, -p:]
+│ │      return s_, v_
+│ │  
+│ │  
+│ │  def _full_rank(x, cov_func, jitter=DEFAULT_JITTER):
+│ │      R"""
+│ │ @@ -105,14 +111,21 @@
+│ │      :param jitter: A small amount to add to the diagonal. Defaults to 1e-6.
+│ │      :type jitter: float
+│ │      :return: :math:`L` - A matrix such that :math:`L L^\top = K`.
+│ │      :rtype: array-like
+│ │      """
+│ │      W = stabilize(cov_func(x, x), jitter)
+│ │      L = cholesky(W)
+│ │ +    if any(isnan(L)):
+│ │ +        message = (
+│ │ +            f"Covariance not positively definite with jitter={jitter}. "
+│ │ +            "Consider increasing the jitter for numerical stabilization."
+│ │ +        )
+│ │ +        logger.error(message)
+│ │ +        raise ValueError(message)
+│ │      return L
+│ │  
+│ │  
+│ │  def _full_decomposition_low_rank(
+│ │      x, cov_func, rank=DEFAULT_RANK, method=DEFAULT_METHOD, jitter=DEFAULT_JITTER
+│ │  ):
+│ │      R"""
+│ │ @@ -163,14 +176,21 @@
+│ │      :type jitter: float
+│ │      :return: :math:`L` - A matrix such that :math:`L L^\top \approx K`.
+│ │      :rtype: array-like
+│ │      """
+│ │      W = stabilize(cov_func(xu, xu), jitter)
+│ │      C = cov_func(x, xu)
+│ │      U = cholesky(W)
+│ │ +    if any(isnan(U)):
+│ │ +        message = (
+│ │ +            f"Covariance of landmarks not positively definite with jitter={jitter}. "
+│ │ +            "Consider increasing the jitter for numerical stabilization."
+│ │ +        )
+│ │ +        logger.error(message)
+│ │ +        raise ValueError(message)
+│ │      L = solve_triangular(U, C.T, lower=True).T
+│ │      return L
+│ │  
+│ │  
+│ │  def _modified_low_rank(
+│ │      x, cov_func, xu, rank=DEFAULT_RANK, method=DEFAULT_METHOD, jitter=DEFAULT_JITTER
+│ │  ):
+│ │   --- mellon-1.1.1/mellon/derivatives.py
+│ ├── +++ mellon-1.2.0/mellon/derivatives.py
+│ │┄ Files identical despite different names
+│ │   --- mellon-1.1.1/mellon/inference.py
+│ ├── +++ mellon-1.2.0/mellon/inference.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │  from collections import namedtuple
+│ │ -from jax.numpy import log, pi, exp, stack
+│ │ +from jax.numpy import log, pi, exp, stack, arange, median, sort, max
+│ │  from jax.numpy import sum as arraysum
+│ │  from jax.scipy.special import gammaln
+│ │  import jax
+│ │  from jax.example_libraries.optimizers import adam
+│ │  from jaxopt import ScipyMinimize
+│ │  from .conditional import (
+│ │      _full_conditional_mean,
+│ │ @@ -76,14 +76,44 @@
+│ │          A = exp(log_density + V)
+│ │          B = log_density + Vdr
+│ │          return arraysum(B - A)
+│ │  
+│ │      return logpdf
+│ │  
+│ │  
+│ │ +def _poisson(distances):
+│ │ +    """
+│ │ +    Returns the likelihood function of dimensionality and density given the
+│ │ +    observed k nearest-neighbor distances
+│ │ +    .
+│ │ +    :param distances: The observed nearest neighbor distances.
+│ │ +    :type distances: array-like
+│ │ +    :return: The likelihood function.
+│ │ +    :rtype: function
+│ │ +    """
+│ │ +    k = distances.shape[1]
+│ │ +    counts = arange(1, k + 1)
+│ │ +
+│ │ +    ldist = sort(distances, axis=-1)
+│ │ +    ldist = log(ldist) + log(pi) / 2
+│ │ +
+│ │ +    def V(d):
+│ │ +        """
+│ │ +        Return the log-volume of the n-sphere for the raidus related values in ldist.
+│ │ +        """
+│ │ +        return d * ldist - gammaln(d / 2 + 1)
+│ │ +
+│ │ +    def logpdf(dims, log_dens):
+│ │ +        pred = log_dens[:, None] + V(dims[:, None])
+│ │ +        logp = pred * counts[None, :] - exp(pred) - gammaln(counts)[None, :]
+│ │ +        return arraysum(logp)
+│ │ +
+│ │ +    return logpdf
+│ │ +
+│ │ +
+│ │  def compute_transform(mu, L):
+│ │      R"""
+│ │      Computes a function transform that maps :math:`z \sim
+│ │      \text{Normal}(0, I) \rightarrow f \sim \text{Normal}(mu, K')`,
+│ │      where :math:`I` is the identity matrix and :math:`K \approx K' = L L^\top`,
+│ │      where :math:`K` is the covariance matrix.
+│ │  
+│ │ @@ -93,14 +123,39 @@
+│ │          covariance matrix.
+│ │      :type L: array-like
+│ │      :return: transform - The transform function :math:`z \rightarrow f`.
+│ │      """
+│ │      return _multivariate(mu, L)
+│ │  
+│ │  
+│ │ +def compute_dimensionality_transform(mu_dim, mu_dens, L):
+│ │ +    R"""
+│ │ +    Computes a function transform that maps :math:`z \sim
+│ │ +    \text{Normal}(0, I) \rightarrow \log(f) \sim \text{Normal}(mu, K')`,
+│ │ +    where :math:`I` is the identity matrix and :math:`K \approx K' = L L^\top`,
+│ │ +    where :math:`K` is the covariance matrix.
+│ │ +
+│ │ +    :param mu: The Gaussian process mean.
+│ │ +    :type mu: float
+│ │ +    :param L: A matrix such that :math:`L L^\top \approx K`, where :math:`K` is the
+│ │ +        covariance matrix.
+│ │ +    :type L: array-like
+│ │ +    :return: transform - The transform function :math:`z \rightarrow f`.
+│ │ +    """
+│ │ +
+│ │ +    dim_transform = _multivariate(mu_dim, L)
+│ │ +    dens_transform = _multivariate(mu_dens, L)
+│ │ +
+│ │ +    def transform(z):
+│ │ +        dims, dens = z[0, :], z[1, :]
+│ │ +        return exp(dim_transform(dims)), dens_transform(dens)
+│ │ +
+│ │ +    return transform
+│ │ +
+│ │ +
+│ │  def compute_loss_func(nn_distances, d, transform, k):
+│ │      R"""
+│ │      Computes the Bayesian loss function -(prior(:math:`z`) +
+│ │      likelihood(transform(:math:`z`))).
+│ │  
+│ │      :param nn_distances: The observed nearest neighbor distances.
+│ │      :type nn_distances: array-like
+│ │ @@ -121,14 +176,41 @@
+│ │  
+│ │      def loss_func(z):
+│ │          return -(prior(z) + likelihood(transform(z)))
+│ │  
+│ │      return loss_func
+│ │  
+│ │  
+│ │ +def compute_dimensionality_loss_func(distances, transform, k):
+│ │ +    R"""
+│ │ +    Computes the Bayesian loss function -(prior(:math:`z`) +
+│ │ +    likelihood(transform(:math:`z`))) for dimensionality inference.
+│ │ +
+│ │ +    :param distances: The observed k nearest neighbor distances.
+│ │ +    :type distances: array-like
+│ │ +    :param transform:
+│ │ +        Maps :math:`z \sim \text{Normal}(0, I) \rightarrow \log(f) \sim \text{Normal}(mu, K')`,
+│ │ +        where :math:`I` is the identity matrix and :math:`K \approx K' = L L^\top`,
+│ │ +        where :math:`K` is the covariance matrix.
+│ │ +    :type transform: function
+│ │ +    :param k: dimension of transform input
+│ │ +    :type k: int
+│ │ +    :return: loss_func - The Bayesian loss function
+│ │ +    :rtype: function, function
+│ │ +    """
+│ │ +    prior = _normal(k)
+│ │ +    likelihood = _poisson(distances)
+│ │ +
+│ │ +    def loss_func(z):
+│ │ +        dims, log_dens = transform(z)
+│ │ +        return -(prior(z) + likelihood(dims, log_dens))
+│ │ +
+│ │ +    return loss_func
+│ │ +
+│ │ +
+│ │  def minimize_adam(
+│ │      loss_func,
+│ │      initial_value,
+│ │      n_iter=DEFAULT_N_ITER,
+│ │      init_learn_rate=DEFAULT_INIT_LEARN_RATE,
+│ │      jit=DEFAULT_JIT,
+│ │  ):
+│ │ @@ -260,14 +342,72 @@
+│ │              mu,
+│ │              cov_func,
+│ │              sigma=sigma,
+│ │              jitter=jitter,
+│ │          )
+│ │  
+│ │  
+│ │ +def compute_conditional_mean_explog(
+│ │ +    x,
+│ │ +    landmarks,
+│ │ +    y,
+│ │ +    mu,
+│ │ +    cov_func,
+│ │ +    sigma=0,
+│ │ +    jitter=DEFAULT_JITTER,
+│ │ +):
+│ │ +    R"""
+│ │ +    Builds the mean function of the Gaussian process, conditioned on the
+│ │ +    function exponential values (e.g., dimensionality) on x.
+│ │ +    Returns a function that is defined on the whole domain of x.
+│ │ +
+│ │ +    :param x: The training instances.
+│ │ +    :type x: array-like
+│ │ +    :param landmarks: The landmark points for fast sparse computation.
+│ │ +        Landmarks can be None if not using landmark points.
+│ │ +    :type landmarks: array-like
+│ │ +    :param y: The function values at each point in x.
+│ │ +    :type y: array-like
+│ │ +    :param mu: The original Gaussian process mean.
+│ │ +    :type mu: float
+│ │ +    :param cov_func: The Gaussian process covariance function.
+│ │ +    :type cov_func: function
+│ │ +    :param sigma: White moise veriance. Defaults to 0.
+│ │ +    :type sigma: float
+│ │ +    :param jitter: A small amount to add to the diagonal for stability. Defaults to 1e-6.
+│ │ +    :type jitter: float
+│ │ +    :return: conditional_mean - The conditioned Gaussian process mean function.
+│ │ +    :rtype: function
+│ │ +    """
+│ │ +    if landmarks is None:
+│ │ +        return Exp(
+│ │ +            _full_conditional_mean(
+│ │ +                x,
+│ │ +                log(y),
+│ │ +                mu,
+│ │ +                cov_func,
+│ │ +                jitter=jitter,
+│ │ +            )
+│ │ +        )
+│ │ +    else:
+│ │ +        if len(landmarks.shape) < 2:
+│ │ +            landmarks = landmarks[:, None]
+│ │ +        return Exp(
+│ │ +            _landmarks_conditional_mean(
+│ │ +                x,
+│ │ +                landmarks,
+│ │ +                log(y),
+│ │ +                mu,
+│ │ +                cov_func,
+│ │ +                sigma=sigma,
+│ │ +                jitter=jitter,
+│ │ +            )
+│ │ +        )
+│ │ +
+│ │ +
+│ │  def compute_conditional_mean_y(
+│ │      x,
+│ │      landmarks,
+│ │      Xnew,
+│ │      mu,
+│ │      cov_func,
+│ │      sigma=0,
+│ │ @@ -312,7 +452,18 @@
+│ │              landmarks,
+│ │              Xnew,
+│ │              mu,
+│ │              cov_func,
+│ │              sigma=sigma,
+│ │              jitter=jitter,
+│ │          )
+│ │ +
+│ │ +
+│ │ +def Exp(func):
+│ │ +    """
+│ │ +    Function wrapper, making a function that returns the exponent of the wrapped function.
+│ │ +    """
+│ │ +
+│ │ +    def new_func(x):
+│ │ +        return exp(func(x))
+│ │ +
+│ │ +    return new_func
+│ │   --- mellon-1.1.1/mellon/model.py
+│ ├── +++ mellon-1.2.0/mellon/model.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,46 +1,54 @@
+│ │  from .cov import Matern52
+│ │  from .decomposition import DEFAULT_RANK, DEFAULT_METHOD
+│ │  from .inference import (
+│ │      compute_transform,
+│ │ +    compute_dimensionality_transform,
+│ │      compute_loss_func,
+│ │ +    compute_dimensionality_loss_func,
+│ │      minimize_adam,
+│ │      minimize_lbfgsb,
+│ │      compute_log_density_x,
+│ │      compute_conditional_mean,
+│ │      compute_conditional_mean_y,
+│ │ +    compute_conditional_mean_explog,
+│ │      DEFAULT_N_ITER,
+│ │      DEFAULT_INIT_LEARN_RATE,
+│ │      DEFAULT_JIT,
+│ │      DEFAULT_OPTIMIZER,
+│ │  )
+│ │  from .parameters import (
+│ │      compute_landmarks,
+│ │      compute_nn_distances,
+│ │ +    compute_distances,
+│ │      compute_d,
+│ │ +    compute_d_factal,
+│ │      compute_mu,
+│ │      compute_ls,
+│ │      compute_cov_func,
+│ │      compute_L,
+│ │      compute_initial_value,
+│ │ +    compute_initial_dimensionalities,
+│ │      DEFAULT_N_LANDMARKS,
+│ │  )
+│ │  from .derivatives import (
+│ │      gradient,
+│ │      hessian,
+│ │      hessian_log_determinant,
+│ │  )
+│ │  from .util import (
+│ │      DEFAULT_JITTER,
+│ │      vector_map,
+│ │      Log,
+│ │ +    local_dimensionality,
+│ │  )
+│ │  
+│ │  
+│ │  DEFAULT_COV_FUNC = Matern52
+│ │ +DEFAULT_D_METHOD = "embedding"
+│ │  
+│ │  logger = Log()
+│ │  
+│ │  
+│ │  class BaseEstimator:
+│ │      R"""
+│ │      Base class for the mellon estimators.
+│ │ @@ -91,19 +99,15 @@
+│ │              f"jitter={self.jitter}, "
+│ │              f"landmarks={self.landmarks}, "
+│ │          )
+│ │          if self.nn_distances is None:
+│ │              string += "nn_distances=None, "
+│ │          else:
+│ │              string += "nn_distances=nn_distances, "
+│ │ -        string += (
+│ │ -            f"mu={self.mu}, "
+│ │ -            f"ls={self.mu}, "
+│ │ -            f"cov_func={self.cov_func}, "
+│ │ -        )
+│ │ +        string += f"mu={self.mu}, " f"ls={self.mu}, " f"cov_func={self.cov_func}, "
+│ │          if self.L is None:
+│ │              string += "L=None, "
+│ │          else:
+│ │              string += "L=L, "
+│ │          return string
+│ │  
+│ │      def _set_x(self, x):
+│ │ @@ -114,15 +118,15 @@
+│ │          n_landmarks = self.n_landmarks
+│ │          logger.info(f"Computing {n_landmarks:,} landmarks with k-means clustering.")
+│ │          landmarks = compute_landmarks(x, n_landmarks=n_landmarks)
+│ │          return landmarks
+│ │  
+│ │      def _compute_nn_distances(self):
+│ │          x = self.x
+│ │ -        logger.info('Computing nearest neighbor distances.')
+│ │ +        logger.info("Computing nearest neighbor distances.")
+│ │          nn_distances = compute_nn_distances(x)
+│ │          return nn_distances
+│ │  
+│ │      def _compute_ls(self):
+│ │          nn_distances = self.nn_distances
+│ │          ls = compute_ls(nn_distances)
+│ │          ls *= self.ls_factor
+│ │ @@ -135,37 +139,41 @@
+│ │          logger.info("Using covariance function %s.", str(cov_func))
+│ │          return cov_func
+│ │  
+│ │      def _compute_L(self):
+│ │          x = self.x
+│ │          cov_func = self.cov_func
+│ │          landmarks = self.landmarks
+│ │ -        n_landmarks = landmarks.shape[0]
+│ │ +        n_landmarks = x.shape[0] if landmarks is None else landmarks.shape[0]
+│ │          rank = self.rank
+│ │          method = self.method
+│ │          jitter = self.jitter
+│ │ -        if isinstance(rank, float) and method != 'fixed':
+│ │ +        if isinstance(rank, float) and method != "fixed":
+│ │              logger.info(
+│ │                  f'Computing rank reduction using "{method}" method '
+│ │                  f"retaining > {rank:.2%} of variance."
+│ │              )
+│ │          else:
+│ │              logger.info(
+│ │                  f'Computing rank reduction to rank {rank} using "{method}" method.'
+│ │              )
+│ │          L = compute_L(
+│ │              x, cov_func, landmarks=landmarks, rank=rank, method=method, jitter=jitter
+│ │          )
+│ │          new_rank = L.shape[1]
+│ │ -        if not (
+│ │ -            type(rank) is int
+│ │ -            and rank == n_landmarks
+│ │ -            or type(rank) is float
+│ │ -            and rank == 1.0
+│ │ -        ) and method != 'fixed' and new_rank > (rank * 0.8 * n_landmarks):
+│ │ +        if (
+│ │ +            not (
+│ │ +                type(rank) is int
+│ │ +                and rank == n_landmarks
+│ │ +                or type(rank) is float
+│ │ +                and rank == 1.0
+│ │ +            )
+│ │ +            and method != "fixed"
+│ │ +            and new_rank > (rank * 0.8 * n_landmarks)
+│ │ +        ):
+│ │              logger.warning(
+│ │                  f"Shallow rank reduction from {n_landmarks:,} to {new_rank:,} "
+│ │                  "indicates underrepresentation by landmarks. Consider "
+│ │                  "increasing n_landmarks!"
+│ │              )
+│ │          logger.info(f"Using rank {new_rank:,} covariance representation.")
+│ │          return L
+│ │ @@ -334,14 +342,20 @@
+│ │          fixed number of eigenvectors or a percent of eigenvalues to include
+│ │          in the low rank approximation. Supports 'fixed', 'percent', or 'auto'.
+│ │          If 'auto', interprets rank as a fixed number of eigenvectors if it is
+│ │          an int and interprets rank as a percent of eigenvalues if it is a float.
+│ │          Provided for explictness and to clarify the ambiguous case of 1 vs 1.0.
+│ │          Defaults to 'auto'.
+│ │      :type method: str
+│ │ +    :param d_method: Method to compute intrinsic dimensionality of the data.
+│ │ +        Implemended options are
+│ │ +            * 'embedding' use the embedding dimension `x.shape[1]`
+│ │ +            * 'fractal' use the average fractal dimension (experimental)
+│ │ +        Defaults to 'embedding'.
+│ │ +    :type d_method: str
+│ │      :param jitter: A small amount to add to the diagonal of the covariance
+│ │          matrix to bind eigenvalues numerically away from 0 ensuring numerical
+│ │          stabilitity. Defaults to 1e-6.
+│ │      :type jitter: float
+│ │      :param optimizer: Select optimizer 'L-BFGS-B' or stochastic optimizer 'adam'
+│ │          for the maximum a posteriori density estimation. Defaults to 'L-BFGS-B'.
+│ │      :type optimizer: str
+│ │ @@ -425,14 +439,15 @@
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │          cov_func_curry=DEFAULT_COV_FUNC,
+│ │          n_landmarks=DEFAULT_N_LANDMARKS,
+│ │          rank=DEFAULT_RANK,
+│ │          method=DEFAULT_METHOD,
+│ │ +        d_method=DEFAULT_D_METHOD,
+│ │          jitter=DEFAULT_JITTER,
+│ │          optimizer=DEFAULT_OPTIMIZER,
+│ │          n_iter=DEFAULT_N_ITER,
+│ │          init_learn_rate=DEFAULT_INIT_LEARN_RATE,
+│ │          landmarks=None,
+│ │          nn_distances=None,
+│ │          d=None,
+│ │ @@ -454,14 +469,15 @@
+│ │              mu=mu,
+│ │              ls=ls,
+│ │              ls_factor=ls_factor,
+│ │              cov_func=cov_func,
+│ │              L=L,
+│ │          )
+│ │          self.method = method
+│ │ +        self.d_method = d_method
+│ │          self.optimizer = optimizer
+│ │          self.n_iter = n_iter
+│ │          self.init_learn_rate = init_learn_rate
+│ │          self.initial_value = initial_value
+│ │          self.d = d
+│ │          self.transform = None
+│ │          self.loss_func = None
+│ │ @@ -505,15 +521,20 @@
+│ │          else:
+│ │              string += "initial_value=initial_value, "
+│ │          string += f"jit={self.jit}" ")"
+│ │          return string
+│ │  
+│ │      def _compute_d(self):
+│ │          x = self.x
+│ │ -        d = compute_d(x)
+│ │ +        if self.d_method == "fractal":
+│ │ +            logger.warning("Using EXPERIMENTAL fractal dimensionality selection.")
+│ │ +            d = compute_d_factal(x)
+│ │ +            logger.info(f"Using d={d}.")
+│ │ +        else:
+│ │ +            d = compute_d(x)
+│ │          if d > 50:
+│ │              message = f"""The detected dimensionality of the data is over 50,
+│ │              which is likely to cause numerical instability issues.
+│ │              Consider running a dimensionality reduction algorithm, or
+│ │              if this number of dimensions is intended, explicitly pass
+│ │              d={self.d} as a parameter."""
+│ │              raise ValueError(message)
+│ │ @@ -567,29 +588,14 @@
+│ │              log_density_x,
+│ │              mu,
+│ │              cov_func,
+│ │              jitter=jitter,
+│ │          )
+│ │          self.log_density_func = log_density_func
+│ │  
+│ │ -    def _prepare_attribute(self, attribute):
+│ │ -        R"""
+│ │ -        If self.attribute is None, sets self.attribute to the value of its
+│ │ -        corresponding _compute_attribute function. If self.attribute is None, does nothing.
+│ │ -
+│ │ -        :param attribute: The name of the attribute.
+│ │ -        :type attribute: str
+│ │ -        """
+│ │ -        if getattr(self, attribute) is not None:
+│ │ -            return
+│ │ -        function_name = "_compute_" + attribute
+│ │ -        function = getattr(self, function_name)
+│ │ -        value = function()
+│ │ -        setattr(self, attribute, value)
+│ │ -
+│ │      def prepare_inference(self, x):
+│ │          R"""
+│ │          Set all attributes in preparation for optimization, but do not
+│ │          perform Bayesian inference. It is not necessary to call this
+│ │          function before calling fit.
+│ │  
+│ │          :param x: The training instances to estimate density function.
+│ │ @@ -806,15 +812,14 @@
+│ │          method=DEFAULT_METHOD,
+│ │          jitter=DEFAULT_JITTER,
+│ │          optimizer=DEFAULT_OPTIMIZER,
+│ │          n_iter=DEFAULT_N_ITER,
+│ │          init_learn_rate=DEFAULT_INIT_LEARN_RATE,
+│ │          landmarks=None,
+│ │          nn_distances=None,
+│ │ -        d=None,
+│ │          mu=0,
+│ │          ls=None,
+│ │          ls_factor=1,
+│ │          cov_func=None,
+│ │          sigma=0,
+│ │      ):
+│ │          super().__init__(
+│ │ @@ -827,29 +832,14 @@
+│ │              mu=mu,
+│ │              ls=ls,
+│ │              ls_factor=ls_factor,
+│ │              cov_func=cov_func,
+│ │          )
+│ │          self.sigma = sigma
+│ │  
+│ │ -    def _prepare_attribute(self, attribute):
+│ │ -        R"""
+│ │ -        If self.attribute is None, sets self.attribute to the value of its
+│ │ -        corresponding _compute_attribute function. If self.attribute is None, does nothing.
+│ │ -
+│ │ -        :param attribute: The name of the attribute.
+│ │ -        :type attribute: str
+│ │ -        """
+│ │ -        if getattr(self, attribute) is not None:
+│ │ -            return
+│ │ -        function_name = "_compute_" + attribute
+│ │ -        function = getattr(self, function_name)
+│ │ -        value = function()
+│ │ -        setattr(self, attribute, value)
+│ │ -
+│ │      def prepare_inference(self, x):
+│ │          R"""
+│ │          Set all attributes in preparation. It is not necessary to call this
+│ │          function before calling fit.
+│ │  
+│ │          :param x: The cell states.
+│ │          :type x: array-like
+│ │ @@ -984,7 +974,516 @@
+│ │              mu,
+│ │              cov_func,
+│ │              sigma,
+│ │              jitter=jitter,
+│ │          )
+│ │  
+│ │          return vector_map(conditional, Y)
+│ │ +
+│ │ +
+│ │ +class DimensionalityEstimator(BaseEstimator):
+│ │ +    R"""
+│ │ +    A non-parametric estimator for local dimensionality and density.
+│ │ +    DimensionalityEstimator performs Bayesian inference with a Gaussian process prior and
+│ │ +    a normal distribution for local scaling rates.
+│ │ +    All intermediate computations are cached as instance variables, so
+│ │ +    the user can view intermediate results and save computation time by passing precomputed
+│ │ +    values as arguments to a new model.
+│ │ +
+│ │ +    :param cov_func_curry: The generator of the Gaussian process covariance function.
+│ │ +        Must be a curry that takes one length scale argument and returns a
+│ │ +        covariance function of the form k(x, y) :math:`\rightarrow` float.
+│ │ +        Defaults to the type Matern52.
+│ │ +    :type cov_func_curry: function or type
+│ │ +    :param n_landmarks: The number of landmark points. If less than 1 or greater than or
+│ │ +        equal to the number of training points, does not compute or use inducing points.
+│ │ +        Defaults to 5000.
+│ │ +    :type n_landmarks: int
+│ │ +    :param rank: The rank of the approximate covariance matrix.
+│ │ +        If rank is an int, an :math:`n \times` rank matrix
+│ │ +        :math:`L` is computed such that :math:`L L^\top \approx K`, the exact
+│ │ +        :math:`n \times n` covariance matrix.
+│ │ +        If rank is a float 0.0 :math:`\le` rank :math:`\le` 1.0, the rank/size
+│ │ +        of :math:`L` is selected such that the included eigenvalues of the covariance
+│ │ +        between landmark points account for the specified percentage of the
+│ │ +        sum of eigenvalues. Defaults to 0.999.
+│ │ +    :type rank: int or float
+│ │ +    :param method: Explicitly specifies whether rank is to be interpreted as a
+│ │ +        fixed number of eigenvectors or a percent of eigenvalues to include
+│ │ +        in the low rank approximation. Supports 'fixed', 'percent', or 'auto'.
+│ │ +        If 'auto', interprets rank as a fixed number of eigenvectors if it is
+│ │ +        an int and interprets rank as a percent of eigenvalues if it is a float.
+│ │ +        Provided for explictness and to clarify the ambiguous case of 1 vs 1.0.
+│ │ +        Defaults to 'auto'.
+│ │ +    :type method: str
+│ │ +    :param jitter: A small amount to add to the diagonal of the covariance
+│ │ +        matrix to bind eigenvalues numerically away from 0 ensuring numerical
+│ │ +        stabilitity. Defaults to 1e-6.
+│ │ +    :type jitter: float
+│ │ +    :param optimizer: Select optimizer 'L-BFGS-B' or stochastic optimizer 'adam'
+│ │ +        for the maximum a posteriori density estimation. Defaults to 'L-BFGS-B'.
+│ │ +    :type optimizer: str
+│ │ +    :param n_iter: The number of optimization iterations. Defaults to 100.
+│ │ +    :type n_iter: int
+│ │ +    :param init_learn_rate: The initial learn rate. Defaults to 1.
+│ │ +    :type init_learn_rate: float
+│ │ +    :param landmarks: The points to quantize the data for the approximate covariance. If None,
+│ │ +        landmarks are set as k-means centroids with k=n_landmarks. Ignored if n_landmarks
+│ │ +        is greater than or equal to the number of training points. Defaults to None.
+│ │ +    :type landmarks: array-like or None
+│ │ +    :param k: The number of nearest neighbor distances to consider. Defaults to 10.
+│ │ +    :type k: int
+│ │ +    :param distances: The k nearest neighbor distances at each
+│ │ +        data point. If None, computes the nearest neighbor distances automatically, with
+│ │ +        a KDTree if the dimensionality of the data is less than 20, or a BallTree otherwise.
+│ │ +        Defaults to None.
+│ │ +    :type distances: array-like or None
+│ │ +    :param d: The estimated local dimensionality of the data.
+│ │ +        If None, sets d to the emperical estimae.
+│ │ +    :type d: array-like
+│ │ +    :param mu_dim: The mean of the Gaussian process for log dimensionality. Default is 0.
+│ │ +    :type mu_dim: float or None
+│ │ +    :param mu_dens: The mean of the Gaussian process for log density. If None, sets mu to the 1th percentile
+│ │ +        of :math:`mle(nn\text{_}distances, d) - 10`, where :math:`mle = \log(\text{gamma}(d/2 + 1))
+│ │ +        - (d/2) \cdot \log(\pi) - d \cdot \log(nn\text{_}distances)`. Defaults to None.
+│ │ +    :type mu_dens: float or None
+│ │ +    :param ls: The length scale of the Gaussian process covariance function. If None,
+│ │ +        sets ls to the geometric mean of the nearest neighbor distances times a constant.
+│ │ +        If cov_func is supplied explictly, ls has no effect. Defaults to None.
+│ │ +    :type ls: float or None
+│ │ +    :param cov_func: The Gaussian process covariance function of the form
+│ │ +        k(x, y) :math:`\rightarrow` float. If None, automatically generates the covariance
+│ │ +        function cov_func = cov_func_curry(ls). Defaults to None.
+│ │ +    :type cov_func: function or None
+│ │ +    :param L: A matrix such that :math:`L L^\top \approx K`, where :math:`K` is the covariance matrix.
+│ │ +        If None, automatically computes L. Defaults to None.
+│ │ +    :type L: array-like or None
+│ │ +    :param initial_value: The initial guess for optimization. If None, uses
+│ │ +        the neighborhood based local dimensionality estimate.
+│ │ +    :type initial_value: array-like or None
+│ │ +    :param jit: Use jax just in time compilation for loss and its gradient
+│ │ +        during optimization. Defaults to False.
+│ │ +    :type jit: bool
+│ │ +    :ivar cov_func_curry: The generator of the Gaussian process covariance function.
+│ │ +    :ivar n_landmarks: The number of landmark points.
+│ │ +    :ivar rank: The rank of approximate covariance matrix or percentage of
+│ │ +        eigenvalues included in approximate covariance matrix.
+│ │ +    :ivar method: The method to interpret the rank as a fixed number of eigenvectors
+│ │ +        or a percentage of eigenvalues.
+│ │ +    :ivar jitter: A small amount added to the diagonal of the covariance matrix
+│ │ +        for numerical stability.
+│ │ +    :ivar n_iter: The number of optimization iterations if adam optimizer is used.
+│ │ +    :ivar init_learn_rate: The initial learn rate when adam optimizer is used.
+│ │ +    :ivar landmarks: The points to quantize the data.
+│ │ +    :ivar nn_distances: The nearest neighbor distances for each data point.
+│ │ +    :ivar mu_dim: The Gaussian process mean.
+│ │ +    :ivar mu_dens: The Gaussian process mean.
+│ │ +    :ivar ls: The Gaussian process covariance function length scale.
+│ │ +    :ivar ls_factor: Factor to scale the automatically selected length scale.
+│ │ +        Defaults to 1.
+│ │ +    :ivar cov_func: The Gaussian process covariance function.
+│ │ +    :ivar L: A matrix such that :math:`L L^\top \approx K`, where :math:`K` is the covariance matrix.
+│ │ +    :ivar initial_value: The initial guess for Maximum A Posteriori optimization.
+│ │ +    :ivar optimizer: Optimizer for the maximum a posteriori density estimation.
+│ │ +    :ivar x: The training data.
+│ │ +    :ivar transform: A function
+│ │ +        :math:`z \sim \text{Normal}(0, I) \rightarrow \text{Normal}(mu, K')`.
+│ │ +        Used to map the latent representation to the log-density on the
+│ │ +        training data.
+│ │ +    :ivar loss_func: The Bayesian loss function.
+│ │ +    :ivar pre_transformation: The optimized parameters :math:`z \sim \text{Normal}(0, I)` before
+│ │ +        transformation to :math:`\text{Normal}(mu, K')`, where :math:`I` is the identity matrix
+│ │ +        and :math:`K'` is the approximate covariance matrix.
+│ │ +    :ivar opt_state: The final state the optimizer.
+│ │ +    :ivar losses: The history of losses throughout training of adam or final
+│ │ +        loss of L-BFGS-B.
+│ │ +    :ivar local_dim_x: The local dimensionality at the training points.
+│ │ +    :ivar log_density_x: The log density with variing units at the training
+│ │ +        points. Density indicates the number of cells per volume in state
+│ │ +        space. Since the dimensionality of the volume changes, the resulting
+│ │ +        density unit varies.
+│ │ +    :ivar local_dim_func: A function that computes the local dimensionality at arbitrary prediction points.
+│ │ +    :ivar log_density_func: A function that computes the log density with
+│ │ +        variing units at arbitrary prediction points.
+│ │ +    """
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        cov_func_curry=DEFAULT_COV_FUNC,
+│ │ +        n_landmarks=DEFAULT_N_LANDMARKS,
+│ │ +        rank=DEFAULT_RANK,
+│ │ +        method=DEFAULT_METHOD,
+│ │ +        jitter=DEFAULT_JITTER,
+│ │ +        optimizer=DEFAULT_OPTIMIZER,
+│ │ +        n_iter=DEFAULT_N_ITER,
+│ │ +        init_learn_rate=DEFAULT_INIT_LEARN_RATE,
+│ │ +        landmarks=None,
+│ │ +        k=10,
+│ │ +        distances=None,
+│ │ +        d=None,
+│ │ +        mu_dim=0,
+│ │ +        mu_dens=None,
+│ │ +        ls=None,
+│ │ +        ls_factor=1,
+│ │ +        cov_func=None,
+│ │ +        L=None,
+│ │ +        initial_value=None,
+│ │ +        jit=DEFAULT_JIT,
+│ │ +    ):
+│ │ +        super().__init__(
+│ │ +            cov_func_curry=cov_func_curry,
+│ │ +            n_landmarks=n_landmarks,
+│ │ +            rank=rank,
+│ │ +            jitter=jitter,
+│ │ +            landmarks=landmarks,
+│ │ +            nn_distances=None,
+│ │ +            mu=mu_dens,
+│ │ +            ls=ls,
+│ │ +            ls_factor=ls_factor,
+│ │ +            cov_func=cov_func,
+│ │ +            L=L,
+│ │ +        )
+│ │ +        self.k = k
+│ │ +        self.d = d
+│ │ +        self.mu_dim = mu_dim
+│ │ +        self.mu_dens = mu_dens
+│ │ +        self.method = method
+│ │ +        self.distances = distances
+│ │ +        self.optimizer = optimizer
+│ │ +        self.n_iter = n_iter
+│ │ +        self.init_learn_rate = init_learn_rate
+│ │ +        self.initial_value = initial_value
+│ │ +        self.transform = None
+│ │ +        self.loss_func = None
+│ │ +        self.opt_state = None
+│ │ +        self.losses = None
+│ │ +        self.pre_transformation = None
+│ │ +        self.local_dim_x = None
+│ │ +        self.log_density_x = None
+│ │ +        self.local_dim_func = None
+│ │ +        self.log_density_func = None
+│ │ +        self.jit = jit
+│ │ +
+│ │ +    def __repr__(self):
+│ │ +        name = self.__class__.__name__
+│ │ +        string = (
+│ │ +            f"{name}("
+│ │ +            f"cov_func_curry={self.cov_func_curry}, "
+│ │ +            f"n_landmarks={self.n_landmarks}, "
+│ │ +            f"rank={self.rank}, "
+│ │ +            f"method='{self.method}', "
+│ │ +            f"jitter={self.jitter}, "
+│ │ +            f"optimizer='{self.optimizer}', "
+│ │ +            f"n_iter={self.n_iter}, "
+│ │ +            f"init_learn_rate={self.init_learn_rate}, "
+│ │ +            f"landmarks={self.landmarks}, "
+│ │ +        )
+│ │ +        if self.distances is None:
+│ │ +            string += "distances=None, "
+│ │ +        else:
+│ │ +            string += "distances=distances, "
+│ │ +        string += (
+│ │ +            f"d={self.d}, "
+│ │ +            f"mu_dim={self.mu_dim}, "
+│ │ +            f"mu_dens={self.mu_dens}, "
+│ │ +            f"ls={self.mu}, "
+│ │ +            f"cov_func={self.cov_func}, "
+│ │ +        )
+│ │ +        if self.L is None:
+│ │ +            string += "L=None, "
+│ │ +        else:
+│ │ +            string += "L=L, "
+│ │ +        if self.initial_value is None:
+│ │ +            string += "initial_value=None, "
+│ │ +        else:
+│ │ +            string += "initial_value=initial_value, "
+│ │ +        string += f"jit={self.jit}" ")"
+│ │ +        return string
+│ │ +
+│ │ +    def _compute_mu_dens(self):
+│ │ +        nn_distances = self.nn_distances
+│ │ +        d = self.d
+│ │ +        mu = compute_mu(nn_distances, d)
+│ │ +        return mu
+│ │ +
+│ │ +    def _compute_d(self):
+│ │ +        x = self.x
+│ │ +        d = local_dimensionality(x, neighbor_idx=None)
+│ │ +        return d
+│ │ +
+│ │ +    def _compute_initial_value(self):
+│ │ +        x = self.x
+│ │ +        d = self.d
+│ │ +        nn_distances = self.nn_distances
+│ │ +        mu_dim = self.mu_dim
+│ │ +        mu_dens = self.mu_dens
+│ │ +        L = self.L
+│ │ +        initial_value = compute_initial_dimensionalities(
+│ │ +            x, mu_dim, mu_dens, L, nn_distances, d
+│ │ +        )
+│ │ +        return initial_value
+│ │ +
+│ │ +    def _compute_transform(self):
+│ │ +        mu_dim = self.mu_dim
+│ │ +        mu_dens = self.mu_dens
+│ │ +        L = self.L
+│ │ +        transform = compute_dimensionality_transform(mu_dim, mu_dens, L)
+│ │ +        return transform
+│ │ +
+│ │ +    def _compute_distances(self):
+│ │ +        x = self.x
+│ │ +        k = self.k
+│ │ +        logger.info("Computing distances.")
+│ │ +        distances = compute_distances(x, k=k)
+│ │ +        return distances
+│ │ +
+│ │ +    def _compute_nn_distances(self):
+│ │ +        distances = self.distances
+│ │ +        return distances[:, 0]
+│ │ +
+│ │ +    def _compute_loss_func(self):
+│ │ +        distances = self.distances
+│ │ +        transform = self.transform
+│ │ +        k = self.initial_value.shape[0]
+│ │ +        loss_func = compute_dimensionality_loss_func(distances, transform, k)
+│ │ +        return loss_func
+│ │ +
+│ │ +    def _set_local_dim_x(self):
+│ │ +        pre_transformation = self.pre_transformation
+│ │ +        transform = self.transform
+│ │ +        local_dim_x, log_density_x = compute_log_density_x(
+│ │ +            pre_transformation, transform
+│ │ +        )
+│ │ +        self.local_dim_x = local_dim_x
+│ │ +        self.log_density_x = log_density_x
+│ │ +
+│ │ +    def _set_local_dim_func(self):
+│ │ +        x = self.x
+│ │ +        landmarks = self.landmarks
+│ │ +        local_dim_x = self.local_dim_x
+│ │ +        mu = self.mu_dim
+│ │ +        cov_func = self.cov_func
+│ │ +        jitter = self.jitter
+│ │ +        logger.info("Computing predictive dimensionality function.")
+│ │ +        log_dim_func = compute_conditional_mean_explog(
+│ │ +            x,
+│ │ +            landmarks,
+│ │ +            local_dim_x,
+│ │ +            mu,
+│ │ +            cov_func,
+│ │ +            jitter=jitter,
+│ │ +        )
+│ │ +        self.local_dim_func = log_dim_func
+│ │ +
+│ │ +    def _set_log_density_func(self):
+│ │ +        x = self.x
+│ │ +        landmarks = self.landmarks
+│ │ +        log_density_x = self.log_density_x
+│ │ +        mu = self.mu_dens
+│ │ +        cov_func = self.cov_func
+│ │ +        jitter = self.jitter
+│ │ +        logger.info("Computing predictive density function.")
+│ │ +        log_density_func = compute_conditional_mean(
+│ │ +            x,
+│ │ +            landmarks,
+│ │ +            log_density_x,
+│ │ +            mu,
+│ │ +            cov_func,
+│ │ +            jitter=jitter,
+│ │ +        )
+│ │ +        self.log_density_func = log_density_func
+│ │ +
+│ │ +    def prepare_inference(self, x):
+│ │ +        R"""
+│ │ +        Set all attributes in preparation for optimization, but do not
+│ │ +        perform Bayesian inference. It is not necessary to call this
+│ │ +        function before calling fit.
+│ │ +
+│ │ +        :param x: The training instances to estimate density function.
+│ │ +        :type x: array-like
+│ │ +        :return: loss_func, initial_value - The Bayesian loss function and
+│ │ +            initial guess for optimization.
+│ │ +        :rtype: function, array-like
+│ │ +        """
+│ │ +        self._set_x(x)
+│ │ +        self._prepare_attribute("distances")
+│ │ +        self._prepare_attribute("nn_distances")
+│ │ +        self._prepare_attribute("d")
+│ │ +        self._prepare_attribute("mu_dens")
+│ │ +        self._prepare_attribute("ls")
+│ │ +        self._prepare_attribute("cov_func")
+│ │ +        self._prepare_attribute("landmarks")
+│ │ +        self._prepare_attribute("L")
+│ │ +        self._prepare_attribute("initial_value")
+│ │ +        self._prepare_attribute("transform")
+│ │ +        self._prepare_attribute("loss_func")
+│ │ +        return self.loss_func, self.initial_value
+│ │ +
+│ │ +    def run_inference(self, loss_func=None, initial_value=None, optimizer=None):
+│ │ +        R"""
+│ │ +        Perform Bayesian inference, optimizing the pre_transformation parameters.
+│ │ +        If you would like to run your own inference procedure, use the loss_function
+│ │ +        and initial_value attributes and set pre_transformation to the optimized
+│ │ +        parameters.
+│ │ +
+│ │ +        :param loss_func: The Bayesian loss function. If None, uses the stored
+│ │ +            loss_func attribute.
+│ │ +        :type loss_func: function
+│ │ +        :param initial_value: The initial guess for optimization. If None, uses
+│ │ +            the stored initial_value attribute.
+│ │ +        :type initial_value: array-like
+│ │ +        :return: pre_transformation - The optimized parameters.
+│ │ +        :rtype: array-like
+│ │ +        """
+│ │ +        if loss_func is not None:
+│ │ +            self.loss_func = loss_func
+│ │ +        if initial_value is not None:
+│ │ +            self.initial_value = initial_value
+│ │ +        if optimizer is not None:
+│ │ +            self.optimizer = optimizer
+│ │ +        self._run_inference()
+│ │ +        return self.pre_transformation
+│ │ +
+│ │ +    def process_inference(self, pre_transformation=None, build_predict=True):
+│ │ +        R"""
+│ │ +        Use the optimized parameters to compute the local dimensionality at the
+│ │ +        training points. If build_predict, also build the prediction function.
+│ │ +
+│ │ +        :param pre_transformation: The optimized parameters. If None, uses the stored
+│ │ +            pre_transformation attribute.
+│ │ +        :type pre_transformation: array-like
+│ │ +        :param build_predict: Whether or not to build the prediction function.
+│ │ +            Defaults to True.
+│ │ +        :type build_predict: bool
+│ │ +        :return: local_dim_x - The local dimensionality
+│ │ +        :rtype: array-like
+│ │ +        """
+│ │ +        if pre_transformation is not None:
+│ │ +            self.pre_transformation = pre_transformation
+│ │ +        self._set_local_dim_x()
+│ │ +        if build_predict:
+│ │ +            self._set_local_dim_func()
+│ │ +            self._set_log_density_func()
+│ │ +        return self.local_dim_x, self.log_density_x
+│ │ +
+│ │ +    def fit(self, x=None, build_predict=True):
+│ │ +        R"""
+│ │ +        Fit the model from end to end.
+│ │ +
+│ │ +        :param x: The training instances to estimate dimensionality function.
+│ │ +        :type x: array-like
+│ │ +        :param build_predict: Whether or not to build the prediction function.
+│ │ +            Defaults to True.
+│ │ +        :type build_predict: bool
+│ │ +        :return: self - A fitted instance of this estimator.
+│ │ +        :rtype: Object
+│ │ +        """
+│ │ +        if self.x is not None and self.x is not x:
+│ │ +            message = "self.x has been set already, but is not equal to the argument x."
+│ │ +            raise ValueError(message)
+│ │ +        if self.x is None and x is None:
+│ │ +            message = "Required argument x is missing and self.x has not been set."
+│ │ +            raise ValueError(message)
+│ │ +        if x is None:
+│ │ +            x = self.x
+│ │ +
+│ │ +        self.prepare_inference(x)
+│ │ +        self.run_inference()
+│ │ +        self.process_inference(build_predict=build_predict)
+│ │ +        return self
+│ │ +
+│ │ +    def predict_density(self, x):
+│ │ +        R"""
+│ │ +        Predict the log density with adaptive unit at each point in x.
+│ │ +        Note that the unit of denity depends on the dimensionality of the
+│ │ +        volume.
+│ │ +
+│ │ +        :param x: The new data to predict.
+│ │ +        :type x: array-like
+│ │ +        :return: log_density - The log density at each test point in x.
+│ │ +        :rtype: array-like
+│ │ +        """
+│ │ +        if self.log_density_func is None:
+│ │ +            self._set_log_density_func()
+│ │ +        return self.log_density_func(x)
+│ │ +
+│ │ +    def predict(self, x):
+│ │ +        R"""
+│ │ +        Predict the dimensionality at each point in x.
+│ │ +        Alias for predict_dimensionality().
+│ │ +
+│ │ +        :param x: The new data to predict.
+│ │ +        :type x: array-like
+│ │ +        :return: dimensionality - The dimensionality at each test point in x.
+│ │ +        :rtype: array-like
+│ │ +        """
+│ │ +        if self.local_dim_func is None:
+│ │ +            self._set_local_dim_func()
+│ │ +        return self.local_dim_func(x)
+│ │ +
+│ │ +    def fit_predict(self, x=None, build_predict=False):
+│ │ +        R"""
+│ │ +        Perform Bayesian inference and return the local dimensionality at training points.
+│ │ +
+│ │ +        :param x: The training instances to estimate the local dimensionality function.
+│ │ +        :type x: array-like
+│ │ +        :return: local_dim_x - The local dimensionality at each training point in x.
+│ │ +        """
+│ │ +        if self.x is not None and self.x is not x:
+│ │ +            message = "self.x has been set already, but is not equal to the argument x."
+│ │ +            error = ValueError(message)
+│ │ +            logger.error(error)
+│ │ +            raise error
+│ │ +        if self.x is None and x is None:
+│ │ +            message = "Required argument x is missing and self.x has not been set."
+│ │ +            error = ValueError(message)
+│ │ +            logger.error(error)
+│ │ +            raise error
+│ │ +        if x is None:
+│ │ +            x = self.x
+│ │ +
+│ │ +        self.fit(x, build_predict=build_predict)
+│ │ +        return self.local_dim_x
+│ │ +
+│ │ +    def gradient_density(self, x, jit=True):
+│ │ +        R"""
+│ │ +        Conputes the gradient of the predictive log-density function for each line in x.
+│ │ +
+│ │ +        :param x: Data points.
+│ │ +        :type x: array-like
+│ │ +        :param jit: Use jax just in time compilation. Defaults to True.
+│ │ +        :type jit: bool
+│ │ +        :return: gradiants - The gradient of function at each point in x.
+│ │ +            gradients.shape == x.shape
+│ │ +        :rtype: array-like
+│ │ +        """
+│ │ +        return gradient(self.predict_density, x, jit=jit)
+│ │ +
+│ │ +    def hessian_density(self, x, jit=True):
+│ │ +        R"""
+│ │ +        Conputes the hessian of the predictive log-density function for each line in x.
+│ │ +
+│ │ +        :param x: Data points.
+│ │ +        :type x: array-like
+│ │ +        :param jit: Use jax just in time compilation. Defaults to True.
+│ │ +        :type jit: bool
+│ │ +        :return: hessians - The hessian matrix of function at each point in x.
+│ │ +            hessians.shape == X.shape + X.shape[1:]
+│ │ +        :rtype: array-like
+│ │ +        """
+│ │ +        return hessian(self.predict_density, x, jit=jit)
+│ │ +
+│ │ +    def hessian_log_determinant_density(self, x, jit=True):
+│ │ +        R"""
+│ │ +        Conputes the logarirhm of the determinat of the predictive density function for
+│ │ +        each line in x.
+│ │ +
+│ │ +        :param x: Data points.
+│ │ +        :type x: array-like
+│ │ +        :param jit: Use jax just in time compilation. Defaults to True.
+│ │ +        :type jit: bool
+│ │ +        :return: signs, log_determinants - The sign of the determinant
+│ │ +            at each point x and the logarithm of its absolute value.
+│ │ +            signs.shape == log_determinants.shape == x.shape[0]
+│ │ +        :rtype: array-like, array-like
+│ │ +        """
+│ │ +        return hessian_log_determinant(self.predict_density, x, jit=jit)
+│ │   --- mellon-1.1.1/mellon/parameters.py
+│ ├── +++ mellon-1.2.0/mellon/parameters.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,12 +1,13 @@
+│ │ -from jax.numpy import exp, log, quantile
+│ │ +from jax.numpy import exp, log, quantile, stack
+│ │ +from jax import random
+│ │  from sklearn.cluster import k_means
+│ │  from sklearn.linear_model import Ridge
+│ │  from sklearn.neighbors import BallTree, KDTree
+│ │ -from .util import mle, DEFAULT_JITTER
+│ │ +from .util import mle, local_dimensionality, DEFAULT_JITTER
+│ │  from .decomposition import (
+│ │      _check_method,
+│ │      _full_rank,
+│ │      _full_decomposition_low_rank,
+│ │      _standard_low_rank,
+│ │      _modified_low_rank,
+│ │      DEFAULT_RANK,
+│ │ @@ -25,23 +26,45 @@
+│ │      :param x: The training instances.
+│ │      :type x: array-like
+│ │      :param n_landmarks: The number of landmark points.
+│ │      :type n_landmarks: int
+│ │      :return: landmark_points - k-means centroids.
+│ │      :rtype: array-like
+│ │      """
+│ │ +    if n_landmarks == 0:
+│ │ +        return None
+│ │      n = x.shape[0]
+│ │      if len(x.shape) < 2:
+│ │          x = x[:, None]
+│ │ -    assert n_landmarks > 1, "n_landmarks musst be larger 1"
+│ │ +    assert n_landmarks > 1, "n_landmarks musst be larger 1 or euqual to 0"
+│ │      if n_landmarks >= n:
+│ │ -        return x
+│ │ +        return None
+│ │      return k_means(x, n_landmarks, n_init=1)[0]
+│ │  
+│ │  
+│ │ +def compute_distances(x, k):
+│ │ +    R"""
+│ │ +    Computes the distance to the k nearest neighbor for each training instance.
+│ │ +
+│ │ +    :param x: The training instances.
+│ │ +    :type x: array-like
+│ │ +    :param k: The number of nearest neighbors to consider.
+│ │ +    :return: distances - The k observed nearest neighbor distances.
+│ │ +    :rtype: array-like
+│ │ +    """
+│ │ +    if len(x.shape) < 2:
+│ │ +        x = x[:, None]
+│ │ +    if x.shape[1] >= 20:
+│ │ +        tree = BallTree(x, metric="euclidean")
+│ │ +    else:
+│ │ +        tree = KDTree(x, metric="euclidean")
+│ │ +    distances = tree.query(x, k=k + 1)[0][:, 1:]
+│ │ +    return distances
+│ │ +
+│ │ +
+│ │  def compute_nn_distances(x):
+│ │      R"""
+│ │      Computes the distance to the nearest neighbor for each training instance.
+│ │  
+│ │      :param x: The training instances.
+│ │      :type x: array-like
+│ │      :return: nn_distances - The observed nearest neighbor distances.
+│ │ @@ -65,14 +88,38 @@
+│ │      :type x: array-like
+│ │      """
+│ │      if len(x.shape) < 2:
+│ │          return 1
+│ │      return x.shape[1]
+│ │  
+│ │  
+│ │ +def compute_d_factal(x, k=30, n=1000, seed=432):
+│ │ +    R"""
+│ │ +    Computes the dimensionality of the data based on the average fractal
+│ │ +    dimension around n randomly selected cells.
+│ │ +
+│ │ +    :param x: The training instances.
+│ │ +    :type x: array-like
+│ │ +    :param n: Number of samples.
+│ │ +    :type n: int
+│ │ +    :param seed: Random seed for sampling.
+│ │ +    :type seed: int
+│ │ +    """
+│ │ +    if len(x.shape) < 2:
+│ │ +        return 1
+│ │ +    if n < x.shape[0]:
+│ │ +        key = random.PRNGKey(seed)
+│ │ +        idx = random.choice(key, x.shape[0], shape=(n,), replace=False)
+│ │ +        x_query = x[idx, ...]
+│ │ +    else:
+│ │ +        x_query = x
+│ │ +    local_dims = local_dimensionality(x, k=k, x_query=x_query)
+│ │ +    return local_dims.mean()
+│ │ +
+│ │ +
+│ │  def compute_mu(nn_distances, d):
+│ │      R"""
+│ │      Computes mu equal to the 1th percentile of :math:`mle(nn\text{_}distances, d) - 10`,
+│ │      where :math:`mle =
+│ │      \log(\text{gamma}(d/2 + 1)) - (d/2) \cdot \log(\pi) - d \cdot \log(nn\text{_}distances)`
+│ │  
+│ │      :param nn_distances: The observed nearest neighbor distances.
+│ │ @@ -199,7 +246,33 @@
+│ │          is the covariance matrix.
+│ │      :type L: array-like
+│ │      :return: initial_value - The argmin :math:`z`.
+│ │      :rtype: array-like
+│ │      """
+│ │      target = mle(nn_distances, d) - mu
+│ │      return Ridge(fit_intercept=False).fit(L, target).coef_
+│ │ +
+│ │ +
+│ │ +def compute_initial_dimensionalities(x, mu_dim, mu_dens, L, nn_distances, d):
+│ │ +    R"""
+│ │ +    Computes an initial guess for the log dimensionality and log density at every cell state
+│ │ +    with Ridge regression.
+│ │ +
+│ │ +    :param x: The cell states.
+│ │ +    :type x: array-like
+│ │ +    :param mu: The Gaussian Process mean.
+│ │ +    :type mu: int
+│ │ +    :param L: A matrix such that :math:`L L^\top \approx K`, where :math:`K`
+│ │ +        is the covariance matrix.
+│ │ +    :type L: array-like
+│ │ +    :param nn_distances: The observed nearest neighbor distances.
+│ │ +    :type nn_distances: array-like
+│ │ +    :param d: The local dimensionality of the data.
+│ │ +    :type d: array-like
+│ │ +    :return: initial_value
+│ │ +    :rtype: array-like
+│ │ +    """
+│ │ +    target = log(d) - mu_dim
+│ │ +    initial_dims = Ridge(fit_intercept=False).fit(L, target).coef_
+│ │ +    initial_dens = compute_initial_value(nn_distances, d, mu_dens, L)
+│ │ +    initial_value = stack([initial_dims, initial_dens])
+│ │ +    return initial_value
+│ │   --- mellon-1.1.1/mellon/util.py
+│ ├── +++ mellon-1.2.0/mellon/util.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,14 +1,31 @@
+│ │  import sys
+│ │  import logging
+│ │  
+│ │ -from jax.numpy import eye, log, pi, repeat, newaxis, tensordot, sqrt, maximum
+│ │ +from jax.numpy import (
+│ │ +    eye,
+│ │ +    log,
+│ │ +    pi,
+│ │ +    repeat,
+│ │ +    newaxis,
+│ │ +    tensordot,
+│ │ +    sqrt,
+│ │ +    maximum,
+│ │ +    triu_indices,
+│ │ +    sort,
+│ │ +    ones,
+│ │ +    arange,
+│ │ +    concatenate,
+│ │ +    isscalar,
+│ │ +)
+│ │  from jax.numpy import sum as arraysum
+│ │ +from jax.numpy.linalg import norm, lstsq
+│ │  from jax.scipy.special import gammaln
+│ │  from jax import jit, vmap
+│ │ +from sklearn.neighbors import BallTree, KDTree
+│ │  
+│ │  
+│ │  DEFAULT_JITTER = 1e-6
+│ │  
+│ │  
+│ │  def stabilize(A, jitter=DEFAULT_JITTER):
+│ │      R"""
+│ │ @@ -76,14 +93,41 @@
+│ │      :return: Stacked results of the function calls.
+│ │      :rtype: array-like
+│ │      """
+│ │      vfun = vmap(jit(fun), in_axis)
+│ │      return vfun(X)
+│ │  
+│ │  
+│ │ +def local_dimensionality(x, k=30, x_query=None, neighbor_idx=None):
+│ │ +    if neighbor_idx is None:
+│ │ +        if x_query is None:
+│ │ +            x_query = x
+│ │ +        if x.shape[1] >= 20:
+│ │ +            tree = BallTree(x, metric="euclidean")
+│ │ +        else:
+│ │ +            tree = KDTree(x, metric="euclidean")
+│ │ +        neighbors = x[tree.query(x_query, k=k)[1]]
+│ │ +    else:
+│ │ +        neighbors = x[neighbor_idx]
+│ │ +    i, j = triu_indices(k, k=1)
+│ │ +    neighbor_distances = norm(neighbors[..., i, :] - neighbors[..., j, :], axis=-1)
+│ │ +    neighborhood_distances = sort(neighbor_distances, axis=-1)
+│ │ +
+│ │ +    kc2 = k * (k - 1) // 2
+│ │ +    A = concatenate(
+│ │ +        [log(neighborhood_distances)[..., None], ones((x_query.shape[0], kc2, 1))],
+│ │ +        axis=-1,
+│ │ +    )
+│ │ +    y = log(arange(1, kc2 + 1))[:, None]
+│ │ +
+│ │ +    vreg = vmap(lstsq, in_axes=(0, None))
+│ │ +    w = vreg(A, y)
+│ │ +    return w[0][:, 0, 0]
+│ │ +
+│ │ +
+│ │  class Log(object):
+│ │      """Access the Mellon logging/verbosity. Log() returns the singelon logger and
+│ │      Log.off() and Log.on() disable or enable logging respectively."""
+│ │  
+│ │      def __new__(cls):
+│ │          """Return the singelton Logger."""
+│ │          if not hasattr(cls, "logger"):
+│ │   --- mellon-1.1.1/mellon.egg-info/PKG-INFO
+│ ├── +++ mellon-1.2.0/mellon.egg-info/PKG-INFO
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,24 +1,28 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mellon
+│ │ -Version: 1.1.1
+│ │ +Version: 1.2.0
+│ │  Summary: Non-parametric density estimator.
+│ │  Home-page: https://github.com/settylab/mellon
+│ │  Author: Setty Lab
+│ │  Author-email: msetty@fredhutch.org
+│ │  License: GNU General Public License v3.0
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+│ │  Description-Content-Type: text/x-rst
+│ │  License-File: LICENSE
+│ │  
+│ │  .. image:: https://zenodo.org/badge/558998366.svg
+│ │     :target: https://zenodo.org/badge/latestdoi/558998366
+│ │  .. image:: https://codecov.io/github/settylab/Mellon/branch/main/graph/badge.svg?token=TKIKXK4MPG 
+│ │ -    :target: https://codecov.io/github/settylab/Mellon
+│ │ +    :target: https://app.codecov.io/github/settylab/Mellon
+│ │ +.. image:: https://badge.fury.io/py/mellon.svg
+│ │ +       :target: https://badge.fury.io/py/mellon
+│ │ +.. image:: https://static.pepy.tech/personalized-badge/mellon?period=total&units=international_system&left_color=grey&right_color=lightgrey&left_text=Downloads
+│ │ +    :target: https://pepy.tech/project/mellon
+│ │  
+│ │  Mellon is a non-parametric density estimator based on the NearestNeighbors distribution.
+│ │  
+│ │  Installation
+│ │  ============
+│ │  
+│ │  To install with pip you can run:
+│ │   --- mellon-1.1.1/setup.py
+│ ├── +++ mellon-1.2.0/setup.py
+│ │┄ Files identical despite different names

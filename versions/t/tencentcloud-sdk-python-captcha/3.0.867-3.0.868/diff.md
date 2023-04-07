@@ -1,0 +1,193 @@
+# Comparing `tmp/tencentcloud-sdk-python-captcha-3.0.867.tar.gz` & `tmp/tencentcloud-sdk-python-captcha-3.0.868.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/tencentcloud-sdk-python-captcha-3.0.867.tar", last modified: Wed Apr  5 16:23:10 2023, max compression
++gzip compressed data, was "dist/tencentcloud-sdk-python-captcha-3.0.868.tar", last modified: Fri Apr  7 00:22:08 2023, max compression
+```
+
+## Comparing `tencentcloud-sdk-python-captcha-3.0.867.tar` & `tencentcloud-sdk-python-captcha-3.0.868.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,19 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/
+--rw-r--r--   0 root         (0) root         (0)     1014 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/setup.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/captcha/
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/captcha/v20190722/
+--rw-r--r--   0 root         (0) root         (0)        0 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/captcha/v20190722/__init__.py
+--rw-r--r--   0 root         (0) root         (0)    17785 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/captcha/v20190722/captcha_client.py
+--rw-r--r--   0 root         (0) root         (0)     1037 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/captcha/v20190722/errorcodes.py
+--rw-r--r--   0 root         (0) root         (0)    73336 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/captcha/v20190722/models.py
+--rw-r--r--   0 root         (0) root         (0)        0 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/captcha/__init__.py
+--rw-r--r--   0 root         (0) root         (0)      630 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/__init__.py
+--rw-r--r--   0 root         (0) root         (0)       88 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/setup.cfg
+--rw-r--r--   0 root         (0) root         (0)     1679 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)      749 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/README.rst
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud_sdk_python_captcha.egg-info/
+--rw-r--r--   0 root         (0) root         (0)        1 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud_sdk_python_captcha.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)      485 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud_sdk_python_captcha.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)     1679 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud_sdk_python_captcha.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)       13 2023-04-05 16:23:10.000000 tencentcloud-sdk-python-captcha-3.0.867/tencentcloud_sdk_python_captcha.egg-info/top_level.txt
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/
++-rw-r--r--   0 root         (0) root         (0)     1679 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/PKG-INFO
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/
++-rw-r--r--   0 root         (0) root         (0)      630 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/captcha/
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/captcha/v20190722/
++-rw-r--r--   0 root         (0) root         (0)    17785 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/captcha/v20190722/captcha_client.py
++-rw-r--r--   0 root         (0) root         (0)    73577 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/captcha/v20190722/models.py
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/captcha/v20190722/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     1037 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/captcha/v20190722/errorcodes.py
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/captcha/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud_sdk_python_captcha.egg-info/
++-rw-r--r--   0 root         (0) root         (0)     1679 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud_sdk_python_captcha.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud_sdk_python_captcha.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)       13 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud_sdk_python_captcha.egg-info/top_level.txt
++-rw-r--r--   0 root         (0) root         (0)      485 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/tencentcloud_sdk_python_captcha.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)      749 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/README.rst
++-rw-r--r--   0 root         (0) root         (0)     1014 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/setup.py
++-rw-r--r--   0 root         (0) root         (0)       88 2023-04-07 00:22:08.000000 tencentcloud-sdk-python-captcha-3.0.868/setup.cfg
+```
+
+### Comparing `tencentcloud-sdk-python-captcha-3.0.867/setup.py` & `tencentcloud-sdk-python-captcha-3.0.868/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/captcha/v20190722/captcha_client.py` & `tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/captcha/v20190722/captcha_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/captcha/v20190722/errorcodes.py` & `tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/captcha/v20190722/errorcodes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/captcha/v20190722/models.py` & `tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/captcha/v20190722/models.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1175,17 +1175,17 @@
+         :type UserIp: str
+         :param Randstr: 前端回调函数返回的随机字符串
+         :type Randstr: str
+         :param CaptchaAppId: 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
+         :type CaptchaAppId: int
+         :param AppSecretKey: 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
+         :type AppSecretKey: str
+-        :param BusinessId: 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
++        :param BusinessId: 预留字段
+         :type BusinessId: int
+-        :param SceneId: 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
++        :param SceneId: 预留字段
+         :type SceneId: int
+         :param MacAddress: mac 地址或设备唯一标识
+         :type MacAddress: str
+         :param Imei: 手机设备号
+         :type Imei: str
+         :param NeedGetCaptchaTime: 是否返回前端获取验证码时间，取值1：需要返回
+         :type NeedGetCaptchaTime: int
+@@ -1247,29 +1247,38 @@
+ EvilLevel=0 请求无恶意
+ EvilLevel=100 请求有恶意
+ 注意：此字段可能返回 null，表示取不到有效值。
+         :type EvilLevel: int
+         :param GetCaptchaTime: 前端获取验证码时间，时间戳格式
+ 注意：此字段可能返回 null，表示取不到有效值。
+         :type GetCaptchaTime: int
++        :param EvilBitmap: 拦截类型
++注意：此字段可能返回 null，表示取不到有效值。
++        :type EvilBitmap: int
++        :param SubmitCaptchaTime: 提交验证码时间
++        :type SubmitCaptchaTime: int
+         :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+         :type RequestId: str
+         """
+         self.CaptchaCode = None
+         self.CaptchaMsg = None
+         self.EvilLevel = None
+         self.GetCaptchaTime = None
++        self.EvilBitmap = None
++        self.SubmitCaptchaTime = None
+         self.RequestId = None
+ 
+ 
+     def _deserialize(self, params):
+         self.CaptchaCode = params.get("CaptchaCode")
+         self.CaptchaMsg = params.get("CaptchaMsg")
+         self.EvilLevel = params.get("EvilLevel")
+         self.GetCaptchaTime = params.get("GetCaptchaTime")
++        self.EvilBitmap = params.get("EvilBitmap")
++        self.SubmitCaptchaTime = params.get("SubmitCaptchaTime")
+         self.RequestId = params.get("RequestId")
+ 
+ 
+ class DescribeCaptchaTicketDataRequest(AbstractModel):
+     """DescribeCaptchaTicketData请求参数结构体
+ 
+     """
+```
+
+### Comparing `tencentcloud-sdk-python-captcha-3.0.867/tencentcloud/__init__.py` & `tencentcloud-sdk-python-captcha-3.0.868/tencentcloud/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -10,8 +10,8 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
+-__version__ = '3.0.867'
++__version__ = '3.0.868'
+```
+
+### Comparing `tencentcloud-sdk-python-captcha-3.0.867/PKG-INFO` & `tencentcloud-sdk-python-captcha-3.0.868/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.1
+ Name: tencentcloud-sdk-python-captcha
+-Version: 3.0.867
++Version: 3.0.868
+ Summary: Tencent Cloud Captcha SDK for Python
+ Home-page: https://github.com/TencentCloud/tencentcloud-sdk-python
+ Author: Tencent Cloud
+ Author-email: tencentcloudapi@tencent.com
+ License: Apache License 2.0
+ Description: ============================
+         Tencent Cloud SDK for Python
+```
+
+### Comparing `tencentcloud-sdk-python-captcha-3.0.867/README.rst` & `tencentcloud-sdk-python-captcha-3.0.868/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `tencentcloud-sdk-python-captcha-3.0.867/tencentcloud_sdk_python_captcha.egg-info/PKG-INFO` & `tencentcloud-sdk-python-captcha-3.0.868/tencentcloud_sdk_python_captcha.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.1
+ Name: tencentcloud-sdk-python-captcha
+-Version: 3.0.867
++Version: 3.0.868
+ Summary: Tencent Cloud Captcha SDK for Python
+ Home-page: https://github.com/TencentCloud/tencentcloud-sdk-python
+ Author: Tencent Cloud
+ Author-email: tencentcloudapi@tencent.com
+ License: Apache License 2.0
+ Description: ============================
+         Tencent Cloud SDK for Python
+```
+

@@ -1,0 +1,37 @@
+# Comparing `tmp/kewkekkek-1.2.0.tar.gz` & `tmp/kewkekkek-1.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "kewkekkek-1.2.0.tar", last modified: Fri Apr  7 00:16:33 2023, max compression
++gzip compressed data, was "kewkekkek-1.3.0.tar", last modified: Fri Apr  7 00:22:58 2023, max compression
+```
+
+## Comparing `kewkekkek-1.2.0.tar` & `kewkekkek-1.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,10 +1,9 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:16:33.545556 kewkekkek-1.2.0/
+--rw-rw-rw-   0        0        0      144 2023-04-07 00:16:33.545556 kewkekkek-1.2.0/PKG-INFO
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:16:33.545556 kewkekkek-1.2.0/kewkekkek.egg-info/
+--rw-rw-rw-   0        0        0      144 2023-04-07 00:16:33.000000 kewkekkek-1.2.0/kewkekkek.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      176 2023-04-07 00:16:33.000000 kewkekkek-1.2.0/kewkekkek.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 00:16:33.000000 kewkekkek-1.2.0/kewkekkek.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       78 2023-04-07 00:16:33.000000 kewkekkek-1.2.0/kewkekkek.egg-info/entry_points.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 00:16:33.000000 kewkekkek-1.2.0/kewkekkek.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-07 00:16:33.545556 kewkekkek-1.2.0/setup.cfg
+--rw-rw-rw-   0        0        0      199 2023-04-07 00:16:22.000000 kewkekkek-1.2.0/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:22:58.171107 kewkekkek-1.3.0/
++-rw-rw-rw-   0        0        0      144 2023-04-07 00:22:58.171107 kewkekkek-1.3.0/PKG-INFO
++drwxrwxrwx   0        0        0        0 2023-04-07 00:22:58.171107 kewkekkek-1.3.0/kewkekkek.egg-info/
++-rw-rw-rw-   0        0        0      144 2023-04-07 00:22:58.000000 kewkekkek-1.3.0/kewkekkek.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      140 2023-04-07 00:22:58.000000 kewkekkek-1.3.0/kewkekkek.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 00:22:58.000000 kewkekkek-1.3.0/kewkekkek.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 00:22:58.000000 kewkekkek-1.3.0/kewkekkek.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 00:22:58.171107 kewkekkek-1.3.0/setup.cfg
++-rw-rw-rw-   0        0        0      222 2023-04-07 00:22:52.000000 kewkekkek-1.3.0/setup.py
+```
+
